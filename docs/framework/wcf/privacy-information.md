@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683967"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che usa Windows Communication Foundation (WCF), versione 3.0, l'applicazione può incidere sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviarlo a Microsoft.  
@@ -95,7 +95,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 ### <a name="tracing"></a>Traccia  
  La funzionalità di diagnostica dell'infrastruttura di WCF registra i messaggi che passano attraverso il trasporto e livelli del modello di servizio e le attività e gli eventi associati a questi messaggi. Questa funzionalità è disattivata per impostazione predefinita. Viene attivata usando il file di configurazione dell'applicazione e il comportamento della traccia può essere modificato usando il provider WMI per WCF in fase di esecuzione. Quando viene attivata, l'infrastruttura di traccia emette una traccia di diagnostica che contiene messaggi, attività ed eventi di elaborazione per i listener configurati. Il formato e la posizione dell'output vengono determinati dalle scelte di configurazione dei listener dell'amministratore, ma l'output è in genere un file con formattazione XML. L'amministratore è responsabile dell'impostazione dell'elenco di controllo di accesso sui file di traccia. In particolare, in caso di hosting in Windows Activation System (WAS), l'amministratore deve verificare che i file non vengano servizi dalla directory radice virtuale pubblica, se non lo si desidera.  
   
- Ci sono due tipi di traccia, la registrazione messaggi e la traccia diagnostica del modello di servizio, descritte nella sezione seguente. Ogni tipo viene configurato tramite la propria origine di traccia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Entrambe queste origini di traccia di registrazione acquisiscono dati locali rispetto all'applicazione.  
+ Esistono due tipi di traccia: La registrazione dei messaggi e modello del servizio diagnostica tracing, descritto nella sezione seguente. Ogni tipo viene configurato tramite la propria origine di traccia: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Entrambe queste origini di traccia di registrazione acquisiscono dati locali rispetto all'applicazione.  
   
 ### <a name="message-logging"></a>Registrazione messaggi  
  L'origine di traccia della registrazione messaggi (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) consente a un amministratore di registrare messaggi che fluiscono attraverso il sistema. Tramite la configurazione, l'utente può decidere di registrare interi messaggi o solo intestazioni, se eseguire la registrazione a livello di trasporto e/o di modello di servizio e se includere messaggi in formato non valido. Inoltre, può configurare il filtro per limitare il numero di messaggi registrati.  
@@ -133,7 +133,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  wst:Entropy  
   
- \- Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Potenziali informazioni personali rimosse:  
   
- \- Per xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -171,7 +171,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!-tipo di base astratta  
   
@@ -179,9 +179,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  -->  
   
- \</ Condizioni >?  
+ \</Conditions>?  
   
- \<Consigli >  
+ \<Advice>  
   
  \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
@@ -189,15 +189,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [any]*  
   
- \</ Consigli >?  
+ \</Advice>?  
   
  <\!: Tipi di base astratti  
   
  \<Istruzione / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<Soggetto >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -221,9 +221,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</SubjectConfirmation>?  
   
- \</ Soggetto >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -273,7 +273,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</ Attributo > +  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
@@ -285,17 +285,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [Subject]  
   
- \<Azione Namespace = "[uri]" > [string]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
- \<Evidenza >  
+ \<Evidence>  
   
  \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
  \<Asserzione > [asserzione]\</Assertion > +  
   
- \</ Evidenza >?  
+ \</Evidence>?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
  \</ Asserzione >  
   
@@ -401,6 +401,6 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Il linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) contiene una definizione della porta. Ogni porta ha un indirizzo endpoint e un'associazione che rappresenta i servizi usati dall'applicazione. L'esposizione del codice WSDL può essere disattivata usando la configurazione. Nessuna informazioni viene conservata sul computer.  
   
-## <a name="see-also"></a>Vedere anche  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Vedere anche
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)

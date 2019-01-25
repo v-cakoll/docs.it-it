@@ -3,12 +3,12 @@ title: Linee guida per la migrazione di un'applicazione compilata con le version
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696188"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5
 ## <a name="applies-to"></a>Si applica a  
@@ -94,7 +94,7 @@ ms.locfileid: "48582515"
 ### <a name="visual-studio-tooling-changes"></a>Modifiche apportate agli strumenti di Visual Studio  
  Windows Identity Foundation 3.5 SDK offre un'utilità di federazione autonoma, FedUtil.exe (FedUtil), che può essere usata per l'outsourcing della gestione delle identità in applicazioni abilitate per Windows Identity Foundation a un servizio token di sicurezza. Questo strumento aggiunge impostazioni di Windows Identity Foundation al file di configurazione dell'applicazione per permettere all'applicazione di ottenere token di sicurezza da uno o più servizi token di sicurezza ed è disponibile in Visual Studio tramite il pulsante **Aggiungi riferimento al servizio token di sicurezza**. L'utilità FedUtil non è inclusa in Windows Identity Foundation 4.5. Windows Identity Foundation 4.5 supporta invece una nuova estensione di Visual Studio chiamata Identity and Access Tool per Visual Studio 2012, che può essere usata per modificare il file di configurazione dell'applicazione con le impostazioni di Windows Identity Foundation necessarie per l'outsourcing della gestione delle identità a un servizio token di sicurezza. Identity and Access Tool implementa anche un servizio token di sicurezza chiamato servizio token di sicurezza locale, che può essere usato per testare le applicazioni abilitate per Windows Identity Foundation. In molti casi, questa funzionalità elimina la necessità di compilare servizi token di sicurezza personalizzati, spesso necessari in Windows Identity Foundation 3.5 per testare le soluzioni in fase di sviluppo. Per questo motivo, i modelli di servizio token di sicurezza non sono più supportati in Visual Studio 2012, ma le classi che supportano lo sviluppo di servizi token di sicurezza sono ancora disponibili in Windows Identity Foundation 4.5.  
   
- È possibile installare Identity and Access Tool dal gestore di estensioni e aggiornamenti in Visual Studio oppure è possibile scaricarlo dalla pagina [Identity and Access Tool per Visual Studio 2012 su Code Gallery](https://go.microsoft.com/fwlink/?LinkID=245849). L'elenco seguente offre un riepilogo delle modifiche apportate agli strumenti di Visual Studio:  
+ È possibile installare Identity and Access Tool dal estensioni e gestione degli aggiornamenti in Visual Studio oppure è possibile scaricarlo dalla pagina seguente nella galleria di codice: [Identity and Access Tool per Visual Studio 2012 su Code Gallery](https://go.microsoft.com/fwlink/?LinkID=245849). L'elenco seguente offre un riepilogo delle modifiche apportate agli strumenti di Visual Studio:  
   
 -   È stata rimossa la funzionalità Aggiungi riferimento al servizio token di sicurezza. La funzionalità è stata sostituita da Identity and Access Tool.  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  Poiché molte delle classi in Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 condividono gli stessi nomi, quando si usano Windows Identity Foundation 3.5 e Windows Identity Foundation 4.5 insieme, assicurarsi di usare nomi di classe completi o alias dello spazio dei nomi per distinguere tra le classi di Windows Identity Foundation 3.5 e quelle di Windows Identity Foundation 4.5.  
   
-## <a name="see-also"></a>Vedere anche  
- [Schema di configurazione di WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Identity and Access Tool per Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Schema di configurazione di WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Novità di Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Identity and Access Tool per Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

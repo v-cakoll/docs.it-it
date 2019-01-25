@@ -8,21 +8,21 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: d0a0cbbcc618e2fa52b3719bcc8f0135a1e0752e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a43befd69bc3fb33f8027bd32fc4d66414951c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711999"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo TrackBar (Windows Form)
-Windows Form <xref:System.Windows.Forms.TrackBar> controllo (talvolta definito "slider") viene utilizzato per spostarsi di una grande quantità di informazioni o per visivamente un'impostazione numerica. Il <xref:System.Windows.Forms.TrackBar> controllo dispone di due parti: il cursore, noto anche come un dispositivo di scorrimento e i segni di graduazione. Il cursore è la parte che può essere modificata. La posizione corrisponde alla <xref:System.Windows.Forms.TrackBar.Value%2A> proprietà. I segni di graduazione sono indicatori visivi disposti a intervalli regolari. Controllo trackbar viene spostato ad incrementi specificati dall'utente e possono essere allineate orizzontalmente o verticalmente. Ad esempio, è possibile utilizzare l'indicatore di avanzamento per controllare il cursore intermittente o del mouse la velocità per un sistema.  
+I moduli di Windows <xref:System.Windows.Forms.TrackBar> controllo (talvolta definito "slider") viene usato per spostarsi all'interno di una grande quantità di informazioni o per regolare visivamente un'impostazione numerica. Il <xref:System.Windows.Forms.TrackBar> controllo è costituito da due parti: il controllo thumb, noto anche come un dispositivo di scorrimento e i segni di graduazione. Il controllo thumb è la parte che può essere modificata. La posizione corrisponde alla <xref:System.Windows.Forms.TrackBar.Value%2A> proprietà. I segni di graduazione sono indicatori visivi che sono disposti a intervalli regolari. Consente di spostare l'indicatore di avanzamento in base a incrementi specificati e possono essere allineate orizzontalmente o verticalmente. Ad esempio, è possibile utilizzare l'indicatore di avanzamento per il cursore per il lampeggiamento mouse o frequenza velocità per un sistema di controllo.  
   
 ## <a name="key-properties"></a>Proprietà chiave  
- Le proprietà della chiave di <xref:System.Windows.Forms.TrackBar> controllo sono <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, e <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> è la spaziatura dei segni di graduazione. <xref:System.Windows.Forms.TrackBar.Minimum%2A> e <xref:System.Windows.Forms.TrackBar.Maximum%2A> sono i valori minimo e massimo che possono essere rappresentati sull'indicatore di avanzamento.  
+ Le proprietà chiave del <xref:System.Windows.Forms.TrackBar> controllo vengono <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, e <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> è la spaziatura dei segni di graduazione. <xref:System.Windows.Forms.TrackBar.Minimum%2A> e <xref:System.Windows.Forms.TrackBar.Maximum%2A> sono i valori minimo e massimo che possono essere rappresentati sull'indicatore di avanzamento.  
   
- Altre due proprietà importanti, <xref:System.Windows.Forms.TrackBar.SmallChange%2A> e <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Il valore di <xref:System.Windows.Forms.TrackBar.SmallChange%2A> proprietà è il numero di posizioni, il cursore viene spostato in seguito al pressione dei tasti freccia sinistra o destra. Il valore di <xref:System.Windows.Forms.TrackBar.LargeChange%2A> proprietà è il numero di posizioni, il cursore viene spostato in seguito al pressione dei tasti PGSU o PGGIÙ o in risposta a mouse fa clic sull'indicatore di avanzamento su entrambi i lati del cursore.  
+ Altre due importanti proprietà sono <xref:System.Windows.Forms.TrackBar.SmallChange%2A> e <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Il valore della <xref:System.Windows.Forms.TrackBar.SmallChange%2A> proprietà è il numero di posizioni il cursore viene spostato in seguito alla pressione dei tasti freccia sinistra o destra. Il valore della <xref:System.Windows.Forms.TrackBar.LargeChange%2A> proprietà è il numero di posizioni il cursore viene spostato in seguito alla pressione dei tasti PGSU o PGGIÙ o in risposta al mouse fa clic sull'indicatore di avanzamento in entrambi i lati del cursore.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.TrackBar>  
- [Controllo TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.TrackBar>
+- [Controllo TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)

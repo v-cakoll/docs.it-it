@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740112"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>Metodo IMetaDataImport::GetParamForMethodIndex
-Ottiene il token che rappresenta un parametro del metodo rappresentato dal token MethodDef specificato.  
+Ottiene il token che rappresenta un parametro specificato del metodo rappresentato dal token MethodDef specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,20 +42,20 @@ HRESULT GetParamForMethodIndex (
  [in] Un token che rappresenta il metodo per restituire il token del parametro.  
   
  `ulParamSeq`  
- [in] La posizione ordinale nell'elenco di parametri in cui si verifica il parametro richiesto. I parametri sono numerati a partire da uno, con il valore restituito del metodo nella posizione zero.  
+ [in] La posizione ordinale nell'elenco dei parametri in cui è presente il parametro richiesto. I parametri sono numerati a partire da uno, con valore restituito del metodo nella posizione zero.  
   
  `ppd`  
  [out] Puntatore a un token ParamDef che rappresenta il parametro richiesto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** inclusa come risorsa in Mscoree. dll  
+ **Libreria:** Inclusa come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

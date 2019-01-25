@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3e21d42340378c576bfc65750fba26a257b82cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a65de26f3fc088b292ec9f8a96ca4e503a17edd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680900"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>Metodo ICorProfilerCallback4::ReJITCompilationStarted
-Notifica al profiler che il compilatore di just-in-time (JIT) è stato avviato ricompilare una funzione.  
+Notifica al profiler che il compilatore JIT just-in-time è stato avviato ricompilare una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,27 +41,27 @@ HRESULT ReJITCompilationStarted(
  [in] L'ID della funzione che il compilatore JIT è stata avviata da ricompilare.  
   
  `rejitId`  
- [in] L'ID della ricompilazione della nuova versione della funzione.  
+ [in] L'ID di ricompilazione della nuova versione della funzione.  
   
  `fIsSafeToBlock`  
- [in] `true` per indicare che il blocco può causare il runtime di attesa per il thread chiamante da questo callback; `false` per indicare che il blocco non avranno effetto l'operazione di runtime. Il valore `true` non influisce sul runtime, ma possono influenzare i risultati di profilatura.  
+ [in] `true` per indicare che il blocco può causare il runtime di attesa per il thread chiamante restituire da questo callback; `false` per indicare che il blocco non avrà effetto il funzionamento del runtime. Un valore di `true` non danneggia il runtime, ma può influenzare i risultati della profilatura.  
   
 ## <a name="remarks"></a>Note  
- È possibile ricevere più di una coppia di `ReJITCompilationStarted` e [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) metodo chiama per ogni funzione a causa del modo il runtime gestisce i costruttori di classe. Ad esempio, il runtime Avvia ricompilazione di un metodo, ma il costruttore della classe per classe B deve essere eseguito. Pertanto, il runtime ricompila il costruttore di classe B e lo esegue. Durante l'esecuzione, il costruttore che effettua una chiamata al metodo che determina il metodo per la ricompilazione nuovamente. In questo scenario, viene interrotta la ricompilazione prima del metodo. Tuttavia, entrambi tenta ricompilare metodo vengono segnalata con gli eventi di ricompilazione JIT.  
+ È possibile ricevere più di una coppia di `ReJITCompilationStarted` e [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) metodo viene chiamato per ogni funzione a causa della modalità il runtime gestisce i costruttori di classe. Ad esempio, il runtime Avvia ricompilazione di un metodo, ma deve essere eseguito il costruttore della classe per classe B. Pertanto, il runtime ricompila il costruttore per la classe B e lo esegue. Mentre il costruttore è in esecuzione, che effettua una chiamata al metodo A, che fa sì che il metodo venga ricompilato nuovamente. In questo scenario, la ricompilazione prima del metodo verrà interrotta. Tuttavia, entrambi tenta di ricompilare metodo un oggetto vengono segnalata con eventi di ricompilazione JIT.  
   
- I profiler devono supportare la sequenza di callback di ricompilazione JIT nei casi in cui due thread effettuano callback simultaneamente. Ad esempio, il thread chiama `ReJITCompilationStarted`; tuttavia, prima di un thread chiama [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), thread B chiama [ICorProfilerCallback:: ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) con l'ID (funzione) dal `ReJITCompilationStarted` callback per thread A. Potrebbe sembrare che l'ID della funzione non deve ancora essere valido perché una chiamata a [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) non ha ancora ricevuto dal profiler. Tuttavia, in questo caso, l'ID della funzione è valido.  
+ I profiler devono supportare la sequenza di callback di ricompilazione JIT nei casi in cui due thread contemporaneamente dei callback. Ad esempio, il thread chiama `ReJITCompilationStarted`; tuttavia, prima che il thread chiami [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md), il thread B chiama [ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) con l'ID (funzione) dal `ReJITCompilationStarted` callback per il thread A. Può sembrare che l'ID di funzione non deve ancora essere valido perché una chiamata a [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) non ha ancora ricevuto dal profiler. Tuttavia, in questo caso, l'ID di funzione è valido.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorProf.idl, CorProf.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [Metodo JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)  
- [Metodo ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [Metodo JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+- [Metodo ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)

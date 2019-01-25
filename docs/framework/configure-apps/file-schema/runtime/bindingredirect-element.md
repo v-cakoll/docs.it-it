@@ -1,5 +1,5 @@
 ---
-title: '&lt;bindingRedirect&gt; elemento'
+title: '&lt;bindingRedirect&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7fb610357772b3c74129074096c53bf3f149501a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714750"
 ---
-# <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; elemento
+# <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; Element
 Reindirizza una versione dell'assembly in un'altra.  
   
  \<configuration>  
 \<runtime>  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<bindingRedirect >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<bindingRedirect>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ newVersion="new assembly version"/>
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`oldVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly richiesta in origine. Il formato di un numero di versione assembly *revisione*. I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.<br /><br /> È inoltre possibile specificare una gamma di versioni nel seguente formato:<br /><br /> *n.n.n. n - n.n.n. n*|  
+|`oldVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly richiesta in origine. Il formato di un numero di versione assembly *revisione*. I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.<br /><br /> È inoltre possibile specificare una gamma di versioni nel seguente formato:<br /><br /> *n.n.n.n - n.n.n.n*|  
 |`newVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly da utilizzare al posto della versione richiesta originariamente nel formato: *n.n.n. n*<br /><br /> Questo valore può specificare una versione precedente di `oldVersion`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -86,7 +86,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

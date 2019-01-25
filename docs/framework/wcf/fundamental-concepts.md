@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664018"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -51,7 +51,7 @@ Questo documento fornisce una panoramica generale dell'architettura Windows Comm
  messaggio  
  Unità autonoma di dati che può essere costituita da varie parti, incluso corpo e intestazioni.  
   
- service  
+ servizio  
  Costrutto che espone uno o più endpoint che a loro volta espongono una o più operazioni del servizio.  
   
  endpoint  
@@ -65,7 +65,7 @@ Questo documento fornisce una panoramica generale dell'architettura Windows Comm
  endpoint infrastruttura  
  Endpoint esposto dall'infrastruttura per agevolare la funzionalità necessaria o fornita dal servizio che non è correlata a un contratto di servizio. Un servizio, ad esempio, potrebbe avere un endpoint dell'infrastruttura che fornisce informazioni sui metadati.  
   
- address  
+ indirizzo  
  Specifica il percorso in cui vengono ricevuti i messaggi. Viene specificato come Uniform Resource Identifier (URI). La parte relativa allo schema URI denomina il meccanismo di trasporto da usare per raggiungere l'indirizzo, ad esempio HTTP e TCP. La parte gerarchica dell'URI contiene un percorso univoco il cui formato dipende dal meccanismo di trasporto.  
   
  L'indirizzo endpoint consente di creare indirizzi endpoint univoci per ogni endpoint in un servizio o, a determinate condizioni, di condividere un indirizzo tra gli endpoint. Nell'esempio seguente viene illustrato un indirizzo che utilizza il protocollo HTTPS con una porta non predefinita:  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Abbreviazione per il set in continua crescita di specifiche Web Service (WS), ad esempio WS-Security, WS-ReliableMessaging e così via, che sono implementate in WCF.  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Vedere anche
+- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

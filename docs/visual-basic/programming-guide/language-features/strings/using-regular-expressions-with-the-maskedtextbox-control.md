@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683690"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic
 In questo esempio viene illustrato come eseguire la conversione di espressioni regolari semplice da utilizzare con il <xref:System.Windows.Forms.MaskedTextBox> controllo.  
@@ -24,7 +24,7 @@ In questo esempio viene illustrato come eseguire la conversione di espressioni r
 |---------------------|-----------------|--------------------------------|  
 |0|Qualsiasi cifra singola compreso tra 0 e 9. Immettere i dati.|\d|  
 |9|Cifra o lo spazio. Voce facoltativa.|[\d]?|  
-|#|Cifra o lo spazio. Voce facoltativa. Se questa posizione viene lasciata vuota nella maschera, verrà visualizzata come spazio. Segno più (+) e meno (-) sono consentiti i segni.|[\d+-]?|  
+|#|Cifra o lo spazio. Voce facoltativa. Se questa posizione viene lasciata vuota nella maschera, verrà visualizzata come spazio. Segno più (+) e meno (-) sono consentiti i segni.|[ \d+-]?|  
 |L|Lettera ASCII. Immettere i dati.|[a-zA-Z]|  
 |?|Lettera ASCII. Voce facoltativa.|[a-zA-Z]?|  
 |&|Carattere. Immettere i dati.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
@@ -55,8 +55,8 @@ In questo esempio viene illustrato come eseguire la conversione di espressioni r
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Numero di telefono Stati Uniti, indicativo di località facoltativo. Se l'utente non desidera immettere i caratteri facoltativi, Anna può immettere gli spazi o posizionare il puntatore del mouse direttamente in corrispondenza della posizione della maschera rappresentato dal primo 0.|  
 |`$\d{6}.00`|`$999,999.00`|Valore di valuta compreso nell'intervallo tra 0 e 999999. La valuta, millesimo e caratteri decimali verranno sostituiti in fase di esecuzione con i relativi equivalenti specifici delle impostazioni cultura.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Convalida delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [Controllo MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Convalida delle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [Controllo MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

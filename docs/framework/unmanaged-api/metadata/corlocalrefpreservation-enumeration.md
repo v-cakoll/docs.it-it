@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9ed3cdac726fbdbf9ee2b33f42565d8594bc36e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669679"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>Enumerazione CorLocalRefPreservation
 Contiene valori di flag per il trattamento dei riferimenti locali.  
@@ -41,16 +41,16 @@ typedef enum CorLocalRefPreservation
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Non mantenere i riferimenti locali.|  
-|`MDPreserveLocalTypeRef`|Mantenere i riferimenti al tipo locale.|  
+|`MDPreserveLocalRefsNone`|Non Preserve riferimenti locali.|  
+|`MDPreserveLocalTypeRef`|Mantenere i riferimenti ai tipi locali.|  
 |`MDPreserveLocalMemberRef`|Mantenere i riferimenti membro locale.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** CorHdr. H  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

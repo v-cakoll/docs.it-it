@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-ms.openlocfilehash: eeb200646be91255d85136f8ee987ac312fc8b41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84c534e04749a933ed04c112bd0fb78123d204bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731374"
 ---
 # <a name="need-property-array-index"></a>Necessario indice della matrice di proprietà
 Questo valore della proprietà è costituito da una matrice, non da un unico valore. Non è stato specificato alcun indice per la matrice di proprietà a cui si sta tentando di accedere.  
@@ -18,6 +18,6 @@ Questo valore della proprietà è costituito da una matrice, non da un unico val
   
 -   Consultare la documentazione relativa al componente per individuare l'intervallo di indici appropriato per la matrice. Specificare un indice appropriato nell'istruzione di accesso alla proprietà.  
   
-## <a name="see-also"></a>Vedere anche  
- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)  
- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+## <a name="see-also"></a>Vedere anche
+- [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

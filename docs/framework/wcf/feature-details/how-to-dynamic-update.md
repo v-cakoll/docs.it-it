@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: aggiornamento dinamico'
+title: 'Procedura: Aggiornamento dinamico'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736598"
 ---
-# <a name="how-to-dynamic-update"></a>Procedura: aggiornamento dinamico
+# <a name="how-to-dynamic-update"></a>Procedura: Aggiornamento dinamico
 In questo argomento vengono descritti i passaggi di base necessari per creare e aggiornare in modo dinamico la configurazione del routing. In questo esempio, la configurazione iniziale del routing viene ottenuta dal file di configurazione e indirizza tutti i messaggi al servizio di calcolo regularCalc. Viene tuttavia aggiornata in un secondo momento a livello di codice per modificare l'endpoint di destinazione del servizio roundingCalc.  
   
 > [!NOTE]
@@ -296,5 +296,5 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

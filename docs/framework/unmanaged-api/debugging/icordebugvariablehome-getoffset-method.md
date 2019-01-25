@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a2ea7273fec62654c168d6786d3644b184ff7f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 687c3bb441c2a12529c873b4fa5f9283b9326a40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659069"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Metodo ICorDebugVariableHome::GetOffset
 Ottiene l'offset del Registro di base per una variabile.  
@@ -37,24 +37,24 @@ HRESULT GetOffset(
   
 #### <a name="parameters"></a>Parametri  
  `pOffset`  
- [out] L'offset del Registro di base.  
+ [out] L'offset dalla base registratore di cassa.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il metodo restituisce i valori seguenti:  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`S_OK`|La variabile è in una posizione di memoria relativo al registro.|  
 |`E_FAIL`|La variabile non è presente in una posizione di memoria relativo al registro.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

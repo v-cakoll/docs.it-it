@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dfb31a2fad8a07b3821ac85bbb43b25693f11d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25b7a708bb2f16433d9de9b5fc1c178cb48874a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658468"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>Metodo ExportNestedTypeForwarder
-Aggiunge un server d'inoltro di tipo per un tipo annidato per la tabella dei tipi dell'assembly specificato.  
+Aggiunge un server d'inoltro di tipo per un tipo annidato alla tabella di tipo di assembly specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,30 +45,30 @@ HRESULT ExportNestedTypeForwarder(
  ID dell'assembly da cui esportare.  
   
  `FileToken`  
- ID di token o l'assembly del file che definisce il tipo di file.  
+ ID token o l'assembly del file che definisce il tipo di file.  
   
  `TypeToken`  
  Token per il tipo.  
   
  `ParentType`  
- Token di tipo padre.  
+ Token del tipo padre.  
   
  `pszTypename`  
  Nome completo del tipo da esportare.  
   
  `dwFlags`  
- `ComType` flag, ad esempio `tdPublic` o `tdNested`.  
+ `ComType` ad esempio i flag `tdPublic` o `tdNested`.  
   
  `pType`  
  Riceve il token del tipo di esportazione. Ciò è necessario solo per la creazione di tipi annidati.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce S_OK.  
+ Restituisce S_OK se il metodo ha esito positivo.  
   
 ## <a name="requirements"></a>Requisiti  
  Richiede alink.h  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)

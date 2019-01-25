@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a6830f47d5cac2cf9c84144c18486489b0ec581
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b73c9d6fa802a90e59345eb477bccfe80cf2275e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704930"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>Metodo ISymUnmanagedDocument::GetLanguageVendor
-Recupera il fornitore di linguaggio di questo documento.  
+Ottiene il fornitore di linguaggio di questo documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,10 +36,10 @@ HRESULT GetLanguageVendor(
   
 #### <a name="parameters"></a>Parametri  
  `pRetVal`  
- [out] Puntatore a una variabile che riceve il fornitore di linguaggio.  
+ [out] Puntatore a una variabile che riceve il fornitore del linguaggio.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se il metodo ha esito positivo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

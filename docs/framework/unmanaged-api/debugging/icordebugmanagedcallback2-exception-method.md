@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d46dcd43ffe6963d1177a395b855a287182cdff0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685633"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Metodo ICorDebugManagedCallback2::Exception
-Notifica al debugger che si è iniziata una ricerca di un gestore di eccezioni.  
+Notifica al debugger che una ricerca di un gestore di eccezioni è stato avviato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,46 +42,46 @@ HRESULT Exception (
   
 #### <a name="parameters"></a>Parametri  
  `pAppDomain`  
- [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il thread su cui è stata generata l'eccezione.  
+ [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.  
   
  `pThread`  
- [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread su cui è stata generata l'eccezione.  
+ [in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.  
   
  `pFrame`  
- [in] Un puntatore a un oggetto ICorDebugFrame che rappresenta un frame, come determinato dal `dwEventType` parametro. Per ulteriori informazioni, vedere la tabella nella sezione Osservazioni.  
+ [in] Un puntatore a un oggetto ICorDebugFrame che rappresenta un frame, come determinato dal `dwEventType` parametro. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
   
  `nOffset`  
- [in] Valore intero che specifica un offset, come determinato dal `dwEventType` parametro. Per ulteriori informazioni, vedere la tabella nella sezione Osservazioni.  
+ [in] Intero che specifica un offset, come determinato dal `dwEventType` parametro. Per altre informazioni, vedere la tabella nella sezione Osservazioni.  
   
  `dwEventType`  
- [in] Valore dell'enumerazione CorDebugExceptionCallbackType che specifica il tipo di callback dell'eccezione.  
+ [in] Valore dell'enumerazione CorDebugExceptionCallbackType che specifica il tipo di questo callback di eccezione.  
   
  `dwFlags`  
- [in] Il valore di [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumerazione che specifica informazioni aggiuntive sull'eccezione  
+ [in] Valore di [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumerazione che specifica informazioni aggiuntive sull'eccezione  
   
 ## <a name="remarks"></a>Note  
- Il `Exception` callback viene chiamato in vari momenti durante la fase di ricerca del processo di gestione delle eccezioni. Ovvero, può essere chiamato più volte durante la rimozione di un'eccezione.  
+ Il `Exception` callback viene chiamato in vari momenti durante la fase di ricerca del processo di gestione delle eccezioni. Vale a dire può essere chiamato più volte durante la rimozione di un'eccezione.  
   
- L'eccezione in fase di elaborazione può essere recuperato dall'oggetto ICorDebugThread a cui fa riferimento il `pThread` parametro.  
+ L'eccezione in fase di elaborazione può essere recuperato dall'oggetto ICorDebugThread fa riferimento il `pThread` parametro.  
   
- Il frame e l'offset sono determinati dalle `dwEventType` parametro come indicato di seguito:  
+ Il frame specifico e l'offset sono determinati dal `dwEventType` parametro come indicato di seguito:  
   
 |Valore di `dwEventType`|Valore di `pFrame`|Valore di `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Frame che ha generato l'eccezione.|Puntatore all'istruzione nel frame.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Il frame di codice utente più vicino al punto dell'eccezione generata.|Puntatore all'istruzione nel frame.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Il frame che contiene il gestore catch.|Offset Microsoft intermediate language (MSIL) dell'inizio del gestore catch.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Frame che ha generato l'eccezione.|Il puntatore dell'istruzione nel frame.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Il frame di codice utente più vicino al punto dell'eccezione generata.|Il puntatore dell'istruzione nel frame.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Frame che contiene il gestore catch.|Offset Microsoft intermediate language (MSIL) dell'inizio del gestore catch.|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Non è definito.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664590"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>Funzione _EFN_GetManagedObjectFieldInfo
 Ottiene l'offset per un campo dall'inizio di un oggetto e il valore del campo, usando il puntatore all'oggetto e il nome di campo forniti.  
@@ -43,7 +43,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  [in] Puntatore al client di debug.  
   
  `objAddr`  
- [in] Puntatore a un oggetto gestito.  
+ [in] Un puntatore all'oggetto gestito.  
   
  szFieldName  
  [in] Un puntatore all'oggetto gestito per il nome del campo.  
@@ -55,16 +55,16 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  [out] L'offset dal `objAddr` al campo. Questo parametro può essere null.  
   
 ## <a name="remarks"></a>Note  
- Se l'offset è 0, viene scritto alcun offset.  
+ Se l'offset è 0, non viene scritto alcun offset.  
   
- Se non è presente nessun codice gestito sul thread attualmente in contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore funzionalità 0xa0 e un codice di errore di 0x1000.  
+ Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** SOS_Stacktrace. h  
+ **Intestazione:** SOS_Stacktrace.h  
   
  **Versione di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

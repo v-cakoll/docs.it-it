@@ -2,12 +2,12 @@
 title: Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659095"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 Gli alberi dei comandi di query di output sono molto simili alle query esprimibili in SQL. Per generare SQL da un albero dei comandi di output, tuttavia i writer del provider devono affrontare alcune difficoltà comuni. In questo argomento vengono illustrate tali difficoltà, mentre nell'argomento successivo il provider di esempio mostra come risolverle.  
@@ -130,13 +130,13 @@ ON b.y = d.z
  Inoltre, quando si rendono bidimensionali i join, è possibile che si verifichi un conflitto tra gli alias delle tabelle coinvolte (o sottoquery). In questo caso, è necessario rinominarle.  
   
 ## <a name="avoid-select-"></a>Evitare SELECT *  
- Non usare `SELECT *` per effettuare la selezione dalle tabelle di base. Il modello di archiviazione in un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applicazione può includere solo un subset di colonne presenti nella tabella di database. In questo caso, è possibile che `SELECT *` produca un risultato errato. Al contrario, è necessario specificare tutte le colonne coinvolte tramite i nomi di colonna del tipo di risultato delle espressioni interessate.  
+ Non usare `SELECT *` per effettuare la selezione dalle tabelle di base. Il modello di archiviazione in un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] applicazione può includere solo un subset delle colonne che sono nella tabella di database. In questo caso, è possibile che `SELECT *` produca un risultato errato. Al contrario, è necessario specificare tutte le colonne coinvolte tramite i nomi di colonna del tipo di risultato delle espressioni interessate.  
   
 ## <a name="reuse-of-expressions"></a>Riutilizzo delle espressioni  
- È possibile riutilizzare le espressioni nella struttura ad albero dei comandi di query passata da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Non presupporre che ogni espressione sia visualizzata solo una volta nella struttura ad albero dei comandi di query.  
+ È possibile riutilizzare le espressioni nell'albero dei comandi di query passato da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Non presupporre che ogni espressione sia visualizzata solo una volta nella struttura ad albero dei comandi di query.  
   
 ## <a name="mapping-primitive-types"></a>Mapping di tipi primitivi  
- Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Inoltre, evitare di mapping a tipi che non può essere usato per molte operazioni, come i tipi BLOB (ad esempio, `ntext` in SQL Server).  
+ Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Inoltre, evitare di mapping a tipi non possono essere usati per molte operazioni, come i tipi BLOB (ad esempio, `ntext` in SQL Server).  
   
-## <a name="see-also"></a>Vedere anche  
- [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Vedere anche
+- [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

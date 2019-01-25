@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f147fef90d7a9033bdfd07b75e5c33efd2c6881f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59dad67db9f9f9184a139f848020cf866a3a6771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716830"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Metodo IMetaDataAssemblyImport::GetFileProps
 Ottiene le proprietà del file con la firma dei metadati specificato.  
@@ -49,28 +49,28 @@ HRESULT GetFileProps (
  [out] Il nome semplice del file.  
   
  `cchName`  
- [in] La dimensione in caratteri wide, di `szName`.  
+ [in] Le dimensioni, in caratteri wide, di `szName`.  
   
  `pchName`  
- [out] Numero di caratteri "wide" effettivamente restituiti nella `szName`.  
+ [out] Numero di caratteri wide effettivamente restituiti nella `szName`.  
   
  `ppbHashValue`  
- [out] Puntatore al valore hash. Si tratta dell'hash, usando l'algoritmo SHA-1, del file.  
+ [out] Puntatore al valore hash. Questo è l'hash, usando l'algoritmo SHA-1, del file.  
   
  `pcbHashValue`  
- [out] Il numero di caratteri "wide" nel valore hash restituito.  
+ [out] Il numero di caratteri wide nel valore restituito di hash.  
   
  `pdwFileFlags`  
- [out] Un puntatore per i flag che descrivono i metadati applicati a un file. Il valore del flag è una combinazione di uno o più [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valori.  
+ [out] Puntatore al flag che descrivono i metadati applicati a un file. Il valore dei flag è una combinazione di uno o più [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valori.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforma:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -1,36 +1,36 @@
 ---
-title: 'Procedura: comprimere e nascondere sezioni di codice (Visual Basic)'
+title: 'Procedura: Comprimere e nascondere sezioni di codice (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: f6c272b7ac016258d99873512cb789bba6739727
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1282269f06f89645c213f3daaa1bd29e95a44d35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668717"
 ---
-# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Procedura: comprimere e nascondere sezioni di codice (Visual Basic)
-Il `#Region` direttiva consente di comprimere e nascondere sezioni di codice nel file di Visual Basic. Il `#Region` direttiva consente di specificare un blocco di codice che è possibile espandere o comprimere quando si utilizza l'editor di codice di Visual Studio. La possibilità di nascondere in modo selettivo il codice rende i file più gestibile e più facile da leggere. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).  
+# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Procedura: Comprimere e nascondere sezioni di codice (Visual Basic)
+Il `#Region` direttiva consente di comprimere e nascondere sezioni di codice nel file di Visual Basic. Il `#Region` direttiva consente di specificare un blocco di codice che è possibile espandere o comprimere quando si usa l'editor di Visual Studio code. La possibilità di nascondere in modo selettivo il codice rende i file più gestibile e più facile da leggere. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).  
   
- `#Region` direttive supportano la semantica di blocco di codice, ad esempio `#If...#End If`. Ciò significa che non possono iniziare in un blocco e terminare con un altro. inizio e fine deve essere nello stesso blocco. `#Region` le direttive non sono supportate all'interno delle funzioni.  
+ `#Region` direttive supportano la semantica di blocco di codice, ad esempio `#If...#End If`. Ciò significa che non possono iniziare in un blocco e terminare con un altro. l'inizio e fine deve essere nello stesso blocco. `#Region` direttive non sono supportate all'interno delle funzioni.  
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Per comprimere e nascondere una sezione di codice  
   
--   Inserire la sezione di codice tra le `#Region` e `#End Region` istruzioni, come nell'esempio seguente:  
+-   Inserire la sezione di codice tra il `#Region` e `#End Region` (istruzioni), come nell'esempio seguente:  
   
      [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
-     Il `#Region` blocco può essere utilizzato più volte in un file di codice; pertanto, gli utenti possono definire i propri blocchi di routine e le classi che a sua volta, possono essere compressi. `#Region` blocchi possono anche essere annidati all'interno di altri `#Region` blocchi.  
+     Il `#Region` blocco può essere usato più volte in un file di codice, di conseguenza, gli utenti possono definire i propri blocchi di procedure e le classi che a sua volta, possono essere compressi. `#Region` blocchi possono anche essere annidati all'interno di altri `#Region` blocchi.  
   
     > [!NOTE]
-    >  Nascondere il codice non impedisce che venga compilato e non influisce sulla `#If...#End If` istruzioni.  
+    >  Nascondere il codice non impedisce che venga compilato e non influisce sul `#If...#End If` istruzioni.  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [Direttiva #Region](../../../visual-basic/language-reference/directives/region-directive.md)  
- [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Struttura](/visualstudio/ide/outlining)
+## <a name="see-also"></a>Vedere anche
+- [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Direttiva #Region](../../../visual-basic/language-reference/directives/region-directive.md)
+- [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Struttura](/visualstudio/ide/outlining)

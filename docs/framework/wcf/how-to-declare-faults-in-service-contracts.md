@@ -1,27 +1,27 @@
 ---
-title: 'Procedura: dichiarare errori nei contratti di servizio'
+title: 'Procedura: Dichiarare errori nei contratti di servizio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727950"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Procedura: dichiarare errori nei contratti di servizio
-Nel codice gestito, vengono generate eccezioni quando si verificano condizioni di errore. Nelle applicazioni Windows Communication Foundation (WCF), tuttavia, i contratti di servizio specificare le informazioni di errore viene restituite ai client dichiarando errori SOAP nel contratto di servizio. Per una panoramica della relazione tra eccezioni ed errori, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+# <a name="how-to-declare-faults-in-service-contracts"></a>Procedura: Dichiarare errori nei contratti di servizio
+Nel codice gestito, vengono generate eccezioni quando si verificano condizioni di errore. Nelle applicazioni Windows Communication Foundation (WCF), tuttavia, i contratti di servizio specificare le informazioni di errore viene restituite ai client dichiarando errori SOAP nel contratto di servizio. Per una panoramica sulla relazione tra eccezioni ed errori, vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Creare un contratto di servizio che specifica un errore SOAP.  
   
-1.  Creare un contratto di servizio che contiene almeno un'operazione. Per un esempio, vedere [procedura: definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
+1.  Creare un contratto di servizio che contiene almeno un'operazione. Per un esempio, vedere [Procedura: Definire un contratto di servizio](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
   
-2.  Selezionare un'operazione che può specificare una condizione di errore in merito alla quale i client prevedono di ricevere una notifica. Per decidere quali condizioni di errore giustificano la restituzione di errori SOAP ai client, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+2.  Selezionare un'operazione che può specificare una condizione di errore in merito alla quale i client prevedono di ricevere una notifica. Per decidere quali condizioni di errore giustificano la restituzione di errori SOAP ai client, vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
-3.  Applicare una classe <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> all'operazione selezionata e passare un tipo di errore serializzabile al costruttore. Per informazioni dettagliate sulla creazione e utilizzo di tipi serializzabili, vedere [specifica di trasferimento dei dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Nell'esempio seguente viene illustrato come specificare che l'operazione `SampleMethod` può produrre un `GreetingFault`.  
+3.  Applicare una classe <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> all'operazione selezionata e passare un tipo di errore serializzabile al costruttore. Per informazioni dettagliate sulla creazione e uso di tipi serializzabili, vedere [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Nell'esempio seguente viene illustrato come specificare che l'operazione `SampleMethod` può produrre un `GreetingFault`.  
   
      [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
      [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
@@ -44,6 +44,6 @@ Nel codice gestito, vengono generate eccezioni quando si verificano condizioni d
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

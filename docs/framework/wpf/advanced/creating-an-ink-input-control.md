@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664811"
 ---
 # <a name="creating-an-ink-input-control"></a>Creazione di un controllo di input penna
 È possibile creare un controllo personalizzato che in modo dinamico e in modo statico viene eseguito il rendering dell'input penna. Vale a dire, eseguire il rendering dell'input penna come un utente consente di disegnare un tratto, causando l'input penna venga visualizzato "fluire" dalla penna del tablet PC e visualizzarlo dopo che viene aggiunto al controllo, tramite la penna del tablet PC, incollato dagli Appunti o caricato da un file. Per eseguire il rendering dinamico, è necessario usare il controllo un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Per eseguire il rendering statico, è necessario eseguire l'override dei metodi di evento dello stilo (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) per raccogliere <xref:System.Windows.Input.StylusPoint> dati, creare i tratti e aggiungerle a un <xref:System.Windows.Controls.InkPresenter> (che esegue il rendering dell'input penna in del controllo).  
   
  In questo argomento sono contenute le seguenti sottosezioni:  
   
--   [Procedura: raccogliere dati di punti dello stilo e creare tratti input penna](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [Procedura: Raccogliere dati di punti dello stilo e creare tratti input penna](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Procedura: abilitare il controllo accettare l'Input da Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [Procedura: Abilitare il controllo accettare l'Input da Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [Uso combinato](#PuttingItTogether)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44085773"
 -   [Conclusione](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Procedura: raccogliere dati di punti dello stilo e creare tratti input penna  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Procedura: Raccogliere dati di punti dello stilo e creare tratti input penna  
  Per creare un controllo che consente di raccogliere e gestisce l'input penna tratti di eseguire le operazioni seguenti:  
   
 1.  Derivare una classe dalla classe <xref:System.Windows.Controls.Control> o una delle classi derivate da <xref:System.Windows.Controls.Control>, ad esempio <xref:System.Windows.Controls.Label>.  
@@ -55,7 +55,7 @@ ms.locfileid: "44085773"
      [!code-csharp[AdvancedInkTopicsSamples#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
     [!code-csharp[AdvancedInkTopicsSamples#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
-4.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnStylusDown%2A>.  In questo metodo acquisisce lo stilo con una chiamata a <xref:System.Windows.Input.Stylus.Capture%2A>. Per acquisire lo stilo, si verifica il controllo per continuare a ricevere <xref:System.Windows.UIElement.StylusMove> e <xref:System.Windows.UIElement.StylusUp> eventi anche se lo stilo esce i limiti del controllo. Ciò non è obbligatoria, ma quasi sempre desiderato per un'esperienza utente soddisfacente. Creare una nuova <xref:System.Windows.Input.StylusPointCollection> raccogliere <xref:System.Windows.Input.StylusPoint> dei dati. Infine, aggiungere il set iniziale di <xref:System.Windows.Input.StylusPoint> dei dati per il <xref:System.Windows.Input.StylusPointCollection>.  
+4.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnStylusDown%2A> .  In questo metodo acquisisce lo stilo con una chiamata a <xref:System.Windows.Input.Stylus.Capture%2A>. Per acquisire lo stilo, si verifica il controllo per continuare a ricevere <xref:System.Windows.UIElement.StylusMove> e <xref:System.Windows.UIElement.StylusUp> eventi anche se lo stilo esce i limiti del controllo. Ciò non è obbligatoria, ma quasi sempre desiderato per un'esperienza utente soddisfacente. Creare una nuova <xref:System.Windows.Input.StylusPointCollection> raccogliere <xref:System.Windows.Input.StylusPoint> dei dati. Infine, aggiungere il set iniziale di <xref:System.Windows.Input.StylusPoint> dei dati per il <xref:System.Windows.Input.StylusPointCollection>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
@@ -68,18 +68,18 @@ ms.locfileid: "44085773"
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Procedura: abilitare il controllo accettare l'Input da Mouse  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Procedura: Abilitare il controllo accettare l'Input da Mouse  
  Se si aggiungere il controllo precedente all'applicazione, eseguirla e utilizza il mouse come un dispositivo di input, si noterà che i tratti non sono persistenti. Per rendere persistenti i tratti quando il puntatore del mouse viene usato come dispositivo di input le operazioni seguenti:  
   
 1.  Eseguire l'override di <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> e creare un nuovo <xref:System.Windows.Input.StylusPointCollection> ottenere la posizione del mouse quando si è verificato l'evento e creare un <xref:System.Windows.Input.StylusPoint> usando i dati del punto e aggiungere il <xref:System.Windows.Input.StylusPoint> per il <xref:System.Windows.Input.StylusPointCollection>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
-2.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnMouseMove%2A>. Ottenere la posizione del mouse quando si è verificato l'evento e creare un <xref:System.Windows.Input.StylusPoint> usando i dati del punto.  Aggiungere il <xref:System.Windows.Input.StylusPoint> per il <xref:System.Windows.Input.StylusPointCollection> oggetto creato in precedenza.  
+2.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnMouseMove%2A> . Ottenere la posizione del mouse quando si è verificato l'evento e creare un <xref:System.Windows.Input.StylusPoint> usando i dati del punto.  Aggiungere il <xref:System.Windows.Input.StylusPoint> per il <xref:System.Windows.Input.StylusPointCollection> oggetto creato in precedenza.  
   
      [!code-csharp[AdvancedInkTopicsSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
-3.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>.  Creare un nuovo <xref:System.Windows.Ink.Stroke> con il <xref:System.Windows.Input.StylusPointCollection> dei dati e aggiungere i nuovi <xref:System.Windows.Ink.Stroke> creato per il <xref:System.Windows.Controls.InkPresenter.Strokes%2A> raccolta del <xref:System.Windows.Controls.InkPresenter>.  
+3.  Eseguire l'override del metodo <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> .  Creare un nuovo <xref:System.Windows.Ink.Stroke> con il <xref:System.Windows.Input.StylusPointCollection> dei dati e aggiungere i nuovi <xref:System.Windows.Ink.Stroke> creato per il <xref:System.Windows.Controls.InkPresenter.Strokes%2A> raccolta del <xref:System.Windows.Controls.InkPresenter>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   
@@ -98,6 +98,6 @@ ms.locfileid: "44085773"
 ## <a name="conclusion"></a>Conclusione  
  È possibile creare un controllo che consente di raccogliere ed esegue il rendering dell'input penna eseguendo l'override dei metodi di evento dello stilo. Tramite la creazione di un controllo personalizzato, derivare il proprio <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classi e inserire le informazioni di in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, è possibile implementare qualsiasi comportamento immaginabile con input penna. È possibile utilizzare il <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati, offrendo la possibilità di personalizzare <xref:System.Windows.Input.Stylus> input ed eseguirne il rendering sullo schermo come appropriato per l'applicazione. Perché si dispone di accesso di basso livello per il <xref:System.Windows.Input.StylusPoint> dati, è possibile implementare una raccolta dell'input penna ed eseguirne il rendering con prestazioni ottimali per l'applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione avanzata dell'input penna](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [L'accesso e modifica dell'Input penna](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- [Gestione avanzata dell'input penna](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [L'accesso e modifica dell'Input penna](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

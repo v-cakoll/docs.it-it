@@ -11,15 +11,15 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 192309a7ca728feb300e867bf2340e669e9da16c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686673"
 ---
 # <a name="if-operator-visual-basic"></a>Operatore If (Visual Basic)
-Valutazione per restituire in modo condizionale uno dei due valori di corto circuito Usa. Il `If` operatore può essere chiamato con tre argomenti o con due argomenti.  
+Utilizzi di corto circuito di valutazione per restituire in modo condizionale uno dei due valori. Il `If` operatore può essere chiamato con tre argomenti o con due argomenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -27,40 +27,40 @@ Valutazione per restituire in modo condizionale uno dei due valori di corto circ
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## <a name="if-operator-called-with-three-arguments"></a>Se l'operatore chiamato con tre argomenti  
- Quando `If` viene chiamato con tre argomenti, il primo argomento deve restituire un valore che è possibile eseguire il cast come un `Boolean`. Che `Boolean` valore determina quale dei due argomenti viene valutato e restituito. Nell'elenco seguente viene applicata solo quando il `If` operatore viene chiamato con tre argomenti.  
+## <a name="if-operator-called-with-three-arguments"></a>Se viene chiamato operatore con tre argomenti  
+ Quando `If` viene chiamato con tre argomenti, il primo argomento deve restituire un valore che è possibile eseguire il cast come un `Boolean`. Che `Boolean` valore determina quale dei due argomenti viene valutata e restituita. Nell'elenco seguente si applica solo quando il `If` operatore viene chiamato con tre argomenti.  
   
 ## <a name="parts"></a>Parti  
   
 |Termine|Definizione|  
 |---|---|  
-|`argument1`|Obbligatorio. `Boolean`. Determina quale degli altri argomenti per valutare e restituire.|  
-|`argument2`|Obbligatorio. `Object`. Valutata e restituita se `argument1` restituisce `True`.|  
-|`argument3`|Obbligatorio. `Object`. Valutata e restituita se `argument1` restituisce `False` o se `argument1` è un [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variabile che restituisce [nulla](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|Obbligatorio. `Boolean`. Determina gli altri argomenti per valutare e restituire.|  
+|`argument2`|Obbligatorio. `Object`. Valutata e restituita se `argument1` restituisca `True`.|  
+|`argument3`|Obbligatorio. `Object`. Valutata e restituita se `argument1` restituisca `False` o se `argument1` è un [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variabile che restituisca [Nothing](../../../visual-basic/language-reference/nothing.md).|  
   
- Un `If` operatore che viene chiamato con tre argomenti funziona come un `IIf` funzione ad eccezione del fatto che usa valutazione di corto circuito. Un `IIf` funzione valuta sempre tutti i tre argomenti, mentre un `If` operatore che ha tre argomenti restituisce solo due di essi. Il primo `If` viene valutato l'argomento e il risultato viene eseguito il cast come un `Boolean` valore `True` o `False`. Se il valore è `True`, `argument2` viene valutato e il relativo valore viene restituito, ma `argument3` non viene valutato. Se il valore della `Boolean` espressione è `False`, `argument3` viene valutato e il relativo valore viene restituito, ma `argument2` non viene valutato. Nell'esempio seguente viene illustrato l'utilizzo di `If` quando vengono utilizzati tre argomenti:  
+ Un' `If` operatore che viene chiamato con tre argomenti funziona come un `IIf` funzioni ad eccezione del fatto che usi valutazione di corto circuito. Un' `IIf` funzione valuta sempre tutti e tre argomenti, mentre un `If` operatore con tre argomenti viene valutata solo due di essi. Il primo `If` viene valutato l'argomento e il risultato viene eseguito il cast come un `Boolean` , valore `True` o `False`. Se il valore è `True`, `argument2` viene valutata e il relativo valore viene restituito, ma `argument3` non viene valutato. Se il valore della `Boolean` espressione è `False`, `argument3` viene valutata e il relativo valore viene restituito, ma `argument2` non viene valutato. Gli esempi seguenti illustrano l'uso di `If` quando vengono usati tre argomenti:  
   
  [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
   
- Nell'esempio seguente viene illustrato il valore della valutazione di corto circuito. L'esempio mostra due tentativi di dividere una variabile `number` dalla variabile `divisor` eccetto quando `divisor` è zero. In tal caso, deve essere restituito il valore 0, e deve essere eseguito alcun tentativo di eseguire la divisione perché provocherebbe un errore di run-time. Poiché il `If` utilizzo delle espressioni di valutazione di corto circuito, valuta il secondo o il terzo argomento, a seconda del valore del primo argomento. Se il primo argomento è true, è consigliabile valutare il secondo argomento ed eseguire la divisione il divisore è diverso da zero. Se il primo argomento è false, viene valutato solo il terzo argomento e viene restituito 0. Pertanto, quando il divisore è 0, viene eseguito alcun tentativo di eseguire la divisione e non verranno generati errori. Tuttavia, poiché `IIf` non utilizza la valutazione di corto circuito, il secondo argomento viene valutato anche quando il primo argomento è false. Viene generato un errore di divisione per zero in fase di esecuzione.  
+ L'esempio seguente illustra il valore di valutazione di corto circuito. L'esempio mostra due tentativi di dividere una variabile `number` dalla variabile `divisor` eccetto quando `divisor` è uguale a zero. In tal caso, deve essere restituito un valore 0 e debba eseguito alcun tentativo di eseguire la divisione perché provocherebbe un errore di run-time. Poiché il `If` utilizzo delle espressioni di valutazione di corto circuito, valuta il secondo o il terzo argomento, a seconda del valore del primo argomento. Se il primo argomento è true, il divisore è diverso da zero ed è opportuno valutare il secondo argomento ed eseguire la divisione. Se il primo argomento è false, solo il terzo argomento viene valutato e viene restituito 0. Pertanto, quando il divisore è 0, viene eseguito alcun tentativo di eseguire la divisione e non verranno generati errori. Tuttavia, poiché `IIf` non usa la valutazione di corto circuito, il secondo argomento è valutato anche quando il primo argomento è false. Ciò causa un errore di divisione per zero in fase di esecuzione.  
   
  [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
   
-## <a name="if-operator-called-with-two-arguments"></a>Se chiamato operatore con due argomenti  
- Il primo argomento `If` può essere omesso. In questo modo l'operatore da chiamare usando solo due argomenti. Nell'elenco seguente viene applicata solo quando il `If` operatore viene chiamato con due argomenti.  
+## <a name="if-operator-called-with-two-arguments"></a>Se viene chiamato operatore con due argomenti  
+ Il primo argomento `If` può essere omesso. In questo modo l'operatore di chiamata usando solo due argomenti. Nell'elenco seguente si applica solo quando il `If` operatore viene chiamato con due argomenti.  
   
 ## <a name="parts"></a>Parti  
   
 |Termine|Definizione|  
 |---|---|  
 |`argument2`|Obbligatorio. `Object`. Deve essere un riferimento o nullable. Valutata e restituita quando restituisce un valore qualsiasi diverso da `Nothing`.|  
-|`argument3`|Obbligatorio. `Object`. Valutata e restituita se `argument2` restituisce `Nothing`.|  
+|`argument3`|Obbligatorio. `Object`. Valutata e restituita se `argument2` restituisca `Nothing`.|  
   
- Quando il `Boolean` viene omesso, il primo argomento deve essere un riferimento o nullable. Se il primo argomento restituisce `Nothing`, viene restituito il valore del secondo argomento. In tutti gli altri casi, viene restituito il valore del primo argomento. Nell'esempio seguente viene illustrato il funzionamento di questa valutazione.  
+ Quando il `Boolean` viene omesso, il primo argomento deve essere un riferimento o nullable. Se il primo argomento restituisce `Nothing`, viene restituito il valore del secondo argomento. In tutti gli altri casi, viene restituito il valore del primo argomento. L'esempio seguente illustra il funzionamento di questa versione di valutazione.  
   
  [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
- [Tipi di valori nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Interaction.IIf%2A>
+- [Tipi di valori nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709221"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Si verificano tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -45,7 +45,7 @@ Si verificano tutte le comunicazioni con un servizio Windows Communication Found
   
  Quando la <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> metodo viene chiamato (ovvero, quando l'applicazione host tenta di avviare il servizio), il sistema cerca una [ \<servizio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento con un attributo name che specifica "UE. Samples.HelloService". Se il [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento viene trovato, il sistema carica la classe specificata e crea gli endpoint utilizzando le definizioni di endpoint specificate nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.  
   
- Le intestazioni facoltative vengono dichiarate in un [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che consente di distinguere tra due intestazioni: client "Gold" dal `http://tempuri1.org/` e ai client "Standard" `http://tempuri2.org/`. Il client chiama questo servizio deve avere l'appropriato [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.  
+ Le intestazioni facoltative vengono dichiarate in un [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che consente di distinguere tra due intestazioni: I client "Gold" dal `http://tempuri1.org/` e ai client "Standard" `http://tempuri2.org/`. Il client chiama questo servizio deve avere l'appropriato [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -82,8 +82,8 @@ Si verificano tutte le comunicazioni con un servizio Windows Communication Found
   
  Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.EndpointAddress>  
- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hosting](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.EndpointAddress>
+- [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Hosting](../../../docs/framework/wcf/feature-details/hosting.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670316"
 ---
 # <a name="drawings-how-to-topics"></a>Procedure relative agli oggetti Drawing
-Negli argomenti di questa sezione viene illustrato come utilizzare <xref:System.Windows.Media.Drawing> oggetti per disegnare forme, immagini o testo.  
+Negli argomenti di questa sezione viene descritto come utilizzare <xref:System.Windows.Media.Drawing> oggetti per disegnare forme, immagini o testo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Applicare un GuidelineSet a un disegno](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
@@ -29,8 +29,8 @@ Negli argomenti di questa sezione viene illustrato come utilizzare <xref:System.
   [Riprodurre contenuti multimediali usando un oggetto VideoDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
   [Usare un disegno come origine di immagini](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.Drawing>  
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.Drawing>
+- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: accedere agli oggetti UTC e l'ora locale zona predefiniti"
+title: "Procedura: Accedere ora UTC e l'ora locale zona agli oggetti predefiniti"
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f074e6f6d9b11cc7d7405adced3a4523a31676fa
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658026"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procedura: accedere agli oggetti UTC e l'ora locale zona predefiniti
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procedura: Accedere ora UTC e l'ora locale zona agli oggetti predefiniti
 
 Il <xref:System.TimeZoneInfo> classe fornisce due proprietà, <xref:System.TimeZoneInfo.Utc%2A> e <xref:System.TimeZoneInfo.Local%2A>, che forniscono il codice di accesso agli oggetti fuso orario predefinito. In questo argomento viene illustrato come accedere agli oggetti <xref:System.TimeZoneInfo> restituiti da tali proprietà.
 
@@ -57,6 +57,6 @@ L'esempio presenta i requisiti seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
-* [Ricerca dei fusi orari definiti in un sistema locale](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-* [Procedura: Creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)
+- [Ricerca dei fusi orari definiti in un sistema locale](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [Procedura: Creare un'istanza di un oggetto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)

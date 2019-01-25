@@ -14,47 +14,47 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674193"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Suggerimenti per il controllo TableLayoutPanel
-Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce potenti funzioni di layout che è necessario considerare con attenzione prima di usare in Windows Form.  
+Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce funzionalità di layout avanzate che è opportuno considerare con attenzione prima di utilizzare nei Windows Form.  
   
 ## <a name="recommendations"></a>Suggerimenti  
- I suggerimenti seguenti consentono di utilizzare il <xref:System.Windows.Forms.TableLayoutPanel> controllo relativo ottimale.  
+ I suggerimenti seguenti consentiranno di usare il <xref:System.Windows.Forms.TableLayoutPanel> controllo a proprio vantaggio migliore.  
   
-### <a name="targeted-use"></a>Utilizzo di destinazione  
- Utilizzare il <xref:System.Windows.Forms.TableLayoutPanel> controllare con cautela. È consigliabile non utilizzare in tutte le situazioni che richiedono un layout ridimensionabile. Nell'elenco seguente vengono descritti i layout che traggono dall'utilizzo del <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
+### <a name="targeted-use"></a>Uso specifici  
+ Usare il <xref:System.Windows.Forms.TableLayoutPanel> controllare in modo sporadico. Non è necessario usarlo in tutte le situazioni che richiedono un layout ridimensionabile. Nell'elenco seguente vengono descritti i layout che traggono vantaggio dall'utilizzo di più il <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
   
--   Layout in cui sono presenti più parti del form di ridimensionare in modo proporzionale a altro.  
+-   Layout in cui sono presenti più parti nel formato che ridimensionano in modo proporzionale tra loro.  
   
--   Layout che verrà generato in modo dinamico in fase di esecuzione, ad esempio moduli di immissione dati che dispongono di campi personalizzabili aggiunte o sottratte o modificati in base alle preferenze.  
+-   Layout che verranno generate dinamicamente in fase di esecuzione, ad esempio form di immissione di dati con campi personalizzabili dall'utente aggiunte o sottratte o modificato in base alle preferenze.  
   
 -   Layout che deve rimanere in una dimensione fissa globale. Ad esempio, potrebbe essere una finestra di dialogo che deve rimanere inferiore a 800 x 600, ma è necessario supportare le stringhe localizzate.  
   
- Nell'elenco seguente vengono descritti i layout che non traggono dall'utilizzo di <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
+ Nell'elenco seguente vengono descritti i layout che non traggono notevoli vantaggi dall'utilizzo di <xref:System.Windows.Forms.TableLayoutPanel> controllo:  
   
--   Semplice moduli di immissione dati con una singola colonna di etichette e una singola colonna di aree di immissione di testo.  
+-   Semplice moduli di immissione dati con una sola colonna di etichette e una singola colonna delle aree di immissione di testo.  
   
--   Form con un unico grande Visualizza l'area che deve occupare tutto lo spazio disponibile quando si verifica un ridimensionamento. Un esempio di questo è un modulo che consente di visualizzare un singolo <xref:System.Windows.Forms.PropertyGrid> controllo. In questo caso, utilizzare l'ancoraggio perché nessun altro elemento deve espandere quando il form viene ridimensionato.  
+-   Form con un unico grande Visualizza area che deve occupare tutto lo spazio disponibile quando si verifica un ridimensionamento. Un esempio di questo oggetto è una forma che visualizza una singola <xref:System.Windows.Forms.PropertyGrid> controllo. In questo caso, utilizzare l'ancoraggio perché nessun altro elemento deve espandere quando il form viene ridimensionato.  
   
- Scegliere con attenzione i controlli che devono essere un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Se si dispone di spazio per il testo per l'aumento delle dimensioni del 30% tramite ancoraggio, è consigliabile utilizzare il <xref:System.Windows.Forms.Control.Anchor%2A> solo per la proprietà. Se è possibile stimare lo spazio richiesto dal layout, consente di <xref:System.Windows.Forms.Control.Dock%2A> e <xref:System.Windows.Forms.Control.Anchor%2A> anziché stimare i dettagli dello spazio rimanente e <xref:System.Windows.Forms.Control.AutoSize%2A> comportamento.  
+ Scegliere con attenzione i controlli che devono essere in un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Se si dispone di spazio per la crescita del 30% usando l'ancoraggio del testo, è consigliabile usare il <xref:System.Windows.Forms.Control.Anchor%2A> solo la proprietà. Se è possibile stimare lo spazio richiesto per il layout, usare <xref:System.Windows.Forms.Control.Dock%2A> e <xref:System.Windows.Forms.Control.Anchor%2A> è più facile che stima i dettagli dello spazio rimanente e <xref:System.Windows.Forms.Control.AutoSize%2A> comportamento.  
   
- In generale, quando si progetta il layout con il <xref:System.Windows.Forms.TableLayoutPanel> di controllo, semplificare la progettazione.  
+ In generale, quando si progetta il layout con il <xref:System.Windows.Forms.TableLayoutPanel> controllare, semplificare la progettazione.  
   
 ### <a name="use-the-document-outline-window"></a>Utilizzare la finestra Struttura documento  
- La finestra Struttura documento offre una visualizzazione albero di layout, che è possibile utilizzare per modificare le relazioni padre-figlio e di ordine z dei controlli. Dal **dal menu Visualizza**selezionare **altre finestre**, quindi selezionare **struttura documento**.  
+ La finestra Struttura documento offre una visualizzazione albero del layout, che è possibile usare per modificare le relazioni padre-figlio e ordine z dei controlli. Dal **dal menu**, selezionare **Other Windows**, quindi selezionare **struttura documento**.  
   
 ### <a name="avoid-nesting"></a>Evitare l'annidamento  
- Evitare di annidare altri <xref:System.Windows.Forms.TableLayoutPanel> controlli all'interno di un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Può essere difficile il debug di layout nidificati.  
+ Evitare l'annidamento altri <xref:System.Windows.Forms.TableLayoutPanel> controlli all'interno di un <xref:System.Windows.Forms.TableLayoutPanel> controllo. Layout annidati di debug può essere difficile.  
   
-### <a name="avoid-visual-inheritance"></a>Evitare l'ereditarietà visiva  
- Il <xref:System.Windows.Forms.TableLayoutPanel> controllo non supporta l'ereditarietà visiva in Progettazione Windows Form. Oggetto <xref:System.Windows.Forms.TableLayoutPanel> come "bloccato" in fase di progettazione verrà visualizzato un controllo in una classe derivata.  
+### <a name="avoid-visual-inheritance"></a>Evitare ereditarietà visiva  
+ Il <xref:System.Windows.Forms.TableLayoutPanel> controllo non supporta l'ereditarietà visiva in Progettazione Windows Form. Oggetto <xref:System.Windows.Forms.TableLayoutPanel> controllo in una classe derivata viene visualizzato come "bloccato" in fase di progettazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

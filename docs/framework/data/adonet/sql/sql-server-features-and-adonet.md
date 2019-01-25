@@ -2,12 +2,12 @@
 title: Funzionalità SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705372"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità SQL Server e ADO.NET
 Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.  
@@ -46,9 +46,9 @@ Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Ser
  [Supporto SqlClient per Local DB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Viene descritto il supporto di SqlClient per database LocalDB.  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

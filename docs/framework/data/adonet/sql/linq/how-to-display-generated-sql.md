@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: visualizzare il codice SQL generato'
+title: 'Procedura: Visualizzare il codice SQL generato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: edc0f8fea2768391a47e12940cbe083e41852f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725688"
 ---
-# <a name="how-to-display-generated-sql"></a>Procedura: visualizzare il codice SQL generato
+# <a name="how-to-display-generated-sql"></a>Procedura: Visualizzare il codice SQL generato
 È possibile visualizzare il codice SQL generato per le query e modificare l'elaborazione usando la proprietà <xref:System.Data.Linq.DataContext.Log%2A>. Questo approccio può essere utile per comprendere la funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e per eseguire il debug di problemi specifici.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene usata la proprietà <xref:System.Data.Linq.DataContext.Log%2A> per visualizzare il codice SQL nella finestra della console prima di eseguirlo.  È possibile usare questa proprietà con comandi di query, inserimento, aggiornamento ed eliminazione.  
   
- Le righe dalla finestra della console sono ciò che viene visualizzato quando si esegue il codice Visual Basic o c# che segue.  
+ Le righe dalla finestra della console sono quelli visualizzati quando si esegue il Visual Basic o C# codice che segue.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,5 +42,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Vedere anche
+- [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

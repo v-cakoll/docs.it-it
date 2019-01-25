@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671226"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>Enumerazione CorDebugNGenPolicy
 Fornisce un valore che determina se un debugger carica immagini native (NGen) dalla cache delle immagini native.  
@@ -40,19 +40,19 @@ enum CorDebugNGENPolicy {
   
 |Nome del membro|Descrizione|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In un [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, l'utilizzo di immagini dalla cache delle immagini native locali è disabilitato. In un'applicazione desktop, questa impostazione non ha alcun effetto.|  
+|`DISABLE_LOCAL_NIC`|In un [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, l'uso delle immagini dalla cache delle immagini native locale è disabilitato. In un'app desktop, questa impostazione ha effetto.|  
   
 ## <a name="remarks"></a>Note  
- Il `CorDebugNGENPolicy` enumerazione viene utilizzata per la [icordebugprocess5:: Enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) metodo. Disabilitare l'utilizzo di immagini dalla cache delle immagini native locali garantisce per un'esperienza di debug coerente, assicurando che il debugger carica le immagini con compilazione JIT debuggable anziché le immagini native ottimizzate.  
+ Il `CorDebugNGENPolicy` enumerazione viene utilizzata per il [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) (metodo). Disabilitare l'utilizzo delle immagini dalla cache delle immagini native locali fornisce un'esperienza di debug coerente, garantendo che il debugger carica immagini debuggable compilato tramite JIT anziché le immagini native ottimizzate.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vedere anche
+- [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

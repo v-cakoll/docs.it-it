@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660723"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Routine ricorsive (Visual Basic)
 Oggetto *ricorsiva* routine è quella che chiama se stesso. In generale, questo non è il modo più efficace per scrivere il codice Visual Basic.  
@@ -37,15 +37,15 @@ Oggetto *ricorsiva* routine è quella che chiama se stesso. In generale, questo 
   
  **Test**. Se si scrive una routine ricorsiva, è consigliabile testare con estrema attenzione per assicurarsi che soddisfi sempre una condizione di limitazione. È inoltre necessario assicurarsi che non è possibile eseguire esaurito la memoria a causa di un numero eccessivo di chiamate ricorsive.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.StackOverflowException>  
- [Routine](./index.md)  
- [Routine Sub](./sub-procedures.md)  
- [Routine Function](./function-procedures.md)  
- [Routine Property](./property-procedures.md)  
- [Routine di operatore](./operator-procedures.md)  
- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
- [Overload della routine](./procedure-overloading.md)  
- [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)  
- [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Risoluzione dei problemi relativi ad eccezioni: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.StackOverflowException>
+- [Routine](./index.md)
+- [Routine Sub](./sub-procedures.md)
+- [Routine Function](./function-procedures.md)
+- [Routine Property](./property-procedures.md)
+- [Routine di operatore](./operator-procedures.md)
+- [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
+- [Overload della routine](./procedure-overloading.md)
+- [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
+- [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Risoluzione dei problemi relativi ad eccezioni: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

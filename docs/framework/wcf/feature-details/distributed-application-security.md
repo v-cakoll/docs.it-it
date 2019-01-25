@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709429"
 ---
 # <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree funzionali principali: protezione del trasferimento, controllo degli accessi e il controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  
@@ -65,8 +65,8 @@ Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree 
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
 |None|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Basic|Specifica l'autenticazione di base.  Per altre informazioni, vedere il documento RFC2617, "[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
-|Digest|Specifica l'autenticazione digest.  Per altre informazioni, vedere il documento RFC2617, "[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
+|Basic|Specifica l'autenticazione di base.  Per altre informazioni, vedere il documento RFC2617, "[HTTP Authentication: Base e l'autenticazione Digest](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Digest|Specifica l'autenticazione digest.  Per altre informazioni, vedere il documento RFC2617, "[HTTP Authentication: Base e l'autenticazione Digest](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |Ntlm|Specifica l'autenticazione di Windows basata sulla negoziazione SSPI in un dominio di Windows.<br /><br /> La negoziazione SSPI comporta l'utilizzo del protocollo Kerberos o del protocollo NTLM (NT LanMan).|  
 |WINDOWS|Specifica l'autenticazione di Windows basata su SSPI in un dominio di Windows. L'interfaccia SSPI sceglie come servizio di autenticazione il protocollo Kerberos oppure il protocollo NTLM.<br /><br /> In particolare, tenta prima di scegliere il protocollo Kerberos e, se il tentativo non riesce, utilizza il protocollo NTLM.|  
 |Certificato|L'autenticazione del client viene eseguita tramite un certificato, in genere X.509.|  
@@ -94,8 +94,8 @@ Sicurezza di Windows Communication Foundation (WCF) viene suddiviso in tre aree 
   
  La modalità di sicurezza a livello di messaggio consente inoltre di eseguire la funzionalità di sicurezza di trasferimento in modo che la credenziale del servizio venga scambiata con il client nel contesto di una negoziazione iniziale. Per attivare la negoziazione, impostare la proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> su `true`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vedere anche
+- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745383"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architettura di Windows Communication Foundation
-L'immagine seguente illustra i livelli principali dell'architettura di Windows Communication Foundation (WCF).  
+Il grafico seguente illustra i livelli principali dell'architettura Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Architettura WCF  
- ![Architettura WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
+ ![The WCF Architecture](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Contratti e descrizioni  
  I contratti definiscono i vari aspetti del sistema del messaggio. Il contratto dati descrive ogni parametro che costituisce ogni messaggio che un servizio può creare o utilizzare. I parametri del messaggio sono definiti da documenti XSD (XML Schema Definition Language) e consentono a qualsiasi sistema compatibile con XML di elaborare i documenti. Il contratto del messaggio definisce parti specifiche del messaggio utilizzando protocolli SOAP e consente un controllo più preciso delle parti del messaggio laddove tale precisione è richiesta dall'interoperabilità. Il contratto di servizio specifica le firme effettive del metodo del servizio ed è distribuito come interfaccia in uno dei linguaggi di programmazione supportati, ad esempio Visual Basic o Visual C#.  
@@ -30,7 +30,7 @@ L'immagine seguente illustra i livelli principali dell'architettura di Windows C
  L'estendibilità consente la personalizzazione di processi della fase di esecuzione. Il controllo messaggi, ad esempio, è la funzionalità che consente di controllare parti di un messaggio e il filtro parametri consente il verificarsi di azioni preimpostate in base a filtri che agiscono sulle intestazioni del messaggio.  
   
 ### <a name="messaging"></a>Messaggistica  
- Il livello di messaggistica è composto da *canali*. Un canale è un componente che elabora in vario modo un messaggio, ad esempio autenticandolo. Un set di canali è noto anche come un *stack dei canali*. I canali operano su messaggi e intestazioni del messaggio. È un livello diverso dalla fase di esecuzione del servizio, che verte essenzialmente sull'elaborazione del contenuto del corpo del messaggio.  
+ Il livello di messaggistica è composto *canali*. Un canale è un componente che elabora in vario modo un messaggio, ad esempio autenticandolo. Un set di canali è noto anche come un *stack dei canali*. I canali operano su messaggi e intestazioni del messaggio. È un livello diverso dalla fase di esecuzione del servizio, che verte essenzialmente sull'elaborazione del contenuto del corpo del messaggio.  
   
  Esistono due tipi di canali: canali del trasporto e canali del protocollo.  
   
@@ -43,8 +43,8 @@ L'immagine seguente illustra i livelli principali dell'architettura di Windows C
 ### <a name="hosting-and-activation"></a>Hosting e attivazione  
  Nella forma finale un servizio è un programma. Come altri programmi, un servizio viene eseguito in un file eseguibile. Questo è noto come un *self-hosted* servizio.  
   
- Servizi possono inoltre essere *ospitato*, oppure eseguire in un file eseguibile gestito da un agente esterno, ad esempio IIS o il servizio di attivazione di Windows (WAS). ERA consente alle applicazioni WCF di essere attivate automaticamente se distribuite in un computer che esegue. I servizi possono inoltre essere eseguiti manualmente come file eseguibili (file con estensione exe). Un servizio può essere eseguito automaticamente come servizio Windows. I componenti COM+ possono anche essere ospitati come servizi WCF.  
+ I servizi possono essere anche *ospitato*, oppure eseguire in un file eseguibile gestito da un agente esterno, ad esempio IIS o Windows Activation Service (WAS). ERA consente alle applicazioni WCF per essere attivata automaticamente quando viene distribuita in un computer che esegue. I servizi possono inoltre essere eseguiti manualmente come file eseguibili (file con estensione exe). Un servizio può essere eseguito automaticamente come servizio Windows. I componenti COM+ possono anche essere ospitati come servizi WCF.  
   
-## <a name="see-also"></a>Vedere anche  
- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>Vedere anche
+- [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

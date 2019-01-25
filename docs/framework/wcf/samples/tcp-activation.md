@@ -2,12 +2,12 @@
 title: Attivazione TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677829"
 ---
 # <a name="tcp-activation"></a>Attivazione TCP
 In questo esempio viene illustrato come ospitare un servizio che usa i servizi di attivazione dei processi Windows (WAS) per attivare un servizio che comunica mediante il protocollo net.tcp. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -146,7 +146,7 @@ Press <ENTER> to terminate client.
   
      Inoltre, è necessario installare i componenti di attivazione non HTTP di WCF:  
   
-    1.  Dal **avviare** menu, scegliere **Pannello di controllo**.  
+    1.  Fare clic sul pulsante **Start** e scegliere **Pannello di controllo**.  
   
     2.  Selezionare **programmi e funzionalità**.  
   
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Questo comando deve essere digitato come una singola riga di testo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vedere anche
+- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

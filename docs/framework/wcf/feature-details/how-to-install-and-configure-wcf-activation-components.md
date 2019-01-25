@@ -1,24 +1,24 @@
 ---
-title: 'Procedura: installare e configurare componenti di attivazione WCF'
+title: 'Procedura: Installare e configurare componenti di attivazione WCF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726897"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedura: installare e configurare componenti di attivazione WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedura: Installare e configurare componenti di attivazione WCF
 In questo argomento vengono descritti i passaggi necessari per configurare il servizio Attivazione processo Windows (noto anche come WAS) in [!INCLUDE[wv](../../../../includes/wv-md.md)] per Windows Communication Foundation (WCF) di ospitare servizi che non comunicano su HTTP i protocolli di rete. Nelle sezioni seguenti vengono spiegati i passaggi relativi a tale configurazione:  
   
 -   Installare (o confermare l'installazione di) i componenti di attivazione di WCF.  
   
 -   Configurare WAS per supportare un protocollo non HTTP. Nella procedura seguente viene illustrato come configurare [!INCLUDE[wv](../../../../includes/wv-md.md)] per l'attivazione TCP.  
   
- Dopo aver installato e configurato WAS, vedere [procedura: ospitare un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) per le procedure creare un servizio WCF che espone un endpoint non HTTP che utilizza WAS.  
+ Dopo aver installato e configurato WAS, vedere [come: Ospitare un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) per le procedure creare un servizio WCF che espone un endpoint non HTTP che utilizza WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Per installare i componenti di attivazione WCF non HTTP  
   
@@ -100,8 +100,8 @@ In questo argomento vengono descritti i passaggi necessari per configurare il se
     > [!NOTE]
     >  Questo comando è una singola riga di testo.  
   
-## <a name="see-also"></a>Vedere anche  
- [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [Attivazione di NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server AppFabric con funzionalità di Hosting](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Vedere anche
+- [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [Attivazione di NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

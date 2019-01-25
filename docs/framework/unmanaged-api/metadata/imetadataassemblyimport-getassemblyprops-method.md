@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcf1dca8799ac082c025e602e5d82c99d42650d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659605"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>Metodo IMetaDataAssemblyImport::GetAssemblyProps
 Ottiene il set di proprietà per l'assembly con la firma dei metadati specificato.  
@@ -48,22 +48,22 @@ HRESULT GetAssemblyProps (
  [in]. Il `mdAssembly` token di metadati che rappresenta l'assembly per cui ottenere le proprietà.  
   
  `ppbPublicKey`  
- [out] Un puntatore a chiave pubblica o token di metadati.  
+ [out] Puntatore alla chiave pubblica o token di metadati.  
   
  `pcbPublicKey`  
- [out] Il numero di byte in una chiave pubblica restituita.  
+ [out] Il numero di byte nella chiave pubblica restituita.  
   
  `pulHashAlgId`  
- [out] Un puntatore per l'algoritmo di hash file nell'assembly.  
+ [out] Un puntatore all'algoritmo utilizzato per eseguire l'hashing i file nell'assembly.  
   
  `szName`  
  [out] Il nome semplice dell'assembly.  
   
  `cchName`  
- [in] La dimensione in caratteri wide, di `szName`.  
+ [in] Le dimensioni, in caratteri wide, di `szName`.  
   
  `pchName`  
- [out] Numero di caratteri "wide" effettivamente restituiti nella `szName`.  
+ [out] Numero di caratteri wide effettivamente restituiti nella `szName`.  
   
  `pMetaData`  
  [out] Un puntatore a una struttura ASSEMBLYMETADATA che contiene i metadati dell'assembly.  
@@ -72,13 +72,13 @@ HRESULT GetAssemblyProps (
  [out] Flag che descrivono i metadati applicati a un assembly. Questo valore è una combinazione di uno o più [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valori.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** Cor. h  
   
- **Libreria:** usata come risorsa in Mscoree. dll  
+ **Libreria:** Usato come risorsa in Mscoree. dll  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vedere anche
+- [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
