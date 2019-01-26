@@ -2,12 +2,12 @@
 title: Sicurezza delle associazioni personalizzate
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 5ed4b124fb5150974bcbe334e3fec627e027498f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584899"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066130"
 ---
 # <a name="custom-binding-security"></a>Sicurezza delle associazioni personalizzate
 In questo esempio viene illustrato come configurare la sicurezza mediante un'associazione personalizzata. Viene mostrato come usare un'associazione personalizzata per abilitare la sicurezza a livello di messaggio insieme con un trasporto sicuro. Questo è utile quando è necessario un trasporto protetto per trasmettere i messaggi tra client e servizio e simultaneamente i messaggi devono essere protetti a livello di messaggio. Questa configurazione non è supportata dalle associazioni fornite dal sistema.
@@ -57,7 +57,7 @@ In questo esempio viene illustrato come configurare la sicurezza mediante un'ass
 </behaviors>
 ```
 
- L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di credenziale di Windows, che è il tipo di credenziale predefinito. Ciò viene ottenuto dall'elemento di associazione `security`. Sia il client che il servizio vengono autenticati mediante la sicurezza a livello di messaggio se è disponibile l'autenticazione Kerberos. Questa situazione si verifica se l'esempio viene eseguito nell'ambiente di Active Directory. Se il meccanismo di autenticazione Kerberos non è disponibile, viene usata l'autenticazione NTLM. Tale autenticazione viene eseguita tra il client e il servizio, ma non tra il servizio e il client. Il `security` elemento di associazione è configurato per usare `SecureConversation``authenticationType`, che comporta la creazione di una sessione di sicurezza nel client e il servizio. Questa operazione è necessaria per consentire il funzionamento del contratto duplex del servizio.
+ L'associazione personalizzata usa inoltre la sicurezza dei messaggi con tipo di credenziale di Windows, che è il tipo di credenziale predefinito. Ciò viene ottenuto dall'elemento di associazione `security`. Sia il client che il servizio vengono autenticati mediante la sicurezza a livello di messaggio se è disponibile l'autenticazione Kerberos. Questa situazione si verifica se l'esempio viene eseguito nell'ambiente di Active Directory. Se il meccanismo di autenticazione Kerberos non è disponibile, viene usata l'autenticazione NTLM. Tale autenticazione viene eseguita tra il client e il servizio, ma non tra il servizio e il client. L'elemento di associazione `security` viene configurato per utilizzare un `SecureConversation` `authenticationType`, che comporta la creazione di una sessione di sicurezza nel client e nel servizio. Questa operazione è necessaria per consentire il funzionamento del contratto duplex del servizio.
 
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.
 

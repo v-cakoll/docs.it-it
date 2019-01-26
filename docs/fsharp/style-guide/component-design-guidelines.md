@@ -2,12 +2,12 @@
 title: F#linee guida di progettazione componenti
 description: Le linee guida per la scrittura di informazioni su F# componenti destinati all'utilizzo da altri chiamanti.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415637"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066025"
 ---
 # <a name="f-component-design-guidelines"></a>F#linee guida di progettazione componenti
 
@@ -708,7 +708,7 @@ Preferire invece la restituzione di un tipo denominato che contiene i dati aggre
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Evitare l'uso di currying dei parametri
 
-Usare invece le convenzioni di chiamata .NET ``Method(arg1,arg2,…,argN)``.
+Usare invece le convenzioni di chiamata .NET `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

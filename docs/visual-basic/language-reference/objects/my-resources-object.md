@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571821"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065869"
 ---
 # <a name="myresources-object"></a>Oggetto My.Resources
 Fornisce proprietà e classi per l'accesso alle risorse dell'applicazione.  
@@ -26,9 +26,9 @@ Fornisce proprietà e classi per l'accesso alle risorse dell'applicazione.
  È possibile accedere i file di risorse specifiche delle impostazioni cultura dell'applicazione dal `My.Resources` oggetto. Per impostazione predefinita, il `My.Resources` oggetto cerca le risorse dal file di risorse che corrisponde alla lingua nel <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> proprietà. Tuttavia, è possibile eseguire l'override di questo comportamento e specificare determinate impostazioni cultura da utilizzare per le risorse. Per altre informazioni, vedere [Risorse nelle applicazioni desktop](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Proprietà  
- Le proprietà del `My.Resources` oggetto forniscono accesso in lettura alle risorse dell'applicazione. Per aggiungere o rimuovere le risorse, usare il **Progettazione progetti**. È possibile accedere alle risorse aggiunte tramite il **creazione progetti** usando `My.Resources.``resourceName`.  
+ Le proprietà del `My.Resources` oggetto forniscono accesso in lettura alle risorse dell'applicazione. Per aggiungere o rimuovere le risorse, usare il **Progettazione progetti**. È possibile accedere alle risorse aggiunte tramite il **creazione progetti** utilizzando `My.Resources.` *resourceName*.  
   
- È anche possibile aggiungere o rimuovere i file di risorse, selezionare il progetto in **Esplora soluzioni** e facendo clic su **Aggiungi nuovo elemento** oppure **Aggiungi elemento esistente** dal  **Progetto** menu. È possibile accedere alle risorse aggiunte in questo modo tramite `My.Resources.``resourceFileName`.`resourceName`.  
+ È anche possibile aggiungere o rimuovere i file di risorse, selezionare il progetto in **Esplora soluzioni** e facendo clic su **Aggiungi nuovo elemento** oppure **Aggiungi elemento esistente** dal  **Progetto** menu. È possibile accedere alle risorse aggiunte in questo modo tramite `My.Resources.` *resourceFileName*`.`*resourceName*.  
   
  Ogni risorsa ha un nome, categoria e valore, e queste impostazioni determinano come la proprietà per accedere alla risorsa viene visualizzata nel `My.Resources` oggetto. Per le risorse aggiunte nel **Progettazione progetti**:  
   

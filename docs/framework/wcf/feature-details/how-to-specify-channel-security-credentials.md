@@ -2,12 +2,12 @@
 title: 'Procedura: Specificare le credenziali di sicurezza del canale'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495201"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066196"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedura: Specificare le credenziali di sicurezza del canale
 Il Moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. La maggior parte dei servizi WCF richiedono al client specificare le credenziali per l'autenticazione e autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile usare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
@@ -23,9 +23,9 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 2.  Aprire il progetto Message Security.  
   
-3.  Aggiungere `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` per il `ICalculator` definizione dell'interfaccia.  
+3.  Aggiungere `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` per il `ICalculator` definizione dell'interfaccia.  
   
-4.  Aggiungere `bindingNamespace=``http://Microsoft.ServiceModel.Samples` al tag dell'endpoint in App. config per il servizio.  
+4.  Aggiungere `bindingNamespace="http://Microsoft.ServiceModel.Samples"` al tag dell'endpoint in App. config per il servizio.  
   
 5.  Compilare l'esempio di sicurezza dei messaggi ed eseguire Service.exe. Usare Internet Explorer e passare all'URI del servizio (http://localhost:8000/ServiceModelSamples/Service) per garantire che il servizio funzioni.  
   

@@ -1,13 +1,13 @@
 ---
 title: Estensioni di tipo
 description: Informazioni su come F# estensioni di tipo consentono aggiungere nuovi membri a un tipo di oggetto definito in precedenza.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614058"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066155"
 ---
 # <a name="type-extensions"></a>Estensioni di tipo
 
@@ -121,7 +121,7 @@ Non è possibile ottenere il codice deve funzionare con un'estensione di tipo fa
 
 * Come è, il `Sum` membro presenta un vincolo diverso in `'T` (`static member get_Zero` e `static member (+)`) rispetto a ciò che definisce l'estensione del tipo.
 * Modifica l'estensione del tipo con lo stesso vincolo come `Sum` non corrisponderanno più il vincolo definito in `IEnumerable<'T>`.
-* Apportare la modifica di membro da `member inline Sum` genererà un errore che i vincoli di tipo non corrispondono
+* Modificando `member this.Sum` a `member inline this.Sum` genererà un errore che i vincoli di tipo non corrispondono.
 
 L'opzione desiderata sono metodi statici che "float nello spazio" e possono essere presentati come se si sta estendendo un tipo. Si tratta in cui diventano necessari metodi di estensione.
 

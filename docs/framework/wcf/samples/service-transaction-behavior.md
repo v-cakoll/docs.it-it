@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739284"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066142"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma è stato esteso per mantenere un registro sul server delle operazioni eseguite in una tabella di database e un totale per le operazioni della calcolatrice parziale con stato. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.  
@@ -100,7 +100,7 @@ client.Close();
   
     -   La proprietà `ReleaseServiceInstanceOnTransactionComplete` specifica se l'istanza del servizio sottostante viene riciclata al completamento di una transazione. Impostando questa proprietà su `false`, il servizio gestisce la stessa istanza del servizio tra varie richieste di operazione. Questo aspetto è necessario per gestire il totale parziale. Se la proprietà è impostata su `true`, viene generata una nuova istanza dopo ogni azione completata.  
   
-    -   La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostandola su `false`, le singole operazioni devono impostare la `OperationBehaviorAttribute``TransactionAutoComplete` proprietà `true` o richiedere in modo esplicito una chiamata al `SetTransactionComplete` metodo per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.  
+    -   La proprietà `TransactionAutoCompleteOnSessionClose` specifica se alla chiusura della sessione corrente vengono completate le transazioni in attesa. Impostandola su `false`, le singole operazioni devono impostare la <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> proprietà `true` o richiedere in modo esplicito una chiamata al <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> metodo per completare le transazioni. Nell'esempio vengono illustrati entrambi gli approcci.  
   
 -   Per `ServiceContractAttribute`:  
   

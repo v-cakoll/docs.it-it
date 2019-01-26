@@ -2,12 +2,12 @@
 title: LINQ to XML per gli utenti di XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568166"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066263"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML per gli utenti di XPath (Visual Basic)
 
@@ -32,7 +32,7 @@ In questo set di argomenti vengono illustrate varie espressioni XPath e gli equi
 |[Procedura: Trovare un'unione di due percorsi (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|Viene illustrato un confronto tra l'utilizzo dell'operatore di unione, <code>&#124;</code>, in XPath e l'utilizzo dell'operatore di query standard <xref:System.Linq.Enumerable.Concat%2A> in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:<code>"//Category&#124;//Price"</code>.|  
 |[Procedura: Trovare nodi di pari livello (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|Viene illustrato un confronto su come trovare tutti gli elementi di pari livello di un nodo con un nome specificato con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"../Book"`.|  
 |[Procedura: Trovare un attributo dell'elemento padre (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Viene illustrato un confronto su come spostarsi all'elemento padre e trovare un attributo associato con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"../@id"`.|  
-|[Procedura: Trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Viene illustrato un confronto su come trovare attributi specifici degli elementi di pari livello del nodo di contesto con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"``../Book/@id``"`.|  
+|[Procedura: Trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Viene illustrato un confronto su come trovare attributi specifici degli elementi di pari livello del nodo di contesto con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"../Book/@id"`.|  
 |[Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|Viene illustrato un confronto su come trovare tutti gli elementi contenenti un attributo specifico con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"./*[@Select]"`.|  
 |[Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|Viene illustrato un confronto su come trovare un elemento in base alla posizione relativa con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"Test[position() >= 2 and position() <= 4]"`.|  
 |[Procedura: Trovare il pari livello immediatamente precedente (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Viene illustrato un confronto su come trovare l'elemento di pari livello immediatamente precedente di un nodo con XPath e con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'espressione XPath associata è:`"preceding-sibling::*[1]"`.|  

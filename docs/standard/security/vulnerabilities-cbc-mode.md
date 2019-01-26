@@ -4,12 +4,12 @@ description: Informazioni su come rilevare e attenuare le vulnerabilità di temp
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123644"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066176"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC con spaziatura interna
 
@@ -29,7 +29,7 @@ Le crittografie a blocchi dispongono di un'altra proprietà, denominata la modal
 
 Un utente malintenzionato può usare un oracle di spaziatura interna, in combinazione con la modalità CBC dati strutturati, per inviare messaggi leggermente modificati per il codice che espone il oracle e continuare a inviare i dati fino a quando non lo oracle informa i dati siano corretti. Da questa risposta, l'autore dell'attacco può decrittografare il messaggio byte per byte.
 
-Reti di computer moderni sono di qualità talmente elevata che un utente malintenzionato può rilevare molto piccolo (meno di 0,1 ms) le differenze nell'esecuzione di tempo nei sistemi remoti. Le applicazioni che si presuppone che una volta completata la decrittazione può essere eseguiti solo quando i dati non è stato manomesso potrebbero essere vulnerabile agli attacchi provenienti da strumenti progettati per osservare le differenze nelle riusciti e la decrittografia. Sebbene questa differenza di intervallo può essere più significativa in alcune lingue o in librerie rispetto ad altri, ora che si ritiene che si tratta di una minaccia pratica per tutti i linguaggi e librerie quando la risposta dell'applicazione all'errore viene preso in considerazione.
+Reti di computer moderni sono di qualità talmente elevata che un utente malintenzionato può rilevare molto piccolo (meno di 0,1 ms) le differenze nell'esecuzione di tempo nei sistemi remoti. Le applicazioni che si presuppone che una volta completata la decrittazione può essere eseguiti solo quando i dati non è stato manomesso potrebbero essere vulnerabile agli attacchi provenienti da strumenti progettati per osservare le differenze nelle riusciti e la decrittografia. Sebbene questa differenza di intervallo può essere più significativa in alcune lingue o in librerie rispetto ad altri, ora che si ritiene che si tratta di una minaccia pratica per tutti i linguaggi e librerie quando la risposta dell'applicazione all'errore viene preso in considerazione.
 
 Questo tipo di attacco si basa sulla possibilità di modificare i dati crittografati e testare il risultato con oracle. L'unico modo completamente attenuare l'attacco è per rilevare le modifiche apportate ai dati crittografati e rifiuta di eseguire azioni su di esso. Il metodo standard per eseguire questa operazione consiste nel creare una firma per i dati e convalidare tale firma prima di tutte le operazioni vengono eseguite. La firma deve essere verificabile, non può essere creato dall'autore dell'attacco, in caso contrario, si potrebbe modificare i dati crittografati e quindi calcolare una firma di nuovo i dati modificati in base. Un tipo comune di firma appropriata è noto come un codice di autenticazione del messaggio hash con chiavi (HMAC). Un HMAC è diverso da un checksum in quanto richiede una chiave privata, nota solo all'utente che produce il valore HMAC e alla persona convalidarlo. Senza il possesso della chiave, non è possibile produrre un HMAC corretto. Quando si riceveranno i dati, si potrebbe richiedere i dati crittografati, in modo indipendente di calcolo di HMAC di code con la chiave privata è e la condivisione di mittente, quindi confronta il valore HMAC sono inviati rispetto a quella calcolato. Questo confronto deve essere tempo costante, in caso contrario, è stato aggiunto un altro oracle rilevabili, che consente un tipo diverso di attacco.
 
@@ -100,7 +100,7 @@ Le applicazioni che non è possibile modificare il formato di messaggistica senz
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Ricerca di codice vulnerabile - applicazioni native
 
-Per i programmi compilati con la crittografia di Windows: raccolta Next Generation (CNG):
+Per i programmi compilati con la crittografia di Windows: Libreria di Generation (CNG) successiva:
 
 - La chiamata di decrittografia riguarda [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), specificando il `BCRYPT_BLOCK_PADDING` flag.
 - L'handle di chiave è stato inizializzato chiamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) impostato su `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Per i programmi compilati con la crittografia di Windows: raccolta Next Generati
 Per i programmi compilati con l'API di crittografia di Windows precedenti:
 
 - La chiamata di decrittografia riguarda [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) con `Final=TRUE`.
-- L'handle di chiave è stato inizializzato chiamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) impostato su `CRYPT_MODE_CBC`.
+- L'handle di chiave è stato inizializzato chiamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) impostato su `CRYPT_MODE_CBC`.
   - Poiché `CRYPT_MODE_CBC` è l'impostazione predefinita, interessata codice potrebbe non aver assegnato alcun valore per `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Ricerca codice vulnerabile - applicazioni gestite

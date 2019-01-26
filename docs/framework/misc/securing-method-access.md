@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691476"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066012"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Override virtual interni e friend sottoponibile a override da overload  
   
 > [!NOTE]
->  In questa sezione illustra un problema di sicurezza quando si dichiara un metodo come `virtual` e `internal` (`Overloads``Overridable``Friend` in Visual Basic). Questo avviso si applica solo alle versioni 1.0 e 1.1 di .NET Framework, non è applicabile alle versioni successive.  
+>  In questa sezione illustra un problema di sicurezza quando si dichiara un metodo come `virtual` e `internal` (`Overloads` `Overridable` `Friend` in Visual Basic). Questo avviso si applica solo alle versioni 1.0 e 1.1 di .NET Framework, non è applicabile alle versioni successive.  
   
  Nelle versioni 1.0 e 1.1 di .NET Framework, è necessario considerare una sfumatura di accessibilità al sistema di tipi quando si conferma che il codice non è disponibile ad altri assembly. Un metodo dichiarato **virtuale** e **interna** (**Overloads Overridable Friend** in Visual Basic) può eseguire l'override di voce vtable della classe padre e può essere usato solo da nello stesso assembly in quanto è interno. Tuttavia, l'accessibilità per eseguire l'override è determinato dal **virtuale** (parola chiave) che può essere sottoposto a override da un altro assembly, purché tale codice abbia accesso alla stessa classe. Se la possibilità di un override presenta un problema, usare la sicurezza dichiarativa per risolverlo o rimuovere le **virtuale** parola chiave se non è strettamente necessaria.  
   

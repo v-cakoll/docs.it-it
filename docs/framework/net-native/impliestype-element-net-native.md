@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548050"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065973"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Elemento &lt;ImpliesType&gt; (.NET Native)
 Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al tipo contenitore.  
@@ -99,7 +99,7 @@ Applica criteri a un tipo, se tale criterio è stato applicato al metodo o al ti
 </Type>  
 ```  
   
- L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Ad esempio, si supponga un metodo generico `IEnumerable<T> MakeEnumerable<T>(string``spelling``, T` `defaultValue``)` al quale una determinata libreria accederà in modo dinamico con i tipi <xref:System.Collections.Generic.List%601> e <xref:System.Array> associati. Questa operazione può essere espressa nel seguente modo:  
+ L'elemento `<ImpliesType>` può anche essere visualizzato all'interno di un elemento `<Method>`, perché in alcuni casi un'istanza di un metodo generico implica la reflection su un'istanza del tipo. Ad esempio, immaginare un metodo generico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` che una determinata libreria accederà in modo dinamico con associato <xref:System.Collections.Generic.List%601> e <xref:System.Array> tipi. Questa operazione può essere espressa nel seguente modo:  
   
 ```xml  
 <Type Name="MyType">  

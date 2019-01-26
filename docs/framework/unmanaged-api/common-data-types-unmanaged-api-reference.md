@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737897"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065830"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipi di dati comuni (riferimenti alle API non gestite)
 In questo argomento sono elencati i tipi di dati semplici usati dalle API non gestite per .NET Framework e definiti dalle istruzioni `typedef` di C/C++. Questi tipi di dati sono in genere alias di tipi di dati primitivi di C/C++. I valori di questi tipi di dati normalmente sono opachi, cioè vengono restituiti da una determinata funzione o metodo in modo da poter essere passati ad altre funzioni o metodi senza modifiche.  
@@ -18,7 +18,8 @@ In questo argomento sono elencati i tipi di dati semplici usati dalle API non ge
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Identificatore di un dominio di applicazione.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Identificatore di un assembly.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Identificatore di una classe gestita.|
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Identificatore di una classe gestita.|  
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|Un indirizzo di memoria a 64 bit.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Non disponibile|Un indirizzo di memoria a 64 bit.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Identificatore della connessione per un thread connesso a un'istanza di Microsoft SQL Server.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Identificatore del contesto associato a un thread gestito specifico.|  
@@ -29,7 +30,8 @@ In questo argomento sono elencati i tipi di dati semplici usati dalle API non ge
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Valore di un registro della CPU.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Identificatore di una funzione o di un metodo.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Handle di Garbage Collection.|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|Token di metadati (una riga in una tabella di metadati).|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Un token di definizione di metodo.|
+|mdToken|`typedef UINT32 mdToken;`|corprof.h|Un token di metadati (una riga in una tabella di metadati).|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Identificatore di un modulo di assembly.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Identificatore di un oggetto.|  
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Identificatore di un processo gestito.|  

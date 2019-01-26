@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332873"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065791"
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
 Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi sono basata su eventi, vale a dire il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
@@ -87,7 +87,7 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Gestione degli eventi ereditati da una classe di base  
- *Le classi derivate*, ovvero le classi che ereditano le caratteristiche da una classe di base, possono gestire gli eventi generati dalla rispettiva classe di base usando l'istruzione `Handles``MyBase`.  
+ *Le classi derivate*, ovvero le classi che ereditano le caratteristiche da una classe di base, possono gestire gli eventi generati dalla rispettiva classe di base usando l'istruzione `Handles MyBase`.  
   
 #### <a name="to-handle-events-from-a-base-class"></a>Per gestire gli eventi da una classe di base  
   
@@ -100,7 +100,7 @@ Sebbene sia possibile rappresentare graficamente un progetto di Visual Studio co
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Procedura dettagliata: Dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Descrizione dettagliata della procedura per dichiarare e generare eventi per una classe.|  
-|[Procedura dettagliata: Gestione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Illustra come scrivere una routine di gestore eventi.|  
+|[Procedura dettagliata: Gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Illustra come scrivere una routine di gestore eventi.|  
 |[Procedura: Dichiarare eventi personalizzati per evitare il blocco](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Illustra come definire un evento personalizzato che consente la chiamata asincrona dei gestori eventi.|  
 |[Procedura: Dichiarare eventi personalizzati per proteggere la memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Illustra come definire un evento personalizzato che usa la memoria solo quando viene gestito l'evento.|  
 |[Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Elenca i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.|  

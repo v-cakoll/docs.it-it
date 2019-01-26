@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669315"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065856"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: Chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
 Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di integer senza segno, è possibile accedere a questi membri con Visual Basic.  
@@ -32,7 +32,7 @@ Se si sta utilizzando una classe, modulo o una struttura con membri dei tipi di 
   
 3.  Consultare la documentazione per la funzione di Windows che per trovare i nomi e valori delle costanti che usa si sta chiamando. Molte di queste sono definiti nel file winuser. H.  
   
-4.  Dichiarare le costanti necessarie nel codice. Molte Windows costanti sono valori senza segno a 32 bit e devono essere dichiarate `As``UInteger`.  
+4.  Dichiarare le costanti necessarie nel codice. Molte Windows costanti sono valori senza segno a 32 bit e devono essere dichiarate `As UInteger`.  
   
 5.  Chiamare la funzione in modo normale. L'esempio seguente chiama la funzione Windows `MessageBox`, che accetta un argomento di intero senza segno.  
   

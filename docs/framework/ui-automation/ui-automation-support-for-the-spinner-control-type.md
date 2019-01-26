@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518163"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066298"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Spinner
 > [!NOTE]
@@ -41,13 +41,13 @@ ms.locfileid: "54518163"
 |------------------|------------------|  
 |Spinner<br /><br /> -Edit (0 o 1)<br />-Button (2)<br />-List Item (0 o più)|Spinner<br /><br /> -ListItem (0 o più)|  
   
- Per garantire che i due pulsanti nel sottoalbero della visualizzazione controlli possano essere rilevati dagli strumenti di test automatici, assegnare `SmallIncrement` o `SmallDecrement``AutomationId` come appropriato. Per alcune implementazioni il controllo di modifica associato può essere un elemento di pari livello del controllo Spinner.  
+ Per garantire che i due pulsanti nel sottoalbero della visualizzazione controlli possano essere rilevati dagli strumenti di test automatizzati, assegnare il `SmallIncrement` oppure `SmallDecrement` `AutomationId` come appropriato. Per alcune implementazioni il controllo di modifica associato può essere un elemento di pari livello del controllo Spinner.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
  La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli casella di selezione. Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proprietà, vedere [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Value|Note|  
+|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Valore|Note|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|  
