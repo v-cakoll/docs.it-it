@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 645b5beca2f65ad54b194d656309d850e1ff9fa7
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712470"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083548"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;aggiungere&gt; (elemento) per &lt;sharedListeners&gt;
 Aggiunge un listener alla raccolta `sharedListeners`. `sharedListeners` è una raccolta di listener che eventuali [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) può fare riferimento.  Per impostazione predefinita, nei listener di traccia le `sharedListeners` raccolta non vengono inserite in un `Listeners` raccolta. Devono essere aggiunti in base al nome per il [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Non è possibile ottenere il listener `sharedListeners` insieme nel codice in fase di esecuzione.  

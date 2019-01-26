@@ -1,16 +1,16 @@
 ---
 title: Recupero di dati tramite un oggetto DataReader
-ms.date: 10/259/2018
+ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692756"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083847"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati tramite un oggetto DataReader
 Per recuperare dati usando un **DataReader**, creare un'istanza del **comando** dell'oggetto e quindi creare un **DataReader** chiamando **Command. ExecuteReader**  per recuperare righe da un'origine dati. Il **DataReader** fornisce un flusso non memorizzato nel buffer di dati che consente una logica procedurale di elaborare sequenzialmente risultati da un'origine dati. Il **DataReader** è un'ottima scelta quando si recuperano grandi quantità di dati perché i dati non viene memorizzato nella cache in memoria.

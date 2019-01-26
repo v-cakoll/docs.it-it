@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980833"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083661"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico
 
 Quando si esegue la compilazione di App in Visual Studio che hanno come destinazione il [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versioni successive, i reindirizzamenti di associazione possono essere aggiunte automaticamente al file di configurazione dell'app per eseguire l'override di unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatico influisce sulle App web e App desktop destinate le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o versione successiva, anche se il comportamento è leggermente diverso per un'app web. È possibile abilitare il reindirizzamento di associazione automatico se si dispongono delle App esistenti destinati a versioni precedenti di .NET Framework, o se si vuole creare manualmente i reindirizzamenti di associazione, è possibile disabilitare questa funzionalità.
 

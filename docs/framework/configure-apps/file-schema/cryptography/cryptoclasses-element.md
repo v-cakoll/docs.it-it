@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e3bc8fbb103d59b825e07cc52b155f1ea8061f31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e47830649b0088d1e1645d73c4fb924ba5591f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649375"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083327"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt; elemento
 Contiene un elenco delle classi di crittografia per le quali è stato eseguito il mapping a un nome descrittivo nell'elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  

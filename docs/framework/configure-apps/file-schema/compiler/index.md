@@ -2,17 +2,21 @@
 title: Schema di impostazioni del compilatore e del provider di linguaggi
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'configuration settings [.NET Framework], compilers'
-  - 'compiler configuration elements, schema'
-  - compiler configuration elements
-  - language providers
-  - 'compiler configuration settings, schema'
-  - 'configuration schema [.NET Framework], compiler settings'
-  - 'language providers, settings schema'
-  - compiler configuration settings
+- configuration settings [.NET Framework], compilers
+- compiler configuration elements, schema
+- compiler configuration elements
+- language providers
+- compiler configuration settings, schema
+- configuration schema [.NET Framework], compiler settings
+- language providers, settings schema
+- compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084367"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema di impostazioni del compilatore e del provider di linguaggi
 Le impostazioni del compilatore e del provider di linguaggi specificano gli elementi di configurazione del compilatore per i provider di linguaggi disponibili. Ogni elemento di configurazione del compilatore specifica il nome del tipo di provider di codice, i parametri del compilatore, i nomi dei linguaggi supportati e le estensioni di file supportate.  

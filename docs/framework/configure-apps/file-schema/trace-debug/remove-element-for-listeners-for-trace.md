@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2e68a93840022776530bb9ed2f94a7505a8a3b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1587c28e05609970c732192752578d089ec9f35
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642792"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083834"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;rimuovere&gt; (elemento) per &lt;listener&gt; per &lt;traccia&gt;
 Rimuove un listener dal **listener** raccolta.  
