@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739615"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -62,7 +62,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
  Quando si crea un'istanza di un'opzione, la si inizializza anche specificando due argomenti: un argomento *displayName* e un argomento *description*. L'argomento *displayName* del costruttore imposta la proprietà <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> dell'istanza della classe <xref:System.Diagnostics.Switch>. L'argomento *displayName* rappresenta il nome usato per configurare l'opzione nel file CONFIG, mentre l'argomento *description* restituisce una breve descrizione dell'opzione e dei messaggi che controlla.  
   
- Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione. Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
+ Oltre a specificare il nome di un'opzione da configurare, è necessario specificare un valore per l'opzione.  Tale valore deve essere Integer. Per <xref:System.Diagnostics.BooleanSwitch>, un valore pari a 0 corrisponde a **Off**, mentre un valore diverso da 0 corrisponde a **On**. Per la classe <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3 e 4 corrispondono rispettivamente a **Off**, **Error**, **Warning**, **Info** e **Verbose**. Tutti i numeri maggiori di 4 vengono considerati come **Verbose**, tutti i numeri minori di zero vengono considerati **Off**.  
   
 > [!NOTE]
 >  In .NET Framework versione 2.0 è possibile usare testo per specificare il valore di un'opzione, ad esempio `true` per la classe <xref:System.Diagnostics.BooleanSwitch> o il testo che rappresenta un valore di enumerazione, come `Error` per la classe <xref:System.Diagnostics.TraceSwitch>. La riga `<add name="myTraceSwitch" value="Error" />` equivale a `<add name="myTraceSwitch" value="1" />`.  
@@ -75,11 +75,11 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 2.  Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
-    -   **Visual Basic:** nella finestra di dialogo **Aggiungi nuovo elemento** scegliere **File di configurazione dell'applicazione**.  
+    -   **Visual Basic:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File di configurazione dell'applicazione**.  
   
          Verrà creato e aperto il file di configurazione dell'applicazione. Si tratta di un documento XML il cui elemento radice è `<configuration>.`  
   
-    -   **Visual C#:** nella finestra di dialogo **Aggiungi nuovo elemento** fare clic su **File XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
+    -   **Visual C#:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File XML**. Denominare il file **app.config**. Nell'editor XML, dopo la dichiarazione XML, aggiungere il codice XML seguente:  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Procedura: aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Schema delle impostazioni di traccia e debug](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Schema delle impostazioni di traccia e debug](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
