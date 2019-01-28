@@ -8,33 +8,33 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: e3b77af312abcc99945a22abf2b73ebd47556026
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 28c07331931450f41f8c93d24e119f8a981ae9ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500603"
 ---
-# <a name="ltvaluegt-c-programming-guide"></a><span data-ttu-id="e2070-102">&lt;value&gt; (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="e2070-102">&lt;value&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="e2070-103">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e2070-103">Syntax</span></span>  
+# <a name="ltvaluegt-c-programming-guide"></a><span data-ttu-id="28d50-102">&lt;value&gt; (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="28d50-102">&lt;value&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="28d50-103">Sintassi</span><span class="sxs-lookup"><span data-stu-id="28d50-103">Syntax</span></span>  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e2070-104">Parametri</span><span class="sxs-lookup"><span data-stu-id="e2070-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="28d50-104">Parametri</span><span class="sxs-lookup"><span data-stu-id="28d50-104">Parameters</span></span>  
  `property-description`  
- <span data-ttu-id="e2070-105">Descrizione della proprietà.</span><span class="sxs-lookup"><span data-stu-id="e2070-105">A description for the property.</span></span>  
+ <span data-ttu-id="28d50-105">Descrizione della proprietà.</span><span class="sxs-lookup"><span data-stu-id="28d50-105">A description for the property.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e2070-106">Note</span><span class="sxs-lookup"><span data-stu-id="e2070-106">Remarks</span></span>  
- <span data-ttu-id="e2070-107">Il tag \<value> consente di descrivere il valore che rappresenta una proprietà.</span><span class="sxs-lookup"><span data-stu-id="e2070-107">The \<value> tag lets you describe the value that a property represents.</span></span> <span data-ttu-id="e2070-108">Si noti che quando si aggiunge una proprietà tramite la procedura guidata per il codice nell'ambiente di sviluppo di Visual Studio .NET, verrà aggiunto un tag [ \<summary>](../../../csharp/programming-guide/xmldoc/summary.md) per la nuova proprietà.</span><span class="sxs-lookup"><span data-stu-id="e2070-108">Note that when you add a property via code wizard in the Visual Studio .NET development environment, it will add a [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="e2070-109">È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.</span><span class="sxs-lookup"><span data-stu-id="e2070-109">You should then manually add a \<value> tag to describe the value that the property represents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28d50-106">Note</span><span class="sxs-lookup"><span data-stu-id="28d50-106">Remarks</span></span>  
+ <span data-ttu-id="28d50-107">Il tag \<value> consente di descrivere il valore che rappresenta una proprietà.</span><span class="sxs-lookup"><span data-stu-id="28d50-107">The \<value> tag lets you describe the value that a property represents.</span></span> <span data-ttu-id="28d50-108">Si noti che quando si aggiunge una proprietà tramite la procedura guidata per il codice nell'ambiente di sviluppo di Visual Studio .NET, verrà aggiunto un tag [ \<summary>](../../../csharp/programming-guide/xmldoc/summary.md) per la nuova proprietà.</span><span class="sxs-lookup"><span data-stu-id="28d50-108">Note that when you add a property via code wizard in the Visual Studio .NET development environment, it will add a [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="28d50-109">È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.</span><span class="sxs-lookup"><span data-stu-id="28d50-109">You should then manually add a \<value> tag to describe the value that the property represents.</span></span>  
   
- <span data-ttu-id="e2070-110">Compilare con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.</span><span class="sxs-lookup"><span data-stu-id="e2070-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="28d50-110">Compilare con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.</span><span class="sxs-lookup"><span data-stu-id="28d50-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e2070-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="e2070-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="28d50-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="28d50-111">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="e2070-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2070-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28d50-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="28d50-112">See also</span></span>
 
-- [<span data-ttu-id="e2070-113">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="e2070-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e2070-114">Tag consigliati per i commenti relativi alla documentazione</span><span class="sxs-lookup"><span data-stu-id="e2070-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="28d50-113">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="28d50-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="28d50-114">Tag consigliati per i commenti relativi alla documentazione</span><span class="sxs-lookup"><span data-stu-id="28d50-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
