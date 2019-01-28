@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698024"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Distribuire app .NET Core con Visual Studio
 
@@ -311,5 +311,5 @@ Si noti che è possibile distribuire una distribuzione autonoma solo con una lib
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Distribuzione di applicazioni .NET Core](index.md)
-* [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
+- [Distribuzione di applicazioni .NET Core](index.md)
+- [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
