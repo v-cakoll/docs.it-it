@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679893"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -163,4 +163,4 @@ Dalla pagina [.NET Application Architecture](https://www.microsoft.com/net/learn
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Novità di ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+- [Novità di ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)

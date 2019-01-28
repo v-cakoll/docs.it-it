@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683021"
 ---
 # <a name="tilebrush-overview"></a>Cenni preliminari sugli oggetti TileBrush
 <xref:System.Windows.Media.TileBrush> gli oggetti forniscono un elevato livello di controllo sulla modalità di un'area con un'immagine <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.TileBrush> le funzionalità da ottenere un maggiore controllo sulle modalità di un' <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> disegna un'area.  
@@ -29,7 +29,7 @@ ms.locfileid: "43505139"
   
  Il disegno di un'area con un pennello tessera include tre componenti: il contenuto, la tessera di base e l'area di output.  
   
- ![Componenti di TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 Componenti di un oggetto TileBrush con una sola tessera  
   
  ![Componenti di TileBrush affiancato](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
@@ -100,15 +100,15 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
 ### <a name="tiling-behavior"></a>Comportamento dell'affiancamento  
  Oggetto <xref:System.Windows.Media.TileBrush> genera un modello affiancato quando la tessera di base non occupa completamente l'area di output e una modalità di affiancamento quindi <xref:System.Windows.Media.TileMode.None> è specificato. Se tessera un pennello non occupa completamente l'area di output, relativo <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà specifica se la tessera di base deve essere duplicata da riempire l'area di output e, in tal caso, come la tessera di base deve essere duplicato. Il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà accetta i valori seguenti, definiti dal <xref:System.Windows.Media.TileMode> enumerazione:  
   
--   <xref:System.Windows.Media.TileMode.None>: Consente solo la tessera di base viene disegnata.  
+-   <xref:System.Windows.Media.TileMode.None>: Viene disegnata la tessera di base.  
   
 -   <xref:System.Windows.Media.TileMode.Tile>: Viene disegnata la tessera di base e l'area rimanente viene riempita ripetendo la tessera di base in modo che il bordo destro di una tessera sia adiacente al margine sinistro della riga successiva e che lo stesso avvenga per superiore e inferiore.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Identico <xref:System.Windows.Media.TileMode.Tile>, ma le colonne alternate di tessere vengono capovolte in senso orizzontale.  
+-   <xref:System.Windows.Media.TileMode.FlipX>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le colonne alternate di tessere vengono capovolte in senso orizzontale.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Identico <xref:System.Windows.Media.TileMode.Tile>, ma le righe alternate di tessere vengono capovolte in senso verticale.  
+-   <xref:System.Windows.Media.TileMode.FlipY>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le righe alternate di tessere vengono capovolte in senso verticale.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Una combinazione di <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
+-   <xref:System.Windows.Media.TileMode.FlipXY>: Combinazione di <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
   
  L'immagine seguente illustra le diverse modalità di affiancamento.  
   
@@ -121,13 +121,13 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

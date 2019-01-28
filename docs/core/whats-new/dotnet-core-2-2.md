@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 19063d5fdfc81e1c2315211d7599b9e588250589
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679777"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novità di .NET Core 2.2
 
@@ -98,6 +98,6 @@ Per altre informazioni, vedere [Host startup hook](https://github.com/dotnet/cor
 
 ## <a name="see-also"></a>Vedere anche
 
-* [What's new in .NET Core](index.md) (Novità di .NET Core)
-* [Novità di ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)  
-* [Nuove funzionalità di EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)  
+- [What's new in .NET Core](index.md) (Novità di .NET Core)
+- [Novità di ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)
+- [Nuove funzionalità di EF Core 2.2](/ef/core/what-is-new/ef-core-2.2)
