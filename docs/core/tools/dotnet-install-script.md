@@ -2,12 +2,12 @@
 title: Script dotnet-install
 description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
 ms.date: 01/16/2019
-ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608792"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Riferimento agli script dotnet-install
 
@@ -200,5 +200,5 @@ Prima di eseguire lo script, installare le [dipendenze](https://github.com/dotne
 
 ## <a name="see-also"></a>Vedere anche
 
-* [.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)
-* [.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)
+- [.NET Core releases](https://github.com/dotnet/core/releases) (Versioni di .NET Core)
+- [.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)
