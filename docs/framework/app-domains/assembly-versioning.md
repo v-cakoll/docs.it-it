@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53b757417f1f37c1a76021a518570da85dc04ad2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724070"
 ---
 # <a name="assembly-versioning"></a>Controllo delle versioni degli assembly
 Il controllo delle versioni degli assembly che utilizzano Common Language Runtime viene svolto interamente a livello dell'assembly. La specifica versione di un assembly e le versioni degli assembly dipendenti sono memorizzate nel manifesto dell'assembly. I criteri di versione predefiniti del runtime prevedono che l'applicazione venga eseguita solo con le versioni con cui è stata compilata e testata. Per modificare il comportamento predefinito, è possibile esprimere esplicitamente criteri di versione diversi nei file di configurazione (il file di configurazione dell'applicazione, il file dei criteri dell'autore e il file di configurazione dell'amministratore del computer).  
@@ -70,8 +70,8 @@ Risoluzione della richiesta di associazione di un assembly
   
  La versione informativa viene espressa utilizzando l'attributo personalizzato <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Per altre informazioni sull'attributo usato dalla versione informativa, vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>Vedere anche  
-- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
-- [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)  
-- [Impostazione degli attributi dell'assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)  
+## <a name="see-also"></a>Vedere anche
+- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)
+- [Impostazione degli attributi dell'assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

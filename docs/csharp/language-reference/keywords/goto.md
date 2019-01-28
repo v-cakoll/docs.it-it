@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: bfc997631cc147bf5718ec91a57e2995cead052f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e4642d0e43a538217493298b58d572e435db5dae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645327"
 ---
 # <a name="goto-c-reference"></a>goto (Riferimenti per C#)
 
@@ -41,8 +41,8 @@ Nell'esempio riportato di seguito viene illustrato come usare `goto` per uscire 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)  
-- [Guida per programmatori C#](../../programming-guide/index.md)  
-- [Parole chiave di C#](index.md)  
-- [Istruzione goto (C++)](/cpp/cpp/goto-statement-cpp)  
-- [Istruzioni di spostamento](jump-statements.md)  
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Istruzione goto (C++)](/cpp/cpp/goto-statement-cpp)
+- [Istruzioni di spostamento](jump-statements.md)

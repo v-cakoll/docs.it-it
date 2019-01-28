@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681911"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -131,7 +131,7 @@ Parametri di AutoFormat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
-- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
 - [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)

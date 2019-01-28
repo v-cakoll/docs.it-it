@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 02540db02d8e413ec254c0642d106ca41b263376
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662517"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipi generici (C#)
 Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi generici introdotti nella versione 2.0 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Non è necessaria una conoscenza approfondita dei generics per poter iniziare a scrivere le query. È tuttavia importante comprendere due concetti di base:  
@@ -38,5 +38,5 @@ Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono basate su tipi g
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Generics](../../../../csharp/programming-guide/generics/index.md)

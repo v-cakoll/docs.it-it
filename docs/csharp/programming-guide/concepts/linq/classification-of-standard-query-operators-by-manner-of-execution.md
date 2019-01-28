@@ -2,12 +2,12 @@
 title: Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: 76a1cc4cdca00df8e3338e9251ce1e715cb8ce29
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711772"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)
 Le implementazioni LINQ to Objects dei metodi degli operatori di query standard vengono eseguite in due modi principali: implementazione immediata o posticipata. Gli operatori di query che usano l'esecuzione posticipata possono essere anche suddivisi in due categorie: di flusso e non di flusso. Se si conosce la modalità di esecuzione dei vari operatori di query, sarà più facile capire i risultati che si ottengono da una determinata query. Ciò è particolarmente vero se l'origine dei dati viene modificata oppure se si sta creando una query su un'altra query. Questo argomento classifica gli operatori di query standard in base alla relativa modalità di esecuzione.  
@@ -89,7 +89,7 @@ Le implementazioni LINQ to Objects dei metodi degli operatori di query standard 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq.Enumerable>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Sintassi di espressione di query per operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- <xref:System.Linq.Enumerable>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Sintassi di espressione di query per operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

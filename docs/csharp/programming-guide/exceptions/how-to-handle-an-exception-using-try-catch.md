@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 17b3be52bb89a1cf74bb8171ca937e434a8d94f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552528"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Procedura: Gestire un'eccezione usando try/catch (Guida per programmatori C#)
 Lo scopo di un blocco [try-catch](../../../csharp/language-reference/keywords/try-catch.md) è quello di rilevare e gestire un'eccezione generata da codice in esecuzione. Alcune eccezioni possono essere gestite in un blocco `catch` e il problema viene risolto senza che l'eccezione venga generata nuovamente. Molto spesso, invece, l'unica cosa che si possa fare è assicurarsi che venga generata l'eccezione appropriata.  
@@ -27,6 +27,6 @@ Lo scopo di un blocco [try-catch](../../../csharp/language-reference/keywords/tr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)
 - [Gestione delle eccezioni](../../../csharp/programming-guide/exceptions/exception-handling.md)

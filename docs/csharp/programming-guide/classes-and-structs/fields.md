@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655673"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -49,9 +49,9 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

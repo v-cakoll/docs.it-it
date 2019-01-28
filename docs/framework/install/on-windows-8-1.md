@@ -5,12 +5,12 @@ description: Informazioni sull'installazione di .NET Framework in Windows 8.1
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: 302215f71e00ef7de03f6d7a27def71087822012
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737806"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installare .NET Framework in Windows 8.1 e Windows Server 2012 R2
 
@@ -39,6 +39,6 @@ Seguire le istruzioni per l'installazione di [.NET Framework 3.5 in Windows 8.1 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installare .NET Framework per sviluppatori](guide-for-developers.md)
+- [Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Installare .NET Framework per sviluppatori](guide-for-developers.md)

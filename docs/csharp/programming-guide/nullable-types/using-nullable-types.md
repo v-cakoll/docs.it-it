@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658247"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Uso dei tipi nullable (Guida per programmatori C#)
 
@@ -112,6 +112,6 @@ Tenere presente che questi due operatori non si attengono alle regole descritte 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi nullable](index.md)  
-- [Guida per programmatori C#](../../programming-guide/index.md)  
-- [Cosa significa esattamente "elevato"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Tipi nullable](index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Cosa significa esattamente "elevato"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

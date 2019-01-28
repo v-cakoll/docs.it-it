@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: faf7f635a42ece1a30c5bac096a909e32095fc0c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a987d0501e36232993a2f1a2b4ebda29d007afd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618646"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedura: Implementare una classe leggera con proprietà implementate automaticamente (Guida per programmatori C#)
 Questo esempio mostra come creare una classe leggera non modificabile che serve solo a incapsulare un set di proprietà implementate automaticamente. Usare questo genere di costrutto invece di una struct quando è necessario usare la semantica del tipo riferimento.  
@@ -116,6 +116,6 @@ Questo esempio mostra come creare una classe leggera non modificabile che serve 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

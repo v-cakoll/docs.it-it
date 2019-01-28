@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608675"
 ---
 # <a name="proxy-configuration"></a>Configurazione proxy
 Un server proxy gestisce le richieste di risorse del client. Un proxy può restituire una risorsa richiesta dalla cache o inoltrare la richiesta al server in cui risiede la risorsa. I proxy possono migliorare le prestazioni della rete riducendo il numero di richieste inviate ai server remoti. I proxy possono essere usati anche per limitare l'accesso alle risorse.  
@@ -53,7 +53,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
   
  La tabella seguente mostra le opzioni di configurazione di un proxy statico.  
   
-|Impostazione di attributo, proprietà o file di configurazione|Descrizione|  
+|Impostazione di attributo, proprietà o file di configurazione|Description|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` o <xref:System.Net.WebProxy.Address>|Indirizzo del proxy da usare.|  
 |`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Valore che controlla se il proxy viene ignorato per gli indirizzi locali.|  
@@ -75,7 +75,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.GlobalProxySelection>  
- [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.GlobalProxySelection>
+- [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)

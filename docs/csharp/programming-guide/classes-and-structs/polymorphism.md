@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659644"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -98,10 +98,10 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Eventi](../../../csharp/programming-guide/events/index.md)  
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Eventi](../../../csharp/programming-guide/events/index.md)
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)
 - [Tipi](../../../csharp/programming-guide/types/index.md)

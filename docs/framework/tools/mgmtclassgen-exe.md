@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628851"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
@@ -30,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*classeWMI*|Classe WMI per la quale generare una classe gestita ad associazione precoce.|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/l**  *linguaggio*|Specifica il linguaggio in cui generare la classe gestita ad associazione precoce. È possibile specificare **CS** (C#; impostazione predefinita), **VB** (Visual Basic),  **MC** (C++) o  **JS** (JScript) come argomento del linguaggio.|  
 |**/m**  *computer*|Specifica il computer al quale eseguire la connessione ovvero quello sul quale risiede la classe WMI. Il valore predefinito è il computer locale.|  
@@ -150,9 +150,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Management>  
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Management>
+- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
+- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

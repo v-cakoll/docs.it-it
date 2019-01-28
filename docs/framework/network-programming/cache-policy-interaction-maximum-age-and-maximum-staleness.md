@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 7a066f403e526c50054b58a099bb7978ef57e74d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653645"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interazione tra criteri di cache: durata massima e obsolescenza massima
 Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra criteri di cache del client e requisiti di riconvalida del server determina sempre la creazione dei criteri di cache più conservativi. In tutti gli esempi di questo argomento vengono illustrati i criteri di cache per una risorsa memorizzata nella cache il 1° gennaio con scadenza il 4 gennaio.  
@@ -35,10 +35,10 @@ Per garantire che all'applicazione client venga restituito il contenuto più agg
   
 -   Se i criteri di cache prevedono l'impostazione di `maxAge` su 1 giorno e di `maxStale` su 1 giorno, il contenuto viene riconvalidato il 2 gennaio.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [Interazione tra criteri di cache: durata massima e validità minima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [Interazione tra criteri di cache: durata massima e validità minima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

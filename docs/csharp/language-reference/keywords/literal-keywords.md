@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
-ms.openlocfilehash: db64d728f3d4c63b0b994fef69a5139944e39af4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd657901c8cc4f5b63442f4f7001dfb9ea1ef8b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577404"
 ---
 # <a name="literal-keywords-c-reference"></a>Parole chiave letterali (Riferimenti per C#)
 C# usa le parole chiave seguenti:  
@@ -25,6 +25,6 @@ C# usa le parole chiave seguenti:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

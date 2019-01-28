@@ -2,12 +2,12 @@
 title: Autenticazione di Windows integrata con Protezione estesa
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591617"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticazione di Windows integrata con Protezione estesa
 Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate in <xref:System.Net> e negli spazi dei nomi correlati. È stato aggiunto il supporto per la protezione estesa per migliorare la sicurezza.  
@@ -148,6 +148,6 @@ Sono stati apportati alcuni miglioramenti che influiscono sul modo in cui l'aute
   
  Queste funzionalità di protezione estesa possono essere usate dalle applicazioni server anche per l'autenticazione con altri tipi di richieste e quando si usano proxy attendibili.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Authentication.ExtendedProtection>  
- <xref:System.Security.Authentication.ExtendedProtection.Configuration>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Security.Authentication.ExtendedProtection>
+- <xref:System.Security.Authentication.ExtendedProtection.Configuration>

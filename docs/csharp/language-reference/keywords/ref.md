@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726650"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -154,12 +154,12 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)  
+- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
 - [Valori restituiti e variabili locali per riferimento](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operatore di assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator)
-- [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [Parametri dei metodi](method-parameters.md)  
-- [Riferimenti per C#](../index.md)  
-- [Guida per programmatori C#](../../programming-guide/index.md)  
+- [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Parametri dei metodi](method-parameters.md)
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)

@@ -2,12 +2,12 @@
 title: Partizionamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 2e719b3a61b7c42d8ec6afe5fffe88a5bf83f82e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 184d9d34e087a06ca3fad9b0a8dad571253b225d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702366"
 ---
 # <a name="partitioning-data-c"></a>Partizionamento dei dati (C#)
 Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input in due sezioni senza ridisposizione degli elementi e la successiva restituzione di una delle sezioni.  
@@ -20,7 +20,7 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
   
 ## <a name="operators"></a>Operatori  
   
-|Nome dell'operatore|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome dell'operatore|Description|Sintassi di espressione della query C#|Altre informazioni|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|Ignora gli elementi fino a una posizione specificata in una sequenza.|Non applicabile.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Ignora gli elementi in base a una funzione di predicato fino a quando un elemento non soddisfa la condizione.|Non applicabile.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -29,5 +29,5 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- <xref:System.Linq>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

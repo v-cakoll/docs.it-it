@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione e utilizzo di oggetti dinamici (C# e Visual Basic)'
+title: 'Procedura dettagliata: Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 8134a7c7c1f2c4e6432dd19889faf796a9284553
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691754"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: creazione e utilizzo di oggetti dinamici (C# e Visual Basic)
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)
 
 Gli oggetti dinamici espongono i membri, ad esempio proprietà e metodi, in fase di esecuzione anziché in fase di compilazione. In questo modo è possibile creare oggetti da usare con le strutture che non corrispondono a un tipo o formato statico. Ad esempio, è possibile usare un oggetto dinamico per fare riferimento al modello a oggetti documenti (DOM, Document Object Model) HTML, che può contenere qualsiasi combinazione di attributi ed elementi di markup HTML validi. Poiché ogni documento HTML è univoco, i membri per un particolare documento HTML vengono determinati in fase di esecuzione. Un metodo comune per fare riferimento a un attributo di un elemento HTML consiste nel passare il nome dell'attributo al metodo `GetProperty` dell'elemento. Per fare riferimento all'attributo `id` dell'elemento HTML `<div id="Div1">`, per prima cosa è necessario ottenere un riferimento all'elemento `<div>` e quindi usare `divElement.GetProperty("id")`. Se si usa un oggetto dinamico, è possibile fare riferimento all'attributo `id` come `divElement.id`.  
   
@@ -159,9 +159,9 @@ Il progetto successivo di questa procedura dettagliata accede a una libreria scr
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Dynamic?displayProperty=nameWithType>  
-- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- <xref:System.Dynamic?displayProperty=nameWithType>
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
+- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [Implementazione delle interfacce dinamiche (PDF scaricabile da Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

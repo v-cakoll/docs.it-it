@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740892"
 ---
 # <a name="cache-policy"></a>Criteri di cache
 I criteri di cache definiscono le regole usate per determinare se è possibile soddisfare una richiesta usando una copia della risorsa richiesta memorizzata nella cache. Anche se nelle applicazioni vengono specificati i requisiti di cache del client relativi alla validità, l'efficacia dei criteri di cache è determinata non solo dai requisiti di cache del client, ma anche dai requisiti di scadenza del contenuto del server e di riconvalida del server. Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra i criteri di cache del client e i requisiti del server determina sempre la creazione dei criteri di cache più conservativi.  
@@ -24,7 +24,7 @@ I criteri di cache definiscono le regole usate per determinare se è possibile s
   
  Nella tabella seguente sono descritte le classi usate per specificare i criteri di cache.  
   
-|Nome di classe|Descrizione|  
+|Nome di classe|Description|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Rappresenta criteri di cache basati sulla posizione e sul tempo per risorse richieste tramite oggetti <xref:System.Net.HttpWebRequest>.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Rappresenta criteri di cache basati sulla posizione o i criteri di cache <xref:System.Net.Cache.RequestCacheLevel.Default> basati sul tempo per risorse richieste tramite oggetti <xref:System.Net.WebRequest>.|  
@@ -38,8 +38,8 @@ I criteri di cache definiscono le regole usate per determinare se è possibile s
   
  Per esempi di codice che illustrano la creazione e l'uso dei criteri di cache, vedere [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

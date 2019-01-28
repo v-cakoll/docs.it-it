@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f644e4f4ff47e31c0f2aaadb577aa6715b445d29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff12472ae5c7b2abbf1af338c2a1aea2a72907d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677147"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Esposizione di componenti COM a .NET Framework
 Questa sezione riepiloga il processo necessario per esporre un componente COM esistente al codice gestito. Per informazioni dettagliate sulla scrittura di server COM strettamente integrati con .NET Framework, vedere [Considerazioni di progettazione per l'interoperabilità](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).
@@ -38,9 +38,9 @@ Questa sezione riepiloga il processo necessario per esporre un componente COM es
   
      Per una distribuzione ottimale delle applicazioni di interoperabilità, distribuirle come assembly firmati [con nome sicuro](../app-domains/strong-named-assemblies.md) nella Global Assembly Cache.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità con codice non gestito](index.md)  
- [Considerazioni di progettazione per l'interoperabilità](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))  
- [Esempio di interoperabilità COM: client .NET e server COM](com-interop-sample-net-client-and-com-server.md)  
- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../standard/language-independence-and-language-independent-components.md)  
- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità con codice non gestito](index.md)
+- [Considerazioni di progettazione per l'interoperabilità](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))
+- [Esempio di interoperabilità COM: client .NET e server COM](com-interop-sample-net-client-and-com-server.md)
+- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../standard/language-independence-and-language-independent-components.md)
+- [Gacutil.exe (strumento Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731881"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedura: Creare un file o una cartella (Guida per programmatori C#)
 A livello di codice è possibile creare una cartella, una sottocartella e un file nella sottocartella e quindi scrivere dati nel file.  
@@ -70,6 +70,6 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)

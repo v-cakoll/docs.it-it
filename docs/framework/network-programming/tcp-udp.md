@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 987a8aa789d8c4585a58a031c9d920ee5cab45aa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692545"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) con le classi <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Queste classi protocollo sono basate sulla classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e possono gestire i dettagli del trasferimento dei dati.  
@@ -32,10 +32,10 @@ Le applicazioni possono usare servizi TCP (Transmission Control Protocol) e UDP 
   
  La classe **UdpClient** usa una matrice di byte per contenere il datagramma UDP. Si usa il metodo <xref:System.Net.Sockets.UdpClient.Send%2A> per inviare i dati alla rete e il metodo <xref:System.Net.Sockets.UdpClient.Receive%2A> per ricevere un datagramma in ingresso.  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso dei servizi TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
- [Uso dei servizi UDP](../../../docs/framework/network-programming/using-udp-services.md)  
- [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>Vedere anche
+- [Uso dei servizi TCP](../../../docs/framework/network-programming/using-tcp-services.md)
+- [Uso dei servizi UDP](../../../docs/framework/network-programming/using-udp-services.md)
+- [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a7b4cb29dcf2c799f17bb7f3a02c300c5f0d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555401"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -372,8 +372,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)  
- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)  
- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Copia e blocco](copying-and-pinning.md)
+## <a name="see-also"></a>Vedere anche
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Copia e blocco](copying-and-pinning.md)

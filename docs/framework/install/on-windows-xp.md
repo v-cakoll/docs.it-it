@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: eb62bfe992e5b3774c4a8123eb9ca3f790eaf0b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7c21ffbbb4feaf3b64ac454f1f00443bdb5f7227
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536490"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installare .NET Framework in Windows XP e Windows Server 2003
 
@@ -39,6 +39,6 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="see-also"></a>Vedere anche
 
-[Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installare .NET Framework per sviluppatori](guide-for-developers.md)
+- [Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Installare .NET Framework per sviluppatori](guide-for-developers.md)

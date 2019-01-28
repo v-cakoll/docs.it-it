@@ -2,12 +2,12 @@
 title: Rimozione di elementi, attributi e nodi da un albero XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: f3091c3f46d8b3283c961fffd4d1f0ce991083ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46584116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547384"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Rimozione di elementi, attributi e nodi da un albero XML (C#)
 È possibile modificare un albero XML, rimuovendo elementi, attributi e altri tipi di nodi.  
@@ -18,7 +18,7 @@ ms.locfileid: "46584116"
   
  I metodi seguenti consentono di rimuovere nodi e attributi da un albero XML.  
   
-|Metodo|Descrizione|  
+|Metodo|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Rimuove un oggetto <xref:System.Xml.Linq.XAttribute> dal relativo elemento padre.|  
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Rimuove i nodi figlio da un oggetto <xref:System.Xml.Linq.XContainer>.|  
@@ -31,7 +31,7 @@ ms.locfileid: "46584116"
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  In questo esempio sono illustrati tre approcci per la rimozione di elementi. Con il primo viene rimosso un singolo elemento. Con il secondo viene recuperata una raccolta di elementi, che viene materializzata tramite l'operatore <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e quindi viene rimossa. Infine, viene recuperata una raccolta di elementi che viene rimossa tramite il metodo di estensione <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
  Per altre informazioni sull'operatore <xref:System.Linq.Enumerable.ToList%2A>, vedere [Conversione di tipi di dati (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).  

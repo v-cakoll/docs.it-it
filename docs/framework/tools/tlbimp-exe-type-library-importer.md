@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631308"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (utilità di importazione della libreria dei tipi)
 L'utilità di importazione della libreria dei tipi consente di convertire le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti in un assembly di Common Language Runtime. L'output di Tlbimp.exe è un file binario (assembly) che contiene i metadati di runtime per i tipi definiti all'interno della libreria dei tipi originale. È possibile esaminare questo file con strumenti quali [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](index.md)  
- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](tlbexp-exe-type-library-exporter.md)  
- [Importazione di una libreria dei tipi come assembly](../interop/importing-a-type-library-as-an-assembly.md)  
- [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe (Disassembler IL)](ildasm-exe-il-disassembler.md)  
- [Sn.exe (strumento Nome sicuro)](sn-exe-strong-name-tool.md)  
- [Assembly con nomi sicuri](../app-domains/strong-named-assemblies.md)  
- [Attributi per l'importazione di librerie dei tipi in assembly di interoperabilità](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [Prompt dei comandi](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](index.md)
+- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](tlbexp-exe-type-library-exporter.md)
+- [Importazione di una libreria dei tipi come assembly](../interop/importing-a-type-library-as-an-assembly.md)
+- [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe (Disassembler IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (strumento Nome sicuro)](sn-exe-strong-name-tool.md)
+- [Assembly con nomi sicuri](../app-domains/strong-named-assemblies.md)
+- [Attributi per l'importazione di librerie dei tipi in assembly di interoperabilità](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [Prompt dei comandi](developer-command-prompt-for-vs.md)

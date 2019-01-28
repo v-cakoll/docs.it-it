@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: e3cd4779b4f865c4c9bb46d4f25819c863de8bc2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 280b818534238207f901e1dcd125e03f5ce1d1fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675221"
 ---
 # <a name="get-c-reference"></a>get (Riferimenti per C#)
 
@@ -37,7 +37,7 @@ Per i casi semplici in cui le funzioni di accesso `get` e `set` di una propriet√
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
 - [Propriet√†](../../../csharp/programming-guide/classes-and-structs/properties.md)

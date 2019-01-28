@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 330d8ff784218483caf153b5c14f8a30df2d2452
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628929"
 ---
 # <a name="platform-invoke-examples"></a>Esempi di platform invoke
 Gli esempi seguenti dimostrano come definire e chiamare la funzione **MessageBox** in User32.dll, passando una stringa semplice come argomento. Negli esempi, il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> è impostato su **Auto** per consentire alla piattaforma di destinazione di determinare la larghezza del carattere e il marshalling delle stringhe.  
@@ -31,7 +31,7 @@ Gli esempi seguenti dimostrano come definire e chiamare la funzione **MessageBox
   
  Per ulteriori esempi, vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Specifica di un set di caratteri](../../../docs/framework/interop/specifying-a-character-set.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Specifica di un set di caratteri](../../../docs/framework/interop/specifying-a-character-set.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728385"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie a collegamento dinamico (DLL), come quelle nell'API Win32. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità.  
@@ -72,7 +72,7 @@ Chiamata di platform invoke a una funzione DLL non gestita
   
  Platform invoke dà luogo a eccezioni generate dalla funzione non gestita per il chiamante gestito.
 
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)  
- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)  
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)
+- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)
+- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)

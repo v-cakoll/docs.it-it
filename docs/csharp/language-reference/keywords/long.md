@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: 7693de1502898a6ba8d35c0011d31756848fb461
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3085fd9c5f0c379d4a2ef22f4adb0ec157f0b785
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585510"
 ---
 # <a name="long-c-reference"></a>long (Riferimenti per C#)
 
@@ -106,11 +106,11 @@ Per altre informazioni, vedere [Tipi integrali](~/_csharplang/spec/types.md#inte
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Int64>  
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Int64>
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabella dei tipi integrali](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabella dei tipi incorporati](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

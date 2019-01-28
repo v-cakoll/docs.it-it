@@ -1,14 +1,14 @@
 ---
 title: Eseguire join raggruppati (LINQ in C#)
 description: Informazioni su come eseguire join raggruppati usando LINQ in C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: f65faabcb039e186a2e0d18dda4373263ffd0b8b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911925"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857554"
 ---
 # <a name="perform-grouped-joins"></a>Eseguire join raggruppati
 
@@ -35,8 +35,8 @@ I join di gruppo sono ideali per la creazione di XML tramite LINQ to XML. L'esem
 
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Eseguire inner join](perform-inner-joins.md)  
-- [Eseguire left outer join](perform-left-outer-joins.md)  
-- [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Eseguire inner join](perform-inner-joins.md)
+- [Eseguire left outer join](perform-left-outer-joins.md)
+- [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)

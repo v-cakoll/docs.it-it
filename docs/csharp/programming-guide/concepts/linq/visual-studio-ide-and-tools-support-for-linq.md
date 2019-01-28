@@ -2,12 +2,12 @@
 title: IDE di Visual Studio e supporto di strumenti per LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: e7c5a1efb8ab6e9e9aab98a2dd07e9a85c5625b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f2d27bfaa6c9199d29c1566e0e157cf08c1ccd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561049"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>IDE di Visual Studio e supporto di strumenti per LINQ (C#)
 L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzionalità che supportano lo sviluppo di applicazioni LINQ:  
@@ -26,4 +26,4 @@ L'ambiente di sviluppo integrato (IDE) di Visual Studio offre le seguenti funzio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

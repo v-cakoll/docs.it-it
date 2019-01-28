@@ -2,12 +2,12 @@
 title: -subsystemversion (opzioni del compilatore C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738079"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opzioni del compilatore C#)
 Specifica la versione minima del sottosistema in cui è possibile eseguire il file eseguibile generato, determinando le versioni di Windows in cui è possibile eseguire il file eseguibile. In genere, questa opzione assicura che il file eseguibile possa sfruttare le funzionalità di protezione che non sono disponibili con le versioni precedenti di Windows.  
@@ -58,6 +58,6 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
 ## <a name="setting-this-option"></a>Impostazione di questa opzione  
  Per impostare l'opzione del compilatore **-subsystemversion** in Visual Studio, è necessario aprire il file con estensione csproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
 - [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

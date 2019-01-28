@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: af83ae8c6c209886649d4eb1543c47e63bd97449
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685945"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Attributo cref (Guida per programmatori C#)
 L'attributo `cref` in un tag della documentazione XML indica un "riferimento al codice". Specifica che il testo all'interno del tag è un elemento di codice, ad esempio un tipo, un metodo o una proprietà. Gli strumenti per la creazione di documentazione, ad esempio [Sandcastle](https://github.com/EWSoftware/SHFB), usano attributi `cref` per generare automaticamente collegamenti ipertestuali alla pagina in cui è documentato il tipo o il membro.  
@@ -121,5 +121,5 @@ L'attributo `cref` in un tag della documentazione XML indica un "riferimento al 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Commenti relativi alla documentazione XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [Commenti relativi alla documentazione XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

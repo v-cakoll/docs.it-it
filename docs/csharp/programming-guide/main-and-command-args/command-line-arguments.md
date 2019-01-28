@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722699"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
 È possibile inviare argomenti al metodo `Main` definendo il metodo in uno dei modi seguenti:  
@@ -76,10 +76,10 @@ long num = Convert.ToInt64(s);
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Environment?displayProperty=nameWithType>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-- [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- <xref:System.Environment?displayProperty=nameWithType>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)

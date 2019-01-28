@@ -2,12 +2,12 @@
 title: Panoramica della classe XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dba8b29c98499bc056d546a282ff2ee1bb88bfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494015"
 ---
 # <a name="xattribute-class-overview-c"></a>Panoramica della classe XAttribute (C#)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
@@ -20,7 +20,7 @@ Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:S
 ## <a name="the-xattribute-constructor"></a>Costruttore XAttribute  
  Il seguente costruttore della classe <xref:System.Xml.Linq.XAttribute> è quello usato più comunemente:  
   
-|Costruttore|Descrizione|  
+|Costruttore|Description|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XAttribute>. L'argomento `name` specifica il nome dell'attributo, mentre `content` ne specifica il contenuto.|  
   

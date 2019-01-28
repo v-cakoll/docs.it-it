@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589317"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: Definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
 Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
@@ -65,5 +65,5 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Confronti di uguaglianza](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [Confronti di uguaglianza](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

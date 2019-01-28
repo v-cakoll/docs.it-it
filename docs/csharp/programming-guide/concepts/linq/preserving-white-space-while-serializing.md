@@ -2,12 +2,12 @@
 title: Conservazione di spazi vuoti durante la serializzazione
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1b2a7f3ab2dcad200d6985e6b7bd91637d27dde8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741363"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Conservazione di spazi vuoti durante la serializzazione
 In questo argomento viene descritto come controllare lo spazio vuoto durante la serializzazione di un albero XML.  

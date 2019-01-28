@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632790"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
@@ -41,7 +41,7 @@ Interfacce COM e il Runtime Callable Wrapper
   
  L'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |**IDispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
@@ -50,15 +50,15 @@ Interfacce COM e il Runtime Callable Wrapper
   
  RCW usa facoltativamente le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|Talvolta l'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.|  
 |**IDispatchEx**|Se la classe implementa **IDispatchEx**, l'oggetto RCW implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Consente di trattare come raccolte i tipi COM che supportano l'enumerazione.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Wrapper COM](com-wrappers.md)  
- [Sottoporre a marshalling interfacce selezionate](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
- [COM Callable Wrapper](com-callable-wrapper.md)  
- [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a>Vedere anche
+- [Wrapper COM](com-wrappers.md)
+- [Sottoporre a marshalling interfacce selezionate](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
+- [COM Callable Wrapper](com-callable-wrapper.md)
+- [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Importazione di una libreria dei tipi come assembly](importing-a-type-library-as-an-assembly.md)

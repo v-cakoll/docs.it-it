@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bb8f9ace8f259ece803aa6681ebab90355146380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661698"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilazione dalla riga di comando con csc.exe
 È possibile richiamare il compilatore C# digitando il nome del relativo file eseguibile (*csc.exe*) da un prompt dei comandi.
@@ -97,11 +97,11 @@ Dopo il richiamo del compilatore C# non viene creato alcun file oggetto (*.obj*)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
-- [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
-- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
+- [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5429dfbf7b318b60d6c3150315dbe22ee73b4792
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563444"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Panoramica sul modello di programmazione con attributi (MEF)
 In Managed Extensibility Framework (MEF) un *modello di programmazione* è un metodo particolare per definire l'insieme di oggetti concettuali su cui opera MEF, incluse le parti, le importazioni e le esportazioni. MEF usa questi oggetti, ma non specifica il modo in cui devono essere rappresentati. È quindi possibile usare una vasta gamma di modelli di programmazione, inclusi i modelli di programmazione personalizzati.  
@@ -149,7 +149,7 @@ public class MyAddin
 }  
 ```  
   
- In questa classe il metodo `DoSomething` accetta un singolo parametro `int` e restituisce un oggetto `string`. Per corrispondere a questa esportazione, la parte che esegue l'importazione deve dichiarare un membro appropriato. La classe seguente importa il metodo `DoSomething`.  
+ In questa classe il metodo `DoSomething` accetta un singolo parametro `int` e restituisce un oggetto `string`. Per corrispondere a questa esportazione, la parte che esegue l'importazione deve dichiarare un membro appropriato. La classe seguente importa il metodo `DoSomething` .  
   
 ```vb  
 Public Class MyClass1  
@@ -730,7 +730,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Quando si dichiara di nuovo l'attributo `InheritedExport` per eseguire l'override dei metadati, occorre assicurarsi che i tipi di contratto siano uguali. Nell'esempio precedente, `IPlugin` è il tipo di contratto In caso di differenza, invece di eseguire l'override, il secondo attributo creerà una seconda esportazione indipendente dalla parte. In genere, ciò significa che sarà necessario specificare in modo esplicito il tipo di contratto quando si esegue l'override di un attributo `InheritedExport`, come illustrato nell'esempio precedente.  
+ Quando si dichiara di nuovo l'attributo `InheritedExport` per eseguire l'override dei metadati, occorre assicurarsi che i tipi di contratto siano uguali. Nell'esempio precedente, `IPlugin` è il tipo di contratto In caso di differenza, invece di eseguire l'override, il secondo attributo creerà una seconda esportazione indipendente dalla parte. In genere, ciò significa che sarà necessario specificare in modo esplicito il tipo di contratto quando si esegue l'override di un attributo `InheritedExport` , come illustrato nell'esempio precedente.  
   
  Poiché non è possibile creare direttamente istanze delle interfacce, non è in genere possibile decorarle con attributi `Export` o `Import` . Un'interfaccia può essere tuttavia decorata con l'attributo `InheritedExport` a livello di interfaccia e tale esportazione, insieme a eventuali metadati associati, sarà ereditata da qualsiasi classe che esegue l'implementazione. L'interfaccia stessa, tuttavia, non sarà disponibile come parte.  
   
@@ -957,6 +957,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` include un metodo con nome `OnImportsSatisfied`. Questo metodo è chiamato dal contenitore di composizione per qualsiasi parte che implementa l'interfaccia quando la composizione è stata completata e le importazioni della parte sono pronte per l'uso. Le parti sono create dal motore di composizione per completare le importazioni di altre parti. Prima dell'impostazione delle importazioni di una parte, sarà possibile eseguire inizializzazioni che si basano su o che modificano valori importati nel costruttore della parte solo se tali valori sono stati specificati come prerequisiti usando l'attributo `ImportingConstructor` . Questo è in genere il metodo preferito, ma in alcuni casi è possibile che l'aggiunta di costruttori non sia disponibile. In questi casi l'inizializzazione può essere eseguita in `OnImportsSatisfied`e la parte deve implementare `IPartImportsSatisfiedNotification`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Video di Channel 9: Aprire le applicazioni con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Video di Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>Vedere anche
+- [Video di Channel 9: Aprire le applicazioni con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Video di Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

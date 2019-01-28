@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 92ac601719ccb1c5e9f769c286a1d2dd443c713a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695673"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query (Guida per programmatori C#)
 È possibile usare le variabili locali tipizzate in modo implicito ogni volta che si vuole che il compilatore determini il tipo di una variabile locale. È necessario usare le variabili locali tipizzate in modo implicito per archiviare i tipi anonimi, che vengono spesso usati nelle espressioni di query. Gli esempi seguenti illustrano tipi d'uso facoltativi e obbligatori delle variabili locali tipizzate in modo implicito nelle query.  
@@ -29,8 +29,8 @@ ms.locfileid: "53237805"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Metodi di estensione](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ (Language-Integrated Query)](../../../csharp/linq/index.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600492"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 Un'*espressione* è una sequenza di uno o più operandi e zero o più operatori che può restituire un singolo valore, oggetto, metodo o spazio dei nomi. Le espressioni possono contenere un valore letterale, una chiamata al metodo, un operatore e i relativi operandi oppure un *nome semplice*, ad esempio il nome di una variabile, un membro di un tipo, un parametro di un metodo, uno spazio dei nomi o un tipo.  
@@ -75,9 +75,9 @@ C# supporta i *membri con corpo di espressione*, che consentono di specificare u
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
-- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Tipi](../../../csharp/programming-guide/types/index.md)
 - [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

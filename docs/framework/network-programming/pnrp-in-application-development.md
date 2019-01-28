@@ -2,12 +2,12 @@
 title: PNRP nello sviluppo di applicazioni
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93dd65100e19f16c6597374cbab1e10d6a759562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736546"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP nello sviluppo di applicazioni
 In Windows Vista, le applicazioni di rete possono accedere alle funzioni di risoluzione e pubblicazione dei nomi tramite un'API PNRP semplificata.  
@@ -19,5 +19,5 @@ In Windows Vista, le applicazioni di rete possono accedere alle funzioni di riso
   
  Il passaggio di messaggi tra le applicazioni PeerToPeer viene ancora gestito da architetture sottostanti, ad esempio PeerChannel e [Dati di grandi dimensioni e flussi](https://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.PeerToPeer>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523090"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshalling predefinito per le stringhe
 Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> presentano un comportamento del marshalling simile.  
@@ -218,9 +218,9 @@ struct StringInfoT {
 ## <a name="fixed-length-string-buffers"></a>Buffer di stringhe di lunghezza fissa  
  In alcuni casi, è necessario passare un buffer di caratteri a lunghezza fissa nel codice non gestito da modificare. Il semplice passaggio di una stringa non funziona in questo caso perché il chiamato non può modificare il contenuto del buffer passato. Anche se la stringa viene passata per riferimento, non è possibile inizializzare il buffer su una dimensione specifica.  
   
- La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una stringa. Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.  
+ La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una stringa.  Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.  
   
- La funzione `GetWindowText` dell'API Microsoft Win32 (definita in Windows.h) rappresenta ad esempio un buffer di caratteri a lunghezza fissa che deve essere passato nel codice non gestito per essere modificato. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`. Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. Il codice seguente illustra la dichiarazione della funzione `GetWindowText` come definita in Windows.h.  
+ La funzione `GetWindowText` dell'API Microsoft Win32 (definita in Windows.h) rappresenta ad esempio un buffer di caratteri a lunghezza fissa che deve essere passato nel codice non gestito per essere modificato. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`.  Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. Il codice seguente illustra la dichiarazione della funzione `GetWindowText` come definita in Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -230,7 +230,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.  
+  Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.  
   
 ```vb  
 Public Class Win32API  
@@ -263,8 +263,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)  
- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)  
- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Copia e blocco](copying-and-pinning.md)
+## <a name="see-also"></a>Vedere anche
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Copia e blocco](copying-and-pinning.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677641"
 ---
 # <a name="web-and-socket-permissions"></a>Autorizzazioni Web e socket
 La sicurezza Internet per le applicazioni che usano lo spazio dei nomi <xref:System.Net> viene fornita dalle classi <xref:System.Net.WebPermission> e <xref:System.Net.SocketPermission>. La classe **WebPermission** controlla il diritto di un'applicazione di richiedere i dati da un URI o di servire un URI in Internet. La classe **SocketPermission** controlla il diritto di un'applicazione di usare un oggetto <xref:System.Net.Sockets.Socket> per accettare i dati su una porta locale o di contattare i dispositivi remoti usando un protocollo di trasporto in un altro indirizzo, in base all'host, al numero di porta e al protocollo di trasporto del socket.  
@@ -33,6 +33,6 @@ La sicurezza Internet per le applicazioni che usano lo spazio dei nomi <xref:Sys
   
  Per le istanze di **WebPermission**, autorizzazione di accettazione significa che un'applicazione può esportare l'URI controllato da **WebPermission**, mentre autorizzazione di connessione significa che un'applicazione può accedere a tale URI (che sia locale o remoto).  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza](../../../docs/standard/security/index.md)  
- [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza](../../../docs/standard/security/index.md)
+- [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)
