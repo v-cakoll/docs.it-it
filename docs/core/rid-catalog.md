@@ -2,12 +2,12 @@
 title: Catalogo dei RID (Runtime IDentifier) di .NET Core
 description: Informazioni sull'identificatore di runtime (RID) e su come vengono usati i RID in .NET Core.
 ms.date: 07/19/2018
-ms.openlocfilehash: b801b7866b563ae06499d8ccd2d07cf5fd52b928
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5a6dda260b4be85e54f4075f3edf12210b385289
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534543"
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -196,4 +196,4 @@ Per altre informazioni, vedere [Prerequisiti per .NET Core in macOS](macos-prere
 
 ## <a name="see-also"></a>Vedere anche
 
-* [ID di runtime](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [ID di runtime](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

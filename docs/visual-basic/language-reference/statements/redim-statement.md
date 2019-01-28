@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617316"
 ---
 # <a name="redim-statement-visual-basic"></a>Istruzione ReDim (Visual Basic)
 Rialloca lo spazio di archiviazione per una variabile di matrice.  
@@ -47,7 +47,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Termine|Definizione|  
 |----------|----------------|  
 |`Preserve`|Facoltativo. Modificatore utilizzato per conservare i dati nella matrice esistente quando si modifica soltanto la grandezza dell'ultima dimensione.|  
-|`name`|Obbligatorio. Nome della variabile di matrice. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Obbligatorio. Nome della variabile di matrice. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obbligatorio. Elenco di limiti relativi a ogni dimensione della matrice ridefinita.|  
   
 ## <a name="remarks"></a>Note  
@@ -67,7 +67,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Tipi di dati.** L'istruzione `ReDim` non è in grado di modificare il tipo di dati di una variabile di matrice oppure i relativi elementi.  
   
--   **inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
+-   **Inizializzazione.** L'istruzione `ReDim` non può fornire nuovi valori di inizializzazione per gli elementi della matrice.  
   
 -   **Numero di dimensioni.** L'istruzione `ReDim` non può modificare la classificazione (numero di dimensioni) della matrice.  
   
@@ -75,7 +75,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
      Ad esempio, se la matrice contiene solo una dimensione, è possibile ridimensionarla e mantenere tutto il contenuto della matrice, poiché si sta modificando l'ultima e unica dimensione. Tuttavia, se la matrice dispone di due o più dimensioni e si utilizza `Preserve`, è possibile modificare i valori soltanto per l'ultima dimensione.  
   
--   **Proprietà.** È possibile utilizzare `ReDim` su una proprietà che contiene una matrice di valori.  
+-   **proprietà.** È possibile utilizzare `ReDim` su una proprietà che contiene una matrice di valori.  
   
 ## <a name="behavior"></a>Comportamento  
   
@@ -98,12 +98,12 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  La terza `ReDim` crea una nuova matrice e rimuove altre cinque colonne dalla fine di ogni riga relativa a ogni livello. Questa volta non copia gli elementi esistenti. Questa istruzione consente di ripristinare le dimensioni originali della matrice. Dal momento che l'istruzione non include il modificatore `Preserve`, imposta i valori predefiniti originali di tutti gli elementi della matrice.  
   
- Per ulteriori esempi, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Per altri esempi, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IndexOutOfRangeException>  
- [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Istruzione Erase](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IndexOutOfRangeException>
+- [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Istruzione Erase](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)

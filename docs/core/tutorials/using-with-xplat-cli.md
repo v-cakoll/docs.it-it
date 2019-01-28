@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 11d8a4d1841a1d161c4aed233a025813374556d6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605955"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -157,4 +157,4 @@ Si noti che i comandi e i passaggi illustrati in questa esercitazione per esegui
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
+- [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)

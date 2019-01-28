@@ -4,12 +4,12 @@ description: Informazioni su come creare un modello personalizzato per il comand
 author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 72cafab774187cf8c59b2a00d8adcc5028974c88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714058"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creare un modello personalizzato per dotnet new
 
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
-* [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [Come creare modelli personalizzati per dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
-* Lo schema [*template.JSON* nell'archivio di schemi JSON](http://json.schemastore.org/template)  
+- [Wiki del repository GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)
+- [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+- [Come creare modelli personalizzati per dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- Lo schema [*template.JSON* nell'archivio di schemi JSON](http://json.schemastore.org/template)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d089b27158a36d03245e6312dff0e0dc71d12f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599604"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applicazioni ASP.NET tramite handle di attesa
 I modelli di callback e di polling per la gestione di operazioni asincrone sono utili quando l'applicazione elabora una sola operazione asincrona alla volta. I modelli di attesa offrono un metodo più flessibile per l'elaborazione di più operazioni asincrone. Sono disponibili due modelli Wait, denominati in base ai metodi <xref:System.Threading.WaitHandle> usati per implementarli: Il modello Wait (Any) e il modello Wait (All).  
@@ -315,7 +315,7 @@ void Button1_Click(object sender, System.EventArgs e)
 ## <a name="example-wait-all-model"></a>Esempio: Modello Wait (All)  
  Nell'esempio seguente viene illustrato il modello Wait (All). Quando vengono avviati tre processi asincroni, viene chiamato il metodo <xref:System.Threading.WaitHandle.WaitAll%2A> per attendere il completamento o il timeout di tali processi.  
   
- Come nell'esempio del modello Wait (Any), viene aggiunta l'ora di completamento del processo in una casella di testo corrispondente. Nuovamente, le ore nelle caselle di testo illustrano il punto: il codice che segue il metodo <xref:System.Threading.WaitHandle.WaitAny%2A> viene eseguito solo dopo il completamento di tutti i processi.  
+ Come nell'esempio del modello Wait (Any), viene aggiunta l'ora di completamento del processo in una casella di testo corrispondente. Nuovamente, le ore nelle caselle di testo illustrano il punto: il codice che segue il metodo <xref:System.Threading.WaitHandle.WaitAny%2A> viene eseguito solo dopo che tutti i processi vengono completati.  
   
  Per impostare questo esempio, creare un nuovo progetto Sito Web ASP.NET. Posizionare un controllo <xref:System.Web.UI.WebControls.Button> e quattro controlli <xref:System.Web.UI.WebControls.TextBox> nella pagina (accettando il nome predefinito di ciascuno).  
   
@@ -579,6 +579,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche
+- [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
