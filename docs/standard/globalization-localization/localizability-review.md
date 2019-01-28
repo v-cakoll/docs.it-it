@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623984"
 ---
 # <a name="localizability-review"></a>Revisione della localizzabilità
 La revisione della localizzabilità è un passaggio intermedio nello sviluppo di un'applicazione internazionale. Viene verificato che un'applicazione globalizzata sia pronta per la localizzazione e viene identificato qualsiasi codice o aspetto dell'interfaccia utente per cui è richiesta una gestione speciale. Questo passaggio consente di garantire che durante il processo di localizzazione non verranno introdotti difetti funzionali nell'applicazione. Quando tutti i problemi generati dall'analisi della localizzazione vengono risolti, l'applicazione è pronta per la localizzazione. Se la revisione della localizzabilità è completa, non è necessario modificare nessun codice sorgente durante il processo di localizzazione.  
@@ -75,7 +75,7 @@ La revisione della localizzabilità è un passaggio intermedio nello sviluppo di
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
-- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)  
-- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
+- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)
+- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)
 - [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

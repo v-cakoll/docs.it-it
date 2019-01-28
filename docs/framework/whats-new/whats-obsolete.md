@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541261"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
 .NET Framework cambia nel corso del tempo. In ogni nuova versione vengono aggiunti nuovi tipi e membri dei tipi che forniscono nuove funzionalità. Anche i tipi esistenti e i relativi membri cambiano nel tempo. Alcuni tipi, ad esempio, perdono di importanza in quanto la tecnologia che supportano viene sostituita da una nuova tecnologia, e alcuni metodi vengono sostituiti da altri più nuovi che sono più adatti o più completi in termini di funzionalità.  
@@ -36,7 +36,7 @@ ms.locfileid: "50183477"
   
 -   Modificare il codice rimuovendo l'uso del tipo o membro, se possibile.  
   
-     oppure  
+     -oppure-  
   
 -   Rivedere la documentazione di quest'area tecnologica per stabilire come rispondere a questa deprecazione.  
   
@@ -81,5 +81,5 @@ ms.locfileid: "50183477"
   
  [Elenco degli elementi obsoleti di .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>Vedere anche  
- [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>Vedere anche
+- [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

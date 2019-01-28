@@ -4,12 +4,12 @@ description: Informazioni su come definire e usare valori restituiti e variabili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514415"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -124,5 +124,5 @@ Questa seconda versione è più efficiente con sequenze più lunghe negli scenar
 
 ## <a name="see-also"></a>Vedere anche
 
-- [ref (parola chiave)](../../language-reference/keywords/ref.md)  
+- [ref (parola chiave)](../../language-reference/keywords/ref.md)
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)

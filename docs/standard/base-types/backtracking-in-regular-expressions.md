@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615978"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -157,7 +157,7 @@ ms.locfileid: "53130091"
   
  `(?<=` *sottoespressione* `)` è un'asserzione lookbehind positiva, ovvero il carattere o i caratteri prima della posizione corrente devono corrispondere a *sottoespressione*. `(?<!`*sottoespressione*`)` è un'asserzione lookbehind negativa, ovvero il carattere o i caratteri prima della posizione corrente non devono corrispondere a *sottoespressione*. Le asserzioni lookbehind positive e negative sono entrambe particolarmente utili quando *sottoespressione* è un subset della sottoespressione precedente.  
   
- L'esempio seguente usa due modelli di espressione regolare equivalenti che convalidano il nome utente in un indirizzo di posta elettronica. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookbehind positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ L'esempio seguente usa due modelli di espressione regolare equivalenti che convalidano il nome utente in un indirizzo di posta elettronica. Il primo modello è soggetto a una riduzione delle prestazioni a causa di un utilizzo eccessivo del backtracking. Il secondo modello modifica la prima espressione regolare sostituendo un quantificatore annidato con un'asserzione lookbehind positiva. Nell'output dell'esempio viene visualizzato il tempo di esecuzione del metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -167,7 +167,7 @@ ms.locfileid: "53130091"
 |Modello|Description|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
-|`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
+|`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> , il confronto non rileva la distinzione tra maiuscole e minuscole.|  
 |`[-.\w]*`|Trova la corrispondenza di zero, una o più occorrenze di un trattino, un punto o un carattere alfanumerico.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico.|  
 |`([-.\w]*[0-9A-Z])*`|Trova la corrispondenza di zero o più occorrenze della combinazione di zero o più trattini, punti o caratteri alfanumerici seguiti da un carattere alfanumerico. Equivale al primo gruppo di acquisizione.|  
@@ -219,8 +219,8 @@ ms.locfileid: "53130091"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

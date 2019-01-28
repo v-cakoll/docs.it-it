@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692964"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -94,7 +94,7 @@ ms.locfileid: "44038744"
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Interfacce generiche con parametri di tipo generico controvariante  
  A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], diverse interfacce generiche presentano parametri di tipo controvariante. Ad esempio: <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601>e <xref:System.Collections.Generic.IEqualityComparer%601>. Queste interfacce dispongono solo di parametri di tipo controvariante, pertanto i parametri di tipo vengono utilizzati solo come tipi di parametri nei membri delle interfacce.  
   
- Nell'esempio seguente vengono illustrati parametri di tipo controvariante. Nell'esempio viene definita una classe`MustInherit` astratta ( `Shape` in Visual Basic) con una proprietà `Area` . Nell'esempio viene definita anche una classe `ShapeAreaComparer` che implementa `IComparer<Shape>` (`IComparer(Of Shape)` in Visual Basic). L'implementazione del metodo <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> è basata sul valore della proprietà `Area`, pertanto `ShapeAreaComparer` può essere utilizzato per ordinare gli oggetti `Shape` in base all'area.  
+ Nell'esempio seguente vengono illustrati parametri di tipo controvariante. Nell'esempio viene definita una classe`MustInherit` astratta ( `Shape` in Visual Basic) con una proprietà `Area` . Nell'esempio viene definita anche una classe `ShapeAreaComparer` che implementa `IComparer<Shape>` (`IComparer(Of Shape)` in Visual Basic). L'implementazione del metodo <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> è basata sul valore della proprietà `Area` , pertanto `ShapeAreaComparer` può essere utilizzato per ordinare gli oggetti `Shape` in base all'area.  
   
  La classe `Circle` eredita dalla classe `Shape` ed esegue l'override di `Area`. Nell'esempio viene creato un oggetto <xref:System.Collections.Generic.SortedSet%601> di oggetti `Circle` , usando un costruttore che accetta un oggetto `IComparer<Circle>` (`IComparer(Of Circle)` in Visual Basic). Tuttavia, anziché passare un oggetto `IComparer<Circle>`, nell'esempio viene passato un oggetto `ShapeAreaComparer` che implementa `IComparer<Shape>`. È possibile passare un operatore di confronto di un tipo meno derivato (`Shape`) quando il codice chiama un operatore di confronto di un tipo più derivato (`Circle`), poiché il parametro di tipo dell'interfaccia generica <xref:System.Collections.Generic.IComparer%601> è controvariante.  
   
@@ -172,11 +172,11 @@ ms.locfileid: "44038744"
   
 |Tipo|Parametri di tipo covariante|Parametri di tipo controvariante|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> in <xref:System.Action%6016>||Yes|  
+|<xref:System.Action%601> in <xref:System.Action%6016>||Sì|  
 |<xref:System.Comparison%601>||Yes|  
 |<xref:System.Converter%602>|Yes|Yes|  
-|<xref:System.Func%601>|Yes||  
-|<xref:System.Func%602> in <xref:System.Func%6017>|Yes|Yes|  
+|<xref:System.Func%601>|Sì||  
+|<xref:System.Func%602> in <xref:System.Func%6017>|Sì|Yes|  
 |<xref:System.IComparable%601>||Yes|  
 |<xref:System.Predicate%601>||Yes|  
 |<xref:System.Collections.Generic.IComparer%601>||Yes|  
@@ -186,10 +186,10 @@ ms.locfileid: "44038744"
 |<xref:System.Linq.IGrouping%602>|Yes||  
 |<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
 |<xref:System.Linq.IOrderedQueryable%601>|Yes||  
-|<xref:System.Linq.IQueryable%601>|Yes||  
+|<xref:System.Linq.IQueryable%601>|Sì||  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+- [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982867"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066323"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -98,7 +98,7 @@ ms.locfileid: "50982867"
   
  Per ogni processo gestito esiste un heap gestito. Tutti i thread nel processo allocano memoria per gli oggetti sullo stesso heap.  
   
- Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) Win32.  
+ Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) Win32.  
   
 > [!IMPORTANT]
 >  La dimensione dei segmenti allocati dal Garbage Collector è specifica dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.  

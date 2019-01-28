@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221648"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066389"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |**-t**[**p**] *FileIn*|Visualizza il token per la chiave pubblica archiviata in *FileIn*. Il contenuto di *FileIn* deve includere una chiave pubblica generata in precedenza da un file di coppia di chiavi tramite **-p**.  Non usare l'opzione **-t[p]** per estrarre il token direttamente dal file di coppia di chiavi.<br /><br /> Sn.exe calcola il token usando una funzione hash tratta dalla chiave pubblica. Per risparmiare spazio, Common Language Runtime archivia i token di chiave pubblica nel manifesto come parte di un riferimento a un altro assembly quando registra una dipendenza in un assembly con nome sicuro. Oltre al token, l'opzione **-tp** visualizza anche la chiave pubblica. Se all'assembly è stato applicato l'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute>, il token è per la chiave di identità e viene visualizzato il nome dell'algoritmo hash e della chiave di identità.<br /><br /> Questa opzione non verifica la firma dell'assembly e non deve essere usata per prendere decisioni sull'attendibilità.  Serve solo a visualizzare i dati non elaborati del token della chiave pubblica.|  
 |**-T**[**p**] *assembly*|Visualizza il token della chiave pubblica per *assembly*. *assembly* deve corrispondere al nome di un file che contiene un manifesto dell'assembly.<br /><br /> Sn.exe calcola il token usando una funzione hash tratta dalla chiave pubblica. Per risparmiare spazio, il runtime archivia i token di chiave pubblica nel manifesto come parte di un riferimento a un altro assembly quando registra una dipendenza in un assembly con nome sicuro. Oltre al token, l'opzione **-Tp** visualizza anche la chiave pubblica. Se all'assembly è stato applicato l'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute>, il token è per la chiave di identità e viene visualizzato il nome dell'algoritmo hash e della chiave di identità.<br /><br /> Questa opzione non verifica la firma dell'assembly e non deve essere usata per prendere decisioni sull'attendibilità.  Serve solo a visualizzare i dati non elaborati del token della chiave pubblica.|  
 |`-TS` `assembly` `infile`|Applica la firma di test all'`assembly` firmato o parzialmente firmato con la coppia di chiavi presente in `infile`.|  
-|-`TSc``assembly``container`|Applica la firma di test all'`assembly` firmato o parzialmente firmato con la coppia di chiavi presente nel contenitore di chiavi `container`.|  
+|-`TSc` `assembly` `container`|Applica la firma di test all'`assembly` firmato o parzialmente firmato con la coppia di chiavi presente nel contenitore di chiavi `container`.|  
 |**-v** *assembly*|Verifica il nome sicuro in *assembly*, dove *assembly* è il nome di un file che contiene un manifesto dell'assembly.|  
 |**-vf**  *assembly*|Verifica il nome sicuro in *assembly*. A differenza dall'opzione **-v**, **-vf** forza la verifica, anche se questa è stata disabilitata tramite l'opzione **-Vr**.|  
 |**-Vk**  *regfile.reg* *assembly* [*elencoutenti*] [*FileIn*]|Crea un file con voci di registrazione (.reg) che è possibile usare per registrare l'assembly specificato e poter saltare la verifica. Le regole di denominazione dell'assembly che si applicano all'opzione **-Vr** si applicano anche a **–Vk**. Per informazioni sulle opzioni *elencoutenti* e *FileIn*, vedere l'opzione **–Vr**.|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

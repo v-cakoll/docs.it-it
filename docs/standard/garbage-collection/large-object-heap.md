@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415533"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066428"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap oggetti grandi nei sistemi Windows
 
@@ -34,7 +34,7 @@ Gli oggetti piccoli vengono sempre allocati nella generazione 0 e a seconda dell
 
 Gli oggetti grandi appartengono alla generazione 2 perché vengono raccolti solo durante una raccolta di generazione 2. Quando viene raccolta una generazione, vengono raccolte anche le generazioni più giovani corrispondenti. Ad esempio quando si verifica un'operazione GC di generazione 1 vengono raccolte sia la generazione 1 che la generazione 0. Quando si verifica un'operazione GC di generazione 2 viene raccolto l'intero heap. Per questo motivo un'operazione GC di generazione 2 è anche detta *operazione GC completa*. L'articolo cita l'operazione GC di generazione 2 anziché l'operazione GC completa, ma i termini sono intercambiabili.
 
-Le generazioni offrono una visualizzazione logica dell'heap GC. A livello fisico gli oggetti si trovano in segmenti gestiti dell'heap. Un *segmento gestito dell'heap* è una parte di memoria che l'operazione GC riserva nel sistema operativo (chiamando la [funzione VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)) per conto del codice gestito. Quando viene caricato il CLR, l'operazione GC alloca due segmenti di heap iniziali, l'heap oggetti piccoli (SOH, Small Object Heap) e l'heap oggetti grandi (LOH, Large Object Heap).
+Le generazioni offrono una visualizzazione logica dell'heap GC. A livello fisico gli oggetti si trovano in segmenti gestiti dell'heap. Un *segmento gestito dell'heap* è una parte di memoria che l'operazione GC riserva nel sistema operativo (chiamando la [funzione VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) per conto del codice gestito. Quando viene caricato il CLR, l'operazione GC alloca due segmenti di heap iniziali, l'heap oggetti piccoli (SOH, Small Object Heap) e l'heap oggetti grandi (LOH, Large Object Heap).
 
 Le richieste di allocazione vengono quindi soddisfatte inserendo gli oggetti gestiti in uno di questi segmenti di heap gestiti. Se l'oggetto ha dimensioni inferiori a 85.000 byte viene inserito in un segmento SOH; in caso contrario viene inserito in un segmento LOH. Man mano che nei segmenti vengono allocati gli oggetti, tali segmenti vengono impegnati (in blocchi più piccoli).
 Per l'heap oggetti piccoli, gli oggetti ancora attivi dopo un'operazione GC vengono promossi alla generazione successiva. Gli oggetti esclusi da una raccolta di generazione 0 sono ora considerati oggetti di generazione 1 e così via. Gli oggetti che raggiungono la generazione di grado superiore si considerano come appartenenti a tale generazione. In altri termini gli oggetti che rimangono nella generazione 2 sono oggetti di generazione 2 e gli oggetti che rimangono nel segmento LOH sono oggetti LOH (raccolti con la generazione 2).
@@ -57,9 +57,9 @@ Figura 2: Dopo un'operazione GC di generazione 2
 
 Se lo spazio libero non è sufficiente ad accogliere le richieste di allocazione di oggetti grandi, inizialmente GC prova a ottenere altri segmenti dal sistema operativo. Se il problema persiste, attiva un'operazione GC di generazione 2 per liberare spazio.
 
-Durante un'operazione GC di generazione 1 o 2 il Garbage Collector rilascia i segmenti privi di oggetti attivi al sistema operativo chiamando la [funzione VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). Viene annullato il commit dello spazio dopo l'ultimo oggetto attivo alla fine del segmento (salvo per il segmento effimero in cui risiedono gen0/gen1 e dove il Garbage Collector mantiene spazio con commit, perché l'applicazione lo alloca quasi immediatamente). Gli spazi liberi mantengono il commit anche se vengono reimpostati, a indicare che il sistema operativo non ha bisogno di riscrivere su disco i dati in essi contenuti.
+Durante un'operazione GC di generazione 1 o 2 il Garbage Collector rilascia i segmenti privi di oggetti attivi al sistema operativo chiamando la [funzione VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree). Viene annullato il commit dello spazio dopo l'ultimo oggetto attivo alla fine del segmento (salvo per il segmento effimero in cui risiedono gen0/gen1 e dove il Garbage Collector mantiene spazio con commit, perché l'applicazione lo alloca quasi immediatamente). Gli spazi liberi mantengono il commit anche se vengono reimpostati, a indicare che il sistema operativo non ha bisogno di riscrivere su disco i dati in essi contenuti.
 
-Dato che l'heap oggetti grandi viene raccolto solo durante operazioni GC di generazione 2, il segmento LOH può essere liberato solo durante un' operazione GC di questo tipo. La figura 3 illustra uno scenario in cui il Garbage Collector rilascia un segmento (segmento 2) al sistema operativo e annulla il commit di altro spazio nei segmenti rimanenti. Se il Garbage Collector deve usare lo spazio liberato alla fine del segmento per soddisfare nuove richieste di allocazione di oggetti grandi, esegue di nuovo il commit della memoria. Per una spiegazione del commit e dell'annullamento del commit, vedere la documentazione relativa a [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+Dato che l'heap oggetti grandi viene raccolto solo durante operazioni GC di generazione 2, il segmento LOH può essere liberato solo durante un' operazione GC di questo tipo. La figura 3 illustra uno scenario in cui il Garbage Collector rilascia un segmento (segmento 2) al sistema operativo e annulla il commit di altro spazio nei segmenti rimanenti. Se il Garbage Collector deve usare lo spazio liberato alla fine del segmento per soddisfare nuove richieste di allocazione di oggetti grandi, esegue di nuovo il commit della memoria. Per una spiegazione del commit e dell'annullamento del commit, vedere la documentazione relativa a [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
 ![Figura 3: LOH dopo un'operazione GC di generazione 2](media/loh/loh-figure-3.jpg)  
 Figura 3: LOH dopo un'operazione GC di generazione 2
@@ -302,13 +302,13 @@ Poiché l'heap oggetti grandi non è compattato, si può pensare che sia all'ori
 
 È più comune osservare la frammentazione della memoria virtuale causata da oggetti grandi temporanei, che richiedono a Garbage Collector di acquisire frequentemente nuovi segmenti di heap gestiti dal sistema operativo e di restituire quelli vuoti e liberati.
 
-Per verificare se l'heap oggetti grandi è la causa della frammentazione della memoria virtuale, è possibile impostare un punto di interruzione su [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) e [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) per vedere quale entità chiama questi processi. Ad esempio, per vedere quale entità ha provato ad allocare blocchi di memoria virtuale del sistema operativo di dimensioni superiori a 8 MB, è possibile impostare un punto di interruzione simile al seguente:
+Per verificare se l'heap oggetti grandi è la causa della frammentazione della memoria virtuale, è possibile impostare un punto di interruzione su [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) e [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) per vedere quale entità chiama questi processi. Ad esempio, per vedere quale entità ha provato ad allocare blocchi di memoria virtuale del sistema operativo di dimensioni superiori a 8 MB, è possibile impostare un punto di interruzione simile al seguente:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Questo comando apre il debugger e visualizza lo stack di chiamate solo se [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) viene chiamata con una dimensione di allocazione superiore a 8 MB (0x800000).
+Questo comando apre il debugger e visualizza lo stack di chiamate solo se [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) viene chiamata con una dimensione di allocazione superiore a 8 MB (0x800000).
 
 In CLR 2.0 la nuova funzionalità *VM Hoarding* (Accumulo in memoria virtuale) può essere utile in situazioni con acquisizione e rilascio frequente di oggetti, ad esempio nell'heap oggetti piccoli e nell'heap oggetti grandi. Per impostare VM Hoarding si specifica un flag di avvio chiamato `STARTUP_HOARD_GC_VM` tramite l'API di hosting. Invece di rilasciare i segmenti vuoti per restituirli al sistema operativo, CLR libera la memoria in questi segmenti e li inserisce in un elenco di standby. Si noti che CLR non esegue questa operazione per segmenti troppo grandi. CLR usa i segmenti in un secondo momento per soddisfare nuove richieste di segmenti. Quando l'app torna a richiedere un nuovo segmento, CLR usa un segmento di questo elenco di standby, se è disponibile un segmento abbastanza grande.
 

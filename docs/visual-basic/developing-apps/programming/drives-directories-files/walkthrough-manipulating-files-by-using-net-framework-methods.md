@@ -15,14 +15,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 20150326308513325a9f1219de3e3023e6c5192b
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 89645c489cb9f21ffe415fb7c02ae09fca9a7444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505705"
 ---
-# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
+# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic)
 Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -89,7 +89,7 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
  Per questa sezione della procedura, aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-|Controllo|Proprietà|Valori|  
+|Control|Proprietà|Valori|  
 |-------------|----------------|------------|  
 |<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Dimensione**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **per**|`Display`<br /><br /> **Visualizzazione**|  
@@ -147,7 +147,7 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
  Per testare il codice, premere F5 per compilare l'applicazione. Fare clic su **Ottieni voci**, selezionare una voce e quindi fare clic su **Visualizza**. La voce viene visualizzata nell'oggetto `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Fare clic su **Modifica voce**. La voce viene visualizzata nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox>. Modificare la voce nell'oggetto `Entry`<xref:System.Windows.Forms.TextBox> e fare clic su **Invia modifica**. Aprire il file `MyDiary.txt` per confermare la correzione. Ora selezionare una voce e fare clic su **Elimina voce**. Quando l'oggetto <xref:System.Windows.Forms.MessageBox> chiede una conferma, fare clic su **OK**. Chiudere l'applicazione e aprire `MyDiary.txt` per confermare l'eliminazione.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.StreamWriter>  
- [Procedure dettagliate](../../../../visual-basic/walkthroughs.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamWriter>
+- [Procedure dettagliate](../../../../visual-basic/walkthroughs.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652185"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Proprietà dell'interfaccia (Guida per programmatori C#)
 Le proprietà possono essere dichiarate su una [interfaccia](../../../csharp/language-reference/keywords/interface.md). Nell'esempio seguente viene illustrata la funzione di accesso di una proprietà di interfaccia:  
@@ -53,9 +53,9 @@ Le proprietà possono essere dichiarate su una [interfaccia](../../../csharp/lan
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Confronto tra proprietà e indicizzatori](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)
 - [Interfacce](../../../csharp/programming-guide/interfaces/index.md)

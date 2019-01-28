@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493911"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilazione di applicazioni console in .NET Framework
 La classe <xref:System.Console?displayProperty=nameWithType> può essere utilizzata dalle applicazioni in .NET Framework per la lettura e scrittura di caratteri nella console. I dati provenienti dalla console vengono letti dal flusso di input standard, mentre i dati inviati alla console vengono scritti nel flusso di output standard e i dati di errori inviati alla console vengono scritti nel flusso di output standard degli errori. I flussi vengono associati automaticamente alla console in fase di avvio dell'applicazione e vengono presentati rispettivamente come proprietà <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> ed <xref:System.Console.Error%2A>.  
@@ -34,5 +34,5 @@ La classe <xref:System.Console?displayProperty=nameWithType> può essere utilizz
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Console?displayProperty=nameWithType>  
+- <xref:System.Console?displayProperty=nameWithType>
 - [Formattazione di tipi](../../docs/standard/base-types/formatting-types.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678213"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su attività
 È possibile implementare il modello asincrono basato su attività (TAP) in i tre modi: con i compilatori C# e Visual Basic in Visual Studio, manualmente oppure con una combinazione dei primi due. Le sezioni seguenti illustrano in dettaglio ogni metodo. È possibile usare il modello TAP per implementare operazioni asincrone di calcolo e di I/O. La sezione [Carichi di lavoro](#workloads) illustra ogni tipo di operazione.
@@ -50,7 +50,7 @@ La classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> è la 
 
 È possibile generare attività di calcolo nei seguenti modi:
 
-- In .NET Framework 4, usare il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, che accetta l'esecuzione asincrona di un delegato (di solito <xref:System.Action%601> o <xref:System.Func%601>). Se l'utente fornisce un delegato <xref:System.Action%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> che rappresenta l'esecuzione asincrona di tale delegato. Se si fornisce un delegato <xref:System.Func%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Gli overload del metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> accettano un token di annullamento (<xref:System.Threading.CancellationToken>), opzioni di creazione attività (<xref:System.Threading.Tasks.TaskCreationOptions>) e un'utilità di pianificazione delle attività (<xref:System.Threading.Tasks.TaskScheduler>), tutti i quali offrono un controllo granulare sulla pianificazione e l'esecuzione dell'attività. Un'istanza della factory destinata all'utilità di pianificazione dell'attività corrente è disponibile come proprietà statica (<xref:System.Threading.Tasks.Task.Factory%2A>) della classe <xref:System.Threading.Tasks.Task>; ad esempio: `Task.Factory.StartNew(…)`.
+- In .NET Framework 4, usare il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, che accetta l'esecuzione asincrona di un delegato (di solito <xref:System.Action%601> o <xref:System.Func%601>). Se l'utente fornisce un delegato <xref:System.Action%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> che rappresenta l'esecuzione asincrona di tale delegato. Se si fornisce un delegato <xref:System.Func%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Gli overload del metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> accettano un token di annullamento (<xref:System.Threading.CancellationToken>), opzioni di creazione attività (<xref:System.Threading.Tasks.TaskCreationOptions>) e un'utilità di pianificazione (<xref:System.Threading.Tasks.TaskScheduler>), che offrono tutti un controllo granulare sulla pianificazione e l'esecuzione dell'attività. Un'istanza della factory destinata all'utilità di pianificazione dell'attività corrente è disponibile come proprietà statica (<xref:System.Threading.Tasks.Task.Factory%2A>) della classe <xref:System.Threading.Tasks.Task>; ad esempio: `Task.Factory.StartNew(…)`.
 
 - In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive (inclusi .NET Core e .NET Standard), usare il metodo statico <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> come collegamento a <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. È possibile usare <xref:System.Threading.Tasks.Task.Run%2A> per avviare facilmente un'attività di calcolo destinata al pool di thread. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive questo è il meccanismo preferenziale per l'avvio di un'attività di calcolo. Usare `StartNew` direttamente solo quando si vuole controllare l'attività in modo più accurato.
 
@@ -103,6 +103,6 @@ In questo esempio viene illustrato come un unico token di annullamento può esse
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
-- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+- [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Interoperabilità con altri tipi e modelli asincroni](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

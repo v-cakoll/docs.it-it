@@ -3,12 +3,12 @@ title: Nozioni fondamentali sulle espressioni di query (LINQ in C#)
 description: Vengono introdotti concetti relativi alle espressioni di query
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709117"
 ---
 # <a name="query-expression-basics"></a>Nozioni fondamentali sulle espressioni di query
 
@@ -174,7 +174,7 @@ Per altre informazioni, vedere [Procedura: Eseguire una sottoquery su un'operazi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../programming-guide/index.md)  
-- [LINQ (Language-Integrated Query)](index.md)  
-- [Parole chiave di query (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [Panoramica degli operatori query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Guida per programmatori C#](../programming-guide/index.md)
+- [LINQ (Language-Integrated Query)](index.md)
+- [Parole chiave di query (LINQ)](../language-reference/keywords/query-keywords.md)
+- [Panoramica degli operatori query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md)

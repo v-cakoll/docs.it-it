@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550500"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -24,7 +24,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
   
  Nella tabella seguente sono elencati i tipi che possono essere inferiti per lo schema risultante.  
   
-|Tipo semplice|Descrizione|  
+|Tipo semplice|Description|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Numeri interi nell'intervallo compreso tra -128 e 127.|  
@@ -37,8 +37,8 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
 |numero intero|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
 |decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
-|float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
-|double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
+|float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF, -INF e NaN.|  
+|double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF, -INF e NaN.|  
 |duration|Formato della durata W3C.|  
 |dateTime|Formato dateTime W3C.|  
 |ora|Formato di ora W3C.|  
@@ -69,7 +69,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 
 Di seguito sono riportati gli attributi di definizione dello schema che vengono ignorati durante l'inferenza dello schema.  
   
-|Attributo|Descrizione|  
+|Attributo|Description|  
 |---------------|-----------------|  
 |`xsi:type`|Se viene rilevato un elemento con `xsi:type` specificato, l'attributo `xsi:type` viene ignorato.|  
 |`xsi:nil`|Se viene rilevato un elemento con un attributo `xsi:nil`, la dichiarazione dell'elemento nello schema inferito presenta il valore `nillable="true"`. Un elemento con un attributo `xsi:nil` impostato su `true` non può contenere elementi figlio.|  
@@ -78,6 +78,6 @@ Di seguito sono riportati gli attributi di definizione dello schema che vengono 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

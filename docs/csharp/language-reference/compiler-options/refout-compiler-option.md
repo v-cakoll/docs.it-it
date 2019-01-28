@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: e204a053f6f68a4b848d22c95c98f04edff58716
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 51029c071b3c5bdefe5af798f01238086b8e6d4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589792"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (opzioni del compilatore C#)
 
@@ -46,5 +46,5 @@ Le opzioni `-refout` e [`-refonly`](refonly-compiler-option.md) si escludono rec
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

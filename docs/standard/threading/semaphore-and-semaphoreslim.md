@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550487"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappresenta un semaforo denominato (systemwide) o locale. È un semplice wrapper per l'oggetto semaforo Win32. I semafori Win32 sono semafori di conteggio che possono essere usati per controllare l'accesso a un pool di risorse.  
@@ -48,6 +48,6 @@ La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappres
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Threading.Semaphore>  
-- <xref:System.Threading.SemaphoreSlim>  
+- <xref:System.Threading.Semaphore>
+- <xref:System.Threading.SemaphoreSlim>
 - [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)

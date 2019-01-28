@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683664"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regole per l'inferenza dello schema per tipi di nodo e struttura
 In questo argomento viene descritto in che modo il processo di inferenza converte in una struttura XSD (XML Schema Definition Language) i tipi di nodo di un documento XML.  
@@ -148,8 +148,8 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Inferenza di uno schema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Inferenza di uno schema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regole per l'inferenza di tipi semplici](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

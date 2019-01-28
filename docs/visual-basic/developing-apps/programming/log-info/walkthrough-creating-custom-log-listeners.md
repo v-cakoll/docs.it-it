@@ -5,14 +5,14 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 6139a1fef2b2c37bc2c8a6167febd060d8d01fb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12943e449f825516d37079e7ddac2a6705879066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710508"
 ---
-# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: creazione di listener di log personalizzati (Visual Basic)
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: Creazione di listener di log personalizzati (Visual Basic)
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
   
 ## <a name="getting-started"></a>Introduzione  
@@ -76,7 +76,7 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
 1.  Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
   
-     oppure  
+     -oppure-  
   
      Se non è presente un file app.config:  
   
@@ -104,9 +104,9 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
      Modificare il valore di `SimpleLogStrongName` in modo che sia il nome sicuro del listener.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Utilizzo dei log applicazione](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

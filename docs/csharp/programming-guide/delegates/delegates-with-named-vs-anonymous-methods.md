@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 077bc9d7a433c6fdf60f739f34c25a1b469fea02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509552"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegati con metodi denominati Metodi anonimi (Guida per programmatori C#)
 È possibile associare un [delegato](../../../csharp/language-reference/keywords/delegate.md) a un metodo denominato. Quando si crea un'istanza di un delegato usando un metodo denominato, il metodo viene passato come parametro, ad esempio:  
@@ -39,8 +39,8 @@ ms.locfileid: "53241489"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
-- [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [Procedura: Combinare delegati multicast](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Procedura: Combinare delegati multicast](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [Eventi](../../../csharp/programming-guide/events/index.md)

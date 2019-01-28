@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688896"
 ---
 # <a name="comparing-strings-in-net"></a>Confronto di stringhe in .NET
 .NET offre diversi metodi per confrontare i valori delle stringhe. La tabella seguente elenca e descrive i metodi di confronto di valori.  
   
-|Nome metodo|Uso|  
+|Nome metodo|Usa|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Confronta i valori di due stringhe. Restituisce un valore intero.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Confronta due stringhe senza tenere in considerazione le impostazioni cultura locali. Restituisce un valore intero.|  
@@ -46,12 +46,12 @@ ms.locfileid: "45698562"
   
 |Valore restituito|Condizione|  
 |------------------|---------------|  
-|Intero negativo|La prima stringa precede la seconda stringa nella sequenza di ordinamento.<br /><br /> oppure<br /><br /> La prima stringa è `null`.|  
+|Intero negativo|La prima stringa precede la seconda stringa nella sequenza di ordinamento.<br /><br /> -oppure-<br /><br /> La prima stringa è `null`.|  
 |0|La prima stringa e la seconda stringa sono uguali.<br /><br /> oppure<br /><br /> Entrambe le stringhe sono `null`.|  
-|Intero positivo<br /><br /> oppure<br /><br /> 1|La prima stringa segue la seconda stringa nella sequenza di ordinamento.<br /><br /> oppure<br /><br /> La seconda stringa è `null`.|  
+|Intero positivo<br /><br /> -oppure-<br /><br /> 1|La prima stringa segue la seconda stringa nella sequenza di ordinamento.<br /><br /> -oppure-<br /><br /> La seconda stringa è `null`.|  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  L'esempio seguente usa il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per determinare i valori relativi di due stringhe.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "45698562"
   
  L'esempio visualizza `-1` nella console.  
   
- L'esempio precedente fa distinzione tra le impostazioni cultura per impostazione predefinita. Per eseguire un confronto tra stringhe senza fare distinzione tra le impostazioni cultura, usare un overload del metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>, che consente di specificare le impostazioni cultura da usare tramite un parametro *culture*. Per un esempio che illustra come usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per eseguire un confronto senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ L'esempio precedente fa distinzione tra le impostazioni cultura per impostazione predefinita. Per eseguire un confronto tra stringhe senza fare distinzione tra le impostazioni cultura, usare un overload del metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> , che consente di specificare le impostazioni cultura da usare tramite un parametro *culture* . Per un esempio che illustra come usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> per eseguire un confronto senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> confronta due oggetti stringa senza considerare le impostazioni cultura locali. I valori restituiti da questo metodo sono identici a quelli restituiti dal metodo **Compare** nella tabella precedente.  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  L'esempio seguente usa il metodo **CompareOrdinal** per confrontare i valori di due stringhe.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "45698562"
  Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> confronta la stringa incapsulata dall'oggetto stringa corrente con un altro oggetto o stringa. I valori restituiti da questo metodo sono identici a quelli restituiti dal metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> nella tabella precedente.  
   
 > [!IMPORTANT]
->  Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+>  Il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> è destinato principalmente a essere usato quando si ordinano o si dispongono le stringhe. Non usare il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per verificare l'uguaglianza (ovvero, per cercare in modo esplicito un valore restituito pari a 0 senza considerare se una stringa è minore o maggiore di un'altra). Per determinare se due stringhe sono uguali, usare invece il metodo <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- L'esempio seguente usa il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per confrontare l'oggetto `string1` con l'oggetto `string2`.  
+ L'esempio seguente usa il metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> per confrontare l'oggetto `string1` con l'oggetto `string2` .  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
@@ -91,7 +91,7 @@ ms.locfileid: "45698562"
   
  L'esempio visualizza `-1` nella console.  
   
- Tutti gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono per impostazione predefinita confronti che fanno distinzione tra le impostazioni cultura e tra maiuscole e minuscole. Non sono disponibili overload di questo metodo per eseguire un confronto senza distinzione tra le impostazioni cultura. Per maggiore chiarezza del codice, è consigliabile usare invece il metodo **String.Compare**, specificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> per operazioni con distinzione tra le impostazioni cultura o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> per operazioni senza distinzione tra le impostazioni cultura. Per un esempio che illustra come usare il metodo **String.Compare** per eseguire confronti con e senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Tutti gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono per impostazione predefinita confronti che fanno distinzione tra le impostazioni cultura e tra maiuscole e minuscole. Non sono disponibili overload di questo metodo per eseguire un confronto senza distinzione tra le impostazioni cultura. Per maggiore chiarezza del codice, è consigliabile usare invece il metodo **String.Compare** , specificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> per operazioni con distinzione tra le impostazioni cultura o <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> per operazioni senza distinzione tra le impostazioni cultura. Per un esempio che illustra come usare il metodo **String.Compare** per eseguire confronti con e senza distinzione tra le impostazioni cultura, vedere [Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Equals  
  Il metodo **Equals** consente di determinare in modo semplice se due stringhe sono uguali. Questo metodo, che fa distinzione tra maiuscole e minuscole, restituisce un valore booleano **true** o **false** . Può essere usato da una classe esistente, come illustrato nell'esempio seguente. L'esempio seguente usa il metodo **Equals** per determinare se un oggetto stringa contiene la frase "Hello World".  
@@ -152,7 +152,7 @@ ms.locfileid: "45698562"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
 - [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sorting Weight Tables (for .NET on Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921) (Tabelle di ordinamento spessore - Per .NET in Windows)
 - [Default Unicode Collation Element Table (for .NET Core on Linux and macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (Tabella degli elementi delle regole di confronto Unicode predefinite - Per .NET Core in Linux e MacOS)

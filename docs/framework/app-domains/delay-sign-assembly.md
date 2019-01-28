@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a833bb0f412407d1f18793c356d4c207716eb101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632621"
 ---
 # <a name="delay-signing-an-assembly"></a>Ritardo della firma di un assembly
 È possibile che in un'organizzazione venga usata una coppia di chiavi sottoposta a una rigorosa sicurezza e quindi non accessibile giornalmente agli sviluppatori. La chiave pubblica è spesso disponibile, ma l'accesso alla chiave privata è consentito solo ad alcune persone. Quando si sviluppano assembly con nome sicuro, in ogni assembly che fa riferimento all'assembly con nome sicuro di destinazione è contenuto un token della chiave pubblica usata per assegnare un nome sicuro all'assembly di destinazione. È quindi necessario che la chiave pubblica risulti disponibile durante il processo di sviluppo.  
@@ -72,8 +72,8 @@ ms.locfileid: "53152292"
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Vedere anche
+- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)
+- [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

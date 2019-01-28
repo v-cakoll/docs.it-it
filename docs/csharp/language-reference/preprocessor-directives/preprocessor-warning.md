@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 08fcefd904ad43c781017087082592120e21f5cd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 55768a354b2841021607ed40b4ef87b9767edcad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620318"
 ---
 # <a name="warning-c-reference"></a>#warning (Riferimenti per C#)
 `#warning` consente di generare l'avviso [CS1030](../../misc/cs1030.md) di livello uno del compilatore da una posizione specifica del codice. Ad esempio:  
@@ -43,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)

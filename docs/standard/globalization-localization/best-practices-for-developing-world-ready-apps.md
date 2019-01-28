@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 465d5e8f37be3dad0d548387f9928a9f79fcebf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565787"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Suggerimenti per lo sviluppo di applicazioni internazionali
 In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo di applicazioni internazionali.  
@@ -102,5 +102,5 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
 - [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

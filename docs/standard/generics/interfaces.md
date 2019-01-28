@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613805"
 ---
 # <a name="generic-interfaces"></a>Interfacce generiche
 Questo argomento fornisce una panoramica delle interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.  
@@ -44,9 +44,9 @@ Questo argomento fornisce una panoramica delle interfacce generiche che fornisco
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [Generics](../../../docs/standard/generics/index.md)  
-- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)  
-- [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [Generics](../../../docs/standard/generics/index.md)
+- [Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)
+- [Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)

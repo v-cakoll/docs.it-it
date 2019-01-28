@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0b75a6aa47cfc169157b229c4386ed7dc1e627b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710196"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operazioni aritmetiche sui puntatori (Guida per programmatori C#)
 Questo argomento illustra l'uso degli operatori aritmetici `+` e `-` per modificare i puntatori.  
@@ -38,13 +38,13 @@ Questo argomento illustra l'uso degli operatori aritmetici `+` e `-` per modific
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Operatori C#](../../../csharp/language-reference/operators/index.md)  
-- [Modifica dei puntatori](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
-- [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Tipi](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Operatori C#](../../../csharp/language-reference/operators/index.md)
+- [Modifica dei puntatori](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

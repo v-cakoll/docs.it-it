@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617915"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizzazione dei dati per il multithreading
 Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi di un singolo oggetto, è essenziale che tali chiamate siano sincronizzate. In caso contrario un thread potrebbe interrompere le operazioni eseguite da un altro thread e l'oggetto potrebbe rimanere in uno stato non valido. Una classe i cui membri sono protetti da tali interruzioni è detta thread-safe.  
@@ -69,8 +69,8 @@ Se più thread sono in grado di effettuare chiamate alle proprietà e ai metodi 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)  
-- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+- [Panoramica sulle primitive di sincronizzazione](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Istruzione SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

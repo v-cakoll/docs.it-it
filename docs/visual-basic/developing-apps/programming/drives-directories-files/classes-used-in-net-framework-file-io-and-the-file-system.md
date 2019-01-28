@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705323"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
 Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .NET Framework, suddivisi in classi I/O di file, classi usate per la creazione di flussi e classi usate per leggere e scrivere nei flussi.  
@@ -19,7 +19,7 @@ Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .N
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classi di I/O di base per file, unità e directory  
  La tabella seguente elenca e descrive le principali classi usate nell'I/O di file.  
   
-|Classe|Descrizione|  
+|Classe|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Offre metodi statici per creare, spostare ed enumerare directory e sottodirectory.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Offre metodi di istanza per creare, spostare ed enumerare directory e sottodirectory.|  
@@ -36,7 +36,7 @@ Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .N
 ## <a name="classes-used-to-create-streams"></a>Classi usate per creare flussi  
  La tabella seguente elenca e descrive le principali classi usate per creare flussi.  
   
-|Classe|Descrizione|  
+|Classe|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Aggiunge un livello di buffer per operazioni di lettura e scrittura in un altro flusso.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Supporta l'accesso casuale ai file tramite il metodo <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> apre file simultaneamente per impostazione predefinita, ma supporta anche operazioni asincrone.|  
@@ -56,8 +56,8 @@ Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .N
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Legge caratteri da un `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Scrive caratteri in una `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Composizione dei flussi](../../../../standard/io/composing-streams.md)  
- [I/O di file e di flussi](../../../../standard/io/index.md)  
- [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)  
- [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Vedere anche
+- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
+- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

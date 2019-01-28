@@ -5,12 +5,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631408"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -121,8 +121,8 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../index.md)  
-- [Guida per programmatori C#](../../programming-guide/index.md)  
-- [Parole chiave di C#](index.md)  
-- [Parametri dei metodi](method-parameters.md)  
-- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)  
+- [Riferimenti per C#](../index.md)
+- [Guida per programmatori C#](../../programming-guide/index.md)
+- [Parole chiave di C#](index.md)
+- [Parametri dei metodi](method-parameters.md)
+- [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)

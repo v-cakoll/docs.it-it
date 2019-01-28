@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713315"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 È possibile suddividere la definizione di una [classe](../../../csharp/language-reference/keywords/class.md) di uno [struct](../../../csharp/language-reference/keywords/struct.md), di un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.  
@@ -164,8 +164,8 @@ Per altre informazioni, vedere [Tipi parziali](~/_csharplang/spec/classes.md#par
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Struct](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Struct](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)

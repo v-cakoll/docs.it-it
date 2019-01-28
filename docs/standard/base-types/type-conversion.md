@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659761"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversione di tipi in .NET Framework
 <a name="top"></a> A ogni valore è associato un tipo che definisce attributi quali la quantità di spazio allocato per il valore, l'intervallo di valori possibili supportati e i membri resi disponibili. Numerosi valori possono essere espressi mediante tipi diversi. Il valore 4, ad esempio, può essere espresso come intero o come valore a virgola mobile. Mediante la conversione di tipi viene creato un valore in un nuovo tipo equivalente al valore del tipo precedente, ma non viene necessariamente mantenuta l'identità, o il valore esatto, dell'oggetto originale.  
@@ -208,6 +208,6 @@ ms.locfileid: "45617934"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Convert?displayProperty=nameWithType>  
-- <xref:System.IConvertible>  
+- <xref:System.Convert?displayProperty=nameWithType>
+- <xref:System.IConvertible>
 - [Tabelle di conversione dei tipi](../../../docs/standard/base-types/conversion-tables.md)

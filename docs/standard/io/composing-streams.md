@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1f2aa68822dd14b4cb81b48598faa6bdb4c71a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544354"
 ---
 # <a name="composing-streams"></a>Composizione dei flussi
 Un archivio di backup è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>. Ogni tipo di flusso legge e scrive i byte da e nel relativo archivio di backup. I flussi che si connettono agli archivi di backup sono chiamati flussi di base. I flusso di base hanno costruttori con i parametri necessari per connettere il flusso all'archivio di backup. <xref:System.IO.FileStream>, ad esempio, ha costruttori che specificano un parametro del percorso, che specifica come il file verrà condiviso dai processi e così via.  
@@ -41,10 +41,10 @@ Un archivio di backup è un supporto di archiviazione, ad esempio un disco o la 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.BinaryReader>  
-- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.BinaryReader>
+- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>
 - <xref:System.IO.BinaryReader.PeekChar%2A?displayProperty=nameWithType>

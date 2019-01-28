@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512346"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelle di conversione dei tipi in .NET
 Si parla di conversione verso un tipo di dati più grande quando un valore di un certo tipo viene convertito in un altro tipo di dimensioni identiche o maggiori. Si parla di conversione verso un tipo di dati più piccolo quando un valore di un certo tipo viene convertito in un valore di un altro tipo di dimensioni inferiori. Le tabelle in questo argomento illustrano i comportamenti di entrambi i tipi di conversioni.  
@@ -73,5 +73,5 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.Convert?displayProperty=nameWithType>
 - [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

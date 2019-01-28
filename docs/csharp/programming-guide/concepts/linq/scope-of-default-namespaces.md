@@ -2,12 +2,12 @@
 title: Ambito degli spazi dei nomi predefiniti in C#1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: bb0e111bfded0769c498b116f828711003036e33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613857"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Ambito degli spazi dei nomi predefiniti in C#
 Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query. Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.  

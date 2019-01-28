@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722666"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -324,6 +324,6 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Browser API .NET](/dotnet/api)  
-- [Common Language Runtime](../../../docs/standard/clr.md)  
+- [Browser API .NET](/dotnet/api)
+- [Common Language Runtime](../../../docs/standard/clr.md)
 - [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

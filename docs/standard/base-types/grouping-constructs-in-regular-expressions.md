@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645899"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -29,7 +29,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 -   Applicare un quantificatore a una sottoespressione che dispone di più elementi del linguaggio di espressioni regolari. Per altre informazioni sui quantificatori, vedere [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Includere una sottoespressione nella stringa restituita dai metodi <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>.  
+-   Includere una sottoespressione nella stringa restituita dai metodi <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
 -   Recuperare le singole sottoespressioni dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> ed elaborarle separatamente dal testo corrispondente nel suo complesso.  
   
@@ -67,9 +67,9 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 -   Tramite il costrutto del backreference denominato all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\k<`*nome*`>`, dove *nome* è il nome di un gruppo di acquisizione, o `\k<`*numero*`>`, dove *numero* è il numero ordinale di un gruppo di acquisizione. Un gruppo di acquisizione ha un nome predefinito identico al relativo numero ordinale. Per altre informazioni, vedere [Sottoespressioni corrispondenti denominate](#named_matched_subexpression) più avanti in questo argomento.  
   
--   Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
+-   Tramite la sequenza di sostituzione `$`*numero* in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
--   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. Per altre informazioni, vedere la sezione [Grouping Constructs and Regular Expression Objects](#Objects) .  
+-   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. Per altre informazioni, vedere la sezione [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  Nell'esempio seguente viene illustrata un'espressione regolare che identifica le parole duplicate in un testo. I due gruppi di acquisizione del criterio di ricerca di espressioni regolari rappresentano le due istanze della parola duplicata. La seconda istanza è acquisita per riportare la posizione iniziale nella stringa di input.  
   
@@ -84,7 +84,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Nella tabella seguente è illustrata l'interpretazione del criterio di ricerca di espressioni regolari.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|  
@@ -116,11 +116,11 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 -   Tramite il costrutto del backreference all'interno dell'espressione regolare. Si fa riferimento alla sottoespressione corrispondente nella stessa espressione regolare tramite la sintassi `\`*numero*, dove *numero* è il numero ordinale della sottoespressione acquisita. Le sottoespressioni corrispondenti denominate sono numerate consecutivamente da sinistra a destra dopo le sottoespressioni corrispondenti.  
   
--   Tramite la sequenza di sostituzione `${`*nome*`}` in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, dove *nome* è il nome della sottoespressione acquisita.  
+-   Tramite la sequenza di sostituzione `${`*nome*`}` in una <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o la chiamata al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *nome* è il nome della sottoespressione acquisita.  
   
 -   Tramite la sequenza di sostituzione `$`*numero* in una chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , dove *numero* è il numero ordinale della sottoespressione acquisita.  
   
--   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. I gruppi acquisiti denominati vengono archiviati nella raccolta dopo i gruppi acquisiti numerati.  
+-   A livello di codice, usando l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Il membro alla posizione zero nella raccolta rappresenta l'intera corrispondenza dell'espressione regolare. Ogni membro successivo rappresenta una sottoespressione corrispondente. I gruppi acquisiti denominati vengono archiviati nella raccolta dopo i gruppi acquisiti numerati.  
   
 -   A livello di codice, fornendo il nome della sottoespressione all'indicizzatore dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> (in C#) o alla relativa proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (in Visual Basic).  
   
@@ -147,7 +147,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Nella tabella seguente viene illustrato come viene interpretata l'espressione regolare.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `duplicateWord`.|  
 |`\s`|Trova la corrispondenza con uno spazio vuoto.|  
@@ -164,7 +164,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Nella tabella seguente viene illustrato come viene interpretata l'espressione regolare.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\D+`|Corrisponde a una o più cifre non decimali.|  
 |`(?<digit>\d+)`|Corrisponde a una o più cifre decimali. Assegna la corrispondenza al gruppo denominato `digit`.|  
@@ -187,7 +187,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  dove *nome1* è il gruppo corrente (facoltativo), *nome2* è un gruppo precedentemente definito e *sottoespressione* è qualsiasi criterio di ricerca di espressioni regolari valido. La definizione di gruppo di bilanciamento elimina la definizione di *nome2* e archivia l'intervallo tra *nome2* e *nome1* in *nome1*. Se non è definito alcun gruppo *nome2* , viene eseguito il backtracking della corrispondenza. Poiché l'eliminazione dell'ultima definizione di *nome2* rivela la definizione precedente di *nome2*, questo costrutto consente di usare lo stack di acquisizioni per il gruppo *nome2* come contatore per tenere traccia dei costrutti annidati, come ad esempio le parentesi o le parentesi quadre di apertura e chiusura.  
   
- La definizione del gruppo di bilanciamento usa *nome2* come uno stack. Il carattere iniziale di ogni costrutto annidato viene posizionato nel gruppo e nella relativa raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Quando viene trovata la corrispondenza con il carattere di chiusura, il carattere di apertura associato viene rimosso dal gruppo e la raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> viene ridotta di uno. Dopo che la corrispondenza dei caratteri di apertura e chiusura di tutti i costrutti annidati è stata trovata, *nome1* è vuoto.  
+ La definizione del gruppo di bilanciamento usa *nome2* come uno stack. Il carattere iniziale di ogni costrutto annidato viene posizionato nel gruppo e nella relativa raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Quando viene trovata la corrispondenza con il carattere di chiusura, il carattere di apertura associato viene rimosso dal gruppo e la raccolta <xref:System.Text.RegularExpressions.Group.Captures%2A> viene ridotta di uno. Dopo che la corrispondenza dei caratteri di apertura e chiusura di tutti i costrutti annidati è stata trovata, *nome1* è vuoto.  
   
 > [!NOTE]
 >  Dopo avere modificato l'espressione regolare dell'esempio seguente affinché usi il carattere di apertura e chiusura appropriato di un costrutto annidato, è possibile usarla per gestire più costrutti annidati, come ad esempio espressioni matematiche o righe di codice del programma che includono più chiamate al metodo annidate.  
@@ -205,7 +205,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare viene interpretata nel modo seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Comincia all'inizio della stringa.|  
 |`[^<>]*`|Trova la corrispondenza di zero o più caratteri diversi da parentesi uncinate aperte o chiuse.|  
@@ -270,7 +270,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `(?:\b(?:\w+)\W*)+\.` trova la corrispondenza di una frase che termina con un punto. Poiché l'espressione regolare si concentra sulle frasi e non sulle singole parole, i costrutti di raggruppamento vengono usati esclusivamente come quantificatori. Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?:\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Non assegna il testo corrispondente a un gruppo acquisito.|  
@@ -293,7 +293,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Ad esempio, l'espressione regolare `\b(?ix: d \w+)\s` nell'esempio seguente usa opzioni inline in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi nel criterio durante l'identificazione delle parole che iniziano con la lettera "d". L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?ix: d \w+)`|Usando la corrispondenza senza distinzione tra maiuscole e minuscole e ignorando lo spazio vuoto in questo criterio, trova la corrispondenza con una "d" seguita da uno o più caratteri alfanumerici.|  
@@ -319,7 +319,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b\w+(?=\sis\b)` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -342,7 +342,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b(?!un)\w+\b` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(?!un)`|Determina se i due caratteri successivi sono "un". Se non lo sono, è possibile stabilire la corrispondenza.|  
@@ -356,7 +356,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare `\b\w+\b(?!\p{P})` viene interpretata come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -380,7 +380,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `(?<=\b20)\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\d{2}`|Trova la corrispondenza con due cifre decimali.|  
 |`(?<=\b20)`|Continua la corrispondenza per verificare se le due cifre decimali sono precedute dalle cifre decimali "20" su un confine di parola.|  
@@ -405,7 +405,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza con uno o più caratteri alfanumerici seguiti da uno spazio vuoto.|  
@@ -434,7 +434,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  L'espressione regolare di non backtracking `(?>(\w)\1+).\b` è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`(\w)`|Trova la corrispondenza di un singolo carattere alfanumerico e la assegna al primo gruppo di acquisizione.|  
 |`\1+`|Trova la corrispondenza con il valore della prima sottostringa acquisita una o più volte.|  
@@ -444,7 +444,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 <a name="Objects"></a>   
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>costrutti di raggruppamento e oggetti delle espressioni regolari  
- Le sottostringhe per cui viene trovata una corrispondenza da parte di un gruppo di acquisizione dell'espressione regolare sono rappresentate da oggetti <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType>, che possono essere recuperati dall'oggetto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. L'oggetto <xref:System.Text.RegularExpressions.GroupCollection> è popolato come descritto di seguito:  
+ Le sottostringhe per cui viene trovata una corrispondenza da parte di un gruppo di acquisizione dell'espressione regolare sono rappresentate da oggetti <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , che possono essere recuperati dall'oggetto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . L'oggetto <xref:System.Text.RegularExpressions.GroupCollection> è popolato come descritto di seguito:  
   
 -   Il primo oggetto <xref:System.Text.RegularExpressions.Group> della raccolta (in corrispondenza dell'indice zero) rappresenta l'intera corrispondenza.  
   
@@ -452,7 +452,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
 -   Il set di oggetti <xref:System.Text.RegularExpressions.Group> finale rappresenta i gruppi di acquisizione denominati. Vengono visualizzati nell'ordine in cui sono definiti nell'espressione regolare, da sinistra a destra. Il valore di indice del primo gruppo di acquisizione denominato è maggiore di uno rispetto all'ultimo gruppo di acquisizione non denominato. Se l'espressione regolare non contiene gruppi di acquisizione non denominati, il valore di indice del primo gruppo di acquisizione denominato è uno.  
   
- Se si applica un quantificatore a un gruppo di acquisizione, le proprietà <xref:System.Text.RegularExpressions.Group>, <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> dell'oggetto <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> corrispondente riflettono l'ultima sottostringa acquisita da un gruppo di acquisizione. È possibile recuperare un set completo di sottostringhe acquisite da gruppi che dispongono di quantificatori dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ Se si applica un quantificatore a un gruppo di acquisizione, le proprietà <xref:System.Text.RegularExpressions.Group> , <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>e <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>dell'oggetto <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> corrispondente riflettono l'ultima sottostringa acquisita da un gruppo di acquisizione. È possibile recuperare un set completo di sottostringhe acquisite da gruppi che dispongono di quantificatori dall'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
  Nell'esempio seguente viene illustrata la relazione tra gli oggetti <xref:System.Text.RegularExpressions.Group> e <xref:System.Text.RegularExpressions.Capture> .  
   
@@ -461,16 +461,16 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\W+)+` estrae singole parole da una stringa e viene definito come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Insieme, questi caratteri formano una parola. Equivale al secondo gruppo di acquisizione.|  
 |`\W+`|Trova la corrispondenza di uno o più caratteri non alfanumerici.|  
 |`(\w+)\W+)+`|Trova la corrispondenza con il criterio di uno o più caratteri alfanumerici seguiti da uno o più caratteri non alfanumerici, una o più volte. Equivale al primo gruppo di acquisizione.|  
   
- Il primo gruppo di acquisizione trova la corrispondenza per ogni parola della frase. Il secondo gruppo di acquisizione trova la corrispondenza per ogni parola insieme alla punteggiatura e allo spazio vuoto che seguono la parola. L'oggetto <xref:System.Text.RegularExpressions.Group> il cui indice è 2 fornisce informazioni sul testo corrispondente in base al secondo gruppo di acquisizione. Il set completo di parole acquisite dal gruppo di acquisizione è disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ Il primo gruppo di acquisizione trova la corrispondenza per ogni parola della frase. Il secondo gruppo di acquisizione trova la corrispondenza per ogni parola insieme alla punteggiatura e allo spazio vuoto che seguono la parola. L'oggetto <xref:System.Text.RegularExpressions.Group> il cui indice è 2 fornisce informazioni sul testo corrispondente in base al secondo gruppo di acquisizione. Il set completo di parole acquisite dal gruppo di acquisizione è disponibile tramite l'oggetto <xref:System.Text.RegularExpressions.CaptureCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

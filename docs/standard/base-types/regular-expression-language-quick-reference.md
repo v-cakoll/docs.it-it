@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531421"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -217,10 +217,10 @@ ms.locfileid: "54030399"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
-- <xref:System.Text.RegularExpressions.Regex>  
-- [Espressioni regolari](regular-expressions.md)  
-- [Classi di espressioni regolari](the-regular-expression-object-model.md)  
-- [Esempi di espressioni regolari](regular-expression-examples.md)  
-- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
+- <xref:System.Text.RegularExpressions.Regex>
+- [Espressioni regolari](regular-expressions.md)
+- [Classi di espressioni regolari](the-regular-expression-object-model.md)
+- [Esempi di espressioni regolari](regular-expression-examples.md)
+- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

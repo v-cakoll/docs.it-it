@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529762"
 ---
 # <a name="assembly-manifest"></a>Manifesto dell'assembly
 Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.  
@@ -42,7 +42,7 @@ Tipi di assembly
 ## <a name="assembly-manifest-contents"></a>Contenuto del manifesto dell'assembly  
  Nella tabella che segue vengono mostrate le informazioni contenute nel manifesto dell'assembly. I primi quattro elementi (le informazioni sul nome, il numero di versione, le impostazioni cultura e il nome sicuro dell'assembly) costituiscono l'identità dell'assembly.  
   
-|Informazioni|Descrizione|  
+|Informazioni|Description|  
 |-----------------|-----------------|  
 |Nome assembly|Una stringa di testo che specifica il nome dell'assembly.|  
 |Numero di versione|Un numero di versione principale e secondario e un numero di revisione e di build. Common Language Runtime utilizza tali numeri per assicurare l'applicazione dei criteri per la gestione delle versioni.|  
@@ -54,8 +54,8 @@ Tipi di assembly
   
  È possibile aggiungere o modificare alcune informazioni del manifesto dell'assembly utilizzando gli attributi dell'assembly nel proprio codice. È anche possibile modificare le informazioni sulla versione e alcuni attributi informativi, tra cui marchio, copyright, prodotto, società e versione informativa. Per un elenco completo degli attributi degli assembly vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>Vedere anche  
-- [Contenuto degli assembly](../../../docs/framework/app-domains/assembly-contents.md)  
-- [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)  
-- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+## <a name="see-also"></a>Vedere anche
+- [Contenuto degli assembly](../../../docs/framework/app-domains/assembly-contents.md)
+- [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)

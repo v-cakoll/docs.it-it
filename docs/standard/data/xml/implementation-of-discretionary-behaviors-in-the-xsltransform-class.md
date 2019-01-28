@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609577"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementazione di comportamenti discretionary nella classe XslTransform
 
@@ -82,10 +82,10 @@ Nella tabella seguente sono riportate le funzionalità la cui implementazione è
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)  
-- [Trasformazioni XSLT con la classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)  
-- [XPathNavigator nelle trasformazioni](xpathnavigator-in-transformations.md)  
-- [XPathNodeIterator nelle trasformazioni](xpathnodeiterator-in-transformations.md)  
-- [Input di XPathDocument in XslTransform](xpathdocument-input-to-xsltransform.md)  
-- [Input di XmlDataDocument in XslTransform](xmldatadocument-input-to-xsltransform.md)  
-- [Input di XmlDocument in XslTransform](xmldocument-input-to-xsltransform.md)  
+- [Implementazione del processore XSLT da parte della classe XslTransform](xsltransform-class-implements-the-xslt-processor.md)
+- [Trasformazioni XSLT con la classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
+- [XPathNavigator nelle trasformazioni](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nelle trasformazioni](xpathnodeiterator-in-transformations.md)
+- [Input di XPathDocument in XslTransform](xpathdocument-input-to-xsltransform.md)
+- [Input di XmlDataDocument in XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [Input di XmlDocument in XslTransform](xmldocument-input-to-xsltransform.md)

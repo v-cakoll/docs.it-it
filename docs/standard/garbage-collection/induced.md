@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492123"
 ---
 # <a name="induced-collections"></a>Raccolte indotte
 Nella maggior parte dei casi, tramite il Garbage Collector è possibile determinare il momento migliore per eseguire una raccolta ed è consigliabile consentire l'esecuzione in modo indipendente. In rari casi una raccolta forzata può migliorare le prestazioni dell'applicazione. In questi casi, è possibile indurre un'operazione di Garbage Collection usando il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> per forzarla.  
@@ -22,7 +22,7 @@ Nella maggior parte dei casi, tramite il Garbage Collector è possibile determin
 ## <a name="gc-collection-mode"></a>Modalità di raccolta Garbage Collection  
  È possibile usare uno degli overload del metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> che include un valore <xref:System.GCCollectionMode> per specificare il comportamento di una raccolta forzata, come indicato di seguito.  
   
-|Valore di `GCCollectionMode`|Descrizione|  
+|Valore di `GCCollectionMode`|Description|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Usa l'impostazione di Garbage Collection predefinita per la versione di .NET in esecuzione.|  
 |<xref:System.GCCollectionMode.Forced>|Forza l'esecuzione immediata dell'operazione di Garbage Collection. Equivale alla chiamata dell'overload di <xref:System.GC.Collect?displayProperty=nameWithType>. Restituisce una raccolta di blocco completa di tutte le generazioni.<br /><br /> È anche possibile compattare l'heap di oggetti di grandi dimensioni impostando la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> su <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> prima di forzare una procedura completa immediata di Garbage Collection di blocco.|  
@@ -38,5 +38,5 @@ Nella maggior parte dei casi, tramite il Garbage Collector è possibile determin
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)  
+- [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)
 - [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

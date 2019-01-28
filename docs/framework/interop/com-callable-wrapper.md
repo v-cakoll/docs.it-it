@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e62d115292edc7b75ff782ac2c9161d942077333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655335"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando un client COM chiama un oggetto .NET, Common Language Runtime crea l'oggetto gestito e un COM Callable Wrapper (CCW) per l'oggetto. Incapaci di fare riferimento diretto a un oggetto .NET, i client COM usano il CCW come un proxy per l'oggetto gestito.  
@@ -48,7 +48,7 @@ Interfacce COM e COM Callable Wrapper
   
  Oltre a esporre le interfacce che sono esplicitamente implementate da una classe dell'ambiente gestito, .NET Framework fornisce per l'oggetto un'implementazione delle interfacce COM elencate nella tabella che segue. Una classe .NET può eseguire l'override del comportamento predefinito fornendo la propria implementazione di queste interfacce. Il runtime, tuttavia, fornisce sempre l'implementazione delle interfacce **IUnknown** e **IDispatch**.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |**Idispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|  
 |**IerrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
@@ -59,7 +59,7 @@ Interfacce COM e COM Callable Wrapper
   
  Le classi gestite possono anche fornire le interfacce COM descritte nella tabella che segue.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |Interfaccia della classe (\_*nomeclasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|  
@@ -189,9 +189,9 @@ Se l'applicazione richiede chiamate ad associazione anticipata ai metodi dell'in
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [Wrapper COM](com-wrappers.md)  
- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
- [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)  
- [Runtime Callable Wrapper](runtime-callable-wrapper.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [Wrapper COM](com-wrappers.md)
+- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)
+- [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)
+- [Runtime Callable Wrapper](runtime-callable-wrapper.md)

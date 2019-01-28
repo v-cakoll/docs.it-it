@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663160"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|Descrizione|
+|Argomento|Description|
 |--------------|-----------------|
 |`resourceFile`|File di risorse da localizzare. Deve essere un form di Windows Form con estensione .resx o .resources generato dalla finestra di progettazione di Visual Studio. Winres.exe non è in grado di aprire file .resx o .resources generici.|
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
@@ -110,7 +110,7 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
 2.  Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
 
-     oppure
+     -oppure-
 
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.
 

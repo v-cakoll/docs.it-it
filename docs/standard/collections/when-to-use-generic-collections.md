@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674037"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando utilizzare raccolte generiche
 L'uso di raccolte generiche è in genere consigliato perché offre l'immediato vantaggio dell'indipendenza dai tipi senza la necessità di derivare da un tipo di raccolta di base e implementare membri specifici di tipo. I tipi di raccolte generiche offrono anche prestazioni migliori rispetto ai tipi di raccolte non generiche corrispondenti (e tipi derivati dai tipi di raccolte base non generiche) quando gli elementi della raccolta sono tipi di valore, perché con i generics non è necessario il boxing degli elementi.  
@@ -55,6 +55,6 @@ L'uso di raccolte generiche è in genere consigliato perché offre l'immediato v
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Raccolte e strutture di dati](../../../docs/standard/collections/index.md)  
-- [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Raccolte e strutture di dati](../../../docs/standard/collections/index.md)
+- [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [Generics](../../../docs/standard/generics/index.md)

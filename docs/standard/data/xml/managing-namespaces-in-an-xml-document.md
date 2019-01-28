@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676172"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -81,5 +81,5 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.XmlNamespaceManager>  
+- <xref:System.Xml.XmlNamespaceManager>
 - [Documenti e dati XML](../../../../docs/standard/data/xml/index.md)

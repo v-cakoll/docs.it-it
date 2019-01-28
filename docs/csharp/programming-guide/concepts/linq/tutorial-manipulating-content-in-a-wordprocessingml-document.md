@@ -2,12 +2,12 @@
 title: 'Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 2d906bb2310d4dd6c0ccd865a52ede441556dfda
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2d972f53b30ccd8ba8e1ffdaecb40cf7f76e7b6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583466"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)
 In questa esercitazione viene illustrato come applicare l'approccio delle trasformazioni funzionali e LINQ to XML per modificare documenti XML. Negli esempio in C# vengono eseguite query e modificate le informazioni in documenti WordprocessingML di Office Open XML salvati tramite Microsoft Word.  
@@ -31,5 +31,5 @@ In questa esercitazione viene illustrato come applicare l'approccio delle trasfo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [Introduzione alle trasformazioni funzionali pure (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

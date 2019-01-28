@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46584253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563431"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
@@ -49,7 +49,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|Descrizione|  
+|Spazi dei nomi predefiniti|Description|  
 |------------------------|-----------------|  
 |System|Classe di sistema.|  
 |System.Collection|Classi Collection.|  
@@ -72,7 +72,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
 |Frammento di albero risultato|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Se la funzione di script usa un tipo numerico quale Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, questo verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
+ Se la funzione di script utilizza un tipo numerico Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, questo verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
   
  Se la funzione di script usa un tipo diverso da quelli specificati in precedenza o se la funzione non viene compilata quando il foglio di stile viene caricato nell'oggetto <xref:System.Xml.Xsl.XslTransform>, verrà generata un'eccezione.  
   
@@ -89,9 +89,10 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
  Si consiglia di inserire tutto il contenuto dello script in una sezione CDATA, poiché è possibile che gli operatori, gli identificatori o i delimitatori per un determinato linguaggio vengano erroneamente interpretati come XML. Nell'esempio seguente viene illustrato l'uso dell'operatore logico AND nello script.  
   
 ```xml  
-<msxsl:script implements-prefix='yourprefix' language='CSharp>  
+<msxsl:script implements-prefix='yourprefix' language='CSharp'>  
     public string book(string abc, string xyz)  
-    {  if ((abc== abc)&&(abc== xyz)) return bar+xyz;  
+    {  
+        if ((abc == bar) && (abc == xyz)) return bar + xyz;  
         else return null;  
     }  
 </msxsl:script>  
@@ -146,8 +147,8 @@ public class Sample
    private const String filename = "number.xml";  
    private const String stylesheet = "calc.xsl";  
   
-   public static void Main() {  
-  
+   public static void Main()  
+   {  
     //Create the XslTransform and load the style sheet.  
     XslTransform xslt = new XslTransform();  
     xslt.Load(stylesheet);  
@@ -162,7 +163,7 @@ public class Sample
     //Transform the file.  
     xslt.Transform(doc, null, writer, null);  
     writer.Close();  
-  }   
+  }  
 }  
 ```  
   
@@ -190,7 +191,8 @@ public class Sample
   
   <msxsl:script language="C#" implements-prefix="user">  
      <![CDATA[  
-     public double circumference(double radius){  
+     public double circumference(double radius)  
+     {  
        double pi = 3.14;  
        double circ = pi*radius*2;  
        return circ;  

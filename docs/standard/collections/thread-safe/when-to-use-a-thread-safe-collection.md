@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543173"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
@@ -64,6 +64,6 @@ ms.locfileid: "49123566"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
 - [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)

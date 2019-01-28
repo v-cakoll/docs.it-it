@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731920"
 ---
 # <a name="file-encodings-visual-basic"></a>Codifiche dei file (Visual Basic)
 Le codifiche dei file, note anche come codifiche dei caratteri, specificano in che modo vengono rappresentati i caratteri durante l'elaborazione del testo. Una codifica può essere preferibile rispetto a un'altra per i caratteri del linguaggio che è o non è in grado di gestire, anche se in genere è preferibile Unicode.  
@@ -27,7 +27,7 @@ Le codifiche dei file, note anche come codifiche dei caratteri, specificano in c
 ## <a name="encoding-class"></a>Classe di codifica  
  La classe <xref:System.Text.Encoding> rappresenta una codifica dei caratteri. In questa tabella sono elencati i tipi di codifica disponibili con una descrizione di ogni tipo.  
   
-|nome|Descrizione|
+|nome|Description|
 |---|---|    
 |<xref:System.Text.ASCIIEncoding>|Rappresenta una codifica dei caratteri ASCII di caratteri Unicode.|  
 |<xref:System.Text.UnicodeEncoding>|Rappresenta una codifica UTF-16 dei caratteri Unicode.|  
@@ -35,6 +35,6 @@ Le codifiche dei file, note anche come codifiche dei caratteri, specificano in c
 |<xref:System.Text.UTF7Encoding>|Rappresenta una codifica UTF-7 dei caratteri Unicode.|  
 |<xref:System.Text.UTF8Encoding>|Rappresenta una codifica UTF-8 dei caratteri Unicode.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>Vedere anche
+- [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Scrittura su file](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

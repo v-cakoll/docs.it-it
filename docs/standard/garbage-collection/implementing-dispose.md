@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607121"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementazione di un metodo Dispose
 
@@ -145,7 +145,7 @@ Le classi derivate dalla classe <xref:System.Runtime.InteropServices.SafeHandle?
 * La classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> per gli handle di attesa.  
   
 <a name="base"></a>   
-## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Utilizzo di un handle sicuro per implementare il modello Dispose per una classe di base
+## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Uso di un handle sicuro per implementare il modello Dispose per una classe di base
 
 L'esempio seguente illustra il modello Dispose per una classe di base, `DisposableStreamResource`, che usa handle sicuri per incapsulare le risorse non gestite. Viene definita una classe `DisposableResource` che usa <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> per eseguire il wrapping di un oggetto <xref:System.IO.Stream> che rappresenta un file aperto. Il metodo `DisposableResource` include anche una singola proprietà, `Size`, che restituisce il numero totale di byte nel flusso di file.  
   
@@ -162,11 +162,11 @@ Nell'esempio seguente viene illustrato il modello Dispose per una classe derivat
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.GC.SuppressFinalize%2A>   
-- <xref:System.IDisposable>   
-- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
-- <xref:Microsoft.Win32.SafeHandles>   
-- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
-- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-- [Procedura: Definire e usare classi e struct (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+- <xref:System.GC.SuppressFinalize%2A>
+- <xref:System.IDisposable>
+- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>
+- <xref:Microsoft.Win32.SafeHandles>
+- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
+- [Procedura: Definire e usare classi e struct (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Criterio Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)

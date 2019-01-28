@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 04601ac0e6b1bc3289be36ce3e1a144ce57ccefb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550513"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura
 I metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> forniscono overload che non accettano parametri. Per impostazione predefinita, questi overload senza parametri eseguono modifiche di maiuscole e minuscole in base al valore di <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Ciò produce risultati con distinzione tra maiuscole e minuscole che possono variare in base alle impostazioni cultura. Per definire modifiche di maiuscole e minuscole dipendenti o meno dalle impostazioni cultura, è consigliabile usare gli overload di questi metodi che richiedono di specificare in modo esplicito un parametro `culture`. Per definire modifiche di maiuscole e minuscole dipendenti dalle impostazioni cultura, specificare `CultureInfo.CurrentCulture` per il parametro `culture`. Per definire modifiche indipendenti dalle impostazioni cultura, specificare `CultureInfo.InvariantCulture` per il parametro `culture`.  
@@ -69,8 +69,8 @@ static object LookupKey(string key)
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
 - [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

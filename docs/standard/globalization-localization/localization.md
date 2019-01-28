@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ba8a897ba0840d6e159c4d48c2ca9427bb2937c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579498"
 ---
 # <a name="localization"></a>Localizzazione
 La localizzazione è il processo di conversione delle risorse di un'applicazione nelle versioni localizzate per tutte le impostazioni cultura supportate dall'applicazione. È consigliabile passare alla fase di localizzazione solo dopo aver completato il passaggio di [revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md), per verificare che l'applicazione globalizzata sia pronta per la localizzazione.  
@@ -34,7 +34,7 @@ La localizzazione è il processo di conversione delle risorse di un'applicazione
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
-- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)  
-- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
+- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)
+- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)
 - [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

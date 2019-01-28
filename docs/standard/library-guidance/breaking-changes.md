@@ -4,12 +4,12 @@ description: Procedure consigliate per esplorare le modifiche di rilievo durante
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564224"
 ---
 # <a name="breaking-changes"></a>Modifiche che causano un'interruzione
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Considerazioni su versione e aggiornamento per gli sviluppatori C#](../../csharp/whats-new/version-update-considerations.md)
-* [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Ottima guida alle modifiche di rilievo delle API in .NET)
-* [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Regole di modifica di rilievo CoreFX)
+- [Considerazioni su versione e aggiornamento per gli sviluppatori C#](../../csharp/whats-new/version-update-considerations.md)
+- [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Ottima guida alle modifiche di rilievo delle API in .NET)
+- [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Regole di modifica di rilievo CoreFX)
 
 >[!div class="step-by-step"]
 >[Precedente](versioning.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620058"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso della classe StringBuilder in .NET
 L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno dei metodi nella classe <xref:System.String?displayProperty=nameWithType>, si crea un nuovo oggetto stringa in memoria che richiede una nuova allocazione di spazio. In situazioni in cui è necessario modificare ripetutamente una stringa, il sovraccarico associato alla creazione di un nuovo oggetto <xref:System.String> può essere dispendioso. La classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> può essere usata per modificare una stringa senza creare un nuovo oggetto. Ad esempio, l'uso della classe <xref:System.Text.StringBuilder> può migliorare le prestazioni quando si concatenano più stringhe in un ciclo.  
@@ -113,6 +113,6 @@ L'oggetto <xref:System.String> non è modificabile. Ogni volta che si usa uno de
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
-- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
+- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
