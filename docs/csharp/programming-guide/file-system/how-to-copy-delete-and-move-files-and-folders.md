@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: 498f266597032a4c35dbc8783994095b5c08fc3d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3e6c08050186642ceec4e2301524919379e12aaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527705"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Procedura: Copiare, eliminare e spostare file e cartelle (Guida per programmatori C#)
 Gli esempi seguenti mostrano come copiare, spostare ed eliminare file e cartelle in modo sincrono usando le classi <xref:System.IO.File?displayProperty=nameWithType>, <xref:System.IO.Directory?displayProperty=nameWithType>, <xref:System.IO.FileInfo?displayProperty=nameWithType> e <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> dello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>. Questi esempi non forniscono un indicatore di stato o altri elementi di interfaccia utente. Se si vuole fornire una finestra di dialogo di stato standard, vedere [Procedura: Creare una finestra di dialogo dello stato di avanzamento per operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
@@ -34,9 +34,9 @@ Gli esempi seguenti mostrano come copiare, spostare ed eliminare file e cartelle
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [File system e Registro di sistema (Guida per programmatori C#)](index.md)  
-- [Procedura: Creare una finestra di dialogo dello stato di avanzamento per operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md)  
-- [I/O di file e di flussi](../../../standard/io/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [File system e Registro di sistema (Guida per programmatori C#)](index.md)
+- [Procedura: Creare una finestra di dialogo dello stato di avanzamento per operazioni su file](how-to-provide-a-progress-dialog-box-for-file-operations.md)
+- [I/O di file e di flussi](../../../standard/io/index.md)
 - [Attività di I/O comuni](../../../standard/io/common-i-o-tasks.md)

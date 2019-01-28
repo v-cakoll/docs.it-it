@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710254"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi
 
@@ -107,4 +107,4 @@ L'esempio riportato di seguito illustra due metodi di estensione `Deconstruct` p
 ## <a name="see-also"></a>Vedere anche
 
 - [Variabili discard](discards.md)
-- [Tuple](tuples.md)  
+- [Tuple](tuples.md)

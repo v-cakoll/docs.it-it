@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1dac8aec7f565b82797ba179fc01968e00bf36b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541222"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 Lo strumento Global Assembly Cache consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -165,8 +165,8 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

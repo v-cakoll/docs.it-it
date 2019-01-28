@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad74b9e23c65209c8084588d09670e3c64e44213
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493729"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Creazione di pacchetti e distribuzione delle risorse nelle app .NET
 Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resource Manager, rappresentato dalla classe <xref:System.Resources.ResourceManager>. Resource Manager presuppone l'uso di un modello hub e spoke per la creazione di pacchetti e la distribuzione delle risorse. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, ovvero le impostazioni che vengono usate quando non si trovano le risorse localizzate. Ogni spoke si connette a un assembly satellite contenente le risorse di determinate impostazioni cultura, ma non contiene alcun codice.  
@@ -90,7 +90,7 @@ Per recuperare le risorse localizzate le applicazioni usano .NET Framework Resou
   
 8.  Il runtime genera l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per indicare che non è stata trovata una risorsa di fallback appropriata. Se si sceglie di gestire l'evento, il gestore eventi può restituire un riferimento all'assembly satellite le cui risorse verranno usate per la ricerca. In caso contrario il gestore eventi restituisce `null` e la ricerca continua.  
   
-9. Il runtime esegue quindi la ricerca negli assembly padre come nei tre passaggi precedenti, su numerosi livelli potenziali. Ogni set di impostazioni cultura ha un solo set padre, definito dalla proprietà <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, ma un set padre può a sua volta avere un proprio set padre. La ricerca di impostazioni cultura padre si interrompe quando la proprietà <xref:System.Globalization.CultureInfo.Parent%2A> di un set di impostazioni cultura restituisce <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ai fini del fallback delle risorse le impostazioni cultura inglese non dipendenti da paese/area geografica non sono considerate impostazioni cultura padre o impostazioni cultura che possono avere risorse.  
+9. Il runtime esegue quindi la ricerca negli assembly padre come nei tre passaggi precedenti, su numerosi livelli potenziali. Ogni set di impostazioni cultura ha un solo set padre, definito dalla proprietà <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, ma un set padre può a sua volta avere un proprio set padre. La ricerca di impostazioni cultura padre si interrompe quando la proprietà <xref:System.Globalization.CultureInfo.Parent%2A> di un set di impostazioni cultura restituisce <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Ai fini del fallback delle risorse le impostazioni cultura invariabili non sono considerate impostazioni cultura padre o impostazioni cultura che possono avere risorse.  
   
 10. Se dopo la ricerca nelle impostazioni cultura specificate in origine e in tutte le impostazioni cultura padre la risorsa non è stata trovata, viene usata la risorsa corrispondente alle impostazioni cultura predefinite (fallback). In genere le risorse delle impostazioni cultura predefinite sono incluse nell'assembly principale dell'applicazione. Tuttavia è possibile specificare il valore <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> per la proprietà <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> dell'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute> per indicare come posizione finale di fallback per le risorse un assembly satellite anziché l'assembly principale.  
   
@@ -221,8 +221,8 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>Proposta alternativa per la creazione dei pacchetti  
  Vincoli di tempo o di budget potrebbero rendere difficile la creazione di un set di risorse per ogni subset di impostazioni cultura supportato dall'applicazione. In alternativa è possibile creare un solo assembly satellite per impostazioni cultura padre usabili da tutte le impostazioni cultura secondarie correlate. Ad esempio è possibile offrire un singolo assembly satellite inglese (en) che viene recuperato da utenti che richiedono risorse di regioni specifiche di lingua inglese e un singolo assembly satellite tedesco (de) per gli utenti che richiedono risorse di regioni specifiche di lingua tedesca. Le richieste per il tedesco parlato in Germania (de-DE), in Austria (de-AT) e in Svizzera (de-CH) avranno come fallback l'assembly satellite tedesco (de). Le risorse predefinite sono il fallback finale e come tali sono quelle richieste dalla maggior parte degli utenti dell'applicazione, perciò vanno scelte con attenzione. Questo approccio consente di distribuire risorse meno specifiche a livello di impostazioni cultura, ma in grado di ridurre notevolmente i costi di localizzazione dell'applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+## <a name="see-also"></a>Vedere anche
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

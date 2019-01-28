@@ -2,12 +2,12 @@
 title: Accesso agli attributi tramite reflection (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660411"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Accesso agli attributi tramite reflection (C#)
 La possibilità di definire attributi personalizzati e inserirli nel codice sorgente sarebbe di scarso valore senza un metodo per recuperare e usare le informazioni. Tramite l'uso di reflection, è possibile recuperare le informazioni definite con gli attributi personalizzati. Il metodo chiave è `GetCustomAttributes`, che restituisce una matrice di oggetti che rappresentano gli equivalenti in fase di esecuzione degli attributi di codice sorgente. Questo metodo ha versioni diverse sottoposte a overload. Per ulteriori informazioni, vedere <xref:System.Attribute>.  
@@ -115,10 +115,10 @@ class TestAuthorAttribute
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Recupero di informazioni memorizzate negli attributi](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Recupero di informazioni memorizzate negli attributi](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
 - [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

@@ -2,12 +2,12 @@
 title: Selezione e convalida dei certificati
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2767f8fc62d44e480962690a3cbe379fea0f9662
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666666"
 ---
 # <a name="certificate-selection-and-validation"></a>Selezione e convalida dei certificati
 Le classi <xref:System.Net> supportano diversi modi per selezionare e convalidare <xref:System.Security.Cryptography.X509Certificates> per le connessioni SSL (Secure Socket Layer). Un client può selezionare uno o più certificati per autenticarsi a un server, mentre un server può richiedere che un certificato client abbia uno o più attributi specifici per l'autenticazione.  
@@ -52,6 +52,6 @@ Per configurare i certificati server per la classe <xref:System.Net.HttpListener
   
  Oltre a questi strumenti, le classi <xref:System.Security.Cryptography.X509Certificates.X509Certificate> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> offrono metodi per caricare un certificato dal file system.  
   
-## <a name="see-also"></a>Vedere anche  
- [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)

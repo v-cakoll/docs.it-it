@@ -2,12 +2,12 @@
 title: Supporto per IRI (International Resource Identifier) in System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651071"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Supporto per IRI (International Resource Identifier) in System.Uri
 La classe <xref:System.Uri?displayProperty=nameWithType> è stata estesa con il supporto per gli IRI (International Resource Identifier) e gli IDN (Internationalized Domain Name). Questi miglioramenti sono disponibili in .NET Framework 3.5, 3.0 SP1 e 2.0 SP1.  
@@ -43,8 +43,8 @@ La classe <xref:System.Uri?displayProperty=nameWithType> è stata estesa con il 
   
  L'impostazione di configurazione per le classi di configurazione <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> e <xref:System.Configuration.IdnElement?displayProperty=nameWithType> verrà letta una volta quando viene costruita la prima classe <xref:System.Uri?displayProperty=nameWithType>. Le modifiche apportate alle impostazioni di configurazione da questo momento in poi verranno ignorate.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>

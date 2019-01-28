@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 064061b44cca3adb5dde89ecc71fb1f8ea3abf8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562904"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Procedura: Implementare in modo esplicito i membri di interfaccia (Guida per programmatori C#)
 Questo esempio dichiara un'[interfaccia](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, e una classe, `Box`, che implementa in modo esplicito i membri dell'interfaccia `getLength` e `getWidth`. L'accesso ai membri avviene tramite l'istanza di interfaccia `dimensions`.  
@@ -30,7 +30,7 @@ Questo esempio dichiara un'[interfaccia](../../../csharp/language-reference/keyw
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
 - [Procedura: Implementare in modo esplicito i membri di due interfacce](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)

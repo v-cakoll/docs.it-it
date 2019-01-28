@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 5cc7c06a763c4b274b154afc581e495a7e2aa09b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3ba825fcbf40e08a2cb4488de2bbed9257c2508
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592835"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Costruttori di istanze (Guida per programmatori C#)
 I costruttori di istanze vengono usati per creare e inizializzare qualsiasi variabile membro di istanza quando si usa l'espressione [new](../../../csharp/language-reference/keywords/new.md) per creare un oggetto di una [classe](../../../csharp/language-reference/keywords/class.md). Per inizializzare una classe [statica](../../../csharp/language-reference/keywords/static.md), o variabili statiche in una classe non statica, è necessario definire un costruttore statico. Per altre informazioni, vedere [Costruttori statici](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -23,7 +23,7 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
 > [!NOTE]
 >  Per maggior chiarezza, questa classe contiene campi pubblici. L'uso di campi pubblici non è una procedura di programmazione consigliata, perché consente a qualsiasi metodo in qualsiasi punto di un programma di accedere senza restrizioni e senza verifiche ai componenti interni di un oggetto. I membri dati in genere devono essere privati e l'accesso ad essi deve essere consentito solo tramite metodi e proprietà della classe.  
   
- Questo costruttore di istanze viene chiamato ogni volta che viene creato un oggetto basato sulla classe `CoOrds`. Un costruttore come questo, che non accetta argomenti, viene chiamato *costruttore predefinito*. È spesso utile, tuttavia, per fornire costruttori aggiuntivi. È ad esempio possibile aggiungere un costruttore alla classe `CoOrds` che consente di specificare i valori iniziali dei membri dati:  
+ Questo costruttore di istanze viene chiamato ogni volta che viene creato un oggetto basato sulla classe `Coords`. Un costruttore come questo, che non accetta argomenti, viene chiamato *costruttore predefinito*. È spesso utile, tuttavia, per fornire costruttori aggiuntivi. È ad esempio possibile aggiungere un costruttore alla classe `Coords` che consente di specificare i valori iniziali dei membri dati:  
   
  [!code-csharp[csProgGuideObjects#76](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_2.cs)]  
   
@@ -31,7 +31,7 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
  [!code-csharp[csProgGuideObjects#77](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_3.cs)]  
   
- Se una classe non ha un costruttore, viene generato automaticamente un costruttore predefinito e per inizializzare i campi dell'oggetto vengono usati i valori predefiniti. Ad esempio, un valore [int](../../../csharp/language-reference/keywords/int.md) viene inizializzato su 0. Per altre informazioni sui valori predefiniti, vedere [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md). Poiché il costruttore predefinito della classe `CoOrds` inizializza tutti i membri dati su zero, può pertanto essere rimosso completamente senza modificare il funzionamento della classe. Per un esempio completo sull'uso di più costruttori, vedere l'esempio 1 più avanti in questo argomento. Per un esempio di costruttore generato automaticamente, vedere l'esempio 2.  
+ Se una classe non ha un costruttore, viene generato automaticamente un costruttore predefinito e per inizializzare i campi dell'oggetto vengono usati i valori predefiniti. Ad esempio, un valore [int](../../../csharp/language-reference/keywords/int.md) viene inizializzato su 0. Per altre informazioni sui valori predefiniti, vedere [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md). Poiché il costruttore predefinito della classe `Coords` inizializza tutti i membri dati su zero, può pertanto essere rimosso completamente senza modificare il funzionamento della classe. Per un esempio completo sull'uso di più costruttori, vedere l'esempio 1 più avanti in questo argomento. Per un esempio di costruttore generato automaticamente, vedere l'esempio 2.  
   
  I costruttori di istanze possono anche essere usati per chiamare i costruttori di istanze delle classi di base. Il costruttore di classi può chiamare il costruttore della classe di base mediante l'inizializzatore, ad esempio:  
   
@@ -60,8 +60,8 @@ I costruttori di istanze vengono usati per creare e inizializzare qualsiasi vari
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [static](../../../csharp/language-reference/keywords/static.md)

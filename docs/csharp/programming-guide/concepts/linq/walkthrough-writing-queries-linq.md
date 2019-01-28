@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: scrittura di query in C# (LINQ)'
+title: 'Procedura dettagliata: Scrittura di query in C# (LINQ)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 085a5f27225589989cf5b9d4b5871226624843ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554976"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: scrittura di query in C# (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: Scrittura di query in C# (LINQ)
 Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizzate per scrivere espressioni di query LINQ.  
   
 ## <a name="create-a-c-project"></a>Creare un progetto C#  
@@ -184,6 +184,6 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)

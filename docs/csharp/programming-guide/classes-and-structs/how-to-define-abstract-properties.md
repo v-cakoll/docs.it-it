@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 70f344fb4e5a74940219688190324beb8183d32b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab846f423631c8238ff9a516f95d32ff32bd0335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616335"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedura: Definire proprietà astratte (Guida per programmatori C#)
 L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../csharp/language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
@@ -55,8 +55,8 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Procedura: Creare e usare assembly dalla riga di comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)

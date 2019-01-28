@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: d61d48ca05e93743ef3afa894ad0cbc98d6d2ab0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1d6884dc7376c07d2cc6fc03aa3972fb68d39ead
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615241"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici (Guida per programmatori C#)
 In questi esempi viene mostrato come effettuare le seguenti attività:  
@@ -55,6 +55,6 @@ In questi esempi viene mostrato come effettuare le seguenti attività:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Tipi](../../../csharp/programming-guide/types/index.md)  
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Tipi](../../../csharp/programming-guide/types/index.md)
 - [Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

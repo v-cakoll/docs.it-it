@@ -2,12 +2,12 @@
 title: Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 9e95dc571bc520c0abd0cf676ce37f383fed84ba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570860"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
 Lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> offre classi e API che consentono di implementare attività di collaborazione peer usando l'infrastruttura di collaborazione peer-to-peer.  
@@ -39,5 +39,5 @@ Lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> offre classi e API
   
  Le tipiche applicazioni P2P sono: conferenze telefoniche per la gestione collaborativa degli appunti, applicazioni chat senza server, annunci pubblicitari interattivi e sessioni di giochi online.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.PeerToPeer.Collaboration>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.PeerToPeer.Collaboration>

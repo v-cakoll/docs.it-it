@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589766"
 ---
 # <a name="applying-interop-attributes"></a>Applicazione di attributi di interoperabilità
 Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di attributi specifici per l'interoperabilità: quelli applicati manualmente in fase di progettazione, quelli applicati dalle API e dagli strumenti di interoperabilità COM durante il processo di conversione e quelli applicati nell'uno o nell'altro modo.  
@@ -30,7 +30,7 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 ## <a name="design-time-attributes"></a>Attributi della fase di progettazione  
  È possibile intervenire sul risultato del processo di conversione eseguito dalle API e dagli strumenti di interoperabilità COM usando gli attributi in fase di progettazione. La tabella seguente descrive gli attributi che è possibile applicare al codice sorgente gestito. Questi attributi possono essere applicati, in alcuni casi, anche dagli strumenti di interoperabilità COM.  
   
-|Attributo|Descrizione|  
+|Attributo|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Specifica se il marshalling del tipo deve essere effettuato mediante il gestore di marshalling di Automazione oppure un proxy e uno stub personalizzati.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controlla il tipo di interfaccia generato per una classe.|  
@@ -57,7 +57,7 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 ## <a name="conversion-tool-attributes"></a>Attributi degli strumenti di conversione  
  La tabella seguente descrive gli attributi applicati dagli strumenti di interoperabilità COM durante il processo di conversione. Questi attributi non devono essere applicati in fase di progettazione.  
   
-|Attributo|Descrizione|  
+|Attributo|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica l'alias COM per un tipo di parametro o campo. Può essere usato per parametri, campi o valori restituiti.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica che le informazioni relative a una classe o a un'interfaccia sono andate perse durante l'importazione da una libreria dei tipi a un assembly.|  
@@ -67,9 +67,9 @@ Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di 
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Contiene i **TYPEFLAGS** importati in origine per questo tipo dalla libreria dei tipi COM.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contiene i **VARFLAGS** importati in origine per questa variabile dalla libreria dei tipi COM.|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices>  
- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Attributi](../../../docs/standard/attributes/index.md)  
- [Qualificazione di tipi .NET per l'interoperabilità](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Preparazione di un assembly per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.InteropServices>
+- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Attributi](../../../docs/standard/attributes/index.md)
+- [Qualificazione di tipi .NET per l'interoperabilità](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [Preparazione di un assembly per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

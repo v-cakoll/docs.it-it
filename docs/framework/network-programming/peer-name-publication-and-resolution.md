@@ -2,12 +2,12 @@
 title: Pubblicazione e risoluzione di nomi di peer
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682982"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Pubblicazione e risoluzione di nomi di peer
 
@@ -47,5 +47,5 @@ Il peer richiedente continua questo processo con iterazioni successive, fino a i
   
  All'interno dello spazio dei nomi <xref:System.Net.PeerToPeer> esiste una relazione molti-a-molti tra i record <xref:System.Net.PeerToPeer.PeerName> che contengono gli endpoint e i cloud o le reti PNRP in cui comunicano. In presenza di voci duplicate o non aggiornate o di più nodi con lo stesso nome di peer, i nodi PNRP possono ottenere informazioni aggiornate usando la classe <xref:System.Net.PeerToPeer.PeerNameResolver>. I metodi <xref:System.Net.PeerToPeer.PeerNameResolver> usano un singolo nome di peer per semplificare la prospettiva per i record dei nomi uno-a-molti per i peer e uno-a-molti per i cloud. Il meccanismo è simile all'esecuzione di una query tramite un join su una tabella relazionale. Al completamento, l'oggetto Resolver restituisce un <xref:System.Net.PeerToPeer.PeerNameRecordCollection> per il nome di peer specificato.  Ad esempio, un nome di peer comparirebbe in tutti i record di nomi di peer della raccolta, ordinati in base al cloud. Queste sono le istanze del nome di peer i cui dati di supporto potrebbero essere richiesti da un'applicazione basata sul protocollo PNRP.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - <xref:System.Net.PeerToPeer>

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599780"
 ---
 # <a name="handling-errors"></a>Gestione degli errori
 Entrambe le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> generano eccezioni di sistema (ad esempio <xref:System.ArgumentException>) ed eccezioni specifiche del Web (ovvero <xref:System.Net.WebException> generate dal metodo <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -45,7 +45,7 @@ Entrambe le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> 
   
  La tabella seguente descrive i possibili valori per la proprietà **Status**.  
   
-|Status|Descrizione|  
+|Status|Description|  
 |------------|-----------------|  
 |ConnectFailure|Non è stato possibile contattare il servizio remoto al livello di trasporto.|  
 |ConnectionClosed|Chiusura imprevista della connessione.|  
@@ -167,6 +167,6 @@ End Try
   
  Quando viene generata una **SocketException**, la classe **SocketException** imposta la proprietà <xref:System.Net.Sockets.SocketException.ErrorCode%2A> sull'ultimo errore relativo a un socket del sistema operativo che si è verificato. Per altre informazioni sui codici di errore di socket, vedere la documentazione dei codici di errore dell'API Winsock 2.0 in MSDN.  
   
-## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali sulla gestione delle eccezioni](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Vedere anche
+- [Nozioni fondamentali sulla gestione delle eccezioni](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)

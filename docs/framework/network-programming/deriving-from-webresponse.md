@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50088598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598867"
 ---
 # <a name="deriving-from-webresponse"></a>Derivazione da WebResponse
 La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce metodi e proprietà di base per creare un risposta specifica del protocollo adatta al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe <xref:System.Net.WebRequest> per richiedere i dati dalle risorse ricevono le risposte in **WebResponse**. I discendenti specifici del protocollo **WebResponse** devono implementare i membri astratti della classe **WebResponse**.  
@@ -38,9 +38,9 @@ La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce
   
  L'istanza del flusso restituita dal metodo **GetResponseStream** è di proprietà dell'applicazione e può essere chiusa senza chiudere **WebResponse**. Per convenzione, la chiamata al metodo **WebResponse.Close** chiude anche il flusso restituito da **GetResponse**.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601695"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilatore licenze)
 Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza e produce un file binario che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

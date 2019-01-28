@@ -2,12 +2,12 @@
 title: Refactoring con una funzione pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692298"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring con una funzione pura (C#)
 Nell'esempio seguente viene eseguito il refactoring dell'esempio precedente, [Refactoring con un metodo di estensione (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), per usare una funzione pure. In questo esempio il codice per individuare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  
@@ -181,6 +181,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [Refactoring usando un metodo di estensione (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring usando un metodo di estensione (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [Refactoring in funzioni pure (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

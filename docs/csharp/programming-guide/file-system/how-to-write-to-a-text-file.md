@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce0321d91835fbdf6c37f4b7736f0de900e9f838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666800"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Procedura: Scrivere in un file di testo (Guida per programmatori C#)
 In questi esempi vengono mostrati vari modi per scrivere testo in un file. I primi due esempi usano metodi pratici statici nella classe <xref:System.IO.File?displayProperty=nameWithType> per scrivere ogni elemento di qualsiasi oggetto `IEnumerable<string>` e una stringa in un file di testo. Nell'esempio 3 viene illustrato come aggiungere testo a un file quando è necessario elaborare individualmente ogni riga mentre si scrive nel file. Gli esempi da 1 a 3 sovrascrivono tutto il contenuto esistente nel file, ma l'esempio 4 mostra come aggiungere il testo a un file esistente.  
@@ -35,6 +35,6 @@ In questi esempi vengono mostrati vari modi per scrivere testo in un file. I pri
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
 - [Esempio: Salvare una raccolta nello spazio di archiviazione dell'applicazione](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

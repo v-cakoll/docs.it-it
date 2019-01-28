@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563197"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework (Guida per programmatori C#)
 La procedura seguente illustra come aggiungere a classi e struct gli eventi che seguono il modello standard [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Tutti gli eventi della libreria di classi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] si basano sul delegato <xref:System.EventHandler>, che viene definito come segue:  
@@ -76,7 +76,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Delegate>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Eventi](../../../csharp/programming-guide/events/index.md)  
+- <xref:System.Delegate>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Eventi](../../../csharp/programming-guide/events/index.md)
 - [Delegati](../../../csharp/programming-guide/delegates/index.md)

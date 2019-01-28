@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: d168444bb2e7df6aa71d729a44bd6f20f7bfce3d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544666"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Limitazione dell'accessibilità delle funzioni di accesso (Guida per programmatori C#)
 Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) di una proprietà o un indicizzatore sono denominate *funzioni di accesso*. Per impostazione predefinita, queste funzioni di accesso hanno la stessa visibilità o livello di accesso della proprietà o dell'indicizzatore a cui appartengono. Per altre informazioni, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md). Tuttavia, talvolta è utile limitare l'accesso a una di queste funzioni di accesso. In genere, ciò comporta la limitazione dell'accessibilità della funzione di accesso `set`, mantenendo la funzione di accesso `get` accessibile pubblicamente. Ad esempio:  
@@ -66,7 +66,7 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)
 - [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

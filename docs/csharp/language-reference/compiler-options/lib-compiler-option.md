@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677875"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opzioni del compilatore C#)
 L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento tramite l'opzione [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -69,5 +69,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

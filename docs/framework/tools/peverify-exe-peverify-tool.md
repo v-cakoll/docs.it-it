@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598291"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (strumento PEVerify)
 Lo strumento PEVerify aiuta gli sviluppatori che utilizzano il linguaggio MSIL (Microsoft Intermediate Language) per creare compilatori, motori di script e così via, a determinare se il codice MSIL creato e i metadati associati soddisfano i requisiti di indipendenza dai tipi. Alcuni compilatori generano codice di cui è verificabile l'indipendenza dai tipi solo se si evita di utilizzare determinati costrutti del linguaggio. Se, in qualità di sviluppatore, si utilizza un compilatore di questo tipo, sarà opportuno verificare di non aver compromesso l'indipendenza dai tipi del codice. In questa situazione è possibile eseguire lo strumento PEVerify sui file per controllare il codice MSIL e i metadati.  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Al prompt dei comandi digitare quanto segue:  
   
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Scrittura di codice indipendente dai tipi verificabile](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [Indipendenza dai tipi e sicurezza](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Scrittura di codice indipendente dai tipi verificabile](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Indipendenza dai tipi e sicurezza](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

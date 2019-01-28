@@ -5,12 +5,12 @@ description: Informazioni su come installare .NET Framework in Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 74b457eba9642eb4d54873769014a7db5d28003b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22b5f128bd797fda23d14008e016dcdc2432b3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645132"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installare .NET Framework in Windows 7 SP1 e Windows Server 2008 R2
 
@@ -39,6 +39,6 @@ Queste istruzioni saranno utili per installare le versioni di .NET Framework nec
 
 ## <a name="see-also"></a>Vedere anche
 
-[Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installare .NET Framework per sviluppatori](guide-for-developers.md)
+- [Scaricare .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Installare .NET Framework per sviluppatori](guide-for-developers.md)

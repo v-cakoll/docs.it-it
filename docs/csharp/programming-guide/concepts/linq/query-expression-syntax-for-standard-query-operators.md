@@ -2,12 +2,12 @@
 title: Sintassi di espressione di query per operatori di query standard (C#)
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: 46923b34fce08a9ddb8152e51a5308aa7d557ca3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 232793e63673ef51b650d8188fea5733d02fd1b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514461"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501772"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintassi di espressione di query per operatori di query standard (C#)
 Alcuni degli operatori di query standard usati più di frequente dispongono di una sintassi dedicata delle parole chiave per i linguaggi C# che consente di chiamare gli operatori come parte di un'espressione di *query*. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente *basata su metodo*. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione.  
@@ -31,7 +31,7 @@ Alcuni degli operatori di query standard usati più di frequente dispongono di u
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq.Enumerable>  
-- <xref:System.Linq.Queryable>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)

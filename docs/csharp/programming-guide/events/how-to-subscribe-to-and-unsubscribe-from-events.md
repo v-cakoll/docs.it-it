@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 646ff22aed68cc3c37a7d581ffa078a2e06df5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661620"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: Sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
@@ -101,8 +101,8 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eventi](../../../csharp/programming-guide/events/index.md)  
-- [event](../../../csharp/language-reference/keywords/event.md)  
-- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-- [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [Eventi](../../../csharp/programming-guide/events/index.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

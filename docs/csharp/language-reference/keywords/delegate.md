@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 233b0255121cf6e7a5283041d594e2d843f105fb
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560607"
 ---
 # <a name="delegate-c-reference"></a>delegate (Riferimenti per C#)
 
@@ -46,12 +46,12 @@ I delegati sono la base degli [eventi](../../../csharp/programming-guide/events/
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)  
-- [Eventi](../../../csharp/programming-guide/events/index.md)  
-- [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) 
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+- [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)
+- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [Eventi](../../../csharp/programming-guide/events/index.md)
+- [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

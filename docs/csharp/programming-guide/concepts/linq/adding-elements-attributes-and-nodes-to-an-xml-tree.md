@@ -2,12 +2,12 @@
 title: Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87b63df1011af9594ff44bed6385f9d82dee08a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585877"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 È possibile aggiungere contenuto (elementi, attributi, commenti, istruzioni di elaborazione, testo e CDATA) a un albero XML esistente.  
@@ -15,21 +15,21 @@ ms.locfileid: "43517059"
 ## <a name="methods-for-adding-content"></a>Metodi per l'aggiunta di contenuto  
  I metodi seguenti consentono di aggiungere contenuto figlio a un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>:  
   
-|Metodo|Descrizione|  
+|Metodo|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|Consente di aggiungere il contenuto alla fine del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Consente di aggiungere il contenuto all'inizio del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
   
  I seguenti metodi consentono di aggiungere contenuto come nodi di pari livello di un oggetto <xref:System.Xml.Linq.XNode>. Il nodo più comune al quale viene aggiunto contenuto di pari livello è <xref:System.Xml.Linq.XElement>, anche se è possibile aggiungere contenuto di pari livello valido ad altri tipi di nodi, tra cui <xref:System.Xml.Linq.XText> o <xref:System.Xml.Linq.XComment>.  
   
-|Metodo|Descrizione|  
+|Metodo|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Consente di aggiungere contenuto dopo <xref:System.Xml.Linq.XNode>.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Aggiunge contenuto prima di <xref:System.Xml.Linq.XNode>.|  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Nell'esempio seguente vengono create due strutture ad albero XML e quindi ne viene modificata una.  
   
 ### <a name="code"></a>Codice  

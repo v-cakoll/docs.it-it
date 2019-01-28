@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540624"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (strumento per la generazione del codice)
 Lo strumento da riga di comando SqlMetal genera codice e mapping per il componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mediante l'applicazione delle opzioni riportate più avanti in questo argomento è possibile usare SqlMetal per eseguire diverse operazioni, fra cui:  
@@ -132,7 +132,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  Quando si usa l'opzione **/pluralize** con il database di esempio Northwind, si verifica il comportamento seguente. Quando SqlMetal crea nomi di tipo riga per le tabelle, i relativi nomi sono al singolare. Quando crea proprietà <xref:System.Data.Linq.DataContext> per le tabelle, i relativi nomi sono invece al plurale. Per coincidenza, i nomi delle tabelle contenute nel database di esempio Northwind sono già al plurale. Pertanto, l'opzione di pluralizzazione di fatto non viene usata. Di norma le tabelle di database vengono denominate al singolare, mentre le raccolte di .NET vengono denominate al plurale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Generare il modello a oggetti in Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [Generazione di codice in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [External Mapping](../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Generare il modello a oggetti in Visual Basic o C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Generazione di codice in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [External Mapping](../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)

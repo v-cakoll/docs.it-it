@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 1bd4c063afe175b5585e5f732ebddbe1a271c8b3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ca7bef8bf68b80015128619336db9fc6a8f5c237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661825"
 ---
 # <a name="accessibility-levels-c-reference"></a>Livelli di accessibilità (Riferimenti per C#)
 
@@ -48,15 +48,15 @@ Usare i modificatori di accesso `public`, `protected`, `internal` o `private` pe
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
-- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
-- [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [Dominio di accessibilità](../../../csharp/language-reference/keywords/accessibility-domain.md)  
-- [Restrizioni relative all'uso dei livelli di accessibilità](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
-- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
+## <a name="see-also"></a>Vedere anche
+- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+- [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [Dominio di accessibilità](../../../csharp/language-reference/keywords/accessibility-domain.md)
+- [Restrizioni relative all'uso dei livelli di accessibilità](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

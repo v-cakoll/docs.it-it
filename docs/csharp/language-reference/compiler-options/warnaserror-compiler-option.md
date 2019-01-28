@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: a29b0a6095453e3d2747cad9d9f71b463d8f6b1f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634610"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opzioni del compilatore C#)
 L'opzione **-warnaserror+** considera tutti gli avvisi come errori  
@@ -51,7 +51,7 @@ csc -warnaserror in.cs
 csc -warnaserror:642,649,652 in.cs  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500629"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -234,7 +234,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link (opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

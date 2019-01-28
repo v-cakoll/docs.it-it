@@ -2,12 +2,12 @@
 title: Attributi comuni (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558588"
 ---
 # <a name="common-attributes-c"></a>Attributi comuni (C#)
 Questo argomento descrive gli attributi usati più di frequente nei programmi C#.  
@@ -221,7 +221,7 @@ class SampleClass
   
  È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi. Ogni parametro facoltativo specifica un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Attributo|Descrizione|Tipo|  
+|Attributo|Description|Tipo|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Attributi](../../../../../docs/standard/attributes/index.md)  
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Attributi](../../../../../docs/standard/attributes/index.md)
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: f8fec2c4da49aa6cac2f8dc1dc9b07c5864b837a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 92d5faa870623b5b7d7d1bad16ad0f1ba3f1bf76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636995"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (opzioni del compilatore C#)
 L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal compilatore per ridurre le dimensioni del file di output e aumentarne la velocità e l'efficienza.  
@@ -56,7 +56,7 @@ L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
 csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

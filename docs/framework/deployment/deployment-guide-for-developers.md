@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396994"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589178"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
 Questo argomento offre informazioni destinate agli sviluppatori che vogliono installare una versione di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] con le proprie app.
@@ -403,9 +403,9 @@ Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibi
 |3082|Spagnolo (Spagna, ordinamento moderno)|es|
 
 ## <a name="see-also"></a>Vedere anche
-- [Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md)  
-- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)  
-- [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md)  
-- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
-- [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md)
+- [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

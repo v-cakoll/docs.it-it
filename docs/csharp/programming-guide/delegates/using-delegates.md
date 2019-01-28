@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570135"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizzo di delegati (Guida per programmatori C#)
 Un [delegato](../../../csharp/language-reference/keywords/delegate.md) è un tipo che incapsula in modo sicuro un metodo, simile a un puntatore a funzione in C e C++. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati a oggetti, indipendenti dai tipi e sicuri. Il tipo delegato è definito dal nome del delegato. Nell'esempio seguente viene dichiarato un delegato denominato `Del` che può incapsulare un metodo che accetta una [stringa](../../../csharp/language-reference/keywords/string.md) come argomento e restituisce [void](../../../csharp/language-reference/keywords/void.md):  

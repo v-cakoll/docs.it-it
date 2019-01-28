@@ -2,12 +2,12 @@
 title: Serializzazione di alberi XML (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a1c39c4c85cbd01fa7c3f3f99f2dfae49e3721d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583444"
 ---
 # <a name="serializing-xml-trees-c"></a>Serializzazione di alberi XML (C#)
 Per serializzazione di un albero XML si intende la generazione di codice XML dall'albero XML. È possibile eseguire la serializzazione in un file, in un'implementazione concreta della classe <xref:System.IO.TextWriter> o in un'implementazione concreta di un oggetto <xref:System.Xml.XmlWriter>.  
@@ -16,7 +16,7 @@ Per serializzazione di un albero XML si intende la generazione di codice XML dal
   
 ## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[Conservazione di spazi vuoti durante la serializzazione](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Viene descritto come controllare il comportamento dello spazio vuoto durante la serializzazione di strutture ad albero XML.|  
 |[Serializzazione con una dichiarazione XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Viene descritto come serializzare una struttura ad albero XML che include una dichiarazione XML.|  

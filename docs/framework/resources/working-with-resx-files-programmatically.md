@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c13a00ddad974ebba8eea4fceddd6a9fe3ed942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597580"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Uso dei file RESX a livello di codice
 Poiché i file di risorse XML (con estensione resx) devono essere costituiti da codice XML ben definito, comprensivo di un'intestazione che deve seguire uno schema specifico, seguita da dati in coppie nome/valore, la creazione manuale di questi file è soggetta a errori. In alternativa, è possibile creare file con estensione resx a livello di codice usando tipi e membri inclusi nella libreria di classi .NET Framework. La libreria di classi .NET Framework può essere usata anche per recuperare risorse archiviate in file con estensione resx. Questo argomento illustra come usare i tipi e i membri nello spazio dei nomi <xref:System.Resources> per i file RESX.  
@@ -84,7 +84,7 @@ Poiché i file di risorse XML (con estensione resx) devono essere costituiti da 
   
  **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Vedere anche
+- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

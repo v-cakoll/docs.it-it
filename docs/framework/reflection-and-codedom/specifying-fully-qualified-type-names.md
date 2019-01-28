@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628539"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Specifica di nomi di tipo completi
 È necessario specificare nomi di tipi per avere input validi per le diverse operazioni di reflection. Un nome completo consiste in una specifica del nome di assembly, in una specifica dello spazio dei nomi e in un nome di tipo. Le specifiche dei nomi di tipi vengono usate dai metodi, quali <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> e <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -134,7 +134,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>Specifica dei nomi di assembly  
  Le informazioni minime necessarie in una specifica di nome di assembly è il nome testuale (IDENTIFIER) dell'assembly. È possibile far seguire l'IDENTIFIER da un elenco delimitato da virgole di coppie proprietà/valore, come descritto nella tabella seguente. La denominazione dell'IDENTIFIER deve seguire le regole di denominazione dei file. La denominazione dell'IDENTIFIER non fa distinzione tra maiuscole e minuscole.  
   
-|Nome della proprietà|Descrizione|Valori consentiti|  
+|Nome della proprietà|Description|Valori consentiti|  
 |-------------------|-----------------|----------------------|  
 |**Version**|Numero di versione dell'assembly|*Major.Minor.Build.Revision*, dove *Major*, *Minor*, *Build* e *Revision* sono numeri interi compresi tra 0 e 65535.|  
 |**PublicKey**|Chiave pubblica completa|Valore di stringa della chiave pubblica completa in formato esadecimale. Specificare un riferimento Null (**Nothing** in Visual Basic) per indicare in modo esplicito un assembly privato.|  
@@ -201,11 +201,11 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  Per **ModuleBuilder.GetType**, `MyArray[0..5]` indica una matrice unidimensionale con dimensione pari a 6 e limite inferiore pari a 0. `MyArray[4…]` indica una matrice unidimensionale di dimensioni sconosciute e limite inferiore pari a 4.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.AssemblyName>  
- <xref:System.Reflection.Emit.ModuleBuilder>  
- <xref:System.Reflection.Emit.TypeBuilder>  
- <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.AssemblyName>
+- <xref:System.Reflection.Emit.ModuleBuilder>
+- <xref:System.Reflection.Emit.TypeBuilder>
+- <xref:System.Type.FullName%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
+- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

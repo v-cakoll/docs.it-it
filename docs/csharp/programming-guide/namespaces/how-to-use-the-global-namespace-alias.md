@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e01f8d5e8868c11a88d99c42fba06d8fefa5dc92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491689"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Procedura: Usare l'alias dello spazio dei nomi globale (Guida per programmatori C#)
 La possibilità di accedere a un membro nello [spazio dei nomi globale](../../../csharp/language-reference/keywords/namespace.md) è utile quando il membro può essere nascosto da un'altra entità con lo stesso nome.  
@@ -48,8 +48,8 @@ La possibilità di accedere a un membro nello [spazio dei nomi globale](../../..
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)  
-- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)
+- [. (operatore)](../../../csharp/language-reference/operators/member-access-operator.md)
+- [:: (operatore)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

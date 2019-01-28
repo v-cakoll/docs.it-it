@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 937c559130ea70ab125935ce26ecc5f9bd315ad1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: eab291528080b75a07c8f8c3994428eafde94568
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612814"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Procedura: installare e disinstallare servizi
 Se si sta sviluppando un servizio Windows con .NET Framework, è possibile installare rapidamente l'applicazione di servizio tramite un'utilità della riga di comando denominata InstallUtil.exe. Se uno sviluppatore vuole rilasciare un servizio Windows che gli utenti possono installare e disinstallare, può usare InstallShield. Vedere [Distribuzione con Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -62,8 +62,8 @@ Se si sta sviluppando un servizio Windows con .NET Framework, è possibile insta
   
 3.  In alcuni casi, dopo avere eliminato il file eseguibile di un servizio, è possibile che il servizio sia ancora presente nel Registro di sistema. In tal caso, usare il comando [sc delete](/windows-server/administration/windows-commands/sc-delete) per rimuovere la voce per il servizio dal Registro di sistema.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Installutil.exe (Strumento Programma di installazione)](../../../docs/framework/tools/installutil-exe-installer-tool.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Installutil.exe (Strumento Programma di installazione)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

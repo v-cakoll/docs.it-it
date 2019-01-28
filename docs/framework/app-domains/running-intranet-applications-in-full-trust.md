@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180646"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554530"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Esecuzione di applicazioni Intranet in attendibilità totale
 A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le applicazioni e i relativi assembly di librerie possono essere eseguiti come assembly con attendibilità totale da una condivisione di rete. Agli assembly caricati da una condivisione nella rete Intranet viene automaticamente aggiunta l'evidenza della zona <xref:System.Security.SecurityZone.MyComputer>. Questa evidenza concede agli assembly lo stesso set di autorizzazioni, in genere l'attendibilità totale, degli assembly che si trovano nel computer. Questa funzionalità non è applicabile alle applicazioni ClickOnce o alle applicazioni progettate per l'esecuzione in un host.  
@@ -34,5 +34,5 @@ A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), le applicazioni e
   
 -   Nei computer a 64 bit creare una sottochiave della chiave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework nel Registro di sistema. Usare il nome di chiave LegacyMyComputerZone con il valore DWORD impostato su 1. Creare la stessa sottochiave nella chiave HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

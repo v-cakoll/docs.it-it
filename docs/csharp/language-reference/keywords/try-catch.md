@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240021"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083925"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
 
@@ -163,7 +163,7 @@ L'esempio seguente illustra la gestione delle eccezioni per i metodi asincroni. 
 
 Rimuovere il commento dalla riga `throw new Exception` nell'esempio per illustrare la gestione delle eccezioni. La proprietà `IsFaulted` dell'attività viene impostata su `True`, la proprietà `Exception.InnerException` dell'attività viene impostata sull'eccezione e l'eccezione viene intercettata nel blocco `catch`.
 
-Rimuovere il commento dalla riga `throw new OperationCancelledException` per illustrare cosa accade quando si annulla un processo asincrono. La proprietà `IsCanceled` dell'attività viene impostata su `true` e l'eccezione viene intercettata nel blocco `catch`. In alcune condizioni che non si applicano a questo esempio, la proprietà `IsFaulted` dell'attività viene impostata su `true` e `IsCanceled` viene impostata su `false`.
+Rimuovere il commento dalla riga `throw new OperationCanceledException` per illustrare cosa accade quando si annulla un processo asincrono. La proprietà `IsCanceled` dell'attività viene impostata su `true` e l'eccezione viene intercettata nel blocco `catch`. In alcune condizioni che non si applicano a questo esempio, la proprietà `IsFaulted` dell'attività viene impostata su `true` e `IsCanceled` viene impostata su `false`.
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 

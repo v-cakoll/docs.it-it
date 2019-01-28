@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc4f40ab954a3bb31e0b55aad8c00ed2ee63f6c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514894"
 ---
 # <a name="marshaling-strings"></a>Marshalling di stringhe
 Platform invoke copia parametri stringa, convertendoli dal formato .NET Framework (Unicode) al formato non gestito (ANSI) all'occorrenza. Dato che le stringhe gestite non sono modificabili, platform invoke non le copia di nuovo dalla memoria non gestita alla memoria gestita quando la funzione restituisce il controllo.  
   
  La tabella seguente elenca le opzioni di marshalling per le stringhe con la descrizione dell'utilizzo e un collegamento all'esempio .NET Framework corrispondente.  
   
-|Stringa|Descrizione|Esempio|  
+|Stringa|Description|Esempio|  
 |------------|-----------------|------------|  
 |Per valore.|Passa le stringhe come parametri in.|[MsgBox](msgbox-sample.md)|  
 |Come risultato.|Restituisce le stringhe da codice non gestito.|[Stringhe](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))|  
@@ -35,12 +35,12 @@ Platform invoke copia parametri stringa, convertendoli dal formato .NET Framewor
 |In una struttura per riferimento **(char[])**.|Passa le stringhe in una struttura che è un parametro in/out. La funzione non gestita prevede un buffer di caratteri incorporati.|[OSInfo](https://msdn.microsoft.com/library/69d89067-507b-41fe-859d-30bf3ff29455(v=vs.100))|  
 |In una classe per valore **(char\*)**.|Passa le stringhe in una classe (una classe è un parametro in/out). La funzione non gestita prevede un puntatore a un buffer di caratteri.|[OpenFileDlg](https://msdn.microsoft.com/library/b7dea792-cb92-4baf-ac7b-6a24803e6c75(v=vs.100))|  
 |In una classe per valore **(char[])**.|Passa le stringhe in una classe (una classe è un parametro in/out). La funzione non gestita prevede un buffer di caratteri incorporati.|[OSInfo](https://msdn.microsoft.com/library/69d89067-507b-41fe-859d-30bf3ff29455(v=vs.100))|  
-|Come matrice di stringhe per valore.|Crea una matrice di stringhe passata per valore.|[Array](marshaling-different-types-of-arrays.md)|  
-|Come matrice di strutture che contengono le stringhe per valore.|Crea una matrice di strutture che contengono le stringhe e la matrice viene passata per valore.|[Array](marshaling-different-types-of-arrays.md)|  
+|Come matrice di stringhe per valore.|Crea una matrice di stringhe passata per valore.|[Matrici](marshaling-different-types-of-arrays.md)|  
+|Come matrice di strutture che contengono le stringhe per valore.|Crea una matrice di strutture che contengono le stringhe e la matrice viene passata per valore.|[Matrici](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)  
- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Marshalling di classi, strutture e unioni](marshaling-classes-structures-and-unions.md)  
- [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [Esempi vari di marshalling](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))
+## <a name="see-also"></a>Vedere anche
+- [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)
+- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Marshalling di classi, strutture e unioni](marshaling-classes-structures-and-unions.md)
+- [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Esempi vari di marshalling](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))

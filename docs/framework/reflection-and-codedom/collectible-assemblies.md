@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637742"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Assembly ritirabili per la generazione di tipi dinamici
 
@@ -77,9 +77,9 @@ Agli assembly ritirabili si applicano le seguenti restrizioni:
 - **Oggetti legati al contesto**    
    Le variabili statiche a livello di contesto non sono supportate. Non è possibile estendere i tipi in un assembly ritirabile <xref:System.ContextBoundObject>. Tuttavia, il codice negli assembly ritirabili può usare oggetti associati al contesto definiti altrove.
 
-- **Dati statici a livello di thread**       
+- **Dati statici a livello di thread**       
    Le variabili statiche a livello di thread non sono supportate.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di assembly e metodi dinamici](emitting-dynamic-methods-and-assemblies.md)
+- [Creazione di assembly e metodi dinamici](emitting-dynamic-methods-and-assemblies.md)

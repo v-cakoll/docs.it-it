@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c71284fbc925aa9bb10a8bf68cef581f78d7f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d3e56faad9e65cff6037f11b332d7b0df52a79fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589545"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
 Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per altri dettagli, vedere [Copia e blocco](copying-and-pinning.md).  
   
  La tabella seguente elenca le opzioni di marshalling delle matrici e ne descrive l'utilizzo.  
   
-|Matrice|Descrizione|  
+|Matrice|Description|  
 |-----------|-----------------|  
 |Di Integer in base al valore.|Passa una matrice di Integer come un parametro in.|  
 |Di Integer in base al riferimento.|Passa una matrice di Integer come un parametro in/out.|  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  In questo esempio, le strutture `MyPoint` e `MyPerson` contengono tipi incorporati. L'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> è impostato in modo da garantire che i membri vengano inseriti in memoria in sequenza, nell'ordine in cui appaiono.  
   
- La classe `LibWrap` contiene un set di metodi chiamati dalla classe `App`. Per informazioni specifiche sul passaggio di matrici, vedere i commenti nell'esempio seguente. Una matrice, che è un tipo di riferimento, viene passata come un parametro in per impostazione predefinita. Per permettere al chiamante di ricevere i risultati, **InAttribute** e **OutAttribute** devono essere applicati in modo esplicito all'argomento contenente la matrice.  
+ La classe `LibWrap` contiene un set di metodi chiamati dalla classe `App` . Per informazioni specifiche sul passaggio di matrici, vedere i commenti nell'esempio seguente. Una matrice, che è un tipo di riferimento, viene passata come un parametro in per impostazione predefinita. Per permettere al chiamante di ricevere i risultati, **InAttribute** e **OutAttribute** devono essere applicati in modo esplicito all'argomento contenente la matrice.  
   
 ### <a name="declaring-prototypes"></a>Dichiarazione dei prototipi  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
@@ -114,7 +114,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a>Vedere anche
+- [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)

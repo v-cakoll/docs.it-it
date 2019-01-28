@@ -2,12 +2,12 @@
 title: Informazioni su problemi ed eccezioni di WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 14bce9e9791e74f70f9bd91fc2551f55eaabfc5e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587528"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Informazioni su problemi ed eccezioni di WebRequest
 <xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala. In alcuni casi la risoluzione di questi problemi non è scontata.  
@@ -28,7 +28,7 @@ ms.locfileid: "50200600"
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Il servizio DNS (Domain Name Service) non è riuscito a risolvere il nome host del proxy.|Configurare il proxy in modo corretto. Vedere <https://support.microsoft.com/?id=318140>.<br /><br /> Forzare <xref:System.Net.HttpWebRequest> a non usare alcun proxy impostando la proprietà <xref:System.Net.HttpWebRequest.Proxy%2A> su `null`.|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|La risposta dal server non è una risposta HTTP valida. Questo problema si verifica quando .NET Framework rileva che la risposta del server non è conforme alla specifica RFC per HTTP 1.1. Questo problema può verificarsi quando la risposta contiene intestazioni non corrette o delimitatori dell'intestazione non corretti. Il documento RFC 2616 definisce HTTP 1.1 e il formato valido per la risposta dal server. Per altre informazioni, vedere il documento [RFC 2616 - Hypertext Transfer Protocol - HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) nel sito Web [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Ottenere una traccia di rete della transazione ed esaminare le intestazioni nella risposta.<br /><br /> Se l'applicazione richiede la risposta del server senza analisi (potrebbe rappresentare un problema per la sicurezza), impostare `useUnsafeHeaderParsing` su `true` nel file di configurazione. Vedere [Elemento \<httpWebRequest> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.Dns>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.Dns>

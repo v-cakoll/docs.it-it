@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 81e506a8b2528b6e3fa783ecd90aa4aa8987bbe5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587268"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Generics nel runtime (Guida per programmatori C#)
 Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate Language (MSIL), contiene metadati che lo identificano come contenente parametri di tipo. L'uso di MSIL per un tipo generico differisce a seconda che il parametro di tipo sia un tipo valore o un tipo riferimento.  
@@ -49,7 +49,7 @@ Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate La
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Generic>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
-- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- <xref:System.Collections.Generic>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Generics](~/docs/standard/generics/index.md)
