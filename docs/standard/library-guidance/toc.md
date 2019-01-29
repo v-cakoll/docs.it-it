@@ -4,7 +4,7 @@
 ## [Denominazione sicura](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [Dipendenze](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [Collegamento a un'origine](sourcelink.md)
 ### [Pubblicazione](publish-nuget-package.md)
 ## [Controllo delle versioni](versioning.md)
 ### [Modifiche che causano un'interruzione](breaking-changes.md)
