@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a1921f1a0f0e724bfc8d8289ac1b654cc8198d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654308"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modello di programmazione asincrona (APM)
 Un'operazione asincrona in cui viene usato il modello di progettazione dell'oggetto <xref:System.IAsyncResult> viene implementata come due metodi denominati `BeginOperationName` e `EndOperationName` tramite cui viene rispettivamente avviata e terminata l'operazione asincrona *NomeOperazione*. La classe <xref:System.IO.FileStream> fornisce ad esempio i metodi <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> per la lettura asincrona dei byte da un file. Tali metodi implementano la versione asincrona del metodo <xref:System.IO.FileStream.Read%2A> .  
@@ -40,12 +40,12 @@ Un'operazione asincrona in cui viene usato il modello di progettazione dell'ogge
   
  In un metodo `BeginOperationName` vengono accettati tutti i parametri dichiarati nella firma della versione sincrona del metodo passati per valore o riferimento. Nella firma del metodo `BeginOperationName` non sono inclusi parametri out. Il metodo `BeginOperationName` include invece due parametri aggiuntivi. Il primo dei quali definisce un delegato <xref:System.AsyncCallback> che fa riferimento a un metodo chiamato al completamento dell'operazione asincrona. Il chiamante può specificare `null` (`Nothing` in Visual Basic) se non vuole richiamare un metodo al termine dell'operazione. Il secondo parametro aggiuntivo è un oggetto definito dall'utente che può essere usato per passare informazioni sullo stato specifiche dell'applicazione al metodo richiamato al completamento dell'operazione asincrona. Se in un metodo `BeginOperationName` sono accettati altri parametri specifici dell'operazione, ad esempio una matrice di byte per l'archiviazione dei byte letti da un file, l'oggetto <xref:System.AsyncCallback> e l'oggetto stato dell'applicazione saranno gli ultimi parametri nella firma del metodo `BeginOperationName`.  
   
- Il metodo `BeginOperationName` restituisce immediatamente il controllo al thread chiamante. Se il metodo `BeginOperationName` genera eccezioni, ciò avviene prima dell'avvio dell'operazione asincrona e il metodo di callback non viene richiamato.  
+ Il metodo `BeginOperationName` restituisce immediatamente il controllo al thread chiamante. Se il metodo `BeginOperationName` genera eccezioni, ciò avviene prima dell'avvio dell'operazione asincrona e il metodo `BeginOperationName`di callback non viene richiamato.  
   
 ## <a name="ending-an-asynchronous-operation"></a>Fine di un'operazione asincrona  
  Il metodo `EndOperationName` termina l'operazione asincrona *NomeOperazione*. Il valore restituito dal metodo `EndOperationName` è dello stesso tipo restituito dalla controparte sincrona ed è specifico dell'operazione asincrona. Il metodo <xref:System.IO.FileStream.EndRead%2A> restituisce ad esempio il numero di byte letti da un oggetto <xref:System.IO.FileStream> mentre il metodo <xref:System.Net.Dns.EndGetHostByName%2A> restituisce un oggetto <xref:System.Net.IPHostEntry> contenente le informazioni relative a un computer host. Il metodo `EndOperationName` accetta tutti i parametri out o ref dichiarati nella firma della versione sincrona del metodo. Oltre ai parametri provenienti dal metodo sincrono, nel metodo `EndOperationName` è incluso anche un parametro <xref:System.IAsyncResult>. I chiamanti devono passare l'istanza restituita dalla chiamata corrispondente al metodo `BeginOperationName`.  
   
- Se l'operazione asincrona rappresentata dall'oggetto <xref:System.IAsyncResult> non è stata completata quando viene chiamato il metodo `EndOperationName`, quest'ultimo blocca il thread chiamante fino al completamento dell'operazione. Le eccezioni generate dall'operazione asincrona vengono generate dal metodo `EndOperationName`. Non è definito l'effetto della chiamata ripetuta del metodo `EndOperationName` con lo stesso oggetto <xref:System.IAsyncResult>, come anche della chiamata del metodo `EndOperationName` con un oggetto <xref:System.IAsyncResult> non restituito dal metodo Begin correlato.  
+ Se l'operazione asincrona rappresentata dall'oggetto <xref:System.IAsyncResult> non è stata completata quando viene chiamato il metodo `EndOperationName`, `EndOperationName`quest'ultimo blocca il thread chiamante fino al completamento dell'operazione. Le eccezioni generate dall'operazione asincrona vengono generate dal metodo `EndOperationName`. Non è definito l'effetto della chiamata ripetuta del metodo `EndOperationName` con lo stesso oggetto <xref:System.IAsyncResult>, come anche della chiamata del metodo `EndOperationName` con un oggetto <xref:System.IAsyncResult> non restituito dal metodo Begin correlato.  
   
 > [!NOTE]
 >  In questi due scenari non definiti ai responsabili dell'implementazione è consigliata la generazione di <xref:System.InvalidOperationException>.  
@@ -67,6 +67,6 @@ Un'operazione asincrona in cui viene usato il modello di progettazione dell'ogge
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)  
-- [Chiamata sincrona dei metodi asincroni](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Chiamata sincrona dei metodi asincroni](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [Uso di un oggetto di stato e di un delegato AsyncCallback](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
