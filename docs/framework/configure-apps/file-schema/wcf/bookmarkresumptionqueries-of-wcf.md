@@ -1,29 +1,29 @@
 ---
-title: '&lt;bookmarkResumptionQueries&gt; di WCF'
+title: <bookmarkResumptionQueries> di WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 80d1c1e4bc61972d44c27bcbdd0eba14d97c2d6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261269"
 ---
-# <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a><span data-ttu-id="10450-102">&lt;bookmarkResumptionQueries&gt; di WCF</span><span class="sxs-lookup"><span data-stu-id="10450-102">&lt;bookmarkResumptionQueries&gt; of WCF</span></span>
+# <a name="bookmarkresumptionqueries-of-wcf"></a><span data-ttu-id="b99e3-102">\<bookmarkResumptionQueries > di WCF</span><span class="sxs-lookup"><span data-stu-id="b99e3-102">\<bookmarkResumptionQueries> of WCF</span></span>
   
-<span data-ttu-id="10450-103">Rappresenta una raccolta di query usate per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="10450-103">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="10450-104">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.</span><span class="sxs-lookup"><span data-stu-id="10450-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
+<span data-ttu-id="b99e3-103">Rappresenta una raccolta di query usate per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="b99e3-103">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="b99e3-104">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.</span><span class="sxs-lookup"><span data-stu-id="b99e3-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
   
-<span data-ttu-id="10450-105">Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="10450-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
+<span data-ttu-id="b99e3-105">Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="b99e3-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
   
-<span data-ttu-id="10450-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="10450-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="10450-107">\<tracking></span><span class="sxs-lookup"><span data-stu-id="10450-107">\<tracking></span></span>  
-<span data-ttu-id="10450-108">\<i profili ></span><span class="sxs-lookup"><span data-stu-id="10450-108">\<profiles></span></span>  
-<span data-ttu-id="10450-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="10450-109">\<trackingProfile></span></span>  
-<span data-ttu-id="10450-110">\<flusso di lavoro ></span><span class="sxs-lookup"><span data-stu-id="10450-110">\<workflow></span></span>  
-<span data-ttu-id="10450-111">\<bookmarkResumptionQueries></span><span class="sxs-lookup"><span data-stu-id="10450-111">\<bookmarkResumptionQueries></span></span>  
-<span data-ttu-id="10450-112">\<bookmarkResumptionQuery></span><span class="sxs-lookup"><span data-stu-id="10450-112">\<bookmarkResumptionQuery></span></span>  
+<span data-ttu-id="b99e3-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="b99e3-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="b99e3-107">\<tracking></span><span class="sxs-lookup"><span data-stu-id="b99e3-107">\<tracking></span></span>  
+<span data-ttu-id="b99e3-108">\<i profili ></span><span class="sxs-lookup"><span data-stu-id="b99e3-108">\<profiles></span></span>  
+<span data-ttu-id="b99e3-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="b99e3-109">\<trackingProfile></span></span>  
+<span data-ttu-id="b99e3-110">\<flusso di lavoro ></span><span class="sxs-lookup"><span data-stu-id="b99e3-110">\<workflow></span></span>  
+<span data-ttu-id="b99e3-111">\<bookmarkResumptionQueries></span><span class="sxs-lookup"><span data-stu-id="b99e3-111">\<bookmarkResumptionQueries></span></span>  
+<span data-ttu-id="b99e3-112">\<bookmarkResumptionQuery></span><span class="sxs-lookup"><span data-stu-id="b99e3-112">\<bookmarkResumptionQuery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10450-113">Sintassi</span><span class="sxs-lookup"><span data-stu-id="10450-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b99e3-113">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b99e3-113">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -39,29 +39,29 @@ ms.locfileid: "54493950"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="10450-114">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="10450-114">Attributes and elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b99e3-114">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="b99e3-114">Attributes and elements</span></span>  
   
-<span data-ttu-id="10450-115">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="10450-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="b99e3-115">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="b99e3-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="10450-116">Attributi</span><span class="sxs-lookup"><span data-stu-id="10450-116">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b99e3-116">Attributi</span><span class="sxs-lookup"><span data-stu-id="b99e3-116">Attributes</span></span>  
   
-<span data-ttu-id="10450-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="10450-117">None.</span></span>  
+<span data-ttu-id="b99e3-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="b99e3-117">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="10450-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="10450-118">Child elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b99e3-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="b99e3-118">Child elements</span></span>  
   
-|<span data-ttu-id="10450-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="10450-119">Element</span></span>|<span data-ttu-id="10450-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="10450-120">Description</span></span>|  
+|<span data-ttu-id="b99e3-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="b99e3-119">Element</span></span>|<span data-ttu-id="b99e3-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b99e3-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="10450-121">\<bookmarkResumptionQuery></span><span class="sxs-lookup"><span data-stu-id="10450-121">\<bookmarkResumptionQuery></span></span>](bookmarkresumptionquery-of-wcf.md)|<span data-ttu-id="10450-122">Query usata per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="10450-122">A query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="10450-123">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.</span><span class="sxs-lookup"><span data-stu-id="10450-123">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>|  
+|[<span data-ttu-id="b99e3-121">\<bookmarkResumptionQuery></span><span class="sxs-lookup"><span data-stu-id="b99e3-121">\<bookmarkResumptionQuery></span></span>](bookmarkresumptionquery-of-wcf.md)|<span data-ttu-id="b99e3-122">Query usata per rilevare la riassunzione di un segnalibro all'interno di un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="b99e3-122">A query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="b99e3-123">La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di riassunzione dei segnalibri.</span><span class="sxs-lookup"><span data-stu-id="b99e3-123">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="10450-124">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="10450-124">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b99e3-124">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="b99e3-124">Parent elements</span></span>  
   
-|<span data-ttu-id="10450-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="10450-125">Element</span></span>|<span data-ttu-id="10450-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="10450-126">Description</span></span>|  
+|<span data-ttu-id="b99e3-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="b99e3-125">Element</span></span>|<span data-ttu-id="b99e3-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b99e3-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="10450-127">\<workflow></span><span class="sxs-lookup"><span data-stu-id="10450-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="10450-128">Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.</span><span class="sxs-lookup"><span data-stu-id="10450-128">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
+|[<span data-ttu-id="b99e3-127">\<workflow></span><span class="sxs-lookup"><span data-stu-id="b99e3-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="b99e3-128">Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà `activityDefinitionId`.</span><span class="sxs-lookup"><span data-stu-id="b99e3-128">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="10450-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10450-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b99e3-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b99e3-129">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="10450-130">Rilevamento e analisi del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="10450-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="10450-131">Profili di rilevamento</span><span class="sxs-lookup"><span data-stu-id="10450-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="b99e3-130">Rilevamento e analisi del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="b99e3-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="b99e3-131">Profili di rilevamento</span><span class="sxs-lookup"><span data-stu-id="b99e3-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
