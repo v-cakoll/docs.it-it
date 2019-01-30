@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;synchronousReceive&gt;
+title: elemento <synchronousReceive>
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4a8868304ebae9a7ed5e6afbfb14fb2116afc49
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278473"
 ---
-# <a name="ltsynchronousreceivegt-element"></a>Elemento &lt;synchronousReceive&gt;
+# <a name="synchronousreceive-element"></a>\<synchronousReceive > elemento
 Questo elemento di configurazione viene usato per specificare il comportamento in fase di esecuzione per la ricezione di messaggi in un servizio o in un'applicazione client. Non prevede attributi o elementi figlio.  
   
  \<system.ServiceModel>  

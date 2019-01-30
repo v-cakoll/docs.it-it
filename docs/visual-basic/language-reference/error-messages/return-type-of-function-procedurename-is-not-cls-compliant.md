@@ -1,5 +1,5 @@
 ---
-title: Tipo restituito della funzione &#39; &lt;NomeProcedura&gt; &#39; non è conforme a CLS
+title: Il tipo restituito della funzione '<procedurename>' non è conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40027
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: b7704ee63031c38f708a2243e84b880c25fcf819
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5e746981d10ba8e662aebf86f67f08856ba37199
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243782"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260515"
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Tipo restituito della funzione &#39; &lt;NomeProcedura&gt; &#39; non è conforme a CLS
+# <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Tipo restituito della funzione '\<nomeroutine >' non è conforme a CLS
 Oggetto `Function` routine contrassegnata come `<CLSCompliant(True)>` ma restituisce un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non può essere utilizzato perché è un tipo non conforme.  
   
  Affinché una procedura risulti compatibile con l'[indipendenza del linguaggio e i componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), deve usare solo tipi conformi a CLS. Questo scenario si applica ai tipi dei parametri, al tipo restituito e ai tipi di tutte le variabili locali.  

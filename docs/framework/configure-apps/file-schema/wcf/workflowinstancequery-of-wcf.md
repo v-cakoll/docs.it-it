@@ -1,27 +1,27 @@
 ---
-title: '&lt;workflowInstanceQuery&gt; di WCF'
+title: <workflowInstanceQuery> di WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148175"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278772"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; di WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > di WCF
 
 Rappresenta una query che rileva modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.  
   
 Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<i profili >  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +55,7 @@ Nessuno.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<stati >](states-of-wcf-workflowinstancequery.md)|Raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

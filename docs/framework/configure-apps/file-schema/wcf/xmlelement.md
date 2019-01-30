@@ -1,15 +1,15 @@
 ---
-title: '&lt;xmlElement&gt;'
+title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 40703bdf62e8c69ac7e09a0d715e2a2f99408680
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 648147a7e3977648ac3c26c9dfc469629f3b70c3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612281"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278291"
 ---
-# <a name="ltxmlelementgt"></a>&lt;xmlElement&gt;
+# <a name="xmlelement"></a>\<xmlElement>
 Specifica un elemento XML inviato nel corpo del messaggio al servizio token di sicurezza per la richiesta di un token.  
   
  \<system.ServiceModel>  

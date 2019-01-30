@@ -1,5 +1,5 @@
 ---
-title: Il tipo della variabile &#39; &lt;variablename&gt; &#39; non riuscita perché è associato a un campo in un ambito contenitore
+title: Il tipo della variabile '<variablename>' non verrà dedotto perché associato a un ambito di inclusione
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672383"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259241"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo della variabile &#39; &lt;variablename&gt; &#39; non riuscita perché è associato a un campo in un ambito contenitore
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo della variabile '\<nomevariabile >' non riuscita perché è associato a un campo in un ambito contenitore
 Il tipo della variabile '\<nomevariabile >' non riuscita perché è associato a un campo in un ambito contenitore. Modificare il nome del '\<nomevariabile >', oppure usare il nome completo (ad esempio, 'Me. variablename' o 'Variablename').  
   
  Una variabile di controllo ciclo nel codice ha lo stesso nome di un campo della classe o altri ambito contenitore. Poiché la variabile di controllo viene usata senza un `As` clausola, è associato al campo nell'ambito di inclusione e il compilatore non crea una nuova variabile per tale né dedurne il tipo.  

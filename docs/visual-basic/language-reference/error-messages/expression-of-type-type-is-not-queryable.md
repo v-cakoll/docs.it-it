@@ -1,5 +1,5 @@
 ---
-title: Espressione di tipo &lt;tipo&gt; non è disponibile per query
+title: L'espressione di tipo <type> non può essere sottoposta a query
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521491"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261256"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>Espressione di tipo &lt;tipo&gt; non è disponibile per query
+# <a name="expression-of-type-type-is-not-queryable"></a>Espressione di tipo \<tipo > non è disponibile per query
 Espressione di tipo \<tipo > non è disponibile per query. Assicurarsi che sia presente un'importazione di riferimento e/o lo spazio dei nomi di assembly per il provider LINQ.  
   
  Tipi queryable sono definiti nel <xref:System.Linq>, <xref:System.Data.Linq>, e <xref:System.Xml.Linq> gli spazi dei nomi. È necessario importare uno o più di questi spazi dei nomi per eseguire query LINQ.  

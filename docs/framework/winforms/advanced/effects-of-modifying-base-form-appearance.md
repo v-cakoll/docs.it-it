@@ -8,14 +8,14 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: b942c160d7c4f89b1aad97c2dfdef1d060c18e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639224"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260164"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Effetti della modifica dell'aspetto di un form di base
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>Effetti della modifica dell'aspetto di un form di base
 Durante lo sviluppo di applicazioni, spesso potrebbe essere necessario modificare l'aspetto del form di base da cui ereditano altri form nel progetto (o in altri progetti).  
   
  In fase di progettazione, le modifiche all'aspetto del form di base, relative sia all'impostazione di proprietà o all'aggiunta e sottrazione dei controlli, vengono applicate ai form ereditati quando viene compilato il progetto contenente il form di base. Non è sufficiente salvare le modifiche al form di base. Per compilare un progetto, scegliere **Compila** dal menu **Compila**.  

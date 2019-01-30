@@ -1,5 +1,5 @@
 ---
-title: Tipo di valore facoltativo per il parametro facoltativo &lt;parametername&gt; non è conforme a CLS
+title: Il tipo di valore facoltativo per il parametro facoltativo <parametername> non è conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960349"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261424"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Tipo di valore facoltativo per il parametro facoltativo &lt;parametername&gt; non è conforme a CLS
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Tipo di valore facoltativo per il parametro facoltativo \<parametername > non è conforme a CLS
 Una procedura è contrassegnata come `<CLSCompliant(True)>`, ma viene dichiarato un parametro [facoltativo](../../../visual-basic/language-reference/modifiers/optional.md) con valore predefinito di un tipo non conforme.  
   
  Affinché una procedura risulti compatibile con l'[indipendenza del linguaggio e i componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), deve usare solo tipi conformi a CLS. Questo scenario si applica ai tipi dei parametri, al tipo restituito e ai tipi di tutte le variabili locali. Si applica anche ai valori predefiniti dei parametri facoltativi.  

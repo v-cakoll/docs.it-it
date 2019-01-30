@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;localClientSettings&gt;
+title: elemento <localClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 67e872ea44a502c5b0fcdc5c1d326aad91eaa8fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e43a03258f4a76c1d19c7bdcff99fcb1d1db19ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600362"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278928"
 ---
-# <a name="ltlocalclientsettingsgt-element"></a>Elemento &lt;localClientSettings&gt;
+# <a name="localclientsettings-element"></a>\<localClientSettings > elemento
 Specifica le impostazioni di sicurezza di un client locale per questa associazione.  
   
  \<system.serviceModel>  
