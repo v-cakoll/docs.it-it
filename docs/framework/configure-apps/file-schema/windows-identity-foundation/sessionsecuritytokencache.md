@@ -1,16 +1,16 @@
 ---
-title: '&lt;sessionSecurityTokenCache&gt;'
+title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 024375cb114bb080c576ea033e5588526350ecdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697c20d1f526cb376c2430f0006349f7d8f9b2f1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510091"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257941"
 ---
-# <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
+# <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 Registra una cache per i token di sessione con un servizio o una raccolta di gestori di token di sicurezza.  
   
  \<system.identityModel>  

@@ -1,5 +1,5 @@
 ---
-title: Iniziale &#39;. &#39; o &#39;. &#39; può trovarsi solo all'interno di un &#39;con&#39; istruzione
+title: Il carattere '.' o '!' iniziale può trovarsi solo all'interno di un'istruzione
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30157
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: e64318d4ececbd887f55a1a202cc2d58c90c8fc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 367da8e7c9fd8c14a16a09b1f023e7637d78309d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625952"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259552"
 ---
-# <a name="leading-3939-or-3939-can-only-appear-inside-a-39with39-statement"></a>Iniziale &#39;. &#39; o &#39;. &#39; può trovarsi solo all'interno di un &#39;con&#39; istruzione
+# <a name="leading--or--can-only-appear-inside-a-with-statement"></a>Il carattere '.' o '!' iniziale può trovarsi solo all'interno di un'istruzione
 Un punto (.) o un punto esclamativo (!) che non è compreso in un `With` blocchi si verifica senza un'espressione a sinistra. Accesso ai membri (`.`) e accesso ai membri dizionario (`!`) richiedono un'espressione che specifica l'elemento che contiene il membro. Questo deve apparire immediatamente a sinistra della funzione di accesso o come destinazione di un `With` blocco che contiene l'accesso al membro.  
   
  **ID errore:** BC30157  

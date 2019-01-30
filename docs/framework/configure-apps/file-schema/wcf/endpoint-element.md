@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;endpoint&gt;
+title: elemento <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509701"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254457"
 ---
-# <a name="ltendpointgt-element"></a>Elemento &lt;endpoint&gt;
+# <a name="endpoint-element"></a>\<endpoint > elemento
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
   
  \<system.ServiceModel>  

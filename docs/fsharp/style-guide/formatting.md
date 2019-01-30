@@ -2,12 +2,12 @@
 title: F#linee guida per la formattazione del codice
 description: Per ulteriori linee guida per la formattazione, vedere F# codice.
 ms.date: 11/26/2018
-ms.openlocfilehash: d4b61646154c613093374ef3dcf7436de4b0d3ea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415442"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254822"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
@@ -275,6 +275,17 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+Viene anche comunemente accettato per omettere le parentesi, se la tupla è il valore restituito di una funzione:
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+In sintesi, preferisce le creazioni di istanze di racchiusi tra parentesi tuple, ma quando si usano le tuple per criteri di ricerca o un valore restituito, viene considerato corretto evitare le parentesi.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formattazione di dichiarazioni di unione discriminata
 

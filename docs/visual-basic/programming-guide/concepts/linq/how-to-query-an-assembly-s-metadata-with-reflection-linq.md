@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Eseguire query di un Assembly&#39;sui metadati tramite Reflection (LINQ) (Visual Basic)'
+title: 'Procedura: Eseguire query sui metadati di un Assembly tramite Reflection (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: fb46cef7eb9b4827cb5e4b7ca7366c0910fcef26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7966b85172af48c7762027877a03b12dd6e2b62d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609824"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255159"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Procedura: Eseguire query di un Assembly&#39;sui metadati tramite Reflection (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Procedura: Eseguire query sui metadati di un Assembly tramite Reflection (LINQ) (Visual Basic)
 Nell'esempio seguente viene illustrato come LINQ può essere usato con il processo di reflection per recuperare metadati specifici sui metodi che corrispondono a un criterio di ricerca specificato. In questo caso la query individuerà i nomi di tutti i metodi dell'assembly che restituiscono tipi enumerabili, ad esempio matrici.  
   
 ## <a name="example"></a>Esempio  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; di &lt;contractTypeNames&gt;'
+title: <add> di <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: cf9a1ae28b53b841ac5d8d85d31e1548e36369ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735727"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55253716"
 ---
-# <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;add&gt; di &lt;contractTypeNames&gt;
+# <a name="add-of-contracttypenames"></a>\<aggiungere > di \<contractTypeNames >
 Elemento di configurazione che specifica il nome del contratto dei servizi ricercati e i criteri usati in genere durante la ricerca di un servizio. Se si specificano più nomi di contratto, risponderanno solo gli endpoint del servizio corrispondenti a tutti i contratti. Si noti che in Windows Communication Foundation (WCF), un endpoint può supportare un solo contratto.  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;Ottenere&#39; funzione di accesso della proprietà &#39; &lt;propertyname&gt; &#39; non è accessibile'
+title: La funzione di accesso 'Get' della proprietà '<propertyname>' non è accessibile
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31103
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 10b7168ac40ca7c7d696cd63cd823454f404bb94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72675f882676d3ded9ccc9ff245a1d757fa4393a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582214"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257785"
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Ottenere&#39; funzione di accesso della proprietà &#39; &lt;propertyname&gt; &#39; non è accessibile
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>'Get' della funzione di accesso della proprietà '\<NomeProprietà >' non è accessibile
 Un'istruzione prova a recuperare il valore di una proprietà quando non ha accesso alla proprietà `Get` procedure.  
   
  Se il [l'istruzione Get](../../../visual-basic/language-reference/statements/get-statement.md) è contrassegnata con un accesso più restrittivo livello relativa [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md), tenta di leggere il valore della proprietà potrebbe non riuscire nei casi seguenti:  

@@ -1,16 +1,16 @@
 ---
-title: '&lt;gli stati&gt; di &lt;activityStateQuery&gt;'
+title: <states> di <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
-ms.openlocfilehash: db50155af22cd8a50158b940a88599df1a66ce1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97664518f7c7c0078cef1c81035724a02c9857c0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635858"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257733"
 ---
-# <a name="ltstatesgt-of-ltactivitystatequerygt"></a>&lt;gli stati&gt; di &lt;activityStateQuery&gt;
+# <a name="states-of-activitystatequery"></a>\<stati > di \<activityStateQuery >
 Raccolta di elementi di configurazione contenenti gli stati dell'attività sottoscritta per la quale deve essere generato un record di rilevamento.  
   
  Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
