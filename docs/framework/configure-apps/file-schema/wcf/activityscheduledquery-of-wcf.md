@@ -1,27 +1,27 @@
 ---
-title: '&lt;activityScheduledQuery&gt; di WCF'
+title: <activityScheduledQuery> di WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: fd7830bc178de0693f0632cea3b390d792408ec1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147877"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272903"
 ---
-# <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; di WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > di WCF
 
 Rappresenta una raccolta di query usate per rilevare un'attività pianificata per l'esecuzione da parte di un'attività padre. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record pianificati dell'attività.  
   
 Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<rilevamento >  
+\<tracking>  
 \<i profili >  
 \<trackingProfile>  
 \<flusso di lavoro >  
-\<activityScheduledQueries >  
-\<activityScheduledQuery >  
+\<activityScheduledQueries>  
+\<activityScheduledQuery>  
   
 ## <a name="syntax"></a>Sintassi  
   

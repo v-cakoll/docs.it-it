@@ -1,19 +1,19 @@
 ---
-title: '&lt;memoryCache&gt; (impostazioni Cache)'
+title: Elemento <memoryCache> (impostazioni cache)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: cdf7d0e5605bde42d092492ea1b16d712984c182
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083912"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266377"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; (impostazioni Cache)
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > (impostazioni Cache)
 Definisce un elemento che viene usato per configurare una cache basata sulla classe <xref:System.Runtime.Caching.MemoryCache> . La classe <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> definisce un elemento [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) che è possibile usare per configurare la cache. In una singola applicazione possono essere usate più istanze della classe <xref:System.Runtime.Caching.MemoryCache> . Ogni elemento `memoryCache` nel file di configurazione può contenere le impostazioni per un'istanza denominata di <xref:System.Runtime.Caching.MemoryCache> .  
   
  \<configuration>  

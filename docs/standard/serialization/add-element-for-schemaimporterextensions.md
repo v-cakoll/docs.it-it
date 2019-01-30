@@ -1,18 +1,18 @@
 ---
-title: '&lt;aggiungere&gt; (elemento) per &lt;schemaImporterExtensions&gt;'
+title: Elemento <add> per <schemaImporterExtensions>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 212ce43dc50735da71091111a0fd03eca0583315
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577685"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270563"
 ---
-# <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;aggiungere&gt; (elemento) per &lt;schemaImporterExtensions&gt;
+# <a name="add-element-for-schemaimporterextensions"></a>\<aggiungere > (elemento) per \<schemaImporterExtensions >
 Aggiunge i tipi usati da <xref:System.Xml.Serialization.XmlSchemaImporter> per l'esecuzione del mapping dei tipi XSD ai tipi .NET Framework. Per altre informazioni sui file di configurazione, vedere [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  

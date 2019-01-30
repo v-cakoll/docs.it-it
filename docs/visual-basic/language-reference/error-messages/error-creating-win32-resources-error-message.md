@@ -1,5 +1,5 @@
 ---
-title: 'Errore durante la creazione delle risorse Win32: &lt;messaggio di errore&gt;'
+title: 'Errore durante la creazione delle risorse Win32: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30136
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 00ad9b30a354794647f9b4c097732cd572c100b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56de1554480fdb31f64859da2d94a81618f01c50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566764"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270466"
 ---
-# <a name="error-creating-win32-resources-lterror-messagegt"></a>Errore durante la creazione delle risorse Win32: &lt;messaggio di errore&gt;
+# <a name="error-creating-win32-resources-error-message"></a>Errore durante la creazione delle risorse Win32: \<messaggio di errore >
 Il compilatore Visual Basic chiama Assembly Linker (Al.exe, definito anche Alink) per generare un assembly con un manifesto. Il linker ha rilevato un errore nella creazione di una risorsa in memoria. Potrebbe trattarsi di un problema di ambiente o di memoria insufficiente nel computer.  
   
  **ID errore:** BC30136  

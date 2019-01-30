@@ -1,23 +1,23 @@
 ---
-title: '&lt;audienceUris&gt;'
+title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034480"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267274"
 ---
-# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+# <a name="audienceuris"></a>\<audienceUris>
 Specifica il set di URI accettabili identificatori della relying party (RP). I token non verranno accettati, a meno che hanno come ambito per uno dei gruppi di destinatari consentiti gli URI.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<audienceUris >  
+\<securityTokenHandlerConfiguration>  
+\<audienceUris>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ Specifica il set di URI accettabili identificatori della relying party (RP). I t
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza i gestori di token.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza i gestori di token.|  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, la raccolta è vuota. usare `<add>`, `<clear>`, e `<remove>` elementi per modificare la raccolta. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> e <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> agli oggetti usano i valori nel gruppo di destinatari raccolta di URI per configurare qualsiasi consentito audience le restrizioni di URI in <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> oggetti.  

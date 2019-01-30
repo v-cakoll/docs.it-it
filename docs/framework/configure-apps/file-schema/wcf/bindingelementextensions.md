@@ -1,15 +1,15 @@
 ---
-title: '&lt;bindingElementExtensions&gt;'
+title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 1b843f2986a0020b8ce079e58bf9865a0b3d402d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569901"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270465"
 ---
-# <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
+# <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 Questa sezione consente l'uso di un elemento di associazione personalizzata dal file di configurazione di un computer o di un'applicazione. È possibile aggiungere un elemento di associazione personalizzato a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento su un'estensione dell'elemento di associazione, oltre all'attributo `name` sull'elemento di associazione personalizzato.  
   
  Le estensioni delle associazioni consentono di creare elementi di associazione definiti dall'utente da usare come parti di associazioni personalizzate. A livello di programmazione, un'estensione di associazione è un tipo che implementa la classe astratta <xref:System.ServiceModel.Channels.BindingElement>. Nel file di configurazione, la sezione `bindingElementExtensions` è usata per definire un elemento dell'estensione.  

@@ -1,16 +1,16 @@
 ---
-title: '&lt;i comportamenti&gt; del flusso di lavoro'
+title: <behaviors> del flusso di lavoro
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: b4ad7fb54cc8a03f5dd698055da5a29e719775c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e61a2078c5989a3b100e77e6b2f753b0ee5dd934
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731673"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271786"
 ---
-# <a name="ltbehaviorsgt-of-workflow"></a>&lt;i comportamenti&gt; del flusso di lavoro
+# <a name="behaviors-of-workflow"></a>\<i comportamenti > del flusso di lavoro
 Questo elemento contiene il **serviceBehaviors** raccolta.  Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi flusso di lavoro. Ogni elemento di comportamento è identificato dal relativo univoco **nome** attributo.  
   
  \<system.ServiceModel>  

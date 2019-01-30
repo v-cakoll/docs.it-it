@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;scopedCertificates&gt;
+title: <scopedCertificates> Elemento
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de85b3230461e876ec48e98887805d767e981e0f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556496"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270386"
 ---
-# <a name="ltscopedcertificatesgt-element"></a>Elemento &lt;scopedCertificates&gt;
+# <a name="scopedcertificates-element"></a>\<scopedCertificates > elemento
 Rappresenta una raccolta di certificati X.509 fornita da servizi specifici (con ambito) per l'autenticazione. Questa raccolta è usata in genere per specificare i certificati di servizio per i servizi dei token di sicurezza in un scenario federato.  
   
  \<system.ServiceModel>  

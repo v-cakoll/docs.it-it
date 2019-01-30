@@ -1,5 +1,5 @@
 ---
-title: Limitazioni del componente Timer Windows Form&#39;proprietà di Interval s
+title: Limitazioni della proprietà Interval del componente Timer di Windows Form
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 86cfcce65998d19aea8592ae33c5baf58e1ff0fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d8e25d9d27c0908f2d794a0c3c9646024984764
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516954"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269673"
 ---
-# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Limitazioni del componente Timer Windows Form&#39;proprietà di Interval s
+# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitazioni della proprietà Interval del componente Timer di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.Timer> componente dispone di un <xref:System.Windows.Forms.Timer.Interval%2A> proprietà che specifica il numero di millisecondi che intercorre tra un evento timer e quella successiva. A meno che il componente è disabilitato, un timer continua a ricevere il <xref:System.Windows.Forms.Timer.Tick> evento quasi uguale a intervalli di tempo.  
   
  Questo componente è progettato per l'ambiente Windows Form. Per informazioni su un timer adatto a un ambiente server, vedere [Introduzione ai timer basati su server](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  

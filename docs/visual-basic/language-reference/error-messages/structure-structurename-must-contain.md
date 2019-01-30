@@ -1,5 +1,5 @@
 ---
-title: Struttura &#39; &lt;nomestruttura&gt; &#39; deve contenere almeno una variabile membro di istanza o dichiarazione di evento almeno un'istanza non contrassegnata &#39;personalizzata&#39;
+title: La struttura '<structurename>' deve contenere almeno una dichiarazione di evento o di variabile membro di istanza non contrassegnata 'Custom'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30941
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: d8c654c212a459d40c6cf20cd62c3e0fcda8511b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603781"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267456"
 ---
-# <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>Struttura &#39; &lt;nomestruttura&gt; &#39; deve contenere almeno una variabile membro di istanza o dichiarazione di evento almeno un'istanza non contrassegnata &#39;personalizzata&#39;
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struttura '\<nomestruttura >' deve contenere almeno una variabile membro di istanza o dichiarazione di evento almeno un'istanza non contrassegnata 'Custom'
 Una definizione di struttura non include eventuali variabili non condivise o eventi non personalizzati non condivisi.  
   
  Ogni struttura deve essere una variabile o un evento che si applica a ogni istanza specifica (non condivisa) invece che a tutte le istanze collettivamente ([condiviso](../../../visual-basic/language-reference/modifiers/shared.md)). Procedure, le proprietà e le costanti non condivise non soddisfano questo requisito. Inoltre, se sono presenti un solo evento non condiviso e nessuna variabile non condivisa, tale evento non può essere un `Custom` evento.  

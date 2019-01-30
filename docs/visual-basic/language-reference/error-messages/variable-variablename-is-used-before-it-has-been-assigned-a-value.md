@@ -1,5 +1,5 @@
 ---
-title: Variabile &#39; &lt;variablename&gt; &#39; viene usato prima che sia stato assegnato un valore
+title: La variabile '<variablename>' viene utilizzata prima che le sia stato assegnato un valore
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42104
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: f91343e850600c9e5f4b4b4eb2126798baf3d980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647023"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268834"
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>Variabile &#39; &lt;variablename&gt; &#39; viene usato prima che sia stato assegnato un valore
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variabile '\<nomevariabile >' viene usato prima che sia stato assegnato un valore
 Variabile '\<nomevariabile >' viene usato prima che sia stato assegnato un valore. È possibile che in fase di esecuzione venga restituita un'eccezione dovuta a un riferimento Null.  
   
  Un'applicazione ha almeno un possibile percorso all'interno del codice che legge una variabile prima che venga assegnato un valore qualsiasi.  

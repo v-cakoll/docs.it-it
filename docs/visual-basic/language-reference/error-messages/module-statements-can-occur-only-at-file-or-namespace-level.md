@@ -1,5 +1,5 @@
 ---
-title: '&#39;Modulo&#39; istruzioni possono trovarsi solo a livello di file o lo spazio dei nomi'
+title: Le istruzioni 'Module' possono trovarsi solo a livello di file o di spazio dei nomi
 ms.date: 07/20/2015
 f1_keywords:
 - bc30617
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: bdbf8df5942e9df4b9696aeea4e3492121efe21a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820763cce9cc27f9a379ed5e766e0691a75f36b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746312"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271265"
 ---
-# <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a>&#39;Modulo&#39; istruzioni possono trovarsi solo a livello di file o lo spazio dei nomi
+# <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>Le istruzioni 'Module' possono trovarsi solo a livello di file o di spazio dei nomi
 `Module` devono essere visualizzate nella parte superiore del file di origine immediatamente dopo aver `Option` e `Imports` istruzioni, gli attributi globali e le dichiarazioni dello spazio dei nomi, ma prima di tutte le altre dichiarazioni.  
   
  **ID errore:** BC30617  

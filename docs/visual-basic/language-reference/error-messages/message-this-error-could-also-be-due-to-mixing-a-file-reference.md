@@ -1,5 +1,5 @@
 ---
-title: "&lt;messaggio&gt; questo errore potrebbe inoltre essere dovuto all'unione di un riferimento al file con un riferimento progetto all'assembly &#39; &lt;NomeAssembly&gt;&#39;"
+title: <message> L'errore potrebbe inoltre essere dovuto all'unione di un riferimento di file con un riferimento al progetto nell'assembly '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: d4fb2a8985a21ecea5056b83d2766e8dc468180d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528992"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272552"
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;messaggio&gt; questo errore potrebbe inoltre essere dovuto all'unione di un riferimento al file con un riferimento progetto all'assembly &#39; &lt;NomeAssembly&gt;&#39;
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<messaggio > Questo errore potrebbe inoltre essere dovuto all'unione di un riferimento al file con un riferimento progetto all'assembly '\<assemblyname >'
 \<messaggio > Questo errore potrebbe inoltre essere dovuto all'unione di un riferimento al file con un riferimento progetto all'assembly '\<assemblyname >. In questo caso, provare a sostituire il riferimento file a '\<assemblyfilename >' nel progetto '\<projectname1 >' con un riferimento al progetto '\<projectname2 >'.  
   
  Il codice del progetto accede a un membro di un altro progetto, ma la configurazione della soluzione non supporta il compilatore Visual Basic risolvere il riferimento.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;i listener&gt; (elemento) per &lt;origine&gt;'
+title: Elemento <listeners> per <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 8378d34ffc2fea22fb5d16ed0b727da54ca74503
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083990"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266776"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;i listener&gt; (elemento) per &lt;origine&gt;
+# <a name="listeners-element-for-source"></a>\<i listener > (elemento) per \<origine >
 Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSource.Listeners%2A> insieme per un <xref:System.Diagnostics.TraceSource>. I listener indirizzano l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
   
  \<configuration>  

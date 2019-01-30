@@ -1,5 +1,5 @@
 ---
-title: '&lt;aggiungere&gt; (elemento) per &lt;sharedListeners&gt;'
+title: Elemento <add> per <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: 645b5beca2f65ad54b194d656309d850e1ff9fa7
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cbce115c6a485c5642a60528614480324e3e5665
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083548"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274025"
 ---
-# <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;aggiungere&gt; (elemento) per &lt;sharedListeners&gt;
+# <a name="add-element-for-sharedlisteners"></a>\<aggiungere > (elemento) per \<sharedListeners >
 Aggiunge un listener alla raccolta `sharedListeners`. `sharedListeners` è una raccolta di listener che eventuali [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) può fare riferimento.  Per impostazione predefinita, nei listener di traccia le `sharedListeners` raccolta non vengono inserite in un `Listeners` raccolta. Devono essere aggiunti in base al nome per il [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oppure [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Non è possibile ottenere il listener `sharedListeners` insieme nel codice in fase di esecuzione.  
   
  \<configuration>  

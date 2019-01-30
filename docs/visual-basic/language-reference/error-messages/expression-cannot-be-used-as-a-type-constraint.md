@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;espressione&gt; &#39; non può essere usato come vincolo di tipo'
+title: Impossibile utilizzare '<expression>' come vincolo di tipo
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742133"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264674"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;espressione&gt; &#39; non può essere usato come vincolo di tipo
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<espressione >' non può essere usato come vincolo di tipo
 Un elenco di vincoli comprende un'espressione che non rappresenta un vincolo valido per un parametro di tipo.  
   
  Un elenco di vincoli impone requisiti per l'argomento di tipo passato al parametro di tipo. Si possono specificare i requisiti seguenti in qualsiasi combinazione:  

@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;NomeProcedura&gt; &#39; perché l'istanza di accesso è un tipo interfaccia
+title: Impossibile applicare la risoluzione dell'overload con associazione tardiva a '<procedurename>' perché l'istanza di accesso è un tipo interfaccia
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651516"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272636"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Risoluzione dell'overload con associazione tardiva non è possibile applicare a &#39; &lt;NomeProcedura&gt; &#39; perché l'istanza di accesso è un tipo interfaccia
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Impossibile applicare la risoluzione dell'overload con associazione tardiva a '\<nomeroutine >' perché l'istanza di accesso è un tipo interfaccia
 Il compilatore sta provando a risolvere un riferimento a una proprietà in overload o una routine, ma il riferimento ha esito negativo perché è un argomento di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore a risolvere il riferimento come associazione tardiva.  
   
  In questi casi, il compilatore risolve l'overload tramite la classe di implementazione anziché tramite l'interfaccia sottostante. Se la classe consente di rinominare una delle versioni di overload, il compilatore non considera tale versione di un overload perché il nome è diverso. Ciò a sua volta fa sì che il compilatore ignora la versione rinominata quando avrebbe potuto essere la scelta corretta per risolvere il riferimento.  
