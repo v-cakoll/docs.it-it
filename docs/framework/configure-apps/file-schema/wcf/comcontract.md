@@ -1,21 +1,21 @@
 ---
-title: '&lt;comContract&gt;'
+title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 2cab52b09b5cc8455531b5f76b088fd4d835ee3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63383fbd711f3725748e85fcf12e06b185bf30d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734896"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257605"
 ---
-# <a name="ltcomcontractgt"></a><span data-ttu-id="092b9-102">&lt;comContract&gt;</span><span class="sxs-lookup"><span data-stu-id="092b9-102">&lt;comContract&gt;</span></span>
-<span data-ttu-id="092b9-103">Specifica un contratto del servizio COM+ Integration.</span><span class="sxs-lookup"><span data-stu-id="092b9-103">Specifies a COM+ integration service contract.</span></span>  
+# <a name="comcontract"></a><span data-ttu-id="60390-101">\<comContract></span><span class="sxs-lookup"><span data-stu-id="60390-101">\<comContract></span></span>
+<span data-ttu-id="60390-102">Specifica un contratto del servizio COM+ Integration.</span><span class="sxs-lookup"><span data-stu-id="60390-102">Specifies a COM+ integration service contract.</span></span>  
   
- <span data-ttu-id="092b9-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="092b9-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="092b9-105">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="092b9-105">\<comContracts></span></span>  
+ <span data-ttu-id="60390-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="60390-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="60390-104">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="60390-104">\<comContracts></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="092b9-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="092b9-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60390-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="60390-105">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -42,34 +42,34 @@ ms.locfileid: "54734896"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="092b9-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="092b9-107">Attributes and Elements</span></span>  
- <span data-ttu-id="092b9-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="092b9-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="60390-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="60390-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="60390-107">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="60390-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="092b9-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="092b9-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="60390-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="60390-108">Attributes</span></span>  
   
-|<span data-ttu-id="092b9-110">Attributo</span><span class="sxs-lookup"><span data-stu-id="092b9-110">Attribute</span></span>|<span data-ttu-id="092b9-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="092b9-111">Description</span></span>|  
+|<span data-ttu-id="60390-109">Attributo</span><span class="sxs-lookup"><span data-stu-id="60390-109">Attribute</span></span>|<span data-ttu-id="60390-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60390-110">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="092b9-112">contratto</span><span class="sxs-lookup"><span data-stu-id="092b9-112">contract</span></span>|<span data-ttu-id="092b9-113">Stringa che contiene il tipo di contratto.</span><span class="sxs-lookup"><span data-stu-id="092b9-113">A string that contains the contract type.</span></span>|  
-|<span data-ttu-id="092b9-114">name</span><span class="sxs-lookup"><span data-stu-id="092b9-114">name</span></span>|<span data-ttu-id="092b9-115">Stringa che contiene il nome del contratto.</span><span class="sxs-lookup"><span data-stu-id="092b9-115">A string that contains the contract name.</span></span>|  
-|<span data-ttu-id="092b9-116">namespace</span><span class="sxs-lookup"><span data-stu-id="092b9-116">namespace</span></span>|<span data-ttu-id="092b9-117">Stringa che contiene lo spazio dei nomi del contratto.</span><span class="sxs-lookup"><span data-stu-id="092b9-117">A string that contains the contract namespace.</span></span>|  
-|<span data-ttu-id="092b9-118">requiresSession</span><span class="sxs-lookup"><span data-stu-id="092b9-118">requiresSession</span></span>|<span data-ttu-id="092b9-119">Valore booleano che specifica se il contratto può essere usato solo nelle associazioni con sessione.</span><span class="sxs-lookup"><span data-stu-id="092b9-119">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="092b9-120">All'avvio del servizio, il runtime di integrazione verifica che questa impostazione sia coerente con il tipo di associazione da usare.</span><span class="sxs-lookup"><span data-stu-id="092b9-120">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="092b9-121">Viene generata un'eccezione se una o più delle associazioni per il contratto sono in conflitto tra loro.</span><span class="sxs-lookup"><span data-stu-id="092b9-121">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="092b9-122">Se questa proprietà è `false` e viene usato un canale unidirezionale in presenza di parametri [out], viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="092b9-122">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
+|<span data-ttu-id="60390-111">contratto</span><span class="sxs-lookup"><span data-stu-id="60390-111">contract</span></span>|<span data-ttu-id="60390-112">Stringa che contiene il tipo di contratto.</span><span class="sxs-lookup"><span data-stu-id="60390-112">A string that contains the contract type.</span></span>|  
+|<span data-ttu-id="60390-113">name</span><span class="sxs-lookup"><span data-stu-id="60390-113">name</span></span>|<span data-ttu-id="60390-114">Stringa che contiene il nome del contratto.</span><span class="sxs-lookup"><span data-stu-id="60390-114">A string that contains the contract name.</span></span>|  
+|<span data-ttu-id="60390-115">namespace</span><span class="sxs-lookup"><span data-stu-id="60390-115">namespace</span></span>|<span data-ttu-id="60390-116">Stringa che contiene lo spazio dei nomi del contratto.</span><span class="sxs-lookup"><span data-stu-id="60390-116">A string that contains the contract namespace.</span></span>|  
+|<span data-ttu-id="60390-117">requiresSession</span><span class="sxs-lookup"><span data-stu-id="60390-117">requiresSession</span></span>|<span data-ttu-id="60390-118">Valore booleano che specifica se il contratto può essere usato solo nelle associazioni con sessione.</span><span class="sxs-lookup"><span data-stu-id="60390-118">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="60390-119">All'avvio del servizio, il runtime di integrazione verifica che questa impostazione sia coerente con il tipo di associazione da usare.</span><span class="sxs-lookup"><span data-stu-id="60390-119">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="60390-120">Viene generata un'eccezione se una o più delle associazioni per il contratto sono in conflitto tra loro.</span><span class="sxs-lookup"><span data-stu-id="60390-120">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="60390-121">Se questa proprietà è `false` e viene usato un canale unidirezionale in presenza di parametri [out], viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="60390-121">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="092b9-123">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="092b9-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="60390-122">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="60390-122">Child Elements</span></span>  
   
-|<span data-ttu-id="092b9-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="092b9-124">Element</span></span>|<span data-ttu-id="092b9-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="092b9-125">Description</span></span>|  
+|<span data-ttu-id="60390-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="60390-123">Element</span></span>|<span data-ttu-id="60390-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60390-124">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="092b9-126">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="092b9-126">persistableTypes</span></span>|<span data-ttu-id="092b9-127">Tutti i tipi persistenti.</span><span class="sxs-lookup"><span data-stu-id="092b9-127">All the persistable types.</span></span>|  
-|<span data-ttu-id="092b9-128">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="092b9-128">userDefinedTypes</span></span>|<span data-ttu-id="092b9-129">Raccolta di tipi definiti dall'utente che deve essere inclusa nel contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="092b9-129">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
-|<span data-ttu-id="092b9-130">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="092b9-130">exposedMethods</span></span>|<span data-ttu-id="092b9-131">Raccolta di metodi COM+ che vengono esposti quando l'interfaccia in un componente COM+ viene esposta come servizio Web.</span><span class="sxs-lookup"><span data-stu-id="092b9-131">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
+|<span data-ttu-id="60390-125">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="60390-125">persistableTypes</span></span>|<span data-ttu-id="60390-126">Tutti i tipi persistenti.</span><span class="sxs-lookup"><span data-stu-id="60390-126">All the persistable types.</span></span>|  
+|<span data-ttu-id="60390-127">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="60390-127">userDefinedTypes</span></span>|<span data-ttu-id="60390-128">Raccolta di tipi definiti dall'utente che deve essere inclusa nel contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="60390-128">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
+|<span data-ttu-id="60390-129">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="60390-129">exposedMethods</span></span>|<span data-ttu-id="60390-130">Raccolta di metodi COM+ che vengono esposti quando l'interfaccia in un componente COM+ viene esposta come servizio Web.</span><span class="sxs-lookup"><span data-stu-id="60390-130">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="092b9-132">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="092b9-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="60390-131">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="60390-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="092b9-133">Elemento</span><span class="sxs-lookup"><span data-stu-id="092b9-133">Element</span></span>|<span data-ttu-id="092b9-134">Descrizione</span><span class="sxs-lookup"><span data-stu-id="092b9-134">Description</span></span>|  
+|<span data-ttu-id="60390-132">Elemento</span><span class="sxs-lookup"><span data-stu-id="60390-132">Element</span></span>|<span data-ttu-id="60390-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60390-133">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="092b9-135">comContracts</span><span class="sxs-lookup"><span data-stu-id="092b9-135">comContracts</span></span>|<span data-ttu-id="092b9-136">Contiene una raccolta di elementi `comContract`.</span><span class="sxs-lookup"><span data-stu-id="092b9-136">Contains a collection of `comContract` elements.</span></span>|  
+|<span data-ttu-id="60390-134">comContracts</span><span class="sxs-lookup"><span data-stu-id="60390-134">comContracts</span></span>|<span data-ttu-id="60390-135">Contiene una raccolta di elementi `comContract`.</span><span class="sxs-lookup"><span data-stu-id="60390-135">Contains a collection of `comContract` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="092b9-137">Note</span><span class="sxs-lookup"><span data-stu-id="092b9-137">Remarks</span></span>  
- <span data-ttu-id="092b9-138">Contratti di servizio COM+ integration sono limitati attualmente al `http://tempuri.org` spazio dei nomi e nome del contratto è derivato dall'interfaccia COM di supporto.</span><span class="sxs-lookup"><span data-stu-id="092b9-138">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="092b9-139">È tuttavia possibile specificare alternative usando la sezione `comContracts` e anche l'elemento `comContract` nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="092b9-139">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="092b9-140">Ad esempio, è possibile usare la configurazione seguente per specificare lo spazio dei nomi, il nome del contratto, i tipi definiti dall'utente da includere e altre impostazioni per un contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="092b9-140">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="60390-136">Note</span><span class="sxs-lookup"><span data-stu-id="60390-136">Remarks</span></span>  
+ <span data-ttu-id="60390-137">Contratti di servizio COM+ integration sono limitati attualmente al `http://tempuri.org` spazio dei nomi e nome del contratto è derivato dall'interfaccia COM di supporto.</span><span class="sxs-lookup"><span data-stu-id="60390-137">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="60390-138">È tuttavia possibile specificare alternative usando la sezione `comContracts` e anche l'elemento `comContract` nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="60390-138">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="60390-139">Ad esempio, è possibile usare la configurazione seguente per specificare lo spazio dei nomi, il nome del contratto, i tipi definiti dall'utente da includere e altre impostazioni per un contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="60390-139">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
   
 ```xml  
 <comContracts>
@@ -86,12 +86,12 @@ ms.locfileid: "54734896"
 </comContracts>
 ```  
   
- <span data-ttu-id="092b9-141">Quando il servizio viene inizializzato, gli spazi dei nomi specificati e i nomi del contratto vengono applicati alle descrizioni del servizio generate.</span><span class="sxs-lookup"><span data-stu-id="092b9-141">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="60390-140">Quando il servizio viene inizializzato, gli spazi dei nomi specificati e i nomi del contratto vengono applicati alle descrizioni del servizio generate.</span><span class="sxs-lookup"><span data-stu-id="60390-140">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="092b9-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="092b9-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60390-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60390-141">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [<span data-ttu-id="092b9-143">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="092b9-143">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [<span data-ttu-id="092b9-144">Integrazione con applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="092b9-144">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="092b9-145">Procedura: Configurare le impostazioni di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="092b9-145">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="60390-142">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="60390-142">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [<span data-ttu-id="60390-143">Integrazione con applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="60390-143">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="60390-144">Procedura: Configurare le impostazioni di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="60390-144">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
