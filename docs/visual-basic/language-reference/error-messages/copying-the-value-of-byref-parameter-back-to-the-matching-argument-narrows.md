@@ -1,5 +1,5 @@
 ---
-title: Quando il valore del &#39;ByRef&#39; parametro &#39; &lt;parametername&gt; &#39; argomento corrispondente viene convertito dal tipo di &#39; &lt;NomeTipo1&gt; &#39; &#39; &lt;in NomeTipo2&gt;&#39;
+title: Copiando il valore del parametro 'ByRef' '<parametername>' nell'argomento corrispondente viene eseguita la conversione dal tipo '<typename1>' a '<typename2>', più piccolo
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506276"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276614"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Quando il valore del &#39;ByRef&#39; parametro &#39; &lt;parametername&gt; &#39; argomento corrispondente viene convertito dal tipo di &#39; &lt;NomeTipo1&gt; &#39; &#39; &lt;in NomeTipo2&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Quando il valore del parametro 'ByRef' '\<nomeparametro >' nell'argomento corrispondente viene convertito dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >'
 Una routine viene chiamata con un argomento che può ampliarsi nel tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.  
   
  Quando si definisce una classe o una struttura, è possibile definire uno o più operatori di conversione per convertire il tipo della classe o della struttura in altri tipi. È anche possibile definire operatori di conversione inversi per riconvertire gli altri tipi nel tipo della classe o della struttura originale. Quando si usa il tipo di classe o struttura in una chiamata di routine, Visual Basic possono usare gli operatori di conversione per convertire il tipo di argomento al tipo di parametro corrispondente.  

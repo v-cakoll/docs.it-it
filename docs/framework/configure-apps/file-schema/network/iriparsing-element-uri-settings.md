@@ -1,15 +1,15 @@
 ---
-title: '&lt;iriParsing&gt; (impostazioni Uri)'
+title: Elemento <iriParsing> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552944"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256656"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; (impostazioni Uri)
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing > (impostazioni Uri)
 Specifica se l'analisi IRI (International Resource Identifier) viene applicata a un <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.  
   
 ## <a name="schema-hierarchy"></a>Gerarchia dello schema  

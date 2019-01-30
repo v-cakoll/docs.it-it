@@ -1,17 +1,17 @@
 ---
-title: Linea &lt;numero&gt; non è possibile leggere perché supera la dimensione massima della riga.
+title: Riga <number> non è possibile leggere perché supera la dimensione massima della riga.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 6288f50a28ed4edac876dd1ea08d9d09dbca90be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f9a784676777fa1419dc85f07ef26a614768ab8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671408"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256897"
 ---
-# <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Linea &lt;numero&gt; non è possibile leggere perché supera la dimensione massima della riga.
+# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Riga \<numero > non è possibile leggere perché supera la dimensione massima della riga.
 Impossibile leggere la riga perché supera la dimensione massima consentita per le righe. In genere questo significa che nel file sono presenti virgolette di apertura, ma non virgolette di chiusura.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  

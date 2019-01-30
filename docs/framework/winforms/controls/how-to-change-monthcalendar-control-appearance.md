@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare il controllo MonthCalendar di Windows Form&#39;aspetto'
+title: "Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624349"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258922"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Procedura: Modificare il controllo MonthCalendar di Windows Form&#39;aspetto
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente di personalizzare l'aspetto del calendario in molti modi. Ad esempio, è possibile impostare la combinazione di colori e scegliere di visualizzare o nascondere i numeri di settimana e la data corrente.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Per modificare lo schema di colori del calendario mensile  
