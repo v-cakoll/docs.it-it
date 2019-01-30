@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; di &lt;allowedAudienceUris&gt;'
+title: <add> di <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: 2e3939f670bcb2424cfb1dfaa2b5e036bbf2888b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5538db902525b03513a69fcc1a5c06d0877b8e0e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569007"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281151"
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;add&gt; di &lt;allowedAudienceUris&gt;
+# <a name="add-of-allowedaudienceuris"></a>\<add> of \<allowedAudienceUris>
 Aggiunge un URI di destinazione al quale il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché venga considerato valido da un'istanza di <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  \<system.ServiceModel>  

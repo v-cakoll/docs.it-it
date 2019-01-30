@@ -1,17 +1,17 @@
 ---
-title: '&lt;useLegacyJit&gt; Element'
+title: <useLegacyJit> Elemento
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648180"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278759"
 ---
-# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; Element
+# <a name="uselegacyjit-element"></a>\<useLegacyJit > elemento
 
 Determina se Common Language Runtime usa il compilatore JIT a 64 bit legacy per la compilazione JIT.  
   
@@ -39,7 +39,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
   
 ### <a name="enabled-attribute"></a>attributo Enabled  
   
-| Valore | Descrizione                                                                                                         |  
+| Value | Descrizione                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | Common language runtime usa il nuovo compilatore JIT a 64 bit incluso in .NET Framework 4.6 e versioni successive. |  
 | 1     | Common language runtime usa il compilatore JIT a 64 bit precedente.                                                     |  
