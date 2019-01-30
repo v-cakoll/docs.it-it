@@ -1,15 +1,15 @@
 ---
-title: '&lt;discoveryEndpoint&gt;'
+title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524169"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274783"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
+# <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
 Questo elemento di configurazione definisce un endpoint standard con un contratto di individuazione fisso. Quando viene aggiunto alla configurazione del servizio, specifica la posizione di ascolto dei messaggi di individuazione. Quando viene aggiunto alla configurazione del client, specifica la posizione di invio delle query di individuazione.  
   

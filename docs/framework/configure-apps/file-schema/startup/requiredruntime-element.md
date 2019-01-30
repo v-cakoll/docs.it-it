@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt; elemento'
+title: elemento <requiredRuntime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222129"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254730"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
+# <a name="requiredruntime-element"></a>\<requiredRuntime > elemento
 
 Specifica che l'applicazione supporta solo la versione 1.0 di Common Language Runtime. Questo elemento è deprecato e non deve più essere utilizzato. Il [ `supportedRuntime` ](supportedruntime-element.md) elemento deve essere usato invece.
 
-\<configurazione > \<avvio > \<requiredRuntime >
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,7 +43,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 ## <a name="safemode-attribute"></a>attributo di modalità provvisoria
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |`false`|Il codice di avvio di runtime cerca nel Registro di sistema. Rappresenta il valore predefinito.|
 |`true`|Il codice di avvio del runtime non cercare nel Registro di sistema.|
