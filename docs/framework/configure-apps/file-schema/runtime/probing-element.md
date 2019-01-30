@@ -1,5 +1,5 @@
 ---
-title: '&lt;individuazione tramite probe&gt; elemento'
+title: <probing> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711903656d8bcce3a2d213af68160707a55a48e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700000"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257045"
 ---
-# <a name="ltprobinggt-element"></a><span data-ttu-id="3fac7-102">&lt;individuazione tramite probe&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="3fac7-102">&lt;probing&gt; Element</span></span>
-<span data-ttu-id="3fac7-103">Specifica le sottodirectory di base dell'applicazione per common language runtime per la ricerca quando il caricamento degli assembly.</span><span class="sxs-lookup"><span data-stu-id="3fac7-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
+# <a name="probing-element"></a><span data-ttu-id="9011b-102">\<probing > elemento</span><span class="sxs-lookup"><span data-stu-id="9011b-102">\<probing> Element</span></span>
+<span data-ttu-id="9011b-103">Specifica le sottodirectory di base dell'applicazione per common language runtime per la ricerca quando il caricamento degli assembly.</span><span class="sxs-lookup"><span data-stu-id="9011b-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
   
- <span data-ttu-id="3fac7-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3fac7-104">\<configuration></span></span>  
-<span data-ttu-id="3fac7-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="3fac7-105">\<runtime></span></span>  
-<span data-ttu-id="3fac7-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="3fac7-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="3fac7-107">\<probing></span><span class="sxs-lookup"><span data-stu-id="3fac7-107">\<probing></span></span>  
+ <span data-ttu-id="9011b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9011b-104">\<configuration></span></span>  
+<span data-ttu-id="9011b-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="9011b-105">\<runtime></span></span>  
+<span data-ttu-id="9011b-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="9011b-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="9011b-107">\<probing></span><span class="sxs-lookup"><span data-stu-id="9011b-107">\<probing></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3fac7-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3fac7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9011b-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9011b-108">Syntax</span></span>  
   
 ```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3fac7-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="3fac7-109">Attributes and Elements</span></span>  
- <span data-ttu-id="3fac7-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="3fac7-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9011b-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="9011b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="9011b-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="9011b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3fac7-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="3fac7-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9011b-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="9011b-111">Attributes</span></span>  
   
-|<span data-ttu-id="3fac7-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="3fac7-112">Attribute</span></span>|<span data-ttu-id="3fac7-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3fac7-113">Description</span></span>|  
+|<span data-ttu-id="9011b-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="9011b-112">Attribute</span></span>|<span data-ttu-id="9011b-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9011b-113">Description</span></span>|  
 |---------------|-----------------|  
-|`privatePath`|<span data-ttu-id="3fac7-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="3fac7-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="3fac7-115">Specifica le sottodirectory della directory base dell'applicazione che possono contenere assembly.</span><span class="sxs-lookup"><span data-stu-id="3fac7-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="3fac7-116">Consente di delimitare ogni sottodirectory con un punto e virgola.</span><span class="sxs-lookup"><span data-stu-id="3fac7-116">Delimit each subdirectory with a semicolon.</span></span>|  
+|`privatePath`|<span data-ttu-id="9011b-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="9011b-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="9011b-115">Specifica le sottodirectory della directory base dell'applicazione che possono contenere assembly.</span><span class="sxs-lookup"><span data-stu-id="9011b-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="9011b-116">Consente di delimitare ogni sottodirectory con un punto e virgola.</span><span class="sxs-lookup"><span data-stu-id="9011b-116">Delimit each subdirectory with a semicolon.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3fac7-117">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="3fac7-117">Child Elements</span></span>  
- <span data-ttu-id="3fac7-118">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="3fac7-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9011b-117">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="9011b-117">Child Elements</span></span>  
+ <span data-ttu-id="9011b-118">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="9011b-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="3fac7-119">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="3fac7-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9011b-119">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="9011b-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="3fac7-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="3fac7-120">Element</span></span>|<span data-ttu-id="3fac7-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3fac7-121">Description</span></span>|  
+|<span data-ttu-id="9011b-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="9011b-120">Element</span></span>|<span data-ttu-id="9011b-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9011b-121">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="3fac7-122">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="3fac7-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="3fac7-123">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fac7-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="3fac7-124">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="3fac7-124">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="9011b-122">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="9011b-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="9011b-123">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9011b-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="9011b-124">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="9011b-124">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3fac7-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="3fac7-125">Example</span></span>  
- <span data-ttu-id="3fac7-126">Nell'esempio seguente viene illustrato come specificare le sottodirectory di base dell'applicazione che il runtime deve cercare gli assembly.</span><span class="sxs-lookup"><span data-stu-id="3fac7-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="9011b-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="9011b-125">Example</span></span>  
+ <span data-ttu-id="9011b-126">Nell'esempio seguente viene illustrato come specificare le sottodirectory di base dell'applicazione che il runtime deve cercare gli assembly.</span><span class="sxs-lookup"><span data-stu-id="9011b-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,8 +65,8 @@ ms.locfileid: "54700000"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3fac7-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3fac7-127">See also</span></span>
-- [<span data-ttu-id="3fac7-128">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="3fac7-128">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="3fac7-129">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="3fac7-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="3fac7-130">Specifica della posizione di un assembly</span><span class="sxs-lookup"><span data-stu-id="3fac7-130">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [<span data-ttu-id="3fac7-131">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="3fac7-131">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="9011b-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9011b-127">See also</span></span>
+- [<span data-ttu-id="9011b-128">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="9011b-128">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="9011b-129">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="9011b-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="9011b-130">Specifica della posizione di un assembly</span><span class="sxs-lookup"><span data-stu-id="9011b-130">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [<span data-ttu-id="9011b-131">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="9011b-131">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
