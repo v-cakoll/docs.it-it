@@ -1,5 +1,5 @@
 ---
-title: Tipo del parametro &#39; &lt;parametername&gt; &#39; non è conforme a CLS
+title: Il tipo di parametro '<parametername>' non è conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40028
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403036"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265922"
 ---
-# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Tipo del parametro &#39; &lt;parametername&gt; &#39; non è conforme a CLS
+# <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Tipo del parametro '\<nomeparametro >' non è conforme a CLS
 Una procedura è contrassegnata come `<CLSCompliant(True)>` ma viene dichiarato un parametro con un tipo contrassegnato come `<CLSCompliant(False)>`, non è contrassegnata o non può essere utilizzato perché è un tipo non conforme.  
   
  Affinché una procedura risulti compatibile con l'[indipendenza del linguaggio e i componenti indipendenti dal linguaggio](../../../standard/language-independence-and-language-independent-components.md) (CLS), deve usare solo tipi conformi a CLS. Questo scenario si applica ai tipi dei parametri, al tipo restituito e ai tipi di tutte le variabili locali.  

@@ -1,22 +1,22 @@
 ---
-title: '&lt;securityTokenHandlerConfiguration&gt;'
+title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: d66771ec7ed52ace52df6bb3bfafdcf9cce989b5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838481"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262887"
 ---
-# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
 Fornisce la configurazione per la raccolta di gestori di token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
+\<securityTokenHandlerConfiguration>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,13 +46,13 @@ Fornisce la configurazione per la raccolta di gestori di token.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Specifica il set di URI accettabili identificatori di questa relying party. Facoltativo.|  
-|[\<memorizza nella cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per il rilevamento riproduzione token e i token di sessione. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Queste impostazioni vengono ignorate se un gestore specifico è configurato con il proprio validator. Facoltativo.|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura il registro dei nomi dell'autorità di certificazione che viene usato dai gestori nella raccolta di gestori di token. Facoltativo.|  
-|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra il resolver dei token che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token viene usato per risolvere il token di firma nel token in arrivo e messaggi. Facoltativo.|  
-|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra il resolver dei token di servizio che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token di servizio viene usato per risolvere il token di crittografia token in arrivo e messaggi. Facoltativo.|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
+|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Specifica il set di URI accettabili identificatori di questa relying party. Facoltativo.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per il rilevamento riproduzione token e i token di sessione. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Queste impostazioni vengono ignorate se un gestore specifico è configurato con il proprio validator. Facoltativo.|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura il registro dei nomi dell'autorità di certificazione che viene usato dai gestori nella raccolta di gestori di token. Facoltativo.|  
+|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra il resolver dei token che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token viene usato per risolvere il token di firma nel token in arrivo e messaggi. Facoltativo.|  
+|[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra il resolver dei token di servizio che viene usato dai gestori nella raccolta di gestori di token. Il resolver dei token di servizio viene usato per risolvere il token di crittografia token in arrivo e messaggi. Facoltativo.|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. Può essere specificato a livello di servizio o in una raccolta di gestori di token di sicurezza. Facoltativo.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

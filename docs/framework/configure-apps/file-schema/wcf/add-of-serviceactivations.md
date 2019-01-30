@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; di &lt;serviceActivations&gt;'
+title: <add> di <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87a79137641d2697452a4862c5449da166ecfda
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587635"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262676"
 ---
-# <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;add&gt; di &lt;serviceActivations&gt;
+# <a name="add-of-serviceactivations"></a>\<aggiungere > di \<serviceActivations >
 Elemento di configurazione che consente di definire impostazioni di attivazione di servizi virtuali che eseguono il mapping ai tipi di servizio Windows Communication Foundation (WCF). In questo modo è possibile attivare servizi ospitati in WAS/IIS senza un file con estensione svc.  
   
  \<system.ServiceModel>  

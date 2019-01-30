@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; di &lt;issuerChannelBehaviors&gt;'
+title: <add> di <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: e0f49f71a3f9649492b3ad7ccf263114957ee4e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65c76cba696ae388d6184eaaa70a1f2f5a301e1c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729931"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271794"
 ---
-# <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; di &lt;issuerChannelBehaviors&gt;
+# <a name="add-of-issuerchannelbehaviors"></a>\<aggiungere > di \<issuerChannelBehaviors >
 Aggiunge un comportamento di endpoint da usare durante le comunicazioni con un servizio STS.  
   
 > [!NOTE]

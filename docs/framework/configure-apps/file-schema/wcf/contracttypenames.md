@@ -1,15 +1,15 @@
 ---
-title: '&lt;contractTypeNames&gt;'
+title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 2c3f501f44d9e3c601e654041eb9d5a7de8a0a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8f2b600b700a19cf587a6c8c4cc3f0e851edbd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626771"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261281"
 ---
-# <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
+# <a name="contracttypenames"></a>\<contractTypeNames>
 Sezione di configurazione che specifica un elenco di nomi di tipi di contratto che costituiscono i nomi di contratto dei servizi ricercati, nonché i criteri usati in genere durante la ricerca di un servizio. Se si specificano più nomi di contratto, risponderanno solo gli endpoint del servizio corrispondenti a tutti i contratti. Si noti che in Windows Communication Foundation (WCF), un endpoint può supportare un solo contratto.  
   
  \<system.ServiceModel>  

@@ -1,22 +1,22 @@
 ---
-title: '&lt;Tipo di attestazione&gt;'
+title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234961"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267235"
 ---
-# <a name="ltclaimtypegt"></a>&lt;Tipo di attestazione&gt;
+# <a name="claimtype"></a>\<claimType>
 Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimTypeRequired >  
-\<tipo di attestazione >  
+\<claimTypeRequired>  
+\<claimType>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,4 +48,4 @@ Specifica una singola attestazione obbligatorio o facoltativa per i token di sic
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.|
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.|

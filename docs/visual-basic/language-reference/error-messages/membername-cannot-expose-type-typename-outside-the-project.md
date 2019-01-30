@@ -1,5 +1,5 @@
 ---
-title: "&#39;&lt;nomeMembro&gt; &#39; non può esporre il tipo &#39; &lt;nomeTipo&gt; &#39; all'esterno del progetto mediante &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;"
+title: "'<membername>' non può esporre il tipo '<typename>' all'esterno del progetto mediante <containertype> '<containertypename>'"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30909
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 39d316aca5ec306de4b1e43e2eb2d1495f5525d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03767501488a395073f925e27adea439751c0de6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265064"
 ---
-# <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;nomeMembro&gt; &#39; non può esporre il tipo &#39; &lt;nomeTipo&gt; &#39; all'esterno del progetto mediante &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<nomeMembro >' non può esporre il tipo '\<nomeTipo >' all'esterno del progetto mediante \<containertype > '\<containertypename >'
 Una variabile, parametro di routine o restituito dalla funzione viene esposto all'esterno del relativo contenitore, ma viene dichiarato come un tipo che non deve essere esposto all'esterno del contenitore.  
   
  Lo scheletro di codice seguente viene illustrata una situazione che genera l'errore.  

@@ -1,22 +1,22 @@
 ---
-title: '&lt;CertificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206891"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269341"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference>
 Specifica le impostazioni che consentono di trovare e convalidare un certificato X.509 in un archivio certificati.  
   
- \<IdentityModel >  
-\<federationConfiguration >  
-\<serviceCertificate >  
-\<certificateReference >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ Specifica le impostazioni che consentono di trovare e convalidare un certificato
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura il certificato utilizzato per crittografare e decrittografare i token.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura il certificato utilizzato per crittografare e decrittografare i token.|  
   
 ## <a name="remarks"></a>Note  
  Il `<certificateReference>` elemento specifica le impostazioni che vengono usate per trovare e convalidare un certificato X.509 in un archivio certificati. Quando viene specificato come elemento figlio del `<serviceCertficate>` elemento, specifica la posizione e verifica le impostazioni del certificato X.509 utilizzato per crittografare e decrittografare i token. Il `<certificateReference>` elemento è rappresentato dal <xref:System.ServiceModel.Configuration.CertificateReferenceElement> classe.
