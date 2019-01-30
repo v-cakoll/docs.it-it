@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 69cafb53feca392729c20efe0de3d1e74362dc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69dad31e750143af8fee94de9ccdbfd609737fe
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720561"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204483"
 ---
 # <a name="getting-started-sample"></a>Esempio della guida introduttiva
 L'esempio di Guida introduttiva illustra come implementare un servizio tipico e un client tipico utilizzando Windows Communication Foundation (WCF). Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
@@ -27,7 +27,7 @@ L'esempio di Guida introduttiva illustra come implementare un servizio tipico e 
 >   
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`  
   
  Il servizio descrive le operazioni che esegue in un contratto di servizio che espone pubblicamente come metadati. Il servizio contiene inoltre il codice per implementare le operazioni.  
   
