@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531421"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204886"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -58,10 +58,10 @@ ms.locfileid: "54531421"
 |`\f`|Trova la corrispondenza di un carattere di avanzamento carta, \u000C.|`[\f]{2,}`|"\f\f\f" in "\f\f\f"|  
 |`\n`|Trova la corrispondenza di una nuova riga, \u000A.|`\r\n(\w+)`|"\r\nThese" in "\r\nThese are\ntwo lines."|  
 |`\e`|Trova la corrispondenza di un carattere di escape, \u001B.|`\e`|"\x001B" in "\x001B"|  
-|`\` *nnn*|Usa la rappresentazione ottale per specificare un carattere (*nnn* è costituito da un massimo di tre cifre).|`\w\040\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\x` *nn*|Usa la rappresentazione esadecimale per specificare un carattere (*nn* è costituito da esattamente due cifre).|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\` *nnn*|Usa la rappresentazione ottale per specificare un carattere (*nnn* è costituito da un massimo di tre cifre).|`\w\040\w`|"a b", "c d" in "a bc d"|  
+|`\x` *nn*|Usa la rappresentazione esadecimale per specificare un carattere (*nn* è costituito da esattamente due cifre).|`\w\x20\w`|"a b", "c d" in "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Trova la corrispondenza con il carattere di controllo ASCII specificato da *X* o *x*, dove *X* o *x* è la lettera del carattere di controllo.|`\cC`|"\x0003" in "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Trova la corrispondenza di un carattere Unicode usando una rappresentazione esadecimale (esattamente quattro cifre, come rappresentate da *nnnn*).|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\u` *nnnn*|Trova la corrispondenza di un carattere Unicode usando una rappresentazione esadecimale (esattamente quattro cifre, come rappresentate da *nnnn*).|`\w\u0020\w`|"a b", "c d" in "a bc d"|  
 |`\`|Quando è seguito da un carattere non riconosciuto come carattere di escape, in questa e in altre tabelle del presente argomento, trova la corrispondenza di tale carattere. Ad esempio, `\*` corrisponde a `\x2A`e `\.` corrisponde a `\x2E`. Questo permette al motore delle espressioni regolari di distinguere tra elementi del linguaggio, ad esempio \* o ? e valori letterali carattere, rappresentati da `\*` o `\?`.|`\d+[\+-x\*]\d+`|"2+2" e "3\*9" in "(2+2) \* 3\*9"|  
   
  [Torna all'inizio](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "54531421"
   
 |Asserzione|Description|Modello|Corrispondenze|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Per impostazione predefinita, la corrispondenza deve iniziare all'inizio della stringa; in modalità multiriga, deve iniziare all'inizio della riga.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi prima della fine della riga oppure prima di `\n` alla fine della riga.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
-|`\A`|La corrispondenza deve verificarsi all'inizio della stringa.|`\A\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`\Z`|La corrispondenza deve verificarsi alla fine della stringa o prima di `\n` alla fine della stringa.|`-\d{3}\Z`|"-333" in<br /><br /> "-901-333"|  
-|`\z`|La corrispondenza deve verificarsi alla fine della stringa.|`-\d{3}\z`|"-333" in<br /><br /> "-901-333"|  
+|`^`|Per impostazione predefinita, la corrispondenza deve iniziare all'inizio della stringa; in modalità multiriga, deve iniziare all'inizio della riga.|`^\d{3}`|"901" in "901-333-"|  
+|`$`|Per impostazione predefinita, la corrispondenza deve verificarsi alla fine della stringa oppure prima di `\n` alla fine della stringa; in modalità multiriga, deve verificarsi prima della fine della riga oppure prima di `\n` alla fine della riga.|`-\d{3}$`|"-333" in "-901-333"|  
+|`\A`|La corrispondenza deve verificarsi all'inizio della stringa.|`\A\d{3}`|"901" in "901-333-"|  
+|`\Z`|La corrispondenza deve verificarsi alla fine della stringa o prima di `\n` alla fine della stringa.|`-\d{3}\Z`|"-333" in "-901-333"|  
+|`\z`|La corrispondenza deve verificarsi alla fine della stringa.|`-\d{3}\z`|"-333" in "-901-333"|  
 |`\G`|La corrispondenza deve verificarsi nel punto in cui è terminata la corrispondenza precedente.|`\G\(\d\)`|"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"|  
 |`\b`|La corrispondenza deve verificarsi sul limite tra un carattere `\w` (alfanumerico) e un carattere `\W` (non alfanumerico).|`\b\w+\s\w+\b`|"them theme", "them them" in "them theme them them"|  
 |`\B`|La corrispondenza non deve verificarsi su un limite `\b` .|`\Bend\w*\b`|"ends", "ender" in "end sends endure lender"|  
@@ -218,7 +218,7 @@ ms.locfileid: "54531421"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
-- <xref:System.Text.RegularExpressions.Regex>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Espressioni regolari](regular-expressions.md)
 - [Classi di espressioni regolari](the-regular-expression-object-model.md)
 - [Esempi di espressioni regolari](regular-expression-examples.md)

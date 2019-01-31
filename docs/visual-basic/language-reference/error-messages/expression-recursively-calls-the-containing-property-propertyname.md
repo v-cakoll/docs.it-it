@@ -1,5 +1,5 @@
 ---
-title: Espressione in modo ricorsivo chiama la proprietà che contiene &#39; &lt;NomeProprietà&gt;&#39;
+title: L'espressione chiama in modo ricorsivo la proprietà '<propertyname>' che la contiene
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553074"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259761"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Espressione in modo ricorsivo chiama la proprietà che contiene &#39; &lt;NomeProprietà&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Espressione in modo ricorsivo chiama la proprietà che contiene '\<NomeProprietà >'
 Un'istruzione all'interno di `Set` routine di una definizione di proprietà archivia un valore nel nome della proprietà.  
   
  L'approccio consigliato per contenere il valore di una proprietà consiste nel definire un `Private` variabile nel contenitore della proprietà e utilizzarlo in entrambe le `Get` e `Set` procedure. Il `Set` routine deve quindi archiviare il valore in ingresso in questo `Private` variabile.  
