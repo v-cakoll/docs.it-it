@@ -1,22 +1,22 @@
 ---
-title: '&lt;certificateValidator&gt;'
+title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: df52212305e0865b8c03fdd49068cb7c7da4fa38
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849698"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277452"
 ---
-# <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
+# <a name="certificatevalidator"></a>\<certificateValidator>
 Specifica un tipo personalizzato per la convalida del certificato. Questo tipo viene usato solo se il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento è impostato su "Custom".  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificateValidation >  
-\<certificateValidator >  
+\<certificateValidation>  
+\<certificateValidator>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ Specifica un tipo personalizzato per la convalida del certificato. Questo tipo v
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati.|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controllare le impostazioni che utilizzano i gestori di token per convalidare i certificati.|  
   
 ## <a name="example"></a>Esempio  
   

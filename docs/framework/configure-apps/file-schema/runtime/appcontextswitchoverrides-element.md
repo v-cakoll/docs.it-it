@@ -1,5 +1,5 @@
 ---
-title: '&lt;AppContextSwitchOverrides&gt; elemento'
+title: <AppContextSwitchOverrides> Elemento
 ms.custom: updateeachrelease
 ms.date: 09/19/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78909c3529bb96b973b914742e9b83bc2e21d0f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288054"
 ---
-# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
+# <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
   
  \<configuration>  
@@ -83,7 +83,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Controlla se un test per verificarne l'uguaglianza confronta la <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> proprietà di un oggetto con il <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> proprietà del secondo oggetto. Per altre informazioni, vedere [implementazione non corretta di MemberDescriptor. Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Disattiva la convalida dell'identificatore (OID) Utilizzo chiavi avanzato (EKU) oggetto del certificato. Un'estensione di utilizzo chiavi avanzato (EKU) è una raccolta di identificatori di oggetto (OID) che indica le applicazioni che usano la chiave.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|Disabilita la mitigazione dei rischi TLS1.0 Browser Exploit con SSL/TLS (BEAST), disabilitare l'utilizzo di SCH_SEND_AUX_RECORD.|.NET Framework 4.6|
-|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Controlli se il <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> le classi possono utilizzare il protocollo SSL 3.0. Per altre informazioni, vedere [mitigazione: I protocolli TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
+|`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|Controlli se il <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> le classi possono utilizzare il protocollo SSL 3.0. Per altre informazioni, vedere [mitigazione: Protocolli TLS](~/docs/framework/migration-guide/mitigation-tls-protocols.md).|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Disabilita le versioni di TLS SystemDefault eseguendo il ripristino di un valore predefinito di Tls12, Tls11, Tls.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Disabilita gli avvisi sul lato server TLS SslStream.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Controlli se il [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializza alcuni caratteri di controllo basati sugli standard ECMAScript V6 e V8. Per altre informazioni, vedere [mitigazione: Serializzazione dei caratteri di controllo con DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |

@@ -1,5 +1,5 @@
 ---
-title: Espressioni lambda non sono valide nella prima espressione di un &#39;Select Case&#39; istruzione
+title: Le espressioni lambda non sono valide nella prima espressione di un'istruzione 'Select Case'
 ms.date: 07/20/2015
 f1_keywords:
 - bc36635
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: afefa821f9695dbbfe2a96aee5afd3171ae5b1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700221"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287794"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Espressioni lambda non sono valide nella prima espressione di un &#39;Select Case&#39; istruzione
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Le espressioni lambda non sono valide nella prima espressione di un'istruzione 'Select Case'
 È possibile usare un'espressione lambda per l'espressione di test in un `Select Case` istruzione. Le definizioni delle espressioni lambda restituiscono le funzioni e l'espressione di test di un `Select Case` istruzione deve essere un tipo di dati elementare.  
   
  Il codice seguente causa questo errore:  
