@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc957b345c1e66059551508f73e37e0f6d69f6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692210"
 ---
 # <a name="viewing-type-information"></a>Visualizzazione delle informazioni sul tipo
 La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la reflection. Quando la reflection lo richiede, Common Language Runtime crea l'oggetto **Type** relativo a un tipo caricato. Per ottenere informazioni sul tipo, è possibile usare metodi, campi, proprietà e classi nidificate dell'oggetto **Type**.  
@@ -74,19 +74,19 @@ La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.BindingFlags>  
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.MemberInfo>  
- <xref:System.Reflection.ConstructorInfo>  
- <xref:System.Reflection.MethodInfo>  
- <xref:System.Reflection.FieldInfo>  
- <xref:System.Reflection.EventInfo>  
- <xref:System.Reflection.ParameterInfo>  
- [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.BindingFlags>
+- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.MemberInfo>
+- <xref:System.Reflection.ConstructorInfo>
+- <xref:System.Reflection.MethodInfo>
+- <xref:System.Reflection.FieldInfo>
+- <xref:System.Reflection.EventInfo>
+- <xref:System.Reflection.ParameterInfo>
+- [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: implementare funzioni di callback'
+title: 'Procedura: Implementare funzioni di callback'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389275"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718676"
 ---
-# <a name="how-to-implement-callback-functions"></a>Procedura: implementare funzioni di callback
+# <a name="how-to-implement-callback-functions"></a>Procedura: Implementare funzioni di callback
 La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale. In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.  
   
 ### <a name="to-implement-a-callback-function"></a>Per implementare una funzione di callback  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Funzioni di callback](../../../docs/framework/interop/callback-functions.md)  
- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Vedere anche
+- [Funzioni di callback](../../../docs/framework/interop/callback-functions.md)
+- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)

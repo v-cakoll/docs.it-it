@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: creazione di codice in scenari di attendibilità parziale'
+title: 'Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712574"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: creazione di codice in scenari di attendibilità parziale
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
   
 > [!NOTE]
@@ -34,7 +34,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 -   [Configurazione di un oggetto sandbox semplice per il test del codice parzialmente attendibile](#Setting_up).  
   
     > [!IMPORTANT]
-    >  Questo è un modo semplice per sperimentare il codice in situazioni di attendibilità parziale. Per eseguire codice realmente proveniente da percorsi non attendibili, vedere la [procedura relativa all'esecuzione di codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+    >  Questo è un modo semplice per sperimentare il codice in situazioni di attendibilità parziale. Per eseguire codice realmente proveniente da percorsi non attendibili, vedere [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
 -   [Esecuzione di codice in domini di applicazioni parzialmente attendibili](#Running_code).  
   
@@ -67,7 +67,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 2.  Creare un oggetto <xref:System.AppDomainSetup> per inizializzare il dominio dell'applicazione con un percorso dell'applicazione.  
   
     > [!IMPORTANT]
-    >  Per semplicità, questo esempio di codice usa la cartella corrente. Per eseguire codice realmente proveniente da Internet, usare una cartella separata per il codice non attendibile, come descritto nella [procedura relativa all'esecuzione di codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+    >  Per semplicità, questo esempio di codice usa la cartella corrente. Per eseguire codice realmente proveniente da Internet, usare una cartella separata per il codice non attendibile, come descritto nella [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
@@ -184,7 +184,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 <a name="Example"></a>   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Nell'esempio di codice riportato di seguito viene illustrato l'uso del flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> per consentire ai metodi dinamici ospitati in modo anonimo di ignorare i controlli di visibilità JIT, ma solo quando il membro di destinazione è un livello uguale o inferiore di attendibilità rispetto all'assembly che genera il codice.  
   
  Nell'esempio viene definita una classe `Worker` che può essere sottoposta a marshalling entro i limiti del dominio dell'applicazione. La classe ha due overload del metodo `AccessPrivateMethod` che generano ed eseguono i metodi dinamici. Il primo overload genera un metodo dinamico che chiama il metodo privato `PrivateMethod` della classe `Worker` e può generare il metodo dinamico con o senza controlli di visibilità JIT. Il secondo overload genera un metodo dinamico che accede a una proprietà `internal` (proprietà `Friend` in Visual Basic) della classe <xref:System.String>.  
@@ -211,6 +211,6 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 -   Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
-## <a name="see-also"></a>Vedere anche  
- [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>Vedere anche
+- [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

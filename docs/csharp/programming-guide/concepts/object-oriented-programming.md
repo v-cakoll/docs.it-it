@@ -2,12 +2,12 @@
 title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702483"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
 C# offre un supporto completo per la programmazione orientata a oggetti che include incapsulamento, ereditarietà e polimorfismo.  
@@ -296,7 +296,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- Per altre informazioni, vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Per altre informazioni, vedere: [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ##  <a name="Inheritance"></a> Ereditarietà  
  L'ereditarietà permette di creare una nuova classe che riutilizza, estende e modifica il comportamento definito in un'altra classe. La classe i cui membri vengono ereditati è denominata *classe base*, mentre la classe che eredita i membri è denominata *classe derivata*. Tuttavia, tutte le classi in C# ereditano in modo implicito dalla classe <xref:System.Object> che supporta la gerarchia di classi .NET e offre servizi di basso livello a tutte le classi.  

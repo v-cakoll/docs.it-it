@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere un ciclo Parallel.For con variabili di thread locali'
+title: 'Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610799"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: scrivere un ciclo Parallel.For con variabili di thread locali
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali
 Questo esempio illustra come usare le variabili locali di thread per archiviare e recuperare lo stato in ogni attività separata creata da un ciclo <xref:System.Threading.Tasks.Parallel.For%2A>. L'uso dei dati locali di thread permette di evitare il sovraccarico dovuto alla sincronizzazione di un numero elevato di accessi a uno stato condiviso. Invece di scrivere in una risorsa condivisa a ogni iterazione, si calcola e si archivia il valore fino al completamento di tutte le iterazioni per l'attività. È quindi possibile scrivere il risultato finale una volta sola nella risorsa condivisa oppure passarlo a un altro metodo.  
   
 ## <a name="example"></a>Esempio  
@@ -46,7 +46,7 @@ Function() new MyClass()
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

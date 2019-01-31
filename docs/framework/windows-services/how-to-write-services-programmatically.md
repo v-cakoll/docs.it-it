@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere servizi a livello di codice'
+title: 'Procedura: Scrivere servizi a livello di codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 904a82a3cc725221defb6795bf813b8cbc490c41
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672912"
 ---
-# <a name="how-to-write-services-programmatically"></a>Procedura: scrivere servizi a livello di codice
+# <a name="how-to-write-services-programmatically"></a>Procedura: Scrivere servizi a livello di codice
 Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile scrivere servizi personalizzati impostando manualmente l'ereditarietà e altri elementi di infrastruttura. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi che altrimenti vengono gestiti automaticamente dal modello:  
   
 -   È necessario impostare la classe del servizio in modo che erediti dalla classe <xref:System.ServiceProcess.ServiceBase>.  
@@ -66,13 +66,13 @@ Se si sceglie di non usare il modello di progetto Servizio Windows, è possibile
     > [!NOTE]
     >  Non è possibile eseguire un progetto di servizio premendo F5.  
   
-9. Creare un progetto per il programma di installazione e le azioni personalizzate per installare il servizio. Per un esempio, vedere [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
+9. Creare un progetto per il programma di installazione e le azioni personalizzate per installare il servizio. Per un esempio, vedere [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Installare il servizio. Per altre informazioni, vedere [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+10. Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Procedura: registrare informazioni sui servizi](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedura: Registrare informazioni sui servizi](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

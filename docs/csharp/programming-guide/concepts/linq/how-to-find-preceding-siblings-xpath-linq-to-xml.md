@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare elementi di pari livello precedenti (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d2bd34db7bd839e50ec3e77819230f5f6410b73e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: de5393f720a854b9644dc7cac7d73c3c6d380483
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43787122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707427"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi di pari livello precedenti (XPath-LINQ to XML) (C#)
 Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> dell'elemento figlio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -21,7 +21,7 @@ Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:Sys
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercato l'elemento `FullAddress` e quindi vengono recuperati gli elementi precedenti usando l'asse `preceding-sibling`.  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

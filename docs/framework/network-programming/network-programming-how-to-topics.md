@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561972"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
 Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella documentazione concettuale relativa alla programmazione di rete.  
@@ -77,7 +77,7 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 -   [Procedura: Eseguire il ping di un host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>Vedere anche
+- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Esempi di rete per .NET in MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

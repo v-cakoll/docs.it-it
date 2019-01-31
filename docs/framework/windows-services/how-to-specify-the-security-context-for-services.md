@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: specificare il contesto di sicurezza per i servizi'
+title: 'Procedura: Specificare il contesto di sicurezza per i servizi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572617"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: specificare il contesto di sicurezza per i servizi
+# <a name="how-to-specify-the-security-context-for-services"></a>Procedura: Specificare il contesto di sicurezza per i servizi
 Per impostazione predefinita, i servizi vengono eseguiti in un contesto di sicurezza diverso rispetto a quello dell'utente connesso. I servizi vengono eseguiti nel contesto dell'account di sistema predefinito, chiamato `LocalSystem`, che concede privilegi di accesso diversi per le risorse di sistema rispetto all'account utente. È possibile modificare questo comportamento per specificare un account utente diverso nell'ambito del quale eseguire il servizio.  
   
  Per impostare il contesto di sicurezza, è necessario modificare la proprietà <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> per il processo in cui viene eseguito il servizio. Questa proprietà consente di impostare il servizio su uno di quattro tipi di account:  
@@ -44,7 +44,7 @@ Per impostazione predefinita, i servizi vengono eseguiti in un contesto di sicur
   
 3.  Nella finestra **Proprietà** impostare <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> sul valore appropriato.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

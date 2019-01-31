@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517617"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
 In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nella programmazione parallela, inclusi un set di classi di raccolta simultanee, primitive di sincronizzazione leggera e tipi per l'inizializzazione differita. È possibile usare questi tipi con qualsiasi codice dell'applicazione multithreading, inclusi Task Parallel Library e PLINQ.  
@@ -22,7 +22,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Nella tabella seguente vengono elencate le nuove classi di raccolta simultanee:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornisce funzionalità di blocco e limitazione per le raccolte thread-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. I thread producer vengono bloccati se non sono disponibili slot o se la raccolta è completa. I thread consumer vengono bloccati se la raccolta è vuota. Questo tipo supporta anche l'accesso che non causa blocchi da parte di consumer e producer. <xref:System.Collections.Concurrent.BlockingCollection%601> può essere usata come classe di base o archivio di backup per fornire funzionalità di blocco limitazione per le classi di raccolta che supportano <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementazione di un contenitore thread-safe che fornisce operazioni add e get scalabili.|  
@@ -37,7 +37,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di sincronizzazione:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Consente a più thread di usare un algoritmo in parallelo fornendo un punto in cui ogni attività può segnalare il proprio arrivo e quindi venire bloccata finché non arrivano alcune o tutte le attività. Per altre informazioni, vedere [Barriera](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Semplifica gli scenari di fork e join fornendo un agevole meccanismo di rendezvous. Per altre informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -57,7 +57,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di inizializzazione differita:  
   
-|Tipo|Descrizione|  
+|Tipo|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornisce l'inizializzazione differita leggera e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornisce un valore con inizializzazione differita per ogni thread e ogni thread richiama in modo differito la funzione di inizializzazione.|  
@@ -70,6 +70,6 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- <xref:System.Threading?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- <xref:System.Threading?displayProperty=nameWithType>
 - [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)

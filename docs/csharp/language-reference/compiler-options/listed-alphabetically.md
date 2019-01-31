@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653749"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
 
@@ -44,7 +44,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |-incremental|Abilita la compilazione incrementale [obsoleto]|
 |[-keycontainer](keycontainer-compiler-option.md)|Specifica un contenitore di chiavi con nome sicuro.|
 |[-keyfile](keyfile-compiler-option.md)|Specifica un file di chiave con nome sicuro.|
-|[-langversion:\<stringa>](langversion-compiler-option.md)|Specifica la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
+|[-langversion:\<stringa>](langversion-compiler-option.md)|Specificare la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
 |[/lib](lib-compiler-option.md)|Specifica directory aggiuntive in cui cercare i riferimenti.|
 |[-link](link-compiler-option.md)|Rende disponibili per il progetto le informazioni sui tipi COM negli assembly specificati.|
 |[-linkresource](linkresource-compiler-option.md)|Collega la risorsa specificata all'assembly.|
@@ -82,7 +82,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](index.md)  
-- [Opzioni del compilatore C# elencate per categoria](listed-by-category.md)  
-- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [Opzioni del compilatore C#](index.md)
+- [Opzioni del compilatore C# elencate per categoria](listed-by-category.md)
+- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)

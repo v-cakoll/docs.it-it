@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: continuare un servizio Windows (Visual Basic)'
+title: 'Procedura: Continuare un servizio Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 255dccfb74eced63ffbeff7ef567083a504cc6da
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612710"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Procedura: continuare un servizio Windows (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Procedura: Continuare un servizio Windows (Visual Basic)
 Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> per continuare l'esecuzione del servizio IIS Admin nel computer locale.  
   
 ## <a name="example"></a>Esempio  
@@ -49,7 +49,7 @@ Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> 
   
  L'accesso alle informazioni sul servizio può essere limitato tramite l'enumerazione <xref:System.Security.Permissions.PermissionState> per impostare le autorizzazioni nella classe <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- [Procedura: sospendere un servizio Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- [Procedura: Sospendere un servizio Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

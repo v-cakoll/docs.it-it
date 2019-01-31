@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: rinominare un file in Visual Basic'
+title: 'Procedura: Rinominare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: ef024f90567d8d69bdd432499db96e4f67578ce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b1e85cc9e0b0768f7065ff690f6dc969ee040b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676367"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: rinominare un file in Visual Basic
+# <a name="how-to-rename-a-file-in-visual-basic"></a>Procedura: Rinominare un file in Visual Basic
 Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominare un file fornendo la posizione corrente, il nome file attuale e il nuovo nome file. Questo metodo non può essere usato per spostare un file. Per spostare e rinominare un file, usare il metodo `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Per rinominare un file  
@@ -46,9 +46,9 @@ Usare il metodo `RenameFile` dell'oggetto `My.Computer.FileSystem` per rinominar
   
 -   L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- [Procedura: spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [Procedura: creare una copia di un file nella stessa directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
+- [Procedura: Spostare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
+- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [Procedura: Creare una copia di un file nella stessa directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Procedura: Creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

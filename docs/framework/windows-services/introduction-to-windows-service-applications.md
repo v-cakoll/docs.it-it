@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614419"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduzione alle applicazioni di servizio Windows
 I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di creare applicazioni eseguibili di lunga durata in esecuzione in sessioni Windows dedicate. Questi servizi possono essere avviati automaticamente all'avvio del computer, possono essere sospesi e riavviati e non visualizzano alcuna interfaccia utente. Queste funzionalità rendono i servizi ideali per l'uso in un server o per fornire funzionalità di lunga durata che non interferiscono con gli altri utenti che lavorano sullo stesso computer. È anche possibile eseguire i servizi nel contesto di sicurezza di un account utente specifico diverso dall'utente connesso o dall'account computer predefinito. Per altre informazioni sui servizi e le sessioni di Windows, vedere la documentazione di Windows SDK.  
@@ -41,7 +41,7 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Applicazioni di servizio a confronto con altre applicazioni di Visual Studio  
  Le applicazioni di servizio funzionano in modo diverso rispetto a molti altri tipi di progetto per vari aspetti:  
   
--   Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio per Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+-   Il file eseguibile compilato creato da un progetto di applicazione di servizio deve essere installato nel server prima che il progetto possa funzionare in modo significativo. Non è possibile eseguire il debug o eseguire un'applicazione di servizio premendo F5 o F11. Non è possibile eseguire immediatamente un servizio o eseguirne il codice istruzione per istruzione. È invece necessario installare e avviare il servizio, quindi collegare un debugger al processo del servizio. Per altre informazioni, vedere [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
 -   A differenza di alcuni tipi di progetti, è necessario creare i componenti di installazione per le applicazioni di servizio. I componenti di installazione installano e registrano il servizio nel server e creano una voce per il servizio con **Gestione controllo servizi** di Windows. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
@@ -80,12 +80,12 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
 -   I progetti contenenti servizi Windows devono avere componenti di installazione per il progetto e i relativi servizi. È possibile ottenere facilmente questo risultato dalla finestra **Proprietà**. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Applicazioni di servizi Windows](../../../docs/framework/windows-services/index.md)  
- [Architettura di programmazione delle applicazioni di servizio](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Procedura: eseguire il debug di applicazioni di servizio per Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Applicazioni di servizi Windows](../../../docs/framework/windows-services/index.md)
+- [Architettura di programmazione delle applicazioni di servizio](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

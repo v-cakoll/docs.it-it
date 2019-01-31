@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492039"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 ## <a name="what-is-a-parallel-query"></a>Che cos'è una query parallela?  
@@ -37,7 +37,7 @@ ms.locfileid: "43879754"
   
  Oltre agli operatori query standard, la classe <xref:System.Linq.ParallelEnumerable> contiene un set di metodi che rendono possibili comportamenti specifici dell'esecuzione parallela. Questi metodi specifici di PLINQ sono elencati nella tabella seguente.  
   
-|Operatore ParallelEnumerable|Descrizione|  
+|Operatore ParallelEnumerable|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto di ingresso di PLINQ. Specifica che la parte rimanente della query deve essere parallelizzata, se è possibile.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Specifica che la parte rimanente della query deve essere eseguita in sequenza, come una query LINQ non parallela.|  
@@ -118,9 +118,9 @@ ms.locfileid: "43879754"
  PLINQ supporta un numero fisso di partizioni. È tuttavia possibile che durante il runtime i dati vengano riassegnati dinamicamente alle partizioni per il bilanciamento del carico. <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> supportano solo il partizionamento dinamico, il che significa che il numero di partizioni cambia in fase di esecuzione. Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="measuring-plinq-performance"></a>Misurazione delle prestazioni di PLINQ  
- In molti casi una query può essere parallelizzata, ma le risorse necessarie per configurare la query parallela rappresentano uno svantaggio superiore al vantaggio ottenuto in termini di prestazioni. Se la query esegue pochi calcoli o se l'origine dati è di dimensioni ridotte, è possibile che una query PLINQ risulti più lenta di una query LINQ to Objects sequenziale. È possibile usare Parallel Performance Analyzer in Visual Studio Team Server per confrontare le prestazioni delle diverse query per individuare colli di bottiglia di elaborazione e determinare se la query è eseguita in parallelo o in modo sequenziale. Per altre informazioni, vedere [Visualizzatore di concorrenze](/visualstudio/profiling/concurrency-visualizer) e [Procedura: Misurare le prestazioni di esecuzione delle query di PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ In molti casi una query può essere parallelizzata, ma le risorse necessarie per configurare la query parallela rappresentano uno svantaggio superiore al vantaggio ottenuto in termini di prestazioni. Se la query esegue pochi calcoli o se l'origine dati è di dimensioni ridotte, è possibile che una query PLINQ risulti più lenta di una query LINQ to Objects sequenziale. È possibile usare Parallel Performance Analyzer in Visual Studio Team Server per confrontare le prestazioni delle diverse query per individuare colli di bottiglia di elaborazione e determinare se la query è eseguita in parallelo o in modo sequenziale. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) e [Procedura: Misurare le prestazioni di esecuzione delle query di PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare matrici di raccolte di blocco in una pipeline'
+title: 'Procedura: Usare matrici di raccolte di blocco in una pipeline'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e2e312668a7cf4fe39596ae018adaf62cd850e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a4667d78fdf91a3e62c22d88c7cbe9effaae57d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627200"
 ---
-# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Procedura: utilizzare matrici di raccolte di blocco in una pipeline
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Procedura: Usare matrici di raccolte di blocco in una pipeline
 L'esempio seguente illustra come usare matrici di oggetti <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> con metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, per implementare un trasferimento di dati rapido e flessibile tra componenti.  
   
 ## <a name="example"></a>Esempio  
@@ -28,5 +28,5 @@ L'esempio seguente illustra come usare matrici di oggetti <xref:System.Collectio
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

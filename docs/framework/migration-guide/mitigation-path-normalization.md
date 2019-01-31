@@ -1,17 +1,17 @@
 ---
-title: 'Migrazione: Normalizzazione del percorso'
+title: 'Mitigazione: Normalizzazione del percorso'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa31641cc325f15b9afe677038deb33c57e77fd1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: addbeeab6f5b3544a7ed1b86b7da0f7d09be7ffb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508813"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701105"
 ---
-# <a name="mitigation-path-normalization"></a>Migrazione: Normalizzazione del percorso
+# <a name="mitigation-path-normalization"></a>Mitigazione: Normalizzazione del percorso
 A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione del percorso in .NET Framework è stata modificata.  
   
 ## <a name="what-is-path-normalization"></a>Che cos'è la normalizzazione di un percorso?  
@@ -60,5 +60,5 @@ A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/n
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a>Vedere anche
+- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Esempio di interoperabilità: client COM e server .NET'
+title: 'Esempio di interoperabilità COM: client COM e server .NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548547"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità: client COM e server .NET
+# <a name="com-interop-sample-com-client-and-net-server"></a>Esempio di interoperabilità COM: client COM e server .NET
 Questo esempio illustra l'interazione di un [Client COM](#cpconcominteropsamplecomclientnetserveranchor1) e di un [server .NET](#cpconcominteropsamplecomclientnetserveranchor2) per l'esecuzione di calcoli per un mutuo. In questo esempio il client crea e chiama un'istanza della classe gestita `Loan`, passa quattro argomenti, uno dei quali uguale a zero, all'istanza e visualizza i calcoli. Diversi esempi di codice di questo esempio vengono presentati in vari punti della sezione.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
@@ -389,5 +389,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Vedere anche
+- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

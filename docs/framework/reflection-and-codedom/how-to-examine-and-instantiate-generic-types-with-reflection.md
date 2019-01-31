@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: esaminare e creare istanze di tipi generici tramite reflection'
+title: 'Procedura: Esaminare e creare istanze di tipi generici tramite reflection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622052"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: esaminare e creare istanze di tipi generici tramite reflection
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedura: Esaminare e creare istanze di tipi generici tramite reflection
 Le informazioni sui tipi generici vengono ottenute esattamente come quelle relative ad altri tipi, ovvero esaminando un oggetto <xref:System.Type> che rappresenta il tipo generico. La differenza principale è data dal fatto che un tipo generico dispone di un elenco di oggetti <xref:System.Type> che rappresentano i relativi parametri di tipo generico. La prima procedura in questa sezione esamina i tipi generici.  
   
  È possibile creare un oggetto <xref:System.Type> che rappresenta un tipo costruito associando argomenti di tipo ai parametri di tipo di una definizione di tipo generico. Questo concetto è illustrato nella seconda procedura.  
@@ -123,9 +123,9 @@ Le informazioni sui tipi generici vengono ottenute esattamente come quelle relat
   
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Generics](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Generics](../../../docs/standard/generics/index.md)

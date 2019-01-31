@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: configurare un dominio applicazione'
+title: "Procedura: Configurare un dominio dell'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534566"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Procedura: configurare un dominio applicazione
+# <a name="how-to-configure-an-application-domain"></a>Procedura: Configurare un dominio dell'applicazione
 La classe <xref:System.AppDomainSetup> consente di specificare Common Language Runtime con informazioni di configurazione per un nuovo dominio dell'applicazione. Quando si creano domini dell'applicazione, la proprietà fondamentale è <xref:System.AppDomainSetup.ApplicationBase%2A>. Le altre proprietà **AppDomainSetup** vengono usate principalmente dagli host di runtime per configurare un particolare dominio dell'applicazione.  
   
  La proprietà **ApplicationBase** definisce la directory radice dell'applicazione. Quando riceve una richiesta di tipo, il runtime prova a individuare l'assembly contenente il tipo nella directory specificata dalla proprietà **ApplicationBase**.  
@@ -33,6 +33,6 @@ La classe <xref:System.AppDomainSetup> consente di specificare Common Language R
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
-- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>Vedere anche
+- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
 - [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

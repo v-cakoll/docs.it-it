@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: compilare un assembly con un singolo file'
+title: 'Procedura: Compilare un assembly su singolo file'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597840"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>Procedura: compilare un assembly con un singolo file
+# <a name="how-to-build-a-single-file-assembly"></a>Procedura: Compilare un assembly su singolo file
 
-Un assembly con un singolo file, che rappresenta il tipo di assembly più semplice, contiene le informazioni e l'implementazione relative al tipo, oltre al [manifesto dell'assembly](../../../docs/framework/app-domains/assembly-manifest.md). Per creare un assembly con un singolo file, è possibile usare i compilatori della riga di comando o Visual Studio. Per impostazione predefinita, il file di assembly creato dal compilatore ha l'estensione exe.
+Un assembly su singolo file, che rappresenta il tipo di assembly più semplice, contiene le informazioni e l'implementazione relative al tipo, oltre al [manifesto dell'assembly](../../../docs/framework/app-domains/assembly-manifest.md). Per creare un assembly con un singolo file, è possibile usare i compilatori della riga di comando o Visual Studio. Per impostazione predefinita, il file di assembly creato dal compilatore ha l'estensione exe.
 
 > [!NOTE]
 > È possibile usare Visual Studio per C# e Visual Basic solo per creare assembly con un singolo file. Per creare assembly con più file, è necessario usare i compilatori della riga di comando o Visual C++.
 
-Le procedure seguenti illustrano come creare assembly con un singolo file usando i compilatori della riga di comando.
+Le procedure seguenti illustrano come creare assembly su singolo file usando i compilatori della riga di comando.
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>Per creare un assembly con estensione exe
 
@@ -91,6 +91,6 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)
-- [Assembly con più file](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Procedura: Compilare un assembly con più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Assembly su più file](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: caricare un file in Visual Basic'
+title: 'Procedura: Caricare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: 769c04430f8323dfde680fca45cfcd67809bdab0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d0aaca06a72b9bd2631a652a0b4756f4681df7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704407"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Procedura: caricare un file in Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Procedura: Caricare un file in Visual Basic
 Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di caricare un file e archiviarlo in un percorso remoto. Se il parametro `ShowUI` è impostato su `True`, viene visualizzata una finestra di dialogo che mostra lo stato di avanzamento del processo di caricamento e consente agli utenti di annullare l'operazione.  
   
 ### <a name="to-upload-a-file"></a>Per caricare un file  
@@ -45,8 +45,8 @@ Il metodo <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> consente di
   
 -   Timeout della connessione (<xref:System.TimeoutException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- [Procedura: Scaricare file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
+- [Procedura: Scaricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Procedura: Analizzare percorsi file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

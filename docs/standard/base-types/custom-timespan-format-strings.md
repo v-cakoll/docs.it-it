@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a22f462bc425a9c9e8f1be700474e7326193674
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722712"
 ---
 # <a name="custom-timespan-format-strings"></a>Stringhe di formato TimeSpan personalizzate
 
@@ -43,7 +43,7 @@ Le stringhe in formato <xref:System.TimeSpan> personalizzato sono usate anche da
 
 <a name="table"></a> La tabella seguente descrive gli identificatori di formato di data e ora personalizzati.
 
-| Identificatore di formato | Descrizione | Esempio |
+| Identificatore di formato | Description | Esempio |
 |----------------------|-----------------|-------------|
 |"d", "%d"|Il numero di giorni completi nell'intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|Il numero di giorni completi nell'intervallo di tempo, con il numero di zeri necessari all'inizio.<br /><br /> Altre informazioni: [Identificatori di formato personalizzato "dd"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -420,5 +420,5 @@ Nell'esempio seguente vengono usati sia il carattere di escape che la virgoletta
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Formattazione di tipi](formatting-types.md)  
-- [Stringhe di formato TimeSpan standard](standard-timespan-format-strings.md)  
+- [Formattazione di tipi](formatting-types.md)
+- [Stringhe di formato TimeSpan standard](standard-timespan-format-strings.md)

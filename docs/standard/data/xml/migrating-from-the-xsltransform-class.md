@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664551"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrazione dalla classe XslTransform
 
@@ -114,11 +114,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   msxsl:version: questa funzione è supportata in <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Funzioni dell'estensione XPath: le funzioni [ms:string-compare](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) e [ms:format-time](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) ora sono supportate.  
+-   Funzioni di estensione XPath: le funzioni [ms:string-compare](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) e [ms:format-time](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) ora sono supportate.  
   
 -   Funzioni di estensione XPath correlate allo schema: queste funzioni non sono supportate in modalità nativa da <xref:System.Xml.Xsl.XslCompiledTransform>. Tuttavia, possono essere implementate come funzioni di estensione.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

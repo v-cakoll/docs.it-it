@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494561"
 ---
 # <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
 Questo argomento fornisce una breve descrizione di .NET Core e illustra come trovare altre informazioni. Per l'elenco completo degli argomenti relativi a .NET Core, vedere la [Guida a .NET Core](../../core/index.md).
@@ -22,7 +22,7 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
  Di seguito sono riportate le caratteristiche principali di .NET Core:  
   
--   **Multi-piattaforma:** NET Core offre gli strumenti essenziali per implementare le funzioni dell'app necessarie e riusare il codice indipendentemente dalla piattaforma di destinazione. Supporta attualmente tre sistemi operativi principali: Windows, Linux e macOS. È possibile scrivere app e librerie in modo che vengano eseguite senza modifiche nei sistemi operativi supportati. Per visualizzare l'elenco dei sistemi operativi supportati, vedere [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Roadmap di .NET Core).
+-   **Multi-piattaforma:** NET Core offre gli strumenti essenziali per implementare le funzioni dell'app necessarie e riusare il codice indipendentemente dalla piattaforma di destinazione. Attualmente supporta tre sistemi operativi principali: Windows, Linux e macOS. È possibile scrivere app e librerie in modo che vengano eseguite senza modifiche nei sistemi operativi supportati. Per visualizzare l'elenco dei sistemi operativi supportati, vedere [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Roadmap di .NET Core).
   
 -   **Open source:** .NET Core è uno dei molti progetti sotto il controllo di [.NET Foundation](https://www.dotnetfoundation.org/) ed è disponibile in [GitHub](https://github.com/).  La disponibilità di .NET Core come progetto open source favorisce un processo di sviluppo più trasparente e promuove una community più attiva e impegnata.  
   
@@ -45,7 +45,7 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>Vedere anche  
-- [Home page di .NET Core](https://www.microsoft.com/net/core)  
-- [Guida a .NET Core](../../core/index.md)  
+## <a name="see-also"></a>Vedere anche
+- [Home page di .NET Core](https://www.microsoft.com/net/core)
+- [Guida a .NET Core](../../core/index.md)
 - [Documentazione di ASP.NET Core](/aspnet/core/)

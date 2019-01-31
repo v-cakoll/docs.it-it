@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: c8f15ac33ae92a13159c2a95435ba3d2391ace8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42792349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739206"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Archiviazione e lettura di dati negli Appunti (Visual Basic)
 Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immagini. Poiché gli Appunti sono condivisi tra tutti i processi attivi, possono essere usati per trasferire dati tra di essi. L'oggetto `My.Computer.Clipboard` consente di accedere facilmente agli Appunti per leggere e scrivere.  
@@ -68,9 +68,9 @@ Gli Appunti possono essere usati per archiviare i dati, ad esempio testo e immag
 > [!IMPORTANT]
 >  Dal momento che gli Appunti sono accessibili da altri utenti, non usarli per archiviare informazioni sensibili, ad esempio password o dati riservati.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
- [Procedura: Leggere dati oggetto in un file XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Procedura: Scrivere dati oggetto in un file XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
+- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
+- [Procedura: Leggere dati oggetto in un file XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Procedura: Scrivere dati oggetto in un file XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

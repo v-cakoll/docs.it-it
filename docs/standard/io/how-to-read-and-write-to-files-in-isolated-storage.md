@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato'
+title: 'Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491521"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Procedura: leggere e scrivere sui file nello spazio di memorizzazione isolato
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato
 Per leggere da un file in un archivio isolato o scrivervi, utilizzare un oggetto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lettore di flusso (oggetto <xref:System.IO.StreamReader>) o uno scrittore di flusso (oggetto <xref:System.IO.StreamWriter>).  
   
 ## <a name="example"></a>Esempio  
@@ -36,11 +36,11 @@ Per leggere da un file in un archivio isolato o scrivervi, utilizzare un oggetto
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
-- <xref:System.IO.FileMode?displayProperty=nameWithType>  
-- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
-- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
-- [I/O di file e di flussi](../../../docs/standard/io/index.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
+- <xref:System.IO.FileMode?displayProperty=nameWithType>
+- <xref:System.IO.FileAccess?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader?displayProperty=nameWithType>
+- <xref:System.IO.StreamWriter?displayProperty=nameWithType>
+- [I/O di file e di flussi](../../../docs/standard/io/index.md)
 - [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)

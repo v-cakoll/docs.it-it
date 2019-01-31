@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606530"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoraggio delle risorse del dominio applicazione
 Il monitoraggio delle risorse del dominio applicazione permette agli host di monitorare l'utilizzo di CPU e memoria da parte del dominio applicazione. Ciò risulta utile per gli host, come ASP.NET, che usano molti domini applicazione in un processo a esecuzione prolungata. L'host può scaricare il dominio applicazione di un'applicazione che influisce negativamente sulle prestazioni dell'intero processo, ma solo se è in grado di identificare l'applicazione problematica. Il monitoraggio delle risorse del dominio applicazione fornisce informazioni che possono essere usate per prendere questo tipo di decisioni.  
@@ -44,15 +44,15 @@ Il monitoraggio delle risorse del dominio applicazione permette agli host di mon
   
     -   API gestita: proprietà <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>.  
   
-    -   API di hosting: metodo [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
+    -   API di hosting: Metodo [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md).  
   
     -   Eventi ETW: eventi `ThreadCreated`, `ThreadAppDomainEnter` e `ThreadTerminated`. Per informazioni sui provider e le parole chiave, vedere "Eventi di monitoraggio risorse di AppDomain" in [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Totale delle allocazioni gestite effettuate da un dominio applicazione durante la sua durata, in byte**: le allocazioni totali non riflettono sempre l'uso della memoria da parte di un dominio applicazione, perché gli oggetti allocati potrebbero avere breve durata. Tuttavia, se un'applicazione alloca e libera grandi quantità di oggetti, il costo delle allocazioni potrebbe essere significativo.  
+-   **Totale delle allocazioni gestite eseguite da un dominio applicazione durante la relativa durata, in byte**: Le allocazioni totali non riflettono sempre quanta memoria viene usata dal dominio applicazione, perché gli oggetti allocati potrebbero avere breve durata. Tuttavia, se un'applicazione alloca e libera grandi quantità di oggetti, il costo delle allocazioni potrebbe essere significativo.  
   
     -   API gestita: proprietà <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API di hosting: metodo [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
+    -   API di hosting: Metodo [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md).  
   
     -   Eventi ETW: evento `AppDomainMemAllocated`, campo `Allocated`.  
   
@@ -60,15 +60,15 @@ Il monitoraggio delle risorse del dominio applicazione permette agli host di mon
   
     -   API gestita: proprietà <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API di hosting: metodo [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parametro `pAppDomainBytesSurvived`.  
+    -   API di hosting: Metodo [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parametro `pAppDomainBytesSurvived`.  
   
     -   Eventi ETW: evento `AppDomainMemSurvived`, campo `Survived`.  
   
--   **Totale di memoria gestita, in byte, a cui fa riferimento il processo ed esclusa dalla Garbage Collection di blocco completa più recente**: la memoria esclusa per i singoli domini applicazione può essere confrontata con questo numero.  
+-   **Memoria gestita totale in byte, a cui fa riferimento un processo ed esclusa dalla Garbage Collection di blocco completa più recente**: la memoria esclusa per singoli domini applicazione può essere confrontata con questo numero.  
   
     -   API gestita: proprietà <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
-    -   API di hosting: metodo [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parametro `pTotalBytesSurvived`.  
+    -   API di hosting: Metodo [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), parametro `pTotalBytesSurvived`.  
   
     -   Eventi ETW: evento `AppDomainMemSurvived`, campo `ProcessSurvived`.  
   
@@ -85,7 +85,7 @@ Il monitoraggio delle risorse del dominio applicazione permette agli host di mon
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Interfaccia ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Interfaccia ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

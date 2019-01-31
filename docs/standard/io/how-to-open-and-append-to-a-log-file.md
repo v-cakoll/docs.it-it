@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622732"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Procedura: Aprire e accodare un file di log
 <xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> scrivono e leggono i caratteri nei flussi. L'esempio di codice seguente apre il file `log.txt` per l'input oppure crea il file, se non esiste già, e aggiunge le informazioni alla fine del file. Il contenuto del file viene quindi scritto nell'output standard per la visualizzazione. In alternativa a questo esempio, è possibile archiviare le informazioni come un'unica stringa o matrice di stringhe e usare il metodo <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> per ottenere la stessa funzionalità.  
@@ -32,15 +32,15 @@ ms.locfileid: "48848153"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [Procedura: Enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Procedura: Leggere testo da un file](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Procedura: Scrivere un testo in un file](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Procedura: Leggere caratteri da una stringa](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [Procedura: Scrivere caratteri in una stringa](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- [Procedura: Enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Procedura: Leggere testo da un file](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Procedura: Scrivere un testo in un file](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Procedura: Leggere caratteri da una stringa](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [Procedura: Scrivere caratteri in una stringa](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [I/O di file e di flussi](../../../docs/standard/io/index.md)

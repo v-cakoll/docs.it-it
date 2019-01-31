@@ -2,19 +2,19 @@
 title: Ricerca dello stile di paragrafo predefinito (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 77eb008ba6419e58541b60ac1ca7c1ef0344e316
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674076"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Ricerca dello stile di paragrafo predefinito (C#)
 La prima attività dell'esercitazione Modifica di informazioni in un documento WordprocessingML consiste nell'individuare lo stile predefinito dei paragrafi del documento.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Descrizione  
+### <a name="description"></a>Description  
  Nell'esempio seguente viene aperto un documento WordprocessingML di Office Open XML, vengono individuate le parti del package relative a documento e stile, quindi viene eseguita una query che trova il nome dello stile predefinito. Per informazioni sui pacchetti di documenti Office Open XML e sulle parti da cui sono costituiti, vedere [Dettagli di documenti WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
  La query cerca un nodo denominato `w:style` che ha un attributo denominato `w:type` con il valore "paragraph" e un attributo denominato `w:default` con il valore "1". Poiché sarà disponibile un solo nodo XML con questi attributi, la query usa l'operatore <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> per convertire una raccolta in un Singleton. Ottiene quindi il valore dell'attributo con il nome `w:styleId`.  
@@ -90,4 +90,4 @@ The default style is: Normal
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esercitazione: manipolazione di contenuto in un documento WordprocessingML](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

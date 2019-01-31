@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: e47b7de00941a8da24052c21f28e91391cff390d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514049"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
 I criteri di cache basati sulla posizione consentono a un'applicazione di definire in modo esplicito il comportamento di memorizzazione nella cache in base alla posizione della risorsa richiesta. Questo argomento illustra l'impostazione dei criteri di cache a livello di codice. Per informazioni sull'impostazione dei criteri per un'applicazione che usa file di configurazione, vedere [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
@@ -153,9 +153,9 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
     End Sub  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

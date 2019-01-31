@@ -1,5 +1,5 @@
 ---
-title: "Procedura: ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5"
+title: "Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5"
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614597"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è un runtime ridistribuibile. Se si sviluppano applicazioni per questa versione di .NET Framework, è possibile includere (a catena) l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] come un componente prerequisito nell'impostazione dell'applicazione. Per offrire un'esperienza d'installazione personalizzata o unificata, si consiglia di avviare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in modo invisibile all'utente, tenendone traccia visualizzando lo stato di avanzamento dell'installazione dell'app. Per abilitare la gestione invisibile, l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], che può essere controllata, definisce un protocollo usando un segmento di I/O mappato alla memoria (MMIO) per comunicare con l'installazione, ovvero con il watcher o il chainer. Questo protocollo definisce una modalità per il chainer per ottenere lo stato di avanzamento, i risultati dettagliati, per rispondere ai messaggi e per annullare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 -   **Chiamata**.  Per chiamare l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e ricevere informazioni sullo stato di avanzamento della sezione MMIO, il programma di installazione deve eseguire le operazioni seguenti:  
@@ -35,7 +35,7 @@ ms.locfileid: "50197951"
   
          Sostituire i nomi con nomi univoci per il programma di installazione.  
   
-    2.  Leggere dalla sezione MMIO. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le operazioni di download e installazione sono simultanee: una parte di .NET Framework potrebbe essere in fase di installazione mentre un'altra è in fase di download. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.  
+    2.  Leggere dalla sezione MMIO. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le operazioni di download e installazione sono simultanee: una parte di .NET Framework potrebbe essere in installazione mentre un'altra parte in download. Di conseguenza, lo stato di avanzamento viene restituito, ovvero scritto, nella sezione MMIO come due numeri (`m_downloadSoFar` e `m_installSoFar`) crescenti da 0 a 255. Quando viene scritto 255 e viene chiuso .NET Framework, l'installazione è completa.  
   
 -   **Codici di uscita**. I codici di uscita seguenti del comando per la chiamata al programma ridistribuibile [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicano se l'installazione è riuscita o meno:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50197951"
   
  È possibile scaricare la soluzione Visual Studio completa per l'[esempio di chainer di .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) dalla raccolta di esempi di MSDN.  
   
- Le sezioni seguenti descrivono i file significativi in questo esempio: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
+ Le sezioni seguenti descrivono i file più importanti dell'esempio: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
@@ -309,6 +309,6 @@ ms.locfileid: "50197951"
   
  Un server tipico crea un nome file MMIO casuale, crea il file (come illustrato nell'esempio di codice precedente in `Server::CreateSection`) e avvia il programma ridistribuibile usando il metodo `CreateProcess` e passando il nome pipe con l'opzione `-pipe someFileSectionName`. Il server deve implementare il metodi `OnProgress`, `Send` e `Finished` con il codice specifico dall'interfaccia utente dell'applicazione.  
   
-## <a name="see-also"></a>Vedere anche  
-- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>Vedere anche
+- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Distribuzione](../../../docs/framework/deployment/index.md)

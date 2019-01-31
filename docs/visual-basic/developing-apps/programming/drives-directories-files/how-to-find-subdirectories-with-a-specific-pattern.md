@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: cercare sottodirectory con un modello specifico in Visual Basic'
+title: 'Procedura: Trovare sottodirectory con un criterio specifico in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: b3c80fccea06a48c78f37dc7d1c8dcc88e143de4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b0f5c1052d45e9c068d291f8e6efaf6dfbf906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677693"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procedura: cercare sottodirectory con un modello specifico in Visual Basic
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Procedura: Trovare sottodirectory con un criterio specifico in Visual Basic
 Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> restituisce una raccolta di stringhe di sola lettura che rappresentano i nomi di percorso per le sottodirectory di una directory. È possibile usare il parametro `wildCards` per specificare un criterio specifico. Se si vogliono includere i contenuti delle sottodirectory nella ricerca, impostare il parametro `searchType` su `SearchOption.SearchAllSubDirectories`.  
   
  Se non vengono trovate directory corrispondenti al criterio specificato, verrà restituita una raccolta vuota.  
@@ -44,6 +44,6 @@ Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> resti
   
 -   L'utente non dispone delle autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>  
- [Procedura: trovare file con un modello specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
+- [Procedura: Trovare file con un criterio specifico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

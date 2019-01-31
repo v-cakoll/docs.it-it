@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere un riferimento a un assembly con nome sicuro'
+title: 'Procedura: Aggiungere un riferimento a un assembly con nome sicuro'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596072"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: aggiungere un riferimento a un assembly con nome sicuro
+# <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: Aggiungere un riferimento a un assembly con nome sicuro
 Il processo per la creazione di riferimenti a tipi o risorse in un assembly con nome sicuro è solitamente trasparente all'utente. È possibile creare i riferimenti in fase di compilazione (associazione anticipata) o in fase di esecuzione.  
   
  Un riferimento in fase di compilazione viene creato quando si indica al compilatore che l'assembly contiene riferimenti espliciti a un altro assembly. Quando si usano i riferimenti in fase di compilazione, il compilatore riceve automaticamente la chiave pubblica dell'assembly con nome sicuro di destinazione e inserisce la chiave nel riferimento dell'assembly in fase di compilazione.  
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<** *file di chiave pubblica* **>**  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

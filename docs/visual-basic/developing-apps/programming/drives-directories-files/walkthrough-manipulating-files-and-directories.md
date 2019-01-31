@@ -15,14 +15,14 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: ab1c119d2c5cd9bfa0ff725774144bc65817cad4
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709729"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: Modifica di file e directory in Visual Basic
 Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in Visual Basic. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
   
  In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in Visual Basic. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
@@ -159,8 +159,8 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
- [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IO>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
+- [Procedura dettagliata: Modifica di file con i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

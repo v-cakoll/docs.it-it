@@ -2,12 +2,12 @@
 title: Ottimizzazione dell'applicazione asincrona (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: 23557c0c920fbd858e9bdf8ae629bd5ef5f0355b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f33a06a181b44fc15ed2de81c4ceb385023a6fe5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601948"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Ottimizzazione dell'applicazione asincrona (C#)
 È possibile rendere più precise e flessibili le applicazioni asincrone usando le proprietà e i metodi resi disponibili dal tipo <xref:System.Threading.Tasks.Task>. Gli argomenti di questa sezione mostrano esempi che usano <xref:System.Threading.CancellationToken> e metodi `Task` importanti, ad esempio <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -20,7 +20,7 @@ ms.locfileid: "47197929"
   
 -   `WhenAll` restituisce un'attività completata quando tutte le attività in una raccolta vengono completate.  
   
-     Per altre informazioni e un esempio che usa `WhenAll`, vedere [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)).  
+     Per altre informazioni e un esempio che usa `WhenAll`, vedere [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Questa sezione presenta i seguenti esempi.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47197929"
   
  ![Finestra WPF con pulsante Annulla](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "Annullamento")  
   
- È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
+ È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona con async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

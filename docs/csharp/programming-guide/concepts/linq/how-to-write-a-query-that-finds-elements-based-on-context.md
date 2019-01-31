@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere una query per trovare elementi in base al contesto (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667950"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Procedura: Scrivere una query per trovare elementi in base al contesto (C#)
 A volte può essere necessario scrivere una query per selezionare gli elementi in base al contesto. In questo caso è anche possibile scegliere un filtro basato sugli elementi di pari livello precedenti o successivi oppure sugli elementi figlio o sui predecessori.  
@@ -100,8 +100,8 @@ id = 6
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Linq.XElement.Parse%2A>  
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
-- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
-- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
 - [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

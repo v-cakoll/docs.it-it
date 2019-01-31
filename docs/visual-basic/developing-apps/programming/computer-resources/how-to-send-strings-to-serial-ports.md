@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: inviare stringhe a porte seriali in Visual Basic'
+title: 'Procedura: Inviare stringhe a porte seriali in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, sending strings to
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: a00306407cfe880ebc915d74a753109cc9696f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2ba25f4ca3f63e1e7831d26745fa35cd337dc48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503027"
 ---
-# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Procedura: inviare stringhe a porte seriali in Visual Basic
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Procedura: Inviare stringhe a porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in Visual Basic.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio si invia una stringa alla porta seriale COM1. Potrebbe essere necessario usare un'altra porta seriale nel computer in uso.  
   
- Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
  Il blocco `Using` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.  
   
@@ -37,8 +37,8 @@ Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe al
   
  Questo esempio usa un blocco `Using` per verificare che l'applicazione chiuda la porta anche se viene generata un'eccezione. Per altre informazioni, vedere [Istruzione using](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
+- [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

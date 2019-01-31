@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare componenti che supportano il modello asincrono basato su eventi'
+title: 'Procedura: Usare componenti che supportano il modello asincrono basato su eventi'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543250"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procedura: usare componenti che supportano il modello asincrono basato su eventi
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Procedura: Usare componenti che supportano il modello asincrono basato su eventi
 Molti componenti consentono di eseguire le attività in modo asincrono. I componenti <xref:System.Media.SoundPlayer> e <xref:System.Windows.Forms.PictureBox>, ad esempio, consentono di caricare suoni e immagini "in background", mentre l'esecuzione del thread principale procede senza interruzioni.  
   
  L'uso di metodi asincroni in una classe che supporta il [modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) può essere semplice quanto collegare un gestore eventi all'evento _MethodName_**Completed** del componente, come per qualsiasi altro evento. Quando si chiama il metodo _MethodName_**Async**, l'esecuzione dell'applicazione continua senza interruzioni fino alla generazione dell'evento _MethodName_**Completed**. Nel gestore eventi è possibile esaminare il parametro <xref:System.ComponentModel.AsyncCompletedEventArgs> per determinare se l'operazione asincrona è stata completata o se è stata annullata.  
@@ -62,5 +62,5 @@ Molti componenti consentono di eseguire le attività in modo asincrono. I compon
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

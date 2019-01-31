@@ -2,12 +2,12 @@
 title: Panoramica di LINQ to XML (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 5e005343226b47fb843b817747ca03c49c28dbfc
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: ec09984486710f29417615499e7b1c565b51b932
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43856621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502208"
 ---
 # <a name="linq-to-xml-overview-c"></a>Panoramica di LINQ to XML (C#)
 XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamma di contesti. Viene ad esempio usato in applicazioni Web, file di configurazione, file di Microsoft Office Word e in database.  
@@ -22,13 +22,13 @@ XML è stato ampiamente adottato per la formattazione dei dati in una vasta gamm
 ## <a name="what-is-linq-to-xml"></a>Informazioni su LINQ to XML  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è un'interfaccia di programmazione XML in memoria con supporto LINQ che consente di usare codice XML dall'interno dei linguaggi di programmazione di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è simile al modello DOM (Document Object Model) in quanto porta in memoria il documento XML. È quindi possibile eseguire query e modificare il documento e dopo averlo modificato salvarlo in un file o serializzarlo e inviarlo tramite Internet. Tuttavia, a differenza di DOM, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offre un nuovo modello a oggetti più leggero e facile da usare che sfrutta le funzionalità del linguaggio in C#.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è simile al modello DOM (Document Object Model) in quanto porta in memoria il documento XML. È quindi possibile eseguire query e modificare il documento e dopo averlo modificato salvarlo in un file o serializzarlo e inviarlo tramite Internet. Tuttavia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è diverso da DOM: offre un nuovo modello a oggetti più leggero e facile da usare che sfrutta le funzionalità del linguaggio in C#.  
   
  Il principale vantaggio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è costituito dall'integrazione con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Grazie a tale integrazione è possibile scrivere query sul documento XML in memoria per recuperare raccolte di elementi e di attributi. La funzionalità di query di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è paragonabile a XPath e XQuery, dal punto di vista funzionale ma non sintattico. L'integrazione di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in C# offre una tipizzazione più forte, il controllo in fase di compilazione e il supporto migliorato del debugger.  
   
  Un altre vantaggio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], costituito dalla possibilità di usare risultati di query come parametri di costruttori di oggetti <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>, consente di disporre di un approccio potente per la creazione di alberi XML. Questo approccio, chiamato *costruzione funzionale* consente agli sviluppatori di trasformare facilmente gli alberi XML da una forma all'altra.  
   
- Ad esempio, è possibile avere un ordine d'acquisto XML tipico come descritto in [Sample XML File: Typical Purchase Order (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md) (File XML di esempio: ordine d'acquisto tipico (LINQ to XML). Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile eseguire la query seguente per ottenere il valore dell'attributo relativo al numero di parte di ciascun articolo incluso dell'ordine di acquisto:  
+ Si supponga ad esempio di avere un tipico ordine di acquisto in formato XML come descritto in [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). Usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], è possibile eseguire la query seguente per ottenere il valore dell'attributo relativo al numero di parte di ciascun articolo incluso dell'ordine di acquisto:  
   
 ```csharp
 // Load the XML file from our project directory containing the purchase orders
@@ -113,5 +113,5 @@ new XElement("Contacts",
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Linq>  
+- <xref:System.Xml.Linq>
 - [Introduzione (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

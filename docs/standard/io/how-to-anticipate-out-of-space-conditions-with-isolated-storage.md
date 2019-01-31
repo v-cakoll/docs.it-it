@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609681"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procedura: Anticipare le condizioni di spazio insufficiente con lo spazio di memorizzazione isolato
 Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota](../../../docs/standard/io/isolated-storage.md#quotas) che specifica la dimensione massima per il raggruppamento dati in cui si trovano file e directory dello spazio di memorizzazione isolato. La quota è definita da criteri di sicurezza e può essere configurata dagli amministratori. Se la dimensione massima consentita viene superata quando si prova a scrivere dati, viene generata un'eccezione <xref:System.IO.IsolatedStorage.IsolatedStorageException> e l'operazione non riesce. In questo modo, è possibile impedire attacchi Denial of Service dannosi che possono causare il rifiuto delle richieste da parte dell'applicazione perché l'archivio dati è pieno.  
@@ -47,6 +47,6 @@ Il codice che usa lo spazio di memorizzazione isolato è vincolato da una [quota
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)
 - [Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

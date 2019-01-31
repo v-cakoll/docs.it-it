@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690618"
 ---
 # <a name="using-threads-and-threading"></a>Utilizzo di thread e threading
 
@@ -44,7 +44,7 @@ Usare il metodo <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithTy
 
 La tabella seguente illustra alcune delle proprietà dell'oggetto <xref:System.Threading.Thread>:  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Restituisce `true` se il thread è stato avviato, ma non è stato ancora terminato normalmente o è stato interrotto.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Ottiene o imposta un valore booleano che indica se un thread è un thread in background. I thread in background sono simili ai thread in primo piano, ma un thread in background non impedisce l'arresto di un processo. Dopo l'arresto di tutti i thread in primo piano che appartengono a un processo, Common Language Runtime termina il processo chiamando il metodo <xref:System.Threading.Thread.Abort%2A> nei thread in background ancora attivi. Per altre informazioni, vedere [Thread in primo piano e in background](foreground-and-background-threads.md).|  
@@ -54,6 +54,6 @@ La tabella seguente illustra alcune delle proprietà dell'oggetto <xref:System.T
 
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Threads and Threading](threads-and-threading.md) (Thread e threading)  
-- [Programmazione parallela](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Threads and Threading](threads-and-threading.md) (Thread e threading)
+- [Programmazione parallela](../parallel-programming/index.md)

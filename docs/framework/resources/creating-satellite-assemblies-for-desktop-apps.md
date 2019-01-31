@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678798"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Questi file consentono a un'applicazione di visualizzare stringhe, immagini e altri dati nella lingua dell'utente e con le impostazioni cultura di questo, fornendo anche dati alternativi per i casi in cui non siano disponibili risorse per la lingua o le impostazioni cultura dell'utente. Per individuare e recuperare risorse localizzate, .NET Framework usa un modello hub e spoke. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, usate quando non sono disponibili risorse localizzate. Per designare le impostazioni cultura predefinite dell'applicazione, si usa l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>. Ogni spoke si connette a un assembly satellite contenente le risorse relative a impostazioni cultura specifiche, ma non contiene codice. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile aggiornare o sostituire facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
@@ -74,7 +74,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Nella tabella seguente vengono descritte in modo più dettagliato le opzioni di Al.exe usate in questi comandi.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**-target:** lib|Specifica che l'assembly satellite deve essere compilato in un file di libreria con estensione dll. Poiché un assembly satellite non contiene codice eseguibile e non rappresenta l'assembly principale dell'applicazione, è necessario salvare gli assembly satellite come DLL.|  
 |**-embed:** strings.de.resources|Specifica il nome del file di risorse da incorporare quando Al.exe compila l'assembly. È possibile incorporare più file con estensione resources in un assembly satellite. Se si segue il modello hub e spoke, però, è necessario compilare un assembly satellite per ognuna delle impostazioni cultura. È tuttavia possibile creare file con estensione resources separati per le stringhe e gli oggetti.|  
@@ -84,7 +84,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Per l'elenco completo delle opzioni disponibili con Al.exe, vedere [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
-## <a name="satellite-assemblies-an-example"></a>Assembly satellite: un esempio  
+## <a name="satellite-assemblies-an-example"></a>Assembly satellite: Esempio  
  Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza una finestra di messaggio contenente un saluto localizzato. L'esempio include le risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia) e russe (Russia). Le impostazioni cultura inglesi sono le impostazioni cultura di fallback. Per creare l'esempio, eseguire le operazioni seguenti:  
   
 1.  Creare un file di risorse denominato Greeting.resx o Greeting.txt che deve contenere le risorse per le impostazioni cultura predefinite. Salvare in questo file un'unica stringa denominata `HelloString` il cui valore sia "Hello world!" .  
@@ -199,7 +199,7 @@ gacutil -i:StringLibrary.resources.dll
   
  L'opzione **/i** specifica che Gacutil.exe deve installare l'assembly specificato nella Global Assembly Cache. Dopo l'installazione dell'assembly satellite nella cache, le risorse in esso contenute diventano disponibili per tutte le applicazioni progettate per l'uso dell'assembly satellite.  
   
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Risorse nella Global Assembly Cache: un esempio  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Risorse nella Global Assembly Cache: Esempio  
  L'esempio seguente usa un metodo di una libreria di classi .NET Framework per estrarre e restituire un messaggio di saluto localizzato contenuto in un file di risorse. La libreria e le relative risorse sono registrate nella Global Assembly Cache. L'esempio include risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia), russe (Russia) e inglesi. Le impostazioni cultura predefinite corrispondono a quelle inglesi e le risorse corrispondenti sono archiviate nell'assembly principale. All'inizio dell'esempio viene impostato il ritardo della firma della libreria e dei relativi assembly con una chiave pubblica. Questi vengono quindi firmati di nuovo con una coppia di chiavi pubblica/privata. Per creare l'esempio, eseguire le operazioni seguenti:  
   
 1.  Se non si usa Visual Studio, creare una coppia di chiavi pubblica/privata denominata ResKey.snk tramite il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente:  
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. Eseguire Example.exe.  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)

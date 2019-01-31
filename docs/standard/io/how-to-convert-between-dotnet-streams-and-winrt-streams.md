@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime'
+title: 'Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492760"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime
 
 .NET Framework per le applicazioni Windows Store è un subset della versione completa di .NET Framework. Per motivi di sicurezza e di altri requisiti per le applicazioni Windows Store, non è possibile usare l'Integer set di API di .NET Framework per aprire e leggere i file. Per altre informazioni, vedere [Panoramica di .NET per le applicazioni Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Tuttavia, è possibile usare le API di .NET Framework per altre operazioni di manipolazione di un flusso. Per modificare questi flussi, potrebbe essere necessario eseguire la conversione tra un tipo di flusso di .NET Framework come <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream> e un flusso di Windows Runtime come <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -68,7 +68,7 @@ I flussi di .NET Framework non supportano la clonazione, anche dopo la conversio
 - Usare il metodo [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md), come illustrato nell'esempio seguente:
 
   > [!IMPORTANT]
-  > Assicurarsi che il flusso di .NET Framework usato supporti la ricerca oppure copiarlo in un flusso che la supporti. A tale scopo, è possibile usare la proprietà <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType>.
+  > Assicurarsi che il flusso di .NET Framework usato supporti la ricerca oppure copiarlo in un flusso che la supporti. A tale scopo, è possibile usare la proprietà <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> .
 
   Per eseguire l'esempio, è necessario creare un'applicazione Windows Store in XAML destinata a .NET Framework 4.5.1 contenente un blocco di testo denominato `TextBlock2` e un pulsante denominato `Button2`. L'evento click del pulsante deve essere associato al metodo `button2_Click` illustrato nell'esempio.
 
@@ -79,6 +79,6 @@ I flussi di .NET Framework non supportano la clonazione, anche dopo la conversio
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida introduttiva: Lettura e scrittura di un file (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Panoramica di .NET per le app di Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET per app di Windows Store – API supportate](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Avvio rapido: Lettura e scrittura di un file (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Panoramica di .NET per le app di Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET per app di Windows Store – API supportate](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: creare un file in Visual Basic'
+title: 'Procedura: Creare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 6167ea0850308eec4b558a47dd881476325a8ea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eedb6dafdd181b254610331899b5df7ac0823f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661373"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Procedura: creare un file in Visual Basic
+# <a name="how-to-create-a-file-in-visual-basic"></a>Procedura: Creare un file in Visual Basic
 In questo esempio viene creato un file di testo vuoto nel percorso specificato usando il metodo <xref:System.IO.File.Create%2A> nella classe <xref:System.IO.File>.  
   
 ## <a name="example"></a>Esempio  
@@ -45,8 +45,8 @@ In questo esempio viene creato un file di testo vuoto nel percorso specificato u
   
  Viene generata un'eccezione <xref:System.UnauthorizedAccessException> se l'utente non dispone dell'autorizzazione per creare il file.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO>  
- <xref:System.IO.File.Create%2A>  
- [Uso di librerie da codice parzialmente attendibile](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IO>
+- <xref:System.IO.File.Create%2A>
+- [Uso di librerie da codice parzialmente attendibile](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
+- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../../framework/misc/code-access-security-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: gestire le eccezioni in una query PLINQ'
+title: 'Procedura: Gestire le eccezioni in una query PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554244"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: gestire le eccezioni in una query PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedura: Gestire le eccezioni in una query PLINQ
 Il primo esempio in questo argomento mostra come gestire l'oggetto <xref:System.AggregateException?displayProperty=nameWithType>, che può essere generato da una query PLINQ in fase di esecuzione. Il secondo esempio mostra come inserire blocchi Try-Catch all'interno di delegati, il più vicino possibile al punto in cui verrà generata l'eccezione. In questo modo, è possibile intercettare le eccezioni non appena si verificano, per poter proseguire con l'esecuzione della query. Quando alle eccezioni è consentita la propagazione fino al thread di unione, è possibile che una query continui a elaborare alcuni elementi dopo la generazione dell'eccezione.  
   
  In alcuni casi, quando PLINQ passa all'esecuzione sequenziale e viene generata un'eccezione, l'eccezione può essere propagata direttamente, senza eseguirne il wrapping in un oggetto <xref:System.AggregateException>. Inoltre, gli oggetti <xref:System.Threading.ThreadAbortException> vengono sempre propagati direttamente.  
@@ -50,5 +50,5 @@ Il primo esempio in questo argomento mostra come gestire l'oggetto <xref:System.
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

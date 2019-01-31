@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607199"
 ---
 # <a name="com-wrappers"></a>Wrapper COM
 COM è diverso dal modello a oggetti .NET Framework per diversi aspetti importanti:  
@@ -34,9 +34,9 @@ Cenni preliminari sul wrapper COM
   
  Nella maggior parte dei casi, l'RCW o il CCW generato dal runtime effettua un marshalling adeguato per le chiamate che superano il limite tra COM e .NET Framework. Usando attributi personalizzati, è possibile, facoltativamente, impostare il modo in cui il runtime rappresenta il codice gestito e non gestito.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Runtime Callable Wrapper](runtime-callable-wrapper.md)  
- [COM Callable Wrapper](com-callable-wrapper.md)  
- [Personalizzazione di wrapper standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Procedura: Personalizzare Runtime Callable Wrapper](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Runtime Callable Wrapper](runtime-callable-wrapper.md)
+- [COM Callable Wrapper](com-callable-wrapper.md)
+- [Personalizzazione di wrapper standard](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [Procedura: Personalizzare Runtime Callable Wrapper](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

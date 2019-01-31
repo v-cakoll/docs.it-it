@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728363"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
 Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
@@ -31,7 +31,7 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
   
  [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
   
- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Procedura dettagliata: Scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
 >  Se si ha già familiarità con un linguaggio di query, ad esempio SQL o XQuery, è possibile ignorare la maggior parte di questo argomento. Leggere la sezione sulla "clausola `from`" più avanti per informazioni sull'ordine delle clausole nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -44,7 +44,7 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
  La variabile di intervallo è come la variabile di iterazione in un ciclo `foreach` ad eccezione del fatto che non si verifica alcuna iterazione in un'espressione di query. Quando viene eseguita la query, la variabile di intervallo verrà usata come riferimento a ogni elemento successivo in `customers`. Poiché il compilatore può dedurre il tipo di `cust`, non è necessario specificarlo in modo esplicito. Altre variabili di intervallo possono essere introdotte da una clausola `let`. Per altre informazioni, vedere [Clausola let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) e [Clausola from](../../../../csharp/language-reference/keywords/from-clause.md).  
+>  Per origini dati non generiche, ad esempio <xref:System.Collections.ArrayList>, la variabile di intervallo deve essere tipizzata in modo esplicito. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) e [ Clausola ](../../../../csharp/language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtro  
  Probabilmente l'operazione di query più comune consiste nell'applicazione di un filtro sotto forma di espressione booleana. Il filtro fa in modo che la query restituisca solo gli elementi per i quali l'espressione è vera. Il risultato viene generato utilizzando la clausola `where`. Il filtro in realtà specifica gli elementi da escludere dalla sequenza di origine. Nell'esempio seguente vengono restituiti solo i `customers` che hanno un indirizzo in Londra.  
@@ -101,8 +101,8 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Procedura dettagliata: Scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

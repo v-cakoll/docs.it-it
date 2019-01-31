@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43748236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564318"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintassi di query e sintassi di metodi in LINQ (C#)
 La maggior parte delle query presenti nella documentazione di Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sono scritte usando la sintassi di query dichiarativa di LINQ. Tuttavia, la sintassi di query deve essere convertita in chiamate al metodo per Common Language Runtime (CLR) di .NET quando il codice viene compilato. Queste chiamate al metodo richiamano gli operatori query standard, che hanno nomi come `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. È possibile chiamarli direttamente usando la sintassi di metodo anziché la sintassi di query.  
@@ -35,7 +35,7 @@ La maggior parte delle query presenti nella documentazione di Language Integrate
  Per altre informazioni sui metodi di estensione, vedere [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Per altre informazioni sugli operatori di query standard, vedere [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md). Alcuni provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], ad esempio [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementano i propri operatori di query standard e i metodi di estensione aggiuntivi per altri tipi oltre a <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="lambda-expressions"></a>Espressioni lambda  
- Nell'esempio precedente, si può notare che l'espressione condizionale (`num % 2 == 0`) viene passata come argomento inline al metodo `Where`: `Where(num => num % 2 == 0).` Questa espressione inline è definita espressione lambda. È un modo pratico per scrivere codice che altrimenti dovrebbe essere scritto in un formato più complesso come metodo anonimo, delegato generico o albero delle espressioni. In C# `=>` è l'operatore lambda, che viene letto come "goes to". L'elemento `num` a sinistra dell'operatore è la variabile di input che corrisponde a `num` nell'espressione di query. Il compilatore è in grado di dedurre il tipo di `num` poiché sa che `numbers` è un tipo <xref:System.Collections.Generic.IEnumerable%601> generico. Il corpo dell'espressione lambda è identico all'espressione nella sintassi di query o in qualsiasi altra espressione o istruzione di C# e può includere chiamate al metodo e altra logica complessa. Il valore restituito è semplicemente il risultato dell'espressione.  
+ Si noti che nell'esempio precedente l'espressione condizionale (`num % 2 == 0`) viene passata come argomento inline al metodo `Where`: `Where(num => num % 2 == 0).` Questa espressione inline è definita espressione lambda. È un modo pratico per scrivere codice che altrimenti dovrebbe essere scritto in un formato più complesso come metodo anonimo, delegato generico o albero delle espressioni. In C# `=>` è l'operatore lambda, che viene letto come "goes to". L'elemento `num` a sinistra dell'operatore è la variabile di input che corrisponde a `num` nell'espressione di query. Il compilatore è in grado di dedurre il tipo di `num` poiché sa che `numbers` è un tipo <xref:System.Collections.Generic.IEnumerable%601> generico. Il corpo dell'espressione lambda è identico all'espressione nella sintassi di query o in qualsiasi altra espressione o istruzione di C# e può includere chiamate al metodo e altra logica complessa. Il valore restituito è semplicemente il risultato dell'espressione.  
   
  Per iniziare a usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], non è necessario fare ampio ricorso alle espressioni lambda. Tuttavia, alcune query possono essere espresse solo nella sintassi di metodo e alcune di esse richiedono le espressioni lambda. Dopo avere acquisito maggiore familiarità con le espressioni lambda, si noterà che sono uno strumento potente e flessibile della casella degli strumenti di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per altre informazioni, vedere [Espressioni lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   

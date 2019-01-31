@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: annullare una query PLINQ'
+title: 'Procedura: Annullare una query PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45973092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604301"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Procedura: annullare una query PLINQ
+# <a name="how-to-cancel-a-plinq-query"></a>Procedura: Annullare una query PLINQ
 Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo esempio descrive come annullare una query costituita principalmente da attraversamento di dati. Il secondo esempio descrive come annullare una query che contiene una funzione utente onerosa dal punto di vista delle risorse di calcolo.  
   
 > [!NOTE]
@@ -52,6 +52,6 @@ Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- <xref:System.Linq.ParallelEnumerable>
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
+title: 'Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543422"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: Aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
 In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rimuovere elementi da un oggetto <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Questa classe di raccolta è un'implementazione thread-safe. È consigliabile usarla ogni volta che più thread tentano di accedere contemporaneamente agli elementi.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> offre molti metodi pratici che consentono al codice di evitare il controllo dell'esistenza di una chiave prima di aggiungere o rimuovere dati. Nella tabella seguente vengono elencati questi metodi pratici e viene specificato quando usarli.  
@@ -50,5 +50,5 @@ In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rim
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

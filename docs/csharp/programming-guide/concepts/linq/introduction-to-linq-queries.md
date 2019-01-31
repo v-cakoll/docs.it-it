@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605133"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] semplifica questa situazione offrendo un modello coerente per l'uso dei dati con tutti i diversi tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Vengono usati gli stessi criteri di codifica di base per eseguire una query e trasformare i dati in documenti XML, database SQL, dataset [!INCLUDE[vstecado](~/includes/vstecado-md.md)], raccolte .NET e qualsiasi altro formato per il quale sia disponibile un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -90,9 +90,9 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Procedura dettagliata: scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Procedura dettagliata: Scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Procedura dettagliata: Scrittura di query in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

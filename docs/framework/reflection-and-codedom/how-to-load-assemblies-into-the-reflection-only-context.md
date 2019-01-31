@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: caricare assembly nel contesto Reflection-Only'
+title: 'Procedura: Caricare assembly nel contesto Reflection-Only'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa7f8a158a851baf76455da685059f02c69cb6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567048"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: caricare assembly nel contesto Reflection-Only
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: Caricare assembly nel contesto Reflection-Only
 Il contesto di caricamento di sola reflection consente di esaminare gli assembly compilati per altre piattaforme o altre versioni di .NET Framework. Il codice caricato in questo contesto può essere solo esaminato e non eseguito. Di conseguenza, poiché i costruttori non possono essere eseguiti, non è possibile creare oggetti. Non essendo possibile eseguire il codice, le dipendenze non vengono caricate automaticamente. Per esaminarle, è necessario caricarle manualmente.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Per caricare un assembly nel contesto di caricamento di sola reflection  
@@ -52,7 +52,7 @@ Il contesto di caricamento di sola reflection consente di esaminare gli assembly
  [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
- <xref:System.Reflection.CustomAttributeData>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- <xref:System.Reflection.Assembly.ReflectionOnly%2A>
+- <xref:System.Reflection.CustomAttributeData>

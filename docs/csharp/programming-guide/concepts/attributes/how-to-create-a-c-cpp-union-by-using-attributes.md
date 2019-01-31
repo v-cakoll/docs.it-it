@@ -2,14 +2,14 @@
 title: "Procedura: Creare un'unione C-C++ tramite attributi (C#)"
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599036"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedura: Creare un'unione C-C++ tramite attributi (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedura: Creare un'unione C/C++ tramite attributi (C#)
 L'uso degli attributi consente di personalizzare la disposizione degli struct in memoria. Ad esempio, tramite gli attributi `StructLayout(LayoutKind.Explicit)` e `FieldOffset` è possibile creare una struttura che in C/C++ è nota come unione.  
   
 ## <a name="example"></a>Esempio  
@@ -68,11 +68,11 @@ L'uso degli attributi consente di personalizzare la disposizione degli struct in
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Attributi](../../../../../docs/standard/attributes/index.md)  
-- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Attributi](../../../../../docs/standard/attributes/index.md)
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
 - [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))

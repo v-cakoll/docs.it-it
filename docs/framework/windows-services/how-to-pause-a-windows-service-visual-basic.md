@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: sospendere un servizio Windows (Visual Basic)'
+title: 'Procedura: Sospendere un servizio Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612723"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Procedura: sospendere un servizio Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Procedura: Sospendere un servizio Windows (Visual Basic)
 Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> per sospendere l'esecuzione del servizio IIS Admin nel computer locale.  
   
 ## <a name="example"></a>Esempio  
@@ -47,8 +47,8 @@ Questo esempio usa il componente <xref:System.ServiceProcess.ServiceController> 
   
  L'accesso alle informazioni sul servizio può essere limitato tramite <xref:System.Security.Permissions.PermissionState> per impostare le autorizzazioni in <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Procedura: continuare un servizio Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
+- [Procedura: Continuare un servizio Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

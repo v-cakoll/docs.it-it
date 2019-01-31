@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517682"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 
@@ -67,7 +67,7 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composito "0x{0:X} {0:E} {0:N}", come nell'esempio seguente.  
+ Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composto quale: "0x{0:X} {0:E} {0:N}", come nell'esempio riportato di seguito.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [Interpolazione di stringhe (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [Interpolazione di stringhe (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
-- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [Interpolazione di stringhe (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [Interpolazione di stringhe (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
+- [Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

@@ -2,12 +2,12 @@
 title: Oggetti XName e XNamespace atomizzati (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557860"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Oggetti XName e XNamespace atomizzati (LINQ to XML) (C#)
 Gli oggetti <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> sono *atomizzati*, ovvero, se contengono lo stesso nome completo fanno riferimento allo stesso oggetto. Questo offre vantaggi a livello di prestazioni per le query: quando si confrontano due nomi atomizzati per verificarne l'uguaglianza, il linguaggio intermedio sottostante deve determinare solo se i due riferimenti puntano allo stesso oggetto. Il codice sottostante non deve eseguire confronti tra stringhe, che richiederebbero molto tempo.  

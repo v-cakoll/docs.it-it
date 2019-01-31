@@ -1,18 +1,19 @@
 ---
-title: 'Procedura: ricevere stringhe da porte seriali in Visual Basic'
+title: 'Procedura: Ricevere stringhe da porte seriali in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 9d71a725aeea684e27479a5d55728151426c4a52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f87ff7e621d241a94dae444bc156502ee86b36b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521608"
 ---
-# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: ricevere stringhe da porte seriali in Visual Basic
+# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: Ricevere stringhe da porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe dalle porte seriali del computer in Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Per ricevere stringhe dalla porta seriale  
@@ -23,7 +24,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
   
 2.  Determinare quale porta seriale deve fornire le stringhe. In questo esempio si presuppone che sia `COM1`.  
   
-3.  Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3.  Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Il blocco `Try...Catch...Finally` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice per la modifica della porta seriale deve essere contenuto all'interno di questo blocco.  
   
@@ -62,9 +63,9 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
   
  Questo esempio usa un blocco `Try...Catch...Finally` per verificare che l'applicazione chiuda la porta e per rilevare tutte le eccezioni di timeout. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Procedura: Inviare stringhe a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
+- [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Procedura: Inviare stringhe a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673998"
 ---
 # <a name="blockingcollection-overview"></a>Panoramica di BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> è una classe di raccolta thread-safe che offre le funzionalità seguenti:  
@@ -75,13 +75,13 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Per altre informazioni, vedere [Procedura: Aggiungere funzionalità di delimitazione e blocco a una raccolta](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>Supporto di IEnumerable  
- <xref:System.Collections.Concurrent.BlockingCollection%601> offre un metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> che consente agli utenti di usare `foreach` (`For Each` in Visual Basic) per rimuovere gli elementi fino a quando non viene completata la raccolta, ovvero finché non è vuota e non vengono aggiunti altri elementi. Per altre informazioni, vedere [Procedura: usare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> offre un metodo <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> che consente agli utenti di usare `foreach` (`For Each` in Visual Basic) per rimuovere gli elementi fino a quando non viene completata la raccolta, ovvero finché non è vuota e non vengono aggiunti altri elementi. Per altre informazioni, vedere [Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Uso di più oggetti BlockingCollections come uno solo  
- Per gli scenari in cui un Consumer deve rimuovere elementi da più raccolte contemporaneamente, è possibile creare matrici di <xref:System.Collections.Concurrent.BlockingCollection%601> e usare i metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> che eseguiranno operazioni di aggiunta o rimozione in qualsiasi raccolta nella matrice. Se una raccolta è bloccata, il metodo ne cerca immediatamente un'altra finché non ne trova una che può eseguire l'operazione. Per altre informazioni, vedere [Procedura: usare matrici di BlockingCollection in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
+ Per gli scenari in cui un Consumer deve rimuovere elementi da più raccolte contemporaneamente, è possibile creare matrici di <xref:System.Collections.Concurrent.BlockingCollection%601> e usare i metodi statici, ad esempio <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> che eseguiranno operazioni di aggiunta o rimozione in qualsiasi raccolta nella matrice. Se una raccolta è bloccata, il metodo ne cerca immediatamente un'altra finché non ne trova una che può eseguire l'operazione. Per altre informazioni, vedere [Procedura: Usare matrici di raccolte di blocco in una pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [Raccolte e strutture di dati](../../../../docs/standard/collections/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Raccolte e strutture di dati](../../../../docs/standard/collections/index.md)
 - [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

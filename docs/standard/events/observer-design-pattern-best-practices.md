@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599998"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedure consigliate per un modello di progettazione observer
 In.NET Framework, il modello di progettazione osservatore è implementato come un insieme di interfacce. L'interfaccia <xref:System.IObservable%601?displayProperty=nameWithType> rappresenta il provider di dati, che è anche responsabile di fornire un'implementazione di <xref:System.IDisposable> che consenta agli osservatori di annullare la sottoscrizione di notifiche. L'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType> rappresenta l'osservatore. In questo argomento vengono descritte le procedure consigliate che gli sviluppatori devono seguire per implementare il modello di progettazione osservatore usando queste interfacce.  
@@ -55,6 +55,6 @@ In.NET Framework, il modello di progettazione osservatore è implementato come u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)  
-- [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)
+- [Procedura: Implementare un elemento Observer](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)

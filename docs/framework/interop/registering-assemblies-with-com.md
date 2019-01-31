@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3ba8cb41244157b1fca0f7e9d345625cc579d0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494041"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrazione di assembly presso COM
 È possibile eseguire uno strumento da riga di comando denominato [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) per registrare o annullare la registrazione di un assembly per l'uso con COM. Regasm.exe aggiunge informazioni sulla classe al Registro di sistema, così che i client COM possano usare la classe di .NET Framework in modo trasparente. La classe <xref:System.Runtime.InteropServices.RegistrationServices> fornisce funzionalità equivalenti.  
   
  Un componente gestito deve essere registrato nel Registro di sistema di Windows per poter essere attivato da un client COM. La tabella seguente mostra le chiavi che Regasm.exe aggiunge in genere al Registro di sistema di Windows. 000000 indica il valore GUID effettivo.  
   
-|GUID|Descrizione|Chiave del Registro di sistema|  
+|GUID|Description|Chiave del Registro di sistema|  
 |----------|-----------------|------------------|  
 |CLSID|Identificatore di classe|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|Identificatore di interfaccia|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -43,8 +43,8 @@ ms.locfileid: "33389161"
   
  Per la sottochiave `InprocServer32`, viene visualizzato un riferimento a Mscoree.dll al posto di una libreria dei tipi COM tradizionale per indicare che Common Language Runtime crea l'oggetto gestito.  
   
-## <a name="see-also"></a>Vedere anche  
- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
- [Procedura: fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md)  
- [Chiamata di un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [Distribuzione di un'applicazione per l'accesso COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>Vedere anche
+- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)
+- [Procedura: Fare riferimento a tipi .NET da COM](how-to-reference-net-types-from-com.md)
+- [Chiamata di un oggetto .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
+- [Distribuzione di un'applicazione per l'accesso COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

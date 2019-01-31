@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532682"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -165,7 +165,7 @@ public class Startup
 
 Quando nelle connessioni di EF Core sono abilitati i tentativi, ogni operazione che viene eseguita con EF Core diventa un'unica operazione con possibilità di ritentare. Per ogni query e per ogni chiamata a SaveChanges verranno eseguiti altri tentativi come una sola unità nel caso in cui si verifichi un errore temporaneo.
 
-Tuttavia, se il codice avvia una transazione tramite BeginTransaction, viene definito un gruppo personalizzato di operazioni che deve essere considerato come un'unità. Se si verifica un errore, verrà eseguito il rollback di tutto ciò che si trova all'interno della transazione. Se si tenta di eseguire la transazione quando si usa una strategia di esecuzione (criteri di ripetizione) di EF e si includono numerosi oggetti SaveChanges da più oggetti DbContext, verrà restituita un'eccezione simile alla seguente.
+Se tuttavia il codice avvia una transazione tramite BeginTransaction, viene definito un gruppo di operazioni personalizzato che deve essere considerato come un'unità. Se si verifica un errore, verrà eseguito il rollback di tutto ciò che si trova all'interno della transazione. Se si tenta di eseguire la transazione quando si usa una strategia di esecuzione (criteri di ripetizione) di EF e si includono numerosi oggetti SaveChanges da più oggetti DbContext, verrà restituita un'eccezione simile alla seguente.
 
 System.InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Usare la strategia di esecuzione restituita da 'DbContext.Database.CreateExecutionStrategy()' per eseguire tutte le operazioni nella transazione come un'unità con possibilità di ritentare.
 
@@ -200,7 +200,7 @@ Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si
 >
 > - **Documentazione di Entity Framework**  
 >   <https://docs.microsoft.com/ef/>
-> - **Entity Framework Core: dati correlati**  
+> - **EF Core: dati correlati**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASP.NET Applications** (Evitare il caricamento lazy di entità in applicazioni ASPNET)  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>

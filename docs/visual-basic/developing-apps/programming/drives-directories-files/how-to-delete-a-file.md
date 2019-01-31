@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eliminare un file in Visual Basic'
+title: 'Procedura: Eliminare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 2918b756d5f37de2489042a9eabfe7312841af81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2222c06b71b3063c848495aec52fd4acf0674073
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520620"
 ---
-# <a name="how-to-delete-a-file-in-visual-basic"></a>Procedura: eliminare un file in Visual Basic
+# <a name="how-to-delete-a-file-in-visual-basic"></a>Procedura: Eliminare un file in Visual Basic
 Il metodo `DeleteFile` dell'oggetto `My.Computer.FileSystem` consente l'eliminazione di un file. È possibile scegliere di inviare il file eliminato al **Cestino**, chiedere all'utente di confermare l'eliminazione del file e decidere cosa fare quando l'utente annulla l'operazione.  
   
 ### <a name="to-delete-a-text-file"></a>Per eliminare un file di testo  
@@ -58,9 +58,9 @@ Il metodo `DeleteFile` dell'oggetto `My.Computer.FileSystem` consente l'eliminaz
   
 -   L'utente ha annullato l'operazione e `onUserCancel` è impostato su `ThrowException` (<xref:System.OperationCanceledException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.UIOption>  
- <xref:Microsoft.VisualBasic.FileIO.RecycleOption>  
- [Procedura: ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.UIOption>
+- <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
+- [Procedura: Ottenere la raccolta di file di una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

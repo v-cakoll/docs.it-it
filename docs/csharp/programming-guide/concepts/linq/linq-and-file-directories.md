@@ -2,12 +2,12 @@
 title: Directory di file e LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: 4bdd21cf4d8558f140b265f195368082964c34c4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652371"
 ---
 # <a name="linq-and-file-directories-c"></a>Directory di file e LINQ (C#)
 Molte operazioni del file system sono essenzialmente query e quindi particolarmente adatte all'approccio LINQ.  
@@ -25,16 +25,16 @@ Molte operazioni del file system sono essenzialmente query e quindi particolarme
  [Procedura: Eseguire una query per trovare il numero totale di byte in un set di cartelle (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  La procedura illustra come restituire il numero totale di byte in tutti i file all'interno di un albero di directory specificato.  
   
- [Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)  
+ [Procedura: Confrontare il contenuto di due cartelle (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
  La procedura illustra come restituire tutti i file presenti in due cartelle specifiche e tutti i file presenti in una cartella, ma non nell'altra.  
   
- [Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [Procedura: Eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
  La procedura illustra come ripristinare il file più grande, il file più piccolo o un numero specificato di file in un albero di directory.  
   
  [Procedura: Eseguire una query per trovare i file duplicati in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  La procedura illustra come raggruppare tutti i nomi file che si verificano in più di una posizione all'interno di un albero di directory specificato. Viene anche illustrato come eseguire confronti più complessi basati su un operatore di confronto personalizzato.  
   
- [Procedura: eseguire una query sul contenuto dei file in una cartella (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [Procedura: Eseguire una query sul contenuto dei file in una cartella (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
  La procedura illustra come eseguire l'iterazione nelle cartelle in un albero, aprire ogni file ed eseguire query sul contenuto del file.  
   
 ## <a name="comments"></a>Commenti  

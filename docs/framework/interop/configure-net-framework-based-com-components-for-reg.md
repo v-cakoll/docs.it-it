@@ -1,5 +1,5 @@
 ---
-title: "Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione"
+title: "Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530696"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
   
 -   Per identificare il componente gestito, le applicazioni COM devono disporre di un manifesto dell'applicazione di tipo Win32.  
@@ -105,11 +105,11 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 4.  Identificare ogni classe nell'assembly. Usare l'elemento `<clrClass>` per identificare in modo univoco ogni classe nell'assembly gestito. L'elemento, che costituisce un sottoelemento di `<assembly>` dispone degli attributi descritti nella tabella seguente.  
   
-    |Attributo|Descrizione|Obbligatorio|  
+    |Attributo|Description|Obbligatorio|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identificatore che specifica la classe da attivare.|Yes|  
+    |`clsid`|Identificatore che specifica la classe da attivare.|Sì|  
     |`description`|Stringa contenente informazioni sul componente. Il valore predefinito è una stringa vuota.|No|  
-    |`name`|Stringa che rappresenta la classe gestita.|Yes|  
+    |`name`|Stringa che rappresenta la classe gestita.|Sì|  
     |`progid`|Identificatore da usare per l'attivazione con associazione tardiva.|No|  
     |`threadingModel`|Modello di threading COM. "Both" è il valore predefinito.|No|  
     |`runtimeVersion`|Specifica la versione di Common Language Runtime (CLR) da usare. Se questo attributo non viene specificato e CLR non è ancora stato caricato, il componente viene caricato con l'ultimo CLR installato prima della versione 4. Se si specifica v1.0.3705, v1.1.4322 o v2.0.50727, la versione esegue automaticamente il roll forward all'ultima versione di CLR installata prima della versione 4 (di solito v2.0.50727). Se è già stata caricata un'altra versione di CLR ed è possibile caricare la versione specificata side-by-side in-process, la versione specificata viene caricata; in caso contrario, viene usato il CLR caricato. Ciò potrebbe causare un errore di caricamento.|No|  
@@ -172,8 +172,8 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
      Anche in questo caso, `myresource.res` rappresenta il nome del file di risorse contenente la risorsa incorporata.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM senza registrazione](registration-free-com-interop.md)  
- [Requisiti per l'interoperabilità COM senza registrazione](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
- [Configurazione di componenti COM per l'attivazione senza registrazione](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
- [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità COM senza registrazione](registration-free-com-interop.md)
+- [Requisiti per l'interoperabilità COM senza registrazione](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
+- [Configurazione di componenti COM per l'attivazione senza registrazione](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
+- [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)

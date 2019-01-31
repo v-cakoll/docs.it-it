@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il mapping di HRESULT ed eccezioni'
+title: 'Procedura: Eseguire il mapping di HRESULT ed eccezioni'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729236"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Procedura: eseguire il mapping di HRESULT ed eccezioni
+# <a name="how-to-map-hresults-and-exceptions"></a>Procedura: Eseguire il mapping di HRESULT ed eccezioni
 I metodi COM segnalano gli errori restituendo HRESULT, mentre i metodi .NET li segnalano generando eccezioni. Il runtime gestisce la transizione tra questi due approcci. Ogni classe di eccezione in .NET Framework viene mappata a un HRESULT.  
   
  Le classi di eccezioni definite dall'utente possono specificare un HRESULT appropriato. Queste classi di eccezione possono modificare dinamicamente il valore HRESULT da restituire quando viene generata l'eccezione impostando il campo **HResult** per l'oggetto eccezione. Informazioni aggiuntive sull'eccezione vengono fornite al client tramite l'interfaccia **IErrorInfo**, implementata per l'oggetto .NET nel processo non gestito.  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  I campi di eccezione, ad esempio **Message**, **Source** e **StackTrace** non sono disponibili per **StackOverflowException**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Eccezioni](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Eccezioni](../../standard/exceptions/index.md)

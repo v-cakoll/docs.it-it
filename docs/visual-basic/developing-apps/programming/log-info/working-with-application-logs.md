@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693136"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Utilizzo dei log applicazione in Visual Basic
 Gli oggetti `My.Applicaton.Log` e `My.Log` consentono di scrivere facilmente nei log le informazioni di registrazione e di traccia.  
@@ -42,10 +42,10 @@ Gli oggetti `My.Applicaton.Log` e `My.Log` consentono di scrivere facilmente nei
   
  I valori di `CompanyName`, `ProductName`e `ProductVersion` provengono dalle informazioni sull'assembly dell'applicazione. Il formato del nome del file di log è *NomeAssembly*.log, dove *NomeAssembly* è il nome file dell'assembly senza estensione. Se sono necessari più file di log, ad esempio se il log originale non è disponibile quando l'applicazione prova a scrivere nel log, il formato del nome del file di log sarà *NomeAssembly*-*iteration*.log, dove `iteration` è un `Integer`.  
   
- È possibile eseguire l'override del comportamento predefinito aggiungendo o modificando i file di configurazione del computer e dell'applicazione. Per altre informazioni, vedere [Procedura dettagliata: modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ È possibile eseguire l'override del comportamento predefinito aggiungendo o modificando i file di configurazione del computer e dell'applicazione. Per altre informazioni, vedere [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Configurazione delle impostazioni del log  
- L'oggetto `Log` contiene un'implementazione predefinita che funziona senza il file di configurazione dell'applicazione, ovvero app.config. Per modificare le impostazioni predefinite, è necessario aggiungere un file di configurazione con le nuove impostazioni. Per altre informazioni, vedere [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ L'oggetto `Log` contiene un'implementazione predefinita che funziona senza il file di configurazione dell'applicazione, ovvero app.config. Per modificare le impostazioni predefinite, è necessario aggiungere un file di configurazione con le nuove impostazioni. Per altre informazioni, vedere [Procedura dettagliata: Filtro dell'output di My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  Le sezioni della configurazione del log si trovano nel nodo `<system.diagnostics>` all'interno del nodo principale `<configuration>` del file app.config. Le informazioni del log vengono definite in diversi nodi:  
   
@@ -100,6 +100,6 @@ Gli oggetti `My.Applicaton.Log` e `My.Log` consentono di scrivere facilmente nei
   
 -   **Evitare Denial of Service.** Se nel log dell'applicazione viene scritta una quantità eccessiva di informazioni, il log potrebbe riempirsi o potrebbe essere difficile trovare le informazioni importanti.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Registrazione di informazioni relative all'applicazione](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Registrazione di informazioni relative all'applicazione](../../../../visual-basic/developing-apps/programming/log-info/index.md)

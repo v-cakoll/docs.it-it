@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675367"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
@@ -58,7 +58,7 @@ ms.locfileid: "53155038"
 |Modello|Description|  
 |-------------|-----------------|  
 |`^`|La corrispondenza deve iniziare all'inizio della stringa di input (o all'inizio della riga se il metodo viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
-|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio esattamente due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita, il terzo dagli spazi acquisiti.|  
+|`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio esattamente due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: Il secondo è costituito dalla parola acquisita e il terzo dagli spazi acquisiti.|  
 |`,\s`|Trova una virgola seguita da uno spazio vuoto.|  
 |`(\w+\s\w+)`|Trova uno o più caratteri alfanumerici seguiti da uno spazio, seguito da uno o più caratteri alfanumerici. Questo è il quarto gruppo di acquisizione.|  
 |`,`|Trova la corrispondenza con una virgola.|  
@@ -73,7 +73,7 @@ ms.locfileid: "53155038"
 ## <a name="end-of-string-or-line-"></a>Fine di stringa o riga: ^  
  L'ancoraggio `$` specifica che il criterio precedente deve verificarsi alla fine della stringa di input oppure prima di `\n` alla fine della stringa di input.  
   
- Se si usa `$` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, la corrispondenza può verificarsi anche alla fine di una riga. Notare che `$` corrisponde a `\n` , ma non a `\r\n` (combinazione di ritorno a capo e caratteri di nuova riga o CR/LF). Per trovare la combinazione di caratteri CR/LF, includere `\r?$` nel criterio di espressione regolare.  
+ Se si usa `$` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , la corrispondenza può verificarsi anche alla fine di una riga. Notare che `$` corrisponde a `\n` , ma non a `\r\n` (combinazione di ritorno a capo e caratteri di nuova riga o CR/LF). Per trovare la combinazione di caratteri CR/LF, includere `\r?$` nel criterio di espressione regolare.  
   
  L'esempio seguente aggiunge l'ancoraggio `$` al criterio di espressione regolare usato nell'esempio della sezione [Inizio di stringa o riga](#Start) . Se usato con la stringa di input originale, che include cinque righe di testo, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> non riesce a trovare una corrispondenza, perché la fine della prima riga non corrisponde al criterio `$` . Quando la stringa di input originale viene suddivisa in una matrice di stringhe, il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> riesce a trovare la corrispondenza in ognuna delle cinque righe. Quando il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> viene chiamato con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, non viene trovata alcuna corrispondenza perché il criterio di espressione regolare non tiene conto dell'elemento di ritorno a capo (\u+000D). Tuttavia, quando il criterio di espressione regolare viene modificato sostituendo `$` con `\r?$`, la chiamata del metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con il parametro `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trova di nuovo cinque corrispondenze.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53155038"
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Fine di stringa o prima di terminare una nuova riga: \Z  
- L'ancoraggio `\Z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input oppure prima di `\n` alla fine della stringa di input. L'ancoraggio è identico a `$`, ad eccezione del fatto che `\Z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Di conseguenza, in una stringa con più righe può trovare solo la fine dell'ultima riga oppure l'ultima riga prima di `\n`.  
+ L'ancoraggio `\Z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input oppure prima di `\n` alla fine della stringa di input. L'ancoraggio è identico a `$` , ad eccezione del fatto che `\Z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Di conseguenza, in una stringa con più righe può trovare solo la fine dell'ultima riga oppure l'ultima riga prima di `\n`.  
   
  Notare che `\Z` corrisponde a `\n` , ma non a `\r\n` (combinazione di caratteri CR/LF). Per trovare la combinazione di caratteri CR/LF, includere `\r?\Z` nel criterio di espressione regolare.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53155038"
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Solo fine di stringa: \z  
- L'ancoraggio `\z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input. Come per l'elemento del linguaggio `$`, `\z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Diversamente dall'elemento del linguaggio `\Z`, `\z` non trova un carattere `\n` alla fine di una stringa. Di conseguenza, può trovare solo l'ultima riga della stringa di input.  
+ L'ancoraggio `\z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input. Come per l'elemento del linguaggio `$` , `\z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Diversamente dall'elemento del linguaggio `\Z` , `\z` non trova un carattere `\n` alla fine di una stringa. Di conseguenza, può trovare solo l'ultima riga della stringa di input.  
   
  L'esempio seguente usa l'ancoraggio `\z` in un'espressione regolare che è altrimenti identica all'esempio della sezione precedente, che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. L'esempio prova a trovare ognuno dei cinque elementi in una matrice di stringhe con il criterio di espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Due delle stringhe terminano con caratteri di ritorno a capo e di avanzamento riga, mentre le altre due no. Come mostrato dall'output, solo le stringhe senza carattere di ritorno a capo o avanzamento riga corrispondono al criterio.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53155038"
   
 <a name="Contiguous"></a>   
 ## <a name="contiguous-matches-g"></a>Corrispondenze contigue: \G  
- L'ancoraggio `\G` specifica che la corrispondenza deve verificarsi nel punto in cui è terminata la corrispondenza precedente. Se usato con il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>, questo ancoraggio garantisce che tutte le corrispondenze siano contigue.  
+ L'ancoraggio `\G` specifica che la corrispondenza deve verificarsi nel punto in cui è terminata la corrispondenza precedente. Se usato con il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> , questo ancoraggio garantisce che tutte le corrispondenze siano contigue.  
   
  L'esempio seguente usa un'espressione regolare per estrarre i nomi delle specie di roditori da una stringa con valori delimitati da virgole.  
   
@@ -178,5 +178,5 @@ ms.locfileid: "53155038"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)

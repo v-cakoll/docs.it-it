@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: definire un metodo generico tramite reflection emit'
+title: 'Procedura: Definire un metodo generico tramite reflection emit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596857"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: definire un metodo generico tramite reflection emit
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: Definire un metodo generico tramite reflection emit
 La prima procedura illustra come creare un metodo generico semplice con due parametri di tipo e come applicare a questi ultimi vincoli speciali, di interfaccia e di classe.  
   
  La seconda procedura illustra come creare il corpo del metodo e usare i parametri di tipo del metodo generico per creare istanze di tipi generici e chiamare i relativi metodi.  
@@ -117,7 +117,7 @@ La prima procedura illustra come creare un metodo generico semplice con due para
   
 6.  Creare il codice per il ciclo. Il primo passaggio consiste nel contrassegnare l'inizio del ciclo chiamando <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> con l'etichetta `loopAgain`. Le istruzioni per la creazione di un ramo che usano l'etichetta passeranno a questo punto del codice. Il passaggio successivo prevede l'inserimento nello stack dell'oggetto `TOutput` di cui è stato eseguito il cast in `ICollection(Of TInput)`. Questa operazione non deve essere eseguita immediatamente, ma deve comunque essere prevista per la chiamata al metodo `Add`. Dopo l'inserimento della matrice di input nello stack è necessario inserire la variabile `index` contenente l'indice corrente nella matrice. Il codice operativo <xref:System.Reflection.Emit.OpCodes.Ldelem> estrae l'indice e la matrice dallo stack e inserisce l'elemento della matrice indicizzata nello stack. A questo punto lo stack è pronto per la chiamata al metodo <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> che estrae l'insieme e il nuovo elemento dallo stack e aggiunge il secondo al primo.  
   
-     La parte del codice rimanente nel ciclo incrementa l'indice e verifica se il ciclo è terminato: l'indice e un intero 1 a 32 bit vengono inseriti nello stack e aggiunti tramite addizione, lasciando la somma risultante nello stack; la somma viene archiviata in `index`. Per impostare questo punto come punto di ingresso per il ciclo, viene chiamato il metodo <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>. L'indice viene nuovamente caricato. La matrice di input viene inserita nello stack e viene creato <xref:System.Reflection.Emit.OpCodes.Ldlen> per ottenere la relativa lunghezza. Per eseguire il confronto tra l'indice e la lunghezza, ora presenti nello stack, viene creato <xref:System.Reflection.Emit.OpCodes.Clt>. Se l'indice è minore della lunghezza, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> torna all'inizio del ciclo.  
+     Il resto del codice nel ciclo incrementa l'indice e verifica se il ciclo è terminato: l'indice e un intero 1 a 32 bit vengono inseriti nello stack e aggiunti, lasciando la somma nello stack. La somma viene archiviata in `index`. Per impostare questo punto come punto di ingresso per il ciclo, viene chiamato il metodo <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>. L'indice viene nuovamente caricato. La matrice di input viene inserita nello stack e viene creato <xref:System.Reflection.Emit.OpCodes.Ldlen> per ottenere la relativa lunghezza. Per eseguire il confronto tra l'indice e la lunghezza, ora presenti nello stack, viene creato <xref:System.Reflection.Emit.OpCodes.Clt>. Se l'indice è minore della lunghezza, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> torna all'inizio del ciclo.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -170,6 +170,6 @@ La prima procedura illustra come creare un metodo generico semplice con due para
   
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

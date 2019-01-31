@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546988"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opzioni del compilatore C# elencate per categoria
 
@@ -95,7 +95,7 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 |[-codepage](codepage-compiler-option.md)|Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.|
 |[-help](help-compiler-option.md)|Elenca le opzioni del compilatore in stdout.|
 |[-highentropyva](highentropyva-compiler-option.md)|Specifica che il file eseguibile supporta ASLR (Address Space Layout Randomization).|
-|[-langversion](langversion-compiler-option.md)|Specifica la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
+|[-langversion](langversion-compiler-option.md)|Specificare la versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o Latest |
 |[-main](main-compiler-option.md)|Specifica il percorso del metodo **Main**.|
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilatore di non eseguire la compilazione con csc.rsp.|
 |[-nologo](nologo-compiler-option.md)|Elimina i messaggi informativi del compilatore.|
@@ -114,6 +114,6 @@ Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore C#](index.md)  
-- [Opzioni del compilatore C# in ordine alfabetico](listed-alphabetically.md)  
+- [Opzioni del compilatore C#](index.md)
+- [Opzioni del compilatore C# in ordine alfabetico](listed-alphabetically.md)
 - [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

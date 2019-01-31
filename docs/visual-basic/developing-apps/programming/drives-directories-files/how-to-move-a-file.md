@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: spostare un file in Visual Basic'
+title: 'Procedura: Spostare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 95a7deeec7c5f5d997a99ba9aa4bae8d7f972b5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721975"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>Procedura: spostare un file in Visual Basic
+# <a name="how-to-move-a-file-in-visual-basic"></a>Procedura: Spostare un file in Visual Basic
 Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una cartella diversa. Se la struttura di destinazione non esiste, verrà creata.  
   
 ### <a name="to-move-a-file"></a>Per spostare un file  
@@ -49,8 +49,8 @@ Il metodo `My.Computer.FileSystem.MoveFile` consente di spostare un file in una 
   
 -   L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- [Procedura: rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
+- [Procedura: Rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Procedura: Creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedura: Analizzare percorsi file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

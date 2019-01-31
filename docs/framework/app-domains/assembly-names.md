@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50184784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529817"
 ---
 # <a name="assembly-names"></a>Nomi degli assembly
 Il nome di un assembly viene archiviato nei metadati e ha un effetto significativo sull'ambito dell'assembly e sull'uso dell'assembly da parte di un'applicazione. Un assembly con un nome sicuro dispone di un nome completo costituito da nome, impostazioni cultura, chiave pubblica e numero di versione dell'assembly. Questo nome è spesso detto nome visualizzato. Nel caso degli assembly caricati è possibile ottenere tale nome con la proprietà <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Se si inserisce un assembly con nome sicuro nella Global Assembly Cache il nome file dell'assembly deve corrispondere al nome dell'assembly (esclusa l'estensione del nome file, ad esempio .exe o .dll). Ad esempio se il nome file di un assembly è myAssembly.dll, il nome dell'assembly deve essere myAssembly. Gli assembly privati distribuiti solo nella directory radice dell'applicazione possono avere un nome dell'assembly diverso dal nome file.  
   
-## <a name="see-also"></a>Vedere anche  
-- [Procedura: Determinare il nome completo di un assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
-- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Vedere anche
+- [Procedura: Determinare il nome completo di un assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)
+- [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

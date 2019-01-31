@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: estrarre il giorno della settimana da una data specifica'
+title: 'Procedura: Estrarre il giorno della settimana da una data specifica'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537972"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: estrarre il giorno della settimana da una data specifica
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedura: Estrarre il giorno della settimana da una data specifica
 .NET Framework consente di determinare in modo semplice il giorno ordinale della settimana e di visualizzare il nome del giorno della settimana localizzato per una data specifica. Un valore enumerato che indica il giorno della settimana corrispondente a una determinata data è specificato dalla proprietà <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A>. Al contrario, il recupero del nome del giorno della settimana è un'operazione di formattazione che può essere eseguita effettuando la chiamata a un metodo di formattazione, ad esempio il metodo `ToString` del valore di data e ora o il metodo <xref:System.String.Format%2A?displayProperty=nameWithType>. In questo argomento viene illustrato come eseguire queste operazioni di formattazione.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Per estrarre un numero che indica il giorno della settimana da una data specifica  
@@ -102,6 +102,6 @@ ms.locfileid: "43872342"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

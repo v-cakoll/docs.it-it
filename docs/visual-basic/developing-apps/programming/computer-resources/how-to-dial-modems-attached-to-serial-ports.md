@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: comporre numeri con modem collegati a porte seriali in Visual Basic'
+title: 'Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: 6bef611b96c8c86a6eaf2802840e96769cd6fa34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db99f94d27235a7c9dca4fc5339854a39147b585
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490613"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: comporre numeri con modem collegati a porte seriali in Visual Basic
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con modem in Visual Basic.  
   
  In genere, il modem è collegato a una delle porte seriali del computer. Affinché l'applicazione comunichi con il modem, è necessario inviare i comandi alla porta seriale appropriata.  
@@ -22,7 +22,7 @@ Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con
   
 1.  Determinare a quale porta seriale è connesso il modem. Nell'esempio si presuppone che il modem sia collegato a COM1.  
   
-2.  Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+2.  Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Il blocco `Using` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.  
   
@@ -51,9 +51,9 @@ Questo argomento descrive come usare `My.Computer.Ports` per comporre numeri con
   
  In questo esempio, l'applicazione si disconnette dalla porta seriale dopo aver composto il numero con il modem. In uno scenario reale, l'utente vuole trasferire i dati da e verso il modem. Per altre informazioni, vedere [Procedura: Ricevere stringhe da porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Procedura: Inviare stringhe a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Procedura: Ricevere stringhe da porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
+- [Procedura: Inviare stringhe a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Procedura: Ricevere stringhe da porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

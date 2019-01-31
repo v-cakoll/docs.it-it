@@ -2,12 +2,12 @@
 title: Protocollo PNRP (Peer Name Resolution Protocol)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662660"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  
@@ -40,14 +40,14 @@ Il protocollo PNRP (Peer Name Resolution Protocol) ha le proprietà seguenti:
   
 -   <xref:System.Net.PeerToPeer.PeerName>: definisce un nome di peer che può essere usato per registrare e risolvere successivamente un peer all'interno di un cloud.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: definisce il record nel cloud PNRP che contiene le informazioni di registrazione per un peer, che include gli endpoint di rete in cui è possibile contattare il peer.  
+-   <xref:System.Net.PeerToPeer.PeerNameRecord>: definisce il record nel cloud PNRP che contiene le informazioni di registrazione per un peer, inclusi gli endpoint di rete dove è possibile contattare il peer.  
   
 -   <xref:System.Net.PeerToPeer.PeerNameRegistration>: definisce il processo di registrazione per un nome di peer, inclusi i metodi per avviare e arrestare la registrazione dei nomi di peer.  
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: definisce il processo per la risoluzione di un nome di peer negli endpoint di rete corrispondenti, inclusi sia i metodi sincroni che quelli asincroni per la risoluzione.  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
 - [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)

@@ -2,12 +2,12 @@
 title: 'Procedura: Modificare alberi delle espressioni (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 97a8ea0d66edf5d084c442deae32e04bdeb63c32
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1cdc6eb4017495fc7486025dd868352eb9d04892
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735610"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procedura: Modificare alberi delle espressioni (C#)
 In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non possono essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia dell'albero esistente e solo in seguito apportare le modifiche necessarie. È possibile usare la classe <xref:System.Linq.Expressions.ExpressionVisitor> per attraversare un albero delle espressioni esistente e copiare ogni nodo visitato.  
@@ -72,5 +72,5 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Procedura: Eseguire alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

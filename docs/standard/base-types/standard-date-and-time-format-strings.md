@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532192"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -415,8 +415,8 @@ Le stringhe di formato data e ora standard possono essere usate con i valori <xr
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Esempio: Utilità di formattazione in .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

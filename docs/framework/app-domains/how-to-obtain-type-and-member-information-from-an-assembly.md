@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: reperire informazioni su tipo e membro da un assembly'
+title: 'Procedura: Reperire informazioni su tipo e membro da un assembly'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44fcded298f33a420a505900f618c1c67f4b9b6f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef3fbb7af3097a67cb39f0c3b2ee294b86f0600e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701599"
 ---
-# <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Procedura: reperire informazioni su tipo e membro da un assembly
+# <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Procedura: Reperire informazioni su tipo e membro da un assembly
 Lo spazio dei nomi <xref:System.Reflection> contiene numerosi metodi per il recupero di informazioni da un assembly. Questa sezione illustra uno di questi metodi. Per altre informazioni, vedere [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md).  
   
  L'esempio seguente ottiene informazioni su tipo e membro da un assembly.  
@@ -28,7 +28,7 @@ Lo spazio dei nomi <xref:System.Reflection> contiene numerosi metodi per il recu
  [!code-csharp[Conceptual.Types.ViewInfo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source6.cs#8)]
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Programmazione con i domini dell'applicazione](./application-domains.md#programming-with-application-domains)
-- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

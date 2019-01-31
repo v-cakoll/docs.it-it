@@ -2,12 +2,12 @@
 title: Refactoring in funzioni pure (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: fcb396984d58b5601d278a860b272211e785dcfb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497131"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
 
@@ -24,7 +24,7 @@ Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire
   
  Per passare alla programmazione funzionale, è possibile eseguire il refactoring del codice esistente per eliminare inutili effetti collaterali e dipendenze esterne. In questo modo, è possibile creare versioni di funzioni pure del codice esistente.  
   
- In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. L'[esercitazione sulla modifica del contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) illustra come modificare un documento WordprocessingML e contiene due esempi su come eseguire il refactoring usando una funzione pura.  
+ In questo argomento vengono descritte le caratteristiche presenti e non presenti in una funzione pura. [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) illustra come modificare un documento WordprocessingML e include due esempi di esecuzione del refactoring usando una funzione pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminazione di effetti collaterali e dipendenze esterne  
  Negli esempi seguenti vengono confrontate due funzioni non pure e una funzione pura.  
@@ -114,5 +114,5 @@ class Program
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione alle trasformazioni funzionali pure (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Introduzione alle trasformazioni funzionali pure (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Differenze tra programmazione funzionale e programmazione imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661867"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Se ad esempio Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da `http://www.code.microsoft.com/utils`, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi verifica la presenza dell'assembly in `http://www.code.microsoft.com/utils/Assembly2.dll` e `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
   
-## <a name="see-also"></a>Vedere anche  
-- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Vedere anche
+- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Distribuzione](../../../docs/framework/deployment/index.md)

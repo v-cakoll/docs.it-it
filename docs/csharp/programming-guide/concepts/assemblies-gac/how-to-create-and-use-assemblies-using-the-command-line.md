@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: creare e usare assembly dalla riga di comando (C#)'
+title: 'Procedura: Creare e usare assembly dalla riga di comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623841"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedura: creare e usare assembly dalla riga di comando (C#)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedura: Creare e usare assembly dalla riga di comando (C#)
 Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione. Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:  
   
 -   `MathLibrary.DLL`: il file libreria che contiene i metodi da chiamare in fase di esecuzione. In questo esempio la DLL contiene due metodi: `Add` e `Multiply`.  
@@ -124,6 +124,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)  
-- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+- [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 - [Creazione di una classe che contenga le funzioni DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

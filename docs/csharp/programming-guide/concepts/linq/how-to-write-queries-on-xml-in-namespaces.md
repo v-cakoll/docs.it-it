@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere query in XML negli spazi dei nomi (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722097"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procedura: Scrivere query in XML negli spazi dei nomi (C#)
 Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  

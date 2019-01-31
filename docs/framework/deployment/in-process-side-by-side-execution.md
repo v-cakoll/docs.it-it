@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554556"
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
@@ -52,13 +52,13 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
   
 -   **Scenario 1:** applicazione nativa che usa i componenti COM compilati con versioni precedenti di .NET Framework.  
   
-     Versioni di .NET framework installate: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e tutte le altre versioni di .NET Framework usate dai componenti COM.  
+     Versioni di .NET Framework installate: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e tutte le altre versioni di .NET Framework usate dai componenti COM.  
   
      Cosa fare: in questo scenario, non eseguire alcuna operazione. I componenti COM verranno eseguiti con la versione di .NET Framework con la quale sono stati registrati.  
   
--   **Scenario 2**: applicazione gestita compilata con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] che si vuole eseguire con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma che verrà eseguita in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] se la versione 2.0 non è disponibile.  
+-   **Scenario 2**: applicazione gestita compilata con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] che si preferisce eseguire con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], ma che si vuole eseguire in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] se la versione 2.0 non è disponibile.  
   
-     Versioni di .NET framework installate: una versione precedente di .NET Framework e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versioni di .NET Framework installate: una versione precedente di .NET Framework e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Cosa fare: nel [file di configurazione dell'applicazione](../../../docs/framework/configure-apps/index.md) contenuto nella directory dell'applicazione usare [l'elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) e [l'elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) impostati nel modo seguente:  
   
@@ -73,7 +73,7 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
   
 -   **Scenario 3:** applicazione nativa che usa i componenti COM compilati con versioni precedenti di .NET Framework che si vuole eseguire con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Versioni di .NET framework installate: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versioni di .NET Framework installate: Oggetto [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Cosa fare: nel file di configurazione dell'applicazione contenuto nella directory dell'applicazione usare l'elemento `<startup>` con l'attributo `useLegacyV2RuntimeActivationPolicy` impostato su `true` e l'elemento `<supportedRuntime>` impostato nel modo seguente:  
   
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
-- [Elemento \<startup](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>Vedere anche
+- [Elemento \<startup](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

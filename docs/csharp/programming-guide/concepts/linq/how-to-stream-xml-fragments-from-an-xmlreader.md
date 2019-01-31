@@ -2,12 +2,12 @@
 title: 'Procedura: Flusso di frammenti XML da un XmlReader (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0c34b9aeb5cda61c13045487dee6ab15e55314e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693993"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Procedura: Flusso di frammenti XML da un XmlReader (C#)
 Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In questo argomento viene illustrato come generare il flusso di frammenti tramite <xref:System.Xml.XmlReader>.  
@@ -20,7 +20,7 @@ Quando è necessario elaborare file XML di grandi dimensioni, potrebbe risultare
   
  L'argomento [Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene informazioni e un esempio su come generare un flusso per un documento più complesso.  
   
- L'argomento [Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio dell'utilizzo di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
+ L'argomento [Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un esempio dell'uso di LINQ to XML per trasformare documenti XML di dimensioni estremamente grandi mantenendo un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene creato un metodo dell'asse personalizzato. È possibile sottoporlo a query tramite una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Il metodo dell'asse personalizzato `StreamRootChildDoc` è progettato specificamente per leggere un documento contenente un elemento `Child` ripetuto.  

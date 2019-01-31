@@ -1,5 +1,5 @@
 ---
-title: "Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web"
+title: "Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722361"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: convertire in numeri l'input numerico dell'utente nei controlli Web
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti possono immettere dati numerici in un controllo <xref:System.Web.UI.WebControls.TextBox> in un numero praticamente illimitato di formati. Di conseguenza, è molto importante determinare le impostazioni locali e le impostazioni cultura dell'utente della pagina Web. Quando si analizza l'input dell'utente, è quindi possibile applicare le convenzioni di formattazione definite dalle impostazioni locali e dalle impostazioni cultura dell'utente.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Per convertire l'input numerico da un controllo Web TextBox a un numero  
@@ -73,5 +73,5 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti po
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540533"
 ---
 # <a name="how-to-configure-network-tracing"></a>Procedura: Configurare la traccia di rete
 Nel file di configurazione del computer o dell'applicazione sono contenute le impostazioni che determinano il formato e il contenuto delle tracce di rete. Prima di eseguire questa procedura, assicurarsi che la funzionalità di traccia sia abilitata. Per informazioni su come abilitare la traccia di rete, vedere [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -97,8 +97,8 @@ Nel file di configurazione del computer o dell'applicazione sono contenute le im
 |`maxdatasize`|Attributo <xref:System.Int32> facoltativo. Imposta il numero massimo di byte di dati di rete inclusi in ogni traccia di riga. Il valore predefinito è 1024.<br /><br /> Questo attributo deve essere impostato per l'elemento \<source> come mostrato nell'esempio. Viene generata un'eccezione se questo attributo viene impostato per un elemento sotto l'elemento \<switches>.|  
 |`Tracemode`|Attributo <xref:System.String> facoltativo. Impostare su `includehex` per visualizzare le tracce del protocollo nel formato esadecimale e di testo. Impostare su `protocolonly` per mostrare solo testo. Il valore predefinito è `includehex`.<br /><br /> Questo attributo deve essere impostato per l'elemento \<switches> come mostrato nell'esempio. Viene generata un'eccezione se questo attributo viene impostato per un elemento sotto l'elemento \<source>.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

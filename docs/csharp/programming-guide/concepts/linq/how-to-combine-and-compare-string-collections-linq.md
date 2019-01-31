@@ -2,12 +2,12 @@
 title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514777"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
@@ -173,5 +173,5 @@ class MergeStrings
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

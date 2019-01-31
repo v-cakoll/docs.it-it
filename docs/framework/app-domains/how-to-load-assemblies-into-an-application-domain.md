@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: caricare assembly in un dominio applicazione'
+title: "Procedura: Caricare assembly in un dominio dell'applicazione"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c6b816c3a2c4f684993117deb38b40f4436a627c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653801"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: caricare assembly in un dominio applicazione
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: Caricare assembly in un dominio dell'applicazione
 È possibile caricare un assembly in un dominio dell'applicazione in diversi modi. Il modo consigliato consiste nell'usare il metodo `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.Load%2A> della classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Gli assembly possono essere caricati anche nei modi seguenti:  
   
 -   Il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> della classe <xref:System.Reflection.Assembly> carica un assembly dopo aver specificato il percorso del file. Se gli assembly vengono caricati usando questo metodo viene usato un contesto di caricamento diverso.  
   
--   I metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> caricano un assembly nel contesto di sola reflection. Gli assembly caricati in questo contesto possono essere esaminati ma non eseguiti. In questo modo è possibile esaminare assembly destinati ad altre piattaforme. Vedere [Procedura: Caricare assembly nel contesto di sola reflection](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   I metodi <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> caricano un assembly nel contesto di sola reflection. Gli assembly caricati in questo contesto possono essere esaminati ma non eseguiti. In questo modo è possibile esaminare assembly destinati ad altre piattaforme. Vedere [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 >  Il contesto di sola reflection è stata introdotto con .NET Framework versione 2.0.  
@@ -46,10 +46,10 @@ ms.locfileid: "50193071"
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
-- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)  
-- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)  
-- [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
+- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+- [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domini applicazione e assembly](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

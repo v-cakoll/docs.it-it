@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection'
+title: 'Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44b71ed726af585259b015c608e49d8c81e4e22a
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: abd2c98ac51a59e68f2bb49761555753a280c73d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509948"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedura: utilizzare ForEach per rimuovere elementi in un oggetto BlockingCollection
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedura: Usare ForEach per rimuovere elementi in un oggetto BlockingCollection
 Oltre a estrarre elementi da un oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> usando il metodo <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, è anche possibile usare [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ([For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) in Visual Basic) per rimuovere gli elementi finché l'aggiunta viene completata e la raccolta è vuota. Questa operazione viene definita *enumerazione mutante* o *enumerazione di consumo* perché, a differenza di un ciclo `foreach` tipico (`For Each`), questo enumeratore modifica la raccolta di origine rimuovendo elementi.  
   
 ## <a name="example"></a>Esempio  
@@ -34,5 +34,5 @@ Oltre a estrarre elementi da un oggetto <xref:System.Collections.Concurrent.Bloc
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)

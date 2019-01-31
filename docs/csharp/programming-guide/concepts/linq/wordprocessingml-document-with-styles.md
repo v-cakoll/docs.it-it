@@ -2,12 +2,12 @@
 title: Documento WordprocessingML con stili3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603924"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento WordprocessingML con stili
 I documenti WordprocessingML più complicati includono paragrafi formattati con stili.  
@@ -17,7 +17,7 @@ I documenti WordprocessingML più complicati includono paragrafi formattati con 
  È importante che per l'accesso ai pacchetti vengano usate le relazioni tra le parti, anziché un percorso arbitrario. Questo aspetto esula dagli argomenti previsti dall'esercitazione sulla modifica del contenuto in un documento WordprocessingML, tuttavia i programmi di esempio inclusi nell'esercitazione illustrano l'approccio corretto.  
   
 ## <a name="a-document-that-uses-styles"></a>Documento con stili  
- L'esempio WordML illustrato nell'argomento [Forma dei documenti WordprocessingML](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) è molto semplice. Il documento seguente è più complicato perché include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire l'[Esempio che genera parti di documento Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ L'esempio WordML illustrato nell'argomento [Forma dei documenti WordprocessingML](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) è molto semplice. Il documento seguente è più complicato: include paragrafi formattati con stili. Il modo più semplice per visualizzare il codice XML che costituisce un documento Office Open XML consiste nell'eseguire l'[Esempio che genera parti di documento Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
  Nel documento seguente al primo paragrafo è applicato lo stile `Heading1`. Vi sono poi diversi paragrafi cui è applicato lo stile predefinito e altri cui è applicato lo stile `Code`. In virtù di questa relativa complessità, si tratta di un documento più interessante da analizzare con LINQ to XML.  
   

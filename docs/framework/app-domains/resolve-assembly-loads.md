@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684489"
 ---
 # <a name="resolving-assembly-loads"></a>risoluzione caricamenti assembly
 .NET Framework offre l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per le applicazioni che richiedono un maggiore controllo sul caricamento di assembly. Con questo evento, l'applicazione può caricare un assembly nel contesto di caricamento dall'esterno di percorsi di sondaggio normale, selezionare la versione di assembly da caricare, creare e restituire un assembly dinamico e così via. Questo argomento illustra il materiale sussidiario per la gestione dell'evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -72,7 +72,7 @@ ms.locfileid: "50202211"
  La regola principale nella gestione di eventi <xref:System.AppDomain.AssemblyResolve> è che non si deve provare a restituire un assembly non riconosciuta. Quando si scrive il gestore, è necessario conoscere gli assembly che potrebbero causare la generazione dell'evento. Il gestore deve restituire Null per gli altri assembly.  
   
 > [!IMPORTANT]
->  A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], l'evento <xref:System.AppDomain.AssemblyResolve> viene generato per gli assembly satellite. Questa modifica interessa un gestore eventi scritto per una versione precedente di .NET Framework, se il gestore proverà a risolvere tutte le richieste di caricamento di assembly. I gestori di eventi, che ignorano gli assembly non riconosciuti, non sono interessati da questa modifica. Infatti restituiscono Null e seguono i normali meccanismi di fallback.  
+>  A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], l'evento <xref:System.AppDomain.AssemblyResolve> viene generato per gli assembly satellite. Questa modifica interessa un gestore eventi scritto per una versione precedente di .NET Framework, se il gestore proverà a risolvere tutte le richieste di caricamento di assembly. I gestori eventi che ignorano gli assembly che non riconoscono non sono interessati da questa modifica: restituiscono Null e seguono i normali meccanismi di fallback.  
   
  Quando si carica un assembly, il gestore eventi non deve usare nessun overload del metodo <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> che può causare la generazione dell'evento <xref:System.AppDomain.AssemblyResolve> in modo ricorsivo, poiché questo può causare un overflow dello stack. Vedere l'elenco illustrato in precedenza in questo argomento. Ciò avviene anche se si specifica una gestione di eccezioni per la richiesta di caricamento, perché non viene generata alcuna eccezione fino a quando non sono restituiti tutti i gestori eventi. Di conseguenza, il codice seguente causa un overflow dello stack se `MyAssembly` non viene trovato:  
   
@@ -80,6 +80,6 @@ ms.locfileid: "50202211"
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>Vedere anche  
-- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Vedere anche
+- [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

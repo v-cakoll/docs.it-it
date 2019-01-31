@@ -2,12 +2,12 @@
 title: Operazioni sui set (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: c91ec399e7c3bccd4ef937d5f7f3f871f86f00be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8a9cf898faeccdf513daf1ae384e811cd559e72a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692181"
 ---
 # <a name="set-operations-c"></a>Operazioni sui set (C#)
 Le operazioni sui set in LINQ si riferiscono alle operazioni di query che generano un set di risultati basato sulla presenza o sull'assenza di elementi equivalenti all'interno delle stesse Collection oppure di Collection (o set) distinte.  
@@ -16,7 +16,7 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Distinct|Rimuove i valori duplicati da una Collection.|Non applicabile.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
 |Eccezione|Restituisce la differenza dei set, ovvero gli elementi di una Collection che non sono presenti in una seconda Collection.|Non applicabile.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
@@ -47,7 +47,7 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+- <xref:System.Linq>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
 - [Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

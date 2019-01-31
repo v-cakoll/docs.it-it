@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514699"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Tracciatura di rete in .NET Framework
 La funzionalità di traccia di rete in .NET Framework consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. Questa funzionalità è utile per il debug delle applicazioni in fase di sviluppo, nonché per l'analisi delle applicazioni distribuite. È possibile personalizzare l'output generato dalla tracciatura della rete per supportare differenti scenari di utilizzo in fase di sviluppo e nell'ambiente di produzione.  
@@ -35,8 +35,8 @@ La funzionalità di traccia di rete in .NET Framework consente di accedere alle 
 > [!NOTE]
 >  Questo membro genera informazioni di traccia quando viene abilitata la funzionalità di traccia di rete nell'applicazione in uso. Per ulteriori informazioni, vedere Traccia di rete.  
   
-## <a name="see-also"></a>Vedere anche  
- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
-[Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

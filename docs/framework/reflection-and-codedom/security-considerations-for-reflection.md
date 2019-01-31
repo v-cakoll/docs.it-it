@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509310"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
 La reflection consente di ottenere informazioni su tipi e membri e di accedere ai membri, vale a dire chiamare metodi e costruttori, ottenere e impostare valori di proprietà, aggiungere e rimuovere gestori eventi e così via. L'uso della reflection per ottenere informazioni su tipi e membri non presenta limitazioni. L'intero codice può usare la reflection per eseguire le attività seguenti:  
@@ -56,7 +56,7 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
  Queste regole valgono sempre, indipendentemente dal fatto che l'accesso al membro critico per la sicurezza venga eseguito direttamente dal codice compilato o tramite reflection.  
   
- Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale, ad esempio in un dominio applicazione in modalità sandbox, il livello di attendibilità dell'assembly determina se può accedere o meno a codice critico per la sicurezza: se l'assembly è dotato di un nome sicuro ed è installato nella Global Assembly Cache, si tratta di un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.  
+ Il codice dell'applicazione eseguito dalla riga di comando viene eseguito con attendibilità totale. A condizione che non sia contrassegnato come Transparent, può usare la reflection per accedere a membri critici per la sicurezza. Quando lo stesso codice viene eseguito con attendibilità parziale (ad esempio in un dominio dell'applicazione creato mediante sandbox), il livello di attendibilità dell'assembly determina se può accedere a codice critico per la sicurezza: se l'assembly ha un nome sicuro e viene installato nella Global Assembly Cache, è un assembly attendibile e può chiamare membri critici per la sicurezza. Nel caso non sia attendibile, diventa Transparent anche se non è stato contrassegnato come tale e non può accedere a membri critici per la sicurezza.  
   
  Per altre informazioni sul modello di sicurezza in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vedere [Security Changes](../../../docs/framework/security/security-changes.md) (Modifiche di sicurezza).  
   
@@ -82,7 +82,7 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
     > [!NOTE]
     >  Per impostazione predefinita, i criteri di sicurezza negano questa autorizzazione al codice proveniente da Internet. L'autorizzazione, infatti, non dovrebbe mai essere concessa a codice proveniente da Internet.  
   
--   Per consentire al codice di richiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro richiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+-   Per consentire al codice di chiamare qualsiasi membro non pubblico, a condizione che il set di concessioni dell'assembly contenente il membro chiamato sia uguale o sia un sottoinsieme del set di concessioni dell'assembly contenente il codice chiamante: è necessario concedere al codice l'autorizzazione <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
  Ad esempio, si supponga di concedere a un dominio applicazione autorizzazioni Internet più <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, quindi di eseguire un'applicazione Internet con due assembly, A e B.  
   
@@ -104,13 +104,13 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
 -   A partire da [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], l'uso della reflection per ottenere informazioni su tipi e membri non pubblici non richiede alcuna autorizzazione. Nelle versioni precedenti è necessario usare <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)  
- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)  
- [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Applicazione di attributi](../../../docs/standard/attributes/applying-attributes.md)  
- [Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)
+- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
+- [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Applicazione di attributi](../../../docs/standard/attributes/applying-attributes.md)
+- [Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)

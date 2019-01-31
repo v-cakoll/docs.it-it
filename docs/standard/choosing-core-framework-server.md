@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699506"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -91,7 +91,7 @@ Esistono tecnologie di .NET Framework non disponibili in .NET Core. Alcune potre
 
 * Implementazione di servizi WCF: anche se è presente una [libreria WCF client](https://github.com/dotnet/wcf) per l'utilizzo di servizi WCF da .NET Core, l'implementazione di server WCF è attualmente disponibile solo in .NET Framework. Questo scenario non è attualmente previsto per .NET Core, ma verrà preso in considerazione per il futuro.
 
-* Servizi correlati al flusso di lavoro: Windows Workflow Foundation (WF), Servizi flusso di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
+* Servizi correlati ai flussi di lavoro: Windows Workflow Foundation (WF), Servizi flussi di lavoro (WCF e WF in un unico servizio) e WCF Data Services (in precedenza "ADO.NET Data Services") sono disponibili solo in .NET Framework.  e non è previsto alcun trasferimento di WF/WCF+WF/WCF Data Services in .NET Core.
 
 * Supporto per i linguaggi: Visual Basic e F# sono attualmente supportati in .NET Core, ma non per tutti i tipi di progetto. Per un elenco dei modelli di progetto supportati, vedere le [opzioni del modello per dotnet new](../core/tools/dotnet-new.md#arguments).
 
@@ -103,11 +103,11 @@ Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni s
 
 ## <a name="see-also"></a>Vedere anche
 
-* [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework) (Scegliere tra ASP.NET e ASP.NET Core)
-* [ASP.NET Core per .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Framework di destinazione](frameworks.md)
-* [Guida a .NET Core](../core/index.md)  
-* [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)  
-* [.NET Framework on Docker Guide](../framework/docker/index.md) (Guida a .NET Framework su Docker)  
-* [.NET Components Overview](components.md) (Panoramica dei componenti .NET)  
-* [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)
+- [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework) (Scegliere tra ASP.NET e ASP.NET Core)
+- [ASP.NET Core per .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Framework di destinazione](frameworks.md)
+- [Guida a .NET Core](../core/index.md)
+- [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)
+- [.NET Framework on Docker Guide](../framework/docker/index.md) (Guida a .NET Framework su Docker)
+- [.NET Components Overview](components.md) (Panoramica dei componenti .NET)
+- [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)

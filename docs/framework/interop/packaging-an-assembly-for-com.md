@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531512"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Preparazione di un assembly per COM
 Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui tipi gestiti che prevedono di incorporare nella propria applicazione:  
@@ -60,7 +60,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
   
      Indipendentemente dal meccanismo scelto, solo i tipi pubblici definiti nell'assembly specificato vengono inclusi nella libreria dei tipi generata.  
   
-     È possibile creare un pacchetto per una libreria dei tipi come file separato o incorporarlo come file di risorse Win32 all'interno di un'applicazione basata su NET. In Microsoft Visual Basic 6.0 questa operazione viene eseguita automaticamente. Tuttavia, quando si usa [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], è necessario incorporare manualmente la libreria dei tipi. Per istruzioni, vedere [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni basate su .NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     È possibile creare un pacchetto per una libreria dei tipi come file separato o incorporarlo come file di risorse Win32 all'interno di un'applicazione basata su NET. In Microsoft Visual Basic 6.0 questa operazione viene eseguita automaticamente. Tuttavia, quando si usa [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], è necessario incorporare manualmente la libreria dei tipi. Per istruzioni, vedere [Procedura: Incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Utilità di esportazione della libreria dei tipi  
@@ -80,13 +80,13 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
 ## <a name="net-services-installation-tool"></a>Strumento di installazione dei servizi .NET  
  Lo [strumento di installazione dei servizi .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) aggiunge classi gestite ai servizi componenti di Windows 2000 e combina diverse attività in un unico strumento. Oltre a caricamento e registrazione di un assembly, Regsvcs.exe può generare, registrare e installare la libreria dei tipi in un'applicazione COM+ 1.0 esistente.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
- [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)  
- [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface)  
- [Considerazioni sulla sicurezza degli assembly](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Registrazione di assembly presso COM](registering-assemblies-with-com.md)  
- [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)
+- [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)
+- [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Considerazioni sulla sicurezza degli assembly](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Registrazione di assembly presso COM](registering-assemblies-with-com.md)
+- [Procedura: Incorporare librerie dei tipi come risorse Win32 nelle applicazioni](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

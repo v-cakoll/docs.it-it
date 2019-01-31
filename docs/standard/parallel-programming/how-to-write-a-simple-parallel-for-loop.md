@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere un ciclo Parallel.For semplice'
+title: 'Procedura: Scrivere un ciclo Parallel.For semplice'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b2ebf679816684e68a1c13d660ef9fc54e3a175
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574924"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: Scrivere un ciclo Parallel.For semplice
 
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.
 

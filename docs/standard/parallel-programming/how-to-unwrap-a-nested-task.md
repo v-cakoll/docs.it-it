@@ -1,5 +1,5 @@
 ---
-title: "Procedura: annullare il wrapping di un'attività annidata"
+title: "Procedura: Annullare il wrapping di un'attività annidata"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602052"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>Procedura: annullare il wrapping di un'attività annidata
+# <a name="how-to-unwrap-a-nested-task"></a>Procedura: Annullare il wrapping di un'attività annidata
 È possibile restituire un'attività da un metodo e quindi attendere o continuare da tale attività, come illustrato nell'esempio seguente:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -45,5 +45,5 @@ ms.locfileid: "45750193"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [Programmazione asincrona basata su attività](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

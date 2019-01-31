@@ -2,12 +2,12 @@
 title: 'Procedura: Filtrare in base a un elemento facoltativo (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1aeb234365fa5d02911f70bb70a860258ce62f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540113"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Procedura: Filtrare in base a un elemento facoltativo (C#)
 Talvolta si desidera filtrare in base a un elemento anche se non si è certi che esista nel documento XML. La ricerca deve essere eseguita in modo che se l'elemento specifico non include l'elemento figlio, non viene generata un'eccezione di riferimento null quando si applica un filtro sull'elemento. Nell'esempio seguente l'elemento `Child5` non contiene un elemento figlio `Type`, tuttavia la query viene comunque eseguita correttamente.  
@@ -97,9 +97,9 @@ Child Four Text
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
-- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
+- [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Operazioni di proiezione (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

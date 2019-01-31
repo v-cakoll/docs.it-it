@@ -2,12 +2,12 @@
 title: 'Procedura: Raggruppare file per estensione (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 320d89c78a317f49d98d4dc139aaa3df05fcd6f3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575149"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Procedura: Raggruppare file per estensione (LINQ) (C#)
 Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle. Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
@@ -109,5 +109,5 @@ class GroupByExtension
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

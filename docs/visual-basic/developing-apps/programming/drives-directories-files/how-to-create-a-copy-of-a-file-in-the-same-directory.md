@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una copia di un file nella stessa directory in Visual Basic'
+title: 'Procedura: Creare una copia di un file nella stessa directory in Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 1147e89292181060589b38be2972e2ff1a3e386c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667102"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Procedura: creare una copia di un file nella stessa directory in Visual Basic
+# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Procedura: Creare una copia di un file nella stessa directory in Visual Basic
 Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametri consentono di sovrascrivere file esistenti, rinominare il file, visualizzare lo stato di avanzamento dell'operazione e permettere all'utente di annullare l'operazione.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Per creare una copia di un file nella stessa directory  
@@ -62,11 +62,11 @@ Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file. I parametr
   
 -   L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
- [Procedura: copiare file con un criterio specifico in una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- [Procedura: creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [Procedura: copiare una directory in un'altra directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- [Procedura: rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
+- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
+- [Procedura: Copiare file con un criterio specifico in una directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Procedura: Creare una copia di un file in una directory diversa](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedura: Copiare una directory in un'altra directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
+- [Procedura: Rinominare un file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

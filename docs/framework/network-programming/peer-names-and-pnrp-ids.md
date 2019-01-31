@@ -2,12 +2,12 @@
 title: Nomi di peer e ID PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690788"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomi di peer e ID PNRP
 Il nome di peer rappresenta un endpoint per la comunicazione e può identificarsi in un computer, un utente, un gruppo, un servizio o qualsiasi altro elemento associato a un peer che può essere risolto in un indirizzo IPv6. Il protocollo PNRP (Peer Name Resolution Protocol) accetta il nome di peer statisticamente univoco per la creazione di un ID PNRP, usato per identificare i membri del cloud.  
@@ -24,12 +24,12 @@ Il nome di peer rappresenta un endpoint per la comunicazione e può identificars
   
  Gli ID PNRP sono composti di:  
   
--   I 128 bit di ordine superiore, noti come ID peer-to-peer (P2P) sono un hash di un nome di peer assegnato all'endpoint. Il nome del peer ha il seguente formato: *Autorità.Classificatore*. Nel caso dei nomi protetti, *Autorità* è l'hash SHA1 (Secure Hash Algorithm 1 ) della chiave pubblica del nome di peer in caratteri esadecimali. Per i nomi non protetti, *Autorità* è il singolo carattere: "0". *Classificatore* è una stringa che identifica l'applicazione. Nessun classificatore per nome di peer può essere più lungo di 149 caratteri, compreso il carattere di terminazione `null`.  
+-   I 128 bit di ordine superiore, noti come ID peer-to-peer (P2P) sono un hash di un nome di peer assegnato all'endpoint. Il nome peer ha il formato seguente: *Authority.Classifier*. Nel caso dei nomi protetti, *Autorità* è l'hash SHA1 (Secure Hash Algorithm 1 ) della chiave pubblica del nome di peer in caratteri esadecimali. Per i nomi non protetti, *Autorità* è il singolo carattere: "0". *Classificatore* è una stringa che identifica l'applicazione. Nessun classificatore per nome di peer può essere più lungo di 149 caratteri, compreso il carattere di terminazione `null`.  
   
 -   I 128 bit di ordine inferiore vengono usati per la posizione del servizio, ovvero un numero generato che identifica diverse istanze dello stesso ID P2P nello stesso cloud.  
   
  La combinazione di ID P2P e posizione del servizio consente la registrazione di più ID PNRP da un unico computer.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

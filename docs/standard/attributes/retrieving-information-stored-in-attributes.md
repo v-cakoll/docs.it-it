@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744085"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recupero di informazioni memorizzate negli attributi
 Il recupero di un attributo personalizzato è un processo semplice. Dichiarare prima di tutto un'istanza dell'attributo da recuperare. Usare quindi il metodo <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> per inizializzare il nuovo attributo per il valore dell'attributo da recuperare. Dopo avere inizializzato il nuovo attributo, è sufficiente usarne le proprietà per ottenere i valori.  
@@ -86,7 +86,7 @@ The attribute was not found.
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Type?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Attributi](../../../docs/standard/attributes/index.md)

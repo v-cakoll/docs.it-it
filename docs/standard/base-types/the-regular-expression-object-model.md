@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535308"
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
 <a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Include le sezioni seguenti:  
@@ -91,7 +91,7 @@ ms.locfileid: "45664735"
   
  Il criterio di ricerca di espressioni regolari `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Trova la corrispondenza con l'inizio della stringa di input.|  
 |`\d{3}`|Trova la corrispondenza con tre cifre decimali.|  
@@ -109,7 +109,7 @@ ms.locfileid: "45664735"
   
  Il criterio di espressione regolare `\b(\w+)\W+(\1)\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -131,7 +131,7 @@ ms.locfileid: "45664735"
   
  Il criterio di ricerca di espressioni regolari `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -154,7 +154,7 @@ ms.locfileid: "45664735"
   
  Il criterio di ricerca di espressioni regolari `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d{1,2}`|Trova la corrispondenza con una o due cifre decimali.|  
@@ -217,7 +217,7 @@ ms.locfileid: "45664735"
   
  Il criterio di espressione regolare `\b\d+(,\d{3})*\.\d{2}\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -248,7 +248,7 @@ ms.locfileid: "45664735"
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -277,14 +277,14 @@ ms.locfileid: "45664735"
   
  Il criterio di ricerca di espressioni regolari `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(?<name>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `name`.|  
 |`:`|Trova la corrispondenza con i due punti.|  
 |`(?<value>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `value`.|  
   
- Le proprietà della classe <xref:System.Text.RegularExpressions.Group> forniscono informazioni sul gruppo acquisito. La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo acquisito nel testo di input, la proprietà `Group.Length` include la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al modello definito dal gruppo di acquisizione.  
+ Le proprietà della classe <xref:System.Text.RegularExpressions.Group> offrono informazioni sul gruppo Capture: La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo Capture nel testo di input, la proprietà `Group.Length` contiene la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al criterio definito dal gruppo Capture.  
   
  L'applicazione di quantificatori a un gruppo (per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664735"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   I quantificatori possono corrispondere a più occorrenze di un modello definito da un gruppo di acquisizione. In questo caso, le proprietà `Value` e `Length` di un oggetto <xref:System.Text.RegularExpressions.Group> contengono informazioni sull'ultima sottostringa acquisita. Ad esempio, l'espressione regolare seguente corrisponde a una singola frase che termina con un punto. Usa due costrutti di raggruppamento: il primo acquisisce singole parole insieme a un carattere di spaziatura e il secondo acquisisce le singole parole. Come illustrato dall'output dell'esempio, anche se l'espressione regolare riesce ad acquisire un'intera frase, il secondo gruppo di acquisizione acquisisce solo l'ultima parola.  
+-   I quantificatori possono corrispondere a più occorrenze di un modello definito da un gruppo di acquisizione. In questo caso, le proprietà `Value` e `Length` di un oggetto <xref:System.Text.RegularExpressions.Group> contengono informazioni sull'ultima sottostringa acquisita. Ad esempio, l'espressione regolare seguente corrisponde a una singola frase che termina con un punto. Usa due costrutti di raggruppamento: il primo acquisisce parole singole insieme a uno spazio e il secondo acquisisce parole singole. Come illustrato dall'output dell'esempio, anche se l'espressione regolare riesce ad acquisire un'intera frase, il secondo gruppo di acquisizione acquisisce solo l'ultima parola.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -341,7 +341,7 @@ ms.locfileid: "45664735"
   
  L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`(\s\w+)*`|Trova la corrispondenza con zero o più occorrenze di un carattere di spaziatura seguito da uno o più caratteri di parola. Questo modello corrisponde a nomi di città composti da più parole. Equivale al terzo gruppo di acquisizione.|  
@@ -353,6 +353,6 @@ ms.locfileid: "45664735"
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Text.RegularExpressions>  
-- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

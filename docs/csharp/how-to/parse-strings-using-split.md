@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Analizzare le stringhe con String.Split (guida a C#)'
+title: 'Procedura: Analizzare le stringhe con String.Split (Guida a C#)'
 description: String.Split restituisce una matrice di stringhe divise da un set di delimitatori e rappresenta un modo semplice per analizzare le stringhe.
 ms.date: 01/03/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603720"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Procedura: Analizzare le stringhe con String.Split (guida a C#)
+# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Procedura: Analizzare le stringhe con String.Split (Guida a C#)
 
 Il metodo <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matrice di sottostringhe dividendo la stringa di input in base a uno o più delimitatori. È spesso il modo più semplice per separare una stringa in corrispondenza della fine delle parole. Questo metodo viene usato anche per dividere le stringhe in corrispondenza di altri caratteri o di altre stringhe specifiche.
 
@@ -52,6 +52,6 @@ Istanze consecutive di un separatore generano una stringa vuota nella matrice di
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida per programmatori C#](../programming-guide/index.md)  
-- [Stringhe](../programming-guide/strings/index.md)  
+- [Guida per programmatori C#](../programming-guide/index.md)
+- [Stringhe](../programming-guide/strings/index.md)
 - [Espressioni regolari .NET](../../standard/base-types/regular-expressions.md)

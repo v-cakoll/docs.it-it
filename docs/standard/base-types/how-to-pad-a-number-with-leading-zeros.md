@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere zeri iniziali a un numero'
+title: 'Procedura: Aggiungere zeri iniziali a un numero'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673034"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: Aggiungere zeri iniziali a un numero
 È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](../../../docs/standard/base-types/custom-numeric-format-strings.md). In questo argomento viene illustrato come usare entrambi i metodi per aggiungere un numero con gli zeri iniziali.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Per aggiungere un intero con gli zeri iniziali a una lunghezza specifica  
@@ -80,7 +80,7 @@ ms.locfileid: "44086722"
   
     2.  In questo caso, determinare il numero di caratteri alla sinistra del separatore decimale.  
   
-         oppure  
+         -oppure-  
   
          In caso contrario, determinare la lunghezza della stringa.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "44086722"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)

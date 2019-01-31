@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: registrare informazioni sui servizi'
+title: 'Procedura: Registrare informazioni sui servizi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660141"
 ---
-# <a name="how-to-log-information-about-services"></a>Procedura: registrare informazioni sui servizi
+# <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
   
  Il programma di installazione del servizio registra automaticamente ogni servizio nel progetto come origine valida degli eventi con il registro applicazioni sul computer in cui è installato il servizio, quando la registrazione è attivata. Il servizio registra informazioni ogni volta che viene avviato, arrestato, sospeso, riavviato, installato o disinstallato, oltre a registrare tutti gli errori che si verificano. Non è necessario scrivere nessun codice per scrivere voci nel registro quando si usa il comportamento predefinito, perché è il servizio a farlo automaticamente.  
@@ -69,5 +69,5 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

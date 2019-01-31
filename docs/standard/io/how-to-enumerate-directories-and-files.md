@@ -1,6 +1,6 @@
 ---
-title: 'Procedura: enumerare directory e file'
-ms.date: 03/30/2017
+title: 'Procedura: Enumerare directory e file'
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,61 +10,59 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580460"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>Procedura: enumerare directory e file
-È possibile enumerare directory e file usando i metodi che restituiscono una raccolta enumerabile di stringhe dei rispettivi nomi. È anche possibile usare metodi che restituiscono una raccolta enumerabile di oggetti <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>. Le raccolte enumerabili offrono prestazioni migliori rispetto alle matrici quando si lavora con grandi raccolte di file e directory.  
+# <a name="how-to-enumerate-directories-and-files"></a>Procedura: Enumerare directory e file
+Le raccolte enumerabili offrono prestazioni migliori rispetto alle matrici quando si lavora con grandi raccolte di file e directory. Per enumerare directory e file, usare metodi che restituiscono una raccolta enumerabile di nomi di directory o file o dei rispettivi oggetti <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>.  
   
- È anche possibile usare raccolte enumerabili ottenute da questi metodi per fornire il parametro <xref:System.Collections.Generic.IEnumerable%601> per i costruttori di classi di raccolte, ad esempio la classe <xref:System.Collections.Generic.List%601>.  
+Se si vogliono cercare e restituire solo i nomi di directory o file, usare i metodi di enumerazione della classe <xref:System.IO.Directory>. Se si vogliono cercare e restituire altre proprietà di directory o file, usare le classi <xref:System.IO.DirectoryInfo> e <xref:System.IO.FileSystemInfo>.  
   
- Se si vuole ottenere solo i nomi di directory o file, usare i metodi di enumerazione della classe <xref:System.IO.Directory>. Se si vuole ottenere altre proprietà di directory o file, usare le classi <xref:System.IO.DirectoryInfo> e <xref:System.IO.FileSystemInfo>.  
+È possibile usare raccolte enumerabili ottenute da questi metodi come parametro <xref:System.Collections.Generic.IEnumerable%601> per i costruttori di classi di raccolte, come <xref:System.Collections.Generic.List%601>.  
   
- La tabella seguente offre una guida ai metodi che restituiscono raccolte enumerabili.  
+La tabella seguente riepiloga i metodi che restituiscono raccolte enumerabili di file e directory:  
   
-|Per enumerare|Raccolta enumerabile da restituire|Metodo da usare|  
+|Per cercare e restituire|Usare il metodo|  
 |------------------|-------------------------------------|-------------------|  
-|Directory|Nomi di directory|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-||Informazioni sulle directory (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-|File|Nomi file|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
-||Informazioni sui file (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
-|Informazioni sui file system|Voci di file system|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
-||Informazioni sui file system (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|Nomi di directory|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|Informazioni sulle directory (<xref:System.IO.DirectoryInfo>)|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|Nomi file|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|Informazioni sui file (<xref:System.IO.FileInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|Nomi di voci del file system|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+|Informazioni sulle voci di file system (<xref:System.IO.FileSystemInfo>)|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|Nomi di file e directory |<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+
+> [!NOTE]
+> Anche se è possibile enumerare immediatamente tutti i file presenti nelle sottodirectory della directory padre usando l'opzione <xref:System.IO.SearchOption.AllDirectories> dell'enumerazione <xref:System.IO.SearchOption> facoltativa, errori <xref:System.UnauthorizedAccessException> possono rendere incompleta l'enumerazione. È possibile intercettare queste eccezioni enumerando prima di tutto le directory e quindi i file.  
   
- Anche se è possibile enumerare immediatamente tutti i file presenti nelle sottodirectory della directory padre usando l'opzione di ricerca <xref:System.IO.SearchOption.AllDirectories> fornita dall'enumerazione <xref:System.IO.SearchOption>, eccezioni di accesso non autorizzato (<xref:System.UnauthorizedAccessException>) possono fare sì che l'enumerazione non sia completa. Se queste eccezioni sono possibili, è possibile intercettarle e continuare enumerando prima di tutto le directory e quindi i file.  
+## <a name="examples-use-the-directory-class"></a>Esempi: Usare la classe Directory  
   
-### <a name="to-enumerate-directory-names"></a>Per enumerare nomi di directory  
+L'esempio seguente usa il metodo <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> per ottenere un elenco dei nomi delle directory di primo livello in un percorso specificato.  
+
+[!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
+[!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
+
+L'esempio seguente usa il metodo <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> per enumerare in modo ricorsivo tutti i nomi file in una directory e nelle relative sottodirectory che soddisfano un criterio specifico. L'esempio legge quindi ogni riga di ogni file e visualizza le righe che contengono una stringa specificata, con i nomi file e i percorsi corrispondenti.
+
+[!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
+[!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
--   Usare il metodo <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> per ottenere un elenco dei nomi di directory di primo livello in un percorso specificato.  
+## <a name="examples-use-the-directoryinfo-class"></a>Esempi: Usare la classe DirectoryInfo  
   
-     [!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
-     [!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
+L'esempio seguente usa il metodo <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> per elencare una raccolta di directory di primo livello la cui proprietà <xref:System.IO.FileSystemInfo.CreationTimeUtc> è precedente a un valore <xref:System.DateTime> specifico.  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs)]
+[!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb)]  
   
-### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a>Per enumerare nomi di file in una directory e in sottodirectory  
-  
--   Usare il metodo <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> per cercare in una directory e (facoltativamente) nelle relative sottodirectory e ottenere un elenco di nomi di file che corrispondono a un criterio di ricerca specificato.  
-  
-     [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
-     [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-directoryinfo-objects"></a>Per enumerare una raccolta di oggetti DirectoryInfo  
-  
--   Usare il metodo <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> per ottenere una raccolta di directory di primo livello.  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a>Per enumerare una raccolta di oggetti FileInfo in tutte le directory  
-  
--   Usare il metodo <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> per ottenere una raccolta di file che corrispondono a un criterio di ricerca specificato in tutte le directory. Questo esempio enumera prima di tutto le directory di primo livello per intercettare le possibili eccezioni di accesso non autorizzato e quindi enumera i file.  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
+L'esempio seguente usa il metodo <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> per elencare tutti i file la cui proprietà <xref:System.IO.FileInfo.Length> supera i 10 MB. Questo esempio enumera prima di tutto le directory di primo livello per intercettare possibili eccezioni di accesso non autorizzato e quindi enumera i file.  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
+[!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [I/O di file e di flussi](../../../docs/standard/io/index.md)
+[I/O di file e di flussi](../../../docs/standard/io/index.md)

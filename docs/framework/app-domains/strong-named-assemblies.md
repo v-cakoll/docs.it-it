@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657298"
 ---
 # <a name="strong-named-assemblies"></a>Assembly con nomi sicuri
 L'assegnazione di un nome sicuro a un assembly permette di creare un'identità univoca e prevenire gli eventuali conflitti con altri assembly.  
@@ -20,7 +20,7 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
 ## <a name="what-makes-a-strong-named-assembly"></a>Come si genera un assembly con nome sicuro?  
  Per generare un assembly con nome sicuro usare la chiave privata corrispondente alla chiave pubblica distribuita con l'assembly, oltre all'assembly stesso. L'assembly include il relativo manifesto, che a sua volta contiene i nomi e gli hash di tutti i file che costituiscono l'assembly. Gli assembly che hanno lo stesso nome sicuro devono essere uguali.  
   
- È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) o [Sn.exe (Strong Name Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) (Strumento Nome sicuro (Sn.exe)).  
+ È possibile assegnare nomi sicuri agli assembly usando Visual Studio o uno strumento da riga di comando. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) o [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).  
   
  Nel creare un assembly con nome sicuro è necessario includere il nome in formato testo semplice dell'assembly, il numero di versione, le informazioni facoltative relative alle impostazioni cultura, una firma digitale e la chiave pubblica corrispondente alla chiave privata usata per apporre la firma.  
   
@@ -42,8 +42,8 @@ L'assegnazione di un nome sicuro a un assembly permette di creare un'identità u
   
  Gli sviluppatori open source che vogliono ottenere i vantaggi relativi all'identità di un assembly con nome sicuro possono archiviare la chiave privata associata a un assembly nel sistema di controllo del codice sorgente.  
   
-## <a name="see-also"></a>Vedere anche  
-- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
-- [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Vedere anche
+- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
+- [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

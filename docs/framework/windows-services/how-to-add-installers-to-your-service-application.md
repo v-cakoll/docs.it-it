@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere programmi di installazione all'applicazione di servizio"
+title: "Procedura: Aggiungere programmi di installazione all'applicazione di servizio"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743517"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: aggiungere programmi di installazione all'applicazione di servizio
+# <a name="how-to-add-installers-to-your-service-application"></a>Procedura: Aggiungere programmi di installazione all'applicazione di servizio
 Visual Studio include componenti di installazione che consentono di installare le risorse associate alle applicazioni di servizio. I componenti di installazione registrano un singolo servizio nel sistema in cui viene installato e informazione Gestione controllo servizi dell'esistenza del servizio. Quando si lavora con un'applicazione di servizio, è possibile selezionare un collegamento nella finestra Proprietà per aggiungere automaticamente i programmi di installazione appropriati al progetto.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Visual Studio include componenti di installazione che consentono di installare l
   
 5.  Per determinare come verrà avviato il servizio, fare clic sul componente <xref:System.ServiceProcess.ServiceInstaller> e impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> sul valore appropriato.  
   
-    |Valore|Risultato|  
+    |Value|Risultato|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Il servizio deve essere avviato manualmente dopo l'installazione. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Il servizio verrà avviato automaticamente a ogni riavvio del computer.|  
@@ -60,8 +60,8 @@ Visual Studio include componenti di installazione che consentono di installare l
     > [!NOTE]
     >  Per ogni servizio aggiuntivo nel progetto, è necessario aggiungere un ulteriore componente <xref:System.ServiceProcess.ServiceInstaller> alla classe `ProjectInstaller` del progetto. Il componente <xref:System.ServiceProcess.ServiceProcessInstaller> aggiunto nel passaggio 3 funziona con tutti i programmi di installazione dei singoli servizi nel progetto.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Procedura: specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Procedura: Specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

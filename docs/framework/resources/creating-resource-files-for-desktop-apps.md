@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569940"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Creazione di file di risorse per applicazioni desktop
 È possibile includere risorse, ad esempio stringhe, immagini o dati di oggetti, all'interno di file di risorse per renderli facilmente disponibili per l'applicazione. In .NET Framework è possibile creare file di risorse in cinque modi diversi:  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  In fase di compilazione, Visual Studio prima converte i file con estensione resx di un progetto in file di risorse binari con estensione resources e li archivia in una sottodirectory della directory obj del progetto. Visual Studio incorpora ogni file di risorse che non contiene risorse localizzate nell'assembly principale generato dal progetto. Se tutti i file di risorse contengono risorse localizzate, Visual Studio li incorpora in assembly satellite separati per ognuna delle impostazioni cultura localizzate e archivia quindi ogni assembly satellite in una directory il cui nome corrisponde alle impostazioni cultura localizzate. Ad esempio, le risorse localizzate per l'inglese (Stati Uniti) vengono archiviate in un assembly satellite nella sottodirectory en-US.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Resources>  
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Resources>
+- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
+- [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680302"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -173,7 +173,7 @@ Per supportare le aree dinamiche sono state aggiunte le API seguenti a WPF:
 
 - I campi <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> che identificano la proprietà **LiveSetting** e l'evento **LiveRegionChanged**. Questi campi possono essere impostati tramite XAML.
 
-- La proprietà associata **AutomationProperties.LiveSetting**, che segnala all'utilità per la lettura dello schermo l'importanza della modifica dell'interfaccia utente per l'utente.
+- La proprietà associata **AutomationProperties.LiveSetting** che segnala all'utilità per la lettura dello schermo l'importanza della modifica dell'interfaccia utente per l'utente.
 
 - La proprietà <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>, che identifica la proprietà associata **AutomationProperties.LiveSetting**.
  
@@ -213,13 +213,13 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
 - Controllo <xref:System.Windows.Controls.Expander>
 
-    L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Ad esempio:
+    L'oggetto visivo per lo stato attivo per il controllo <xref:System.Windows.Controls.Expander> è ora visibile. Anche gli oggetti visivi della tastiera per i controlli <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.RadioButton> sono visibili. Ad esempio:
 
-    Prima: 
+    Prima: 
     
     ![Controllo Expander con lo stato attivo prima dei miglioramenti per l'accessibilità](media/expander-before.png)
 
-    Dopo: 
+    Dopo: 
 
     ![Controllo Expander con lo stato attivo dopo i miglioramenti per l'accessibilità](media/expander-after.png)
 
@@ -227,11 +227,11 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
  
     Il testo nei controlli <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton> è ora più semplice da vedere quando viene selezionato nei temi a contrasto elevato. Ad esempio:
 
-    Prima: 
+    Prima: 
 
     ![Pulsante di opzione con contrasto elevato con lo stato attivo prima dei miglioramenti per l'accessibilità](media/radio-button-before.png)
     
-    Dopo: 
+    Dopo: 
 
     ![Pulsante di opzione con contrasto elevato con lo stato attivo dopo i miglioramenti per l'accessibilità](media/radio-button-after.png)
 
@@ -239,11 +239,11 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
  
     A partire da .NET Framework 4.7.1, il bordo di un controllo <xref:System.Windows.Controls.ComboBox> disabilitato ha lo stesso colore del testo disabilitato. Ad esempio:
     
-    Prima: 
+    Prima: 
 
      ![Bordo e testo disabilitati del controllo ComboBox prima dei miglioramenti per l'accessibilità](media/combo-disabled-before.png)
 
-    Dopo:   
+    Dopo:   
 
      ![Bordo e testo disabilitati del controllo ComboBox dopo i miglioramenti per l'accessibilità](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 
     Prima:
 
-    ![Colori del tema dei pulsanti prima dei miglioramenti per l'accessibilità](media/button-themes-before.png) 
+    ![Colori del tema dei pulsanti prima dei miglioramenti per l'accessibilità](media/button-themes-before.png) 
     
-    Dopo: 
+    Dopo: 
 
-    ![Colori del tema dei pulsanti dopo i miglioramenti per l'accessibilità](media/button-themes-after.png) 
+    ![Colori del tema dei pulsanti dopo i miglioramenti per l'accessibilità](media/button-themes-after.png) 
 
     Infine, in .NET Framework 4.7 e versioni precedenti, l'impostazione dello stile di un controllo <xref:System.Windows.Controls.ComboBox> su `Toolbar.ComboBoxStyleKey` rende invisibile la freccia a discesa. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Ad esempio:
 
-    Prima: 
+    Prima: 
 
-    ![Toolbar.ComboBoxStyleKey prima dei miglioramenti per l'accessibilità](media/comboboxstylekey-before.png) 
+    ![Toolbar.ComboBoxStyleKey prima dei miglioramenti per l'accessibilità](media/comboboxstylekey-before.png) 
     
-    Dopo: 
+    Dopo: 
 
-    ![Toolbar.ComboBoxStyleKey dopo i miglioramenti per l'accessibilità](media/comboboxstylekey-after.png) 
+    ![Toolbar.ComboBoxStyleKey dopo i miglioramenti per l'accessibilità](media/comboboxstylekey-after.png) 
 
 - Controllo <xref:System.Windows.Controls.DataGrid>
 
     A partire da .NET Framework 4.7.1, la freccia dell'indicatore di ordinamento nei controlli <xref:System.Windows.Controls.DataGrid> usa ora i colori del tema corretti. Ad esempio:
 
-    Prima: 
+    Prima: 
 
-    ![Freccia dell'indicatore di ordinamento prima dei miglioramenti per l'accessibilità](media/sort-indicator-before.png) 
+    ![Freccia dell'indicatore di ordinamento prima dei miglioramenti per l'accessibilità](media/sort-indicator-before.png) 
     
-    Dopo:   
+    Dopo:   
  
-    ![Freccia dell'indicatore di ordinamento dopo i miglioramenti per l'accessibilità](media/sort-indicator-after.png) 
+    ![Freccia dell'indicatore di ordinamento dopo i miglioramenti per l'accessibilità](media/sort-indicator-after.png) 
     
     Inoltre, in .NET Framework 4.7 e versioni precedenti, per lo stile di collegamento predefinito viene usato un colore non corretto al passaggio del mouse in modalità a contrasto elevato. Questo problema è stato risolto a partire da .NET Framework 4.7.1. Analogamente, le colonne della casella di controllo per i controlli <xref:System.Windows.Controls.DataGrid> usano i colori previsti per il riscontro dello stato attivo della tastiera a partire da .NET Framework 4.7.1.
 
-    Prima: 
+    Prima: 
 
-    ![Stile di collegamento predefinito DataGrid prima dei miglioramenti per l'accessibilità](media/default-link-style-before.png) 
+    ![Stile di collegamento predefinito DataGrid prima dei miglioramenti per l'accessibilità](media/default-link-style-before.png) 
  
-    Dopo:    
+    Dopo:    
   
-    ![Stile di collegamento predefinito DataGrid dopo i miglioramenti per l'accessibilità](media/default-link-style-after.png)  
+    ![Stile di collegamento predefinito DataGrid dopo i miglioramenti per l'accessibilità](media/default-link-style-after.png)  
 
 Per altre informazioni sui miglioramenti per l'accessibilità di WPF in .NET Framework 4.7.1, vedere [Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf) (Miglioramenti per l'accessibilità in WPF).
 
@@ -298,7 +298,7 @@ In .NET Framework 4.7.1 Windows Form (WinForms) include modifiche per l'accessib
 
 **Miglioramento della visualizzazione in modalità a contrasto elevato**
 
-A partire da .NET Framework 4.7.1, vari controlli WinForms offrono un rendering migliorato nelle modalità a contrasto elevato disponibili nel sistema operativo. Windows 10 ha cambiato i valori di alcuni colori di sistema a contrasto elevato e Windows Form si basa sul framework Win32 di Windows 10. Per risultati ottimali, usare la versione più recente di Windows e accettare le modifiche del sistema operativo più recenti aggiungendo un file app.manifest in un'applicazione di test e rimuovere il commento dalla riga del sistema operativo supportato Windows 10, in modo che sia come segue:
+A partire da .NET Framework 4.7.1, vari controlli WinForms offrono un rendering migliorato nelle modalità a contrasto elevato disponibili nel sistema operativo. Windows 10 ha cambiato i valori di alcuni colori di sistema a contrasto elevato e Windows Form si basa sul framework Win32 di Windows 10. Per risultati ottimali, usare la versione più recente di Windows e accettare le modifiche del sistema operativo più recenti aggiungendo un file app.manifest in un'applicazione di test e rimuovere il commento dalla riga del sistema operativo supportato Windows 10, in modo che abbia l'aspetto seguente:
 
 ```xml
 <!-- Windows 10 -->
@@ -316,11 +316,11 @@ Alcuni esempi di modifiche per il contrasto elevato includono:
 
     Prima:
 
-    ![Testo disabilitato prima dei miglioramenti per l'accessibilità](media/wf-disabled-before.png) 
+    ![Testo disabilitato prima dei miglioramenti per l'accessibilità](media/wf-disabled-before.png) 
 
     Dopo:
 
-    ![Testo disabilitato dopo i miglioramenti per l'accessibilità](media/wf-disabled-after.png) 
+    ![Testo disabilitato dopo i miglioramenti per l'accessibilità](media/wf-disabled-after.png) 
 
 - Miglioramenti per il contrasto elevato nella finestra di dialogo di eccezione del thread.
 
@@ -441,5 +441,5 @@ Le modifiche all'accessibilità in Progettazione flussi di lavoro includono quan
 
 ## <a name="see-also"></a>Vedere anche
 
-[Novità di .NET Framework](whats-new.md)
- 
+- [Novità di .NET Framework](whats-new.md)
+

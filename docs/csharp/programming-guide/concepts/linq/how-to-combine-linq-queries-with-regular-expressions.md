@@ -2,12 +2,12 @@
 title: 'Procedura: Combinare query LINQ con espressioni regolari (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9aa8378fb6b4bbfbfca280e1a9fc73adc108d81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558761"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Procedura: Combinare query LINQ con espressioni regolari (C#)
 In questo esempio viene illustrato come usare la classe <xref:System.Text.RegularExpressions.Regex> per creare un'espressione regolare per una corrispondenza più complessa nelle stringhe di testo. La query LINQ consente di filtrare esattamente i file che si vuole cercare tramite l'espressione regolare e di dare forma ai risultati.  
@@ -100,5 +100,5 @@ class QueryWithRegEx
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

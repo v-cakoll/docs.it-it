@@ -1,14 +1,14 @@
 ---
-title: 'Procedura: Modificare il contenuto delle stringhe - Guida a C#'
+title: 'Procedura: Modificare il contenuto delle stringhe - Guida di C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664019"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedura: Modificare il contenuto delle stringhe in C\#
 
@@ -73,5 +73,5 @@ L'esempio seguente viene incluso per i rari casi in cui si vuole modificare una 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)  
-- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md)

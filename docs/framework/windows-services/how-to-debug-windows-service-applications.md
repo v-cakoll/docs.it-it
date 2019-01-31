@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: eseguire il debug di applicazioni di servizio per Windows'
+title: 'Procedura: Eseguire il debug di applicazioni di servizio di Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720366"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Procedura: eseguire il debug di applicazioni di servizio per Windows
+# <a name="how-to-debug-windows-service-applications"></a>Procedura: Eseguire il debug di applicazioni di servizio di Windows
 Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione controllo servizi e non dall'interno di Visual Studio, il debug di un servizio non è semplice come quello di altri tipi di applicazioni di Visual Studio. Per eseguire il debug di un servizio, è necessario avviare il servizio e connettere un debugger al processo in cui viene eseguito. È quindi possibile eseguire il debug dell'applicazione tramite tutte le funzionalità di debug standard di Visual Studio.  
   
 > [!CAUTION]
@@ -29,7 +29,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
  Questo articolo descrive il debug di un servizio in esecuzione nel computer locale, ma è possibile anche eseguire il debug di servizi Windows in esecuzione in un computer remoto. Vedere [Debug remoto](/visualstudio/debugger/debug-installed-app-package).  
   
 > [!NOTE]
->  Il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> può risultare difficile in quanto Gestione controllo servizi impone un limite di 30 secondi per tutti i tentativi di avvio di un servizio. Per altre informazioni, vedere [Risoluzione dei problemi: Debug dei servizi Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+>  Il debug del metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> può risultare difficile in quanto Gestione controllo servizi impone un limite di 30 secondi per tutti i tentativi di avvio di un servizio. Per altre informazioni, vedere [Risoluzione dei problemi: debug dei servizi Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
 >  Per ottenere informazioni significative per il debug, il debugger di Visual Studio deve trovare il file di simboli per i file binari sottoposti a debug. Se si esegue il debug di un servizio compilato in Visual Studio, i file di simboli (con estensione PDB) si trovano nella stessa cartella dell'eseguibile o della libreria e il debugger li carica automaticamente. Se si esegue il debug di un servizio che non è stato compilato, è necessario prima trovare i simboli per il servizio e assicurarsi che possano essere individuati dal debugger. Vedere [Specificare file di simboli (con estensione pdb) e di origine](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Se si esegue il debug di un processo di sistema o è necessario avere i simboli per le chiamate di sistema nei servizi, aggiungere i server dei simboli Microsoft. Vedere [Simboli di debug](/windows/desktop/DxTechArts/debugging-with-symbols).  
@@ -38,7 +38,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 1.  Compilare il servizio nella configurazione di debug.  
   
-2.  Installare il servizio. Per altre informazioni, vedere [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  Installare il servizio. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 3.  Avviare il servizio da **Gestione controllo servizi**, da **Esplora server** o dal codice. Per altre informazioni, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md).  
   
@@ -46,7 +46,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 5.  (Facoltativo) Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Opzioni**. Nella finestra di dialogo **Opzioni** scegliere **Debug**, **Simboli**, selezionare la casella di controllo **Server dei simboli Microsoft** e quindi scegliere il pulsante **OK**.  
   
-6.  Nella barra dei menu scegliere **Connetti a processo** dal menu **Debug** o **Strumenti**. (scelta rapida da tastiera: CTRL+ALT+P).  
+6.  Nella barra dei menu scegliere **Connetti a processo** dal menu **Debug** o **Strumenti**. (Tastiera: CTRL+ALT+P)  
   
      Verrà visualizzata la finestra di dialogo **Processi**.  
   
@@ -66,7 +66,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
 10. Impostare i punti di interruzione da usare nel codice.  
   
-11. Accedere a Gestione controllo servizi e modificare il servizio, specificando i comandi per arrestare, sospendere e riprendere il servizio, in modo da raggiungere i punti di interruzione impostati. Per altre informazioni sull'esecuzione di Gestione controllo servizi, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md). Vedere anche [Risoluzione dei problemi: Debug dei servizi Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. Accedere a Gestione controllo servizi e modificare il servizio, specificando i comandi per arrestare, sospendere e riprendere il servizio, in modo da raggiungere i punti di interruzione impostati. Per altre informazioni sull'esecuzione di Gestione controllo servizi, vedere [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md). Vedere anche [Risoluzione dei problemi: debug dei servizi Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 ## <a name="debugging-tips-for-windows-services"></a>Suggerimenti per il debug dei servizi Windows  
  La connessione al processo di un servizio consente di eseguire il debug della maggior parte del codice del servizio, ma non di tutto. Poiché, ad esempio, il servizio è già stato avviato, non è possibile eseguire il debug del codice nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> del servizio o del codice nel metodo `Main` usato per caricare il servizio. Un modo per aggirare questa limitazione consiste nel creare un secondo servizio temporaneo nell'applicazione di servizio che esiste solo per il debug. È possibile installare entrambi i servizi, quindi avviare il servizio fittizio per caricare il processo del servizio. Una volta che il servizio temporaneo ha avviato il processo, usare il menu **Debug** in Visual Studio per connettersi al processo del servizio.  
@@ -75,7 +75,7 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
  Provare a modificare il programma in un'applicazione console normale. A tale scopo, riscrivere il metodo `Main` come segue in modo che possa essere eseguito come servizio Windows e come applicazione console, a seconda della modalità di avvio.  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procedura: eseguire un servizio Windows come applicazione console  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procedura: Eseguire un servizio Windows come applicazione console  
   
 1.  Aggiungere un metodo al servizio che esegue i metodi <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
@@ -113,8 +113,8 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
   
  In alcuni casi, ad esempio quando si vuole eseguire il debug di un problema che si verifica solo all'avvio del sistema, è necessario usare il debugger di Windows. Installare [Strumenti di debug per Windows](https://msdn.microsoft.com/windows/hardware/hh852365) e vedere [Esecuzione del debug dei servizi Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Debug di un servizio](/windows/desktop/Services/debugging-a-service)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Debug di un servizio](/windows/desktop/Services/debugging-a-service)

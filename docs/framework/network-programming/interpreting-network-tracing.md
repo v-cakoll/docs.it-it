@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576525"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretazione della traccia di rete
 Quando la traccia di rete è abilitata, può essere usata per acquisire le chiamate effettuate dall'applicazione a diversi membri della classe <xref:System.Net>. L'output di queste chiamate può essere simile agli esempi seguenti.  
@@ -44,7 +44,7 @@ Quando la traccia di rete è abilitata, può essere usata per acquisire le chiam
   
  `Connection: Close`  
   
-## <a name="see-also"></a>Vedere anche  
- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>Vedere anche
+- [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

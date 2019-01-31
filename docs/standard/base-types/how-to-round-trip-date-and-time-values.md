@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire il round trip dei valori di data e ora'
+title: 'Procedura: Valori di data e ora round trip'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628188"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Eseguire il round trip dei valori di data e ora
+# <a name="how-to-round-trip-date-and-time-values"></a>Procedura: Valori di data e ora round trip
 In molte applicazioni un valore di data e ora deve identificare una data e un'ora singole in modo non ambiguo. Questo argomento illustra come salvare e ripristinare un valore <xref:System.DateTime>, un valore <xref:System.DateTimeOffset> e un valore di data e ora con informazioni sul fuso orario, in modo che il valore ripristinato identifichi la stessa ora del valore salvato.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Per eseguire il round trip di un valore DateTime  
@@ -101,6 +101,6 @@ In molte applicazioni un valore di data e ora deve identificare una data e un'or
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

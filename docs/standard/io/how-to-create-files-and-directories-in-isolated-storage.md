@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47157834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709013"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Procedura: Creare file e directory nello spazio di memorizzazione isolato
 Dopo aver ottenuto uno spazio di memorizzazione isolato, è possibile creare directory e file per l'archiviazione dei dati. All'interno di un archivio i nomi di file e directory vengono specificati rispetto alla radice del file system virtuale.  
@@ -40,6 +40,6 @@ Dopo aver ottenuto uno spazio di memorizzazione isolato, è possibile creare dir
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
 - [Spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md)

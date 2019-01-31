@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 483a6532ad62fb7e1561ac5cc4de37aeaaf45fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573179"
 ---
 # <a name="mitigation-product-versioning"></a>Mitigazione: Controllo delle versioni del prodotto
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, il controllo delle versioni del prodotto è cambiato rispetto alle versioni precedenti di .NET Framework (.NET Framework 4, 4.5, 4.5.1 e 4.5.2).  
@@ -28,7 +28,7 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, i
 ### <a name="handling-the-product-versioning-changes"></a>Gestione delle modifiche apportate al controllo delle versioni del prodotto  
  In generale, le applicazioni dovrebbero dipendere dalle tecniche consigliate per il rilevamento di elementi come la versione di runtime di .NET Framework e la directory di installazione:  
   
--   Per rilevare la versione di runtime di .NET Framework, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+-   Per rilevare la versione runtime di .NET Framework, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
 -   Per determinare il percorso di installazione di .NET Framework, usare il valore della voce `InstallPath` nella chiave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.  
   
@@ -39,6 +39,6 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, i
   
 -   Per ottenere la versione CLR, chiamare il metodo <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>.   Per .NET Framework 4 e le versioni intermedie (.NET Framework 4.5, 4.5.1, 4.5.2 e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 e 4.7), restituisce la stringa `v4.0.30319`.  
   
-## <a name="see-also"></a>Vedere anche  
- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
- 
+## <a name="see-also"></a>Vedere anche
+- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

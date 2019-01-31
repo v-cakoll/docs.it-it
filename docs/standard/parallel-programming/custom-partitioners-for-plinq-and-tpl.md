@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45964855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698891"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitioner personalizzati per PLINQ e TPL
 Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare* l'origine in più sezioni a cui è possibile accedere contemporaneamente da più thread. PLINQ e Task Parallel Library (TPL) forniscono partitioner predefiniti che funzionano in modo trasparente quando si scrive una query o un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A> parallelo. Per scenari più avanzati, è possibile collegare il proprio partitioner.  
@@ -95,7 +95,7 @@ Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare
 ### <a name="dynamic-partitions"></a>Partizioni dinamiche  
  Se si prevede che il partitioner venga usato in un metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, è necessario poter restituire un numero dinamico di partizioni. Questo significa che il partitioner può fornire un enumeratore per una nuova partizione on demand in qualsiasi momento durante l'esecuzione del ciclo. In sostanza, quando il ciclo aggiunge una nuova attività parallela, richiede una nuova partizione per tale attività. Se è necessario che i dati siano ordinabili, derivare da <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> in modo che a ogni elemento in ogni partizione venga assegnato un indice univoco.  
   
- Per altre informazioni e per un esempio, vedere [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
+ Per altre informazioni e un esempio, vedere [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).  
   
 ### <a name="contract-for-partitioners"></a>Contratto per i partitioner  
  Quando si implementa un partitioner personalizzato, seguire queste linee guida per assicurare la corretta interazione con PLINQ e <xref:System.Threading.Tasks.Parallel.ForEach%2A> in TPL:  
@@ -112,7 +112,7 @@ Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare
   
     -   `KeysOrderedInEachPartition`: ogni partizione restituisce elementi con indici di chiave crescenti.  
   
-    -   `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave della partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.  
+    -   `KeysOrderedAcrossPartitions`: per tutte le partizioni restituite, gli indici di chiave nella partizione *i* hanno un valore superiore rispetto a quelli nella partizione *i*-1.  
   
     -   `KeysNormalized`: tutti gli indici di chiave sono a incremento progressivo costante senza gap, a partire da zero.  
   
@@ -122,6 +122,6 @@ Per parallelizzare un'operazione in un'origine dati, è essenziale *partizionare
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
-- [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
+- [Procedura: Implementare partizioni dinamiche](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
 - [Procedura: Implementare un partitioner per il partizionamento statico](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

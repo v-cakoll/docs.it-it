@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: avviare servizi'
+title: 'Procedura: Avviare servizi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494369"
 ---
-# <a name="how-to-start-services"></a>Procedura: avviare servizi
+# <a name="how-to-start-services"></a>Procedura: Avviare servizi
 Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> per la classe del servizio. In genere, il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> definisce le operazioni utili che verranno eseguite dal servizio. Dopo l'avvio, un servizio rimane attivo fino a quando non viene sospeso o arrestato manualmente.  
   
  I servizi possono essere configurati per l'avvio automatico o manuale. Un servizio con avvio automatico verrà avviato in seguito al riavvio o alla prima accensione del computer in cui è installato. Un utente deve avviare un servizio con avvio manuale.  
@@ -48,7 +48,7 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Per avviare manualmente un servizio da Esplora server  
   
-1.  In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: Accedere e inizializzare Esplora server-Esplora database.  
+1.  In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: accedere e inizializzare Esplora server/Esplora database.  
   
 2.  Espandere il nodo **Servizi** e quindi individuare il servizio che si vuole avviare.  
   
@@ -77,7 +77,7 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
   
 2.  Chiamare il metodo <xref:System.ServiceProcess.ServiceController.Start%2A> per avviare il servizio.  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Vedere anche
+- [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

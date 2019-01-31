@@ -2,12 +2,12 @@
 title: 'Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571337"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)
 
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come unire dati da origini diverse in una seq
 
 ## <a name="to-create-the-data-file"></a>Per creare il file di dati
 
-Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Procedura: Creare un join da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Copiare i file names.csv e scores.csv nella cartella del progetto, come descritto in [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Esempio
 
@@ -149,6 +149,6 @@ Creare e compilare un progetto destinato a una delle opzioni seguenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Inizializzatori di oggetto e di raccolta](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Inizializzatori di oggetto e di raccolta](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

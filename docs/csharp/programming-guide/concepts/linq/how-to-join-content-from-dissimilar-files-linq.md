@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698414"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)
 
@@ -134,5 +134,5 @@ Creare e compilare un progetto destinato a una delle opzioni seguenti:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

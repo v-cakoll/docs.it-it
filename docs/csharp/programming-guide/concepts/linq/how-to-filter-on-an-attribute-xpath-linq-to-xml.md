@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Filtrare in base a un attributo (XPath-LINQ to XML)'
+title: 'Procedura: Filtrare in base a un attributo (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 9d99387be6683dcc46d36b5fdefbcd09f998eab1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603794"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Procedura: Filtrare in base a un attributo (XPath-LINQ to XML)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Procedura: Filtrare in base a un attributo (XPath-LINQ to XML) (C#)
 In questo argomento viene illustrato come ottenere gli elementi discendente con un nome specificato e con un attributo con un valore specificato.  
   
  L'espressione XPath è:  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come ottenere gli elementi discendente con 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati tutti gli elementi discendente il cui nome è `Address` e in cui il valore dell'attributo `Type` è "Shipping".  
   
- Questo esempio usa il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

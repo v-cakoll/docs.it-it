@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702899"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigazione dello spazio dei nomi XPath
 Per usare le query XPath con i documenti XML, è necessario indirizzare correttamente gli spazi dei nomi XML e gli elementi da questi contenuti. Gli spazi dei nomi evitano le ambiguità che si possono verificare quando i nomi vengono usati in più contesti; ad esempio il nome `ID` potrebbe far riferimento a più identificatori associati a diversi elementi di un documento XML. La sintassi dello spazio dei nomi specifica gli URI, i nomi e i prefissi che distinguono gli elementi di un documento XML.  
@@ -20,7 +20,7 @@ Per usare le query XPath con i documenti XML, è necessario indirizzare corretta
 ## <a name="namespace-declarations"></a>Dichiarazioni dello spazio dei nomi  
  Le dichiarazioni dello spazio dei nomi consentono di distinguere e indirizzare gli elementi di un documento XML quando si usa un'istanza dell'oggetto <xref:System.Xml.XPath.XPathNavigator>. I prefissi dello spazio dei nomi forniscono una breve sintassi per l'indirizzamento degli spazi dei nomi.  
   
- I prefissi sono definiti dal formato: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In questa sintassi il prefisso "`e`" è un'abbreviazione dell'URI formale dello spazio dei nomi. È possibile identificare l'elemento `Body` come membro dello spazio dei nomi `Envelope` tramite la sintassi: `e:Body`.  
+ I prefissi sono definiti dal modulo: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In questa sintassi il prefisso "`e`" è un'abbreviazione dell'URI formale dello spazio dei nomi. È possibile identificare l'elemento `Body` come membro dello spazio dei nomi `Envelope` tramite la sintassi: `e:Body`.  
   
  Nell'esempio di navigazione della sezione successiva, al seguente documento XML verrà fatto riferimento come `response.xml`.  
   
@@ -72,5 +72,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Accesso ai dati XML con XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Selezione, valutazione e corrispondenza di dati XML con XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

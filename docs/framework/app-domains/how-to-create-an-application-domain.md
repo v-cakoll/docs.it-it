@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39cc38f56b6f9fb1735bcca64bf0f77ec29a1c43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597827"
 ---
 # <a name="how-to-create-an-application-domain"></a>Procedura: Creare un dominio dell'applicazione
 I domini dell'applicazione vengono creati automaticamente dall'host Common Language Runtime quando necessario. È tuttavia possibile creare i propri domini dell'applicazione e caricarvi gli assembly che si vuole gestire personalmente. È anche possibile creare domini dell'applicazione da cui eseguire codice.  
@@ -29,6 +29,6 @@ I domini dell'applicazione vengono creati automaticamente dall'host Common Langu
  [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Vedere anche  
-- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>Vedere anche
+- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
 - [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

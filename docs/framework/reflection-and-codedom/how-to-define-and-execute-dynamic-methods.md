@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: definire ed eseguire metodi dinamici'
+title: 'Procedura: Definire ed eseguire metodi dinamici'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1dd58cfe0eb448a4bf886eb11b1b2e6375835b05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43785300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709182"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: definire ed eseguire metodi dinamici
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Procedura: Definire ed eseguire metodi dinamici
 Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico semplice e un metodo dinamico associato a un'istanza di una classe. Per altre informazioni sui metodi dinamici, vedere la classe <xref:System.Reflection.Emit.DynamicMethod> e [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Per definire ed eseguire un metodo dinamico  
@@ -122,7 +122,7 @@ Le procedure seguenti illustrano come definire ed eseguire un metodo dinamico se
   
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Emit.DynamicMethod>  
- [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Emit.DynamicMethod>
+- [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [Scenari relativi a metodi dinamici della reflection emit](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: gestire le eccezioni nei cicli paralleli'
+title: 'Procedura: Gestire le eccezioni nei cicli paralleli'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711421"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Procedura: gestire le eccezioni nei cicli paralleli
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Procedura: Gestire le eccezioni nei cicli paralleli
 Gli overload dei metodi <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> non presentano alcun meccanismo speciale per gestire le eccezioni eventualmente generate. Sotto questo aspetto assomigliano ai cicli `for` e `foreach` (`For` e `For Each`in Visual Basic) normali; un'eccezione non gestita fa sì che il ciclo termini immediatamente.  
   
  Quando si aggiunge una logica personalizzata di gestione delle eccezioni nei cicli paralleli, gestire il caso della generazione simultanea di eccezioni simili in più thread e il caso in cui un'eccezione generata in un determinato thread comporta la generazione di un'altra eccezione in un altro thread. Per gestire entrambi questi casi è possibile eseguire il wrapping di tutte le eccezioni del ciclo in un oggetto <xref:System.AggregateException?displayProperty=nameWithType>. L'esempio seguente mostra uno degli approcci possibili.  
@@ -33,5 +33,5 @@ Gli overload dei metodi <xref:System.Threading.Tasks.Parallel.For%2A?displayProp
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

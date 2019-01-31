@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 1bbaf4fc85fe4d7e3d3737cf62cb63d8e09927cd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594aef9feee81d026abd6313f1e75cb518479688
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499830"
 ---
 # <a name="location-based-cache-policies"></a>criteri di cache basati sulla posizione
 I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
@@ -46,9 +46,9 @@ I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci
 ## <a name="revalidate-policy"></a>Revalidate (criterio)  
  Confronta la copia della risorsa nella cache con la copia nel server. Se la copia nel server è più recente, viene usata per soddisfare la richiesta e la copia nella cache viene sostituita. Se la copia nella cache corrisponde alla copia nel server, viene usata la copia memorizzata nella cache. Nel protocollo di memorizzazione nella cache HTTP, ciò si ottiene usando una richiesta condizionale.  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)  
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>Vedere anche
+- [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

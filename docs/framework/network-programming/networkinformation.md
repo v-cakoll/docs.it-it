@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 333baa68f4bd80b98e8bb03929ab41dc9cbed7a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497170"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Lo spazio dei nomi <xref:System.Net.NetworkInformation> consente di raccogliere informazioni sugli eventi, le modifiche, le statistiche e le proprietà della rete. È anche possibile determinare se un host remoto è raggiungibile tramite la classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -23,8 +23,8 @@ Lo spazio dei nomi <xref:System.Net.NetworkInformation> consente di raccogliere 
 ## <a name="determine-if-a-remote-host-is-reachable"></a>Determinare se un host remoto è raggiungibile  
  È possibile usare la classe <xref:System.Net.NetworkInformation.Ping> per determinare se un host remoto è attivo, in rete e raggiungibile. Per altre informazioni, vedere [Procedura: Eseguire il ping di un host](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Network Information Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179564) (Esempio di tecnologia per informazioni di rete)  
- [NetStat Tool Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179562) (Esempio di tecnologia dello strumento NetStat)  
- [Ping Client Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179565) (Esempio di tecnologia ping)
+## <a name="see-also"></a>Vedere anche
+- [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Network Information Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179564) (Esempio di tecnologia per informazioni di rete)
+- [NetStat Tool Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179562) (Esempio di tecnologia dello strumento NetStat)
+- [Ping Client Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179565) (Esempio di tecnologia ping)

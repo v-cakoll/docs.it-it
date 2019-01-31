@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713941"
 ---
 # <a name="globalization"></a>Globalizzazione
 La globalizzazione comporta la progettazione e lo sviluppo di un'app internazionalizzata che supporti interfacce localizzate e dati locali per utenti in più impostazioni cultura. Prima di iniziare la fase di progettazione, è necessario determinare quali impostazioni cultura verranno supportate dall'app. Sebbene un'app sia destinata per impostazione predefinita a singole impostazioni cultura o a una singola area, è possibile progettarla e scriverla in modo che possa essere facilmente estesa agli utenti di altre impostazioni cultura o aree.  
@@ -371,5 +371,5 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  
+- [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
 - [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md)

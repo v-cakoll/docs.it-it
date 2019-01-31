@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718650"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Procedura: leggere un file di testo una riga alla volta (Visual C#)
 Questo esempio legge il contenuto di un file di testo, una riga alla volta, in una stringa usando il metodo `ReadLine` della classe `StreamReader`. Ogni riga di testo è memorizzata nella stringa `line` e visualizzata nella schermata.  
@@ -52,6 +52,6 @@ System.Console.ReadLine();
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)

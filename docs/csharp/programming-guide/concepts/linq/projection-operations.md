@@ -2,12 +2,12 @@
 title: Operazioni di proiezione (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 80939e3ece9fdf82b7ca3300fe6f927caa34e9f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fa9b1d2a0dc63be89e8a93fd5d234f131a2943e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723953"
 ---
 # <a name="projection-operations-c"></a>Operazioni di proiezione (C#)
 La proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuovo form costituito spesso solo dalle proprietà che verranno usate successivamente. Utilizzando la proiezione, è possibile costruire un nuovo tipo compilato in base a ogni oggetto. È possibile proiettare una proprietà ed eseguirvi una funzione matematica. È anche possibile proiettare l'oggetto originale senza modificarlo.  
@@ -16,7 +16,7 @@ La proiezione si riferisce all'operazione di trasformazione di un oggetto in un 
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Seleziona|Proietta i valori che si basano su una funzione di trasformazione.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Proietta le sequenze di valori che si basano su una funzione di trasformazione semplificandoli in un'unica sequenza.|Usare più clausole `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -161,8 +161,8 @@ static void SelectVsSelectMany()
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Clausola select](../../../../csharp/language-reference/keywords/select-clause.md)  
-- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+- <xref:System.Linq>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola select](../../../../csharp/language-reference/keywords/select-clause.md)
+- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

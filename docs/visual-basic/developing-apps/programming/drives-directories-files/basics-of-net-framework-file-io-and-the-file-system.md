@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600765"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.  
@@ -55,11 +55,11 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
  La tabella seguente elenca le attività comunemente eseguite con un flusso:  
   
-|Per|Vedere|
+|A|Vedere|
 |---|---|   
 |Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Scrivere testo in un file|[Procedura: Scrivere testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|  
 |Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
 |Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |Crittografare i dati|[Crittografia di dati](../../../../standard/security/encrypting-data.md)|  
@@ -98,8 +98,8 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
 ## <a name="file-events"></a>Eventi di file  
  Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modifiche nei file e nelle directory del sistema o in qualsiasi computer a cui si ha accesso dalla rete. Ad esempio, se un file viene modificato, è consigliabile inviare all'utente un avviso che la modifica ha avuto luogo. Quando vengono apportate modifiche, vengono generati uno o più eventi, che vengono archiviati in un buffer e consegnati al componente <xref:System.IO.FileSystemWatcher> per l'elaborazione.  
   
-## <a name="see-also"></a>Vedere anche  
- [Composizione dei flussi](../../../../standard/io/composing-streams.md)  
- [I/O di file e di flussi](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))
+## <a name="see-also"></a>Vedere anche
+- [Composizione dei flussi](../../../../standard/io/composing-streams.md)
+- [I/O di file e di flussi](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))

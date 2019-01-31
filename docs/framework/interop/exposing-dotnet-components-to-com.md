@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f11928388dba9b0e9b442578bfb7b6f751c2e172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5c80ba473b0080a1368c82949c765820239ef25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715738"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Esposizione di componenti .NET Framework a COM
 La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito sono attività distinte per gli sviluppatori. Questa sezione offre diversi suggerimenti per la scrittura di un codice gestito che interagisce con i client COM:  
@@ -50,6 +50,6 @@ La scrittura di un tipo .NET e l'utilizzo di tale tipo dal codice non gestito so
   
      Un assembly con nome sicuro può essere installato nella Global Assembly Cache e richiede una firma dall'entità di pubblicazione. Gli assembly privi di nome sicuro devono essere installati nella directory dell'applicazione del client.  
   
-## <a name="see-also"></a>Vedere anche  
- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)  
- [Esempio di interoperabilità: client COM e server .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+## <a name="see-also"></a>Vedere anche
+- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)
+- [Esempio di interoperabilità COM: client COM e server .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

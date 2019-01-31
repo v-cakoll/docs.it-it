@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scaricare file in Visual Basic'
+title: 'Procedura: Scaricare un file in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: b0dc95674e17a7aba9b04a8b7e0b82c9c97c4180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 435dfe497cde5a08bce8825eaf6fa73daab4348b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43385549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671187"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>Procedura: scaricare file in Visual Basic
+# <a name="how-to-download-a-file-in-visual-basic"></a>Procedura: Scaricare un file in Visual Basic
 Il metodo <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> può essere usato per scaricare un file remoto e archiviarlo in un percorso specifico. Se il parametro `ShowUI` è impostato su `True`, viene visualizzata una finestra che mostra lo stato di avanzamento del download e consente agli utenti di annullare l'operazione. Per impostazione predefinita non vengono sovrascritti i file esistenti con lo stesso nome. Se si desidera sovrascrivere i file esistenti, impostare il parametro `overwrite` su `True`.  
   
  Le seguenti condizioni possono generare un'eccezione:  
@@ -54,8 +54,8 @@ Il metodo <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> può esse
     > [!IMPORTANT]
     >  Il protocollo FTP utilizzato dal metodo `DownLoadFile` invia informazioni, comprese le password, in testo normale e non deve essere usato per trasmettere informazioni riservate.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Network>  
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [Procedura: analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
+- [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Procedura: Analizzare percorsi di file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

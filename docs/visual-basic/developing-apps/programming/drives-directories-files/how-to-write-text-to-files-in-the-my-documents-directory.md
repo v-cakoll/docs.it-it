@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scrivere testo in file della directory Documenti in Visual Basic'
+title: 'Procedura: Scrivere testo in file della directory Documenti in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 894458ad6d69b8bb2836518b90723703733208b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6e1e53f6eb0e14afa82bde95637c1e4473391bd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595058"
 ---
-# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedura: scrivere testo in file della directory Documenti in Visual Basic
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedura: Scrivere testo in file della directory Documenti in Visual Basic
 L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a directory speciali, ad esempio alla directory **Documenti**.  
   
 ## <a name="procedure"></a>Routine  
@@ -43,9 +43,9 @@ L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a dir
   
  In questo esempio viene creato un nuovo file. Per poter creare un file in un'applicazione, è necessario che l'applicazione disponga dell'autorizzazione per la creazione della cartella. Le autorizzazioni vengono impostate tramite gli elenchi di controllo di accesso. Se il file è già esistente, l'applicazione necessita solo dell'autorizzazione di scrittura, ossia di un privilegio di livello inferiore. Laddove possibile, è più sicuro creare il file durante la fase di distribuzione e concedere privilegi di lettura a un unico file, anziché concedere privilegi per la creazione di una cartella. È anche più sicuro scrivere i dati nelle cartelle utente anziché nella cartella radice o nella cartella **Programmi**. Per altre informazioni, vedere [Panoramica della tecnologia ACL](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
+## <a name="see-also"></a>Vedere anche
+- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>

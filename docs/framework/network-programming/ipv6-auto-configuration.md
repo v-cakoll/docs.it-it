@@ -2,12 +2,12 @@
 title: Configurazione automatica di IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 31aaebaefa0d2682ee20ae93496aff42ae1633d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726351"
 ---
 # <a name="ipv6-auto-configuration"></a>Configurazione automatica di IPv6
 Un obiettivo importante per IPv6 consiste nel supportare la modalità Plug and Play per i nodi. Questo significa che deve essere possibile collegare un nodo in una rete IPv6 perché il nodo venga automaticamente configurato senza alcun intervento manuale.  
@@ -24,6 +24,6 @@ Un obiettivo importante per IPv6 consiste nel supportare la modalità Plug and P
 ## <a name="ipv6-mobility"></a>Mobilità di IPv6  
  La grande diffusione di dispositivi mobili ha introdotto un nuovo requisito: un dispositivo deve essere in grado di cambiare arbitrariamente posizione nella rete Internet IPv6, mantenendo comunque le connessioni esistenti. Per fornire questa funzionalità, a un nodo mobile viene assegnato un indirizzo di posizione iniziale a cui può essere sempre raggiunto. Quando il nodo mobile si trova nella posizione iniziale, si connette al collegamento di questa posizione e usa il proprio indirizzo di posizione iniziale. Quando il nodo mobile si trova in un'altra posizione, un home agent, che è in genere un router, inoltra i messaggi tra il nodo mobile e i nodi con cui sta comunicando.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Socket](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Vedere anche
+- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Socket](../../../docs/framework/network-programming/sockets.md)

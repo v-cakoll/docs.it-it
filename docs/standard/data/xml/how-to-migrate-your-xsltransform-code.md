@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: migrare il codice XslTransform'
+title: 'Procedura: Eseguire la migrazione del codice XslTransform'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71e5ae19b1e0123dc28713befef070a9cc23bdc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bb8754c4e572464f139a6b072ccd542b1a302652
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595604"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Procedura: migrare il codice XslTransform
+# <a name="how-to-migrate-your-xsltransform-code"></a>Procedura: Eseguire la migrazione del codice XslTransform
 Le nuove classi XSLT sono state progettate in modo analogo alle classi esistenti. La classe <xref:System.Xml.Xsl.XslCompiledTransform> sostituisce la classe <xref:System.Xml.Xsl.XslTransform>. I fogli di stile vengono compilati usando il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Le trasformazioni vengono eseguite usando il metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Nelle procedure seguenti vengono illustrate le attività comuni di XSLT e viene eseguito un confronto del codice usando la classe <xref:System.Xml.Xsl.XslTransform> e la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Per trasformare un file e un output in un URI  
@@ -95,5 +95,5 @@ Le nuove classi XSLT sono state progettate in modo analogo alle classi esistenti
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
+- [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

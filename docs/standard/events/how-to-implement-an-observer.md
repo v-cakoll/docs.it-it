@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738053"
 ---
 # <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
 Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), descrive come creare un provider.  
@@ -51,7 +51,7 @@ Lo schema progettuale degli observer richiede una divisione tra un observer, che
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.IObserver%601>  
-- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)  
-- [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- <xref:System.IObserver%601>
+- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)
+- [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)

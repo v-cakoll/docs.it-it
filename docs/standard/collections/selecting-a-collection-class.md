@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620084"
 ---
 # <a name="selecting-a-collection-class"></a>Selezione di una classe Collection
 Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del tipo errato può limitare l'uso della raccolta. In generale, evitare di usare i tipi nello spazio dei nomi <xref:System.Collections> a meno che la destinazione specifica non sia .NET Framework versione 1.1. È preferibile usare le versioni generiche e simultanee delle raccolte per via di una maggiore indipendenza dai tipi e di altri miglioramenti.  
@@ -81,7 +81,7 @@ Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del 
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)
