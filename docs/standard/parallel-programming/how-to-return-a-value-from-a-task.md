@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2af0f82e66da1c8db5e17863dfad861c8a7d195e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df928ec6494da6da368b3cef1f1d25a84a692aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741782"
 ---
-# <a name="how-to-return-a-value-from-a-task"></a><span data-ttu-id="5406c-102">Procedura: Restituire un valore da un'attività</span><span class="sxs-lookup"><span data-stu-id="5406c-102">How to: Return a Value from a Task</span></span>
-<span data-ttu-id="5406c-103">In questo esempio viene illustrato come usare il tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> per restituire un valore dalla proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>.</span><span class="sxs-lookup"><span data-stu-id="5406c-103">This example shows how to use the <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> type to return a value from the <xref:System.Threading.Tasks.Task%601.Result%2A> property.</span></span> <span data-ttu-id="5406c-104">È necessaria la presenza della directory C:\Users\Public\Pictures\Sample Pictures\ e che in essa siano contenuti dei file.</span><span class="sxs-lookup"><span data-stu-id="5406c-104">It requires that the C:\Users\Public\Pictures\Sample Pictures\ directory exists, and that it contains files.</span></span>  
+# <a name="how-to-return-a-value-from-a-task"></a><span data-ttu-id="e1891-102">Procedura: Restituire un valore da un'attività</span><span class="sxs-lookup"><span data-stu-id="e1891-102">How to: Return a Value from a Task</span></span>
+<span data-ttu-id="e1891-103">In questo esempio viene illustrato come usare il tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> per restituire un valore dalla proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>.</span><span class="sxs-lookup"><span data-stu-id="e1891-103">This example shows how to use the <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> type to return a value from the <xref:System.Threading.Tasks.Task%601.Result%2A> property.</span></span> <span data-ttu-id="e1891-104">È necessaria la presenza della directory C:\Users\Public\Pictures\Sample Pictures\ e che in essa siano contenuti dei file.</span><span class="sxs-lookup"><span data-stu-id="e1891-104">It requires that the C:\Users\Public\Pictures\Sample Pictures\ directory exists, and that it contains files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5406c-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="5406c-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e1891-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="e1891-105">Example</span></span>  
  [!code-csharp[TPL#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/returnavalue10.cs#10)]
  [!code-vb[TPL#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/10_returnavalue.vb#10)]  
   
- <span data-ttu-id="5406c-106">La proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> blocca il thread chiamante fino al termine dell'attività.</span><span class="sxs-lookup"><span data-stu-id="5406c-106">The <xref:System.Threading.Tasks.Task%601.Result%2A> property blocks the calling thread until the task finishes.</span></span>  
+ <span data-ttu-id="e1891-106">La proprietà <xref:System.Threading.Tasks.Task%601.Result%2A> blocca il thread chiamante fino al termine dell'attività.</span><span class="sxs-lookup"><span data-stu-id="e1891-106">The <xref:System.Threading.Tasks.Task%601.Result%2A> property blocks the calling thread until the task finishes.</span></span>  
   
- <span data-ttu-id="5406c-107">Per informazioni su come passare il risultato di un oggetto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> a un'attività di continuazione, vedere [Concatenamento di attività tramite attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span><span class="sxs-lookup"><span data-stu-id="5406c-107">To see how to pass the result of one <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> to a continuation task, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span></span>  
+ <span data-ttu-id="e1891-107">Per informazioni su come passare il risultato di un oggetto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> a un'attività di continuazione, vedere [Concatenamento di attività tramite attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span><span class="sxs-lookup"><span data-stu-id="e1891-107">To see how to pass the result of one <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> to a continuation task, see [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5406c-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5406c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1891-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1891-108">See also</span></span>
 
-- [<span data-ttu-id="5406c-109">Programmazione asincrona basata su attività</span><span class="sxs-lookup"><span data-stu-id="5406c-109">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
-- [<span data-ttu-id="5406c-110">Espressioni lambda in PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="5406c-110">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [<span data-ttu-id="e1891-109">Programmazione asincrona basata su attività</span><span class="sxs-lookup"><span data-stu-id="e1891-109">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [<span data-ttu-id="e1891-110">Espressioni lambda in PLINQ e TPL</span><span class="sxs-lookup"><span data-stu-id="e1891-110">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

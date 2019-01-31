@@ -1,107 +1,59 @@
 ---
 title: Operatore =&gt; - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 10/02/2017
+ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: fa2e149f5b19e80e3171d08519be3ae249d2a112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540806"
 ---
-# <a name="gt-operator-c-reference"></a><span data-ttu-id="233b1-102">=&gt; Operatore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="233b1-102">=&gt; Operator (C# Reference)</span></span>
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="5c35a-102">Operatore =&gt; (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="5c35a-102">=&gt; operator (C# Reference)</span></span>
 
-<span data-ttu-id="233b1-103">L'operatore `=>` può essere usato in due modi in C#:</span><span class="sxs-lookup"><span data-stu-id="233b1-103">The `=>` operator can be used in two ways in C#:</span></span>
+<span data-ttu-id="5c35a-103">Il token `=>` è supportato in due forme: come operatore lambda e come separatore tra il nome di un membro e l'implementazione del membro nella definizione del corpo dell'espressione.</span><span class="sxs-lookup"><span data-stu-id="5c35a-103">The `=>` token is supported in two forms: as the lambda operator and as a separator of a member name and the member implementation in an expression body definition.</span></span>
 
-- <span data-ttu-id="233b1-104">Come l'[operatore lambda](#lambda-operator) in un'[espressione lambda](../../lambda-expressions.md), separa le variabili di input dal corpo dell'espressione lambda.</span><span class="sxs-lookup"><span data-stu-id="233b1-104">As the [lambda operator](#lambda-operator) in a [lambda expression](../../lambda-expressions.md), it separates the input variables from the lambda body.</span></span>
- 
-- <span data-ttu-id="233b1-105">In una [definizione del corpo dell'espressione](#expression-body-definition), separa un nome membro dall'implementazione membro.</span><span class="sxs-lookup"><span data-stu-id="233b1-105">In an [expression body definition](#expression-body-definition), it separates a member name from the member implementation.</span></span> 
+## <a name="lambda-operator"></a><span data-ttu-id="5c35a-104">Operatore lambda</span><span class="sxs-lookup"><span data-stu-id="5c35a-104">Lambda operator</span></span>
 
-## <a name="lambda-operator"></a><span data-ttu-id="233b1-106">Operatore lambda</span><span class="sxs-lookup"><span data-stu-id="233b1-106">Lambda operator</span></span>
+<span data-ttu-id="5c35a-105">Nelle [espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), l'operatore lambda `=>` separa le variabili di input sul lato sinistro dal corpo dell'espressione lambda sul lato destro.</span><span class="sxs-lookup"><span data-stu-id="5c35a-105">In [lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md), the lambda operator `=>` separates the input variables on the left side from the lambda body on the right side.</span></span>
 
-<span data-ttu-id="233b1-107">Il token `=>` viene chiamato operatore lambda.</span><span class="sxs-lookup"><span data-stu-id="233b1-107">The `=>` token is called the lambda operator.</span></span> <span data-ttu-id="233b1-108">Viene usato nelle *espressioni lambda* per separare le variabili di input sul lato sinistro dal corpo dell'espressione lambda da quelle sul lato destro.</span><span class="sxs-lookup"><span data-stu-id="233b1-108">It is used in *lambda expressions* to separate the input variables on the left side from the lambda body on the right side.</span></span> <span data-ttu-id="233b1-109">Le espressioni lambda sono espressioni inline simili ai metodi anonimi ma più flessibili. Vengono usate ampiamente nelle query LINQ espresse nella sintassi del metodo.</span><span class="sxs-lookup"><span data-stu-id="233b1-109">Lambda expressions are inline expressions similar to anonymous methods but more flexible; they are used extensively in LINQ queries that are expressed in method syntax.</span></span> <span data-ttu-id="233b1-110">Per altre informazioni, vedere [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="233b1-110">For more information, see [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
-  
- <span data-ttu-id="233b1-111">Nell'esempio seguente vengono illustrate due modalità per individuare e visualizzare la lunghezza della stringa più breve in una matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="233b1-111">The following example shows two ways to find and display the length of the shortest string in an array of strings.</span></span> <span data-ttu-id="233b1-112">La prima parte dell'esempio applica un'espressione lambda (`w => w.Length`) a ogni elemento della matrice `words` e usa quindi il metodo <xref:System.Linq.Enumerable.Min%2A> per individuare la lunghezza minima.</span><span class="sxs-lookup"><span data-stu-id="233b1-112">The first part of the example applies a lambda expression (`w => w.Length`) to each element of the `words` array and then uses the <xref:System.Linq.Enumerable.Min%2A> method to find the smallest length.</span></span> <span data-ttu-id="233b1-113">La seconda parte dell'esempio mostra invece una soluzione più lunga che usa la sintassi della query per eseguire la stessa operazione.</span><span class="sxs-lookup"><span data-stu-id="233b1-113">For comparison, the second part of the example shows a longer solution that uses query syntax to do the same thing.</span></span>  
-  
-```csharp  
-string[] words = { "cherry", "apple", "blueberry" };  
-  
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
-  
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
-  
-// Output:   
-// 5  
-// 5  
-```  
-  
-### <a name="remarks"></a><span data-ttu-id="233b1-114">Note</span><span class="sxs-lookup"><span data-stu-id="233b1-114">Remarks</span></span>  
- <span data-ttu-id="233b1-115">L'operatore `=>` ha la stessa priorità dell'operatore di assegnazione (`=`) e si associa all'operando a destra.</span><span class="sxs-lookup"><span data-stu-id="233b1-115">The `=>` operator has the same precedence as the assignment operator (`=`) and is right-associative.</span></span>  
-  
- <span data-ttu-id="233b1-116">È possibile specificare il tipo di variabile di input in modo esplicito o consentendo al compilatore di dedurlo; in entrambi i casi, la variabile è fortemente tipizzata in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="233b1-116">You can specify the type of the input variable explicitly or let the compiler infer it; in either case, the variable is strongly typed at compile time.</span></span> <span data-ttu-id="233b1-117">Quando si specifica un tipo, è necessario racchiudere tra parentesi il nome del tipo e il nome della variabile, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="233b1-117">When you specify a type, you must enclose the type name and the variable name in parentheses, as the following example shows.</span></span>  
-  
-```csharp  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-### <a name="example"></a><span data-ttu-id="233b1-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="233b1-118">Example</span></span>  
- <span data-ttu-id="233b1-119">Nell'esempio seguente viene illustrato come scrivere un'espressione lambda per eseguire l'overload dell'operatore query standard <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> che accetta due argomenti.</span><span class="sxs-lookup"><span data-stu-id="233b1-119">The following example shows how to write a lambda expression for the overload of the standard query operator <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> that takes two arguments.</span></span> <span data-ttu-id="233b1-120">Poiché l'espressione lambda contiene più di un parametro, i parametri devono essere racchiusi tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="233b1-120">Because the lambda expression has more than one parameter, the parameters must be enclosed in parentheses.</span></span> <span data-ttu-id="233b1-121">Il secondo parametro, `index`, rappresenta l'indice dell'elemento corrente nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="233b1-121">The second parameter, `index`, represents the index of the current element in the collection.</span></span> <span data-ttu-id="233b1-122">L'espressione `Where` restituisce tutte le stringhe la cui lunghezza è minore rispetto alla loro posizione nell'indice nella matrice.</span><span class="sxs-lookup"><span data-stu-id="233b1-122">The `Where` expression returns all the strings whose lengths are less than their index positions in the array.</span></span>  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    string[] digits = { "zero", "one", "two", "three", "four", "five",   
-            "six", "seven", "eight", "nine" };  
-  
-    Console.WriteLine("Example that uses a lambda expression:");  
-    var shortDigits = digits.Where((digit, index) => digit.Length < index);  
-    foreach (var sD in shortDigits)  
-    {  
-        Console.WriteLine(sD);  
-    }  
-  
-    // Output:  
-    // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-}  
-```  
-## <a name="expression-body-definition"></a><span data-ttu-id="233b1-123">Definizione del corpo dell'espressione</span><span class="sxs-lookup"><span data-stu-id="233b1-123">Expression body definition</span></span>
+<span data-ttu-id="5c35a-106">L'esempio seguente illustra l'utilizzo delle espressioni lambda tramite la funzionalità [LINQ](../../programming-guide/concepts/linq/index.md) con la sintassi dei metodi:</span><span class="sxs-lookup"><span data-stu-id="5c35a-106">The following example uses the [LINQ](../../programming-guide/concepts/linq/index.md) feature with method syntax to demonstrate the usage of lambda expressions:</span></span>
 
-<span data-ttu-id="233b1-124">Una definizione del corpo dell'espressione offre l'implementazione di un membro in un modulo molto conciso e leggibile.</span><span class="sxs-lookup"><span data-stu-id="233b1-124">An expression body definition provides a member's implementation in a highly condensed, readable form.</span></span> <span data-ttu-id="233b1-125">Contiene la sintassi generale seguente:</span><span class="sxs-lookup"><span data-stu-id="233b1-125">It has the following general syntax:</span></span>
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+
+<span data-ttu-id="5c35a-107">Le variabili di input delle espressioni lambda vengono fortemente tipizzate in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="5c35a-107">Input variables of lambda expressions are strongly typed at compile time.</span></span> <span data-ttu-id="5c35a-108">Se il compilatore è in grado di dedurre i tipi delle variabili di input, come nell'esempio precedente, è possibile omettere le dichiarazioni di tipo.</span><span class="sxs-lookup"><span data-stu-id="5c35a-108">When the compiler can infer the types of input variables, like in the preceding example, you may omit type declarations.</span></span> <span data-ttu-id="5c35a-109">Se il tipo delle variabili di input deve essere specificato, è necessario farlo per ogni variabile, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="5c35a-109">If you need to specify the type of input variables, you must do that for each variable, as the following example shows:</span></span>
+
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+
+<span data-ttu-id="5c35a-110">L'esempio seguente illustra come definire un'espressione lambda senza variabili di input:</span><span class="sxs-lookup"><span data-stu-id="5c35a-110">The following example shows how to define a lambda expression without input variables:</span></span>
+
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+
+<span data-ttu-id="5c35a-111">Per altre informazioni, vedere [Espressioni lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5c35a-111">For more information, see [Lambda expressions](../../programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>
+
+## <a name="expression-body-definition"></a><span data-ttu-id="5c35a-112">Definizione del corpo dell'espressione</span><span class="sxs-lookup"><span data-stu-id="5c35a-112">Expression body definition</span></span>
+
+<span data-ttu-id="5c35a-113">Una definizione di corpo di espressione presenta la seguente sintassi generale:</span><span class="sxs-lookup"><span data-stu-id="5c35a-113">An expression body definition has the following general syntax:</span></span>
 
 ```csharp
 member => expression;
 ```
-<span data-ttu-id="233b1-126">dove *expression* è un'espressione valida.</span><span class="sxs-lookup"><span data-stu-id="233b1-126">where *expression* is a valid expression.</span></span> <span data-ttu-id="233b1-127">Si noti che *expression* può essere un'*espressione di istruzione* solo se il membro restituito del tipo è `void` o se il membro è un costruttore o un finalizzatore.</span><span class="sxs-lookup"><span data-stu-id="233b1-127">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor or a finalizer.</span></span>
 
-<span data-ttu-id="233b1-128">Le definizioni del corpo dell'espressione per i metodi e le istruzioni Property Get sono supportate a partire da C# 6.</span><span class="sxs-lookup"><span data-stu-id="233b1-128">Expression body definitions for methods and property get statements are supported starting with C# 6.</span></span> <span data-ttu-id="233b1-129">Le definizioni del corpo dell'espressione per costruttori, finalizzatori, istruzioni Property Set e indicizzatori sono supportate a partire da C# 7.</span><span class="sxs-lookup"><span data-stu-id="233b1-129">Expression body definitions for constructors, finalizers, property set statements, and indexers are supported starting with C# 7.</span></span>
+<span data-ttu-id="5c35a-114">dove *expression* è un'espressione valida.</span><span class="sxs-lookup"><span data-stu-id="5c35a-114">where *expression* is a valid expression.</span></span> <span data-ttu-id="5c35a-115">Si noti che *expression* può essere un'*espressione di istruzione* solo se il tipo restituito del membro è `void` o se il membro è un costruttore, un finalizzatore o una funzione di accesso `set` di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="5c35a-115">Note that *expression* can be a *statement expression* only if the member's return type is `void`, or if the member is a constructor, a finalizer, or a property `set` accessor.</span></span>
 
-<span data-ttu-id="233b1-130">Di seguito è riportata una definizione del corpo dell'espressione per un metodo `Person.ToString`:</span><span class="sxs-lookup"><span data-stu-id="233b1-130">The following is an expression body definition for a `Person.ToString` method:</span></span>
+<span data-ttu-id="5c35a-116">L'esempio seguente illustra una definizione del corpo dell'espressione per un metodo `Person.ToString`:</span><span class="sxs-lookup"><span data-stu-id="5c35a-116">The following example shows an expression body definition for a `Person.ToString` method:</span></span>
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-<span data-ttu-id="233b1-131">È una versione abbreviata della definizione di metodo seguente:</span><span class="sxs-lookup"><span data-stu-id="233b1-131">It is a shorthand version of the following method definition:</span></span>
+<span data-ttu-id="5c35a-117">Si tratta di una versione abbreviata della definizione di metodo seguente:</span><span class="sxs-lookup"><span data-stu-id="5c35a-117">It's a shorthand version of the following method definition:</span></span>
 
 ```csharp
 public override string ToString()
@@ -109,11 +61,23 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-<span data-ttu-id="233b1-132">Per altre informazioni dettagliate sulle definizioni del corpo dell'espressione, vedere [Membri con corpo di espressione](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span><span class="sxs-lookup"><span data-stu-id="233b1-132">For more detailed information on expression body definitions, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="233b1-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="233b1-133">See Also</span></span>
+<span data-ttu-id="5c35a-118">Le definizioni del corpo dell'espressione per i metodi e le proprietà di sola lettura sono supportate a partire da C# 6.</span><span class="sxs-lookup"><span data-stu-id="5c35a-118">Expression body definitions for methods and read-only properties are supported starting with C# 6.</span></span> <span data-ttu-id="5c35a-119">Le definizioni del corpo dell'espressione per costruttori, finalizzatori, funzioni di accesso di proprietà e indicizzatori sono supportate a partire da C# 7.0.</span><span class="sxs-lookup"><span data-stu-id="5c35a-119">Expression body definitions for constructors, finalizers, property accessors, and indexers are supported starting with C# 7.0.</span></span>
 
-- [<span data-ttu-id="233b1-134">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="233b1-134">C# Reference</span></span>](../../../csharp/language-reference/index.md)   
-- [<span data-ttu-id="233b1-135">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="233b1-135">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)   
-- [<span data-ttu-id="233b1-136">Espressioni lambda</span><span class="sxs-lookup"><span data-stu-id="233b1-136">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-- <span data-ttu-id="233b1-137">[Membri con corpo di espressione](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span><span class="sxs-lookup"><span data-stu-id="233b1-137">[Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+<span data-ttu-id="5c35a-120">Per altre informazioni, vedere [Membri con corpo di espressione](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span><span class="sxs-lookup"><span data-stu-id="5c35a-120">For more information, see [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="5c35a-121">Overload degli operatori</span><span class="sxs-lookup"><span data-stu-id="5c35a-121">Operator overloadability</span></span>
+
+<span data-ttu-id="5c35a-122">Non è possibile sottoporre l'operatore `=>` a overload.</span><span class="sxs-lookup"><span data-stu-id="5c35a-122">The `=>` operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="5c35a-123">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="5c35a-123">C# language specification</span></span>
+
+<span data-ttu-id="5c35a-124">Per altre informazioni, vedere la sezione [Espressioni di funzioni anonime](~/_csharplang/spec/expressions.md#anonymous-function-expressions) della [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="5c35a-124">For more information, see the [Anonymous function expressions](~/_csharplang/spec/expressions.md#anonymous-function-expressions) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5c35a-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c35a-125">See also</span></span>
+
+- [<span data-ttu-id="5c35a-126">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="5c35a-126">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="5c35a-127">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="5c35a-127">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5c35a-128">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="5c35a-128">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="5c35a-129">Espressioni lambda</span><span class="sxs-lookup"><span data-stu-id="5c35a-129">Lambda expressions</span></span>](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [<span data-ttu-id="5c35a-130">Membri con corpo di espressione</span><span class="sxs-lookup"><span data-stu-id="5c35a-130">Expression-bodied members</span></span>](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

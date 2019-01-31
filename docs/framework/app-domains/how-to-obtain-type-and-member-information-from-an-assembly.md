@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: reperire informazioni su tipo e membro da un assembly'
+title: 'Procedura: Reperire informazioni su tipo e membro da un assembly'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44fcded298f33a420a505900f618c1c67f4b9b6f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef3fbb7af3097a67cb39f0c3b2ee294b86f0600e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701599"
 ---
-# <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a><span data-ttu-id="e0522-102">Procedura: reperire informazioni su tipo e membro da un assembly</span><span class="sxs-lookup"><span data-stu-id="e0522-102">How to: Obtain Type and Member Information from an Assembly</span></span>
-<span data-ttu-id="e0522-103">Lo spazio dei nomi <xref:System.Reflection> contiene numerosi metodi per il recupero di informazioni da un assembly.</span><span class="sxs-lookup"><span data-stu-id="e0522-103">The <xref:System.Reflection> namespace contains many methods for obtaining information from an assembly.</span></span> <span data-ttu-id="e0522-104">Questa sezione illustra uno di questi metodi.</span><span class="sxs-lookup"><span data-stu-id="e0522-104">This section demonstrates one of these methods.</span></span> <span data-ttu-id="e0522-105">Per altre informazioni, vedere [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="e0522-105">For additional information, see [Reflection Overview](../../../docs/framework/reflection-and-codedom/reflection.md).</span></span>  
+# <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a><span data-ttu-id="8a616-102">Procedura: Reperire informazioni su tipo e membro da un assembly</span><span class="sxs-lookup"><span data-stu-id="8a616-102">How to: Obtain Type and Member Information from an Assembly</span></span>
+<span data-ttu-id="8a616-103">Lo spazio dei nomi <xref:System.Reflection> contiene numerosi metodi per il recupero di informazioni da un assembly.</span><span class="sxs-lookup"><span data-stu-id="8a616-103">The <xref:System.Reflection> namespace contains many methods for obtaining information from an assembly.</span></span> <span data-ttu-id="8a616-104">Questa sezione illustra uno di questi metodi.</span><span class="sxs-lookup"><span data-stu-id="8a616-104">This section demonstrates one of these methods.</span></span> <span data-ttu-id="8a616-105">Per altre informazioni, vedere [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="8a616-105">For additional information, see [Reflection Overview](../../../docs/framework/reflection-and-codedom/reflection.md).</span></span>  
   
- <span data-ttu-id="e0522-106">L'esempio seguente ottiene informazioni su tipo e membro da un assembly.</span><span class="sxs-lookup"><span data-stu-id="e0522-106">The following example obtains type and member information from an assembly.</span></span>  
+ <span data-ttu-id="8a616-106">L'esempio seguente ottiene informazioni su tipo e membro da un assembly.</span><span class="sxs-lookup"><span data-stu-id="8a616-106">The following example obtains type and member information from an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e0522-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="e0522-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8a616-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="8a616-107">Example</span></span>  
  [!code-cpp[Conceptual.Types.ViewInfo#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source6.cpp#8)]
  [!code-csharp[Conceptual.Types.ViewInfo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source6.cs#8)]
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
-## <a name="see-also"></a><span data-ttu-id="e0522-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e0522-108">See Also</span></span>  
-- [<span data-ttu-id="e0522-109">Programmazione con i domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e0522-109">Programming with Application Domains</span></span>](./application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="e0522-110">Reflection</span><span class="sxs-lookup"><span data-stu-id="e0522-110">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [<span data-ttu-id="e0522-111">Uso dei domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e0522-111">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
+## <a name="see-also"></a><span data-ttu-id="8a616-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8a616-108">See also</span></span>
+- [<span data-ttu-id="8a616-109">Programmazione con i domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="8a616-109">Programming with Application Domains</span></span>](./application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="8a616-110">Reflection</span><span class="sxs-lookup"><span data-stu-id="8a616-110">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [<span data-ttu-id="8a616-111">Uso dei domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="8a616-111">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)

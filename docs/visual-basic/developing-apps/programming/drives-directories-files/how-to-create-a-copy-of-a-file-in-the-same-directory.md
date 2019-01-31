@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare una copia di un file nella stessa directory in Visual Basic'
+title: 'Procedura: Creare una copia di un file nella stessa directory in Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,64 +9,64 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 1147e89292181060589b38be2972e2ff1a3e386c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667102"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a><span data-ttu-id="9d539-102">Procedura: creare una copia di un file nella stessa directory in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9d539-102">How to: Create a Copy of a File in the Same Directory in Visual Basic</span></span>
-<span data-ttu-id="9d539-103">Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file.</span><span class="sxs-lookup"><span data-stu-id="9d539-103">Use the `My.Computer.FileSystem.CopyFile` method to copy files.</span></span> <span data-ttu-id="9d539-104">I parametri consentono di sovrascrivere file esistenti, rinominare il file, visualizzare lo stato di avanzamento dell'operazione e permettere all'utente di annullare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="9d539-104">The parameters allow you to overwrite existing files, rename the file, show the progress of the operation, and allow the user to cancel the operation.</span></span>  
+# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a><span data-ttu-id="a07ff-102">Procedura: Creare una copia di un file nella stessa directory in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a07ff-102">How to: Create a Copy of a File in the Same Directory in Visual Basic</span></span>
+<span data-ttu-id="a07ff-103">Usare il metodo `My.Computer.FileSystem.CopyFile` per copiare i file.</span><span class="sxs-lookup"><span data-stu-id="a07ff-103">Use the `My.Computer.FileSystem.CopyFile` method to copy files.</span></span> <span data-ttu-id="a07ff-104">I parametri consentono di sovrascrivere file esistenti, rinominare il file, visualizzare lo stato di avanzamento dell'operazione e permettere all'utente di annullare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="a07ff-104">The parameters allow you to overwrite existing files, rename the file, show the progress of the operation, and allow the user to cancel the operation.</span></span>  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a><span data-ttu-id="9d539-105">Per creare una copia di un file nella stessa directory</span><span class="sxs-lookup"><span data-stu-id="9d539-105">To create a copy of a file in the same folder</span></span>  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a><span data-ttu-id="a07ff-105">Per creare una copia di un file nella stessa directory</span><span class="sxs-lookup"><span data-stu-id="a07ff-105">To create a copy of a file in the same folder</span></span>  
   
--   <span data-ttu-id="9d539-106">Usare il metodo `CopyFile` specificando il percorso e il file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="9d539-106">Use the `CopyFile` method, supplying the target file and the location.</span></span> <span data-ttu-id="9d539-107">Nell'esempio seguente viene creata una copia di `test2.txt` denominata `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="9d539-107">The following example creates a copy of `test.txt` called `test2.txt`.</span></span>  
+-   <span data-ttu-id="a07ff-106">Usare il metodo `CopyFile` specificando il percorso e il file di destinazione.</span><span class="sxs-lookup"><span data-stu-id="a07ff-106">Use the `CopyFile` method, supplying the target file and the location.</span></span> <span data-ttu-id="a07ff-107">Nell'esempio seguente viene creata una copia di `test2.txt` denominata `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="a07ff-107">The following example creates a copy of `test.txt` called `test2.txt`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a><span data-ttu-id="9d539-108">Per creare una copia di un file nella stessa cartella, sovrascrivendo i file esistenti</span><span class="sxs-lookup"><span data-stu-id="9d539-108">To create a copy of a file in the same folder, overwriting existing files</span></span>  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a><span data-ttu-id="a07ff-108">Per creare una copia di un file nella stessa cartella, sovrascrivendo i file esistenti</span><span class="sxs-lookup"><span data-stu-id="a07ff-108">To create a copy of a file in the same folder, overwriting existing files</span></span>  
   
--   <span data-ttu-id="9d539-109">Usare il metodo `CopyFile` specificando il percorso e il file di destinazione e impostando `overwrite` su `True`.</span><span class="sxs-lookup"><span data-stu-id="9d539-109">Use the `CopyFile` method, supplying the target file and location, and setting `overwrite` to `True`.</span></span> <span data-ttu-id="9d539-110">Nell'esempio riportato di seguito viene creata una copia di `test.txt` denominata `test2.txt` e i file esistenti vengono sovrascritti con questo nome.</span><span class="sxs-lookup"><span data-stu-id="9d539-110">The following example creates a copy of `test.txt` called `test2.txt` and overwrites any existing files by that name.</span></span>  
+-   <span data-ttu-id="a07ff-109">Usare il metodo `CopyFile` specificando il percorso e il file di destinazione e impostando `overwrite` su `True`.</span><span class="sxs-lookup"><span data-stu-id="a07ff-109">Use the `CopyFile` method, supplying the target file and location, and setting `overwrite` to `True`.</span></span> <span data-ttu-id="a07ff-110">Nell'esempio riportato di seguito viene creata una copia di `test.txt` denominata `test2.txt` e i file esistenti vengono sovrascritti con questo nome.</span><span class="sxs-lookup"><span data-stu-id="a07ff-110">The following example creates a copy of `test.txt` called `test2.txt` and overwrites any existing files by that name.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="9d539-111">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="9d539-111">Robust Programming</span></span>  
- <span data-ttu-id="9d539-112">Le condizioni seguenti possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="9d539-112">The following conditions may cause an exception to be thrown:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a07ff-111">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="a07ff-111">Robust Programming</span></span>  
+ <span data-ttu-id="a07ff-112">Le condizioni seguenti possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="a07ff-112">The following conditions may cause an exception to be thrown:</span></span>  
   
--   <span data-ttu-id="9d539-113">Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="a07ff-113">Il percorso non è valido per uno dei motivi seguenti: è una stringa di lunghezza zero, contiene solo spazi vuoti, contiene caratteri non validi o è il percorso di un dispositivo (inizia con \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="9d539-114">Il sistema non ha recuperato il percorso assoluto (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-114">The system could not retrieve the absolute path (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="a07ff-114">Il sistema non ha recuperato il percorso assoluto (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-114">The system could not retrieve the absolute path (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="9d539-115">Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-115">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+-   <span data-ttu-id="a07ff-115">Il percorso non è valido in quanto è `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-115">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="9d539-116">Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-116">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
+-   <span data-ttu-id="a07ff-116">Il file di origine non è valido o non esiste (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-116">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   <span data-ttu-id="9d539-117">Il percorso combinato punta a una directory esistente (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-117">The combined path points to an existing directory (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="a07ff-117">Il percorso combinato punta a una directory esistente (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-117">The combined path points to an existing directory (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="9d539-118">Il file di destinazione esiste e `overwrite` è impostato su `False` (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-118">The destination file exists and `overwrite` is set to `False` (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="a07ff-118">Il file di destinazione esiste e `overwrite` è impostato su `False` (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-118">The destination file exists and `overwrite` is set to `False` (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="9d539-119">L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-119">The user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="a07ff-119">L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-119">The user does not have sufficient permissions to access the file (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="9d539-120">Un file nella cartella di destinazione con lo stesso nome è in uso (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-120">A file in the target folder with the same name is in use (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="a07ff-120">Un file nella cartella di destinazione con lo stesso nome è in uso (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-120">A file in the target folder with the same name is in use (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="9d539-121">Il nome di un file o di una cartella nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-121">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+-   <span data-ttu-id="a07ff-121">Il nome di un file o di una cartella nel percorso contiene i due punti (:) o ha un formato non valido (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-121">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   <span data-ttu-id="9d539-122">`ShowUI` è impostato su `True`, `onUserCancel` è impostato su `ThrowException` e l'utente ha annullato l'operazione (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-122">`ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and the user has cancelled the operation (<xref:System.OperationCanceledException>).</span></span>  
+-   <span data-ttu-id="a07ff-122">`ShowUI` è impostato su `True`, `onUserCancel` è impostato su `ThrowException` e l'utente ha annullato l'operazione (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-122">`ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and the user has cancelled the operation (<xref:System.OperationCanceledException>).</span></span>  
   
--   <span data-ttu-id="9d539-123">`ShowUI`è impostato su `True`, `onUserCancel` è impostato su `ThrowException` e si verifica un errore di I/O non specificato (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-123">`ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and an unspecified I/O error occurs (<xref:System.OperationCanceledException>).</span></span>  
+-   <span data-ttu-id="a07ff-123">`ShowUI`è impostato su `True`, `onUserCancel` è impostato su `ThrowException` e si verifica un errore di I/O non specificato (<xref:System.OperationCanceledException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-123">`ShowUI` is set to `True`, `onUserCancel` is set to `ThrowException`, and an unspecified I/O error occurs (<xref:System.OperationCanceledException>).</span></span>  
   
--   <span data-ttu-id="9d539-124">La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-124">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="a07ff-124">La lunghezza del percorso supera la lunghezza massima definita dal sistema (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-124">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="9d539-125">L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-125">The user does not have required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
+-   <span data-ttu-id="a07ff-125">L'utente non ha le autorizzazioni necessarie (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-125">The user does not have required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
   
--   <span data-ttu-id="9d539-126">L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="9d539-126">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="a07ff-126">L'utente non dispone delle autorizzazioni necessarie per visualizzare il percorso (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="a07ff-126">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d539-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d539-127">See Also</span></span>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
- [<span data-ttu-id="9d539-128">Procedura: copiare file con un criterio specifico in una directory</span><span class="sxs-lookup"><span data-stu-id="9d539-128">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- [<span data-ttu-id="9d539-129">Procedura: creare una copia di un file in una directory diversa</span><span class="sxs-lookup"><span data-stu-id="9d539-129">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- [<span data-ttu-id="9d539-130">Procedura: copiare una directory in un'altra directory</span><span class="sxs-lookup"><span data-stu-id="9d539-130">How to: Copy a Directory to Another Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- [<span data-ttu-id="9d539-131">Procedura: rinominare un file</span><span class="sxs-lookup"><span data-stu-id="9d539-131">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+## <a name="see-also"></a><span data-ttu-id="a07ff-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a07ff-127">See also</span></span>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
+- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
+- [<span data-ttu-id="a07ff-128">Procedura: Copiare file con un criterio specifico in una directory</span><span class="sxs-lookup"><span data-stu-id="a07ff-128">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [<span data-ttu-id="a07ff-129">Procedura: Creare una copia di un file in una directory diversa</span><span class="sxs-lookup"><span data-stu-id="a07ff-129">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [<span data-ttu-id="a07ff-130">Procedura: Copiare una directory in un'altra directory</span><span class="sxs-lookup"><span data-stu-id="a07ff-130">How to: Copy a Directory to Another Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
+- [<span data-ttu-id="a07ff-131">Procedura: Rinominare un file</span><span class="sxs-lookup"><span data-stu-id="a07ff-131">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
