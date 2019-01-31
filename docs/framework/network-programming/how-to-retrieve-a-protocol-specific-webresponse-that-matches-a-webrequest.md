@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-ms.openlocfilehash: f1da226fb62c55f37183404765430c094f1cd63f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b3b523d6248b3c61a0994728b035bc6f02d5cf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745349"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest
 Questo esempio mostra come recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest.  
@@ -32,5 +32,5 @@ Dim resp As WebResponse = req.GetResponse()
   
 -   Riferimenti allo spazio dei nomi **System.Net**.  
   
-## <a name="see-also"></a>Vedere anche  
- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Vedere anche
+- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)

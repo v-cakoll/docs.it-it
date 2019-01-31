@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202920"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066402"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  I comandi di MDbg.exe sono soggetti alla distinzione tra maiuscole e minuscole.  
   
-|Comando|Descrizione|  
+|Comando|Description|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*numero*]|Passa a un altro processo di cui viene eseguito il debug o visualizza i processi disponibili. I numeri non corrispondono a ID di processo (PID) effettivi ma a un elenco a indice zero.|  
 |**a**[**ttach**] [*pid*]|Esegue la connessione a un processo o visualizza i processi disponibili.|  
@@ -57,7 +57,7 @@ MDbg [ProgramName[arguments]] [options]
 |**int**[**ercept**] *NumeroFrame*|Esegue il rollback del debugger a un numero di frame specificato.<br /><br /> Se il debugger rileva un'eccezione, usare questo comando per eseguire il rollback del debugger al numero di frame specificato. È possibile modificare lo stato del programma tramite il comando **set** e usare il comando **go** per continuare.|  
 |**k**[**ill**]|Arresta il processo attivo.|  
 |**l**[**ist**] [*moduli* &#124; *dominiapp* &#124; *assembly*]|Visualizza i moduli, i domini applicazione o gli assembly caricati.|  
-|**lo**[**ad**] *nomeAssembly*|Carica un'estensione in questo modo: l'assembly specificato viene caricato e viene quindi effettuato un tentativo di eseguire il metodo statico `LoadExtension` dal tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *nomeAssembly*|Carica un'estensione nel modo seguente: L'assembly specificato viene caricato e viene quindi effettuato un tentativo di eseguire il metodo statico `LoadExtension` dal tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*tipoEvento*]|Imposta o visualizza gli eventi da registrare.|  
 |**mo**[**de**] [*opzione on/off*]|Imposta opzioni differenti del debugger. Usare `mode` senza opzioni per ottenere un elenco delle modalità di debug e delle relative impostazioni correnti.|  
 |**mon**[**itorInfo**] *riferimentoMonitoraggio*|Visualizza le informazioni sul blocco di monitoraggio degli oggetti.|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*righe*]|Specifica il numero di righe da visualizzare.|  
 |**s**[**tep**]|Sposta l'esecuzione alla funzione successiva della riga corrente oppure passa alla riga successiva se non è disponibile un'altra funzione di cui eseguire le istruzioni.|  
 |**su**[**spend**] [\* &#124; [~]*numeroThread*]|Sospende il thread corrente o quello specificato dal parametro *numeroThread*.  Se *numeroThread* viene specificato come `*`, il comando viene applicato a tutti i thread. Se il numero di thread inizia con `~`, il comando viene applicato a tutti i thread, ad eccezione di quello specificato da *numeroThread*. I thread sospesi sono esclusi dall'esecuzione quando il processo viene eseguito tramite il comando **go** o **step**. L'esecuzione del processo non continuerà se il processo non include thread non sospesi e si usa il comando **go**. In tal caso, premere CTRL-C per passare al processo.|  
-|**sy**[**mbol**] *nomeComando* [*valoreComando*]|Specifica uno dei seguenti comandi:<br /><br /> -   `symbol path` [`"``value``"`] - Visualizza o imposta il percorso del simbolo corrente.<br />-   `symbol addpath` `"` `value` `"` - Aggiunge il valore al percorso del simbolo corrente.<br />-   `symbol reload` [`"``module``"`]- Ricarica tutti i simboli o i simboli per il modulo specificato.<br />-   `symbol list` [`module`] - Visualizza tutti i simboli attualmente caricati per tutti i moduli o per il modulo specificato.|  
+|**sy**[**mbol**] *nomeComando* [*valoreComando*]|Specifica uno dei seguenti comandi:<br /><br /> -   `symbol path` [`"value"`] - Visualizza o imposta il percorso del simbolo corrente.<br />-   `symbol addpath` `"value"` - Aggiunge il valore al percorso del simbolo corrente.<br />-   `symbol reload` [`"module"`] - Ricarica tutti i simboli o i simboli per il modulo specificato.<br />-   `symbol list` [`module`] - Visualizza tutti i simboli attualmente caricati per tutti i moduli o per il modulo specificato.|  
 |**t**[**hread**] [*nuovoThread*] [-*soprannome*`]`|Il comando thread senza parametri visualizza tutti i thread gestiti nel processo corrente. I thread sono in genere identificati in base ai relativi numeri. Se tuttavia al thread è assegnato un nome alternativo, verrà visualizzato tale nome. È possibile usare il parametro `-nick` per assegnare un nome alternativo a un thread.<br /><br /> -   **thread** `-nick` *nomeThread* assegna un soprannome al thread attualmente in esecuzione.<br /><br /> I nomi alternativi non possono essere numeri. Se al thread corrente è già stato assegnato un nome alternativo, il nome alternativo precedente verrà sostituito da quello nuovo. Se il nuovo nome alternativo è una stringa vuota (""), il nome alternativo del thread corrente verrà eliminato e non ne verrà assegnato un altro.|  
 |**u**[**p**]|Spostare verso l'alto lo stack frame attivo.|  
 |**uwgc**[**handle**] [*variabile*] &#124; [*indirizzo*]|Visualizza la variabile rilevata da un handle. L'handle può essere specificato in base al nome o all'indirizzo.|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>Esempi  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)  
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vedere anche
+- [Strumenti](../../../docs/framework/tools/index.md)
+- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

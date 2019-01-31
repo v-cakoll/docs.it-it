@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: rimuovere un assembly dalla Global Assembly Cache'
+title: 'Procedura: Rimuovere un assembly dalla Global Assembly Cache'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18148d21c6329167437cd1ca3ea1f4635c7a28a0
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4a8077125ac99fa1d8f5b22ac3864fcc17213fa6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639635"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedura: rimuovere un assembly dalla Global Assembly Cache
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedura: Rimuovere un assembly dalla Global Assembly Cache
 Esistono due modi per rimuovere un assembly dalla Global Assembly Cache (GAC):  
   
 -   Usando lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). È possibile usare questa opzione per disinstallare gli assembly inseriti nella GAC durante le fasi di sviluppo e test.  
@@ -51,7 +51,7 @@ gacutil -u hello
     > [!NOTE]
     >  Windows Installer mantiene un conteggio dei riferimenti per gli assembly installati nella GAC. La rimozione di un assembly dalla Global Assembly Cache avviene solo quando il conteggio dei riferimenti raggiunge zero. Ciò indica che non viene usato da altre applicazioni installate da un pacchetto di Windows Installer.  
   
-## <a name="see-also"></a>Vedere anche  
-- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
-- [Procedura: Installare un assembly nella Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+## <a name="see-also"></a>Vedere anche
+- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Procedura: Installare un assembly nella Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
 - [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582176"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
 Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), librerie di classi base e altre librerie gestite. Questo argomento descrive le funzionalità principali di .NET Framework in base alla versione, fornisce informazioni sulle versioni CLR sottostanti e sugli ambienti di sviluppo associati, e identifica le versioni installate dal sistema operativo Windows.  
@@ -24,7 +24,7 @@ Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), li
   
  Ogni nuova versione di .NET Framework conserva funzionalità dalle versioni precedenti e ne aggiunge nuove. CLR viene identificato dal relativo numero di versione. Il numero di versione di .NET Framework viene incrementato a ogni rilascio, sebbene la versione CLR non venga sempre incrementata. Ad esempio, .NET Framework 4, 4.5 e versioni più recenti includono CLR 4, ma .NET Framework 2.0, 3.0 e 3.5 includono CLR 2.0. (non c'è nessuna versione 3 di CLR).  
   
- Per un elenco completo dei sistemi operativi supportati, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per i download, vedere [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md). Per determinare le versioni di .NET Framework installate in un computer, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+ Per un elenco completo dei sistemi operativi supportati, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per i download, vedere [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md). Per determinare quali versioni di .NET Framework siano installate in un computer, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
  Nella tabella le versioni di .NET Framework installate nelle versioni dei sistemi operativi contrassegnate da ✓ nelle colonne **Inclusa in/Può essere installata su Windows** e **Inclusa in/Può essere installata su Windows Server** devono essere [abilitate nel Pannello di controllo](../../../docs/framework/install/dotnet-35-windows-10.md) (per Windows) oppure devono essere abilitate tramite Server Manager (per Windows Server).  
   
@@ -76,10 +76,10 @@ Tutte le versioni di .NET Framework contengono Common Language Runtime (CLR), li
   
 -   Per informazioni sulla migrazione di un'app da .NET Framework 4 a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e alle versioni intermedie, vedere la [guida alla migrazione](../../../docs/framework/migration-guide/index.md).  
   
--   Per informazioni su come determinare le versioni o gli aggiornamenti installati in un computer, vedere [Procedura: determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) e [Procedura: determinare gli aggiornamenti di .NET Framework installati](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
+-   Per informazioni sulla determinazione delle versioni o degli aggiornamenti installati in un computer, vedere [Procedura: Determinare le versioni di .NET Framework installate](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) e [Procedura: Determinare gli aggiornamenti di .NET Framework installati](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Compatibilità tra le versioni](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

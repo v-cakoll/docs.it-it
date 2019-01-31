@@ -1,15 +1,15 @@
 ---
-title: 'File XML di esempio: più ordini di acquisto (LINQ to XML)'
+title: 'File XML di esempio: Più ordini di acquisto (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 232be52bb75c6e07773c79a65f4e8e8f346a65d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747791"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>File XML di esempio: più ordini di acquisto (LINQ to XML)
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>File XML di esempio: Più ordini di acquisto (LINQ to XML)
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene molti ordini di acquisto.  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  

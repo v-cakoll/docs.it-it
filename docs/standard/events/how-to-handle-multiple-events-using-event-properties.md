@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: gestire più eventi mediante le relative proprietà'
+title: 'Procedura: Gestire più eventi mediante le relative proprietà'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592221"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedura: gestire più eventi mediante le relative proprietà
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedura: Gestire più eventi mediante le relative proprietà
 Per utilizzare le proprietà evento è necessario definire queste proprietà nella classe tramite cui vengono generati gli eventi e, successivamente, impostarne i delegati nelle classi mediante cui vengono gestiti gli eventi. Per implementare più proprietà evento in una classe, la classe deve archiviare e mantenere internamente il delegato definito per ogni evento. Uno degli approcci più comuni consiste nell'implementare una raccolta di delegati indicizzata da una chiave evento.  
   
  Per archiviare i delegati per ogni evento, è possibile usare la classe <xref:System.ComponentModel.EventHandlerList> o implementare una raccolta personalizzata. La classe della raccolta deve fornire metodi per l'impostazione, l'accesso e il recupero del delegato del gestore eventi in base alla chiave evento. È possibile, ad esempio, usare una classe <xref:System.Collections.Hashtable> o derivare una classe personalizzata dalla classe <xref:System.Collections.DictionaryBase>. I dettagli sull'implementazione della raccolta di delegati non devono necessariamente essere esposti al di fuori della classe.  
@@ -52,7 +52,7 @@ Per utilizzare le proprietà evento è necessario definire queste proprietà nel
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [Eventi](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [Eventi](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
 - [Procedura: Dichiarare eventi personalizzati per proteggere la memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

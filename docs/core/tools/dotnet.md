@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170847"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066441"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -78,9 +78,14 @@ Visualizza i runtime di .NET Core installati.
 
 Visualizza i .NET Core SDK installati.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Se impostato su `0`, disabilita il roll forward della versione secondaria. Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
+Definisce il comportamento quando il framework condiviso richiesto non è disponibile. `N` può essere:
+ * `0` - Disabilitare anche il roll forward per la versione secondaria.
+ * `1` - Eseguire il roll forward per la versione secondaria, ma non la versione principale. Comportamento predefinito.
+ * `2` - Eseguire il roll forward per le versioni principali e secondarie.
+
+ Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 

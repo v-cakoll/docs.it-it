@@ -2,12 +2,12 @@
 title: Raggruppamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583220"
 ---
 # <a name="grouping-data-c"></a>Raggruppamento dei dati (C#)
 Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
@@ -20,7 +20,7 @@ Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elemen
   
 ## <a name="methods"></a>Metodi  
   
-|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|Nome metodo|Description|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|Raggruppa gli elementi che condividono un attributo comune. Ogni gruppo è rappresentato da un oggetto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> oppure<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Inserisce gli elementi in un oggetto <xref:System.Linq.Lookup%602>, un dizionario uno-a-molti, sulla base di una funzione del selettore di chiavi.|Non applicabile.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -61,11 +61,11 @@ foreach (var group in query)
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Linq>  
-- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md)  
-- [Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
-- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
-- [Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
-- [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
+- <xref:System.Linq>
+- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md)
+- [Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
+- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
+- [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
 - [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

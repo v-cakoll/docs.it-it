@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615050"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065995"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilatore XSLT (xsltc.exe)
 Il compilatore XSLT (xsltc.exe) consente di compilare fogli di stile XSLT e di generare un assembly. Il foglio di stile compilato può quindi essere passato direttamente nel metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Non è possibile generare assembly firmati con xsltc.exe.  
@@ -25,16 +25,16 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Argomento  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |`sourceFile`|Consente di specificare il nome del foglio di stile. Il foglio di stile deve essere un file locale o deve essere disponibile nella Intranet.|  
   
 ## <a name="options"></a>Opzioni  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Consente di specificare il nome della classe del foglio di stile successivo. Il nome della classe può essere completo.<br /><br /> Per impostazione predefinita, il nome della classe corrisponde al nome del foglio di stile. Ad esempio, se viene compilato il foglio di stile customers.xsl, il nome predefinito della classe sarà customers.|  
-|`/debug[`+&#124;-`]`|Consente di specificare se generare le informazioni per il debug.<br /><br /> Se si specifica `+` o `/debug`, il compilatore genererà le informazioni per il debug e le inserirà in un file del database di programma con estensione PDB. Il nome del file PDB generato è `assemblyName`.pdb.<br /><br /> Se si specifica l'argomento `-`, che è attivo quando `/debug` non è specificato, non verranno create informazioni per il debug. Verrà generato un assembly finale. **Nota:** la compilazione in modalità di debug può influire significativamente sulle prestazioni di XSLT.|  
+|`/debug[`+&#124;-`]`|Consente di specificare se generare le informazioni per il debug.<br /><br /> Se si specifica `+` o `/debug`, il compilatore genererà le informazioni per il debug e le inserirà in un file del database di programma con estensione PDB. Il nome del file PDB generato è `assemblyName`.pdb.<br /><br /> Se si specifica l'argomento `-`, che è attivo quando `/debug` non è specificato, non verranno create informazioni per il debug. Verrà generato un assembly finale. **Nota:**  La compilazione in modalità di debug può influire significativamente sulle prestazioni di XSLT.|  
 |`/help`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |`/nologo`|Consente di disattivare la visualizzazione del messaggio di copyright del compilatore.|  
 |`/platform:` `string`|Consente di specificare le piattaforme in cui è possibile eseguire l'assembly. Di seguito sono illustrati i valori di piattaforma validi:<br /><br /> `x86`: consente di compilare l'assembly in modo che sia possibile eseguirlo con la versione x86 compatibile di Common Language Runtime a 32 bit.<br /><br /> `x64`: consente di compilare l'assembly in modo che sia possibile eseguirlo con Common Language Runtime a 64 bit su un computer che supporta il set di istruzioni AMD64 o EM64T.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]: consente di compilare l'assembly in modo che sia possibile eseguirlo con Common Language Runtime a 64 bit su un computer dotato di un processore [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> `anycpu`: consente di compilare l'assembly in modo che sia possibile eseguirlo su qualsiasi piattaforma. Questa è l'impostazione predefinita.|  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  È inoltre necessario includere anche l'assembly compilato come riferimento nell'applicazione.  
   
- Lo strumento xsltc.exe non convalida i nomi di classe (`/class:``name`) o di assembly (`/out:``assemblyName`). Se i nomi non sono validi, CLR genera errori.  
+ Lo strumento xsltc.exe non convalida i nomi di classe (`/class:`*name*) o di assembly (`/out:`*assemblyName*). Se i nomi non sono validi, CLR genera errori.  
   
 ## <a name="examples"></a>Esempi  
  Il comando seguente consente di compilare il foglio di stile e di creare un assembly denominato booksort.dll.  
@@ -84,6 +84,6 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Procedura: Eseguire una trasformazione XSLT con un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Procedura: Eseguire una trasformazione XSLT con un assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [Trasformazioni XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

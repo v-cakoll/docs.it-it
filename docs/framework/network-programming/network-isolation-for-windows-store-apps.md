@@ -2,12 +2,12 @@
 title: Isolamento rete per app di Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 537d94201b3e0ae92707c858f10032848a690004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0209bd57bfa98fec8a3057490502081c4c20554f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594265"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
 Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> possono essere usate per sviluppare app di Windows Store o app desktop. Quando vengono usate in un'app di Windows Store, le classi in questi spazi dei nomi sono interessate dall'isolamento rete, parte del modello di sicurezza delle applicazioni usato da [!INCLUDE[win8](../../../includes/win8-md.md)]. Le funzionalità di rete appropriate devono essere abilitate nel manifesto dell'app per un'app di Windows Store affinché il sistema consenta l'accesso alla rete.  
@@ -25,10 +25,10 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
   
  Per informazioni più dettagliate su come configurare le funzionalità di rete e gli strumenti di isolamento usati per la risoluzione dei problemi dell'isolamento rete, vedere [Come impostare le funzionalità di rete](https://go.microsoft.com/fwlink/?LinkID=228265) nella documentazione per gli sviluppatori di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
-## <a name="see-also"></a>Vedere anche  
- [Connecting to a web service](https://go.microsoft.com/fwlink/?LinkID=245696) (Connessione a servizi Web)  
- [Linee guida ed elenco di controllo per l'isolamento rete](https://go.microsoft.com/fwlink/?LinkID=228265)  
- [Quickstart: Connecting using HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697) (Guida introduttiva: Connessione tramite HttpClient)  
- [How to use HttpClient handlers](https://go.microsoft.com/fwlink/?LinkId=245699) (Come usare i gestori HttpClient)  
- [How to secure HttpClient connections](https://go.microsoft.com/fwlink/?LinkId=245698) (Come proteggere le connessioni HttpClient)  
- [HttpClient Sample](https://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)
+## <a name="see-also"></a>Vedere anche
+- [Connecting to a web service](https://go.microsoft.com/fwlink/?LinkID=245696) (Connessione a servizi Web)
+- [Linee guida ed elenco di controllo per l'isolamento rete](https://go.microsoft.com/fwlink/?LinkID=228265)
+- [Avvio rapido: Connecting using HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697) (Connessione tramite HttpClient)
+- [How to use HttpClient handlers](https://go.microsoft.com/fwlink/?LinkId=245699) (Come usare i gestori HttpClient)
+- [How to secure HttpClient connections](https://go.microsoft.com/fwlink/?LinkId=245698) (Come proteggere le connessioni HttpClient)
+- [HttpClient Sample](https://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)

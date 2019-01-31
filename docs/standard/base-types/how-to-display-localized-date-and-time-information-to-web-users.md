@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web'
+title: 'Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085225"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857658"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: visualizzare le informazioni su data e ora localizzate agli utenti del Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Per analizzare stringhe di data e ora immesse dall'utente  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Per analizzare stringhe di data e ora immesse dall'utente  
   
 1.  Determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 6.  
   
@@ -40,7 +43,7 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
   
 6.  Se la conversione continua a non riuscire o se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è vuota, analizzare la stringa usando le impostazioni cultura inglese non dipendenti da paese/area geografica, restituite dalla proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Per analizzare la data e l'ora locali della richiesta dell'utente  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Per analizzare la data e l'ora locali della richiesta dell'utente  
   
 1.  Aggiungere un controllo <xref:System.Web.UI.WebControls.HiddenField> a un Web Form.  
   
@@ -110,7 +113,7 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)

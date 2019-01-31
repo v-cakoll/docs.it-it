@@ -4,12 +4,12 @@ description: Versioni Linux supportate e dipendenze .NET Core necessarie per lo 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656050"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083886"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -100,7 +100,8 @@ Quelli che seguono sono esempi. Le versioni e i nomi esatti possono variare legg
 Le distribuzioni Ubuntu richiedono che siano installate le librerie seguenti:
 
 * liblttng-ust0
-* libcurl3
+* libcurl3 (per 14.x e 16.x)
+* libcurl4 (per 18.x)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

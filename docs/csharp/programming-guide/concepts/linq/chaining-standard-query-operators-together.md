@@ -2,15 +2,15 @@
 title: Concatenamento di operatori di query standard (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582883"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Concatenamento di operatori di query standard (C#)
-Questo è l'argomento finale dell'[Esercitazione: concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+Questo è l'argomento finale nell'[Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
  È anche possibile concatenare gli operatori di query standard. Ad esempio, è possibile inserire l'operatore <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> che opera anch'esso in modo lazy. Questo operatore non materializza nessun risultato intermedio.  
   

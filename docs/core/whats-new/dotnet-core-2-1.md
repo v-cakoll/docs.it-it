@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127550"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066350"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novità di .NET Core 2.1
 
@@ -96,23 +96,30 @@ Di tutte le applicazioni .NET Core a partire da .NET Core 2.0 viene eseguito aut
 A partire da .NET Core 2.0, se la versione di .NET Core con cui è stata compilata un'applicazione non è presente in fase di esecuzione, l'applicazione verrà eseguita automaticamente con la *versione secondaria* installata più recente di .NET Core. In altre parole, se un'applicazione è compilata con .NET Core 2.0 e .NET Core 2.0 non è presente nel sistema host ma .NET Core 2.1 lo è, l'applicazione verrà eseguita con .NET Core 2.1.
 
 > [!IMPORTANT]
-> Questo comportamento di roll forward non si applica alle versioni di anteprima, né alle versioni principali. Ad esempio, un'applicazione .NET Core 1.0 non esegue il roll forward a .NET Core 2.0 o a .NET Core 2.1.
+> Questo comportamento di roll forward non si applica alle versioni di anteprima, Per impostazione predefinita, non si applica nemmeno alle versioni principali, ma il comportamento si può modificare con le impostazioni seguenti.
 
-È anche possibile disabilitare il roll forward alla versione secondaria in uno dei tre modi seguenti:
+Per modificare questo comportamento, cambiare l'impostazione per il roll forward scegliendo di non eseguirlo su framework condiviso candidato. Le impostazioni disponibili sono:
+- `0` - Disabilitare il comportamento del roll forward per la versione secondaria. Con questa impostazione, un'applicazione creata per .NET Core 2.0.0 esegue il roll forward a .NET Core 2.0.1, ma non a .NET Core 2.2.0 o .NET Core 3.0.0.
+- `1` - Abilitare il comportamento del roll forward per la versione secondaria. Questo è il valore predefinito per l'impostazione. Con questa impostazione, un'applicazione creata per .NET Core 2.0.0 esegue il roll forward a .NET Core 2.0.1 o a .NET Core 2.2.0, a seconda di quale dei due è installato, ma non a .NET Core 3.0.0.
+- `2` - Abilitare il comportamento del roll forward per le versioni principale e secondaria. Se impostata, vengono considerate anche diverse versioni principali, in modo che un'applicazione compilata per .NET Core 2.0.0 esegua il roll forward a .NET Core 3.0.0.
 
-- Impostare la variabile di ambiente `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` su 0.
+È possibile modificare questa impostazione in tre modi:
 
-- Aggiungere la riga seguente al file runtimeconfig.json:
+- Impostare la variabile di ambiente `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` su un valore.
+
+- Aggiungere la riga seguente con quel valore al file `runtimeconfig.json`:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Quando si usano gli [strumenti dell'interfaccia della riga di comando di .NET Core](../tools/index.md), includere l'opzione seguente con un comando di .NET Core, ad esempio `run`:
+- Quando si usano gli [strumenti dell'interfaccia della riga di comando di .NET Core](../tools/index.md), aggiungere l'opzione seguente con il valore a un comando di .NET Core, ad esempio `run`:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+Il roll forward della versione della patch è indipendente da questa impostazione e viene eseguito dopo gli eventuali roll forward della versione principale o secondaria.
 
 ## <a name="deployment"></a>Distribuzione
 
@@ -239,6 +246,6 @@ In Linux e macOS è possibile configurare <xref:System.Net.Http.HttpClient> solo
 
 ## <a name="see-also"></a>Vedere anche
 
-* [What's new in .NET Core](index.md) (Novità di .NET Core)  
-* [Nuove funzionalità di EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-* [Novità di ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+- [What's new in .NET Core](index.md) (Novità di .NET Core)
+- [Nuove funzionalità di EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
+- [Novità di ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

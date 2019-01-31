@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636602"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
@@ -35,7 +35,7 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 -   [Procedura: Compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
--   [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+-   [Procedura: Compilare un assembly con più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
 -   [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
@@ -51,7 +51,7 @@ Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella
   
 -   [Procedura: Rimuovere un assembly dalla Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
--   [Procedura: Visualizzare il contenuto dell'assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+-   [Procedura: Visualizzare il contenuto degli assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
 - [Domini applicazione e assembly](../../../docs/framework/app-domains/index.md)

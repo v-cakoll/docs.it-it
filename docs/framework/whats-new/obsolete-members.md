@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635975"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membri obsoleti in .NET Framework
 Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework 4.5 e versioni successive, organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -177,12 +177,12 @@ Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Questo costruttore è stato deprecato. Usare invece <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|La proprietà è stata deprecata. Usare invece <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|La proprietà è stata deprecata.|  
-|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|È disponibile un'API alternativa: creare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|È disponibile un'API alternativa: generare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Questa API è stata deprecata.|  
-|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|È disponibile un'API alternativa: creare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|È disponibile un'API alternativa: generare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Questa API è stata deprecata.|  
 |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Questa API è stata deprecata.|  
-|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|È disponibile un'API alternativa: creare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|È disponibile un'API alternativa: generare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|In alternativa, chiamare <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|Il metodo <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> è stato deprecato e verrà rimosso nelle versioni future.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|Il metodo <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> è stato deprecato. Per eseguire questa operazione, usare l'API di hosting.|  
@@ -798,6 +798,6 @@ Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Non usare questo metodo.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La chiave del Registro di sistema `DynData` funziona solo su Win9x, che non è supportato da questa versione di .NET Framework. Usare invece la chiave del Registro di sistema `PerformanceData`. Questa proprietà verrà rimossa da una versione futura di Framework.|  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>Vedere anche
+- [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md)

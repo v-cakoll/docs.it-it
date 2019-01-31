@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: associare un delegato tramite reflection'
+title: 'Procedura: Associare un delegato tramite reflection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16c80dacbe71bb9052df1caa65fbd31e433957e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe90542d1ba106dd52e8995afab298b4b9f69899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644391"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: associare un delegato tramite reflection
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedura: Associare un delegato tramite reflection
 Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, non è possibile usare le funzioni del linguaggio come l'operatore `+=` di C# o l'[istruzione AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) di Visual Basic per associare gli eventi. Le procedure seguenti illustrano come associare un metodo esistente a un evento recuperando tutti i tipi necessari tramite reflection e come creare un metodo dinamico usando reflection emit e associarlo a un evento.  
   
 > [!NOTE]
@@ -113,10 +113,10 @@ Quando viene usata la reflection per il caricamento e l'esecuzione di assembly, 
   
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Emit.DynamicMethod>  
- <xref:System.Activator.CreateInstance%2A>  
- <xref:System.Delegate.CreateDelegate%2A>  
- [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)  
- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Emit.DynamicMethod>
+- <xref:System.Activator.CreateInstance%2A>
+- <xref:System.Delegate.CreateDelegate%2A>
+- [Procedura: Definire ed eseguire metodi dinamici](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
+- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)

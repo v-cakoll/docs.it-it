@@ -2,12 +2,12 @@
 title: LINQ e stringhe (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744622"
 ---
 # <a name="linq-and-strings-c"></a>LINQ e stringhe (C#)
 
@@ -74,5 +74,5 @@ Numerosi tipi di file di testo sono costituiti da una serie di righe, spesso con
 
 ## <a name="see-also"></a>Vedere anche
 
-- [LINQ (Language-Integrated Query) (C#)](index.md)
-- [Procedura: generare XML da file CSV](how-to-generate-xml-from-csv-files.md)
+- [Language-Integrated Query (LINQ) (C#)](index.md)
+- [Procedura: Generare XML da file CSV](how-to-generate-xml-from-csv-files.md)

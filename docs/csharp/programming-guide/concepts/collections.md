@@ -2,12 +2,12 @@
 title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679174"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084120"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -23,7 +23,7 @@ Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È
 > [!NOTE]
 >  Per gli esempi in questo argomento, includere le direttive [using](../../../csharp/language-reference/keywords/using-directive.md) per gli spazi dei nomi `System.Collections.Generic` e `System.Linq`.  
   
- **Contenuto dell'argomento**  
+ **In questo argomento**  
   
 -   [Uso di una raccolta semplice](#BKMK_SimpleCollection)  
   
@@ -193,7 +193,7 @@ public class Galaxy
   
  La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:  
 
-|Classe|Descrizione| 
+|Classe|Description| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|  
 |<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:  
   
-|Classe|Descrizione|  
+|Classe|Description|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|  
 |<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|  
@@ -577,13 +577,13 @@ private static IEnumerable<int> EvenSequence(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Raccolte e strutture di dati](../../../standard/collections/index.md)  
-- [Creazione e modifica delle raccolte](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)  
-- [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Raccolte e strutture di dati](../../../standard/collections/index.md)
+- [Creazione e modifica delle raccolte](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)
+- [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)

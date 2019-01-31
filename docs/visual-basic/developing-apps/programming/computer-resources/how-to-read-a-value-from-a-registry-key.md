@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere un valore da una chiave del Registro di sistema in Visual Basic'
+title: 'Procedura: Leggere un valore da una chiave del Registro di sistema in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 645ec80124a23ac86a06993bd4e06b59372a6d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748090"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: leggere un valore da una chiave del Registro di sistema in Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: Leggere un valore da una chiave del Registro di sistema in Visual Basic
 Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per leggere i valori nel Registro di sistema di Windows.  
   
  Se la chiave, "Software\MyApp" nell'esempio seguente, non esiste, viene generata un'eccezione. Se `ValueName`,  "Name" nell'esempio seguente, non esiste, viene restituito `Nothing`.  
@@ -52,7 +52,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.Win32.RegistryHive>  
- [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>Vedere anche
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.Win32.RegistryHive>
+- [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

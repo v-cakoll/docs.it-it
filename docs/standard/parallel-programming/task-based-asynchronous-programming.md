@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 63e1c55aa3aad1923ac34070784e8b4de7251a7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592757"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che rappresenta un'operazione asincrona. Per certi versi, un'attività è analoga a un thread o a un elemento di lavoro <xref:System.Threading.ThreadPool>, ma a un livello più generale di astrazione. L'espressione *parallelismo delle attività* fa riferimento a una o più attività indipendenti eseguite contemporaneamente. Le attività forniscono due vantaggi principali:  
@@ -42,7 +42,7 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
 > [!NOTE]
 >  Il numero di istanze <xref:System.Threading.Tasks.Task> create automaticamente da <xref:System.Threading.Tasks.Parallel.Invoke%2A> non è necessariamente uguale al numero dei delegati forniti. La libreria TPL può applicare varie ottimizzazioni, specialmente nel caso di un numero elevato di delegati.  
   
- Per altre informazioni, vedere [Procedura: utilizzare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
+ Per altre informazioni, vedere [Procedura: Usare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
   
  Per ottenere un controllo maggiore sull'esecuzione delle attività o per restituire un valore dall'attività, è necessario usare in modo più esplicito gli oggetti <xref:System.Threading.Tasks.Task>.  
   
@@ -92,7 +92,7 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
 ## <a name="task-creation-options"></a>Opzioni di creazione delle attività  
  La maggior parte delle API che creano attività genera overload che accettano un parametro <xref:System.Threading.Tasks.TaskCreationOptions>. Quando si specifica una di queste opzioni si indica all'utilità di pianificazione il modo in cui pianificare l'attività nel pool di thread. Nella tabella seguente sono elencate le varie opzioni di creazione delle attività.  
   
-|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|Descrizione|  
+|Valore del parametro <xref:System.Threading.Tasks.TaskCreationOptions>|Description|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Valore predefinito quando non si specificano opzioni. L'utilità di pianificazione usa le proprie regole euristiche predefinite per pianificare l'attività.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Specifica che l'attività deve essere pianificata in modo che le attività create prima abbiano più possibilità di essere eseguite prima delle attività create in un secondo momento.|  
@@ -201,16 +201,16 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
  Il metodo <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> produce un oggetto <xref:System.Threading.Tasks.Task> che viene completato allo scadere del tempo specificato. È possibile usare questo metodo per creare cicli che occasionalmente eseguono il polling dei dati, introducono timeout, ritardano la gestione dell'input utente per un tempo predeterminato e così via.  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, è possibile creare un oggetto <xref:System.Threading.Tasks.Task%601> contenente un risultato precedentemente calcolato. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato. Per un esempio che usa <xref:System.Threading.Tasks.Task.FromResult%2A> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache, vedere [Procedura: Creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
+ Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, è possibile creare un oggetto <xref:System.Threading.Tasks.Task%601> contenente un risultato precedentemente calcolato. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato. Per un esempio che utilizza <xref:System.Threading.Tasks.Task.FromResult%2A> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache, vedere [Procedura: creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).  
   
 ## <a name="handling-exceptions-in-tasks"></a>Gestione delle eccezioni nelle attività  
  Quando un'attività genera una o più eccezioni, il sistema esegue il wrapping di queste ultime in un'eccezione <xref:System.AggregateException>. Tale eccezione viene ripropagata al thread che si unisce all'attività, ovvero in genere il thread che resta in attesa del completamento dell'attività o che accede alla proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo comportamento serve a imporre i criteri di .NET Framework secondo cui tutte le eccezioni non gestite devono comportare per impostazione predefinita la terminazione del processo. Il codice che effettua la chiamata può gestire le eccezioni usando uno qualsiasi degli elementi seguenti in un blocco `try`/`catch`:  
   
--   Metodo <xref:System.Threading.Tasks.Task.Wait%2A>  
+-   Metodo <xref:System.Threading.Tasks.Task.Wait%2A>   
   
--   Metodo <xref:System.Threading.Tasks.Task.WaitAll%2A>  
+-   Metodo <xref:System.Threading.Tasks.Task.WaitAll%2A>   
   
--   Metodo <xref:System.Threading.Tasks.Task.WaitAny%2A>  
+-   Metodo <xref:System.Threading.Tasks.Task.WaitAny%2A>   
   
 -   Proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>  
   
@@ -252,22 +252,22 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-|-|  
 |[Concatenamento di attività tramite attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Viene descritto il funzionamento delle continuazioni.|  
 |[Attività figlio connesse e disconnesse](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Viene descritta la differenza tra attività figlio collegate e scollegate.|  
 |[Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md)|Viene descritto il supporto dell'annullamento, incorporato nell'oggetto <xref:System.Threading.Tasks.Task>.|  
 |[Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Viene descritto come vengono gestite le eccezioni su thread simultanei.|  
-|[Procedura: Usare parallel_invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
+|[Procedura: Usare Parallel.Invoke per eseguire operazioni in parallelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
 |[Procedura: Restituire un valore da un'attività](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Viene descritto come restituire valori dalle attività.|  
 |[Procedura: Annullare un'attività e i relativi figli](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Viene descritto come annullare le attività.|  
-|[Procedura: Creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Viene descritto come usare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache.|  
+|[Procedura: creare attività precalcolate](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Viene descritto come usare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati delle operazioni di download asincrone contenuti in una cache.|  
 |[Procedura: Attraversare un albero binario con attività in parallelo](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Viene descritto come usare le attività per attraversare un albero binario.|  
-|[Procedura: annullare il wrapping di un'attività annidata](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Viene illustrato come usare il metodo di estensione <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|  
+|[Procedura: Annullare il wrapping di un'attività annidata](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Viene illustrato come usare il metodo di estensione <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|  
 |[Parallelismo dei dati](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Viene descritto come usare <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> per creare cicli paralleli su dati.|  
 |[Programmazione parallela](../../../docs/standard/parallel-programming/index.md)|Nodo di livello principale per la programmazione parallela di .NET Framework.|  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
+- [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)
 - [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

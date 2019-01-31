@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: definire un tipo generico tramite reflection emit'
+title: 'Procedura: Definire un tipo generico tramite reflection emit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645064"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: definire un tipo generico tramite reflection emit
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
 Questo argomento illustra come creare un tipo generico semplice con due parametri di tipo, come applicare vincoli speciali, di classe e di interfaccia ai parametri di tipo e come creare membri che usano i parametri di tipo della classe come tipi di parametro o tipi restituiti.  
   
 > [!IMPORTANT]
@@ -135,7 +135,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
   
 -   Compilare il codice dalla riga di comando usando csc.exe, vbc.exe o cl.exe. Per compilare il codice in Visual Studio, inserirlo in un modello di progetto di applicazione console.  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Scenari relativi ad assembly dinamici della reflection emit](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>Vedere anche
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [Uso della reflection emit](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [Scenari relativi ad assembly dinamici della reflection emit](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633852"
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. Uno dei motivi di uno spazio indirizzi così grande è la possibilità di suddividere gli indirizzi disponibili in una gerarchia di domini di routing che riflettono la topologia di Internet. Un altro motivo è poter eseguire il mapping degli indirizzi delle schede (o interfacce) di rete che connettono i dispositivi alla rete. IPv6 è automaticamente in grado di risolvere gli indirizzi al livello inferiore, ovvero a livello di interfaccia di rete, e include anche funzionalità di configurazione automatica.  
@@ -62,9 +62,9 @@ La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. U
   
     -   **Indirizzi locali rispetto al collegamento**. Questi indirizzi vengono usati in un singolo collegamento e hanno questo formato: FE80::*IDInterfaccia*. Gli indirizzi locali rispetto al collegamento vengono usati tra nodi in un collegamento per la configurazione automatica degli indirizzi, l'individuazione di router adiacenti o quando non è presente alcun router. Un indirizzo locale rispetto al collegamento viene usato in particolare all'avvio e quando il sistema non ha ancora acquisito indirizzi di ambito maggiore.  
   
-    -   **Indirizzi locali rispetto al sito**. Questi indirizzi vengono usati in un singolo sito e hanno questo formato: FEC0::*IDSubnet*:*IDInterfaccia*. Gli indirizzi locali rispetto al sito vengono usati per l'indirizzamento all'interno di un sito senza necessità di un prefisso globale.  
+    -   **Indirizzi locali rispetto al sito**. Questi indirizzi vengono usati in un singolo collegamento e hanno questo formato: FEC0::*IDSubnet*:*IDInterfaccia*. Gli indirizzi locali rispetto al sito vengono usati per l'indirizzamento all'interno di un sito senza necessità di un prefisso globale.  
   
-    -   **Indirizzi unicast IPv6 globali**. Questi indirizzi possono essere usati in Internet e hanno questo formato: 010(PF, 3 bit) ID TLA (13 bit) bit riservati (8 bit) ID NLA (24 bit) ID SLA (16 bit) *InterfacciaID* (64 bit).  
+    -   **Indirizzi unicast IPv6 globali**. Questi indirizzi possono essere usati in Internet e hanno questo formato: 010 (FP, 3 bit) ID TLA (13 bit) bit riservati (8 bit) ID NLA (24 bit) ID contratto di servizio (16 bit) *IDInterfaccia* (64 bit).  
   
 -   **Indirizzo multicast**. Identificatore per un set di interfacce, in genere appartenenti a nodi diversi. Un pacchetto inviato a questo indirizzo viene recapitato a tutte le interfacce identificate dall'indirizzo. I tipi di indirizzo multicast sostituiscono gli indirizzi di broadcast IPv4.  
   
@@ -72,6 +72,6 @@ La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. U
   
  In generale, un nodo ha sempre un indirizzo locale rispetto al collegamento. Può avere anche un indirizzo locale rispetto al sito e uno o più indirizzi globali.  
   
-## <a name="see-also"></a>Vedere anche  
- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Socket](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Vedere anche
+- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Socket](../../../docs/framework/network-programming/sockets.md)

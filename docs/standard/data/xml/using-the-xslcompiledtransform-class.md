@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0537685a91db2c0e323b3f1bda24c6cadc264e34
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce9a06c14141bb658eb665e643d8da27e18dd94f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590369"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>Utilizzo della classe XslCompiledTransform
 La classe <xref:System.Xml.Xsl.XslCompiledTransform> è il processore XSLT di Microsoft .NET Framework. Questa classe consente di compilare fogli di stile e di eseguire trasformazioni XSLT.  
@@ -42,5 +42,5 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> è il processore XSLT di Mi
   
 ## <a name="see-also"></a>Vedere anche
 
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XsltSettings>
 - <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

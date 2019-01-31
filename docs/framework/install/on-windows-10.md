@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6db1a3f5fd2011a13a28551a38b319995039ab38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153611"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066312"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Installare .NET Framework in Windows 10 e Windows Server 2016
 
-.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) è la versione più recente disponibile.
+.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. Le istruzioni contenute in questo articolo consentono di installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) è la versione più recente disponibile.
 
 È possibile che si sia arrivati a questa pagina dopo avere provato a eseguire un'applicazione e avere visualizzato sul computer una finestra di dialogo simile a quella seguente:
 
@@ -29,11 +29,11 @@ ms.locfileid: "53153611"
 * [Aggiornamento di Windows 10 (aprile 2018)](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [Scaricare .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Scaricare .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7.1.
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) può essere usato per eseguire le applicazioni create per le versioni di .NET Framework da 4.0 a 4.7.1.
 
-È possibile installare [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) in:
+È possibile installare [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) in:
 
 * Windows 10 Fall Creators Update (versione 1709)
 * Windows 10 Creators Update (versione 1703)
@@ -78,6 +78,6 @@ Se non si riesce a installare la versione corretta di .NET Framework, è possibi
 
 ## <a name="see-also"></a>Vedere anche
 
-[.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)  (Download di .NET)  
-[Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Installare .NET Framework per sviluppatori](guide-for-developers.md)
+- [.NET Downloads](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) (Download di .NET)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Installare .NET Framework per sviluppatori](guide-for-developers.md)

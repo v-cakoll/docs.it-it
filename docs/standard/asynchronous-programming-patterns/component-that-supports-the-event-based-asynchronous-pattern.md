@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: implementare un componente che supporta il modello asincrono basato su eventi'
+title: 'Procedura: Implementare un componente che supporta il modello asincrono basato su eventi'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745467"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: implementare un componente che supporta il modello asincrono basato su eventi
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura: Implementare un componente che supporta il modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  Questa procedura dettagliata illustra come creare un componente che implementa un modello asincrono basato su eventi. L'implementazione viene eseguita usando classi helper dallo spazio dei nomi <xref:System.ComponentModel?displayProperty=nameWithType>, per poter assicurare che il componente funzioni correttamente con qualsiasi modello di applicazione, inclusi [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], applicazioni console e applicazioni Windows Form. Questo componente è anche identificabile da un controllo <xref:System.Windows.Forms.PropertyGrid> e dalle finestre di progettazione personalizzate.  
@@ -176,7 +176,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
  Il metodo `CalculateWorker` viene sottoposto a wrapping in un delegato e richiamato in modo asincrono con una chiamata a `BeginInvoke`.  
   
 > [!NOTE]
->  Il report dello stato viene implementato nel metodo `BuildPrimeNumberList`. Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione. Il thread del client, in cui questi eventi vengono generati, deve poter gestire questa situazione. Il codice dell'interfaccia utente potrebbe non riuscire a stare al passo perché sommerso di messaggi e subire di conseguenza un'interruzione. Per un'interfaccia utente di esempio che gestisce questa situazione, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Il report dello stato viene implementato nel metodo `BuildPrimeNumberList`. Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione. Il thread del client, in cui questi eventi vengono generati, deve poter gestire questa situazione. Il codice dell'interfaccia utente potrebbe non riuscire a stare al passo perché sommerso di messaggi e subire di conseguenza un'interruzione. Per un esempio di interfaccia utente che gestisce questa situazione, vedere [Procedura: Implementare un client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Per eseguire in modo asincrono il calcolo dei numeri primi:  
   
@@ -253,6 +253,6 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)  
+- [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
