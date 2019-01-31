@@ -1,21 +1,21 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eafaf253e27db632f17acfce4445a07d18b109aa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837763"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277453"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimTypeRequired >  
+\<claimTypeRequired>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,10 +38,10 @@ Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<tipo di attestazione >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.|  
+|[\<claimType>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|

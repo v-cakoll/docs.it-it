@@ -1,5 +1,5 @@
 ---
-title: La conversione implicita da &#39; &lt;NomeTipo1&gt; &#39; per &#39; &lt;in NomeTipo2&gt; &#39; quando il valore di &#39;ByRef&#39; parametro &#39; &lt; ParameterName&gt; &#39; nell'argomento corrispondente.
+title: Conversione implicita da '<typename1>' a '<typename2>' quando il valore del parametro 'ByRef' '<parametername>' viene ricopiato nell'argomento corrispondente
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537236"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279617"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>La conversione implicita da &#39; &lt;NomeTipo1&gt; &#39; per &#39; &lt;in NomeTipo2&gt; &#39; quando il valore di &#39;ByRef&#39; parametro &#39; &lt; ParameterName&gt; &#39; nell'argomento corrispondente.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>La conversione implicita da '\<NomeTipo1 >' a '\<in NomeTipo2 >' quando il valore del parametro 'ByRef' '\<nomeparametro >' nell'argomento corrispondente.
 Una routine viene chiamata con un [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argomento di tipo diverso rispetto a quello del parametro corrispondente.  
   
  Se si passa un argomento `ByRef`, Visual Basic copia a volte il valore dell'argomento in una variabile locale nella routine invece di passare un riferimento. In tal caso, quando la procedura termina, Visual Basic deve quindi copiare il valore della variabile locale nell'argomento nel codice chiamante.  

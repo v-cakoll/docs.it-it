@@ -1,5 +1,5 @@
 ---
-title: Il primo operando in un file binario &#39;se&#39; espressione deve essere nullable o un tipo di riferimento
+title: Il primo operando in un'espressione 'If' binaria deve essere nullable o un tipo riferimento
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668272"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284635"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Il primo operando in un file binario &#39;se&#39; espressione deve essere nullable o un tipo di riferimento
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Il primo operando in un'espressione 'If' binaria deve essere nullable o un tipo riferimento
 Un `If` espressione può avere due o tre argomenti. Quando si inviano solo due argomenti, il primo argomento deve essere un tipo riferimento o un tipo nullable. Se il primo argomento restituisce un valore diverso da `Nothing`, viene restituito il relativo valore. Se il primo argomento restituisce `Nothing`, il secondo argomento viene valutato e restituito.  
   
  Ad esempio, il codice seguente contiene due `If` espressioni, uno con tre argomenti e uno con due argomenti. Le espressioni di calcolare e restituiscono lo stesso valore.  

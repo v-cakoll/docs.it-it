@@ -1,16 +1,16 @@
 ---
-title: '&lt;workflowInstanceQueries&gt;'
+title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: 8ee8c74e88f1605ae3858db787c38976de9cc976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6db5b2c821037b81f293daeed78cd4767ab48688
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693704"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290030"
 ---
-# <a name="ltworkflowinstancequeriesgt"></a>&lt;workflowInstanceQueries&gt;
+# <a name="workflowinstancequeries"></a>\<workflowInstanceQueries>
 Rappresenta una raccolta di elementi di configurazione che rilevano modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.  
   
  Per altre informazioni sulle query relative ai profili di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

@@ -3,10 +3,10 @@ title: Riferimento per parole chiave
 description: Fare clic sui collegamenti alle informazioni relative a tutte le F# parole chiave del linguaggio.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857905"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
@@ -64,7 +64,7 @@ La tabella seguente illustra tutti i F# parole chiave in ordine alfabetico, insi
 |`null`|[Valori Null](values/null-values.md)<br /><br />[Vincoli](generics/constraints.md)|Indica l'assenza di un oggetto.<br /><br />Usato anche in vincoli del parametro generico.|
 |`of`|[Unioni discriminate](discriminated-unions.md)<br /><br />[Delegati](delegates.md)<br /><br />[Tipi di eccezione](exception-handling/exception-types.md)|Usato nelle unioni discriminate per indicare il tipo di categorie di valori e nelle dichiarazioni di delegato e l'eccezione.|
 |`open`|[Dichiarazioni di importazione: Parola chiave `open`](import-declarations-the-open-keyword.md)|Utilizzato per rendere il contenuto di un modulo o dello spazio dei nomi disponibili senza qualifica.|
-|`or`|[Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)<br /><br />[Vincoli](generics/constraints.md)|Utilizzato con condizioni booleane come un valore booleano `or` operatore. Equivalente a '||`.<br /><br />Utilizzato anche nei vincoli di membro.|
+|`or`|[Riferimenti per simboli e operatori](symbol-and-operator-reference/index.md)<br /><br />[Vincoli](generics/constraints.md)|Utilizzato con condizioni booleane come un valore booleano `or` operatore. Equivalente a `||`.<br /><br />Utilizzato anche nei vincoli di membro.|
 |`override`|[Membri](members/index.md)|Usato per implementare una versione di un metodo astratto o virtuale che è diversa dalla versione di base.|
 |`private`|[Controllo di accesso](access-control.md)|Limita l'accesso a un membro al codice nello stesso tipo o modulo.|
 |`public`|[Controllo di accesso](access-control.md)|Consente l'accesso a un membro dall'esterno del tipo.|

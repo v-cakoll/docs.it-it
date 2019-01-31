@@ -1,5 +1,5 @@
 ---
-title: Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
+title: Impossibile dedurre il tipo di '<variablename>' perché i limiti del ciclo e la clausola STEP non eseguono la conversione nello stesso tipo
 ms.date: 07/20/2015
 f1_keywords:
 - bc30982
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1ae14426181778a78254db8a5cd968d60bbdc8f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631261"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287495"
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo di &#39; &lt;variablename&gt; &#39; non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo di '\<nomevariabile >' non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
 È stato scritto un `For...Next` ciclo in cui il compilatore non è possibile dedurre un tipo di dati per la variabile di controllo ciclo perché vengono soddisfatte le condizioni seguenti:  
   
 -   Il tipo di dati della variabile di controllo del ciclo non è specificato con una clausola `As` .  

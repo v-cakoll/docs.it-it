@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513724"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480062"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF
-La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando i dati sono accessibili anche in questo caso, le applicazioni possono ottenere i dati dalla cache anziché recuperarli dall'origine dati originale. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
+La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.
 
  Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornisce le classi che consentono di usare la memorizzazione nella cache [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazioni. Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.
 
@@ -218,7 +218,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Se viene fornita alcuna informazione di eliminazione o scadenza, il valore predefinito è <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ovvero le voci della cache senza scadenza in base solo in un tempo assoluto. Al contrario, le voci della cache scadono solo quando sono presenti richieste di memoria. Come procedura consigliata, è necessario fornire sempre in modo esplicito assoluto o una scadenza variabile scappare.
+     Se viene fornita alcuna informazione di eliminazione o scadenza, il valore predefinito è <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ovvero le voci della cache senza scadenza in base solo in un tempo assoluto. Al contrario, le voci della cache scadono solo quando sono presenti richieste di memoria. Come procedura consigliata, è necessario fornire sempre in modo esplicito assoluto o su una scadenza.
 
 7.  All'interno di `if/then` in blocchi e dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per creare una raccolta per i percorsi dei file che si desidera monitorare e aggiungere il percorso del file di testo nella raccolta:
 
@@ -254,7 +254,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      Il timestamp di data e ora viene aggiunto in modo che sarà in grado di vedere quando scade la voce della cache.
@@ -296,7 +296,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
      Il contenuto memorizzato nella cache dal file di testo viene visualizzato in una finestra di messaggio. Si noti che il timestamp sul file.
 
-3.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente **.**
+3.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.
 
      Il timestamp è invariato. Ciò indica che viene visualizzato il contenuto memorizzato nella cache.
 
@@ -306,7 +306,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 
 5.  In un editor di testo aprire il file di testo che è stato creato. Non apportare eventuali modifiche ancora.
 
-6.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente **.**
+6.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.
 
      Si noti che il timestamp nuovamente.
 

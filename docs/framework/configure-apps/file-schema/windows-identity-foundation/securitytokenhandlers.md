@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206179"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277524"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.  
   
  \<system.identityModel>  
@@ -44,13 +44,13 @@ Specifica una raccolta di gestori di token di sicurezza che sono registrati con 
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge un gestore di token di sicurezza per la raccolta di gestori di token.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Cancella tutti i gestori di token di sicurezza dalla raccolta di gestori di token.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Rimuove un gestore di token di sicurezza dalla raccolta di gestori di token.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per la raccolta di gestori di token.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per la raccolta di gestori di token.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|  
   
 ## <a name="remarks"></a>Note  
  È possibile specificare uno o più raccolte denominate di gestori di token di sicurezza in una configurazione del servizio. È possibile specificare un nome per una raccolta usando il `name` attributo. Gli unici nomi che gestisce il framework sono "ActAs" e "OnBehalfOf". Se presenti dei gestori in tali raccolte, verranno utilizzate da un servizio token di sicurezza (STS) anziché i gestori predefiniti quando si elaborano `ActAs` e `OnBehalfOf` i token.  

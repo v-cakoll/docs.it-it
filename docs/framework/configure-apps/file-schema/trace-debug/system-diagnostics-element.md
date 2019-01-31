@@ -1,5 +1,5 @@
 ---
-title: '&lt;System. Diagnostics&gt; elemento'
+title: Elemento < Diagnostics >
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: c4a10f8973a78a80067ab6eb23fafd3540a68abe
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 31768c1a66accab33a8867fac6e813c6ae93bda7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083405"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284219"
 ---
-# <a name="ltsystemdiagnosticsgt-element"></a>&lt;System. Diagnostics&gt; elemento
+# <a name="systemdiagnostics-element"></a>\<System. Diagnostics > elemento
 Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.  
   
  \<configuration>  

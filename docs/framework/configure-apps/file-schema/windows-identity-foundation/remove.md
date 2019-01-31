@@ -1,22 +1,22 @@
 ---
-title: '&lt;remove&gt;'
+title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 410fef1a43f9202d56c4957b1162c53ee056ae3f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a54957458311e2d5941d1aa1c2486a2f66994d9b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198722"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288132"
 ---
-# <a name="ltremovegt"></a>&lt;remove&gt;
+# <a name="remove"></a>\<remove>
 Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori di token.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<rimuovere >  
+\<remove>  
   
 ## <a name="syntax"></a>Sintassi  
   

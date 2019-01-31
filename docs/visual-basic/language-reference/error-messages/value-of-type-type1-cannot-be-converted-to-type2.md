@@ -1,5 +1,5 @@
 ---
-title: Valore di tipo &#39;type1&#39; non può essere convertito in &#39;type2&#39;
+title: Impossibile convertire il valore di tipo 'type1' in 'type2'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31194
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: 657e0feb675e15b9ece00d40c3d1ebe932a29099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568288"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287508"
 ---
-# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Valore di tipo &#39;type1&#39; non può essere convertito in &#39;type2&#39;
+# <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Impossibile convertire il valore di tipo 'type1' in 'type2'
 Valore di tipo 'type1' non può essere convertito in 'type2'. È possibile usare la proprietà 'Value' per ottenere il valore di stringa del primo elemento di '\<ElementoPadre >'.  
   
  Si è provato a eseguire implicitamente il cast di un valore letterale XML a un tipo specifico. Non è possibile eseguire implicitamente il cast del valore letterale XML al tipo specificato.  

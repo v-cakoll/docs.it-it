@@ -1,5 +1,5 @@
 ---
-title: Namespace o il tipo specificato nelle istruzioni Imports a livello di progetto &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stata trovata
+title: Lo spazio dei nomi o il tipo specificato nelle importazioni '<qualifiedelementname>' a livello di progetto non contiene alcun membro pubblico o non è definito
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40057
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 215d8d301317f711aecb88167030e70ed01408aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d20a88179a3d0c93c18f0aed65ca46b001059a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552463"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283309"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni Imports a livello di progetto &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stata trovata
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata
 Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata. Assicurarsi che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.  
   
  Una proprietà di importazione di un progetto specifica un elemento contenitore che può essere trovato o non definisce alcun `Public` membri.  

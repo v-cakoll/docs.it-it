@@ -3,10 +3,10 @@ title: Opzioni del compilatore
 description: Usare F# opzioni della riga di comando del compilatore per controllare la compilazione di F# le App e librerie.
 ms.date: 12/10/2018
 ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "53614493"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
@@ -25,7 +25,7 @@ La tabella seguente illustra le opzioni del compilatore elencate in ordine alfab
 |`--baseaddress:address`|Specifica l'indirizzo di base preferenziale in cui caricare una DLL.<br /><br />Questa opzione del compilatore è equivalente ai C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere [ &#47;baseaddress &#40;C&#35; opzioni del compilatore&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Specifica la tabella codici da utilizzare durante la compilazione, se la pagina richiesta non è la tabella codici predefinita corrente per il sistema.<br /><br />Questa opzione del compilatore è equivalente ai C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere [ &#47;le tabelle codici &#40;C&#35; opzioni del compilatore&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Specifica che gli errori e avvisi utilizzano testo codificato con colori sulla console.|
-|'--crossoptimize[+|-]`|Abilita o disabilita le ottimizzazioni intramodulo.|
+|`--crossoptimize[+|-]`|Abilita o disabilita le ottimizzazioni intramodulo.|
 |<code>--delaysign[+&#124;-]</code>|Ritarda la firma nell'assembly usando solo la parte pubblica della chiave con nome sicuro.<br /><br />Questa opzione del compilatore è equivalente ai C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere [ &#47;delaysign &#40;C&#35; opzioni del compilatore&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Abilita o disabilita la generazione dei controlli dell'overflow.<br /><br />Questa opzione del compilatore è equivalente ai C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere [ &#47;archiviato &#40;C&#35; opzioni del compilatore&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Abilita o disabilita la generazione di informazioni di debug o specifica il tipo di informazioni di debug da generare. Il valore predefinito è completo, che consente l'associazione a un programma in esecuzione. Scegli **pdbonly** per ottenere informazioni di debug limitate archiviate in un file pdb (database di programma).<br /><br />Equivalente per la C# opzione del compilatore con lo stesso nome. Per altre informazioni, vedere<br /><br />[&#47;eseguire il debug &#40;C&#35; opzioni del compilatore&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|

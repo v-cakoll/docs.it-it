@@ -1,5 +1,5 @@
 ---
-title: Namespace o il tipo specificato nelle istruzioni Imports &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stata trovata
+title: Lo spazio dei nomi o il tipo specificato nelle importazioni '<qualifiedelementname>' non contiene alcun membro pubblico o non è definito
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552138"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288275"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni Imports &#39; &lt;nomeelementoqualificato&gt; &#39; &#39;t contiene membri pubblici o non è stata trovata
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni 'Imports\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata
 Namespace o il tipo specificato nelle istruzioni 'Imports\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata. Assicurarsi che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.  
   
  Un' `Imports` istruzione specifica un elemento contenitore che può essere trovato o non definisce alcun `Public` membri.  

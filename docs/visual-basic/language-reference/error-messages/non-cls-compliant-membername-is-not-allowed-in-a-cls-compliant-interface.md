@@ -1,5 +1,5 @@
 ---
-title: Non conforme a CLS &lt;nomemembro&gt; non è consentita in un'interfaccia conforme a CLS
+title: <membername> non conforme a CLS non consentito in un'interfaccia conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40033
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: c837065d2d448fc2523cfbd18efac962445f8bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627695"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288977"
 ---
-# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme a CLS &lt;nomemembro&gt; non è consentita in un'interfaccia conforme a CLS
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme a CLS \<membername > non è consentita in un'interfaccia conforme a CLS
 Una proprietà, routine o evento in un'interfaccia è contrassegnata come `<CLSCompliant(True)>` quando l'interfaccia stessa viene contrassegnata come `<CLSCompliant(False)>` o non è contrassegnata.  
   
  Per un'interfaccia è conforme con la [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), tutti i relativi membri devono essere conformi.  

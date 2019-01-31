@@ -1,15 +1,15 @@
 ---
-title: '&lt;faultPropagationQuery&gt; di WCF'
+title: <faultPropagationQuery> di WCF
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1670f8fdf72bc202a4a595034f3818ab43b11be6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601805"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276055"
 ---
-# <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; di WCF
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery> of WCF
 
 Rappresenta una query usata per rilevare la gestione degli errori che si verificano all'interno di un'attività.  Questo evento si verifica ogni volta che un FaultHandler elabora un errore. È necessario usare tale query per rilevare la gestione degli errori che si verificano all'interno di un'attività. La query è necessaria affinché un partecipante del rilevamento sottoscriva i record di propagazione degli errori.  
   
