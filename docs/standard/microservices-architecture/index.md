@@ -3,19 +3,19 @@ title: Microservizi .NET. Architettura per le applicazioni .NET incluse in conte
 description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | I microservizi sono servizi modulari e distribuibili in modo indipendente. I contenitori Docker (per Linux e Windows) semplificano le attività di distribuzione e test riunendo un servizio e le relative dipendenze in una singola unità che viene quindi eseguita in un ambiente isolato.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030438"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479945"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori
 
 ![Copertina](./media/cover-small.png)
 
-**EDIZIONE v2.1.03** - Aggiornato ad ASP.NET Core 2.1
+**EDIZIONE v2.2.00** - Aggiornato ad ASP.NET Core 2.2
 
 Questa guida offre un'introduzione allo sviluppo di applicazioni basate su microservizi e alla relativa gestione tramite i contenitori. Vengono descritti gli approcci alla progettazione e all'implementazione dell'architettura mediante i contenitori di .NET Core e Docker. 
 
@@ -49,7 +49,7 @@ Dopo aver consultato questa guida, il passaggio successivo sarà acquisire infor
 
 ## <a name="version"></a>Versione
 
-Questa guida è stata rivista per coprire la versione **.NET Core 2.1**, oltre a numerosi aggiornamenti aggiuntivi correlati alla stessa "generazione" di tecnologie (ovvero Azure e tecnologie aggiuntive di terze parti) in coincidenza con .NET Core 2.1. Per tale motivo, anche la versione stampata è stata aggiornata alla versione **2.1**. 
+Questa guida è stata rivista per includere la versione **.NET Core 2.2** e numerosi aggiornamenti aggiuntivi correlati alla stessa "generazione" di tecnologie (ovvero Azure e tecnologie aggiuntive di terze parti) in coincidenza con .NET Core 2.2. Per tale motivo anche la versione stampata è stata aggiornata alla versione **2.2**. 
 
 ## <a name="what-this-guide-does-not-cover"></a>Argomenti non trattati dalla guida
 
@@ -124,6 +124,8 @@ Collaboratori e revisori:
 >
 > **Scott Hunter**, Partner Director PM, team di .NET, Microsoft
 >
+> **Nish Anil**, Senior Program Manager, team di .NET, Microsoft
+>
 > **Dylan Reisenberger**, Architect and Dev Lead di Polly
 >
 > **Steve Smith**, Software Craftsman & Trainer di ASPSmith Ltd.
@@ -147,7 +149,6 @@ Collaboratori e revisori:
 > **Charles Lowell**, Software Engineer, team VS CAT, Microsoft
 >
 > **Miguel Veloso**, Senior Consultant, Turing Challenge
-
 
 ## <a name="copyright"></a>Copyright
 
