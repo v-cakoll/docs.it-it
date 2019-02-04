@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743543"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674880"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, vale a dire che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi non vi è alcuna chiamata a una procedura per eseguire la conversione, che migliora le prestazioni. Ogni funzione converte un'espressione per un tipo di dati specifico.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Tipo di dati Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 e - fino a 4.94065645841246544-324 per valori negativi. Fino a 4.94065645841246544-324 e 1.79769313486231570 e + 308 per i valori positivi.|  
 |`CDec`|[Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79.228.162.514.264.337.593.543.950.335 per i numeri da zero a scalabilità, ovvero numeri senza cifre decimali. Per i numeri con 28 posizioni decimali, l'intervallo è + /-7,9228162514264337593543950335. Il minor numero possibile di diverso da zero è 0,0000000000000000000000000001 (+ /-1E-28).|  
 |`CInt`|[Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (da -2.147.483.648) attraverso <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2,147,483,647); vengono arrotondate parti frazionarie.<sup> 1</sup> <br/><br/>A partire da 15.8 Visual Basic, Visual Basic ottimizza le prestazioni della virgola mobile per la conversione di integer con il `CInt` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio. |  
-|`CLng`|[Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (da -9.223.372.036.854.775.808) attraverso <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di integer a 64 bit con la `CLng` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
+|`CLng`|[Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (da -9.223.372.036.854.775.808) attraverso <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di integer a 64 bit con la `CLng` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
 |`CObj`|[Tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
 |`CSByte`|[Tipo di dati SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (da -128) attraverso <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di byte con segno con il `CSByte` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
 |`CShort`|[Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) attraverso <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di integer a 16 bit con la `CShort` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  

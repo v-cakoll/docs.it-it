@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e862c52235c3836c79506dc2e80a264ceceddab3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267827"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674672"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > elemento
 Specifica il nome completo dell'assembly da caricare in modo dinamico quando viene usato un nome parziale.  
@@ -78,4 +78,4 @@ Specifica il nome completo dell'assembly da caricare in modo dinamico quando vie
 ## <a name="see-also"></a>Vedere anche
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [NIB: Riferimenti ad Assembly parziali](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+- [Riferimenti ad Assembly parziali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
