@@ -1,5 +1,5 @@
 ---
-title: Operatore &gt; - Riferimenti per C#
+title: '> (operatore) - Riferimenti per C#'
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '> operator [C#]'
 - greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
-ms.openlocfilehash: 0c9d414d159b5e2f1faa24e9bd5f073d1ca874a4
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 3b036c491d9663bf4ab0971d84a0a8d58d902ee6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655972"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287209"
 ---
-# <a name="gt-operator-c-reference"></a>Operatore &gt; (Riferimenti per C#)
+# <a name="-operator-c-reference"></a>Operatore > (Riferimenti per C#)
 
 L'operatore relazionale "maggiore di" `>` restituisce `true` se il primo operando è maggiore del secondo operando, `false` in caso contrario. Tutti i tipi numerici e di enumerazione supportano l'operatore `>`. Per gli operandi dello stesso tipo [enum](../keywords/enum.md), i valori corrispondenti del tipo integrale sottostante vengono confrontati.
 

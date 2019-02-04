@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517617"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479698"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
 In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nella programmazione parallela, inclusi un set di classi di raccolta simultanee, primitive di sincronizzazione leggera e tipi per l'inizializzazione differita. È possibile usare questi tipi con qualsiasi codice dell'applicazione multithreading, inclusi Task Parallel Library e PLINQ.  
@@ -22,7 +22,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  Nella tabella seguente vengono elencate le nuove classi di raccolta simultanee:  
   
-|Tipo|Description|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornisce funzionalità di blocco e limitazione per le raccolte thread-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. I thread producer vengono bloccati se non sono disponibili slot o se la raccolta è completa. I thread consumer vengono bloccati se la raccolta è vuota. Questo tipo supporta anche l'accesso che non causa blocchi da parte di consumer e producer. <xref:System.Collections.Concurrent.BlockingCollection%601> può essere usata come classe di base o archivio di backup per fornire funzionalità di blocco limitazione per le classi di raccolta che supportano <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Implementazione di un contenitore thread-safe che fornisce operazioni add e get scalabili.|  
@@ -37,11 +37,11 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di sincronizzazione:  
   
-|Tipo|Description|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Consente a più thread di usare un algoritmo in parallelo fornendo un punto in cui ogni attività può segnalare il proprio arrivo e quindi venire bloccata finché non arrivano alcune o tutte le attività. Per altre informazioni, vedere [Barriera](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Semplifica gli scenari di fork e join fornendo un agevole meccanismo di rendezvous. Per altre informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Primitiva di sincronizzazione simile a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> è più semplice, ma può essere usata solo per la comunicazione all'interno di un processo. Per altre informazioni, vedere [ManualResetEvent e ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Primitiva di sincronizzazione simile a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> è più semplice, ma può essere usata solo per la comunicazione all'interno di un processo.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Primitiva di sincronizzazione che limita il numero di thread che possono accedere simultaneamente a una risorsa o a un pool di risorse. Per altre informazioni, vedere [Semaphore e SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Primitiva di blocco a esclusione reciproca che fa in modo che il thread che prova ad acquisire il blocco rimanga in attesa in un ciclo, o *spin*, per un determinato periodo di tempo prima di sospendere il quantum. Negli scenari in cui si prevede che l'attesa nel blocco sarà breve, <xref:System.Threading.SpinLock> offre prestazioni migliori di altre forme di blocco. Per altre informazioni, vedere [SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Tipo leggero di piccole dimensioni che ruoterà per un periodo di tempo specificato e infine metterà il thread in uno stato di attesa se il numero spin viene superato.  Per altre informazioni, vedere [SpinWait](../../../docs/standard/threading/spinwait.md).|  
@@ -57,7 +57,7 @@ In .NET Framework versione 4 sono stati introdotti diversi nuovi tipi utili nell
   
  La tabella seguente elenca i nuovi tipi di inizializzazione differita:  
   
-|Tipo|Description|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornisce l'inizializzazione differita leggera e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornisce un valore con inizializzazione differita per ogni thread e ogni thread richiama in modo differito la funzione di inizializzazione.|  

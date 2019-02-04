@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680302"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675439"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Nuove funzionalità di accessibilità in .NET Framework
 
@@ -292,7 +292,7 @@ A partire da .NET Framework 4.7.1, sono stati apportati miglioramenti relativi a
 Per altre informazioni sui miglioramenti per l'accessibilità di WPF in .NET Framework 4.7.1, vedere [Accessibility improvements in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf) (Miglioramenti per l'accessibilità in WPF).
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Miglioramenti per l'accessibilità di Windows Form
+### <a name="windows-forms-accessibility-improvements"></a>Miglioramenti per l'accessibilità di Windows Form
 
 In .NET Framework 4.7.1 Windows Form (WinForms) include modifiche per l'accessibilità nelle aree seguenti.
 
@@ -358,7 +358,7 @@ A partire da .NET Framework 4.7.1, Windows Form include:
 - Comportamento migliorato dell'Assistente vocale.
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>Controlli Web ASP.NET
+### <a name="aspnet-web-controls"></a>Controlli Web ASP.NET
 
 A partire da .NET Framework 4.7.1 e Visual Studio 2017 15.3, in ASP.NET è stato migliorato il funzionamento dei controlli Web ASP.NET con tecnologia di accessibilità in Visual Studio. Le modifiche includono quanto segue:
 
@@ -369,14 +369,14 @@ A partire da .NET Framework 4.7.1 e Visual Studio 2017 15.3, in ASP.NET è stato
 - Modifiche per migliorare la navigazione tramite tastiera per controlli, come la finestra di dialogo **Campi** nella procedura guidata **Modifica campi del pager** del controllo DataPager, la finestra di dialogo **Configura ObjectContext** o la finestra di dialogo **Configura selezione dati** della procedura guidata **Configura origine dati**.
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>Strumenti .NET SDK
+### <a name="net-sdk-tools"></a>Strumenti .NET SDK
 
 Lo [strumento Editor di configurazione (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) e lo [strumento Visualizzatore di tracce (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) sono stati migliorati correggendo vari problemi di accessibilità. Molti erano problemi di lieve entità, come ad esempio un nome non definito o alcuni criteri dell'automazione interfaccia utente non implementati correttamente. È possibile che molti utenti non si siano accorti di questi valori non corretti. I clienti che usano le assistive technology, ad esempio le utilità per la lettura dello schermo, troveranno invece questi strumenti SDK più accessibili. 
 
 Tali miglioramenti modificano alcuni comportamenti precedenti, ad esempio l'ordine di attivazione della tastiera.
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Progettazione flussi di lavoro di Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Progettazione flussi di lavoro di Windows Workflow Foundation (WF)
 
 Le modifiche all'accessibilità in Progettazione flussi di lavoro includono quanto segue:
 

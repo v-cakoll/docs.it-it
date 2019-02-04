@@ -3,13 +3,13 @@ title: Confronto tra schema API Gateway e comunicazione diretta da client a micr
 description: Informazioni sulle differenze e sugli usi dello schema API Gateway e della comunicazione diretta da client a microservizio.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030542"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675452"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Confronto tra schema API Gateway e comunicazione diretta da client a microservizio
 
@@ -25,7 +25,7 @@ Un possibile approccio prevede l'uso di un'architettura di comunicazione da clie
 
 In questo approccio ogni microservizio include un endpoint pubblico, talvolta con una porta TCP diversa per ogni microservizio. Un esempio di URL per un determinato servizio potrebbe essere l'URL seguente in Azure:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 In un ambiente di produzione basato su un cluster, questo URL esegue il mapping al servizio di bilanciamento del carico usato nel cluster, che a sua volta distribuisce le richieste nei vari microservizi. Negli ambienti di produzione, tra i microservizi e Internet potrebbe esserci un controller per la distribuzione delle applicazioni (ADC, Application Delivery Controller), ad esempio il [gateway applicazione di Azure](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction). Questo controller funge da livello trasparente ed esegue non solo il bilanciamento del carico, ma anche la terminazione SSL per proteggere i servizi. In questo modo, migliora il carico degli host eliminando le operazioni di terminazione SSL che richiedono un utilizzo intensivo della CPU e altre attività di routing al gateway applicazione di Azure. In ogni caso, dal punto di vista dell'architettura dell'applicazione logica, un servizio di bilanciamento del carico e un controller per la distribuzione delle applicazioni sono trasparenti.
 
@@ -134,7 +134,7 @@ Possono esserci molti altri problemi di montaggio incrociato generati dai gatewa
 
 **Figura 4-14**. Utilizzo di Gestione API di Azure per il gateway API
 
-In questo caso, quando si usa un prodotto come Gestione API di Azure, la presenza di un solo gateway API non è così rischiosa perché questi tipi di gateway API sono più "sottili", in altre parole non comportano l'implementazione di codice C# personalizzato che potrebbe diventare un componente monolitico. Questi prodotti fanno da proxy inverso per le comunicazioni in ingresso, in cui è anche possibile filtrare le API dai microservizi interni e applicare l'autorizzazione alle API pubblicate in questo livello singolo.
+In questo caso, quando si usa un prodotto come Gestione API di Azure, la presenza di un solo gateway API non è così rischiosa perché questi tipi di gateway API sono più "sottili", in altre parole non comportano l'implementazione di codice C# personalizzato che potrebbe diventare un componente monolitico. 
 
 I gateway API fungono in genere da proxy inverso per le comunicazioni in ingresso, in cui è possibile anche filtrare le API dai microservizi interni e applicare l'autorizzazione alle API pubblicate in questo livello singolo.
 
