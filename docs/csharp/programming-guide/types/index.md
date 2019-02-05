@@ -1,17 +1,23 @@
 ---
-title: 'Tipi - Guida per programmatori C#'
+title: Tipi - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739316"
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
 ## <a name="types-variables-and-values"></a>Tipi, variabili e valori  
@@ -82,8 +88,8 @@ Tipi valore e tipi riferimento nel CTS
  I tipi numerici incorporati sono struct i cui metodi e le cui proprietà sono accessibili dall'utente:  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  Ad essi, tuttavia, si dichiarano e si assegnano valori come se fossero tipi non aggregati semplici:  
