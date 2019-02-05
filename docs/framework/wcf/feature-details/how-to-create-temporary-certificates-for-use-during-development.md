@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: creare certificati temporanei da usare durante lo sviluppo'
+title: 'Procedura: Creare certificati temporanei da usare durante lo sviluppo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698584"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738630"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: Creare certificati temporanei da usare durante lo sviluppo
 
 Quando si sviluppa un servizio sicuro o un client che utilizza Windows Communication Foundation (WCF), è spesso necessario fornire un certificato X.509 da usare come credenziali. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. In questo argomento descrive i passaggi per creare questi due certificati mediante Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet.
 
@@ -62,7 +62,7 @@ Se è stato creato un certificato autofirmato, è possibile installarlo nell'arc
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Per installare un certificato autofirmato nell'Autorità di certificazione radice attendibili
 
-1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Aprire lo snap-in del certificato. Per altre informazioni, vedere [Procedura: Visualizzare i certificati con lo Snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Aprire la cartella in cui archiviare il certificato, **Computer locale** o **Utente corrente**.
 
@@ -70,7 +70,7 @@ Se è stato creato un certificato autofirmato, è possibile installarlo nell'arc
 
 4. Fare clic con il pulsante destro del mouse sulla cartella **Certificati** , scegliere **Tutte le attività**, quindi fare clic su **Importa**.
 
-5. Seguire le istruzioni della procedura guidata per importare TempCa.cer nell'archivio.
+5. Seguire la procedura guidata le istruzioni per importare il RootCA.pfx nell'archivio.
 
 ## <a name="using-certificates-with-wcf"></a>Utilizzo di certificati con WCF
 
@@ -106,7 +106,7 @@ Nel file di configurazione per un client, usare il seguente codice XML per speci
 </behaviors>
 ```
 
-Per altre informazioni sull'uso dei certificati in WCF, vedere [Working with Certificates](working-with-certificates.md).
+Per altre informazioni sull'uso di certificati in WCF, vedere [Working with Certificates](working-with-certificates.md).
 
 ## <a name="net-framework-security"></a>.NET Framework (sicurezza)
 
@@ -115,5 +115,5 @@ Assicurarsi di eliminare qualsiasi certificato temporaneo dell'autorità di radi
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di certificati](working-with-certificates.md)
-- [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Procedura: Visualizzare i certificati con lo Snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protezione di servizi e client](securing-services-and-clients.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211749"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739475"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Compilazione dalla riga di comando (Visual Basic)
 Un progetto Visual Basic è costituito da uno o più file di origine separato. Durante il processo è noto come la compilazione, questi file vengono riuniti in un pacchetto, ovvero un singolo file eseguibile che può essere eseguito come un'applicazione.  
@@ -28,12 +28,12 @@ Un progetto Visual Basic è costituito da uno o più file di origine separato. D
   Per compilare i file di origine nell'IDE di Visual Studio, scegliere il **compilare** dalle **compilazione** menu.  
   
 > [!TIP]
->  Quando si compila i file di progetto usando l'IDE di Visual Studio, è possibile visualizzare informazioni sull'oggetto associato **vbc** comando e le opzioni nella finestra di output. Per visualizzare queste informazioni, aprire il [finestra di dialogo Opzioni, progetti e soluzioni, compila ed Esegui](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), quindi impostare il **livello di dettaglio output di compilazione progetto MSBuild** al **normale** o un livello di dettaglio maggiore. Per altre informazioni, vedere [Procedura: Visualizzare, salvare e configurare file di log di compilazione](https://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
+>  Quando si compila i file di progetto usando l'IDE di Visual Studio, è possibile visualizzare informazioni sull'oggetto associato **vbc** comando e le opzioni nella finestra di output. Per visualizzare queste informazioni, aprire il [finestra di dialogo Opzioni, progetti e soluzioni, compila ed Esegui](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), quindi impostare il **livello di dettaglio output di compilazione progetto MSBuild** al **normale** o un livello di dettaglio maggiore. Per altre informazioni, vedere [Procedura: Visualizzare, salvare e configurare file di Log di compilazione](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).  
   
- È possibile compilare i file di progetto (con estensione vbproj) in un prompt dei comandi usando MSBuild. Per altre informazioni, vedere [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) e [procedura dettagliata: uso di MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
+ È possibile compilare i file di progetto (con estensione vbproj) in un prompt dei comandi usando MSBuild. Per altre informazioni, vedere [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) e [procedura dettagliata: Uso di MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura:Richiamare il compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
+ [Procedura: Richiamare il compilatore da riga di comando](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
  Viene descritto come richiamare il compilatore della riga di comando al prompt di MS-DOS o da una sottodirectory specifica.  
   
  [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  

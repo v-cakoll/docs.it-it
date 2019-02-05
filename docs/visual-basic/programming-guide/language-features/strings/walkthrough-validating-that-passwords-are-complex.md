@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733948"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738565"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Procedura dettagliata: Verifica della complesse delle password (Visual Basic)
 Questo metodo verifica la presenza di alcune caratteristiche di password complesse e aggiorna un parametro di stringa con le informazioni sui controlli che la password ha esito negativo.  
@@ -31,7 +31,7 @@ Questo metodo verifica la presenza di alcune caratteristiche di password comples
 -   Accedere ai membri dello spazio dei nomi <xref:System.Text.RegularExpressions>. Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sicurezza  
- Se si sta spostando la password attraverso una rete, è necessario usare un metodo sicuro per il trasferimento dei dati. Per altre informazioni, vedere [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
+ Se stai spostando la password attraverso una rete, è necessario usare un metodo sicuro per il trasferimento dei dati. Per altre informazioni, vedere [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  È possibile migliorare l'accuratezza del `ValidatePassword` funzione mediante l'aggiunta di controlli di complessità aggiuntiva:  
   
@@ -45,4 +45,4 @@ Questo metodo verifica la presenza di alcune caratteristiche di password comples
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Text.RegularExpressions.Regex>
-- [Protezione delle applicazioni Web ASP.NET](https://msdn.microsoft.com/library/330a99hc)
+- [Protezione delle applicazioni Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
