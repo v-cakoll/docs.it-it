@@ -37,7 +37,7 @@ Quando si sviluppa un'applicazione di grandi dimensioni basata su microservizi, 
 
 L'interazione con più microservizi per compilare una singola schermata dell'interfaccia utente aumenta il numero di round trip in Internet. In questo modo si aumenta la latenza e la complessità sul lato dell'interfaccia utente. In teoria, le risposte dovrebbero essere aggregate in modo efficiente sul lato server. Ciò consente di ridurre la latenza, perché vengono restituiti più blocchi di dati in parallelo e alcune interfacce utente possono visualizzare i dati non appena vengono resi disponibili.
 
-- *Come si gestiscono i problemi di montaggio incrociato, ad esempio le autorizzazioni, le trasformazioni dei dati e l'invio di richieste dinamiche?*
+- *Come si gestiscono i problemi trasversali, ad esempio le autorizzazioni, le trasformazioni dei dati e l'invio di richieste dinamiche?*
 
 L'implementazione di soluzioni per la sicurezza e il montaggio incrociato, ad esempio la sicurezza e le autorizzazioni in ogni microservizio, possono richiedere un notevole impegno in termini di sviluppo. Un possibile approccio prevede di inserire questi servizi all'interno dell'host Docker o di un cluster interno, in modo da limitare l'accesso diretto dall'esterno e di implementare queste soluzioni di montaggio incrociato in una posizione centralizzata, ad esempio un gateway API.
 
@@ -61,7 +61,7 @@ Pertanto, può essere molto comodo per le applicazioni basate su microservizi di
 
 - **Problemi relativi alla sicurezza**: senza un gateway, tutti i microservizi devono essere esposti all'esterno, rendendo più ampia la superficie di attacco rispetto a quando si nascondono i microservizi interni non usati direttamente dalle app client. Minore è la superficie di attacco, maggiore è la sicurezza dell'applicazione.
 
-- **Problemi di montaggio incrociato**: ogni microservizio reso disponibile pubblicamente deve gestire problemi quali autorizzazione, SSL e così via. In molti casi questi problemi possono essere gestiti in un livello singolo così che i microservizi interni risultino semplificati.
+- **Problemi trasversali**: ogni microservizio reso disponibile pubblicamente deve gestire problemi quali autorizzazione, SSL e così via. In molti casi questi problemi possono essere gestiti in un livello singolo così che i microservizi interni risultino semplificati.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Definizione dello schema API Gateway
 
@@ -105,7 +105,7 @@ A seconda del gateway API in uso, potrebbe essere possibile eseguire questa aggr
 
 Per altre informazioni, vedere [Modello di aggregazione gateway](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
 
-**Problemi di montaggio incrociato o offload del gateway.** A seconda delle funzionalità offerte da ogni gateway API, è possibile eseguire l'offload delle funzionalità dai singoli microservizi al gateway, semplificando l'implementazione di ogni microservizio attraverso il consolidamento dei problemi di montaggio incrociato in un livello. Ciò è particolarmente utile per le funzionalità specializzate che possono essere complesse da implementare correttamente in ogni microservizio interno, ad esempio le funzionalità seguenti:
+**Problemi trasversali o offload del gateway.** A seconda delle funzionalità offerte da ogni gateway API, è possibile eseguire l'offload delle funzionalità dai singoli microservizi al gateway, semplificando l'implementazione di ogni microservizio attraverso il consolidamento dei problemi trasversali in un livello. Ciò è particolarmente utile per le funzionalità specializzate che possono essere complesse da implementare correttamente in ogni microservizio interno, ad esempio le funzionalità seguenti:
 
 - Autenticazione e autorizzazione
 - Integrazione dell'individuazione dei servizi
@@ -121,7 +121,7 @@ Per altre informazioni, vedere [Modello di offload gateway](https://docs.microso
 
 ## <a name="using-products-with-api-gateway-features"></a>Uso di prodotti con funzionalità di gateway API
 
-Possono esserci molti altri problemi di montaggio incrociato generati dai gateway API a seconda dell'implementazione. Di seguito verranno esaminati:
+Possono esserci molti altri problemi trasversali generati dai gateway API a seconda dell'implementazione. Di seguito verranno esaminati:
 
 - [Gestione API di Azure](https://azure.microsoft.com/services/api-management/)
 - [Ocelot](https://github.com/ThreeMammals/Ocelot)
