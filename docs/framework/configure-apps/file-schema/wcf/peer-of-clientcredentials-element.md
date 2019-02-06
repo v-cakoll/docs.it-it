@@ -2,12 +2,12 @@
 title: <peer> di <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8970100b1ad3019ff4a639d835d1db1430968008
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275142"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758352"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer > di \<clientCredentials > elemento
 Specifica le credenziali usate per l'autenticazione di client peer-to-peer.  
@@ -50,7 +50,7 @@ Specifica le credenziali usate per l'autenticazione di client peer-to-peer.
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Specifica le credenziali usate per autenticare un client presso un servizio.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento di configurazione specifica le credenziali che un nodo peer usa per autenticare se stesso agli altri nodi della rete, nonché le impostazioni di autenticazione usate da un nodo peer per autenticare altri nodi peer. Per altre informazioni, vedere [l'autenticazione dei messaggi del canale Peer](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) e [protezione di applicazioni del canale Peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
+ Questo elemento di configurazione specifica le credenziali che un nodo peer usa per autenticare se stesso agli altri nodi della rete, nonché le impostazioni di autenticazione usate da un nodo peer per autenticare altri nodi peer. Per altre informazioni, vedere [l'autenticazione dei messaggi del canale Peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) e [protezione di applicazioni del canale Peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
@@ -62,7 +62,7 @@ Specifica le credenziali usate per l'autenticazione di client peer-to-peer.
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
-- [Autenticazione dei messaggi del canale peer](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [Autenticazione personalizzata del canale peer](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Autenticazione dei messaggi del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticazione personalizzata del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protezione di applicazioni del canale peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

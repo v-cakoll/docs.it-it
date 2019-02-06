@@ -2,12 +2,12 @@
 title: <message> elemento di <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 9150b6f1ab821f7d062f389c3dbd7fa9119fd0db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29d9c318b6cff586095ed9668fdac79d7813e856
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289705"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759080"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<messaggio > dell'elemento \<ws2007FederationHttpBinding >
 Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -131,7 +131,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement` 
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

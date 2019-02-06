@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: a039e805bc4378582d7a7bcf6ef84591ec3d2b6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3a41cb85ac2917f34bd7e5f33e241853777f045f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261438"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759171"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 Definisce un'associazione per la messaggistica TCP specifica del canale peer.  
@@ -59,7 +59,7 @@ Definisce un'associazione per la messaggistica TCP specifica del canale peer.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Specifica un resolver peer usato dall'associazione per risolvere un ID di rete peer negli indirizzi endpoint dei nodi appartenenti alla rete di peer.|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Definisce le impostazioni di sicurezza per il messaggio. L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
@@ -73,7 +73,7 @@ Definisce un'associazione per la messaggistica TCP specifica del canale peer.
  Questa associazione fornisce il supporto per la creazione di applicazioni peer-to-peer o a più parti usando il trasporto peer su TCP. Ogni nodo di peer può ospitare più canali del peer definiti con questo tipo di associazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è dimostrato l'uso dell'associazione NetPeerTcpBinding, il quale fornisce comunicazione a più parti usando un canale peer. Per uno scenario dettagliato dell'utilizzo di questa associazione, vedere [Net. TCP Peer](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae).  
+ Nell'esempio seguente è dimostrato l'uso dell'associazione NetPeerTcpBinding, il quale fornisce comunicazione a più parti usando un canale peer. Per uno scenario dettagliato dell'utilizzo di questa associazione, vedere [Net. TCP Peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90)).  
   
 ```xml  
 <configuration>
@@ -107,5 +107,5 @@ Definisce un'associazione per la messaggistica TCP specifica del canale peer.
 - [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Netpeertcp](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [Netpeertcp](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
 - [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

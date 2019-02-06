@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9ceb7b4351d2278835014235bc1f3b5f15b65c0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579823"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758287"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -29,7 +29,7 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
 |`container`|Obbligatorio. File contenitore che contiene la chiave. Racchiudere il nome file racchiuso tra virgolette ("") se il nome contiene uno spazio.|  
   
 ## <a name="remarks"></a>Note  
- Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Se esegue la compilazione con `-target:module`, il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly con [- addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   

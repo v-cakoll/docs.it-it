@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260034"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759643"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Object Notation) e al contenuto binario "non elaborato" di essere letti e scritti quando vengono usati in un'associazione Windows Communication Foundation (WCF).  
@@ -41,7 +41,7 @@ Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Obje
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -60,7 +60,7 @@ Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Obje
   
  Le proprietà `maxReadPoolSize` e `maxWritePoolSize` possono inoltre essere usate per impostare rispettivamente il numero massimo di lettori e il numero massimo di writer da allocare. Per impostazione predefinita vengono allocati 64 lettori e 16 writer.  
   
- Vincoli di complessità predefiniti vengono inoltre impostati usando il [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) elemento per la protezione da una classe di tipo denial of service (DOS) attacchi che tentano di utilizzare la complessità dei messaggi per bloccare l'elaborazione di endpoint risorse.  
+ Vincoli di complessità predefiniti vengono inoltre impostati usando il [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) elemento per la protezione da una classe di tipo denial of service (DOS) attacchi che tentano di utilizzare la complessità dei messaggi per bloccare l'elaborazione di endpoint risorse.  
   
 ## <a name="example"></a>Esempio  
   

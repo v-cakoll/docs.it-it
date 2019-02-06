@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083509"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758989"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  
@@ -103,8 +103,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
 ## <a name="see-also"></a>Vedere anche
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)
-- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configurazione delle App usando i file di configurazione](../../../docs/framework/configure-apps/index.md)
 - [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

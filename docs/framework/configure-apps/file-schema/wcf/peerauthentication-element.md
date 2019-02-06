@@ -2,12 +2,12 @@
 title: <peerAuthentication> Elemento
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 6e9fd69af5bce4da0bb14442cddcbecd536535f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7607f5bab6083c190303fd0a9121ffab55c620c3
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277719"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759444"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > elemento
 Specifica le opzioni di autenticazione dei client peer-to-peer.  
@@ -108,6 +108,6 @@ Specifica le opzioni di autenticazione dei client peer-to-peer.
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticazione dei messaggi del canale peer](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [Autenticazione personalizzata del canale peer](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Autenticazione dei messaggi del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticazione personalizzata del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protezione di applicazioni del canale peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193588"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758794"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>Metodo WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
 
@@ -25,8 +25,8 @@ ms.locfileid: "44193588"
 
 Converte il flusso specificato in un flusso di accesso casuale.
 
-**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
- **Assembly:** System.Runtime.WindowsRuntime (in windowsruntime)
+**Spazio dei nomi:** <xref:System.IO?displayProperty=nameWithType>
+**Assembly:** System.Runtime.WindowsRuntime (in windowsruntime)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,9 +72,8 @@ Questo metodo di estensione è disponibile solo quando si sviluppano applicazion
 
 **.NET per App di Windows Store**
 
-Supportato in: Windows 8.1
+Supportato in: {0}, {1}, {2}, {3}, {4} Windows 8,1
 
 ## <a name="see-also"></a>Vedere anche
 
--[Windowsruntimestreamextensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
