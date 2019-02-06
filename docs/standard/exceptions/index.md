@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707882"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758431"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -48,7 +48,7 @@ Le eccezioni presentano vantaggi rispetto ad altri metodi di notifica degli erro
 
 Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possibili cause.
 
-| Tipo di eccezione | Description | Esempio |
+| Tipo di eccezione | Descrizione | Esempio |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
 | <xref:System.IndexOutOfRangeException> | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: <br /> `arr[arr.Length+1]` |
@@ -69,4 +69,4 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 - [Procedura: Usare blocchi Finally](how-to-use-finally-blocks.md)
 - [Gestione di eccezioni per interoperabilità COM](handling-com-interop-exceptions.md)
 - [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)
-- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime).
+- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tutto quello che ogni sviluppatore deve sapere sulle eccezioni in runtime)
