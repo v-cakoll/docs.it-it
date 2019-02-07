@@ -3,10 +3,10 @@ title: F#linee guida di progettazione componenti
 description: Le linee guida per la scrittura di informazioni su F# componenti destinati all'utilizzo da altri chiamanti.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066025"
 ---
 # <a name="f-component-design-guidelines"></a>F#linee guida di progettazione componenti
@@ -74,7 +74,7 @@ La tabella seguente rispetta le convenzioni di denominazione e l'uso delle maius
 |-----------|------|------|----------|-------|
 | Tipi concreti | PascalCase | Sostantivo / aggettivali | Elenco, Double, complesso | Tipi concreti sono strutture, classi, enumerazioni, delegati, record e unioni. Anche se i nomi dei tipi sono in genere in minuscoli in OCaml, F# ha adottato lo schema di denominazione .NET per i tipi.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Tag di unione     | PascalCase | Sostantivo | Alcuni casi, aggiungere, operazione riuscita | Non usare un prefisso nelle API pubbliche. Se lo si desidera usare un prefisso quando interni, ad esempio `digitare team = TAlpha | TBeta | TDelta.` |
+| Tag di unione     | PascalCase | Sostantivo | Alcuni casi, aggiungere, operazione riuscita | Non usare un prefisso nelle API pubbliche. Se lo si desidera usare un prefisso quando interni, ad esempio `type Teams = TAlpha | TBeta | TDelta.` |
 | event          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
 | Eccezioni     | PascalCase |      | WebException | Nome deve terminare con "Exception". |
 | Campo          | PascalCase | Sostantivo | CurrentName  | |
