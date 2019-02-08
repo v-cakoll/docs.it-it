@@ -2,14 +2,14 @@
 title: Convertire il codice da .NET Framework a .NET Core
 description: Informazioni sul processo di trasferimento e sugli strumenti che possono risultare utili durante il trasferimento di un progetto .NET Framework in .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266572"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903572"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Convertire il codice da .NET Framework a .NET Core
 
@@ -37,8 +37,6 @@ Questo è il processo che è consigliabile eseguire durante la conversione del p
 
 5. Eseguire il piano di portabilità.
 
-## <a name="tools-to-help"></a>Strumenti utili
-
 L'elenco seguente illustra gli strumenti che potrebbero risultare utili durante il processo di conversione:
 
 * .NET Portability Analyzer: [strumento da riga di comando](https://github.com/Microsoft/dotnet-apiport/releases) o [estensione di Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una toolchain in grado di generare un report sulla portabilità del codice tra .NET Framework e .NET Core, con un'analisi dettagliata dei problemi basata sugli assembly. Per altre informazioni, vedere [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ L'elenco seguente illustra gli strumenti che potrebbero risultare utili durante 
 > CsprojToVs2017 è uno strumento di terze parti. Non è garantito che funzioni per tutti i progetti e potrebbe causare lievi modifiche del comportamento di cui si dipende. CsprojToVs2017 deve essere usato come _punto iniziale_ che automatizza gli elementi di base che possono essere automatizzati. Non è una soluzione garantita per la migrazione dei formati di file di progetto.
 
 >[!div class="step-by-step"]
->[avanti](third-party-deps.md)
+>[avanti](net-framework-tech-unavailable.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;include&gt; - Guida per programmatori C#'
+title: <include> - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a9e87e803bef38ceb91849b976e2019deed54471
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541170"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286261"
 ---
-# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guida per programmatori C#)
+# <a name="include-c-programming-guide"></a>\<include> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
@@ -67,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Output di programma  
- L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.` In Visual Studio, l'opzione per i commenti doc XML viene specificata nel riquadro di compilazione di Creazione progetti. Se il compilatore C# rileva il tag \<include>, la ricerca dei commenti alla documentazione verrà eseguita nel file xml_include_tag.doc anziché nel file di origine corrente. Il compilatore genera quindi il file DocFileName.xml, che verrà usato dagli strumenti della documentazione come [Sandcastle](https://github.com/EWSoftware/SHFB) per realizzare la documentazione finale.  
+ L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.` In Visual Studio, l'opzione per i commenti doc XML viene specificata nel riquadro di compilazione di Creazione progetti. Se il compilatore C# rileva il tag \<include>, la ricerca dei commenti alla documentazione verrà eseguita nel file xml_include_tag.doc anziché nel file di origine corrente. Il compilatore genera quindi il file DocFileName.xml, che verrà usato dagli strumenti della documentazione come [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) per produrre la documentazione finale.  
   
 ```xml  
 <?xml version="1.0"?>   

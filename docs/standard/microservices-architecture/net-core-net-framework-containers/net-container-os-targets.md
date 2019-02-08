@@ -3,13 +3,13 @@ title: Come scegliere il sistema operativo per i contenitori .NET
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Come scegliere il sistema operativo per i contenitori .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147200"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479867"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Come scegliere il sistema operativo per i contenitori .NET
 
@@ -38,21 +38,21 @@ Quando si aggiunge il nome dell'immagine al file Dockerfile, è possibile selezi
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>Multiarchitettura .NET Core 2.1: supporta Linux e Windows Nano Server a seconda dell'host Docker.</td>
+<td>microsoft/dotnet:2.2-runtime</td>
+<td>Multiarchitettura .NET Core 2.2: supporta Linux e Windows Nano Server a seconda dell'host Docker.</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>Multiarchitettura ASP .NET Core 2.1: supporta Linux e Windows Nano Server a seconda dell'host Docker.</p>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td><p>Multiarchitettura ASP .NET Core 2.2: supporta Linux e Windows Nano Server a seconda dell'host Docker.</p>
 <p>L'immagine aspnetcore ha poche ottimizzazioni per ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>Solo runtime .NET Core 2.1 in distribuzioni Linux Alpine</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>Solo runtime .NET Core 2.2 in distribuzioni Linux Alpine</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>Solo runtime .NET Core 2.1 in Windows Nano Server (Windows Server versione 1803)</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>Solo runtime .NET Core 2.2 in Windows Nano Server (Windows Server versione 1803)</td>
 </tr>
 </tbody>
 </table>

@@ -3,13 +3,13 @@ title: Progettare applicazioni Web moderne con ASP.NET Core e Azure
 description: Una guida che offre linee guida end-to-end sulla compilazione di applicazioni Web monolitiche usando ASP.NET Core e Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148106"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827864"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 Microsoft Corporation
+Copyright © 2019 Microsoft Corporation
 
 Tutti i diritti sono riservati. Nessuna parte del contenuto di questo libro può essere riprodotta o trasmessa in qualsiasi forma o con qualsiasi mezzo, senza il permesso scritto dell'editore.
 
@@ -43,7 +43,7 @@ Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
 Autore:
 
-> **Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** - Software Architect e Trainer - [Ardalis.com](https://ardalis.com)
 
 Editor:
 
@@ -63,11 +63,11 @@ Editor:
 
 - Controllo delle versioni side-by-side di .NET in base all'applicazione nello stesso server.
 
-Le applicazioni .NET tradizionali possono supportare e supportano questi requisiti, ma ASP.NET Core e .NET Core sono stati ottimizzati per offrire supporto migliorato per gli scenari elencati sopra.
+Le applicazioni .NET tradizionali possono supportare e supportano molti di questi requisiti, ma ASP.NET Core e .NET Core sono stati ottimizzati per offrire supporto migliorato per gli scenari elencati sopra.
 
 Sempre più organizzazioni scelgono di ospitare le proprie applicazioni Web nel cloud usando servizi come Microsoft Azure. Prendere in considerazione di ospitare l'applicazione nel cloud se gli aspetti seguenti sono importanti per l'applicazione o l'organizzazione:
 
-- Riduzione dell'investimento nei costi del data center (hardware, software, spazio, utilità e così via).
+- Riduzione dell'investimento nei costi del data center (hardware, software, spazio, utilità, gestione dei server e così via).
 
 - Prezzi flessibili (pagamento in base all'utilizzo, non per la capacità inattiva).
 
@@ -81,7 +81,7 @@ La compilazione di applicazioni Web con ASP.NET Core, ospitato in Azure, offre m
 
 ## <a name="purpose"></a>Scopo
 
-Questa guida offre linee guida end-to-end sulla compilazione di applicazioni Web monolitiche usando ASP.NET Core e Azure.
+Questa guida offre linee guida end-to-end sulla compilazione di applicazioni Web *monolitiche* usando ASP.NET Core e Azure. In questo contesto "monolitico" si riferisce al fatto che queste applicazioni vengono distribuite come una singola unità, non come una raccolta di applicazioni e servizi che interagiscono tra loro.
 
 Questa guida è complementare per i ["_Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori_"](../microservices-architecture/index.md) incentrata principalmente su Docker, microservizi e distribuzione di contenitori per ospitare applicazioni aziendali.
 

@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156689"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204769"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Esercitazione: Esprimere più chiaramente le finalità di progettazione con tipi riferimento nullable e non nullable
 
@@ -68,7 +68,7 @@ Per questa applicazione di sondaggio è necessario creare alcune classi:
 
 Questi tipi useranno tipi riferimento sia nullable sia non nullable per indicare i membri obbligatori e quelli facoltativi. I tipi riferimento nullable comunicano chiaramente questa finalità della progettazione:
 
-- Le domande che costituiscono il sondaggio non possono mai essere Null. Una domanda vuota non ha infatti alcun senso.
+- Le domande che fanno parte del sondaggio non possono mai essere Null: non ha senso porre una domanda vuota.
 - I partecipanti al sondaggio non possono mai essere Null. Si vuole infatti tenere traccia delle persone che sono state contattate, anche quelle che non hanno accettato di partecipare.
 - Una risposta a una domanda può essere Null. I partecipanti possono infatti rifiutarsi di rispondere ad alcune o a tutte le domande.
 
@@ -88,7 +88,7 @@ L'app che si intende compilare eseguirà i passaggi seguenti:
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Compilare il sondaggio con tipi nullable e non nullable
 
-Il primo codice scritto crea il sondaggio. Occorre scrivere le classi necessarie per modellare una domanda del sondaggio e l'esecuzione del sondaggio. Il sondaggio ha tre tipi di domande, distinte dal formato della risposta: risposte Sì/No, risposte in forma di numero e risposte testuali. Creare una classe `public` `SurveyQuestion`. Includere la direttiva pragma `#nullable enable` subito dopo le istruzioni `using`:
+Il primo codice scritto crea il sondaggio. Occorre scrivere le classi necessarie per modellare una domanda del sondaggio e l'esecuzione del sondaggio. Il sondaggio include tre tipi di domande, distinti in base al formato della risposta: risposte Sì/No, risposte numeriche e risposte di testo. Creare una classe `public` `SurveyQuestion`. Includere la direttiva pragma `#nullable enable` subito dopo le istruzioni `using`:
 
 ```csharp
 #nullable enable
@@ -190,7 +190,7 @@ La responsabilità principale di questa classe è generare le risposte di un par
 1. Chiedere di partecipare al sondaggio. Se la persona non acconsente, restituire una risposta mancante (o Null).
 1. Porre ogni domanda e registrare la risposta. Ogni risposta può anche essere mancante (o Null).
 
-Aggiungere il codice seguente alla classe `SurveyRespondent`:
+Aggiungere il codice seguente alla classe `SurveyResponse`:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ L'ultimo passaggio è la visualizzazione dei risultati del sondaggio. Occorre ag
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Poiché `surveyResponses` è un riferimento non nullable, non è necessario eseguire alcun controllo del tipo prima di dereferenziarlo. Il metodo `Answer` restituisce una stringa non nullable, quindi scegliere l'overload di `GetValueOrDefault` che accetta un secondo argomento come valore predefinito.
+Poiché `surveyResponses` è un tipo riferimento non nullable, non è necessario eseguire alcun controllo del tipo prima di dereferenziarlo. Il metodo `Answer` restituisce una stringa non nullable, quindi scegliere l'overload di `GetValueOrDefault` che accetta un secondo argomento come valore predefinito.
 
 Aggiungere quindi questi tre membri con corpo di espressione alla classe `SurveyRun`:
 
@@ -228,7 +228,7 @@ Non è necessario eseguire alcun controllo dei valori `null` in questo codice pe
 
 ## <a name="get-the-code"></a>Ottenere il codice
 
-Il codice dell'esercitazione completata è disponibile nel repository [samples](https://github.com/dotnet/samples) nella cartella [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
+Il codice dell'esercitazione completata è disponibile nel repository [samples](https://github.com/dotnet/samples) nella cartella [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
 
 È possibile fare delle prove cambiando le dichiarazioni di tipo fra tipi riferimento nullable e non nullable e osservare come vengono generati avvisi diversi per assicurare che non venga dereferenziato accidentalmente un valore `null`.
 

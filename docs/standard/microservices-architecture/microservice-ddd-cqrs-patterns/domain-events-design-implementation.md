@@ -4,12 +4,12 @@ description: Architettura di Microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127849"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675478"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventi del dominio: progettazione e implementazione
 
@@ -31,7 +31,7 @@ In sostanza, gli eventi di dominio consentono di esprimere esplicitamente le reg
 
 È importante garantire che, proprio come in una transazione di database, vengano completate correttamente tutte le operazioni correlate a un evento di dominio oppure nessuna di esse.
 
-Gli eventi di dominio sono simili agli eventi di tipo messaggistica, con una differenza importante. Con la messaggistica reale, l'accodamento di messaggi, i broker di messaggi o un bus di servizio che usa il protocollo AMPQ, un messaggio viene sempre inviato in modo asincrono e trasferito tra processi e computer. Questo approccio è utile per l'integrazione di più contesti delimitati, microservizi o persino applicazioni differenti. Tuttavia, con gli eventi del dominio si vuole generare un evento dall'operazione di dominio attualmente in esecuzione, facendo in modo che tutti gli effetti collaterali si verifichino all'interno dello stesso dominio.
+Gli eventi di dominio sono simili agli eventi di tipo messaggistica, con una differenza importante. Con la messaggistica reale, l'accodamento di messaggi, i broker di messaggi o un bus di servizio che usa il protocollo AMQP, un messaggio viene sempre inviato in modo asincrono e trasferito tra processi e computer. Questo approccio è utile per l'integrazione di più contesti delimitati, microservizi o persino applicazioni differenti. Tuttavia, con gli eventi del dominio si vuole generare un evento dall'operazione di dominio attualmente in esecuzione, facendo in modo che tutti gli effetti collaterali si verifichino all'interno dello stesso dominio.
 
 Gli eventi del dominio e i relativi effetti collaterali, ossia le azioni attivate dopo l'elaborazione da parte dei gestori di eventi, devono verificarsi quasi immediatamente, in genere durante il processo, e all'interno dello stesso dominio. Gli eventi del dominio possono quindi essere sincroni o asincroni. Gli eventi di integrazione, invece, devono essere sempre asincroni.
 
@@ -132,7 +132,7 @@ Come notato in precedenza, una caratteristica importante degli eventi è che, po
 
 La domanda successiva è come generare un evento del dominio in modo che venga ricevuto dai gestori di eventi correlati. Sono disponibili più approcci.
 
-In origine Udi Dahan ha proposto, ad esempio in diversi post correlati come [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (Eventi del dominio - Parte 2), di usare una classe statica per la gestione e la generazione di eventi. Potrebbe trattarsi di una classe statica denominata DomainEvents che genera immediatamente eventi di dominio al momento della chiamata, usando una sintassi come `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard ha scritto un post di blog, [Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (Rafforzamento del dominio: eventi del dominio), in cui consiglia un approccio simile.
+In origine Udi Dahan ha proposto, ad esempio in diversi post correlati come [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) (Eventi del dominio - Parte 2), di usare una classe statica per la gestione e la generazione di eventi. Potrebbe trattarsi di una classe statica denominata DomainEvents che genera immediatamente eventi di dominio al momento della chiamata, usando una sintassi come `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard ha scritto il post di blog [Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (Rafforzamento del dominio: eventi di dominio), che consiglia un approccio simile.
 
 Tuttavia, quando la classe di eventi del dominio è statica, esegue anche immediatamente l'invio ai gestori. I test e il debug risultano quindi più difficili perché i gestori di eventi con la logica degli effetti collaterali vengono eseguiti immediatamente dopo la generazione dell'evento. Quando si eseguono i test e il debug, è possibile concentrarsi solo su ciò che accade nelle classi di aggregazione correnti e non essere reindirizzati improvvisamente ad altri gestori di eventi per gli effetti collaterali correlati ad altre aggregazioni o alla logica dell'applicazione. Per questo motivo sono stati sviluppati altri approcci, come illustrato nella sezione successiva.
 
@@ -355,7 +355,7 @@ Come illustrato, usare gli eventi del dominio per implementare in modo esplicito
 - **Jimmy Bogard. A better domain events pattern** \ (Un modello più efficiente di eventi di dominio)
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Progettazione efficace delle aggregazioni - parte II: uso di aggregazioni in combinazione)
+- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Progettazione efficace delle aggregazioni - Parte II: Integrazione delle aggregazioni)
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Rafforzamento del dominio: eventi di dominio)

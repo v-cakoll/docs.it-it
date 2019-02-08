@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492833"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285025"
 ---
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
 La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET. Il modello viene esposto dai tipi `Task` e `Task<T>` e dalle parole chiave `async` e `await` in C# e Visual Basic. Le risorse specifiche del linguaggio sono disponibili nella sezione [Vedere anche](#see-also). In questo articolo viene illustrato come usare il codice asincrono di .NET e vengono specificate informazioni approfondite sul framework asincrono che ne è alla base.
 
-## <a name="task-and-tasklttgt"></a>Task e Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task e Task\<T>
 
 Le attività sono costrutti usati per implementare il cosiddetto [Modello di concorrenza basato su promise](https://en.wikipedia.org/wiki/Futures_and_promises).  In poche parole offrono la "promessa" che il lavoro verrà completato in un secondo memento, consentendo all'utente di coordinare la promessa con un'API nuova.
 
@@ -114,7 +114,7 @@ E cosa ancora più importante, dal momento che il lavoro associato a I/O virtual
 
 Inviare lavoro al thread dell'interfaccia utente, ad esempio l'aggiornamento dell'interfaccia, è anche molto semplice con i metodi `async` e non richiede operazioni aggiuntive, come ad esempio la chiamata a un delegato thread-safe.
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Approfondimento delle attività Task e Task&lt;T&gt; per un'operazione associata alla CPU
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Approfondimento delle attività Task e Task\<T> per un'operazione associata alla CPU
 
 Il codice `async` associato alla CPU è un po' diverso rispetto al codice `async` associato a I/O.  Dal momento che il lavoro viene eseguito sulla CPU, non c'è modo di evitare di dedicare un thread al calcolo.  L'uso di `async` e `await` offre un metodo chiaro per interagire con un thread in background e mantenere reattivo il chiamante del metodo asincrono.  Si noti che ciò non offre alcuna protezione per i dati condivisi.  Se si usano dati condivisi, sarà necessario applicare una strategia di sincronizzazione appropriata.
 

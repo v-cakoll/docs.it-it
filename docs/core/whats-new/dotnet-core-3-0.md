@@ -6,27 +6,154 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2018
-ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 12/31/2018
+ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415546"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675088"
 ---
-# <a name="whats-new-in-net-core-30-preview-1"></a>Novità di .NET Core 3.0 (Preview 1)
+# <a name="whats-new-in-net-core-30-preview-2"></a>Novità di .NET Core 3.0 (Preview 2)
 
-Questo articolo descrive le novità di .NET Core 3.0 (Preview 1). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Utilizzando un componente di .NET Core 3.0 denominato Windows Desktop, è possibile convertire le applicazioni WPF (Windows Presentation Foundation) Windows Form. Il componente Windows Desktop è dunque supportato solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) riportata di seguito.
+Questo articolo descrive le novità di .NET Core 3.0 (Preview 2). Uno dei principali miglioramenti è il supporto per le applicazioni desktop di Windows (solo Windows). Utilizzando un componente di .NET Core 3.0 SDK denominato Windows Desktop, è possibile convertire le applicazioni Windows Forms e WPF (Windows Presentation Foundation). Il componente Windows Desktop è dunque supportato e incluso solo in Windows. Per altre informazioni, vedere la sezione [Desktop di Windows](#windows-desktop) riportata di seguito.
 
 .NET Core 3.0 aggiunge il supporto per C# 8.0.
 
-[Scaricare e iniziare subito a usare .NET Core 3 Preview 1](https://aka.ms/netcore3download) in Windows, Mac e Linux. È possibile visualizzare i dettagli completi della versione nelle [note sulla versione di .NET Core 3 Preview 1](https://aka.ms/netcore3releasenotes).
+[Scaricare e iniziare subito a usare .NET Core 3 Preview 2](https://aka.ms/netcore3download) in Windows, Mac e Linux. È possibile visualizzare i dettagli completi della versione nelle [note sulla versione di .NET Core 3 Preview 2](https://aka.ms/netcore3releasenotes).
 
-Per altre informazioni, vedere l'[annuncio relativo a .NET Core 3.0 Preview 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
+Per altre informazioni sulle funzionalità incluse nella versione di anteprima 1, vedere l'[annuncio per .NET Core 3.0 Preview 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
 
-## <a name="net-standard-21"></a>.NET Standard 2.1
+Per altre informazioni sulle funzionalità incluse nella versione di anteprima 2, vedere l'[annuncio per .NET Core 3.0 Preview 2]().
 
-.NET Core 3.0 implementa .NET Standard 2.1.
+## <a name="c-8"></a>C# 8
+
+.NET Core 3.0 supporta C# 8 e a partire da .NET Core 3.0 Preview 2 supporta queste nuove funzionalità. Per altre informazioni sulle funzionalità di C# 8.0, vedere i post di blog seguenti:
+
+- [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/) (Nuove potenzialità con i modelli in C# 8.0)
+- [Take C# 8.0 for a spin](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/) (Un giro di C# 8.0)
+- [Building C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) (Sviluppo con C# 8.0)
+
+
+### <a name="ranges-and-indices"></a>Gli intervalli e indici
+
+Il nuovo tipo `Index` può essere usato per l'indicizzazione. È possibile crearne uno da `int`, che esegue il conteggio dall'inizio, o con un operatore prefisso `^` (C#), che esegue il conteggio dalla fine:
+
+```csharp
+Index i1 = 3;  // number 3 from beginning
+Index i2 = ^4; // number 4 from end
+int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
+```
+
+Esiste anche un tipo `Range`, costituito da due valori `Index`, uno per l'inizio e uno per la fine, che può essere scritto con un'espressione intervallo `x..y` (C#). È quindi possibile eseguire l'indicizzazione con `Range` per generare una sezione:
+
+```csharp
+var slice = a[i1..i2]; // { 3, 4, 5 }
+```
+
+### <a name="async-streams"></a>Flussi asincroni
+
+Il tipo `IAsyncEnumerable<T>` è una nuova versione asincrona di `IEnumerable<T>`. Il linguaggio consente di usare `await foreach` su `IAsyncEnumerable<T>` per utilizzarne gli elementi e di usare `yield return` per generare gli elementi.
+
+L'esempio seguente illustra sia la produzione che l'utilizzo dei flussi asincroni. L'istruzione `foreach` è asincrona e usa `yield return` per produrre un flusso asincrono per i chiamanti. Questo modello (con `yield return`) è quello consigliato per la produzione di flussi asincroni.
+
+```csharp
+async IAsyncEnumerable<int> GetBigResultsAsync()
+{
+    await foreach (var result in GetResultsAsync())
+    {
+        if (result > 20) yield return result; 
+    }
+}
+```
+
+Oltre a poter usare `await foreach`, è anche possibile creare iteratori asincroni, ad esempio un iteratore che restituisce `IAsyncEnumerable/IAsyncEnumerator` in cui è possibile usare sia `await` che `yield`. Per gli oggetti che devono essere eliminati, è possibile usare `IAsyncDisposable`, implementato da diversi tipi BCL, ad esempio `Stream` e `Timer`.
+
+>[!NOTE]
+>È necessario .NET Core 3.0 Preview 2 per usare flussi asincroni se si vuole sviluppare con Visual Studio 2019 Preview 2 o l'anteprima più recente dell'[estensione C# per Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Se si usa .NET Core 3.0 Preview 2 dalla riga di comando, tutto funzionerà come previsto.
+
+### <a name="using-declarations"></a>Dichiarazioni using
+
+Le *dichiarazioni using* sono un nuovo modo per assicurarsi che l'oggetto venga eliminato correttamente. Una *dichiarazione using* mantiene attivo l'oggetto mentre è ancora nell'ambito. Quando l'oggetto diventa esterno all'ambito, viene eliminato automaticamente. In questo modo si riducono le *istruzioni using* annidate e il codice diventa più chiaro.
+
+```csharp
+static void Main(string[] args)
+{
+    using var options = Parse(args);
+    if (options["verbose"]) { WriteLine("Logging..."); }
+
+} // options disposed here
+```
+
+### <a name="switch-expressions"></a>Espressioni switch
+
+Le *espressioni switch* sono un modo più pulito per eseguire un'*istruzione switch* ma, trattandosi di un'espressione, restituisce un valore. Le *espressioni switch* sono anche completamente integrate con i criteri di ricerca e usano il criterio di rimozione `_` per rappresentare il valore `default`.
+
+È possibile visualizzare la sintassi per le *espressioni switch* nell'esempio seguente:
+
+```csharp
+static string Display(object o) => o switch
+{
+    Point { X: 0, Y: 0 }         => "origin",
+    Point { X: var x, Y: var y } => $"({x}, {y})",
+    _                            => "unknown"
+};
+```
+
+In questo esempio entrano in gioco due criteri. `o` corrisponde prima di tutto al *criterio di tipo* `Point` e poi al *criterio di proprietà* all'interno delle *{parentesi graffe}*. `_` descrive `discard pattern`, uguale a `default` per le *istruzioni switch*.
+
+I criteri consentono di scrivere codice dichiarativo che definisce la finalità anziché codice procedurale che implementa i test. Il compilatore diventa responsabile dell'implementazione di tale codice procedurale noioso e viene garantito che l'operazione sia sempre eseguita in modo corretto.
+
+Esistono comunque casi in cui le *istruzioni switch* saranno preferibili rispetto alle *espressioni switch* e i criteri possono essere usati con entrambi gli stili di sintassi.
+
+Per altre informazioni, vedere [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/) (Nuove potenzialità con i modelli in C# 8.0).
+
+## <a name="ieee-floating-point-improvements"></a>Miglioramenti per le API a virgola mobile IEEE
+
+Le API a virgola mobile sono in corso di aggiornamento per soddisfare i requisiti della [revisione IEEE 754-2008](https://en.wikipedia.org/wiki/IEEE_754-2008_revision). L'obiettivo di queste modifiche è esporre tutte le operazioni "obbligatorie" e assicurarsi che siano compatibili a livello di comportamento con la specifica IEEE.
+
+Correzioni per analisi e formattazione:
+
+* Analisi corretta e arrotondamento degli input di qualsiasi lunghezza.
+* Analisi corretta e formattazione dello zero negativo.
+* Analisi corretta di valori Infinity e NaN con l'esecuzione di un controllo senza distinzione tra maiuscole e minuscole e consentendo un `+` precedente facoltativo, ove applicabile.
+
+Le nuove API per operazioni matematiche:
+
+* `BitIncrement/BitDecrement`\
+Corrispondono alle operazioni IEEE `nextUp` e `nextDown`. Restituiscono il numero a virgola mobile più piccolo che risulta maggiore o minore rispetto all'input (rispettivamente). Ad esempio, `Math.BitIncrement(0.0)` restituirebbe `double.Epsilon`.
+
+* `MaxMagnitude/MinMagnitude`\
+Corrispondono alle operazioni IEEE `maxNumMag` e `minNumMag` e restituiscono il valore maggiore o minore in termini di grandezza dei due input (rispettivamente). Ad esempio, `Math.MaxMagnitude(2.0, -3.0)` restituirebbe `-3.0`.
+
+* `ILogB`\
+Corrispondono all'operazione IEEE `logB` che restituisce il logaritmo in base 2 integrale del parametro di input. Equivale in effetti a `floor(log2(x))`, ma con errori minimi di arrotondamento.
+
+* `ScaleB`\
+Corrisponde all'operazione IEEE `scaleB` che accetta un valore integrale, restituisce in effetti `x * pow(2, n)`, ma con errori minimi di arrotondamento.
+
+* `Log2`\
+Corrisponde all'operazione IEEE `log2` e restituisce il logaritmo in base 2. Gli errori di arrotondamento sono ridotti al minimo.
+
+* `FusedMultiplyAdd`\
+Corrisponde all'operazione IEEE `fma` ed esegue un'operazione FMA (Fused Multiply-Add). Vale a dire, esegue `(x * y) + z` come una singola operazione, riducendo così al minimo gli errori di arrotondamento. Un esempio è `FusedMultiplyAdd(1e308, 2.0, -1e308)` che restituisce `1e308`. L'operazione normale `(1e308 * 2.0) - 1e308` restituisce `double.PositiveInfinity`.
+
+* `CopySign`\
+Corrisponde all'operazione IEEE `copySign` e restituisce il valore di `x`, ma con il segno di `y`.
+
+## <a name="net-platform-dependent-intrinsics"></a>Intrinseci dipendenti dalla piattaforma .NET
+
+Sono state aggiunte API che consentono l'accesso a determinate istruzioni CPU orientate alle prestazioni, ad esempio i set di **istruzioni SIMD** oppure di **istruzioni di manipolazione dei bit**. Queste istruzioni consentono di ottenere miglioramenti delle prestazioni notevoli in determinati scenari, ad esempio l'elaborazione dei dati in modo efficiente in parallelo. Oltre a esporre le API per i programmi, le librerie .NET hanno iniziato a usare queste istruzioni per migliorare le prestazioni.
+
+Le richieste pull CoreCLR seguenti illustrano alcuni degli intrinseci, tramite implementazione o uso:
+
+* [Implement simple SSE2 hardware intrinsics](https://github.com/dotnet/coreclr/pull/15585) (Implementare intrinseci hardware SSE2 semplici)
+* [Implement the SSE hardware intrinsics](https://github.com/dotnet/coreclr/pull/15538) (Implementare gli intrinseci hardware SSE)
+* [Arm64 Base HW Intrinsics](https://github.com/dotnet/coreclr/pull/16822) (Intrinseci hardware base Arm64)
+* [Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}](https://github.com/dotnet/coreclr/pull/21073) (Usare TZCNT e LZCNT per Locate{First|Last}Found{Byte|Char})
+
+Per altre informazioni, vedere [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md) (Intrinseci dipendenti dalla piattaforma .NET), che definisce un approccio per la definizione di questa infrastruttura hardware, che consente a Microsoft, fornitori di chip o altre società o singoli di definire API per hardware/chip che devono essere esposte al codice .NET.
 
 ## <a name="default-executables"></a>File eseguibili predefiniti
 
@@ -46,11 +173,44 @@ Esistono alcune operazioni, ad esempio il collegamento e la pubblicazione della 
 
 ## <a name="local-dotnet-tools"></a>Strumenti dotnet locali
 
-Mentre .NET Core 2.1 supportava strumenti globali, .NET Core 3.0 ha ora strumenti locali. Gli strumenti locali sono simili agli strumenti globali, ma sono associati a una determinata posizione sul disco. Ciò consente di usare strumenti specifici per ogni progetto e ogni repository. Gli strumenti installati in locale non sono disponibili a livello globale.
+>[!WARNING]
+>È stata introdotta una modifica per gli strumenti .NET Core locali tra .NET Core 3.0 Preview 1 e .NET Core 3.0 Preview 2.  Se sono stati provati gli strumenti locali nella versione Preview 1 eseguendo un comando come `dotnet tool restore` o `dotnet tool install`, è necessario eliminare la cartella della cache degli strumenti locali prima che gli strumenti locali funzionino correttamente nella versione Preview 2. Questa cartella si trova in:
+>
+>In Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+>
+>In Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>
+>Se non si elimina questa cartella, si riceverà un errore.
 
-Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice non possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
+Mentre .NET Core 2.1 supportava strumenti globali, .NET Core 3.0 ha ora strumenti locali. Gli strumenti locali sono simili agli strumenti globali, ma sono associati a una determinata posizione sul disco. Ciò consente di usare strumenti specifici per ogni progetto e ogni repository. Gli strumenti installati in locale non sono disponibili a livello globale. Gli strumenti vengono distribuiti come pacchetti NuGet.
 
-Quando il file manifesto degli strumenti locali è disponibile, usare il comando seguente per scaricare e installare automaticamente tali strumenti in locale:
+Gli strumenti locali si basano sul nome file manifesto `dotnet-tools.json` nella directory corrente. Questo file manifesto definisce gli strumenti che devono essere disponibili in tale cartella e relative sottocartelle. Creando questo file manifesto nella radice del repository, si ha la certezza che chiunque cloni il codice non possa ripristinare e usare gli strumenti necessari per lavorare in modo corretto con il codice.
+
+Per creare un file manifesto `dotnet-tools.json`, usare:
+
+```console
+dotnet new tool-manifest
+```
+
+Aggiungere un nuovo strumento al manifesto locale con:
+
+```console
+dotnet tool install <packageId>
+```
+
+È anche possibile elencare gli strumenti nel manifesto locale con:
+
+```console
+dotnet tool list
+```
+
+Per vedere quali strumenti vengono installati a livello globale, usare:
+
+```console
+dotnet tool list -g
+```
+
+Quando il file manifesto degli strumenti locali è disponibile, ma gli strumenti definiti nel manifesto non sono stati installati, usare il comando seguente per scaricare e installare automaticamente tali strumenti in locale:
 
 ```console
 dotnet tool restore
@@ -62,31 +222,15 @@ Eseguire uno strumento locale con il comando seguente:
 dotnet tool run <tool-command-name>
 ```
 
-Quando viene chiamato uno strumento locale, dotnet cerca un manifesto nella struttura di directory. Quando viene trovato un file manifesto degli strumenti, viene eseguita la ricerca dello strumento richiesto. Lo strumento, se trovato, include le informazioni necessarie per trovare lo strumento nel percorso globale dei pacchetti NuGet. 
+Quando viene eseguito uno strumento locale, dotnet cerca un manifesto nella struttura di directory corrente. Quando viene trovato un file manifesto degli strumenti, viene eseguita la ricerca dello strumento richiesto. Se lo strumento viene trovato nel manifesto, ma non la cache, l'utente riceve un errore e deve eseguire `dotnet tool restore`.
 
-Se lo strumento viene trovato nel manifesto, ma non la cache, l'utente visualizza un errore. Il messaggio verrà migliorato dopo l'anteprima 1 per chiedere all'utente di eseguire `dotnet tool restore`.
-
-Per aggiungere gli strumenti locali a una directory, è necessario creare prima il file manifesto degli strumenti. Dopo l'anteprima 1, sarà disponibile un meccanismo per la creazione di file manifesto degli strumenti, ad esempio un nuovo modello dotnet. Per l'anteprima 1 è necessario creare il file denominato `dotnet-tools.json` con il contenuto seguente:
-
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {}
-}
-```
-
-Dopo aver creato il manifesto, è possibile aggiungere gli strumenti locali usando:
+Per rimuovere uno strumento dal file manifesto dello strumento locale, eseguire il comando seguente:
 
 ```console
-dotnet tool install <toolPackageId>
+dotnet tool uninstall <packageId>
 ```
 
-Questo comando installa la versione più recente dello strumento, a meno che non venga specificata un'altra versione.  Anche se è stata scelta automaticamente la versione più recente, la versione dello strumento viene scritta nel file manifesto dello strumento per consentire il ripristino o l'esecuzione della versione corretta dello strumento.
-
-Il file manifesto dello strumento è progettato per consentire la modifica manuale, ad esempio per aggiornare la versione necessaria per usare il repository.
-
-Ecco un file `dotnet-tools.json` di esempio:
+Il file manifesto dello strumento è progettato per consentire la modifica manuale, ad esempio per aggiornare la versione necessaria per usare il repository. Ecco un file `dotnet-tools.json` di esempio:
 
 ```json
 {
@@ -109,15 +253,7 @@ Ecco un file `dotnet-tools.json` di esempio:
 }
 ```
 
-Per rimuovere uno strumento dal file manifesto, eseguire il comando seguente:
-
-```console
-dotnet tool uninstall <toolPackageId>
-```
-
 Per gli strumenti sia locali che globali, è necessaria una versione compatibile del runtime. Molti strumenti attualmente presenti su NuGet.org hanno come destinazione .NET Core Runtime 2.1. Per installarli a livello globale o locale, è ancora necessario installare il [runtime di NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
-
-Per altre informazioni, vedere [Local Tools Early Preview Documentation](https://github.com/dotnet/cli/issues/10288) (Documentazione dell'anteprima preliminare degli strumenti locali).
 
 ## <a name="windows-desktop"></a>Desktop di Windows
 
@@ -132,7 +268,9 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-È anche possibile aprire, avviare ed eseguire il debug di progetti .NET Core 3.0 WPF e Windows Form in Visual Studio 2019 Preview 1. Anche se attualmente è possibile aprire questi progetti in Visual Studio 2017 15.9, questo non è uno scenario supportato (ed è necessario [abilitare le anteprime](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/)).
+Visual Studio 2019 Preview 2 aggiunge modelli **Nuovo progetto** per .NET Core 3.0 Windows Forms e WPF. Le finestre di progettazione non sono ancora supportate. È possibile aprire, avviare ed eseguire il debug di questi progetti in Visual Studio 2019.
+
+Visual Studio 2017 15.9 aggiunge la possibilità di [abilitare le anteprime di .NET Core](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ma è necessario attivare questa funzionalità e non è uno scenario supportato.
 
 I nuovi progetti sono uguali ai progetti .NET Core esistenti, con alcune aggiunte. Di seguito è riportato il confronto tra il progetto console .NET Core di base e un progetto Windows Form e WPF di base.
 
@@ -166,9 +304,26 @@ Sia `UseWPF` che `UseWindowsForms` possono essere impostati su `true` se l'app u
 
 Condividere commenti e suggerimenti nei repository [dotnet/winforms](https://github.com/dotnet/winforms/issues), [dotnet/wpf](https://github.com/dotnet/wpf/issues) e [dotnet/core](https://github.com/dotnet/core/issues).
 
+## <a name="msix-deployment-for-windows-desktop"></a>Distribuzione MSIX per Windows Desktop
+
+[MSIX](https://docs.microsoft.com/windows/msix/) è un nuovo formato di pacchetto di app Windows. Può essere usato per distribuire applicazioni desktop di .NET Core 3.0 in Windows 10.
+
+Il [Progetto di creazione pacchetti di applicazione Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponibile in Visual Studio 2019 Preview 2, consente di creare pacchetti MSIX con applicazioni .NET Core [autonome](../deploying/#self-contained-deployments-scd).
+
+>Nota: Il file di progetto .NET Core deve specificare i runtime supportati nella proprietà `<RuntimeIdentifiers>`:
+```xml
+<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+```
+
 ## <a name="fast-built-in-json-support"></a>Supporto JSON predefinito rapido
 
-`System.Text.Json.Utf8JsonReader` è un lettore forward-only a prestazioni elevate e allocazione ridotta per il testo JSON con codifica UTF-8, letto da `ReadOnlySpan<byte>`. `Utf8JsonReader` è un tipo di base di basso livello, che può essere sfruttato per compilare parser e deserializzatori personalizzati. La lettura di un payload JSON con il nuovo `Utf8JsonReader` è due volte più veloce che con il lettore di [Json.NET](https://www.newtonsoft.com/json). Non viene allocato fino a quando non è necessario realizzare i token JSON come stringhe (UTF-16).
+L'ecosistema .NET si è basato su [**Json.NET**](https://www.newtonsoft.com/json) e altre librerie JSON molto diffuse, che rimangono sempre scelte valide. Come tipo di dati di base **Json.NET** usa le stringhe .NET, che in realtà sono UTF-16.
+
+Il nuovo supporto JSON predefinito offre prestazioni elevate, bassa allocazione ed è basato su `Span<byte>`. Sono stati aggiunti tre nuovi tipi correlati principali JSON a .NET Core 3.0 nello spazio dei nomi `System.Text.Json`.
+
+### <a name="utf8jsonreader"></a>Utf8JsonReader
+
+`System.Text.Json.Utf8JsonReader` è un lettore forward-only a prestazioni elevate e allocazione ridotta per il testo JSON con codifica UTF-8, letto da `ReadOnlySpan<byte>`. `Utf8JsonReader` è un tipo di base di basso livello, che può essere sfruttato per compilare parser e deserializzatori personalizzati. La lettura di un payload JSON con il nuovo `Utf8JsonReader` è due volte più veloce che con il lettore di **Json.NET**. Non viene allocato fino a quando non è necessario realizzare i token JSON come stringhe (UTF-16).
 
 Questa nuova API includerà i componenti seguenti:
 
@@ -223,53 +378,111 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 }
 ```
 
-L'ecosistema .NET si è basato su [Json.NET](https://www.newtonsoft.com/json) e altre librerie JSON molto diffuse, che rimangono sempre scelte valide. Come tipo di dati di base JSON.NET usa le stringhe .NET, che in realtà sono UTF-16. 
+### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-In .NET Core 2.1 e 3.0 sono state aggiunte nuove API per poter scrivere API JSON (ad esempio, `Utf8JsonReader`) che richiedono molta meno memoria, in base sull'uso di stringhe UTF-8 e `Span<T>`, e soddisfano meglio le esigenze delle applicazioni a velocità effettiva elevata, come Kestrel, il server Web ASP.NET Core.
+`System.Text.Json.Utf8JsonWriter` rende disponibile un metodo ad alte prestazioni, senza memorizzazione nella cache e forward-only per la scrittura di test JSON con codifica UTF-8 da tipi .NET comuni, come `String`, `Int32` e `DateTime`. Come il lettore, il writer è un tipo di base di basso livello, che può essere sfruttato per creare serializzatori personalizzati. La scrittura di un payload JSON con il nuovo `Utf8JsonWriter` offre velocità maggiori del 30-80% rispetto all'uso del writer da **Json.NET** e non prevede allocazione.
 
-## <a name="ranges-and-indices"></a>Gli intervalli e indici
-
-Il nuovo tipo `Index` può essere usato per l'indicizzazione. È possibile crearne uno da `int`, che esegue il conteggio dall'inizio, o con un operatore prefisso `^` (C#), che esegue il conteggio dalla fine:
+Ecco un esempio di utilizzo di `Utf8JsonWriter` che può essere usato come punto di partenza:
 
 ```csharp
-Index i1 = 3;  // number 3 from beginning
-Index i2 = ^4; // number 4 from end
-int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
-```
-
-Esiste anche un tipo `Range`, costituito da due valori `Index`, uno per l'inizio e uno per la fine, che può essere scritto con un'espressione intervallo `x..y` (C#). È quindi possibile eseguire l'indicizzazione con `Range` per generare una sezione:
-
-```csharp
-var slice = a[i1..i2]; // { 3, 4, 5 }
-```
-
-> [!NOTE]
-> Solo [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) supporta la sintassi per `Range` e `Index`.
-
-## <a name="async-streams"></a>Flussi asincroni
-
-Il tipo `IAsyncEnumerable<T>` è una nuova versione asincrona di `IEnumerable<T>`. Il linguaggio consente di usare `await foreach` su questi tipi per utilizzarne gli elementi e di usare `yield return` per generare gli elementi.
-
-L'esempio seguente illustra sia la produzione che l'utilizzo dei flussi asincroni. L'istruzione `foreach` è asincrona e usa `yield return` per produrre un flusso asincrono per i chiamanti. Questo modello (con `yield return`) è quello consigliato per la produzione di flussi asincroni.
-
-```csharp
-async IAsyncEnumerable<int> GetBigResultsAsync()
+static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 {
-    await foreach (var result in GetResultsAsync())
+    var json = new Utf8JsonWriter(output, state: default);
+
+    json.WriteStartObject();
+
+    json.WriteNumber("age", 15, escape: false);
+    json.WriteString("date", DateTime.Now);
+    json.WriteString("first", "John");
+    json.WriteString("last", "Smith");
+
+    json.WriteStartArray("phoneNumbers", escape: false);
+    json.WriteStringValue("425-000-1212", escape: false);
+    json.WriteStringValue("425-000-1213");
+    json.WriteEndArray();
+
+    json.WriteStartObject("address");
+    json.WriteString("street", "1 Microsoft Way");
+    json.WriteString("city", "Redmond");
+    json.WriteNumber("zip", 98052);
+    json.WriteEndObject();
+
+    json.WriteStartArray("ExtraArray");
+    for (var i = 0; i < extraData.Length; i++)
     {
-        if (result > 20) yield return result; 
+        json.WriteNumberValue(extraData[i]);
     }
+    json.WriteEndArray();
+
+    json.WriteEndObject();
+
+    json.Flush(isFinalBlock: true);
+
+    return (int)json.BytesWritten;
 }
 ```
 
-> [!WARNING]
-> .NET Core 3.0 Preview 1 presenta attualmente un bug relativo a `await foreach`. Usare invece `GetEnumerator` e `MoveNext` per elaborare gli elementi. Per altre informazioni, vedere [roslyn/#31268](https://github.com/dotnet/roslyn/issues/31268).
+`Utf8JsonWriter` accetta `IBufferWriter<byte>` come posizione di output per la scrittura sincrona dei dati JSON ed è il chiamante a dover fornire un'implementazione concreta. Attualmente la piattaforma non include un'implementazione di questa interfaccia. Per un esempio di `IBufferWriter<byte>`, vedere [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
 
-Oltre a poter usare `await foreach`, è anche possibile creare iteratori asincroni, ad esempio un iteratore che restituisce `IAsyncEnumerable/IAsyncEnumerator` in cui è possibile usare sia `await` che `yield`. Per gli oggetti che devono essere eliminati, è possibile usare `IAsyncDisposable`, implementato da diversi tipi BCL, ad esempio `Stream` e `Timer`.
+### <a name="jsondocument"></a>JsonDocument
 
-> [!NOTE]
-> Solo [C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) supporta la sintassi `await foreach`.
+`System.Text.Json.JsonDocument` è basato su `Utf8JsonReader`. `JsonDocument` offre la possibilità di analizzare i dati JSON e compilare un modello DOM (Document Object Model) di sola lettura su cui è possibile eseguire query per supportare l'accesso casuale e l'enumerazione. Gli elementi JSON che compongono i dati sono accessibili tramite il tipo `JsonElement` che viene esposto da `JsonDocument` come una proprietà denominata `RootElement`. `JsonElement` contiene gli enumeratori di matrice e oggetto JSON insieme alle API per convertire il testo JSON in tipi .NET comuni. L'analisi di un payload JSON tipico e l'accesso a tutti i relativi membri tramite `JsonDocument` è 2-3 volte più veloce rispetto a **Json.NET** con allocazioni minime per dati di dimensioni ragionevoli, ovvero inferiori a 1 MB.
+
+Ecco un esempio di utilizzo di `JsonDocument` e `JsonElement` che può essere usato come punto di partenza:
+
+```csharp
+static double ParseJson()
+{
+    const string json = " [ { \"name\": \"John\" }, [ \"425-000-1212\", 15 ], { \"grades\": [ 90, 80, 100, 75 ] } ]";
+
+    double average = -1;
+
+    using (JsonDocument doc = JsonDocument.Parse(json))
+    {
+        JsonElement root = doc.RootElement;
+        JsonElement info = root[1];
+
+        string phoneNumber = info[0].GetString();
+        int age = info[1].GetInt32();
+
+        JsonElement grades = root[2].GetProperty("grades");
+
+        double sum = 0;
+        foreach (JsonElement grade in grades.EnumerateArray())
+        {
+            sum += grade.GetInt32();
+        }
+
+        int numberOfCourses = grades.GetArrayLength();
+        average = sum / numberOfCourses;
+    }
+
+    return average;
+}
+```
+
+## <a name="assembly-unloadability"></a>Assembly non caricabili
+
+Gli assembly non caricabili sono una nuova funzionalità di `AssemblyLoadContext`. Questa nuova funzionalità è in gran parte trasparente dal punto di vista di un'API ed è esposta solo con poche nuove API. Consente di scaricare il contesto di un caricatore, rilasciando tutta la memoria per tipi istanziati, i campi statici e per l'assembly stesso. Un'applicazione deve essere in grado di caricare e scaricare gli assembly tramite questo meccanismo a tempo indefinito senza riscontrare una perdita di memoria.
+
+Questa nuova funzionalità può essere usata per scenari simili ai seguenti:
+
+* Scenari con plug-in in cui sono richiesti il caricamento e lo scaricamento dinamico del plug-in. 
+* Compilazione, esecuzione e scaricamento dinamici del codice. Utile per siti Web, motori di scripting e così via.
+* Il caricamento degli assembly per introspezione (ad esempio ReflectionOnlyLoad), nonostante [MetadataLoadContext](#type-metadataloadcontext) (rilasciato nella versione Preview 1) sia una scelta migliore in molti casi.
+
+Per altre informazioni, vedere il documento [Using Unloadability](https://github.com/dotnet/coreclr/pull/22221) (Usare la funzionalità che impedisce lo scaricamento).
+
+Lo scaricamento degli assembly richiede notevole attenzione per assicurare che tutti i riferimenti agli oggetti gestiti dall'esterno del contesto di un caricatore vengano riconosciuti e gestiti. Quando è richiesto lo scaricamento del contesto del caricatore, occorre rimuovere tutti gli eventuali riferimenti esterni in modo che il contesto del caricatore sia intrinsecamente coerente solo con se stesso.
+
+La funzionalità per impedire lo scaricamento degli assembly era inclusa in .NET Framework tramite i domini dell'applicazione (AppDomain), non supportati in .NET Core. AppDomain presenta sia vantaggi che limiti rispetto a questo nuovo modello. Prendere in considerazione questo nuovo modello di caricatore per ottenere maggiore flessibilità e prestazioni più elevate rispetto ad AppDomain.
+
+## <a name="windows-native-interop"></a>Interoperabilità nativa di Windows
+
+Windows offre un'API nativa completa, sotto forma di API C semplici, COM e WinRT. **P/Invoke** è supportato a partire da .NET Core 1.0. Con .NET Core 3.0 è stato ora aggiunto il supporto della possibilità di **generare contestualmente API COM** e di **attivare API WinRT**.
+
+È possibile vedere un esempio dell'uso di COM con il [codice sorgente per la demo con Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+
 
 ## <a name="type-sequencereader"></a>Tipo: SequenceReader
 
@@ -522,7 +735,7 @@ Questa funzionalità è stata aggiunta come funzionalità con consenso esplicito
 
 ## <a name="arm64-linux-support"></a>Supporto ARM64 per Linux
 
-In questa versione verrà aggiunto il supporto per ARM64 per Linux. Per il contesto, è stato aggiunto il supporto per ARM32 per Linux con .NET Core 2.1 e per Windows con .NET Core 2.2. Il caso d'uso principale per ARM64 è attualmente con gli scenari IoT.
+È stato aggiunto il supporto per ARM64 per Linux. Il caso d'uso principale per ARM64 è attualmente con gli scenari IoT.
 
 [Sono disponibili immagini Docker per .NET Core per ARM64](https://hub.docker.com/r/microsoft/dotnet/) di Alpine, Debian e Ubuntu.
 
@@ -530,3 +743,59 @@ Per altre informazioni., vedere [Stato di ARM64 per .NET Core](https://github.co
 
 >[!NOTE]
 > Il supporto **ARM64** per Windows non è ancora disponibile.
+
+## <a name="install-net-core-30-previews-on-linux-with-snap"></a>Installare le versioni di anteprima di .NET Core 3.0 in Linux con Snap
+
+Snap è il modo preferenziale per installare e provare le anteprime di .NET Core nelle [distribuzioni di Linux che supportano Snap](https://docs.snapcraft.io/installing-snapd/6735).
+
+Dopo aver configurato Snap nel sistema, eseguire il comando seguente per installare [.NET Core SDK 3.0 Preview SDK](https://snapcraft.io/dotnet-sdk).
+
+```console
+sudo snap install dotnet-sdk --beta --classic
+```
+ 
+Se .NET Core viene installato usando il pacchetto Snap, il comando di .NET Core predefinito è `dotnet-sdk.dotnet`, anziché semplicemente `dotnet`. Il vantaggio del comando con spazio dei nomi è che non si verificheranno conflitti con una versione di .NET Core installata a livello globale eventualmente disponibile. È possibile definire l'alias `dotnet` per questo comando con:
+
+```console
+sudo snap alias dotnet-sdk.dotnet dotnet
+```
+
+Alcune distribuzioni richiedono un altro passaggio per abilitare l'accesso al certificato SSL. Vedere la [documentazione sulla configurazione di Linux](https://github.com/dotnet/core/blob/master/Documentation/linux-setup.md) per altri dettagli.
+
+## <a name="gpio-support-for-raspberry-pi"></a>Supporto di GPIO per Raspberry Pi
+
+Sono stati rilasciati due nuovi pacchetti NuGet che è possibile usare per la programmazione GPIO.
+
+* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio/0.1.0-prerelease.19078.2)
+* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/0.1.0-prerelease.19078.2)
+
+I pacchetti GPIO includono le API per i dispositivi GPIO, SPI, I2C e PWM. Il pacchetto di associazioni IoT include [associazioni di dispositivi](https://github.com/dotnet/iot/blob/master/src/devices/README.md) per i vari chip e sensori, gli stessi disponibili in[dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices).
+
+Le API per le porte seriali aggiornate, annunciate per .NET Core 3.0 Preview 1, non fanno parte di questi pacchetti ma sono disponibili come parte della piattaforma .NET Core.
+
+
+## <a name="platform-support"></a>Supporto per piattaforme
+
+.NET Core 3 sarà supportato nei sistemi operativi seguenti:
+
+* Client Windows: 7, 8.1, 10 (1607+)
+* Windows Server: 20012 R2 SP1+
+* macOS: 10.12+
+* RHEL: 6+
+* Fedora: 26+
+* Ubuntu: 16.04+
+* Debian: 9+
+* SLES: 12+
+* openSUSE: 42.3+
+* Alpine: 3.8+
+
+Il supporto dei chip è il seguente:
+
+* x64 in Windows, macOS e Linux
+* x86 in Windows
+* ARM32 in Windows e Linux
+* ARM64 in Linux
+
+Per Linux, ARM32 è supportato in Debian 9+ e Ubuntu 16.04+. Per ARM64, è uguale a ARM32 con l'aggiunta di Alpine 3.8. Queste sono le stesse versioni di tali distribuzioni supportate per x64.
+
+Le immagini Docker per .NET Core 3.0 sono disponibili in [microsoft/dotnet nell'Hub Docker](https://hub.docker.com/r/microsoft/dotnet/). È in corso il processo di adozione di [Microsoft Container Registry (MCR)](https://cloudblogs.microsoft.com/opensource/2019/01/17/improved-discovery-experience-microsoft-containers-docker-hub/) ed è previsto che le immagini finali di .NET Core 3.0 vengano pubblicate solo in MCR.

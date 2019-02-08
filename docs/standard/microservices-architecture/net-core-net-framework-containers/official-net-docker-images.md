@@ -3,13 +3,13 @@ title: Immagini Docker .NET ufficiali
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Immagini Docker .NET ufficiali
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131378"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479607"
 ---
 # <a name="official-net-docker-images"></a>Immagini Docker .NET ufficiali
 
@@ -31,13 +31,13 @@ Perché sono disponibili più immagini? Durante lo sviluppo, la compilazione e l
 
 ### <a name="during-development-and-build"></a>Durante lo sviluppo e la compilazione
 
-Durante lo sviluppo, ciò che conta è la velocità di iterazione delle modifiche e la possibilità di eseguire il debug delle modifiche. Le dimensioni dell'immagine non sono importanti quanto la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche. Durante il processo di sviluppo e compilazione, alcuni strumenti e "contenitori dell'agente di compilazione" usano l'immagine .NET Core (*microsoft/dotnet:2.1-sdk*) di sviluppo. Durante la compilazione all'interno di un contenitore Docker, gli aspetti importanti sono gli elementi necessari per compilare l'app. Tra questi, il compilatore e le eventuali altre dipendenze di .NET.
+Durante lo sviluppo, ciò che conta è la velocità di iterazione delle modifiche e la possibilità di eseguire il debug delle modifiche. Le dimensioni dell'immagine non sono importanti quanto la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche. Durante il processo di sviluppo e compilazione, alcuni strumenti e "contenitori dell'agente di compilazione" usano l'immagine .NET Core (*microsoft/dotnet:2.2-sdk*) di sviluppo. Durante la compilazione all'interno di un contenitore Docker, gli aspetti importanti sono gli elementi necessari per compilare l'app. Tra questi, il compilatore e le eventuali altre dipendenze di .NET.
 
 Perché questo tipo di immagine di compilazione è importante? Questa immagine non viene distribuita nell'ambiente di produzione. È piuttosto un'immagine usata per compilare il contenuto inserito in un'immagine di produzione. Questa immagine può essere usata nell'ambiente di integrazione continua (CI, Continuous Integration) o di compilazione quando si eseguono compilazioni Docker in più fasi.
 
 ### <a name="in-production"></a>In produzione
 
-Ciò che conta nella produzione è quanto velocemente è possibile distribuire e avviare i contenitori basati su un'immagine .NET Core di produzione. Di conseguenza, l'immagine solo runtime basata su *microsoft/dotnet:2.1-aspnetcore-runtime* è di piccole dimensioni, in modo che possa attraversare velocemente la rete dal registro Docker agli host Docker. Il contenuto è pronto per l'esecuzione, rendendo minimo l'intervallo tra l'avvio del contenitore e l'elaborazione dei risultati. Nel modello Docker, non è necessario eseguire la compilazione dal codice C\#, come quando si eseguono i comandi dotnet build o dotnet publish con il contenitore di compilazione.
+Ciò che conta nella produzione è quanto velocemente è possibile distribuire e avviare i contenitori basati su un'immagine .NET Core di produzione. Di conseguenza, l'immagine solo runtime basata su *microsoft/dotnet:2.2-aspnetcore-runtime* è di piccole dimensioni, in modo che possa attraversare velocemente la rete dal registro Docker agli host Docker. Il contenuto è pronto per l'esecuzione, rendendo minimo l'intervallo tra l'avvio del contenitore e l'elaborazione dei risultati. Nel modello Docker, non è necessario eseguire la compilazione dal codice C\#, come quando si eseguono i comandi dotnet build o dotnet publish con il contenitore di compilazione.
 
 In questa immagine ottimizzata si inseriscono solo i binari e altro contenuto necessari per eseguire l'applicazione. Ad esempio, il contenuto creato dal comando dotnet publish contiene solo i file JS e CSS, le immagini e i file binari .NET compilati. Nel corso del tempo, si vedranno immagini contenenti pacchetti pre-JIT (la compilazione dal linguaggio intermedio al codice nativo che avviene in fase di esecuzione).
 
@@ -47,8 +47,8 @@ Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si trove
 
 | Image                                       | Commenti                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
-| microsoft/dotnet:**2.1-sdk**                | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura)                                  |
+| microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
+| microsoft/dotnet:**2.2-sdk**                | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura)                                  |
 
 >[!div class="step-by-step"]
 >[Precedente](net-container-os-targets.md)

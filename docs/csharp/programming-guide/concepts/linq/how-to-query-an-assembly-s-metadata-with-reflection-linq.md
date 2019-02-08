@@ -2,14 +2,14 @@
 title: 'Procedura: Eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 849244f1345966dbe198686f4f9024fc321b6ded
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696061"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263498"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Procedura: Eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Procedura: Eseguire una query sui metadati di un assembly tramite reflection (LINQ) (C#)
 Nell'esempio seguente viene illustrato come LINQ può essere usato con il processo di reflection per recuperare metadati specifici sui metodi che corrispondono a un criterio di ricerca specificato. In questo caso la query individuerà i nomi di tutti i metodi dell'assembly che restituiscono tipi enumerabili, ad esempio matrici.  
   
 ## <a name="example"></a>Esempio  

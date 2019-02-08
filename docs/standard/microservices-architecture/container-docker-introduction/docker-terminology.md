@@ -3,13 +3,13 @@ title: Terminologia di Docker
 description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Terminologia di Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150654"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479997"
 ---
 # <a name="docker-terminology"></a>Terminologia di Docker
 
@@ -31,13 +31,13 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Repository**: raccolta di immagini Docker correlate, etichettate con un tag che indica la versione dell'immagine. Alcuni repository contengono più varianti di un'immagine specifica, ad esempio un'immagine contenente gli SDK (più pesante), un'immagine contenente solo i runtime (più leggera) e così via. Tali varianti possono essere contrassegnate con i tag. Un singolo repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine Windows.
 
-**Registro**: servizio che fornisce l'accesso ai repository. Il registro predefinito per la maggior parte delle immagini pubbliche è l'[Hub Docker](https://hub.docker.com/), di proprietà di Docker a livello di organizzazione. Un registro contiene in genere i repository di più team. Spesso le aziende hanno registri privati in cui archiviare e gestire le immagini che hanno creato. Registro contenitori di Azure è un esempio.
+**Registro**: servizio che fornisce l'accesso ai repository. Il registro predefinito per la maggior parte delle immagini pubbliche è l'[Hub Docker](https://hub.docker.com/), di proprietà di Docker a livello di organizzazione. Un registro contiene in genere i repository di più team. Spesso le aziende hanno registri privati in cui archiviare e gestire le immagini che hanno creato. Registro Azure Container è un esempio.
 
-**Immagine con multiarchitettura**: la multiarchitettura è una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui Docker è in esecuzione. Quando ad esempio un Dockerfile richiede un'immagine di base **DA microsoft/dotnet:2.1-sdk** del registro, ottiene di fatto **2.1-sdk-nanoserver-1709**, **2.1-sdk-nanoserver-1803** o **2.1-sdk-alpine**, a seconda del sistema operativo e della versione in cui Docker è in esecuzione.
+**Immagine con multiarchitettura**: la multiarchitettura è una funzionalità che semplifica la selezione dell'immagine appropriata, in base alla piattaforma in cui Docker è in esecuzione. Ad esempio, quando un Dockerfile richiede un'immagine di base **FROM microsoft/dotnet:2.2-sdk** dal registro, ottiene di fatto **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** o **2.2-sdk-alpine**, a seconda del sistema operativo e della versione in cui Docker è in esecuzione.
 
 **Hub Docker**: registro pubblico in cui caricare le immagini e usarle. L'hub Docker fornisce l'hosting di immagini Docker, registri pubblici o privati, trigger e webhook di compilazione e integrazione con GitHub e Bitbucket.
 
-**Registro contenitori di Azure**: risorsa pubblica per l'uso di immagini Docker e dei relativi componenti in Azure. Fornisce un registro vicino alle distribuzioni in Azure e offre il controllo sugli accessi, tramite i gruppi e le autorizzazioni di Azure Active Directory.
+**Registro Azure Container**: risorsa pubblica per l'uso di immagini Docker e dei relativi componenti in Azure. Fornisce un registro vicino alle distribuzioni in Azure e offre il controllo sugli accessi, tramite i gruppi e le autorizzazioni di Azure Active Directory.
 
 **Docker Trusted Registry (DTR)**: servizio di registro Docker (di Docker) che può essere installato in locale per risiedere all'interno del data center e della rete dell'organizzazione. È una soluzione pratica per le immagini private che devono essere gestite all'interno dell'azienda. Docker Trusted Registry è incluso nel prodotto Docker Datacenter. Per altre informazioni, vedere [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
@@ -47,7 +47,7 @@ Questa sezione elenca i termini e le definizioni che è necessario conoscere pri
 
 **Compose**: strumento da riga di comando e formato di file YAML con i metadati per definire ed eseguire applicazioni multicontenitore. Si definisce una singola applicazione in base a più immagini con uno o più file YML che possono eseguire l'override dei valori a seconda dell'ambiente. Dopo aver creato le definizioni, è possibile distribuire l'intera applicazione multicontenitore con un singolo comando (a partire da docker-compose) che crea un contenitore per immagine nell'host Docker.
 
-**Cluster**: raccolta di host Docker esposta come se si trattasse di un singolo host Docker virtuale, per consentire la scalabilità aggiungendo più istanze dei servizi distribuite tra più host all'interno del cluster. È possibile creare i cluster Docker con Kubernetes, Azure Service Fabric Docker Swarm e Mesosphere DC/OS.
+**Cluster**: raccolta di host Docker esposta come se si trattasse di un singolo host Docker virtuale, per consentire la scalabilità dell'applicazione aggiungendo più istanze dei servizi distribuite tra più host all'interno del cluster. È possibile creare i cluster Docker con Kubernetes, Azure Service Fabric Docker Swarm e Mesosphere DC/OS.
 
 **Agente di orchestrazione**: strumento che semplifica la gestione di cluster e host Docker. Gli agenti di orchestrazione consentono di gestire immagini, contenitori e host tramite un'interfaccia della riga di comando o un'interfaccia utente grafica. È possibile gestire le reti di contenitori, le configurazioni, il bilanciamento del carico, l'individuazione di servizi, la disponibilità elevata, la configurazione dell'host Docker e altro ancora. Un agente di orchestrazione è responsabile dell'esecuzione, della distribuzione, del ridimensionamento e della correzione dei carichi di lavoro in una raccolta di nodi. In genere, i prodotti per l'agente di orchestrazione sono gli stessi che forniscono l'infrastruttura cluster, ad esempio Kubernetes, Azure Service Fabric e altre offerte disponibili sul mercato. 
 

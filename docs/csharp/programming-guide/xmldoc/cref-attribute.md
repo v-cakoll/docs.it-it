@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685945"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204288"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Attributo cref (Guida per programmatori C#)
-L'attributo `cref` in un tag della documentazione XML indica un "riferimento al codice". Specifica che il testo all'interno del tag è un elemento di codice, ad esempio un tipo, un metodo o una proprietà. Gli strumenti per la creazione di documentazione, ad esempio [Sandcastle](https://github.com/EWSoftware/SHFB), usano attributi `cref` per generare automaticamente collegamenti ipertestuali alla pagina in cui è documentato il tipo o il membro.  
+L'attributo `cref` in un tag della documentazione XML indica un "riferimento al codice". Specifica che il testo all'interno del tag è un elemento di codice, ad esempio un tipo, un metodo o una proprietà. Gli strumenti per la creazione di documentazione, come [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB), usano attributi `cref` per generare automaticamente collegamenti ipertestuali alla pagina in cui è documentato il tipo o il membro.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra attributi `cref` usati nei tag [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- Durante la compilazione, il programma crea il file XML seguente. Si noti che l'attributo `cref` del metodo `GetZero`, ad esempio, è stato trasformato dal compilatore in `"M:TestNamespace.TestClass.GetZero"`. Il prefisso "M:" significa "metodo" ed è una convenzione riconosciuta dagli strumenti di creazione della documentazione come Sandcastle. Per un elenco completo dei prefissi, vedere [Elaborazione del file XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ Durante la compilazione, il programma crea il file XML seguente. Si noti che l'attributo `cref` del metodo `GetZero`, ad esempio, è stato trasformato dal compilatore in `"M:TestNamespace.TestClass.GetZero"`. Il prefisso "M:" significa "metodo" ed è una convenzione riconosciuta dagli strumenti di creazione della documentazione come DocFX e Sandcastle. Per un elenco completo dei prefissi, vedere [Elaborazione del file XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   
 ```xml  
 <?xml version="1.0"?>  

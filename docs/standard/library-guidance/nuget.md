@@ -4,12 +4,12 @@ description: Procedure consigliate per la creazione di pacchetti con NuGet per l
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724304"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204613"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ Le dipendenze dei pacchetti NuGet sono illustrate in dettaglio nell'articolo [Di
 
 Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che deve offrire ogni pacchetto in NuGet.org:
 
-| Nome proprietà MSBuild              | Nome nuspec              | Description  |
+| Nome proprietà MSBuild              | Nome nuspec              | Descrizione  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificatore del pacchetto. Un prefisso dell'identificatore può essere riservato se soddisfa i [criteri](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versione del pacchetto NuGet. Per altre informazioni, vedere [Versione dei pacchetti NuGet](./versioning.md#nuget-package-version).             |
@@ -69,9 +69,9 @@ Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/
 
 **✔️ USARE** un'immagine di icona del pacchetto con dimensioni di 64x64 e con uno sfondo trasparente per ottenere una migliore visualizzazione.
 
-**✔️ VALUTARE** la configurazione di [SourceLink](./sourcelink.md) per aggiungere metadati di controllo del codice sorgente agli assembly e al pacchetto NuGet.
+**✔️ VALUTARE** la configurazione del [collegamento all'origine](./sourcelink.md) per aggiungere metadati di controllo del codice sorgente agli assembly e al pacchetto NuGet.
 
-> SourceLink aggiunge automaticamente metadati `RepositoryUrl` e `RepositoryType` al pacchetto NuGet. SourceLink aggiunge inoltre informazioni sul codice di origine esatto su cui è stato compilato il pacchetto. Ad esempio, a un pacchetto creato da un repository Git verrà aggiunto l'hash commit come metadati.
+> Il collegamento all'origine aggiunge automaticamente metadati `RepositoryUrl` e `RepositoryType` al pacchetto NuGet. Il collegamento all'origine aggiunge anche informazioni sul codice sorgente esatto da cui è stato compilato il pacchetto. Ad esempio, a un pacchetto creato da un repository Git verrà aggiunto l'hash commit come metadati.
 
 ## <a name="pre-release-packages"></a>Pacchetti in versione non definitiva
 

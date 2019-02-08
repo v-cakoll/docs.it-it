@@ -3,12 +3,12 @@ title: Guida ai contenuti su ML.NET
 description: Informazioni su come creare soluzioni di intelligenza artificiale personalizzate e integrarle nelle applicazioni .NET usando ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550461"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826269"
 ---
 # <a name="mlnet-content-guide"></a>Guida ai contenuti su ML.NET
 
@@ -31,7 +31,7 @@ L'esercitazione [Analizzare il sentiment usando un modello di classificazione bi
 
 [Classificare i problemi di GitHub usando un modello di classificazione multiclasse](tutorials/github-issue-classification.md) illustra come creare un'app che determina l'etichetta Area per un problema di GitHub.
 
-L'esercitazione [Prevedere la tariffa di un taxi usando un modello di regressione](tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.
+L'esercitazione [Prevedere i prezzi usando un modello di regressione](tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.
 
 L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris. 
 

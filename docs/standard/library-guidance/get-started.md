@@ -4,12 +4,12 @@ description: Introduzione alla compilazione di librerie .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145725"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204645"
 ---
 # <a name="get-started"></a>Introduzione
 
@@ -29,9 +29,9 @@ Il modo migliore per creare pacchetti NuGet per le librerie .NET open source, in
 
 NuGet semplifica l'uso di pacchetti esistenti quando si esegue la compilazione di una libreria .NET. Vengono fornite informazioni sulle cause comuni dei problemi relativi alle dipendenze NuGet e su come evitare che si verifichino.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Collegamento a un'origine](./sourcelink.md)
 
-SourceLink è uno strumento straordinario che consente agli utenti della libreria .NET di esaminare il codice sorgente durante il debug. Questo articolo fornisce una panoramica di SourceLink e spiega perché è consigliabile usare questo strumento.
+Il collegamento all'origine è uno strumento straordinario che consente agli utenti della libreria .NET di esaminare il codice sorgente durante il debug. Questo articolo fornisce una panoramica del collegamento all'origine e spiega perché è consigliabile usare questo strumento.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Pubblicazione](./publish-nuget-package.md)
 

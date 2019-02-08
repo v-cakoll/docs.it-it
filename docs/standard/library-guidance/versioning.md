@@ -4,12 +4,12 @@ description: Procedure consigliate per il controllo delle versioni delle libreri
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169599"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204743"
 ---
 # <a name="versioning"></a>Controllo delle versioni
 
@@ -87,7 +87,7 @@ La versione del file di assembly viene usata per visualizzare una versione di fi
 
 ### <a name="assembly-informational-version"></a>Versione informativa dell'assembly
 
-La versione informativa dell'assembly viene usata per registrare informazioni aggiuntive sulla versione e non ha alcun effetto sul comportamento in fase di esecuzione. L'impostazione di questa versione è facoltativa. Se si usa SourceLink, questa versione verrà impostata in fase di compilazione con la versione del pacchetto NuGet più una versione del controllo del codice sorgente. Ad esempio, `1.0.0-beta1+204ff0a` include l'hash commit del codice sorgente da cui è stato compilato l'assembly. Per altre informazioni, vedere [SourceLink](./sourcelink.md).
+La versione informativa dell'assembly viene usata per registrare informazioni aggiuntive sulla versione e non ha alcun effetto sul comportamento in fase di esecuzione. L'impostazione di questa versione è facoltativa. Se si usa un collegamento all'origine, questa versione verrà impostata in fase di compilazione con la versione del pacchetto NuGet più una versione del controllo del codice sorgente. Ad esempio, `1.0.0-beta1+204ff0a` include l'hash commit del codice sorgente da cui è stato compilato l'assembly. Per altre informazioni, vedere [Collegamento all'origine](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
