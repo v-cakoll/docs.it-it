@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748638"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904369"
 ---
 # <a name="working-with-data-definition-language"></a>Utilizzo di Data Definition Language
 Inizia con la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versione 4, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta il linguaggio di definizione dei dati (DDL). Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).  
@@ -40,11 +40,11 @@ Inizia con la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
 2.  Aggiungere un modello esistente all'applicazione.  
   
-    1.  Aggiungere un modello vuoto denominato `SchoolModel`. Per creare un modello vuoto, vedere la [procedura: creare un File con estensione edmx nuovo](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) argomento.  
+    1.  Aggiungere un modello vuoto denominato `SchoolModel`. Per creare un modello vuoto, vedere il [come: Creare un File con estensione edmx nuovo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) argomento.  
   
      Il file SchoolModel.edmx verrà aggiunto al progetto.  
   
-    1.  Copiare la risorsa di archiviazione, concettuale e il mapping del contenuto per il modello School dal [modello School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) argomento.  
+    1.  Copiare la risorsa di archiviazione, concettuale e il mapping del contenuto per il modello School dal [modello School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) argomento.  
   
     2.  Aprire il file SchoolModel.edmx e incollare il contenuto all'interno dei tag `edmx:Runtime`.  
   

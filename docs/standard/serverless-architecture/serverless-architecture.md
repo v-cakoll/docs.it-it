@@ -4,16 +4,16 @@ description: Esplorazione delle varie architetture e le app supportate da archit
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150303"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904787"
 ---
 # <a name="serverless-architecture"></a>Architettura senza server
 
-Esistono molti approcci per l'utilizzo di architetture senza server. In questo capitolo illustra esempi di architetture comuni che si integrano senza server. Vengono inoltre descritti i problemi che possono comportare problemi aggiuntivi o richiedono attenzione aggiuntiva durante l'implementazione senza server. Infine, alcuni esempi di progettazione vengono forniti che illustrano diversi casi d'uso senza server.
+Esistono molti approcci per l'utilizzo [senza server](http://azure.com/serverless) architetture. In questo capitolo illustra esempi di architetture comuni che si integrano senza server. Vengono inoltre descritti i problemi che possono comportare problemi aggiuntivi o richiedono attenzione aggiuntiva durante l'implementazione senza server. Infine, alcuni esempi di progettazione vengono forniti che illustrano diversi casi d'uso senza server.
 
 Host senza server usano spesso un esistente basato su contenitori o un livello PaaS per gestire le istanze senza server. Ad esempio, funzioni di Azure si basa sul [servizio App di Azure](https://docs.microsoft.com/azure/app-service/). Il servizio App consente di aumentare le istanze e gestire il runtime che esegue il codice di funzioni di Azure. Per le funzioni basate su Windows, viene eseguito l'host come PaaS e delle scale out il runtime di .NET. Per le funzioni basate su Linux, l'host si basa su contenitori.
 

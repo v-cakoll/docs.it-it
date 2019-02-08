@@ -2,12 +2,12 @@
 title: Metodi LINQ supportati e non supportati (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a1a5f9f1789d8c0446a2816c2c07f61b6a373869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710378"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904280"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metodi LINQ supportati e non supportati (LINQ to Entities)
 Contenuto della sezione vengono fornite informazioni sugli operatori di query standard LINQ (Language Integrated Query) supportati o non supportati nelle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Numerosi operatori di query standard LINQ dispongono di una versione di overload che accetta un argomento integer. L'argomento integer corrisponde a un indice in base zero nella sequenza di cui si sta usando, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. Se non specificato diversamente, queste versioni di overload degli operatori di query standard LINQ non sono supportate e quando si tenta di usarle viene generata un'eccezione.  
@@ -145,7 +145,7 @@ Contenuto della sezione vengono fornite informazioni sugli operatori di query st
 |<xref:System.Linq.Queryable.Sum%2A>|Non supportato|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Metodi di tipo  
- Gli operatori di query standard LINQ che gestiscono i test e la conversione dei tipi CLR sono supportati in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Solo i tipi CLR mappati ai tipi del modello concettuale sono supportati in LINQ to Entities. Per un elenco di tipi del modello concettuale, vedere [tipi di modello concettuale (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Nella tabella seguente sono elencati i metodi di tipo supportati e non supportati.  
+ Gli operatori di query standard LINQ che gestiscono la conversione di tipi CLR e ai test sono supportati in Entity Framework. Solo i tipi CLR mappati ai tipi del modello concettuale sono supportati in LINQ to Entities. Per un elenco di tipi del modello concettuale, vedere [tipi di modello concettuale (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Nella tabella seguente sono elencati i metodi di tipo supportati e non supportati.  
   
 |Metodo|Supporto|Firma della funzione Visual Basic|Firma del metodo C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

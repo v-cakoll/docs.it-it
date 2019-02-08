@@ -2,15 +2,15 @@
 title: Esempi di query basate sul metodo (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 0e904d975860dad6bf11344435b249c3bad84b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f2b319d313706fa78e52cfd9aff1361455a441e
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632855"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903936"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Esempi di query basate sul metodo (LINQ to DataSet)
-Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle query basate su metodo in cui vengono usati gli operatori di query standard. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando i `FillDataSet` metodo, che viene specificato in [il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per altre informazioni, vedere [panoramica degli operatori Query Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Questa sezione fornisce LINQ to DataSet esempi nella sintassi delle query basate sul metodo che utilizzano gli operatori query standard di programmazione. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando i `FillDataSet` metodo, che viene specificato in [il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per altre informazioni, vedere [panoramica degli operatori Query Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oppure [panoramica degli operatori di Query Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Proiezione](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

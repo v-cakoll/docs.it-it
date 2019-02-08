@@ -2,15 +2,15 @@
 title: Operatori di query standard in query di LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: d055898a78d57da4dfc276b24d643e38046abd0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577494"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904651"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operatori di query standard in query di LINQ to Entities
-In una query è necessario specificare le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. LINQ fornisce un set di metodi di query standard che è possibile usare in una query. La maggior parte di questi metodi agisce sulle sequenze; In questo contesto, una sequenza è un oggetto il cui tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Le funzionalità di query degli operatori di query standard includono filtro, proiezione, aggregazione, ordinamento, raggruppamento, paging e altro ancora. Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave, in modo da poter essere chiamati usando la sintassi delle espressioni di query. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente basata su metodo. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione. Per un elenco degli operatori query standard che hanno clausole di espressione di query equivalenti, vedere [panoramica degli operatori Query Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+In una query è necessario specificare le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. LINQ fornisce un set di metodi di query standard che è possibile usare in una query. La maggior parte di questi metodi agisce sulle sequenze; In questo contesto, una sequenza è un oggetto il cui tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Le funzionalità di query degli operatori di query standard includono filtro, proiezione, aggregazione, ordinamento, raggruppamento, paging e altro ancora. Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave, in modo da poter essere chiamati usando la sintassi delle espressioni di query. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente basata su metodo. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione. Per un elenco degli operatori query standard che hanno clausole di espressione di query equivalenti, vedere [panoramica degli operatori Query Standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Non tutti gli operatori di query standard sono supportati nelle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per altre informazioni, vedere [supportati e i metodi LINQ non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). In questo argomento vengono fornite informazioni sugli operatori di query standard specifici di [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Per altre informazioni sui problemi noti [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query, vedere [problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ In una query è necessario specificare le informazioni che si desidera recuperar
 |`Sum`|Restituisce null.|Restituisce null.|Restituisce la somma dei valori non null in una sequenza.|Calcola la somma di una sequenza di valori numerici.|  
   
 ## <a name="type-methods"></a>Metodi di tipo  
- I due metodi LINQ per il test e la conversione dei tipi sono entrambi supportati nel contesto di [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Questo significa che i soli tipi supportati sono quelli mappati al tipo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] appropriato. Per un elenco di questi tipi, vedere [tipi di modello concettuale (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). I metodi di tipo sono `Convert` e `OfType`.  
+ I due metodi LINQ che gestiscono con conversione del tipo e il test sono entrambi supportati nel contesto di Entity Framework. Ciò significa che gli unici tipi supportati sono i tipi che eseguono il mapping al tipo appropriato di Entity Framework. Per un elenco di questi tipi, vedere [tipi di modello concettuale (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). I metodi di tipo sono `Convert` e `OfType`.  
   
  `OfType` è supportato per i tipi di entità. `Convert` è supportato per i tipi primitivi del modello concettuale.  Sono supportati anche i metodi `is` e `as` C#.  
   
@@ -78,4 +78,4 @@ In una query è necessario specificare le informazioni che si desidera recuperar
   
 ## <a name="see-also"></a>Vedere anche
 - [Metodi LINQ supportati e non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Cenni preliminari sugli operatori di query standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Cenni preliminari sugli operatori di query standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

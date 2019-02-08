@@ -2,15 +2,15 @@
 title: Esempi di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 8e6cce8ba79cad42ade6ac373631094f9e2d4e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634532"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903803"
 ---
 # <a name="linq-to-dataset-examples"></a>Esempi di LINQ to DataSet
-Questa sezione vengono fornite [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] esempi che utilizzano gli operatori query standard di programmazione. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando i `FillDataSet` metodo, che viene specificato in [il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per altre informazioni, vedere [panoramica degli operatori Query Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Questa sezione vengono fornite LINQ agli esempi di programmazione di set di dati che utilizzano gli operatori query standard. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando i `FillDataSet` metodo, che viene specificato in [il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per altre informazioni, vedere [panoramica degli operatori Query Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oppure [panoramica degli operatori di Query Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Esempi di espressione di query](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  

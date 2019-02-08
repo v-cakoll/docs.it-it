@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: c12fdd70b7174d6e6fbae10d5132c9e3e2a7eb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e4b30c5d4d1cd5703ff6ec15a1c3fe32e41f42a
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733376"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903742"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Esempi di sintassi di espressione di query: Proiezione
-Gli esempi in questo argomento illustrano come usare il `Select` metodo e il `From … From …` parole chiave per eseguire una query il [modello Sales di AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando la sintassi di espressione di query. `From … From …` è l'equivalente basato sulla query del metodo `SelectMany`. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+Gli esempi in questo argomento illustrano come usare il `Select` metodo e il `From … From …` parole chiave per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. `From … From …` è l'equivalente basato sulla query del metodo `SelectMany`. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
   

@@ -2,12 +2,12 @@
 title: Riferimenti
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583063"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904709"
 ---
 # <a name="reference"></a>Riferimenti
 Questa sezione descrive informazioni di riferimento per gli sviluppatori che usano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -40,8 +40,9 @@ Questa sezione descrive informazioni di riferimento per gli sviluppatori che usa
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Viene fornito un portale per l'accesso ad argomenti relativi a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Viene fornito un portale per l'accesso ad argomenti relativi a [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Fornisce i portali per [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] argomenti.  
   
  [Panoramica della tecnologia LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Viene descritto come il controllo <xref:System.Web.UI.WebControls.LinqDataSource> consenta di esporre [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] agli sviluppatori Web tramite l'architettura di controllo origine dati di [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

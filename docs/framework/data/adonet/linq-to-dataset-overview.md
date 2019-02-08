@@ -2,12 +2,12 @@
 title: Cenni preliminari su LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: a1f01c95513eee1de65343e9f574b8f7df68e0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0f95e4118ec688ade628152b28537433d24d5d2
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612557"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903642"
 ---
 # <a name="linq-to-dataset-overview"></a>Cenni preliminari su LINQ to DataSet
 <xref:System.Data.DataSet> è uno dei componenti più utilizzati di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Rappresenta un elemento chiave del modello di programmazione disconnesso su cui si basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e consente di memorizzare in modo esplicito nella cache dati di origini dati diverse. Per il livello della presentazione <xref:System.Data.DataSet> è strettamente integrato nei controlli GUI per il data binding. Per il livello intermedio fornisce una cache che mantiene la forma relazionale dei dati e include servizi di navigazione all'interno della gerarchia e di query semplici e rapidi. Una tecnica comune usata per ridurre il numero di richieste in un database consiste nell'usare il <xref:System.Data.DataSet> per la memorizzazione nella cache nel livello intermedio. Ad esempio, prendere in considerazione un basate sui dati [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web. Spesso, una parte significativa dei dati dell'applicazione non viene modificata frequentemente ed è comune a più sessioni o utenti. Tali dati possono essere mantenuti in memoria sul server Web, in modo da ridurre il numero di richieste al database e velocizzare le interazioni utente. Un altro aspetto utile del <xref:System.Data.DataSet> consiste nella possibilità di un'applicazione di portare i subset di dati da uno o più origini dati nello spazio dell'applicazione. L'applicazione può quindi modificare i dati in memoria, mantenendo comunque la propria forma relazionale.  
@@ -30,5 +30,6 @@ ms.locfileid: "54612557"
   
 ## <a name="see-also"></a>Vedere anche
 - [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Language-Integrated Query (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
