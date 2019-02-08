@@ -1,13 +1,13 @@
 ---
 title: Opzioni di valori
 description: Scopri la F# tipo di opzione di valore, ovvero una versione di uno struct di tipo di opzione.
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613427"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828033"
 ---
 # <a name="value-options"></a>Opzioni di valori
 
@@ -16,7 +16,7 @@ Il tipo di opzione del valore in F# viene utilizzato per contengono i seguenti d
 1. Uno scenario è appropriato per un [ F# opzione](options.md).
 2. Usando un tipo struct offre un miglioramento delle prestazioni nel proprio scenario.
 
-Non tutti gli scenari sensibili alle prestazioni sono "risolto" utilizzo di struct. È necessario considerare il costo aggiuntivo di copia quando vengono utilizzati invece i tipi di riferimento. Tuttavia, grande F# programmi comunemente creare molti tipi facoltativi che passano attraverso i percorsi critici, perché struct in alcuni casi possono produrre migliori prestazioni complessive in base alla durata di un programma.
+Non tutti gli scenari sensibili alle prestazioni sono "risolto" utilizzo di struct. È necessario considerare il costo aggiuntivo di copia quando vengono utilizzati invece i tipi di riferimento. Tuttavia, grande F# programmi è comunemente creare un'istanza di molti tipi facoltativi che passano attraverso i percorsi critici e in questi casi, gli struct possono producono spesso migliori prestazioni complessive in base alla durata di un programma.
 
 ## <a name="definition"></a>Definizione
 

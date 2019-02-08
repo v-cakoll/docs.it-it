@@ -2,12 +2,12 @@
 title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680507"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825511"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 
@@ -16,7 +16,7 @@ Visual Studio supporta il debug di [!INCLUDE[linq_dataset](../../../../includes/
 ## <a name="viewing-results"></a>Visualizzazione dei risultati  
  È possibile visualizzare il risultato di un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] istruzione usando i suggerimenti dati, finestra Espressioni di controllo e la finestra di dialogo Controllo immediato. Quando si usa una finestra di origine, passare con il puntatore su una query nella finestra di origine per visualizzare un suggerimento dati. È possibile copiare una variabile [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e incollarla nella finestra Espressioni di controllo o nella finestra di dialogo Controllo immediato. In [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] le query non vengono valutate al momento della creazione o della dichiarazione, ma solo quando vengono eseguite. Questa operazione viene definita *un'esecuzione posticipata*. La variabile della query non dispone pertanto di un valore fino a quando non viene valutata. Per altre informazioni, vedere [le query in LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
   
- Per visualizzare i risultati della query, è necessario che la query venga valutata dal debugger. Questa valutazione implicita si verifica quando si visualizza un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] risultato della query nel debugger e ha alcuni effetti, è necessario considerare. La singola valutazione della query e l'espansione del nodo dei risultati richiedono tempo. La valutazione ripetuta di alcune query può comportare una notevole riduzione delle prestazioni. La valutazione di una query può inoltre avere come effetto collaterale la modifica del valore dei dati o dello stato del programma. Non tutte le query hanno effetti collaterali. Per determinare la possibilità di valutare una query in modo sicuro, senza effetti collaterali, è necessario conoscere il codice con cui la query viene implementata. Per altre informazioni, vedere [effetti collaterali ed espressioni](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).  
+ Per visualizzare i risultati della query, è necessario che la query venga valutata dal debugger. Questa valutazione implicita si verifica quando si visualizza un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] risultato della query nel debugger e ha alcuni effetti, è necessario considerare. La singola valutazione della query e l'espansione del nodo dei risultati richiedono tempo. La valutazione ripetuta di alcune query può comportare una notevole riduzione delle prestazioni. La valutazione di una query può inoltre avere come effetto collaterale la modifica del valore dei dati o dello stato del programma. Non tutte le query hanno effetti collaterali. Per determinare la possibilità di valutare una query in modo sicuro, senza effetti collaterali, è necessario conoscere il codice con cui la query viene implementata. Per altre informazioni, vedere [effetti collaterali ed espressioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Modifica e continuazione  
  Modifica e continuazione non supporta le modifiche apportate a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] le query. Se aggiungere, rimuovere o modificare un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene visualizzata una finestra di dialogo di istruzione durante una sessione di debug, indicante che la modifica non è supportata da modifica e continuazione. A questo punto è possibile annullare la modifica oppure interrompere la sessione di debug per avviare una nuova sessione con il codice modificato.  

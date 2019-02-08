@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 8069ff646a124c6922358dda57de3e598ef62262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 774a6d3476c8e3b310ffe67bb56fc5a4d5c45bb0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692886"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826876"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -176,7 +176,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Uso del modello di provider di base e la nuova funzionalità asincrona  
  Potrebbe essere necessario creare uno strumento in grado di connettersi al database e di eseguire query. È possibile usare il modello di provider di base e la nuova funzionalità asincrona  
   
- È necessario abilitare il servizio Microsoft Distributed Transaction Controller (MSDTC) sul server per usare transazioni distribuite. Per informazioni su come abilitare MSDTC, vedere [come abilitare MSDTC su un Server Web](https://msdn.microsoft.com/library/dd327979.aspx).  
+ È necessario abilitare il servizio Microsoft Distributed Transaction Controller (MSDTC) sul server per usare transazioni distribuite. Per informazioni su come abilitare MSDTC, vedere [come abilitare MSDTC su un Server Web](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).  
   
 ```csharp
 using System;  

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639952"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825953"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Metodo ISOSDacInterface::GetMethodDescData
 
-Ottiene i dati per il dato [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Ottiene i dati per il puntatore MethodDesc specificato.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ Ottiene i dati per il dato [MethodDesc](../../../../docs/framework/unmanaged-api
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in] L'indirizzo IP del metodo.
 
-`data` [out] I dati associati con la MethodDesc come restituito dall'API interne. La struttura deve almeno 168 byte.
+`data` [out] I dati associati con la MethodDesc come restituito dall'API interne.
 
 `cRevertedRejitVersions` [out] Il numero di versioni rejit ripristinato.
 
-`rgRevertedRejitData` [out] I dati associati con le versioni rejit ripristinato come restituito dall'API interne. La struttura deve almeno 24 byte.
+`rgRevertedRejitData` [out] I dati associati con le versioni rejit ripristinato come restituito dall'API interne.
 
 `pcNeededRevertedRejitData` [out] Il numero di byte necessari per archiviare i dati associati con le versioni ReJit ripristinate.
 
 ## <a name="remarks"></a>Note
 
-Il metodo specificato fa parte di `ISOSDacInterface` interfaccia e corrisponde al 20 ° slot della tabella di metodo virtuale. Anche il `CLRDATA_ADDRESS` sono valori integer senza segno a 64 bit.
+Il metodo specificato fa parte di `ISOSDacInterface` interfaccia e corrisponde al 20 ° slot della tabella di metodo virtuale. Per poter utilizzarli [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) deve essere definito come un intero senza segno a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 

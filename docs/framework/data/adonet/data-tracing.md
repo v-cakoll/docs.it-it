@@ -2,12 +2,12 @@
 title: Traccia dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1191396c8e5a68d613c403d260d15d26fa929f
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721890"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826577"
 ---
 # <a name="data-tracing-in-adonet"></a>Traccia dati in ADO.NET
 ADO.NET dotato di funzionalità di analisi di dati incorporati che è supportata dal provider di dati .NET per SQL Server, Oracle, OLE DB e ODBC, nonché ADO.NET <xref:System.Data.DataSet>e i protocolli di rete SQL Server.  
@@ -26,10 +26,10 @@ ADO.NET dotato di funzionalità di analisi di dati incorporati che è supportata
   
  Per supportare tecnologie di traccia diverse, questa funzionalità è estensibile, pertanto uno sviluppatore può tracciare un problema a qualsiasi livello dello stack dell'applicazione. Sebbene la funzionalità di analisi non sia esclusiva di ADO.NET, i provider Microsoft usano l'analisi generalizzata e le API della strumentazione.  
   
- Per altre informazioni sull'impostazione e configurazione dell'analisi gestita in ADO.NET, vedere [Tracing Data Access](https://msdn.microsoft.com/library/hh880086.aspx).  
+ Per altre informazioni sull'impostazione e configurazione dell'analisi gestita in ADO.NET, vedere [Tracing Data Access](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni diagnostiche nel registro di eventi esteso  
- Nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server, accesso ai dati traccia ([traccia di accesso ai dati](https://msdn.microsoft.com/library/hh880086.aspx)) è stata aggiornata per semplificare la più facile correlare gli eventi client con informazioni di diagnostica, ad esempio gli errori di connessione dal connettività del server circolare del buffer e l'applicazione informazioni sulle prestazioni nel registro eventi esteso. Per informazioni sulla lettura del registro eventi esteso, vedere [visualizzare i dati della sessione eventi](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ Nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server, accesso ai dati traccia ([traccia di accesso ai dati](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) è stata aggiornata per semplificare la più facile correlare gli eventi client con informazioni di diagnostica, ad esempio gli errori di connessione dal connettività del server circolare del buffer e l'applicazione informazioni sulle prestazioni nel registro eventi esteso. Per informazioni sulla lettura del registro eventi esteso, vedere [visualizzare i dati della sessione eventi](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).  
   
  Per le operazioni di connessione, ADO.NET invierà un ID della connessione client. Se la connessione non riesce, è possibile accedere al buffer circolare ([risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare della connettività](https://go.microsoft.com/fwlink/?LinkId=207752)) e individuare il `ClientConnectionID` campo e ottenere informazioni diagnostiche Errore di connessione. Gli ID della connessione client vengono registrati nel buffer circolare solo se si verifica un errore. Se la connessione non riesce prima di inviare il pacchetto di preaccesso, non verrà generato un ID di connessione client. L'ID di connessione client è un GUID a 16 byte. È anche possibile trovare l'ID di connessione client nell'output di destinazione di eventi estesi, se l'azione `client_connection_id` viene aggiunta agli eventi in una sessione di eventi estesi. È possibile abilitare l'analisi di accesso ai dati ed eseguire di nuovo il comando di connessione e osservare il campo `ClientConnectionID` nell'analisi di accesso ai dati, se si necessita di ulteriore assistenza per la diagnostica dei driver del client.  
   

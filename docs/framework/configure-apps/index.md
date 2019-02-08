@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 30e9e768ceef3e75d383232fcca1ea01c60199c6
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083769"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826434"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -52,7 +52,7 @@ ms.locfileid: "55083769"
 ```  
   
 ## <a name="machine-configuration-files"></a>File di configurazione del computer  
- Il file di configurazione del computer, Machine.config, contiene le impostazioni che vengono applicate al computer. Questo file si trova nella directory %*percorso installazione runtime*%\Config. Il file Machine.config contiene le impostazioni di configurazione per l'associazione di assembly del computer, [canali remoti](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) predefiniti e ASP.NET.  
+ Il file di configurazione del computer, Machine.config, contiene le impostazioni che vengono applicate al computer. Questo file si trova nella directory %*percorso installazione runtime*%\Config. Il file Machine.config contiene le impostazioni di configurazione per l'associazione di assembly del computer, [canali remoti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) predefiniti e ASP.NET.  
   
  Il sistema di configurazione cerca prima di tutto nel file di configurazione del computer l'[**elemento \<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/index.md) e altre sezioni di configurazione che possono essere definite dallo sviluppatore. Successivamente analizza il file di configurazione dell'applicazione. Per gestire al meglio la configurazione del computer, è consigliabile definire queste impostazioni nel file di configurazione dell'applicazione. La definizione delle impostazioni nel file di configurazione del computer semplifica tuttavia la manutenzione del sistema. Se ad esempio è disponibile un componente di terze parti usato da entrambe le applicazioni server e client, risulta più semplice definire le impostazioni relative a tale componente in un solo file di configurazione. In questo caso, è appropriato definire le impostazioni nel file di configurazione del computer, senza definire le stesse impostazioni in due file diversi.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "55083769"
   
 -   Applicazione ospitata in ASP.NET.  
   
-     Per altre informazioni sui file di configurazione ASP.NET, vedere [Impostazioni di configurazione di ASP.NET](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100)).  
+     Per altre informazioni sui file di configurazione ASP.NET, vedere [impostazioni di configurazione ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 -   Applicazione ospitata in Internet Explorer.  
   
@@ -123,9 +123,7 @@ ms.locfileid: "55083769"
 - [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Specifica della posizione di un assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [Registrazione di oggetti remoti tramite file di configurazione](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)
-- [Amministrazione di siti Web ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
-- [NIB: Gestione di criteri di sicurezza](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)
+- [Amministrazione di siti Web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Gestione di criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Oggetti remoti](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

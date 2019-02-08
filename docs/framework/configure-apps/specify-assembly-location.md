@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258990"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825407"
 ---
 # <a name="specifying-an-assemblys-location"></a>Specifica della posizione di un assembly
 Esistono due modi per specificare la posizione dell'assembly:  
@@ -20,7 +20,7 @@ Esistono due modi per specificare la posizione dell'assembly:
   
 -   Usando il [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- È anche possibile usare la [strumento di .NET Framework Configuration (Mscorcfg. msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o specificare i percorsi per common language runtime verificare la presenza di assembly.  
+ È anche possibile usare la [strumento di .NET Framework Configuration (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) per specificare i percorsi degli assembly o specificare i percorsi per common language runtime verificare la presenza di assembly.  
   
 ## <a name="using-the-codebase-element"></a>Uso di \<codeBase > elemento  
  È possibile usare la  **\<codeBase >** elemento solo in computer configuration o autore del file dei criteri che anche il reindirizzamento alla versione dell'assembly. Se il runtime determina la versione di assembly da usare, si applica l'impostazione di base di codice dal file che determina la versione. Se non viene indicato alcun codice di base, il runtime esegue il probe per l'assembly in modo normale. Per informazioni dettagliate, vedere [modo in cui il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -69,4 +69,4 @@ Esistono due modi per specificare la posizione dell'assembly:
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurazione delle app .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configurazione delle App usando i file di configurazione](index.md)
