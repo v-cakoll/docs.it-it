@@ -2,14 +2,14 @@
 title: Convertire librerie per .NET Core
 description: Informazioni su come convertire progetti di libreria da .NET Framework a .NET Core.
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/7/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169682"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904692"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Convertire librerie .NET Framework a .NET Core
 
@@ -40,38 +40,6 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 
 [Portabilità in .NET Core - Analisi delle dipendenze di terze parti](~/docs/core/porting/third-party-deps.md)   
 Questo argomento illustra la portabilità delle dipendenze di terze parti e le operazioni da eseguire quando una dipendenza per un pacchetto NuGet non può essere eseguita su .NET Core.
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologie di .NET Framework non disponibili in .NET Core
-
-Varie tecnologie disponibili per le librerie .NET Framework non sono disponibili per l'uso con .NET Core, ad esempio AppDomain, servizi remoti, sicurezza dall'accesso di codice e trasparenza della sicurezza. Se le librerie si basano su una o più di queste tecnologie, prendere in considerazione gli approcci alternativi descritti di seguito. Per altre informazioni sulla compatibilità delle API, il team CoreFX gestisce un [elenco aggiornato delle modifiche di comportamento, dei problemi di compatibilità e delle API deprecate/legacy](https://github.com/dotnet/corefx/wiki/ApiCompat) su GitHub.
-
-Il fatto che un'API o una tecnologia non sia attualmente implementata non implica che sia intenzionalmente non supportata. Registrare un problema nella sezione dei [problemi del repository dotnet/corefx](https://github.com/dotnet/corefx/issues) su GitHub per richiedere API e tecnologie specifiche. [Le richieste relative alla portabilità nei problemi](https://github.com/dotnet/corefx/labels/port-to-core) sono contrassegnate con l'etichetta `port-to-core`.
-
-### <a name="appdomains"></a>AppDomain
-
-Gli AppDomain consentono di isolare le app una dall'altra. Per gli AppDomain è richiesto il supporto di runtime e sono in genere alquanto costosi. Non sono implementati in .NET Core. Non è prevista l'aggiunta di questa funzionalità in futuro. Per l'isolamento del codice, è consigliabile separare i processi o usare i contenitori in alternativa. Per il caricamento dinamico di assembly è consigliabile usare la nuova classe <xref:System.Runtime.Loader.AssemblyLoadContext>.
-
-Per semplificare la migrazione di codice da .NET Framework, parte della superficie dell'API <xref:System.AppDomain> è stata esposta in .NET Core. Alcune parti dell'API funzionano normalmente, (ad esempio <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alcuni membri non eseguono alcuna operazione (ad esempio, <xref:System.AppDomain.SetCachePath%2A>) e alcuni generano <xref:System.PlatformNotSupportedException> (ad esempio, <xref:System.AppDomain.CreateDomain%2A>). Controllare i tipi usati in base al [codice sorgente di riferimento `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) nel [repository di GitHub dotnet/corefx](https://github.com/dotnet/corefx) assicurandosi di selezionare il ramo corrispondente alla versione implementata.
-
-### <a name="remoting"></a>Servizi remoti
-
-L'architettura dei servizi remoti di .NET è stata identificata come problematica. Questi servizi vengono usati per le comunicazioni tra AppDomain, non più supportate. Per i servizi remoti è richiesto anche il supporto del runtime, costoso da gestire. Per questi motivi, i servizi remoti di .NET non sono supportati in .NET Core e non è prevista l'aggiunta del supporto in futuro.
-
-Per le comunicazioni tra processi, è possibile usare i meccanismi di comunicazione interprocesso (IPC, Inter-Process Communication) in alternativa ai servizi remoti, come la classe <xref:System.IO.Pipes> o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
-
-Per le comunicazioni tra computer, usare una soluzione basata su rete in alternativa. Preferibilmente, usare un protocollo di testo normale con basso overhead, come HTTP. Il [server Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ovvero il server Web usato da ASP.NET Core, rappresenta un'opzione praticabile in questo caso. Valutare anche l'uso di <xref:System.Net.Sockets> per gli scenari basati sulla rete per le comunicazioni tra computer. Per informazioni su altre opzioni, vedere [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Progetti di sviluppo open source .NET: Messaggistica).
-
-### <a name="code-access-security-cas"></a>Sicurezza per l'accesso al codice (CAS, Code Access Security)
-
-Il sandboxing, ovvero la funzionalità che consente di basarsi sul runtime o sul framework per vincolare le risorse usate o eseguite da un'applicazione gestita o una libreria, [non è supportato in .NET Framework](~/docs/framework/misc/code-access-security.md) e pertanto non è supportato neanche in .NET Core. Esistono troppi casi in .NET Framework e nel runtime in cui si verifica un'elevazione dei privilegi per continuare a considerare la sicurezza dall'accesso di codice come limite di sicurezza. La sicurezza dall'accesso di codice, inoltre, rende l'implementazione più complicata e spesso ha implicazioni a livello di prestazioni della correttezza per le applicazioni che non intendono usare questo meccanismo di sicurezza.
-
-Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per eseguire i processi con il set di privilegi più ridotto.
-
-### <a name="security-transparency"></a>Trasparenza della sicurezza
-
-Analogamente alla sicurezza dall'accesso di codice, la trasparenza della sicurezza consente la separazione del codice in modalità sandbox dal codice critico per la sicurezza in modalità dichiarativa, ma [non è più supportata come limite di sicurezza](~/docs/framework/misc/security-transparent-code.md). Questa funzionalità è ampiamente usata da Silverlight. 
-
-Usare i limiti di sicurezza forniti dal sistema operativo, ad esempio la virtualizzazione, i contenitori o gli account utente, per eseguire i processi con il set di privilegi più ridotto.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Ridestinazione del codice .NET Framework a .NET Framework 4.7.2
 
@@ -163,3 +131,6 @@ In definitiva, l'entità del lavoro di conversione dipende in larga misura dal m
 1. Selezionare il successivo livello di codice da convertire e ripetere i passaggi precedenti.
 
 Iniziando con la base della libreria e spostandosi metodicamente dalla base testando ogni livello nel modo appropriato, la conversione diventa un processo sistematico in cui i problemi vengono isolati in un livello del codice alla volta.
+
+>[!div class="step-by-step"]
+>[avanti](project-structure.md)

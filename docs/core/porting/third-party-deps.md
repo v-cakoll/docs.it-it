@@ -2,14 +2,14 @@
 title: Analizzare le dipendenze per convertire il codice per .NET Core
 description: Informazioni su come analizzare le dipendenze esterne per convertire il progetto da .NET Framework a .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415221"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904340"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizzare le dipendenze per convertire il codice per .NET Core
 
@@ -93,13 +93,13 @@ Per eliminare l'avviso modificando il file di progetto, trovare la voce `Package
 
 Per altre informazioni sull'eliminazione degli avvisi del compilatore in Visual Studio, vedere [Non visualizzare avvisi per i pacchetti NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
-### <a name="port-your-packages-to-packagereference"></a>Convertire i pacchetti a `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>Convertire i pacchetti a `PackageReference`
 
 .NET Core usa [PackageReference](/nuget/consume-packages/package-references-in-project-files) per specificare le dipendenze dei pacchetti. Se si usa [packages.config](/nuget/reference/packages-config) per specificare i pacchetti, sarà necessario eseguire la conversione a `PackageReference`.
 
 Per altre informazioni, vedere [Eseguire la migrazione da packages.config a PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Operazioni da eseguire quando una dipendenza del pacchetto NuGet non viene eseguita in .NET Core
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Operazioni da eseguire quando una dipendenza del pacchetto NuGet non viene eseguita in .NET Core
 
 Se un pacchetto NuGet importante non può essere eseguito in .NET Core, è possibile provare varie soluzioni:
 
@@ -119,6 +119,5 @@ Il team .NET è interessato a sapere quali sono le librerie più importanti da s
 
 Nel file system può essere presente una dipendenza diversa da un pacchetto NuGet, ad esempio una DLL. L'unico metodo per determinare la portabilità di tale dipendenza è l'esecuzione dello strumento [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport). Lo strumento può analizzare gli assembly che supportano .NET Framework e identificare le API non trasferibili ad altre piattaforme .NET come .NET Core. È possibile eseguire lo strumento come applicazione console o come [estensione di Visual Studio](../../standard/analyzers/portability-analyzer.md).
 
-## <a name="next-steps"></a>Passaggi successivi
-
-Se si esegue il trasferimento di una libreria, consultare [Porting your Libraries](libraries.md) (Portabilità delle librerie).
+>[!div class="step-by-step"]
+>[avanti](libraries.md)
