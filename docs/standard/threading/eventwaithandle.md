@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d410470a6722901f52e80be1b45527abbb464f9f
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479828"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758625"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La classe <xref:System.Threading.EventWaitHandle> consente la comunicazione tra i thread inviando e attendendo i segnali. Gli handle di attesa degli eventi (detti anche semplicemente eventi) sono handle di attesa che possono essere segnalati per rilasciare uno o più thread in attesa. Un handle di attesa di un evento, dopo essere stato segnalato, viene reimpostato manualmente o automaticamente. La classe <xref:System.Threading.EventWaitHandle> può rappresentare un handle di attesa di un evento locale (evento locale) o un handle di attesa di un evento di sistema denominato (evento denominato o evento di sistema, visibile a tutti i processi).  
@@ -68,4 +68,3 @@ La classe <xref:System.Threading.EventWaitHandle> consente la comunicazione tra 
 - <xref:System.Threading.WaitHandle>
 - <xref:System.Threading.AutoResetEvent>
 - <xref:System.Threading.ManualResetEvent>
-- [EventWaitHandle, CountdownEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

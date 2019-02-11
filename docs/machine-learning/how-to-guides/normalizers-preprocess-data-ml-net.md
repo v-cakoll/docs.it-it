@@ -1,14 +1,14 @@
 ---
 title: Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dei dati - ML.NET
 description: Informazioni su come usare i normalizzatori per pre-elaborare i dati di training da usare per la creazione del modello di Machine Learning, il training e l'assegnazione dei punteggi con ML.NET
-ms.date: 11/07/2018
+ms.date: 02/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c8b959904705e996c97bdcd8b3444e754d14d046
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4311307f5410a96bb4a30fcedd88bc43afd25c12
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148834"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738578"
 ---
 # <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a>Pre-elaborare i dati di training con normalizzatori da usare nell'elaborazione dei dati - ML.NET
 
@@ -29,17 +29,19 @@ Di seguito è riportato un frammento di codice che illustra la normalizzazione n
 var mlContext = new MLContext();
 
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
-{
-    Column = new[] {
+var reader = mlContext.Data.CreateTextReader(
+    columns: new TextLoader.Column[]
+    {
         // The four features of the Iris dataset will be grouped together as one Features column.
-        new TextLoader.Column("Features", DataKind.R4, 0, 3),
+        new TextLoader.Column("Features",DataKind.R4,0,3),
         // Label: kind of iris.
-        new TextLoader.Column("Label", DataKind.TX, 4),
+        new TextLoader.Column("Label",DataKind.TX,4)
     },
     // Default separator is tab, but the dataset has comma.
-    Separator = ","
-});
+    separatorChar: ',',
+    // First line of the file is a header, not a data row.
+    hasHeader: true
+);
 
 // Read the training data.
 var trainData = reader.Read(dataPath);
