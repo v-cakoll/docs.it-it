@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634259"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807044"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Provare la stessa operazione con il metodo `Caps`. Si tratta di un piccolo miglioramento, ma quando viene usato con criterio consente di creare codice molto più leggibile, soprattutto per gli oggetti DTO (Data Transfer Object) e per altri tipi con comportamento minimo.
+    Provare la stessa operazione con il metodo `AllCaps`. Si tratta di un piccolo miglioramento, ma quando viene usato con criterio consente di creare codice molto più leggibile, soprattutto per gli oggetti DTO (Data Transfer Object) e per altri tipi con comportamento minimo.
 - title: Importazione di una classe singola
   durationInMinutes: 2
   content: "Se in tutto il codice si usano più volte metodi statici di una classe indicando ogni volta il nome della classe, il codice diventa di difficile comprensione. La classe `Person` attualmente importa lo spazio dei nomi `System`, anche se viene usato solo il metodo <xref:System.Console?displayProperty=nameWithType>. Modificare l'istruzione `using` come segue:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\nL'istruzione `static using` è più utile all'interno di programmi di dimensioni maggiori che fanno ampio uso di un'unica classe con molti metodi statici, ad esempio la classe [`string` ](xref:System.String) o <xref:System.Math?displayProperty=nameWithType>.\n"
