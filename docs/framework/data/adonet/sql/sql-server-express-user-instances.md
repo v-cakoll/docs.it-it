@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664083"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093814"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  È anche possibile usare la <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> proprietà per compilare una stringa di connessione in fase di esecuzione.  
+>  È anche possibile usare le proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> per compilare una stringa di connessione in fase di esecuzione.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Tramite il &#124;DataDirectory&#124; stringa di sostituzione  
  `AttachDbFileName` è stata estesa in ADO.NET 2.0 con l'introduzione della stringa di sostituzione `|DataDirectory|` (racchiusa tra barre verticali). `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Qualsiasi applicazione in modalità utente singolo in cui non è necessario condividere dati.  
   
--   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per altre informazioni, vedere [distribuzione ClickOnce per le applicazioni di Windows Forms](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per altre informazioni, vedere [distribuzione ClickOnce per Windows Form](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 -   Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
   

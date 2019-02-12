@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736994"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093444"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilizzo di un servizio dati in un'applicazione client (WCF Data Services)
 È possibile accedere a un servizio che espone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed specificando un URI a un Web browser. L'URI fornisce l'indirizzo di una risorsa e i messaggi di richiesta vengono inviati a questi indirizzi per accedere ai dati sottostanti rappresentati dalla risorsa o per modificarli. Il browser invia un comando GET HTTP e restituisce la risorsa richiesta come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Per altre informazioni, vedere [accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "54736994"
  Il formato del messaggio per il payload deve essere incluso nell'intestazione del messaggio di richiesta HTTP. Per altre informazioni, vedere [OData: Operazioni](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Accesso ai dati e relativa modifica tramite le librerie client  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include librerie client che consentono di usare più facilmente un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da .NET Framework e applicazioni client basate su Silverlight. Queste librerie semplificano l'invio e la ricezione di messaggi HTTP, oltre a convertire il payload del messaggio in oggetti CLR che rappresentano dati di entità. Le librerie client rendono disponibili le due classi principali <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> che consentono di eseguire una query su un servizio dati e di usare quindi i dati di entità restituiti come oggetti CLR. Per altre informazioni, vedere [libreria Client di WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) e [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include librerie client che consentono di usare più facilmente un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da .NET Framework e applicazioni client basate su Silverlight. Queste librerie semplificano l'invio e la ricezione di messaggi HTTP, oltre a convertire il payload del messaggio in oggetti CLR che rappresentano dati di entità. Le librerie client rendono disponibili le due classi principali <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> che consentono di eseguire una query su un servizio dati e di usare quindi i dati di entità restituiti come oggetti CLR. Per altre informazioni, vedere [libreria Client di WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) e [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  È possibile usare la **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio per aggiungere un riferimento a un servizio dati. Questo strumento richiede i metadati del servizio a un servizio dati a cui viene fatto riferimento e genera l'oggetto <xref:System.Data.Services.Client.DataServiceContext> che rappresenta un servizio dati, oltre a generare le classi del servizio dati client che rappresentano entità. Per altre informazioni, vedere [generazione della libreria Client di servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
   

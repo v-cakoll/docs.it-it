@@ -1,13 +1,13 @@
 ---
 title: Valori letterali
 description: Informazioni sui tipi di valore letterali in di F# linguaggio di programmazione.
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612452"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092163"
 ---
 # <a name="literals"></a>Valori letterali
 
@@ -32,7 +32,7 @@ La tabella seguente illustra i tipi di valore letterali in F#. I caratteri che r
 |int64|intero con segno a 64 bit|L|`86L`|
 |uint64|Numero naturale senza segno a 64 bit|UL|`86UL`|
 |float32 singolo,|numero a virgola mobile a 32 bit|F o f|`4.14F` o `4.14f`|
-|||LF|`0x00000000lf`|
+|||lf|`0x00000000lf`|
 |float; Double|numero a virgola mobile a 64 bit|none|`4.14` o `2.3E+32` o `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|Integer non limitato alla rappresentazione a 64 bit|I|`9999999999999999999999999999I`|
@@ -51,16 +51,16 @@ A partire dal F# 3.1, è possibile usare il `+` accedere per combinare i valori 
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Non è consentito l'uso di altri operatori bit per bit.
@@ -76,8 +76,8 @@ Nelle espressioni dei criteri, gli identificatori che iniziano con caratteri min
 È possibile anche specificare interi con segno a 32 bit binaria, ottale o esadecimale con un `0x`, `0o` o `0b` rispettivamente del prefisso.
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>Caratteri di sottolineatura nei valori letterali numerici

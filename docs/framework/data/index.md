@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198153"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091721"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dati e modellazione in .NET Framework
 In questa sezione vengono fornite informazioni su come accedere ai dati mediante ADO.NET, LINQ (Language Integrated Query), WCF Data Services e XML.  
@@ -20,8 +20,11 @@ In questa sezione vengono fornite informazioni su come accedere ai dati mediante
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Viene descritta l'architettura ADO.NET e viene illustrato come usare le classi ADO.NET per gestire i dati dell'applicazione e interagire con le origini dati, incluse Microsoft SQL Server, le origini dati OLE DB e XML.  
   
- [Portale LINQ](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- Vengono forniti collegamenti alla documentazione relativa a LINQ (Language Integrated Query).  
+ [LINQ (Language-Integrated Query)](../../csharp/programming-guide/concepts/linq/index.md)  
+ Vengono forniti collegamenti alla documentazione rilevante per l'uso di Language Integrated Query (LINQ) C#.  
+  
+ [LINQ (Language-Integrated Query) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Vengono forniti collegamenti alla documentazione rilevante per Language Integrated Query (LINQ) utilizzando Visual Basic.  
   
  [Elaborazione delle transazioni](../../../docs/framework/data/transactions/index.md)  
  Viene descritto il supporto di .NET Framework per le transazioni.  
@@ -30,7 +33,7 @@ In questa sezione vengono fornite informazioni su come accedere ai dati mediante
  Vengono fornite informazioni su come usare WCF Data Services per distribuire servizi dati sul Web o su una rete Intranet.  
   
  [Documenti e dati XML](../../../docs/standard/data/xml/index.md)  
- Viene descritto un set completo e integrato di classi che vengono usate con documenti e dati XML in .NET Framework.  
+ Viene descritto un set completo e integrato di classi che vengono utilizzate con documenti e dati XML in .NET Framework.  
   
  [Riferimento agli standard XML](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Vengono fornite informazioni di riferimento sugli standard XML supportati da Microsoft.  
@@ -43,4 +46,4 @@ In questa sezione vengono fornite informazioni su come accedere ai dati mediante
  Viene fornita una guida per tutte le aree e attività principali per lo sviluppo di applicazioni, quali la creazione, la configurazione, il debug, la sicurezza e la distribuzione dell'applicazione e informazioni su programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
  [Sicurezza](../../../docs/standard/security/index.md)  
- Vengono forniti collegamenti ad altre informazioni sulle classi e sui servizi in Common Language Runtime e .NET Framework che semplificano lo sviluppo di applicazioni sicure.
+ Vengono forniti collegamenti a ulteriori informazioni sulle classi e sui servizi in Common Language Runtime e .NET Framework che semplificano lo sviluppo di applicazioni sicure.

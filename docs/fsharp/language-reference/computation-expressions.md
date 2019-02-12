@@ -2,12 +2,12 @@
 title: Espressioni di calcolo
 description: Informazioni su come creare una sintassi efficiente per la scrittura di calcoli F# che può essere in sequenza e combinati tramite controllo costrutti del flusso e le associazioni.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610697"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093515"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -218,6 +218,7 @@ Nella tabella seguente vengono descritti i metodi che possono essere usati in un
 |`Yield`|`'T -> M<'T>`|Chiamato per `yield` espressioni nelle espressioni di calcolo.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Chiamato per `yield!` espressioni nelle espressioni di calcolo.|
 |`Zero`|`unit -> M<'T>`|Chiamato per vuoto `else` rami di `if...then` espressioni nelle espressioni di calcolo.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica che l'espressione di calcolo viene passato per il `Run` membro come quotation. Converte tutte le istanze di calcolo in una quotation.|
 
 Molti dei metodi in una classe generatore usano e restituiscono un `M<'T>` construct che è in genere un tipo definito separatamente che caratterizza il tipo di calcoli combinate, ad esempio, `Async<'T>` per i flussi di lavoro asincroni e `Seq<'T>` per i flussi di lavoro di sequenza. Le firme di questi metodi consentono loro di essere combinate e annidate tra loro, in modo che sia possibile passare l'oggetto del flusso di lavoro restituito da un costrutto a quella successiva. Il compilatore, quando analizza un'espressione di calcolo, converte l'espressione in una serie di chiamate di funzione annidata usando i metodi nella tabella precedente e il codice nell'espressione di calcolo.
 

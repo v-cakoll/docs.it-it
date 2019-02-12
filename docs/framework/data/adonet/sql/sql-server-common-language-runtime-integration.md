@@ -2,12 +2,12 @@
 title: Integrazione di Common Language Runtime di SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 7d291e5ab715638217c024302c36188d63b20239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f8e16ecec1f99a0d7df6224f542eb03506528e3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493963"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092878"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrazione di Common Language Runtime di SQL Server
 In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET Framework per Microsoft Windows. Questo significa che è possibile scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente, aggregati definiti dall'utente e funzioni con valori di tabella di flusso usando qualsiasi linguaggio di .NET Framework, inclusi Microsoft Visual Basic .NET e Microsoft Visual C#. Lo spazio dei nomi <xref:Microsoft.SqlServer.Server> contiene un set di nuove API (Application Programming Interface) che consente l'interazione del codice gestito con l'ambiente Microsoft SQL Server.  
@@ -44,5 +44,4 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
   
 ## <a name="see-also"></a>Vedere anche
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Creazione di oggetti di SQL Server 2005 nel codice gestito](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

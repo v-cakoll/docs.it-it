@@ -2,12 +2,12 @@
 title: Protezione delle informazioni di connessione
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662218"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091955"
 ---
 # <a name="protecting-connection-information"></a>Protezione delle informazioni di connessione
 La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta. Se le informazioni di connessione vengono archiviate in testo normale o mantenute nella memoria, si rischia di compromettere l'intero sistema. Le stringhe di connessione incorporate nel codice sorgente possono essere letto utilizzando il [Ildasm.exe (Disassembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) visualizzare Microsoft intermediate language (MSIL) in un assembly compilato.  
@@ -41,6 +41,6 @@ La protezione dell'accesso all'origine dati è uno dei principali obiettivi da r
   
 ## <a name="see-also"></a>Vedere anche
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Crittografia delle informazioni di configurazione tramite configurazione protetta](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
-- [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)
+- [Crittografia delle informazioni di configurazione tramite configurazione protetta](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [Sicurezza in .NET](../../../standard/security/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

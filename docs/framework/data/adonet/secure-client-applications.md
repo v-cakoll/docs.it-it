@@ -2,12 +2,12 @@
 title: Applicazioni client sicure
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599613"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092709"
 ---
 # <a name="secure-client-applications"></a>Applicazioni client sicure
 Le applicazioni sono costituite in genere da molte parti che è necessario proteggere da vulnerabilità che potrebbero causare la perdita di dati o compromettere in altro modo il sistema. La creazione di interfacce utente protette consente di impedire molti problemi bloccando gli utenti non autorizzati prima che accedano ai dati o alle risorse del sistema.  
@@ -21,7 +21,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
  [Sicurezza e input dell'utente](../../../../docs/standard/security/security-and-user-input.md)  
  Viene descritto come gestire i bug di difficile individuazione e potenzialmente pericolosi che riguardano l'input dell'utente.  
   
- [Convalida dell'Input utente nelle pagine Web ASP.NET](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ [Convalida dell'Input utente nelle pagine Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Viene fornita una panoramica della convalida dell'input dell'utente tramite gli appositi controlli di ASP.NET.  
   
  [Input dell'utente in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
@@ -39,7 +39,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
  [Windows Form e applicazioni non gestite](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Viene descritto come interagire con applicazioni non gestite in un'applicazione Windows Forms.  
   
- [Distribuzione ClickOnce per Windows Forms Application](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [Distribuzione ClickOnce per Windows Form](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Viene descritto come usare la distribuzione `ClickOnce` in un'applicazione Windows Forms e ne vengono illustrate le implicazioni per la sicurezza.  
   
 ## <a name="aspnet-and-xml-web-services"></a>Servizi Web ASP.NET e XML  
@@ -51,23 +51,23 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[NIB: ASP.NET Security](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|Viene illustrato come proteggere le applicazioni ASP.NET.|  
-|[Protezione dei servizi Web XML creati tramite ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|Viene illustrato come implementare la sicurezza per un servizio Web ASP.NET.|  
-|[Panoramica di attacchi tramite script](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Viene descritto come salvaguardarsi da attacchi tramite script, in cui si tenta di inserire caratteri dannosi in una pagina Web.|  
-|[NIB: base procedure consigliate per le applicazioni Web ASP.NET](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Informazioni generali sulla sicurezza e collegamenti ad ulteriori argomenti.|  
+|[Protezione dei siti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Viene illustrato come proteggere le applicazioni ASP.NET.|  
+|[Protezione dei servizi Web XML creati tramite ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Viene illustrato come implementare la sicurezza per un servizio Web ASP.NET.|  
+|[Panoramica di attacchi tramite script](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Viene descritto come salvaguardarsi da attacchi tramite script, in cui si tenta di inserire caratteri dannosi in una pagina Web.|  
+|[Procedure consigliate di sicurezza di base per le applicazioni Web](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Informazioni generali sulla sicurezza e collegamenti ad ulteriori argomenti.|  
   
 ## <a name="remoting"></a>Servizi remoti  
  Con .NET Remoting è possibile compilare facilmente applicazioni ampiamente distribuite, sia che i componenti dell'applicazione si trovino tutti nello stesso computer o dislocati in varie parti del mondo. È possibile compilare applicazioni client che usano oggetti di altri processi nello stesso computer o in qualsiasi altro computer disponibile sulla rete. È anche possibile usare .NET Remoting per comunicare con altri domini applicazione nello stesso processo.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Configurazione di applicazioni Remote](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|Viene descritto come configurare le applicazioni remote per evitare problemi comuni.|  
-|[Sicurezza in .NET Remoting](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Vengono descritte l'autenticazione e la crittografia e sono riportati altri argomenti sulla sicurezza relativi ai servizi remoti.|  
+|[Configurazione di applicazioni Remote](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Viene descritto come configurare le applicazioni remote per evitare problemi comuni.|  
+|[Sicurezza in .NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Vengono descritte l'autenticazione e la crittografia e sono riportati altri argomenti sulla sicurezza relativi ai servizi remoti.|  
 |[Considerazioni sulla sicurezza e la comunicazione remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Vengono descritti i problemi di sicurezza con gli oggetti protetti e l'uso di più domini di applicazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Raccomandazioni per strategie di accesso ai dati](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Raccomandazioni per strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protezione delle applicazioni](/visualstudio/ide/securing-applications)
 - [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

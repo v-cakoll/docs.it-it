@@ -1,13 +1,13 @@
 ---
 title: Estensioni di tipo
 description: Informazioni su come F# estensioni di tipo consentono aggiungere nuovi membri a un tipo di oggetto definito in precedenza.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066155"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092475"
 ---
 # <a name="type-extensions"></a>Estensioni di tipo
 
@@ -100,6 +100,8 @@ type IEnumerable<'T> with
 Le estensioni facoltative non vengono visualizzati sul tipo esteso quando esaminato tramite reflection. Le estensioni facoltative devono trovarsi nei moduli e risultano nell'ambito solo quando il modulo che contiene l'estensione è aperto o in caso contrario, si trova nell'ambito.
 
 I membri di estensione facoltative vengono compilati in membri statici per il quale l'istanza dell'oggetto viene passata in modo implicito come primo parametro. Tuttavia, agiscono come se fossero membri di istanza o membri statici in base al modo in cui sono dichiarate.
+
+I membri di estensione facoltativa non sono visibili a C# o i consumer VB. Può essere usate solo in altre F# codice.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitazione generica di estensioni di tipo intrinseche e facoltativi
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588574"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093931"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Il processore di query del database determina la semantica di esecuzione della conversione SQL.  
   
- Operatori di Query standard definiti per *sequenze*. È una sequenza *ordinati* e si basa sull'identità del riferimento per ogni elemento della sequenza. Per altre informazioni, vedere [panoramica degli operatori Query Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Operatori di Query standard definiti per *sequenze*. È una sequenza *ordinati* e si basa sull'identità del riferimento per ogni elemento della sequenza. Per altre informazioni, vedere [panoramica degli operatori Query Standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oppure [panoramica degli operatori di Query Standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL vengono principalmente gestiti *insiemi di valori non ordinati*. L'ordinamento è in genere un'operazione di post-elaborazione specificata in modo esplicito, che viene applicata al risultato finale di una query piuttosto che ai risultati intermedi. L'identità viene definita dai valori. Per questo motivo, le query SQL vengono riconosciute come gestiti multiset (*sacchetti*) anziché *imposta*.  
   

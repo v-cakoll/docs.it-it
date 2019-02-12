@@ -2,12 +2,12 @@
 title: Sicurezza Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570486"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091799"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 La protezione di un'applicazione è un processo costante. Lo sviluppatore non sarà mai in grado di garantire l'assoluta sicurezza di un'applicazione da tutti gli attacchi, in quanto non è possibile prevedere i tipi di attacchi che consentiranno di elaborare le nuove tecnologie. Al contrario, proprio perché nessuno ha ancora individuato (o pubblicato) i punti deboli nella sicurezza di un sistema, questo non implica che non ne esista nessuno. Durante la fase di progettazione del progetto è necessario pianificare la sicurezza nonché le procedure previste di manutenzione per l'intera durata dell'applicazione.  
@@ -89,7 +89,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Viene fornita una panoramica delle funzionalità di sicurezza di SQL Server, nonché scenari per la creazione di applicazioni ADO.NET protette da usare con SQL Server.|  
-|[Raccomandazioni per strategie di accesso ai dati](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
+|[Raccomandazioni per strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
   
 ## <a name="security-policy-and-administration"></a>Amministrazione e criteri di sicurezza  
  Se i criteri di sicurezza dall'accesso di codice vengono amministrati in modo non corretto, possono verificarsi problemi di sicurezza. Una volta distribuita l'applicazione, è necessario usare tecniche per il monitoraggio della sicurezza e valutare i rischi quando emergono nuove minacce.  
@@ -98,11 +98,11 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[NIB: Gestione di criteri di sicurezza](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
-|[NIB: Procedure consigliate per criteri di sicurezza](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
+|[Gestione di criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
+|[Procedure consigliate per criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)
+- [Sicurezza in .NET](../../../standard/security/index.md)
 - [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

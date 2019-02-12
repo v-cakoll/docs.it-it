@@ -1,13 +1,13 @@
 ---
 title: F#linee guida per la formattazione del codice
 description: Per ulteriori linee guida per la formattazione, vedere F# codice.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254822"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093619"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-Risultare se si sta dichiarando le implementazioni di interfaccia o i membri nel record consiste nell'inserire il token di apertura su una nuova riga e il token di chiusura in una nuova riga:
+L'inserimento del token di apertura in una nuova riga e il token di chiusura in una nuova riga è preferibile se si sta dichiarando le implementazioni di interfaccia o i membri del record:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Inserire l'apertura il contenuto a schede ambito su un token in una nuova riga, e il token di chiusura in una nuova riga è risultare se si è:
+L'apertura di inserire il contenuto a schede ambito su un token in una nuova riga, e il token di chiusura in una nuova riga è preferibile se si è:
 
 * Spostamento record all'interno di codice con ambiti diversi rientro
 * Piping in una funzione
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 Per gli elementi di elenco e la matrice si applicano le stesse regole.
+
+## <a name="formatting-copy-and-update-record-expressions"></a>La formattazione delle espressioni di copia e aggiorna record
+
+Un'espressione di record di copia e aggiornamento è ancora un record, in modo simile linee guida sono valide.
+
+Le espressioni breve possono contenere una sola riga:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Espressioni più lunghe devono usare le nuove righe:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+E come le indicazioni di record, è possibile dedicare righe separate per le parentesi graffe e impostare un rientro di un ambito a destra con l'espressione. Si noti che in alcuni casi speciali, ad esempio il wrapping di un valore con facoltativo senza parentesi, potrebbe essere necessario mantenere una parentesi graffa in una sola riga:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>Formattazione di elenchi e matrici
 
@@ -759,7 +795,7 @@ Quando applicato a un parametro, devono essere nella stessa riga e separati da u
 
 ## <a name="formatting-literals"></a>Valori letterali di formattazione
 
-[F#valori letterali](../language-reference/literals.md) utilizzando il `Literal` attributo dovrebbe deve inserire l'attributo su una riga e usare camelCase di denominazione:
+[F#valori letterali](../language-reference/literals.md) utilizzando il `Literal` attributo deve inserire l'attributo su una riga e usare camelCase di denominazione:
 
 ```fsharp
 [<Literal>]

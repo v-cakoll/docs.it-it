@@ -2,12 +2,12 @@
 title: Abilitazione dell'accesso tra database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 785f1a1bb66af0fade84444c0484acb17368ccf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596878"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093853"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Abilitazione dell'accesso tra database in SQL Server
 Il concatenamento della proprietà tra database si verifica quando una procedura di un database dipende dagli oggetti di un altro. Una catena di proprietà tra database funziona allo stesso modo del concatenamento della proprietà con un singolo database, ad eccezione del fatto che una catena di proprietà non interrotta richiede che tutti i proprietari degli oggetti siano mappati allo stesso account di accesso. Se l'oggetto di origine nel database di origine e gli oggetti di destinazione nei database di destinazione appartengono allo stesso account di accesso, le autorizzazioni sugli oggetti di destinazione non verranno controllate in SQL Server.  
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Estensione della rappresentazione del Database tramite EXECUTE AS](https://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) e [opzione Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)documentazione Online di SQL Server.|Negli argomenti viene descritto come configurare il concatenamento di un'istanza di SQL Server della proprietà tra database.|  
+|[Estensione della rappresentazione del Database tramite EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) e [opzione Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Gli articoli descrivono come configurare il concatenamento di un'istanza di SQL Server della proprietà tra database.|  
   
 ## <a name="see-also"></a>Vedere anche
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

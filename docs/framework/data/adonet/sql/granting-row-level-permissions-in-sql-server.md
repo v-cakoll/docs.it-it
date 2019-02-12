@@ -2,15 +2,15 @@
 title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553771"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092995"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
-In alcuni scenari è necessario controllare l'accesso a un livello caratterizzato da una maggior granularità rispetto a quanto consentito dalla semplice concessione, revoca o negazione delle autorizzazioni sui dati. Ad esempio, in un'applicazione di database usata in un ospedale potrebbe essere necessario consentire ai medici di visualizzare solo le informazioni correlate ai propri pazienti. Scenari simili sono presenti in molti ambienti, tra cui quelli delle applicazioni destinate al settore finanziario, legale, statale e militare. Per contribuire a gestire questi scenari, SQL Server 2016 fornisce una funzionalità di [sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) che semplifica e centralizza la logica di accesso a livello di riga in un criterio di sicurezza. Per le versioni precedenti di SQL Server, una funzionalità simile può essere ottenuta usando le visualizzazioni per applicare filtri a livello di riga.  
+In alcuni scenari è necessario controllare l'accesso a un livello caratterizzato da una maggior granularità rispetto a quanto consentito dalla semplice concessione, revoca o negazione delle autorizzazioni sui dati. Ad esempio, in un'applicazione di database usata in un ospedale potrebbe essere necessario consentire ai medici di visualizzare solo le informazioni correlate ai propri pazienti. Scenari simili sono presenti in molti ambienti, tra cui quelli delle applicazioni destinate al settore finanziario, legale, statale e militare. Per contribuire a gestire questi scenari, SQL Server 2016 fornisce una funzionalità di [sicurezza a livello di riga](/sql/relational-databases/security/row-level-security) che semplifica e centralizza la logica di accesso a livello di riga in un criterio di sicurezza. Per le versioni precedenti di SQL Server, una funzionalità simile può essere ottenuta usando le visualizzazioni per applicare filtri a livello di riga.  
   
 ## <a name="implementing-row-level-filtering"></a>Implementazione di applicazione di filtri a livello di riga  
  L'applicazione di filtri a livello di riga viene usata per applicazioni che archiviano informazioni in un'unica tabella, come nell'esempio dell'ospedale. Per applicare i filtri a livello di riga, ogni riga include una colonna che definisce un parametro discriminante, ad esempio un nome utente, un'etichetta o un altro identificatore. È possibile creare un criterio di sicurezza o una visualizzazione nella tabella, che consente di filtrare le righe a cui l'utente può accedere. È possibile quindi creare stored procedure con parametri, che controllano i tipi di query, che l'utente può eseguire.  
@@ -60,7 +60,7 @@ In alcuni scenari è necessario controllare l'accesso a un livello caratterizzat
 -   Concedere ai ruoli del database l'autorizzazione EXECUTE sulle stored procedure. Gli utenti potranno accedere ai dati solo tramite le stored procedure specificate.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Sicurezza a livello di riga](/sql/relational-databases/security/row-level-security)
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

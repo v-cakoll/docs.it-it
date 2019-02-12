@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855283"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092501"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debug, traccia e profilatura
 Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilatore e di runtime deve essere configurato per consentire a un debugger di connettersi all'applicazione e di produrre simboli e mappe di linee, se possibile, per l'applicazione e il corrispondente Microsoft Intermediate Language (MSIL). Dopo il debug di un'applicazione gestita, è possibile eseguire la profilatura per migliorare le prestazioni. La profilatura valuta e descrive le righe del codice sorgente che generano il codice eseguito con maggiore frequenza e il tempo richiesto per eseguirle.  
@@ -47,7 +47,7 @@ Per eseguire il debug di un'applicazione .NET Framework, l'ambiente del compilat
  Descrive i contatori che è possibile usare per registrare le prestazioni di un'applicazione.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Debug di applicazioni ASP.NET e AJAX](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Eseguire il debug di App ASP.NET o ASP.NET Core in Visual Studio](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  Fornisce i prerequisiti e le istruzioni su come eseguire il debug di un'applicazione ASP.NET durante lo sviluppo o dopo la distribuzione.  
   
  [Guida di sviluppo](../../../docs/framework/development-guide.md)  

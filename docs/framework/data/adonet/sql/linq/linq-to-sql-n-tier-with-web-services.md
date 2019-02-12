@@ -2,12 +2,12 @@
 title: Più livelli di LINQ to SQL con Servizi Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623612"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092722"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Più livelli di LINQ to SQL con Servizi Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato appositamente per essere utilizzati nel livello intermedio in un livello di accesso a regime di controllo dei dati (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
@@ -38,4 +38,4 @@ ms.locfileid: "54623612"
   
 ## <a name="see-also"></a>Vedere anche
 - [Applicazioni a più livelli e remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [NIB: Cenni preliminari sul controllo Server Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+- [Cenni preliminari sul controllo Server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

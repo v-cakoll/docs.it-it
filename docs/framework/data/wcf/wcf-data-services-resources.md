@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658156"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093671"
 ---
 # <a name="wcf-data-services-resources"></a>Risorse di WCF Data Services
 Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
   
  [Panoramica](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- Viene fornita una panoramica delle funzionalità introdotte in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Viene fornita una panoramica delle caratteristiche e delle funzionalità introdotte in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Introduzione](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Viene descritto come progettare e accedere a un servizio dati mediante [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], come illustrato le [Guida introduttiva](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -23,7 +23,7 @@ Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssA
  [Scenari di applicazione](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Fornisce un approccio basato su attività alla creazione [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e le applicazioni che accedono a [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.  
   
- [Glossario di .NET Framework e Visual Studio](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Glossario .NET](../../../standard/glossary.md)  
  Contiene i termini usati nella [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] documentazione.  
   
 ## <a name="external-resources"></a>Risorse esterne  
@@ -33,7 +33,7 @@ Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssA
  Supporto alla programmazione di dati per sviluppatori di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Blog del team di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
- Blog contenente aggiornamenti e discussioni relativi alle funzionalità di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Blog contenente aggiornamenti e discussioni relativi alle caratteristiche e funzionalità di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [OData: sito Web](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Fonte principale delle informazioni relative a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  

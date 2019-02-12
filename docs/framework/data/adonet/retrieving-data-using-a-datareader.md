@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083847"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093281"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati tramite un oggetto DataReader
 Per recuperare dati usando un **DataReader**, creare un'istanza del **comando** dell'oggetto e quindi creare un **DataReader** chiamando **Command. ExecuteReader**  per recuperare righe da un'origine dati. Il **DataReader** fornisce un flusso non memorizzato nel buffer di dati che consente una logica procedurale di elaborare sequenzialmente risultati da un'origine dati. Il **DataReader** è un'ottima scelta quando si recuperano grandi quantità di dati perché i dati non viene memorizzato nella cache in memoria.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Per evitare un' **OverflowException**, si consiglia di gestire le conversioni dal tipo NUMBER Oracle in un tipo .NET Framework valido prima di archiviare i valori in un <xref:System.Data.DataRow>. È possibile usare la <xref:System.Data.Common.DataAdapter.FillError> evento per determinare se un' **OverflowException** si è verificato. Per altre informazioni sul <xref:System.Data.Common.DataAdapter.FillError> eventi, vedere [la gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Utilizzo di DataReader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

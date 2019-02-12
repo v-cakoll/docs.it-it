@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: bee0cf4a1fcd70274ff8c1107a35ec3501ef2249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563639"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093086"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Sviluppare e distribuire servizi dati WCF
 
@@ -55,7 +55,7 @@ Quando si sviluppa un servizio dati WCF come un [!INCLUDE[vstecasp](../../../../
 
     -   L'accesso al server può essere eseguito solo sul computer locale.
 
-    -   Il server è in ascolto su `localhost` e su una porta specifica, non sulla porta 80 che è la porta predefinita per i messaggi HTTP. Per altre informazioni, vedere [Server Web in Visual Studio per progetti Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).
+    -   Il server è in ascolto su `localhost` e su una porta specifica, non sulla porta 80 che è la porta predefinita per i messaggi HTTP. Per altre informazioni, vedere [Server Web in Visual Studio per progetti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
     -   Il server esegue il servizio dati nel contesto dell'account utente corrente. Ad esempio, se si esegue come utente a livello di amministratore, un servizio dati eseguito in Visual Studio Development Server avrà privilegi di amministratore. È possibile che il servizio dati quindi sia in grado di accedere alle risorse che non ha diritto ad accedere se viene distribuito in un server IIS.
 
@@ -82,7 +82,7 @@ Quando si sviluppa un servizio dati è opportuno considerare quanto segue:
 
 -   Durante il debug di un servizio dati, è possibile ottenere altre informazioni sull'errore dal servizio dati anziché durante il normale funzionamento. È possibile ottenere altre informazioni sull'errore dal servizio dati impostando la proprietà <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> in <xref:System.Data.Services.DataServiceConfiguration> su `true` e impostando la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> dell'attributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> nella classe del servizio dati su `true`. Per altre informazioni, vedere il post [debug di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). È anche possibile abilitare la traccia in WCF per visualizzare le eccezioni generate nel livello di messaggistica HTTP. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Un servizio dati viene generalmente sviluppato come un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] progetto di applicazione, ma è anche possibile creare il servizio dati come un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] progetto sito Web in Visual Studio. Per informazioni sulle differenze tra i due tipi di progetti, vedere [NIB: Web Application Projects rispetto a progetti di siti Web in Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Un servizio dati viene generalmente sviluppato come un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] progetto di applicazione, ma è anche possibile creare il servizio dati come un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] progetto sito Web in Visual Studio. Per informazioni sulle differenze tra i due tipi di progetti, vedere [progetti di applicazioni Web e progetti di siti Web in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
 -   Quando si crea un servizio dati tramite il **Aggiungi nuovo elemento** finestra di dialogo in Visual Studio, il servizio dati è ospitato da [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e IIS costituiscono l'host predefinito di un servizio dati, tuttavia sono supportate altre opzioni host. Per altre informazioni, vedere [che ospita il servizio dati](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -96,19 +96,19 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
     -   **Tecnologie di distribuzione per applicazioni Web ASP.NET**
 
-        -   [Pacchetto di distribuzione Web](https://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)
+        -   [Procedura: Creare un pacchetto di distribuzione Web in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [Pubblicazione con un clic](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
+        -   [Procedura: Distribuire un sito Web pubblica progetto usando un solo clic in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
     -   **Tecnologie di distribuzione per siti Web ASP.NET**
 
-        -   [Strumento Copia sito Web](https://msdn.microsoft.com/library/b819aed4-014b-427e-be80-02317b1bb003)
+        -   [Procedura: Copiare i file del sito con lo strumento Copia sito Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [Strumento Pubblica sito Web](https://msdn.microsoft.com/library/d0a1a20f-15be-4940-9485-cb8e4aa8181b)
+        -   [Procedura: Pubblicazione di siti Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [XCopy](https://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)
+        -   [Procedura dettagliata: Distribuzione di un'applicazione Web ASP.NET tramite XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     Per altre informazioni sulle opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione, vedere [Cenni preliminari sulla distribuzione Web per Visual Studio e ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
+     Per altre informazioni sulle opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione, vedere [Cenni preliminari sulla distribuzione Web per Visual Studio e ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
     > Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [Procedura: Sviluppare un servizio dati WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
@@ -121,7 +121,7 @@ WCF Data Services fornisce flessibilità di scelta per il processo che ospita il
 
 Quando si distribuisce un servizio dati è opportuno considerare quanto segue:
 
--   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. Visual Studio possa creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e questi script possono essere inclusi nel pacchetto di distribuzione Web di un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione. Per altre informazioni, vedere [Procedura: Distribuire un Database con un progetto di applicazione Web](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sito Web, è possibile farlo usando il **Database Publishing Wizard** in Visual Studio. Per altre informazioni, vedere [distribuzione di un Database tramite Database Publishing Wizard](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
+-   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. Visual Studio possa creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e questi script possono essere inclusi nel pacchetto di distribuzione Web di un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione. Per altre informazioni, vedere [Procedura: Distribuire un Database con un progetto di applicazione Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sito Web, è possibile farlo usando il **Database Publishing Wizard** in Visual Studio. Per altre informazioni, vedere [pubblicazione di un Database SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 -   Poiché WCF Data Services include un'implementazione WCF di base, è possibile usare Windows Server AppFabric per monitorare un servizio dati distribuito a IIS che esegue Windows Server. Per altre informazioni sull'uso di Windows Server AppFabric per monitorare un servizio dati, vedere il post [traccia di WCF Data Services con Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

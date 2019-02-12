@@ -2,12 +2,12 @@
 title: Protezione delle applicazioni ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585367"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092241"
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o distruggere dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -42,10 +42,10 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Sicurezza](../../../../docs/standard/security/index.md)  
  Contiene collegamenti ad argomenti in cui vengono descritti tutti gli aspetti della sicurezza in .NET.  
   
- [Strumenti di sicurezza](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Strumenti di sicurezza](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  Vengono fornite informazioni sugli strumenti di .NET Framework per la protezione e l'amministrazione dei criteri di sicurezza.  
   
- [Risorse per la creazione di applicazioni sicure](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Risorse per la creazione di applicazioni sicure](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Vengono forniti collegamenti ad argomenti relativi alla creazione di applicazioni protette.  
   
  [Bibliografia sulla sicurezza](/visualstudio/ide/security-bibliography)  

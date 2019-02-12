@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743036"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093957"
 ---
 # <a name="enabling-query-notifications"></a>Abilitazione di notifiche di query
 Le applicazioni che usano le notifiche di query dispongono di un set comune di requisiti. L'origine dati dell'utente deve essere configurata correttamente per supportare le notifiche di query SQL e l'utente deve disporre delle autorizzazioni corrette sia sul lato client che sul lato server.  
@@ -28,25 +28,25 @@ Le applicazioni che usano le notifiche di query dispongono di un set comune di r
 ## <a name="query-notifications-requirements"></a>Requisiti delle notifiche di query  
  Le notifiche di query sono supportate solo per le istruzioni SELECT che soddisfano un elenco di specifici requisiti. Nella tabella seguente sono forniti i collegamenti alla documentazione sulle notifiche di query e Service Broker disponibili nella documentazione online di SQL Server.  
   
- **Documentazione online di SQL Server**  
+ **Documentazione di SQL Server**  
   
--   [Creazione di una Query per la notifica](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Creazione di una Query per la notifica](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Considerazioni sulla sicurezza per Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Considerazioni sulla sicurezza per Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Sicurezza e protezione (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Sicurezza e protezione (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Considerazioni sulla sicurezza per Notification Services](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Considerazioni sulla sicurezza per Notification Services](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Autorizzazioni di notifica delle query](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Autorizzazioni di notifica delle query](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Considerazioni sulle funzionalità internazionali di Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Considerazioni sulle funzionalità internazionali di Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Considerazioni sulla progettazione di soluzioni (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Considerazioni sulla progettazione di soluzioni (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Centro informazioni per sviluppatori di Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Centro informazioni per sviluppatori di Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Guida per sviluppatori (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guida per sviluppatori (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Abilitazione delle notifiche di query per l'esecuzione di codice di esempio  
  Per abilitare Service Broker nel **AdventureWorks** database usando SQL Server Management Studio, eseguire l'istruzione Transact-SQL seguente:  

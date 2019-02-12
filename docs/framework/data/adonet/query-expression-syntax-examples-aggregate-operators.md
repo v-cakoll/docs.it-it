@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 317a91c1127e85334d733e6890ace0c5a6b603df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dbe00686d44d5861f4334cdc2cbc996934a3e57
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695504"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091987"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Esempi di sintassi di espressione di query: Operatori di aggregazione (LINQ to DataSet)
 Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> e <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su un oggetto <xref:System.Data.DataSet> e aggregare i dati usando la sintassi delle espressioni di query.  
@@ -99,4 +99,5 @@ Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.
 ## <a name="see-also"></a>Vedere anche
 - [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Cenni preliminari sugli operatori di query standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Panoramica degli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Panoramica degli operatori query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

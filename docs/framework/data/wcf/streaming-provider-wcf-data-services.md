@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697348"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093840"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -89,7 +89,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
  Per altre informazioni, vedere [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) e [quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per abilitare il servizio dati di ricevere flussi superiori a 4MB durante l'esecuzione in IIS, è necessario impostare anche il `maxRequestLength` attributo del [elemento httpRuntime (Schema delle impostazioni ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) nel `<system.web />` sezione di configurazione, come illustrato nell'esempio seguente:  
+ Per impostazione predefinita, Internet Information Services (IIS) consente anche di limitare la dimensione delle richieste a 4 MB. Per abilitare il servizio dati di ricevere flussi superiori a 4MB durante l'esecuzione in IIS, è necessario impostare anche il `maxRequestLength` attributo del [elemento httpRuntime (Schema delle impostazioni ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) nel `<system.web />` sezione di configurazione, come illustrato nell'esempio seguente:  
   
   
   
@@ -119,7 +119,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
 -   Quando si implementa il metodo <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, è necessario usare i valori eTag e Content-Type forniti come parametri dei metodi. Non impostare le intestazioni eTag o Content-Type nell'implementazione del provider <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server non supporta questo tipo di codifica, è possibile utilizzare questo server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per ulteriori informazioni sul [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, vedere [server Web in Visual Studio per progetti Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Per impostazione predefinita, il client invia i flussi binari di grandi dimensioni tramite codifica di trasferimento HTTP Chunked. Poiché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server non supporta questo tipo di codifica, è possibile utilizzare questo server Web per ospitare un servizio dati di flusso che debba accettare flussi binari di grandi dimensioni. Per ulteriori informazioni sul [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, vedere [server Web in Visual Studio per progetti Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Requisiti di versione  

@@ -2,12 +2,12 @@
 title: Introduzione all'integrazione CLR in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714932"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092579"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introduzione all'integrazione CLR in SQL Server
 Common Language Runtime (CLR) rappresenta l'elemento essenziale di Microsoft .NET Framework e fornisce l'ambiente di esecuzione per tutto il codice .NET Framework. Il codice eseguito all'interno di CLR viene definito codice gestito. CLR fornisce diverse funzioni e vari servizi richiesti per l'esecuzione del programma, che includono la compilazione JIT (Just-In-Time), l'allocazione e la gestione della memoria, l'applicazione dell'indipendenza dai tipi, la gestione delle eccezioni e dei thread e la sicurezza.  
@@ -66,6 +66,5 @@ GO
 -   [Debug di oggetti di Database CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creazione di oggetti di SQL Server 2005 nel codice gestito](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [Sicurezza dell'accesso di codice e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

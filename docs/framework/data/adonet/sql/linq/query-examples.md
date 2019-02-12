@@ -2,12 +2,12 @@
 title: Esempi di query
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211866"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093762"
 ---
 # <a name="query-examples"></a>Esempi di query
 In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query. Gli sviluppatori che usano Visual Studio è possono trovare ulteriori esempi in una soluzione di esempio disponibile nella sezione esempi. Per altre informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -65,8 +65,11 @@ In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUD
  Vengono forniti esempi della combinazione `select` con altre funzionalità (ad esempio *tipi anonimi*) per formare proiezioni della query.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Cenni preliminari sugli operatori di query standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- Viene illustrato il concetto di operatori di query standard.  
+ [Panoramica degli operatori di query standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Viene illustrato il concetto degli operatori query standard usando C#.  
+  
+ [Panoramica degli operatori query standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Viene illustrato il concetto degli operatori query standard con Visual Basic.  
   
  [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Viene descritto come vengono usati i concetti applicabili alle query in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

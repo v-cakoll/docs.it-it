@@ -1,13 +1,13 @@
 ---
 title: Riferimenti per simboli e operatori
 description: Informazioni sui simboli e operatori usati nel F# linguaggio di programmazione.
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613804"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092943"
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
@@ -50,8 +50,8 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`-`|[Operatori nullable](nullable-operators.md)|<ul><li>Sottrae il lato destro dal lato sinistro, quando la parte destra è un tipo nullable.<br /></li></ul>|
 |`->`|[Funzioni](../functions/index.md)<br /><br />[Espressioni match](../match-expressions.md)|<ul><li>Nei tipi di funzione, delimita argomenti e valori restituiti.<br /></li><li>Produce un'espressione (nelle espressioni di sequenza); equivalente alla parola chiave `yield`.<br /></li><li>Usato nelle espressioni match<br /></li></ul>|
 |`.`|[Membri](../members/index.md)<br /><br />[Tipi primitivi](../primitive-types.md)|<ul><li>Accede a un membro e separa i singoli nomi in un nome completo.<br /></li><li>Consente di specificare un separatore decimale nei numeri a virgola mobile.<br /></li></ul>|
-|`..`|[Cicli: `for...in` Espressione](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo.<br /></li></ul>|
-|`.. ..`|[Cicli: `for...in` Espressione](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo con un incremento.<br /></li></ul>|
+|`..`|[Cicli: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo.<br /></li></ul>|
+|`.. ..`|[Cicli: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo con un incremento.<br /></li></ul>|
 |`.[...]`|[Matrici](../arrays.md)|<ul><li>Accede a un elemento di matrice.<br /></li></ul>|
 |`/`|[Operatori aritmetici](arithmetic-operators.md)<br /><br />[Unità di misura](../units-of-measure.md)|<ul><li>Divide il lato sinistro (numeratore) per il lato destro (denominatore).<br /></li><li>Usato in unità di tipi di misura.<br /></li></ul>|
 |`/?`|[Operatori nullable](nullable-operators.md)|<ul><li>Divide il lato sinistro dal lato destro, quando il lato destro è un tipo nullable.<br /></li></ul>|
@@ -133,7 +133,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`or`, <code>&#124;&#124;</code>|Sinistro|
 |`&`, `&&`|Sinistro|
 |`:>`, `:?>`|A destra|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
+|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
 |`^`*op*<br /><br />(incluso `^^^`)|A destra|
 |`::`|A destra|
 |`:?`|Non associativa|

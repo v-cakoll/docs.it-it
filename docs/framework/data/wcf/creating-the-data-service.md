@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772741"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091825"
 ---
 # <a name="create-the-data-service"></a>Creazione del servizio dati
 
@@ -52,7 +52,7 @@ In questo argomento, si crea un servizio dati di esempio che utilizza WCF Data S
 
 5. Connettere il modello di dati al database effettuando una delle operazioni seguenti e quindi fare clic su **successivo**:
 
-    -   Se non si dispone di una connessione al database già configurata, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [procedura: creare connessioni a database di SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
+    -   Se non si dispone di una connessione al database già configurata, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [Procedura: Creare connessioni a database di SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
 
          \- oppure -
 
@@ -103,4 +103,4 @@ Avere creato un nuovo servizio dati che espone un feed OData che è basato sul d
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Strumenti di ADO.NET Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [Strumenti di ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

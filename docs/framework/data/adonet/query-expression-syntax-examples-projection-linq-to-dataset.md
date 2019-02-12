@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
-ms.openlocfilehash: f5f7e2ed93eee6fe9c6f5a77e88f03b0f13e94d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64d8454a9eacca81e93677c2b63dc5afdcc27d64
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702509"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091695"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Esempi di sintassi di espressione di query: Proiezione (LINQ to DataSet)
 Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> per eseguire una query su <xref:System.Data.DataSet> usando la sintassi delle espressioni di query.  
@@ -63,4 +63,5 @@ Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.
 ## <a name="see-also"></a>Vedere anche
 - [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Cenni preliminari sugli operatori di query standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Panoramica degli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Panoramica degli operatori query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
