@@ -2,24 +2,30 @@
 title: Risorse nelle app .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221043"
 ---
 # <a name="resources-in-net-apps"></a>Risorse nelle app .NET
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
   
  .NET Framework e .NET Core offrono ampio supporto per la creazione e la localizzazione di risorse. .NET supporta inoltre un modello semplice per la creazione del pacchetto di risorse localizzate e la relativa distribuzione.  
   
- Per informazioni sulle risorse in ASP.NET, vedere [Cenni preliminari sulle risorse delle pagine Web ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+ Per informazioni sulle risorse in ASP.NET, vedere [Cenni preliminari sulle risorse delle pagine Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  ## <a name="creating-and-localizing-resources"></a>Creazione e localizzazione di risorse  
  In un'applicazione non localizzata, è possibile utilizzare i file di risorse come repository per i dati dell'applicazione, in particolare per le stringhe che altrimenti possono essere hard-coded in più posizioni nel codice sorgente. In genere, le risorse vengono create come testo, con estensione txt o come o file XML (RESX) e si utilizza [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilarle in file binari con estensione resources. Questi file possono quindi essere incorporati nel file eseguibile dell'applicazione tramite un compilatore di linguaggio. Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

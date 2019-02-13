@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 208dc3048b52cc895a5142a7686829390d1d4503
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041486"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220107"
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
 Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
@@ -129,7 +129,7 @@ La maggior parte degli strumenti di .NET Framework descritti in questa sezione v
  Consente di localizzare risorse dell'interfaccia utente (file con estensione resx o resources) usate da Windows Form. È possibile tradurre stringhe e quindi ridimensionare, spostare e nascondere i controlli per adattarli alle stringhe localizzate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Strumenti](https://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ [strumenti WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Include strumenti quali lo strumento di conformità isXPS (isXPS.exe) e gli strumenti di profilatura delle prestazioni.  
   
  [Strumenti Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
