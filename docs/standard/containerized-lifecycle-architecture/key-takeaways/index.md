@@ -1,15 +1,15 @@
 ---
 title: Considerazioni principali
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft (e-book)_v1.1
+description: Esaminare le considerazioni principali per la Guida.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 31ecd6eff3590dded69b48c6ee718a94a2d697cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148632"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219230"
 ---
 # <a name="key-takeaways"></a>Considerazioni principali
 

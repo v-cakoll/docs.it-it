@@ -1,15 +1,15 @@
 ---
 title: Passaggi nel flusso di lavoro DevOps ciclo esterno per un'applicazione Docker
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+description: Informazioni sulla procedura per il ciclo"esterno" del flusso di lavoro DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143649"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220939"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps ciclo esterno per un'applicazione Docker
 
@@ -235,4 +235,4 @@ Solo quando il monitoraggio e diagnostica è 100 percento entro l'area di autent
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)
->[Successivo](../run-manage-monitor-docker-environments/index.md)
+>[Successivo](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

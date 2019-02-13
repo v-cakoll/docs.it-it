@@ -1,15 +1,15 @@
 ---
 title: Monitorare i servizi delle applicazioni in contenitori
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+description: Informazioni su alcuni aspetti fondamentali del monitoraggio di architetture di contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153923"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221186"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorare i servizi delle applicazioni in contenitori
 
@@ -88,7 +88,7 @@ Usa Operations Management Suite contenitore soluzione, è possibile eseguire le 
 
 È possibile visualizzare informazioni sulle prestazioni tramite l'esecuzione di query come tipo = Perf, come illustrato nella figura 6-3.
 
-![DockerPerfMetricsView](./media/image3.png){larghezza = altezza "5.78625 in" = "3,25 in"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Figura 6-3: Metriche delle prestazioni di host Docker illustrato da Operations Management Suite
 

@@ -1,15 +1,15 @@
 ---
 title: Applicazioni monolitiche
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+description: Comprendere i concetti di base per l'inserimento di applicazioni monolitiche nei contenitori.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743269"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221355"
 ---
 # <a name="monolithic-applications"></a>Applicazioni monolitiche
 
@@ -21,7 +21,7 @@ In seguito l'entità che esegue un'operazione solo un contenitore e lo fa in un 
 
 ![](./media/image1.png)
 
-Figura 4-1: un esempio di architettura dell'applicazione monolitica
+Figura 4-1: Un esempio di architettura dell'applicazione monolitica
 
 Lo svantaggio di questo approccio viene fornito se o quando si espande l'applicazione, che richiedono scalabilità. Se l'intera applicazione è stata ridimensionata, non ci sono problemi. Tuttavia, nella maggior parte dei casi, alcune parti dell'applicazione sono colli di bottiglia che richiedono il ridimensionamento, mentre altri componenti vengono utilizzate meno.
 
@@ -35,13 +35,13 @@ Dal punto di vista dell'infrastruttura, ogni server può eseguire molte applicaz
 
 ![](./media/image2.png)
 
-Figura 4-2: un host che esegue più App/contenitori
+Figura 4-2: Un host che esegue più App/contenitori
 
 È possibile distribuire le applicazioni monolitiche in Azure usando macchine virtuali dedicate per ogni istanza. Usando [set di scalabilità di macchine Virtuali di Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), è possibile ridimensionare facilmente le macchine virtuali. I [Servizi app di Azure](https://azure.microsoft.com/services/app-service/) sono in grado di eseguire le applicazioni monolitiche e di ridimensionare facilmente le istanze senza la necessità di gestire le macchine virtuali. Dal 2016, servizi App di Azure può eseguire anche singole istanze di contenitori di Docker, semplificando la distribuzione. E, usando Docker, è possibile distribuire una singola macchina virtuale come host Docker ed eseguire più istanze. Usa il servizio di bilanciamento Azure, come illustrato nella figura 4-3, è possibile gestire la scalabilità.
 
 ![](./media/image3.png)
 
-Figura 4-3: più host la scalabilità orizzontale una singola applicazione App/contenitori Docker
+Figura 4-3: Più host, la scalabilità orizzontale una singola applicazione App/contenitori Docker
 
 È possibile gestire la distribuzione ai vari host tramite le tecniche di distribuzione tradizionali. È possibile gestire gli host Docker, utilizzando comandi quali `docker run` manualmente, tramite l'automazione, ad esempio le pipeline di recapito continuo (CD), che viene illustrato più avanti in questo e-book.
 
@@ -65,7 +65,7 @@ A questo punto, tuttavia, (annunciato in occasione di Microsoft Connect 2016 a n
 
 ![](./media/image4.png)
 
-Figura 4-4: pubblicazione di un contenitore in servizio App di Azure da Visual Studio. app/contenitori
+Figura 4-4: Pubblicazione di un contenitore in servizio App di Azure da Visual Studio. app/contenitori
 
 Figura 4-4 mostra anche che il flusso di pubblicazione effettua il push di un'immagine tramite un registro contenitori, che può essere il registro contenitori di Azure (un registro vicino alle distribuzioni in Azure e protetto dall'account e gruppi di Azure Active Directory) o qualsiasi altro registro Docker ad esempio i registri di Docker Hub o in locale.
 

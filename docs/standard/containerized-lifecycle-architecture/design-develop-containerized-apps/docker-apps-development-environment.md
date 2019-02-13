@@ -1,19 +1,19 @@
 ---
 title: Ambiente di sviluppo per le app di Docker
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+description: Conoscere i più importanti opzioni dello strumento di sviluppo che supportano il ciclo di vita di sviluppo Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152412"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219997"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
 
-## <a name="development-tools-choices-ide-or-editor"></a>Opzioni di strumenti di sviluppo: IDE o editor
+## <a name="development-tools-choices-ide-or-editor"></a>Strumenti di sviluppo possibili: IDE o editor
 
 Non importa se si preferisce un IDE potente e completo o un editor semplice e agile, Microsoft ha ti serve se si desidera lo sviluppo di applicazioni di Docker.
 
@@ -47,5 +47,5 @@ Quando si usa Visual Studio 2015 è possibile installare gli strumenti di compon
 In pratica, è possibile usare qualsiasi linguaggio moderno supportato da Docker in Linux o Windows.
 
 >[!div class="step-by-step"]
->[Precedente](orchestrate-high-scalability-availability.md)
+>[Precedente](deploy-azure-kubernetes-service.md)
 >[Successivo](docker-apps-inner-loop-workflow.md)

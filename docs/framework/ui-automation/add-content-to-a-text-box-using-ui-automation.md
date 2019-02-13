@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: b8f64b12400098d94d0e25590559877d61519777
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e39efd77a0cf153e3d0287f061702dd3c5c1e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582164"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221004"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>Aggiungere contenuto a una casella di testo utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "54582164"
  [!code-vb[InsertText#InsertText](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InsertText/VisualBasic/Window1.xaml.vb#inserttext)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
+- [TextPattern Insert Text Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))

@@ -3,13 +3,13 @@ title: Eseguire, gestire e monitorare ambienti di produzione Docker
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 2f29119e102bbb62e96da6b3c00f9c53c0a270a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9c24a87fd691723b8f91077288478d26e5123265
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130950"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219126"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Eseguire, gestire e monitorare ambienti di produzione Docker
 
@@ -20,5 +20,5 @@ L'ultimo elemento fondamentale nel ciclo di vita delle applicazioni Docker in co
 La modalità di esecuzione delle applicazioni in contenitori nell'ambiente di produzione (architettura dell'infrastruttura e tecnologie della piattaforma) è strettamente correlata a, e basata su, l'architettura e le piattaforme di sviluppo scelte, esaminate nel capitolo 1 di questo e-book. Questo capitolo esamina le tecnologie e i prodotti specifici, di Microsoft e di altri fornitori, che è possibile usare per eseguire in modo efficace applicazioni distribuite a scalabilità e disponibilità elevate e illustra inoltre come l'IT può gestire e monitorare tali applicazioni.
 
 >[!div class="step-by-step"]
->[Precedente](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+>[Precedente](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 >[Successivo](run-microservices-based-applications-in-production.md)

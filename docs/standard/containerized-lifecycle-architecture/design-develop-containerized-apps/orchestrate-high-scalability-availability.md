@@ -1,15 +1,15 @@
 ---
-title: Orchestrazione di microservizi e applicazioni multicontenitore per scalabilità e disponibilità elevate
-description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
+title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
+description: Le applicazioni di produzione reale devono essere distribuite e gestite con gli agenti di orchestrazione di gestire l'integrità, il carico di lavoro e i cicli di vita di tutti i contenitori.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126900"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221160"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni multicontenitore per scalabilità e disponibilità elevate
 
@@ -31,7 +31,7 @@ Da un'architettura e sviluppo punto di vista, se si è aziendali di grandi dimen
 
 -   **I cluster e agenti di orchestrazione** quando è necessario ridimensionare-orizzontalmente le applicazioni in molti host Docker, ad esempio con un'applicazione basata su microservizi di grandi dimensioni, è fondamentale essere in grado di gestire tutti gli host come un singolo cluster da astrazione della complessità della piattaforma sottostante. Questo è ciò che fornisce cluster di contenitori e gli agenti di orchestrazione. Esempi di agenti di orchestrazione sono Docker Swarm, Mesosphere DC/OS, Kubernetes (i primi tre disponibili tramite il servizio contenitore di Azure) e Azure Service Fabric.
 
--   **Le utilità di pianificazione** *pianificazione* significa avere la possibilità per un amministratore di avviare contenitori in un cluster in modo che forniscano anche un'interfaccia utente. Un'utilità di pianificazione di cluster ha diverse funzioni: da usare in modo efficiente le risorse del cluster, configurare i vincoli forniti dall'utente, ai contenitori di bilanciamento del carico in modo efficiente tra nodi e negli host e per essere efficace in caso di errori, fornendo alto disponibilità.
+-   **Le utilità di pianificazione** *pianificazione* significa avere la possibilità per un amministratore di avviare contenitori in un cluster in modo che forniscano anche un'interfaccia utente. Un'utilità di pianificazione di cluster ha molte responsabilità, tra cui usare in modo efficiente le risorse del cluster, configurare i vincoli specificati dall'utente, bilanciare in modo efficiente il carico dei contenitori nei nodi e negli host e infine assicurare l'affidabilità in caso di errori, offrendo al tempo stesso una disponibilità elevata.
 
 I concetti di cluster e utilità di pianificazione sono strettamente correlati, quindi i prodotti offerti da diversi fornitori includono spesso entrambi i set di funzionalità. Tabella 4-1 Elenca le piattaforme più importanti e scelte di software che disponibili per i cluster e le utilità di pianificazione. Questi cluster vengono generalmente offerti in cloud pubblici quali Azure.
 
@@ -103,7 +103,7 @@ Di seguito sono posizioni in cui è possibile trovare informazioni aggiuntive:
 -   Kubernetes (il sito ufficiale):  
     <https://kubernetes.io/>
 
-## <a name="using-service-fabric"></a>Uso di Service Fabric
+## <a name="using-service-fabric"></a>Using Service Fabric
 
 Service Fabric si è verificato dal passaggio di Microsoft dalla fornitura di "box" prodotti preconfezionati, generalmente di tipo monolitico, alla fornitura dei servizi. L'esperienza di creazione e gestione di grandi servizi su larga scala, ad esempio Database SQL di Azure, Azure Document DB, il Bus di servizio di Azure o Backend di Cortana, la forma di Service Fabric. La piattaforma si è evoluta nel tempo con la sua continua adozione da parte di un numero crescente di servizi. Cosa ancora più importante, Service Fabric doveva essere eseguito non solo in Azure, ma anche nelle distribuzioni autonome di Windows Server.
 
@@ -147,7 +147,7 @@ Per quanto riguarda i contenitori in Service Fabric, è anche possibile distribu
 
 Figura 4-11: Microservizio aziendale con numerosi servizi (contenitori) in Service Fabric
 
-Tuttavia, contenitori cosiddette "collaterali" (due contenitori che devono essere distribuiti insieme come parte di un servizio logico) sono possibili anche in Service Fabric. La cosa importante è che un microservizio aziendale è rappresentato dal limite logico intorno a diversi elementi coesivi. In molti casi, potrebbe essere un singolo servizio con un singolo modello di dati, ma in altri casi potrebbe essere diversi servizi fisici, nonché.
+I cosiddetti contenitori "collaterali" (due contenitori che devono essere distribuiti insieme nell'ambito di un servizio logico), tuttavia, sono possibili anche in Service Fabric. La cosa importante è che un microservizio aziendale è rappresentato dal limite logico intorno a diversi elementi coesivi. In molti casi, potrebbe essere un singolo servizio con un singolo modello di dati, ma in altri casi potrebbe essere diversi servizi fisici, nonché.
 
 Al momento della stesura di questo documento (aprile 2017), in Service Fabric non è possibile distribuire servizi Reliable con stato SF sui contenitori, è possibile distribuire solo i contenitori guest, servizi senza stato o servizi actor nei contenitori. Ma si noti che è possibile combinare servizi in processi e servizi in contenitori nella stessa applicazione Service Fabric, come illustrato nella figura 4-12.
 
@@ -181,4 +181,4 @@ Si noti che anche i contenitori Docker sono senza stato. Se si vuole implementar
 
 >[!div class="step-by-step"]
 >[Precedente](soa-applications.md)
->[Successivo](docker-apps-development-environment.md)
+>[Successivo](deploy-azure-kubernetes-service.md)
