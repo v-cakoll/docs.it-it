@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599218"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826902"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: Firmare un assembly con un nome sicuro
 Sono disponibili diversi modi per firmare un assembly con un nome sicuro:  
@@ -42,6 +42,9 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
 3.  Selezionare la casella **Firma assembly** .  
   
 4.  Nella casella **Scegli un file chiave con nome sicuro** scegliere **\<Sfoglia>**, quindi passare al file di chiave. Per creare un nuovo file di chiave, scegliere **\<Nuovo>** e immettere il nome nella finestra di dialogo **Crea chiave con nome sicuro**.  
+  
+> [!NOTE]
+>  Per [ritardare la firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md), scegliere un file di chiave pubblica.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Per creare e firmare un assembly con un nome sicuro utilizzando Assembly Linker  
   

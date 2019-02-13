@@ -4,12 +4,12 @@ description: Guida alla scelta dell'implementazione di .NET da prendere in consi
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699506"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828514"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -99,7 +99,7 @@ In aggiunta a quanto indicato nella roadmap ufficiale, sono presenti altri frame
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Necessità di usare una piattaforma che non supporta .NET Core
 
-Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni servizi di Azure come i servizi Reliable con stato di Service Fabric e Reliable Actors di Service Fabric, ad esempio, richiedono .NET Framework. Altri servizi forniscono un SDK non ancora disponibile per l'utilizzo in .NET Core. Questa situazione è transitoria poiché tutti i servizi di Azure usano .NET Core. Nel frattempo, è possibile usare l'API REST equivalente anziché l'SDK client.
+Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni servizi di Azure offrono un SDK non ancora disponibile per l'utilizzo in .NET Core. Questa situazione è transitoria poiché tutti i servizi di Azure usano .NET Core. Nel frattempo, è possibile usare l'API REST equivalente anziché l'SDK client.
 
 ## <a name="see-also"></a>Vedere anche
 

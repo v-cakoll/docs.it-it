@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679932"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093593"
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -45,7 +45,7 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
   
  I delegati sono multicast, il che significa che possono mantenere riferimenti a più di un metodo di gestione degli eventi. Per informazioni dettagliate, vedere la pagina di riferimento per <xref:System.Delegate>. I delegati offrono flessibilità e controlli specifici nella gestione degli eventi. Un delegato agisce come un dispatcher di eventi per la classe che genera l'evento compilando un elenco di gestori eventi registrati per l'evento.  
   
- Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione, contrassegnare un delegato con la parola chiave `delegate` (in C#) o `Delegate` (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
+ Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione contrassegnare un delegato con la parola chiave `delegate` (in C#) o `Delegate` (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -71,7 +71,7 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Gestori eventi statici e dinamici  
- .NET Framework consente ai sottoscrittori di registrarsi per le notifiche degli eventi in modo statico o dinamico. I gestori eventi statici sono attivi per l'intera durata della classe di cui gestiscono gli eventi. I gestori eventi dinamici sono attivati e disattivati in modo esplicito durante l'esecuzione del programma, in genere in risposta a una logica di programma condizionale. Ad esempio, possono essere usati se le notifiche degli eventi sono necessarie solo in determinate condizioni oppure se un'applicazione fornisce più gestori eventi e le condizioni di runtime definiscono quello appropriato da usare. Nell'esempio della sezione precedente viene illustrato come aggiungere un gestore eventi in modo dinamico. Per altre informazioni, vedere [Eventi](../../visual-basic/programming-guide/language-features/events/index.md) ed [Eventi](../../csharp/programming-guide/events/index.md).  
+ .NET Framework consente ai sottoscrittori di registrarsi per le notifiche degli eventi in modo statico o dinamico. I gestori eventi statici sono attivi per l'intera durata della classe di cui gestiscono gli eventi. I gestori eventi dinamici sono attivati e disattivati in modo esplicito durante l'esecuzione del programma, in genere in risposta a una logica di programma condizionale. Ad esempio, possono essere usati se le notifiche degli eventi sono necessarie solo in determinate condizioni oppure se un'applicazione fornisce più gestori eventi e le condizioni di runtime definiscono quello appropriato da usare. Nell'esempio della sezione precedente viene illustrato come aggiungere un gestore eventi in modo dinamico. Per altre informazioni, vedere [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md) e [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md).  
   
 ## <a name="raising-multiple-events"></a>Generazione di più eventi  
  Se la propria classe genera più eventi, il compilatore genera un campo per ogni istanza del delegato di evento. Se il numero di eventi è elevato, il costo di archiviazione di un campo per ciascun delegato non è sostenibile. Per questi casi, .NET Framework fornisce le proprietà evento che è possibile usare con un'altra struttura di dati di propria scelta per archiviare i delegati degli eventi.  
@@ -80,7 +80,7 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Procedura: Generare e utilizzare eventi](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene esempi di generazione e uso di eventi.|  
 |[Procedura: Gestire più eventi mediante le relative proprietà](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Viene illustrato come usare le proprietà degli eventi per gestire più eventi.|  

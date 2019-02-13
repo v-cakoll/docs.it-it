@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492039"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903889"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 ## <a name="what-is-a-parallel-query"></a>Che cos'è una query parallela?  
- LINQ (Language-Integrated Query), introdotto in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)],  offre un modello unificato per l'esecuzione di query su qualsiasi origine dati <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> in modo indipendente dai tipi. LINQ to Objects è il nome delle query LINQ eseguite su raccolte in memoria, ad esempio oggetti <xref:System.Collections.Generic.List%601> e matrici. Questo articolo presuppone che si abbia già una conoscenza delle nozioni di base di LINQ. Per altre informazioni, vedere [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ LINQ (Language-Integrated Query), introdotto in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)],  offre un modello unificato per l'esecuzione di query su qualsiasi origine dati <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> in modo indipendente dai tipi. LINQ to Objects è il nome delle query LINQ eseguite su raccolte in memoria, ad esempio oggetti <xref:System.Collections.Generic.List%601> e matrici. Questo articolo presuppone che si abbia già una conoscenza delle nozioni di base di LINQ. Per altre informazioni, vedere [LINQ (Language-Integrated Query)- C# ](../../csharp/programming-guide/concepts/linq/index.md) oppure [LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  Parallel LINQ (PLINQ) è un'implementazione in parallelo del modello LINQ. Una query PLINQ è molto simile a una query LINQ to Objects non parallela. Analogamente alle query [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] sequenziali, le query PLINQ possono essere eseguite su qualsiasi origine dati <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> in memoria e hanno un'esecuzione posticipata, ovvero l'esecuzione viene avviata solo dopo l'enumerazione della query. La differenza principale consiste nel fatto che PLINQ tenta di sfruttare al massimo tutti i processori del sistema. A tale scopo esegue il partizionamento dell'origine dati in segmenti e quindi esegue la query su ogni segmento in thread di lavoro distinti e in parallelo su più processori. In molti casi, l'esecuzione parallela rende notevolmente più rapida l'esecuzione della query.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54492039"
   
  Oltre agli operatori query standard, la classe <xref:System.Linq.ParallelEnumerable> contiene un set di metodi che rendono possibili comportamenti specifici dell'esecuzione parallela. Questi metodi specifici di PLINQ sono elencati nella tabella seguente.  
   
-|Operatore ParallelEnumerable|Description|  
+|Operatore ParallelEnumerable|Descrizione|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto di ingresso di PLINQ. Specifica che la parte rimanente della query deve essere parallelizzata, se è possibile.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Specifica che la parte rimanente della query deve essere eseguita in sequenza, come una query LINQ non parallela.|  

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696884"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759132"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -112,5 +112,5 @@ L'utente decide come devono essere gestiti i dati diagnostici, ovvero come avvis
 
 ## <a name="see-also"></a>Vedere anche
 
-* Post di blog [Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) (Introduzione all'analizzatore di API).
-* Video dimostrativo sull'[analizzatore di API](https://youtu.be/eeBEahYXGd0) su YouTube.
+- Post di blog [Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) (Introduzione all'analizzatore di API).
+- Video dimostrativo sull'[analizzatore di API](https://youtu.be/eeBEahYXGd0) su YouTube.

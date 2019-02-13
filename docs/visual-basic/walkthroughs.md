@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086764"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739462"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -47,9 +47,6 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Implementazione dell'ereditarietà con gli oggetti COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Spiega come usare Visual Basic 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in Visual Basic.  
   
- [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Viene illustrato come creare un'applicazione multithreading che cerca le occorrenze di una parola in un file di testo.  
-  
  [Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Descrive le impostazioni predefinite di `My.Application.Log` e spiega come determinare le impostazioni dell'applicazione.  
   
@@ -80,5 +77,5 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  [Persistenza di un oggetto in Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Viene illustrato come creare un oggetto semplice e rendere persistenti i relativi dati in un file.  
   
- [Supporto test preliminare con la funzionalità di generazione dall'utilizzo](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Procedura dettagliata: Supporto test preventivi con la funzionalità di generazione dall'utilizzo](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Spiega come eseguire uno sviluppo con test preliminare, in cui prima si scrivono gli unit test e successivamente il codice sorgente in modo che il test abbia esito positivo.

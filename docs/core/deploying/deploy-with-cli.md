@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504002"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826460"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
@@ -38,11 +38,11 @@ Per un aiuto rapido sull'uso dell'interfaccia della riga di comando, la tabella 
 
 ## <a name="publishing-basics"></a>Nozioni di base sulla pubblicazione
 
-L'impostazione `<TargetFramework>` del file di progetto specifica il framework di destinazione predefinito quando si pubblica l'app. È possibile modificare il framework di destinazione impostando qualsiasi [moniker framework di destinazione (TFM)](../../standard/frameworks.md). Ad esempio, se il progetto usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, viene creato un file binario che ha come destinazione .NET Core 2.2. Il moniker framework di destinazione specificato in questa impostazione è la destinazione predefinita usata dal comando [`dotnet publish`][dotnet-publish].
+L'impostazione `<TargetFramework>` del file di progetto specifica il framework di destinazione predefinito quando si pubblica l'app. È possibile modificare il framework di destinazione impostando qualsiasi [moniker framework di destinazione (TFM)](../../standard/frameworks.md). Ad esempio, se il progetto usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, viene creato un file binario che ha come destinazione .NET Core 2.2. Il moniker framework di destinazione specificato in questa impostazione è la destinazione predefinita usata dal comando [`dotnet publish`](../tools/dotnet-publish.md).
 
 Se si vuole impostare più framework di destinazione, è possibile impostare `<TargetFrameworks>` su più valori di moniker framework di destinazione separati da punto e virgola. È possibile pubblicare uno dei framework con il comando `dotnet publish -f <TFM>`. Ad esempio, se è stato specificato `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` e si esegue `dotnet publish -f netcoreapp2.1`, viene creato un file binario che ha come destinazione .NET Core 2.1.
 
-Se non è stata impostata diversamente, la directory di output del comando [`dotnet publish`][dotnet-publish] è `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. La modalità **BUILD-CONFIGURATION** predefinita è **Debug** a meno che non venga modificata con il parametro `-c`. Ad esempio, `dotnet publish -c Release -f netcoreapp2.1` pubblica in `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Se non è stata impostata diversamente, la directory di output del comando [`dotnet publish`](../tools/dotnet-publish.md) è `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. La modalità **BUILD-CONFIGURATION** predefinita è **Debug** a meno che non venga modificata con il parametro `-c`. Ad esempio, `dotnet publish -c Release -f netcoreapp2.1` pubblica in `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Se si usa .NET Core SDK 3.0, la modalità di pubblicazione predefinita per le app che hanno come destinazione .NET Core versione 2.1, 2.2 o 3.0 è un file eseguibile dipendente dal framework.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Quando si esegue l'app ([`dotnet run`][dotnet-run]), viene visualizzato l'output seguente:
+Quando si esegue l'app ([`dotnet run`](../tools/dotnet-run.md)), viene visualizzato l'output seguente:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ La pubblicazione di una distribuzione autonoma crea un'app che non esegue il rol
 
 - [Distribuzione di applicazioni .NET Core](index.md)
 - [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

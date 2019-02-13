@@ -3,13 +3,13 @@ title: Caratteristiche delle applicazioni Web moderne
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Caratteristiche delle applicazioni Web moderne
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147336"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828124"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caratteristiche delle applicazioni Web moderne
 
@@ -39,25 +39,25 @@ Il framework ASP.NET Core è ottimizzato per il cloud (sia pubblico che privato)
 
 ## <a name="cross-platform"></a>Multipiattaforma
 
-ASP.NET Core è multipiattaforma e può essere eseguito su Linux, macOS e Windows. Ciò apre molte nuove opzioni per lo sviluppo e la distribuzione di app compilate con ASP.NET Core. I contenitori Docker, che attualmente eseguono in genere Linux, possono ospitare applicazioni ASP.NET Core e avvalersi dei vantaggi di [contenitori e microservizi](../microservices-architecture/index.md).
+ASP.NET Core è multipiattaforma e può essere eseguito in Linux, macOS e Windows. Ciò apre molte nuove opzioni per lo sviluppo e la distribuzione di app compilate con ASP.NET Core. I contenitori Docker sia Linux che Windows possono ospitare applicazioni ASP.NET Core e avvalersi così dei vantaggi offerti da [contenitori e microservizi](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modulare e loosely coupled
 
 I pacchetti NuGet sono perfettamente compatibili in .NET Core e la struttura con molte librerie delle app ASP.NET Core dipende da NuGet. La granularità delle funzionalità garantisce che le app eseguano e distribuiscano solo le funzionalità necessarie, riducendo la superficie di attacco per le vulnerabilità di sicurezza.
 
-ASP.NET Core offre anche il supporto completo dell'inserimento di dipendenze, sia internamente che a livello delle applicazioni. Le interfacce possono avere più implementazioni, intercambiabili in base alle esigenze. L'inserimento di dipendenze consente l'associazione generica delle app a tali interfacce, semplificandone la distribuzione, la gestione e il test.
+ASP.NET Core offre anche il supporto completo per l'[inserimento delle dipendenze](https://deviq.com/dependency-injection/), sia internamente che a livello di applicazione. Le interfacce possono avere più implementazioni, intercambiabili in base alle esigenze. L'inserimento delle dipendenze consente l'accoppiamento debole delle app a tali interfacce, anziché a implementazioni specifiche, semplificandone l'estensione, la gestione e il test.
 
 ## <a name="easily-tested-with-automated-tests"></a>Test automatizzati
 
-Le applicazioni ASP.NET Core supportano gli unit test, il regime di controllo libero e l'inserimento delle dipendenze, pertanto risulta facile sostituire le sezioni dell'infrastruttura che causano problemi con implementazioni fittizie per l'esecuzione di test. ASP.NET Core include anche un TestServer che può essere usato per l'hosting delle app in memoria. I test funzionali possono quindi inoltrare richieste a questo server in memoria, usando l'intero stack dell'applicazione (middleware, routing, binding dei modelli, filtri e così via) e ricevendo una risposta, il tutto in una frazione del tempo che sarebbe necessario per impostare l'hosting dell'app in un server reale e inoltrare richieste attraverso il layer di rete. Questi test sono facili da scrivere e particolarmente utili per le API, che sono sempre più importanti nelle applicazioni Web moderne.
+Le applicazioni ASP.NET Core supportano gli unit test, l'accoppiamento libero e l'inserimento delle dipendenze, pertanto risulta facile sostituire le sezioni dell'infrastruttura che causano problemi con implementazioni fittizie per l'esecuzione di test. ASP.NET Core include anche un TestServer che può essere usato per l'hosting delle app in memoria. I test funzionali possono quindi inoltrare richieste a questo server in memoria, usando l'intero stack dell'applicazione (middleware, routing, binding dei modelli, filtri e così via) e ricevendo una risposta, il tutto in una frazione del tempo che sarebbe necessario per impostare l'hosting dell'app in un server reale e inoltrare richieste attraverso il layer di rete. Questi test sono facili da scrivere e particolarmente utili per le API, che sono sempre più importanti nelle applicazioni Web moderne.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Supporto di comportamenti tradizionali e delle applicazioni a pagina singola
 
-Le applicazioni Web tradizionali includono comportamenti lato client limitati, ma si basano sul server per tutte le attività di navigazione, query e aggiornamento. Ogni nuova operazione eseguita dall'utente diventa una nuova richiesta Web e richiede un nuovo caricamento completo della pagina nel browser dell'utente finale. I framework Model-View-Controller (MVC , Modello-Visualizzazione-Controller) classici seguono in genere questo approccio, in cui ogni nuova richiesta corrisponde a un'azione del controller diversa che a sua volta interagisce con un modello e restituisce una visualizzazione. Alcune operazioni singole su una determinata pagina possono essere migliorate con la funzionalità AJAX (Asynchronous JavaScript and XML), ma l'architettura complessiva dell'app usa molte visualizzazioni MVC e molti endpoint URL diversi.
+Le applicazioni Web tradizionali includono comportamenti lato client limitati, ma si basano sul server per tutte le attività di navigazione, query e aggiornamento. Ogni nuova operazione eseguita dall'utente diventa una nuova richiesta Web e richiede un nuovo caricamento completo della pagina nel browser dell'utente finale. I framework Model-View-Controller (MVC , Modello-Visualizzazione-Controller) classici seguono in genere questo approccio, in cui ogni nuova richiesta corrisponde a un'azione del controller diversa che a sua volta interagisce con un modello e restituisce una visualizzazione. Alcune operazioni singole su una determinata pagina possono essere migliorate con la funzionalità AJAX (Asynchronous JavaScript and XML), ma l'architettura complessiva dell'app usa molte visualizzazioni MVC e molti endpoint URL diversi. ASP.NET Core MVC supporta anche Razor Pages, un modo più semplice per organizzare le pagine in stile MVC.
 
 Le applicazioni a pagina singola, al contrario, richiedono un numero molto limitato di caricamenti pagina generati dinamicamente sul lato server. Molte applicazioni a pagina singola vengono inizializzate all'interno di un file HTML statico, che carica le librerie JavaScript necessarie per avviare ed eseguire l'app. Queste app usano in modo intensivo le API Web per ottenere i dati necessari e possono offrire esperienze utente molto più complete.
 
-Molte applicazioni Web presentano una combinazione di comportamenti dell'applicazione Web tradizionale (in genere per il contenuto) e applicazioni a pagina singola (per l'interattività). ASP.NET Core supporta sia i framework MVC (Viste e/o Razor Pages) sia le API Web nella stessa applicazione, usando lo stesso set di strumenti e librerie del framework sottostanti.
+Molte applicazioni Web presentano una combinazione di comportamenti dell'applicazione Web tradizionale (in genere per il contenuto) e applicazioni a pagina singola (per l'interattività). ASP.NET Core supporta sia MVC (Viste e Pagine) sia le API Web nella stessa applicazione, usando lo stesso set di strumenti e librerie del framework sottostanti.
 
 ## <a name="simple-development-and-deployment"></a>Sviluppo e distribuzione facili
 

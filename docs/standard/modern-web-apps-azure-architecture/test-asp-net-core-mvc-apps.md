@@ -3,20 +3,20 @@ title: Testare app ASP.NET Core MVC
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Testare app ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154203"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827552"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
 > *"Non vi piace fare lo unit test dei vostri prodotti? Molto probabilmente non piacerà neanche ai vostri clienti."*
  > \_- Anonimo-
 
-Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma sfortunatamente, se le applicazioni non sono progettate per l'esecuzione di test, è l'unico modo disponibile. Le applicazioni scritte secondo i principi architetturali descritti nel capitolo X devono supportare gli unit test. Le applicazioni ASP.NET Core supportano anche l'integrazione automatizzata e i test funzionali.
+Qualsiasi software, indipendentemente dalla complessità, può generare errori imprevisti dopo che è stato modificato. È quindi assolutamente necessario sottoporre a test tutte le applicazioni che non siano banali o poco importanti. Il test manuale è il modo più lento, meno affidabile e più costoso per testare il software, ma se le applicazioni non sono progettate per essere testabili, è l'unico modo disponibile. Le applicazioni create secondo i principi architetturali descritti nel [capitolo 4](architectural-principles.md) devono supportare gli unit test. Le applicazioni ASP.NET Core supportano anche l'integrazione automatizzata e i test funzionali.
 
 ## <a name="kinds-of-automated-tests"></a>Tipi di test automatizzati
 
@@ -66,7 +66,7 @@ I test di integrazione vengono scritti dal punto di vista dello sviluppatore per
 
 > "Spesso lo sviluppo di un sistema viene paragonato alla costruzione di una casa. Questa analogia non è completamente corretta, ma è possibile estenderla per consentire la comprensione delle differenze tra unit test e test funzionali. Uno unit test può essere paragonato a un ispettore che visita il cantiere di un'abitazione. L'ispettore concentra l'attenzione sulle varie parti interne della casa: le fondamenta, gli infissi, l'impianto elettrico, quello idraulico e così via, per assicurarsi (testare) che le parti della casa funzionino correttamente e in modo sicuro, ovvero soddisfino le normative edilizie (il codice di compilazione). In questo scenario, i test funzionali sono paragonabili al proprietario della casa che visita questo stesso cantiere. Il proprietario presuppone che gli impianti interni della casa funzionino come si deve, dato che di questo si occupa l'ispettore. Il proprietario concentra l'attenzione sulla qualità della vita in quella casa, preoccupandosi dell'aspetto della casa stessa, dell'adeguatezza delle dimensioni delle stanze, della capacità della casa di soddisfare le esigenze della famiglia e dell'orientamento delle finestre, che devono lasciar entrare il sole del mattino. Il proprietario esegue il test funzionale della casa. Il suo punto di vista è quello dell'utente finale. L'ispettore esegue gli unit test della casa. Il suo punto di vista è quello del compilatore."
 
-Fonte: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Unit test e test funzionali)
+Origine: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Unit test e test funzionali)
 
 Gli sviluppatori possono sbagliare in due modi: creando una cosa nel modo sbagliato o creando la cosa sbagliata. Gli unit test consentono di verificare che si stia creando qualcosa nel modo corretto. I test funzionali consentono di verificare che si stia creando la cosa giusta.
 
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Lo unit test di questo metodo è reso difficile dalla dipendenza diretta da System.IO.File, usato per leggere dal file system. È possibile testare questo comportamento per assicurarsi che funzioni come previsto, ma facendo questo con file reali si esegue un test di integrazione. Vale la pena di notare che non è possibile testare la route di questo metodo. Fra poco si vedrà come eseguire questa operazione con un test funzionale.
+Lo unit test di questo metodo è reso difficile dalla dipendenza diretta da System.IO.File, usato per leggere dal file system. È possibile testare questo comportamento per assicurarsi che funzioni come previsto, ma facendo questo con file reali si esegue un test di integrazione. Si noti che non è possibile applicare uno unit test alla route di questo metodo. Più avanti si vedrà come eseguire questa operazione con un test funzionale.
 
 Se non è possibile eseguire direttamente lo unit test del comportamento del file system e non è possibile testare la route, cosa è possibile testare? Dopo aver effettuato il refactoring per rendere possibile l'esecuzione di unit test, si possono individuare alcuni test case e comportamenti mancanti, ad esempio la gestione degli errori. Che cosa fa il metodo quando non trova un file? Cosa deve fare? In questo esempio, il metodo sottoposto a refactoring ha l'aspetto seguente:
 
@@ -171,53 +171,15 @@ public IActionResult GetImage(int id)
 
 \_logger e \_imageService sono entrambi inseriti come dipendenze. È ora possibile verificare che lo stesso ID che viene passato al metodo di azione venga passato a \_imageService, e che i byte risultanti vengano restituiti come parte di FileResult. È anche possibile verificare che la registrazione degli errori venga eseguita come previsto e che venga restituito un risultato NotFound se l'immagine manca, presupponendo che questo rappresenti un comportamento importante dell'applicazione, in altre parole, che non sia solo codice temporaneo aggiunto dallo sviluppatore per diagnosticare un problema. La logica effettiva del file è stata spostata in un servizio di implementazione separato ed è stata migliorata perché venga restituita un'eccezione specifica dell'applicazione in caso di mancanza di un file. È possibile testare questa implementazione in modo indipendente, usando un test di integrazione.
 
+Nella maggior parte dei casi è opportuno usare i gestori di eccezioni globali nei controller, per ridurre al minimo la quantità di codice e di conseguenza la necessità di esecuzione di unit test. È consigliabile eseguire la maggior parte dei test di azioni dei controller mediante i test funzionali e la classe `TestServer` descritta di seguito.
+
 ## <a name="integration-testing-aspnet-core-apps"></a>Test di integrazione di app ASP.NET Core
 
-Per verificare il corretto funzionamento di un LocalFileImageService, è necessario creare un file di immagine di test noto e verificare che il servizio lo restituisca in risposta a un input specifico. È necessario prestare attenzione a non usare oggetti fittizi per il comportamento effettivamente da testare (in questo caso, la lettura dal file system). Gli oggetti fittizi, tuttavia, possono comunque rivelarsi utili per impostare i test di integrazione. In questo caso, è possibile simulare IHostingEnvironment in modo che il relativo ContentRootPath punti alla cartella che si intende usare per l'immagine di test. La classe di test di integrazione funzionante completa è illustrata di seguito:
-
-```csharp
-public class LocalFileImageServiceGetImageBytesById
-{
-    private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
-    private readonly Mock<IHostingEnvironment> _mockEnvironment = new Mock<IHostingEnvironment>();
-    private int _testImageId = 123;
-    private string _testFileName = "123.png";
-
-    public LocalFileImageServiceGetImageBytesById()
-    {
-        // create folder if necessary
-        Directory.CreateDirectory(Path.Combine(GetFileDirectory(), "Pics"));
-        string filePath = GetFilePath(_testFileName);
-        System.IO.File.WriteAllBytes(filePath, _testBytes);
-        _mockEnvironment.SetupGet<string>(m => m.ContentRootPath).Returns(GetFileDirectory());
-    }
-
-    private string GetFilePath(string fileName)
-    {
-        return Path.Combine(GetFileDirectory(), "Pics", fileName);
-        }
-            private string GetFileDirectory()
-        {
-        var location = System.Reflection.Assembly.GetEntryAssembly().Location;
-        return Path.GetDirectoryName(location);
-    }
-
-    [Fact]
-    public void ReturnsFileContentResultGivenValidId()
-    {
-        var fileService = new LocalFileImageService(_mockEnvironment.Object);
-        var result = fileService.GetImageBytesById(_testImageId);
-        Assert.Equal(_testBytes, result);
-    }
-}
-```
-
-> [!NOTE]
-> Il test di per sé è molto semplice: la maggior parte del codice è necessaria per configurare il sistema e creare l'infrastruttura di test (in questo caso, un file effettivo da leggere dal disco). Questa è una situazione tipica per i test di integrazione, che spesso richiedono una configurazione più complessa rispetto agli unit test.
+La maggior parte dei test di integrazione nelle app ASP.NET Core dovrebbe riguardare test dei servizi e degli altri tipi di implementazione definiti nel progetto di infrastruttura. Il modo migliore per verificare che il progetto ASP.NET Core MVC funzioni correttamente è l'esecuzione di test funzionali sull'app in esecuzione in un host di test. Un esempio di test di integrazione di una classe di accesso di dati è illustrato nella sezione Test di integrazione in precedenza nel capitolo.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Test funzionale di app ASP.NET Core
 
-Per applicazioni ASP.NET Core, la classe TestServer rende la scrittura di test funzionali piuttosto facile. Configurare un TestServer usando direttamente un WebHostBuilder (esattamente come si farebbe normalmente per l'applicazione), o con un tipo di WebApplicationFactory (disponibile nella versione 2.1). È consigliabile cercare di far corrispondere l'host di test all'host di produzione quanto più possibile, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe WebApplicationFactory è utile per configurare la ContentRoot di TestServer, che viene usata da ASP.NET Core per individuare una risorsa statica come Views.
+Per le applicazioni ASP.NET Core, la classe `TestServer` semplifica notevolmente la scrittura di test funzionali. Si configura un elemento `TestServer` usando direttamente `WebHostBuilder` (come nella procedura standard usata per l'applicazione) o con il tipo `WebApplicationFactory` (disponibile a partire dalla versione 2.1). È consigliabile cercare la corrispondenza più esatta possibile tra l'host di test e l'host di produzione, in modo che i test abbiano un comportamento simile a quello dell'app in produzione. La classe `WebApplicationFactory` è utile per configurare ContentRoot di TestServer, che viene usata da ASP.NET Core per trovare una risorsa statica come Views.
 
 È possibile generare test funzionali semplici creando una classe di test che implementa IClassFixture \<WebApplicationFactoryTEntry\<>>, dove TEntry è la classe Startup dell'applicazione Web. In questo modo, la fixture di test può creare un client usando il metodo CreateClient della factory:
 
@@ -238,19 +200,19 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 Spesso, prima dell'esecuzione di ogni test è necessario eseguire un'ulteriore configurazione del sito, ad esempio la configurazione dell'applicazione per l'uso di un archivio dati in memoria e il seeding dell'applicazione con i dati di test. A tale scopo, è necessario creare una propria sottoclasse di WebApplicationFactory<TEntry> ed eseguire l'override del suo metodo ConfigureWebHost. L'esempio seguente è tratto dal progetto FunctionalTests di eShopOnWeb e viene usato come parte dei test sull'applicazione Web principale.
 
 ```cs
-using Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.eShopWeb;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.eShopWeb.Infrastructure.Data;
+using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.eShopWeb.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using Microsoft.EntityFrameworkCore;
-using Infrastructure.Identity;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 {
-    public class CustomWebRazorPagesApplicationFactory<TStartup>
+    public class CustomWebApplicationFactory<TStartup>
     : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
@@ -262,7 +224,7 @@ namespace FunctionalTests.WebRazorPages
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -288,7 +250,7 @@ namespace FunctionalTests.WebRazorPages
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebRazorPagesApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -310,19 +272,20 @@ namespace FunctionalTests.WebRazorPages
 }
 ```
 
-I test possono usare questa WebApplicationFactory personalizzata per creare un client e formulare quindi le richieste all'applicazione usando questa istanza del client. L'applicazione avrà effettuato il seeding dei dati utilizzabili come parte delle asserzioni del test. Questo test verifica che la home page dell'applicazione Razor Pages di eShopOnWeb si carichi correttamente e includa un elenco di prodotti già aggiunto all'applicazione come parte dei dati del valore di inizializzazione.
+I test possono usare questa WebApplicationFactory personalizzata per creare un client e formulare quindi le richieste all'applicazione usando questa istanza del client. L'applicazione avrà effettuato il seeding dei dati utilizzabili come parte delle asserzioni del test. Il test seguente verifica che la home page dell'applicazione eShopOnWeb si carichi correttamente e includa un elenco di prodotti già aggiunto all'applicazione come parte dei dati iniziali.
 
 ```cs
-using Microsoft.eShopWeb.RazorPages;
+using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
+using Microsoft.eShopWeb.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace FunctionalTests.WebRazorPages
+namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebRazorPagesApplicationFactory<Startup>>
+    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
     {
-        public HomePageOnGet(CustomWebRazorPagesApplicationFactory<Startup> factory)
+        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
         {
             Client = factory.CreateClient();
         }
@@ -338,13 +301,13 @@ namespace FunctionalTests.WebRazorPages
             var stringResponse = await response.Content.ReadAsStringAsync();
 
             // Assert
-            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse); // from seed data
+            Assert.Contains(".NET Bot Black Sweatshirt", stringResponse);
         }
     }
 }
 ```
 
-Questo test funzionale interessa tutto lo stack dell'applicazione ASP.NET Core MVC / Razor Pages, inclusi tutti i middleware, i filtri, i binder e così via eventualmente presenti. Verifica che una determinata route ("/") restituisca il codice di stato riuscito e l'output HTML previsti. Questa verifica viene eseguita senza la configurazione di un server Web reale ed è quindi possibile evitare gran parte degli inconvenienti che l'uso di un server Web reale può comportare (ad esempio, problemi con le impostazioni del firewall). I test funzionali eseguiti su TestServer sono in genere più lenti rispetto ai test di integrazione e agli unit test, ma sono molto più veloci rispetto a test eseguiti attraverso la rete per un server Web. È necessario usare i test funzionali per garantire che lo stack front-end dell'applicazione funzioni come previsto. Questi test sono particolarmente utili quando si trova la duplicazione nei controller o nelle pagine e la si risolve aggiungendo filtri. In teoria, questo refactoring non cambierà il comportamento dell'applicazione e una suite di test funzionali verificherà che questo sia il caso.
+Questo test funzionale interessa tutto lo stack dell'applicazione ASP.NET Core MVC / Razor Pages, inclusi tutti i middleware, i filtri, i binder e così via eventualmente presenti. Verifica che una determinata route ("/") restituisca il codice di stato riuscito e l'output HTML previsti. Questa verifica viene eseguita senza la configurazione di un server Web reale ed è quindi possibile evitare gran parte degli inconvenienti che l'uso di un server Web reale può comportare (ad esempio, problemi con le impostazioni del firewall). I test funzionali eseguiti su TestServer sono in genere più lenti rispetto ai test di integrazione e agli unit test, ma sono molto più veloci rispetto a test eseguiti attraverso la rete per un server Web. È consigliabile usare test funzionali per garantire che lo stack front-end dell'applicazione funzioni come previsto. Questi test sono particolarmente utili quando si trova la duplicazione nei controller o nelle pagine e la si risolve aggiungendo filtri. In teoria questo refactoring non modifica il comportamento dell'applicazione e ciò sarà verificabile tramite un gruppo di test funzionali.
 
 >[!div class="step-by-step"]
 >[Precedente](work-with-data-in-asp-net-core-apps.md)

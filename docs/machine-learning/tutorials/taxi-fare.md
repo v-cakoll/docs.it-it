@@ -1,24 +1,24 @@
 ---
-title: Eseguire una stima delle tariffe dei taxi a New York usando un algoritmo di apprendimento basato sulla regressione con ML.NET
-description: Eseguire una stima delle tariffe usando un algoritmo di apprendimento basato sulla regressione con ML.NET.
+title: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET
+description: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333785"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828397"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima delle tariffe dei taxi a New York usando un algoritmo di apprendimento basato sulla regressione con ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET
 
 > [!NOTE]
 > Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Questa esercitazione illustra come usare ML.NET per creare un [modello di regressione](../resources/glossary.md#regression) per la stima delle tariffe dei taxi a New York.
+Questa esercitazione illustra come usare ML.NET per creare un [modello di regressione](../resources/glossary.md#regression) per la stima dei prezzi, precisamente delle tariffe dei taxi a New York.
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]

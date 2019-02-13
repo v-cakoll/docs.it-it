@@ -3,13 +3,13 @@ title: Usare i dati nelle app ASP.NET Core
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usare i dati nelle app ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532682"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827175"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-È possibile includere più relazioni, ma anche relazioni secondarie usando ThenInclude. EF Core eseguirà una singola query per recuperare il set di entità ottenuto.
+È possibile includere più relazioni, ma anche relazioni secondarie usando ThenInclude. EF Core eseguirà una singola query per recuperare il set di entità ottenuto. In alternativa è possibile includere proprietà di navigazione di proprietà di navigazione passando una stringa separata da "." al metodo di estensione `.Include()`, come illustrato di seguito:
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+Oltre a incapsulare la logica di filtro, una specifica può indicare la forma dei dati da restituire, incluse le proprietà da popolare. L'esempio eShopOnWeb include diverse specifiche che illustrano l'incapsulamento di informazioni di caricamento eager nella specifica. Di seguito è visualizzato un esempio d'uso della specifica come parte di una query:
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 Il _caricamento esplicito_ è un'altra opzione per caricare i dati correlati. Il caricamento esplicito consente di caricare dati aggiuntivi in un'entità che è già stata recuperata. Poiché prevede una richiesta separata al database, non è consigliabile per le applicazioni Web, che devono ridurre al minimo il numero round trip al database per ogni richiesta.
 
 Il _caricamento lazy_ è una funzionalità che consente di caricare automaticamente i dati correlati ai quali l'applicazione fa riferimento. EF Core ha aggiunto il supporto per il caricamento posticipato nella versione 2.1. Il caricamento posticipato non è abilitato per impostazione predefinita e richiede l'installazione di `Microsoft.EntityFrameworkCore.Proxies`. Come con il caricamento esplicito, il caricamento posticipato in genere deve essere disabilitato per le applicazioni Web poiché comporta delle query di database aggiuntive eseguite all'interno di ogni richiesta Web. Purtroppo, il sovraccarico generato dal caricamento posticipato spesso non viene rilevato in fase di sviluppo, quando la latenza è poca e spesso i set di dati usati per il test sono piccoli. Tuttavia nell'ambiente di produzione, con più utenti, più dati e latenza maggiore, le richieste di database aggiuntive spesso possono causare una riduzione delle prestazioni delle applicazioni Web che fanno largo uso del caricamento posticipato.
 
 [Avoid Lazy Loading Entities in Web Applications](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications) (Evitare il caricamento posticipato nelle applicazioni Web)
+
+### <a name="encapsulating-data"></a>Incapsulamento dei dati
+
+EF Core supporta diverse funzionalità che consentono al modello di incapsulare correttamente il proprio stato. Un problema comune nei modelli di dominio è che espongono le proprietà di navigazione della raccolta come tipi elenco accessibili pubblicamente. Di conseguenza i collaboratori possono modificare il contenuto di questi tipi di raccolta e ignorare importanti regole di business relative alla raccolta stessa, con il rischio di lasciare l'oggetto in uno stato non valido. La soluzione è esporre l'accesso in sola lettura alle raccolte correlate e specificare in modo esplicito metodi che definiscono le modalità di modifica di queste raccolte da parte dei client, come nell'esempio seguente:
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Si noti che questo tipo di entità non espone una proprietà `List` o `ICollection` pubblica, ma espone un tipo `IReadOnlyCollection` che esegue il wrapping del tipo List (Elenco) sottostante. Quando si usa questo criterio è possibile indicare a Entity Framework Core di usare il campo sottostante nel modo seguente:
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Un altro approccio per il miglioramento del modello di dominio è l'uso di oggetti valore per i tipi che non dispongono di identità e si distinguono solo per le relative proprietà. L'uso di questi tipi come proprietà delle entità consente di mantenere la logica specifica per l'oggetto valore nella posizione appropriata, evitando duplicazioni di logica tra più entità che usano lo stesso concetto. In Entity Framework Core è possibile rendere persistenti gli oggetti valore nella stessa tabella dell'entità di appartenenza, configurando il tipo come entità di proprietà come illustrato di seguito:
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+In questo esempio la proprietà `ShipToAddress` è di tipo `Address`. `Address` è un oggetto valore con diverse proprietà, quali `Street` e `City`. Entity Framework Core esegue il mapping dell'oggetto `Order` alla relativa tabella con una sola colonna per ogni proprietà `Address`, facendo precedere al nome di ogni colonna il nome della proprietà. In questo esempio la tabella `Order` includerebbe colonne come `ShipToAddress_Street` e `ShipToAddress_City`.
+
+[EF Core 2.2 introduce il supporto delle raccolte di entità di proprietà](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Connessioni resilienti
 
@@ -253,7 +322,7 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Poiché Dapper offre una capacità di incapsulamento ridotta, è necessario che gli sviluppatori sappiano come archiviare i dati, eseguire una query sui dati in modo efficiente e scrivere altro codice per recuperare i dati. Quando viene modificato il modello, anziché creare semplicemente una nuova migrazione (un'altra funzionalità di EF Core) e/o aggiornare le informazioni di mapping in un unico punto di un oggetto DbContext, è necessario aggiornare tutte le query interessate. Queste query non offrono garanzie durante la compilazione. Possono quindi interrompersi durante l'esecuzione in risposta alle modifiche al modello o al database, compromettendo il rilevamento rapido degli errori. A fronte di questi compromessi, Dapper offre prestazioni molto elevate.
+Poiché Dapper offre una capacità di incapsulamento ridotta, è necessario che gli sviluppatori sappiano come archiviare i dati, eseguire una query sui dati in modo efficiente e scrivere altro codice per recuperare i dati. Quando viene modificato il modello, anziché creare semplicemente una nuova migrazione (un'altra funzionalità di EF Core) e/o aggiornare le informazioni di mapping in un unico punto di un oggetto DbContext, è necessario aggiornare tutte le query interessate. Queste query non offrono garanzie durante la compilazione, pertanto possono interrompersi durante l'esecuzione in risposta alle modifiche al modello o al database, compromettendo il rilevamento rapido degli errori. A fronte di questi compromessi, Dapper offre prestazioni molto elevate.
 
 Per la maggior parte delle applicazioni e per molte parti di quasi tutte le applicazioni, le prestazioni di EF Core risultano accettabili. Di conseguenza, i vantaggi offerti agli sviluppatori dal punto della produttività superano il relativo sovraccarico delle prestazioni. Per le query che usano la memorizzazione nella cache, la query effettiva può essere eseguita in brevissimo tempo. In questi casi le differenze in termini di prestazioni di query si riducono e diventano discutibili.
 

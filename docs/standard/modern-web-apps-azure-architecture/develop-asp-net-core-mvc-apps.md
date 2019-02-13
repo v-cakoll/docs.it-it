@@ -3,13 +3,13 @@ title: Sviluppo di app ASP.NET Core MVC
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Sviluppo di app ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.date: 01/30/2019
+ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058503"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827878"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -17,6 +17,24 @@ ms.locfileid: "54058503"
 > _- Andrew Hunt e David Thomas_
 
 ASP.NET Core è un framework multipiattaforma open source per la compilazione di moderne applicazioni Web ottimizzate per il cloud. Le app ASP.NET Core sono leggere e modulari, con supporto incorporato per l'inserimento di dipendenze, e offrono maggiore testabilità e gestibilità. In associazione a MVC, che supporta la compilazione di API Web moderne oltre che di app basate su visualizzazione, ASP.NET Core è un framework potente per la compilazione di applicazioni Web aziendali.
+
+## <a name="mvc-and-razor-pages"></a>MVC e Razor Pages
+
+ASP.NET Core MVC offre molte funzionalità utili per la compilazione di API e app basate sul Web. Il termine MVC è l'acronimo di "Model-View-Controller", un modello UI che suddivide le responsabilità della risposta alle richieste degli utenti in più sezioni. Oltre a seguire questo modello è possibile implementare funzionalità nelle app ASP.NET Core come Razor Pages. Le Razor Pages sono integrate in ASP.NET Core MVC e usano le stesse funzionalità di routing, associazione di modelli e così via. Tuttavia anziché avere cartelle e file separati per controller, viste e così via e usare il routing basato sugli attributi, le Razor Pages si trovano in un'unica cartella ("/Pages"), eseguono il routing sulla base della loro posizione relativa in tale cartella e gestiscono le richieste con gestore anziché con azioni del controller.
+
+Quando si crea una nuova app ASP.NET Core è importante avere determinato il tipo di app che si vuole creare. In Visual Studio è possibile scegliere tra diversi modelli. I tre modelli di progetto più comuni sono API Web, Applicazione Web e Applicazione Web (MVC). Questa scelta può essere effettuata solo quando si crea un progetto, ma non è una decisione irrevocabile. Il progetto API Web usa controller MVC standard, ma per impostazione predefinita non dispone di una cartella Views. Allo stesso modo il modello Applicazione Web predefinito usa Razor Pages e pertanto non dispone di una cartella Views. È possibile aggiungere una cartella Views a questi progetti in un secondo momento per supportare il comportamento basato sulle visualizzazioni. I progetti API Web e MVC non includono una cartella Pages per impostazione predefinita, ma è possibile aggiungerne una in un secondo momento per supportare i comportamenti basati su Razor Pages. Considerare questi tre modelli come origini del supporto per tre tipi diversi di interazione dell'utente predefinita: dati (API Web), basata sulle pagine e basata sulle visualizzazioni. Se si vuole è tuttavia possibile combinare e associare alcuni o tutti questi modelli in un singolo progetto.
+
+### <a name="why-razor-pages"></a>Perché Razor Pages?
+
+Razor Pages è l'approccio predefinito per le nuove applicazioni Web in Visual Studio. Razor Pages offre una modalità più semplice per la creazione di funzionalità dell'applicazione basate sulle pagine, ad esempio moduli non SPA. Con i controller e le visualizzazioni capitava spesso di avere applicazioni con controller molto grandi, che funzionavano con molte dipendenze e modelli di visualizzazione diversi e restituivano molte visualizzazioni diverse. Questo comportava un grado di complessità elevato e spesso risultava in controller non conformi al Principio di singola responsabilità o al Principio aperto/chiuso. Razor Pages risolve questo problema incapsulando la logica lato server di una determinata "pagina" logica in un'applicazione Web con markup Razor. Una pagina Razor che non include logica lato server può essere costituita semplicemente da un file Razor (ad esempio "Index.cshtml"). Tuttavia la maggior parte delle pagine Razor non elementari include una classe modello pagina associata, che per convenzione ha lo stesso nome del file Razor seguito dall'estensione "cs", ad esempio "Index.cshtml.cs".
+
+Un modello di pagina Razor Pages combina le responsabilità di un controller MVC e di un elemento viewmodel. Anziché gestire le richieste con metodi di azione del controller, vengono eseguiti gestori modello di pagina come "OnGet()" che eseguono il rendering della pagina associata per impostazione predefinita. Razor Pages semplifica il processo di creazione di pagine singole in un'app ASP.NET Core, pur garantendo tutte le funzionalità architettoniche di ASP.NET Core MVC. Si tratta di una scelta predefinita ottimale per nuove funzionalità basate sulle pagine.
+
+### <a name="when-to-use-mvc"></a>Quando usare MVC
+
+Se si stanno creando API Web, il modello MVC è preferibile all'uso di Razor Pages. Se il progetto espone solo endpoint dell'API Web è consigliabile iniziare con il modello di progetto API Web, ma per il resto è facile aggiungere controller ed endpoint API associati a qualsiasi app ASP.NET Core. È anche consigliabile usare l'approccio MVC basato sulle visualizzazioni quando si esegue la migrazione di un'applicazione esistente da ASP.NET MVC 5 o versioni precedenti ad ASP.NET Core MVC e si vuole eseguire questa operazione con il minimo sforzo. Dopo aver eseguito la migrazione iniziale è possibile valutare se è opportuno adottare Razor Pages per le nuove funzionalità o per la migrazione integrale.
+
+Sia che si scelga di crearla con Razor Pages o con le visualizzazioni MVC, l'app avrà prestazioni simili e supporterà l'inserimento delle dipendenze, i filtri, l'associazione e convalida di modelli e così via.
 
 ## <a name="mapping-requests-to-responses"></a>Mapping delle richieste alle risposte
 
@@ -58,6 +76,18 @@ public class ProductsController : Controller
 }
 ```
 
+Razor Pages non usa il routing degli attributi. È possibile specificare informazioni aggiuntive sul modello di route per una pagina Razor nel contesto della direttiva `@page` corrispondente:
+
+```csharp
+@page "{id:int}"
+```
+
+Nell'esempio precedente, la pagina in questione corrisponderà a una route con un parametro `id` intero. Ad esempio la pagina *Products.cshtml* nel percorso radice di `/Pages` ha la route seguente:
+
+```csharp
+"/Products/123"
+```
+
 Dopo aver individuato una determinata richiesta corrispondente a una route e prima della chiamata al metodo di azione, ASP.NET Core MVC eseguirà l'[associazione del modello](/aspnet/core/mvc/models/model-binding) e la [convalida del modello](/aspnet/core/mvc/models/validation) nella richiesta. L'associazione del modello converte i dati HTTP in ingresso nei tipi .NET specificati come parametri del metodo di azione da chiamare. Ad esempio, se il metodo di azione prevede un parametro ID di tipo int, l'associazione del modello tenterà di usare questo parametro in base a un valore specificato come parte della richiesta. A tale scopo, l'associazione del modello cerca i valori in un form pubblicato, i valori nella route e i valori di stringa di query. Se viene trovato un valore ID, il valore viene convertito in un intero prima di essere passato nel metodo di azione.
 
 Dopo l'associazione del modello ma prima della chiamata al metodo di azione, viene eseguita la convalida del modello. La convalida del modello usa gli attributi facoltativi del tipo di modello e contribuisce a garantire che l'oggetto di modello specificato sia conforme a determinati requisiti dei dati. Alcuni valori possono essere specificati come obbligatori o limitati a una determinata lunghezza o a un determinato intervallo numerico e così via. Se vengono specificati gli attributi di convalida ma il modello non è conforme ai requisiti, la proprietà ModelState.IsValid avrà valore false e il set di regole della convalida non riuscita sarà disponibile per l'invio al client che effettua la richiesta.
@@ -65,6 +95,8 @@ Dopo l'associazione del modello ma prima della chiamata al metodo di azione, vie
 Se viene usata la convalida del modello, è necessario verificare sempre che il modello sia valido prima di eseguire i comandi di modifica dello stato per garantire che l'app non sia danneggiata da dati non validi. È possibile usare un [filtro](/aspnet/core/mvc/controllers/filters) per evitare di aggiungere il codice necessario in ogni azione. I filtri di ASP.NET Core MVC consentono di intercettare i gruppi di richieste in modo che sia possibile applicare alla base di destinazione i criteri e gli aspetti comuni. I filtri possono essere applicati alle singole azioni, a interi controller o a livello globale per un'applicazione.
 
 Per le API Web, ASP.NET Core MVC supporta la [_negoziazione del contenuto_](/aspnet/core/mvc/models/formatting) consentendo alle richieste di specificare la formattazione delle risposte. In base alle intestazioni specificate nella richiesta, le azioni che restituiscono dati formattano la risposta nel formato XML, JSON o un altro formato supportato. Questa funzionalità consente a più client con requisiti diversi di formattazione dei dati di usare la stessa API.
+
+Per i progetti API Web può essere utile usare l'attributo `[ApiController]`, applicabile a singoli controller, a una classe controller di base o all'intero assembly. Questo attributo aggiunge il controllo di convalida modello automatico e qualsiasi azione con un modello non valido restituisce BadRequest con i dettagli degli errori di convalida. L'attributo richiede anche che tutte le azioni abbiano una route di attributo (anziché usare una route convenzionale) e restituisce informazioni ProblemDetails più dettagliate in caso di errori.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Riferimenti - Mapping delle richieste alle risposte
 >
@@ -76,6 +108,8 @@ Per le API Web, ASP.NET Core MVC supporta la [_negoziazione del contenuto_](/asp
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtri**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **Attributo ApiController**
+ > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>Uso delle dipendenze
 
@@ -132,13 +166,13 @@ Il modello a oggetti e le interfacce dell'applicazione devono trovarsi nel proge
 
 I dettagli di implementazione, ad esempio la modalità di persistenza o di invio delle notifiche a un utente, si trovano nel progetto Infrastructure. Il progetto farà riferimento a pacchetti specifici dell'implementazione, ad esempio Entity Framework Core, ma non deve esporre informazioni dettagliate su queste implementazioni all'esterno del progetto. I servizi e i repository dell'infrastruttura devono implementare interfacce definite nel progetto ApplicationCore e le relative implementazioni della persistenza sono responsabili del recupero e dell'archiviazione delle entità definite in ApplicationCore.
 
-Il progetto dell'interfaccia utente ASP.NET Core è responsabile di tutte le competenze a livello dell'interfaccia utente, ma non deve includere la logica di business o i dettagli dell'infrastruttura. Di fatto, il progetto non deve includere alcuna dipendenza nel progetto Infrastructure in modo che non venga inserita accidentalmente alcuna dipendenza tra i due progetti. Questo obiettivo può essere raggiunto usando un contenitore DI di terze parti come StructureMap che consente di definire le regole DI nelle classi Registry in ogni progetto.
+Il progetto dell'interfaccia utente ASP.NET Core è responsabile di tutte le competenze a livello dell'interfaccia utente, ma non deve includere la logica di business o i dettagli dell'infrastruttura. Di fatto, il progetto non deve includere alcuna dipendenza nel progetto Infrastructure in modo che non venga inserita accidentalmente alcuna dipendenza tra i due progetti. Questo obiettivo può essere raggiunto usando un contenitore DI di terze parti come Autofac, che consente di definire le regole DI nelle classi Module in ogni progetto.
 
 Un altro approccio per disaccoppiare l'applicazione dai dettagli di implementazione consiste nel fare in modo che l'applicazione chiami i microservizi, forse distribuiti in singoli contenitori Docker. Ciò offre una separazione delle competenze e un disaccoppiamento maggiori rispetto all'utilizzo di DI tra due progetti ma comporta una maggiore complessità.
 
 ### <a name="feature-organization"></a>Organizzazione basata sulle funzionalità
 
-Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato "cartelle di funzionalità" o "sezioni di funzionalità". Vedere anche [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
+Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato cartelle di funzionalità o [sezioni di funzionalità](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx). Vedere anche: [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
 
 A tale scopo, ASP.NET Core MVC supporta le aree. Usando le aree è possibile creare set separati di cartelle di controller e visualizzazioni, inclusi i modelli associati, in ogni cartella Area. La figure 7-1 illustra un esempio di struttura di cartelle con aree.
 
@@ -220,7 +254,7 @@ I filtri vengono in genere implementati come attributi, quindi è possibile appl
 public class AccountController : Controller
 
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // overrides the Authorize attribute
     public async Task<IActionResult> Login() {}
     public async Task<IActionResult> ForgotPassword() {}
 }
@@ -262,6 +296,8 @@ public class ValidateModelAttribute : ActionFilterAttribute
     }
 }
 ```
+
+È possibile aggiungere `ValidateModelAttribute` al progetto come dipendenza NuGet includendo il pacchetto [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel). Per le API è possibile usare l'attributo `ApiController` per applicare questo comportamento senza la necessità di un filtro `ValidateModel` separato.
 
 Analogamente, è possibile usare un filtro per verificare l'esistenza di un record e restituire un errore 404 prima che venga eseguita l'azione, eliminando la necessità di eseguire questi controlli nell'azione. Dopo aver estratto le convenzioni comuni e aver organizzato la soluzione per separare il codice dell'infrastruttura e la logica di business dall'interfaccia utente, i metodi delle azioni MVC dovrebbero essere estremamente snelli:
 
@@ -384,6 +420,13 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 
 **Figura 7-4.** Autenticazione basata su token per le API Web.
 
+È possibile creare un servizio di autenticazione personalizzato, eseguire l'integrazione con Azure AD e OAuth oppure implementare un servizio usando uno strumento open source quale [IdentityServer](https://github.com/IdentityServer).
+
+#### <a name="custom-security"></a>Sicurezza personalizzata
+
+Prestare particolare attenzione alle implementazioni personalizzate della crittografia, dell'appartenenza degli utenti o del sistema di generazione di token. Esistono molte alternative commerciali e open source che nella maggior parte dei casi offrono una sicurezza migliore rispetto a quella di un'implementazione personalizzata.
+
+
 > ### <a name="references--security"></a>Riferimenti - Sicurezza
 >
 > - **Panoramica della documentazione sulla sicurezza**  
@@ -396,12 +439,14 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticazione e autorizzazione per app per le API nel servizio app di Azure**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+> - **Identity Server**  
+>   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>Comunicazione con i client
 
 Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
 
-ASP.NET Core SignalR è incluso in ASP.NET Core 2.1.
+ASP.NET Core SignalR è disponibile con ASP.NET Core a partire dalla versione 2.1.
 
 La comunicazione con il client in tempo reale, con l'utilizzo diretto di WebSocket o altre tecniche, è utile in diversi scenari di applicazioni. Di seguito sono riportati alcuni esempi:
 

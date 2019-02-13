@@ -4,16 +4,16 @@ description: Descrive come creare uno strumento globale. Lo strumento globale è
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144579"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826421"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creare uno strumento globale Core .NET tramite l'interfaccia della riga di comando di .NET Core
 
-Questo articolo illustra come creare uno strumento globale .NET Core e inserirlo in un pacchetto. L'interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come uno strumento globale, che altri utenti possono facilmente installare ed eseguire. Gli strumenti globali .NET Core sono pacchetti NuGet installati dall'interfaccia della riga di comando di .NET Core. Per altre informazioni sugli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core][global-tool-info].
+Questo articolo illustra come creare uno strumento globale .NET Core e inserirlo in un pacchetto. L'interfaccia della riga di comando di .NET Core consente di creare un'applicazione console come uno strumento globale, che altri utenti possono facilmente installare ed eseguire. Gli strumenti globali .NET Core sono pacchetti NuGet installati dall'interfaccia della riga di comando di .NET Core. Per altre informazioni sugli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto:
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-Il parametro `--add-source` indica all'interfaccia della riga di comando di .NET Core di usare temporaneamente la cartella `./nupkg` (ovvero, la cartella `<PackageOutputPath>` che è stata specificata) come feed di origine aggiuntivo per i pacchetti NuGet. Per altre informazioni sull'installazione sugli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core][global-tool-info].
+Il parametro `--add-source` indica all'interfaccia della riga di comando di .NET Core di usare temporaneamente la cartella `./nupkg` (ovvero, la cartella `<PackageOutputPath>` che è stata specificata) come feed di origine aggiuntivo per i pacchetti NuGet. Per altre informazioni sull'installazione degli strumenti globali, vedere [Panoramica degli strumenti globali .NET Core](global-tools.md).
 
 Se l'installazione ha esito positivo, viene visualizzato un messaggio che mostra il comando usato per chiamare lo strumento e la versione installata, simile all'esempio seguente:
 
@@ -191,5 +191,3 @@ Dopo aver completato la sperimentazione con lo strumento, è possibile rimuoverl
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

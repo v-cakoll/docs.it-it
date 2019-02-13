@@ -3,13 +3,13 @@ title: Processo di sviluppo per Azure
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Processo di sviluppo per Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152605"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827474"
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
@@ -22,7 +22,7 @@ ms.locfileid: "53152605"
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>Ambiente di sviluppo per app ASP.NET Core
 
-### <a name="development-tools-choices-ide-or-editor"></a>Opzioni degli strumenti di sviluppo: IDE o editor
+### <a name="development-tools-choices-ide-or-editor"></a>Strumenti di sviluppo possibili: IDE o editor
 
 Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti necessari sia che si scelga un IDE potente e completo sia che si preferisca un editor semplice e agile.
 
