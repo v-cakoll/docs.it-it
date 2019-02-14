@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un servizio transazionale'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 98346c0fd8990d3122ceb7c25950dc815bd5bed5
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245639"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261142"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Procedura: Creare un servizio transazionale
 In questo esempio vengono illustrati vari aspetti della creazione di un servizio transazionale e l'utilizzo di una transazione iniziata dal client per coordinare operazioni del servizio.  
@@ -65,7 +65,7 @@ In questo esempio vengono illustrati vari aspetti della creazione di un servizio
     }  
     ```  
   
-3.  Configurare le associazioni nel file di configurazione, specificando che il contesto della transazione deve essere propagato e i protocolli da utilizzare a tale scopo. Per altre informazioni, vedere [configurazione delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). In particolare, il tipo di associazione è specificato nell'attributo `binding` dell'elemento endpoint. Il [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `transactionalOleTransactionsTcpBinding`, come illustrato nell'esempio di configurazione seguente.  
+3.  Configurare le associazioni nel file di configurazione, specificando che il contesto della transazione deve essere propagato e i protocolli da utilizzare a tale scopo. Per altre informazioni, vedere [configurazione delle transazioni ServiceModel](servicemodel-transaction-configuration.md). In particolare, il tipo di associazione è specificato nell'attributo `binding` dell'elemento endpoint. Il [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento contiene un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `transactionalOleTransactionsTcpBinding`, come illustrato nell'esempio di configurazione seguente.  
   
     ```xml  
     <service name="CalculatorService">  

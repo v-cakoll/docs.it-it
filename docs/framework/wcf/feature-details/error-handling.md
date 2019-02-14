@@ -2,12 +2,12 @@
 title: Gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695556"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261152"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestione degli errori in Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695556"
   
  Scopo dei blocchi applicativi è incorporare procedure consigliate di uso comune e offrire un approccio comune per la gestione delle eccezioni nell'intera applicazione. D'altra parte, anche i gestori degli errori e i contratti di errore sviluppati in modo personalizzato possono essere molto utili. Ad esempio, i gestori degli errori personalizzati forniscono un'eccellente opportunità di promozione automatica di tutte le eccezioni a FaultExceptions nonché di aggiungere funzionalità di registrazione all'applicazione.  
   
- Per altre informazioni, vedi [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Per altre informazioni, vedi [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Gestione delle eccezioni previste  
  La linea di condotta appropriata consiste nell'intercettare le eccezioni previste in ogni operazione o punto di estendibilità pertinente, decidere se essi possono essere ripristinati da e restituire l'errore personalizzato appropriato in un oggetto FaultException\<T >  

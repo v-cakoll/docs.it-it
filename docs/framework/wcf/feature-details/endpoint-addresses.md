@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730945"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261102"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo dell'endpoint è rappresentato nel modello di programmazione di Windows Communication Foundation (WCF) per il <xref:System.ServiceModel.EndpointAddress> classe, che contiene un facoltativo <xref:System.ServiceModel.EndpointAddress.Identity%2A> proprietà che abilita l'autenticazione dell'endpoint da altri endpoint che scambiare messaggi con esso e un set di facoltativo <xref:System.ServiceModel.EndpointAddress.Headers%2A> proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
@@ -52,7 +52,8 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema. Nelle versioni precedenti a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF non supporta più indirizzi per uno schema e, se sono stati specificati, ha generato un <xref:System.ArgumentException> durante l'attivazione.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
+ 
+  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
   
  Un sito potrebbe contenere, ad esempio, gli indirizzi di base seguenti:  
   
@@ -77,7 +78,8 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  Nell'esempio precedente, `net.tcp://payroll.myorg.com:8000` e `http://shipping.myorg.com:8000` sono solo gli indirizzi di base, i rispettivi schemi, che vengono passati.  
   
- `baseAddressPrefixFilter` non supporta caratteri jolly.  
+ 
+  `baseAddressPrefixFilter` non supporta caratteri jolly.  
   
  Gli indirizzi di base forniti da IIS possono disporre di indirizzi associati ad altri schemi non presenti nell'elenco `baseAddressPrefixFilters`. Questi indirizzi non vengono filtrati.  
   
@@ -93,7 +95,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
 </system.serviceModel>  
 ```  
   
- Quando questa impostazione viene utilizzata per abilitare più associazioni di siti, tutte le impostazioni baseAddressPrefixFilters vengono ignorate, sia per i protocolli HTTP sia per quelli non HTTP.  
+ Quando questa impostazione viene utilizzata per abilitare più binding di siti, tutte le impostazioni baseAddressPrefixFilters vengono ignorate, sia per i protocolli HTTP sia per quelli non HTTP.  
   
  Per informazioni dettagliate ed esempi, vedere [supporto di più associazioni del sito IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) e <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
@@ -119,7 +121,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 -   Nel codice, creare intestazioni di indirizzo personalizzate utilizzando la classe <xref:System.ServiceModel.Channels.AddressHeader>, quindi utilizzarle nella costruzione di un oggetto <xref:System.ServiceModel.EndpointAddress>.  
   
--   In configurazione personalizzata [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) vengono specificati come elementi figlio del [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   In configurazione personalizzata [ \<intestazioni >](../../configure-apps/file-schema/wcf/headers.md) vengono specificati come elementi figlio del [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento.  
   
  La configurazione è in genere preferibile al codice, poiché consente di modificare le intestazioni dopo la distribuzione.  
   
@@ -130,10 +132,11 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 -   Nel codice, specificare un indirizzo di ascolto personalizzato aggiungendo una classe <xref:System.ServiceModel.Description.ClientViaBehavior> alla raccolta di comportamenti dell'endpoint.  
   
--   Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro dell'indirizzo SOAP personalizzato  
- <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  
+ 
+  <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  
   
  In alcuni scenari, un endpoint riceve tutti i messaggi che arrivano sul trasporto sottostante e non solo quelli con l'intestazione `To` appropriata. Affinché ciò sia possibile, l'utente può utilizzare la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   

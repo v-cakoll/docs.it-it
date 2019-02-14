@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 20c462f811be86d52ec6f06700326f0e949a76d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637911"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261167"
 ---
 # <a name="how-to-create-a-custom-token"></a>Procedura: Creare un Token personalizzato
 Questo argomento illustra come creare un token di sicurezza personalizzato utilizzando la classe <xref:System.IdentityModel.Tokens.SecurityToken> e come integrarlo in un provider e un autenticatore di token di sicurezza personalizzati. Per un esempio di codice completo, vedere la [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) esempio.  
@@ -29,8 +29,6 @@ Questo argomento illustra come creare un token di sicurezza personalizzato utili
  Per altre informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere [procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Per un elenco di altre classi utilizzate per rappresentare token di sicurezza, vedere lo spazio dei nomi <xref:System.IdentityModel.Tokens>.  
-  
- Per altre informazioni sulle credenziali, gestore del token di sicurezza e le classi di provider e autenticatore, vedere [architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procedure  
  È necessario fornire a un'applicazione client un modo per specificare le informazioni sulla carta di credito per l'infrastruttura di sicurezza. Per consentire all'applicazione di specificare queste informazioni viene utilizzata una classe di credenziali client personalizzata. Il primo passaggio consiste nel creare una classe che rappresenta le informazioni di carta di credito come credenziali client personalizzate.  
@@ -165,4 +163,3 @@ Questo argomento illustra come creare un token di sicurezza personalizzato utili
 - [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Procedura: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [Procedura: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

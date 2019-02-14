@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627707"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261348"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Procedura: Creare un Provider di Token di sicurezza personalizzato
 In questo argomento viene illustrato come creare nuovi tipi di token con un provider di token di sicurezza personalizzati e come integrare il provider con un gestore di token di sicurezza personalizzati.  
@@ -23,8 +23,6 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
  Il provider di token di sicurezza crea una rappresentazione dei token di sicurezza in base alle informazioni presenti nelle credenziali del client o del servizio. Per usare il provider di token di sicurezza personalizzato in sicurezza Windows Communication Foundation (WCF), è necessario creare credenziali personalizzate e implementazioni di gestore del token di sicurezza.  
   
  Per altre informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere il [procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
-  
- Per altre informazioni sulle credenziali, token manager, provider e autenticatore classi di sicurezza, vedere la [architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Per creare un provider di token di sicurezza personalizzati  
   
@@ -61,4 +59,3 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Procedura: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

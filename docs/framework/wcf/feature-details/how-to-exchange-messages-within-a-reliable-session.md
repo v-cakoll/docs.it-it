@@ -2,18 +2,18 @@
 title: 'Procedura: Scambiare messaggi in una sessione affidabile'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720054"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260686"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedura: Scambiare messaggi in una sessione affidabile
 
 In questo argomento vengono delineati i passaggi necessari per attivare una sessione affidabile utilizzando una delle associazioni fornite dal sistema che supportano tale sessione, ma non per impostazione predefinita. Si attiva una sessione affidabile in modo imperativo tramite codice o in modo dichiarativo nel file di configurazione. Questa procedura Usa i file di configurazione client e servizio per abilitare la sessione affidabile e stabilire che i messaggi arrivino nello stesso ordine in cui sono stati inviati.
 
-La parte principale di questa procedura è che l'elemento di configurazione endpoint contenga un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `Binding1`. Il [  **\<associazione >** ](../../../../docs/framework/misc/binding.md) elemento di configurazione fa riferimento a questo nome per attivare sessioni affidabili impostando il `enabled` attributo del [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Le garanzie di recapito ordinato per la sessione affidabile vengono specificate impostando l'attributo `ordered` su `true`.
+La parte principale di questa procedura è che l'elemento di configurazione endpoint contenga un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `Binding1`. Il [  **\<associazione >** ](../../../../docs/framework/misc/binding.md) elemento di configurazione fa riferimento a questo nome per attivare sessioni affidabili impostando il `enabled` attributo del [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento `true`. Le garanzie di recapito ordinato per la sessione affidabile vengono specificate impostando l'attributo `ordered` su `true`.
 
 Per la copia di origine di questo esempio, vedere [sessioni affidabili WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
