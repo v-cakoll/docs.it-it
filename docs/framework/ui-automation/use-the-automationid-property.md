@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1987d5af904f1e151617d0cea6c183c52b8386e2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743842"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305480"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "54743842"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso persistente per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. È possibile creare un'istanza di questi elementi solo riproducendo una sequenza specifica di azioni dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] usando le proprietà, ad esempio AutomationID, i pattern di controllo e i listener di eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Vedere [Test Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) per un esempio che usa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per generare script di test basati sull'interazione dell'utente con l' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. Questi elementi è possibile creare solo istanze da riprodurre, o "riproduzione", una sequenza specifica di azioni dell'interfaccia utente tramite l'utilizzo di proprietà di automazione interfaccia utente, ad esempio AutomationID, i pattern di controllo e i listener di eventi.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

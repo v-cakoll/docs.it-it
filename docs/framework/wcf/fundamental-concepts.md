@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664018"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305545"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -75,7 +75,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```  
   
  binding  
- Definisce le modalità di comunicazione tra un endpoint e gli elementi rimanenti. È costituita da un set di componenti denominati elementi di associazione "impilati" uno sopra l'altro per creare l'infrastruttura di comunicazione. Un'associazione definisce almeno il trasporto (ad esempio HTTP o TCP) e la codifica (ad esempio testo o binaria) utilizzati. Un'associazione può contenere elementi di associazione che specificano dettagli come i meccanismi di sicurezza utilizzati per proteggere i messaggi o il modello del messaggio utilizzato da un endpoint. Per altre informazioni, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
+ Definisce le modalità di comunicazione tra un endpoint e gli elementi rimanenti. È costituita da un set di componenti denominati elementi di associazione "impilati" uno sopra l'altro per creare l'infrastruttura di comunicazione. Un'associazione definisce almeno il trasporto (ad esempio HTTP o TCP) e la codifica (ad esempio testo o binaria) utilizzati. Un'associazione può contenere elementi di associazione che specificano dettagli come i meccanismi di sicurezza usati per proteggere i messaggi o il modello del messaggio usato da un endpoint. Per altre informazioni, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
   
  elemento di associazione  
  Rappresenta una particolare parte dell'associazione, ad esempio un trasporto, una codifica, un'implementazione di un protocollo a livello di infrastruttura (ad esempio WS-ReliableMessaging) o qualsiasi altro componente dello stack di comunicazione.  
@@ -84,7 +84,8 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Componente che controlla vari aspetti in fase di esecuzione di un servizio, di un endpoint, di una particolare operazione o di un client. I comportamenti sono raggruppati in base allo scopo. I comportamenti comuni influiscono globalmente su tutti gli endpoint, i comportamenti del servizio influiscono solo sugli aspetti relativi al servizio, i comportamenti dell'endpoint influiscono solo sulle proprietà relative all'endpoint e i comportamenti a livello di operazione influiscono su particolari operazioni. Un comportamento del servizio, ad esempio, l'azione di limitazione che specifica come un servizio reagisce quando un eccesso di messaggi minaccia di sovraccaricarne le funzionalità di gestione. Un comportamento dell'endpoint, invece, controlla solo gli aspetti pertinenti agli endpoint, ad esempio come e dove trovare una credenziale di sicurezza.  
   
  associazioni fornite dal sistema  
- WCF include numerose associazioni fornite dal sistema. Si tratta di raccolte di elementi di associazione ottimizzati per scenari specifici. <xref:System.ServiceModel.WSHttpBinding> è progettata, ad esempio, per l'interoperabilità con servizi che implementano varie specifiche WS-*. Le associazioni predefinite consentono di risparmiare tempo presentando solo quelle opzioni che possono essere applicate correttamente allo scenario specifico. Se un'associazione predefinita non soddisfa i requisiti, è possibile crearne una personalizzata.  
+ WCF include numerose associazioni fornite dal sistema. Si tratta di raccolte di elementi di associazione ottimizzati per scenari specifici. 
+  <xref:System.ServiceModel.WSHttpBinding> è progettata, ad esempio, per l'interoperabilità con servizi che implementano varie specifiche WS-*. Le associazioni predefinite consentono di risparmiare tempo presentando solo quelle opzioni che possono essere applicate correttamente allo scenario specifico. Se un'associazione predefinita non soddisfa i requisiti, è possibile crearne una personalizzata.  
   
  configurazione e codifica  
  Il controllo di un'applicazione può essere eseguito tramite codifica, tramite configurazione o tramite una combinazione di entrambe. La configurazione presenta il vantaggio di consentire a qualcun altro oltre allo sviluppatore, ad esempio a un amministratore di rete, di impostare parametri del client e del servizio dopo che il codice è stato scritto e senza doverlo ricompilare. La configurazione non solo consente di impostare valori come gli indirizzi endpoint ma fornisce anche un maggior controllo consentendo di aggiungere endpoint, associazioni e comportamenti. La codifica consente allo sviluppatore di mantenere uno stretto controllo su tutti i componenti del servizio o del client ed eventuali impostazioni eseguite tramite la configurazione possono essere controllate e se necessario sottoposte a override dal codice.  
@@ -155,4 +156,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Vedere anche
 - [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
-- [Architettura di sicurezza](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

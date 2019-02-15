@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: ae35fe1689bd6cd575d46c5f8f4cce5107345a72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a295eadae854a2e1a982f18ec49570944cc999d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671557"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303517"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedura: Disporre i controlli con guide di allineamento e la griglia in Windows Form
 Tramite le caratteristiche di layout di Visual Studio è possibile indicare precisamente in cui i controlli vengono posizionati in un form. I controlli aggiunti a un form o spostati in un form possono essere automaticamente allineati a righe e colonne della griglia di Windows Form della finestra di progettazione oppure è possibile allineare i controlli usando la funzionalità di guide di allineamento.  
@@ -25,7 +25,7 @@ Tramite le caratteristiche di layout di Visual Studio è possibile indicare prec
   
 -   Selezionare il **SnapToGrid** modalità di layout in Progettazione Windows Form **opzioni** nella finestra di dialogo.  
   
-     Per altre informazioni, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Tutti i controlli verranno allineano lungo i punti della griglia.  
+     Per altre informazioni, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Tutti i controlli verranno allineano lungo i punti della griglia.  
   
      È possibile agganciare singoli controlli alla griglia bloccandoli posto. Tuttavia, anche se sono bloccati, essi non può essere spostati o ridimensionati. Per altre informazioni sul blocco dei controlli, vedere [come: Bloccare i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ Tramite le caratteristiche di layout di Visual Studio è possibile indicare prec
      Per altre informazioni, vedere [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). È ora possibile usare le guide di allineamento per allineare e disporre i controlli sul form.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
 - [Procedura: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
