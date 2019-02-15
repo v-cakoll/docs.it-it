@@ -2,12 +2,18 @@
 title: Denominazione sicura (riferimenti alle API non gestite)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305645"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma con nome sicuro per gli assembly.  
@@ -15,8 +21,6 @@ L'API di denominazione sicura consente a un client di amministrare la firma con 
  La firma di un assembly con un nome sicuro comporta l'aggiunta di una crittografia con chiave pubblica al file che contiene il manifesto dell'assembly. La firma con nome sicuro garantisce l'univocità del nome, ne impedisce l'utilizzo fraudolento e fornisce un'identità univoca al chiamante quando viene risolto un riferimento. I nomi sicuri non garantiscono tuttavia nessun grado di attendibilità.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Funzioni statiche globali per la gestione del nome sicuro](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Descrive le funzioni statiche globali non gestite usate dall'API di denominazione sicura.  
   
 > [!NOTE]
 >  Tutte queste funzioni sono state deprecate a partire da [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Per le proposte alternative, vedere l'interfaccia [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
@@ -98,9 +102,6 @@ L'API di denominazione sicura consente a un client di amministrare la firma con 
   
  [Funzione StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Ottiene un token che rappresenta una chiave pubblica. Deprecata a partire da [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Strutture di denominazione sicura](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Descrive la struttura non gestita che l'API di denominazione sicura usa per amministrare la firma con nome sicuro per gli assembly.  
   
  [Struttura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Rappresenta la chiave pubblica di una coppia di chiavi pubblica/privata in formato binario.  

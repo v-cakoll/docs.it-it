@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508522"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303394"
 ---
 # <a name="unmanaged-api-reference"></a>Riferimenti alle API non gestite
 Questa sezione include informazioni sulle API non gestite che possono essere usate da applicazioni correlate a codice gestito, ad esempio host di runtime, compilatori, disassembler, soluzioni di offuscamento, debugger e profiler.  
@@ -32,7 +32,7 @@ Questa sezione include informazioni sulle API non gestite che possono essere usa
  [Costanti](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Vengono descritte le costanti definite in CorSym.idl.  
   
- [Attributi di interfaccia personalizzati](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Attributi di interfaccia personalizzati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Vengono descritti gli attributi di interfaccia personalizzati COM (Component Object Model).  
   
  [Debug](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ Questa sezione include informazioni sulle API non gestite che possono essere usa
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Guida di sviluppo](../../../docs/framework/development-guide.md)  
-  
- [Lettura avanzata per .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
