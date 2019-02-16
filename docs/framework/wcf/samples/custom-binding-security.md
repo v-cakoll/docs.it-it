@@ -2,12 +2,12 @@
 title: Sicurezza delle associazioni personalizzate
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066130"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333443"
 ---
 # <a name="custom-binding-security"></a>Sicurezza delle associazioni personalizzate
 In questo esempio viene illustrato come configurare la sicurezza mediante un'associazione personalizzata. Viene mostrato come usare un'associazione personalizzata per abilitare la sicurezza a livello di messaggio insieme con un trasporto sicuro. Questo è utile quando è necessario un trasporto protetto per trasmettere i messaggi tra client e servizio e simultaneamente i messaggi devono essere protetti a livello di messaggio. Questa configurazione non è supportata dalle associazioni fornite dal sistema.
@@ -122,7 +122,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   

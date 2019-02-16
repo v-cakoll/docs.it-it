@@ -2,17 +2,17 @@
 title: Esempio di servizio AJAX che usa tipi complessi
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 338d7105180df94f85647da413fc682451b7c9d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676666"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333482"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Esempio di servizio AJAX che usa tipi complessi
 Questo esempio viene illustrato come utilizzare Windows Communication Foundation (WCF) per creare un servizio ASP.NET Asynchronous JavaScript and XML (AJAX) che crea istanze di tipi complessi e li invia tra servizio e client come JavaScript Object Notation (JSON). È possibile accedere a un servizio AJAX utilizzando codice JavaScript a partire da un client del browser Web. In questo esempio si basa sul [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) esempio.  
   
- Supporto AJAX in WCF è ottimizzato per l'utilizzo con ASP.NET AJAX tramite il <xref:System.Web.UI.ScriptManager> controllo. Per un esempio dell'utilizzo di WCF con ASP.NET AJAX, vedere la [esempi AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Supporto AJAX in WCF è ottimizzato per l'utilizzo con ASP.NET AJAX tramite il <xref:System.Web.UI.ScriptManager> controllo. Per un esempio dell'utilizzo di WCF con ASP.NET AJAX, vedere la [esempi AJAX](ajax.md).  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  

@@ -2,12 +2,12 @@
 title: Migrazione da .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415975"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333066"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrazione da .NET Remoting a WCF
 In questo articolo viene descritto come eseguire la migrazione di un'applicazione che usa Servizi remoti .NET per l'uso di Windows Communication Foundation (WCF). Vengono confrontati concetti simili tra questi prodotti e quindi viene descritto come realizzare diversi scenari comuni di Servizi remoti .NET in WCF.  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  L'attributo [DataContract] identifica questo tipo come serializzabile e deserializzabile tra client e server. L'attributo [DataMember] identifica le singole proprietà o i singoli campi da serializzare.  
   
- Quando WCF invia un oggetto tra i livelli, serializza solo i valori e crea una nuova istanza dell'oggetto nell'altro livello. Tutte le interazioni con i valori dell'oggetto avvengono solo in locale: non comunicano con l'altro livello come nel caso degli oggetti in base al riferimento di Servizi remoti .NET. Per altre informazioni, vedere i seguenti argomenti:  
-  
--   [Serializzazione e deserializzazione](./feature-details/serialization-and-deserialization.md)  
-  
--   [Serializzazione in Windows Communication Foundation](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ Quando WCF invia un oggetto tra i livelli, serializza solo i valori e crea una nuova istanza dell'oggetto nell'altro livello. Tutte le interazioni con i valori dell'oggetto avvengono solo in locale: non comunicano con l'altro livello come nel caso degli oggetti in base al riferimento di Servizi remoti .NET. Per altre informazioni, vedere [serializzazione e deserializzazione](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Funzionalità di gestione delle eccezioni  
   

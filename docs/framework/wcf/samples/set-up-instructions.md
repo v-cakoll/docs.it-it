@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529578"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333430"
 ---
 # <a name="set-up-instructions"></a>Istruzioni di configurazione
 Questo set di argomenti viene descritto come impostare i servizi necessari per eseguire un servizio Windows Communication Foundation (WCF).  
@@ -37,11 +37,8 @@ Questo set di argomenti viene descritto come impostare i servizi necessari per e
  [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Vengono delineati i passaggi per l'esecuzione degli esempi di WCF nello stesso computer e tra più computer.  
   
- [Abilitazione servizi Peer-to-Peer](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- Vengono delineati i passaggi per installare il componente peer-to-peer Windows, ovvero il resolver incorporato per i servizi di messaggistica peer-to-peer.  
-  
  [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Vengono delineati i passaggi per installare il servizio di accodamento messaggi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Suggerimenti per la risoluzione dei problemi](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Suggerimenti di risoluzione dei problemi per gli esempi WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

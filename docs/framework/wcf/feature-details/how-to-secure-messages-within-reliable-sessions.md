@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: proteggere i messaggi in sessioni affidabili'
+title: 'Procedura: Proteggere i messaggi in sessioni affidabili'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185352"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333053"
 ---
-# <a name="how-to-secure-messages-within-reliable-sessions"></a>Procedura: proteggere i messaggi in sessioni affidabili
+# <a name="how-to-secure-messages-within-reliable-sessions"></a>Procedura: Proteggere i messaggi in sessioni affidabili
 
 In questo argomento vengono delineati i passaggi necessari per attivare la protezione a livello di messaggio per i messaggi scambiati all'interno di una sessione affidabile utilizzando una delle associazioni fornite dal sistema che supportano tale sessione, ma non per impostazione predefinita. Abilitare una sessione affidabile protetta in modo imperativo tramite codice o in modo dichiarativo nel file di configurazione. In questa procedura vengono utilizzati i file di configurazione del client e del servizio per attivare la sessione affidabile protetta.
 
@@ -21,7 +21,7 @@ Questa procedura è costituita dalle tre attività chiave seguenti:
 
 1. Specificare il tipo di credenziale client che il client deve utilizzare per essere autenticato con il servizio.
 
-È importante per la prima attività contenenti l'elemento di configurazione di endpoint un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata (in questo esempio) `MessageSecurity`. Il [  **\<associazione >** ](../../../../docs/framework/misc/binding.md) elemento di configurazione fa quindi riferimento a questo nome per attivare sessioni affidabili impostando il `enabled` attributo del [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. È possibile richiedere che le garanzie di recapito ordinato siano disponibili all'interno di una sessione affidabile impostando l'attributo `ordered` su `true`.
+È importante per la prima attività contenenti l'elemento di configurazione di endpoint un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata (in questo esempio) `MessageSecurity`. Il [  **\<associazione >** ](../../../../docs/framework/misc/binding.md) elemento di configurazione fa quindi riferimento a questo nome per attivare sessioni affidabili impostando il `enabled` attributo del [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) elemento `true`. È possibile richiedere che le garanzie di recapito ordinato siano disponibili all'interno di una sessione affidabile impostando l'attributo `ordered` su `true`.
 
 Per la copia origine dell'esempio in cui si basa questa procedura di configurazione, vedere la [sessioni affidabili WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -34,11 +34,11 @@ Gli elementi essenziali della terza attività vengono eseguiti impostando il `cl
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurare il servizio con una classe WSHttpBinding per utilizzare una sessione affidabile
 
-Questa procedura è descritta in [procedura: scambio dei messaggi all'interno di una sessione affidabile](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Questa procedura è descritta nella [come: Lo scambio di messaggi in una sessione affidabile](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurare il client con una classe WSHttpBinding per utilizzare una sessione affidabile
 
-Questa procedura è descritta in [procedura: scambio dei messaggi all'interno di una sessione affidabile](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Questa procedura è descritta nella [come: Lo scambio di messaggi in una sessione affidabile](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Impostare la modalità e la proprietà ClientCredentialType nella configurazione
 

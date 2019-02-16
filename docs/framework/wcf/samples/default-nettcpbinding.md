@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589942"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333352"
 ---
 # <a name="default-nettcpbinding"></a>Associazione NetTcpBinding predefinita
 Questo esempio dimostra l'uso dell'associazione <xref:System.ServiceModel.NetTcpBinding>. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il servizio è indipendente. Sia il client che il servizio sono applicazioni console.  
@@ -26,7 +26,7 @@ Questo esempio dimostra l'uso dell'associazione <xref:System.ServiceModel.NetTcp
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nella `binding` attributo del [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) come illustrato nell'esempio di configurazione seguente.  
+ L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nella `binding` attributo del [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) come illustrato nell'esempio di configurazione seguente.  
   
 ```xml  
 <endpoint address=""  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d35d5115f6005578164d13b94c9940152ddc1c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57a5df92b1e1dd20575c7930ac2a6eb546e1400
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734461"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333001"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 In questo esempio viene descritta l'associazione `netNamedPipeBinding`, che fornisce la comunicazione tra i processi sullo stesso computer. Le named pipe non funzionano tra computer. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) servizio calcolatrice.  
@@ -19,7 +19,7 @@ In questo esempio viene descritta l'associazione `netNamedPipeBinding`, che forn
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nella `binding` attributo del [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) come illustrato nell'esempio di configurazione seguente:  
+ L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nel `binding` attributo del [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) o [ \<endpoint > di \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento, come illustrato di configurazione di esempio seguente:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

@@ -2,12 +2,12 @@
 title: HTTP duale WS
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 93097c5f13a45ba399ec90d6282db8ca277a8ede
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640550"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332156"
 ---
 # <a name="ws-dual-http"></a>HTTP duale WS
 Nell'esempio di HTTP duale viene illustrato come configurare l'associazione `WSDualHttpBinding`. Questo esempio è costituito da un programma di console client (.exe) e da una libreria di servizi (.dll) ospitati da Internet Information Services (IIS). Il servizio implementa un contratto duplex. Il contratto è definito dall'interfaccia `ICalculatorDuplex`, che espone operazioni matematiche (somma, sottrazione, moltiplicazione e divisione). In questo esempio, l'interfaccia `ICalculatorDuplex` consente al client di eseguire operazioni matematiche, calcolando un risultato nella sessione. Il servizio restituisce risultati sull'interfaccia `ICalculatorDuplexCallback` indipendentemente. Poiché occorre definire un contesto per correlare il set di messaggi scambiati fra il client e il servizio, un contratto duplex richiede una sessione. L'associazione `WSDualHttpBinding` supporta la comunicazione duplex.  
@@ -87,7 +87,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Quando si esegue il client in una configurazione tra più computer, assicurarsi di sostituire localhost sia la `address` attributo del [endpoint](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento e il `clientBaseAddress` attributo del [ \< associazione >](../../../../docs/framework/misc/binding.md) dell'elemento di [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con il nome del computer appropriato, come illustrato:  
+    >  Quando si esegue il client in una configurazione tra più computer, assicurarsi di sostituire localhost sia la `address` attributo del [ \<endpoint > di \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento e il `clientBaseAddress` attributo del [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento del [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con il nome del computer appropriato, come illustrato:  
   
     ```xml  
     <client>  

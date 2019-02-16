@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583404"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333456"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) ed eseguire da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale IIS denominato **ServiceModelSamples**.
@@ -25,7 +25,7 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
   
 3.  Se non è installato Visual Studio 2012 e il sistema operativo non è Windows Server 2008 SP2 o versioni successive, installare [aggiornamento rapido 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Eseguire i comandi seguenti: Per altre informazioni sui motivi per cui è necessario eseguire questi comandi, vedere [IIS ospitata servizio ha esito negativo](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Eseguire i comandi seguenti: Per altre informazioni sui motivi per cui è necessario eseguire questi comandi, vedere [IIS ospitata servizio ha esito negativo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Se IIS viene reinstallato, nei comandi seguenti sarà necessario eseguirlo nuovamente.

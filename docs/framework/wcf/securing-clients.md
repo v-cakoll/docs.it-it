@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721110"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333469"
 ---
 # <a name="securing-clients"></a>Protezione di client
 In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per altre informazioni sulla creazione di un servizio sicuro, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -41,7 +41,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
  Se si ha la configurazione lo strumento Svcutil.exe generato del file, esaminare i [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione per determinare il tipo di credenziale client è obbligatorio. All'interno della sezione esistono elementi di associazione che specificano i requisiti di sicurezza. In particolare, esaminare il \<sicurezza > elemento di ogni associazione. L'elemento include l'attributo `mode` che è possibile impostare su uno dei tre valori seguenti, `Message`, `Transport` o `TransportWithMessageCredential`. Il valore dell'attributo determina la modalità che a sua volta determina quale degli elementi figlio è significativo.  
   
  Il `<security>` elemento può contenere un `<transport>` o `<message>` elemento, o entrambi. L'elemento significativo è quello che corrisponde alla modalità di sicurezza. Nel codice seguente, ad esempio, viene specificato che la modalità di sicurezza è `"Message"` e il tipo di credenziale client per l'elemento `<message>` è `"Certificate"`. In questo caso, l'elemento `<transport>` può essere ignorato. L'elemento `<message>`, tuttavia, specifica che è necessario che venga fornito un certificato X.509.  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  Si noti che se l'attributo `clientCredentialType` è impostato su `"Windows"`, come illustrato nell'esempio seguente, non è necessario fornire un valore della credenziale effettivo. Questo avviene perché la protezione integrata di Windows fornisce la credenziale effettiva (un token Kerberos) della persona che sta eseguendo il client.  
   
 ```xml  
@@ -107,29 +107,21 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 </configuration>  
 ```  
   
- Per impostare la credenziale client nella configurazione, aggiungere un' [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento nel file di configurazione. Inoltre, l'elemento di comportamento aggiunto deve essere collegato all'endpoint del servizio usando il `behaviorConfiguration` attributo del [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, come illustrato nell'esempio seguente. Il valore dell'attributo `behaviorConfiguration` deve corrispondere al valore dell'attributo `name` del comportamento.  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ Per impostare la credenziale client nella configurazione, aggiungere un' [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento nel file di configurazione. Inoltre, l'elemento di comportamento aggiunto deve essere collegato all'endpoint del servizio usando il `behaviorConfiguration` attributo del [ \<endpoint > di \<client >](../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento, come illustrato nell'esempio seguente. Il valore dell'attributo `behaviorConfiguration` deve corrispondere al valore dell'attributo `name` del comportamento.  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  È impossibile impostare alcuni dei valori della credenziale client utilizzando i file di configurazione dell'applicazione, ad esempio nome utente e password o i valori utente e password di Windows. È possibile specificare tali valori della credenziale solo nel codice.  

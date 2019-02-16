@@ -2,12 +2,12 @@
 title: Resolver del peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496845"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333378"
 ---
 # <a name="peer-resolvers"></a>Resolver del peer
 Per connettersi a una mesh, un nodo peer necessita dell'indirizzo IP di altri nodi. Gli indirizzi IP si ottengono contattando un servizio resolver, che accetta l'ID della rete e restituisce un elenco di indirizzi corrispondenti ai nodi registrati con quel particolare ID di rete. Il resolver mantiene un elenco di indirizzi registrati, creato facendo in modo che ogni nodo nella mesh venga registrato con il servizio.  
@@ -32,7 +32,7 @@ Per connettersi a una mesh, un nodo peer necessita dell'indirizzo IP di altri no
 > [!NOTE]
 >  Quando si usano reti locali e improvvisate con un resolver personalizzato, è consigliabile che le applicazioni che usano o supportano reti improvvisate e locali rispetto al collegamento includano la logica per la selezione di un solo indirizzo locale rispetto al collegamento da usare per la connessione. Ciò evita la confusione che può essere causata da computer con più indirizzi locali rispetto al collegamento. In conformità a quanto sopra, il canale peer supporta l'uso di un solo indirizzo di collegamento locale alla volta. È possibile specificare questo indirizzo con la proprietà `ListenIpAddress` sulla classe <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Per una dimostrazione di come implementare un resolver personalizzato, vedere [Resolver Peer personalizzato del canale Peer](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Per una dimostrazione di come implementare un resolver personalizzato, vedere [Resolver Peer personalizzato del canale Peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Custompeerresolverservice: Registrazioni client](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

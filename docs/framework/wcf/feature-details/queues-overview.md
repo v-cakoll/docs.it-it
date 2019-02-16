@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600427"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333027"
 ---
 # <a name="queues-overview"></a>Panoramica delle code
 Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti dell'accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
@@ -81,6 +81,5 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
 - [Comunicazione volatile in coda](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Esempi di associazione di integrazione dell'accodamento dei messaggi](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
 - [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

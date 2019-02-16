@@ -2,12 +2,12 @@
 title: 'Modelli di progettazione: Elenco di pubblicazione-sottoscrizione basato'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717895"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333391"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: Elenco di pubblicazione-sottoscrizione basato
 Questo esempio viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Eseguire Datasource.exe da \datasource\bin\\, che si trova sotto la cartella specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
   
-4.  Se il client, l'origine dati e applicazioni di servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client, l'origine dati e applicazioni di servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   

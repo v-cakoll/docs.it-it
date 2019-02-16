@@ -1,6 +1,6 @@
 ---
 title: Metodo ICorProfilerInfo7::ApplyMetaData
-ms.date: 03/30/2017
+ms.date: 02/15/2019
 dev_langs:
 - cpp
 api_name:
@@ -12,12 +12,12 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7209314f9cf3170ba0b577395a5134f9549475e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5caf7b5e24ac5e583420b45c563f53b8988f1e00
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536568"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332663"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>Metodo ICorProfilerInfo7::ApplyMetaData
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
@@ -52,7 +52,13 @@ HRESULT ApplyMetaData(
 -   `MemberSpec` i record, che è possibile creare chiamando il [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) (metodo).  
   
 -   `UserString` i record, che è possibile creare chiamando il [DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) (metodo).  
-  
+
+A partire da .NET Core 3.0, `ApplyMetaData` supporta anche i tipi seguenti:
+
+- `TypeDef` i record, che è possibile creare chiamando il [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (metodo).
+
+- `MethodDef` i record, che è possibile creare chiamando il [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) (metodo). Tuttavia, l'aggiunta di metodi virtuali a un tipo esistente non è supportata. Metodi virtuali devono essere aggiunto prima la [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.
+
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   

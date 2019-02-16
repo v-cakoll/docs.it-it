@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: configurare un client Windows Communication Foundation di base'
+title: 'Procedura: Configurare un Client di base di Windows Communication Foundation'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: 3f267edf87711de8a5969e3e0b577648008c5a75
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 18acec48b2af78877f99335da38ccb0ae8942824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562190"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332319"
 ---
-# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Procedura: configurare un client Windows Communication Foundation di base
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Procedura: Configurare un Client di base di Windows Communication Foundation
 
 Questa è la quinta delle sei attività necessarie per creare un'applicazione Windows Communication Foundation (WCF). Per una panoramica di tutte e sei le attività, vedere l'argomento [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -19,7 +19,7 @@ Questo argomento viene illustrato il file di configurazione client generato tram
 
 ## <a name="configure-a-windows-communication-foundation-client"></a>Configurare un client Windows Communication Foundation
 
-Aprire il file di configurazione generato (App.config) dal progetto GettingStartedClient. L'esempio seguente è una visualizzazione del file di configurazione generato. Sotto il [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, trovare il [ \<endpoint >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.
+Aprire il file di configurazione generato (App.config) dal progetto GettingStartedClient. L'esempio seguente è una visualizzazione del file di configurazione generato. Sotto il [ \<System. ServiceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sezione, trovare il [ \<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md) elemento.
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,17 +53,17 @@ In questo esempio viene configurato l'endpoint utilizzato dal client per acceder
 
 L'elemento endpoint specifica che il contratto di servizio `ServiceReference1.ICalculator` viene usato per la comunicazione tra il client e il servizio di WCF. Il canale WCF è configurato con l'oggetto <xref:System.ServiceModel.WSHttpBinding> fornito dal sistema. Il presente contratto è stato generato utilizzando **Aggiungi riferimento al servizio** in Visual Studio. Si tratta essenzialmente di una copia del contratto che è stato definito nel progetto GettingStartedLib. Con l'associazione <xref:System.ServiceModel.WSHttpBinding> vengono specificati HTTP come trasporto, la sicurezza interoperativa e altri dettagli di configurazione.
 
-Per altre informazioni su come usare il client generato con questa configurazione, vedere [procedura: usare un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
+Per altre informazioni su come usare il client generato con questa configurazione, vedere [come: Usare un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 > [!div class="nextstepaction"]
-> [Procedura: usare un client WCF](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+> [Procedura: Usare un client WCF](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Servizio indipendente](../../../docs/framework/wcf/samples/self-host.md)

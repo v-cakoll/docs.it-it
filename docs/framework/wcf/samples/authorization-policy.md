@@ -2,12 +2,12 @@
 title: Criteri di autorizzazione
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873479"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332676"
 ---
 # <a name="authorization-policy"></a>Criteri di autorizzazione
 
@@ -460,7 +460,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 1. Avviare Client.exe dal *\client\bin*. L'attività del client viene visualizzata nella finestra dell'applicazione console.
 
-  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer
 
@@ -500,11 +500,11 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.
 
-   Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>La pulizia dopo il codice di esempio
 
 Per eseguire la pulizia dopo il codice di esempio, eseguire *Cleanup. bat* nella cartella degli esempi è terminata l'esecuzione dell'esempio. In questo modo i certificati server e client vengono rimossi dall'archivio certificati.
 
 > [!NOTE]
-> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi WCF che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati in CurrentUser - TrustedPeople archiviare. Per eseguire questa operazione, usare il seguente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi WCF che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati in CurrentUser - TrustedPeople archiviare. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

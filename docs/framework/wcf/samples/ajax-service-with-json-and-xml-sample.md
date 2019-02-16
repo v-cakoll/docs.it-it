@@ -2,17 +2,17 @@
 title: Servizio AJAX con esempi JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632296"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332344"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servizio AJAX con esempi JSON e XML
 Questo esempio viene illustrato come utilizzare Windows Communication Foundation (WCF) per creare un servizio Asynchronous JavaScript and XML (AJAX) che restituisce dati JavaScript Object Notation (JSON) o XML. È possibile accedere a un servizio AJAX utilizzando codice JavaScript a partire da un client del browser Web. In questo esempio si basa sul [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) esempio.  
   
- A differenza degli altri esempi AJAX, questo esempio non utilizza ASP.NET AJAX e il controllo <xref:System.Web.UI.ScriptManager>. Con alcune configurazioni aggiuntive, servizi WCF AJAX è possibile accedere da qualsiasi pagina HTML tramite JavaScript e questo scenario è illustrato di seguito. Per un esempio dell'utilizzo di WCF con ASP.NET AJAX, vedere [esempi AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
+ A differenza degli altri esempi AJAX, questo esempio non utilizza ASP.NET AJAX e il controllo <xref:System.Web.UI.ScriptManager>. Con alcune configurazioni aggiuntive, servizi WCF AJAX è possibile accedere da qualsiasi pagina HTML tramite JavaScript e questo scenario è illustrato di seguito. Per un esempio dell'utilizzo di WCF con ASP.NET AJAX, vedere [esempi AJAX](ajax.md).
   
  Questo esempio mostra come cambiare il tipo di risposta di un'operazione da JSON a XML. Questa funzionalità è disponibile indipendentemente dal fatto che il servizio sia configurato per l'accesso da ASP.NET AJAX o da una pagina client HTML/JavaScript semplice.  
   

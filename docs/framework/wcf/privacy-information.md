@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683967"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333404"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione che usa Windows Communication Foundation (WCF), versione 3.0, l'applicazione può incidere sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. WCF non invia informazioni a Microsoft dall'applicazione, a meno che l'utente finale sceglie di inviarlo a Microsoft.  
@@ -402,5 +402,5 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  Il linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) contiene una definizione della porta. Ogni porta ha un indirizzo endpoint e un'associazione che rappresenta i servizi usati dall'applicazione. L'esposizione del codice WSDL può essere disattivata usando la configurazione. Nessuna informazioni viene conservata sul computer.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation](index.md)
 - [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)
