@@ -4,12 +4,12 @@ description: Informazioni sull'estendibilità degli strumenti dell'interfaccia d
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170236"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093008"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -79,7 +79,7 @@ Gli strumenti di questo tipo hanno un grafico delle dipendenze completamente sep
 Esempi più dettagliati e differenti combinazioni sono disponibili in [.NET Core CLI repo](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects) (Archivio .NET Core dell'interfaccia della riga di comando).
 Nello stesso archivio è possibile vedere anche l'[implementazione degli strumenti usati](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages).
 
-### <a name="custom-targets"></a>Destinazioni personalizzate
+## <a name="custom-targets"></a>Destinazioni personalizzate
 NuGet è in grado di [creare pacchetti di destinazioni MSBuild personalizzate e file props](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Con il passaggio all'uso di MSBuild per gli strumenti CLI di .NET Core, lo stesso meccanismo di estendibilità è ora applicabile ai progetti .NET Core. È opportuno usare questo tipo di estendibilità quando si vuole estendere il processo di compilazione, quando si vuole accedere a qualsiasi elemento di tale processo, ad esempio i file generati, quando si vuole esaminare la configurazione in cui viene chiamata la compilazione e così via.
 
 Nell'esempio seguente è possibile visualizzare il file di progetto della destinazione con la sintassi `csproj`. Il codice indica al comando [`dotnet pack`](dotnet-pack.md) quali elementi aggiungere al pacchetto, posizionando i file di destinazioni e gli assembly nella cartella *build* all'interno del pacchetto. Si noti l'elemento `<ItemGroup>` con la proprietà `Label` impostata su `dotnet pack instructions` e la destinazione definita sotto tale elemento.
@@ -137,7 +137,7 @@ L'uso della destinazione personalizzata dipende esclusivamente dal modo in cui q
 
 Tuttavia per offrire agli utenti una migliore esperienza d'uso è possibile combinare strumenti in base al progetto e destinazioni personalizzate. In questo scenario lo strumento in base al progetto si limita ad accettare qualsiasi parametro necessario e lo traduce nella chiamata a [`dotnet msbuild`](dotnet-msbuild.md) richiesta, che esegue la destinazione. È possibile visualizzare un esempio di questo tipo di sinergia nel repository degli [esempi di MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) nel progetto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-### <a name="path-based-extensibility"></a>Estendibilità basata su PATH
+## <a name="path-based-extensibility"></a>Estendibilità basata su PATH
 L'estendibilità basata sul PATH viene in genere usata per i computer di sviluppo in cui è necessario disporre di uno strumento in grado di coprire concettualmente più di un singolo progetto. Il principale svantaggio di questo meccanismo di estensione sta nel fatto che è vincolato al computer in cui è presente lo strumento. Se si vuole usare questo meccanismo in un altro computer, è necessario eseguire un'attività di distribuzione.
 
 Questo modello di estendibilità del set di strumenti dell'interfaccia della riga di comando è molto semplice. Come illustrato in [.NET Core CLI overview](index.md) (Panoramica sull'interfaccia della riga di comando di .NET Core), il driver `dotnet` può eseguire qualsiasi comando denominato in base alla convenzione `dotnet-<command>`. La logica di risoluzione predefinita verifica diverse posizioni e infine sceglie il percorso specificato dal PATH di sistema. Se il comando richiesto è presente nel PATH di sistema ed è un file binario che è possibile richiamare, il driver `dotnet` lo richiamerà.
