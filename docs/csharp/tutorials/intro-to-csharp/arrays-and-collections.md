@@ -3,12 +3,12 @@ title: Usare raccolte - Esercitazione introduttiva su C#
 description: Imparare a usare C# esplorando la raccolta List in questa esercitazione.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205282"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261271"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informazioni su come gestire le raccolte dati tramite il tipo di elenco generico
 
@@ -19,9 +19,6 @@ Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo
 ## <a name="a-basic-list-example"></a>Esempio di elenco di base
 
 Creare una directory denominata **list-tutorial**. Impostarla come directory corrente ed eseguire `dotnet new console`.
-
-> [!NOTE]
-> Se si è già completato [Get started with .NET in 10 minutes](https://www.microsoft.com/net) (Iniziare a usare .NET in 10 minuti), è possibile continuare a usare l'applicazione myApp appena creata.
 
 Aprire **Program.cs** nell'editor preferito e sostituire il codice esistente con il seguente:
 
