@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bef8ce86a3dba5449e50c890b09acdee1375317c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719547"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219308"
 ---
 # <a name="msgbox-sample"></a>Esempio di MsgBox
 Questo esempio illustra come passare i tipi stringa per valore come parametri in e quando usare i campi <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -46,7 +46,6 @@ Questo esempio illustra come passare i tipi stringa per valore come parametri in
   
 ## <a name="see-also"></a>Vedere anche
 - [Marshalling di stringhe](marshaling-strings.md)
-- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [Marshalling predefinito per le stringhe](default-marshaling-for-strings.md)
 - [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)
 - [Specifica di un set di caratteri](specifying-a-character-set.md)

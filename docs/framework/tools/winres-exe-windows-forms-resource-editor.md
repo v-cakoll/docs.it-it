@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663160"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221095"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -35,15 +35,15 @@ winres /?
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|Description|
+|Argomento|Descrizione|
 |--------------|-----------------|
 |`resourceFile`|File di risorse da localizzare. Deve essere un form di Windows Form con estensione .resx o .resources generato dalla finestra di progettazione di Visual Studio. Winres.exe non è in grado di aprire file .resx o .resources generici.|
 
-|Opzione|Description|
+|Opzione|Descrizione|
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Lo stato degli elementi dell'interfaccia utente di un form in un progetto Windows Form viene in genere archiviato nei file di risorse, che possono essere file basati su XML con estensione .resx oppure le corrispondenti versioni binarie compilate con estensione .resources. Winres.exe fornisce funzionalità di modifica limitate per questi tipi di file all'esterno dell'ambiente di progettazione Visual Studio. In particolare, consente i seguenti tipi di operazioni di modifica:
 
@@ -53,7 +53,7 @@ Lo stato degli elementi dell'interfaccia utente di un form in un progetto Window
 
 - Un file di risorse di determinate impostazioni cultura può essere salvato come file di risorse per altre impostazioni cultura. Un file di risorse per l'inglese può ad esempio essere salvato come file di risorse per il polacco. Il nuovo file viene in genere successivamente modificato in modo da essere compatibile con le nuove impostazioni cultura.
 
-Vedere anche [Organizzazione gerarchica di risorse per la localizzazione](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\))o [Organizzazione gerarchica di risorse per la localizzazione](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\)).
+Vedere anche [Organizzazione gerarchica di risorse per la localizzazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))o [Organizzazione gerarchica di risorse per la localizzazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 Non è possibile usare Winres.exe per convertire un file .resx nel file .resources corrispondente. Per effettuare questa operazione, usare lo strumento Resgen.exe. Per altre informazioni su Resgen.exe, vedere [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
@@ -110,7 +110,7 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
 2.  Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
 
-     -oppure-
+     oppure
 
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.
 

@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589675"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221277"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, proprietà ed eventi nonché metodi statici e non statici. Una differenza fondamentale è data dal fatto che le strutture sono tipi di valore e le classi sono tipi di riferimento.  
   
  Nella tabella seguente sono elencate le opzioni di marshalling per le classi, le strutture e le unioni con la descrizione dell'utilizzo e un collegamento all'esempio corrispondente di platform invoke.  
   
-|Tipo|Description|Esempio|  
+|Tipo|Descrizione|Esempio|  
 |----------|-----------------|------------|  
 |Classe per valore.|Passa una classe con membri Integer come parametro in/out, come il case gestito.|SysTime (esempio)|  
 |Struttura per valore.|Passa le strutture come parametri in.|Structures (esempio)|  
 |Struttura per riferimento.|Passa le strutture come parametri in/out.|OSInfo (esempio)|  
 |Struttura con strutture annidate (semplificata).|Passa una classe che rappresenta una struttura con strutture annidate nella funzione non gestita. La struttura viene semplificata in una sola grande struttura nel prototipo gestito.|FindFile (esempio)|  
-|Struttura con puntatore a un'altra struttura.|Passa una struttura che contiene un puntatore a una seconda struttura come membro.|Structures (esempio)|  
+|Struttura con puntatore a un'altra struttura.|Passa una struttura che contiene un puntatore a una seconda struttura come membro.|Esempio di strutture|  
 |Matrice di strutture con Integer per valore.|Passa una matrice di strutture che contengono solo Integer come un parametro in/out. È possibile modificare i membri della matrice.|Arrays (esempio)|  
 |Matrice di strutture con Integer e stringhe per riferimento.|Passa una matrice di strutture che contengono Integer e stringhe come un parametro out. La memoria per la matrice viene allocata dalla funzione chiamata.|OutArrayOfStructs (esempio)|  
-|Unioni con tipi di valore.|Passa le unioni con tipi di valore (Integer e Double).|Unions (esempio)|  
-|Unioni con tipi misti.|Passa unioni con tipi misti (Integer e String).|Unions (esempio)|  
+|Unioni con tipi di valore.|Passa le unioni con tipi di valore (Integer e Double).|unioni (esempio)|  
+|Unioni con tipi misti.|Passa unioni con tipi misti (Integer e String).|unioni (esempio)|  
 |Valori null nella struttura.|Passa un riferimento null (**Nothing** in Visual Basic) invece di un riferimento a un tipo di valore.|HandleRef (esempio)|  
   
 ## <a name="structures-sample"></a>Structures (esempio)  
@@ -129,7 +129,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile (esempio)  
- In questo esempio viene illustrato come passare una struttura che contiene una seconda struttura incorporata a una funzione non gestita. Viene inoltre illustrato come usare l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per dichiarare una matrice a lunghezza fissa all'interno della struttura. Nell'esempio gli elementi della struttura incorporata vengono aggiunti alla struttura padre. Per un esempio di struttura incorporata non appiattita, vedere [Esempio di strutture](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100)).  
+ In questo esempio viene illustrato come passare una struttura che contiene una seconda struttura incorporata a una funzione non gestita. Viene inoltre illustrato come usare l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per dichiarare una matrice a lunghezza fissa all'interno della struttura. Nell'esempio gli elementi della struttura incorporata vengono aggiunti alla struttura padre. Per un esempio di struttura incorporata non appiattita, vedere [Esempio di strutture](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).  
   
  Nell'esempio FindFile viene usata la seguente funzione non gestita, illustrata con la relativa dichiarazione di funzione originale:  
   
@@ -171,7 +171,7 @@ typedef struct _WIN32_FIND_DATA
  [!code-csharp[Conceptual.Interop.Marshaling#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/findfile.cs#18)]
  [!code-vb[Conceptual.Interop.Marshaling#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/findfile.vb#18)]  
   
-## <a name="unions-sample"></a>Unions (esempio)  
+## <a name="unions-sample"></a>unioni (esempio)  
  In questo esempio viene dimostrato come passare le strutture contenenti solo tipi di valore e le strutture contenenti un tipo di valore e una stringa come parametri a una funzione non gestita per la quale è prevista un'unione. Un'unione rappresenta un percorso di memoria che può essere condiviso da due o più variabili.  
   
  Nell'esempio di unioni viene usata la seguente funzione non gestita, illustrata con la dichiarazione di funzione originale:  
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  In questo esempio la classe `SystemTime` contiene gli elementi della struttura originale rappresentati come membri di classe. L'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> è impostato in modo da garantire che i membri vengano inseriti in memoria in sequenza, nell'ordine in cui appaiono.  
   
- La classe `LibWrap` contiene un prototipo gestito del metodo `GetSystemTime`, che passa la classe `SystemTime` come parametro in/out per impostazione predefinita. Il parametro deve essere dichiarato con gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> perché le classi, che sono tipi di riferimento, per impostazione predefinita vengono passate come parametri in. Affinché il chiamante riceva i risultati, è necessario applicare questi [attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) in modo esplicito. Con la classe `App` si crea una nuova istanza della classe `SystemTime` e si accede ai relativi campi di dati.  
+ La classe `LibWrap` contiene un prototipo gestito del metodo `GetSystemTime`, che passa la classe `SystemTime` come parametro in/out per impostazione predefinita. Il parametro deve essere dichiarato con gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> perché le classi, che sono tipi di riferimento, per impostazione predefinita vengono passate come parametri in. Affinché il chiamante riceva i risultati, è necessario applicare questi [attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) in modo esplicito. Con la classe `App` si crea una nuova istanza della classe `SystemTime` e si accede ai relativi campi di dati.  
   
 ### <a name="code-samples"></a>Esempi di codice  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -290,6 +290,5 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Vedere anche
 - [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)
-- [Tipi di dati platform invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [Marshalling di stringhe](marshaling-strings.md)
-- [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Marshalling di diversi tipi di matrici](marshaling-different-types-of-arrays.md)

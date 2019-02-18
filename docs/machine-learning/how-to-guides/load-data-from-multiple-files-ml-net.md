@@ -1,14 +1,14 @@
 ---
 title: Caricare dati da più file per l'elaborazione dell'apprendimento automatico - ML.NET
 description: Informazioni su come caricare dati da più file per l'uso nella creazione del modello di Machine Learning, nel training e nell'assegnazione dei punteggi con ML.NET
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe6758e46d923dc07908e1334056ea8394c1085e
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479984"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092046"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Caricare dati da più file per l'elaborazione dell'apprendimento automatico - ML.NET
 
@@ -23,7 +23,7 @@ Usare `TextLoader` e specificare una matrice di file nel metodo `Read`. I file d
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

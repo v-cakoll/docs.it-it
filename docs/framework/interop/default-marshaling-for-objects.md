@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528020"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219607"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
@@ -325,13 +325,13 @@ Varianti passate per valore e per riferimento
 |----------|--------|-----------------------------|  
 |**Variante**  *v*|**Oggetto**  *o*|Never|  
 |**Oggetto**  *o*|**Variante**  *v*|Never|  
-|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Sempre|  
-|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Sempre|  
+|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Always|  
+|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Always|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Never|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
   
 ## <a name="see-also"></a>Vedere anche
 - [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
-- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copia e blocco](copying-and-pinning.md)

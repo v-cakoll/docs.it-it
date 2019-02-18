@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eee3238c4aa7e061fa29a4062b089c6d44ec89ad
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204834"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093944"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
 
@@ -45,7 +45,7 @@ Usare la tabella indicata di seguito per i collegamenti rapidi o continuare a le
 |**4.6**|Incluso in Visual Studio 2015.<br /><br /> [Microsoft .NET Framework 4.6 Targeting Pack](https://go.microsoft.com/fwlink/?LinkId=528261)|[Pagina di download per il programma di installazione Web 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Pagina di download per il programma di installazione offline 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Incluso in:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Installabile anche in:**<br /><br/> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Per l'uso con Visual Studio 2013, Visual Studio 2012 o altri IDE|[Pagina di download per il programma di installazione Web 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Pagina di download per il programma di installazione offline 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Installabile in:**<br /><br/> Windows 8.1 e versioni precedenti<br /> Windows Server 2012 R2 e versioni precedenti<br /> (per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Per l'uso con Visual Studio 2013, Visual Studio 2012 o altri IDE|[Pagina di download per il programma di installazione Web 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Pagina di download per il programma di installazione offline 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Incluso in:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Installabile anche in:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni precedenti<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] e versioni precedenti<br />(per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
-|**4.5**|Incluso in Visual Studio 2012<br /><br /> Disponibile anche nell'ambito di [Windows 8 SDK](https://msdn.microsoft.com/windows/hardware/hh852363)|[Pagina di download per il programma di installazione Web 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Incluso in:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Installabile anche in:**<br/><br /> Windows 7 e versioni precedenti<br /> Windows Server 2008 SP2 e versioni precedenti<br />(per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
+|**4.5**|Incluso in Visual Studio 2012<br /><br /> Disponibile anche nell'ambito di [Windows 8 SDK](/windows/downloads/sdk-archive)|[Pagina di download per il programma di installazione Web 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Incluso in:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Installabile anche in:**<br/><br /> Windows 7 e versioni precedenti<br /> Windows Server 2008 SP2 e versioni precedenti<br />(per un elenco completo, vedere [Requisiti di sistema](~/docs/framework/get-started/system-requirements.md))|
 
 È possibile installare il **Developer Pack** per una versione specifica di .NET Framework (se disponibile) in tutte le piattaforme supportate.
 

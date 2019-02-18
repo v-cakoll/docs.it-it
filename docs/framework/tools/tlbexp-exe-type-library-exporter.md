@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10e93af4172e6759cbe04f88e54b6e1db995efa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679006"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219477"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
 L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Parametri  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Specifica il percorso in cui eseguire la ricerca degli assembly. Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.<br /><br /> Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).|  
 |**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
@@ -56,7 +56,7 @@ tlbexp assemblyName [options]
 > [!NOTE]
 >  Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly. Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.  
   
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Si noti che il campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> viene ignorato.  
   
- Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione. Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione. Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  L'utilità di esportazione della libreria dei tipi esporta i metodi con parametri <xref:System.TypedReference> di tipo `VARIANT`, anche se l'oggetto <xref:System.TypedReference> non ha significato nel codice non gestito. Quando si esportano metodi con parametri <xref:System.TypedReference>, l'utilità in questione non genera un avviso o un errore e il codice non gestito che utilizza la libreria dei tipi risultante non viene eseguito correttamente.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Riepilogo della conversione da assembly a libreria dei tipi](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)
+- [Riepilogo della conversione da assembly a libreria dei tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

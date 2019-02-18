@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689000"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221290"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -24,7 +24,7 @@ Il marshalling di interoperabilità opera sulle regole che stabiliscono il compo
  Questa sezione identifica le caratteristiche predefinite del comportamento del servizio di marshalling di interoperabilità. Vengono fornite informazioni dettagliate sul marshalling di matrici, tipi booleani, tipi char, delegati, classi, oggetti, stringhe e strutture.  
   
 > [!NOTE]
->  Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
+>  Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gestione della memoria con il marshalling di interoperabilità  
  Il gestore di marshalling di interoperabilità tenta sempre di liberare la memoria allocata dal codice gestito. Questo comportamento è conforme alle regole di gestione della memoria COM, ma differisce dalle regole che governano il codice C++ nativo.  
@@ -41,10 +41,10 @@ BSTR MethodOne (BSTR b) {
   
  Se, tuttavia, si definisce il metodo come prototipo di platform invoke, si sostituisce ogni tipo **BSTR** con un tipo <xref:System.String> e si chiama `MethodOne`, Common Language Runtime prova a liberare `b` due volte. È possibile modificare il comportamento di marshalling usando tipi <xref:System.IntPtr> invece di tipi **String**.  
   
- Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshalling predefinito per le classi  
- È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
+ È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passaggio di classi a COM  
  Quando una classe gestita viene passata a COM, il marshalling di interoperabilità esegue automaticamente il wrapping della classe con un proxy COM e passa l'interfaccia di classe creata dal proxy alla chiamata al metodo COM. Il proxy delega quindi tutte le chiamate sull'interfaccia di classe all'oggetto gestito. Il proxy espone anche altre interfacce non implementate in modo esplicito dalla classe. Il proxy implementa automaticamente interfacce come **IUnknown** e **IDispatch** per conto della classe.  
@@ -52,7 +52,7 @@ BSTR MethodOne (BSTR b) {
 ### <a name="passing-classes-to-net-code"></a>Passaggio di classi al codice .NET  
  Le coclassi non sono in genere usate come argomenti dei metodi in COM. Al posto della coclasse viene invece in genere passata un'interfaccia predefinita.  
   
- Quando viene passata un'interfaccia nel codice gestito, il gestore di marshalling di interoperabilità è responsabile di eseguire il wrapping dell'interfaccia con il wrapper appropriato e di passare il wrapper al metodo gestito. La determinazione del wrapper da usare può essere complessa. Ogni istanza di un oggetto COM prevede un singolo wrapper univoco, indipendentemente dal numero di interfacce implementate dall'oggetto. Ad esempio, un singolo oggetto COM che implementa cinque interfacce distinte ha solo un wrapper. Lo stesso wrapper espone tutte e cinque le interfacce. Se vengono create due istanze dell'oggetto COM, vengono create due istanze del wrapper.  
+ Quando viene passata un'interfaccia nel codice gestito, il gestore di marshalling di interoperabilità è responsabile di effettuare il wrapping dell'interfaccia con il wrapper appropriato e di passare il wrapper al metodo gestito. La determinazione del wrapper da usare può essere complessa. Ogni istanza di un oggetto COM prevede un singolo wrapper univoco, indipendentemente dal numero di interfacce implementate dall'oggetto. Ad esempio, un singolo oggetto COM che implementa cinque interfacce distinte ha solo un wrapper. Lo stesso wrapper espone tutte e cinque le interfacce. Se vengono create due istanze dell'oggetto COM, vengono create due istanze del wrapper.  
   
  Affinché il wrapper mantenga lo stesso tipo per tutta la sua durata, il gestore di marshalling di interoperabilità deve identificare il wrapper corretto la prima volta che un'interfaccia esposta dall'oggetto viene passata attraverso di esso. Il gestore di marshalling identifica l'oggetto analizzando una delle interfacce implementate.  
   
@@ -348,7 +348,7 @@ interface _Graphics {
 }  
 ```  
   
- Le stesse regole usate per effettuare il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per effettuare il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il gestore marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**Point**\*\*) in entrambe le direzioni.  
+ Le stesse regole usate per il marshalling di valori e riferimenti nelle chiamate di platform invoke vengono usate per il marshalling tramite le interfacce COM. Ad esempio, quando un'istanza del tipo di valore `Point` viene passata da .NET Framework a COM, `Point` viene passato mediante valore. Se il tipo di valore `Point` viene passato mediante riferimento, viene passato un puntatore a un oggetto `Point` nello stack. Il gestore marshalling di interoperabilità non supporta livelli superiori di riferimento indiretto (**Point**\*\*) in entrambe le direzioni.  
   
 > [!NOTE]
 >  Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  

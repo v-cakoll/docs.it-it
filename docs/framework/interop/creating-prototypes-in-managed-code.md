@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564292"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219568"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -79,7 +79,7 @@ using namespace System::Runtime::InteropServices;
   
  La tabella seguente elenca il set completo di campi attributo relativi a platform invoke. Per ogni campo, la tabella include il valore predefinito e un collegamento a informazioni su come usare questi campi per definire le funzioni DLL non gestite.  
   
-|Campo|Description|  
+|Campo|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Abilita o disabilita il mapping più appropriato.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Specifica la convenzione di chiamata da usare per passare gli argomenti del metodo. Il valore predefinito è `WinAPI`, che corrisponde a `__stdcall` per le piattaforme Intel a 32 bit.|  
@@ -226,7 +226,7 @@ interface IDemandStubsItf
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
 - [Specifica di un set di caratteri](specifying-a-character-set.md)
 - [Esempi di platform invoke](platform-invoke-examples.md)
-- [Platform invoke (considerazioni sulla sicurezza)](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [Platform invoke (considerazioni sulla sicurezza)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)
 - [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)
