@@ -1,7 +1,7 @@
 ---
 title: '! - operatore - Riferimenti per C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,27 +9,29 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333226"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303712"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="5c2cb-103">!</span><span class="sxs-lookup"><span data-stu-id="5c2cb-103">!</span></span> <span data-ttu-id="5c2cb-104">operator (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="5c2cb-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="603af-103">!</span><span class="sxs-lookup"><span data-stu-id="603af-103">!</span></span> <span data-ttu-id="603af-104">operator (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="603af-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="5c2cb-105">L'operatore logico di negazione (`!`) è un operatore unario che nega l'operando.</span><span class="sxs-lookup"><span data-stu-id="5c2cb-105">The logical negation operator (`!`) is a unary operator that negates its operand.</span></span> <span data-ttu-id="5c2cb-106">Viene definito per `bool` e restituisce `true` se e solo se il relativo operando è `false`.</span><span class="sxs-lookup"><span data-stu-id="5c2cb-106">It is defined for `bool` and returns `true` if and only if its operand is `false`.</span></span>
+<span data-ttu-id="603af-105">L'operatore di negazione logico `!` è un operatore unario che calcola la negazione logica del relativo operando [bool](../keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="603af-105">The logical negation operator `!` is a unary operator that computes logical negation of its [bool](../keywords/bool.md) operand.</span></span> <span data-ttu-id="603af-106">Vale a dire, produce `true`, se l'operando è `false` e `false` se l'operando è `true`:</span><span class="sxs-lookup"><span data-stu-id="603af-106">That is, it produces `true`, if the operand is `false`, and `false`, if the operand is `true`:</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="5c2cb-107">Note</span><span class="sxs-lookup"><span data-stu-id="5c2cb-107">Remarks</span></span>
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-<span data-ttu-id="5c2cb-108">I tipi definiti dall'utente possono eseguire l'overload dell'operatore `!` (vedere [operatore](../keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="5c2cb-108">User-defined types can overload the `!` operator (see [operator](../keywords/operator.md)).</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="603af-107">Overload degli operatori</span><span class="sxs-lookup"><span data-stu-id="603af-107">Operator overloadability</span></span>
 
-## <a name="example"></a><span data-ttu-id="5c2cb-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="5c2cb-109">Example</span></span>
+<span data-ttu-id="603af-108">I tipi definiti dall'utente possono eseguire l'[overload](../keywords/operator.md) dell'operatore `!`.</span><span class="sxs-lookup"><span data-stu-id="603af-108">User-defined types can [overload](../keywords/operator.md) the `!` operator.</span></span>
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a><span data-ttu-id="603af-109">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="603af-109">C# language specification</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5c2cb-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c2cb-110">See also</span></span>
+<span data-ttu-id="603af-110">Per altre informazioni, vedere la sezione [Operatore di negazione logico](~/_csharplang/spec/expressions.md#logical-negation-operator) della [specifica del linguaggio C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="603af-110">For more information, see the [Logical negation operator](~/_csharplang/spec/expressions.md#logical-negation-operator) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-- [<span data-ttu-id="5c2cb-111">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="5c2cb-111">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="5c2cb-112">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="5c2cb-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="5c2cb-113">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="5c2cb-113">C# Operators</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="603af-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="603af-111">See also</span></span>
+
+- [<span data-ttu-id="603af-112">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="603af-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="603af-113">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="603af-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="603af-114">Operatori C#</span><span class="sxs-lookup"><span data-stu-id="603af-114">C# Operators</span></span>](index.md)
