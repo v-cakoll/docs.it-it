@@ -3,12 +3,12 @@ title: Glossario dell'apprendimento automatico - ML.NET
 description: Glossario dei principali termini relativi all'apprendimento automatico, utili per la creazione di modelli personalizzati in ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415377"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092436"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossario dell'apprendimento automatico
 
@@ -110,7 +110,7 @@ Nell'ambito della [regressione](#regression), una metrica di valutazione costitu
 
 Una sottoclasse di apprendimento automatico in cui un modello desiderato stima l'etichetta per dati non ancora visibili. Alcuni esempi sono la classificazione, la regressione e la stima strutturata. Per altre informazioni, vedere l'articolo relativo all'[apprendimento con supervisione](https://en.wikipedia.org/wiki/Supervised_learning) su Wikipedia.
 
-## <a name="training"></a>Training
+## <a name="training"></a>Formazione
 
 Il processo di identificazione di un [modello](#model) per un determinato training set. Per un modello lineare, rappresenta l'individuazione dei pesi. Per una struttura ad albero, implica l'identificazione dei punti di divisione.
 

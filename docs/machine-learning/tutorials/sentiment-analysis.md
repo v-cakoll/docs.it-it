@@ -1,15 +1,15 @@
 ---
 title: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 description: Informazioni su come usare ML.NET in uno scenario di classificazione binaria per comprendere come usare la stima del sentiment al fine di eseguire l'azione appropriata.
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628007"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092761"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 
@@ -21,18 +21,19 @@ Questa esercitazione di esempio illustra come usare ML.NET per creare un classif
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]
 > * Informazioni sul problema
-> * Selezionare l'attività di apprendimento automatico appropriata
+> * Selezionare l'algoritmo di Machine Learning appropriato
 > * Preparare i dati
-> * Creare la pipeline di apprendimento
-> * Caricare un classificatore
+> * Trasformare i dati
 > * Eseguire il training del modello
-> * Valutare il modello con un set di dati diverso
-> * Eseguire una stima relativa a una singola istanza del risultato dei dati di test con il modello
-> * Eseguire una stima dei risultati dei dati di test con un modello caricato
+> * Valutare il modello
+> * Eseguire stime con il modello sottoposto a training
+> * Eseguire distribuzione e stime con un modello caricato
 
 ## <a name="sentiment-analysis-sample-overview"></a>Panoramica dell'esempio di analisi del sentiment
 
 L'esempio è un'app console che usa ML.NET per eseguire il training di un modello che classifica e stima il sentiment come positivo o negativo. Valuta inoltre il modello con un secondo set di dati per l'analisi della qualità. I set di dati per il sentiment provengono dal progetto WikiDetox.
+
+È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -54,8 +55,8 @@ Le fasi del flusso di lavoro sono le seguenti:
 3. **Compilare ed eseguire il training** 
    * **Eseguire il training del modello**
    * **Valutazione del modello**
-4. **Run**
-   * **Utilizzare il modello**
+4. **Distribuire il modello**
+   * **Usare il modello per le stime**
 
 ### <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -67,7 +68,7 @@ Il problema per questa esercitazione consiste nel comprendere il sentiment dei c
 
 Sarà quindi necessario **determinare** il sentiment, che consente di selezionare l'attività di apprendimento automatico.
 
-## <a name="select-the-appropriate-machine-learning-task"></a>Selezionare l'attività di apprendimento automatico appropriata
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>Selezionare l'algoritmo di Machine Learning appropriato
 
 Per questo problema, sono noti i fatti seguenti:
 
@@ -77,18 +78,18 @@ Stimare il **sentiment** di un nuovo commento nel sito Web, positivo o negativo,
 * Per favore evita di aggiungere cose insensate a Wikipedia.
 * È il migliore, e l'articolo dovrebbe indicarlo.
 
-L'attività di apprendimento automatico tramite classificazione è la più adatta per questo scenario.
+L'algoritmo di Machine Learning di classificazione è il più adatto per questo scenario.
 
 ### <a name="about-the-classification-task"></a>Informazioni sull'attività di classificazione
 
-La classificazione è un'attività di apprendimento automatico che usa i dati per **determinare** la categoria, il tipo o la classe di un elemento o una riga di dati. È ad esempio possibile usare la classificazione per:
+La classificazione è un algoritmo di Machine Learning che usa i dati per **determinare** la categoria, il tipo o la classe di un elemento o una riga di dati. È ad esempio possibile usare la classificazione per:
 
 * Identificare il sentiment come positivo o negativo.
 * Classificare messaggi di posta elettronica come posta indesiderata o legittima.
 * Determinare se le analisi di laboratorio di un paziente indicano la presenza di cellule tumorali.
 * Suddividere in categorie i clienti in base alla relativa propensione a rispondere a una campagna di vendita.
 
-Le attività di classificazione sono spesso di uno dei tipi seguenti:
+Gli algoritmi di classificazione sono spesso di uno dei tipi seguenti:
 
 * Binarie: A o B.
 * Multiclasse: più categorie che possono essere stimate tramite un singolo modello.
@@ -107,7 +108,7 @@ Le attività di classificazione sono spesso di uno dei tipi seguenti:
 
 ### <a name="prepare-your-data"></a>Preparare i dati
 
-1. Scaricare i set di dati [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) e [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) e salvarli nella cartella *Data* creata in precedenza. Il primo set di dati esegue il training del modello di apprendimento automatico e il secondo può essere usato per valutare il livello di accuratezza del modello.
+1. Scaricare i set di dati [Wikipedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) e [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) e salvarli nella cartella *Data* creata in precedenza. Il primo set di dati esegue il training del modello di apprendimento automatico e il secondo può essere usato per valutare il livello di accuratezza del modello.
 
 2. In Esplora soluzioni fare clic con il pulsante destro del mouse su ognuno dei file \*con estensione tsv e selezionare **Proprietà**. In **Avanzate** impostare il valore di **Copia nella directory di output** su **Copia se più recente**.
 
@@ -152,14 +153,14 @@ Creare una variabile denominata `mlContext` e inizializzarla con una nuova istan
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Successivamente, per configurare il caricamento dei dati, inizializzare la variabile globale `_textLoader` in modo da poterla riutilizzare.  Si noti che si sta usando un'istanza di `TextReader`. Quando si crea un'istanza di `TextLoader` con `TextReader`, si passa il contesto necessario e la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> che consente la personalizzazione.
+Successivamente, per configurare il caricamento dei dati, inizializzare la variabile globale `_textLoader` in modo da poterla riutilizzare.  Quando si crea un'istanza di `TextLoader` con `MLContext.Data.CreateTextLoader`, si passa il contesto necessario e la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> che consente la personalizzazione.
 
  Specificare lo schema di dati passando una matrice di oggetti <xref:Microsoft.ML.Data.TextLoader.Column> al caricatore contenente tutti i nomi delle colonne e i relativi tipi. Lo schema di dati è stato definito in precedenza quando si è creata la classe `SentimentData`. Per lo schema, la prima colonna (Label) è un valore <xref:System.Boolean> (la stima) e la seconda colonna (SentimentText) è la caratteristica di tipo testo/stringa usata per la stima del sentiment.
-La classe `TextReader` restituisce un'istanza di <xref:Microsoft.ML.Data.TextLoader> completamente inizializzata.  
+La classe `TextLoader` restituisce un'istanza di <xref:Microsoft.ML.Data.TextLoader> completamente inizializzata.  
 
 Per inizializzare la variabile globale `_textLoader` in modo da riutilizzarla per i set di dati necessari, aggiungere il codice seguente dopo l'inizializzazione di `mlContext`:
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 Aggiungere il codice seguente al metodo `Main` come riga successiva:
 
@@ -186,7 +187,7 @@ Si noti che vengono passati due parametri al metodo Train: `MLContext` per il co
 
 ## <a name="load-the-data"></a>Caricare i dati
 
-Si caricheranno i dati usando la variabile globale `_textLoader` con il parametro `dataPath`. Verrà restituita un'istanza di <xref:Microsoft.ML.Data.IDataView>. Come input e output di `Transforms`, una `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
+Si caricheranno i dati usando la variabile globale `_textLoader` con il parametro `dataPath`. Verrà restituita un'istanza di <xref:Microsoft.Data.DataView.IDataView>. Come input e output di `Transforms`, una `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
 
 In ML.NET i dati sono simili a una visualizzazione SQL. Vengono valutati in modalità differita, sono schematizzati ed eterogenei. L'oggetto è la prima parte della pipeline e carica i dati. Per questa esercitazione, carica un set di dati con commenti e il sentiment positivo o negativo corrispondente. Queste informazioni vengono usate per creare il modello ed eseguirne il training.
 
@@ -216,7 +217,7 @@ Aggiungere al metodo `Train` il codice seguente:
 
 ## <a name="train-the-model"></a>Eseguire il training del modello
 
-Il training del modello, <xref:Microsoft.ML.Data.TransformerChain%601>, viene eseguito in base al set di dati caricato e trasformato. Dopo aver definito l'algoritmo di stima, si esegue il training del modello usando il metodo <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> e fornendo i dati di training già caricati. Viene così restituito un modello da usare per le stime. `pipeline.Fit()` esegue il training della pipeline e restituisce un oggetto `Transformer` in base alla `DataView` passata. L'esperimento non viene eseguito finché questa operazione non è stata completata.
+Il training del modello, <xref:Microsoft.ML.Data.TransformerChain%601>, viene eseguito in base al set di dati caricato e trasformato. Dopo aver definito l'algoritmo di stima, si esegue il training del modello usando il metodo <xref:Microsoft.ML.Data.EstimatorChain%601.Fit*> e fornendo i dati di training già caricati. Viene così restituito un modello da usare per le stime. `pipeline.Fit()` esegue il training della pipeline e restituisce un oggetto `Transformer` in base alla `DataView` passata. L'esperimento non viene eseguito finché questa operazione non è stata completata.
 
 Aggiungere al metodo `Train` il codice seguente:
 
@@ -290,14 +291,13 @@ Il metodo `SaveModelAsFile` esegue le attività seguenti:
 A questo punto, creare un metodo per salvare il modello in modo da poterlo riutilizzare in altre applicazioni. L'interfaccia `ITransformer` ha un metodo <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> che accetta il campo globale `_modelPath` e un'istanza della classe <xref:System.IO.Stream>. Per salvare il modello come file con estensione zip, si creerà l'oggetto `FileStream` subito prima di chiamare il metodo `SaveTo`. Aggiungere il codice seguente al metodo `SaveModelAsFile` come riga successiva:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-È anche possibile visualizzare il percorso in cui è stato salvato il file scrivendo un messaggio della console con il campo `_modelPath` tramite il codice seguente:
+Eseguire distribuzione e stime con un modello caricato È anche possibile visualizzare il percorso in cui è stato salvato il file scrivendo un messaggio della console con il campo `_modelPath` tramite il codice seguente:
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>Stimare il risultato dei dati di test con il modello e un singolo commento
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Stimare il risultato dei dati di test con il modello salvato
 
 Creare il metodo `Predict` subito dopo il metodo `Evaluate`, usando il codice seguente:
 
@@ -321,7 +321,7 @@ Aggiungere una chiamata al nuovo metodo dal metodo `Main`, subito sotto la chiam
 
 `model` è un oggetto `transformer` che opera su molte righe di dati, ma in un ambiente produzione è spesso necessario eseguire stime su singoli esempi. <xref:Microsoft.ML.PredictionEngine%602> è un wrapper che viene restituito dal metodo `CreatePredictionEngine`. A questo punto si aggiunge il codice seguente per creare l'istanza di `PredictionEngine` come prima riga nel metodo `Predict`:
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 Aggiungere un commento per testare la stima del modello sottoposto a training nel metodo `Predict` creando un'istanza di `SentimentData`:
 
@@ -331,13 +331,13 @@ Aggiungere un commento per testare la stima del modello sottoposto a training ne
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>Operazionalizzazione del modello: stima
+### <a name="using-the-model-prediction"></a>Uso del modello: stima
 
 Visualizzare `SentimentText` e la stima del sentiment corrispondente allo scopo di condividere i risultati e agire su di essi di conseguenza. Questa operazione viene denominata operazionalizzazione, ovvero l'uso dei dati restituiti come parte dei criteri operativi. Creare una visualizzazione per i risultati usando il codice <xref:System.Console.WriteLine?displayProperty=nameWithType> seguente:
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>Stimare i risultati dei dati di test con il modello salvato
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Eseguire distribuzione e stime con un modello caricato
 
 Creare il metodo `PredictWithModelLoadedFromFile` subito prima del metodo `SaveModelAsFile`, con il codice seguente:
 
@@ -367,11 +367,11 @@ Caricare il modello
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Dopo aver creato un modello, è possibile usarlo per stimare il sentiment positivo o negativo dei dati relativi ai commenti usando il metodo <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)>. Per ottenere una stima, usare `Predict` sui nuovi dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle funzionalità. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle funzionalità specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta. Aggiungere il codice seguente al metodo `PredictWithModelLoadedFromFile` per le stime:
+Dopo aver creato un modello, è possibile usarlo per stimare il sentiment positivo o negativo dei dati relativi ai commenti usando il metodo <xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A>. Per ottenere una stima, usare `Predict` sui nuovi dati. Si noti che i dati di input sono una stringa e che il modello include l'estrazione delle funzionalità. La pipeline è sincronizzata durante il training e la stima. Non è necessario scrivere codice di pre-elaborazione/estrazione delle funzionalità specifico per le stime e la stessa API gestisce sia le stime in batch che quelle eseguite una sola volta. Aggiungere il codice seguente al metodo `PredictWithModelLoadedFromFile` per le stime:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>Operazionalizzazione del modello: stima
+### <a name="using-the-loaded-model-for-prediction"></a>Uso del modello caricato per la stima
 
 Visualizzare `SentimentText` e la stima del sentiment corrispondente allo scopo di condividere i risultati e agire su di essi di conseguenza. Questa operazione viene denominata operazionalizzazione, ovvero l'uso dei dati restituiti come parte dei criteri operativi. Creare un'intestazione per i risultati con il codice <xref:System.Console.WriteLine?displayProperty=nameWithType> seguente:
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ La procedura è stata completata. A questo punto, è stato creato correttamente 
 In questa esercitazione si è appreso come:
 > [!div class="checklist"]
 > * Informazioni sul problema
-> * Selezionare l'attività di apprendimento automatico appropriata
+> * Selezionare l'algoritmo di Machine Learning appropriato
 > * Preparare i dati
-> * Creare la pipeline di apprendimento
-> * Caricare un classificatore
+> * Trasformare i dati
 > * Eseguire il training del modello
-> * Valutare il modello con un set di dati diverso
-> * Stimare i risultati dei dati di test con il modello
+> * Valutare il modello
+> * Eseguire stime con il modello sottoposto a training
+> * Eseguire distribuzione e stime con un modello caricato
 
 Passare all'esercitazione successiva per altre informazioni
 > [!div class="nextstepaction"]

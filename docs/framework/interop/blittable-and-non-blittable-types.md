@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596891"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093034"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -49,7 +49,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 -   Matrici unidimensionali di tipi copiabili da BLT, come una matrice di integer. Non è tuttavia copiabile da BLT un tipo contenente una matrice variabile di tipi copiabili da BLT.  
   
--   Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [Marshalling predefinito per i tipi di valore](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [Marshalling predefinito per i tipi di valore](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Non sono copiabili da BLT i riferimenti a oggetti, incluse le matrici di riferimenti a oggetti che invece sono copiabili da BLT. È possibile, ad esempio, definire una struttura copiabile da BLT, ma non un tipo copiabile da BLT contenente una matrice di riferimenti alla struttura.  
   
@@ -57,7 +57,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
  Alcuni tipi di dati gestiti richiedono una rappresentazione diversa in un ambiente non gestito. Questi tipi di dati non copiabili da BLT devono essere convertiti in un formato di cui è possibile eseguire il marshalling. Le stringhe gestite, ad esempio, sono tipi non copiabili da BLT perché devono essere convertite in oggetti stringa prima di poter eseguire il marshalling.  
   
- Nella tabella seguente sono elencati i tipi non copiabili da BLT dello spazio dei nomi <xref:System>. Anche i [delegati](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), ossia le strutture di dati che fanno riferimento a un metodo statico o a un'istanza di classe, non sono copiabili da BLT.  
+ Nella tabella seguente sono elencati i tipi non copiabili da BLT dello spazio dei nomi <xref:System>. Anche i [delegati](default-marshaling-behavior.md#default-marshaling-for-delegates), ossia le strutture di dati che fanno riferimento a un metodo statico o a un'istanza di classe, non sono copiabili da BLT.  
   
 |Tipi non copiabili da BLT|Description|  
 |-------------------------|-----------------|  

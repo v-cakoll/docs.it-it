@@ -1,15 +1,15 @@
 ---
 title: Usare ML.NET in uno scenario di classificazione multiclasse dei problemi in GitHub
 description: Informazioni su come usare ML.NET in uno scenario di classificazione multiclasse per assegnare i problemi di GitHub a un'area specifica.
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739423"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333521"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione multiclasse per classificare i problemi di GitHub
 
@@ -20,11 +20,11 @@ In questa esercitazione si imparerà a:
 > * Informazioni sul problema
 > * Selezionare l'algoritmo di Machine Learning appropriato
 > * Preparare i dati
-> * Estrarre le funzionalità e trasformare i dati
+> * Trasformare i dati
 > * Eseguire il training del modello
-> * Valutare il modello con un set di dati diverso
-> * Eseguire una stima relativa a una singola istanza del risultato dei dati di test con il modello di cui è stato eseguito il training
-> * Eseguire una stima relativa a una singola istanza dei dati di test con un modello caricato
+> * Valutare il modello
+> * Eseguire stime con il modello sottoposto a training
+> * Eseguire distribuzione e stime con un modello caricato
 
 > [!NOTE]
 > Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -55,8 +55,8 @@ Le fasi del flusso di lavoro sono le seguenti:
 3. **Compilare ed eseguire il training** 
    * **Eseguire il training del modello**
    * **Valutazione del modello**
-4. **Run**
-   * **Utilizzare il modello**
+4. **Distribuire il modello**
+   * **Usare il modello per le stime**
 
 ### <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -146,7 +146,7 @@ Creare tre campi globali per i percorsi dei file scaricati di recente e variabil
 * `_testDataPath` contiene il percorso del set di dati usato per valutare il modello.
 * `_modelPath` contiene il percorso in cui è salvato il modello sottoposto a training.
 * `_mlContext` è l'elemento <xref:Microsoft.ML.MLContext> che specifica il contesto di elaborazione.
-* `_trainingDataView` è l'elemento <xref:Microsoft.ML.Data.IDataView> usato per elaborare il set di dati di training.
+* `_trainingDataView` è l'elemento <xref:Microsoft.Data.DataView.IDataView> usato per elaborare il set di dati di training.
 * `_predEngine` è l'elemento <xref:Microsoft.ML.PredictionEngine%602> usato per le stime singole.
 * `_reader` è l'istanza della classe <xref:Microsoft.ML.Data.TextLoader> usata per caricare e trasformare i set di dati.
 
@@ -187,7 +187,7 @@ Inizializzare la variabile globale `_mlContext` con una nuova istanza di `MLCont
 
 ## <a name="load-the-data"></a>Caricare i dati
 
-Quindi inizializzare la variabile globale `_trainingDataView` <xref:Microsoft.ML.Data.IDataView> e caricare i dati con il parametro `_trainDataPath`.
+Quindi inizializzare la variabile globale `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> e caricare i dati con il parametro `_trainDataPath`.
 
  Come input e output di [`Transforms`](../basic-concepts-model-training-in-mldotnet.md#transformer), `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
 
@@ -195,7 +195,7 @@ In ML.NET i dati sono simili a una `SQL view`. Vengono valutati in modalità dif
 
 Poiché il tipo di modello di dati `GitHubIssue` creato in precedenza corrisponde allo schema del set di dati, è possibile combinare l'inizializzazione, il mapping e il caricamento del set di dati in un'unica riga di codice.
 
-La prima parte della riga (`CreateTextReader<GitHubIssue>(hasHeader: true)`) crea un <xref:Microsoft.ML.Data.TextLoader> tramite inferenza dello schema del set di dati dal tipo modello di dati `GitHubIssue` e usando l'intestazione del set di dati.
+La prima parte della riga (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) crea un <xref:Microsoft.ML.Data.TextLoader> tramite inferenza dello schema del set di dati dal tipo modello di dati `GitHubIssue` e usando l'intestazione del set di dati.
 
 Lo schema di dati è stato definito in precedenza quando è stata creata la classe `GitHubIssue`. Per lo schema:
 
@@ -245,6 +245,9 @@ Quando vengono eseguiti il training e la valutazione del modello, i valori nella
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> In ML.NET versione 0.10 è stato modificato l'ordine dei parametri Transforms. Non si verificherà nessun errore fino a quando non si compila. Usare i nomi dei parametri per Transforms come illustrato nel frammento di codice precedente.
+
 L'ultimo passaggio della preparazione dei dati combina tutte le colonne di funzionalità nella colonna **Features** usando la classe di trasformazione `Concatenate`. Per impostazione predefinita, un algoritmo di apprendimento elabora solo le funzionalità della colonna **Features**. Aggiungere questa trasformazione alla pipeline con il codice seguente:
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ Si noti che nel metodo BuildAndTrainModel vengono passati due parametri, un `IDa
 
 ### <a name="choose-a-learning-algorithm"></a>Scegliere un algoritmo di apprendimento
 
-Per aggiungere l'algoritmo di Machine Learning, usare l'oggetto <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer>.  L'oggetto `SdcaMultiClassTrainer` viene aggiunto a `pipeline` e accetta gli elementi `Title` e `Description` (`Features`) con estrazione di funzionalità e i parametri di input `Label` per l'apprendimento dai dati cronologici.
-
-Aggiungere al metodo `BuildAndTrainModel` il codice seguente:
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-Dopo aver creato l'algoritmo di Machine Learning, aggiungerlo a `pipeline`. È anche necessario eseguire il mapping dell'etichetta al valore per restituirlo allo stato leggibile originale. Eseguire entrambe le operazioni con il codice seguente:
+Per aggiungere l'algoritmo di apprendimento chiamare il metodo wrapper `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent`, che restituisce un oggetto <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer>.  L'oggetto `SdcaMultiClassTrainer` viene aggiunto a `pipeline` e accetta gli elementi `Title` e `Description` (`Features`) con estrazione di funzionalità e i parametri di input `Label` per l'apprendimento dai dati cronologici. È anche necessario eseguire il mapping dell'etichetta al valore per restituirlo allo stato leggibile originale. Eseguire entrambe le operazioni con il codice seguente:
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ Mentre `model` è un `transformer` che opera su numerose righe di dati, la neces
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>Eseguire stime con il modello sottoposto a training
+
 Aggiungere un problema di GitHub per testare la stima del modello sottoposto a training nel metodo `Predict` creando un'istanza di `GitHubIssue`:
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ Aggiungere un problema di GitHub per testare la stima del modello sottoposto a t
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>Uso del modello: stima
+### <a name="using-the-model-prediction-results"></a>Uso del modello: risultati della stima
 
 Visualizzare `GitHubIssue` e la stima dell'etichetta `Area` corrispondente per condividere i risultati e agire su di essi di conseguenza.  Creare una visualizzazione per i risultati usando il codice <xref:System.Console.WriteLine?displayProperty=nameWithType> seguente:
 
@@ -356,7 +355,7 @@ Come in precedenza con il set di dati di training, è possibile combinare l'iniz
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` è un wrapper del metodo <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A> che calcola le metriche di qualità per il modello usando il set di dati specificato. Restituisce un oggetto <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> che contiene le metriche complessive calcolate dagli analizzatori della classificazione multiclasse.
+`MulticlassClassificationContext.Evaluate` è un wrapper del metodo <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> che calcola le metriche di qualità per il modello usando il set di dati specificato. Restituisce un oggetto <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> che contiene le metriche complessive calcolate dagli analizzatori della classificazione multiclasse.
 Per visualizzare la metrica per determinare la qualità del modello, è prima necessario ottenerla.
 Osservare l'uso del metodo `Transform` della variabile globale di apprendimento automatico `_trainedModel` (un oggetto Transformer) per l'input di funzionalità e la generazione di stime. Aggiungere il codice seguente al metodo `Evaluate` come riga successiva:
 
@@ -409,7 +408,7 @@ A questo punto, creare un metodo per salvare il modello in modo da poterlo riuti
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Stimare il risultato dei dati di test con il modello salvato
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Eseguire distribuzione e stime con un modello caricato
 
 Aggiungere una chiamata al nuovo metodo dal metodo `Main`, subito sotto la chiamata al metodo `Evaluate`, usando il codice seguente:
 
@@ -478,11 +477,11 @@ In questa esercitazione si è appreso come:
 > * Informazioni sul problema
 > * Selezionare l'algoritmo di Machine Learning appropriato
 > * Preparare i dati
-> * Estrarre le funzionalità e trasformare i dati
+> * Trasformare i dati
 > * Eseguire il training del modello
-> * Valutare il modello con un set di dati diverso
-> * Eseguire una stima relativa a una singola istanza del risultato dei dati di test con il modello di cui è stato eseguito il training
-> * Eseguire una stima relativa a una singola istanza dei dati di test con un modello caricato
+> * Valutare il modello
+> * Eseguire stime con il modello sottoposto a training
+> * Eseguire distribuzione e stime con un modello caricato
 
 Passare all'esercitazione successiva per altre informazioni
 > [!div class="nextstepaction"]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592575"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093684"
 ---
 # <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 
@@ -87,7 +87,7 @@ Come ci si aspetta da una libreria di classi orientata agli oggetti, i tipi .NET
 
 - App orientate ai servizi che usano Windows Communication Foundation (WCF). Vedere [Applicazioni orientate ai servizi con WCF](../../../docs/framework/wcf/index.md).
 
-- App basate sul flusso di lavoro che usano Windows Workflow Foundation (WF). Vedere [Compilazione di flussi di lavoro in .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- App basate sul flusso di lavoro che usano Windows Workflow Foundation (WF). Vedere [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
 Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica notevolmente lo sviluppo di GUI Windows. Se si scrive un'app Web Form ASP.NET è possibile usare le classi Web Form.
 
@@ -97,5 +97,5 @@ Le classi Windows Form sono un insieme completo di tipi riusabili che semplifica
 - [Guida all'installazione](../../../docs/framework/install/index.md)
 - [Guida di sviluppo](../../../docs/framework/development-guide.md)
 - [Strumenti](../../../docs/framework/tools/index.md)
-- [Esempi di .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [Esempi ed esercitazioni per .NET](../../samples-and-tutorials/index.md)
 - [Libreria di classi .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

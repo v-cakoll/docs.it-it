@@ -1,11 +1,10 @@
 ---
 title: 'Procedura: Usare il blocco try/catch per intercettare le eccezioni'
-ms.date: 03/30/2017
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842385"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092748"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Come usare il blocco try/catch per rilevare le eccezioni
 
-Inserire le sezioni di codice che potrebbero generare eccezioni in un blocco `try` e il codice che gestisce le eccezioni in un blocco `catch`. Il blocco `catch` è una serie di istruzioni che iniziano con la parola chiave `catch`, seguita da un tipo di eccezione e un'azione da eseguire.
+Inserire le istruzioni di codice che possono generare un'eccezione in un blocco `try` e inserire le istruzioni usate per gestire l'eccezione o le eccezioni in uno o più blocchi `catch` sotto il blocco `try`. Ogni blocco `catch` include il tipo di eccezione e può contenere istruzioni aggiuntive necessarie per gestire quel tipo di eccezione.
 
-L'esempio di codice seguente usa un blocco `try`/`catch` per rilevare una possibile eccezione. Il metodo `Main` contiene un blocco `try` con un'istruzione <xref:System.IO.StreamReader> che apre un file di dati denominato `data.txt` e scrive una stringa del file. Il blocco `try` è seguito da un blocco `catch` che rileva qualsiasi eccezione del blocco `try`.
+Nell'esempio seguente un oggetto <xref:System.IO.StreamReader> apre un file chiamato *data.txt* e recupera una riga dal file. Dato che il codice può generare una qualsiasi delle tre eccezioni disponibili, viene inserito in un blocco `try`. Tre blocchi `catch` intercettano le eccezioni e le gestiscono mediante la visualizzazione dei risultati nella console.
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-Common Language Runtime rileva le eccezioni non rilevate da un blocco catch. A seconda della configurazione del runtime, viene visualizzata una finestra di dialogo di debug, viene interrotta l'esecuzione del programma e viene visualizzata una finestra di dialogo con le informazioni sull'eccezione o viene stampato un errore in STDERR.
+Common Language Runtime (CLR) rileva le eccezioni non gestite dai blocchi `catch`. Se un'eccezione viene rilevata da CLR, a seconda della configurazione di CLR può verificarsi uno dei risultati seguenti:
 
-> [!NOTE] 
-> Quasi tutte le righe di codice possono causare un'eccezione, in particolare eccezioni generate da Common Language Runtime, ad esempio <xref:System.OutOfMemoryException>. Sebbene nella maggior parte delle applicazioni non sia necessario gestire queste eccezioni, considerare questa eventualità quando si creano librerie che devono essere usate da altri utenti. Per suggerimenti su quando impostare il codice di un blocco Try, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).
+- Viene visualizzata la finestra di dialogo **Debug**.
+- Il programma interrompe l'esecuzione e viene visualizzata una finestra di dialogo con informazioni sull'eccezione.
+- Viene visualizzato un errore nel [flusso di output degli errori standard](xref:System.Console.Error).
+
+> [!NOTE]
+> La maggior parte del codice può generare un'eccezione. Alcune eccezioni, ad esempio <xref:System.OutOfMemoryException>, possono essere generate da CLR in qualsiasi momento. Le applicazioni non sono necessarie per gestire queste eccezioni, ma tenere presente questa possibilità quando si creano librerie che devono essere usate da altri utenti. Per suggerimenti su quando impostare il codice di un blocco `try`, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Eccezioni](index.md)
+[Eccezioni](index.md)  
+[Gestione degli errori di I/O in .NET](../io/handling-io-errors.md)

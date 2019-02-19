@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453255"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221251"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -55,7 +55,7 @@ Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM
 ## <a name="marshaling-and-com-apartments"></a>Marshalling e apartment COM  
  Il gestore di marshalling di interoperabilità esegue il marshalling dei dati tra l'heap di Common Language Runtime e quello non gestito. Il marshalling ha luogo ogni volta che il chiamante e il chiamato non possono operare sulla stessa istanza di dati. Il gestore di marshalling di interoperabilità fa sì che il chiamante e il chiamato sembrino operare sugli stessi dati benché dispongano ognuno della propria copia dei dati.  
   
- In COM è anche disponibile un gestore che esegue il marshalling dei dati tra apartment COM o diversi processi COM. Quando le chiamate tra codice gestito e non gestito sono effettuate all'interno dello stesso apartment COM, il gestore di marshalling di interoperabilità è il solo a essere coinvolto. Quando si effettuano chiamate tra codice gestito e non gestito in un diverso apartment COM o processo, sono coinvolti sia il gestore di marshalling COM che quello di interoperabilità.  
+ In COM è anche disponibile un gestore che effettua il marshalling dei dati tra apartment COM o diversi processi COM. Quando le chiamate tra codice gestito e non gestito sono effettuate all'interno dello stesso apartment COM, il gestore di marshalling di interoperabilità è il solo a essere coinvolto. Quando si effettuano chiamate tra codice gestito e non gestito in un diverso apartment COM o processo, sono coinvolti sia il gestore di marshalling COM che quello di interoperabilità.  
   
 ### <a name="com-clients-and-managed-servers"></a>Server gestiti e client COM  
  Un server gestito esportato con una libreria dei tipi registrata da [Regasm.exe (strumento di registrazione di assembly)](../tools/regasm-exe-assembly-registration-tool.md) include una voce `ThreadingModel` del Registro di sistema impostata su `Both`. Questo valore indica che il server può essere attivato in un apartment a thread singolo (Single-Threaded Apartment, STA) o in un apartment con multithreading (Multithreaded Apartment, MTA). L'oggetto server viene creato nello stesso apartment del chiamante, come indicato nella tabella riportata di seguito.  
@@ -82,7 +82,7 @@ Processo di marshalling nello stesso apartment
 |MTA (predefinito)|MTA<br /><br /> STA|Marshalling di interoperabilità.<br /><br /> Marshalling di interoperabilità e COM.|  
 |STA|MTA<br /><br /> STA|Marshalling di interoperabilità e COM.<br /><br /> Marshalling di interoperabilità.|  
   
- Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene effettuato dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
+ Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene eseguito dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
   
  ![Marshalling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 Chiamata su diversi apartment tra un client .NET e un oggetto COM  
@@ -150,10 +150,10 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
 |[Dati di marshalling con interoperabilità COM](marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|  
 |[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|  
 |[Procedura: Eseguire il mapping di HRESULT ed eccezioni](how-to-map-hresults-and-exceptions.md)|Descrive come mappare le eccezioni personalizzate agli oggetti HRESULT e illustra le relazioni di mapping tra ogni oggetto HRESULT e la classe di eccezioni corrispondente in .NET Framework.|  
-|[Interoperabilità tramite tipi generici](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
+|[Interoperabilità tramite tipi generici](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
 |[Interoperabilità con codice non gestito](index.md)|Descrive i servizi di interoperabilità forniti da Common Language Runtime.|  
 |[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|  
-|[Considerazioni di progettazione per l'interoperabilità](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
+|[Considerazioni di progettazione per l'interoperabilità](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
   
  [Torna all'inizio](#top)  
   

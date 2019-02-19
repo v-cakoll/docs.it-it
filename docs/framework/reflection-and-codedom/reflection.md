@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453083"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221238"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
-Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](../../../docs/standard/base-types/common-type-system.md#classes), [interfacce](../../../docs/standard/base-types/common-type-system.md#interfaces) e [tipi di valori](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.  
+Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](../../standard/base-types/common-type-system.md#classes), [interfacce](../../standard/base-types/common-type-system.md#interfaces) e [tipi di valori](../../csharp/language-reference/keywords/value-types.md). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.
   
  Il caricatore di [Common Language Runtime](../../../docs/standard/clr.md) gestisce i [domini applicazioni](../../../docs/framework/app-domains/application-domains.md), che costituiscono limiti definiti intorno a oggetti con lo stesso ambito di applicazione. La gestione include il caricamento di ciascun assembly nel dominio applicazione appropriato e il controllo della disposizione in memoria della gerarchia dei tipi di ciascun assembly.  
   
@@ -80,7 +80,7 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
 |[Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Viene descritto il contesto di caricamento Reflection-Only. Viene illustrato come caricare un assembly, verificare il contesto ed esaminare gli attributi applicati a un assembly nel contesto Reflection-Only.|  
 |[Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)|Viene illustrato l'uso della reflection per ottenere informazioni sull'esistenza degli attributi e sui relativi valori.|  
 |[Specifying Fully Qualified Type Names](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)|Vengono illustrati il formato dei nomi di tipo completi, secondo la notazione BNF (Backus-Naur Form), e la sintassi richiesta per specificare nomi di assembly, puntatori, riferimenti, matrici e caratteri speciali.|  
-|[How to: Hook Up a Delegate Using Reflection](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md) (Procedura: Associare un delegato tramite reflection)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Procedura: Associare un delegato tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Viene illustrato come generare assembly e metodi generici.|  
   
 ## <a name="reference"></a>Riferimenti  

@@ -3,15 +3,15 @@ title: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato
 description: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828397"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092540"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET
 
@@ -122,9 +122,9 @@ Creare una variabile denominata `mlContext` e inizializzarla con una nuova istan
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Successivamente, per configurare il caricamento dei dati, inizializzare la variabile globale `_textLoader` in modo da poterla riutilizzare.  Si noti che si sta usando un'istanza di `TextReader`. Quando si crea un'istanza di `TextLoader` con `TextReader`, si passa il contesto necessario e la classe <xref:Microsoft.ML.Data.TextLoader.Arguments> che consente la personalizzazione. Specificare lo schema di dati passando una matrice di oggetti <xref:Microsoft.ML.Data.TextLoader.Column> all'istanza di `TextReader` contenente tutti i nomi delle colonne e i relativi tipi. Lo schema di dati è stato definito in precedenza quando si è creata la classe `TaxiTrip`.
+Successivamente, per configurare il caricamento dei dati, inizializzare la variabile globale `_textLoader` in modo da poterla riutilizzare. Quando si crea un'istanza di `TextLoader` si passa il contesto necessario e la classe <xref:Microsoft.ML.Data.TextLoader.Arguments>che consente la personalizzazione. Specificare lo schema di dati passando una matrice di oggetti <xref:Microsoft.ML.Data.TextLoader.Column> all'istanza di `TextLoader` contenente tutti i nomi delle colonne e i relativi tipi. Lo schema di dati è stato definito in precedenza quando si è creata la classe `TaxiTrip`.
 
-La classe `TextReader` restituisce un'istanza di <xref:Microsoft.ML.Data.TextLoader> completamente inizializzata.  
+La classe `TextLoader` restituisce un'istanza di <xref:Microsoft.ML.Data.TextLoader> completamente inizializzata.  
 
 Per inizializzare la variabile globale `_textLoader` in modo da riutilizzarla per i set di dati necessari, aggiungere il codice seguente dopo l'inizializzazione di `mlContext`:
 
@@ -155,7 +155,7 @@ In questo modo vengono passati due parametri al metodo `Train`: `MLContext` per 
 
 ## <a name="load-and-transform-data"></a>Caricare e trasformare i dati
 
-Si caricheranno i dati usando la variabile globale `_textLoader` con il parametro `dataPath`. Verrà restituita un'istanza di <xref:Microsoft.ML.Data.IDataView>. Come input e output delle trasformazioni, una `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
+Si caricheranno i dati usando la variabile globale `_textLoader` con il parametro `dataPath`. Verrà restituita un'istanza di <xref:Microsoft.Data.DataView.IDataView>. Come input e output delle trasformazioni, una `IDataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
 
 In ML.NET i dati sono simili a una visualizzazione SQL. Vengono valutati in modalità differita, sono schematizzati ed eterogenei. L'oggetto è la prima parte della pipeline e carica i dati. Per questa esercitazione, carica un set di dati con le informazioni sulle corse in taxi che sono utili per eseguire una stima delle tariffe. Queste informazioni vengono usate per creare il modello ed eseguirne il training.
 

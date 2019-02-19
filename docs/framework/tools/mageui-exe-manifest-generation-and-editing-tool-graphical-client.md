@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572968"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219763"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
 
@@ -26,7 +26,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ## <a name="uielement-list"></a>Elenco UIElement  
  Nella tabella riportata di seguito vengono elencate le voci disponibili nei menu e sulla barra degli strumenti.  
   
-|Comando|Menu|Collegamento|Description|  
+|Comando|Menu|Collegamento|Descrizione|  
 |-------------|----------|--------------|-----------------|  
 |**Manifesto dell'applicazione**|**File, Nuovo**||Crea un nuovo manifesto di applicazione.|  
 |**Manifesto di distribuzione**|**File, Nuovo**||Crea un nuovo manifesto di distribuzione.|  
@@ -47,7 +47,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ## <a name="preferences-dialog-box"></a>Finestra di dialogo Preferenze  
  Nella finestra di dialogo **Preferenze** sono inclusi i seguenti elementi.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Firma al salvataggio**|Visualizza la richiesta di firma di un file ogni volta che si salvano le modifiche.|  
 |**Usa certificato di firma predefinito**|Usa la chiave specificata nella casella di testo **File di certificato** per firmare tutti i file. In questo modo viene eliminata la richiesta di firma visualizzata quando si salva un file ed è selezionata l'opzione **Firma al salvataggio**. Usare il pulsante con i puntini di sospensione (**…**) accanto alla casella di testo **File di certificato** per selezionare un file di chiave.|  
@@ -58,7 +58,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
  In questa finestra di dialogo sono inclusi i seguenti elementi:  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Firma con file di certificato**|Firma il manifesto con un certificato digitale archiviato nel file system.|  
 |**File**|Fornisce un'area per digitare il percorso del file .pfx che rappresenta il certificato.|  
@@ -77,7 +77,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
  La scheda **Manifesto dell'applicazione** contiene le seguenti schede.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Name**|Specifica le informazioni di identificazione relative a questa distribuzione.|  
 |**Descrizione**|Specifica le informazioni relative a editore, prodotto e supporto.|  
@@ -88,7 +88,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="name-tab"></a>Scheda Nome  
  La scheda **Nome** viene visualizzata quando si crea o si apre un manifesto dell'applicazione per la prima volta. Identifica in modo univoco la distribuzione e facoltativamente specifica una piattaforma di destinazione valida.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Name**|Obbligatorio. Il nome del manifesto dell'applicazione. In genere coincide con il nome del file.|  
 |**Version**|Obbligatorio. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
@@ -99,7 +99,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="description-tab"></a>Scheda Descrizione  
  Queste informazioni sono generalmente disponibili all'interno del manifesto della distribuzione. Questi campi possono essere modificati solo se la casella di controllo **Usa manifesto applicazione per informazioni sull'attendibilità** è selezionata nella scheda **Opzioni applicazione**.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Server di pubblicazione**|Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
 |**Prodotto**|Il nome del prodotto completo. Se si seleziona **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione** del manifesto della distribuzione, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** per questa applicazione.|  
@@ -107,14 +107,14 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 ### <a name="application-options-tab"></a>Scheda Opzioni applicazione  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Applicazione browser di Windows Presentation Foundation**|Specifica se si tratta di un'applicazione WPF eseguita nel browser come applicazione browser XAML (XBAP).|  
 |**Usa manifesto applicazione per informazioni sull'attendibilità**|Specifica se il manifesto contiene informazioni sull'attendibilità.|  
   
 ### <a name="files-tab"></a>Scheda File  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Directory dell'applicazione**|La directory in cui si trovano i file dell'applicazione. Usare il pulsante con i puntini di sospensione (**…**) per selezionare la directory.|  
 |**Popola**|Aggiunge tutti i file nella directory dell'applicazione e le sottodirectory nel manifesto dell'applicazione. Se MageUI.exe rileva un unico file eseguibile nella directory, questo viene contrassegnato automaticamente come Punto di ingresso, ovvero il file eseguito per primo quando viene avviata l'applicazione ClickOnce nel client.|  
@@ -126,15 +126,15 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="permissions-required-tab"></a>Scheda Autorizzazioni necessarie  
  Usare la scheda **Autorizzazioni necessarie** per concedere all'applicazione un accesso più esteso al computer locale rispetto a quello concesso per impostazione predefinita. Per altre informazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [NIB: set di autorizzazioni denominati](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [Set di autorizzazioni denominati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Dettagli**|Il file XML creato per il manifesto dell'applicazione al fine di rappresentare il set di autorizzazioni. Se non si è esperti del formato XML del manifesto dell'applicazione, è consigliabile non modificare manualmente il file XML. Per altre informazioni, vedere [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Scheda Manifesto della distribuzione  
  La scheda **Manifesto della distribuzione** contiene le schede seguenti.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Name**|Specifica le informazioni di identificazione relative a questa distribuzione.|  
 |**Descrizione**|Specifica le informazioni relative a editore, prodotto e supporto.|  
@@ -145,7 +145,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="name-tab"></a>Scheda Nome  
  La scheda **Nome** viene visualizzata quando si crea o si apre un manifesto della distribuzione per la prima volta. Identifica in modo univoco la distribuzione e facoltativamente specifica una piattaforma di destinazione valida.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Name**|Obbligatorio. Il nome del manifesto della distribuzione. In genere coincide con il nome del file.|  
 |**Version**|Obbligatorio. Il numero di versione della distribuzione nel formato *N.N.N.N*. È necessario solo il primo numero della build principale. Ad esempio, per la versione 1.0 di un'applicazione, i valori validi sono `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
@@ -155,7 +155,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 ### <a name="description-tab"></a>Scheda Descrizione  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Server di pubblicazione**|Obbligatorio. Il nome della persona o dell'organizzazione responsabile dell'applicazione. Questo valore viene usato come nome della cartella del menu Start.|  
 |**Prodotto**|Obbligatorio. Il nome del prodotto completo. Se è stato selezionato **Installazione locale** per l'elemento **Tipo di applicazione** nella scheda **Opzioni di distribuzione**, questo nome sarà quello visualizzato nel collegamento del menu **Start** e in **Installazione applicazioni** di questa applicazione.|  
@@ -163,7 +163,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 ### <a name="deployment-options-tab"></a>Scheda Opzioni di distribuzione  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Tipo di applicazione**|Facoltativo. Specifica se l'applicazione esegue l'installazione automatica nel computer client (**Installazione locale**), viene eseguita online (**Solo in linea**) oppure è un'applicazione WPF eseguita nel browser (**Applicazione browser WPF**). Il valore predefinito è **Installazione locale**.|  
 |**Posizione iniziale**|Facoltativo. L'URL da cui deve essere effettivamente avviata l'applicazione. È utile quando si distribuisce un'applicazione da un CD che deve aggiornarsi automaticamente dal Web.|  
@@ -175,7 +175,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="update-options-tab"></a>Scheda Opzioni aggiornamento  
  La scheda **Opzioni aggiornamento** contiene le opzioni sopra indicate solo quando la casella di selezione **Tipo di applicazione** nella scheda **Nome** è impostata su **Installazione locale**.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**L'applicazione deve controllare la disponibilità di aggiornamenti**|Specifica se [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve controllare disponibilità di aggiornamenti per l'applicazione. Se questa casella di controllo non è selezionata, l'applicazione non controllerà gli aggiornamenti a meno che non venga aggiornata a livello di codice tramite le API nello spazio dei nomi <xref:System.Deployment.Application>.|  
 |**Scegliere quando controllare la disponibilità di aggiornamenti**|Fornisce due opzioni per i controlli degli aggiornamenti:<br /><br /> -   **Prima dell'avvio dell'applicazione**. Il controllo degli aggiornamenti viene eseguito prima dell'esecuzione dell'applicazione.<br />-   **Dopo l'avvio dell'applicazione**. Il controllo degli aggiornamenti viene avviato subito dopo l'inizializzazione del form principale dell'applicazione e viene eseguito al successivo avvio dell'applicazione.|  
@@ -186,7 +186,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
 ### <a name="application-reference-tab"></a>Scheda Riferimento all'applicazione  
  La scheda **Riferimento all'applicazione** contiene gli stessi campi della scheda **Nome** descritta precedentemente in questo argomento. L'unica eccezione è il campo seguente.  
   
-|Elemento dell'interfaccia utente|Description|  
+|Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
 |**Seleziona manifesto**|Consente di scegliere il manifesto dell'applicazione. Tutti gli altri campi in questa pagina verranno popolati quando si sceglie un manifesto dell'applicazione.|  
   
