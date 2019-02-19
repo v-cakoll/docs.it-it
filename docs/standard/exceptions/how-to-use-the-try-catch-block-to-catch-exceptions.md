@@ -1,11 +1,10 @@
 ---
 title: 'Procedura: Usare il blocco try/catch per intercettare le eccezioni'
-ms.date: 03/30/2017
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842385"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092748"
 ---
-# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="c1a91-102">Come usare il blocco try/catch per rilevare le eccezioni</span><span class="sxs-lookup"><span data-stu-id="c1a91-102">How to use the try/catch block to catch exceptions</span></span>
+# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="e4048-102">Come usare il blocco try/catch per rilevare le eccezioni</span><span class="sxs-lookup"><span data-stu-id="e4048-102">How to use the try/catch block to catch exceptions</span></span>
 
-<span data-ttu-id="c1a91-103">Inserire le sezioni di codice che potrebbero generare eccezioni in un blocco `try` e il codice che gestisce le eccezioni in un blocco `catch`.</span><span class="sxs-lookup"><span data-stu-id="c1a91-103">Place the sections of code that might throw exceptions in a `try` block and place code that handles exceptions in a `catch` block.</span></span> <span data-ttu-id="c1a91-104">Il blocco `catch` è una serie di istruzioni che iniziano con la parola chiave `catch`, seguita da un tipo di eccezione e un'azione da eseguire.</span><span class="sxs-lookup"><span data-stu-id="c1a91-104">The `catch` block is a series of statements beginning with the keyword `catch`, followed by an exception type and an action to be taken.</span></span>
+<span data-ttu-id="e4048-103">Inserire le istruzioni di codice che possono generare un'eccezione in un blocco `try` e inserire le istruzioni usate per gestire l'eccezione o le eccezioni in uno o più blocchi `catch` sotto il blocco `try`.</span><span class="sxs-lookup"><span data-stu-id="e4048-103">Place any code statements that might raise or throw an exception in a `try` block, and place statements used to handle the exception or exceptions in one or more `catch` blocks below the `try` block.</span></span> <span data-ttu-id="e4048-104">Ogni blocco `catch` include il tipo di eccezione e può contenere istruzioni aggiuntive necessarie per gestire quel tipo di eccezione.</span><span class="sxs-lookup"><span data-stu-id="e4048-104">Each `catch` block includes the exception type and can contain additional statements needed to handle that exception type.</span></span>
 
-<span data-ttu-id="c1a91-105">L'esempio di codice seguente usa un blocco `try`/`catch` per rilevare una possibile eccezione.</span><span class="sxs-lookup"><span data-stu-id="c1a91-105">The following code example uses a `try`/`catch` block to catch a possible exception.</span></span> <span data-ttu-id="c1a91-106">Il metodo `Main` contiene un blocco `try` con un'istruzione <xref:System.IO.StreamReader> che apre un file di dati denominato `data.txt` e scrive una stringa del file.</span><span class="sxs-lookup"><span data-stu-id="c1a91-106">The `Main` method contains a `try` block with a <xref:System.IO.StreamReader> statement that opens a data file called `data.txt` and writes a string from the file.</span></span> <span data-ttu-id="c1a91-107">Il blocco `try` è seguito da un blocco `catch` che rileva qualsiasi eccezione del blocco `try`.</span><span class="sxs-lookup"><span data-stu-id="c1a91-107">Following the `try` block is a `catch` block that catches any exception that results from the `try` block.</span></span>
+<span data-ttu-id="e4048-105">Nell'esempio seguente un oggetto <xref:System.IO.StreamReader> apre un file chiamato *data.txt* e recupera una riga dal file.</span><span class="sxs-lookup"><span data-stu-id="e4048-105">In the following example, a <xref:System.IO.StreamReader> opens a file called *data.txt* and retrieves a line from the file.</span></span> <span data-ttu-id="e4048-106">Dato che il codice può generare una qualsiasi delle tre eccezioni disponibili, viene inserito in un blocco `try`.</span><span class="sxs-lookup"><span data-stu-id="e4048-106">Since the code might throw any of three exceptions, it's placed in a `try` block.</span></span> <span data-ttu-id="e4048-107">Tre blocchi `catch` intercettano le eccezioni e le gestiscono mediante la visualizzazione dei risultati nella console.</span><span class="sxs-lookup"><span data-stu-id="e4048-107">Three `catch` blocks catch the exceptions and handle them by displaying the results to the console.</span></span>
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-<span data-ttu-id="c1a91-108">Common Language Runtime rileva le eccezioni non rilevate da un blocco catch.</span><span class="sxs-lookup"><span data-stu-id="c1a91-108">The common language runtime catches exceptions that are not caught by a catch block.</span></span> <span data-ttu-id="c1a91-109">A seconda della configurazione del runtime, viene visualizzata una finestra di dialogo di debug, viene interrotta l'esecuzione del programma e viene visualizzata una finestra di dialogo con le informazioni sull'eccezione o viene stampato un errore in STDERR.</span><span class="sxs-lookup"><span data-stu-id="c1a91-109">Depending on how the runtime is configured, a debug dialog box appears, or the program stops executing and a dialog box with exception information appears, or an error is printed out to STDERR.</span></span>
+<span data-ttu-id="e4048-108">Common Language Runtime (CLR) rileva le eccezioni non gestite dai blocchi `catch`.</span><span class="sxs-lookup"><span data-stu-id="e4048-108">The Common Language Runtime (CLR) catches exceptions not handled by `catch` blocks.</span></span> <span data-ttu-id="e4048-109">Se un'eccezione viene rilevata da CLR, a seconda della configurazione di CLR può verificarsi uno dei risultati seguenti:</span><span class="sxs-lookup"><span data-stu-id="e4048-109">If an exception is caught by the CLR, one of the following results may occur depending on your CLR configuration:</span></span>
 
-> [!NOTE] 
-> <span data-ttu-id="c1a91-110">Quasi tutte le righe di codice possono causare un'eccezione, in particolare eccezioni generate da Common Language Runtime, ad esempio <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="c1a91-110">Almost any line of code can cause an exception, particularly exceptions that are thrown by the common language runtime itself, such as <xref:System.OutOfMemoryException>.</span></span> <span data-ttu-id="c1a91-111">Sebbene nella maggior parte delle applicazioni non sia necessario gestire queste eccezioni, considerare questa eventualità quando si creano librerie che devono essere usate da altri utenti.</span><span class="sxs-lookup"><span data-stu-id="c1a91-111">Most applications don't have to deal with these exceptions, but you should be aware of this possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="c1a91-112">Per suggerimenti su quando impostare il codice di un blocco Try, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="c1a91-112">For suggestions on when to set code in a Try block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
+- <span data-ttu-id="e4048-110">Viene visualizzata la finestra di dialogo **Debug**.</span><span class="sxs-lookup"><span data-stu-id="e4048-110">A **Debug** dialog box appears.</span></span>
+- <span data-ttu-id="e4048-111">Il programma interrompe l'esecuzione e viene visualizzata una finestra di dialogo con informazioni sull'eccezione.</span><span class="sxs-lookup"><span data-stu-id="e4048-111">The program stops execution and a dialog box with exception information appears.</span></span>
+- <span data-ttu-id="e4048-112">Viene visualizzato un errore nel [flusso di output degli errori standard](xref:System.Console.Error).</span><span class="sxs-lookup"><span data-stu-id="e4048-112">An error prints out to the [standard error output stream](xref:System.Console.Error).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c1a91-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c1a91-113">See also</span></span>
+> [!NOTE]
+> <span data-ttu-id="e4048-113">La maggior parte del codice può generare un'eccezione. Alcune eccezioni, ad esempio <xref:System.OutOfMemoryException>, possono essere generate da CLR in qualsiasi momento.</span><span class="sxs-lookup"><span data-stu-id="e4048-113">Most code can throw an exception, and some exceptions, like <xref:System.OutOfMemoryException>, can be thrown by the CLR itself at any time.</span></span> <span data-ttu-id="e4048-114">Le applicazioni non sono necessarie per gestire queste eccezioni, ma tenere presente questa possibilità quando si creano librerie che devono essere usate da altri utenti.</span><span class="sxs-lookup"><span data-stu-id="e4048-114">While applications aren't required to deal with these exceptions, be aware of the possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="e4048-115">Per suggerimenti su quando impostare il codice di un blocco `try`, vedere [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="e4048-115">For suggestions on when to set code in a `try` block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
 
-- [<span data-ttu-id="c1a91-114">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="c1a91-114">Exceptions</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="e4048-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e4048-116">See also</span></span>
+
+[<span data-ttu-id="e4048-117">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="e4048-117">Exceptions</span></span>](index.md)  
+[<span data-ttu-id="e4048-118">Gestione degli errori di I/O in .NET</span><span class="sxs-lookup"><span data-stu-id="e4048-118">Handling I/O errors in .NET</span></span>](../io/handling-io-errors.md)
