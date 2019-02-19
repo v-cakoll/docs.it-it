@@ -3,12 +3,12 @@ title: Tipi tupla - Guida a C#
 description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155132"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332754"
 ---
 # <a name="c-tuple-types"></a>Tipi tupla in C# #
 
@@ -82,7 +82,7 @@ Esistono due condizioni in cui i nomi dei campi candidati non sono previsti nel 
 
 Queste condizioni evitano ogni ambiguità. Questi nomi creerebbero un'ambiguità se utilizzati come nomi di campo per un campo in una tupla. Nessuna di queste condizioni causa errori in fase di compilazione. Al contrario, per gli elementi senza nomi previsti non esistono nomi semantici previsti.  Gli esempi seguenti illustrano queste condizioni:
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Queste situazioni non causano errori del compilatore perché sarebbe una modifica di rilievo per il codice scritto con C# 7.0, quando le proiezioni dei nomi di campo di tupla non erano disponibili.
 
@@ -90,29 +90,31 @@ Queste situazioni non causano errori del compilatore perché sarebbe una modific
 
 A partire da C# 7.3, i tipi tupla supportano gli operatori `==` e `!=`. Questi operatori confrontano ogni membro dell'argomento a sinistra con ogni membro dell'argomento a destra in ordine. Questi confronti generano un corto circuito. Interromperanno la valutazione dei membri non appena una coppia è diversa. Gli esempi di codice seguenti usano `==`, ma tutte le regole di confronto si applicano anche a `!=`. L'esempio di codice seguente illustra un confronto di uguaglianza per due coppie di interi:
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Esistono diverse regole che rendono più comodi i test di uguaglianza delle tuple. I test di uguaglianza delle tuple eseguono [conversioni con elevazione](~/_csharplang/spec/conversions.md#lifted-conversion-operators) se una delle tuple è una tupla nullable, come illustrato nel codice seguente:
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 I test di uguaglianza delle tuple eseguono anche conversioni implicite per ogni membro di entrambe le tuple, incluse conversioni con elevazione, conversioni verso un tipo di dati più grande o altre conversioni implicite. Gli esempi seguenti mostrano che una tupla a 2 elementi integer può essere confrontata con una tupla a 2 elementi long a causa della conversione implicita da integer a long:
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 I nomi dei membri della tupla non partecipano ai test per l'uguaglianza. Tuttavia, se uno degli operandi è una valore letterale di tupla con nomi espliciti, il compilatore genera l'avviso CS8383 se tali nomi non corrispondono ai nomi dell'altro operando.
 Nel caso in cui entrambi gli operandi sono valori letterali di tupla, l'avviso viene generato per l'operando di destra, come illustrato nell'esempio seguente:
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Infine, le tuple possono contenere tuple annidate. L'uguaglianza delle tuple confronta la "forma" di ogni operando tramite tuple annidate, come illustrato nell'esempio seguente:
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+È un errore di compilazione confrontare due tuple per verificarne l'uguaglianza (o la disuguaglianza) quando hanno forme diverse. Il compilatore non tenterà la decostruzione di tuple annidate per confrontarle.
 
 ## <a name="assignment-and-tuples"></a>Assegnazione e tuple
 
-Il linguaggio supporta l'assegnazione tra tipi tupla con lo stesso numero di elementi, in cui ogni elemento sul lato destro può essere convertito in modo implicito nell'elemento sul lato sinistro corrispondente. Non sono considerate altre conversioni per le assegnazioni. Esaminiamo i tipi di assegnazioni consentiti tra i tipi di tupla.
+Il linguaggio supporta l'assegnazione tra tipi tupla con lo stesso numero di elementi, in cui ogni elemento sul lato destro può essere convertito in modo implicito nell'elemento sul lato sinistro corrispondente. Non vengono considerate altre conversioni per le assegnazioni. È un errore in fase di compilazione assegnare una tupla a un'altra quando hanno forme diverse. Il compilatore non tenterà la decostruzione di tuple annidate per assegnarle.
+Esaminiamo i tipi di assegnazioni consentiti tra i tipi di tupla.
 
 Considerare le variabili usate negli esempi seguenti:
 

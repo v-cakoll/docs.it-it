@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523090"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221069"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshalling predefinito per le stringhe
 Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> presentano un comportamento del marshalling simile.  
@@ -35,11 +35,12 @@ Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
 ## <a name="strings-used-in-interfaces"></a>Stringhe usate nelle interfacce  
- La tabella seguente illustra le opzioni di marshalling per il tipo di dati stringa quando il marshalling viene eseguito come argomento di metodo in codice non gestito. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di stringhe in interfacce COM.  
+ La tabella seguente illustra le opzioni di marshalling per il tipo di dati stringa quando il marshalling viene effettuato come argomento di metodo in codice non gestito. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di stringhe in interfacce COM.  
   
 |Tipo di enumerazione|Descrizione del formato non gestito|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (impostazione predefinita)|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
+|`UnmanagedType.BStr` (impostazione predefinita)|
+  `BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
 |`UnmanagedType.LPStr`|Puntatore a matrice di caratteri ANSI con terminazione Null.|  
 |`UnmanagedType.LPWStr`|Puntatore a una matrice con terminazione Null di caratteri Unicode.|  
   
@@ -81,16 +82,19 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ## <a name="strings-used-in-platform-invoke"></a>Stringhe usate in Platform invoke  
  Platform invoke copia argomenti di stringa, effettuando la conversione dal formato .NET Framework (Unicode) al formato della piattaforma non gestita. Le stringhe non sono modificabili e non vengono copiate di nuovo dalla memoria non gestita alla memoria gestita quando la chiamata restituisce un risultato.  
   
- La tabella seguente elenca le opzioni di marshalling per le stringhe quando il marshalling viene eseguito come argomento di metodo di una chiamata Platform invoke. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di stringhe.  
+ La tabella seguente elenca le opzioni di marshalling per le stringhe quando il marshalling viene effettuato come argomento di metodo di una chiamata Platform invoke. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per il marshalling di stringhe.  
   
 |Tipo di enumerazione|Descrizione del formato non gestito|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|`BSTR` di tipo COM con lunghezza fissa e caratteri ANSI.|  
-|`UnmanagedType.BStr`|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
+|`UnmanagedType.AnsiBStr`|
+  `BSTR` di tipo COM con lunghezza fissa e caratteri ANSI.|  
+|`UnmanagedType.BStr`|
+  `BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
 |`UnmanagedType.LPStr`|Puntatore a matrice di caratteri ANSI con terminazione Null.|  
 |`UnmanagedType.LPTStr`|Puntatore a una matrice con terminazione Null di caratteri dipendenti dalla piattaforma.|  
 |`UnmanagedType.LPWStr`|Puntatore a una matrice con terminazione Null di caratteri Unicode.|  
-|`UnmanagedType.TBStr`|`BSTR` di tipo COM con lunghezza fissa e caratteri dipendenti dalla piattaforma.|  
+|`UnmanagedType.TBStr`|
+  `BSTR` di tipo COM con lunghezza fissa e caratteri dipendenti dalla piattaforma.|  
 |`VBByRefStr`|Valore che consente a Visual Basic .NET di modificare una stringa in codice non gestito e riflettere i risultati in codice gestito. Questo valore è supportato solo per platform invoke. Si tratta del valore predefinito in Visual Basic per le stringhe `ByVal`.|  
   
  Questa tabella è applicabile alle stringhe. Per <xref:System.Text.StringBuilder>, tuttavia, le uniche opzioni consentite sono `LPStr`, `LPTStr` e `LPWStr`.  
@@ -143,7 +147,8 @@ String s);
   
 |Tipo di enumerazione|Descrizione del formato non gestito|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
+|`UnmanagedType.BStr`|
+  `BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
 |`UnmanagedType.LPStr`|Puntatore a matrice di caratteri ANSI con terminazione Null.|  
 |`UnmanagedType.LPTStr`|Puntatore a una matrice con terminazione Null di caratteri dipendenti dalla piattaforma.|  
 |`UnmanagedType.LPWStr`|Puntatore a una matrice con terminazione Null di caratteri Unicode.|  
@@ -218,9 +223,9 @@ struct StringInfoT {
 ## <a name="fixed-length-string-buffers"></a>Buffer di stringhe di lunghezza fissa  
  In alcuni casi, è necessario passare un buffer di caratteri a lunghezza fissa nel codice non gestito da modificare. Il semplice passaggio di una stringa non funziona in questo caso perché il chiamato non può modificare il contenuto del buffer passato. Anche se la stringa viene passata per riferimento, non è possibile inizializzare il buffer su una dimensione specifica.  
   
- La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una stringa.  Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.  
+ La soluzione consiste nel passare come argomento un buffer <xref:System.Text.StringBuilder> invece di una stringa. Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. È anche possibile inizializzare questo oggetto in base a una lunghezza fissa. Se, ad esempio, si inizializza un buffer `StringBuilder` per una capacità pari a `N`, un buffer di caratteri di dimensione (`N`+1) viene fornito dal gestore di marshalling. Il valore +1 tiene conto del fatto che, a differenza di `StringBuilder`, la stringa non gestita ha una terminazione Null.  
   
- La funzione `GetWindowText` dell'API Microsoft Win32 (definita in Windows.h) rappresenta ad esempio un buffer di caratteri a lunghezza fissa che deve essere passato nel codice non gestito per essere modificato. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`.  Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. Il codice seguente illustra la dichiarazione della funzione `GetWindowText` come definita in Windows.h.  
+ La funzione `GetWindowText` dell'API Microsoft Win32 (definita in Windows.h) rappresenta ad esempio un buffer di caratteri a lunghezza fissa che deve essere passato nel codice non gestito per essere modificato. `LpString` punta a un buffer allocato dal chiamante di dimensione `nMaxCount`. Il chiamante deve allocare il buffer e impostare l'argomento `nMaxCount` sulla dimensione del buffer allocato. Il codice seguente illustra la dichiarazione della funzione `GetWindowText` come definita in Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -230,7 +235,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
-  Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.  
+ Il chiamato può dereferenziare e modificare un oggetto `StringBuilder`, purché non venga superata la capacità dell'oggetto `StringBuilder` stesso. L'esempio di codice seguente illustra come inizializzare `StringBuilder` in base a una lunghezza fissa.  
   
 ```vb  
 Public Class Win32API  
@@ -266,5 +271,5 @@ public class Window {
 ## <a name="see-also"></a>Vedere anche
 - [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
-- [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copia e blocco](copying-and-pinning.md)

@@ -1,45 +1,51 @@
 ---
 title: '>>Operatore = - Riferimenti per C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278980"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220913"
 ---
 # <a name="-operator-c-reference"></a>Operatore >>= (Riferimenti per C#)
 
 Operatore di assegnazione di spostamento a destra.
 
-## <a name="remarks"></a>Note
-
-Un'espressione nel formato
+Un'espressione che usa l'operatore `>>=`, ad esempio
 
 ```csharp
 x >>= y
 ```
 
-viene valutata come
+equivale a
 
 ```csharp
 x = x >> y
 ```
 
-con la differenza che `x` viene valutato una sola volta. L'[operatore >>](right-shift-operator.md) sposta `x` verso destra di una quantità specificata da `y`.
+con la differenza che `x` viene valutato una sola volta.
 
-L'operatore >>= non può essere sottoposto direttamente a overload. I tipi definiti dall'utente, tuttavia, possono eseguire l'overload dell'[operatore >>](right-shift-operator.md) (vedere [operator](../keywords/operator.md)).
+L'[operatore `>>`](right-shift-operator.md) scorre verso destra il primo operando del numero di bit definito dal secondo operando.
 
-## <a name="example"></a>Esempio
+Nell'esempio seguente viene illustrato l'uso dell'operatore `>>=`:
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Overload degli operatori
+
+Se un tipo definito dall'utente esegue l'[overload](../keywords/operator.md) dell'[operatore `>>`](right-shift-operator.md), viene eseguito l'overload in modo implicito dell'operatore di assegnazione di scorrimento a destra `>>=`. Un tipo definito dall'utente non può eseguire l'overload in modo esplicito dell'operatore di assegnazione di scorrimento a destra.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+Per altre informazioni, vedere la sezione [Assegnazione composta](~/_csharplang/spec/expressions.md#compound-assignment) in [Specifica del linguaggio C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vedere anche
 

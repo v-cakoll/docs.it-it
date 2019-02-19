@@ -1,16 +1,16 @@
 ---
 title: Modificatore del parametro in - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631408"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219555"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -20,11 +20,14 @@ La parola chiave `in` fa sì che gli argomenti vengono passati per riferimento. 
 
 L'esempio precedente dimostra che il modificatore `in` non è in genere necessario nel sito di chiamata. Viene richiesto soltanto nella dichiarazione di metodo.
 
+
 > [!NOTE] 
 > La parola chiave `in` può essere usata anche con un parametro di tipo generico per specificare che il parametro è di tipo controvariante, quale parte di un'istruzione `foreach` o parte di una clausola `join` in una query LINQ. Per altre informazioni sull'uso della parola chiave `in` in questi contesti, vedere la pagina [in](in.md), in cui sono presenti collegamenti a tutti gli usi.
   
  Le variabili passate come argomenti `in` devono essere inizializzate prima di essere passate in una chiamata al metodo. Tuttavia, il metodo chiamato non può assegnare un valore o modificare l'argomento.  
-  
+
+Il modificatore di parametro `in` è disponibile in C# 7.2 e versioni successive. Nelle versioni precedenti viene generato l'errore del compilatore `CS8107` ("La funzionalità 'riferimenti di sola lettura' non è disponibile in C# 7.0. Usare la versione 7.2 o versioni successive del linguaggio.") Per configurare la versione del linguaggio del compilatore, vedere [Selezionare la versione del linguaggio C#](../configure-language-version.md).
+
  Nonostante le parole chiave `in`, `ref` e `out` determinino un comportamento differente in fase di esecuzione, non sono considerate parte della firma del metodo in fase di compilazione. Non è quindi possibile eseguirne l'overload se l'unica differenza è che un metodo accetta un argomento `ref` o `in` e l'altro un argomento `out`. Il codice seguente, ad esempio, non verrà compilato:  
   
 ```csharp
