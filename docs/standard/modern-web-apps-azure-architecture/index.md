@@ -4,13 +4,8 @@ description: Una guida che offre linee guida end-to-end sulla compilazione di ap
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827864"
 ---
+
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
 ![Immagine di copertina](./media/cover.png)
@@ -107,7 +102,7 @@ Questa guida è stata condensata in un documento relativamente piccolo, incentra
 ## <a name="references"></a>Riferimenti
 
 - **Scelta di .NET Core o .NET Framework per le app server**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
 >[avanti](modern-web-applications-characteristics.md)
