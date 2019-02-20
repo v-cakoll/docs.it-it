@@ -1,15 +1,15 @@
 ---
-title: Materiale sussidiario di migrazione
+title: Istruzioni di migrazione
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676874"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441216"
 ---
-# <a name="migration-guidance"></a>Materiale sussidiario di migrazione
+# <a name="migration-guidance"></a>Istruzioni di migrazione
 Nel [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft sta rilasciando la seconda versione principale di Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato rilasciato in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (inclusi i tipi nei namespace System.Workflow.*, ora definiti WF3) e migliorato in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 fa anche parte del [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ma è presente insieme alla nuova tecnologia del flusso di lavoro (i tipi System. Activities.\* gli spazi dei nomi; denominata WF4). Quando si considera di usare WF4, è importante innanzitutto tenere presente che si sta controllando il tempo.  
   
 -   WF3 è una parte integralmente supportata di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
@@ -35,7 +35,7 @@ Nel [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft 
  [Linee guida per WF: Macchina a stati](https://go.microsoft.com/fwlink/?LinkId=153855)  
  Viene descritta la modellazione del flusso di controllo di WF4 in assenza di un'attività State-Machine.  
   
- Questo materiale sussidiario si applica solo ai progetti di flusso di lavoro destinati a .NET Framework 4. I flussi di lavoro di macchina a stati sono stati aggiunti in .NET 4.0.1 con la versione Platform Update 1 e sono inclusi come parte di .NET Framework 4.5. Per altre informazioni sui flussi in .NET 4.0.1 - 4.0.3 e .NET Framework 4.5, vedere [aggiornamento 4.0.1 per funzionalità di Microsoft .NET Framework 4](https://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) e [flussi](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Questo materiale sussidiario si applica solo ai progetti di flusso di lavoro destinati a .NET Framework 4. I flussi di lavoro di macchina a stati sono stati aggiunti in .NET 4.0.1 con la versione Platform Update 1 e sono inclusi come parte di .NET Framework 4.5. Per altre informazioni sui flussi in .NET 4.0.1 - 4.0.3 e .NET Framework 4.5, vedere [aggiornamento 4.0.1 per funzionalità di Microsoft .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) e [flussi](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [Indicazioni sulla migrazione di WF: Attività personalizzate](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Vengono forniti esempi e istruzioni per riprogettare le attività personalizzate di WF3 in WF4.  

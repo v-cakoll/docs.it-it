@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281d102ecd02623e7e18ebf4fc569538ebbdaf7f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528614"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442009"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Supporto delle operazioni di trascinamento della selezione e degli Appunti
 È possibile abilitare le operazioni di trascinamento all'interno di applicazioni per Windows mediante la gestione di una serie di eventi, in particolare gli eventi <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> e <xref:System.Windows.Forms.Control.DragDrop>.  
@@ -19,7 +19,7 @@ ms.locfileid: "43528614"
  È anche possibile implementare il supporto per operazioni di taglia/copia/incolla e il trasferimento di dati dell'utente negli Appunti all'interno delle applicazioni basate su Windows usando semplici chiamate al metodo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura dettagliata: esecuzione di un'operazione di trascinamento in Windows Form](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
  Illustra come avviare un'operazione di trascinamento e rilascio.  
   
  [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "43528614"
  [Procedura: Aggiungere dati agli Appunti](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
  Descrive un modo per inserire informazioni negli Appunti a livello di codice.  
   
- [Procedura: Recuperare dati dagli Appunti](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ [Procedura: Recuperare i dati dagli Appunti](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
  Descrive come accedere ai dati archiviati negli Appunti.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
@@ -42,4 +42,4 @@ ms.locfileid: "43528614"
  Descrive gli aspetti complessi relativi al metodo fondamentale per l'inizio dell'operazione di trascinamento.  
   
  <xref:System.Windows.Forms.Clipboard>  
- Vedere anche [procedura: inviare dati al figlio MDI attivo](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Vedere anche [come: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md).

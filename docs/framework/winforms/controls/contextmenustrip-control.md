@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 31c056f823cc38d370d7d23b7e91d682aa571f76
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748902"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441541"
 ---
 # <a name="contextmenustrip-control"></a>Controllo ContextMenuStrip
 Il controllo <xref:System.Windows.Forms.ContextMenuStrip> fornisce un menu di scelta rapida da associare a un controllo.  
@@ -20,22 +20,22 @@ Il controllo <xref:System.Windows.Forms.ContextMenuStrip> fornisce un menu di sc
  [Panoramica sul controllo ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
- [Procedura: Associare ContextMenuStrip a un controllo](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
+ [Procedura: Associare un controllo ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
  Descrive come fare di un controllo <xref:System.Windows.Forms.ContextMenuStrip> il menu di scelta rapida di un controllo specifico.  
   
- [Procedura: Aggiungere voci di menu a un controllo ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
+ [Procedura: Aggiungere le voci di Menu a un controllo ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
  Descrive come aggiungere opzioni selezionabili a un controllo <xref:System.Windows.Forms.ContextMenuStrip>.  
   
- [Procedura: Configurare margini del segno di spunta e dell'immagine di ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
+ [Procedura: Configurare il controllo ContextMenuStrip margini del segno e immagine](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
  Descrive come personalizzare un controllo <xref:System.Windows.Forms.ContextMenuStrip> impostando le proprietà dei margini dei segni di spunta e delle immagini in vari modi.  
   
- [Procedura: Abilitare i margini del segno di spunta e dell'immagine nei controlli ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
+ [Procedura: Abilitare i margini di verifica e dell'immagine nei controlli ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Descrive come attivare e disattivare i margini del segno di spunta di un controllo <xref:System.Windows.Forms.ContextMenuStrip>.  
   
  [Procedura: Gestire l'evento di apertura ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Descrive come personalizzare il comportamento di un controllo <xref:System.Windows.Forms.ContextMenuStrip> mediante la gestione dell'evento <xref:System.Windows.Forms.ToolStripDropDown.Opening>.  
   
- Vedere anche [finestra di dialogo attività di ContextMenuStrip](https://msdn.microsoft.com/library/ms233646\(v=vs.110\)) oppure [Editor di raccolta Items di ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
+ Vedere anche [finestra di dialogo attività di ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100)) oppure [Editor di raccolta Items di ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100)).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MenuStrip>  

@@ -4,12 +4,12 @@ description: Descrive il flusso di lavoro "ciclo interno" per lo sviluppo di app
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219088"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442321"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo a ciclo interno per le app Docker
 
@@ -120,7 +120,7 @@ Nel DockerFile, è necessario anche indicare a Docker in ascolto sulla porta TCP
 
 Sono presenti altre righe di configurazione che è possibile aggiungere nel DockerFile a seconda del linguaggio/framework in uso, in modo che Docker sa come eseguire l'app. Ad esempio, è necessario la riga ENTRYPOINT con \["dotnet", "MyCustomMicroservice.dll"\] per eseguire un'app .NET Core, anche se è possibile avere più varianti a seconda dell'approccio per compilare ed eseguire il servizio. Se si usa il SDK e una riga di comando dotnet per compilare ed eseguire l'app .NET, potrebbe essere leggermente diverso. La conclusione è che la riga ENTRYPOINT e altre righe saranno diverse a seconda del linguaggio o piattaforma che scelta per l'applicazione.
 
-**Altre informazioni** per informazioni sulla compilazione di immagini Docker per applicazioni .NET Core, vedere <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+**Altre informazioni** per informazioni sulla compilazione di immagini Docker per applicazioni .NET Core, vedere [ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md).
 
 Per altre informazioni sulla creazione di immagini personalizzate, passare a [ https://docs.docker.com/engine/\ esercitazioni/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 

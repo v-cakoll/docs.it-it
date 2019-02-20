@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525536"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442711"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Sviluppo di controlli Windows Form personalizzati con .NET Framework
 I controlli Windows Form sono componenti riutilizzabili che incapsulano funzionalità dell'interfaccia utente e vengono usati nelle applicazioni basate su Windows sul lato client. Windows Form fornisce numerosi controlli pronti per l'uso, nonché l'infrastruttura per lo sviluppo di controlli personalizzati. È possibile combinare ed estendere i controlli esistenti oppure creare controlli personalizzati. Questa sezione fornisce informazioni complementari ed esempi per lo sviluppo di controlli Windows Form.  
@@ -51,13 +51,13 @@ I controlli Windows Form sono componenti riutilizzabili che incapsulano funziona
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Attributi per componenti in fase di progettazione](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Attributi per componenti in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Elenca gli attributi dei metadati da applicare ai componenti e ai controlli in modo che vengano visualizzati correttamente in fase di progettazione nelle finestre di progettazione visiva.  
   
- [Estensione del supporto in fase di progettazione](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
  Descrive come implementare classi, quali editor e finestre di progettazione, che forniscono supporto in fase di progettazione.  
   
- [Procedura: concedere in licenza componenti e controlli](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Procedura: Licenza componenti e controlli](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Descrive come implementare le licenze nel controllo o nel componente.  
   
- Vedere anche [Sviluppo di controlli Windows Form in fase di progettazione](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Vedere anche [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md).

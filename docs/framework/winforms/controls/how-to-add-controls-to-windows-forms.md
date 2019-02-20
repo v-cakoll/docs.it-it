@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611358"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443172"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: Aggiungere controlli a un Windows Form
 La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla superficie del form per definire l'interfaccia utente (UI). Oggetto *controllo* è un componente in un formato utilizzato per visualizzare informazioni o accettare l'input dell'utente. Per altre informazioni sui controlli, vedere [Windows Forms Controls](../../../../docs/framework/winforms/controls/index.md).  
@@ -24,7 +24,7 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ### <a name="to-draw-a-control-on-a-form"></a>Per disegnare un controllo in un form  
   
-1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Nel **casella degli strumenti**, fare clic sul controllo da aggiungere al form.  
   
@@ -37,7 +37,7 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ### <a name="to-drag-a-control-to-a-form"></a>Trascinare un controllo a un form  
   
-1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  Nel **casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
   

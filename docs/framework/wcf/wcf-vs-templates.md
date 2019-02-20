@@ -2,12 +2,12 @@
 title: Modelli di Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624938"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443237"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelli di Visual Studio WCF
 Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto predefiniti e modelli di elementi che è possibile usare in Visual Studio per compilare rapidamente i servizi WCF e le relative applicazioni.  
@@ -59,7 +59,7 @@ Modelli di Visual Studio di Windows Communication Foundation (WCF) sono progetto
  Se il progetto esistente è un progetto Web viene creato anche un file del host del servizio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modello di elemento e progetto di servizio WF WCF.  
- Questi modelli creano servizi WCF che ospitano un servizio del flusso di lavoro, ovvero un flusso di lavoro che è accessibile come un servizio web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per altre informazioni su questi tipi di flusso di lavoro, vedere [esercitazioni di Windows Workflow Foundation](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Per altre informazioni sulla creazione di progetti di flusso di lavoro, vedere [creazione di progetti di flusso di lavoro Legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Questi modelli creano servizi WCF che ospitano un servizio del flusso di lavoro, ovvero un flusso di lavoro che è accessibile come un servizio web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per altre informazioni su questi tipi di flusso di lavoro, vedere [come: Creare un flusso di lavoro](../windows-workflow-foundation/how-to-create-a-workflow.md). Per altre informazioni sulla creazione di progetti di flusso di lavoro, vedere [creazione di progetti di flusso di lavoro Legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Progettazione di Visual Studio è più reattiva quando vengono usati i flussi di lavoro di tipo XOML invece di codice basato su quelle. XOML è il tipo di flusso predefinito che viene creato.  
   

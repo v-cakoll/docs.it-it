@@ -2,12 +2,12 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837187"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442243"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
@@ -108,7 +108,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |RequestForProposal|Una richiesta di proposte (RDP) è un invito rivolto ai fornitori affinché inviino proposte per una merce o un servizio specifico.|  
 |VendorProposal|Proposta inviata da un fornitore a una RDP concreta.|  
 |VendorRepository|Repository di fornitori. Questa implementazione contiene una raccolta in memoria di istanze del fornitore e di metodi per esporre tali istanze.|  
-|RfpRepository|Repository delle richieste di proposte. Questa implementazione usa Linq to XML per eseguire una query sul file XML di richieste di proposte generato dalla persistenza schematizzata. Questa classe implementa [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|Repository delle richieste di proposte. Questa implementazione usa Linq to XML per eseguire una query sul file XML di richieste di proposte generato dalla persistenza schematizzata. |  
 |IOHelper|Questa classe gestisce tutti i problemi di I/O (cartelle, percorsi e così via).|  
   
 ### <a name="web-client"></a>Client Web  
@@ -127,7 +127,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |Form|Descrizione|  
 |-|-|  
 |NewRfp|Crea e invia una nuova richiesta di proposte.|  
-|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:** potrebbe essere necessario scegliere il **Aggiorna** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
+|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:**  Potrebbe essere necessario scegliere il **Aggiorna** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
 |SubmitProposal|Ottiene una proposta da un fornitore in una richiesta di proposte concreta. Questa finestra viene usata solo dai fornitori.|  
 |ViewRfp|Mostra tutte le informazioni relative a una richiesta di proposte (proposte ricevute, date, valori e altre informazioni). Questa finestra viene usata solo dall'autore della richiesta di proposte.|  
   
@@ -155,20 +155,20 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 ### <a name="web-client-options"></a>Opzioni del progetto WebClient  
   
--   **Crea nuova RDP**: crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
+-   **Crea nuova RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+-   **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
--   **Visualizzazione**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
+-   **Visualizza**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
   
 -   Visualizza come: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.  
   
 ### <a name="winforms-client-options"></a>Opzioni del progetto WinFormsClient  
   
--   **Crea RDP**: crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
+-   **Crea RDP**: Crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: aggiorna l'elenco di RDP attive e completate nella finestra principale.  
+-   **Aggiorna**: Aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
 -   **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
   
--   **Connetti come**: l'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **visualizzare come** casella combinata in griglia di RDP attive.
+-   **Connettersi come**: L'utente può accedere alla RDP tramite diverse identità selezionando il partecipante desiderato nella **Visualizza come** casella combinata in griglia di RDP attive.

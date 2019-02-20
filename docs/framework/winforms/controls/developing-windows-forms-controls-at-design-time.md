@@ -9,12 +9,12 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 838ff90a8f19b9fdf01f81f4599592eb1f316585
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041342"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441957"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Sviluppo di controlli Windows Form in fase di progettazione
 .NET Framework offre agli autori di controlli numerose tecnologie di creazione dei controlli. Gli autori non devono più limitarsi alla progettazione di controlli compositi che fungono da raccolta dei controlli preesistenti. Grazie all'ereditarietà, è possibile creare i propri controlli da controlli compositi preesistenti o da controlli Windows Form preesistenti. È anche possibile progettare propri controlli che implementano il disegno personalizzato. Queste opzioni offrono una grande flessibilità per la progettazione e la funzionalità dell'interfaccia visiva. Per sfruttare queste funzionalità, è preferibile avere familiarità con i concetti della programmazione basata su oggetti.  
@@ -22,31 +22,31 @@ ms.locfileid: "44041342"
 > [!NOTE]
 >  Non è necessario avere una conoscenza approfondita dell'ereditarietà, ma può risultare utile per fare riferimento a [nozioni fondamentali sull'ereditarietà (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Per creare controlli personalizzati da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+ Per creare controlli personalizzati da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  Illustra come creare un controllo composito semplice in Visual Basic.  
   
- [Procedura dettagliata: Modifica di un controllo composito con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [Procedura dettagliata: Modifica di un controllo composito con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Illustra come creare un controllo composito semplice in C#.  
   
- [Procedura dettagliata: Eredità da un controllo Windows Form con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [Procedura dettagliata: Eredità da un controllo di Windows Forms con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
  Illustra come creare un controllo Windows Form semplice usando l'ereditarietà in Visual Basic.  
   
- [Procedura dettagliata: Eredità da un controllo Windows Form con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [Procedura dettagliata: Eredità da un controllo di Windows Forms con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  Illustra come creare un controllo Windows Form semplice usando l'ereditarietà in C#.  
   
- [Procedura dettagliata: Esecuzione di attività comuni con gli smart tag nei controlli Windows Form](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [Procedura dettagliata: Esecuzione di attività comuni usando gli Smart tag nei Windows Form controlli](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Illustra come usare la funzionalità di smart tag nei controlli Windows Form.  
   
- [Procedura dettagliata: Serializzazione di raccolte di tipi standard tramite DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
+ [Procedura dettagliata: Serializzazione di raccolte di tipi Standard tramite DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
  Viene illustrato come utilizzare il <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> attributo per serializzare una raccolta.  
   
- [Procedura dettagliata: Debug di controlli Windows Form personalizzati in fase di progettazione](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Illustra come eseguire il debug del comportamento in fase di progettazione di un controllo Windows Form.  
   
- [Procedura dettagliata: Creazione di un controllo Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ [Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  Illustra come integrare profondamente un controllo composito nell'ambiente di progettazione.  
   
  [Procedura: Creare controlli per Windows Form](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "44041342"
  [Procedura: Ereditare dalla classe UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
  Offre una panoramica della procedura di creazione di un controllo composito.  
   
- [Procedura: Ereditare da controlli Windows Form esistenti](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [Procedura: Ereditare da esistenti di Windows Form](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
  Viene illustrato come creare un controllo esteso ereditando dal <xref:System.Windows.Forms.Button> classe del controllo.  
   
  [Procedura: Ereditare dalla classe Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
@@ -67,13 +67,13 @@ ms.locfileid: "44041342"
  [Procedura: Allineare un controllo ai bordi dei form in fase di progettazione](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
  Viene illustrato come utilizzare il <xref:System.Windows.Forms.Control.Dock%2A> proprietà per allineare il controllo al bordo del form occupato.  
   
- [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  Illustra la procedura di installazione del controllo in modo che venga visualizzato nella finestra di dialogo **Customize Toolbox** (Personalizza casella degli strumenti).  
   
- [Procedura: Specificare una bitmap nella casella degli strumenti per un controllo](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ [Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
  Viene illustrato come utilizzare il <xref:System.Drawing.ToolboxBitmapAttribute> per visualizzare un'icona accanto al controllo personalizzato nel **casella degli strumenti**.  
   
- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  Illustra come usare **UserControl Test Container** per testare il comportamento di un controllo composito.  
   
  [Errori in fase di progettazione in Progettazione Windows Form](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  

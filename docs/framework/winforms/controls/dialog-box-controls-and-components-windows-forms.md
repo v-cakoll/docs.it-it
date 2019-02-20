@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 5af2ce568b4c4bcb66de13f18a29b3f465672ffd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8a2dcde82c4bdded05fe1d69578b6becb5c1175e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456412"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441996"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controlli e componenti della finestra di dialogo (Windows Form)
 I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard. Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  
@@ -67,4 +67,4 @@ I controlli e i componenti Windows Form riportati di seguito determinano la visu
  [Cenni preliminari sul componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  Seleziona i file da salvare e la posizione in cui devono essere salvati.  
   
- Vedere anche [Finestre di dialogo in Windows Form](https://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).
+ Vedere anche [Finestre di dialogo in Windows Form](../dialog-boxes-in-windows-forms.md).

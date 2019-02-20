@@ -6,12 +6,12 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 2fa5d81c196e1730eafb177b20b5cba64b2daae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52f914b1d6fe5d8a2707e1f4ab176036ebf62cf9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721145"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441785"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Procedura: Aggiungere i controlli ActiveX a Windows Form
 Mentre è con ottimizzazione per la finestra di progettazione Windows Form per ospitare i controlli Windows Form, è anche possibile inserire controlli ActiveX in Windows Form.  
@@ -19,7 +19,7 @@ Mentre è con ottimizzazione per la finestra di progettazione Windows Form per o
 > [!CAUTION]
 >  Esistono limitazioni delle prestazioni per Windows Form quando i controlli ActiveX a essi aggiunti.  
   
- Prima di aggiungere i controlli ActiveX al form, è necessario aggiungerli nella casella degli strumenti. Per altre informazioni, vedere [componenti COM, finestra di dialogo Personalizza casella degli strumenti](https://msdn.microsoft.com/library/171333f3-f207-4e02-bbdc-17862556212c).  
+ Prima di aggiungere i controlli ActiveX al form, è necessario aggiungerli nella casella degli strumenti. Per altre informazioni, vedere [componenti COM, finestra di dialogo Personalizza casella degli strumenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100)).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -35,7 +35,7 @@ Mentre è con ottimizzazione per la finestra di progettazione Windows Form per o
   
 ## <a name="see-also"></a>Vedere anche
 - [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
-- [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Procedura: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

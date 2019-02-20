@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558956"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441359"
 ---
 # <a name="how-to-create-application-settings"></a>Procedura: Creare le impostazioni dell'applicazione
 Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  
   
  Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>. A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.  
   
- È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [come: Creare impostazioni dell'applicazione utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ È anche possibile eseguire questa routine usando la quantità minima di codice nella finestra di progettazione di Visual Studio.  Vedere anche [come: Creare impostazioni dell'applicazione utilizzando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Per creare nuove impostazioni dell'applicazione a livello di codice  
   

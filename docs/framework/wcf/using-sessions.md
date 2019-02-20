@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533137"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442724"
 ---
 # <a name="using-sessions"></a>Uso di sessioni
 Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni WCF sono differenti dall'oggetto sessione disponibile nelle [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applicazioni, supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento descrive le funzionalità che consentono le sessioni in WCF le applicazioni e come usarli.  
@@ -137,7 +137,7 @@ Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla
  Esiste un'interazione tra l'enumerazione <xref:System.ServiceModel.SessionMode> in un contratto e la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> , che consente di controllare l'associazione tra canali e oggetti servizio specifici. Per altre informazioni, vedere [sessioni, relativo alle istanze e concorrenza](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Condivisione di oggetti InstanceContext  
- È inoltre possibile controllare l'associazione tra canali basati sulla sessione o chiamate con sessione e oggetti <xref:System.ServiceModel.InstanceContext> eseguendo quell'associazione. Per un esempio completo, vedere [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ È inoltre possibile controllare l'associazione tra canali basati sulla sessione o chiamate con sessione e oggetti <xref:System.ServiceModel.InstanceContext> eseguendo quell'associazione. 
   
 ## <a name="sessions-and-streaming"></a>Sessioni e flusso  
  Quando si dispone di una grande quantità di dati da trasferire, la modalità di trasferimento streaming in WCF è un'alternativa praticabile al comportamento predefinito di memorizzazione nel buffer e l'elaborazione dei messaggi in memoria nella loro interezza. È possibile ricevere un comportamento imprevisto quando viene eseguito il flusso delle chiamate con un'associazione basata sulla sessione. Tutte le chiamate del flusso sono eseguite tramite un solo canale (il canale del datagramma) che non supporta sessioni anche se l'associazione utilizzata è configurata per utilizzare sessioni. Se più client effettuano un flusso di chiamate allo stesso oggetto servizio con un'associazione basata sulla sessione, la modalità di concorrenza dell'oggetto servizio è impostata su Single e la modalità di contesto dell'istanza è impostata su `PerSession`, tutte le chiamate devono transitare attraverso il canale del datagramma, pertanto viene elaborata una sola chiamata alla volta. Uno o più client possono quindi scadere. È possibile risolvere questo problema impostando `InstanceContextMode` dell'oggetto servizio su `PerCall` o Concurrency su Multiple.  

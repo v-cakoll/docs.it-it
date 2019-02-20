@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c6d2156b23965175bafe8f32ccf2fa325ff7e3d3
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418052"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441398"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Controllo FlowLayoutPanel (Windows Form)
 Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo.  
@@ -25,7 +25,7 @@ Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso or
  [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  Viene illustrato come usare le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> per ancorare e agganciare i controlli figlio in un controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
- Vedere anche [procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Vedere anche [procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
