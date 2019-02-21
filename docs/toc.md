@@ -259,6 +259,7 @@
 ### [Esplorare C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Usare tipi riferimento nullable](csharp/tutorials/nullable-reference-types.md)
 ### [Generare e usare flussi asincroni](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [Aggiornare un'app per i tipi riferimento nullable](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [Applicazione console](csharp/tutorials/console-teleprompter.md)
 ### [Client REST](csharp/tutorials/console-webapiclient.md)
 ### [Ereditarietà in C# e .NET](csharp/tutorials/inheritance.md)
