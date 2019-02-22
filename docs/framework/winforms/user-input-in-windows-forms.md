@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593791"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664562"
 ---
 # <a name="user-input-in-windows-forms"></a>Input dell'utente in Windows Form
 Windows Form include un modello di input dell'utente basato sugli eventi generati durante l'elaborazione di messaggi di Windows correlati. Negli argomenti di questa sezione vengono fornite informazioni sugli input dell'utente eseguiti mediante il mouse e la tastiera, con esempi di codice che illustrano come eseguire attività specifiche.  
@@ -25,16 +25,16 @@ Windows Form include un modello di input dell'utente basato sugli eventi generat
  Fornisce informazioni sulla gestione dei messaggi della tastiera, sui diversi tipi di tasti e sugli eventi della tastiera.  
   
  [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- Fornisce informazioni sugli eventi del mouse e altre funzionalità collegate al mouse, come i cursori e il mouse capture.  
+ Fornisce informazioni sugli eventi del mouse e altre funzioni collegate al mouse, come i cursori e il mouse capture.  
   
- [Procedura: Simulare eventi di mouse e tastiera nel codice](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [Procedura: Simulare eventi di Mouse e tastiera nel codice](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Illustra modi diversi di simulazione dell'input mediante mouse o tastiera a livello di codice.  
   
- [Procedura: Gestire eventi di input degli utenti nei controlli Windows Form](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Procedura: Gestire gli eventi Input utente dei controlli Windows Form](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Fornisce un esempio di codice per la gestione della maggior parte degli eventi di input e riporta informazioni su ciascun evento.  
   
  [Convalida dell'input utente in Windows Form](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- Descrive i metodi per convalidare l'input dell'utente nelle applicazioni Windows Forms.  
+ Descrive i metodi per convalidare l'input dell'utente nelle applicazioni Windows Form.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- Vedere anche [creazione di gestori di eventi in Windows Form](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Vedere anche [creazione di gestori di eventi in Windows Form](creating-event-handlers-in-windows-forms.md).

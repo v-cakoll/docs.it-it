@@ -3,13 +3,13 @@ title: Orchestrazione di microservizi e applicazioni a più contenitori per la s
 description: Informazioni su come distribuire un'app usando Azure Kubernetes Service.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 984a72c9ca8883b338d10fdaa826a6007580372d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221503"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664965"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Distribuire in Azure Kubernetes Service (AKS)
 
@@ -26,9 +26,9 @@ Prerequisiti per poter prima di usare servizio contenitore di AZURE sono:
 > [!NOTE]
 > Per informazioni complete su:
 >
-> Azure-CLI: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)
+> Azure-CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
 >
-> Sottosistema Windows per Linux: [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)
+> Sottosistema Windows per Linux: <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>Creare l'ambiente del servizio contenitore di AZURE in Azure
 

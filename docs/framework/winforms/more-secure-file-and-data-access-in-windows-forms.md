@@ -13,15 +13,16 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679318"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664926"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
+
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
   
  Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
@@ -348,10 +349,10 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>Accesso a database  
+## <a name="database-access"></a>Accesso database  
  Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati. Per altre informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [Code Access Security and ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per altre informazioni, vedere [dei servizi Web in ASP.NET AJAX](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) oppure [Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx).  
+ Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per altre informazioni, vedere [dei servizi Web in ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) oppure [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Accesso al Registro di sistema  
  La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di provare ad accedere al Registro di sistema. Non garantisce l'accesso, perché il sistema operativo continua ad applicare la sicurezza al Registro di sistema.  

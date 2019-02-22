@@ -9,17 +9,17 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: 8fb10e11224f5b9d965162d68d2b1f4424eca787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b2fc4e15ac1728faefebc932bc4d125a6902168
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562297"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663951"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Procedura: Impostare stili di cella predefiniti per il controllo DataGridView di Windows Form
 Con il controllo <xref:System.Windows.Forms.DataGridView> è possibile specificare gli stili di cella predefiniti per l'intero controllo e per specifiche colonne e righe. Queste impostazioni predefinite filtrano dal livello di controllo al livello di colonna, quindi al livello di riga e infine di cella. Se una particolare proprietà <xref:System.Windows.Forms.DataGridViewCellStyle> non è impostata a livello di cella, viene usata l'impostazione predefinita della proprietà a livello di riga. Se la proprietà non è impostata neanche a livello di riga, viene usata l'impostazione predefinita della colonna. Infine, se la proprietà non è impostata neanche a livello di colonna, viene usata l'impostazione predefinita <xref:System.Windows.Forms.DataGridView>. Con questa impostazione è possibile evitare di duplicare le impostazioni della proprietà a più livelli. A ogni livello è sufficiente specificare gli stili che differiscono dai livelli superiori. Per altre informazioni, vedere [stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
   
- In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [come: Impostare formati di dati e stili di cella predefiniti per i Windows Form controllo DataGridView utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [come: Impostare formati di dati e stili di cella predefiniti per i Windows Form controllo DataGridView utilizzando la finestra di progettazione](default-cell-styles-datagridview.md).  
   
 ### <a name="to-set-the-default-cell-styles-programmatically"></a>Per impostare gli stili della cella predefiniti a livello di codice  
   

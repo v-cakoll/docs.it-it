@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507577"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664185"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
-Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Cenni preliminari sugli eventi (Windows Form)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
   
 ## <a name="mouse-information"></a>Informazioni sul mouse  
  Un oggetto <xref:System.Windows.Forms.MouseEventArgs> viene inviato ai gestori degli eventi del mouse correlati alla pressione di un pulsante e alla registrazione dei movimenti del mouse. <xref:System.Windows.Forms.MouseEventArgs> fornisce informazioni sullo stato corrente del mouse, fra cui la posizione del puntatore nelle coordinate del client, i pulsanti del mouse premuti e se la rotellina del mouse è stata fatta scorrere. Numerosi eventi del mouse, ad esempio quelli che notificano semplicemente il momento in cui il puntatore del mouse entra o esce dai limiti di un controllo, inviano un oggetto <xref:System.EventArgs> al gestore eventi senza altre informazioni.  

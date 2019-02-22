@@ -2,12 +2,12 @@
 title: Sicurezza in SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: a767f4c3f862b3b7442e1455bf086bdba7042062
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091617"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664250"
 ---
 # <a name="sql-server-express-security"></a>Sicurezza in SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) è basata su Microsoft SQL Server e supporta la maggior parte delle funzionalità del motore di database. È progettato in modo tale che le funzionalità non essenziali e la connettività di rete siano disattivate per impostazione predefinita, al fine di ridurre la superficie di attacco disponibile per utenti malintenzionati.  
@@ -31,7 +31,6 @@ Microsoft SQL Server Express Edition (SQL Server Express) è basata su Microsoft
   
 |||  
 |-|-|  
-|[Connessione a SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) nella documentazione Online di SQL Server|Viene descritto come usare SQL Server Express Edition in una rete.|  
 |[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentazione completa relativa a SQL Server 2005 Express Edition.|  
 |[Istanze utente per utenti Non amministratori](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) nella documentazione Online di SQL Server|Viene descritto come creare e distribuire istanze utente.|  
 |[Connessione alle istanze utente di SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Vengono descritte le funzionalità dell'istanza utente in un'applicazione ADO.NET. Vengono inoltre fornite informazioni su come abilitare un'istanza utente, effettuare la connessione a un'istanza utente usando un oggetto <xref:System.Data.SqlClient.SqlConnection>, la durata dell'istanza utente e gli scenari dell'istanza utente.|  

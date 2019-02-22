@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506368"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664419"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: Testare il comportamento in fase di esecuzione di UserControl
 Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario testarne il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione basata su Windows separato e posizionare il controllo in un modulo di test, ma questa procedura non è pratica. Un modo più veloce e più semplice consiste nell'usare la **UserControl Test Container** offerte da Visual Studio. Questo contenitore di test viene avviata direttamente dal progetto di libreria di controlli Windows.  
@@ -29,7 +29,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Per testare il comportamento in fase di esecuzione di UserControl  
   
-1.  Creare un progetto di libreria di controlli di Windows denominato **EsempioTestContainer**. Per informazioni dettagliate, vedere [modello di libreria di controllo di Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Creare un progetto di libreria di controlli di Windows denominato **EsempioTestContainer**. Per informazioni dettagliate, vedere [modello di libreria di controllo di Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  Nel **finestra di progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.Label> controllare dal **casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -41,7 +41,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
   
 6.  Chiudere il contenitore di test.  
   
-7.  Aggiungere un altro controllo utente per il **EsempioTestContainer** progetto. Per informazioni dettagliate, vedere [NIB: procedura: Aggiungere elementi esistenti a un progetto](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Aggiungere un altro controllo utente per il **EsempioTestContainer** progetto. Per informazioni dettagliate, vedere [Procedura: Aggiungere elementi esistenti a un progetto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  Nel **finestra di progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.Button> controllare dal **casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -54,7 +54,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
   
 #### <a name="to-test-user-controls-from-another-project"></a>Per testare i controlli utente da un altro progetto  
   
-1.  Creare un progetto di libreria di controlli di Windows denominato **Esempiotestcontainer2**. Per informazioni dettagliate, vedere [modello di libreria di controllo di Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Creare un progetto di libreria di controlli di Windows denominato **Esempiotestcontainer2**. Per informazioni dettagliate, vedere [modello di libreria di controllo di Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  Nel **finestra di progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.RadioButton> controllare dal **casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -71,4 +71,4 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
 - [Procedura: Modificare controlli compositi](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Procedura dettagliata: Modifica di un controllo composito con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Progettazione controllo utente](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Progettazione controllo utente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

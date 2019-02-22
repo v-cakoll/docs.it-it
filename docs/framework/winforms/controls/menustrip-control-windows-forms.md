@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f94a5c5c45d3115de647085607aac396a0a8f2bc
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205323"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664484"
 ---
 # <a name="menustrip-control-windows-forms"></a>Controllo MenuStrip (Windows Form)
 Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente accessibili.  
@@ -19,7 +19,7 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
  [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
- [Procedura: Aggiungere elementi per il perfezionamento di ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
+ [Procedura: Aggiungere il perfezionamento di ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
  Descrive come aggiungere segni di spunta, immagini, tasti di scelta rapida, tasti di scelta e barre di separazione a menu e comandi di menu.  
   
  [Procedura: Aggiungere un MenuStrip a una finestra padre MDI](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
@@ -28,34 +28,34 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
  [Procedura: Creare un elenco di finestre MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
  Illustra come creare un elenco del form figlio attivo nel menu Finestra dell'elemento padre.  
   
- [Procedura: Disabilitare ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
+ [Procedura: Disabilitare i ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
  Descrive come disabilitare interi menu e singoli comandi di menu.  
   
  [Procedura: Nascondere ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  Descrive come nascondere interi menu e singoli comandi di menu.  
   
- [Procedura: Inserire un MenuStrip in un menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ [Procedura: Inserire un MenuStrip in un Menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  Descrive come impostare diverse proprietà per inserire un gruppo di voci di menu dal menu del figlio MDI nell'elenco a discesa del menu del padre MDI.  
   
- [Procedura: Rimuovere un ToolStripMenuItem da un menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ [Procedura: Rimuovere un ToolStripMenuItem da un Menu a discesa MDI](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
  Descrive come impostare diverse proprietà per rimuovere una voce di menu dall'elenco a discesa del menu del padre MDI.  
   
- [Procedura: Configurare margini del segno di spunta e dell'immagine di MenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ [Procedura: Configurare il controllo MenuStrip margini del segno e immagine](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
  Descrive come personalizzare un controllo <xref:System.Windows.Forms.MenuStrip> impostando le proprietà dei margini dei segni di spunta e delle immagini in vari modi.  
   
- [Procedura: Specificare voci di menu standard in un form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
+ [Procedura: Specificare voci di Menu Standard in un Form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
  Descrive come usare un controllo <xref:System.Windows.Forms.MenuStrip> per creare un form con un menu standard.  
   
- [Procedura: Visualizzare pulsanti di opzione in un controllo MenuStrip](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ [Procedura: Visualizza i pulsanti di opzione in un controllo MenuStrip](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
  Descrive come implementare il comportamento del pulsante di opzione in un <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
  [Unione delle voci di menu nel controllo MenuStrip di Windows Form](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
  Descrive i concetti generali e i metodi per l'unione di menu.  
   
- [Procedura: Impostare l'unione automatica dei menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ [Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Descrive come unire le voci di menu automaticamente in fase di esecuzione.  
   
--   [Editor dell'insieme Items di MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Editor dell'insieme Items di MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
 -   [Procedura: Copiare ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
@@ -65,9 +65,9 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
   
 -   [Procedura: Spostare i ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Procedura dettagliata: inserimento di voci di menu standard in un form](walkthrough-providing-standard-menu-items-to-a-form.md)  
+-   [Procedura dettagliata: Inserimento di voci di Menu Standard in un Form](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Finestra di dialogo attività di MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Finestra di dialogo attività di MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MenuStrip>  

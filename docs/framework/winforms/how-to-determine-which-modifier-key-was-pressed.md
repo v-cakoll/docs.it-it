@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: e2caf421e25dff3300b3d799582f4260d0aab320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58fdea3df3d82aa9f36244a11c6d353019c7ac49
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586657"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665017"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Procedura: Determinare quale tasto di modifica è stato premuto
 Quando si crea un'applicazione che accetta le sequenze di tasti dell'utente, è anche possibile monitorare i tasti di modifica, ad esempio i tasti MAIUSC, ALT e CTRL. Quando viene premuto un tasto modificatore in combinazione con altre chiavi, o con clic del mouse, l'applicazione può rispondere in modo appropriato. Ad esempio, se si preme la lettera S, ciò può comportare semplicemente una "s" venga visualizzato sullo schermo, ma se vengono premuti i tasti CTRL + S, può essere salvato nel documento corrente. Se si gestisce il <xref:System.Windows.Forms.Control.KeyDown> evento, il <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> proprietà del <xref:System.Windows.Forms.KeyEventArgs> ricevuto dall'evento gestore specifica vengono premuti i tasti di modifica. In alternativa, il <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> proprietà di <xref:System.Windows.Forms.KeyEventArgs> specifica il carattere che è stato premuto anche come tasti di modifica combinati con un OR bit per bit. Tuttavia, se si sta gestendo il <xref:System.Windows.Forms.Control.KeyPress> un evento o un mouse, il gestore dell'evento non riceve queste informazioni. In questo caso, è necessario usare il <xref:System.Windows.Forms.Control.ModifierKeys%2A> proprietà del <xref:System.Windows.Forms.Control> classe. In entrambi i casi, è necessario eseguire un'operazione con AND bit per bit di appropriato <xref:System.Windows.Forms.Keys> valore e il valore si sta testando. Il <xref:System.Windows.Forms.Keys> enumerazione offre varianti di ogni chiave di modificatore, pertanto è importante eseguire bit per bit e con il valore corretto. Ad esempio, il tasto MAIUSC è rappresentato da <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> e <xref:System.Windows.Forms.Keys.LShiftKey> il valore corretto per eseguire il test MAIUSC come chiave di modificatore <xref:System.Windows.Forms.Keys.Shift>. Analogamente, per verificare di tasti CTRL e ALT come modificatori è necessario utilizzare il <xref:System.Windows.Forms.Keys.Control> e <xref:System.Windows.Forms.Keys.Alt> rispettivamente i valori.  
@@ -49,4 +49,4 @@ Quando si crea un'applicazione che accetta le sequenze di tasti dell'utente, è 
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.ModifierKeys%2A>
 - [Input da tastiera in un'applicazione Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [Procedura: Determinare che se BLOC MAIUSC è attivo in Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+- [Procedura: Determinare che se BLOC MAIUSC è attivo in Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))

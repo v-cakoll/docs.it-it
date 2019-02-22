@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733337"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664224"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione
 Quando si crea un controllo personalizzato, è spesso risulterà necessario per eseguire il debug relativo comportamento in fase di progettazione. Ciò è particolarmente vero se si crea una finestra di progettazione personalizzata per il controllo personalizzato. Per informazioni dettagliate, vedere [procedura dettagliata: Creazione di un Windows Form di controllo che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -60,9 +60,9 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 1.  Aggiungere un **libreria di controlli Windows** progetto alla soluzione.  
   
-2.  Aggiungere un nuovo **UserControl** elemento al progetto DebugControlLibrary. Per informazioni dettagliate, vedere [NIB: procedura: Aggiungere nuovi elementi di progetto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Assegnare al nuovo file di origine di un nome di base di "DebugControl".  
+2.  Aggiungere un nuovo **UserControl** elemento al progetto DebugControlLibrary. Per informazioni dettagliate, vedere [Procedura: Aggiungere nuovi elementi di progetto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Assegnare al nuovo file di origine di un nome di base di "DebugControl".  
   
-3.  Usando il **Esplora soluzioni**, eliminare il controllo del progetto predefinita eliminando il file di codice con il nome di base "`UserControl1`". Per informazioni dettagliate, vedere [NIB: procedura: Rimuovere, eliminare ed escludere elementi](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Usando il **Esplora soluzioni**, eliminare il controllo del progetto predefinita eliminando il file di codice con il nome di base "`UserControl1`". Per informazioni dettagliate, vedere [Procedura: Rimuovere, eliminare ed escludere elementi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 4.  Compilare la soluzione.  
   
@@ -174,5 +174,5 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 ## <a name="see-also"></a>Vedere anche
 - [Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
-- [Procedura: Servizi di accesso in fase di progettazione](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
-- [Procedura: Supporto dell'accesso in fase di progettazione in Windows Form](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+- [Procedura: Servizi di accesso in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [Procedura: Supporto dell'accesso in fase di progettazione in Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

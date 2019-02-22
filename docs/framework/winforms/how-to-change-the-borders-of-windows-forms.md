@@ -8,19 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 32e5eb60d09eca895a1fa4584c5af5a302e81ff0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558657"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664445"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Procedura: Modificare i bordi di Windows Form
 Quando si stabiliscono l'aspetto e il comportamento di Windows Form, è possibile scegliere tra diversi stili bordo. Modificando la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A>, è possibile controllare il comportamento di ridimensionamento del form. Inoltre, l'impostazione di <xref:System.Windows.Forms.Form.FormBorderStyle%2A> influisce sul modo in cui la barra del titolo viene visualizzata e su quali pulsanti possono apparire sulla barra stessa. Per altre informazioni, vedere <xref:System.Windows.Forms.FormBorderStyle>.  
   
  In Visual Studio è disponibile supporto completo per questa attività.  
   
- Vedere anche [Procedura: Modificare i bordi di Windows Form usando la finestra di progettazione](https://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
+ Vedere anche [Procedura: Modificare i bordi di Windows Form usando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).  
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Per impostare lo stile bordo di Windows Form a livello di codice  
   
@@ -39,7 +39,7 @@ Quando si stabiliscono l'aspetto e il comportamento di Windows Form, è possibil
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     Vedere anche [come: Creare finestre di dialogo in fase di progettazione](https://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
+     Vedere anche [come: Creare finestre di dialogo in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).  
   
      Inoltre, se si è scelto un stile del bordo per il modulo che fornisce facoltativo **Riduci a icona** e **Ingrandisci** pulsanti, è possibile specificare se si desidera che uno o entrambi i pulsanti debbano essere funzionali. Questi pulsanti sono utili quando si desidera controllare da vicino l'esperienza utente. Il **Riduci a icona** e **Ingrandisci** pulsanti sono abilitati per impostazione predefinita e le relative funzionalità viene modificato tramite il **proprietà** finestra.  
   

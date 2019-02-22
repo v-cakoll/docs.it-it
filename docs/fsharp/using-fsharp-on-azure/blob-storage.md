@@ -1,20 +1,20 @@
 ---
-title: Introduzione all'archiviazione Blob di Azure con F#
+title: Iniziare a usare archiviazione Blob di AzureF#
 description: Store dati non strutturati nel cloud con archiviazione Blob di Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037282"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664991"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione Blob di Azure con F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Iniziare a usare archiviazione Blob di AzureF# #
 
 Archiviazione BLOB di Azure è un servizio che archivia dati non strutturati nel cloud come oggetti/BLOB. Archiviazione BLOB può archiviare qualsiasi tipo di dati di testo o binari, ad esempio un documento, un file multimediale o il programma di installazione di un'applicazione. Il servizio Archiviazione BLOB è detto anche archiviazione di oggetti.
 
-Questo articolo illustra come eseguire attività comuni usando l'archiviazione Blob. Gli esempi sono scritti con F# tramite Azure Storage Client Library per .NET. Argomenti trattati includono come caricare, elencare, scaricare ed eliminare i BLOB.
+Questo articolo illustra come eseguire attività comuni usando l'archiviazione Blob. Gli esempi sono scritti usando F# usando la libreria Client di archiviazione di Azure per .NET. Argomenti trattati includono come caricare, elencare, scaricare ed eliminare i BLOB.
 
 Per una panoramica concettuale dell'archiviazione blob, vedere [la Guida di .NET per l'archiviazione blob](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Per una panoramica concettuale dell'archiviazione blob, vedere [la Guida di .NET
 
 Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account). Occorre anche la chiave di accesso di archiviazione per questo account.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F# e avvio di F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un F# creare uno Script e avviare F# interattivo
 
-Gli esempi in questo articolo possono essere utilizzati in un'applicazione F# o uno script F#. Per creare uno script F#, creare un file con il `.fsx` estensione, ad esempio `blobs.fsx`, nell'ambiente di sviluppo F#.
+Gli esempi in questo articolo possono essere utilizzati in un F# dell'applicazione o un oggetto F# dello script. Per creare un F# creare uno script, creare un file con il `.fsx` estensione, ad esempio `blobs.fsx`, nella F# ambiente di sviluppo.
 
 Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` e `Microsoft.WindowsAzure.ConfigurationManager` pacchetti e riferimento `WindowsAzure.Storage.dll` e`Microsoft.WindowsAzure.Configuration.dll` nel script utilizzando un `#r` direttiva.
 
@@ -216,23 +216,24 @@ Per impostazione predefinita, archiviazione di Azure protegge i dati, limitando 
 
 Per impostazione predefinita, i dati blob nell'account di archiviazione sono accessibili solo al proprietario dell'account di archiviazione. Autenticare le richieste all'archiviazione Blob richiede la chiave di accesso di account per impostazione predefinita. Tuttavia, si potrebbe voler rendere disponibile ad altri utenti determinati dati blob.
 
-Per informazioni dettagliate su come controllare l'accesso all'archiviazione blob, vedere [la Guida di .NET per la sezione di archiviazione blob sul controllo degli accessi](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data).
-
-
 ### <a name="encrypting-blob-data"></a>La crittografia dei dati blob
 
 Archiviazione di Azure supporta la crittografia dei dati blob sia nel client e nel server.
-
-Per informazioni dettagliate sulla crittografia dei dati blob, vedere [la Guida di .NET per la sezione di archiviazione blob Encryption](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 A questo punto, dopo aver appreso le nozioni di base dell'archiviazione Blob, visitare i collegamenti seguenti per altre informazioni.
 
 ### <a name="tools"></a>Strumenti
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) An i Provider di tipi F# che può essere usato per esplorare le risorse Blob, tabelle e archiviazione code di Azure e applicare facilmente operazioni CRUD su di essi.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# un'API per l'uso del servizio di archiviazione tabelle di Microsoft Azure
-- [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) è un'app autonoma gratuita di Microsoft che consente di rappresentare facilmente dati di archiviazione di Azure in Windows, OS X e Linux.
+
+- [F#AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Un F# Provider di tipi che può essere usato per esplorare le risorse Blob, tabelle e archiviazione code di Azure e applicare facilmente operazioni CRUD su di essi.
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Un F# API per l'uso del servizio di archiviazione tabelle di Microsoft Azure
+
+- [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Un'app autonoma gratuita di Microsoft che consente di rappresentare facilmente dati di archiviazione di Azure in Windows, OS X e Linux.
 
 ### <a name="blob-storage-reference"></a>Riferimento all'archiviazione BLOB
 
@@ -246,3 +247,4 @@ A questo punto, dopo aver appreso le nozioni di base dell'archiviazione Blob, vi
 - [Trasferire dati con l'utilità della riga di comando di AzCopy in Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)
 - [Blog del Team di archiviazione di Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Avvio rapido: Usare .NET per creare un blob in archiviazione di oggetti](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591942"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664887"
 ---
 # <a name="listview-control-windows-forms"></a>Controllo ListView (Windows Form)
 Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse.  
@@ -51,7 +51,7 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
  Questa funzionalità è disponibile solo per [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
  [Procedura: Visualizzare un segno di inserimento in un controllo ListView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- Illustra come implementare informazioni per l'utente per le operazioni di trascinamento e rilascio in cui un segno di inserimento indica l'obiettivo di rilascio per ogni posizione del puntatore del mouse.  
+ Illustra come implementare informazioni per l'utente per le operazioni di trascinamento in cui un segno di inserimento indica la destinazione finale per ogni posizione del puntatore del mouse.   
   
  Questa funzionalità è disponibile solo per [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
@@ -77,13 +77,10 @@ Il controllo `ListView` di Windows Forms visualizza un elenco di elementi con ic
  Illustra come ereditare da un elemento in una visualizzazione elenco o da un nodo in una visualizzazione albero per aggiungere eventuali campi, metodi o costruttori necessari.  
   
  [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- Fornisce la definizione di un elenco immagini e ne illustra le funzionalità e le proprietà fondamentali.  
+ Fornisce la definizione di un elenco immagini e ne illustra le funzioni e le proprietà fondamentali.  
   
  [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Fornisce le istruzioni per creare un Windows Form con layout a più riquadri.  
-  
- [Funzionalità di Windows XP e controlli di Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Illustra come sfruttare le funzionalità specifiche di Windows XP che si applicano al controllo <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

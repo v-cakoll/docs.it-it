@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543526"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664393"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procedura dettagliata: Implementazione di un Form che usa un'operazione in Background
 Se si dispone di un'operazione che richiederà molto tempo per il completamento, e il blocco non desiderate l'interfaccia utente (UI) o "blocco", è possibile usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.  
@@ -57,7 +57,7 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
   
 5.  Rinominare il primo <xref:System.Windows.Forms.Button> controllo `startAsyncButton` e impostare le <xref:System.Windows.Forms.Control.Text%2A> proprietà `Start Async`. Rinominare la seconda <xref:System.Windows.Forms.Button> controllo `cancelAsyncButton`e impostare le <xref:System.Windows.Forms.Control.Text%2A> proprietà `Cancel Async`. Impostare relativi <xref:System.Windows.Forms.Control.Enabled%2A> proprietà `false`.  
   
-6.  Creare un gestore eventi per entrambi i <xref:System.Windows.Forms.Button> controlli <xref:System.Windows.Forms.Control.Click> gli eventi. Per informazioni dettagliate, vedere [come: Creare i gestori eventi utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Creare un gestore eventi per entrambi i <xref:System.Windows.Forms.Button> controlli <xref:System.Windows.Forms.Control.Click> gli eventi. Per informazioni dettagliate, vedere [Procedura: Creare i gestori eventi utilizzando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 7.  Trascinare un <xref:System.Windows.Forms.Label> controllare dal **casella degli strumenti** nel form e rinominarlo `resultLabel`.  
   
@@ -75,7 +75,7 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Per implementare i gestori eventi asincroni  
   
-1.  Nel **delle proprietà** finestra con il <xref:System.ComponentModel.BackgroundWorker> componente ancora selezionato, fare clic sul **eventi** pulsante. Fare doppio clic il <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventi per creare gestori eventi. Per altre informazioni su come usare i gestori eventi, vedere [come: Creare i gestori eventi utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  Nel **delle proprietà** finestra con il <xref:System.ComponentModel.BackgroundWorker> componente ancora selezionato, fare clic sul **eventi** pulsante. Fare doppio clic il <xref:System.ComponentModel.BackgroundWorker.DoWork> e <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventi per creare gestori eventi. Per altre informazioni su come usare i gestori eventi, vedere [come: Creare i gestori eventi utilizzando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 2.  Creare nel form un nuovo metodo denominato `ComputeFibonacci`. L'operazione verrà effettivamente svolta da questo metodo che verrà eseguito in background. Il codice dimostra l'implementazione ricorsiva dell'algoritmo Fibonacci che è decisamente inefficiente e esponenzialmente impiega più tempo per completare i numeri a molte cifre. Viene impiegato per dimostrare come un'operazione possa provocare lunghi ritardi nell'applicazione.  
   
@@ -169,6 +169,6 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
 - [Threading gestito](../../../../docs/standard/threading/index.md)
 - [Suggerimenti per l'utilizzo del threading gestito](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Panoramica sul modello asincrono basato su eventi](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Procedura: Implementare un Form che usa un'operazione in Background](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Procedura: Implementare un modulo che usa un'operazione in background](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Procedura dettagliata: Esecuzione di un'operazione in Background](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker (componente)](backgroundworker-component.md)

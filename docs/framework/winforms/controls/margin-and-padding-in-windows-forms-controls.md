@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: be5d1ae308b9412f914f1cde91d1cc5834212df8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3218ad029735f4a5d70b3166951dcd93e061c26
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570551"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665225"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margini e spaziatura nei controlli Windows Form
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. A tale scopo, lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> offre diversi strumenti di layout. Due tra le più importanti sono le proprietà <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A>.  
@@ -25,7 +25,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
  ![Spaziatura e margini per Windows Form controlli](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- È disponibile supporto in fase di progettazione per questa funzionalità in Visual Studio.  Vedere anche [procedura dettagliata: Definire il layout dei Windows Form controlli con spaziatura, margini e la proprietà AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
+ È disponibile supporto in fase di progettazione per questa funzionalità in Visual Studio. Vedere anche [procedura dettagliata: Definire il layout dei Windows Form controlli con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Control.AutoSize%2A>

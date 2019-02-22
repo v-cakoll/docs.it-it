@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: a9ae5ed5222179d4b3872478ac94e2ec3fc61c28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1855c7c95638576bf13897e023e07ade5b977d7d
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636144"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664016"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Procedura: Impostare gli stili di colore e tipo di carattere nel controllo DataGridView Windows Form
 È possibile specificare l'aspetto delle celle all'interno di un controllo <xref:System.Windows.Forms.DataGridView> impostando le proprietà della classe <xref:System.Windows.Forms.DataGridViewCellStyle>. È possibile recuperare istanze di questa classe da diverse proprietà della classe <xref:System.Windows.Forms.DataGridView> e delle classi correlate o, in alternativa, creare istanze di oggetti <xref:System.Windows.Forms.DataGridViewCellStyle> da assegnare a tali proprietà.  
   
  Le procedure riportate di seguito illustrano la personalizzazione di base dell'aspetto delle celle mediante la proprietà <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>. Ogni cella del controllo eredita gli stili specificati mediante questa proprietà, a meno che non vengano sostituiti a livello di colonna, riga o cella. Per un esempio di ereditarietà degli stili, vedere [come: Impostare stili di cella predefiniti per i Windows Form controllo DataGridView](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Per informazioni su altri usi della classe <xref:System.Windows.Forms.DataGridViewCellStyle>, vedere gli argomenti elencati nella sezione Vedere anche.  
   
- In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [come: Impostare formati di dati e stili di cella predefiniti per i Windows Form controllo DataGridView utilizzando la finestra di progettazione](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ In Visual Studio è disponibile supporto completo per questa attività.  Vedere anche [come: Impostare formati di dati e stili di cella predefiniti per i Windows Form controllo DataGridView utilizzando la finestra di progettazione](default-cell-styles-datagridview.md).  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>Per specificare il carattere usato dalle celle di un DataGridView  
   
