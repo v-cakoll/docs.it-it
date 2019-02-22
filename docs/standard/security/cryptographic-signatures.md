@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 314c8b7268549380143a608bb423f849ad0bb64c
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086096"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583270"
 ---
 # <a name="cryptographic-signatures"></a>Firme di crittografia
 <a name="top"></a> Le firme digitali di crittografia usano algoritmi con chiave pubblica per garantire l'integrità dei dati. Quando viene applicata una firma digitale ai dati, questa può essere verificata da altri e può quindi provare che i dati non sono stati modificati dopo l'applicazione della firma. Per altre informazioni sulle firme digitali, vedere [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
   
- Questo argomento spiega come generare e verificare firme digitali usando le classi nello <xref:System.Security.Cryptography?displayProperty=nameWithType>spazio dei nomi.  
+ Questo argomento spiega come generare e verificare firme digitali usando le classi nello <xref:System.Security.Cryptography?displayProperty=nameWithType> spazio dei nomi.  
   
 -   [Generazione di firme](#generate)  
   
@@ -49,24 +49,24 @@ Imports System.Security.Cryptography
 Module Module1  
     Sub Main()  
         'The hash value to sign.  
-        Dim HashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
+        Dim hashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
   
         'The value to hold the signed value.  
-        Dim SignedHashValue() As Byte  
+        Dim signedHashValue() As Byte  
   
         'Generate a public/private key pair.  
-        Dim RSA As New RSACryptoServiceProvider()  
+        Dim rsa As New RSACryptoServiceProvider()  
   
         'Create an RSAPKCS1SignatureFormatter object and pass it   
         'the RSACryptoServiceProvider to transfer the private key.  
-        Dim RSAFormatter As New RSAPKCS1SignatureFormatter(RSA)  
+        Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)  
   
         'Set the hash algorithm to SHA1.  
-        RSAFormatter.SetHashAlgorithm("SHA1")  
+        rsaFormatter.SetHashAlgorithm("SHA1")  
   
-        'Create a signature for HashValue and assign it to   
-        'SignedHashValue.  
-        SignedHashValue = RSAFormatter.CreateSignature(HashValue)  
+        'Create a signature for hashValue and assign it to   
+        'signedHashValue.  
+        signedHashValue = rsaFormatter.CreateSignature(hashValue)  
     End Sub  
 End Module  
   
@@ -80,24 +80,24 @@ class Class1
    static void Main()  
    {  
       //The hash value to sign.  
-      byte[] HashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
+      byte[] hashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
   
       //The value to hold the signed value.  
-      byte[] SignedHashValue;  
+      byte[] signedHashValue;  
   
       //Generate a public/private key pair.  
-      RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
   
       //Create an RSAPKCS1SignatureFormatter object and pass it the   
       //RSACryptoServiceProvider to transfer the private key.  
-      RSAPKCS1SignatureFormatter RSAFormatter = new RSAPKCS1SignatureFormatter(RSA);  
+      RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);  
   
       //Set the hash algorithm to SHA1.  
-      RSAFormatter.SetHashAlgorithm("SHA1");  
+      rsaFormatter.SetHashAlgorithm("SHA1");  
   
-      //Create a signature for HashValue and assign it to   
-      //SignedHashValue.  
-      SignedHashValue = RSAFormatter.CreateSignature(HashValue);  
+      //Create a signature for hashValue and assign it to   
+      //signedHashValue.  
+      signedHashValue = rsaFormatter.CreateSignature(hashValue);  
    }  
 }  
 ```  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Firma di file XML  
  .NET Framework fornisce lo spazio dei nomi <xref:System.Security.Cryptography.Xml> che consente di firmare il codice XML. La firma XML è importante quando si vuole verificare l'origine del linguaggio XML. Se si usa ad esempio un servizio di quotazione dei titoli di borsa che usa il linguaggio XML, è possibile verificarne l'origine se è presente la firma.  
   
- Le classi in questo spazio dei nomi sono conformi i [raccomandazione XML-Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/) dal World Wide Web Consortium.  
+ Le classi in questo spazio dei nomi sono conformi alla [raccomandazione relativa alla sintassi e all'elaborazione della firma XML](https://www.w3.org/TR/xmldsig-core/) del World Wide Web Consortium.  
   
  [Torna all'inizio](#top)  
   
@@ -121,34 +121,34 @@ class Class1
   
 -   L'algoritmo hash usato dal firmatario.  
   
- Usare la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> per verificare una firma eseguita dalla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Alla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> deve essere fornita la chiave pubblica del firmatario. Sarà necessario avere i valori del modulo e l'esponente per specificare la chiave pubblica. Tali valori dovrebbero essere forniti dalla parte che ha generato la coppia di chiavi pubblica/privata. Creare innanzitutto un' <xref:System.Security.Cryptography.RSACryptoServiceProvider> oggetto per contenere la chiave pubblica che verificherà la firma, quindi inizializzare un <xref:System.Security.Cryptography.RSAParameters> struttura per i valori di modulo ed esponente che specificano la chiave pubblica.  
+ Usare la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> per verificare una firma eseguita dalla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Alla classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> deve essere fornita la chiave pubblica del firmatario. Sarà necessario avere i valori del modulo e l'esponente per specificare la chiave pubblica. Tali valori dovrebbero essere forniti dalla parte che ha generato la coppia di chiavi pubblica/privata. Creare prima di tutto un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per conservare la chiave pubblica che verificherà la firma, quindi inizializzare una struttura <xref:System.Security.Cryptography.RSAParameters> per i valori di modulo ed esponente che specificano la chiave pubblica.  
   
- Il codice seguente illustra la creazione di una struttura <xref:System.Security.Cryptography.RSAParameters> . La proprietà `Modulus` è impostata sul valore di una matrice di byte denominata `ModulusData` e la proprietà `Exponent` è impostata sul valore di una matrice di byte denominata `ExponentData`.  
+ Il codice seguente illustra la creazione di una struttura <xref:System.Security.Cryptography.RSAParameters> . La proprietà `Modulus` è impostata sul valore di una matrice di byte denominata `modulusData` e la proprietà `Exponent` è impostata sul valore di una matrice di byte denominata `exponentData`.  
   
 ```vb  
-Dim RSAKeyInfo As RSAParameters  
-RSAKeyInfo.Modulus = ModulusData  
-RSAKeyInfo.Exponent = ExponentData  
+Dim rsaKeyInfo As RSAParameters  
+rsaKeyInfo.Modulus = modulusData  
+rsaKeyInfo.Exponent = exponentData  
 ```  
   
 ```csharp  
-RSAParameters RSAKeyInfo;  
-RSAKeyInfo.Modulus = ModulusData;  
-RSAKeyInfo.Exponent = ExponentData;  
+RSAParameters rsaKeyInfo;  
+rsaKeyInfo.Modulus = modulusData;  
+rsaKeyInfo.Exponent = exponentData;  
 ```  
   
  Dopo avere creato l'oggetto <xref:System.Security.Cryptography.RSAParameters> , è possibile inizializzare una nuova istanza della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider> per i valori specificati in <xref:System.Security.Cryptography.RSAParameters>. <xref:System.Security.Cryptography.RSACryptoServiceProvider> viene a sua volta passato al costruttore di un oggetto <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> per trasferire la chiave.  
   
- Nell'esempio che segue viene illustrato questo processo. `HashValue` e `SignedHashValue` sono in questo caso matrici di byte fornite da una parte remota. La parte remota ha firmato `HashValue` usando l'algoritmo SHA1, producendo la firma digitale `SignedHashValue`. Alla classe  
+ Nell'esempio che segue viene illustrato questo processo. `hashValue` e `signedHashValue` sono in questo caso matrici di byte fornite da una parte remota. La parte remota ha firmato `hashValue` usando l'algoritmo SHA1, producendo la firma digitale `signedHashValue`. Alla classe  
   
- metodo <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> verifica che la firma digitale sia valida e usata per firmare il `HashValue`.  
+ metodo<xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> verifica che la firma digitale sia valida e usata per firmare il `hashValue`.  
   
 ```vb  
-Dim RSA As New RSACryptoServiceProvider()  
-RSA.ImportParameters(RSAKeyInfo)  
-Dim RSADeformatter As New RSAPKCS1SignatureDeformatter(RSA)  
-RSADeformatter.SetHashAlgorithm("SHA1")  
-If RSADeformatter.VerifySignature(HashValue, SignedHashValue) Then  
+Dim rsa As New RSACryptoServiceProvider()  
+rsa.ImportParameters(rsaKeyInfo)  
+Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)  
+rsaDeformatter.SetHashAlgorithm("SHA1")  
+If rsaDeformatter.VerifySignature(hashValue, signedHashValue) Then  
    Console.WriteLine("The signature is valid.")  
 Else  
    Console.WriteLine("The signture is not valid.")  
@@ -156,11 +156,11 @@ End If
 ```  
   
 ```csharp  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
-RSA.ImportParameters(RSAKeyInfo);  
-RSAPKCS1SignatureDeformatter RSADeformatter = new RSAPKCS1SignatureDeformatter(RSA);  
-RSADeformatter.SetHashAlgorithm("SHA1");  
-if(RSADeformatter.VerifySignature(HashValue, SignedHashValue))  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
+rsa.ImportParameters(rsaKeyInfo);  
+RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);  
+rsaDeformatter.SetHashAlgorithm("SHA1");  
+if(rsaDeformatter.VerifySignature(hashValue, signedHashValue))  
 {  
    Console.WriteLine("The signature is valid.");  
 }  

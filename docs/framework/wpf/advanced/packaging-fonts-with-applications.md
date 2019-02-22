@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632348"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583420"
 ---
 # <a name="packaging-fonts-with-applications"></a>Includere i tipi di carattere nel pacchetto delle applicazioni
 In questo argomento viene fornita una panoramica di come per i tipi di carattere del pacchetto con il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione.  
@@ -31,7 +31,7 @@ In questo argomento viene fornita una panoramica di come per i tipi di carattere
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] e [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] contengano un flag di tipo, fsType, che indica i diritti di licenza di incorporamento tipi di carattere per il tipo di carattere. Questo flag di tipo, tuttavia, fa riferimento solo ai tipi di carattere incorporati archiviati in un documento e non ai tipi di carattere incorporati in un'applicazione. È possibile recuperare il tipo di carattere incorporamento diritti per un tipo di carattere creando un <xref:System.Windows.Media.GlyphTypeface> oggetto e il riferimento relativo <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> proprietà. Vedere la sezione "OS/2 e Windows metriche" del [specifica OpenType](https://www.microsoft.com/typography/otspec/os2.htm) per altre informazioni sul flag fsType.  
   
- Il [Microsoft Typography](https://www.microsoft.com/typography/links/) sito Web include informazioni di contatto che possono aiutarti a individuare il fornitore di un particolare tipo di carattere o trovare un fornitore di tipo di carattere per un lavoro personalizzato.  
+ Il [Microsoft Typography](https://docs.microsoft.com/typography/) sito Web include informazioni di contatto che possono aiutarti a individuare il fornitore di un particolare tipo di carattere o trovare un fornitore di tipo di carattere per un lavoro personalizzato.  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>Aggiunta di tipi di carattere come elementi di contenuto  
@@ -175,7 +175,7 @@ In questo argomento viene fornita una panoramica di come per i tipi di carattere
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft Typography: I collegamenti, novità e contatti](https://www.microsoft.com/typography/links/)
+- [Microsoft Typography: I collegamenti, novità e contatti](https://docs.microsoft.com/typography/)
 - [Specifica OpenType](https://www.microsoft.com/typography/otspec/)
 - [Funzionalità dei tipi di carattere OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [Esempio di pacchetto di tipi di carattere OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

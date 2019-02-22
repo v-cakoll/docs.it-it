@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f182a65a74507411f2474aca294c479e3b2b9ca6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258922"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584044"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente di personalizzare l'aspetto del calendario in molti modi. Ad esempio, è possibile impostare la combinazione di colori e scegliere di visualizzare o nascondere i numeri di settimana e la data corrente.  
@@ -42,7 +42,7 @@ I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo consente
     ```  
   
     > [!NOTE]
-    >  A partire da Windows Vista e a seconda del tema, l'impostazione di alcune proprietà potrebbero non modificare l'aspetto del calendario. Ad esempio, se Windows è impostato per utilizzare il tema Aero, impostando il <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà non ha alcun effetto. Questo avviene perché viene eseguito il rendering di una versione aggiornata del calendario con un aspetto che è derivato in fase di esecuzione dal tema del sistema operativo corrente. Se si desidera utilizzare queste proprietà e abilitare la versione precedente del calendario, è possibile disabilitare gli stili di visualizzazione per l'applicazione. La disabilitazione di stili potrebbe influenzare l'aspetto e il comportamento di altri controlli nell'applicazione. Per disabilitare gli stili di visualizzazione in Visual Basic, aprire Creazione progetti e deselezionare il **stili visivi XP abilitare** casella di controllo. Per disabilitare gli stili di visualizzazione in c#, aprire Program.cs e impostare come commento `Application.EnableVisualStyles();`. Per altre informazioni sugli stili di visualizzazione, vedere [come: Abilitare Windows XP Visual Styles](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  A partire da Windows Vista e a seconda del tema, l'impostazione di alcune proprietà potrebbero non modificare l'aspetto del calendario. Ad esempio, se Windows è impostato per utilizzare il tema Aero, impostando il <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà non ha alcun effetto. Questo avviene perché viene eseguito il rendering di una versione aggiornata del calendario con un aspetto che è derivato in fase di esecuzione dal tema del sistema operativo corrente. Se si desidera utilizzare queste proprietà e abilitare la versione precedente del calendario, è possibile disabilitare gli stili di visualizzazione per l'applicazione. La disabilitazione di stili potrebbe influenzare l'aspetto e il comportamento di altri controlli nell'applicazione. Per disabilitare gli stili di visualizzazione in Visual Basic, aprire Creazione progetti e deselezionare il **stili visivi XP abilitare** casella di controllo. Per disabilitare gli stili di visualizzazione in c#, aprire Program.cs e impostare come commento `Application.EnableVisualStyles();`. Per altre informazioni sugli stili di visualizzazione, vedere [attivazione di stili](/windows/desktop/controls/cookbook-overview).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Per visualizzare la data corrente nella parte inferiore del controllo  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516824"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583693"
 ---
 # <a name="impersonating-and-reverting"></a>Rappresentazione e ripristino
 Talvolta può essere necessario ottenere un token di account Windows per rappresentare un account Windows. Può essere necessario, ad esempio, che l'applicazione basata su ASP.NET agisca per conto di più utenti in momenti diversi. L'applicazione potrebbe accettare un token che rappresenta un amministratore da Internet Information Services (IIS), rappresentare tale utente, eseguire un'operazione e ripristinare l'identità precedente. In seguito potrebbe accettare un token da IIS che rappresenta un utente con meno diritti, eseguire un'operazione e di nuovo il ripristino.  
@@ -29,31 +29,31 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
 2.  Creare una nuova istanza della classe **WindowsIdentity**, passando il token. Il codice seguente illustra questa chiamata, dove `hToken` rappresenta un token di Windows.  
   
     ```csharp  
-    WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
+    WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
     ```  
   
     ```vb  
-    Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
+    Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
 3.  Iniziare la rappresentazione creando una nuova istanza della classe <xref:System.Security.Principal.WindowsImpersonationContext> e inizializzandola con il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> della classe inizializzata, come mostrato nel codice seguente.  
   
     ```csharp  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
     ```  
   
     ```vb  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
 4.  Quando la rappresentazione non è più necessaria, chiamare il metodo <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> per ripristinare la rappresentazione, come mostrato nel codice seguente.  
   
     ```csharp  
-    MyImpersonation.Undo();  
+    myImpersonation.Undo();  
     ```  
   
     ```vb  
-    MyImpersonation.Undo()  
+    myImpersonation.Undo()  
     ```  
   
  Se il codice attendibile ha già associato un <xref:System.Security.Principal.WindowsPrincipal> dell'oggetto al thread, è possibile chiamare il metodo di istanza **Impersonate**, che non accetta un token di account. Si noti che questo è utile solo quando l'oggetto **WindowsPrincipal** nel thread rappresenta un utente diverso da quello per cui il processo è attualmente in esecuzione. Questa situazione può verificarsi, ad esempio, quando si usa ASP.NET con l'autenticazione di Windows attivata e la rappresentazione disattivata. In questo caso, il processo viene eseguito con un account configurato in Internet Information Services (IIS), mentre l'entità corrente rappresenta l'utente di Windows che sta accedendo alla pagina.  

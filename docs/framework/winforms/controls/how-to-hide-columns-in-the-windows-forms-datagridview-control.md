@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 673c852b89518e2cb4df6ea98a337acd60bc42cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726fa8ee05498ae365409c8330c6e1d9283ae9f5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659670"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583271"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Procedura: Nascondere colonne nel controllo DataGridView Windows Form
 A volte può essere necessario visualizzare solo alcune colonne tra quelle disponibili in un controllo <xref:System.Windows.Forms.DataGridView> Windows Form. Ad esempio, può essere necessario mostrare una colonna con gli stipendi dei dipendenti agli utenti con credenziali di gestione e nasconderla invece agli altri utenti. Oppure potrebbe essere necessario associare il controllo a un'origine dati contenente più colonne, di cui solo alcune devono essere visualizzate. In questo caso, si rimuovono in genere le colonne che non interessa visualizzare, invece di nasconderle.  
   
  Nel controllo <xref:System.Windows.Forms.DataGridView>, il valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> di una colonna determina se la colonna viene visualizzata.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [come: Nascondere le colonne in di Windows Form usando la finestra di progettazione di DataGridView Control](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
+ Questa attività è supportata in Visual Studio.  Vedere anche [come: Nascondere le colonne in di Windows Form usando la finestra di progettazione di DataGridView Control](hide-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-hide-a-column-programmatically"></a>Per nascondere una colonna a livello di codice  
   

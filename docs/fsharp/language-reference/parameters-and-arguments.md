@@ -2,12 +2,12 @@
 title: Parametri e argomenti
 description: Informazioni su F# supporto del linguaggio per la definizione dei parametri e passare argomenti a funzioni, metodi e proprietà.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612478"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583498"
 ---
 # <a name="parameters-and-arguments"></a>Parametri e argomenti
 
@@ -140,7 +140,17 @@ type C =
         printfn "%s" message
 ```
 
-Il valore fornito come argomento per `DefaultParameterValue` deve corrispondere al tipo del parametro, ad esempio quanto segue non è consentito:
+È anche possibile specificare un nuovo oggetto come valore di parametro predefinito. Ad esempio, il `Foo` membro potrebbe avere facoltativo `CanceallationToken` come input invece:
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+Il valore fornito come argomento per `DefaultParameterValue` deve corrispondere al tipo del parametro. Ad esempio, di seguito non è consentita:
 
 ```fsharp
 type C =

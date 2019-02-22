@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: b7a657af2d6caf2217aedf56422f135f0b2d667e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e65f0fd329f624aa186748d298257b15617c17
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619416"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584265"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procedura: Bloccare le colonne nel controllo DataGridView Windows Form
 Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Windows.Forms.DataGridView> Windows Form, a volte devono fare spesso riferimento a una sola colonna o a un set di colonne. Ad esempio, quando si visualizza una tabella di informazioni sui clienti che contiene molte colonne, è utile visualizzare il nome del cliente in qualsiasi momento, anche mentre le altre colonne scorrono all'esterno dell'area visibile.  
@@ -26,7 +26,7 @@ Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Win
   
  La proprietà <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> di una colonna determina se la colonna è sempre visibile nella griglia.  
   
- Questa attività è supportata in Visual Studio.  Vedere anche [come: Bloccare le colonne in Windows il controllo DataGridView form usando la finestra di progettazione](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\)).  
+ Questa attività è supportata in Visual Studio.  Vedere anche [come: Bloccare le colonne in Windows il controllo DataGridView form usando la finestra di progettazione](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-freeze-a-column-programmatically"></a>Per bloccare una colonna a livello di codice  
   
