@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519619"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746059"
 ---
 # <a name="scrollviewer-overview"></a>Cenni preliminari sull'elemento ScrollViewer
 Il contenuto all'interno di un'interfaccia utente è spesso di dimensioni maggiori dell'area di visualizzazione dello schermo di un computer. Il <xref:System.Windows.Controls.ScrollViewer> controllo offre un modo pratico per abilitare lo scorrimento del contenuto in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni. Questo argomento vengono presentate le <xref:System.Windows.Controls.ScrollViewer> elemento e fornisce diversi esempi di utilizzo.  
@@ -64,7 +64,7 @@ Il contenuto all'interno di un'interfaccia utente è spesso di dimensioni maggio
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Creare un visualizzatore a scorrimento](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [Procedura: Creare un visualizzatore a scorrimento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [Stili e modelli di ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
 - [Controlli](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

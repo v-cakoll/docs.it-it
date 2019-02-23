@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c0ad0b644c0af6a4e0982b1437291e923ca79cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499874"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745405"
 ---
 # <a name="timer-component-windows-forms"></a>Componente Timer (Windows Form)
 Il componente <xref:System.Windows.Forms.Timer> di Windows Form genera un evento a intervalli regolari. Questo componente è progettato per l'ambiente Windows Form.  
@@ -36,6 +36,3 @@ Il componente <xref:System.Windows.Forms.Timer> di Windows Form genera un evento
 ## <a name="related-sections"></a>Sezioni correlate  
  [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
-  
- [Controllo Timer per gli utenti di Visual Basic 6.0](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- Descrive le modifiche in Visual Basic alla funzionalità del timer rispetto alle versioni precedenti.

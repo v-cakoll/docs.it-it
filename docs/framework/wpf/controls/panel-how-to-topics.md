@@ -7,18 +7,17 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493527"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747918"
 ---
 # <a name="panel-how-to-topics"></a>Procedure relative all'elemento Panel
 Gli argomenti in questa sezione descrivono come usare il <xref:System.Windows.Controls.Panel> elemento ed elementi correlati [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: applicare una proprietà LayoutTransform a un elemento](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Creare un elemento Panel personalizzato](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Eseguire l'override del metodo Panel OnRender](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Impostare le proprietà di altezza di un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

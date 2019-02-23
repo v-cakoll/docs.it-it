@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 6285deb97b05659283071b8940fe8730890b98e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca5a6836a7cfbc6a36c83044caff23a7d590dfc0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609863"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745985"
 ---
 # <a name="-libpath"></a>-libpath
 Specifica la posizione degli assembly cui viene fatto riferimento.  
@@ -57,6 +57,6 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assembly in .NET](../../../standard/assembly/index.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

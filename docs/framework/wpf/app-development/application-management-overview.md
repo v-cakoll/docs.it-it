@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ae02f77948da9b1371db1d1b67ce5030d207c0e8
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204847"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748102"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -362,5 +362,5 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 - [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)
 - [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
 - [URI di tipo pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Modello di applicazione: Procedure](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [Modello di applicazione: Procedure](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Sviluppo di applicazioni](../../../../docs/framework/wpf/app-development/index.md)

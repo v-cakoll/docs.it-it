@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 8e6da9e9e48238c33a3522034c53ecdcb5ec99cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691554"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747531"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo Win32 in WPF
 Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale nel codice Win32, potrebbe essere più efficace riutilizzare almeno parte di tale codice nell'applicazione WPF anziché riscriverlo completamente. WPF fornisce un meccanismo semplice per l'hosting di una finestra Win32, in una pagina WPF.  
@@ -140,16 +140,16 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
  L'utente può anche selezionare un elemento nella casella di riepilogo facendo clic su di esso, esattamente come accade per un'applicazione Win32 convenzionale. I dati visualizzati vengono aggiornati ogni vota che l'utente modifica lo stato della casella di riepilogo, selezionando, aggiungendo o accodando un elemento.  
   
- Per accodare elementi, inviare la casella di riepilogo un' [ `LB_ADDSTRING` messaggio](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx). Per eliminare gli elementi, inviare [ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx) per ottenere l'indice della selezione corrente e quindi [ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx) per eliminare l'elemento. Nell'esempio vengono inoltre inviati [ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx), il valore restituito viene utilizzato per aggiornare la visualizzazione che mostra il numero di elementi. Entrambe queste istanze di [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) usare una delle dichiarazioni PInvoke illustrate nella sezione precedente.  
+ Per accodare elementi, inviare la casella di riepilogo un' [ `LB_ADDSTRING` messaggio](/windows/desktop/Controls/lb-addstring). Per eliminare gli elementi, inviare [ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel) per ottenere l'indice della selezione corrente e quindi [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring) per eliminare l'elemento. Nell'esempio vengono inoltre inviati [ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount), il valore restituito viene utilizzato per aggiornare la visualizzazione che mostra il numero di elementi. Entrambe queste istanze di [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) usare una delle dichiarazioni PInvoke illustrate nella sezione precedente.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Quando l'utente seleziona un elemento o la selezione viene modificato, il controllo notifica alla finestra inviando un [ `WM_COMMAND` messaggio](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx), che genera il <xref:System.Windows.Interop.HwndHost.MessageHook> eventi per la pagina. Il gestore riceve le stesse informazioni della routine della finestra principale della finestra host. Inoltre, viene passato un riferimento a un valore booleano, `handled`. Si imposta `handled` a `true` per indicare che il messaggio è stato gestito e necessita di alcuna ulteriore elaborazione.  
+ Quando l'utente seleziona un elemento o la selezione viene modificato, il controllo notifica alla finestra inviando un [ `WM_COMMAND` messaggio](/windows/desktop/menurc/wm-command), che genera il <xref:System.Windows.Interop.HwndHost.MessageHook> eventi per la pagina. Il gestore riceve le stesse informazioni della routine della finestra principale della finestra host. Inoltre, viene passato un riferimento a un valore booleano, `handled`. Si imposta `handled` a `true` per indicare che il messaggio è stato gestito e necessita di alcuna ulteriore elaborazione.  
   
- [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) viene inviato per diversi motivi, pertanto è necessario esaminare l'ID della notifica per determinare se si tratta di un evento che si desidera gestire. L'ID è contenuto nel word alto del `wParam` parametro. L'esempio Usa operatori bit per bit per estrarre l'ID. Se l'utente ha effettuato o modificato la selezione, l'ID sarà [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx).  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) viene inviato per diversi motivi, pertanto è necessario esaminare l'ID della notifica per determinare se si tratta di un evento che si desidera gestire. L'ID è contenuto nel word alto del `wParam` parametro. L'esempio Usa operatori bit per bit per estrarre l'ID. Se l'utente ha effettuato o modificato la selezione, l'ID sarà [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange).  
   
- Quando [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) viene ricevuto, il codice di esempio Ottiene l'indice dell'elemento selezionato inviando al controllo un [ `LB_GETCURSEL` messaggio](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx). Per ottenere il testo, creare innanzitutto un <xref:System.Text.StringBuilder>. Quindi inviare al controllo un [ `LB_GETTEXT` messaggio](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx). Passare il vuoto <xref:System.Text.StringBuilder> dell'oggetto come il `wParam` parametro. Quando [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) termina, il <xref:System.Text.StringBuilder> conterrà il testo dell'elemento selezionato. Questo uso di [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) richiede un'altra dichiarazione di PInvoke.  
+ Quando [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) viene ricevuto, il codice di esempio Ottiene l'indice dell'elemento selezionato inviando al controllo un [ `LB_GETCURSEL` messaggio](/windows/desktop/Controls/lb-getcursel). Per ottenere il testo, creare innanzitutto un <xref:System.Text.StringBuilder>. Quindi inviare al controllo un [ `LB_GETTEXT` messaggio](/windows/desktop/Controls/lb-gettext). Passare il vuoto <xref:System.Text.StringBuilder> dell'oggetto come il `wParam` parametro. Quando [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) termina, il <xref:System.Text.StringBuilder> conterrà il testo dell'elemento selezionato. Questo uso di [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) richiede un'altra dichiarazione di PInvoke.  
   
  Infine, impostare `handled` a `true` per indicare che il messaggio è stato gestito.  
   

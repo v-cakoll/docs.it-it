@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 569fccfffe1d117d7ab404f72d0275e7391926da
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588301"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746798"
 ---
 # <a name="toolstripcontainer-control"></a>Controllo ToolStripContainer
 <xref:System.Windows.Forms.ToolStrip> controlla il raggruppamento verticale/orizzontale incorporato di funzionalità (condivisione di spazio orizzontale o verticale nell'area strumenti, se ancorata) usando <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -35,7 +35,7 @@ ms.locfileid: "54588301"
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripContentPanel> di un controllo <xref:System.Windows.Forms.ToolStripContainer>.  
   
- Vedere anche [finestra di dialogo attività di ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Vedere anche [finestra di dialogo attività di ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100)).  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  <xref:System.Windows.Forms.ToolStripPanel>  

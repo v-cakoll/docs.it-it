@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662738"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746562"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> .NET Framework include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari, le applicazioni devono anche visualizzare le interfacce utente fornite dai componenti aggiuntivi. In questo argomento viene illustrato come WPF integra il modello di componente aggiuntivo .NET Framework per consentire questi scenari, l'architettura sottostante, i vantaggi e le relative limitazioni.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662738"
 -   Ha il <xref:System.SerializableAttribute> attributo viene applicato.  
   
 > [!NOTE]
->  Per altre informazioni sulla creazione di oggetti di .NET Framework utilizzabili in remoto, vedere [rendere utilizzabile in remoto gli oggetti](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Per altre informazioni sulla creazione di oggetti di .NET Framework utilizzabili in remoto, vedere [rendere utilizzabile in remoto gli oggetti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  I tipi WPF UI non sono utilizzabili in remoto. Per risolvere il problema, WPF offre il modello di componente aggiuntivo .NET Framework per abilitare creati dai componenti aggiuntivi di WPF UI a essere visualizzate dalle applicazioni host. Questo supporto è fornito da WPF da due tipi: i <xref:System.AddIn.Contract.INativeHandleContract> interfaccia e due metodi statici implementati dal <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A livello generale, questi tipi e metodi vengono usati nel modo seguente:  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662738"
 - <xref:System.LoaderOptimizationAttribute>
 - [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)
-- [Panoramica di .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Oggetti remotizzabili](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Panoramica di .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Oggetti remotizzabili](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)

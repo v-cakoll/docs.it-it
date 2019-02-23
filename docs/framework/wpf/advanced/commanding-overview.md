@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5273850c9fec731c5f11e101d218532d06632263
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723537"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748427"
 ---
 # <a name="commanding-overview"></a>Cenni preliminari sull'esecuzione di comandi
 <a name="introduction"></a> I comandi sono un meccanismo di input in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] che consente la gestione dell'input a un livello più semantico rispetto all'input dei dispositivi. Sono esempi di comandi le operazioni **Copia**, **Taglia** e **Incolla** disponibili in molte applicazioni.  
@@ -191,5 +191,5 @@ ms.locfileid: "54723537"
 - [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
 - [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
 - [Implementare ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
-- [Procedura: Aggiungere un comando a un MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Procedura: Aggiungere un comando a un MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Create a Custom RoutedCommand Sample (Creare un esempio di oggetto RoutedCommand personalizzato)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

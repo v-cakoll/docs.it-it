@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736015"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747139"
 ---
 # <a name="toolstrip-technology-summary"></a>Riepilogo della tecnologia ToolStrip
 Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e alle classi che ne supportano l'uso.  
@@ -63,26 +63,26 @@ Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e a
 ### <a name="task-dialog-boxes"></a>Finestre di dialogo delle attività  
  In Visual Studio, facendo clic sullo smart tag di un controllo nella finestra di progettazione, viene visualizzato un elenco di attività che permette di accedere facilmente a molti comandi usati di frequente.  
   
--   [Finestra di dialogo attività di MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Finestra di dialogo attività di MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Finestra di dialogo attività di ToolStrip](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Finestra di dialogo attività di ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Finestra di dialogo attività di ContextMenuStrip](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [Finestra di dialogo attività di ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Finestra di dialogo attività di StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [Finestra di dialogo attività di StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Finestra di dialogo attività di ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [Finestra di dialogo attività di ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Editor della raccolta Items  
  In Visual Studio, quando si fa clic **Modifica elementi** sull'attività di elenco o fare clic sul controllo e si sceglie **Modifica elementi** nel menu di scelta rapida, viene visualizzato l'editor della raccolta per il controllo. Gli Editor della raccolta permettono di aggiungere, rimuovere e riordinare gli elementi contenuti nel controllo. Si possono anche visualizzare e cambiare le proprietà per il controllo e per gli elementi del controllo.  
   
--   [Editor dell'insieme Items di MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Editor dell'insieme Items di MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Editor dell'insieme Items di StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [Editor dell'insieme Items di StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Editor dell'insieme Items di ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [Editor dell'insieme Items di ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Editor di raccolta Items di ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Editor di raccolta Items di ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hosting di controlli  
  La classe <xref:System.Windows.Forms.ToolStripControlHost> fornisce wrapper predefiniti per i controlli <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>e <xref:System.Windows.Forms.ToolStripProgressBar>. È anche possibile ospitare qualsiasi altri controllo esistente o COM in <xref:System.Windows.Forms.ToolStripControlHost>.  
@@ -106,15 +106,17 @@ Questo argomento riepiloga le informazioni relative al controllo `ToolStrip` e a
   
  *Raggruppamento verticale/orizzontale* è la capacità delle barre degli strumenti di condividere lo spazio orizzontale o verticale. Un Windows Form può contenere un oggetto <xref:System.Windows.Forms.ToolStripContainer> che a sua volta contiene dei pannelli sui lati sinistro, destro, superiore e inferiore del form per posizionare e raggruppare i controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip>. Più controlli <xref:System.Windows.Forms.ToolStrip> vengono raggruppati verticalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> di sinistra o di destra. Vengono raggruppati orizzontalmente se li si inserisce nell'oggetto <xref:System.Windows.Forms.ToolStripContainer> in alto o in basso. È possibile usare l'oggetto <xref:System.Windows.Forms.ToolStripContentPanel> centrale di <xref:System.Windows.Forms.ToolStripContainer> per posizionare i tradizionali controlli sul form.  
   
- Alcuni o tutti i controlli <xref:System.Windows.Forms.ToolStripContainer> sono direttamente selezionabili in fase di progettazione e possono essere eliminati. <xref:System.Windows.Forms.ToolStripContainer> è espandibile e comprimibile e viene ridimensionato con i controlli in esso contenuti.  
+ Alcuni o tutti i controlli <xref:System.Windows.Forms.ToolStripContainer> sono direttamente selezionabili in fase di progettazione e possono essere eliminati. 
+  <xref:System.Windows.Forms.ToolStripContainer> è estendibile e comprimibile e viene ridimensionato con i controlli in esso contenuti.  
   
  *Ancoraggio* si intende l'indicazione semplice di un controllo posizione di sul sinistra, destra, superiore o lato inferiore del form.  
   
  Il vantaggio del raggruppamento rispetto all'ancoraggio è che i controlli <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip> possono condividere lo spazio orizzontale o verticale con altri controlli.  
   
- La maggior parte dei controlli <xref:System.Windows.Forms.ToolStrip> può essere ancorata al form come gli altri controlli, invece di usare il raggruppamento. Si può anche specificare che un <xref:System.Windows.Forms.ToolStrip> controllo possa essere liberamente posizionato sul form rimuovendolo dall'oggetto <xref:System.Windows.Forms.ToolStripContainer> e impostandone la proprietà `Dock` su `None` oppure se ne può specificare la posizione assoluta impostando la rispettiva proprietà <xref:System.Windows.Forms.Control.Location%2A>. Vedere [Procedura: Spostare ToolStrip da ToolStripContainer a un Form](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ La maggior parte dei controlli <xref:System.Windows.Forms.ToolStrip> può essere ancorata al form come gli altri controlli, invece di usare il raggruppamento. Si può anche specificare che un <xref:System.Windows.Forms.ToolStrip> controllo possa essere liberamente posizionato sul form rimuovendolo dall'oggetto <xref:System.Windows.Forms.ToolStripContainer> e impostandone la proprietà `Dock` su `None` oppure se ne può specificare la posizione assoluta impostando la rispettiva proprietà <xref:System.Windows.Forms.Control.Location%2A>. Vedere [How to: Spostare ToolStrip da ToolStripContainer a un Form](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
- Usare uno o più controlli <xref:System.Windows.Forms.ToolStripPanel> per avere più flessibilità, soprattutto per le applicazioni con interfaccia a documenti multipli (MDI) o se non è necessario un oggetto <xref:System.Windows.Forms.ToolStripContainer>. <xref:System.Windows.Forms.ToolStripPanel> fornisce uno spazio ancorabile in cui posizionare e ancorare i controlli <xref:System.Windows.Forms.ToolStrip>, ma non i controlli tradizionali. Per impostazione predefinita, il <xref:System.Windows.Forms.ToolStripPanel> non viene visualizzata nella finestra di progettazione **della casella degli strumenti**, ma è possibile inserire in tale posizione facendo clic con il **della casella degli strumenti**, quindi fare clic su **Scegli elementi**. Si può accedere a <xref:System.Windows.Forms.ToolStripPanel> anche a livello di codice, come a qualsiasi altra classe.  
+ Usare uno o più controlli <xref:System.Windows.Forms.ToolStripPanel> per avere più flessibilità, soprattutto per le applicazioni con interfaccia a documenti multipli (MDI) o se non è necessario un oggetto <xref:System.Windows.Forms.ToolStripContainer>. 
+  <xref:System.Windows.Forms.ToolStripPanel> fornisce uno spazio ancorabile in cui posizionare e ancorare i controlli <xref:System.Windows.Forms.ToolStrip>, ma non i controlli tradizionali. Per impostazione predefinita, il <xref:System.Windows.Forms.ToolStripPanel> non viene visualizzata nella finestra di progettazione **della casella degli strumenti**, ma è possibile inserire in tale posizione facendo clic con il **della casella degli strumenti**, quindi fare clic su **Scegli elementi**. Si può accedere a <xref:System.Windows.Forms.ToolStripPanel> anche a livello di codice, come a qualsiasi altra classe.  
   
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.StatusStrip> consentono l'overflow degli elementi. Il comportamento di questi elementi è simile a quello che hanno sulle barre degli strumenti di Microsoft Office.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611982"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747019"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "54611982"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Creazione di una nuova applicazione browser XAML (XBAP)  
- Il modo più semplice per creare un nuovo progetto XBAP è con Microsoft Visual Studio. Quando si crea un nuovo progetto, selezionare **Applicazione browser WPF** nell'elenco di modelli. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Browser WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Il modo più semplice per creare un nuovo progetto XBAP è con Microsoft Visual Studio. Quando si crea un nuovo progetto, selezionare **Applicazione browser WPF** nell'elenco di modelli. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Browser WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
  Quando viene eseguito, il progetto XBAP viene aperto in una finestra del browser anziché in una finestra autonoma. Quando si esegue il debug del progetto XBAP in Visual Studio, l'applicazione viene eseguita con le autorizzazioni dell'area Internet e pertanto vengono generate eccezioni di sicurezza se tali autorizzazioni non vengono superate. Per ulteriori informazioni, vedere [Sicurezza](../../../../docs/framework/wpf/security-wpf.md) e [Sicurezza con attendibilità parziale in WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

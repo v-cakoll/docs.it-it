@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: b49100ee2ba9ac3f86bff8c646c185f26b5c96f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620305"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746377"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
-In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 -   Impossibile aggiungere un controllo alla casella degli strumenti  
   
@@ -112,6 +112,5 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
 - [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
-- [Modifica di componenti](https://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)
-- [Risoluzione dei problemi relativi allo sviluppo in fase di progettazione](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
-- [Programmazione con i componenti](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [Modifica di componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
+- [Risoluzione dei problemi relativi allo sviluppo in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

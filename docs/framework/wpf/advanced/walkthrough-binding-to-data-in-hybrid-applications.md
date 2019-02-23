@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724343"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748492"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: Associazione ai dati in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come usare l'associazione dati in applicazioni ibride che includono entrambe [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  
@@ -122,7 +122,7 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 1.  Dal **Data** dal menu **Aggiungi nuova origine dati**.  
   
-2.  Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [Procedura: Connettersi ai dati in un Database](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [Procedura: Connettersi ai dati in un Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
 3.  Quando viene richiesto per il **configurazione guidata origine dati**, salvare la stringa di connessione come `NorthwindConnectionString`.  
   

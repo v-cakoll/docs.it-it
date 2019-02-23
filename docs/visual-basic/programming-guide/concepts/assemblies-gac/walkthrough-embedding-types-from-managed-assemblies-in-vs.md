@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245475"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747544"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -222,8 +222,8 @@ End Function
   
 6.  In Esplora File aprire la cartella del percorso di output, ad esempio C:\TypeEquivalenceSample. Fare doppio clic su TypeEquivalenceClient.exe per eseguire il programma. Il programma rifletterà la nuova versione dell'assembly TypeEquivalenceRuntime senza dover essere ricompilato.  
   
-## <a name="see-also"></a>Vedere anche  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Vedere anche
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Programmazione con gli assembly](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Assembly in .NET](../../../../standard/assembly/index.md)

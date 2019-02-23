@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 0d68eb40b60481709ff2852a643908025e2e43ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67d81c02ca7a207a48190a3bf09b6ab5dbec17de
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512333"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746403"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Procedura: Esecuzione dell'associazione ai risultati di una query XDocument, XElement o LINQ to XML
 In questo esempio viene illustrato come associare dati XML da un <xref:System.Windows.Controls.ItemsControl> usando <xref:System.Xml.Linq.XDocument>.  
@@ -29,7 +29,7 @@ In questo esempio viene illustrato come associare dati XML da un <xref:System.Wi
  [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
  [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
- Dati XML possono essere archiviati come risorsa XAML tramite <xref:System.Windows.Data.ObjectDataProvider>. Per un esempio completo, vedere [Codice sorgente di L2DBForm.xaml](https://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e). L'esempio seguente illustra come il codice può impostare il contesto dei dati per una risorsa oggetto.  
+ Dati XML possono essere archiviati come risorsa XAML tramite <xref:System.Windows.Data.ObjectDataProvider>. Per un esempio completo, vedere [codice sorgente di L2DBForm.xaml](/visualstudio/designers/l2dbform-xaml-source-code). L'esempio seguente illustra come il codice può impostare il contesto dei dati per una risorsa oggetto.  
   
  [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
  [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  

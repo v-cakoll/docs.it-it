@@ -4,16 +4,16 @@ description: Modernizzare le applicazioni .NET esistenti con contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152567"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746416"
 ---
 # <a name="what-about-cloud-native-applications"></a>Per quanto riguarda le applicazioni Native del Cloud?
 
-Sebbene [nativa del Cloud](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) applicazioni non sono l'obiettivo principale di questa Guida, è utile per avere una conoscenza di questo livello di maturità della modernizzazione e per distinguerlo dalle applicazioni ottimizzato per il Cloud.
+Sebbene [nativa del Cloud](https://azure.microsoft.com/overview/cloudnative/) applicazioni non sono l'obiettivo principale di questa Guida, è utile per avere una conoscenza di questo livello di maturità della modernizzazione e per distinguerlo dalle applicazioni ottimizzato per il Cloud.
 
 Figura 4-3 posiziona App Native del Cloud nei livelli di maturità modernizzazione di applicazioni:
 
@@ -23,7 +23,7 @@ Figura 4-3 posiziona App Native del Cloud nei livelli di maturità modernizzazio
 
 Il livello di maturità di modernizzazione Native del Cloud richiede in genere nuovi investimenti di sviluppo. Passare al livello di Cloud Native in genere si basa sulle esigenze aziendali per modernizzare le applicazioni quanto più possibile per migliorare concretamente la scalabilità in applicazioni di grandi dimensioni mediante la creazione di sottosistemi autonomi (microservizi) che possono essere distribuiti e scalabilità in modo indipendente da altre aree dell'applicazione riducendo i costi nella flessibilità di evoluzione di lungo termine e l'aumento delle parti dell'app tali autonomi che forniscono significativi competere vantaggi. 
 
-I concetti di base di [nativa del Cloud](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) applicazioni si basano su approcci di architettura di microservizi, che possono evolvere con la flessibilità e scalabilità per i limiti che sarebbero difficili da eseguire in un'architettura monolitica distribuita in uno on-premises o ambiente di cloud.
+I concetti di base di applicazioni Native del Cloud si basano su approcci di architettura di microservizi, che possono evolvere con la flessibilità e scalabilità per i limiti che sarebbero difficili da eseguire in un'architettura monolitica, distribuita in locale o cloud ambiente.
 
 Figura 4-4 illustra le caratteristiche principali del modello e Native del Cloud.  
 
@@ -33,19 +33,19 @@ Figura 4-4 illustra le caratteristiche principali del modello e Native del Cloud
 
 Inoltre, è possibile estendere base moderne App web e App native del cloud aggiungendo altri servizi, come l'intelligenza artificiale (AI), machine learning (ML) e IoT. È possibile usare uno di questi servizi per estendere uno degli approcci possibili ottimizzato per il Cloud.
 
-La differenza fondamentale nelle applicazioni a livello nativo del Cloud è nell'architettura dell'applicazione. [Native del cloud](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) le applicazioni sono, per definizione, le app basate su microservizi. App native del cloud richiedono speciali architetture, tecnologie e piattaforme, rispetto a un'applicazione web monolitica o a più livelli tradizionali.
+La differenza fondamentale nelle applicazioni a livello nativo del Cloud è nell'architettura dell'applicazione. Le applicazioni native del cloud sono, per definizione, le app basate su microservizi. App native del cloud richiedono speciali architetture, tecnologie e piattaforme, rispetto a un'applicazione web monolitica o a più livelli tradizionali.
 
 ## <a name="cloud-native-applications-details"></a>Dettagli di applicazioni native del cloud
 
-[Native del cloud](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) è uno stato più avanzato o maturo per le applicazioni di grandi dimensioni e mission-critical. Applicazioni Native del cloud in genere richiedono l'architettura e progettazione che vengono creati da zero anziché tramite la modernizzazione delle applicazioni esistenti. La differenza principale tra un'applicazione nativa del Cloud e una semplice app web ottimizzato per il Cloud è consigliabile utilizzare le architetture di microservizi in un approccio native del cloud. Le app ottimizzato per il cloud possono essere anche App web monolitica o a più livelli.
+Native del cloud è uno stato più avanzato o maturo per le applicazioni di grandi dimensioni e mission-critical. Applicazioni Native del cloud in genere richiedono l'architettura e progettazione che vengono creati da zero anziché tramite la modernizzazione delle applicazioni esistenti. La differenza principale tra un'applicazione nativa del Cloud e una semplice app web ottimizzato per il Cloud è consigliabile utilizzare le architetture di microservizi in un approccio native del cloud. Le app ottimizzato per il cloud possono essere anche App web monolitica o a più livelli.
 
-Il [App a dodici fattori](https://12factor.net/) (una raccolta di modelli che sono strettamente correlati agli approcci di microservizi) considerata anche un requisito per [native del cloud](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) architetture di applicazioni.
+Il [App a dodici fattori](https://12factor.net/) (una raccolta di modelli che sono strettamente correlati agli approcci di microservizi) considerata anche un requisito per architetture di applicazioni native del cloud.
 
 Il [Foundation Computing nativa Cloud (CNCF)](https://www.cncf.io/) è un promotore primario dei principi native del cloud. Microsoft è un [membro del CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
 Per una definizione di esempio e per altre informazioni sulle caratteristiche di applicazioni native del cloud, vedere l'articolo di Gartner [come definire l'architettura e progettazione di applicazioni native del cloud](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Per indicazioni specifiche su come implementare un'applicazione nativa del cloud di Microsoft, vedere [microservizi .NET: Architettura per applicazioni .NET in contenitori](https://aka.ms/microservicesebook).
 
-Il fattore più importante da prendere in considerazione se si esegue la migrazione di un'applicazione completa per la [nativa del cloud](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) modello è che è necessario ridefinizione dell'architettura per un'architettura basata su microservizi. Chiaramente ciò richiede un investimento significativo in fase di sviluppo a causa del processo di refactoring grande coinvolto. In genere si sceglie questa opzione per applicazioni mission-critical che richiedono nuovi livelli di scalabilità e flessibilità a lungo termine. Tuttavia, è possibile avviare lo spostamento verso native del cloud mediante l'aggiunta di microservizi per pochi nuovi scenari e infine eseguire il refactoring l'applicazione completamente come microservizi. Si tratta di un approccio incrementale che è l'opzione migliore per alcuni scenari.
+Il fattore più importante da prendere in considerazione se si esegue la migrazione di un'applicazione completa al modello e native del cloud è che è necessario ridefinizione dell'architettura per un'architettura basata su microservizi. Chiaramente ciò richiede un investimento significativo in fase di sviluppo a causa del processo di refactoring grande coinvolto. In genere si sceglie questa opzione per applicazioni mission-critical che richiedono nuovi livelli di scalabilità e flessibilità a lungo termine. Tuttavia, è possibile avviare lo spostamento verso native del cloud mediante l'aggiunta di microservizi per pochi nuovi scenari e infine eseguire il refactoring l'applicazione completamente come microservizi. Si tratta di un approccio incrementale che è l'opzione migliore per alcuni scenari.
 
 ## <a name="what-about-microservices"></a>Per quanto riguarda i microservizi? 
 

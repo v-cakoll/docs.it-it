@@ -7,18 +7,18 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718663"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748271"
 ---
 # <a name="xaml-resources"></a>Risorse XAML
 Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'interno dell'applicazione. Sono esempi di risorse pennelli e stili. Questa panoramica viene descritto come usare le risorse di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. È anche possibile creare e accedere alle risorse tramite il codice o in modo intercambiabile tra codice e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni, vedere [risorse e codice](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  I file di risorse descritti in questo argomento sono diversi rispetto a file di risorse descritti [WPF Application Resource, contenuto e i file di dati](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) e diverso da quello delle risorse incorporate o collegate descritte [ La gestione delle risorse dell'applicazione (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  I file di risorse descritti in questo argomento sono diversi rispetto a file di risorse descritti [WPF Application Resource, contenuto e i file di dati](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) e diverso da quello delle risorse incorporate o collegate descritte [Gestisci Le risorse dell'applicazione (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
   
 <a name="usingresources"></a>   

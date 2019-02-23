@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686049"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746523"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struttura di un programma Visual Basic
 Un programma Visual Basic è composto da blocchi di compilazione standard. Oggetto *soluzione* è costituito da uno o più progetti. Oggetto *progetto* a sua volta può contenere uno o più assembly. Ciascuna *assembly* viene compilato da uno o più file di origine. Oggetto *file di origine* fornisce la definizione e implementazione di classi, strutture, moduli e interfacce che contengono infine tutto il codice.  
   
- Per altre informazioni su questi blocchi predefiniti di un programma Visual Basic, vedere [progetti e soluzioni](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Per altre informazioni su questi blocchi predefiniti di un programma Visual Basic, vedere [progetti e soluzioni](/visualstudio/ide/solutions-and-projects-in-visual-studio) e [assembly in .NET](../../../standard/assembly/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Elementi di programmazione a livello di file  
  Quando si avvia un progetto o un file e aprire l'editor di codice, viene visualizzato un codice già in uso e nell'ordine corretto. Qualsiasi codice che si scrive deve seguire la sequenza seguente:  

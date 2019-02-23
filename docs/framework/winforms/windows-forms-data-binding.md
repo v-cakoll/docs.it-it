@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b33ad9d78230588b9c1afd5d59fd0333e2cd18a6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486010"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747061"
 ---
 # <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
@@ -45,13 +45,13 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
  [Procedura: Implementare l'interfaccia IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
  Illustra come implementare l'interfaccia <xref:System.ComponentModel.IListSource> per creare una classe associabile che non implementa <xref:System.Collections.IList>, ma fornisce un elenco da un altro percorso.  
   
- [Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
  Mostra come gestire l'evento <xref:System.Windows.Forms.BindingSource.BindingComplete> per assicurare che tutti i controlli associati a un'origine dati rimangano sincronizzati.  
   
- [Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Mostra come garantire che la riga selezionata di una tabella figlio non venga modificata quando viene apportata una modifica a un campo della tabella padre.  
   
- Vedere anche [interfacce correlate al Data Binding](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [procedura: esplorare dati in Windows Form](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [come: creare un controllo con associazione semplice in un Windows Form](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Vedere anche [interfacce correlate al Data Binding](interfaces-related-to-data-binding.md), [come: Esplorare dati in Windows Form](how-to-navigate-data-in-windows-forms.md), e [come: Creare un controllo con associazione semplice in un Form Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  

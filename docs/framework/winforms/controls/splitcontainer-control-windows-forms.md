@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518807"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745463"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Controllo SplitContainer (Windows Form)
 Il controllo `SplitContainer` Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
@@ -24,7 +24,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
  [Panoramica sul controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Introduce il controllo `SplitContainer` e descrive le proprietà, i metodi e gli eventi correlati usati più comunemente.  
   
- [Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  Descrive come controllare la barra di divisione nel controllo `SplitContainer`.  
   
  [Procedura: Suddividere una finestra orizzontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
@@ -33,7 +33,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
  [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Crea un'interfaccia utente a più riquadri simile a quella usata in Microsoft Outlook.  
   
- Vedere anche [come: suddividere una finestra orizzontalmente utilizzando la finestra di progettazione](how-to-split-a-window-horizontally-using-the-designer.md), [procedura: creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [come: creare un'interfaccia utente con Windows Form usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
+ Vedere anche [come: Suddividere una finestra orizzontalmente usando la finestra di progettazione](how-to-split-a-window-horizontally-using-the-designer.md), [come: Creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [come: Creare un'interfaccia utente a più riquadri con Windows Form usando la finestra di progettazione](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.SplitContainer>  

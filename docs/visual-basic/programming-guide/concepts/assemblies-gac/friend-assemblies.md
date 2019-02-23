@@ -2,12 +2,12 @@
 title: Assembly Friend (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b91f894f9b10c85eb322b4421fd0473335df7a3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579797"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748154"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Assembly Friend (Visual Basic)
 Oggetto *assembly friend* è un assembly che può accedere a un altro assembly [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipi e membri. Se un assembly viene riconosciuto di tipo Friend, non è più necessario contrassegnare tipi e membri come pubblici perché altri assembly possano accedervi. Questo metodo è particolarmente utile negli scenari seguenti:  
@@ -69,5 +69,5 @@ End Class
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [Procedura: Creare assembly Friend non firmati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [Procedura: Creare assembly Friend firmati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)

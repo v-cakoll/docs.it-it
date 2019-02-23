@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441203"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747356"
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
 Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalità di gestione del sistema di stampa è incluso con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
@@ -30,9 +30,6 @@ Gli argomenti in questa sezione illustrano come usare la stampa e le funzionalit
   
  [Enumerare un sottoinsieme di code di stampa](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Istruzioni per la generazione di un elenco delle stampanti con determinate caratteristiche.  
-  
- [NOTINBUILD: Procedura: Estendere lo Schema di stampa e creare nuove classi di sistema di stampa](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Analisi approfondita del codice gestito come i programmatori possono estendere lo Schema di stampa a dispositivi di stampa speciali o le stampanti con funzionalità nuove o non comuni.  
   
  [Ottenere le proprietà dell'oggetto del sistema di stampa senza reflection](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Le istruzioni su come individuare in fase di esecuzione stampa di proprietà dell'oggetto di sistema e i relativi tipi.  

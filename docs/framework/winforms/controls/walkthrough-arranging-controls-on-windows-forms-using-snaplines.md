@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543224"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748034"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Finestra di progettazione Windows Form offre molti strumenti di layout per eseguire questa operazione. Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.  
@@ -154,7 +154,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
 1.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** al form.  
   
-2.  Ridimensionare il <xref:System.Windows.Forms.Button> controllo agganciando uno dei quadratini di ridimensionamento e trascinandolo. Per informazioni dettagliate, vedere [come: Ridimensionare i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Ridimensionare il <xref:System.Windows.Forms.Button> controllo agganciando uno dei quadratini di ridimensionamento e trascinandolo. Per informazioni dettagliate, vedere [Procedura: Ridimensionare i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
   
 3.  Trascinare il quadratino di ridimensionamento fino a quando uno del <xref:System.Windows.Forms.Button> bordi del controllo è allineato a un altro controllo. Si noti che viene visualizzata una Guida di allineamento. Si noti inoltre che il quadratino di ridimensionamento si blocca nella posizione indicata dalla Guida di allineamento.  
   
@@ -222,7 +222,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Per disabilitare le guide di allineamento nell'ambiente di progettazione  
   
-1.  Dal **Tools** menu, aprire il **opzioni** nella finestra di dialogo. Aprire la finestra di dialogo di progettazione di Windows Form. Per informazioni dettagliate, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Dal **Tools** menu, aprire il **opzioni** nella finestra di dialogo. Aprire la finestra di dialogo di progettazione di Windows Form. Per informazioni dettagliate, vedere [generale, finestra di progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   
 2.  Selezionare il **generale** nodo. Nel **modalità Layout** sezione, modificare la selezione dalla **guide di allineamento** a **SnapToGrid**.  
   

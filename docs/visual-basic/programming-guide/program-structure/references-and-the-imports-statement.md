@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: c50a25dc0802f275e5cd4e0068e1a68bf559abc1
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: d9a227f60edf142832ab41e3ea99f33c53a42229
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066038"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748310"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Riferimenti e istruzione Imports (Visual Basic)
 È possibile rendere gli oggetti esterni disponibili al progetto scegliendo il **Aggiungi riferimento** comando le **progetto** menu. I riferimenti in Visual Basic possono puntare agli assembly, che sono come le librerie dei tipi ma contengono ulteriori informazioni.  
@@ -53,6 +53,6 @@ ms.locfileid: "55066038"
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
 - [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assembly in .NET](../../../standard/assembly/index.md)
 - [Procedura: Creare e usare assembly dalla riga di comando](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
 - [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

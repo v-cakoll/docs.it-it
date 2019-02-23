@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865644"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746785"
 ---
 # <a name="windows-forms-security"></a>Sicurezza di Windows Form
 Form di Windows dispongono di un modello di sicurezza che è basata su codice (sicurezza livelli sono impostati per il codice, indipendentemente dall'utente che esegue il codice). Si tratta di oltre agli eventuali schemi di sicurezza che potrebbero essere già presenti nel sistema informatico. Tra cui gli schemi nel browser (ad esempio, la sicurezza basata sull'area disponibile in Internet Explorer) o il sistema operativo (ad esempio, la sicurezza basata su credenziali di Windows NT).  
@@ -33,10 +33,10 @@ Form di Windows dispongono di un modello di sicurezza che è basata su codice (s
  Descrive finestre, mediante gli Appunti ed eseguire chiamate a codice non gestito in un ambiente parzialmente attendibile.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [NIB: Criteri di sicurezza predefiniti](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [Criteri di sicurezza predefiniti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Elenca le autorizzazioni predefinite concesse nei set di autorizzazioni attendibilità completa, Intranet locale e Internet.  
   
- [NIB: Amministrazione di criteri di sicurezza generale](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [Amministrazione generale dei criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  Fornisce informazioni sull'amministrazione di criteri di sicurezza di .NET Framework e sull'elevazione delle autorizzazioni.  
   
  [Autorizzazioni pericolose e amministrazione dei criteri](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Form di Windows dispongono di un modello di sicurezza che è basata su codice (s
  [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)  
  Vengono forniti collegamenti ad argomenti che illustrano le procedure consigliate per la scrittura in modo sicuro di codice rispetto a .NET Framework.  
   
- [NIB: Richiesta delle autorizzazioni](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [Richiesta di autorizzazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  Viene illustrato l'utilizzo di attributi per informare il runtime di quali autorizzazioni deve eseguire il codice.  
   
  [Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Form di Windows dispongono di un modello di sicurezza che è basata su codice (s
  [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)  
  Vengono illustrate le nozioni fondamentali sull'utilizzo dei criteri di sicurezza del runtime di .NET Framework.  
   
- [NIB: Determinazione della necessità di modificare i criteri di sicurezza](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [Determinazione della necessità di modificare i criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Viene illustrato come determinare quando le applicazioni devono molto diversi da criteri di sicurezza predefiniti.  
   
- [NIB: Distribuzione di criteri di sicurezza](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [Distribuzione di criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  Viene descritto il modo migliore per la distribuzione di modifiche ai criteri di sicurezza.

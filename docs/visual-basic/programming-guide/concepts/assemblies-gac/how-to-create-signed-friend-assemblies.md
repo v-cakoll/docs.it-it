@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f0c36d6b134e1c742905ca9081bf3d44e5fe369f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758872"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748726"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -86,7 +86,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Assembly Friend (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Procedura: Creare assembly Friend non firmati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)

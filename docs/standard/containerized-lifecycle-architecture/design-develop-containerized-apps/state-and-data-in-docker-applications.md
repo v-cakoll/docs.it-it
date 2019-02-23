@@ -3,51 +3,69 @@ title: Stato e dati nelle applicazioni di Docker
 description: Scopri l'opzione disponibile per salvare lo stato nelle applicazioni in contenitori.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 9d924f0fffca73b57626910bc3c3ca95b4478300
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218749"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745998"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
-Una primitiva di contenitori è immutabilità. Rispetto a una macchina virtuale, i contenitori non interrompersi quando una situazione comune. Una macchina virtuale potrebbe non riuscire in varie forme da processi inattivi, overload della CPU o un disco con registrazione completo o non riuscito. Tuttavia, si prevede che la macchina virtuale sia disponibile e unità RAID sono usuali per assicurare che i dati di gestire errori delle unità.
+Nella maggior parte dei casi è possibile considerare un contenitore come un'istanza di un processo. Un processo non mantiene uno stato persistente. Anche se un contenitore può scrivere la risorsa di archiviazione locale, presupponendo che un'istanza resti disponibile all'infinito è come presupporre che un'unica posizione in memoria sia durevole. Immagini del contenitore, come i processi, devono essere presupposto di installare più istanze e che vengano infine terminate essi; Se vengono gestite con un agente di orchestrazione del contenitore, si deve presupporre di poter essere spostate da un nodo o della macchina virtuale a un altro.
 
-Tuttavia, i contenitori considerati come istanze dei processi. Un processo non mantiene lo stato durevole. Anche se un contenitore può scrivere la risorsa di archiviazione locale, presupponendo che l'istanza resti disponibile all'infinito corrisponderebbe a presupponendo che una copia singola memoria sia durevole. Si deve presupporre che i contenitori, come i processi, vengono duplicati, abbattuti o, quando gestito con un agente di orchestrazione del contenitore, potrebbero essere spostati.
+Le soluzioni seguenti vengono usate per gestire i dati persistenti nelle applicazioni di Docker:
 
-Docker Usa una funzionalità nota come un *sovrimpressione di file system* per implementare un processo di copia su scrittura che archivia le informazioni aggiornate nel file System radice di un contenitore, rispetto all'immagine originale su cui è basato. Queste modifiche vengono perse se il contenitore viene successivamente eliminato dal sistema. Un contenitore, pertanto, non è un archivio permanente per impostazione predefinita. Sebbene sia possibile salvare lo stato di un contenitore, la progettazione di un sistema di risoluzione di questo problema sarà in conflitto con il principio di architettura a contenitori.
+Dall'host Docker, come [volumi Docker](https://docs.docker.com/engine/admin/volumes/):
 
-Per gestire i dati persistenti nelle applicazioni di Docker, sono disponibili soluzioni comuni:
+- **Volumi** vengono archiviati in un'area del file System host gestito da Docker.
 
--   [**I volumi di dati**](https://docs.docker.com/engine/tutorials/dockervolumes/) questi montati nell'host, quanto appena descritto.
+- **Associare i punti di montaggio** può eseguire il mapping a qualsiasi cartella nel file System host, in modo che l'accesso non può essere controllato da un processo di Docker e può comportare un rischio di sicurezza come un contenitore è stato possibile accedere alle cartelle riservate del sistema operativo.
 
--   [**I contenitori dei volumi di dati**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) offrono archiviazione condivisa tra contenitori, usando un contenitore esterno che può scorrere.
+- I **montaggi di tipo tmpfs** sono come cartelle virtuali presenti solo nella memoria dell'host e non vengono mai scritte nel file system.
 
--   [**I plug-in di volume**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) questi montare i volumi a sedi remote, che fornisce la persistenza a lungo termine.
+Dall'archiviazione remota:
 
--   **Origini dati remote** esempi includono i database SQL e NO-SQL o servizi di cache come Redis.
+- [Archiviazione di Azure](https://azure.microsoft.com/documentation/services/storage/) fornisce l'archiviazione geo-distribuibile, che fornisce un'ottima soluzione di persistenza a lungo termine per i contenitori.
 
--   [**Archiviazione di Azure**](https://docs.microsoft.com/azure/storage/) questa fornisce geografica distribuibile piattaforma come una risorsa di archiviazione del servizio (PaaS), che offre il meglio dei contenitori di persistenza come a lungo termine.
+- Database relazionali remoti come [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/), i database NoSQL come [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), o servizi, ad esempio di cache [Redis](https://redis.io/).
 
-I volumi di dati in modo speciale designati directory all'interno di uno o più contenitori che ignorano il [unione File System](https://docs.docker.com/glossary/?term=Union%20file%20system). I volumi di dati sono progettati per gestire i dati, indipendentemente dal ciclo di vita del contenitore. Docker pertanto mai eliminati automaticamente i volumi quando si rimuovere un contenitore, né verranno "garbage raccogliere" volumi che non fanno riferimento non è più un contenitore. Il sistema operativo host può esplorare e modificare i dati in qualsiasi volume liberamente, che è semplicemente un altro motivo per utilizzare i volumi di dati in modo sporadico.
+Dal contenitore Docker:
 
-Oggetto [contenitore di volumi di dati](https://docs.docker.com/glossary/?term=volume) rappresenta una miglioria normali volumi di dati. È sostanzialmente un contenitore inattivo che ha creati all'interno di esso, come descritto in precedenza, uno o più volumi di dati. Il contenitore del volume di dati fornisce l'accesso ai contenitori da un punto di montaggio centrale. Il vantaggio di questo metodo di accesso è che estrae il percorso dei dati originali, rendendo il contenitore di dati di un punto di montaggio logico. Consente inoltre di contenitori "applicazione" l'accesso a volumi di contenitore di dati per essere creati ed eliminati, mantenendo i dati persistenti in un contenitore dedicato.
+- Docker offre una funzionalità denominata *sovrimpressione di file system*. Questa funzione implementa un'attività di copia su scrittura che archivia le informazioni aggiornate nel file System radice del contenitore. Tali informazioni "imposta il layout nella parte superiore del" l'immagine originale su cui si basa il contenitore. Se il contenitore viene eliminato dal sistema, le modifiche andranno perdute. Pertanto, sebbene sia possibile salvare lo stato di un contenitore nell'archiviazione locale, la progettazione di un sistema basato su questa funzionalità genererebbe un conflitto con il presupposto di progettazione di contenitori, che per impostazione predefinita è senza stato.
 
-Figura 4-5 mostra che i volumi Docker normali possono essere inseriti nell'archivio i contenitori stessi ma all'interno dei limiti fisici/macchine Virtuali server host. *I volumi docker non hanno la possibilità di usare un volume da un host server/macchine Virtuali a un altro*.
+- Tuttavia, i volumi Docker è ora il modo migliore per gestire i dati locali in Docker. Se sono necessarie altre informazioni sull'archiviazione in contenitori, controllare [i driver di archiviazione di Docker](https://docs.docker.com/engine/userguide/storagedriver/) e [sulle immagini, contenitori e i driver di archiviazione](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/).
 
-![](./media/image5.png)
+Nelle sezioni che seguono vengono fornite ulteriori informazioni su queste opzioni.
 
-Figura 4-5: I volumi di dati e origini dati esterne per i contenitori. app/contenitori
+I **volumi di dati** sono directory associate dal sistema operativo host alle directory nei contenitori. Quando il codice nel contenitore accede alla directory, in realtà accede a una directory nel sistema operativo host. Questa directory non è associata alla durata del contenitore stesso, viene gestita da Docker e isolata dalla funzionalità principale del computer host. Di conseguenza, i volumi di dati sono progettati per rendere persistenti i dati in modo indipendente dalla durata del contenitore. Se si elimina un contenitore o un'immagine dall'host Docker, i dati persistenti nel volume di dati non vengono eliminati.
 
-A causa dell'impossibilità di gestire i dati condivisi tra contenitori che vengono eseguiti in host fisici separati, è consigliabile non usare volumi per i dati aziendali, a meno che l'host Docker è una host predefinita/VM, perché quando si usano i contenitori Docker in un agente di orchestrazione i contenitori devono essere spostati da uno a un altro host, a seconda delle ottimizzazioni da eseguire dal cluster.
+I volumi possono essere denominati o possono essere anonimi (opzione predefinita). I volumi denominati rappresentano l'evoluzione dei **contenitori dei volumi di dati** e semplificano la condivisione dei dati tra contenitori. Volumi supportano anche i driver di volume che consentono di archiviare i dati in host remoti, tra le altre opzioni.
 
-Pertanto, i normali volumi di dati sono un meccanismo appropriato per lavorare con i file di traccia, file temporali o qualsiasi concetto simile che non interessano la coerenza dei dati aziendali se o quando i contenitori vengono spostati tra più host.
+**Associare i punti di montaggio** sono disponibili da molto tempo e consentire il mapping di qualsiasi cartella da un punto di montaggio in un contenitore. I montaggi di associazione presentano più limitazioni rispetto ai volumi e generano alcuni problemi importanti in termini di sicurezza. È quindi consigliabile usare i volumi.
 
-[Plug-in di volume](https://docs.docker.com/engine/extend/plugins_volume/) forniscono dati in tutti gli host in un cluster. Anche se non tutti i plug-in di volume vengono creati in modo uniforme, plug-in di volume in genere forniscono archiviazione affidabile, persistente esternalizzata dai contenitori non modificabili.
+**`tmpfs` Consente di montare** sono cartelle virtuali attivi solo in memoria dell'host e non vengono mai scritti nel file System. Sono sicuri e veloci, consumano la memoria e sono applicabili solo a dati non permanenti.
 
-Origini dati remote e le cache, ad esempio Database SQL, DocumentDB o cache remote come Redis sarà quello utilizzato per lo sviluppo senza contenitori. Questo è uno dei modi Preferiti e collaudati per archiviare i dati di business dell'applicazione.
+Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi, non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in diversi host Docker, anche se può essere raggiunto con un driver di volume che supporta host remoti.
+
+![I volumi possono essere condivisi tra contenitori, ma solo nello stesso host, a meno che non si usi un driver remoto che supporta host remoti. ](./media/image5.png)
+
+**Figura 4-5**. Volumi di dati e origini dati esterne per applicazioni basate su contenitore
+
+Quando i contenitori Docker vengono gestiti da un agente di orchestrazione, i contenitori possono anche "spostarsi" tra gli host, a seconda delle ottimizzazioni eseguite dal cluster. Non è quindi consigliabile usare i volumi di dati per i dati aziendali. Ma sono un meccanismo appropriato per lavorare con file di traccia, file temporali, o simile, che non influirà sulla coerenza dei dati aziendali.
+
+**Gli strumenti per le origini dati remote e la cache**, ad esempio i database SQL di Azure, Azure Cosmos DB o le cache remote come Redis, possono essere usati nelle applicazioni incluse in contenitori allo stesso modo con cui vengono usati durante lo sviluppo senza contenitori. Si tratta di un modo consolidato per archiviare i dati delle applicazioni aziendali.
+
+**Archiviazione di Azure.** I dati di business devono in genere si trovino in risorse esterne o i database, come archiviazione di Azure. Archiviazione di Azure offre i servizi seguenti nel cloud:
+
+- L'archiviazione BLOB archivia i dati oggetto non strutturati. Un BLOB può essere costituito da qualsiasi tipo di dati di testo o binari, ad esempio documenti o file multimediali (file di immagini, audio e video). L'archiviazione BLOB viene chiamata anche archiviazione di oggetti.
+
+- Archiviazione file offre un'archiviazione condivisa per le applicazioni che usano il protocollo SMB standard. Le macchine virtuali di Azure e i servizi cloud possono condividere i dati dei file nei componenti delle applicazioni tramite condivisioni montate. Applicazioni locali possono accedere i dati dei file in una condivisione tramite l'API REST di servizi File.
+
+- L'archiviazione tabelle archivia i set di dati strutturati. L'archiviazione tabelle è un archivio dati chiave-attributo NoSQL, che consente di sviluppare e di accedere rapidamente a quantità elevate di dati.
+
+**Database relazionali e database NoSQL.** Esistono numerose opzioni per i database esterni, dai database relazionali come SQL Server, PostgreSQL, Oracle o NoSQL ai database NoSQL come Azure Cosmos DB, MongoDB e così via. Questi database non verranno spiegati nell'ambito di questa guida perché sono completamente un altro argomento.
 
 >[!div class="step-by-step"]
 >[Precedente](monolithic-applications.md)

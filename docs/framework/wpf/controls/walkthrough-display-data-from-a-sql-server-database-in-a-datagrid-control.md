@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid'
+title: 'Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197136"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748414"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: Visualizzazione dei dati da un database di SQL Server in un controllo DataGrid
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: Visualizzare i dati da un database di SQL Server in un controllo DataGrid
 
 In questa procedura dettagliata, si recuperano dati da un database di SQL Server e visualizzare questi dati in un <xref:System.Windows.Controls.DataGrid> controllo. Si usa ADO.NET Entity Framework per creare le classi di entità che rappresentano i dati e usano LINQ per scrivere una query che recupera i dati specificati da una classe di entità.
 
@@ -75,7 +75,7 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 4.  Selezionare <xref:System.Windows.Window>.
 
-5.  Usando la finestra proprietà o l'editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominate `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per altre informazioni, vedere [procedura: creare un gestore eventi semplice](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+5.  Usando la finestra proprietà o l'editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominate `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per altre informazioni, vedere [Procedura: Creare un gestore eventi semplice](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      Di seguito viene illustrato il XAML per MainWindow. Xaml.
 
@@ -100,4 +100,4 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Come ricerca per categorie: iniziare a usare Entity Framework nelle applicazioni WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [Procedura: Introduzione a Entity Framework nelle applicazioni WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)
