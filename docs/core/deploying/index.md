@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266910"
 ---
 # <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
@@ -30,7 +24,7 @@ Per una distribuzione dipendente dal framework, vengono distribuite solo l'app e
 
 Una distribuzione dipendente dal framework offre numerosi vantaggi:
 
-- Non è necessario definire in anticipo i sistemi operativi di destinazione in cui verrà eseguita l'app .NET Core. Poiché .NET Core usa un formato di file PE comune per gli eseguibili e le librerie indipendentemente dal sistema operativo, .NET Core può eseguire l'app indipendentemente dal sistema operativo sottostante. Per altre informazioni sul formato di file PE, vedere [.NET Assembly File Format](../../standard/assembly-format.md) (Formato del file di assembly .NET).
+- Non è necessario definire in anticipo i sistemi operativi di destinazione in cui verrà eseguita l'app .NET Core. Poiché .NET Core usa un formato di file PE comune per gli eseguibili e le librerie indipendentemente dal sistema operativo, .NET Core può eseguire l'app indipendentemente dal sistema operativo sottostante. Per altre informazioni sul formato di file PE, vedere [.NET Assembly File Format](../../standard/assembly/file-format.md) (Formato del file di assembly .NET).
 
 - La dimensione del pacchetto di distribuzione è ridotta. È sufficiente distribuire l'app e le relative dipendenze, non .NET Core.
 
