@@ -3,12 +3,12 @@ title: Documentazione del codice con i commenti XML
 description: Informazioni su come documentare il codice con commenti della documentazione XML e generare un file di documentazione XML in fase di compilazione.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271356"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583706"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentazione del codice con i commenti XML
 
@@ -194,9 +194,9 @@ Ora che i commenti XML si trovano in un file separato, di seguito viene illustra
 
 Infine si avrà un codice di nuovo leggibile e nessuna informazione sulla documentazione è andata persa.
 
-L'attributo `filename` rappresenta il nome del file XML che contiene la documentazione.
+L'attributo `file` rappresenta il nome del file XML che contiene la documentazione.
 
-L'attributo `path` rappresenta una query [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) nel presente `tag name` del `filename` specificato.
+L'attributo `path` rappresenta una query [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) nel presente `tag name` del `file` specificato.
 
 L'attributo `name` rappresenta l'identificatore di nome nel tag che precede i commenti.
 

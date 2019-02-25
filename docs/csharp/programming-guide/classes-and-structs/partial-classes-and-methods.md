@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713315"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441671"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 È possibile suddividere la definizione di una [classe](../../../csharp/language-reference/keywords/class.md) di uno [struct](../../../csharp/language-reference/keywords/struct.md), di un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) o di un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.  
@@ -110,15 +110,15 @@ ms.locfileid: "54713315"
   
 ## <a name="example-1"></a>Esempio 1  
   
-### <a name="description"></a>Description  
- Nell'esempio seguente i campi e il costruttore della classe `CoOrds` vengono dichiarati in una definizione parziale di classe, mentre il membro `PrintCoOrds` viene dichiarato in un'altra definizione parziale di classe.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente i campi e il costruttore della classe `Coords` vengono dichiarati in una definizione parziale di classe, mentre il membro `PrintCoords` viene dichiarato in un'altra definizione parziale di classe.  
   
 ### <a name="code"></a>Codice  
  [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## <a name="example-2"></a>Esempio 2  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  L'esempio seguente dimostra che è anche possibile sviluppare struct e interfacce parziali.  
   
 ### <a name="code"></a>Codice  
