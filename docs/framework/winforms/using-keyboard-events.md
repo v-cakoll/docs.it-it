@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614595"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665251"
 ---
 # <a name="using-keyboard-events"></a>Utilizzo degli eventi di tastiera
-La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi. Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Cenni preliminari sugli eventi (Windows Form)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi. Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
   
 ## <a name="keyboard-events"></a>Eventi della tastiera  
  Windows Form include due eventi che si verificano quando un utente preme un tasto e un evento che si verifica quando un utente rilascia un tasto:  
