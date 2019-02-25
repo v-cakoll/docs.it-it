@@ -31,7 +31,8 @@
 ### [Portability Analyzer](standard/analyzers/portability-analyzer.md)
 ### [Framework Analyzer](standard/analyzers/framework-analyzer.md)
 ## [Gestione e generazione di eccezioni](standard/exceptions/)
-## [Formato dei file di assembly .NET](standard/assembly-format.md)
+## [Assembly in .NET](standard/assembly/index.md)
+### [Formato dei file di assembly .NET](standard/assembly/file-format.md) 
 ## [Garbage Collection](standard/garbage-collection/)
 ## [Tipi generici](standard/generics.md)
 ## [Delegati e lambda](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [Personalizzazione degli oggetti disponibili in My](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Nozioni di base sulla programmazione](visual-basic/programming-guide/concepts/index.md)
-### [Assembly e Global Assembly Cache](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [Assembly in .NET](standard/assembly/index.md)
 ### [Programmazione asincrona con Async e Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Attributi](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [Alberi delle espressioni](visual-basic/programming-guide/concepts/expression-trees/index.md)
