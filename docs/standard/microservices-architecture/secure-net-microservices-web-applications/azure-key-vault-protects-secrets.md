@@ -4,12 +4,12 @@ description: Sicurezza in microservizi .NET e applicazioni Web - Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: fd2bff04e06bf0561ee0c95d87978f834f192172
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362419"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664042"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usare Azure Key Vault per proteggere i segreti in fase di produzione
 
@@ -46,8 +46,8 @@ Il pacchetto **Microsoft.Extensions.Configuration.AzureKeyVault** consente alle 
 - **Configurazione della protezione dati** \
   [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
-- **Gestione e durata delle chiavi** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+- **Gestione e durata delle chiavi di protezione dati in ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings*](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - Repository GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
   [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)

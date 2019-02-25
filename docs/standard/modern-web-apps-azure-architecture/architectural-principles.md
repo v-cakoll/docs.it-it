@@ -3,13 +3,13 @@ title: Principi architetturali
 description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Principi architetturali
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828098"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442984"
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
@@ -99,21 +99,10 @@ I **contesti limitati** sono un criterio centrale nell'approccio Domain-driven d
 
 Come minimo, ogni singola applicazione web deve puntare ad essere il proprio contesto limitato, con un archivio di persistenza per il proprio modello di business, piuttosto che condividere un database con altre applicazioni. La comunicazione tra contesti limitati non avviene tramite un database condiviso bensì tramite interfacce di programmazione che consentono la generazione di eventi e logica di business in risposta alle modifiche che si verificano. I contesti limitati sono strettamente mappati a microservizi, anch'essi idealmente implementati come singoli contesti limitati.
 
-> ### <a name="references--modern-web-applications"></a>Riferimenti: applicazioni Web moderne
-> - **Separazione dei concetti**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Incapsulamento**  
-> <https://deviq.com/encapsulation/>
-> - **Principio di inversione delle dipendenze**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Explicit Dependencies Principle** (Principio delle dipendenze esplicite)  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Don't Repeat Yourself (DRY)**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Mancato riconoscimento della persistenza**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Contesti limitati**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Risorse aggiuntive
+
+* [Schemi progettuali JAVA: principi](https://java-design-patterns.com/principles/)
+* [Contesti limitati](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Precedente](choose-between-traditional-web-and-single-page-apps.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722712"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665095"
 ---
 # <a name="custom-timespan-format-strings"></a>Stringhe di formato TimeSpan personalizzate
 
@@ -43,7 +43,7 @@ Le stringhe in formato <xref:System.TimeSpan> personalizzato sono usate anche da
 
 <a name="table"></a> La tabella seguente descrive gli identificatori di formato di data e ora personalizzati.
 
-| Identificatore di formato | Description | Esempio |
+| Identificatore di formato | Descrizione | Esempio |
 |----------------------|-----------------|-------------|
 |"d", "%d"|Il numero di giorni completi nell'intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|Il numero di giorni completi nell'intervallo di tempo, con il numero di zeri necessari all'inizio.<br /><br /> Altre informazioni: [Identificatori di formato personalizzato "dd"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -51,15 +51,15 @@ Le stringhe in formato <xref:System.TimeSpan> personalizzato sono usate anche da
 |"hh"|Il numero di ore complete nell'intervallo di tempo non conteggiate come parti di giorni. Le ore a una sola cifra hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "hh"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
 |"m", "%m"|Il numero di minuti completi nell'intervallo di tempo non conteggiati come parti di ore o di giorni. I minuti a una sola cifra non hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
 |"mm"|Il numero di minuti completi nell'intervallo di tempo non conteggiati come parti di ore o di giorni. I minuti a una sola cifra hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "mm"](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
-|"s", "%s"|Il numero di secondi completi nell'intervallo di tempo non conteggiati come parti di minuti, ore o giorni. I secondi a una sola cifra non hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
-|"ss"|Il numero di secondi completi nell'intervallo di tempo non conteggiati come parti di minuti, ore o giorni.  I secondi a una sola cifra hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
-|"f", "%f"|I decimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|"ff"|I centesimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
-|"fff"|I millisecondi in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
+|"s", "%s"|Il numero di secondi completi nell'intervallo di tempo non conteggiati come parti di minuti, ore o giorni. I secondi a una sola cifra non hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12,965|
+|"ss"|Il numero di secondi completi nell'intervallo di tempo non conteggiati come parti di minuti, ore o giorni.  I secondi a una sola cifra hanno uno zero iniziale.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06,965|
+|"f", "%f"|I decimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06,8|
+|"ff"|I centesimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06,89|
+|"fff"|I millisecondi in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06,895|
 |"ffff"|I decimillesimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
-|"fffff"|I centesimi di millesimo di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
-|"ffffff"|I milionesimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ffffff"](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|
-|"fffffff"|I decimilionesimi di secondo (o il numero frazionario di tick) in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
+|"fffff"|I centesimi di millesimo di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06,89543|
+|"ffffff"|I milionesimi di secondo in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "ffffff"](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06,895432|
+|"fffffff"|I decimilionesimi di secondo (o il numero frazionario di tick) in un intervallo di tempo.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06,8954321|
 |"F", "%F"|I decimi di secondo in un intervallo di tempo. Se la cifra è zero, non viene prodotta alcuna visualizzazione.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "F"](#F_Specifier).|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|
 |"FF"|I centesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari o doppi zeri non sono inclusi.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FF"](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|
 |"FFF"|I millisecondi in un intervallo di tempo. Eventuali zeri finali frazionari non sono inclusi.<br /><br /> Altre informazioni:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|
@@ -68,7 +68,7 @@ Le stringhe in formato <xref:System.TimeSpan> personalizzato sono usate anche da
 |"FFFFFF"|I milionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|I decimilionesimi di secondo in un intervallo di tempo. Eventuali zeri finali frazionari o gruppi di sette zeri non sono visualizzati.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
 |'*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|\\|Il carattere di escape.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|&#92;|Carattere di escape.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Qualsiasi altro carattere|Qualsiasi altro carattere senza escape viene interpretato come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Altri caratteri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 
