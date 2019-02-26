@@ -3,21 +3,15 @@ title: I/O di file e di flussi - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279474"
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 
@@ -27,7 +21,7 @@ Un file è una raccolta ordinata e denominata di byte con archivio permanente. Q
 
 ## <a name="files-and-directories"></a>File e directory
 
-È possibile usare i tipi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType> per interagire con i file e le directory. Ad esempio, è possibile ottenere e impostare le proprietà dei file e delle directory e recuperare le raccolte di file e directory in base ai criteri di ricerca.
+È possibile utilizzare i tipi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType> per interagire con i file e le directory. Ad esempio, è possibile ottenere e impostare le proprietà dei file e delle directory e recuperare le raccolte di file e directory in base ai criteri di ricerca.
 
 Per le convenzioni di denominazione dei percorsi e i modi in cui esprimere un percorso di file per i sistemi Windows, con la sintassi dei dispositivi DOS supportata in .NET Core 1.1 e versioni successive e .NET Framework 4.6.2 e versioni successive, vedere [Formati dei percorsi di file nei sistemi Windows](file-path-formats.md).
 
@@ -37,7 +31,7 @@ Di seguito sono riportate alcune classi di file e directory comunemente usate:
 
 - <xref:System.IO.FileInfo>: fornisce metodi di istanza per la creazione, la copia, l'eliminazione, lo spostamento e l'apertura di file; inoltre facilita la creazione di un oggetto <xref:System.IO.FileStream>.
 
-- <xref:System.IO.Directory>: consente di usare metodi statici per la creazione, lo spostamento e l'enumerazione di directory e sottodirectory.
+- <xref:System.IO.Directory>: consente di utilizzare metodi statici per la creazione, lo spostamento e l'enumerazione di directory e sottodirectory.
 
 - <xref:System.IO.DirectoryInfo>: consente di usare metodi di istanza per la creazione, lo spostamento e l'enumerazione di directory e sottodirectory.
 
@@ -47,7 +41,7 @@ Di seguito sono riportate alcune classi di file e directory comunemente usate:
 
 Oltre a usare queste classi, gli utenti di Visual Basic possono usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> per l'I/O di file.
 
-Vedere [Procedura: Copiare le directory](how-to-copy-directories.md), [Procedura: Creare una visualizzazione directory](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: Enumerare directory e file](how-to-enumerate-directories-and-files.md).
+Vedere [How to: Copiare le directory](how-to-copy-directories.md), [Procedura: Creare una visualizzazione directory](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) e [Procedura: Enumerare directory e file](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Flussi
 
@@ -95,7 +89,7 @@ Di seguito sono riportate alcune classi comunemente usate di reader e writer:
 
 - <xref:System.IO.TextReader> e <xref:System.IO.TextWriter>: fungono da classi base astratte per gli altri reader e writer che leggono e scrivono caratteri e stringhe, ma non dati binari.
 
-Vedere [Procedura: Leggere testo da un file](how-to-read-text-from-a-file.md), [Procedura: Scrivere un testo in un file](how-to-write-text-to-a-file.md), [Procedura: Leggere caratteri da una stringa](how-to-read-characters-from-a-string.md) e [Procedura: Scrivere caratteri in una stringa](how-to-write-characters-to-a-string.md).
+Vedere [How to: Leggere testo da un file](how-to-read-text-from-a-file.md), [Procedura: Scrivere un testo in un file](how-to-write-text-to-a-file.md), [Procedura: Leggere caratteri da una stringa](how-to-read-characters-from-a-string.md) e [Procedura: Scrivere caratteri in una stringa](how-to-write-characters-to-a-string.md).
 
 ## <a name="asynchronous-io-operations"></a>Operazioni di I/O asincrone
 
@@ -123,7 +117,7 @@ Le classi seguenti vengono spesso usate quando si comprimono e si decomprimono i
 
 - <xref:System.IO.Compression.GZipStream>: per la compressione e la decompressione dei flussi nel formato di dati gzip.
 
-Vedere [Procedura: Comprimere ed estrarre file](how-to-compress-and-extract-files.md).
+Vedere [How to: Comprimere ed estrarre file](how-to-compress-and-extract-files.md).
 
 ## <a name="isolated-storage"></a>Spazio di memorizzazione isolato
 
@@ -133,7 +127,7 @@ Lo spazio di archiviazione isolato non è disponibile per le app [!INCLUDE[win8_
 
 Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage>: fornisce la classe di base per le implementazioni dello spazio di memorizzazione isolato.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage>: fornisce la classe base per le implementazioni dello spazio di memorizzazione isolato.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>: fornisce un'area per lo spazio di memorizzazione isolato che contiene file e directory.
 
@@ -161,7 +155,7 @@ Per altre informazioni sulle operazioni di I/O in un'applicazione [!INCLUDE[win8
 
 ## <a name="io-and-security"></a>I/O e sicurezza
 
-Quando si usano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](how-to-add-or-remove-access-control-list-entries.md).
+Quando si utilizzano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](how-to-add-or-remove-access-control-list-entries.md).
 
 I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
