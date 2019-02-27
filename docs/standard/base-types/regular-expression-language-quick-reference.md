@@ -191,7 +191,7 @@ ms.locfileid: "55204886"
   
 -   Usando il [costrutto vario](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, dove un segno meno (-) prima di un'opzione o di un set di opzioni consente di disattivare tali opzioni. Ad esempio, `(?i-mn)` attiva la non corrispondenza tra maiuscole e minuscole (`i`), disattiva la modalità su più righe (`m`) e disattiva le acquisizioni del gruppo senza nome (`n`). L'opzione si applica al criterio di espressione regolare dal punto in cui l'opzione viene definita e diventa effettiva sia alla fine del criterio sia al punto in cui un altro costrutto annulla l'opzione.  
   
--   Usando il [costrutto di raggruppamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
+-   Usando il [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
   
  Il motore delle espressioni regolari di .NET supporta le seguenti opzioni inline.  
   
