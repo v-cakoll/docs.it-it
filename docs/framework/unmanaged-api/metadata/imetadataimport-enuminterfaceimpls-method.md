@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603768"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836266"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Metodo IMetaDataImport::EnumInterfaceImpls
-Enumera i token MethodDef che rappresentano le implementazioni dell'interfaccia.  
+Enumera tutte le interfacce implementate dall'oggetto specificato `TypeDef`. 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `phEnum`  
  [in, out] Un puntatore all'enumeratore.  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` stato restituito correttamente.|  
 |`S_FALSE`|Non sono presenti token MethodDef per enumerare. In tal caso, `pcImpls` è impostato su zero.|  
+
+## <a name="remarks"></a>Note
+
+L'enumerazione restituisce una raccolta di `mdInterfaceImpl` i token per ogni interfaccia implementata dalla classe specificata `TypeDef`. I token di interfaccia vengono restituiti nell'ordine le interfacce sono state specificate (tramite `DefineTypeDef` o `SetTypeDefProps`). Proprietà del valore restituito `mdInterfaceImpl` token è possibile eseguire query usando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

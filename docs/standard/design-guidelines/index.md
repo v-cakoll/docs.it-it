@@ -45,5 +45,4 @@ In questa sezione vengono fornite linee guida per la progettazione di librerie c
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica](../../../docs/framework/get-started/overview.md)
-- [Guida di orientamento a .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guida di sviluppo](../../../docs/framework/development-guide.md)
