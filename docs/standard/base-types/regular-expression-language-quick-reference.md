@@ -68,7 +68,7 @@ ms.locfileid: "55204886"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Classi di caratteri  
- Una classe di caratteri trova la corrispondenza con uno qualsiasi di un set di caratteri. Le classi di caratteri includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Una classe di caratteri trova la corrispondenza con uno qualsiasi di un set di caratteri. Le classi di caratteri includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Classe di caratteri|Description|Modello|Corrispondenze|  
 |---------------------|-----------------|-------------|-------------|  
@@ -105,15 +105,15 @@ ms.locfileid: "55204886"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Costrutti di raggruppamento  
- I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e in genere acquisiscono sottostringhe di una stringa di input. I costrutti di raggruppamento includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e in genere acquisiscono sottostringhe di una stringa di input. I costrutti di raggruppamento includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md).  
   
 |Costrutto di raggruppamento|Description|Modello|Corrispondenze|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sottoespressione* `)`|Acquisisce la sottoespressione corrispondente e le assegna un numero ordinale in base uno.|`(\w)\1`|"ee" in "deep"|  
 |`(?<` *nome* `>` *sottoespressione* `)`|Acquisisce la sottoespressione corrispondente in un gruppo denominato.|`(?<double>\w)\k<double>`|"ee" in "deep"|  
-|`(?<` *nome1* `-` *nome2* `>` *sottoespressione* `)`|Definisce una definizione di gruppo di bilanciamento Per altre informazioni, vedere la sezione "Definizioni di gruppo di bilanciamento" in [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"|  
+|`(?<` *nome1* `-` *nome2* `>` *sottoespressione* `)`|Definisce una definizione di gruppo di bilanciamento Per altre informazioni, vedere la sezione "Definizioni di gruppo di bilanciamento" in [Costrutti di raggruppamento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"|  
 |`(?:` *sottoespressione* `)`|Definisce un gruppo di non acquisizione.|`Write(?:Line)?`|"WriteLine" in "Console.WriteLine()"<br /><br /> "Write" in "Console.Write(value)"|  
-|`(?imnsx-imnsx:` *sottoespressione* `)`|Applica o disabilita le opzioni specificate in *sottoespressione*. Per altre informazioni, vedere [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" in "A12xl A12XL a12xl"|  
+|`(?imnsx-imnsx:` *sottoespressione* `)`|Applica o disabilita le opzioni specificate in *sottoespressione*. Per altre informazioni, vedere [Opzioni di espressioni regolari](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" in "A12xl A12XL a12xl"|  
 |`(?=` *sottoespressione* `)`|Asserzione lookahead positiva di larghezza zero.|`\w+(?=\.)`|"is", "ran" e "out" in "He is. The dog ran. The sun is out."|  
 |`(?!` *sottoespressione* `)`|Asserzione lookahead negativa di larghezza zero.|`\b(?!un)\w+\b`|"sure", "used" in "unsure sure unity used"|  
 |`(?<=` *sottoespressione* `)`|Asserzione lookbehind positiva di larghezza zero.|`(?<=19)\d{2}\b`|"99", "50", "05" in "1851 1999 1950 1905 2003"|  
@@ -124,7 +124,7 @@ ms.locfileid: "55204886"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantificatori  
- Un quantificatore specifica il numero di istanze dell'elemento precedente, che può essere un carattere, un gruppo o una classe di caratteri, che devono essere presenti nella stringa di input affinché venga trovata una corrispondenza. I quantificatori includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Quantifiers](quantifiers-in-regular-expressions.md).  
+ Un quantificatore specifica il numero di istanze dell'elemento precedente, che può essere un carattere, un gruppo o una classe di caratteri, che devono essere presenti nella stringa di input affinché venga trovata una corrispondenza. I quantificatori includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Quantificatori](quantifiers-in-regular-expressions.md).  
   
 |Quantificatore|Description|Modello|Corrispondenze|  
 |----------------|-----------------|-------------|-------------|  
@@ -145,7 +145,7 @@ ms.locfileid: "55204886"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Costrutti di backreference  
- Un backreference consente a una sottoespressione di cui è stata trovata la corrispondenza in precedenza di essere identificata successivamente nella stessa espressione regolare. Nella tabella seguente sono elencati i costrutti di backreference supportati dalle espressioni regolari in .NET. Per altre informazioni, vedere [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
+ Un backreference consente a una sottoespressione di cui è stata trovata la corrispondenza in precedenza di essere identificata successivamente nella stessa espressione regolare. Nella tabella seguente sono elencati i costrutti di backreference supportati dalle espressioni regolari in .NET. Per altre informazioni, vedere [Costrutti di backreference](backreference-constructs-in-regular-expressions.md).  
   
 |Costrutto di backreference|Description|Modello|Corrispondenze|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "55204886"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Costrutti di alternanza  
- I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or. Questi costrutti includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
+ I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or. Questi costrutti includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Costrutti di alternanza](alternation-constructs-in-regular-expressions.md).  
   
 |Costrutto di alternanza|Description|Modello|Corrispondenze|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -168,7 +168,7 @@ ms.locfileid: "55204886"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Sostituzioni  
- Le sostituzioni sono elementi del linguaggio di espressioni regolari supportati nei modelli di sostituzione. Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md). I metacaratteri elencati nella tabella seguente sono asserzioni atomiche di larghezza zero.  
+ Le sostituzioni sono elementi del linguaggio di espressioni regolari supportati nei modelli di sostituzione. Per altre informazioni, vedere [Sostituzioni](substitutions-in-regular-expressions.md). I metacaratteri elencati nella tabella seguente sono asserzioni atomiche di larghezza zero.  
   
 |Carattere|Description|Modello|Modello di sostituzione|Stringa di input|Stringa di risultato|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -185,29 +185,29 @@ ms.locfileid: "55204886"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opzioni di espressioni regolari  
- È possibile specificare opzioni che controllano il modo in cui il motore delle espressioni regolari interpreta un criterio di espressione regolare. Molte di queste opzioni possono essere specificate inline (nel criterio di espressione regolare) o come uno o più costanti <xref:System.Text.RegularExpressions.RegexOptions> . Questa guida di riferimento rapida elenca solo le opzioni inline. Per altre informazioni sulle opzioni inline e <xref:System.Text.RegularExpressions.RegexOptions> , vedere l'articolo [Regular Expression Options](regular-expression-options.md).  
+ È possibile specificare opzioni che controllano il modo in cui il motore delle espressioni regolari interpreta un criterio di espressione regolare. Molte di queste opzioni possono essere specificate inline (nel criterio di espressione regolare) o come uno o più costanti <xref:System.Text.RegularExpressions.RegexOptions> . Questa guida di riferimento rapida elenca solo le opzioni inline. Per altre informazioni sulle opzioni inline e <xref:System.Text.RegularExpressions.RegexOptions> , vedere l'articolo [Opzioni di espressioni regolari](regular-expression-options.md).  
   
  È possibile specificare un'opzione inline in due modi:  
   
 -   Usando il [costrutto vario](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, dove un segno meno (-) prima di un'opzione o di un set di opzioni consente di disattivare tali opzioni. Ad esempio, `(?i-mn)` attiva la non corrispondenza tra maiuscole e minuscole (`i`), disattiva la modalità su più righe (`m`) e disattiva le acquisizioni del gruppo senza nome (`n`). L'opzione si applica al criterio di espressione regolare dal punto in cui l'opzione viene definita e diventa effettiva sia alla fine del criterio sia al punto in cui un altro costrutto annulla l'opzione.  
   
--   Usando il [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
+-   Usando il [costrutto di raggruppamento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sottoespressione*`)`, che definisce le opzioni solo per il gruppo specificato.  
   
  Il motore delle espressioni regolari di .NET supporta le seguenti opzioni inline.  
   
 |Opzione|Description|Modello|Corrispondenze|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Usa la corrispondenza che non fa distinzione tra maiuscole e minuscole.|`\b(?i)a(?-i)a\w+\b`|"aardvark", "aaaAuto" in "aardvark AAAuto aaaAuto Adam breakfast"|  
-|`m`|Usare la modalità multiriga. `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input.|Ad esempio, vedere la sezione "Modalità multiriga" in [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Non acquisire gruppi senza nome.|Per un esempio, vedere la sezione "Solo acquisizioni esplicite" in [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Usare la modalità a riga singola.|Per un esempio, vedere la sezione "Modalità a riga singola" in [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Usare la modalità multiriga. `^` e `$` corrispondono all'inizio e alla fine di una riga, anziché all'inizio e alla fine della stringa di input.|Ad esempio, vedere la sezione "Modalità multiriga" in [Opzioni di espressioni regolari](regular-expression-options.md).||  
+|`n`|Non acquisire gruppi senza nome.|Per un esempio, vedere la sezione "Solo acquisizioni esplicite" in [Opzioni di espressioni regolari](regular-expression-options.md).||  
+|`s`|Usare la modalità a riga singola.|Per un esempio, vedere la sezione "Modalità a riga singola" in [Opzioni di espressioni regolari](regular-expression-options.md).||  
 |`x`|Ignorare gli spazi vuoti non di escape nel criterio di espressione regolare.|`\b(?x) \d+ \s \w+`|"1 aardvark", "2 cats" in "1 aardvark 2 cats IV centurions"|  
   
  [Torna all'inizio](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Costrutti vari  
- I costrutti vari consentono di modificare un criterio di espressione regolare o forniscono informazioni su di esso. Nella tabella seguente sono elencati i costrutti vari supportati da .NET. Per altre informazioni, vedere [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
+ I costrutti vari consentono di modificare un criterio di espressione regolare o forniscono informazioni su di esso. Nella tabella seguente sono elencati i costrutti vari supportati da .NET. Per altre informazioni, vedere [Costrutti vari](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Costrutto|Definizione|Esempio|  
 |---------------|----------------|-------------|  
