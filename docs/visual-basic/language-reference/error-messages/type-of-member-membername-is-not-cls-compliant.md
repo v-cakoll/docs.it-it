@@ -1,5 +1,5 @@
 ---
-title: Il tipo di membro "<membername>" non è conforme a CLS
+title: Il tipo di membro '<membername>' non è conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
