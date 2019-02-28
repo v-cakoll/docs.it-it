@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: e2838b6473b8c00927073a530b4b49870fcfa9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96941754f17326893437cdcf83c588880e010cc0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600381"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979507"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversione di tipo relaxed del delegato (Visual Basic)
 Conversione di tipo relaxed del delegato consente di assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche. Pertanto, l'associazione ai delegati diventa coerenti con l'associazione già consentito per le chiamate ai metodi.  
@@ -21,32 +21,32 @@ Conversione di tipo relaxed del delegato consente di assegnare subroutine e funz
   
 -   Deve esistere una conversione verso un dal tipo di dati di ogni parametro del delegato per il tipo di dati del parametro corrispondente della funzione assegnata o `Sub`. Nell'esempio seguente, il delegato `Del1` ha un parametro, un `Integer`. Parametro `m` nell'espressione lambda assegnata espressioni devono presentare un tipo di dati per il quale viene eseguita una conversione widening dal `Integer`, ad esempio `Long` o `Double`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
-     [!code-vb[VbVbalrRelaxedDelegates#2](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#2)]  
   
      Conversioni di Narrowing sono consentite solo quando `Option Strict` è impostata su `Off`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#8](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
 -   Deve esistere una conversione verso un nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` nel tipo restituito del delegato. Negli esempi seguenti, deve restituire il corpo di ogni espressione lambda assegnata a un tipo di dati che si amplia in `Integer` perché il tipo restituito di `del1` è `Integer`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#3](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   
  Se `Option Strict` è impostata su `Off`, l'ampliamento restrizione è stata rimossa in entrambe le direzioni.  
   
- [!code-vb[VbVbalrRelaxedDelegates#4](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>Omettendo le specifiche dei parametri  
  Delegati di tipo relaxed consentono anche di omettere completamente le specifiche dei parametri nel metodo assegnato:  
   
- [!code-vb[VbVbalrRelaxedDelegates#5](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#6](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#6)]  
   
  Si noti che non è possibile specificare alcuni parametri e omettere gli altri.  
   
- [!code-vb[VbVbalrRelaxedDelegates#15](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#15)]  
   
  La possibilità di omettere i parametri è utile in situazioni, ad esempio definendo un gestore eventi, in cui sono coinvolti diversi parametri complessi. Gli argomenti per alcuni gestori di eventi non vengono utilizzati. Al contrario, il gestore accede direttamente lo stato del controllo in cui è registrato l'evento e gli argomenti vengono ignorati. Delegati di tipo relaxed consentono di omettere gli argomenti nelle dichiarazioni di questo tipo quando nessun risultato le ambiguità. Nell'esempio seguente, il metodo specificato completamente `OnClick` può essere riscritta come `RelaxedOnClick`.  
   
@@ -65,22 +65,22 @@ End Sub
   
  Nell'esempio seguente, le funzioni `f1`, `f2`, `f3`, e `f4` possono essere assegnati a `Del1`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#7](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#7)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#9](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#9)]  
   
  L'esempio seguente è valido solo quando `Option Strict` è impostata su `Off`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#14](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Eliminazione di elementi restituiti da funzioni  
  Conversione di tipo relaxed del delegato che consente di assegnare una funzione a un `Sub` delegato, in modo efficace, ignorando il valore restituito della funzione. Tuttavia, non è possibile assegnare un `Sub` a un delegato di funzione. Nell'esempio seguente, l'indirizzo della funzione `doubler` viene assegnato a `Sub` delegare `Del3`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#10](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#11](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307526"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981569"
 ---
 # <a name="introducing-xml-serialization"></a>Introduzione alla serializzazione XML
 
@@ -38,7 +38,7 @@ La serializzazione è il processo di conversione di un oggetto in un formato che
 
  La classe **XmlSerializer** può serializzare ulteriormente un oggetto e può generare un flusso XML SOAP codificato. L'elemento XML generato risulta conforme alla sezione 5 del documento "Simple Object Access Protocol (SOAP) 1.1" del World Wide Web Consortium. Per altre informazioni su questo processo, vedere [come: Serializzare un oggetto come un Stream XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Per una tabella degli attributi che controllano l'XML generato, vedere [Attributi per il controllo della serializzazione SOAP codificata](attributes-that-control-encoded-soap-serialization.md).
 
- La classe **XmlSerializer** genera i messaggi SOAP creati dai e passati ai servizi Web XML. Per controllare i messaggi SOAP, è possibile applicare attributi alle classi, ai valori restituiti, ai parametri e ai campi trovati in un file del servizio Web XML (.asmx). È possibile utilizzare entrambi gli attributi elencati in "Attributi per il controllo della serializzazione XML" e "Attributi per il controllo della serializzazione SOAP codificata", dal momento che un servizio Web XML può utilizzare sia lo stile SOAP letterale che quello codificato. Per altre informazioni sull'uso di attributi per controllare l'XML generato da un servizio Web XML, vedere [Serializzazione XML con servizi Web XML](xml-serialization-with-xml-web-services.md). Per altre informazioni sui servizi Web SOAP e XML, vedere [Customizing SOAP Messages](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx) (Personalizzazione dei messaggi SOAP).
+ La classe **XmlSerializer** genera i messaggi SOAP creati dai e passati ai servizi Web XML. Per controllare i messaggi SOAP, è possibile applicare attributi alle classi, ai valori restituiti, ai parametri e ai campi trovati in un file del servizio Web XML (.asmx). È possibile utilizzare entrambi gli attributi elencati in "Attributi per il controllo della serializzazione XML" e "Attributi per il controllo della serializzazione SOAP codificata", dal momento che un servizio Web XML può utilizzare sia lo stile SOAP letterale che quello codificato. Per altre informazioni sull'uso di attributi per controllare l'XML generato da un servizio Web XML, vedere [Serializzazione XML con servizi Web XML](xml-serialization-with-xml-web-services.md). Per altre informazioni sui servizi Web SOAP e XML, vedere [personalizzazione di formattazione dei messaggi SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Considerazioni sulla sicurezza per le applicazioni XmlSerializer
 
