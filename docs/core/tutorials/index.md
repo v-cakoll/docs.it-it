@@ -21,12 +21,12 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
 - [Azure Cosmos DB: introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
-## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con codice di Visual Studio
+## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con Visual Studio Code
 
 - [Introduzione a C# e Visual Studio Code](with-visual-studio-code.md)
 - [Introduzione a .NET Core su macOS](using-on-macos.md)
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>Compilazione di applicazioni con codice di Visual Studio per Mac
+## <a name="building-applications-with-visual-studio-for-mac"></a>Compilazione di applicazioni con Visual Studio Code per Mac
 
 - [Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac](using-on-mac-vs.md)
 - [Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac](using-on-mac-vs-full-solution.md)
