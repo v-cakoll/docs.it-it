@@ -18,17 +18,17 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23e45d00e63c1f50ad2f6d3f08d16adbd13ae2b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568228"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968820"
 ---
-# <a name="ifthenelse-directives"></a><span data-ttu-id="ff6ea-102">Direttive #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="ff6ea-102">#If...Then...#Else Directives</span></span>
-<span data-ttu-id="ff6ea-103">Viene compilata in modo condizionale selezionati blocchi di codice Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
+# <a name="ifthenelse-directives"></a><span data-ttu-id="c6d38-102">Direttive #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="c6d38-102">#If...Then...#Else Directives</span></span>
+<span data-ttu-id="c6d38-103">Viene compilata in modo condizionale selezionati blocchi di codice Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c6d38-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff6ea-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff6ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6d38-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c6d38-104">Syntax</span></span>  
   
 ```  
 #If expression Then  
@@ -43,27 +43,27 @@ ms.locfileid: "54568228"
 #End If  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="ff6ea-105">Parti</span><span class="sxs-lookup"><span data-stu-id="ff6ea-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="c6d38-105">Parti</span><span class="sxs-lookup"><span data-stu-id="c6d38-105">Parts</span></span>  
  `expression`  
- <span data-ttu-id="ff6ea-106">Obbligatorio per `#If` e `#ElseIf` istruzioni facoltative in un' posizione.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="ff6ea-107">Qualsiasi espressione, costituito esclusivamente da uno o più costanti del compilatore condizionale, i valori letterali e gli operatori, che restituisce `True` o `False`.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
+ <span data-ttu-id="c6d38-106">Obbligatorio per `#If` e `#ElseIf` istruzioni facoltative in un' posizione.</span><span class="sxs-lookup"><span data-stu-id="c6d38-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="c6d38-107">Qualsiasi espressione, costituito esclusivamente da uno o più costanti del compilatore condizionale, i valori letterali e gli operatori, che restituisce `True` o `False`.</span><span class="sxs-lookup"><span data-stu-id="c6d38-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
   
  `statements`  
- <span data-ttu-id="ff6ea-108">Obbligatorio per `#If` istruzione blocco, facoltativo in un' posizione.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="ff6ea-109">Righe programma Visual Basic o le direttive del compilatore che vengono compilate se l'espressione associata viene valutata `True`.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
+ <span data-ttu-id="c6d38-108">Obbligatorio per `#If` istruzione blocco, facoltativo in un' posizione.</span><span class="sxs-lookup"><span data-stu-id="c6d38-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="c6d38-109">Righe programma Visual Basic o le direttive del compilatore che vengono compilate se l'espressione associata viene valutata `True`.</span><span class="sxs-lookup"><span data-stu-id="c6d38-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
   
  `#End If`  
- <span data-ttu-id="ff6ea-110">Termina il `#If` blocco di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-110">Terminates the `#If` statement block.</span></span>  
+ <span data-ttu-id="c6d38-110">Termina il `#If` blocco di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c6d38-110">Terminates the `#If` statement block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ff6ea-111">Note</span><span class="sxs-lookup"><span data-stu-id="ff6ea-111">Remarks</span></span>  
- <span data-ttu-id="ff6ea-112">Nell'area di, il comportamento dei `#If...Then...#Else` direttive viene visualizzato lo stesso del `If...Then...Else` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="ff6ea-113">Tuttavia, il `#If...Then...#Else` direttive valutano ciò che viene compilato dal compilatore, mentre il `If...Then...Else` le istruzioni vengono valutate le condizioni in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6d38-111">Note</span><span class="sxs-lookup"><span data-stu-id="c6d38-111">Remarks</span></span>  
+ <span data-ttu-id="c6d38-112">Nell'area di, il comportamento dei `#If...Then...#Else` direttive viene visualizzato lo stesso del `If...Then...Else` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c6d38-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="c6d38-113">Tuttavia, il `#If...Then...#Else` direttive valutano ciò che viene compilato dal compilatore, mentre il `If...Then...Else` le istruzioni vengono valutate le condizioni in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="c6d38-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
   
- <span data-ttu-id="ff6ea-114">Compilazione condizionale viene in genere utilizzata per la compilazione del programma stesso per le diverse piattaforme.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="ff6ea-115">Viene inoltre usato per impedire il debug del codice venga visualizzato in un file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="ff6ea-116">Codice escluso durante la compilazione condizionale viene omesso completamente dal file eseguibile finale, in modo che non ha alcun effetto sulla dimensione o delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
+ <span data-ttu-id="c6d38-114">Compilazione condizionale viene in genere utilizzata per la compilazione del programma stesso per le diverse piattaforme.</span><span class="sxs-lookup"><span data-stu-id="c6d38-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="c6d38-115">Viene inoltre usato per impedire il debug del codice venga visualizzato in un file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="c6d38-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="c6d38-116">Codice escluso durante la compilazione condizionale viene omesso completamente dal file eseguibile finale, in modo che non ha alcun effetto sulla dimensione o delle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="c6d38-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
   
- <span data-ttu-id="ff6ea-117">Indipendentemente dal risultato di qualsiasi valutazione, tutte le espressioni vengono valutate usando `Option Compare Binary`.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="ff6ea-118">Il `Option Compare` istruzione non ha effetto sulle espressioni nelle `#If` e `#ElseIf` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
+ <span data-ttu-id="c6d38-117">Indipendentemente dal risultato di qualsiasi valutazione, tutte le espressioni vengono valutate usando `Option Compare Binary`.</span><span class="sxs-lookup"><span data-stu-id="c6d38-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="c6d38-118">Il `Option Compare` istruzione non ha effetto sulle espressioni nelle `#If` e `#ElseIf` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c6d38-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ff6ea-119">Nessun formato a riga singola del `#If`, `#Else`, `#ElseIf`, e `#End If` direttive esiste.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="ff6ea-120">Nessun altro codice può apparire sulla stessa riga come una delle direttive.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-120">No other code can appear on the same line as any of the directives.</span></span> 
+>  <span data-ttu-id="c6d38-119">Nessun formato a riga singola del `#If`, `#Else`, `#ElseIf`, e `#End If` direttive esiste.</span><span class="sxs-lookup"><span data-stu-id="c6d38-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="c6d38-120">Nessun altro codice può apparire sulla stessa riga come una delle direttive.</span><span class="sxs-lookup"><span data-stu-id="c6d38-120">No other code can appear on the same line as any of the directives.</span></span> 
 
-<span data-ttu-id="ff6ea-121">Le istruzioni all'interno di un blocco di compilazione condizionale devono includere istruzioni logiche completate.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="ff6ea-122">Ad esempio, non è possibile compilare in modo condizionale solo gli attributi di una funzione, ma è possibile dichiarare in modo condizionale la funzione insieme ai relativi attributi:</span><span class="sxs-lookup"><span data-stu-id="ff6ea-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
+<span data-ttu-id="c6d38-121">Le istruzioni all'interno di un blocco di compilazione condizionale devono includere istruzioni logiche completate.</span><span class="sxs-lookup"><span data-stu-id="c6d38-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="c6d38-122">Ad esempio, non è possibile compilare in modo condizionale solo gli attributi di una funzione, ma è possibile dichiarare in modo condizionale la funzione insieme ai relativi attributi:</span><span class="sxs-lookup"><span data-stu-id="c6d38-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
 
 ```vb
    #If DEBUG Then
@@ -75,15 +75,15 @@ ms.locfileid: "54568228"
    #End If
 ```
 
-## <a name="example"></a><span data-ttu-id="ff6ea-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="ff6ea-123">Example</span></span>
- <span data-ttu-id="ff6ea-124">Questo esempio viene usato il `#If...Then...#Else` costrutto per determinare se si desidera compilare alcune istruzioni.</span><span class="sxs-lookup"><span data-stu-id="ff6ea-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
+## <a name="example"></a><span data-ttu-id="c6d38-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="c6d38-123">Example</span></span>
+ <span data-ttu-id="c6d38-124">Questo esempio viene usato il `#If...Then...#Else` costrutto per determinare se si desidera compilare alcune istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c6d38-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="ff6ea-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff6ea-125">See also</span></span>
-- [<span data-ttu-id="ff6ea-126">Direttiva #Const</span><span class="sxs-lookup"><span data-stu-id="ff6ea-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
-- [<span data-ttu-id="ff6ea-127">Istruzione If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="ff6ea-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="ff6ea-128">Compilazione condizionale</span><span class="sxs-lookup"><span data-stu-id="ff6ea-128">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a><span data-ttu-id="c6d38-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6d38-125">See also</span></span>
+- [<span data-ttu-id="c6d38-126">Direttiva #Const</span><span class="sxs-lookup"><span data-stu-id="c6d38-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)
+- [<span data-ttu-id="c6d38-127">Istruzione If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="c6d38-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="c6d38-128">Compilazione condizionale</span><span class="sxs-lookup"><span data-stu-id="c6d38-128">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
 
 
