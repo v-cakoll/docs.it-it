@@ -15,7 +15,7 @@ Usando le interfacce, è possibile, ad esempio, includere il comportamento di pi
   
 Per definire un'interfaccia, si usa la parola chiave [interface](../../language-reference/keywords/interface.md). come nell'esempio riportato di seguito.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 Il nome della struct deve essere un [nome di identificatore](../inside-a-program/identifier-names.md) C# valido. Per convenzione, i nomi di interfaccia iniziano con una lettera `I` maiuscola.
 

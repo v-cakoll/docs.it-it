@@ -1,16 +1,10 @@
 ---
 title: Esercitazioni di .NET Core
-description: Seguire le esercitazioni per l'apprendimento di .NET Core per compilare applicazioni e librerie su Mac, Linux e Windows.
+description: 'Seguire le esercitazioni per l''apprendimento di .NET Core per compilare applicazioni e librerie su Mac, Linux e Windows.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168744"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni
 
@@ -25,7 +19,6 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Compilazione di una libreria di classi con Visual Basic](vb-library-with-visual-studio.md)
 - [Test di una libreria di classi](testing-library-with-visual-studio.md)
 - [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
-- [Compilare una soluzione completa C# con .NET in Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB: introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con codice di Visual Studio
@@ -48,7 +41,6 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Testing unità in .NET Core tramite il test dotnet](../testing/unit-testing-with-dotnet-test.md)
 - [Testing unità con MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)
-- [Come gestire le versioni delle dipendenze di pacchetto per .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hosting di .NET Core da un codice nativo](netcore-hosting.md)
 - [Creare un modello personalizzato per dotnet new](create-custom-template.md)
 
