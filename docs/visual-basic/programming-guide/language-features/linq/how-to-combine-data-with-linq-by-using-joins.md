@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553698"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977981"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Procedura: Combinare dati con LINQ utilizzando join (Visual Basic)
 Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combinare i contenuti di più raccolte in base ai valori comuni tra le raccolte di query. Questi valori sono dette *chiave* valori. Verranno considerati dagli sviluppatori ha familiari con concetti relativi ai database relazionali di `Join` clausola come un INNER JOIN e `Group Join` clausola come, in effetti, un LEFT OUTER JOIN.  
@@ -29,8 +29,8 @@ Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combin
   
 2.  Gli esempi in questo argomento viene utilizzato il `Person` e `Pet` tipi e i dati di esempio di codice seguente. Copiare questo codice nel valore predefinito `Module1` modulo è stato creato da Visual Basic.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Eseguire un Inner Join usando la clausola Join  
  Un INNER JOIN vengono combinati i dati dalle due raccolte. Vengono inclusi gli elementi per cui i valori di chiave specificati corrispondono. Sono esclusi tutti gli elementi da una qualsiasi raccolta che non è un elemento corrispondente in altro insieme.  
@@ -45,7 +45,7 @@ Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combin
   
 1.  Aggiungere il codice seguente per il `Module1` modulo nel progetto per vedere esempi di inner join sia impliciti ed espliciti.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Eseguire un Left Outer Join con la clausola Group Join  
  LEFT OUTER JOIN include tutti gli elementi dalla raccolta a sinistra del join e solo i corrispondenti valori dalla raccolta a destra del join. Tutti gli elementi dalla raccolta a destra del join che non è un elemento corrispondente nella raccolta a sinistra vengono esclusi dal risultato della query.  
@@ -58,7 +58,7 @@ Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combin
   
 1.  Aggiungere il codice seguente per il `Module1` modulo nel progetto per visualizzare un esempio di un left outer join raggruppati e un left outer join non raggruppati.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Eseguire un Join usando una chiave composta  
  È possibile usare la `And` parola chiave in un `Join` o `Group Join` clausola per identificare più campi di chiave da usare durante l'associazione di valori dalle raccolte da unire in join. Il `And` parola chiave specifica che tutti specificati devono corrispondere ai campi chiave per gli elementi da unire.  
@@ -67,7 +67,7 @@ Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combin
   
 1.  Aggiungere il codice seguente per il `Module1` modulo nel progetto per vedere esempi di join che utilizza una chiave composta.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>Eseguire il codice  
   
@@ -75,7 +75,7 @@ Visual Basic fornisce il `Join` e `Group Join` clausole che consentono di combin
   
 1.  Sostituire il `Sub Main` nella `Module1` modulo nel progetto con il codice seguente per eseguire gli esempi in questo argomento.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  Premere F5 per eseguire gli esempi.  
   

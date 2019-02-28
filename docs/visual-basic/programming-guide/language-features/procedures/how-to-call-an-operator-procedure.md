@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: fc658dd7ef001c8d3ef7761bd2a7889f70e9e4a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667583"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978969"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: Chiamare una routine di operatore (Visual Basic)
 Si chiama una routine di operatore usando il simbolo di operatore in un'espressione. Nel caso di un operatore di conversione, si chiama il [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo a altro.  
@@ -44,7 +44,7 @@ Si chiama una routine di operatore usando il simbolo di operatore in un'espressi
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea due <xref:System.TimeSpan> strutture, li somma e archivia il risultato in una terza <xref:System.TimeSpan> struttura. Il <xref:System.TimeSpan> struttura definisce le routine di operatore per eseguire l'overload di diversi operatori standard.  
   
- [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
  In quanto <xref:System.TimeSpan> overloads standard `+` operatore, nell'esempio precedente chiama una routine di operatore quando si calcola il valore di `combinedSpan`.  
   

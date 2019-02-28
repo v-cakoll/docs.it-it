@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugAssemblyEnum
+title: Interfaccia ICorDebugAssemblyEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssemblyEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a5cad5902324a4999648553ab92ee1df11dde5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b259ceb8af61785bc77536d2718bdfbb3683c066
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686726"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979892"
 ---
-# <a name="icordebugassemblyenum-interface1"></a>Interfaccia1 ICorDebugAssemblyEnum
+# <a name="icordebugassemblyenum-interface"></a>Interfaccia ICorDebugAssemblyEnum
+
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugAssembly.  
   
 ## <a name="methods"></a>Metodi  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678785"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978163"
 ---
 # <a name="from-clause-visual-basic"></a>Clausola From (Visual Basic)
 Specifica uno o più variabili di intervallo e una raccolta di query.  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  È possibile specificare più `From` clausole in una query per identificare più raccolte di essere unito in join. Quando si specificano più raccolte, essi vengono scorsi in modo indipendente oppure è possibile unirle se sono correlati. È possibile unire le raccolte in modo implicito utilizzando la `Select` clausola, o in modo esplicito usando il `Join` o `Group Join` clausole. In alternativa, è possibile specificare più variabili di intervallo e le raccolte in una singola `From` clausola, con ogni raccolta separato dagli altri da una virgola e la variabile di intervallo correlato. Esempio di codice seguente illustra entrambe le opzioni della sintassi per il `From` clausola.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  Il `From` clausola definisce l'ambito di una query, che è simile all'ambito di un `For` ciclo. Pertanto, ogni `element` variabile di intervallo nell'ambito di una query deve avere un nome univoco. Poiché è possibile specificare più `From` clausole per una query, le successive `From` clausole possono fare riferimento a variabili di intervallo nel `From` clausola oppure è possibile fare riferimento alle variabili di intervallo in una precedente `From` clausola. Ad esempio, l'esempio seguente mostra un nidificata `From` clausola in cui la raccolta nella seconda clausola si basa su una proprietà della variabile di intervallo nella prima clausola.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  Ogni `From` clausola può essere seguita da una qualsiasi combinazione di clausole di query aggiuntive per perfezionare la query. È possibile affinare la query nei modi seguenti:  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>Esempio  
  La query seguente espressione Usa un `From` clausola per dichiarare una variabile di intervallo `cust` per ogni `Customer` dell'oggetto nel `customers` raccolta. Il `Where` clausola utilizza la variabile di intervallo per limitare l'output per i clienti dall'area specificata. Il `For Each` ciclo Visualizza il nome della società per ogni cliente nel risultato della query.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Query](../../../visual-basic/language-reference/queries/index.md)

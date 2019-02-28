@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19edbebb4dcc4ad48c28ee427084510f8d743c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637830"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970974"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Procedura: Crittografare gli elementi XML con certificati X.509
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo <https://www.w3.org/TR/xmldsig-core/>.  
   
  È possibile usare la crittografia XML per sostituire qualsiasi elemento o documento XML con un elemento <`EncryptedData`> contenente i dati XML crittografati. Nell'elemento <`EncryptedData`> possono essere inclusi sottoelementi in cui sono incluse informazioni sulle chiavi e sui processi usati durante la crittografia.  La crittografia XML consente a un documento di contenere più elementi crittografati e consente a un elemento di essere crittografato più volte.  L'esempio di codice relativo a questa procedura illustra come creare un elemento <`EncryptedData`> insieme a diversi altri sottoelementi utilizzabili in un secondo momento durante la decrittografia.  
   
- Questo esempio crittografa un elemento XML mediante due chiavi.  Genera un certificato X.509 di test usando lo [Strumento di creazione dei certificati (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) e lo salva in un archivio certificati.  Questo esempio richiama il certificato a livello di codice e lo usa per crittografare un elemento XML mediante il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>.  Internamente, il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> crea una chiave di sessione separata e la usa per crittografare il documento XML. La chiave di sessione viene crittografata da questo metodo e salvata insieme ai dati XML crittografati all'interno di un nuovo elemento <`EncryptedData`>.  
+ Questo esempio crittografa un elemento XML mediante due chiavi. Genera un certificato X.509 di test usando lo [Strumento di creazione dei certificati (Makecert.exe)](/windows/desktop/SecCrypto/makecert) e lo salva in un archivio certificati. Questo esempio richiama il certificato a livello di codice e lo usa per crittografare un elemento XML mediante il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>. Internamente, il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> crea una chiave di sessione separata e la usa per crittografare il documento XML. La chiave di sessione viene crittografata da questo metodo e salvata insieme ai dati XML crittografati all'interno di un nuovo elemento <`EncryptedData`>.  
   
  Per decrittografare l'elemento XML, chiamare semplicemente il metodo <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>, che richiama automaticamente il certificato X.509 dall'archivio ed esegue la descrizione necessaria.  Per altre informazioni su come decrittografare un elemento XML che era stato crittografato mediante questa procedura, vedere [come: Decrittografare gli elementi XML con certificati X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54637830"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Per crittografare un elemento XML con un certificato X.509  
   
-1.  Usare lo [Strumento di creazione dei certificati (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) per generare un certificato X.509 di test e inserirlo nell'archivio utente locale.  Si deve generare una chiave di scambio e si deve rendere esportabile la chiave. Eseguire il comando seguente:  
+1.  Usare lo [Strumento di creazione dei certificati (Makecert.exe)](/windows/desktop/SecCrypto/makecert) per generare un certificato X.509 di test e inserirlo nell'archivio utente locale.  Si deve generare una chiave di scambio e si deve rendere esportabile la chiave. Eseguire il comando seguente:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  

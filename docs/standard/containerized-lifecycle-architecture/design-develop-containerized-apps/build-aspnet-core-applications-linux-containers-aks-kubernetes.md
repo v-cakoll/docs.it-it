@@ -4,12 +4,12 @@ description: Ciclo di vita delle applicazioni Docker in contenitori con piattafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835512"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967165"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Creazione di applicazioni ASP.NET Core 2.1 distribuite come contenitori Linux in un servizio contenitore di AZURE/Kubernetes orchestrator
 
@@ -29,7 +29,7 @@ Negli esempi seguenti esplorare la creazione di un'applicazione ASP.NET Core 2.1
 
 ASP.NET Core è una piattaforma di sviluppo generale gestita da Microsoft e dalla community .NET su GitHub. È multipiattaforma, supporta Windows, macOS e Linux e può essere usata su dispositivi, ambienti cloud e scenari IoT/incorporati.
 
-Questo esempio Usa un progetto semplice che si basa basato su un modello API Web di Visual Studio, in modo non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, mediante la tecnologia di ASP.NET Core 2.1.
+Questo esempio Usa un semplice progetto che si basa su un modello API Web di Visual Studio, in modo non occorre alcuna conoscenza aggiuntiva per creare il codice di esempio. È sufficiente creare il progetto usando un modello standard che include tutti gli elementi per eseguire un progetto di piccole dimensioni con un'API REST, mediante la tecnologia di ASP.NET Core 2.1.
 
 ![Aggiungi finestra Nuovo progetto in Visual Studio, selezionare l'applicazione Web ASP.NET Core.](media/create-aspnet-core-application.png)
 

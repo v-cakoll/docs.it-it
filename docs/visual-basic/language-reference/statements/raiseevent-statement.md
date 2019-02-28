@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655010"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973301"
 ---
 # <a name="raiseevent-statement"></a>Istruzione RaiseEvent
 Attiva un evento dichiarato a livello di modulo all'interno di una classe, modulo o documento.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Se l'evento non è stata dichiarata all'interno del modulo in cui viene generato, si verifica un errore. Il frammento di codice seguente viene illustrata una dichiarazione di evento e una procedura in cui viene generato l'evento.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  Non è possibile usare `RaiseEvent` per generare eventi che non sono esplicitamente dichiarati nel modulo. Ad esempio, tutti i form ereditano un <xref:System.Windows.Forms.Control.Click> evento dal <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, non può essere generato mediante `RaiseEvent` in un form derivato. Se si dichiara un `Click` evento nel modulo del form, nasconde il modulo <xref:System.Windows.Forms.Control.Click> evento. È comunque possibile richiamare il modulo <xref:System.Windows.Forms.Control.Click> evento chiamando il <xref:System.Windows.Forms.Control.OnClick%2A> (metodo).  
   
@@ -63,12 +63,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Aggiungere un `WithEvents` alla sezione delle dichiarazioni di variabili di `Form1` classe.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Esempio  
  Aggiungere il codice seguente al codice per `Form1`: Sostituire eventuali routine duplicate che potrebbero esistere, ad esempio `Form_Load`, o `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Premere F5 per eseguire l'esempio precedente, quindi fare clic sul pulsante con etichettato **avviare**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".  
   

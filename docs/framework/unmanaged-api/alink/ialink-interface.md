@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600089"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978241"
 ---
 # <a name="ialink-interface"></a>Interfaccia IALink
 Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interfaccia contiene i metodi di supporto per la scrittura di manifesti dell'assembly per gli assembly multimodulo, la firma degli assembly con nomi sicuri e la creazione netmodule.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Metodo1 AddFile](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile (metodo)](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [Metodo1 AddImport](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport (metodo)](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [Metodo CloseAssembly](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interf
   
  [Metodo GetResolutionScope](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [Metodo1 GetScope](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope (metodo)](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [Metodo GetWin32ResBlob](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   

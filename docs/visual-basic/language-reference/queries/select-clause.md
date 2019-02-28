@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519008"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979606"
 ---
 # <a name="select-clause-visual-basic"></a>Clausola Select (Visual Basic)
 Definisce il risultato di una query.  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  Il `Select` clausola può fare riferimento alle variabili nell'ambito corrente. Ciò include le variabili di intervallo identificate nella `From` clausola (o `From` clausole). Include anche le nuove variabili create con un alias per il `Aggregate`, `Let`, `Group By`, o `Group Join` clausole o le variabili da una precedente `Select` clausola nell'espressione di query. Il `Select` clausola può anche includere valori statici. Ad esempio, il codice seguente viene illustrata un'espressione di query in cui il `Select` clausola definisce il risultato della query come un nuovo tipo anonimo con quattro membri: `ProductName`, `Price`, `Discount`, e `DiscountedPrice`. Il `ProductName` e `Price` i valori del membro provengono dalla variabile di intervallo prodotto definito nel `From` clausola. Il `DiscountedPrice` valore del membro viene calcolato nel `Let` clausola. Il `Discount` membro è un valore statico.  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  Il `Select` clausola introduce un nuovo set di variabili di intervallo per le clausole di query successivi, e le variabili di intervallo precedente non sono più nell'ambito. L'ultimo `Select` clausola in un'espressione di query determina il valore restituito della query. La query seguente restituisce ad esempio, la società nome e l'ID ordine per ogni ordine del cliente per cui il totale superiore a 500. Il primo `Select` clausola identifica le variabili di intervallo per il `Where` clausola e il secondo `Select` clausola. Il secondo `Select` clausola identifica i valori restituiti dalla query come un nuovo tipo anonimo.  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  Se il `Select` clausola identifica un singolo elemento da restituire, l'espressione di query restituisce una raccolta del tipo di quell'unico elemento. Se il `Select` clausola identifica più elementi da restituire, l'espressione di query restituisce una raccolta di un nuovo tipo anonimo, basato sugli elementi selezionati. Ad esempio, le due query seguenti restituiscono raccolte di due tipi diversi in base il `Select` clausola. La prima query restituisce una raccolta di nomi di società come stringhe. La seconda query restituisce una raccolta di `Customer` oggetti popolati con i nomi di società e le informazioni sull'indirizzo.  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Esempio  
  La query seguente espressione Usa un `From` clausola per dichiarare una variabile di intervallo `cust` per il `customers` raccolta. Il `Select` clausola consente di selezionare il nome del cliente e il valore ID e popola la `CompanyName` e `CustomerID` colonne della nuova variabile di intervallo. Il `For Each` istruzione scorre in ciclo ogni oggetto restituito e consente di visualizzare il `CompanyName` e `CustomerID` colonne per ogni record.  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

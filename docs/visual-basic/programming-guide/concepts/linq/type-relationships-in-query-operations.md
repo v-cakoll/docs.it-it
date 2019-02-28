@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731127"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979099"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene usata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini usati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sulle parti di una query, vedere [operazioni di Query (Visual Basic) base](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ Parti di una query LINQ
   
  Visual Basic tipizzazione forte viene applicata mediante l'implementazione di inferenza del tipo locale, noto anche come *tipizzazione implicita*. Funzionalità viene usata nell'esempio precedente che sarà possibile vederlo usata in tutta il [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] esempi e documentazione. In Visual Basic, l'inferenza del tipo locale viene eseguita usando semplicemente una `Dim` istruzione senza un `As` clausola. Nell'esempio seguente, `city` è fortemente tipizzata come una stringa.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  L'inferenza del tipo locale funziona solo quando `Option Infer` è impostata su `On`. Per altre informazioni, vedere [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ Parti di una query LINQ
   
  Si potrebbe essere necessario specificare un tipo esplicito per una variabile di intervallo che non corrisponde al tipo restituito dall'origine dati. È possibile specificare il tipo della variabile di intervallo usando un `As` clausola. Tuttavia, ciò comporta un errore se la conversione è un [conversione di narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e `Option Strict` è impostata su `On`. Pertanto, è consigliabile eseguire la conversione in base ai valori recuperati dall'origine dati. È possibile convertire i valori dall'origine dati per il tipo di variabile di intervallo esplicita tramite la <xref:System.Linq.Enumerable.Cast%2A> (metodo). È anche possibile eseguire il cast ai valori selezionati nel `Select` clausola per un tipo esplicito che è diverso dal tipo della variabile di intervallo. Questi aspetti sono illustrati nel codice seguente.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Query che restituiscono gli elementi completi dei dati di origine  
  L'esempio seguente mostra un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operazione che restituisce una sequenza di elementi selezionati dall'origine dati di query. L'origine, `names`, contiene una matrice di stringhe, e l'output della query è una sequenza che contiene le stringhe che iniziano con la lettera M.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  Ciò equivale al codice seguente, ma è molto più breve e facile da scrivere. Dipendenza dall'inferenza dei tipi locali nelle query è lo stile preferito in Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  Le relazioni seguenti disponibili in entrambi gli esempi di codice precedenti, se i tipi sono determinati in modo implicito o esplicito.  
   
