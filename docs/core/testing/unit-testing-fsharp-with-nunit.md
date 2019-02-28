@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241762"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746046"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testing unità di librerie F# in .NET Core usando il test dotnet e NUnit
 
@@ -45,7 +45,7 @@ Impostare *MathService* come directory corrente ed eseguire il comando seguente 
 dotnet new classlib -lang F#
 ```
 
-Per usare lo sviluppo basato su test (TDD) , è necessario creare un'implementazione non funzionante del servizio matematico:
+Si crea un'implementazione non corretta del servizio matematico:
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>Creazione del primo test
 
-L'approccio di sviluppo basato su test richiede la creazione di un test con esito negativo. È quindi necessario che il test venga superato e che il processo venga ripetuto. Aprire *UnitTest1.fs* e aggiungere il codice seguente:
+Scrivere un test che genera errore, fare in modo che venga superato e quindi ripetere il processo. Aprire *UnitTest1.fs* e aggiungere il codice seguente:
 
 ```fsharp
 namespace MathService.Tests

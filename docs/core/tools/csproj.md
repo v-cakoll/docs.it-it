@@ -3,12 +3,12 @@ title: Aggiunte al formato csproj per .NET Core
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222064"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748010"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -97,26 +97,26 @@ L'elemento radice `<Project>` del file con estensione *csproj* ha un nuovo attri
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`. 
 
 ### <a name="packagereference"></a>PackageReference
-Un elemento `<PackageReference>` specifica una dipendenza NuGet nel progetto. L'attributo `Include` specifica l'ID del pacchetto. 
+Un elemento `<PackageReference>` specifica una [dipendenza NuGet nel progetto](/nuget/consume-packages/package-references-in-project-files). L'attributo `Include` specifica l'ID del pacchetto. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Versione
-`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito prevede la corrispondenza esatta della versione. Ad esempio, specificare `Version="1.2.3"` equivale alla notazione NuGet `[1.2.3]` per la versione esatta 1.2.3 del pacchetto.
+L'attributo `Version` obbligatorio specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). Il comportamento predefinito prevede la corrispondenza esatta della versione. Ad esempio, specificare `Version="1.2.3"` equivale alla notazione NuGet `[1.2.3]` per la versione esatta 1.2.3 del pacchetto.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
-L'attributo `IncludeAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati. 
+L'attributo `IncludeAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati. Per impostazione predefinita, sono inclusi tutti gli asset del pacchetto.
 
 L'attributo `ExcludeAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che non devono essere usati.
 
-L'attributo `PrivateAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati, indicando inoltre che non devono essere trasmessi al progetto successivo. 
+L'attributo `PrivateAssets` specifica gli asset appartenenti al pacchetto specificato da `<PackageReference>` che devono essere usati, indicando inoltre che non devono essere trasmessi al progetto successivo. Gli asset `Analyzers`, `Build` e `ContentFiles` sono privati per impostazione predefinita quando questo attributo non è presente.
 
 > [!NOTE]
 > `PrivateAssets` equivale all'elemento *project.json*/*xproj* `SuppressParent`.
 
-Questi attributi possono contenere uno o più degli elementi seguenti:
+Questi attributi possono contenere uno o più degli elementi seguenti, separati dal carattere punto e virgola `;` se ne vengono elencati vari:
 
 * `Compile`: i contenuti della cartella lib sono disponibili per la compilazione.
 * `Runtime`: vengono distribuiti i contenuti della cartella runtime.
@@ -197,7 +197,7 @@ Elenco con valori delimitati da punto e virgola di autori di pacchetti, corrispo
 
 Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrizione
 Descrizione lunga per l'assembly. Se `PackageDescription` non è specificata, questa proprietà viene usata anche come descrizione del pacchetto.
 
 ### <a name="copyright"></a>Copyright
@@ -206,12 +206,64 @@ Informazioni sul copyright per il pacchetto.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 Valore booleano che specifica se il client deve richiedere al consumer di accettare la licenza del pacchetto prima di installarlo. Il valore predefinito è `false`.
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Espressione di licenza SPDX o percorso di un file di licenza all'interno del pacchetto, spesso visualizzato nell'interfaccia utente oltre che in nuget.org.
+
+Ecco l'elenco completo degli [identificatori di licenza SPDX](https://spdx.org/licenses/). NuGet.org accetta solo licenze approvate OSI o FSF quando si usa un'espressione del tipo di licenza.
+
+La sintassi esatta delle espressioni di licenza è descritta di seguito in [ABNF](https://tools.ietf.org/html/rfc5234).
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> È possibile specificare solo uno degli elementi `PackageLicenseExpression`, `PackageLicenseFile` e `PackageLicenseUrl` contemporaneamente.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Percorso di un file di licenza all'interno del pacchetto se si usa una licenza a cui non è stato assegnato un identificatore SPDX oppure una licenza personalizzata (in caso contrario, è preferibile l'elemento `PackageLicenseExpression`)
+
+> [!NOTE]
+> È possibile specificare solo uno degli elementi `PackageLicenseExpression`, `PackageLicenseFile` e `PackageLicenseUrl` contemporaneamente.
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-URL della licenza applicabile al pacchetto.
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-URL della pagina iniziale del pacchetto, spesso visualizzato nell'interfaccia utente e in nuget.org.
+URL della licenza applicabile al pacchetto. (_deprecato da Visual Studio 15.9.4, .NET SDK 2.1.502 e 2.2.101_)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Un [identificatore di licenza SPDX](https://spdx.org/licenses/) o un'espressione, ad esempio `Apache-2.0`.
+
+Sostituisce `PackageLicenseUrl`, non può essere combinato con `PackageLicenseFile` e richiede Visual Studio 15.9.4, .NET SDK 2.1.502 o 2.2.101 o versione successiva.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Percorso del file di licenza su disco, relativo al file di progetto, ovvero `LICENSE.txt`.
+
+Sostituisce `PackageLicenseUrl`, non può essere combinato con `PackageLicenseExpression` e richiede Visual Studio 15.9.4, .NET SDK 2.1.502 o 2.2.101 o versione successiva.
+
+Sarà necessario assicurarsi che il file di licenza venga incluso nel pacchetto aggiungendolo in modo esplicito al progetto, come in questo esempio di utilizzo:
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 URL di un'immagine 64 x 64 con sfondo trasparente da usare come icona per il pacchetto nella visualizzazione dell'interfaccia utente.
 

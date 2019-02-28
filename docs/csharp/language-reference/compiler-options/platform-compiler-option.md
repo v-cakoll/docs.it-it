@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635664"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663899"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opzioni del compilatore C#)
 Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'assembly.  
@@ -28,7 +28,7 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
  `string`  
  anycpu (impostazione predefinita), anycpu32bitpreferred, ARM, x64, x86 o Itanium.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 -   **anycpu** (valore predefinito) consente di compilare l'assembly in modo da poter essere eseguito su qualsiasi piattaforma. L'applicazione viene eseguita come processo a 64 bit, quando possibile, e tramite essa viene eseguito il fallback a 32 bit solo quando questa modalità è disponibile.  
   
@@ -36,6 +36,8 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
   
 -   **ARM** compila l'assembly in modo da poter essere eseguito su un computer con processore Advanced RISC Machine (ARM).  
   
+-   **ARM64** compila l'assembly in modo che possa essere eseguito da CLR a 64 bit in un computer con un processore Advanced RISC Machine (ARM) che supporta il set di istruzioni A64.  
+
 -   **x64** compila l'assembly in modo che possa essere eseguito da CLR a 64 bit in un computer che supporta il set di istruzioni AMD64 o EM64T.  
   
 -   **x86** compila l'assembly in modo che possa essere eseguito da CLR a 32 bit, compatibile con x86.  

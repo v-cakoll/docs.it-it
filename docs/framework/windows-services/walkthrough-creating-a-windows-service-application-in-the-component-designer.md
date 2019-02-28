@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123670"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665030"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Procedura dettagliata: Creare un'app di servizio di Windows
 
@@ -86,7 +86,7 @@ Nell'editor di codice individuare il metodo <xref:System.ServiceProcess.ServiceB
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio nel sistema. Il monitoraggio viene impostato nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , tuttavia, non esegue effettivamente il monitoraggio. Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve rispondere al sistema operativo dopo l'avvio del servizio, poiché non può scorrere in ciclo all'infinito o bloccarsi. Per impostare un semplice meccanismo di polling, è possibile usare il componente <xref:System.Timers.Timer?displayProperty=nameWithType> . Nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> impostare i parametri del componente e la proprietà <xref:System.Timers.Timer.Enabled%2A> su `true`. Il timer genera degli eventi nel codice periodicamente e, a quel punto, il servizio può svolgere la propria funzione di monitoraggio. A tale scopo, è possibile usare il codice seguente:
+Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio nel sistema. Il monitoraggio viene impostato nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , tuttavia, non esegue effettivamente il monitoraggio. Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve rispondere al sistema operativo dopo l'avvio del servizio, poiché Non deve entrare in un ciclo o bloccarsi. Per impostare un semplice meccanismo di polling, è possibile usare il componente <xref:System.Timers.Timer?displayProperty=nameWithType> come segue: Nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> impostare i parametri per il componente e quindi impostare la proprietà <xref:System.Timers.Timer.Enabled%2A> su `true`. Il timer genera degli eventi nel codice periodicamente e, a quel punto, il servizio può svolgere la propria funzione di monitoraggio. A tale scopo, è possibile usare il codice seguente:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -431,7 +431,7 @@ Una volta compilato il servizio Windows, è possibile installarlo. Per installar
 
     Se il processo **installutil.exe** segnala un errore, controllare il log di installazione per determinarne il motivo. Per impostazione predefinita, il log è nella stessa cartella del file eseguibile del servizio. L'installazione potrebbe non riuscire se la classe <xref:System.ComponentModel.RunInstallerAttribute> non è presente nella classe `ProjectInstaller`, se l'attributo non è impostato su **true** o se la classe `ProjectInstaller` non è contrassegnata come **public**.
 
-Per altre informazioni, vedere [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Avviare ed eseguire il servizio
 
@@ -452,7 +452,7 @@ Per altre informazioni, vedere [How to: Install and Uninstall Services](../../..
 1. Per aprire il **Visualizzatore eventi**, iniziare a digitare **Visualizzatore eventi** nella casella di ricerca sulla barra della applicazioni di Windows e quindi selezionare **Visualizzatore eventi** nei risultati della ricerca.
 
    > [!TIP]
-   > In Visual Studio è possibile accedere al log eventi aprendo **Esplora server** (tastiera: **CTRL**+**ALT**+**S**) ed espandendo il nodo **Log eventi** per il computer locale.
+   > In Visual Studio è possibile accedere ai registri eventi aprendo **Esplora server** (tastiera: **CTRL**+**ALT**+**S**) e quindi espandendo il nodo **Registri eventi** per il computer locale.
 
 2. Nel **Visualizzatore eventi** espandere **Registri applicazioni e servizi**.
 
@@ -472,11 +472,11 @@ Per altre informazioni, vedere [How to: Install and Uninstall Services](../../..
     installutil.exe /u MyNewService.exe
     ```
 
-   Se il servizio viene disinstallato correttamente, tramite il file **installutil.exe** viene segnalato che il servizio è stato rimosso correttamente. Per altre informazioni, vedere [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Se il servizio viene disinstallato correttamente, tramite il file **installutil.exe** viene segnalato che il servizio è stato rimosso correttamente. Per altre informazioni, vedere [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver creato il servizio, potrebbe essere necessario creare un programma di installazione autonomo che altri utenti possono usare per installare il servizio di Windows. ClickOnce non supporta i servizi di Windows, ma è possibile usare [WiX Toolset](http://wixtoolset.org/) per creare un programma di installazione per un servizio di Windows. Per altre idee, vedere [Creare un pacchetto di installazione](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Dopo aver creato il servizio, potrebbe essere necessario creare un programma di installazione autonomo che altri utenti possono usare per installare il servizio di Windows. ClickOnce non supporta i servizi di Windows, ma è possibile usare [WiX Toolset](http://wixtoolset.org/) per creare un programma di installazione per un servizio di Windows. Per altre idee, vedere [Creare un pacchetto di installazione](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Per inviare comandi al servizio installato, è anche possibile usare il componente <xref:System.ServiceProcess.ServiceController>.
 
@@ -487,4 +487,4 @@ Per inviare comandi al servizio installato, è anche possibile usare il componen
 - [Applicazioni di servizi di Windows](../../../docs/framework/windows-services/index.md)
 - [Introduzione alle applicazioni di servizio di Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Servizi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Servizi (Windows)](/windows/desktop/Services/services)
