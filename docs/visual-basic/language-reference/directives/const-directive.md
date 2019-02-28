@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb937a5a9d4688730085829350cb20172db50e97
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710599"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967048"
 ---
 # <a name="const-directive"></a>Direttiva #Const
 Definisce le costanti del compilatore condizionale per Visual Basic.  
@@ -46,7 +46,7 @@ Definisce le costanti del compilatore condizionale per Visual Basic.
 ## <a name="example"></a>Esempio  
  In questo esempio viene usata la direttiva `#Const`.  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

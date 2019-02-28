@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710482"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971533"
 ---
 # <a name="property-procedures-visual-basic"></a>Routine Property (Visual Basic)
 Una routine di proprietà è una serie di istruzioni di Visual Basic che consentono di modificare una proprietà personalizzata in un modulo, classe o struttura. Le routine della proprietà sono dette anche *funzioni di accesso proprietà*.  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
  La proprietà seguente archivia un nome completo come due parti costitutive, il nome e cognome. Quando legge il codice chiamante `fullName`, il `Get` procedure combina le due parti costitutive e restituisce il nome completo. Quando il codice chiamante assegna un nuovo nome completo, il `Set` routine tenta di suddividere l'operazione in due parti costitutive. Se non viene trovato uno spazio, li archivia tutti come il nome.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  L'esempio seguente illustra tipici chiamate alle routine della proprietà di `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

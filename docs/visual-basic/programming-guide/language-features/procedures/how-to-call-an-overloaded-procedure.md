@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: 8320bc550c818fd2bea53f75107709eab8456096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f13fdae9617fa2af21978979cad6f90a15140a4a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706417"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969999"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procedura: Chiamare una routine di overload (Visual Basic)
 Il vantaggio di overload di una routine è la flessibilità della chiamata. Il codice chiamante può ottenere le informazioni che necessarie per passare alla procedura e quindi chiamare un nome di procedura singolo, indipendentemente dagli argomenti è stato superato.  
@@ -28,9 +28,9 @@ Il vantaggio di overload di una routine è la flessibilità della chiamata. Il c
   
      L'esempio seguente chiama il `post` routine dichiarata [come: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md). Ottiene l'identificazione del cliente, determina se è un `String` o un `Integer`e quindi chiama la stessa procedura in entrambi i casi.  
   
-     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
-     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

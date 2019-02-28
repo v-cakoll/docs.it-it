@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf1dbb1d9dafa9c690b4043da5a6f36469e8d7a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737611"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965345"
 ---
 # <a name="xml-value-property-visual-basic"></a>Proprietà Value XML (Visual Basic)
 Fornisce l'accesso al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
@@ -50,7 +50,7 @@ object.Value
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Xml.Linq.XElement.Value%2A> per accedere al primo nodo in una raccolta di proprietà <xref:System.Xml.Linq.XElement> oggetti. L'esempio Usa la proprietà child axis per ottenere la raccolta di tutti i nodi figlio denominati `phone` che si trovano i `contact` oggetto.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
  Questo codice visualizza il testo seguente:  
   
@@ -59,7 +59,7 @@ object.Value
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come ottenere il valore di un attributo XML da una raccolta di <xref:System.Xml.Linq.XAttribute> oggetti. L'esempio Usa la proprietà axis dell'attributo per visualizzare il valore della `type` attributo per tutti i `phone` elementi.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
  Questo codice visualizza il testo seguente:  
   

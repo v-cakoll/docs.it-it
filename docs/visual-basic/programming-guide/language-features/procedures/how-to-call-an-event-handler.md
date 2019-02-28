@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717973"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973522"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Procedura: Chiamare un gestore eventi in Visual Basic
 Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato un limite di credito o fare clic su, che viene riconosciuto da alcuni componenti del programma e per cui è possibile scrivere codice per rispondere. Un' *gestore dell'evento* è riportato il codice scritto in risposta a un evento.  
@@ -36,7 +36,7 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
   
      L'esempio seguente definisce un evento e un `WithEvents` variabile che fa riferimento alla classe che genera l'evento. La gestione degli eventi `Sub` procedure Usa una `Handles` clausola per specificare la classe che gestisce l'evento.  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Per chiamare un gestore evento mediante AddHandler  
   
@@ -48,7 +48,7 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
   
      L'esempio seguente definisce una `Sub` procedure per gestire il <xref:System.Windows.Forms.Form.Closing> eventi di un form. Quindi, utilizza il [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) per associare il `catchClose` routine come gestore eventi per <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      È possibile annullare l'associazione di un gestore eventi da un evento tramite l'esecuzione di [istruzione RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655075"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968270"
 ---
 # <a name="type-list-visual-basic"></a>Elenco dei tipi (Visual Basic)
 Specifica la *parametri di tipo* per una *generico* elemento di programmazione. Più parametri sono separati da virgole. Di seguito è la sintassi per un parametro di tipo.  
@@ -80,17 +80,17 @@ Specifica la *parametri di tipo* per una *generico* elemento di programmazione. 
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente illustra una struttura di definizione di una classe di dizionari generici, tra cui una funzione di base per aggiungere una nuova voce al dizionario.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Esempio  
  Poiché `dictionary` è generico, il codice che lo utilizza può creare un'ampia gamma di oggetti da quest'ultimo, ciascuno con le stesse funzionalità ma che agiscono su un tipo di dati diversi. L'esempio seguente mostra una riga di codice che crea una `dictionary` dell'oggetto con `String` voci e `Integer` chiavi.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente illustra la definizione di struttura equivalente generata dall'esempio precedente.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

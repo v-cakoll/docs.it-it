@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721982"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969193"
 ---
 # <a name="type-promotion-visual-basic"></a>Promozione tipo (Visual Basic)
 Quando si dichiara un elemento di programmazione in un modulo, Visual Basic Alza di livello dell'ambito dello spazio dei nomi che contiene il modulo. Questo è noto come *promozione tipo*.  
   
  L'esempio seguente illustra una struttura di definizione di un modulo e due membri di tale modulo.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  All'interno `projModule`, programmazione gli elementi dichiarati a livello di modulo vengono promosse a `projNamespace`. Nell'esempio precedente, `basicEnum` e `innerClass` alzate di livello, ma `numberSub` non lo è, in quanto non è dichiarato a livello di modulo.  
   
 ## <a name="effect-of-type-promotion"></a>Effetto della promozione tipo  
  L'effetto della promozione del tipo è che la stringa di qualificazione non è necessario includere il nome del modulo. Nell'esempio seguente effettua due chiamate alla procedura nell'esempio precedente.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  Nell'esempio precedente, la prima chiamata Usa le stringhe di qualificazione completo. Tuttavia, ciò non è necessario a causa di promozione del tipo. La seconda chiamata anche gli accessi i membri del modulo senza includere `projModule` nelle stringhe di qualificazione.  
   
 ## <a name="defeat-of-type-promotion"></a>Annullamento dell'effetto della promozione del tipo  
  Se lo spazio dei nomi ha già un membro con lo stesso nome di un membro del modulo, la promozione del tipo viene annullato per tale membro. Nell'esempio seguente illustra una struttura di definizione di un modulo all'interno dello stesso spazio dei nomi e un'enumerazione.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  Nell'esempio precedente, Visual Basic non è possibile alzare di livello classe `abc` a `thisNameSpace` perché esiste già un'enumerazione con lo stesso nome a livello di spazio dei nomi. Per accedere `abcSub`, è necessario usare la stringa di qualificazione completo `thisNamespace.thisModule.abc.abcSub`. Classe tuttavia `xyz` comunque viene promosso, ed è possibile accedere `xyzSub` con la stringa di qualificazione più breve `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ Quando si dichiara un elemento di programmazione in un modulo, Visual Basic Alza
   
  **Conseguenze.** Annullamento dell'effetto della promozione del tipo di una definizione parziale può causare risultati imprevisti e persino errori del compilatore. L'esempio seguente illustra alcune definizioni parziali di una classe, uno dei quali è all'interno di un modulo.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  Nell'esempio precedente, lo sviluppatore potrebbe prevedere il compilatore per unire le due definizioni parziali di `sampleClass`. Tuttavia, il compilatore non considera la promozione per la definizione parziale all'interno di `sampleModule`. Di conseguenza, tenta di compilare due classi separate e distinte, entrambi denominati `sampleClass` ma con percorsi di qualificazione differenti.  
   

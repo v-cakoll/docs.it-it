@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746273"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968725"
 ---
 # <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
 Ripete un gruppo di istruzioni un numero di volte specificato.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  Nell'esempio seguente, il `index` variabile inizia con un valore pari a 1 e viene incrementato con ogni iterazione del ciclo, che termina dopo il valore di `index` raggiunge 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  Nell'esempio seguente, il `number` variabile inizia in corrispondenza di 2 e viene ridotta da 0,25 a ogni iterazione del ciclo, che termina dopo il valore di `number` raggiunge il valore 0. Il `Step` argomento di `-.25` riduce il valore da 0,25 a ogni iterazione del ciclo.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  Oggetto [mentre... Fine istruzione While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) o [è... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md) funziona bene quando non si conosce in anticipo il numero di volte per eseguire le istruzioni nel ciclo. Tuttavia, quando si prevede di eseguire il ciclo di un numero specifico di volte, una `For`... `Next` ciclo è una scelta migliore. Determinare il numero di iterazioni quando si immessa prima di tutto il ciclo.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>Cicli annidati  
  È possibile annidare `For` cicli inserendo un ciclo all'interno di altra. Nell'esempio seguente viene nidificata `For`... `Next` strutture che hanno valori diversi passaggi. Il ciclo esterno viene creata una stringa per ogni iterazione del ciclo. Ciclo interno decrementa una variabile contatore del ciclo per ogni iterazione del ciclo.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  Quando i cicli sono nidificate, ogni ciclo deve avere un valore univoco `counter` variabile.  
   
@@ -130,10 +130,10 @@ Next [ counter ]
   
 |È `datatype` presente?|È `counter` già definito?|Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intera `For...Next` ciclo)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|No|Yes|No, perché `counter` è già definito. Se l'ambito di `counter` non sono locali rispetto alla procedura, viene generato un avviso in fase di compilazione.|  
+|No|Sì|No, perché `counter` è già definito. Se l'ambito di `counter` non sono locali rispetto alla procedura, viene generato un avviso in fase di compilazione.|  
 |No|No|Sì. Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni. Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Yes|Yes|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale rispetto alla procedura, si verifica un errore in fase di compilazione.|  
-|Yes|No|Sì.|  
+|Sì|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale rispetto alla procedura, si verifica un errore in fase di compilazione.|  
+|Sì|No|Sì.|  
   
  Tipo di dati di `counter` determina il tipo dell'iterazione, che deve essere uno dei tipi seguenti:  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente rimuove tutti gli elementi da un elenco generico. Invece di un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md), nell'esempio viene illustrato un `For`... `Next` che esegue l'iterazione in ordine decrescente. L'esempio Usa questa tecnica perché la `removeAt` (metodo), gli elementi dopo l'elemento rimosso abbiano un valore di indice inferiore.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente scorrere un'enumerazione che viene dichiarata utilizzando un [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente, i parametri dell'istruzione usano una classe che ha gli overload degli operatori per la `+`, `-`, `>=`, e `<=` operatori.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Collections.Generic.List%601>

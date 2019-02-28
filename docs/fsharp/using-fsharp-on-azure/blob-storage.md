@@ -3,14 +3,14 @@ title: Iniziare a usare archiviazione Blob di AzureF#
 description: Store dati non strutturati nel cloud con archiviazione Blob di Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664991"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981907"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Iniziare a usare archiviazione Blob di AzureF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione Blob di Azure con F\#
 
 Archiviazione BLOB di Azure è un servizio che archivia dati non strutturati nel cloud come oggetti/BLOB. Archiviazione BLOB può archiviare qualsiasi tipo di dati di testo o binari, ad esempio un documento, un file multimediale o il programma di installazione di un'applicazione. Il servizio Archiviazione BLOB è detto anche archiviazione di oggetti.
 

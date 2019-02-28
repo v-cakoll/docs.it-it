@@ -2,12 +2,12 @@
 title: Esempio di tecnologia per la serializzazione di generics dei servizi Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 27e0a7621bc77b62e36a0bbbdfa25f0ec3778798
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59224df97d54ac089293068bbb5dfa3fe26a8d8c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636585"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971871"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Esempio di tecnologia per la serializzazione di generics dei servizi Web
 [Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -61,7 +61,7 @@ ms.locfileid: "54636585"
 2.  Tipo di `http://localhost/[virtual directory]/Service.asmx`, dove `[virtual directory]` rappresenta la directory virtuale creata durante la compilazione dell'esempio.  
   
 ## <a name="remarks"></a>Note  
- Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web. Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione. Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web. Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione. Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w3h45ebk(v=vs.100)).  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -69,4 +69,4 @@ ms.locfileid: "54636585"
 - <xref:System.Web.Services>
 - <xref:System.Xml.Serialization>
 - [Serializzazione](../../../docs/standard/serialization/index.md)
-- [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+- [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

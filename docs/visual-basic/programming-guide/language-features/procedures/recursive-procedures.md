@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739293"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969323"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Routine ricorsive (Visual Basic)
 Oggetto *ricorsiva* routine è quella che chiama se stesso. In generale, questo non è il modo più efficace per scrivere il codice Visual Basic.  
   
  La procedura seguente usa la ricorsione per la quale calcolare il fattoriale del relativo argomento originale.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>Considerazioni sulle routine ricorsive  
  **Le condizioni di limitazione**. È necessario progettare una routine ricorsiva da verificare per almeno una condizione che può terminare la ricorsione ed è anche necessario gestire il caso in cui nessun tale condizione viene soddisfatta entro un numero ragionevole di chiamate ricorsive. Senza almeno una condizione che può essere soddisfatti senza l'esito negativo, la routine esegue un elevato rischio di esecuzione in un ciclo infinito.  

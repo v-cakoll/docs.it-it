@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 734cc521fe2e8b7af5ca594ced8c3a0a22603af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525950"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966229"
 ---
 # <a name="overload-resolution-visual-basic"></a>Risoluzione dell'overload (Visual Basic)
 Quando il compilatore Visual Basic rileva una chiamata a una routine definito in numerose versioni di overload, il compilatore deve decidere quale overload da chiamare. A tale scopo, seguire questa procedura:  
@@ -41,9 +41,9 @@ La risoluzione tra le versioni di overload
   
  L'esempio seguente illustra questo processo di risoluzione dell'overload.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  Nella prima chiamata, il compilatore elimina il primo overload, perché il tipo del primo argomento (`Short`) viene convertito nel tipo del parametro corrispondente (`Byte`). Il terzo overload viene quindi eliminato poiché ogni tipo di argomento nel secondo overload (`Short` e `Single`) viene ampliato al tipo del terzo overload corrispondente (`Integer` e `Single`). Il secondo overload richiede un ampliamento minore, in modo che il compilatore lo usa per la chiamata.  
   
