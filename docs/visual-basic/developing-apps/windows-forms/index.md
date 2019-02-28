@@ -2,15 +2,9 @@
 title: Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592523"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di Visual Basic è la possibilità di creare applicazioni Windows Forms che vengono eseguite localmente sui computer degli utenti. È possibile usare Visual Studio per creare l'applicazione e interfaccia utente mediante Windows Forms. Un'applicazione Windows Forms è basata sulle classi dal <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -46,7 +40,7 @@ Una parte importante di Visual Basic è la possibilità di creare applicazioni W
   
 |A|Vedere|  
 |--------|---------|  
-|Creare una nuova applicazione Windows Forms con Visual Studio|[Procedura dettagliata: Creazione di un semplice Windows Form](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Creare una nuova applicazione Windows Forms con Visual Studio|[Esercitazione 1: Creare un Visualizzatore immagini](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Usare i controlli nei form|[Procedura: Aggiungere controlli a un Windows Form](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Creare grafici con <xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

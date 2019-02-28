@@ -8,14 +8,14 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 357e001effe22f5e9603ebee63188ddff957d585
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a9ab771d87c3e5af4726806a262886845724cffd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305727"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977049"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Procedura dettagliata: Modifica di un controllo composito con Visual C# #
+# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Procedura dettagliata: Modifica di un controllo composito con Visual C\#
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
   
 > [!NOTE]

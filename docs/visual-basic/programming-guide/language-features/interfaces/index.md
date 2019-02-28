@@ -2,17 +2,11 @@
 title: Interfacce (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654422"
 ---
 # <a name="interfaces-visual-basic"></a>Interfacce (Visual Basic)
 Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi possono implementare. Le interfacce consentono di definire funzionalità come piccoli gruppi di proprietà, metodi ed eventi strettamente correlati fra loro. In questo modo si riducono i problemi di compatibilità, grazie alla possibilità di sviluppare implementazioni migliorate per le interfacce senza compromettere il codice esistente. È possibile aggiungere nuove funzionalità in qualsiasi momento, sviluppando interfacce e implementazioni aggiuntive.  
@@ -37,20 +31,20 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  Il codice riportato di seguito, ad esempio, consente di definire un'interfaccia con una funzione, una proprietà e un evento.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementazione di interfacce  
- Parola riservata di Visual Basic `Implements` viene utilizzato in due modi. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
+ Parola riservata di Visual Basic `Implements` viene usato in due modi. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
   
 ### <a name="implements-statement"></a>Istruzione Implements  
  Se una classe o una struttura implementa una o più interfacce, deve includere l'istruzione `Implements` immediatamente dopo l'istruzione `Class` o `Structure`. L'istruzione `Implements` richiede un elenco separato da virgole di interfacce implementate da una classe. La classe o la struttura deve implementare tutti i membri di interfaccia mediante la parola chiave `Implements`.  
   
 ### <a name="implements-keyword"></a>Parola chiave Implements  
- La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. Il nome di un membro che implementa un membro di interfaccia può usare qualsiasi identificatore valido e non è limitato al `InterfaceName_MethodName` convenzione utilizzata nelle versioni precedenti di Visual Basic.  
+ La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. Il nome di un membro che implementa un membro di interfaccia può utilizzare qualsiasi identificatore valido e non è limitato al `InterfaceName_MethodName` convenzione usata nelle versioni precedenti di Visual Basic.  
   
  Il codice seguente, ad esempio, illustra come dichiarare una subroutine denominata `Sub1` che implementa un metodo di un'interfaccia:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  È necessario che i tipi di parametro e i tipi restituiti del membro che esegue l'implementazione corrispondano alla proprietà dell'interfaccia o alla dichiarazione del membro nell'interfaccia. Per implementare un elemento di un'interfaccia in genere si usa un membro con lo stesso nome dell'interfaccia, come illustrato nell'esempio precedente.  
   
@@ -58,7 +52,7 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  Usando `Implements` è possibile scrivere un unico metodo che implementa più metodi definiti in un'interfaccia, come nell'esempio seguente:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  Per implementare un membro di interfaccia, è possibile usare un membro privato. Quando un membro privato implementa un membro di un'interfaccia, diventa disponibile tramite l'interfaccia anche se non è disponibile direttamente sulle variabili oggetto della classe.  
   
@@ -67,15 +61,15 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  L'esempio seguente definisce due interfacce. La seconda interfaccia, `Interface2`, eredita `Interface1` e definisce una proprietà e un metodo aggiuntivi.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  L'esempio che segue implementa `Interface1`, l'interfaccia definita nell'esempio precedente:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  L'ultimo esempio implementa `Interface2`, incluso un metodo ereditato da `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  È possibile implementare una proprietà ReadOnly usando una proprietà ReadWrite (in altri termini, non è necessario dichiararla ReadOnly nella classe di implementazione).  L'implementazione di un'interfaccia consente di implementare almeno i membri dichiarati dall'interfaccia, ma è possibile offrire maggiori funzionalità, ad esempio rendendo la proprietà accessibile in scrittura.  
   

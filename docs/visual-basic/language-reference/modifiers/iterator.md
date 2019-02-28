@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: bbc18a8b25e0de128cc2c1828213212adad108ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06188560163491284eab0dcfc4bba6b029e65ce8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719495"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969284"
 ---
 # <a name="iterator-visual-basic"></a>Iteratore (Visual Basic)
 Specifica che una funzione o `Get` della funzione di accesso è un iteratore.  
@@ -41,12 +41,12 @@ Specifica che una funzione o `Get` della funzione di accesso è un iteratore.
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra una funzione iteratore. La funzione iteratore ha un `Yield` istruzione all'interno di un [per... Avanti](../../../visual-basic/language-reference/statements/for-next-statement.md) ciclo. Ogni iterazione del [per ognuno](../../../visual-basic/language-reference/statements/for-each-next-statement.md) nel corpo dell'istruzione `Main` crea una chiamata al `Power` funzione iteratore. Ogni chiamata alla funzione iteratore procede fino alla prossima esecuzione dell'istruzione `Yield`, che si verifica durante l'iterazione successiva del ciclo `For…Next`.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una funzione di accesso `Get` che è un iteratore. Il `Iterator` modificatore è nella dichiarazione di proprietà.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
  Per altri esempi, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
   

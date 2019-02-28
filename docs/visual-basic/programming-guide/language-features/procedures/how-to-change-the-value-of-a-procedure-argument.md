@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 096bc6adfa7a8c95674d235f0112d23f7a45caf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672292"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974913"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedura: Modificare il valore di un argomento di routine (Visual Basic)
 Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno dei parametri definiti nella procedura. In alcuni casi, il codice della routine può modificare il valore sottostante a un argomento nel codice chiamante. In altri casi, la routine può modificare solo la copia locale di un argomento.  
@@ -57,17 +57,17 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente illustra due procedure che accettano una variabile di matrice e operano sui relativi elementi. Il `increase` procedure aggiunge semplicemente uno per ogni elemento. Il `replace` procedure assegna una nuova matrice al parametro `a()` , quindi aggiunge uno per ogni elemento.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#36)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Il primo `MsgBox` chiamata viene visualizzato "dopo aver Increase (n): 11, 21, 31, 41". Perché la matrice `n` è un tipo di riferimento `replace` possono modificare i relativi membri, anche se è il meccanismo di passaggio `ByVal`.  
   
  Il secondo `MsgBox` chiamata viene visualizzato "dopo Replace (n): 101, 201, 301". In quanto `n` viene passato `ByRef`, `replace` può modificare la variabile `n` nel codice chiamante e assegnare una nuova matrice a esso. In quanto `n` è un tipo riferimento, `replace` inoltre possibile modificare i relativi membri.  
   
- È possibile impedire la procedura di modifica la variabile nel codice chiamante. Vedere [Procedura: Proteggere un argomento di routine modifica del valore](./how-to-protect-a-procedure-argument-against-value-changes.md).  
+ È possibile impedire la procedura di modifica la variabile nel codice chiamante. Vedere [How to: Proteggere un argomento di routine modifica del valore](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Quando si passa una variabile per riferimento, è necessario usare il `ByRef` parola chiave per specificare questo meccanismo.  

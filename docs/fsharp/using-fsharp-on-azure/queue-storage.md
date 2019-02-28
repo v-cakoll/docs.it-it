@@ -1,16 +1,16 @@
 ---
-title: Introduzione all'archiviazione code di Azure con F#
+title: Iniziare a usare archiviazione di Accodamento di AzureF#
 description: Le code di Azure offrono messaggistica asincrona affidabile tra i componenti dell'applicazione. Messaggistica cloud consente di ridimensionare in modo indipendente i componenti dell'applicazione.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569418"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974276"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Introduzione all'archiviazione code di Azure con F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Introduzione all'archiviazione code di Azure con F\#
 
 Archiviazione code di Azure fornisce messaggistica cloud tra i componenti dell'applicazione. Durante la progettazione di applicazioni scalabili, i componenti dell'applicazione vengono spesso separati, in modo che sia possibile ridimensionarli in modo indipendente. L'archivio Code fornisce la messaggistica asincrona per la comunicazione tra componenti dell'applicazione, che possono essere eseguiti nel cloud, sul desktop, in un server in locale o in un dispositivo mobile. Archiviazione code supporta anche la gestione di attività asincrone e la creazione di flussi di lavoro processi.
 
@@ -25,9 +25,9 @@ Per una panoramica concettuale dell'archiviazione code, vedere [la Guida di .NET
 Per usare questa Guida, è necessario innanzitutto [creare un account di archiviazione di Azure](/azure/storage/storage-create-storage-account).
 È necessario anche la chiave di accesso di archiviazione per questo account.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un Script F# e avvio di F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Creare un F# creare uno Script e avviare F# interattivo
 
-Gli esempi in questo articolo possono essere utilizzati in un'applicazione F# o uno script F#. Per creare uno script F#, creare un file con il `.fsx` estensione, ad esempio `queues.fsx`, nell'ambiente di sviluppo F#.
+Gli esempi in questo articolo possono essere utilizzati in un F# dell'applicazione o un oggetto F# dello script. Per creare un F# creare uno script, creare un file con il `.fsx` estensione, ad esempio `queues.fsx`, nella F# ambiente di sviluppo.
 
 Successivamente, usare una [Gestione pacchetti](package-management.md) , ad esempio [Paket](https://fsprojects.github.io/Paket/) oppure [NuGet](https://www.nuget.org/) per installare il `WindowsAzure.Storage` pacchetto e riferimento `WindowsAzure.Storage.dll` nello script utilizzando un `#r`della direttiva.
 

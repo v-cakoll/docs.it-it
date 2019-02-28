@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 4f60c0c07c0270b94dbb018b9423e210f16269d6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e7d35a900ef4309963ff9de0ea77a12fd4577f12
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065804"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969674"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Procedura: Usare una classe generica (Visual Basic)
 Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si usa una classe generica, è possibile generare una *classe costruita* da essa fornendo un *argomento di tipo* per ciascuno di questi parametri. È possibile quindi dichiarare una variabile del tipo di classe costruita, creare un'istanza della classe costruita e assegnarla alla variabile.  
@@ -43,7 +43,7 @@ Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si 
   
      L'esempio seguente usa la stessa classe (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) per creare due oggetti queue che contengono elementi con tipi di dati diversi. Aggiunge gli elementi alla fine di ogni coda e quindi rimuove e visualizza gli elementi dall'inizio di ogni coda.  
   
-     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739566"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974926"
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
 Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *overload degli operatori*.  
@@ -73,11 +73,11 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
  La struttura seguente archivia un valore intero con segno a 128 bit come le parti costituenti alto e basso. Definisce i `+` operaa a add due `veryLong` i valori e generare una risultante `veryLong` valore.  
   
- [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
   
  Nell'esempio seguente viene illustrata una tipica chiamata per il `+` operatore definito in `veryLong`.  
   
- [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
   
   
 ## <a name="see-also"></a>Vedere anche

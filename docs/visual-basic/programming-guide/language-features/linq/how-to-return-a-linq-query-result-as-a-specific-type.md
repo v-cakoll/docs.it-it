@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500616"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973496"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Procedura: Restituire un risultato di Query LINQ come tipo specifico (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query. Per impostazione predefinita, le query LINQ restituiscono un elenco di oggetti come un tipo anonimo. È anche possibile specificare che la query restituisca un elenco di uno specifico tipo usando il `Select` clausola.  
@@ -63,7 +63,7 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
   
 3.  Dopo il `End Class` istruzione della classe Form1, aggiungere il codice seguente per creare un `CustomerInfo` tipo per contenere i risultati della query per questo esempio.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
 4.  Quando si aggiungono tabelle alla finestra di Progettazione relazionale oggetti, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext> oggetti al progetto. Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle e per accedere ai singoli oggetti e raccolte per ogni tabella. Il <xref:System.Data.Linq.DataContext> oggetto per il progetto viene denominato in base al nome del file. dbml. Per questo progetto, il <xref:System.Data.Linq.DataContext> oggetto è denominato `northwindDataContext`.  
   
@@ -71,7 +71,7 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
   
      Nel `Load` eventi della classe Form1, aggiungere il codice seguente per eseguire query su tabelle che vengono esposti come proprietà del contesto dati. Il `Select` clausola della query verrà creata una nuova `CustomerInfo` tipo invece di un tipo anonimo per ogni elemento del risultato della query.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
 5.  Premere F5 per eseguire il progetto e visualizzare i risultati.  
   

@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9cff900d7328eed2cbe12afca35c77c7ac836fa7
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: fe4d74bcabcdf7c182d11b5dc2fd5042ef47ccfb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904489"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968985"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.  
@@ -148,7 +148,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |---------------|-----------------|  
 |language|Specifica il linguaggio di programmazione da utilizzare. È possibile scegliere tra `CS` (C#, il linguaggio predefinito), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). È anche possibile specificare un nome completo per una classe che implementa <xref:System.CodeDom.Compiler.CodeDomProvider>.|  
 |namespace|Specifica lo spazio dei nomi per il codice generato. Lo spazio dei nomi deve essere conforme agli standard CLR, ad esempio non devono essere presenti spazi o barre rovesciate.|  
-|opzioni|Uno dei valori seguenti: `none`, `properties` (genera proprietà invece di campi pubblici), `order` o `enableDataBinding` (vedere le opzioni `/order` e `/enableDataBinding` nella sezione precedente "Opzioni per i file XSD").|  
+|options|Uno dei valori seguenti: `none`, `properties` (genera proprietà invece di campi pubblici), `order` o `enableDataBinding` (vedere le opzioni `/order` e `/enableDataBinding` nella sezione precedente "Opzioni per i file XSD").|  
   
  È anche possibile controllare la modalità di generazione del codice `DataSet` utilizzando l'elemento `<generateDataSet>`. Il codice XML seguente specifica che il codice generato usa strutture `DataSet`, ad esempio la classe <xref:System.Data.DataTable>, per creare codice Visual Basic per un elemento specifico. Le strutture di DataSet generate supporteranno le query LINQ.  
   
@@ -224,4 +224,5 @@ xsd myAssembly.dll
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Panoramica di LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Esecuzione di query su oggetti DataSet tipizzati](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [LINQ (Language-Integrated Query) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 59df00351d1c1cc4edf87853984d1d13187d4e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90e07afb1515b50ad6e2fd2a1bbe42f6da5fa95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532461"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968140"
 ---
 # <a name="option-compare-statement"></a>Istruzione Option Compare
 Dichiara il metodo di confronto predefinito da usare durante il confronto dei dati di tipo stringa.  
@@ -80,12 +80,12 @@ Option Compare { Binary | Text }
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usata l'istruzione `Option Compare` per impostare il confronto binario come metodo predefinito per il confronto tra stringhe. Per usare questo codice, rimuovere il commento dall'istruzione `Option Compare Binary` e inserirlo all'inizio del file di origine.  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usata l'istruzione `Option Compare` per impostare il criterio di ordinamento del testo senza distinzione tra maiuscole e minuscole come metodo predefinito per il confronto tra stringhe. Per usare questo codice, rimuovere il commento dall'istruzione `Option Compare Text` e inserirlo all'inizio del file di origine.  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>

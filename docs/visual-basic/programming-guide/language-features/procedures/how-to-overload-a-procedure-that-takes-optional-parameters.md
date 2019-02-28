@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 343ede485a0486567710a8bf34d85ea356c139fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52e31ba2f9d2f5cf87a5597a3c8d639816a75535
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694126"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972664"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedura: Overload di una routine che accetta parametri facoltativi (Visual Basic)
 Se una routine contiene uno o più [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) parametri, non è possibile definire una versione di overload corrisponda a uno dei relativi overload impliciti. Per altre informazioni, vedere "Esegue l'overload implicito per i parametri facoltativi" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
@@ -38,11 +38,11 @@ Se una routine contiene uno o più [facoltativo](../../../../visual-basic/langua
   
      Nell'esempio seguente illustra una procedura definita con un parametro facoltativo, un set equivalente di due routine di overload e, infine, esempi di versioni di overload valide e non è valide.  
   
-     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
-     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
-     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>Più parametri facoltativi  
  Per una procedura con più di un parametro facoltativo, in genere è necessario più di due versioni di overload. Ad esempio, se sono presenti due parametri facoltativi e il codice chiamante può specificare o omettere ognuno di essi indipendentemente da altra, è necessario quattro versioni di overload, uno per ogni possibile combinazione di argomenti forniti.  

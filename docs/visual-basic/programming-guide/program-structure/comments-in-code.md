@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597541"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977500"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
 Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore di Visual Basic per ignorare il testo seguente, o la *commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
@@ -28,11 +28,11 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
   
  I commenti possono seguire un'istruzione sulla stessa riga oppure occupare una riga intera. Nell'esempio di codice seguente vengono illustrate entrambe le opzioni.  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#16)]  
   
  Se il commento richiede più di una riga, utilizzare il simbolo di commento su ogni riga, così come viene illustrato nell'esempio seguente:  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Indicazioni sui commenti  
  Nella tabella riportata di seguito vengono fornite indicazioni generali sui tipi di commenti che possono precedere una sezione del codice. Questi sono i suggerimenti; Visual Basic non applica le regole per l'aggiunta di commenti. Scrivere il testo che si ritiene più adatto alle proprie esigenze e a quelle di chi leggerà il codice.  

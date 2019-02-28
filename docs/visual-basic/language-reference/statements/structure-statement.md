@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d312bc14cf4df3825586de0eba5cba64856268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704904"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977513"
 ---
 # <a name="structure-statement"></a>Istruzione Structure
 Dichiara il nome di una struttura e introduce la definizione delle variabili, proprietà, eventi e procedure che comprende la struttura.  
@@ -102,7 +102,7 @@ End Structure
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Structure` istruzione per definire un set di dati correlati per un dipendente. Viene illustrato l'utilizzo delle `Public`, `Friend`, e `Private` membri in modo da riflettere la riservatezza degli elementi di dati. Vengono inoltre visualizzati i membri di routine, proprietà ed eventi.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)

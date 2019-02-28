@@ -2,14 +2,14 @@
 title: Panoramica di F#
 description: Esaminare alcune delle principali funzionalità del linguaggio in questa presentazione con esempi di codice di programmazione F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145523"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968296"
 ---
-# <a name="tour-of-f"></a>Panoramica di F# #
+# <a name="tour-of-f"></a>Panoramica di F\#
 
 Il modo migliore per informazioni su F# è per leggere e scrivere codice F#. Questo articolo verrà agire come un tour dettagliato alcune delle principali funzionalità del linguaggio F# e offrono alcuni frammenti di codice che è possibile eseguire nel computer. Per altre informazioni sull'impostazione di un ambiente di sviluppo, consultare [introduttiva](tutorials/getting-started/index.md).
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: 7d9fbc518d54ab83d517a5c305b171d4b77a664a
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d0beb45d94695d9eeed31a9a7852cf91b3db8a59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305948"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970766"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Procedura dettagliata: Eredità da un controllo di Windows Form con Visual C# #
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Procedura dettagliata: Eredità da un controllo di Windows Forms con Visual C\#
 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] consente di creare controlli personalizzati avanzati sfruttando *l'ereditarietà*. L'ereditarietà consente di creare nuovi controlli che non solo conservano tutte le funzionalità proprie dei controlli Windows Forms standard, ma includono anche funzionalità personalizzate. In questa procedura verrà creato un controllo ereditato semplice denominato `ValueButton`. Questo pulsante eredita la funzionalità di standard di Windows Form <xref:System.Windows.Forms.Button> controllare ed espone una proprietà personalizzata denominata `ButtonValue`.  
   
 > [!NOTE]

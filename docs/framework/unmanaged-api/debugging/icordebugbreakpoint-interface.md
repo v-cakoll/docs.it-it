@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugBreakpoint
+title: Interfaccia ICorDebugBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpoint
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a222f578daed0ab81e2136e00d6f9b032acd95fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7e454c15ddfa977a6d06921a5d80a6c05dca92f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744934"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973574"
 ---
-# <a name="icordebugbreakpoint-interface1"></a>Interfaccia1 ICorDebugBreakpoint
+# <a name="icordebugbreakpoint-interface"></a>Interfaccia ICorDebugBreakpoint
+
 Rappresenta un punto di interruzione in una funzione o un punto di controllo su un valore.  
   
 ## <a name="methods"></a>Metodi  

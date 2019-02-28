@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 487e2ff55f256bc06a463043dd2849a404eb82cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975199"
 ---
 # <a name="dim-statement-visual-basic"></a>Istruzione Dim (Visual Basic)
 Dichiara e alloca spazio di archiviazione per una o più variabili.  
@@ -196,7 +196,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ```  
   
 ## <a name="arrays"></a>Matrici  
- È possibile dichiarare una variabile per contenere un *matrice*, che può contenere più valori. Per specificare che una variabile contiene una matrice, seguire le `variablename` immediatamente con le parentesi. Per altre informazioni sulle matrici, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ È possibile dichiarare una variabile per contenere un *matrice*, che può contenere più valori. Per specificare che una variabile contiene una matrice, seguire le `variablename` immediatamente con le parentesi. Per altre informazioni sulle matrici, vedere [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  È possibile specificare il limite inferiore e superiore di ogni dimensione della matrice. A tale scopo, includere un `boundslist` all'interno delle parentesi. Per ogni dimensione, il `boundslist` specifica il limite superiore e, facoltativamente, il limite inferiore. Il limite inferiore è sempre uguale a zero, se si specifichi o meno. Ogni indice può variare da zero tramite il relativo valore limite superiore.  
   
@@ -252,9 +252,9 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Tipo di dati specificato?|Inizializzatore specificato?|Esempio|Risultato|  
 |---|---|---|---|  
 |No|No|`Dim qty`|Se [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) è disattivata (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|No|Yes|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è abilitata (impostazione predefinita), la variabile accetta i dati di tipo dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|No|Sì|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è abilitata (impostazione predefinita), la variabile accetta i dati di tipo dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Vedere la tabella più avanti in questa sezione.|  
-|Yes|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
  Se si specifica un tipo di dati ma non si specifica un inizializzatore, Visual Basic consente di inizializzare la variabile sul valore predefinito per il tipo di dati. La tabella seguente illustra l'impostazione predefinita i valori di inizializzazione.  
   
@@ -299,19 +299,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>Esempio  
  L'esempio seguente dichiara le variabili usando i `Dim` istruzione con varie opzioni.  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente elenca i numeri primi compreso tra 1 e 30. L'ambito delle variabili locali è descritto nei commenti di codice.  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente, il `speedValue` variabile viene dichiarata a livello di classe. Il `Private` parola chiave viene usata per dichiarare la variabile. La variabile è accessibile da qualsiasi routine di `Car` classe.  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)

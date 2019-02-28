@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691229"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974393"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: Passare argomenti a una routine (Visual Basic)
 Quando si chiama una routine, si seguono il nome della routine con un elenco di argomenti racchiuso tra parentesi. Viene fornito un argomento corrispondente a ogni parametro obbligatorio, definisce la procedura e, facoltativamente, è possibile specificare argomenti per il `Optional` parametri. Se non si fornisce un `Optional` parametro nella chiamata, è necessario includere una virgola per contrassegnarne la posizione nell'elenco di argomenti, se viene fornito alcun argomento successivo.  
@@ -39,7 +39,7 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
   
      L'esempio seguente chiama il Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> (funzione).  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      Nell'esempio precedente specifica il primo argomento obbligatorio, ovvero la stringa di messaggio da visualizzare. Omette un argomento per il secondo parametro facoltativo che specifica i pulsanti da visualizzare nella finestra di messaggio. Poiché la chiamata non fornisce alcun valore, `MsgBox` Usa il valore predefinito `MsgBoxStyle.OKOnly`, che consente di visualizzare solo un **OK** pulsante.  
   

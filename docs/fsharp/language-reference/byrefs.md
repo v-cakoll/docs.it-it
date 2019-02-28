@@ -2,12 +2,12 @@
 title: Zkratka
 description: Informazioni su byref e tipi byref simili in F#, che vengono utilizzati per la programmazione di basso livello.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611581"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976551"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Tutte queste regole insieme significa che il titolare di un `inref` puntatore no
 
 Lo scopo di `outref<'T>` consiste nell'indicare che il puntatore deve essere letto solo da. In modo imprevisto, `outref<'T>` consente la lettura sottostante valore malgrado il nome. Si tratta di garantire la compatibilità. A livello semantico `outref<'T>` non è diversa da `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilità con c# #
+### <a name="interop-with-c"></a>Interoperabilità con C\#
 
 C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra come F# interpreta cosa C# genera:
 

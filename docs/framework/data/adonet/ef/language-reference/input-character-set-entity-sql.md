@@ -2,12 +2,12 @@
 title: Set di caratteri di input (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641200"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976759"
 ---
 # <a name="input-character-set-entity-sql"></a>Set di caratteri di input (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] accetta i caratteri Unicode con codifica UTF-16.  
@@ -24,9 +24,9 @@ ms.locfileid: "54641200"
   
  Le parole chiave, le espressioni e la punteggiatura possono essere qualsiasi carattere UTF-16 normalizzato in latino. SELECT in una tabella codici giapponese è, ad esempio, una parola chiave valida.  
   
- Le parole chiave, le espressioni e la punteggiatura possono essere solo caratteri latini. `SELECT` in una tabella codici giapponese non è una parola chiave. +, -, *, /, =, () ', [,] e qualsiasi altro costrutto di linguaggio non citato possono essere solo caratteri latini.  
+ Le parole chiave, le espressioni e la punteggiatura possono essere solo caratteri latini. `SELECT` in una tabella codici giapponese non è una parola chiave. +,-, \*, /, =, (,), ', [,] e qualsiasi altro costrutto di linguaggio non citato può essere solo caratteri latini.  
   
- Gli identificatori semplici possono essere solo caratteri latini. Questo consente di evitare l'ambiguità durante il confronto, poiché vengono confrontati i valori originali. ABC sarebbe ad esempio diverso nelle tabelle codici giapponese e latina.  
+ Gli identificatori semplici possono essere solo caratteri latini. Questo consente di evitare l'ambiguità durante il confronto, poiché vengono confrontati i valori originali. Ad esempio, ABC sarebbe diverso nelle tabelle codici giapponese e latina.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

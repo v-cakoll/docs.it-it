@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734039"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970961"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Procedura: Creare una proprietà (Visual Basic)
 Una proprietà definizione racchiusa tra una `Property` istruzione e una `End Property` istruzione. All'interno di questa definizione si definisce una `Get` routine, un `Set` procedure, o entrambi. Codice della proprietà si trova all'interno di queste procedure.  
@@ -54,11 +54,11 @@ Una proprietà definizione racchiusa tra una `Property` istruzione e una `End Pr
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea una proprietà di lettura/scrittura che archivia un nome completo come due parti costitutive, il nome e cognome. Quando legge il codice chiamante `fullName`, il `Get` procedure combina le due parti costitutive e restituisce il nome completo. Quando il codice chiamante assegna un nuovo nome completo, il `Set` routine tenta di suddividere l'operazione in due parti costitutive. Se non viene trovato uno spazio, li archivia tutti come il nome.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  L'esempio seguente illustra tipici chiamate alle routine della proprietà di `fullName`. La prima chiamata imposta il valore della proprietà e la seconda chiamata li recupera.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

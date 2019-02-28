@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580495"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975394"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Procedura dettagliata: Dichiarazione e generazione di eventi (Visual Basic)
 Questa procedura dettagliata illustra come dichiarare e generare eventi per una classe denominata `Widget`. Dopo aver completato i passaggi, è possibile leggere l'argomento complementare [procedura dettagliata: Gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), che mostra come usare gli eventi da `Widget` oggetti da fornire informazioni sullo stato in un'applicazione.  
@@ -46,7 +46,7 @@ Questa procedura dettagliata illustra come dichiarare e generare eventi per una 
   
 -   Usare la `Event` parola chiave per dichiarare un evento nel `Widget` classe. Si noti che un evento può avere `ByVal` e `ByRef` gli argomenti, come `Widget`del `PercentDone` dimostrato dall'evento:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  Quando l'oggetto chiamante riceve un' `PercentDone` evento, il `Percent` argomento contiene la percentuale di completamento dell'attività. Il `Cancel` argomento può essere impostato su `True` per annullare il metodo che ha generato l'evento.  
   
@@ -59,11 +59,11 @@ Questa procedura dettagliata illustra come dichiarare e generare eventi per una 
   
 1.  Per semplificare l'accesso per il `Timer` proprietà utilizzata da questa classe, aggiungere un' `Imports` istruzione all'inizio della sezione delle dichiarazioni di modulo di classe, sopra il `Class Widget` istruzione.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  Aggiungere il codice seguente alla classe `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  Quando l'applicazione chiama il `LongTask` metodo, il `Widget` classe genera le `PercentDone` eventi ogni `MinimumInterval` secondi. Quando termina, l'evento `LongTask` verifica se il `Cancel` argomento è stato impostato su `True`.  
   

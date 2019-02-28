@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725363"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978475"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passaggio di argomenti per valore e per riferimento (Visual Basic)
 In Visual Basic, è possibile passare un argomento a una routine *dal valore* oppure *per riferimento*. Questo è noto come il *meccanismo di trasferimento*, e determina se la routine può modificare l'elemento di programmazione sottostante all'argomento nel codice chiamante. La dichiarazione di routine determina il meccanismo di passaggio per ogni parametro specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oppure [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave).  
@@ -66,7 +66,7 @@ In Visual Basic, è possibile passare un argomento a una routine *dal valore* op
  Nell'esempio seguente viene illustrato quando gli argomenti vengono passati per valore e passarle per riferimento. Routine `Calculate` abbia sia un' `ByVal` e un `ByRef` parametro. Dato un tasso di interesse `rate`, nonché la somma di denaro, `debt`, l'attività della procedura consiste nel calcolare un nuovo valore per `debt` che rappresenta il risultato dell'applicazione del tasso di interesse per il valore originale di `debt`. In quanto `debt` è un `ByRef` parametro, il nuovo totale viene riflessa nel valore dell'argomento nel codice chiamante che corrisponde a `debt`. Parametro `rate` è un `ByVal` parametro perché `Calculate` consiglia di non modificare il relativo valore.  
   
 ### <a name="code"></a>Codice  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

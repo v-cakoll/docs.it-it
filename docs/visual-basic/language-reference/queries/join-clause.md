@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514686"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971299"
 ---
 # <a name="join-clause-visual-basic"></a>Clausola Join (Visual Basic)
 Combina due raccolte in un'unica raccolta. L'operazione di join è basata su chiavi corrispondenti e viene utilizzato il `Equals` operatore.  
@@ -59,12 +59,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente esegue un join implicito per combinare un elenco di clienti con i relativi ordini.  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente unisce due raccolte mediante il `Join` clausola.  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
  In questo esempio viene prodotto un output simile al seguente:  
   
@@ -77,7 +77,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>Esempio  
  Esempio di codice seguente unisce due raccolte mediante il `Join` clausola con due colonne chiave.  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
  Nell'esempio viene prodotto un output simile al seguente:  
   

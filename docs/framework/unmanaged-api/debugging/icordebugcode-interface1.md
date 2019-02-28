@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugCode
+title: Interfaccia ICorDebugCode
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2fe1e854069d9b5d566fc00420615e0c06b3d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ca47eb5508907297a78dba1ab2b0a6d2b8ece0d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575947"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976928"
 ---
-# <a name="icordebugcode-interface1"></a>Interfaccia1 ICorDebugCode
+# <a name="icordebugcode-interface"></a>Interfaccia ICorDebugCode
+
 Rappresenta un segmento di codice MSIL (Microsoft Intermediate Language) o di codice nativo.  
   
 ## <a name="methods"></a>Metodi  

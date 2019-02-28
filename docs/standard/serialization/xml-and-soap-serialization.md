@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179429"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965618"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializzazione SOAP e XML
 
@@ -49,7 +49,7 @@ Descrive come controllare la serializzazione tramite l'utilizzo di attributi.
 [Attributi per il controllo della serializzazione XML](attributes-that-control-xml-serialization.md)  
 Elenca gli attributi utilizzati per il controllo della serializzazione XML.
 
-[Procedura: Specificare un nome di elemento alternativo per un flusso XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+[Procedura: Specificare un nome di elemento alternativo per un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 Presenta uon scenario avanzato in cui viene illustrato come generare più flussi XML eseguendo l'override della serializzazione.
 
 [Procedura: Controllare la serializzazione delle classi derivate](how-to-control-serialization-of-derived-classes.md)  
@@ -61,7 +61,7 @@ Descrive come definire e controllare il modo in cui gli spazi dei nomi XML vengo
 [Serializzazione XML con Servizi Web XML](xml-serialization-with-xml-web-services.md)  
 Spiega in che modo la serializzazione XML viene utilizzata nei servizi Web XML.
 
-[Procedura: Serializzare un oggetto come flusso XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[Procedura: Serializzare un oggetto come un Stream XML con codifica SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 Viene descritto come utilizzare il <xref:System.Xml.Serialization.XmlSerializer> classe per creare flussi XML SOAP codificati conformi alla sezione 5 del documento del World Wide Web Consortium (W3C) intitolato [SOAP Simple Object Access Protocol () 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
 
 [Procedura: Eseguire l'override della serializzazione XML con codifica SOAP](how-to-override-encoded-soap-xml-serialization.md)  
@@ -84,10 +84,7 @@ Aggiunge i tipi usati dalla classe <xref:System.Xml.Serialization.XmlSchemaImpor
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Advanced Development Technologies](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e) (Tecnologie di sviluppo avanzate)  
-Sono riportati collegamenti per accedere a ulteriori informazioni sulle tecniche e sulle attività di sviluppo avanzate in .NET Framework.
-
-[Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 Fornisce gli argomenti che descrivono e spiegano come programmare i servizi Web XML con ASP.NET.
 
 ## <a name="see-also"></a>Vedere anche

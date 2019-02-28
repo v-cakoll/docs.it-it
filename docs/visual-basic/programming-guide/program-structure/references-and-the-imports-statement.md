@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: d9a227f60edf142832ab41e3ea99f33c53a42229
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748310"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973041"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Riferimenti e istruzione Imports (Visual Basic)
 È possibile rendere gli oggetti esterni disponibili al progetto scegliendo il **Aggiungi riferimento** comando le **progetto** menu. I riferimenti in Visual Basic possono puntare agli assembly, che sono come le librerie dei tipi ma contengono ulteriori informazioni.  
@@ -36,15 +36,15 @@ ms.locfileid: "56748310"
 ## <a name="using-aliases-with-the-imports-statement"></a>Utilizzo degli alias con l'istruzione Imports  
  Il `Imports` istruzione semplifica l'accesso ai metodi delle classi, eliminando la necessità di tipizzare in modo esplicito i nomi completi dei riferimenti. Gli alias consentono di assegnare un nome più descrittivo a una sola parte di uno spazio dei nomi. Ad esempio, il ritorno a capo/avanzamento riga sequenza che provoca un'unica parte di testo da visualizzare su più righe fa parte del <xref:Microsoft.VisualBasic.ControlChars> modulo nel <xref:Microsoft.VisualBasic?displayProperty=nameWithType> dello spazio dei nomi. Per usare questa costante in un programma senza un alias, è necessario digitare il codice seguente:  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
  `Imports` le istruzioni devono sempre essere le prime righe immediatamente successive alle `Option` istruzioni in un modulo. Il frammento di codice seguente viene illustrato come importare e assegnare un alias per il <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> modulo:  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
  I riferimenti futuri di questo spazio dei nomi possono essere notevolmente più brevi:  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
  Se un `Imports` istruzione non include un nome di alias, gli elementi definiti nello spazio dei nomi importato possono essere usati nel modulo senza qualifica. Se viene specificato il nome dell'alias, deve essere usato come qualificatore per i nomi dei contenuti all'interno di tale spazio dei nomi.  
   
