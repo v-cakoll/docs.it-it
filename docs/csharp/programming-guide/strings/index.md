@@ -1,17 +1,11 @@
 ---
-title: Stringhe - Guida per programmatori C#
+title: 'Stringhe - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, strings
-- strings [C#]
+  - 'C# language, strings'
+  - 'strings [C#]'
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236362"
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -31,22 +25,22 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 ## <a name="immutability-of-string-objects"></a>Immutabilità degli oggetti stringa  
  Gli oggetti stringa sono *immutabili*, ovvero non possono essere modificati una volta creati. Tutti i metodi <xref:System.String> e gli operatori C# che sembrano modificare una stringa in realtà restituiscono i risultati in un nuovo oggetto stringa. Nell'esempio seguente, quando il contenuto di `s1` e `s2` viene concatenato per formare un'unica stringa, le due stringhe originali restano immutate. L'operatore `+=` crea una nuova stringa che contiene il contenuto delle due stringhe combinato. Il nuovo oggetto viene assegnato alla variabile `s1` e l'oggetto originale assegnato a `s1` viene rilasciato per l'operazione di Garbage Collection perché nessun'altra variabile contiene un riferimento a tale oggetto.  
   
- [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
  Dato che una "modifica" della stringa è in effetti la creazione di una nuova stringa, è necessario prestare attenzione quando si creano riferimenti alle stringhe. Se si crea un riferimento a una stringa e quindi si "modifica" la stringa originale, il riferimento continuerà a puntare all'oggetto originale anziché al nuovo oggetto creato quando la stringa è stata modificata. Il codice seguente illustra questo comportamento:  
   
- [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
  Per altre informazioni su come creare nuove stringhe basate su modifiche quali operazioni di ricerca e sostituzione sulla stringa originale, vedere [Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Valori letterali stringa normali e verbatim  
  Usare valori letterali stringa normali quando è necessario incorporare caratteri di escape forniti da C#, come mostrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
  Usare stringhe verbatim per praticità e migliore leggibilità quando il testo della stringa contiene barre rovesciate, ad esempio nei percorsi di file. Dato che le stringhe verbatim mantengono i caratteri di nuova riga come parte del testo della stringa, possono essere usate per inizializzare stringhe su più righe. Usare virgolette doppie per incorporare una virgoletta in una stringa verbatim. L'esempio seguente mostra alcuni usi comuni delle stringhe verbatim:  
   
- [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
 ## <a name="string-escape-sequences"></a>Sequenze di escape delle stringhe  
   
@@ -131,7 +125,7 @@ string s = String.Empty;
 |[Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md)|Illustra le tecniche per trasformare le stringhe e modificare il contenuto di queste.|  
 |[Procedura: Confrontare le stringhe](../../how-to/compare-strings.md)|Illustra come eseguire confronti di stringhe tra ordinali e impostazioni cultura.|  
 |[Procedura: Concatenare più stringhe](../../how-to/concatenate-multiple-strings.md)|Illustra vari modi per unire più stringhe in una.|
-|[Procedura: Analizzare le stringhe con String.Split ](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
+|[Procedura: Analizzare le stringhe con String.Split](../../how-to/parse-strings-using-split.md)|Esempi di codice che illustrano come usare il metodo `String.Split` per analizzare le stringhe.|  
 |[Procedura: Cercare stringhe](../../how-to/search-strings.md)|Spiega come eseguire la ricerca di testo specifico o di motivi nelle stringhe.|  
 |[Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Interpolazione di stringhe](../../language-reference/tokens/interpolated.md)|Descrive la funzionalità di interpolazione di stringhe che offre una sintassi efficiente per formattare le stringhe.|

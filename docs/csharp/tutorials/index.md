@@ -1,19 +1,13 @@
 ---
-title: Esercitazioni su C#
-description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
+title: 'Esercitazioni su C#'
+description: 'Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084667"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
 Queste sono le esercitazioni su C#. iniziano con lezioni interattive che è possibile eseguire nel browser. Le esercitazioni successive e più avanzate consentono di usare gli strumenti di sviluppo .NET per creare programmi C# nel computer.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Introduzione a C# - Esercitazioni interattive #
+## <a name="introduction-to-c-interactive-tutorials"></a>Introduzione a C# - Esercitazioni interattive
 
 Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere e a eseguire codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 
@@ -47,7 +41,7 @@ Questa esercitazione presuppone che siano state completate le lezioni elencate i
 
 Tutte le esercitazioni introduttive successive alla lezione relativa a Hello World sono disponibili nell'ambiente di sviluppo locale. Alla fine di ogni esercitazione, è possibile scegliere se continuare con la successiva lezione online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con l'esercitazione successiva nel computer.
 
-## <a name="explore-new-features-in-c"></a>Esplorare le nuove funzionalità in C# #
+## <a name="explore-new-features-in-c"></a>Esplorare le nuove funzionalità in C\#
 
 Provare le nuove funzionalità in [C# 6](../whats-new/csharp-6.md) in questa [esplorazione interattiva](exploration/csharp-6.yml).
 
