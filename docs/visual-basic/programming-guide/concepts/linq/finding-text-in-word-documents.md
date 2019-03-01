@@ -2,18 +2,18 @@
 title: Ricerca di testo nei documenti di Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee052f140f7db5c3c53e116d8b295b120436f6f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720863"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200975"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Ricerca di testo nei documenti di Word (Visual Basic)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene elaborato un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica. A tale scopo, viene usata una query per ricercare la stringa "Hello". Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
+ Questo esempio elabora un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica nel documento. A tale scopo, viene usata una query per ricercare la stringa "Hello". Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
  Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [creando l'origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   

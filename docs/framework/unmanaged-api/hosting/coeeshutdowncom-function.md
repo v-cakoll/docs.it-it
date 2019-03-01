@@ -8,6 +8,7 @@ api_location:
 - clr.dll
 - mscorwks.dll
 - mscoreei.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -19,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d63a007240ab0bd0240f7b45fed52e2a2129
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568582"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212248"
 ---
 # <a name="coeeshutdowncom-function"></a>Funzione CoEEShutDownCOM
 Forza common language runtime (CLR) per rilasciare tutti i puntatori di interfaccia che vengono mantenuti all'interno di runtime callable wrapper (RCW). Questo ha l'effetto di rilascio di tutte le cache RCW. Questa funzione globale è deprecata nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Usare invece il punto di ingresso per un runtime specifico.  

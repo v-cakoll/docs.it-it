@@ -4,12 +4,12 @@ description: Griglia di eventi di Azure è una soluzione senza server per il rec
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145884"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212183"
 ---
 # <a name="event-grid"></a>Griglia di eventi
 
@@ -97,8 +97,8 @@ Dei principali vantaggi dell'uso di griglia di eventi è gli automatica messaggi
 | | Microsoft.Resources.ResourceWriteCancel | Generato quando una risorsa di creazione o l'operazione di aggiornamento viene annullata. |
 |  | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione della risorsa ha esito positivo. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione della risorsa ha esito negativo. |
-| | Resourcedeletecancel | Generato quando viene annullata un'operazione di eliminazione di risorse. Questo evento si verifica quando viene annullata una distribuzione modello. |
-| Archiviazione BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un blob. |
+| | Microsoft.Resources.ResourceDeleteCancel | Generato quando viene annullata un'operazione di eliminazione di risorse. Questo evento si verifica quando viene annullata una distribuzione modello. |
+| Archiviazione - BLOB | Microsoft.Storage.BlobCreated | Generato quando viene creato un blob. |
 | | Microsoft.Storage.BlobDeleted | Generato quando viene eliminato un blob. |
 | Hub eventi | Microsoft.EventHub.CaptureFileCreated | Generato quando viene creato un file di acquisizione.
 | Hub IoT | Microsoft.Devices.DeviceCreated | Pubblicato quando un dispositivo viene registrato a un hub IoT. |
@@ -108,7 +108,7 @@ Dei principali vantaggi dell'uso di griglia di eventi è gli automatica messaggi
 | | Microsoft.Resources.ResourceWriteCancel | Generato quando una risorsa di creazione o l'operazione di aggiornamento viene annullata. |
 | | Microsoft.Resources.ResourceDeleteSuccess | Generato quando un'operazione di eliminazione della risorsa ha esito positivo. |
 | | Microsoft.Resources.ResourceDeleteFailure | Generato quando un'operazione di eliminazione della risorsa ha esito negativo. |
-| | Resourcedeletecancel | Generato quando viene annullata un'operazione di eliminazione di risorse. Questo evento si verifica quando viene annullata una distribuzione modello. |
+| | Microsoft.Resources.ResourceDeleteCancel | Generato quando viene annullata un'operazione di eliminazione di risorse. Questo evento si verifica quando viene annullata una distribuzione modello. |
 
 Per altre informazioni, vedere [schema di eventi di griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
 
@@ -124,7 +124,7 @@ In questo capitolo si è appreso sulla piattaforma Azure senza server che è cos
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights Analitica](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Crea la tua app nel cloud con funzioni di Azure senza server](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Griglia di eventi di Azure](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Griglia di eventi di Azure](https://docs.microsoft.com/azure/event-grid/overview)
 * [Schema di eventi di griglia di eventi Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs)
 * [Documentazione di funzioni di Azure](https://docs.microsoft.com/azure/azure-functions)

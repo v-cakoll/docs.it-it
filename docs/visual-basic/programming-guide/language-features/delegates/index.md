@@ -2,32 +2,26 @@
 title: Delegati (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- delegates [Visual Basic]
-- Visual Basic code, delegates
+  - 'delegates [Visual Basic]'
+  - 'Visual Basic code, delegates'
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 99fe0eee194fae21615652c9426bf6027fbf4354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652883"
 ---
 # <a name="delegates-visual-basic"></a>Delegati (Visual Basic)
-I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. Ma a differenza dei puntatori a funzione, Visual Basic i delegati sono un tipo di riferimento in base alla classe <xref:System.Delegate?displayProperty=nameWithType>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.  
+I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descritti come *puntatori a funzione indipendenti dai tipi* poiché sono simili ai puntatori a funzione usati in altri linguaggi di programmazione. Ma a differenza dei puntatori a funzione, Visual Basic i delegati sono un tipo riferimento basato sulla classe <xref:System.Delegate?displayProperty=nameWithType>. I delegati possono fare riferimento sia a metodi condivisi, ovvero metodi che è possibile chiamare senza una specifica istanza di una classe, sia a metodi di istanza.  
   
 ## <a name="delegates-and-events"></a>Delegati ed eventi  
  I delegati sono utili nelle situazioni in cui è necessario un intermediario tra una routine chiamante e la routine chiamata. Ad esempio, può essere necessario che un oggetto generatore di eventi sia in grado di chiamare gestori di eventi differenti in circostanze diverse. Purtroppo, l'oggetto che genera gli eventi non può sapere in anticipo quale gestore eventi gestirà uno specifico evento. Visual Basic consente di associare in modo dinamico i gestori eventi con eventi mediante la creazione di un delegato quando si usa il `AddHandler` istruzione. In fase di esecuzione, il delegato inoltrerà le chiamate al gestore eventi appropriato.  
   
- Sebbene sia possibile creare dei delegati personali, nella maggior parte dei casi, Visual Basic crea automaticamente il delegato e tutti i dettagli necessari. Un'istruzione `Event`, ad esempio, consente di definire implicitamente una classe delegata denominata `<EventName>EventHandler` come classe nidificata della classe contenente l'istruzione `Event` e con la stessa firma dell'evento. L'istruzione `AddressOf` crea in modo implicito un'istanza di un delegato che fa riferimento a una routine specifica. Le due righe di codice seguenti sono equivalenti. Nella prima riga è possibile osservare la creazione esplicita di un'istanza di `Eventhandler`, con un riferimento al metodo `Button1_Click` inviato come argomento. La seconda riga rappresenta un modo più pratico di eseguire la stessa operazione.  
+ Sebbene sia possibile creare i delegati, nella maggior parte dei casi, Visual Basic crea automaticamente il delegato e si occupa dei dettagli per l'utente. Un'istruzione `Event`, ad esempio, consente di definire implicitamente una classe delegata denominata `<EventName>EventHandler` come classe nidificata della classe contenente l'istruzione `Event` e con la stessa firma dell'evento. L'istruzione `AddressOf` crea in modo implicito un'istanza di un delegato che fa riferimento a una routine specifica. Le due righe di codice seguenti sono equivalenti. Nella prima riga è possibile osservare la creazione esplicita di un'istanza di `Eventhandler`, con un riferimento al metodo `Button1_Click` inviato come argomento. La seconda riga rappresenta un modo più pratico di eseguire la stessa operazione.  
   
- [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
+ [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]  
   
  È possibile usare la sintassi abbreviata per creare delegati ogni volta che il compilatore è in grado di determinare il tipo del delegato in base al contesto.  
   
 ## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Dichiarazione di eventi che usano un tipo delegato esistente  
  In alcune situazioni, è consigliabile dichiarare un evento che usa un tipo delegato esistente come delegato sottostante. La sintassi seguente illustra come eseguire tale operazione:  
   
- [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
+ [!code-vb[VbVbalrDelegates#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#7)]  
   
  Questa operazione si rivela utile quando si vogliono inviare più eventi allo stesso gestore.  
   
@@ -53,7 +47,7 @@ I delegati sono oggetti che fanno riferimento ai metodi. Vengono a volte descrit
   
  Nell'esempio seguente sono illustrate sia l'espressione `AddressOf` che l'espressione lambda usate per specificare il riferimento per un delegato.  
   
- [!code-vb[VbVbalrDelegates#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_3.vb)]  
+ [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]  
   
  La firma della funzione deve corrispondere a quella del tipo delegato. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Per altri esempi di espressioni lambda e assegnazioni di `AddressOf` a delegati, vedere [Conversione di tipo relaxed del delegato](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   

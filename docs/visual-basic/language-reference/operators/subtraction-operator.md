@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 8526f632b7e54c03bd16c3af70375179cd7cf277
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724473"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201222"
 ---
 # <a name="--operator-visual-basic"></a>Operatore - (Visual Basic)
 Restituisce la differenza tra due espressioni numeriche o il valore negativo di un'espressione numerica.  
@@ -48,7 +48,7 @@ Restituisce la differenza tra due espressioni numeriche o il valore negativo di 
  Il tipo di dati del risultato è un tipo numerico appropriato per i tipi di dati di `expression1` e `expression2`. Vedere le tabelle "Calcoli di interi" nella [Data Types of operatore Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>Tipi supportati  
- Tutti i tipi numerici. Inclusi i tipi senza segno e a virgola mobile e `Decimal`.  
+ tutti i tipi numerici. Inclusi i tipi senza segno e a virgola mobile e `Decimal`.  
   
 ## <a name="remarks"></a>Note  
  Nel primo utilizzo illustrato nella sintassi illustrata in precedenza, il `–` operatore è il *binario* operatore di sottrazione aritmetica per la differenza tra due espressioni numeriche.  
@@ -63,7 +63,7 @@ Restituisce la differenza tra due espressioni numeriche o il valore negativo di 
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `–` operatore per calcolare e restituire la differenza tra due numeri, quindi per negare a un numero.  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
  Dopo l'esecuzione di queste istruzioni `binaryResult` contiene il valore 124,45 e `unaryResult` 334,90.  
   

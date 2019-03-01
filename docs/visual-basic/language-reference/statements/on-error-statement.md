@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976486"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203743"
 ---
 # <a name="on-error-statement-visual-basic"></a>Istruzione On Error (Visual Basic)
 Consente a una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. è anche utilizzabile per disabilitare una routine di gestione degli errori.  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>Esempio  
  In questo esempio utilizza in primo luogo il `On Error GoTo` istruzione per specificare il percorso di una routine di gestione degli errori all'interno di una routine. Nell'esempio, un tentativo di dividere per zero genera il numero di errore 6. L'errore viene gestito nella routine di gestione degli errori e il controllo viene quindi restituito all'istruzione che ha causato l'errore. Il `On Error GoTo 0` istruzione consente di disattivare la registrazione degli errori. Il `On Error Resume Next` istruzione viene utilizzata per rinviare la registrazione degli errori in modo che il contesto dell'errore generato dall'istruzione successiva può essere riconosciuto per alcuni. Si noti che `Err.Clear` viene usato per cancellare il `Err` proprietà dell'oggetto dopo l'errore viene gestito.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

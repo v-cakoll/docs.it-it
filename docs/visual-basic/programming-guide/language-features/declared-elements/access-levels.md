@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704654"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203626"
 ---
 # <a name="access-levels-in-visual-basic"></a>Livelli di accesso in Visual Basic
 Il *livello di accesso* di un elemento dichiarato è l'extent della possibilità di accedervi, vale a dire, il tipo di codice dispone dell'autorizzazione di lettura o scrittura. Ciò è determinato non solo dal modo in cui si dichiara l'elemento stesso, ma anche dal livello di accesso del contenitore dell'elemento. Il codice che non è possibile accedere a un elemento contenitore non può accedere a uno qualsiasi dei relativi elementi contenuti, anche quelli dichiarati come `Public`. Ad esempio, un `Public` di una variabile in un `Private` struttura sono accessibili all'interno della classe che contiene la struttura, ma non all'esterno di tale classe.  
@@ -101,8 +101,9 @@ Usare il `Private Protected` modificatore di accesso, è necessario aggiungere l
 
 Per altre informazioni, vedere [impostando la versione del linguaggio Visual Basic](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Modificatori di accesso  
- Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. La tabella seguente confronta i modificatori di accesso.  
+## <a name="access-modifiers"></a>Modificatori di accesso  
+
+Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. La tabella seguente confronta i modificatori di accesso.  
   
 |Modificatore di accesso|Livello di accesso concesso|Elementi che è possibile dichiarare con questo livello di accesso|Contesto della dichiarazione all'interno del quale è possibile utilizzare questo modificatore|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694139"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201183"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (funzione)
 Scrive il qualificatore e il valore denominati. Nuovo qualificatore sovrascrive il valore precedente con lo stesso nome. Se il qualificatore non esiste, viene creato. 
@@ -55,19 +55,19 @@ HRESULT QualifierSet_Put (
 
 `lFlavor` [in] Una delle costanti seguenti che definisce il contrassegno qualificatore desiderato per questo qualificatore. Il valore predefinito è `WBEM_FLAVOR_OVERRIDABLE` (0).
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Il qualificatore può essere sottoposto a override in un'istanza o una classe derivata. **Questo è il valore predefinito.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Il qualificatore viene propagato alle istanze. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Il qualificatore viene propagato alle classi derivate. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Il qualificatore non può essere sottoposto a override in una classe o in un'istanza derivata. |
-| `WBEM_FLAVOR_AMENDED | 0x80 | Il qualificatore è localizzato. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Il qualificatore non può essere sottoposto a override in una classe o in un'istanza derivata. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Il qualificatore è localizzato. |
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Si è verificato un tentativo non valido per specificare il **chiave** qualificatore su una proprietà che non può essere una chiave. Le chiavi specificate del modello a oggetti c; definizione di set di disponibilità per un oggetto e non può essere modificato in ogni istanza. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |

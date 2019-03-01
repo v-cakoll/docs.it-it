@@ -1,61 +1,86 @@
 ---
-title: 'Procedura: Visualizzare i certificati con lo Snap-in MMC'
-ms.date: 03/30/2017
+title: 'Procedura: Visualizzare i certificati con lo snap-in MMC'
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521582"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200286"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Procedura: Visualizzare i certificati con lo Snap-in MMC
-Un tipo comune di credenziale è il certificato X.509. Al momento di creare servizi o client protetti, è possibile specificare il certificato che deve essere utilizzato come credenziale client o del servizio tramite metodi come, ad esempio, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. Il metodo richiede vari parametri, ad esempio l'archivio in cui il certificato è memorizzato e un valore da utilizzare quando si cerca il certificato. Nella procedura seguente viene illustrato come esaminare gli archivi in un computer per trovare un certificato adatto. Per un esempio di ricerca l'identificazione personale del certificato, vedere [come: Recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Procedura: Visualizzare i certificati con lo snap-in MMC
+Quando si crea un client protetto o un servizio, è possibile usare una [certificato](working-with-certificates.md) come le credenziali. Ad esempio, un tipo comune di credenziale è il certificato X.509 che si crea con la <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> (metodo). 
+
+Esistono tre diversi tipi di archivi di certificati che è possibile esaminare con Microsoft Management Console (MMC) nei sistemi Windows:
+
+- Computer locale: L'archivio è locale per il dispositivo e globali per tutti gli utenti del dispositivo.
+
+- Utente corrente: L'archivio è locale all'account utente corrente nel dispositivo.
+
+- Account del servizio: L'archivio è locale rispetto a un determinato servizio nel dispositivo.
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>Per visualizzare certificati nello snap-in MMC  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>Visualizzare i certificati nello snap-in MMC 
+
+La procedura seguente viene illustrato come esaminare gli archivi nel dispositivo locale per trovare un certificato appropriato: 
   
-1.  Aprire una finestra del prompt dei comandi.  
+1. Selezionare **eseguiti** dalle **avviare** dal menu e quindi immettere *mmc*. 
+
+    Verrà visualizzata la finestra di MMC. 
   
-2.  Tipo `mmc` e premere INVIO. Si noti che per visualizzare certificati nell'archivio del computer locale, è necessario avere il ruolo di Amministratore.  
+2. Dal **File** dal menu **Aggiungi/Rimuovi snap-In**. 
+    
+    Il **Aggiungi o Rimuovi Snap-in** verrà visualizzata la finestra.
   
-3.  Nel **File** menu, fare clic su **Aggiungi/Rimuovi snap-In**.  
+3. Dal **snap-in disponibili** casella di riepilogo **certificati**, quindi selezionare **Add**.  
+
+    ![Aggiungere lo snap-in certificati](./media/mmc-add-certificate-snap-in.png)
   
-4.  Fare clic su **Aggiungi**.  
+4. Nel **snap-in certificati** finestra, seleziona **account Computer**e quindi selezionare **Next**. 
   
-5.  Nel **Aggiungi Snap-in Standalone** finestra di dialogo **certificati**.  
+    Facoltativamente, è possibile selezionare **account dell'utente** per l'utente corrente oppure **account del servizio** per un determinato servizio. 
+
+    > [!NOTE]
+    > Se non si ha un amministratore per il dispositivo, è possibile gestire i certificati solo per l'account utente.
   
-6.  Fare clic su **Aggiungi**.  
+5. Nel **seleziona Computer** finestra, lasciare **computer locale** selezionata e quindi selezionare **fine**.  
   
-7.  Nel **snap-in certificati** finestra di dialogo **account Computer** e fare clic su **Next**. Facoltativamente, è possibile selezionare **account dell'utente** oppure **account del servizio**. Se non si è un amministratore del computer, è possibile gestire i certificati solo per il proprio account utente.  
+6. Nel **Aggiungi o Rimuovi Snap-in** finestra, seleziona **OK**.  
   
-8.  Nel **seleziona Computer** finestra di dialogo, fare clic su **fine**.  
+    ![Aggiungere lo snap-in certificati](./media/mmc-certificate-snap-in-selected.png)
+
+7. Facoltative: Dal **File** dal menu **salvare** oppure **Salva con nome** per salvare il file di console MMC per un uso successivo.  
+
+8. Per visualizzare i certificati nello snap-in MMC, selezionare **radice Console** nel riquadro sinistro, quindi espandere **certificati (Computer locale)**.
+
+    Viene visualizzato un elenco di directory per ogni tipo di certificato. Dalla directory ogni certificato, è possibile visualizzare, esportare, importare ed eliminare i propri certificati.
   
-9. Nel **Aggiungi Snap-in Standalone** finestra di dialogo, fare clic su **Chiudi**.  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>Visualizzare i certificati con lo strumento di gestione certificati
+
+È anche possibile visualizzare, esportare, importare ed eliminare certificati utilizzando lo strumento di gestione certificati.
+
+### <a name="to-view-certificates-for-the-local-device"></a>Per visualizzare i certificati per il dispositivo locale
+
+1. Selezionare **eseguiti** dalle **avviare** dal menu e quindi immettere *certlm. msc*. 
+
+    Viene visualizzato lo strumento di gestione certificati per il dispositivo locale. 
   
-10. Nel **Aggiungi/Rimuovi Snap-in** finestra di dialogo, fare clic su **OK**.  
+2. Per visualizzare i certificati, in **certificati - Computer locale** nel riquadro sinistro, espandere la directory per il tipo di certificato che si desidera visualizzare.
+
+### <a name="to-view-certificates-for-the-current-user"></a>Per visualizzare i certificati per l'utente corrente
+
+1. Selezionare **eseguiti** dalle **avviare** dal menu e quindi immettere *Certmgr. msc*. 
+
+    Viene visualizzato lo strumento di gestione certificati per l'utente corrente. 
   
-11. Nel **radice Console** finestra, fare clic su **certificati (Computer locale)** per visualizzare i certificati vengono archiviati per il computer.  
-  
-12. Facoltativo. Per visualizzare i certificati per il proprio account, ripetere i passaggi da 3 a 6. Nel passaggio 7, anziché selezionare **account Computer**, fare clic su **account dell'utente** e ripetere i passaggi da 8 a 10.  
-  
-13. Facoltativo. Nel **File** menu, fare clic su **salvare** oppure **Salva con nome**. Salvare il file di console per riutilizzarlo in seguito.  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>Visualizzazione di certificati con Internet Explorer  
- È anche possibile visualizzare, esportare, importare ed eliminare certificati utilizzando Internet Explorer.  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>Per visualizzare certificati con Internet Explorer  
-  
-1.  In Internet Explorer, fare clic su **degli strumenti**, quindi fare clic su **Opzioni Internet** per visualizzare il **Opzioni Internet** nella finestra di dialogo.  
-  
-2.  Scegliere il **contenuto** scheda.  
-  
-3.  Sotto **certificati**, fare clic su **certificati**.  
-  
-4.  Per visualizzare i dettagli di qualsiasi certificato, selezionare il certificato e fare clic su **vista**.  
+2. Per visualizzare i certificati, in **certificati - utente corrente** nel riquadro sinistro, espandere la directory per il tipo di certificato che si desidera visualizzare.
+
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Procedura: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [Procedura: Recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Utilizzo dei certificati](working-with-certificates.md)
+- [Procedura: Creare certificati temporanei da usare durante lo sviluppo](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Procedura: Recuperare l'identificazione personale di un certificato](how-to-retrieve-the-thumbprint-of-a-certificate.md)

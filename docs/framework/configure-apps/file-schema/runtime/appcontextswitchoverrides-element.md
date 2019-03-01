@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966151"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203548"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -41,7 +41,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
   
 ### <a name="value-attribute"></a>valore attributo  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |"name=value"|Un nome di parametro predefinito insieme al relativo valore (`true` o `false`). Più coppie nome/valore di opzione sono separate da punti e virgola (";"). Per un elenco di nomi di parametro predefiniti supportati da .NET Framework, vedere la sezione Osservazioni.|  
   
@@ -88,6 +88,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Disabilita gli avvisi sul lato server TLS SslStream.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Controlli se il [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializza alcuni caratteri di controllo basati sugli standard ECMAScript V6 e V8. Per altre informazioni, vedere [Mitigazione: Serializzazione dei caratteri di controllo con DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Controlli se il <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supporta solo una regolazione singola o più modifiche per un fuso orario. Se `true`, Usa le <xref:System.TimeZoneInfo> tipo da serializzare e deserializzare i dati di data e ora; in caso contrario, viene utilizzato il <xref:System.TimeZone> tipo, che non supporta più regole di regolazione.|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Controlli se <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> utilizza una dimensione della matrice di dimensioni maggiori durante la serializzazione degli oggetti e la deserializzazione. Impostare questa opzione su `true` per migliorare le prestazioni di serializzazione e deserializzazione dei grafici di oggetti di grandi dimensioni dai tipi, ad esempio <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Controlli se il <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> costruttore imposta il nuovo oggetto <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> proprietà con un riferimento all'oggetto esistente. Per altre informazioni, vedere [Mitigazione: Costruttore ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Controlli se il tentativo di riusare un' <xref:System.Security.Cryptography.AesCryptoServiceProvider> decrittografia genera un <xref:System.Security.Cryptography.CryptographicException>. Per altre informazioni, vedere [componente di decrittografia AesCryptoServiceProvider fornisce una trasformazione riutilizzabile](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controlli se il valore della [CspParameters. Parentwindowhandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) proprietà è un [IntPtr](xref:System.IntPtr) che rappresenta la posizione di memoria di una finestra di gestione, oppure se si tratta di un handle di finestra (HWND). Per altre informazioni, vedere [Mitigazione: CspParameters. Parentwindowhandle prevede un HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   

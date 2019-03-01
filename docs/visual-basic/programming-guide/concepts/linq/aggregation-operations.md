@@ -2,12 +2,12 @@
 title: Operazioni di aggregazione (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 7daf4f653d3796eaa3ae426fdbf86a89ebdd2dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe39c2efb5d9f24a7d9d5240b20a9ca687ed1aa9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735383"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202184"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operazioni di aggregazione (Visual Basic)
 Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori. Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.  
@@ -35,32 +35,32 @@ Un'operazione di aggregazione calcola un singolo valore da una raccolta di valor
 ### <a name="average"></a>Media  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into Average` clausola in Visual Basic per calcolare la temperatura media in una matrice di numeri che rappresentano le temperature.  
   
- [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
+ [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>Conteggio  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into Count` clausola in Visual Basic per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
   
- [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
+ [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   
 ### <a name="longcount"></a>LongCount  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into LongCount` clausola per contare il numero di valori in una matrice.  
   
- [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
+ [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
 ### <a name="max"></a>Max  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into Max` clausola per la quale calcolare la temperatura massima in una matrice di numeri che rappresentano le temperature.  
   
- [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
+ [!code-vb[CsLINQAggregating#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#4)]  
   
 ### <a name="min"></a>Min  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into Min` clausola per la quale calcolare la temperatura minima in una matrice di numeri che rappresentano le temperature.  
   
- [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
+ [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
 ### <a name="sum"></a>Sum  
  Il codice seguente viene illustrato come utilizzare il `Aggregate Into Sum` clausola per calcolare l'importo di spesa totale da una matrice di valori che rappresentano le spese.  
   
- [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
+ [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Linq>

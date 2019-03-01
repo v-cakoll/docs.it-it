@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540611"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212521"
 ---
 # <a name="service-identity-and-authentication"></a>Identità del servizio e autenticazione
-Un servizio *identità endpoint*è un valore generato dal servizio Web Services Description Language (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questo meccanismo funziona come una protezione contro *phishing* impedendo a un client di essere reindirizzati a un endpoint ospitato da un servizio dannoso.  
+Un servizio *identità endpoint* è un valore generato dal servizio Web Services Description Language (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questo meccanismo funziona come una protezione contro *phishing* impedendo a un client di essere reindirizzati a un endpoint ospitato da un servizio dannoso.  
   
  Per un'applicazione di esempio che illustra l'impostazione dell'identità, vedere [esempio identità del servizio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Per altre informazioni sugli endpoint e gli indirizzi degli endpoint, vedere [indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   

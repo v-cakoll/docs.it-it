@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968018"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203441"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipi anonimi (Visual Basic)
 Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scrivere una definizione di classe per il tipo di dati. La classe viene generata direttamente dal compilatore. La classe non ha alcun nome utilizzabile, eredita direttamente da <xref:System.Object>e contiene le proprietà specificate nella dichiarazione dell'oggetto. Poiché il nome del tipo di dati non è specificato, viene considerato un *tipo anonimo*.  
@@ -81,7 +81,7 @@ Visual Basic supporta i tipi anonimi, che consentono di creare oggetti senza scr
 ### <a name="read-only-values"></a>Valori di sola lettura  
  I valori delle proprietà chiave non possono essere modificati. Ad esempio, nella `prod8` nell'esempio precedente, il `Name` e `Price` campi sono `read-only`, ma `OnHand` può essere modificato.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Tipi anonimi da espressioni di Query  
  Le espressioni di query non richiedono sempre la creazione di tipi anonimi. Quando possibile, usano un tipo esistente per contenere i dati della colonna. Ciò si verifica quando la query restituisce l'intero record dall'origine dei dati, o un solo campo di ogni record. Negli esempi di codice seguente, `customers` è una raccolta di oggetti di un `Customer` classe. La classe dispone di molte proprietà e si può includere uno o più di esse nel risultato della query, in qualsiasi ordine. Nei primi due esempi, non i tipi anonimi sono necessari perché la query Seleziona gli elementi di tipi denominati:  

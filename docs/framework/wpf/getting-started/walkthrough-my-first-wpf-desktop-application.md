@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748375"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212378"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Prima applicazione desktop WPF
 
@@ -205,9 +205,9 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
 10. Aggiungere un'immagine denominata *watermark. PNG* al progetto. È possibile creare un'immagine, copiare il file dal codice di esempio o ottenerlo [qui](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).
 
-   1. Fare doppio clic sul nodo del progetto e selezionare **Add** > **elemento esistente**, oppure premere **MAIUSC**+**Alt** + **Oggetto**.
+    1. Fare doppio clic sul nodo del progetto e selezionare **Add** > **elemento esistente**, oppure premere **MAIUSC**+**Alt** + **Oggetto**.
 
-   2. Nel **Aggiungi elemento esistente** finestra di dialogo, selezionare il file di immagine si vuole usare e quindi selezionare **Add**.
+    2. Nel **Aggiungi elemento esistente** finestra di dialogo, selezionare il file di immagine si vuole usare e quindi selezionare **Add**.
 
 ## <a name="build-and-run-the-application"></a>Compilazione ed esecuzione dell'applicazione
 
