@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugValue
+title: Interfaccia ICorDebugValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValue
@@ -16,46 +16,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41afc2e4305034340ad408e52ce08372bf8962dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de5d3a208594a03bfdca837e592f53b3da7f0f0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507447"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981413"
 ---
-# <a name="icordebugvalue-interface1"></a><span data-ttu-id="0490c-102">Interfaccia1 ICorDebugValue</span><span class="sxs-lookup"><span data-stu-id="0490c-102">ICorDebugValue Interface1</span></span>
-<span data-ttu-id="0490c-103">Rappresenta un valore nel processo sottoposto a debug.</span><span class="sxs-lookup"><span data-stu-id="0490c-103">Represents a value in the process being debugged.</span></span> <span data-ttu-id="0490c-104">Il valore può essere un'operazione di lettura o di scrittura.</span><span class="sxs-lookup"><span data-stu-id="0490c-104">The value can be a read or a write value.</span></span>  
+# <a name="icordebugvalue-interface"></a><span data-ttu-id="b3159-102">Interfaccia ICorDebugValue</span><span class="sxs-lookup"><span data-stu-id="b3159-102">ICorDebugValue Interface</span></span>
+<span data-ttu-id="b3159-103">Rappresenta un valore nel processo sottoposto a debug.</span><span class="sxs-lookup"><span data-stu-id="b3159-103">Represents a value in the process being debugged.</span></span> <span data-ttu-id="b3159-104">Il valore può essere un'operazione di lettura o di scrittura.</span><span class="sxs-lookup"><span data-stu-id="b3159-104">The value can be a read or a write value.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0490c-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="0490c-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b3159-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="b3159-105">Methods</span></span>  
   
-|<span data-ttu-id="0490c-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="0490c-106">Method</span></span>|<span data-ttu-id="0490c-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0490c-107">Description</span></span>|  
+|<span data-ttu-id="b3159-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="b3159-106">Method</span></span>|<span data-ttu-id="b3159-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b3159-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0490c-108">Metodo CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="0490c-108">CreateBreakpoint Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|<span data-ttu-id="0490c-109">Questo metodo non è attualmente implementato.</span><span class="sxs-lookup"><span data-stu-id="0490c-109">This method is not currently implemented.</span></span>|  
-|[<span data-ttu-id="0490c-110">Metodo GetAddress</span><span class="sxs-lookup"><span data-stu-id="0490c-110">GetAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|<span data-ttu-id="0490c-111">Ottiene l'indirizzo di questo `ICorDebugValue` oggetto, che è in corso in fase di debug.</span><span class="sxs-lookup"><span data-stu-id="0490c-111">Gets the address of this `ICorDebugValue` object, which is in the process of being debugged.</span></span>|  
-|[<span data-ttu-id="0490c-112">Metodo GetSize</span><span class="sxs-lookup"><span data-stu-id="0490c-112">GetSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|<span data-ttu-id="0490c-113">Ottiene la dimensione, espressa in byte, di questo `ICorDebugValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="0490c-113">Gets the size, in bytes, of this `ICorDebugValue` object.</span></span>|  
-|[<span data-ttu-id="0490c-114">Metodo GetType</span><span class="sxs-lookup"><span data-stu-id="0490c-114">GetType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|<span data-ttu-id="0490c-115">Ottiene il tipo primitivo di questo `ICorDebugValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="0490c-115">Gets the primitive type of this `ICorDebugValue` object.</span></span>|  
+|[<span data-ttu-id="b3159-108">Metodo CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="b3159-108">CreateBreakpoint Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|<span data-ttu-id="b3159-109">Questo metodo non è attualmente implementato.</span><span class="sxs-lookup"><span data-stu-id="b3159-109">This method is not currently implemented.</span></span>|  
+|[<span data-ttu-id="b3159-110">Metodo GetAddress</span><span class="sxs-lookup"><span data-stu-id="b3159-110">GetAddress Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|<span data-ttu-id="b3159-111">Ottiene l'indirizzo di questo `ICorDebugValue` oggetto, che è in corso in fase di debug.</span><span class="sxs-lookup"><span data-stu-id="b3159-111">Gets the address of this `ICorDebugValue` object, which is in the process of being debugged.</span></span>|  
+|[<span data-ttu-id="b3159-112">Metodo GetSize</span><span class="sxs-lookup"><span data-stu-id="b3159-112">GetSize Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|<span data-ttu-id="b3159-113">Ottiene la dimensione, espressa in byte, di questo `ICorDebugValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="b3159-113">Gets the size, in bytes, of this `ICorDebugValue` object.</span></span>|  
+|[<span data-ttu-id="b3159-114">Metodo GetType</span><span class="sxs-lookup"><span data-stu-id="b3159-114">GetType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|<span data-ttu-id="b3159-115">Ottiene il tipo primitivo di questo `ICorDebugValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="b3159-115">Gets the primitive type of this `ICorDebugValue` object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0490c-116">Note</span><span class="sxs-lookup"><span data-stu-id="0490c-116">Remarks</span></span>  
- <span data-ttu-id="0490c-117">In generale, la proprietà di un oggetto valore viene passata quando viene restituita.</span><span class="sxs-lookup"><span data-stu-id="0490c-117">In general, ownership of a value object is passed when it is returned.</span></span> <span data-ttu-id="0490c-118">Il destinatario è responsabile della rimozione di un riferimento dall'oggetto quando viene terminato con l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="0490c-118">The recipient is responsible for removing a reference from the object when it is finished with the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3159-116">Note</span><span class="sxs-lookup"><span data-stu-id="b3159-116">Remarks</span></span>  
+ <span data-ttu-id="b3159-117">In generale, la proprietà di un oggetto valore viene passata quando viene restituita.</span><span class="sxs-lookup"><span data-stu-id="b3159-117">In general, ownership of a value object is passed when it is returned.</span></span> <span data-ttu-id="b3159-118">Il destinatario è responsabile della rimozione di un riferimento dall'oggetto quando viene terminato con l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="b3159-118">The recipient is responsible for removing a reference from the object when it is finished with the object.</span></span>  
   
- <span data-ttu-id="0490c-119">A seconda di dove il valore è stato recuperato da, il valore non restino valido dopo il processo viene ripreso.</span><span class="sxs-lookup"><span data-stu-id="0490c-119">Depending on where the value was retrieved from, the value may not remain valid after the process is resumed.</span></span> <span data-ttu-id="0490c-120">Pertanto, in generale, il valore non deve essere mantenuto in una chiamata del [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="0490c-120">So, in general, the value shouldn't be held across a call of the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method.</span></span>  
+ <span data-ttu-id="b3159-119">A seconda di dove il valore è stato recuperato da, il valore non restino valido dopo il processo viene ripreso.</span><span class="sxs-lookup"><span data-stu-id="b3159-119">Depending on where the value was retrieved from, the value may not remain valid after the process is resumed.</span></span> <span data-ttu-id="b3159-120">Pertanto, in generale, il valore non deve essere mantenuto in una chiamata del [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="b3159-120">So, in general, the value shouldn't be held across a call of the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0490c-121">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="0490c-121">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b3159-121">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="b3159-121">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0490c-122">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0490c-122">Requirements</span></span>  
- <span data-ttu-id="0490c-123">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0490c-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3159-122">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b3159-122">Requirements</span></span>  
+ <span data-ttu-id="b3159-123">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3159-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0490c-124">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0490c-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b3159-124">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3159-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0490c-125">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0490c-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3159-125">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3159-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0490c-126">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0490c-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b3159-126">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3159-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0490c-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0490c-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3159-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b3159-127">See also</span></span>
 
 
 
 
-- [<span data-ttu-id="0490c-128">Interfaccia ICorDebugValue3</span><span class="sxs-lookup"><span data-stu-id="0490c-128">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
-- [<span data-ttu-id="0490c-129">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="0490c-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b3159-128">Interfaccia ICorDebugValue3</span><span class="sxs-lookup"><span data-stu-id="b3159-128">ICorDebugValue3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [<span data-ttu-id="b3159-129">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="b3159-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
