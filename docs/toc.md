@@ -27,12 +27,12 @@
 ### [Tipi di base](standard/base-types/)
 ## [Librerie di classi .NET](standard/class-libraries.md)
 ## [Analizzatori](standard/analyzers/index.md)
-### [API Analyzer](standard/analyzers/api-analyzer.md) 
+### [API Analyzer](standard/analyzers/api-analyzer.md)
 ### [Portability Analyzer](standard/analyzers/portability-analyzer.md)
 ### [Framework Analyzer](standard/analyzers/framework-analyzer.md)
 ## [Gestione e generazione di eccezioni](standard/exceptions/)
 ## [Assembly in .NET](standard/assembly/index.md)
-### [Formato dei file di assembly .NET](standard/assembly/file-format.md) 
+### [Formato dei file di assembly .NET](standard/assembly/file-format.md)
 ## [Garbage Collection](standard/garbage-collection/)
 ## [Tipi generici](standard/generics.md)
 ## [Delegati e lambda](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [Novità di .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Novità di .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Esercitazioni](core/tutorials/index.md)
-### [Creazione di una soluzione .NET Core completa in Windows tramite Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Introduzione a .NET Core su macOS](core/tutorials/using-on-macos.md)
 ### [Introduzione all'uso di .NET Core su macOS con Visual Studio per Mac](core/tutorials/using-on-mac-vs.md)
 ### [Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [Organizzazione e testing dei progetti con la riga di comando di .NET Core](core/tutorials/testing-with-cli.md)
 ### [Sviluppo di librerie con strumenti multipiattaforma](core/tutorials/libraries.md)
 ### [Sviluppo di applicazioni ASP.NET Core](core/tutorials/aspnet-core.md)
-### [Come gestire le versioni delle dipendenze di pacchetto per .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
 ### [Hosting di .NET Core da un codice nativo](core/tutorials/netcore-hosting.md)
 ### [Creare un modello personalizzato per dotnet new](core/tutorials/create-custom-template.md)
 ## [Pacchetti, metapacchetti e framework](core/packages.md)
@@ -270,7 +268,9 @@
 ## [Panoramica di C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## Novità di C#
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 - Anteprima 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [Personalizzazione degli oggetti disponibili in My](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Nozioni di base sulla programmazione](visual-basic/programming-guide/concepts/index.md)
-### [Assembly in .NET](standard/assembly/index.md)
 ### [Programmazione asincrona con Async e Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Attributi](visual-basic/programming-guide/concepts/attributes/index.md)
+### [Informazioni sul chiamante](visual-basic/programming-guide/concepts/caller-information.md)
+### [Raccolte](visual-basic/programming-guide/concepts/collections.md)
+### [Covarianza e controvarianza](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [Alberi delle espressioni](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [Iteratori](visual-basic/programming-guide/concepts/iterators.md)
 ### [LINQ (Language-Integrated Query)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1199,8 +1201,8 @@
 ### [Iris (clustering)](machine-learning/tutorials/iris-clustering.md)
 ## [Guide pratiche](machine-learning/how-to-guides/index.md)
 ### Preparare i dati
-#### [Applicare la progettazione di funzionalità categoriche ](machine-learning/how-to-guides/train-model-categorical-ml-net.md)
-#### [Applicare la progettazione di funzionalità testuali ](machine-learning/how-to-guides/train-model-textual-ml-net.md)
+#### [Applicare la progettazione di funzionalità categoriche](machine-learning/how-to-guides/train-model-categorical-ml-net.md)
+#### [Applicare la progettazione di funzionalità testuali](machine-learning/how-to-guides/train-model-textual-ml-net.md)
 #### [Caricare dati con più colonne](machine-learning/how-to-guides/load-data-from-mult-column-csv-ml-net.md)
 #### [Caricare dati da più file](machine-learning/how-to-guides/load-data-from-multiple-files-ml-net.md)
 #### [Caricare dati da file di testo](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
@@ -1211,7 +1213,7 @@
 #### [Esaminare i valori dei dati intermedi di una pipeline](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Eseguire il training di un modello di regressione](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [Determinare l'importanza delle funzionalità dei modelli con PFI](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### Usare il modello con training  
+### Usare il modello con training
 #### [Eseguire una stima alla volta con PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Rendere operativo un modello con training](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET

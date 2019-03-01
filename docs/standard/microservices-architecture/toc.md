@@ -1,4 +1,4 @@
-# [Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori](index.md)
+# [Microservizi .NET.: Architecture for Containerized .NET Applications](index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)
 ## [Introduzione a contenitori e Docker](container-docker-introduction/index.md)
 ### [Che cos'è Docker?](container-docker-introduction/docker-defined.md)
 ### [Terminologia di Docker](container-docker-introduction/docker-terminology.md)
