@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: f9201aa4b2aa9280b9b3a4e0a2badf25ea819088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02a7c5c9859352aa07bfaa741b80b7fd18d1da4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684749"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979905"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>Operatore GetXmlNamespace (Visual Basic)
 Ottiene il <xref:System.Xml.Linq.XNamespace> oggetto che corrisponde al prefisso dello spazio dei nomi XML specificato.  
@@ -39,7 +39,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## <a name="example"></a>Esempio  
  L'esempio seguente importa `ns` come un prefisso dello spazio dei nomi XML. Il prefisso dello spazio dei nomi viene quindi utilizzato per creare un file XML letterale e accedere al primo nodo figlio con il nome qualificato `ns:phone`. Quindi passa tale nodo figlio per il `ShowName` subroutine, che crea un nome completo tramite il `GetXmlNamespace` operatore. Il `ShowName` subroutine passa quindi il nome completo per il <xref:System.Xml.Linq.XNode.Ancestors%2A> metodo per ottenere l'elemento padre `ns:contact` nodo.  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
  Quando si chiama `TestGetXmlNamespace.RunSample()`, viene visualizzata una finestra di messaggio che contiene il testo seguente:  
   

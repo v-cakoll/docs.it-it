@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706641"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970285"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedura: Forzare un argomento può essere passato per valore (Visual Basic)
 La dichiarazione di routine determina il meccanismo di passaggio. Se un parametro dichiarato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic prevede di passare l'argomento corrispondente per riferimento. In questo modo la procedura modificare il valore dell'elemento di programmazione sottostante all'argomento nel codice chiamante. Se si vuole proteggere l'elemento sottostante da tali modifiche, è possibile eseguire l'override di `ByRef` meccanismo di passaggio della procedura chiamata racchiudendo il nome dell'argomento racchiuso tra parentesi. Tali parentesi vengono aggiunte le parentesi che racchiudono l'elenco di argomenti nella chiamata.  
@@ -35,9 +35,9 @@ La dichiarazione di routine determina il meccanismo di passaggio. Se un parametr
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente esegue l'override di un `ByRef` dichiarazione del parametro. Nella chiamata che forza `ByVal`, notare i due livelli di parentesi.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Quando `str` è racchiuso tra parentesi aggiuntive nell'elenco degli argomenti, il `setNewString` procedure non è possibile modificarne il valore nel codice chiamante, e `MsgBox` Visualizza "Non può essere sostituito se viene passato ByVal". Quando `str` non è racchiuso tra parentesi aggiuntive, la routine può modificarlo, e `MsgBox` viene visualizzato "This is a un nuovo valore per l'argomento inString".  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529476"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974809"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Espressioni lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può essere usato ovunque un delegato è valido. Le espressioni lambda possono essere funzioni o subroutine e possono essere a riga singola o multilinea. È possibile passare i valori dall'ambito corrente a un'espressione lambda.  
@@ -26,19 +26,19 @@ Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può
   
  Nell'esempio seguente è un'espressione lambda che incrementa il relativo argomento e restituisce il valore. L'esempio illustra sia la sintassi delle espressioni lambda a riga singola e a più righe per una funzione.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  Nell'esempio seguente è un'espressione lambda che scrive un valore nella console. L'esempio illustra sia la sintassi delle espressioni lambda a riga singola e a più righe di una subroutine.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  Si noti che negli esempi precedenti le espressioni lambda assegnate a un nome di variabile. Ogni volta che si fa riferimento alla variabile, si richiama l'espressione lambda. È anche possibile dichiarare e chiamare un'espressione lambda nello stesso momento, come illustrato nell'esempio seguente.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Un'espressione lambda può essere restituita come valore di una chiamata di funzione (come illustrato nell'esempio il [contesto](#context) sezione più avanti in questo argomento), o passata come argomento a un parametro che accetta un tipo delegato, come illustrato di seguito esempio.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
  La sintassi di un'espressione lambda è simile a quello di una subroutine o una funzione standard. Le differenze sono i seguenti:  
@@ -114,7 +114,7 @@ End Class
   
  Accesso alle variabili locali e parametri nell'ambito che lo contiene può estendersi oltre la durata di tale ambito. Fino a quando un delegato che fa riferimento a un'espressione lambda non è disponibile per operazioni di garbage collection, accesso alle variabili dell'ambiente originale viene mantenuto. Nell'esempio seguente, variabile `target` è locale rispetto `makeTheGame`, il metodo in cui l'espressione lambda `playTheGame` è definito. Si noti che l'espressione lambda restituita, assegnato a `takeAGuess` nelle `Main`, ha ancora accesso alla variabile locale `target`.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  L'esempio seguente illustra l'ampia gamma di diritti di accesso dell'espressione lambda annidata. Quando viene eseguita l'espressione lambda restituita da `Main` come `aDel`, accede a questi elementi:  
   
@@ -128,16 +128,16 @@ End Class
   
 -   Un parametro dell'espressione lambda in cui è annidato: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>La conversione in un tipo delegato  
  Un'espressione lambda può essere convertita in modo implicito in un tipo delegato compatibile. Per informazioni sui requisiti generali per la compatibilità, vedere [conversione di tipo Relaxed del delegato](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Ad esempio, il codice seguente viene illustrata un'espressione lambda che converte in modo implicito in `Func(Of Integer, Boolean)` o una firma del delegato corrispondente.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  Esempio di codice seguente illustra un'espressione lambda che converte implicitamente a `Sub(Of Double, String, Double)` o una firma del delegato corrispondente.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  Quando si assegnano le espressioni lambda in delegati o passarli come argomenti alle procedure, è possibile specificare i nomi dei parametri, ma omettere i tipi di dati, consentire i tipi di ricavare il delegato.  
   
@@ -145,11 +145,11 @@ End Class
   
 -   L'esempio seguente definisce un'espressione lambda che restituisce `True` se l'argomento che ammette valori null è stato assegnato un valore, e `False` ha valore `Nothing`.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   L'esempio seguente definisce un'espressione lambda che restituisce l'indice dell'ultimo elemento in una matrice.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

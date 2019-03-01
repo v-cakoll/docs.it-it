@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543448"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980945"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Influenza delle impostazioni cultura sulle stringhe in Visual Basic
 Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.  
@@ -44,7 +44,7 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
   
  Per convertire una data nella stringa delle impostazioni cultura, passare il <xref:System.Globalization.CultureInfo> oggetto dell'oggetto data <xref:System.DateTime.ToString%28System.IFormatProvider%29> (metodo). Ad esempio, il codice seguente consente di visualizzare "04/07/2005 00:00:00", indipendentemente dalle impostazioni cultura dell'applicazione.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Valori letterali data vengono sempre interpretati in base alle impostazioni cultura inglesi.  
@@ -60,11 +60,11 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
   
  Il `StrComp` funzione restituisce un intero che indica la relazione tra le due stringhe confrontate in base all'ordine di ordinamento. Un valore positivo per il risultato indica che la prima stringa è maggiore della seconda stringa. Un risultato negativo indica la prima stringa è minore, mentre zero indica che l'uguaglianza tra le stringhe.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  È anche possibile usare la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partner del `StrComp` funzione, il <xref:System.String.Compare%2A?displayProperty=nameWithType> (metodo). Si tratta di un metodo statico, overload della classe base string. L'esempio seguente illustra come viene utilizzato questo metodo:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  Per un maggiore controllo sul modo in cui vengono eseguiti i confronti, è possibile usare altri overload del <xref:System.String.Compare%2A> (metodo). Con il <xref:System.String.Compare%2A?displayProperty=nameWithType> metodo, è possibile usare il `comparisonType` argomento per specificare il tipo di confronto da usare.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655985"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973275"
 ---
 # <a name="imports-statement-xml-namespace"></a>Istruzione Imports (spazio dei nomi XML)
 Importa i prefissi dello spazio dei nomi XML per l'utilizzo in valori letterali XML e proprietà axis XML.  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Esempio  
  L'esempio seguente importa uno spazio dei nomi XML predefinito e uno spazio dei nomi XML identificato con il prefisso `ns`. Crea quindi i valori letterali XML che utilizzano entrambi gli spazi dei nomi.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  Questo codice visualizza il testo seguente:  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Esempio  
  L'esempio seguente importa il prefisso dello spazio dei nomi XML `ns`. Crea quindi un valore letterale XML che usa il prefisso dello spazio dei nomi e visualizza il formato dell'elemento finale.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Questo codice visualizza il testo seguente:  
   
@@ -82,7 +82,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Esempio  
  L'esempio seguente importa il prefisso dello spazio dei nomi XML `ns`. Il prefisso dello spazio dei nomi viene quindi usato per creare un valore letterale XML e accedere al primo nodo figlio con il nome completo `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  Questo codice visualizza il testo seguente:  
   

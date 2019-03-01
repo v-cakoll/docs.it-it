@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugValue
+title: Interfaccia ICorDebugValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41afc2e4305034340ad408e52ce08372bf8962dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de5d3a208594a03bfdca837e592f53b3da7f0f0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507447"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981413"
 ---
-# <a name="icordebugvalue-interface1"></a>Interfaccia1 ICorDebugValue
+# <a name="icordebugvalue-interface"></a>Interfaccia ICorDebugValue
 Rappresenta un valore nel processo sottoposto a debug. Il valore può essere un'operazione di lettura o di scrittura.  
   
 ## <a name="methods"></a>Metodi  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678401"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975615"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definizione di tipo anonimo (Visual Basic)
 In risposta alla dichiarazione di un'istanza di un tipo anonimo, il compilatore crea una nuova definizione di classe che contiene le proprietà specificate per il tipo.  
@@ -17,7 +17,7 @@ In risposta alla dichiarazione di un'istanza di un tipo anonimo, il compilatore 
 ## <a name="compiler-generated-code"></a>Codice generato dal compilatore  
  Per la seguente definizione di `product`, il compilatore crea una nuova definizione di classe che contiene le proprietà `Name`, `Price`, e `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  La definizione della classe contiene le definizioni delle proprietà simile al seguente. Si noti che non vi è alcun `Set` metodo per la proprietà chiave. I valori delle proprietà di chiave sono di sola lettura.  
   
@@ -66,13 +66,13 @@ End Class
   
      Ad esempio, negli esempi seguenti `Equals` restituisce `True` solo per `employee01` e `employee08`. Il commento prima di ogni riga specifica il motivo per cui la nuova istanza non corrisponde `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` fornisce un algoritmo GetHashCode univoco in modo appropriato. L'algoritmo Usa solo le proprietà della chiave per calcolare il codice hash.  
   
 -   `ToString` Restituisce una stringa concatenata dei valori delle proprietà, come illustrato nell'esempio seguente. Sono incluse sia chiave e le proprietà non chiave.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  Proprietà denominate in modo esplicito di un tipo anonimo non è in conflitto con questi metodi generati. Vale a dire, non è possibile usare `.Equals`, `.GetHashCode`, o `.ToString` per assegnare un nome di una proprietà.  
   

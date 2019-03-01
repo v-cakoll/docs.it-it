@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560740"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974302"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Procedura: Calcolare valori numerici (Visual Basic)
 È possibile calcolare valori numerici tramite l'utilizzo di espressioni numeriche. Oggetto *espressione numerica* è un'espressione che contiene i valori letterali, costanti e variabili che rappresentano valori numerici e operatori che agiscono su quei valori.  
@@ -43,7 +43,7 @@ ms.locfileid: "54560740"
   
 -   È possibile usare un'istruzione di assegnazione per assegnare il valore rappresentato da un'espressione numerica per una variabile, come illustrato nell'esempio seguente.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      Nell'esempio precedente, il valore dell'espressione sul lato destro dell'operatore uguale (`=`) viene assegnato alla variabile `j` sul lato sinistro dell'operatore, in modo `j` 276 viene valutata.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54560740"
   
 -   Utilizzare le parentesi per racchiudere le operazioni che si desidera venga eseguita per prima. Nell'esempio seguente mostra due risultati diversi con gli stessi operandi e operatori.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      Nell'esempio precedente, il calcolo `j` esegue l'operatore di addizione (`+`) prima perché le parentesi che racchiudono `(67 + i)` esegue l'override della precedenza normale e il valore assegnato a `j` è 276 (4 tentativi 69). Il calcolo `k` esegue gli operatori nella relativa priorità normale (`*` prima `+`) e il valore assegnato a `k` 270 (268 + 2).  
   

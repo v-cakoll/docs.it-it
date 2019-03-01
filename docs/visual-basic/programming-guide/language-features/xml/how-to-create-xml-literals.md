@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560594"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974250"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Procedura: Creare valori letterali XML (Visual Basic)
 È possibile creare un documento, frammento o elemento XML direttamente nel codice usando un valore letterale XML. Gli esempi in questo argomento illustrano come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.  
@@ -20,7 +20,7 @@ ms.locfileid: "54560594"
   
 -   Creare il XML inline usando la sintassi dei valori letterali XML, che corrisponde alla sintassi XML effettivo.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
      Eseguire il codice. L'output di questo codice è:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54560594"
   
 -   Creare il documento XML inline. Il codice seguente crea un documento XML con sintassi del valore letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
      Eseguire il codice. L'output di questo codice è:  
   

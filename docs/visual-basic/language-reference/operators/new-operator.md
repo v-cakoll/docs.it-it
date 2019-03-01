@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587554"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980464"
 ---
 # <a name="new-operator-visual-basic"></a>Operatore New (Visual Basic)
 Introduce un `New` clausola per creare una nuova istanza dell'oggetto, specifica un vincolo di costruttore su un parametro di tipo oppure identifica un `Sub` procedure come un costruttore di classe.  
@@ -26,11 +26,11 @@ Introduce un `New` clausola per creare una nuova istanza dell'oggetto, specifica
   
  È possibile usare un `New` clausola in un'istruzione di dichiarazione o un'istruzione di assegnazione. Quando viene eseguita l'istruzione, chiama il costruttore appropriato della classe specificata, vengono passati gli argomenti forniti. Nell'esempio seguente viene illustrata questa mediante la creazione di istanze di un `Customer` classe che dispone di due costruttori, uno che non accetta parametri e uno che accetta un parametro di stringa.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  Poiché le matrici sono classi, `New` può creare una nuova istanza di matrice, come illustrato negli esempi seguenti.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  Common language runtime (CLR) genera un <xref:System.OutOfMemoryException> errore se è disponibile memoria sufficiente per creare la nuova istanza.  
   

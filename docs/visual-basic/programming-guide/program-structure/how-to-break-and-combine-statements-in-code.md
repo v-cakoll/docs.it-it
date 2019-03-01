@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619915"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967178"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lunga durate che richiedono uno scorrimento orizzontale nell'Editor del codice. Anche se ciò non influiscono sulla modalità di esecuzione del codice, rende difficile per te o per altri utenti a leggere il codice visualizzato sul monitor. In questi casi, è necessario considerare suddividendo la singola istruzione lunga in più righe.  
@@ -40,7 +40,7 @@ Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lun
   
      Nell'esempio seguente, l'istruzione viene suddivisa in quattro righe con terminazione di tutti i caratteri di continuazione di riga, ma l'ultima riga.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
      Utilizzo di questa sequenza rende il codice più leggibile, stampati sia online e quando.  
   
@@ -56,7 +56,7 @@ Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lun
   
 -   Separare le istruzioni con un carattere due punti (`:`), come illustrato nell'esempio seguente.  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugFunction2
+title: Interfaccia ICorDebugFunction2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 190e2323fb07dbca6e156d7a24397997e54b6da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d051c7d61d6ade1fc0d313c47125d9c196bcca1d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540793"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979581"
 ---
-# <a name="icordebugfunction2-interface1"></a>Interfaccia1 ICorDebugFunction2
+# <a name="icordebugfunction2-interface"></a>Interfaccia ICorDebugFunction2
+
 Estende logicamente l'interfaccia ICorDebugFunction per fornire supporto per Just My Code debug passo-passo, che ignora il codice non utente.  
   
 ## <a name="methods"></a>Metodi  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204808"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974367"
 ---
 # <a name="examples-of-xml-serialization"></a>Esempi di serializzazione XML
 La serializzazione XML può avere più di una forma, da semplice a complessa. È ad esempio possibile serializzare una classe costituita semplicemente da proprietà e campi pubblici, come illustrato in [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Negli esempi di codice riportati di seguito vengono esaminati vari scenari avanzati, nonché come utilizzare la serializzazione XML per generare un flusso XML conforme a un documento XML Schema (XSD) specifico.  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serializzazione di una classe contenente un campo che restituisce un oggetto complesso  
- Se una proprietà o un campo restituisce un oggetto complesso (come una matrice o l'istanza di una classe), [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) lo converte in un elemento annidato nel documento XML principale. Ad esempio, la prima classe nell'esempio di codice riportato di seguito, restituisce un'istanza della seconda classe.  
+ Se una proprietà o un campo restituisce un oggetto complesso (come una matrice o l'istanza di una classe), <xref:System.Xml.Serialization.XmlSerializer> lo converte in un elemento annidato nel documento XML principale. Ad esempio, la prima classe nell'esempio di codice riportato di seguito, restituisce un'istanza della seconda classe.  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -767,6 +767,6 @@ public class Test
 - [Introduzione alla serializzazione XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Controllo della serializzazione XML mediante attributi](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Attributi per il controllo della serializzazione XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [Classe XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660801"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971793"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedura: Definire un parametro per una routine (Visual Basic)
 Oggetto *parametro* consente di passare un valore per la procedura quando si chiama il codice chiama. Ciascun parametro viene dichiarato per una procedura simile a quello si dichiara una variabile, che specifica il nome e tipo di dati. Specificare inoltre il meccanismo di passaggio e indica se il parametro è facoltativo.  
@@ -36,7 +36,7 @@ Oggetto *parametro* consente di passare un valore per la procedura quando si chi
   
      L'esempio seguente definisce la struttura di un `Sub` routine con tre parametri. Le prime due sono necessari e il terzo è facoltativo. Le dichiarazioni dei parametri sono separate nell'elenco dei parametri da una virgola.  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      Il primo parametro accetta una `customer` oggetti, e `updateCustomer` possibile aggiornare direttamente la variabile passata a `c` perché l'argomento viene passato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). La procedura non è possibile modificare i valori degli ultimi due argomenti in quanto vengono passati [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

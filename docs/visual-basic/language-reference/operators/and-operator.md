@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 2cdc272c07f3b30f61716f0c5ae72f0655c3f46b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 090ae67c1e5f04c5d9c4f6aed7f8131d8f830166
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597320"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968855"
 ---
 # <a name="and-operator-visual-basic"></a>Operatore And (Visual Basic)
 Esegue una congiunzione logica su due `Boolean` espressioni oppure una congiunzione bit per bit su due espressioni numeriche.  
@@ -75,14 +75,14 @@ result = expression1 And expression2
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `And` operatore per eseguire una congiunzione logica su due espressioni. Il risultato è un `Boolean` valore che indica se entrambe le espressioni sono `True`.  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
  Nell'esempio precedente produce i risultati dei `True` e `False`, rispettivamente.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `And` operatore per eseguire la congiunzione logica tra i singoli bit di due espressioni numeriche. Il bit nel risultato viene impostato se i bit corrispondenti negli operandi sono entrambe impostate su 1.  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
  Nell'esempio precedente produce i risultati di 8, 2 e 0, rispettivamente.  
   

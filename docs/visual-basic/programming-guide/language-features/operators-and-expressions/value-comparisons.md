@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724814"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965905"
 ---
 # <a name="value-comparisons-visual-basic"></a>Confronto di valori (Visual Basic)
 Gli operatori di confronto sono utilizzabile per creare espressioni che confrontano i valori delle variabili numeriche. Queste espressioni restituiscono un `Boolean` valore basato sul fatto che il confronto è true o false. Esempi di un'espressione di questo tipo sono i seguenti.  
@@ -34,15 +34,15 @@ Gli operatori di confronto sono utilizzabile per creare espressioni che confront
   
  Le espressioni che confrontano i valori utilizzate più frequentemente `If...Then` costruzioni, come nell'esempio seguente.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  Il `=` segno è un operatore di confronto, nonché un operatore di assegnazione. Quando usato come operatore di confronto, valuta se il valore a sinistra è uguale a quello a destra, come illustrato nell'esempio seguente.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  È anche possibile usare un'espressione di confronto in qualsiasi punto un' `Boolean` valore è necessario, ad esempio in un `If`, `While`, `Loop`, o `ElseIf` istruzione, o durante l'assegnazione o passare un valore a un `Boolean` variabile. Nell'esempio seguente, viene assegnato il valore restituito dall'espressione di confronto per un `Boolean` variabile.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

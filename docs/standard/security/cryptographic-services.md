@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592431"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980243"
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 <a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.  
@@ -68,13 +68,13 @@ ms.locfileid: "33592431"
   
  La crittografia permette di realizzare gli obiettivi seguenti:  
   
--   Riservatezza: aiuta a proteggere l'identità o i dati di un utente dalla lettura.  
+-   Riservatezza: Per impedire la lettura di dati o identità dell'utente.  
   
--   Integrità dei dati: aiuta a proteggere i dati dalla modifica.  
+-   Integrità dei dati: Per proteggere i dati dalla modifica.  
   
--   Autenticazione: assicura che i dati provengano da una parte specifica.  
+-   Autenticazione: Per garantire che i dati provengono da una parte specifica.  
   
--   Non ripudio: impedisce a una parte specifica di negare di avere inviato un messaggio.  
+-   Il non ripudio: Per impedire una parte specifica di negare di aver inviato un messaggio.  
   
  Per realizzare questi obiettivi, è possibile usare una combinazione di algoritmi e procedure nota come primitive di crittografia per creare uno schema crittografico. La tabella seguente elenca le primitive di crittografia e il rispettivo uso.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33592431"
   
  Lo svantaggio della crittografia a chiave segreta consiste nel fatto che presuppone che le due parti si siano accordate su una chiave e un vettore di inizializzazione e che abbiano comunicato i rispettivi valori. Il vettore di inizializzazione non è considerato segreto e può essere trasmesso in testo normale con il messaggio. La chiave deve essere tuttavia mantenuta segreta agli utenti non autorizzati. A causa di questi problemi, la crittografia a chiave segreta viene usata spesso insieme alla crittografia a chiave pubblica per comunicare in modo privato i valori della chiave e del vettore di inizializzazione.  
   
- Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, potranno usare la crittografia a chiave segreta nel modo seguente: Alice e Bob decidono di usare un algoritmo specifico, ad esempio AES, con una chiave e un vettore di inizializzazione specifici. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o rete posta elettronica) a cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.  
+ Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, è possibile usare crittografia a chiave segreta come indicato di seguito: Alice e Bob decidono di usare un algoritmo specifico (ad esempio, AES) con una chiave e un vettore di Inizializzazione. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o rete posta elettronica) su cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce le classi seguenti che implementano algoritmi di crittografia a chiave segreta:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33592431"
 ## <a name="public-key-encryption"></a>Crittografia a chiave pubblica  
  a crittografia a chiave pubblica usa una chiave privata che deve essere tenuta segreta agli utenti non autorizzati e una chiave pubblica che può essere resa pubblica a tutti. La chiave pubblica e la chiave privata sono collegate matematicamente. I dati crittografati con la chiave pubblica possono essere decrittografati solo con la chiave privata e i dati firmati con la chiave privata possono essere verificati solo con la chiave pubblica. La chiave pubblica può essere distribuita a tutti in quanto viene usata per crittografare i dati da inviare a chi detiene la chiave privata. Gli algoritmi di crittografia a chiave pubblica sono noti anche come algoritmi asimmetrici, poiché per crittografare e successivamente decrittografare i dati è necessario usare due chiavi diverse. Una regola di crittografia di base proibisce il riutilizzo di chiavi ed entrambe le chiavi devono essere univoche per ogni sessione di comunicazione. In pratica, tuttavia, le chiavi asimmetriche sono in genere di lunga durata.  
   
- Le due parti, Alice e Bob, possono usare la crittografia a chiave pubblica come illustrato di seguito. Alice genera prima di tutto una coppia di chiavi pubblica/privata. Se Bob vuole inviare ad Alice un messaggio crittografato, le chiede la chiave pubblica. Alice invia a Bob la chiave pubblica su una rete non sicura e Bob la usa per crittografare un messaggio. Bob invia il messaggio crittografato ad Alice, che lo decrittografa usando la sua chiave privata. Se Bob ha ricevuto la chiave di Alice su un canale non sicuro, ad esempio una rete pubblica, sarà esposto a un attacco di tipo man-in-the-middle. Bob deve quindi verificare con Alice che la copia a sua disposizione della chiave pubblica sia corretta.  
+ Due parti (Alice e Bob) possono utilizzare crittografia a chiave pubblica come indicato di seguito: In primo luogo, Alice genera una coppia di chiavi pubblica/privata. Se Bob vuole inviare ad Alice un messaggio crittografato, le chiede la chiave pubblica. Alice invia a Bob la chiave pubblica su una rete non sicura e Bob la usa per crittografare un messaggio. Bob invia il messaggio crittografato ad Alice, che lo decrittografa usando la sua chiave privata. Se Bob ha ricevuto la chiave di Alice su un canale non sicuro, ad esempio una rete pubblica, sarà esposto a un attacco di tipo man-in-the-middle. Bob deve quindi verificare con Alice che la copia a sua disposizione della chiave pubblica sia corretta.  
   
  Durante la trasmissione della chiave pubblica di Alice, una persona non autorizzata potrebbe intercettare la chiave. La stessa persona potrebbe intercettare anche il messaggio crittografato da Bob. Tale persona, tuttavia, non potrà decrittografare il messaggio con la chiave pubblica. Il messaggio può essere decrittografato solo con la chiave privata di Alice che non è stata trasmessa. Alice non usa la propria chiave privata per crittografare un messaggio di risposta a Bob, poiché chiunque sia in possesso della chiave pubblica potrebbe decrittografare il messaggio. Se Alice vuole inviare un messaggio a Bob, gli chiede la chiave pubblica e crittografa il suo messaggio usando quella chiave. Bob decrittografa quindi il messaggio usando la sua chiave privata associata.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "33592431"
   
 -   Alice invia il messaggio come testo normale e il messaggio con hash (firma digitale) a Bob. Bob riceve il messaggio, ne esegue l'hashing, quindi confronta il proprio valore hash con quello che ha ricevuto da Alice. Se i valori hash corrispondono, il messaggio non è stato alterato. Se invece i valori non corrispondono, il messaggio è stato alterato dopo essere stato scritto da Alice.  
   
-     Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Vedere [NIB: esempio di comunicazioni protette Cryptography Next Generation (CNG)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) per ulteriori informazioni.  
+     Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere [esempio di comunicazioni protette con Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).  
   
 -   Alice invia il messaggio come testo normale a Bob tramite un canale pubblico non protetto. Invia il messaggio con hash a Bob su un canale privato protetto. Bob riceve il messaggio in testo normale, ne esegue l'hashing, quindi confronta il valore hash con quello scambiato privatamente. Se i valori corrispondono, Bob può accertare quanto segue:  
   
@@ -273,7 +273,7 @@ ms.locfileid: "33592431"
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Supporto per Suite B  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] supporta l'insieme di algoritmi di crittografia Suite B pubblicati da National Security Agency (NSA). Per ulteriori informazioni su Suite B, vedere il [B crittografia Suite fatti NSA](https://www.nsa.gov/what-we-do/information-assurance/).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] supporta l'insieme di algoritmi di crittografia Suite B pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Sono inclusi gli algoritmi seguenti:  
   

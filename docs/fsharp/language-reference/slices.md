@@ -2,12 +2,12 @@
 title: Le sezioni (F#)
 description: Informazioni su come usare le sezioni esistente F# tipi di dati e come definire le proprie sezioni per altri tipi di dati.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746708"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970109"
 ---
 # <a name="slices"></a>Sezioni
 
@@ -95,7 +95,7 @@ Il F# libreria di base non definisce `GetSlice`per le matrici 3D. Se si desidera
 
 Il F# libreria di base definisce le sezioni per un set limitato di tipi. Se si vuole definire sezioni per più tipi di dati, è possibile farlo nella definizione del tipo stesso o in un'estensione del tipo.
 
-Ad esempio, ecco come è possibile definire sezioni per la <xref:System.ArraySegment`1> classe per consentire la manipolazione dei dati utile:
+Ad esempio, ecco come è possibile definire sezioni per la <xref:System.ArraySegment%601> classe per consentire la manipolazione dei dati utile:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Usare l'incorporamento per evitare la conversione boxing se è necessario
 
-Se si siano definendo le sezioni per un tipo che è effettivamente uno struct, è consigliabile che si `inline` il `GetSlice` membro. Il F# compilatore ottimizza gli argomenti facoltativi, come evitare allocazioni heap come risultato di sezionamento. Ciò è particolarmente importante per i costrutti di sezionamento, ad esempio <xref:System.Span`1> che non è possibile essere allocata nell'heap.
+Se si siano definendo le sezioni per un tipo che è effettivamente uno struct, è consigliabile che si `inline` il `GetSlice` membro. Il F# compilatore ottimizza gli argomenti facoltativi, come evitare allocazioni heap come risultato di sezionamento. Ciò è particolarmente importante per i costrutti di sezionamento, ad esempio <xref:System.Span%601> che non possono essere allocati nell'heap.
 
 ```fsharp
 open System

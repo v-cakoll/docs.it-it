@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506251"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975147"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo, sono stati sviluppati diversi linguaggi per diversi tipi di origini dati, ad esempio, SQL per i database relazionali e XQuery per XML. Ciò rende necessario per lo sviluppatore dell'applicazione per informazioni su un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  
@@ -34,7 +34,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
 > [!NOTE]
 >  Nel [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), assicurarsi che **Option infer** è impostata su **su**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Output:  
   
@@ -47,7 +47,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
  Se i dati di origine non implementano già <xref:System.Collections.Generic.IEnumerable%601>, una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è necessario per implementare la funzionalità del provider il *operatori query standard* per l'origine dati. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gestisce il caricamento di un documento XML in un queryable <xref:System.Xml.Linq.XElement> digitare, come illustrato nell'esempio seguente. Per altre informazioni sugli operatori di query standard, vedere [panoramica degli operatori di Query Standard (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], prima di tutto creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o tramite il [strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) in Visual Studio. È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio riportato di seguito `customers` rappresenta una tabella specifica nel database, e <xref:System.Data.Linq.Table%601> supporta l'interfaccia generica <xref:System.Linq.IQueryable%601>.  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Quando viene eseguita, la query nell'esempio seguente restituisce tutti i numeri pari dalla matrice di interi, `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  L'espressione di query contiene tre clausole: `From`, `Where`, e `Select`. La funzione specifica e lo scopo di ogni clausola dell'espressione di query è descritto in [operazioni di Query (Visual Basic) base](basic-query-operations.md). Per altre informazioni, vedere [query](../../../../visual-basic/language-reference/queries/index.md). Si noti che in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], definizione di una query viene spesso archiviata in una variabile ed eseguita in un secondo momento. La query, variabili, ad esempio `evensQuery` nell'esempio precedente, deve essere un tipo queryable. Il tipo della `evensQuery` è `IEnumerable(Of Integer)`, assegnato dal compilatore mediante l'inferenza del tipo locale.  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>Esecuzione posticipata  
  Una tipica [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query è simile a quello nell'esempio precedente, in cui `evensQuery` è definito. Crea la query, ma non la esegue immediatamente. Al contrario, la definizione di query viene archiviata nella variabile di query `evensQuery`. La query viene eseguita in un secondo momento, in genere tramite un `For Each` ciclo, che restituisce una sequenza di valori, o applicando un operatore query standard, ad esempio `Count` o `Max`. Questo processo è detto *un'esecuzione posticipata*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  Per una sequenza di valori, accedere ai dati recuperati usando la variabile di iterazione nel `For Each` ciclo (`number` nell'esempio precedente). Poiché la variabile di query, `evensQuery`, contiene la definizione della query anziché i risultati della query, è possibile eseguire una query ogni volta che desidera usando la variabile di query più di una volta. Ad esempio, potrebbe essere un database dell'applicazione che viene aggiornato continuamente mediante un'applicazione separata. Dopo aver creato una query che recupera i dati dal database, è possibile usare un `For Each` ciclo per eseguire la query più volte, recuperando i dati più recenti ogni volta.  
   
  L'esempio seguente illustra l'esecuzione posticipata come funziona. Dopo aver `evensQuery2` viene definita ed eseguito con un `For Each` ciclo, come negli esempi precedenti, alcuni elementi nell'origine dati `numbers` vengono modificati. Quindi una seconda `For Each` esecuzioni del ciclo `evensQuery2` nuovamente. I risultati sono diversi la seconda volta, poiché il `For Each` ciclo esegue nuovamente la query utilizzando i nuovi valori in `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Output:  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  La query seguente restituisce un conteggio dei numeri pari nella matrice di interi. Non viene salvata la definizione della query, e `numEvens` è un semplice `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  È possibile ottenere lo stesso risultato utilizzando il `Aggregate` (metodo).  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  È anche possibile forzare l'esecuzione di una query chiamando il `ToList` o `ToArray` metodo in una query (immediato) o una variabile di query (rinviato), come illustrato nel codice seguente.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  Negli esempi precedenti `evensQuery3` è una query, variabile, ma `evensList` è riportato un elenco e `evensArray` è una matrice.  
   

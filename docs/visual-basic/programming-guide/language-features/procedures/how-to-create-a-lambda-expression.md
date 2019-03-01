@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: e7302304fe6c44b0143d7f12ec272d597b313fdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35df64848c0506a1c0a97bd8cd34f158f9febcd7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492413"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970168"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Procedura: Creare un'espressione Lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un nome. Un'espressione lambda può essere utilizzata ogni volta che un tipo delegato è valido.  
@@ -27,15 +27,15 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 3.  In seguito l'elenco di parametri, digitare una singola espressione come corpo della funzione. Il valore restituito dall'espressione a è il valore restituito dalla funzione. Non si usa un `As` clausola per specificare il tipo restituito.  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
+     [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
      L'espressione lambda è chiamata passando un argomento integer.  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
+     [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 4.  In alternativa, lo stesso risultato avviene nell'esempio seguente:  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
+     [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Per creare una subroutine espressione lambda a riga singola  
   
@@ -49,11 +49,11 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 3.  In seguito l'elenco di parametri, digitare una singola istruzione come corpo della subroutine.  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
+     [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
      L'espressione lambda è chiamata passando un argomento di tipo stringa.  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
+     [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Per creare una funzione di espressione lambda su più righe  
   
@@ -69,11 +69,11 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 4.  All'interno del corpo della funzione, aggiungere il codice seguente per creare un'espressione e restituire il valore. Non si usa un `As` clausola per specificare il tipo restituito.  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
+     [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
      L'espressione lambda è chiamata passando un argomento integer.  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
+     [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Per creare una subroutine espressione lambda su più righe  
   
@@ -89,20 +89,20 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 4.  All'interno del corpo della funzione, aggiungere il seguente codice da eseguire quando viene richiamata la subroutine.  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
+     [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
      L'espressione lambda è chiamata passando un argomento di tipo stringa.  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
+     [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Esempio  
  Un uso comune delle espressioni lambda consiste nel definire una funzione che può essere passata come argomento per un parametro di tipo `Delegate`. Nell'esempio seguente, il <xref:System.Diagnostics.Process.GetProcesses%2A> metodo restituisce una matrice di processi in esecuzione nel computer locale. Il <xref:System.Linq.Enumerable.Where%2A> metodo dal <xref:System.Linq.Enumerable> classe richiede un `Boolean` delegato come argomento. L'espressione lambda nell'esempio viene utilizzata a tale scopo. Viene restituito `True` per ogni processo che ha un solo thread e quelli selezionati in `filteredList`.  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
+ [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
  Nell'esempio precedente è equivalente al codice seguente, che viene scritto in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sintassi:  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
+ [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Linq.Enumerable>

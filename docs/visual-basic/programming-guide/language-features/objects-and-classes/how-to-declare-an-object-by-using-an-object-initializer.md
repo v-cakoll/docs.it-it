@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0673c9faceb3bd9fc71123a2ae22abbc7061c04
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561068"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970207"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto (Visual Basic)
 Gli inizializzatori di oggetto consentono di dichiarare e creare un'istanza di una classe in un'unica istruzione. Inoltre, è possibile inizializzare uno o più membri dell'istanza nello stesso momento, senza richiamare un costruttore con parametri.  
@@ -21,7 +21,7 @@ Gli inizializzatori di oggetto consentono di dichiarare e creare un'istanza di u
   
  La procedura seguente illustra come creare un'istanza di un `Student` classi in tre modi diversi. La classe ha nome, cognome e proprietà della classe anno, tra gli altri. Ognuna delle tre dichiarazioni crea una nuova istanza della `Student`, con la proprietà `First` impostato su "Michael," proprietà `Last` impostato su "Tucker", e tutti gli altri membri impostano sui valori predefiniti. Il risultato di ogni dichiarazione della procedura è equivalente all'esempio seguente, che non utilizza un inizializzatore di oggetto.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
  Per un'implementazione del `Student` classe, vedere [come: Creare un elenco di elementi](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). È possibile copiare il codice da quell'argomento per configurare la classe e creare un elenco di `Student` oggetti da utilizzare.  
   
@@ -37,7 +37,7 @@ Gli inizializzatori di oggetto consentono di dichiarare e creare un'istanza di u
   
 3.  Nell'elenco di inizializzazione, includere ogni proprietà che si desidera inizializzare e assegnare un valore iniziale a esso. Il nome della proprietà è preceduto da un punto.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      È possibile inizializzare uno o più membri della classe.  
   
@@ -51,11 +51,11 @@ Gli inizializzatori di oggetto consentono di dichiarare e creare un'istanza di u
   
 6.  Tipo `With` e quindi un inizializzatore di oggetto per inizializzare uno o più membri della nuova istanza.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
 7.  È possibile semplificare la definizione nel passaggio precedente omettendo `As Student`. In questo caso, il compilatore determina che `student3` è un'istanza di `Student` tramite inferenza del tipo locale.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
      Per altre informazioni, vedere [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

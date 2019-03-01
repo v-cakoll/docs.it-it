@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580798"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981543"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni di tipo di dati implicite per solo conversioni di ampliamento, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -99,7 +99,7 @@ Option Strict { On | Off }
 |No|No|`Dim qty`|Se `Option Strict` è disabilitato (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |No|Sì|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per altre informazioni, vedere [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Yes|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Quando non è presente un'istruzione Option Strict  
  Se il codice sorgente non contiene un `Option Strict` istruzione, il **Option strict** impostazione il [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) viene usato. Il **pagina compilazione** dispone di impostazioni che consentono un maggiore controllo delle condizioni che generano un errore.  
@@ -137,19 +137,19 @@ Option Strict { On | Off }
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano gli errori in fase di compilazione causati da conversioni implicite che vengono delle conversioni narrowing. Questa categoria di errori corrisponde alla **conversione implicita** condizione il **pagina compilazione**.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente illustra un errore in fase di compilazione causato dall'associazione tardiva. Questa categoria di errori corrisponde alla **Late binding; chiamata potrebbe non riuscire in fase di esecuzione** condizione il **pagina compilazione**.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano gli errori causati da variabili dichiarate con un tipo implicito di `Object`. Questa categoria di errori corrisponde alla **tipo implicito: presunto oggetto** condizione il **pagina compilazione**.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
 ## <a name="see-also"></a>Vedere anche
 

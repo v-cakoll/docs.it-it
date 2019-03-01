@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966060"
 ---
 # <a name="get-function"></a>Funzione Get
 Recupera il valore della proprietà specificata, se presente.
@@ -64,14 +64,14 @@ HRESULT Get (
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La proprietà è una proprietà di sistema standard. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Per una classe: La proprietà viene ereditata dalla classe padre. </br> Per un'istanza: La proprietà, mentre ereditata dalla classe padre, non modificata dall'istanza.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Per una classe: La proprietà appartiene alla classe derivata. </br> Per un'istanza: La proprietà viene modificata tramite l'istanza. vale a dire, è stato fornito un valore o un qualificatore è stato aggiunto o modificato. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Per una classe: La proprietà viene ereditata dalla classe padre. <br> Per un'istanza: La proprietà, mentre ereditata dalla classe padre, non modificata dall'istanza.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Per una classe: La proprietà appartiene alla classe derivata. <br> Per un'istanza: La proprietà viene modificata tramite l'istanza. vale a dire, è stato fornito un valore o un qualificatore è stato aggiunto o modificato. |
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |

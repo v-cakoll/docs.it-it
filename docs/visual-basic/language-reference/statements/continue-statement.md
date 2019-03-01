@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 23bb57ec022e62cd586c533d4ed4c792789a0b38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7aa0bda9c87553a5c9dae38517b5d546f782bed0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627005"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974081"
 ---
 # <a name="continue-statement-visual-basic"></a>Istruzione Continue (Visual Basic)
 Trasferisce il controllo immediatamente all'iterazione successiva di un ciclo.  
@@ -37,7 +37,7 @@ Continue { Do | For | While }
 ## <a name="example"></a>Esempio  
  Il codice seguente viene illustrato come utilizzare il `Continue While` istruzione per ignorare la successiva colonna di una matrice se il divisore è zero. Il `Continue While` si trova all'interno un `For` ciclo. Viene trasferita l'esecuzione di `While col < lastcol` istruzione, ovvero l'iterazione successiva del ciclo `While` ciclo che contiene il `For` ciclo.  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Istruzione Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)

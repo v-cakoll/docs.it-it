@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3be28ee718675b1f6bebfaff03baaf561a6fff43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492962"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974068"
 ---
 # <a name="handles-clause-visual-basic"></a>Clausola Handles (Visual Basic)
 Dichiara che una routine gestisce un evento specificato.  
@@ -38,21 +38,21 @@ proceduredeclaration Handles eventlist
  Per gli eventi personalizzati, l'applicazione richiama la funzione di accesso `AddHandler` dell'evento quando aggiunge la routine come gestore eventi. Per altre informazioni sugli eventi personalizzati, vedere [istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Esempio  
- [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+ [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
  L'esempio seguente illustra come una classe derivata può usare l'istruzione `Handles` per gestire un evento da una classe base.  
   
- [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente contiene due gestori eventi dei pulsanti per un **WPF Application** progetto.  
   
- [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio che segue equivale a quello precedente. L'oggetto `eventlist` nella clausola `Handles` contiene gli eventi per entrambi i pulsanti.  
   
- [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)

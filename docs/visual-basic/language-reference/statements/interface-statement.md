@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532763"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970532"
 ---
 # <a name="interface-statement-visual-basic"></a>Istruzione Interface (Visual Basic)
 Dichiara il nome di un'interfaccia e introduce le definizioni dei membri che comprende l'interfaccia.  
@@ -95,7 +95,7 @@ End Interface
   
      Se si assegna un'istanza della classe a una variabile, il livello di accesso dei membri può dipendere dal fatto che il tipo di dati della variabile è l'interfaccia sottostante o alla classe che implementa. Questa condizione è illustrata nell'esempio seguente.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      Se si accede a membri della classe tramite `varAsInterface`, hanno tutti accesso pubblico. Tuttavia, se si accede ai membri attraverso `varAsClass`, il `Sub` procedure `doSomething` con accesso privato.  
   
@@ -108,7 +108,7 @@ End Interface
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Interface` istruzione per definire un'interfaccia denominata `thisInterface`, che deve essere implementata con un `Property` istruzione e una `Function` istruzione.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  Si noti che il `Property` e `Function` istruzioni non introducono che terminano con i blocchi `End Property` e `End Function` all'interno dell'interfaccia. L'interfaccia definisce solo le firme dei relativi membri. La versione completa `Property` e `Function` blocchi vengono visualizzati in una classe che implementa `thisInterface`.  
   

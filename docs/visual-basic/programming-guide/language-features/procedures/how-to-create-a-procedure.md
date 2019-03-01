@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 06fed04a0ebe7a0b3111a94308d15d01bcf47c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636534"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970805"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Procedura: Creare una routine (Visual Basic)
 Una routine racchiusa tra un'istruzione di dichiarazione iniziale (`Sub` oppure `Function`) e un'istruzione di dichiarazione finale (`End Sub` o `End Function`). Tutto il codice della routine è compresa tra queste istruzioni.  
@@ -51,7 +51,7 @@ Una routine racchiusa tra un'istruzione di dichiarazione iniziale (`Sub` oppure 
 ## <a name="example"></a>Esempio  
  Nell'esempio `Function` procedure calcola il lato lungo, ovvero l'ipotenusa di un triangolo rettangolo, in base ai valori degli altri due lati.  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
 

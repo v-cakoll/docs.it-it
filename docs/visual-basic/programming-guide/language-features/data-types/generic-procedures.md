@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574313"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976525"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 Oggetto *routine generica*, definita anche come una *metodo generico*, è una routine definita con almeno un parametro di tipo. In questo modo il codice chiamante personalizzare i tipi di dati ai propri requisiti ogni volta che viene chiamata la routine.  
@@ -29,7 +29,7 @@ Oggetto *routine generica*, definita anche come una *metodo generico*, è una ro
 ## <a name="type-inference"></a>Inferenza di tipi  
  È possibile chiamare una routine generica senza fornire alcun argomento di tipo affatto. Se viene chiamata in questo modo, il compilatore prova a determinare i tipi di dati appropriato per passare agli argomenti di tipo della stored procedure. Questa operazione viene definita *inferenza del tipo*. Il codice seguente viene illustrata una chiamata in cui il compilatore deduce che il tipo deve passato `String` al parametro di tipo `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
  Se il compilatore non è possibile dedurre gli argomenti tipo dal contesto della chiamata, viene segnalato un errore. Una delle possibili cause di questo errore è una mancata corrispondenza del numero di dimensioni matrice. Ad esempio, si supponga di che definisce un parametro normale come una matrice di un parametro di tipo. Se si chiama la routine generica fornendo una matrice di una dimensione differente (numero di dimensioni), la mancata corrispondenza causa l'inferenza del tipo esito negativo. Il codice seguente viene illustrata una chiamata in una matrice bidimensionale che viene passata a una procedura che prevede una matrice unidimensionale.  
   
@@ -53,14 +53,14 @@ End Sub
  L'esempio seguente definisce un oggetto generico `Function` procedura per trovare un particolare elemento in una matrice. Definisce un parametro di tipo e lo usa per costruire i due parametri nell'elenco dei parametri.  
   
 ### <a name="code"></a>Codice  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>Commenti  
  Nell'esempio precedente richiede la possibilità di confrontare `searchValue` rispetto a ogni elemento di `searchArray`. Per garantire questa operazione, vincola il parametro di tipo `T` per implementare il <xref:System.IComparable%601> interfaccia. Il codice Usa il <xref:System.IComparable%601.CompareTo%2A> invece del metodo di `=` operatore, poiché non c'è garanzia che un argomento tipo fornito per `T` supporta la `=` operatore.  
   
  È possibile testare il `findElement` procedure con il codice seguente.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
  Nelle chiamate precedenti a `MsgBox` visualizzare rispettivamente "0", "1" e "-1".  
   

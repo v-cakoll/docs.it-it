@@ -12,17 +12,17 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973405"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferenza del tipo di variabile locale (Visual Basic)
 Usa il compilatore Visual Basic *inferenza* per determinare i tipi di dati delle variabili locali dichiarate senza un `As` clausola. Il compilatore deduce il tipo della variabile dal tipo dell'espressione di inizializzazione. In questo modo è possibile dichiarare variabili senza specificare esplicitamente un tipo, come illustrato nell'esempio seguente. Come risultato le dichiarazioni, entrambe `num1` e `num2` sono fortemente tipizzati come numeri interi.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
 >  Se non si desidera `num2` nell'esempio precedente per essere digitato come un' `Integer`, è possibile specificare un altro tipo mediante una dichiarazione simile `Dim num3 As Object = 3` o `Dim num4 As Double = 3`.  
@@ -40,23 +40,23 @@ Usa il compilatore Visual Basic *inferenza* per determinare i tipi di dati delle
 ## <a name="examples"></a>Esempi  
  L'inferenza del tipo si verifica quando una variabile locale viene dichiarata senza una `As` clausola e inizializzato. Il compilatore utilizza il tipo del valore iniziale assegnato come il tipo della variabile. Ad esempio, ognuna delle righe di codice seguente dichiara una variabile di tipo `String`.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
  Il codice seguente illustra due modi equivalenti per creare una matrice di interi.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
  È consigliabile usare l'inferenza del tipo per determinare il tipo di una variabile di controllo del ciclo. Nel codice seguente, il compilatore deduce che `number` è un `Integer` perché `someNumbers2` dall'esempio precedente è una matrice di numeri interi.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
  L'inferenza del tipo locale è utilizzabile in `Using` istruzioni per stabilire il tipo del nome della risorsa, come illustrato nell'esempio seguente.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
  Il tipo di una variabile può anche essere dedotto dai valori restituiti delle funzioni, come illustrato nell'esempio seguente. Entrambe `pList1` e `pList2` sono le matrici dei processi perché `Process.GetProcesses` restituisce una matrice dei processi.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
 ## <a name="option-infer"></a>Option Infer  
  `Option Infer` Consente di specificare se è consentita l'inferenza del tipo locale in un determinato file. Per consentire o bloccare l'opzione, digitare una delle istruzioni seguenti all'inizio del file.  

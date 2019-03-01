@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb25ecad3b797a4993e7a780823a38a0f0ccbd1f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672110"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975628"
 ---
 # <a name="attribute-list-visual-basic"></a>Elenco degli attributi (Visual Basic)
 Specifica gli attributi da applicare a un elemento di programmazione dichiarato. Gli attributi sono separati da una virgola. Di seguito è la sintassi per un attributo.  
@@ -49,7 +49,7 @@ Specifica gli attributi da applicare a un elemento di programmazione dichiarato.
 ## <a name="example"></a>Esempio  
  L'esempio seguente applica il <xref:System.Runtime.InteropServices.DllImportAttribute> dell'attributo a una struttura di definizione di un `Function` procedure.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica che la routine con attributi rappresenta un punto di ingresso in una libreria di collegamento dinamico (DLL) non gestita. L'attributo fornisce il nome della DLL come un argomento posizionale e le altre informazioni come gli inizializzatori di variabili.  
   

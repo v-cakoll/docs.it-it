@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657974"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981465"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procedura dettagliata: Chiamata delle API di Windows (Visual Basic)
 Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sistema operativo Windows. Usarli per eseguire attività quando è difficile scrivere procedure equivalente personalizzato. Ad esempio, Windows fornisce una funzione denominata `FlashWindowEx` che consente di apportare passare alternativamente dalla chiaro e scuro sfumatura barra del titolo per un'applicazione.  
@@ -45,7 +45,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 4.  Aggiungere il codice seguente `Declare` funzionare alla classe o modulo in cui si desidera usare la DLL:  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
 ### <a name="parts-of-the-declare-statement"></a>Parti dell'istruzione Declare  
  Il `Declare` istruzione include gli elementi seguenti.  
@@ -79,7 +79,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 3.  Aggiungere equivalente `Const` istruzioni per la classe o un modulo per rendere disponibili per l'applicazione le costanti. Ad esempio:  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>Chiamare la routine DLL  
   
@@ -87,7 +87,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 2.  Aggiungere il codice per il `Click` gestore eventi per il pulsante è stato aggiunto, per chiamare la routine e fornire gli argomenti appropriati:  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
 3.  Eseguire il progetto premendo F5. Viene visualizzata la finestra di messaggio con entrambe **Yes** e **No** pulsanti di risposta. Fare clic su uno.  
   
@@ -100,11 +100,11 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 2.  Per semplificare l'accesso per il `MarshalAs` dell'attributo, aggiungere un `Imports` istruzione all'inizio del codice per la classe o modulo, come nell'esempio seguente:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 3.  Aggiungere un prototipo di funzione per la funzione importata alla classe o modulo si utilizza e si applica il `MarshalAs` ai parametri dell'attributo o valore restituito. Nell'esempio seguente, una chiamata API che prevede che il tipo `void*` viene sottoposto a marshalling come `AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
 ## <a name="api-calls-using-dllimport"></a>Chiamate API con DllImport  
  Il `DllImport` attributo fornisce un secondo modo per chiamare le funzioni nelle DLL senza librerie dei tipi. `DllImport` è quasi equivalente all'uso di un `Declare` istruzione ma offre maggiore controllo sul modo in cui vengono chiamate le funzioni.  
@@ -123,23 +123,23 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 5.  Per semplificare l'accesso al `DllImport`, aggiungere un `Imports` istruzione all'inizio del codice per la classe di form di avvio:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 6.  Dichiarare una funzione vuota prima la `End Class` istruzione per il modulo e il nome di funzione `MoveFile`.  
   
 7.  Si applicano i `Public` e `Shared` modificatori di dichiarazione di funzione e impostare i parametri per `MoveFile` basata sugli argomenti alla funzione API Windows Usa:  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      La funzione può avere qualsiasi nome di procedura valida; il `DllImport` attributo specifica il nome nella DLL. Gestisce anche il marshalling di interoperabilità per i parametri e valori restituiti, quindi è possibile scegliere tipi di dati di Visual Studio che sono simili ai dati dei tipi utilizzati dall'API.  
   
 8.  Applicare il `DllImport` attributo per la funzione vuota. Il primo parametro è il nome e il percorso della DLL che contiene la funzione che si sta chiamando. Non devi specificare il percorso del file che si trovano nella directory di sistema Windows. Il secondo parametro è un argomento denominato che specifica il nome della funzione nell'API di Windows. In questo esempio, il `DllImport` attributo impone che le chiamate a `MoveFile` deve essere inoltrato al `MoveFileW` in KERNEL32. DLL. Il `MoveFileW` metodo consente di copiare un file dal percorso `src` sul percorso `dst`.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
 9. Aggiungere il codice per il `Button2_Click` gestore eventi per chiamare la funzione:  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
 10. Creare un file denominato test. txt e inserirlo nella directory C:\Tmp sul disco rigido. Se necessario, creare la directory Tmp.  
   

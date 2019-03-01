@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612021"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981452"
 ---
 # <a name="string-functions-visual-basic"></a>Funzioni stringa (Visual Basic)
 Nella tabella seguente elenca le funzioni disponibili in Visual Basic per cercare e modificare le stringhe.  
@@ -51,27 +51,27 @@ Nella tabella seguente elenca le funzioni disponibili in Visual Basic per cercar
 ## <a name="example"></a>Esempio  
  Questo esempio viene usato il `UCase` funzione per restituire la versione maiuscola di una stringa.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Esempio  
  Questo esempio Usa la `LTrim` funzione per rimuovere gli spazi iniziali e `RTrim` di spazi di funzione per rimuovere finali da una variabile di stringa. Usa il `Trim` funzione per rimuovere entrambi i tipi degli spazi.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Esempio  
  Questo esempio viene usato il `Mid` funzione restituisca un numero specificato di caratteri da una stringa.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Esempio  
  Questo esempio Usa `Len` per restituire il numero di caratteri in una stringa.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Esempio  
  Questo esempio viene usato il `InStr` funzione per restituire la posizione della prima occorrenza di una stringa in un altro.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Esempio  
  Questo esempio illustra i vari utilizzi delle `Format` funzione per valori di formato utilizzando sia `String` formati e i formati definiti dall'utente. Per il separatore della data (`/`), il separatore dell'ora (`:`) e gli indicatori AM/PM (`t` e `tt`), l'output formattato visualizzato dal sistema dipende dalle impostazioni locali utilizzate nel codice. Quando tempi e le date vengono visualizzate nell'ambiente di sviluppo, il formato di ora breve e il formato di data breve delle impostazioni locali del codice vengono utilizzati.  
@@ -79,7 +79,7 @@ Nella tabella seguente elenca le funzioni disponibili in Visual Basic per cercar
 > [!NOTE]
 >  Per le impostazioni locali che usano un orologio di 24 ore, gli indicatori AM/PM (`t` e `tt`) non visualizzano alcun output.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

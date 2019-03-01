@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731738"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972548"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametri e argomenti delle routine (Visual Basic)
 Nella maggior parte dei casi, una procedura richiede alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise Usa informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla procedura quando si chiama.  
@@ -44,7 +44,7 @@ Passa un argomento a un parametro
 ## <a name="parameter-data-type"></a>Tipo di dati di parametro  
  Si definisce un tipo di dati per un parametro utilizzando il `As` clausola nella relativa dichiarazione. Ad esempio, la funzione seguente accetta una stringa e un numero intero.  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  Se il controllo del tipo passa ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) viene `Off,` il `As` clausola è facoltativa, ad eccezione del fatto che lo usa un parametro, tutti i parametri devono essere. Se il controllo di tipo `On`, il `As` clausola è obbligatoria per tutti i parametri di procedura.  
   

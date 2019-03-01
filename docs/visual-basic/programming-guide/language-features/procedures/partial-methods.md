@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: a974a68010fe80a07e83ac31e109bbf1c2b955e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568777"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977461"
 ---
 # <a name="partial-methods-visual-basic"></a>Metodi parziali (Visual Basic)
 I metodi parziali consentono agli sviluppatori di inserire la logica personalizzata nel codice. In genere, il codice è parte di una classe generato da progettazione. I metodi parziali sono definiti in una classe parziale che viene creata da un generatore di codice e vengono utilizzati frequentemente alla invierà una notifica che un elemento è stato modificato. Consentono allo sviluppatore di specificare un comportamento personalizzato in risposta alla modifica.  
@@ -56,15 +56,15 @@ End Sub
 ## <a name="example"></a>Esempio  
  In un file denominato Product.Designer.vb, definire un `Product` classe avente un `Quantity` proprietà.  
   
- [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
  In un file denominato Product. vb, fornire un'implementazione per `QuantityChanged`.  
   
- [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
  Infine, nel metodo principale di un progetto, dichiarare un `Product` dell'istanza e fornire un valore iniziale per relativo `Quantity` proprietà.  
   
- [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
  Verrà visualizzata una finestra di messaggio che viene visualizzato questo messaggio:  
   

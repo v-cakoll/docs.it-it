@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525456"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974458"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procedura: Chiamare una routine che restituisce un valore (Visual Basic)
 Oggetto `Function` routine restituisce un valore al codice chiamante. È chiamarlo includendo il nome e gli argomenti sul lato destro di un'istruzione di assegnazione o in un'espressione.  
@@ -42,7 +42,7 @@ Oggetto `Function` routine restituisce un valore al codice chiamante. È chiamar
 ## <a name="example"></a>Esempio  
  L'esempio seguente chiama il Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> per recuperare il valore di una variabile di ambiente del sistema operativo. La prima riga chiama `Environ` all'interno di un'espressione e il secondo viene chiamata in un'istruzione di assegnazione. `Environ` accetta il nome della variabile come unico argomento. Restituisce il valore della variabile al codice chiamante.  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine Function](./function-procedures.md)

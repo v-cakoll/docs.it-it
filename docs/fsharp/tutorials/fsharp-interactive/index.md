@@ -1,15 +1,9 @@
 ---
-title: Riferimenti per F# Interactive (fsi.exe)
-description: Informazioni su come F# Interactive (fsi.exe) viene usato per eseguire F# in modo interattivo alla console o per l'esecuzione di codice F# script.
+title: 'Riferimenti per F# Interactive (fsi.exe)'
+description: 'Informazioni su come F# Interactive (fsi.exe) viene usato per eseguire F# in modo interattivo alla console o per l''esecuzione di codice F# script.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611061"
 ---
-# <a name="interactive-programming-with-f"></a>Programmazione interattiva con F# #
+# <a name="interactive-programming-with-f"></a>Programmazione interattiva con F\#
 
 > [!NOTE]
 > Questo articolo illustra attualmente solo l'esperienza per Windows.  Verrà riscritto.
@@ -44,7 +38,7 @@ Se è aperto un progetto che fa riferimento ad alcune librerie, è possibile far
 È possibile controllare gli argomenti della riga di comando (opzioni) di F# Interactive modificando le impostazioni. Nel menu **Strumenti** selezionare **Opzioni**, quindi espandere **Strumenti F#**. Le due impostazioni che è possibile modificare sono le opzioni di F# Interactive e l'impostazione **F# Interactive a 64 bit**, che è rilevante solo se si esegue F# Interactive in un computer a 64 bit. Con questa impostazione si determina se si desidera eseguire la versione a 64 bit dedicata di fsi.exe o di fsianycpu.exe, in cui si usa l'architettura del computer per determinare se l'esecuzione avviene come processo a 32 bit o 64 bit.
 
 
-## <a name="scripting-with-f"></a>Scripting con F# #
+## <a name="scripting-with-f"></a>Scripting con F\#
 Gli script hanno l'estensione di file **.fsx** o **.fsscript**. Anziché compilare il codice sorgente e quindi eseguire in un secondo momento l'assembly compilato, è possibile eseguire semplicemente **fsi.exe** e specificare il nome del file dello script del codice sorgente F#. F# Interactive legge il codice e lo esegue in tempo reale.
 
 

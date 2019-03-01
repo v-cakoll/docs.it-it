@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667388"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976044"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durata in Visual Basic
 Il *durata* di un elemento dichiarato è il periodo di tempo durante cui si è disponibile per l'uso. Le variabili sono gli unici elementi che hanno una durata. A tale scopo, il compilatore considera i parametri di routine e funzione restituisce come case speciale delle variabili. La durata di una variabile rappresenta il periodo di tempo durante i quali può contenere un valore. Tale valore può cambiare nel corso del tempo, ma mantiene sempre un valore.  
@@ -58,7 +58,7 @@ Il *durata* di un elemento dichiarato è il periodo di tempo durante cui si è d
  Nell'esempio seguente viene dichiarata una variabile con il [statici](../../../../visual-basic/language-reference/modifiers/static.md) (parola chiave). (Si noti che non è necessario il `Dim` parola chiave quando il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) Usa un modificatore, ad esempio `Static`.)  
   
 ### <a name="code"></a>Codice  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Commenti  
  Nell'esempio precedente, la variabile `applesSold` continua a esistere dopo la procedura `runningTotal` restituisce al codice chiamante. La volta successiva `runningTotal` viene chiamato, `applesSold` mantiene il valore calcolato in precedenza.  

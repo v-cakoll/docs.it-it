@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 527e2c594f236f94ce23e4fd21238b8605af308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502443"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967867"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Form
 Nella progettazione delle applicazioni, si potrebbe essere necessario utilizzare un unico gestore eventi per più eventi o avere più eventi di eseguire la stessa procedura. Ad esempio, è spesso un notevole risparmio di tempo per avere un comando di menu generano lo stesso evento come un pulsante sul form se espongono la stessa funzionalità. Questo scopo, è possibile utilizzare la visualizzazione di eventi della finestra proprietà in C# o tramite il `Handles` parola chiave e il **nome della classe** e **nome metodo** caselle di riepilogo a discesa nell'Editor di codice Visual Basic.  
@@ -46,7 +46,7 @@ Nella progettazione delle applicazioni, si potrebbe essere necessario utilizzare
   
 6.  Aggiungere il codice appropriato per il gestore dell'evento.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Per connettere più eventi a un unico gestore eventi inC#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Per connettere più eventi a un unico gestore eventi in C\#
   
 1.  Selezionare il controllo a cui si desidera collegare un gestore eventi.  
   

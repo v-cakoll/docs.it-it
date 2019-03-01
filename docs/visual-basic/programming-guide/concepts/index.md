@@ -1,16 +1,16 @@
 ---
-title: Concetti di programmazione (Visual Basic)
-ms.date: 07/20/2015
+title: Concetti di programmazione - Visual Basic
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>Concetti di programmazione (Visual Basic)
+
 Questa sezione illustra i concetti della programmazione in linguaggio Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Assembly in .NET](../../../standard/assembly/index.md)|Viene descritto come creare e usare gli assembly.|  
 |[Programmazione asincrona con Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Viene illustrato come creare una soluzione asincrona usando le parole chiave [Async](../../../visual-basic/language-reference/modifiers/async.md) e [Await](../../../visual-basic/language-reference/operators/await-operator.md). È inclusa una procedura dettagliata.|  
 |[Panoramica degli attributi (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Viene spiegato come offrire informazioni aggiuntive su elementi di programmazione quali tipi, campi, metodi e proprietà usando gli attributi.|  
 |[Informazioni sul chiamante (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Viene descritto come ottenere informazioni relative al chiamante di un metodo. Queste informazioni includono il percorso del file e il numero di righe del codice sorgente, nonché il nome del chiamante.|  
@@ -27,4 +27,5 @@ Questa sezione illustra i concetti della programmazione in linguaggio Visual Bas
   
 |||  
 |---|---|  
+|[Assembly in .NET](../../../standard/assembly/index.md)|Viene descritto come creare e usare gli assembly.|  
 |[Suggerimenti sulle prestazioni](../../../framework/performance/performance-tips.md) | Vengono discusse diverse regole base che consentono di migliorare le prestazioni dell'applicazione.|

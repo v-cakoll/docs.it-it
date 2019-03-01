@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719976"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977856"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi (funzione)
 Crea o aggiorna un'istanza di una classe esistente. L'istanza viene scritta nel repository WMI. 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se impostato, WMI non archivia i qualificatori con il **modificato** flavor. </br> Se non impostato, si presuppone che non viene localizzato con questo oggetto e tutti i qualificatori vengono storedwith questa istanza. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se impostato, WMI non archivia i qualificatori con il **modificato** flavor. <br> Se non impostato, si presuppone che non viene localizzato con questo oggetto e tutti i qualificatori vengono storedwith questa istanza. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Se non esiste o di sovrascriverlo se esiste già, creare l'istanza. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aggiornare l'istanza. L'istanza deve esistere per la chiamata abbia esito positivo. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Creare l'istanza. La chiamata ha esito negativo se l'istanza esiste già. |
@@ -65,7 +65,7 @@ HRESULT PutInstanceWmi (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | L'utente dispone dell'autorizzazione per aggiornare un'istanza della classe specificata. |
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |

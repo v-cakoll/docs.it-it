@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686673"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965904"
 ---
 # <a name="if-operator-visual-basic"></a>Operatore If (Visual Basic)
 Utilizzi di corto circuito di valutazione per restituire in modo condizionale uno dei due valori. Il `If` operatore può essere chiamato con tre argomenti o con due argomenti.  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  Un' `If` operatore che viene chiamato con tre argomenti funziona come un `IIf` funzioni ad eccezione del fatto che usi valutazione di corto circuito. Un' `IIf` funzione valuta sempre tutti e tre argomenti, mentre un `If` operatore con tre argomenti viene valutata solo due di essi. Il primo `If` viene valutato l'argomento e il risultato viene eseguito il cast come un `Boolean` , valore `True` o `False`. Se il valore è `True`, `argument2` viene valutata e il relativo valore viene restituito, ma `argument3` non viene valutato. Se il valore della `Boolean` espressione è `False`, `argument3` viene valutata e il relativo valore viene restituito, ma `argument2` non viene valutato. Gli esempi seguenti illustrano l'uso di `If` quando vengono usati tre argomenti:  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  L'esempio seguente illustra il valore di valutazione di corto circuito. L'esempio mostra due tentativi di dividere una variabile `number` dalla variabile `divisor` eccetto quando `divisor` è uguale a zero. In tal caso, deve essere restituito un valore 0 e debba eseguito alcun tentativo di eseguire la divisione perché provocherebbe un errore di run-time. Poiché il `If` utilizzo delle espressioni di valutazione di corto circuito, valuta il secondo o il terzo argomento, a seconda del valore del primo argomento. Se il primo argomento è true, il divisore è diverso da zero ed è opportuno valutare il secondo argomento ed eseguire la divisione. Se il primo argomento è false, solo il terzo argomento viene valutato e viene restituito 0. Pertanto, quando il divisore è 0, viene eseguito alcun tentativo di eseguire la divisione e non verranno generati errori. Tuttavia, poiché `IIf` non usa la valutazione di corto circuito, il secondo argomento è valutato anche quando il primo argomento è false. Ciò causa un errore di divisione per zero in fase di esecuzione.  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>Se viene chiamato operatore con due argomenti  
  Il primo argomento `If` può essere omesso. In questo modo l'operatore di chiamata usando solo due argomenti. Nell'elenco seguente si applica solo quando il `If` operatore viene chiamato con due argomenti.  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  Quando il `Boolean` viene omesso, il primo argomento deve essere un riferimento o nullable. Se il primo argomento restituisce `Nothing`, viene restituito il valore del secondo argomento. In tutti gli altri casi, viene restituito il valore del primo argomento. L'esempio seguente illustra il funzionamento di questa versione di valutazione.  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

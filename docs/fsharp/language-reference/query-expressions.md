@@ -2,12 +2,12 @@
 title: Espressioni di query
 description: Informazioni sul supporto di espressione di query di LINQ in di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611373"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977980"
 ---
 # <a name="query-expressions"></a>Espressioni di query
 
@@ -511,7 +511,7 @@ La tabella seguente illustra alcune query comuni di Transact-SQL e gli equivalen
     <th>F#Espressione (maiuscole / minuscole) di query</th>
   </tr>
 <tr><td>
-Selezionare tutti i campi dalla tabella.</br>
+Selezionare tutti i campi dalla tabella.<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55dae51d485bfcd5c8e93910776f4c98c96ea2d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514270"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976031"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Procedura: Trovare il valore minimo o massimo in un risultato di Query utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query.  
@@ -72,7 +72,7 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
   
      Aggiungere il codice seguente per il `Load` evento. Questo codice esegue una query di tabelle che vengono esposti come proprietà del contesto dati e determina i valori minimi e massimo per i risultati. L'esempio Usa egli `Aggregate` clausola per eseguire query per un singolo risultato e il `Group By` clausola per visualizzare una media dei risultati raggruppati.  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form7.vb#14)]  
   
 4.  Premere F5 per eseguire il progetto e visualizzare i risultati.  
   

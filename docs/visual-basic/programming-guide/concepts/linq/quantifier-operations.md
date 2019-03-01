@@ -2,12 +2,12 @@
 title: Operazioni del quantificatore (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 0f732cdb51ed4e26039fc8c1d02b95ad32f901e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551930"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976746"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Operazioni del quantificatore (Visual Basic)
 Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, che indica se alcuni o tutti gli elementi di una sequenza soddisfano una condizione.  
@@ -31,11 +31,11 @@ Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, 
   
  L'esempio seguente usa il `Aggregate` clausola e <xref:System.Linq.Enumerable.All%2A> metodo di estensione per restituire da una raccolta le persone cui animali domestici tutto antecedenti a un periodo di validità specificato.  
   
- [!code-vb[CsLINQAnyAll#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_1.vb)]  
+ [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
  L'esempio seguente usa il `Aggregate` clausola e <xref:System.Linq.Enumerable.Any%2A> metodo di estensione per restituire da una raccolta di coloro che hanno almeno un animale che è precedente rispetto a un periodo di validità specificato.  
   
- [!code-vb[CsLINQAnyAll#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_2.vb)]  
+ [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Linq>

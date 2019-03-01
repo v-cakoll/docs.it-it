@@ -8,12 +8,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: da01d3f1bdfa3e76afcc28e7b70240beb06f74f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e417e13f1617f3ad8064c9e1b0eec835938b6200
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506485"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978916"
 ---
 # <a name="yield-statement-visual-basic"></a>Istruzione Yield (Visual Basic)
 Invia l'elemento avanti di una raccolta a un `For Each...Next` istruzione.  
@@ -84,12 +84,12 @@ Next
   
  Il tipo restituito del metodo iteratore è <xref:System.Collections.Generic.IEnumerable%601>, un tipo interfaccia iteratore. Quando il metodo iteratore viene chiamato, restituisce un oggetto enumerabile che contiene le potenze di un numero.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata una funzione di accesso `Get` che è un iteratore. La dichiarazione di proprietà contiene un `Iterator` modificatore.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
  Per altri esempi, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
   

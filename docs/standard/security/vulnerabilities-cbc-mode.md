@@ -4,12 +4,12 @@ description: Informazioni su come rilevare e attenuare le vulnerabilità di temp
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066176"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974289"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilità di temporizzazione con decrittografia simmetrica modalità CBC con spaziatura interna
 
@@ -92,7 +92,7 @@ Le applicazioni che non è possibile modificare il formato di messaggistica senz
   - Ciò non impedisce anche ripristino plaintext in situazioni in cui l'autore dell'attacco può assegnare lo stesso testo non deve essere crittografato più volte con un offset di messaggi diversi.
 - La valutazione di una chiamata di decrittografia per limitare il segnale di temporizzazione gate:
   - Il calcolo del tempo di attesa deve avere un minimo che supererà la quantità massima di tempo che richiederebbe l'operazione di decrittografia per qualsiasi segmento di dati contenente la spaziatura interna.
-  - Calcoli ora devono essere eseguiti seguendo le istruzioni riportate in [acquisizione timestamp ad alta risoluzione](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), non tramite <xref:System.Environment.TickCount?displayProperty=nameWithType> (soggetto a roll-over/overflow) o la sottrazione di due timestamp di sistema (soggetti a modifica NTP errori).
+  - Calcoli ora devono essere eseguiti seguendo le istruzioni riportate in [acquisizione timestamp ad alta risoluzione](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), non tramite <xref:System.Environment.TickCount?displayProperty=nameWithType> (soggetto a roll-over/overflow) o la sottrazione di due timestamp di sistema (soggetti a modifica NTP errori).
   - Calcoli ora devono essere con strumenti per l'operazione di decrittografia tra cui tutte le potenziali eccezioni in gestito o applicazioni C++, non solo aggiunti alla fine.
   - Se l'esito positivo o negativo è ancora stato determinato, l'attività di controllo dell'intervallo deve restituire errori dopo la scadenza.
 - Servizi che eseguono la decrittografia non autenticata devono avere il monitoraggio in modo che possano rilevare che è stato trovato un flusso eccessivo di messaggi "non è validi".
@@ -103,7 +103,7 @@ Le applicazioni che non è possibile modificare il formato di messaggistica senz
 Per i programmi compilati con la crittografia di Windows: Libreria di Generation (CNG) successiva:
 
 - La chiamata di decrittografia riguarda [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), specificando il `BCRYPT_BLOCK_PADDING` flag.
-- L'handle di chiave è stato inizializzato chiamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) impostato su `BCRYPT_CHAIN_MODE_CBC`.
+- L'handle di chiave è stato inizializzato chiamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) impostato su `BCRYPT_CHAIN_MODE_CBC`.
   - Poiché `BCRYPT_CHAIN_MODE_CBC` è l'impostazione predefinita, interessata codice potrebbe non aver assegnato alcun valore per `BCRYPT_CHAINING_MODE`.
 
 Per i programmi compilati con l'API di crittografia di Windows precedenti:

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528875"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980776"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: Definire più versioni di una routine (Visual Basic)
 È possibile definire una procedura in più versioni da *overload* utilizzando lo stesso nome ma un elenco di parametri diversi per ogni versione. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome.  
@@ -33,7 +33,7 @@ ms.locfileid: "54528875"
 ## <a name="example"></a>Esempio  
  L'esempio seguente definisce un `Sub` procedure per inserire una transazione al saldo di un cliente. Usa il `Overloads` parola chiave per definire due versioni della routine, uno che accetta il cliente per nome e l'altro per numero di account.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  Il codice chiamante può ottenere l'identificazione del cliente come un `String` o un `Integer`e quindi usare la stessa istruzione di chiamata in entrambi i casi.  
   

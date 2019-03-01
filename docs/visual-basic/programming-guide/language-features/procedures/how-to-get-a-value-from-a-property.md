@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543370"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964773"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Procedura: Ottenere un valore da una proprietà (Visual Basic)
 Per recuperare un valore della proprietà di includere il nome della proprietà in un'espressione.  
@@ -30,7 +30,7 @@ Per recuperare un valore della proprietà di includere il nome della proprietà 
   
      Nell'esempio seguente legge il valore di Visual Basic `Now` proprietà, chiamare in modo implicito il `Get` procedure.  
   
-     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
 2.  Se la proprietà accetta argomenti, seguire il nome della proprietà tra parentesi per racchiudere l'elenco di argomenti. Se non sono presenti argomenti, è possibile omettere le parentesi.  
   

@@ -1,5 +1,5 @@
 ---
-title: Interfaccia1 ICorDebugObjectValue2
+title: Interfaccia ICorDebugObjectValue2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63fc2001f611bc4c199d2a8800af8e5210f37c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c361b12fdfd30873f8c756e710e6f1a12ade0aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653229"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979684"
 ---
-# <a name="icordebugobjectvalue2-interface1"></a>Interfaccia1 ICorDebugObjectValue2
+# <a name="icordebugobjectvalue2-interface"></a>Interfaccia ICorDebugObjectValue2
+
 Estende l'interfaccia "ICorDebugObjectValue" per supportare l'ereditarietà ed esegue l'override.  
   
 ## <a name="methods"></a>Metodi  

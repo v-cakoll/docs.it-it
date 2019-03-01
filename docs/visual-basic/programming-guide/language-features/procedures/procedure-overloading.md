@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712522"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975472"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
 *L'overload* significa che una routine di definirla in più versioni, usando lo stesso nome ma gli elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome. Eseguire questa operazione modificando l'elenco di parametri.  
@@ -67,12 +67,12 @@ ms.locfileid: "54712522"
 ## <a name="multiple-versions-of-a-procedure"></a>Più versioni di una stored Procedure  
  Si supponga che si sta scrivendo un `Sub` procedure per inserire una transazione con saldo di un cliente e si desidera essere in grado di fare riferimento al cliente in base al nome o dal numero di account. Di conseguenza, è possibile definire due diversi `Sub` procedure, come nell'esempio seguente:  
   
- [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]  
   
 ### <a name="overloaded-versions"></a>Versioni di overload  
  In alternativa è possibile eseguire l'overload di un singolo nome di routine. È possibile usare la [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) parola chiave per definire una versione della procedura per ogni elenco di parametri, come indicato di seguito:  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
 #### <a name="additional-overloads"></a>Overload aggiuntivi  
  Se si vuole accettare un importo di transazione in uno `Decimal` oppure `Single`, è possibile eseguire l'overload ulteriormente `post` per consentire questa variazione. Se viene eseguita questa operazione per ogni overload nell'esempio precedente, sarebbe necessario quattro `Sub` procedure, tutte con lo stesso nome ma con quattro firme diverse.  
@@ -80,9 +80,9 @@ ms.locfileid: "54712522"
 ## <a name="advantages-of-overloading"></a>Vantaggi dell'overload  
  Il vantaggio di overload di una routine è la flessibilità della chiamata. Usare la `post` routine dichiarata nell'esempio precedente, il codice chiamante può ottenere l'identificazione del cliente come un `String` o un `Integer`, quindi chiamare la stessa procedura in entrambi i casi. Questa condizione è illustrata nell'esempio che segue.  
   
- [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
- [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

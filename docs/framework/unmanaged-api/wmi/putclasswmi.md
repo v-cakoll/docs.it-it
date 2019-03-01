@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614510"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972807"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (funzione)
 Crea una nuova classe o ne aggiorna una esistente.  
@@ -47,9 +47,9 @@ HRESULT PutClassWmi (
 `lFlags`   
 [in] Una combinazione di flag che influiscono sul comportamento di questa funzione. I valori seguenti vengono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice: 
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se set, WMI non archivia i qualificatori con la versione modificata. </br> Se non impostato, si presuppone che non viene localizzato con questo oggetto e tutti i qualificatori vengono storedwith questa istanza. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se set, WMI non archivia i qualificatori con la versione modificata. <br> Se non impostato, si presuppone che non viene localizzato con questo oggetto e tutti i qualificatori vengono storedwith questa istanza. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Creare la classe se non esiste o di sovrascriverlo se esiste già. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aggiornare la classe. La classe deve esistere per la chiamata abbia esito positivo. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Creare la classe. La chiamata ha esito negativo se la classe esiste già. |
@@ -69,7 +69,7 @@ HRESULT PutClassWmi (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | L'utente dispone dell'autorizzazione per creare o modificare le classi. |
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore non specificato. |

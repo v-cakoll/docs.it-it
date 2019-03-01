@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595578"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978501"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipi generici in Visual Basic (Visual Basic)
 Un *tipo generico* è un singolo elemento di programmazione che si adatta per eseguire la stessa funzionalità per diversi tipi di dati. Quando si definisce una classe o una routine generica, non è necessario definire una versione distinta per ogni tipo di dati per il quale si vuole eseguire tale funzionalità.  
@@ -55,7 +55,7 @@ Cacciavite come strumento generico
   
  È ad esempio possibile creare e usare una classe queue che opera su un tipo di dati specifico, quale `String`. È possibile dichiarare tale classe da <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  È ora possibile usare `stringQ` per lavorare esclusivamente con i valori `String` . Poiché `stringQ` è specifico per `String` anziché essere generalizzato per i valori `Object` , non viene eseguita alcuna associazione tardiva o conversione di tipo. Questo consente di risparmiare il tempo di esecuzione e riduce gli errori di runtime.  
   
@@ -64,17 +64,17 @@ Cacciavite come strumento generico
 ## <a name="example-of-a-generic-class"></a>Esempio di classe generica  
  Nell'esempio seguente viene illustrata la struttura della definizione di una classe generica.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  Nella struttura precedente `t` è un *parametro di tipo*, ovvero un segnaposto per un tipo di dati che viene fornito quando si dichiara la classe. In un'altra posizione nel codice è possibile dichiarare varie versioni di `classHolder` fornendo diversi tipi di dati per `t`. Gli esempi seguenti mostrano due dichiarazioni di questo tipo.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  Le istruzioni precedenti dichiarano *classi costruite*, in cui un tipo specifico sostituisce il parametro di tipo. Questa sostituzione viene propagata in tutto il codice all'interno della classe costruita. Nell'esempio seguente viene illustrato l'aspetto della routine `processNewItem` in `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Per un esempio più esaustivo, vedere [come: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Per un esempio più esaustivo, vedere [Procedura: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Elementi di programmazione idonei  
  È possibile definire e usare classi, strutture, interfacce, routine e delegati generici. Si noti che [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] definisce diverse classi, strutture e interfacce generiche che rappresentano elementi generici usati comunemente. Lo spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> fornisce dizionari, elenchi, code e stack. Prima di definire un elemento generico personalizzato, verificare se è già disponibile in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
@@ -110,7 +110,7 @@ Cacciavite come strumento generico
 ### <a name="example-of-a-constraint"></a>Esempio di vincolo  
  Nell'esempio seguente viene illustrata una struttura di definizione di una classe con un vincolo che richiede che l'argomento di tipo implementi <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  Se il codice successivo tenta di costruire una classe da `itemManager` fornendo un tipo che non implementa <xref:System.IComparable>, il compilatore segnala un errore.  
   
@@ -132,7 +132,7 @@ Cacciavite come strumento generico
 ### <a name="example-of-multiple-constraints"></a>Esempio di più vincoli  
  Nell'esempio seguente viene illustrata una struttura di definizione di una classe generica con un elenco di vincoli per il parametro di tipo. Nel codice che crea un'istanza di questa classe, l'argomento di tipo deve implementare entrambe le interfacce <xref:System.IComparable> e <xref:System.IDisposable> , essere un tipo di riferimento ed esporre un costruttore senza parametri accessibile.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Termini importanti  
  I tipi generici introducono e usano i termini seguenti:  

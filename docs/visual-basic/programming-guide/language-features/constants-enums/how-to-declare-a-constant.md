@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678837"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964924"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Procedura: Dichiarare una costante (Visual Basic)
 Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il valore. Dichiarando una costante, si assegna un nome significativo su un valore. Una volta che viene dichiarata una costante, non può essere modificato o assegnato un nuovo valore.  
@@ -43,7 +43,7 @@ Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il va
   
 -   Scrivere una dichiarazione che include un identificatore di accesso, il `Const` (parola chiave) e un'espressione, come negli esempi seguenti:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) viene `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) viene `On`, è necessario dichiarare una costante in modo esplicito specificando un tipo di dati (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, o `String`).  
   
@@ -53,7 +53,7 @@ Si utilizza il `Const` istruzione per dichiarare una costante e impostarne il va
   
 -   Scrivere una dichiarazione che include il `As` digita parola chiave e una data esplicita, come negli esempi seguenti:  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      È possibile dichiarare più costanti in una singola riga, anche se quest'ultima è più leggibili se si dichiara una sola costante per ogni riga. Se si dichiarano più le costanti in una singola riga, devono tutti avere lo stesso livello di accesso (`Public`, `Private`, `Friend`, `Protected`, o `Protected Friend`).  
   

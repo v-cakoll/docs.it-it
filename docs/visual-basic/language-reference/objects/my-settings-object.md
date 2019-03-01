@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628162"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973470"
 ---
 # <a name="mysettings-object"></a>Oggetto My.Settings
 Fornisce proprietà e metodi per l'accesso alle impostazioni dell'applicazione.  
@@ -48,21 +48,21 @@ Fornisce proprietà e metodi per l'accesso alle impostazioni dell'applicazione.
 |A|Vedere|  
 |---|---|  
 |Leggere un'impostazione dell'applicazione|[Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Modificare un'impostazione utente|[Procedura: Modificare le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Modificare un'impostazione utente|[Procedura: Modificare le impostazioni dell'utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Mantenere le impostazioni utente|[Procedura: Mantenere le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Creare una griglia delle proprietà per impostazioni utente|[Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene mostrato il valore dell'impostazione `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  Affinché l'esempio funzioni, l'applicazione deve contenere un'impostazione `Nickname` di tipo `String`.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Procedura: Modificare le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Procedura: Modificare le impostazioni dell'utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
 - [Procedura: Mantenere le impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

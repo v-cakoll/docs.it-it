@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551787"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970298"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Nozioni fondamentali sull'ereditarietà (Visual Basic)
 Il `Inherits` istruzione viene usata per dichiarare una nuova classe, denominata un *classe derivata*, in base a una classe esistente, nota come un *classe di base*. Le classi derivate ereditano e possono estendere, proprietà, metodi, eventi, campi e le costanti definite nella classe di base. La sezione seguente descrive alcune delle regole per l'ereditarietà e i modificatori che è possibile usare per modificare le classi modo ereditano o vengono ereditati:  
@@ -62,14 +62,14 @@ Il `Inherits` istruzione viene usata per dichiarare una nuova classe, denominata
   
  L'esempio seguente definisce una classe di base `Payroll,` e una classe derivata `BonusPayroll`, che esegue l'override di un metodo ereditato, `PayEmployee`. Una routine, `RunPayroll`, viene creato e quindi passa un `Payroll` oggetto e un `BonusPayroll` oggetto a una funzione `Pay`, che esegue il `PayEmployee` metodo di entrambi gli oggetti.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>La parola chiave MyBase  
  Il `MyBase` (parola chiave) si comporta come una variabile oggetto che fa riferimento alla classe di base dell'istanza corrente di una classe. `MyBase` viene spesso utilizzato per accedere ai membri di classe base sottoposto a override o shadowing in una classe derivata. In particolare, `MyBase.New` viene usato per chiamare in modo esplicito un costruttore di classe di base da un costruttore di classe derivata.  
   
  Si supponga, ad esempio, che si progetta una classe derivata che esegue l'override di un metodo ereditato dalla classe di base. Il metodo sottoposto a override è possibile chiamare il metodo nella classe di base e modificare il valore restituito, come illustrato nel frammento di codice seguente:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  L'elenco seguente descrive le restrizioni sull'uso di `MyBase`:  
   

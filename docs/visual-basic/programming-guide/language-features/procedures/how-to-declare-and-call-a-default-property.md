@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640966"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977552"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic
 Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura che il codice possa accedere senza specificarla. Quando si chiama codice nomi una classe o struttura, ma non una proprietà e il contesto consente l'accesso a una proprietà, Visual Basic viene risolto l'accesso a tale classe o una proprietà predefinita della struttura, se disponibile.  
@@ -32,43 +32,43 @@ Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura c
   
 3.  Specificare almeno un parametro per la proprietà. È possibile definire una proprietà predefinita che non accetta almeno un argomento.  
   
-     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Per chiamare una proprietà predefinita  
   
 1.  Dichiarare una variabile del tipo di classe o struttura che lo contiene.  
   
-     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
 2.  Usare il nome della variabile da solo in un'espressione in cui è in genere necessario includere il nome della proprietà.  
   
-     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
 3.  Seguire il nome della variabile con un elenco di argomenti racchiuso tra parentesi. Una proprietà predefinita deve accettare almeno un argomento.  
   
-     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
 4.  Per recuperare il valore della proprietà predefinito, usare il nome di variabile con un elenco di argomenti, in un'espressione o in seguito uguali (`=`) Accedi a un'istruzione di assegnazione.  
   
-     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
 5.  Per impostare il valore della proprietà predefinito, usare il nome di variabile con un elenco di argomenti, sul lato sinistro di un'istruzione di assegnazione.  
   
-     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
 6.  È sempre possibile specificare il nome della proprietà predefinita con il nome della variabile, esattamente come si farebbe per accedere a qualsiasi altra proprietà.  
   
-     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente dichiara una proprietà predefinita in una classe.  
   
- [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come chiamare la proprietà predefinita `myProperty` sulla classe `class1`. Le tre istruzioni di assegnazione valori memorizzati in `myProperty`e il <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> chiamata legge i valori.  
   
- [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
  L'uso più comune di una proprietà predefinita è il <xref:Microsoft.VisualBasic.Collection.Item%2A> proprietà in varie classi di raccolta.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638119"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977578"
 ---
 # <a name="sub-procedures-visual-basic"></a>Routine Sub (Visual Basic)
 Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra il `Sub` e `End Sub` istruzioni. Il `Sub` routine esegue un'attività e quindi restituisce il controllo al codice chiamante, ma non viene restituito un valore al codice chiamante.  
@@ -30,7 +30,7 @@ Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra i
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
  La sintassi per dichiarare un `Sub` procedura è la seguente:  
   
- `[` *i modificatori* `] Sub` *subname* `[(` *elencoparametri*  `)]`  
+ `[` *i modificatori* `] Sub` *subname* `[(` *elencoparametri* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -43,11 +43,11 @@ Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra i
   
  La sintassi per ogni parametro nell'elenco dei parametri è come segue:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *ParameterName*`As`*datatype*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *ParameterName*`As`*datatype*  
   
  Se il parametro è facoltativo, è necessario specificare anche un valore predefinito come parte della relativa dichiarazione. La sintassi per specificare un valore predefinito è come segue:  
   
- `Optional [ByVal | ByRef]`  *ParameterName*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *ParameterName*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Parametri come variabili locali  
  Quando il controllo passa alla procedura, ogni parametro viene considerato come una variabile locale. Ciò significa che la sua durata è uguale a quello della procedura e il relativo ambito è l'intera procedura.  
@@ -66,11 +66,11 @@ Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra i
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
  Nell'esempio `Sub` procedure indica a quale attività l'applicazione sta per eseguire, l'operatore di computer e visualizza inoltre un timestamp. Anziché ripetere questo codice all'inizio di ogni attività, l'applicazione chiama semplicemente `tellOperator` da diverse posizioni. Ogni chiamata passa una stringa nel `task` argomento che identifica l'attività in corso l'avvio.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  Nell'esempio seguente viene illustrata una tipica chiamata alla `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Routine](./index.md)

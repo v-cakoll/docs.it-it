@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: cd93316ada1fcf0997922f71a8efc5a3cf411d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614579"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981218"
 ---
 # <a name="not-operator-visual-basic"></a>Operatore Not (Visual Basic)
 Esegue una negazione logica su un `Boolean` espressione oppure una negazione bit per bit di un'espressione numerica.  
@@ -64,14 +64,14 @@ result = Not expression
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Not` operatore per eseguire la negazione logica su un `Boolean` espressione. Il risultato è un `Boolean` valore che rappresenta l'opposto del valore dell'espressione.  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
  Nell'esempio precedente produce i risultati dei `False` e `True`, rispettivamente.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Not` operatore per eseguire la negazione logica dei singoli bit di un'espressione numerica. Il bit nel risultato viene impostato per l'operazione inversa del bit corrispondente nel modello dell'operando, tra cui il bit di segno.  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
  Nell'esempio precedente produce i risultati di – 11, –9 e –7, rispettivamente.  
   

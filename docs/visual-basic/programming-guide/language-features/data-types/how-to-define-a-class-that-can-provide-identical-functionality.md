@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667479"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977799"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procedura: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi (Visual Basic)
 È possibile definire una classe dalla quale creare oggetti in grado di fornire funzionalità identiche su tipi di dati diversi. A questo scopo, specificare uno o più *parametri di tipo* nella definizione. La classe potrà quindi servire come modello per gli oggetti che usano tipi di dati diversi. Una classe definita in questo modo viene denominata *classe generica*.  
@@ -64,7 +64,7 @@ ms.locfileid: "54667479"
   
      Nell'esempio riportato di seguito viene definita una classe che gestisce un elenco molto semplice. L'elenco è contenuto negli `items`della matrice interna e il tipo di dati degli elementi dell'elenco può essere dichiarato dal codice. Un costruttore con parametri consente al codice di impostare il limite superiore di `items`, quindi il costruttore predefinito lo imposta a 9 (per un totale di 10 elementi).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      È possibile dichiarare una classe da `simpleList` per contenere un elenco di valori `Integer` , un'altra classe per contenere un elenco di valori `String` e un'altra per contenere valori `Date` . Ad eccezione del tipo di dati dei membri dell'elenco, gli oggetti creati da tutte queste classi si comportano in maniera identica.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54667479"
   
      È possibile verificare la classe `simpleList` con il codice seguente.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

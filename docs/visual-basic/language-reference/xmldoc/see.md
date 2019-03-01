@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 9faf1ec7211493b8c0058439e9a6e3bcb293ea99
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0f1293fa0161a9a11b4e80301f5c4c4ddffe7b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289523"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969297"
 ---
 # <a name="see-visual-basic"></a>\<see> (Visual Basic)
 Specifica un collegamento a un altro membro.  
@@ -33,7 +33,7 @@ Specifica un collegamento a un altro membro.
 ## <a name="example"></a>Esempio  
  Questo esempio Usa la `<see>` contrassegnare nel `UpdateRecord` per fare riferimento alla sezione relativa alle osservazioni di `DoesRecordExist` (metodo).  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

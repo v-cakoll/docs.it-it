@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: c9d6a2ad6146ebd90be330813a44d092c044348b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534930"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980191"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedura: Oggetti di riferimento COM da Visual Basic
 In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi richiede la creazione di un assembly di interoperabilità per la libreria COM. I riferimenti ai membri dell'oggetto COM vengono indirizzati all'assembly di interoperabilità e quindi inoltrati all'oggetto COM effettivo. Le risposte dall'oggetto COM vengono indirizzate all'assembly di interoperabilità e inoltrate al [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione.  
@@ -30,7 +30,7 @@ In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi r
   
 3.  Per semplificare l'accesso all'assembly di interoperabilità, aggiungere un `Imports` istruzione all'inizio della classe o modulo in cui si userà l'oggetto COM. Ad esempio, il codice seguente importa lo spazio dei nomi `INKEDLib` per gli oggetti a cui fa riferimento il `Microsoft InkEdit Control 1.0` libreria.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Per creare un assembly di interoperabilità tramite Tlbimp  
   

@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ea7cc2c7f988617de67bf0ea46aeb3396acdf4b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674880"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980620"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, vale a dire che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi non vi è alcuna chiamata a una procedura per eseguire la conversione, che migliora le prestazioni. Ogni funzione converte un'espressione per un tipo di dati specifico.  
@@ -198,73 +198,73 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="cbool-example"></a>Esempio CBool  
  L'esempio seguente usa il `CBool` funzione per convertire le espressioni `Boolean` valori. Se un'espressione restituisce un valore diverso da zero, `CBool` restituisce `True`; in caso contrario, restituisce `False`.  
   
- [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
+ [!code-vb[VbVbalrFunctions#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#1)]  
   
 ## <a name="cbyte-example"></a>Esempio CByte  
  L'esempio seguente usa il `CByte` funzione per convertire un'espressione in un `Byte`.  
   
- [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
+ [!code-vb[VbVbalrFunctions#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#2)]  
   
 ## <a name="cchar-example"></a>Esempio di CChar  
  L'esempio seguente usa il `CChar` funzione per convertire il primo carattere di una `String` espressione da un `Char` tipo.  
   
- [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
+ [!code-vb[VbVbalrFunctions#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#3)]  
   
  L'argomento di input per `CChar` deve essere del tipo di dati `Char` o `String`. Non è possibile usare `CChar` per convertire un numero in un carattere, in quanto `CChar` non può accettare un tipo di dati numerici. Nell'esempio seguente ottiene un numero che rappresenta un punto di codice (codice di carattere) e lo converte nel carattere corrispondente. Usa il <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> funzione per ottenere la stringa di cifre `CInt` per convertire la stringa al tipo `Integer`, e `ChrW` effettuare la conversione al tipo `Char`.  
   
- [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
+ [!code-vb[VbVbalrFunctions#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#4)]  
   
 ## <a name="cdate-example"></a>Esempio CDate  
  L'esempio seguente usa il `CDate` funzione per convertire le stringhe a `Date` valori. In generale, non è consigliabile impostare come hardcoded date e ore sotto forma di stringhe (come illustrato in questo esempio). Usare valori letterali di data e ora, ad esempio #Feb 12, 1969 # e # 4:45:23 PM # invece.  
   
- [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
+ [!code-vb[VbVbalrFunctions#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#5)]  
   
 ## <a name="cdbl-example"></a>Esempio CDbl  
- [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
+ [!code-vb[VbVbalrFunctions#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#6)]  
   
 ## <a name="cdec-example"></a>Esempio CDec  
  L'esempio seguente usa il `CDec` funzione per convertire un valore numerico a `Decimal`.  
   
- [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
+ [!code-vb[VbVbalrFunctions#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#7)]  
   
 ## <a name="cint-example"></a>Esempio CInt  
  L'esempio seguente usa il `CInt` funzione per convertire un valore a `Integer`.  
   
- [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
+ [!code-vb[VbVbalrFunctions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#8)]  
 
 ## <a name="clng-example"></a>Esempio CLng
  L'esempio seguente usa il `CLng` funzione per convertire i valori per `Long`.  
   
- [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
+ [!code-vb[VbVbalrFunctions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#9)]  
   
 ## <a name="cobj-example"></a>CObj esempio  
  L'esempio seguente usa il `CObj` funzione per convertire un valore numerico a `Object`. Il `Object` variabile contiene solo un puntatore a quattro byte, che fa riferimento al `Double` valore assegnato a esso.  
   
- [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
+ [!code-vb[VbVbalrFunctions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#10)]  
   
 ## <a name="csbyte-example"></a>CSByte Example  
  L'esempio seguente usa il `CSByte` funzione per convertire un valore numerico a `SByte`.  
   
- [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
+ [!code-vb[VbVbalrFunctions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#11)]  
   
 ## <a name="cshort-example"></a>Esempio di CShort  
  L'esempio seguente usa il `CShort` funzione per convertire un valore numerico a `Short`.  
   
- [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
+ [!code-vb[VbVbalrFunctions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#12)]  
   
 ## <a name="csng-example"></a>Esempio di CSng  
  L'esempio seguente usa il `CSng` funzione per convertire i valori per `Single`.  
   
- [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
+ [!code-vb[VbVbalrFunctions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#13)]  
   
 ## <a name="cstr-example"></a>Esempio di funzione CStr  
  L'esempio seguente usa il `CStr` funzione per convertire un valore numerico a `String`.  
   
- [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
+ [!code-vb[VbVbalrFunctions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#14)]  
   
  L'esempio seguente usa il `CStr` funzione per convertire `Date` valori `String` valori.  
   
- [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
+ [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]  
   
  `CStr` Visualizza sempre un `Date` valore nel formato breve standard per le impostazioni locali correnti, ad esempio, "6/15/2003 4 35 47 PM". Tuttavia `CStr` Elimina il *valori neutri* 1/1/0001 per la data e 00:00:00 per l'ora.  
   
@@ -273,17 +273,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="cuint-example"></a>Esempio di CUInt  
  L'esempio seguente usa il `CUInt` funzione per convertire un valore numerico a `UInteger`.  
   
- [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
+ [!code-vb[VbVbalrFunctions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#16)]  
   
 ## <a name="culng-example"></a>Esempio di CULng  
  L'esempio seguente usa il `CULng` funzione per convertire un valore numerico a `ULong`.  
   
- [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
+ [!code-vb[VbVbalrFunctions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#17)]  
   
 ## <a name="cushort-example"></a>Esempio di CUShort  
  L'esempio seguente usa il `CUShort` funzione per convertire un valore numerico a `UShort`.  
   
- [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
+ [!code-vb[VbVbalrFunctions#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#18)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

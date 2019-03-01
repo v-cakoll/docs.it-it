@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 67382359a97e9f60b079de1d25589de446042237
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 069c03cc9666cffec2edd26afeb86f0230f9bc6f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638930"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980932"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Procedura: Inizializzare una variabile di matrice in Visual Basic
 Inizializzare una variabile di matrice includendo un valore letterale nell'array un `New` clausola e specificando i valori iniziali della matrice. È possibile specificare il tipo o consentire che possa essere dedotto dai valori nel valore letterale di matrice. Per ulteriori informazioni su come viene dedotto il tipo, vedere "Popolamento di una matrice con valori iniziali" nella [matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
@@ -21,7 +21,7 @@ Inizializzare una variabile di matrice includendo un valore letterale nell'array
   
 -   Nel `New` clausola, o quando si assegna il valore della matrice, fornire i valori degli elementi tra parentesi graffe (`{}`). Nell'esempio seguente vengono illustrati diversi modi per dichiarare, creare e inizializzare una variabile per contenere una matrice con elementi di tipo `Char`.  
   
-     [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_1.vb)]  
+     [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
      Dopo l'esecuzione di ogni istruzione, la matrice creata ha una lunghezza pari a 3, con elementi in corrispondenza dell'indice 0 e l'indice 2 contenenti i valori iniziali. Se si specificano sia il limite superiore che i valori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore.  
   
@@ -31,27 +31,27 @@ Inizializzare una variabile di matrice includendo un valore letterale nell'array
   
 -   Annidare i valori tra parentesi graffe (`{}`) all'interno delle parentesi graffe. Verificare che i valori letterali di matrice annidati che tutti dedotti come matrici dello stesso tipo e lunghezza. Esempio di codice seguente mostra alcuni esempi di inizializzazione di matrici multidimensionali.  
   
-     [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
+     [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
 -   In modo esplicito, è possibile specificare i limiti della matrice o tralasciarli e che il compilatore li deduca in base ai valori nel valore letterale di matrice. Se si specificano sia i limiti superiori che i valori, è necessario includere un valore per ogni elemento dall'indice 0 al limite superiore di ogni dimensione. Nell'esempio seguente vengono illustrati diversi modi per dichiarare, creare e inizializzare una variabile per contenere una matrice bidimensionale con elementi di tipo `Short`  
   
-     [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
+     [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
      Dopo l'esecuzione di ogni istruzione, la matrice creata contiene sei elementi inizializzati che includono indici `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)`, e `(1,2)`. Ogni posizione della matrice contiene il valore `10`.  
   
 -   Nell'esempio seguente scorre una matrice multidimensionale. In un'applicazione console Windows scritta in Visual Basic, incollare il codice all'interno di `Sub Main()` (metodo). Gli ultimi commenti illustrano l'output.  
   
-     [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_4.vb)]  
+     [!code-vb[VbVbalrArrays#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#31)]  
   
 ### <a name="to-initialize-a-jagged-array-variable-by-using-array-literals"></a>Per inizializzare una variabile di matrice di matrici tramite valori letterali di matrice  
   
 -   Annidare i valori di oggetto all'interno delle parentesi graffe (`{}`). Sebbene sia possibile annidare anche valori letterali di matrice che specificano matrici di lunghezze diverse, in caso di una matrice di matrici, assicurarsi che i valori letterali di matrice annidati siano racchiusi tra parentesi (`()`). Le parentesi forzano la valutazione dei valori letterali della matrice annidati e le matrici risultante vengono utilizzate come valori iniziali della matrice di matrici. Esempio di codice seguente mostra due esempi di inizializzazione di matrice di matrici.  
   
-     [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
+     [!code-vb[VbVbalrArrays#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#19)]  
   
 -   Nell'esempio seguente scorre una matrice di matrici. In un'applicazione console Windows scritta in Visual Basic, incollare il codice all'interno di `Sub Main()` (metodo).  Gli ultimi commenti nel codice illustrano l'output.  
   
-     [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
+     [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

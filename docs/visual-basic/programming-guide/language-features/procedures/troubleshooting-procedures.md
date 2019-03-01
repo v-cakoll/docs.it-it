@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648547"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972001"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Risoluzione dei problemi relativi alle routine (Visual Basic)
 Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le procedure.  
@@ -41,7 +41,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  **Approccio corretto:** Per essere in grado di modificare gli elementi della matrice che deve essere restituita, definire una matrice interna come una variabile locale. L'esempio seguente viene compilato senza errori.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argomento non viene modificato dalla chiamata di routine  
  Se si prevede di consentire una procedura per modificare un elemento di programmazione sottostante a un argomento nel codice chiamante, è necessario passarlo per riferimento. Ma una procedura può accedere agli elementi di un argomento di tipo riferimento anche se viene passato per valore.  
@@ -52,13 +52,13 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  L'esempio seguente definisce due procedure che accettano una variabile di matrice per valore e operano sui relativi elementi. Procedure `increase` aggiunge semplicemente uno per ogni elemento. Routine `replace` assegna una nuova matrice al parametro `a()` , quindi aggiunge uno per ogni elemento. Tuttavia, la riassegnazione non influiscono sulla variabile di matrice sottostante nel codice chiamante perché `a()` viene dichiarato `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  Nell'esempio seguente effettua chiamate a `increase` e `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Il primo `MsgBox` chiamata viene visualizzato "dopo aver Increase (n): 11, 21, 31, 41". In quanto `n` è un tipo di riferimento `increase` possono modificare i relativi membri, anche se viene passato `ByVal`.  
   
@@ -66,7 +66,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  **Approccio corretto:** Per essere in grado di modificare un elemento variabile sottostante, è necessario passarlo per riferimento. Nell'esempio seguente mostra la modifica nella dichiarazione di `replace` che consente di sostituire una matrice con un oggetto nel codice chiamante.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>Non è possibile definire un Overload  
  Se si desidera definire una versione di overload di una stored procedure, è necessario usare lo stesso nome e una firma diversa. Se il compilatore non può distinguere la dichiarazione di un overload con la stessa firma, viene generato un errore.  
@@ -108,9 +108,9 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  L'esempio seguente illustra il processo di risoluzione dell'overload.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  Nella prima chiamata, il compilatore elimina il primo overload, perché il tipo del primo argomento (`Short`) viene convertito nel tipo del parametro corrispondente (`Byte`). Il terzo overload viene quindi eliminato poiché ogni tipo di argomento nel secondo overload (`Short` e `Single`) viene ampliato al tipo del terzo overload corrispondente (`Integer` e `Single`). Il secondo overload richiede un ampliamento minore, in modo che il compilatore lo usa per la chiamata.  
   
@@ -118,7 +118,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  **Approccio corretto:** Per essere in grado di chiamare una routine di overload senza ambiguità, usare [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) in modo che corrispondano ai tipi di dati di argomenti per i tipi di parametro. Nell'esempio seguente viene illustrata una chiamata a `z` che forza la risoluzione per il secondo overload.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Risoluzione dell'overload con facoltativa e argomenti ParamArray  
  Se due overload di una stored procedure hanno firme identiche ad eccezione del fatto che l'ultimo parametro viene dichiarato [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in uno e [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in altro, il compilatore risolve una chiamata a tale procedura in base alla corrispondenza più vicina. Per altre informazioni, vedere [Overload Resolution](./overload-resolution.md).  
