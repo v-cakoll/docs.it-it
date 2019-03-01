@@ -15,7 +15,7 @@ Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per ge
   
  In questo esempio, un metodo verifica la presenza di divisioni per zero e intercetta l'errore. Senza la gestione delle eccezioni, il programma verrebbe chiuso con un errore **DivideByZeroException non è stata gestita**.  
   
- [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
 ## <a name="exceptions-overview"></a>Panoramica delle eccezioni  
  Le eccezioni hanno le proprietà seguenti:  

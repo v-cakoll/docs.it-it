@@ -1,24 +1,18 @@
 ---
-title: Delegati - Guida per programmatori C#
+title: 'Delegati - Guida per programmatori C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675374"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
   
  I delegati vengono utilizzati per passare metodi come argomenti ad altri metodi. I gestori di evento non sono altro che metodi richiamati tramite delegati. Creare un metodo personalizzato e una classe, ad esempio un controllo Windows, che può chiamare tale metodo quando si verifica un determinato evento. Nell'esempio che segue viene illustrata la dichiarazione di un delegato:  
   
- [!code-csharp[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#20)]  
   
  Qualsiasi metodo di qualsiasi classe o struct accessibile che corrisponde al tipo di delegato può essere assegnato al delegato. Il metodo può essere un metodo statico o di istanza. In questo modo è possibile modificare le chiamate ai metodi a livello di codice, nonché inserire nuovo codice nelle classi esistenti.  
   

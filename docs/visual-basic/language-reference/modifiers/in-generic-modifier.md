@@ -7,12 +7,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91a0b9c1188820f8fc466ce1bb123b704fcd94b7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625750"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972514"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modificatore generico) (Visual Basic)
 Per i parametri di tipo generico, la parola chiave `In` specifica che il parametro di tipo è controvariante.  
@@ -39,12 +39,12 @@ Per i parametri di tipo generico, la parola chiave `In` specifica che il paramet
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come dichiarare, estendere e implementare un'interfaccia generica controvariante. L'esempio descrive anche come usare la conversione implicita per le classi che implementano quest'interfaccia.  
   
- [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#1)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come dichiarare, creare un'istanza e chiamare un delegato generico controvariante. Illustra anche come convertire in modo implicito un tipo delegato.  
   
- [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
 - [Varianza nelle interfacce generiche](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

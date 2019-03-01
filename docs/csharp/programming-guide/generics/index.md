@@ -10,7 +10,7 @@ ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
 # <a name="generics-c-programming-guide"></a>Generics (Guida per programmatori C#)
 I generics sono stati aggiunti alla versione 2.0 del linguaggio C# e di Common Language Runtime (CLR). I generics introducono in .NET Framework il concetto dei parametri di tipo, che consentono di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non si dichiara la classe o il metodo e si crea un'istanza dal codice client. Ad esempio, usando un parametro di tipo generico T è possibile scrivere un'unica classe che altro codice client può usare senza rischiare cast di runtime o operazioni di boxing, come illustrato di seguito:  
   
- [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]  
   
 ## <a name="generics-overview"></a>Panoramica sui generics  
   

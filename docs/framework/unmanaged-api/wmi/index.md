@@ -4,12 +4,6 @@ description: Contiene informazioni sull'API non gestita .NET Framework per WMI e
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069511"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Strumentazione gestione Windows (WMI) e contatori delle prestazioni (riferimenti alle API non gestite)
 
@@ -19,7 +13,7 @@ L'API non gestita .NET Framework per WMI e i contatori delle prestazioni è cost
   
 L'API include le funzioni seguenti:
 
-| Funzione | Descrizione |
+| Funzione | Description |
 |---------|---------|
 | [BeginEnumeration](beginenumeration.md) | Reimposta l'enumeratore all'inizio di un'enumerazione di proprietà di oggetti WMI. |
 | [BeginMethodEnumeration](beginmethodenumeration.md) |  Inizia l'enumerazione dei metodi disponibili per un oggetto. |
@@ -73,5 +67,6 @@ L'API include le funzioni seguenti:
 | [Funzione VerifyClient](verifyclientkey.md) | Verifica che la chiave client includa la sicurezza corretta. |
 | [Funzione WritePropertyValue](writepropertyvalue.md) | Scrive un numero specificato di byte in una proprietà identificata da un handle di proprietà. |
 
- ## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
+
 [Riferimenti alle API non gestite](../index.md) 

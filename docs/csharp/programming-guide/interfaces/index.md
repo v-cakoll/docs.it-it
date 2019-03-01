@@ -33,7 +33,7 @@ Quando una classe o una struct implementa un'interfaccia, la classe o la struct 
   
 Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia <xref:System.IEquatable%601>. La classe di implementazione, `Car`, deve fornire un'implementazione del metodo <xref:System.IEquatable%601.Equals%2A>.  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 Le proprietà e gli indicizzatori di una classe possono definire altre funzioni di accesso per una proprietà o un indicizzatore definito in un'interfaccia. Ad esempio, un'interfaccia può dichiarare una proprietà con una funzione di accesso [get](../../language-reference/keywords/get.md). La classe che implementa l'interfaccia può dichiarare la stessa proprietà con una funzione di accesso `get` o [set](../../language-reference/keywords/set.md). Tuttavia, se la proprietà o l'indicizzatore usa l'implementazione esplicita, le funzioni di accesso devono corrispondere. Per altre informazioni sull'implementazione esplicita, vedere [Implementazione esplicita dell'interfaccia](explicit-interface-implementation.md) e [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md).  
 

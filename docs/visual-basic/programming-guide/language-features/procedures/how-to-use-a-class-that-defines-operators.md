@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640678"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972516"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Procedura: Usare una classe che definisce gli operatori (Visual Basic)
 Se si usa una classe o struttura che definisca i propri operatori, è possibile accedere a questi ultimi da Visual Basic.  
@@ -26,9 +26,9 @@ Se si usa una classe o struttura che definisca i propri operatori, è possibile 
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente consente di accedere alla struttura SQL <xref:System.Data.SqlTypes.SqlString>, che definisce gli operatori di conversione ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in entrambe le direzioni tra una stringa SQL e una stringa di Visual Basic. Uso `CType(` *espressione stringa SQL*, `String)` per convertire una stringa SQL in una stringa di Visual Basic, e `CType(` *espressione Visual Basic stringa*, <xref:System.Data.SqlTypes.SqlString> `)` da convertire in altra direzione.  
   
- [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
- [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
  Il <xref:System.Data.SqlTypes.SqlString> struttura definisce un operatore di conversione ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) dal `String` a <xref:System.Data.SqlTypes.SqlString> e l'altro da <xref:System.Data.SqlTypes.SqlString> a `String`. L'istruzione che assegna `title` al `jobTitle` Usa il primo operatore e il <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> chiamata di funzione utilizzerà il secondo.  
   
