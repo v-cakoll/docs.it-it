@@ -16,7 +16,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 ## <a name="declaring-and-initializing-strings"></a>Dichiarazione e inizializzazione di stringhe  
  È possibile dichiarare e inizializzare stringhe in vari modi, come mostrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  Si noti che l'operatore [new](../../../csharp/language-reference/keywords/new-operator.md) non viene usato per creare un oggetto stringa tranne nel caso in cui la stringa viene inizializzata con una matrice di caratteri.  
   
@@ -84,16 +84,16 @@ Per altre informazioni sulla formattazione dei tipi .NET, vedere [Formattazione 
 ## <a name="substrings"></a>Sottostringhe  
  Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: Cercare stringhe](../../how-to/search-strings.md) e [Procedura: Modificare il contenuto delle stringhe](../../how-to/modify-string-contents.md).  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>Accesso a caratteri singoli  
  È possibile utilizzare la notazione di matrice con un valore di indice per ottenere l'accesso in sola lettura a singoli caratteri, come nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  Se i metodi <xref:System.String> non specificano la funzionalità richiesta per modificare singoli caratteri in una stringa, è possibile usare un oggetto <xref:System.Text.StringBuilder> per modificare i singoli caratteri "sul posto", quindi creare una nuova stringa per archiviare i risultati tramite i metodi <xref:System.Text.StringBuilder>. Nell'esempio seguente presupporre che sia necessario modificare la stringa originale in un modo specifico e archiviare quindi i risultati per uso futuro:  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Stringhe null e stringhe vuote  
  Una stringa vuota è un'istanza di un oggetto <xref:System.String?displayProperty=nameWithType> che contiene zero caratteri. Le stringhe vuote sono utilizzate di frequente in diversi scenari di programmazione per rappresentare un campo di testo vuoto. È possibile chiamare metodi su stringhe vuote, perché sono oggetti <xref:System.String?displayProperty=nameWithType> validi. Le stringhe vuote vengono inizializzate come indicato di seguito:  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  Al contrario una stringa null non fa riferimento a un'istanza di un oggetto <xref:System.String?displayProperty=nameWithType> e qualsiasi chiamata di un metodo su una stringa null causa un'eccezione <xref:System.NullReferenceException>. È tuttavia possibile usare stringhe null nelle operazioni di concatenazione e confronto con altre stringhe. Gli esempi seguenti illustrano alcuni casi in cui un riferimento a una stringa null causa o meno la generazione di un'eccezione:  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Uso di StringBuilder per la creazione veloce di stringhe  
  Le operazioni sulle stringhe in .NET sono altamente ottimizzate e nella maggior parte dei casi non influiscono sulle prestazioni in modo significativo. Tuttavia, in alcuni scenari, ad esempio cicli rigidi eseguiti molte centinaia o migliaia di volte, le operazioni sulle stringhe possono incidere sulle prestazioni. La classe <xref:System.Text.StringBuilder> crea un buffer di stringhe che offre prestazioni migliori se il programma esegue numerose modifiche di stringhe. La stringa <xref:System.Text.StringBuilder> consente anche di riassegnare singoli caratteri, un'operazione non supportata dal tipo di dati string incorporato. Questo codice, ad esempio, consente di modificare il contenuto di una stringa senza crearne una nuova:  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  In questo esempio viene usato un oggetto <xref:System.Text.StringBuilder> per creare una stringa da un set di tipi numerici:  
   
