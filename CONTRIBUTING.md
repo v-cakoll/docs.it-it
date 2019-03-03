@@ -27,7 +27,7 @@ Sono necessarie conoscenze di base di [Git e GitHub.com](https://guides.github.c
 **Passaggio 1:** Ignorare questo passaggio per le piccole modifiche. Se si è interessati a scrivere nuovo contenuto o a revisionare completamente un contenuto esistente, aprire un [problema](https://github.com/dotnet/docs/issues) descrivendo che cosa si intende fare.
 Il contenuto all'interno della cartella **docs** è suddiviso in sezioni visibili nel sommario. Definire la posizione del sommario in cui verrà inserito l'argomento. Ottenere feedback sulla proposta.
 
--oppure-
+oppure
 
 È anche possibile scegliere tra i problemi esistenti per cui sono previsti i contributi della community. In [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Progetti per i collaboratori della community di .NET) sono elencati molti elementi di lavoro disponibili per i collaboratori della community. In base ai propri interessi e livello di impegno, è possibile scegliere tra i problemi nelle categorie seguenti:
 
@@ -107,7 +107,7 @@ L'argomento conterrà anche collegamenti all'esempio. Creare un collegamento dir
 
 Per altre informazioni, vedere il [file leggimi sugli esempi](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>Esperienza interattiva in C# #
+## <a name="the-c-interactive-experience"></a>Esperienza interattiva in C#
 
 Gli esempi di codice breve in C# possono usare il tag di linguaggio `csharp-interactive` per specificare un esempio C# che viene eseguito nel browser. Gli esempi di codice inline usano il tag `csharp-interactive`. Per i frammenti inclusi dal codice sorgente, usare il tag `code-csharp-interactive`. Questi esempi di codice visualizzano una finestra di codice e una finestra di output nell'articolo. La finestra di output visualizza gli output dell'esecuzione del codice interattivo dopo che l'utente ha eseguito l'esempio. 
 

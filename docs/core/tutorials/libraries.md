@@ -4,12 +4,12 @@ description: Informazioni su come creare librerie .NET Core usando gli strumenti
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169365"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212066"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
@@ -58,9 +58,9 @@ Quando si definisce .NET Standard come destinazione sono disponibili tre opzioni
     ```
 
 2. È possibile usare una versione inferiore o superiore di .NET Standard modificando il valore nel nodo `TargetFramework` del file di progetto.
-    
+
     Le versioni di .NET Standard sono compatibili con le versioni precedenti. Ciò significa che le librerie `netstandard1.0` possono essere eseguite su piattaforme `netstandard1.1` e versioni successive. Tuttavia, non è prevista la compatibilità con le versioni successive. Le piattaforme .NET Standard precedenti non possono fare riferimento a quelle più recenti. Ciò significa che le librerie `netstandard1.0` non possono fare riferimento alle librerie `netstandard1.1` o versioni successive. Selezionare la versione di .NET Standard che contiene la combinazione di API e supporto per piattaforme più adatta alle proprie esigenze. Attualmente è consigliabile selezionare `netstandard1.4`.
-    
+
 3. Se si vuole definire come destinazione .NET Framework 4.0 o versione precedente, o si desidera usare un'API disponibile in .NET Framework ma non in .NET Standard (ad esempio, `System.Drawing`), leggere le sezioni seguenti per apprendere come definire più destinazioni.
 
 ## <a name="how-to-target-the-net-framework"></a>Come definire .NET Framework come destinazione
@@ -131,7 +131,7 @@ Il file di progetto può avere un aspetto simile al seguente:
 Si noteranno tre modifiche principali:
 
 1. Il nodo `TargetFramework` è stato sostituito da `TargetFrameworks` e all'interno sono espressi tre TFM.
-1. Un nodo `<ItemGroup>` per la destinazione `net40 ` chiama un riferimento di .NET Framework.
+1. Un nodo `<ItemGroup>` per la destinazione `net40` chiama un riferimento di .NET Framework.
 1. Un nodo `<ItemGroup>` per la destinazione `net45` chiama due riferimenti di .NET Framework.
 
 Il sistema di compilazione è in grado di riconoscere i seguenti simboli di preprocessore usati nelle direttive `#if`:
@@ -256,7 +256,7 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Verificare che xUnit sia in esecuzione con il comando `dotnet test`. Se si sceglie di usare MSTest, va invece eseguita l'utilità di test delle console MSTest.
-    
+
 L'operazione è ora completata. È ora possibile testare la libreria su tutte le piattaforme usando gli strumenti da riga di comando. Una volta completata la configurazione, è possibile procedere con il testing della libreria in modo molto semplice:
 
 1. Eseguire le opportune modifiche nella libreria.
@@ -321,7 +321,7 @@ Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega. 
 Il modo migliore per creare un riferimento a un progetto è l'uso dell'interfaccia della riga di comando di .NET Core per aggiungere un riferimento al progetto. Dalle directory di progetto **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** è possibile eseguire il comando seguente:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 I file di progetto per **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** includeranno ora un riferimento a **AwesomeLibrary.Core** come destinazione `ProjectReference`.  È possibile verificare la presenza del riferimento cercando quanto segue nei file di progetto:

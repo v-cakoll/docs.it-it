@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244778"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211897"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Uso dello strumento Microsoft per la generazione di serializzatori XML in .NET Core
 
@@ -34,8 +34,8 @@ Per completare questa esercitazione:
 
 > [!TIP]
 > È necessario installare un editor del codice? Provare [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione console .NET Core 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Usare lo strumento Microsoft per la generazione di serializzatori XML in un'applicazione console .NET Core
 
 Le istruzioni seguenti illustrano come usare lo strumento per la generazione di serializzatori XML in un'applicazione console .NET Core.
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Aggiungere un riferimento al pacchetto Microsoft.XmlSerializer.Generator nel progetto MyApp
 
-Usare il comando [`dotnet add package`](../tools//dotnet-add-package.md) per aggiungere il riferimento nel progetto. 
+Usare il comando [`dotnet add package`](../tools//dotnet-add-package.md) per aggiungere il riferimento nel progetto.
 
 Tipo:
 
@@ -107,7 +107,7 @@ All'interno della cartella *MyApp* eseguire l'applicazione tramite [`dotnet run`
 Nella finestra di console digitare il comando seguente:
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > I comandi e i passaggi illustrati in questa esercitazione per eseguire l'applicazione vengono usati solo durante la fase di sviluppo. Quando si è pronti a distribuire l'app, è opportuno esaminare le diverse [strategie di distribuzione](../deploying/index.md) per le app .NET Core e il comando [`dotnet publish`](../tools/dotnet-publish.md).
 
-Se è stato eseguito tutto correttamente, un assembly denominato *MyApp.XmlSerializers.dll* viene generato nella cartella di output. 
+Se è stato eseguito tutto correttamente, un assembly denominato *MyApp.XmlSerializers.dll* viene generato nella cartella di output.
 
 La procedura è stata completata. Sono state eseguite le attività seguenti:
 > [!div class="checklist"]
