@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 982e80696e0a8831397197c0c12d748d1d85c349
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286261"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978934"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +36,7 @@ ms.locfileid: "55286261"
  `id`  
  ID del tag che precede i commenti. Racchiudere l'ID tra virgolette doppie (" ").  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente. Inserendo la documentazione in un file separato, è possibile applicare alla documentazione il controllo del codice sorgente separatamente dal codice sorgente. Una persona, ad esempio, può avere il file di codice sorgente estratto e un'altra il file della documentazione estratto.  
   
  Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'utilizzo di \<include>, consultare la documentazione relativa a XPath.  
@@ -44,7 +44,7 @@ ms.locfileid: "55286261"
 ## <a name="example"></a>Esempio  
  In questo esempio vengono presi in considerazione più file. Di seguito è riportato il primo file, che usa \<include>:  
   
- [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
  Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:  
   

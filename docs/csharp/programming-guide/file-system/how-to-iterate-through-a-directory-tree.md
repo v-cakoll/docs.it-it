@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613844"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976330"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedura: Scorrere un albero di directory (Guida per programmatori C#)
 Eseguire l'iterazione in un albero di directory significa accedere a ogni file in ogni sottodirectory annidata in una cartella radice specificata, a qualsiasi livello. Non è necessario aprire ogni file. È possibile recuperare semplicemente il nome del file o della sottodirectory come `string` oppure è possibile recuperare informazioni aggiuntive sotto forma di oggetto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Le eccezioni specifiche che vengono gestite e le azioni specifiche eseguite su ogni file o cartella vengono illustrate solo a titolo esemplificativo. Per soddisfare esigenze specifiche, è necessario modificare il codice. Per altre informazioni, vedere i commenti nel codice.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come eseguire l'iterazione nei file e nelle cartelle in un albero di directory senza usare la ricorsione. Questa tecnica usa il tipo di raccolta generico <xref:System.Collections.Generic.Stack%601>, che è uno stack LIFO (Last In First Out).  
   
  Le eccezioni specifiche che vengono gestite e le azioni specifiche eseguite su ogni file o cartella vengono illustrate solo a titolo esemplificativo. Per soddisfare esigenze specifiche, è necessario modificare il codice. Per altre informazioni, vedere i commenti nel codice.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  In genere testare ogni cartella per determinare se l'applicazione ha l'autorizzazione per aprirla richiede troppo tempo. Pertanto, l'esempio di codice racchiude quella parte dell'operazione in un blocco `try/catch`. È possibile modificare il blocco `catch` in modo che quando l'accesso a una cartella viene negato, si tenti di innalzare il livello delle autorizzazioni e quindi di accedere nuovamente. Come regola, rilevare solo le eccezioni che è possibile gestire senza lasciare l'applicazione in uno stato sconosciuto.  
   

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - read-only indexers [C#]
 - accessors [C#]
 - properties [C#], read-only
-- asymmetric accessor accesibility [C#]
+- asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219425"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203704"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Limitazione dell'accessibilità delle funzioni di accesso (Guida per programmatori C#)
 Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../../../csharp/language-reference/keywords/set.md) di una proprietà o un indicizzatore sono denominate *funzioni di accesso*. Per impostazione predefinita, queste funzioni di accesso hanno la stessa visibilità o livello di accesso della proprietà o dell'indicizzatore a cui appartengono. Per altre informazioni, vedere [Livelli di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md). Tuttavia, talvolta è utile limitare l'accesso a una di queste funzioni di accesso. In genere, ciò comporta la limitazione dell'accessibilità della funzione di accesso `set`, mantenendo la funzione di accesso `get` accessibile pubblicamente. Ad esempio:  
   
- [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
  In questo esempio, una proprietà denominata `Name` definisce una funzione di accesso `get` e `set`. La funzione di accesso `get` riceve il livello di accessibilità della proprietà stessa, in questo caso `public`, mentre la funzione di accesso `set` è limitata in modo esplicito applicando il modificatore di accesso [protected](../../../csharp/language-reference/keywords/protected.md) alla funzione di accesso stessa.  
   
@@ -38,12 +38,12 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modificatori di accesso per l'override di funzioni di accesso  
  Quando si esegue l'override di una proprietà o un indicizzatore, le funzioni di accesso sottoposte a override devono essere accessibili al codice di override. Inoltre, l'accessibilità della proprietà/indicizzatore e delle relative funzioni di accesso deve corrispondere alla proprietà/indicizzatore e alle funzioni di accesso sottoposti a override corrispondenti. Ad esempio:  
   
- [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
 ## <a name="implementing-interfaces"></a>Implementazione di interfacce  
  Quando si usa una funzione di accesso per implementare un'interfaccia, la funzione di accesso potrebbe non disporre di un modificatore di accesso. Se tuttavia si implementa l'interfaccia usando una sola funzione di accesso, ad esempio `get`, l'altra funzione di accesso può avere un modificatore di accesso, come nell'esempio seguente:  
   
- [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Dominio di accessibilità della funzione di accesso  
  Se si usa un modificatore di accesso nella funzione di accesso, il [dominio di accessibilità](../../../csharp/language-reference/keywords/accessibility-domain.md) della funzione di accesso è determinato da questo modificatore.  
@@ -55,7 +55,7 @@ Le parti [get](../../../csharp/language-reference/keywords/get.md) e [set](../..
   
  L'esempio illustra anche che un modificatore di accesso restrittivo, quale `private` o `protected`, nella funzione di accesso `set` della proprietà `Name` in `DerivedClass` impedisce l'accesso alla funzione di accesso e genera un errore quando si esegue l'assegnazione.  
   
- [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
 ## <a name="comments"></a>Commenti  
  Si noti che sostituendo la dichiarazione `new private string Id` con `new public string Id`, si otterrà l'output:  

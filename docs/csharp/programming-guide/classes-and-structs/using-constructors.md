@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 3505cf44c187c2f7aa54ca61f38e5c40023d809d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502598"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200637"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizzo di costruttori (Guida per programmatori C#)
 Quando si crea una [classe](../../../csharp/language-reference/keywords/class.md) o uno [struct](../../../csharp/language-reference/keywords/struct.md) viene chiamato il relativo costruttore. I costruttori hanno lo stesso nome della classe o dello struct e in genere inizializzano i membri dati del nuovo oggetto.  
   
  Nell'esempio seguente viene definita una classe denominata `Taxi` usando un costruttore semplice. Viene quindi creata un'istanza per la classe con l'operatore [new](../../../csharp/language-reference/keywords/new.md). Il costruttore `Taxi` viene richiamato dall'operatore `new` immediatamente dopo l'allocazione della memoria per il nuovo oggetto.  
   
- [!code-csharp[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
  Un costruttore che non accetta parametri è detto *costruttore predefinito*. I costruttori predefiniti vengono richiamati ogni volta che si crea un'istanza per un oggetto usando l'operatore `new` e non sono specificati argomenti per `new`. Per altre informazioni, vedere [Costruttori di istanze](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -25,7 +25,7 @@ Quando si crea una [classe](../../../csharp/language-reference/keywords/class.md
   
  È possibile impedire che venga creata un'istanza per una classe rendendo il costruttore privato, come indicato di seguito:  
   
- [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
  Per altre informazioni, vedere [Costruttori privati](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
@@ -56,33 +56,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Sia le classi che gli `structs` possono definire costruttori che accettano parametri. I costruttori che accettano parametri devono essere chiamati con un'istruzione `new` o un'istruzione di [base](../../../csharp/language-reference/keywords/base.md). Le classi e gli `structs` possono inoltre definire più costruttori e non è necessario definire un costruttore predefinito. Ad esempio:  
   
- [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
+ [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
  Questa classe può essere creata usando una delle istruzioni seguenti:  
   
- [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
+ [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
  Un costruttore può usare la parola chiave `base` per chiamare il costruttore di una classe di base. Ad esempio:  
   
- [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
+ [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
  In questo esempio il costruttore per la classe di base viene chiamato prima che venga eseguito il blocco per il costruttore. La parola chiave `base` può essere usata con o senza parametri. Tutti i parametri per il costruttore possono essere usati come parametri per `base` o come parte di un'espressione. Per altre informazioni, vedere [base](../../../csharp/language-reference/keywords/base.md).  
   
  In una classe derivata, se un costruttore di classe base non viene chiamato in modo esplicito usando la parola chiave `base`, il costruttore predefinito, se ne esiste uno, viene chiamato in modo implicito. Ciò significa quindi che le seguenti dichiarazioni del costruttore si equivalgono:  
   
- [!code-csharp[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
+ [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
- [!code-csharp[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
+ [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
  Se una classe di base non offre un costruttore predefinito, la classe derivata deve effettuare una chiamata esplicita a un costruttore di base usando `base`.  
   
  Un costruttore può richiamare un altro costruttore nello stesso oggetto usando la parola chiave [this](../../../csharp/language-reference/keywords/this.md). Come `base`, `this` può essere utilizzata con o senza parametri e gli eventuali parametri nel costruttore sono disponibili come parametri per `this` o come parte di un'espressione. Ad esempio, il secondo costruttore nell'esempio precedente può essere riscritto usando `this`:  
   
- [!code-csharp[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
+ [!code-csharp[csProgGuideObjects#59](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#59)]  
   
  L'uso della parola chiave `this` nell'esempio precedente causa la chiamata di questo costruttore:  
   
- [!code-csharp[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
+ [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
  I costruttori possono essere contrassegnati come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) o [private protected](../../../csharp/language-reference/keywords/private-protected.md). Questi modificatori di accesso definiscono il modo in cui gli utenti della classe possono costruire la classe. Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).  
   

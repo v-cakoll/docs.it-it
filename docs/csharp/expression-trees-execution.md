@@ -3,12 +3,12 @@ title: Esecuzione di alberi delle espressioni
 description: Informazioni sull'esecuzione di alberi delle espressioni convertendoli in istruzioni eseguibili in linguaggio intermedio (IL, Intermediate Language).
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207391"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201846"
 ---
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 Il delegato restituito da questo metodo è stato chiuso sull'oggetto `constant`, che è stato eliminato. (È stato eliminato, perché è stato dichiarato in un'istruzione `using`.) 
 
-A questo punto, quando si esegue il delegato restituito da questo metodo, si avrà una `ObjecctDisposedException` generata al momento dell'esecuzione.
+A questo punto, quando si esegue il delegato restituito da questo metodo, si avrà una `ObjectDisposedException` generata al momento dell'esecuzione.
 
 Può sembrare strano ricevere un errore di runtime che rappresenta un costrutto in fase di compilazione, ma questo è ciò che avviene negli alberi delle espressioni.
 

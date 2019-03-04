@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975857"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controllo delle versioni con le parole chiave Override e New (Guida per programmatori C#)
 Il linguaggio C# è progettato in modo che il controllo delle versioni tra le classi [di base](../../../csharp/language-reference/keywords/base.md) e le classi derivate in diverse librerie possa svilupparsi e mantenere la compatibilità con le versioni precedenti. Ciò significa ad esempio che l'introduzione di un nuovo membro in una classe [di base](../../../csharp/language-reference/keywords/class.md) con lo stesso nome di un membro in una classe derivata è completamente supportata da C# e non causa comportamenti imprevisti. Significa inoltre che una classe deve dichiarare in modo esplicito se un metodo deve eseguire l'override di un metodo ereditato o se si tratta di un nuovo metodo che consente di nascondere un metodo ereditato con nome simile.  
@@ -34,15 +34,15 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  Per dimostrare questo concetto in pratica, si supponga che la società A abbia creato una classe denominata `GraphicsClass` che viene usata dal programma. Di seguito è illustrata la classe `GraphicsClass`:  
   
- [!code-csharp[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#27)]  
   
  La società usa questa classe e l'utente la usa per derivare la propria classe, aggiungendo un nuovo metodo:  
   
- [!code-csharp[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#28)]  
   
  L'applicazione viene eseguita senza problemi, finché la società A rilascia una nuova versione di `GraphicsClass`, simile al codice seguente:  
   
- [!code-csharp[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#29)]  
   
  La nuova versione di `GraphicsClass` ora contiene un metodo denominato `DrawRectangle`. Inizialmente non accade nulla. La nuova versione è ancora compatibile a livello binario con la versione precedente. Qualsiasi software già distribuito continuerà a funzionare, anche se la nuova classe viene installata nei relativi computer. Le eventuali chiamate al metodo `DrawRectangle` continueranno a fare riferimento alla versione in uso nella classe derivata.  
   
@@ -50,32 +50,32 @@ Il linguaggio C# è progettato in modo che il controllo delle versioni tra le cl
   
  Se il metodo deve eseguire l'override del nuovo metodo della classe di base, usare la parola chiave `override`:  
   
- [!code-csharp[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#30)]  
   
  La parola chiave `override` garantisce che qualsiasi oggetto derivato da `YourDerivedGraphicsClass` userà la versione della classe derivata di `DrawRectangle`. Gli oggetti derivati da `YourDerivedGraphicsClass` possono comunque accedere alla versione della classe di base `DrawRectangle` usando la parola chiave di base:  
   
- [!code-csharp[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#44)]  
   
  Se si preferisce che il metodo non esegua l'override del nuovo metodo della classe di base, attenersi alle indicazioni che seguono. Per evitare confusione tra i due metodi, è possibile rinominare il metodo da usare. Questa operazione può richiedere molto tempo e causare errori e in alcuni casi è poco pratica. Tuttavia, se il progetto è relativamente piccolo, è possibile usare le opzioni di refactoring di Visual Studio per rinominare il metodo. Per altre informazioni, vedere [Refactoring di classi e tipi (Progettazione classi)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
  In alternativa, è possibile evitare l'avviso usando la parola chiave `new` nella definizione della classe derivata:  
   
- [!code-csharp[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
  L'uso della parola chiave `new` indica al compilatore che la definizione nasconde la definizione contenuta nella classe di base. Comportamento predefinito.  
   
 ## <a name="override-and-method-selection"></a>Override e selezione del metodo  
  Quando un metodo è denominato in una classe, il compilatore C# seleziona il metodo migliore per la chiamata se più metodi sono compatibili con la chiamata, ad esempio quando esistono due metodi con lo stesso nome e parametri compatibili con il parametro passato. I seguenti metodi sarebbero compatibili:  
   
- [!code-csharp[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
  Quando si chiama `DoWork` per un'istanza di `Derived`, il compilatore C# tenta per prima cosa di rendere la chiamata compatibile con le versioni di `DoWork` originariamente dichiarate in `Derived`. I metodi di override non vengono considerati come dichiarati per una classe, sono nuove implementazioni di un metodo dichiarato per una classe di base. Solo se il compilatore C# non è in grado di associare la chiamata al metodo a un metodo originale in `Derived`, tenterà di associare la chiamata a un metodo sottoposto a override con lo stesso nome e parametri compatibili. Ad esempio:  
   
- [!code-csharp[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
  Poiché la variabile `val` può essere convertita in un valore double in modo implicito, il compilatore C# chiama `DoWork(double)` anziché `DoWork(int)`. Questa situazione può essere evitata in due modi. Primo, evitare di dichiarare i nuovi metodi con lo stesso nome dei metodi virtuali. Secondo, è possibile indicare al compilatore C# di chiamare il metodo virtuale facendo in modo che esegua una ricerca nell'elenco dei metodi della classe di base eseguendo il cast dell'istanza di `Derived` a `Base`. Poiché il metodo è virtuale, verrà chiamata l'implementazione di `DoWork(int)` per `Derived`. Ad esempio:  
   
- [!code-csharp[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  Per altri esempi di `new` e `override`, vedere [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   

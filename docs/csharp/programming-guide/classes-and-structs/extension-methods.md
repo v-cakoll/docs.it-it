@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493418"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202223"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -21,13 +21,13 @@ I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza
   
  Nell'esempio seguente viene illustrato come chiamare il metodo `OrderBy` dell'operatore query standard su una matrice di Integer. L'espressione tra parentesi è un'espressione lambda. Molti operatori query standard accettano espressioni lambda come parametri, sebbene non sia un requisito per i metodi di estensione. Per altre informazioni, vedere [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  I metodi di estensione sono definiti come metodi statici, ma vengono chiamati utilizzando la sintassi del metodo di istanza. Il primo parametro specifica su quale tipo opera il metodo ed è preceduto dal modificatore [this](../../../csharp/language-reference/keywords/this.md). I metodi di estensione si trovano nell'ambito solo quando si importa in modo esplicito lo spazio dei nomi nel codice sorgente con una direttiva `using`.  
   
  Nell'esempio riportato di seguito viene illustrato un metodo di estensione definito per la classe <xref:System.String?displayProperty=nameWithType>. Si noti che viene definito in una classe statica non annidata e non generica:  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  Il metodo di estensione `WordCount` può essere inserito nell'ambito con questa direttiva `using`:  
   
@@ -64,7 +64,7 @@ using System.Linq;
   
  Quando il compilatore non è in grado di trovare un metodo di istanza con una firma corrispondente, eseguirà l'associazione a un metodo di estensione corrispondente se esistente.  
   
- [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
 ## <a name="general-guidelines"></a>Indicazioni generali  
  In generale, si consiglia di implementare i metodi di estensione sporadicamente e solo se necessario. Se possibile, è opportuno che il codice client che deve estendere un tipo esistente esegua questa operazione creando un nuovo tipo derivato dal tipo esistente. Per altre informazioni, vedere [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

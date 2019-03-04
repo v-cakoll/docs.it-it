@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607017"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202353"
 ---
 # <a name="inheritance-c-programming-guide"></a>Ereditarietà (Guida per programmatori C#)
 
@@ -35,7 +35,7 @@ Ereditarietà delle classi
   
  Nell'esempio seguente viene illustrato come le relazioni tra le classi mostrate nella precedente illustrazione vengono espresse in C#. Nell'esempio viene descritto anche come `WorkItem` esegue l'override del metodo virtuale <xref:System.Object.ToString%2A?displayProperty=nameWithType> e come la classe `ChangeRequest` eredita l'implementazione del metodo propria della classe `WorkItem`.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Metodi virtuali e astratti  
  Quando una classe di base dichiara un metodo come [virtual](../../../csharp/language-reference/keywords/virtual.md) (virtuale), una classe derivata può [eseguire l'override](../../../csharp/language-reference/keywords/override.md) del metodo definendo una propria implementazione. Se una classe di base dichiara un membro come [abstract](../../../csharp/language-reference/keywords/abstract.md) (astratto), è necessario effettuare l'override di tale metodo in ogni classe non astratta che eredita direttamente da tale classe. Quando una classe derivata è essa stessa astratta, eredita i membri astratti senza implementarli. I membri astratti e virtuali costituiscono la base del polimorfismo, che rappresenta la seconda principale caratteristica della programmazione orientata a oggetti. Per altre informazioni, vedere [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

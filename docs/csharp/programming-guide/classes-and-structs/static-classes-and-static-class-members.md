@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 870d7593dcfd6c2b8d58562d182d37a64484a53e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577500"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202405"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
 Una classe [statica](../../../csharp/language-reference/keywords/static.md) corrisponde fondamentalmente a una classe non statica, ma c'è una differenza: di una classe statica non è possibile creare un'istanza. In altre parole, non è possibile usare la parola chiave [new](../../../csharp/language-reference/keywords/new.md) per creare una variabile del tipo di classe. Poiché non esiste una variabile dell'istanza, si accede ai membri di una classe statica tramite il nome stesso della classe. Se ad esempio si dispone di una classe statica denominata `UtilityClass` che ha un metodo statico pubblico denominato `MethodA`, si chiama il metodo come illustrato nell'esempio seguente:  
@@ -59,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di una classe statica contenente due metodi che consentono di convertire i valori relativi alla temperatura da gradi Celsius a gradi Fahrenheit e viceversa:  
   
- [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Membri static  
  Una classe non statica può contenere metodi, campi, proprietà o eventi statici. È possibile chiamare il membro statico di una classe anche quando non sono state create istanze della classe. Al membro statico si accede sempre tramite il nome della classe, non tramite il nome dell'istanza. Di un membro statico esiste una sola copia, indipendentemente dal numero di istanze della classe create. Proprietà e metodi statici non possono accedere a campi non statici ed eventi nel tipo che li contiene e non possono accedere a una variabile dell'istanza di qualsiasi oggetto a meno che non venga esplicitamente passata in un parametro del metodo.  
@@ -74,11 +74,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  I membri delle classi statiche vengono dichiarati tramite la parola chiave `static` prima del tipo restituito, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#29)]  
   
  I membri statici vengono inizializzati prima dell'accesso iniziale e prima dell'eventuale chiamata al costruttore statico, se presente. Per accedere a un membro di una classe statica, usare il nome della classe anziché il nome di una variabile per specificare la posizione del membro, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#30)]  
   
  Se la classe contiene campi statici, fornire un costruttore statico che li inizializzi al caricamento della classe.  
   

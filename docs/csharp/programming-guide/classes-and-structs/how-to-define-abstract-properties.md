@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: ab846f423631c8238ff9a516f95d32ff32bd0335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616335"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201950"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedura: Definire proprietà astratte (Guida per programmatori C#)
 L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../csharp/language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
@@ -33,7 +33,7 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../c
 ## <a name="example"></a>Esempio  
  Questo file dichiara la classe `Shape` che contiene la proprietà `Area` del tipo `double`.  
   
- [!code-csharp[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
 -   I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. Ad esempio:  
   
@@ -46,12 +46,12 @@ L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../c
 ## <a name="example"></a>Esempio  
  Il codice seguente mostra tre sottoclassi di `Shape` e il modo in cui eseguono l'override della proprietà `Area` per fornire la propria implementazione.  
   
- [!code-csharp[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#2)]  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente mostra un programma di test che crea diversi oggetti derivati da `Shape` e stampa le relative aree.  
   
- [!code-csharp[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
 ## <a name="see-also"></a>Vedere anche
 

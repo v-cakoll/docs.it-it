@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729759"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971169"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
 I tipi anonimi offrono un modo pratico per incapsulare un set di proprietà di sola lettura in un singolo oggetto, senza dover definire prima un tipo in modo esplicito. Il nome del tipo viene generato dal compilatore e non è disponibile a livello di codice sorgente. Il tipo di ogni proprietà è dedotto dal compilatore.  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Se nel tipo anonimo non si specificano i nomi dei membri, il compilatore assegna ai membri di tipo anonimo lo stesso nome della proprietà usata per inizializzarli. Per una proprietà inizializzata con un'espressione è necessario fornire un nome, come illustrato nell'esempio seguente. Nell'esempio seguente i nomi delle proprietà del tipo anonimo sono `Color` e `Price`.  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  In genere, quando si usa un tipo anonimo per inizializzare una variabile, è necessario dichiarare la variabile come locale tipizzata in modo implicito tramite [var](../../../csharp/language-reference/keywords/var.md). Il nome del tipo non può essere specificato nella dichiarazione di variabile, perché solo il compilatore ha accesso al nome sottostante del tipo anonimo. Per altre informazioni su `var`, vedere [Variabili locali tipizzate in modo implicito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -46,7 +46,7 @@ Console.WriteLine(v.Amount + v.Message);
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I tipi anonimi sono tipi [class](../../../csharp/language-reference/keywords/class.md) che derivano da un tipo [object](../../../csharp/language-reference/keywords/object.md) e dei quali non può essere eseguito il cast ad alcun tipo, eccetto al tipo [object](../../../csharp/language-reference/keywords/object.md). Il compilatore fornisce un nome per qualsiasi tipo anonimo, anche se l'applicazione non può accedervi. Dal punto di vista di Common Language Runtime, un tipo anonimo non è diverso da qualsiasi altro tipo di riferimento.  
   
  Se due o più inizializzatori di oggetti anonimi in un assembly specificano una sequenza di proprietà nello stesso ordine e con gli stessi nomi e tipi, il compilatore considera gli oggetti come istanze dello stesso tipo. Condividono le stesse informazioni sul tipo generate dal compilatore.  

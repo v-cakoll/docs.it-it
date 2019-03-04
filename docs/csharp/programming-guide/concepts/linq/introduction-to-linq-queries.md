@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605133"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201664"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] semplifica questa situazione offrendo un modello coerente per l'uso dei dati con tutti i diversi tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Vengono usati gli stessi criteri di codifica di base per eseguire una query e trasformare i dati in documenti XML, database SQL, dataset [!INCLUDE[vstecado](~/includes/vstecado-md.md)], raccolte .NET e qualsiasi altro formato per il quale sia disponibile un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -28,7 +28,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
  Nell'esempio seguente viene illustrato come le tre parti di un'operazione di query vengono espresse nel codice sorgente. Nell'esempio viene usata una matrice di valori interi come origine dati per motivi di praticità. Gli stessi concetti si applicano però anche ad altre origini dati. In questo argomento si fa riferimento sempre a tale esempio.  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  Nella figura seguente viene illustrata l'operazione di query completa. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] l'esecuzione della query è distinta dalla query stessa; in altre parole i dati non vengono recuperati solo creando una variabile di query.  
   
@@ -39,7 +39,7 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
  Un tipo queryable non richiede alcuna modifica o trattamento speciale per essere usato come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se i dati di origine non sono già in memoria come tipi queryable, il provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deve rappresentarli come tali. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carica un documento XML in un tipo <xref:System.Xml.Linq.XElement> queryable:  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Esecuzione posticipata  
  Come indicato in precedenza, la variabile di query archivia solo i comandi della query. L'esecuzione effettiva della query è rinviata finché non si esegue l'iterazione della variabile di query in un'istruzione `foreach`. Questo concetto è detto *esecuzione posticipata* e viene illustrato nell'esempio seguente:  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  Dall'istruzione `foreach` vengono anche recuperati i risultati della query. Ad esempio, nella query precedente la variabile di iterazione `num` contiene ogni valore (uno alla volta) della sequenza restituita.  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Esecuzione immediata  
  Le query che eseguono funzioni di aggregazione su un intervallo di elementi di origine devono prima eseguire l'iterazione in tali elementi. Esempi di tali query sono `Count`, `Max`, `Average` e `First`. Queste query vengono eseguite senza un'istruzione `foreach` esplicita poiché la query stessa deve usare `foreach` per poter restituire un risultato. Si noti anche che questi tipi di query restituiscono un solo valore, non una raccolta `IEnumerable`. Nella query seguente viene restituito un conteggio dei numeri pari nella matrice di origine:  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  Per forzare l'esecuzione immediata di una query e memorizzarne nella cache i risultati, è possibile chiamare i metodi <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  È anche possibile forzare l'esecuzione inserendo il ciclo `foreach` immediatamente dopo l'espressione di query. Tuttavia, chiamando `ToList` o `ToArray` vengono memorizzati nella cache anche tutti i dati di un singolo oggetto della raccolta.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491742"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201495"
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
 Una definizione di classe o struct è simile a un progetto iniziale in cui vengono specificate le funzionalità del tipo. Un oggetto è essenzialmente un blocco di memoria che è stato allocato e configurato in base al progetto iniziale. Un programma può creare molti oggetti della stessa classe. Gli oggetti, definiti anche istanze, possono essere archiviati in una variabile denominata o in una matrice o raccolta. Il codice client è il codice che usa queste variabili per chiamare i metodi e accedere alle proprietà pubbliche dell'oggetto. In un linguaggio orientato a oggetti come C#, il programma tipico è costituito da più oggetti che interagiscono dinamicamente.  
@@ -24,11 +24,11 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
  Le istanze delle classi vengono create usando l'[operatore new](../../../csharp/language-reference/keywords/new-operator.md). Nell'esempio seguente `Person` è il tipo e `person1` e `person 2` sono le istanze o gli oggetti di tale tipo.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  Poiché gli struct sono tipi di valore, una variabile di un oggetto struct contiene una copia dell'intero oggetto. Le istanze di struct possono essere create anche usando l'operatore `new`, sebbene non sia obbligatorio, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  La memoria per `p1` e `p2` viene allocata nello stack di thread. La memoria viene recuperata insieme al tipo o al metodo in cui è stata dichiarata. Questo è il motivo per cui gli struct vengono copiati per assegnazione. Al contrario, la memoria allocata per l'istanza di una classe viene recuperata automaticamente (tramite Garbage Collection) da Common Language Runtime quando tutti i riferimenti all'oggetto sono usciti dall'ambito. Non è possibile eliminare in modo deterministico un oggetto di classe come avviene in C++. Per altre informazioni su Garbage Collection in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
@@ -42,7 +42,7 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
 -   Per determinare se i campi di istanza in due istanze di struct hanno gli stessi valori, usare il metodo <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Poiché tutti gli struct ereditano implicitamente da <xref:System.ValueType?displayProperty=nameWithType>, il metodo viene chiamato direttamente nell'oggetto, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  L'implementazione <xref:System.ValueType?displayProperty=nameWithType> di `Equals` usa la reflection perché deve essere in grado di determinare i campi presenti in tutti gli struct. Quando si creano struct, eseguire l'override del metodo `Equals` per specificare un algoritmo di uguaglianza efficiente specifico del tipo.  
   

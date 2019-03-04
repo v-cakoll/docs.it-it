@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: fe304b9c6631591cf7a3d62fcecd2ed3ca05db9c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b316927c5dfd5eda05bea653f9a601cca9865af3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982063"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -32,7 +32,7 @@ ms.locfileid: "55257291"
  `description`  
  Descrizione dell'eccezione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il tag \<exception> consente di specificare le eccezioni che possono essere generate. Questo tag può essere applicato alle definizioni di metodi, proprietà, eventi e indicizzatori.  
   
  Compilare con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
@@ -40,7 +40,7 @@ ms.locfileid: "55257291"
  Per altre informazioni sulla gestione delle eccezioni, vedere [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md).  
   
 ## <a name="example"></a>Esempio  
- [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  
   
 ## <a name="see-also"></a>Vedere anche
 

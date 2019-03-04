@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 873f515830c072f31548bee84a8ca9eec83fde27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775d83dc96d2b5c1aae70bf47c641611e0dcbc55
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274132"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969410"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns> (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -27,13 +27,13 @@ ms.locfileid: "55274132"
  `description`  
  Descrizione del valore restituito.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il tag \<returns> deve essere usato nel commento per una dichiarazione di metodo per descrivere il valore restituito.  
   
  Compilare con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
   
 ## <a name="example"></a>Esempio  
- [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]  
   
 ## <a name="see-also"></a>Vedere anche
 

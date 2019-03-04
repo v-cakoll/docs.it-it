@@ -6,23 +6,23 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 79b07891d794200507cdb97a869992ef093aff23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979866"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestione delle eccezioni (Guida per programmatori C#)
 I programmatori C# usano un blocco [try](../../../csharp/language-reference/keywords/try-catch.md) per creare partizioni di codice in cui potrebbe essere rilevata un'eccezione. I blocchi [catch](../../../csharp/language-reference/keywords/try-catch.md) associati vengono usati per gestire tutte le eccezioni risultanti. Un blocco [finally](../../../csharp/language-reference/keywords/try-finally.md) contiene il codice eseguito, indipendentemente dal fatto che venga generata o meno un'eccezione nel blocco `try`, ad esempio il codice relativo al rilascio delle risorse allocate nel blocco `try`. Un blocco `try` richiede uno o più blocchi `catch` associati, un blocco `finally` o entrambi.  
   
  Gli esempi seguenti illustrano un'istruzione `try-catch`, un'istruzione `try-finally` e un'istruzione `try-catch-finally`.  
   
- [!code-csharp[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#6)]  
   
- [!code-csharp[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#7)]  
   
- [!code-csharp[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
  Un blocco `try` senza un blocco `catch` o `finally` genera un errore del compilatore.  
   
@@ -37,11 +37,11 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
   
 -   È possibile creare e generare una nuova eccezione più specifica.  
   
-     [!code-csharp[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
+     [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
 -   Si vuole gestire parzialmente un'eccezione prima di passarla a funzioni di gestione aggiuntive. Nell'esempio seguente un blocco `catch` viene usato per aggiungere una voce al log degli errori prima di generare di nuovo l'eccezione.  
   
-     [!code-csharp[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
+     [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Blocchi finally  
  Un blocco `finally` consente la pulizia delle azioni eseguite in un blocco `try`. Se presente, il blocco `finally` viene eseguito per ultimo, dopo il blocco `try` e i blocchi `catch` corrispondenti. Un blocco `finally` viene sempre eseguito, sia che venga o meno generata un'eccezione o che venga o meno individuato un blocco `catch` corrispondente al tipo di eccezione.  
@@ -50,7 +50,7 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
   
  Nell'esempio riportato di seguito viene usato il blocco `finally` per chiudere un file aperto nel blocco `try`. Si noti che prima della chiusura viene controllato lo stato dell'handle del file. Se il blocco `try` non riesce ad aprire il file, l'handle del file ha sempre valore `null` e il blocco `finally` non tenta di chiuderlo. In alternativa, se il file è aperto correttamente nel blocco `try`, il blocco `finally` chiude il file aperto.  
   
- [!code-csharp[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
+ [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

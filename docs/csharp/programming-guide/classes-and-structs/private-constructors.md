@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: e406b72e5d2932464c407dce014dd8eceee59fb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0fd99cb9b9251de62c11c67dcb2ca696e24faf9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577295"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201781"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Costruttori privati (Guida per programmatori C#)
 Un costruttore privato è un costruttore di istanza speciale. Viene generalmente usato in classi contenenti solo membri statici. Se una classe ha uno o più costruttori privati ma non include alcun costruttore pubblico, le altre classi, ad eccezione di quelle annidate, non potranno creare istanze della classe. Ad esempio:  
   
- [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
  La dichiarazione del costruttore vuoto impedisce la generazione automatica di un costruttore predefinito. Tenere presente che se non si usa un modificatore di accesso con il costruttore, questo rimarrà di tipo privato per impostazione predefinita. Tuttavia, il modificatore [private](../../../csharp/language-reference/keywords/private.md) viene solitamente usato in modo esplicito per specificare che non è possibile creare un'istanza della classe.  
   
@@ -25,11 +25,11 @@ Un costruttore privato è un costruttore di istanza speciale. Viene generalmente
 ## <a name="example"></a>Esempio  
  Di seguito è riportato l'esempio di una classe che usa un costruttore privato.  
   
- [!code-csharp[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
   
  Se si rimuove il commento dall'istruzione dell'esempio riportata di seguito, verrà generato un errore poiché non è possibile accedere al costruttore a causa del livello di protezione:  
   
- [!code-csharp[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
+ [!code-csharp[csProgGuideObjects#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#13)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

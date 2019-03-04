@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651786"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970220"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
@@ -40,27 +40,27 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
   
  Le regole per i parametri di tipo e i vincoli hanno diverse implicazioni per il comportamento delle classi generiche, in particolare riguardo a ereditarietà e accessibilità dei membri. Prima di continuare, è utile comprendere alcuni termini. Per una classe generica, il codice client `Node<T>,` può fare riferimento alla classe specificando un argomento tipo, per creare un tipo costruito chiuso (`Node<int>`). In alternativa, può lasciare il parametro di tipo non specificato, ad esempio quando si specifica una classe base generica, per creare un tipo costruito aperto (`Node<T>`). Le classi generiche possono ereditare da classi concrete, classi costruite chiuse o classi base costruite aperte:  
   
- [!code-csharp[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#16)]  
   
  Le classi non generiche, ovvero concrete, possono ereditare da classi base costruite chiuse, ma non da classi costruite aperte o da parametri di tipo, perché in fase di esecuzione il codice client non può in alcun modo specificare l'argomento tipo necessario per creare un'istanza della classe base.  
   
- [!code-csharp[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#17)]  
   
  Le classi generiche che ereditano da tipi costruiti aperti devono specificare gli argomenti tipo per qualsiasi parametro di tipo di classe base che non viene condiviso dalla classe che eredita, come mostrato nel codice seguente:  
   
- [!code-csharp[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#18)]  
   
  Le classi generiche che ereditano da tipi costruiti aperti devono specificare vincoli che implichino o siano un superset dei vincoli sul tipo di base:  
   
- [!code-csharp[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#19)]  
   
  I tipi generici possono usare più parametri di tipo e vincoli, in questo modo:  
   
- [!code-csharp[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#20)]  
   
  I tipo costruiti aperti e i tipi costruiti chiusi possono essere usati come parametri di metodo:  
   
- [!code-csharp[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#21)]  
   
  Se una classe generica implementa un'interfaccia, è possibile eseguire il cast di tutte le istanze della classe all'interfaccia.  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587268"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981478"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Generics nel runtime (Guida per programmatori C#)
 Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate Language (MSIL), contiene metadati che lo identificano come contenente parametri di tipo. L'uso di MSIL per un tipo generico differisce a seconda che il parametro di tipo sia un tipo valore o un tipo riferimento.  
@@ -19,11 +19,11 @@ Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate La
   
  Ad esempio, si supponga che il codice programma abbia dichiarato uno stack costituito da interi:  
   
- [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
  A questo punto, il runtime genera una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> sostituendo l'intero nel modo appropriato per il parametro. D'ora in poi, ogni volta che il codice programma usa uno stack di interi, il runtime riutilizzerà la classe <xref:System.Collections.Generic.Stack%601> specializzata generata. Nell'esempio seguente vengono create due istanze di uno stack di interi che condividono un'istanza singola nel codice `Stack<int>`:  
   
- [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
  Tuttavia, si supponga che venga creata un'altra classe <xref:System.Collections.Generic.Stack%601> con un tipo valore diverso, ad esempio `long`, o una struttura definita dall'utente come parametro in un altro punto del codice. Di conseguenza, il runtime genererà un'altra versione del tipo generico e sostituirà un valore `long` nelle posizioni appropriate in MSIL. Le conversioni non sono più necessarie, perché ogni classe generica specializzata contiene il tipo valore in modo nativo.  
   
@@ -31,17 +31,17 @@ Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate La
   
  Ad esempio, si supponga di avere due tipi riferimento, una classe `Customer` e una classe `Order`, e di aver creato uno stack di tipi `Customer`:  
   
- [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
- [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
  A questo punto, il runtime genera una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> in cui sono archiviati riferimenti a oggetti che verranno compilati successivamente invece di archiviare i dati. Si supponga che la riga di codice successiva crei uno stack di un altro tipo riferimento, chiamato `Order`:  
   
- [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
  Diversamente dai tipi valore, non viene creata un'altra versione specializzata della classe <xref:System.Collections.Generic.Stack%601> per il tipo `Order`. Viene invece creata un'istanza della versione specializzata della classe <xref:System.Collections.Generic.Stack%601> e viene impostata la variabile `orders` per referenziarla. Si supponga di individuare una riga di codice per la creazione di uno stack di un tipo `Customer`:  
   
- [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
  Come per l'uso precedente della classe <xref:System.Collections.Generic.Stack%601> creata con il tipo `Order`, verrà creata un'altra istanza della classe <xref:System.Collections.Generic.Stack%601> specializzata. I puntatori contenuti vengono impostati in modo da fare riferimento a un'area di memoria delle dimensioni di un tipo `Customer`. Poiché il numero di tipi riferimento può variare ampiamente a seconda del programma, l'implementazione C# di generics riduce notevolmente la quantità di codice limitando a uno il numero di classi specializzate create dal compilatore per classi generiche di tipi riferimento.  
   

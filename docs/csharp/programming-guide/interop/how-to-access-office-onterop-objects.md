@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695114"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203535"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C# (Guida per programmatori C#)
 Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Office. Le nuove funzionalità includono argomenti denominati e facoltativi, un nuovo tipo chiamato `dynamic` e la possibilità di passare argomenti a parametri di riferimento nei metodi COM come se fossero parametri di valore.  
@@ -60,17 +60,17 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 2.  Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>Per creare un elenco di conti correnti bancari  
   
 1.  Incollare la seguente definizione di classe in **Program.cs**, sotto la classe `Program`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
 2.  Aggiungere il seguente codice al metodo `Main` per creare un elenco `bankAccounts` contenente due conti.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Per dichiarare un metodo che consente di esportare informazioni sul conto in Excel  
   
@@ -78,23 +78,23 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      Il metodo <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> usa un parametro facoltativo per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nel codice seguente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
 2.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il codice consente di inserire valori nelle prime due colonne della prima riga del foglio di lavoro.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
 3.  Aggiungere il codice seguente alla fine di `DisplayInExcel`. Il ciclo `foreach` inserisce le informazioni dall'elenco dei conti nelle prime due colonne delle righe successive del foglio di lavoro.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
 4.  Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
      Nelle versioni precedenti di C# è necessario eseguire il cast in modo esplicito per queste operazioni perché `ExcelApp.Columns[1]` restituisce `Object`, e `AutoFit` è un metodo <xref:Microsoft.Office.Interop.Excel.Range> di Excel. Le righe seguenti indicano il cast.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
      [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], e versioni successive, converte automaticamente l'oggetto restituito `Object` in `dynamic` se si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, allo stesso modo, se la proprietà **Incorpora tipi di interoperabilità** di Excel viene impostata su true. True è il valore predefinito di questa proprietà.  
   
@@ -102,7 +102,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 1.  Aggiungere la riga seguente alla fine di `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
 2.  Premere CTRL+F5.  
   
@@ -118,19 +118,19 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      Il metodo `PasteSpecial` inserisce il contenuto degli Appunti. Il metodo ha sette parametri di riferimento, tutti facoltativi. Il codice seguente consente di specificare gli argomenti per due di essi: `Link`, per creare un collegamento all'origine del contenuto degli Appunti e `DisplayAsIcon`, per visualizzare il collegamento come icona. In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], è possibile usare argomenti denominati per questi due parametri e omettere gli altri. Anche se si tratta di parametri di riferimento, non è necessario usare la parola chiave `ref` o creare variabili per inviarle come argomenti. È possibile inviare direttamente i valori. In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] e versioni precedenti, è necessario inviare un argomento variabile per ogni parametro referenziato.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
      In [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti del linguaggio, è necessario il codice più complesso seguente.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
 2.  Aggiungere la seguente istruzione dopo `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
 3.  Aggiungere la seguente istruzione dopo `DisplayInExcel`. Il metodo `Copy` aggiunge il foglio di lavoro negli Appunti.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
 4.  Premere CTRL+F5.  
   
@@ -144,7 +144,7 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
      In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], il comportamento predefinito consiste nell'incorporare le informazioni di tipo invece di usare i PIA. A causa di tale impostazione predefinita, molti degli esempi precedenti vengono semplificati perché non è necessario eseguire il cast esplicito. Ad esempio, la dichiarazione di `worksheet` in `DisplayInExcel` è scritta come `Excel._Worksheet workSheet = excelApp.ActiveSheet` piuttosto che `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Anche le chiamate a `AutoFit` nello stesso metodo richiederebbero il cast esplicito senza valore predefinito, perché `ExcelApp.Columns[1]` restituisce un `Object` e `AutoFit` è un metodo Excel. Nel codice seguente viene illustrato il cast.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
 2.  Per modificare l'impostazione predefinita e usare i PIA anziché incorporare le informazioni sul tipo, espandere il nodo **Riferimenti** in **Esplora soluzioni** e selezionare **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.  
   
@@ -156,22 +156,22 @@ Visual C# offre funzionalità che semplificano l'accesso agli oggetti API di Off
   
 1.  Sostituire le due chiamate a `AutoFit` in `DisplayInExcel` con la seguente istruzione.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
      Il metodo <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> ha sette parametri di valore facoltativi. Gli argomenti denominati e facoltativi consentono di specificare gli argomenti per nessuno, alcuni o tutti i parametri. Nell'istruzione precedente, viene fornito un argomento per uno solo dei parametri, `Format`. Poiché `Format` è il primo parametro nell'elenco, non è necessario fornire il nome del parametro. Tuttavia, l'istruzione potrebbe essere più facile da comprendere se si include il nome del parametro, come illustrato nel codice seguente.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
 2.  Premere CTRL + F5 per visualizzare il risultato. Altri formati sono elencati nell'enumerazione <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
   
 3.  Confrontare l'istruzione nel passaggio 1 con il codice seguente, che illustra gli argomenti necessari in [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versioni precedenti.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene illustrato l'esempio completo.  
   
- [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652163"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202886"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizzatori (Guida per programmatori C#)
 I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazioni di pulizia finale eventualmente necessarie quando un'istanza di classe viene raccolta da Garbage Collector.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 -   I finalizzatori non possono essere definiti negli struct. Vengono usati solo con le classi.  
   
@@ -31,7 +31,7 @@ I finalizzatori (detti anche **distruttori**) vengono usati per eseguire operazi
   
  Ad esempio, di seguito è riportata la dichiarazione di un finalizzatore per la classe `Car`.
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 Un finalizzatore può anche essere implementato come definizione di corpo dell'espressione, come illustrato nell'esempio seguente.
 
@@ -81,7 +81,7 @@ protected override void Finalize()
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea tre classi che costituiscono una catena di ereditarietà. La classe `First` è la classe base, `Second` è derivata da `First` e `Third` è derivata da `Second`. Tutte e tre hanno finalizzatori. In `Main` viene creata un'istanza della classe più derivata. Durante l'esecuzione del programma, si noti che i finalizzatori delle tre classi vengono chiamati automaticamente e in ordine, dalla classe più derivata alla meno derivata.  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 

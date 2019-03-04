@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612127"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212209"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -20,7 +20,7 @@ C# ha un modello di programmazione asincrona a livello di linguaggio che consent
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Panoramica di base del modello asincrono
 
-Il nucleo della programmazione asincrona è costituito da oggetti `Task` e `Task<T>` che modellano le operazioni asincrone.  Sono supportati dalle parole chiavi `async` e `await`.  Il modello è piuttosto semplice nella maggior parte dei casi: 
+Il nucleo della programmazione asincrona è costituito da oggetti `Task` e `Task<T>` che modellano le operazioni asincrone.  Sono supportati dalle parole chiavi `async` e `await`.  Il modello è piuttosto semplice nella maggior parte dei casi:
 
 Per il codice associato a I/O, si usa `await` per l'operazione che restituisce un oggetto `Task` o `Task<T>` all'interno di un metodo `async`.
 
@@ -87,11 +87,11 @@ Per gli utenti che amano la teoria, questa è un'implementazione del [Modello fu
 
 ## <a name="key-pieces-to-understand"></a>Nozioni fondamentali da sapere
 
-*   Il codice asincrono può essere usato per il codice associato a I/O e alla CPU, ma in modo diverso per ogni scenario.
-*   Il codice asincrono usa `Task<T>` e `Task`, che sono costrutti usati per modellare le operazioni eseguite in background.
+* Il codice asincrono può essere usato per il codice associato a I/O e alla CPU, ma in modo diverso per ogni scenario.
+* Il codice asincrono usa `Task<T>` e `Task`, che sono costrutti usati per modellare le operazioni eseguite in background.
 * La parola chiave `async` trasforma un metodo in un metodo asincrono, che consente di usare la parola chiave `await` nel relativo corpo.
-*   Quando la parola chiave `await` viene applicata, interrompe il metodo di chiamata e restituisce il controllo al chiamante fino al completamento dell'attività attesa.
-*   `await` può essere usato solo all'interno di un metodo asincrono.
+* Quando la parola chiave `await` viene applicata, interrompe il metodo di chiamata e restituisce il controllo al chiamante fino al completamento dell'attività attesa.
+* `await` può essere usato solo all'interno di un metodo asincrono.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Riconoscere le operazioni associate alla CPU e a I/O
 
@@ -106,7 +106,7 @@ Rispondere a queste due domande prima di scrivere il codice:
 2. Il codice eseguirà un calcolo molto oneroso?
 
     Se la risposta è "Sì", l'operazione è **associata alla CPU**.
-    
+
 Se l'operazione è **associata a I/O**, usare `async` e `await` *senza* `Task.Run`.  *Non si deve* usare la libreria Task Parallel Library.  Il motivo viene illustrato nell'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md).
 
 Se l'operazione è **associata alla CPU** e si è interessati nella velocità di risposta, usare `async` e `await`, ma passare l'operazione a un altro thread *con* `Task.Run`.  Se l'operazione è appropriata per parallelismo e concorrenza, è consigliabile usare anche la libreria [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md).
@@ -185,12 +185,12 @@ public async Task<User> GetUserAsync(int userId)
 public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
-    
+
     foreach (int userId in userIds)
     {
         getUserTasks.Add(GetUserAsync(userId));
     }
-    
+
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -212,33 +212,34 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
 Sebbene produca una quantità minore di codice, è necessario prestare molta attenzione quando si combina LINQ con codice asincrono.  Poiché LINQ usa un'esecuzione posticipata (lazy), le chiamate asincrone non verranno eseguite immediatamente come avviene in un ciclo `foreach()` a meno che non si forzi la sequenza generata per l'iterazione con una chiamata a `.ToList()` o `.ToArray()`.
 
 ## <a name="important-info-and-advice"></a>Consigli e informazioni importanti
 
 Sebbene la programmazione asincrona è relativamente semplice, ci sono alcuni dettagli da tenere presente per evitare comportamenti non previsti.
 
-*  `async`I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
+* `async`I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
 
 Questo è importante da tenere presente.  Se `await` non viene usato nel corpo di un metodo `async`, il compilatore C# genererà un avviso, ma il codice verrà compilato ed eseguito come se fosse un metodo normale.  Si noti che anche questo sarebbe estremamente inefficiente, perché la macchina a stati generata dal compilatore C# per il metodo asincrono non produrrebbe niente.
 
-*   **È consigliabile aggiungere "async" come suffisso di ogni nome di metodo scritto.**
+* **È consigliabile aggiungere "async" come suffisso di ogni nome di metodo scritto.**
 
 Questa è la convenzione usata in .NET per differenziare più facilmente i metodi sincroni dai metodi asincroni. Si noti che alcuni metodi non chiamati in modo esplicito dal codice, ad esempio un gestore di eventi o un metodo di controller del Web, non vengono necessariamente applicati. Poiché questi metodi non vengono chiamati in modo esplicito dal codice, non è importante denominarli in modo esplicito.
 
-*   `async void`  **deve essere usato solo per i gestori eventi.**
+* `async void`  **deve essere usato solo per i gestori eventi.**
 
 `async void` è l'unico modo per consentire ai gestori eventi asincroni di funzionare correttamente, poiché gli eventi non hanno tipi restituiti (quindi non possono usare `Task` e `Task<T>`). Qualsiasi altro uso di `async void` non segue il modello TAP e può essere difficile da usare, ad esempio:
 
-  *   Le eccezioni generate in un metodo `async void` non possono essere rilevate al di fuori di tale metodo.
-  *   I metodi `async void` sono molto difficili da testare.
-  *   I metodi `async void` possono causare effetti collaterali seri se il chiamante non li prevede asincroni.
+* Le eccezioni generate in un metodo `async void` non possono essere rilevate al di fuori di tale metodo.
+* I metodi `async void` sono molto difficili da testare.
+* I metodi `async void` possono causare effetti collaterali seri se il chiamante non li prevede asincroni.
 
-*   **Prestare attenzione quando si usano le espressioni lambda asincrone in espressioni LINQ**
+* **Prestare attenzione quando si usano le espressioni lambda asincrone in espressioni LINQ**
 
 Le espressioni lambda in LINQ usano esecuzioni posticipate, ovvero il codice potrebbe essere eseguito in qualsiasi momento quando meno previsto. L'introduzione delle attività di blocco in questa operazione produce facilmente un deadlock se il codice non è scritto in maniera corretta. L'annidamento di codice asincrono come questo può anche rendere più difficile la valutazione dell'esecuzione del codice. Async e LINQ sono molto efficaci, ma devono essere usati insieme con precauzione e in modo chiaro.
 
-*   **Scrivere codice che attende attività in modo non bloccante**
+* **Scrivere codice che attende attività in modo non bloccante**
 
 Il blocco del thread corrente come mezzo per attendere il completamento di un'attività può risultare in deadlock e in thread di contesto bloccati e può richiedere una gestione degli errori più complessa. La tabella seguente offre indicazioni su come gestire l'attesa di attività in un modo non bloccante:
 
@@ -249,16 +250,16 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un'at
 | `await Task.WhenAll` | `Task.WaitAll` | Attendere che tutte le attività siano complete |
 | `await Task.Delay` | `Thread.Sleep` | Attendere un periodo di tempo |
 
-*   **Scrivere codice con meno dettagli sullo stato**
+* **Scrivere codice con meno dettagli sullo stato**
 
 È consigliabile non dipendere dallo stato di oggetti globali o dall'esecuzione di alcuni metodi. È preferibile dipendere dai valori restituiti dei metodi. Perché?
 
-  *   Sarà più facile valutare il codice.
-  *   Sarà più facile testare il codice.
-  *   La combinazione di codice sincrono e asincrono è molto più semplice.
-  *   È possibile evitare completamente le race condition.
-  *   La dipendenza dai valori restituiti semplifica il coordinamento di codice asincrono.
-  *   (Extra) funziona particolarmente bene con l'inserimento di dipendenze.
+  * Sarà più facile valutare il codice.
+  * Sarà più facile testare il codice.
+  * La combinazione di codice sincrono e asincrono è molto più semplice.
+  * È possibile evitare completamente le race condition.
+  * La dipendenza dai valori restituiti semplifica il coordinamento di codice asincrono.
+  * (Extra) funziona particolarmente bene con l'inserimento di dipendenze.
 
 È consigliabile raggiungere una completa o quasi completa [trasparenza referenziale](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) nel codice. Ciò risulterà in una base di codice completamente prevedibile, testabile e gestibile.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573326"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202691"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Creazione e generazione di eccezioni (Guida per programmatori C#)
 Le eccezioni vengono usate per indicare che si è verificato un errore durante l'esecuzione del programma. Vengono creati oggetti eccezione che descrivono un errore e quindi *generati* con la parola chiave [throw](../../../csharp/language-reference/keywords/throw.md). Il runtime cerca quindi il gestore di eccezioni più compatibile.  
@@ -24,19 +24,19 @@ Le eccezioni vengono usate per indicare che si è verificato un errore durante l
   
      Ad esempio, se un parametro verso un metodo ha un valore non valido:  
   
-     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
 -   Viene eseguita una chiamata non appropriata a un oggetto, in base allo stato dell'oggetto.  
   
      Un esempio potrebbe essere il tentativo di scrivere su un file di sola lettura. Nei casi in cui lo stato di un oggetto non consente un'operazione, generare un'istanza di <xref:System.InvalidOperationException> o un oggetto basato su una derivazione di questa classe. Questo è un esempio di un metodo che genera un oggetto <xref:System.InvalidOperationException>:  
   
-     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
 -   Quando un argomento verso un metodo genera un'eccezione.  
   
      In questo caso, è necessario intercettare l'eccezione originale e creare un'istanza di <xref:System.ArgumentException>. L'eccezione originale deve essere passata al costruttore di <xref:System.ArgumentException> come parametro <xref:System.Exception.InnerException%2A>:  
   
-     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
  Le eccezioni contengono una proprietà denominata <xref:System.Exception.StackTrace%2A>. Questa stringa contiene il nome dei metodi nello stack di chiamate corrente, insieme al numero di riga e al nome del file in cui è stata generata l'eccezione per ogni metodo. Viene creato in automatico un oggetto <xref:System.Exception.StackTrace%2A> da Common Language Runtime (CLR) dal punto dell'istruzione `throw`, in modo tale che le eccezioni debbano essere generate dal punto in cui deve iniziare l'analisi dello stack.  
   
@@ -58,7 +58,7 @@ Le eccezioni vengono usate per indicare che si è verificato un errore durante l
 ## <a name="defining-exception-classes"></a>Definizione delle classi di eccezioni  
  I programmi possono generare una classe di eccezione predefinita nello spazio dei nomi <xref:System>, tranne nei casi indicati in precedenza, oppure creare le proprie classi di eccezione derivando da <xref:System.Exception>. Le classi derivate devono definire almeno quattro costruttori: uno predefinito, uno che imposta la proprietà del messaggio e uno che imposta entrambe le proprietà <xref:System.Exception.Message%2A> e <xref:System.Exception.InnerException%2A>. Il quarto costruttore viene usato per serializzare l'eccezione. Le nuove classi di eccezione devono essere serializzabili. Ad esempio:  
   
- [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
  Le nuove proprietà devono semplicemente essere aggiunte alla classe di eccezioni quando i dati che forniscono sono utili per risolvere l'eccezione. Se vengono aggiunte nuove proprietà alla classe di eccezioni derivata, `ToString()` deve essere sottoposto a override per restituire le informazioni aggiunte.  
   

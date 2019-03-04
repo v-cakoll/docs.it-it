@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710352"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977053"
 ---
-# <a name="is-c-reference"></a>is (Riferimenti per C#) #
+# <a name="is-c-reference"></a>is (Riferimenti per C#)
 
 Controlla se un oggetto è compatibile con un determinato tipo o (a partire da C# 7.0) controlla un'espressione rispetto a un criterio.
 
-## <a name="testing-for-type-compatibility"></a>Verifica della compatibilità del tipo ##
+## <a name="testing-for-type-compatibility"></a>Verifica della compatibilità del tipo
 
 La parola chiave `is` valuta la compatibilità dei tipi in fase di esecuzione. Determina se un'istanza dell'oggetto o il risultato di un'espressione può essere convertito in un tipo specificato. Presenta la sintassi
 
@@ -56,7 +56,7 @@ La parola chiave `is` genera un avviso in fase di compilazione se è noto che l'
 
 A partire da C# 7.0, è possibile usare criteri di ricerca con il [criterio del tipo](#type) per scrivere codice più conciso che usa l'istruzione `is`.
 
-## <a name="pattern-matching-with-is"></a>Criteri di ricerca con `is` ##
+## <a name="pattern-matching-with-is"></a>Criteri di ricerca con `is`
 
 A partire da C# 7.0, le istruzioni `is` e [switch](../../../csharp/language-reference/keywords/switch.md) supportano i criteri di ricerca. La parola chiave `is` supporta i criteri seguenti:
 
@@ -104,7 +104,7 @@ Il codice equivalente senza criteri di ricerca richiede un'assegnazione separata
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Criterio costante ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Criterio costante
 
 Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0, è supportato anche dall'istruzione `is`. La sintassi è la seguente:
 

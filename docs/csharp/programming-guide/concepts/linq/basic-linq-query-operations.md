@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728363"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968192"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operazioni di query LINQ di base (C#)
 Questo argomento offre una breve introduzione alle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e ad alcuni tipi di operazioni specifiche eseguite in una query. Informazioni più specifiche sono disponibili negli argomenti seguenti:  
@@ -39,7 +39,7 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
 ## <a name="obtaining-a-data-source"></a>Ottenere un'origine dei dati  
  In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], il primo passaggio consiste nella specifica dell'origine dei dati. In C#, come nella maggior parte dei linguaggi di programmazione, una variabile deve essere dichiarata prima di essere usata. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clausola `from` viene dichiarata per prima per introdurre l'origine dei dati (`customers`) e la *variabile di intervallo* (`cust`).  
   
- [!code-csharp[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  La variabile di intervallo è come la variabile di iterazione in un ciclo `foreach` ad eccezione del fatto che non si verifica alcuna iterazione in un'espressione di query. Quando viene eseguita la query, la variabile di intervallo verrà usata come riferimento a ogni elemento successivo in `customers`. Poiché il compilatore può dedurre il tipo di `cust`, non è necessario specificarlo in modo esplicito. Altre variabili di intervallo possono essere introdotte da una clausola `let`. Per altre informazioni, vedere [Clausola let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -49,22 +49,22 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
 ## <a name="filtering"></a>Filtro  
  Probabilmente l'operazione di query più comune consiste nell'applicazione di un filtro sotto forma di espressione booleana. Il filtro fa in modo che la query restituisca solo gli elementi per i quali l'espressione è vera. Il risultato viene generato utilizzando la clausola `where`. Il filtro in realtà specifica gli elementi da escludere dalla sequenza di origine. Nell'esempio seguente vengono restituiti solo i `customers` che hanno un indirizzo in Londra.  
   
- [!code-csharp[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
  È possibile usare gli operatori logici `AND` e `OR` di C# per applicare tutte le espressioni necessarie nella clausola `where`. Ad esempio, per restituire solo i clienti in "Londra" `AND` che si chiamano "Devon", si scrive il codice seguente:  
   
- [!code-csharp[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+ [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
  Per restituire i clienti di Londra o Parigi, si scrive il codice seguente:  
   
- [!code-csharp[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
  Per altre informazioni, vedere [Clausola where](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Ordering  
  È spesso utile ordinare i dati restituiti. La clausola `orderby` ordinerà gli elementi della sequenza restituita in base all'operatore di confronto per il tipo che si sta ordinando. Ad esempio, la query seguente può essere estesa per ordinare i risultati basati sulla proprietà `Name`. Poiché `Name` è una stringa, l'operatore di confronto esegue un ordinamento alfabetico da A a Z.  
   
- [!code-csharp[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
  Per ordinare i risultati in ordine inverso, da Z ad A, usare la clausola `orderby…descending`.  
   
@@ -73,20 +73,20 @@ Questo argomento offre una breve introduzione alle espressioni di query [!INCLUD
 ## <a name="grouping"></a>Raggruppamento  
  La clausola `group` consente di raggruppare i risultati in base a una chiave specificata. Ad esempio, è possibile specificare che i risultati devono essere raggruppati in base a `City` in modo che tutti i clienti di Londra o Parigi siano elencati in gruppi individuali. In questo caso, `cust.City` è la soluzione.  
   
- [!code-csharp[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
  Quando si termina una query con una clausola `group`, i risultati vengono rappresentati come un elenco di elenchi. Ogni elemento nell'elenco è un oggetto che ha un membro `Key` e un elenco di elementi che sono raggruppati sotto tale chiave. Quando si esegue l'iterazione di una query che produce una sequenza di gruppi, è necessario usare un ciclo `foreach` annidato. Il ciclo esterno esegue l'iterazione di ogni gruppo e il ciclo interno esegue l'iterazione dei membri di ogni gruppo.  
   
  Se è necessario fare riferimento ai risultati di un'operazione di gruppo, è possibile usare la parola chiave `into` per creare un identificatore sul quale eseguire query addizionali. La query seguente restituisce solo i gruppi che contengono più di due clienti:  
   
- [!code-csharp[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+ [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
  Per altre informazioni, vedere [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Uso di join  
  Le operazioni di join creano associazioni tra le sequenze che non sono modellate in modo esplicito nelle origini dei dati. Ad esempio, è possibile eseguire un join per trovare tutti i clienti e i distributori che hanno la stessa ubicazione. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la clausola `join` usa sempre raccolte di oggetti anziché direttamente le tabelle di database.  
   
- [!code-csharp[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
  In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] non è necessario usare `join` così spesso come in SQL poiché le chiavi esterne in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono rappresentate nel modello a oggetti come proprietà che contengono una raccolta di elementi. Ad esempio, un oggetto `Customer` contiene una raccolta di oggetti `Order`. Anziché eseguire un join, si accede agli ordini usando la notazione "Dot":  
   

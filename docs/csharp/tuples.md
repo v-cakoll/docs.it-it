@@ -3,14 +3,14 @@ title: Tipi tupla - Guida a C#
 description: Informazioni sui tipi di tupla denominati e non denominati in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971407"
 ---
-# <a name="c-tuple-types"></a>Tipi tupla in C# #
+# <a name="c-tuple-types"></a>Tipi tupla in C#
 
 Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi includono una sintassi più semplice, regole per le conversioni basate sul numero (note come cardinalità) e sui tipi di elementi, nonché regole coerenti per copie, test di uguaglianza e assegnazioni. Lo svantaggio è che le tuple non supportano alcuni dei meccanismi orientati agli oggetti associati all'ereditarietà. È possibile ottenere una panoramica nella sezione dedicata alle tuple nell'articolo [Novità di C# 7.0](whats-new/csharp-7.md#tuples).
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655673"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978111"
 ---
 # <a name="fields-c-programming-guide"></a>Campi (Guida per programmatori C#)
 Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente in una [classe](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). I campi sono *membri* del rispettivo tipo contenitore.  
@@ -23,15 +23,15 @@ Un *campo* è una variabile di qualsiasi tipo che viene dichiarata direttamente 
   
  I campi vengono dichiarati nel blocco della classe, specificando il livello di accesso del campo, seguito dal tipo di campo e poi dal nome del campo. Ad esempio:  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  Per accedere a un campo in un oggetto, aggiungere un punto dopo il nome dell'oggetto, seguito dal nome del campo, come in `objectname.fieldname`. Ad esempio:  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  È possibile assegnare a un campo un valore iniziale usando l'operatore di assegnazione quando il campo viene dichiarato. Per assegnare automaticamente il campo `day` a `"Monday"`, ad esempio, è necessario dichiarare `day` come nell'esempio seguente:  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  I campi vengono inizializzati immediatamente prima della chiamata del costruttore per l'istanza dell'oggetto. Se il costruttore assegna il valore di un campo, sovrascriverà qualsiasi valore assegnato nella dichiarazione del campo. Per altre informazioni, vedere [Uso dei costruttori](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

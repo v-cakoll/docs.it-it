@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183130"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212352"
 ---
-# <a name="lambda-expressions"></a>Espressioni lambda #
+# <a name="lambda-expressions"></a>Espressioni lambda
 
 Un'*espressione lambda* è un blocco di codice costituito da espressioni o da istruzioni che viene trattato come oggetto. Tale blocco può essere passato come argomento ai metodi e può anche essere restituito dalle chiamate al metodo. Le espressioni lambda sono spesso usate per eseguire le attività seguenti:
 
@@ -32,7 +32,7 @@ Oppure è possibile passarla direttamente come argomento del metodo:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>Espressioni lambda ##
+## <a name="expression-lambdas"></a>Espressioni lambda
 
  Un'espressione lambda con un'espressione a destra dell'operatore => è denominata *espressione lambda*. Queste espressioni vengono usate spesso nella costruzione di [alberi delle espressioni](expression-trees.md). Un'espressione lambda dell'espressione restituisce il risultato dell'espressione e ha il formato di base seguente:
 
@@ -54,7 +54,7 @@ Il compilatore usa solitamente l'inferenza del tipo per determinare i tipi di pa
 
 Si noti che nell'esempio precedente il corpo di un'espressione lambda dell'espressione può essere costituito da una chiamata al metodo. Se tuttavia si creano alberi delle espressioni valutati al di fuori di .NET Framework, ad esempio in SQL Server o in Entity Framework, non è consigliabile usare chiamate al metodo nelle espressioni lambda. I metodi non avranno infatti alcun significato fuori dal contesto dell'implementazione .NET. Se si sceglie comunque di usare chiamate di metodi in questo caso, assicurarsi di testarle attentamente per verificare che possano essere risolte correttamente.
 
-## <a name="statement-lambdas"></a>Espressioni lambda dell'istruzione ##
+## <a name="statement-lambdas"></a>Espressioni lambda dell'istruzione
 
 Un'espressione lambda dell'istruzione è simile a un'espressione lambda dell'espressione con la differenza che l'istruzione o le istruzioni sono racchiuse tra parentesi graffe:
 
@@ -68,7 +68,7 @@ Il corpo di un'espressione lambda dell'istruzione può essere costituito da un n
 
 Le espressioni lambda dell'istruzione, come i metodi anonimi, non possono essere utilizzate per creare alberi delle espressioni.
 
-## <a name="async-lambdas"></a>Espressioni lambda asincrone ##
+## <a name="async-lambdas"></a>Espressioni lambda asincrone
 
 Usando le parole chiave [async](language-reference/keywords/async.md) e [await](language-reference/keywords/await.md) è facile creare istruzioni ed espressioni lambda che includono l'elaborazione asincrona. Nell'esempio viene chiamato un metodo `ShowSquares` eseguito in modo asincrono.
 
@@ -76,7 +76,7 @@ Usando le parole chiave [async](language-reference/keywords/async.md) e [await](
 
 Per altre informazioni su come creare e usare i metodi asincroni, vedere [Programmazione asincrona con async e await (C#)](programming-guide/concepts/async/index.md).
 
-## <a name="lambda-expressions-and-tuples"></a>Espressioni lambda e tuple ##
+## <a name="lambda-expressions-and-tuples"></a>Espressioni lambda e tuple
 
 A partire da C# 7.0, il linguaggio C# offre supporto predefinito delle tuple. È possibile specificare una tupla come argomento di un'espressione lambda e l'espressione lambda può restituire una tupla. In alcuni casi, il compilatore C# usa l'inferenza del tipo per determinare i tipi di componenti della tupla.
 
@@ -90,9 +90,9 @@ In genere, i campi di una tupla sono denominati `Item1`, `Item2` e così via. È
 
 Per altre informazioni sul supporto delle tuple in C#, vedere [C# Tuple types](tuples.md) (Tipi di tupla in C#).
 
-## <a name="lambdas-with-the-standard-query-operators"></a>Espressioni lambda con operatori query standard ##
+## <a name="lambdas-with-the-standard-query-operators"></a>Espressioni lambda con operatori query standard
 
-LINQ to Objects, tra altre implementazioni, ha un parametro di input il cui tipo appartiene alla famiglia <xref:System.Func%601> di delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati `Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Considerare ad esempio il delegato <xref:System.Func%601>, la cui sintassi è la seguente:
+LINQ to Objects, tra altre implementazioni, ha un parametro di input il cui tipo appartiene alla famiglia <xref:System.Func%601> di delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati`Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Considerare ad esempio il delegato <xref:System.Func%601>, la cui sintassi è la seguente:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -118,7 +118,7 @@ In questo esempio viene illustrato come specificare più parametri di input racc
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Inferenza del tipo nelle espressioni lambda ##
+## <a name="type-inference-in-lambda-expressions"></a>Inferenza del tipo nelle espressioni lambda
 
 Quando si scrivono espressioni lambda, spesso non occorre specificare un tipo per i parametri di input, in quanto il compilatore può dedurlo in base al corpo dell'espressione lambda, ai tipi di parametro e ad altri fattori, come descritto nelle specifiche del linguaggio C#. Per la maggior parte degli operatori di query standard, il primo input è il tipo degli elementi nella sequenza di origine. Pertanto, se si esegue una query su un oggetto `IEnumerable<Customer>`, si deduce che la variabile di input sia un oggetto `Customer`, ovvero che si dispone dell'accesso ai relativi metodi e proprietà:
 
@@ -134,7 +134,7 @@ Di seguito sono riportate le regole generali per l'inferenza del tipo nelle espr
 
 Si noti che le espressioni lambda non hanno un tipo poiché Common Type System non ha alcun concetto intrinseco di "espressione lambda". In alcuni casi, tuttavia, può essere utile fare riferimento in modo informale al "tipo" di un'espressione lambda. In questi casi, per tipo si intende il tipo delegato o il tipo <xref:System.Linq.Expressions.Expression> in cui viene convertita l'espressione lambda.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Ambito delle variabili nelle espressioni lambda ##
+## <a name="variable-scope-in-lambda-expressions"></a>Ambito delle variabili nelle espressioni lambda
 
 Le espressioni lambda possono fare riferimento alle *variabili esterne* (vedere [Metodi anonimi](programming-guide/statements-expressions-operators/anonymous-methods.md)) presenti nell'ambito del metodo che definisce la funzione lambda oppure nell'ambito del tipo che contiene l'espressione lambda. Le variabili acquisite in questo modo vengono archiviate per poter essere utilizzate nell'espressione lambda anche se le variabili diventano esterne all'ambito e vengono sottoposte a Garbage Collection. Una variabile esterna deve essere assegnata prima di poter essere utilizzata in un'espressione lambda. Nell'esempio seguente vengono illustrate queste regole.
 
@@ -152,7 +152,7 @@ Le espressioni lambda possono fare riferimento alle *variabili esterne* (vedere 
 
 - Un'espressione lambda non può contenere un'istruzione `goto` , `break` o `continue` , inclusa nella funzione lambda se la destinazione dell'istruzione jump è esterna al blocco. È altresì errato inserire all'esterno del blocco della funzione lambda un'istruzione jump se la destinazione è interna al blocco.
 
-## <a name="see-also"></a>Vedere anche ##
+## <a name="see-also"></a>Vedere anche
 
 - [LINQ (Language-Integrated Query)](../standard/using-linq.md)
 - [Metodi anonimi](programming-guide/statements-expressions-operators/anonymous-methods.md)

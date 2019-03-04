@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: d16841afda1f1f434d86a6e5572272123c007df8
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674815"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201118"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast e conversioni di tipi (Guida per programmatori C#)
 
@@ -40,7 +40,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 
  Per i tipi numerici predefiniti, è possibile eseguire una conversione implicita quando il valore da archiviare può essere adattato nella variabile senza essere troncato o arrotondato. Ad esempio, una variabile di tipo [long](../../../csharp/language-reference/keywords/long.md) (integer a 64 bit) può archiviare qualsiasi valore archiviabile da un tipo [int](../../../csharp/language-reference/keywords/int.md) (integer a 32 bit). Nell'esempio seguente il compilatore converte in modo implicito il valore `num` a destra di un tipo `long` prima di assegnarlo a `bigNum`.  
   
- [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
  Per un elenco completo delle conversioni numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 
  Tuttavia, se una conversione non può essere eseguita senza il rischio di perdita di informazioni, il compilatore richiede di eseguire una conversione esplicita, che viene chiamata *cast*. Un cast è un modo per informare esplicitamente il compilatore che si vuole eseguire la conversione e che si è a conoscenza della possibile perdita di dati. Per eseguire un cast, specificare il tipo tra parentesi davanti al valore o alla variabile da convertire. Il seguente programma esegue il cast di [double](../../../csharp/language-reference/keywords/double.md) in [int](../../../csharp/language-reference/keywords/int.md). Il programma non verrà compilato senza il cast.  
   
- [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
+ [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
  Per un elenco delle conversioni numeriche esplicite consentite, vedere [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
@@ -81,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 
  In alcune conversioni di tipi di riferimento, il compilatore non può determinare se un cast è valido. È possibile che un'operazione di cast compilata correttamente non riesca in fase di esecuzione. Come illustrato nell'esempio seguente, un cast di tipo che non riesce in fase di esecuzione genera un'eccezione <xref:System.InvalidCastException>.  
   
- [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
  Il linguaggio C# offre gli operatori [is](../../../csharp/language-reference/keywords/is.md) e [as](../../../csharp/language-reference/keywords/as.md) che consentono di testare la compatibilità prima di eseguire un cast. Per altre informazioni, vedere [Procedura: Eseguire il cast sicuro con i criteri di ricerca e gli operatori as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   

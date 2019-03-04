@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600492"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972196"
 ---
 # <a name="expressions-c-programming-guide"></a>Espressioni (Guida per programmatori C#)
 Un'*espressione* è una sequenza di uno o più operandi e zero o più operatori che può restituire un singolo valore, oggetto, metodo o spazio dei nomi. Le espressioni possono contenere un valore letterale, una chiamata al metodo, un operatore e i relativi operandi oppure un *nome semplice*, ad esempio il nome di una variabile, un membro di un tipo, un parametro di un metodo, uno spazio dei nomi o un tipo.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Valori letterali e nomi semplici  
  I due tipi più semplici di espressione sono i valori letterali e i nomi semplici. Un valore letterale è un valore costante che non ha un nome. Ad esempio, nel codice seguente sia `5` che `"Hello World"` sono valori letterali:  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Per altre informazioni sui valori letterali, vedere [Tipi](../../../csharp/language-reference/keywords/types.md).  
   
  Nell'esempio precedente, sia `i` che `s` sono nomi semplici che identificano le variabili locali. Quando tali variabili vengono usate in un'espressione, il nome della variabile restituisce il valore attualmente archiviato nel percorso della variabile in memoria. Questa operazione è illustrata nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Espressioni di chiamata  
  Nell'esempio di codice seguente, la chiamata a `DoWork` è un'espressione di chiamata.  
   
@@ -70,7 +70,7 @@ Gli alberi delle espressioni consentono di rappresentare le espressioni come str
 
 C# supporta i *membri con corpo di espressione*, che consentono di specificare una definizione concisa del corpo dell'espressione per metodi, costruttori, finalizzatori, proprietà e indicizzatori. Per altre informazioni, vedere [Membri con corpo di espressione](expression-bodied-members.md).
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Ogni volta che un'espressione identifica una variabile, una proprietà dell'oggetto o l'accesso a un indicizzatore di oggetti, il valore di tale elemento viene usato come valore dell'espressione. Un'espressione può essere inserita ovunque sia richiesto un valore o un oggetto in C#, purché l'espressione alla fine restituisca il tipo richiesto.  
 
 ## <a name="see-also"></a>Vedere anche

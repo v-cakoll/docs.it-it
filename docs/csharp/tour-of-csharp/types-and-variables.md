@@ -3,12 +3,12 @@ title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583953"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212001"
 ---
 # <a name="types-and-variables"></a>Tipi e variabili
 
@@ -71,7 +71,7 @@ Di seguito vengono riepilogati i tipi numerici di C#.
     - `double`: 64 bit, intervallo compreso tra 5,0 × 10<sup>-324</sup> e 1,7 × 10<sup>308</sup>, precisione di 15 cifre
 * Decimale
     - `decimal`: 128 bit, intervallo compreso almeno tra -7,9 × 10<sup>-28</sup> e 7,9 × 10<sup>28</sup>, con precisione di almeno 28 cifre
-    
+
 I programmi C# usano le *dichiarazioni di tipo* per creare nuovi tipi. Una dichiarazione di tipo consente di specificare il nome e i membri del nuovo tipo. Cinque delle categorie di tipi di C# possono essere definite dall'utente: tipi classe, tipi struct, tipi interfaccia, tipi enum e tipi delegato.
 
 Un tipo `class` definisce una struttura dati contenente membri dati (campi) e membri funzione (metodi, proprietà e altro). I tipi classe supportano l'ereditarietà singola e il polimorfismo, meccanismi in base ai quali le classi derivate possono estendere e specializzare le classi di base.
@@ -115,6 +115,6 @@ In C# sono disponibili diversi tipi di *variabili*, inclusi campi, elementi matr
 * Tipo delegato
     - Riferimento `null` oppure riferimento a un'istanza di un tipo delegato compatibile
 
->[!div class="step-by-step"]
->[Precedente](program-structure.md)
->[Successivo](expressions.md)
+> [!div class="step-by-step"]
+> [Precedente](program-structure.md)
+> [Successivo](expressions.md)

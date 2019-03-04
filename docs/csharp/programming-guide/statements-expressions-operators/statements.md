@@ -6,19 +6,19 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 12c4561e9e2c2a9e3a211351b70fd83b8ca7bccd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640849"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971507"
 ---
 # <a name="statements-c-programming-guide"></a>Istruzioni (Guida per programmatori C#)
 Le azioni accettate da un programma vengono espresse in istruzioni. Le azioni comuni includono la dichiarazione di variabili, l'assegnazione di valori, le chiamate ai metodi, il ciclo delle raccolte e la creazione di rami tra blocchi di codice, a seconda di una data condizione. L'ordine in cui vengono le istruzioni eseguite in un programma viene chiamato "flusso di controllo" o "flusso di esecuzione". Il flusso di controllo può variare ogni volta che viene eseguito un programma, a seconda della reazione del programma all'input ricevuto in fase di esecuzione.  
   
  Un'istruzione può essere costituito da una singola riga di codice che termina con un punto e virgola o da una serie di istruzioni a riga singola in un blocco. Un blocco di istruzioni è racchiuso tra parentesi {} e può contenere blocchi annidati. Il codice seguente mostra due esempi di istruzioni a riga singola e un blocco di istruzioni a più righe:  
   
- [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
 ## <a name="types-of-statements"></a>Tipi di istruzioni  
  Nella tabella seguente sono elencati i vari tipi di istruzioni in C# e le parole chiave associate, con link ad argomenti contenenti maggiori informazioni:  
@@ -43,43 +43,43 @@ Le azioni accettate da un programma vengono espresse in istruzioni. Le azioni co
 
 Il codice seguente illustra esempi di dichiarazioni di variabili con e senza un'assegnazione iniziale e una dichiarazione di costante con le inizializzazioni necessarie.
 
-[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+ [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>Istruzioni di espressione
 
 Il codice seguente illustra esempi di istruzioni di espressione, tra cui assegnazione, creazione di oggetti con assegnazione, e la chiamata al metodo.
 
-[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+ [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Istruzione vuota
 
 Gli esempi seguenti illustrano due usi di un'istruzione vuota:
 
-[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+ [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Istruzioni incorporate
 
  Alcune istruzioni, fra cui [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) e [foreach](../../../csharp/language-reference/keywords/foreach-in.md), dispongono sempre di un'istruzione incorporata che le segue. Questa istruzione incorporata può essere una singola istruzione o più istruzioni racchiuse tra parentesi {} in un blocco di istruzioni. Anche le istruzioni incorporate a riga singola possono essere racchiuse tra parentesi {}, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
  Un'istruzione incorporata non racchiusa tra parentesi {} non può essere un'istruzione di dichiarazione o un'istruzione con etichetta. Questa operazione è illustrata nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
  Inserire l'istruzione incorporata in un blocco per correggere l'errore:  
   
- [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
 ## <a name="nested-statement-blocks"></a>Blocchi di istruzioni annidate  
  I blocchi di istruzioni possono essere annidati, come illustrato nel codice seguente:  
   
- [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
 ## <a name="unreachable-statements"></a>Istruzioni non raggiungibili  
  Se il compilatore determina che il flusso di controllo non può raggiungere mai una particolare istruzione in nessuna circostanza, genererà l'avviso CS0162, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   

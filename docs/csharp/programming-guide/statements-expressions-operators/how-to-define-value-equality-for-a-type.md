@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589317"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203110"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: Definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
 Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
@@ -48,7 +48,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come implementare l'uguaglianza di valori in una classe (tipo riferimento).  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  Nelle classi (tipi riferimento) l'implementazione predefinita di entrambi i metodi <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> esegue un confronto di uguaglianza dei riferimenti, non un controllo di uguaglianza dei valori. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale, lo scopo è assegnare a tale metodo una semantica di uguaglianza di valore.  
   
@@ -57,7 +57,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come implementare l'uguaglianza di valori in uno struct (tipo valore):  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Per gli struct, l'implementazione predefinita di <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, che è la versione sottoposta a override in <xref:System.ValueType?displayProperty=nameWithType>, esegue un controllo di uguaglianza dei valori usando il processo di reflection per confrontare i valori di ogni campo nel tipo. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale `Equals` in uno struct, lo scopo è specificare un mezzo più efficiente per la verifica dell'uguaglianza di valori e facoltativamente basare il confronto su alcuni subset del campo o delle proprietà dello struct.  
   
