@@ -675,7 +675,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| nome                                 | Value                                     |
+| nome                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -781,7 +781,7 @@ End Function
 
  Per risolvere questo problema in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo più chiaro le routine KDF e i relativi input:
 
-|Metodo ECDiffieHellman|Descrizione|
+|Metodo ECDiffieHellman|Description|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva il materiale della chiave usando la formula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> dove *x* è il risultato calcolato dell'algoritmo EC Diffie-Hellman.|
@@ -1042,8 +1042,9 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
 - ActivityDesigner Diagramma di flusso o altri ActivityDesigner del flusso di lavoro possono visualizzare tutti gli oggetti nei propri percorsi predefiniti anziché i valori della proprietà associata.
 
+<a name="clickonce-1" />
 
-### <a name="clickonce"></a>ClickOnce
+### <a name="clickonce"></a>Clickonce
 
 ClickOnce è stato aggiornato per supportare TLS 1.1 e TLS 1.2 oltre al protocollo 1.0 che supporta già. ClickOnce rileva automaticamente il protocollo richiesto e non sono necessarie altre operazioni nell'applicazione ClickOnce per abilitare il supporto per TLS 1.1 e 1.2.
 
