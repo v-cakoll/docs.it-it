@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709729"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202444"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: Modifica di file e directory in Visual Basic
 Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in Visual Basic. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
@@ -43,7 +43,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-    |Control|Proprietà|Valore|  
+    |Control|Proprietà|Value|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Name**|`filesListBox`|  
     |**Pulsante**|**Name**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
@@ -57,13 +57,13 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 2.  Aggiungere il codice seguente al gestore eventi `Click`.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      La chiamata a `FolderBrowserDialog1.ShowDialog` apre la finestra di dialogo **Sfoglia per cartelle**. Dopo che l'utente ha fatto clic su **OK**, la proprietà <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> viene inviata come argomento al metodo `ListFiles`, che viene aggiunto nel passaggio successivo.  
   
 3.  Aggiungere il seguente metodo `ListFiles`.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      Questo codice per prima cosa cancella il contenuto dell'oggetto **ListBox**.  
   
@@ -83,7 +83,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 2.  Aggiungere il codice seguente al gestore eventi `Click`.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      Il codice verifica se un elemento è selezionato nell'oggetto `ListBox`. Ottiene quindi la voce del percorso del file da `ListBox`. Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> viene usato per verificare se il file esiste ancora.  
   
@@ -91,7 +91,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 3.  Aggiungere il seguente metodo `GetTextForOutput`.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      Il codice usa il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> per ottenere i parametri del file. I parametri del file vengono aggiunti a un oggetto <xref:System.Text.StringBuilder>.  
   
@@ -107,7 +107,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1.  Aggiungere il codice seguente alla fine del gestore eventi `examineButton_Click` .  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      Il codice imposta il percorso del file di log in modo da inserire il file di log nella stessa directory del file selezionato. Il testo della voce di log è impostato su data e ora correnti seguite dalle informazioni sul file.  
   
@@ -123,7 +123,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 2.  Aggiungere il codice seguente al gestore eventi.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Questo codice imposta la directory predefinita del browser delle cartelle sulla directory corrente.  
   
@@ -135,7 +135,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 1.  Aggiungere il seguente metodo `SetEnabled`.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      Il metodo `SetEnabled` abilita o disabilita i controlli a seconda se è selezionato un elemento nell'oggetto `ListBox`.  
   
@@ -152,12 +152,12 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
 ## <a name="full-example-using-mycomputerfilesystem"></a>Esempio completo di uso di My.Computer.FileSystem  
  Di seguito è riportato l'esempio completo.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Esempio completo usando System.IO  
  Nel seguente esempio equivalente vengono usate le classi dello spazio dei nomi <xref:System.IO> anziché gli oggetti `My.Computer.FileSystem`.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.IO>

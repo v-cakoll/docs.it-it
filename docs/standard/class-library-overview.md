@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555180"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970571"
 ---
 # <a name="net-class-library-overview"></a>Panoramica della libreria di classi .NET
 
@@ -94,10 +94,10 @@ Le implementazioni .NET includono classi, interfacce, delegati e tipi di valore 
 ||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> oppure<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Intero senza segno a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> -oppure-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /> oppure<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**</br> oppure</br>**single**|  
-||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**</br> oppure </br> **double**|  
+|Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float32**<br> oppure<br>**single**|  
+||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**float**<br> oppure <br> **double**|  
 |Logica|<xref:System.Boolean>|Un valore Boolean (true o false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Altro|<xref:System.Char>|Un carattere Unicode a 16 bit.|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Un valore decimale a 128 bit.|**Decimal**|**decimal**|**Decimal**|**decimal**|  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0d6ff9ced6fe8cb730c755579722e59c07dac5c
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664551"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836500"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrazione dalla classe XslTransform
 
@@ -110,11 +110,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>Funzioni MSXML  
  Alla classe <xref:System.Xml.Xsl.XslCompiledTransform> è stato aggiunto il supporto per altre funzioni MSXML. Nell'elenco seguente vengono descritte le funzionalità nuove o migliorate.  
   
--   msxsl:node-set: con <xref:System.Xml.Xsl.XslTransform> è necessario che l'argomento della funzione [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) sia un frammento dell'albero dei risultati. Questo requisito non è invece previsto con la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
+-   msxsl:node-set: con <xref:System.Xml.Xsl.XslTransform> è necessario che l'argomento della funzione [node-set Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) sia un frammento dell'albero dei risultati. Questo requisito non è invece previsto con la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 -   msxsl:version: questa funzione è supportata in <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Funzioni di estensione XPath: le funzioni [ms:string-compare](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) e [ms:format-time](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) ora sono supportate.  
+-   Funzioni di estensione XPath: le funzioni [ms:string-compare](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) e [ms:format-time](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) ora sono supportate.  
   
 -   Funzioni di estensione XPath correlate allo schema: queste funzioni non sono supportate in modalità nativa da <xref:System.Xml.Xsl.XslCompiledTransform>. Tuttavia, possono essere implementate come funzioni di estensione.  
   

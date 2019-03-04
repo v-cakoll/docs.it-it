@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c316ec79b519e1580f1d5dc7e122d770fb5b82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 585a6e568bde6e6eca15477eaa10b5c91c91c5a4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583158"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835551"
 ---
 # <a name="xml-processing-options"></a>Opzioni di elaborazione XML
 Per un elenco di tecnologie Microsoft usabili per l'elaborazione dei dati XML, vedere le tabelle riportate di seguito.  
@@ -19,7 +19,7 @@ Per un elenco di tecnologie Microsoft usabili per l'elaborazione dei dati XML, v
   
 |**Opzione**|**Tipo di elaborazione**|**Descrizione**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(spazio dei nomi <xref:System.Xml.Linq>)|In memoria|- Basata sulla tecnologia LINQ (Language Integrated Query) di .NET Framework.<br />- Garantisce un utilizzo delle query simile a SQL per oggetti, dati relazionali e dati XML.<br />- Fornisce funzionalità intuitive per la creazione e la trasformazione di documenti.<br />- Usare questa opzione se si scrive del nuovo codice.|  
+|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(spazio dei nomi <xref:System.Xml.Linq>)|In memoria|- Basata sulla tecnologia LINQ (Language Integrated Query) di .NET Framework.<br />- Garantisce un utilizzo delle query simile a SQL per oggetti, dati relazionali e dati XML.<br />- Fornisce funzionalità intuitive per la creazione e la trasformazione di documenti.<br />- Usare questa opzione se si scrive del nuovo codice.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Basata sul flusso|- Fornisce un accesso rapido, non memorizzato nella cache, di tipo forward-only ai dati XML.<br />- È possibile creare oggetti usando il metodo <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>, nonché specificare il set di funzionalità da abilitare nell'oggetto tramite la classe <xref:System.Xml.XmlReaderSettings>.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Basata sul flusso|- Fornisce una generazione rapida, non memorizzata nella cache, di tipo forward-only dei dati XML.<br />- È possibile creare oggetti usando il metodo <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType>, nonché specificare il set di funzionalità da abilitare nell'oggetto tramite la classe <xref:System.Xml.XmlWriterSettings>.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|In memoria|- Implementa le raccomandazioni [W3C Document Object Model (DOM) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) e [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/).<br />- È possibile creare, inserire, rimuovere e modificare nodi usando metodi e proprietà basati sul modello DOM noto.<br />- Usare questa opzione se si modifica il codice esistente tramite cui viene usato DOM di W3C.|  
@@ -30,8 +30,8 @@ Per un elenco di tecnologie Microsoft usabili per l'elaborazione dei dati XML, v
   
 |**Opzione**|**Descrizione**|  
 |----------------|---------------------|  
-|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|- Parser XML rapido, sicuro, che non supporta la memorizzazione nella cache, di tipo forward-only con cui è possibile compilare applicazioni XML a elevate prestazioni.<br />- È compatibile con qualsiasi linguaggio che usa DLL. Se ne consiglia l'uso con C++.|  
-|[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|- Tecnologia basata su COM per l'elaborazione di codice XML inclusa nel sistema operativo Windows.<br />- Fornisce un'implementazione nativa di DOM con supporto per XPath e XSLT.<br />- Contiene il parser SAX2 basato su eventi.|  
+|[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|- Parser XML rapido, sicuro, che non supporta la memorizzazione nella cache, di tipo forward-only con cui è possibile compilare applicazioni XML a elevate prestazioni.<br />- È compatibile con qualsiasi linguaggio che usa DLL. Se ne consiglia l'uso con C++.|  
+|[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|- Tecnologia basata su COM per l'elaborazione di codice XML inclusa nel sistema operativo Windows.<br />- Fornisce un'implementazione nativa di DOM con supporto per XPath e XSLT.<br />- Contiene il parser SAX2 basato su eventi.|  
   
 ## <a name="see-also"></a>Vedere anche
 

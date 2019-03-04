@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696217"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836318"
 ---
 # <a name="writing-custom-attributes"></a>Scrittura di attributi personalizzati
 Per progettare attributi personalizzati, non è necessario apprendere molti nuovi concetti. Se si ha familiarità con la programmazione orientata agli oggetti e si è in grado di progettare le classi, si ha già gran parte delle conoscenze necessarie. Gli attributi personalizzati sono essenzialmente classi tradizionali che derivano direttamente o indirettamente da <xref:System.Attribute?displayProperty=nameWithType>. Analogamente alle classi tradizionali, gli attributi personalizzati contengono metodi che archiviano e recuperano dati.  
@@ -118,7 +118,7 @@ Per progettare attributi personalizzati, non è necessario apprendere molti nuov
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- È possibile eseguire l'overload del costruttore per supportare diverse combinazioni di valori. Se si definisce anche una [proprietà](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) per la classe di attributi personalizzati, è possibile usare una combinazione di parametri denominati e posizionali quando si inizializza l'attributo. In genere, tutti i parametri obbligatori vengono definiti come posizionali e tutti i parametri facoltativi come denominati In questo caso, l'attributo non può essere inizializzato senza il parametro obbligatorio. Tutti gli altri parametri sono facoltativi. Si noti che, in Visual Basic, i costruttori di una classe Attribute non devono usare un argomento ParamArray.  
+ È possibile eseguire l'overload del costruttore per supportare diverse combinazioni di valori. Se si definisce anche una [proprietà](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) per la classe di attributi personalizzati, è possibile usare una combinazione di parametri denominati e posizionali quando si inizializza l'attributo. In genere, tutti i parametri obbligatori vengono definiti come posizionali e tutti i parametri facoltativi come denominati In questo caso, l'attributo non può essere inizializzato senza il parametro obbligatorio. Tutti gli altri parametri sono facoltativi. Si noti che, in Visual Basic, i costruttori di una classe Attribute non devono usare un argomento ParamArray.  
   
  L'esempio di codice seguente illustra come applicare un attributo che usa il costruttore precedente mediante i parametri obbligatori e facoltativi. Presuppone che l'attributo abbia un valore booleano obbligatorio e una proprietà stringa facoltativa.  
   
@@ -127,7 +127,7 @@ Per progettare attributi personalizzati, non è necessario apprendere molti nuov
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Dichiarazione delle proprietà  
- Se si vuole definire un parametro denominato o fornire un modo semplice per restituire i valori archiviati dall'attributo, dichiarare una [proprietà](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Le proprietà dell'attributo devono essere dichiarate come entità pubbliche con una descrizione del tipo di dati che verrà restituito. Definire la variabile che conterrà il valore della proprietà e associarla ai metodi **get** e **set** . L'esempio di codice seguente illustra come implementare una semplice proprietà nell'attributo.  
+ Se si vuole definire un parametro denominato o fornire un modo semplice per restituire i valori archiviati dall'attributo, dichiarare una [proprietà](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Le proprietà dell'attributo devono essere dichiarate come entità pubbliche con una descrizione del tipo di dati che verrà restituito. Definire la variabile che conterrà il valore della proprietà e associarla ai metodi **get** e **set** . L'esempio di codice seguente illustra come implementare una semplice proprietà nell'attributo.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

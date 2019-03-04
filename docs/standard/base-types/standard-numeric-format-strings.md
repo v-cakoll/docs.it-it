@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506719"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979958"
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 
@@ -62,7 +62,7 @@ Le stringhe di formato numerico standard sono supportate:
 |"G" o "g"|Generale|Risultato: la più compatta tra la notazione a virgola fissa e quella scientifica.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre significative.<br /><br /> Identificatore di precisione predefinito: dipende dal tipo numerico.<br /><br /> Altre informazioni: [Identificatore di formato generale ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" o "n"|Number|Risultato: cifre integrali e decimali, separatori di gruppi e un separatore decimale con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di posizioni decimali desiderate.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato numerico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" o "p"|Percentuale|Risultato: numero moltiplicato per 100 e visualizzato con un simbolo di percentuale.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di posizioni decimali desiderate.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato percentuale ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" o "r"|Round trip|Risultato: stringa che può eseguire il round trip a un numero identico.<br /><br /> Supportato da: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Nota: consigliato solo per il tipo <xref:System.Numerics.BigInteger>. Per i tipi <xref:System.Double>, usare "G17"; per i tipi <xref:System.Single>, usare "G9". </br> Identificatore di precisione: Ignorato.<br /><br /> Altre informazioni: [Identificatore di formato di round trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" o "r"|Round trip|Risultato: stringa che può eseguire il round trip a un numero identico.<br /><br /> Supportato da: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Nota: consigliato solo per il tipo <xref:System.Numerics.BigInteger>. Per i tipi <xref:System.Double>, usare "G17"; per i tipi <xref:System.Single>, usare "G9". <br> Identificatore di precisione: Ignorato.<br /><br /> Altre informazioni: [Identificatore di formato di round trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" o "x"|Esadecimale|Risultato: stringa esadecimale.<br /><br /> Supportato da: solo tipi integrali.<br /><br /> Identificatore di precisione: numero di cifre nella stringa di risultato.<br /><br /> Altre informazioni: [Identificatore di formato esadecimale ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Qualsiasi altro carattere singolo|Identificatore sconosciuto|Risultato: genera un evento <xref:System.FormatException> in fase di esecuzione.||  
   

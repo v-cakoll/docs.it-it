@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578123"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836565"
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
 Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (anche noto come *oggetto* o *osservabile*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  
@@ -46,7 +46,7 @@ Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la 
 -   Un oggetto contenente i dati che il provider invia agli osservatori. Il tipo di questo oggetto corrisponde al parametro di tipo generico delle interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Sebbene questo oggetto possa essere lo stesso dell'implementazione di <xref:System.IObservable%601>, in genere è un tipo distinto.  
   
 > [!NOTE]
->  Oltre all'implementazione dello schema progettuale osservatore, potrebbe risultare interessante l'esplorazione delle librerie compilate usando le interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Ad esempio, le [estensioni Rx (Reactive Extensions) per .NET](https://msdn.microsoft.com/library/hh242985.aspx) sono costituite da un set di metodi di estensione e da operatori di sequenza standard LINQ per supportare la programmazione asincrona.  
+>  Oltre all'implementazione dello schema progettuale osservatore, potrebbe risultare interessante l'esplorazione delle librerie compilate usando le interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Ad esempio, le [estensioni Rx (Reactive Extensions) per .NET](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) sono costituite da un set di metodi di estensione e da operatori di sequenza standard LINQ per supportare la programmazione asincrona.  
   
 ## <a name="implementing-the-pattern"></a>Implementazione dello schema  
  Nell'esempio seguente, lo schema progettuale osservatore viene usato per implementare un sistema di informazioni per il ritiro dei bagagli in aeroporto. Una classe `BaggageInfo` fornisce informazioni sui voli in arrivo e sui nastri in cui possono essere ritirati i bagagli per ogni volo, come illustrato nell'esempio seguente.  
@@ -90,7 +90,7 @@ Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la 
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Descrive le procedure consigliate per lo sviluppo di applicazioni che implementano lo schema progettuale observer.|  
 |[Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)|Fornisce un'implementazione dettagliata di un provider per un'applicazione di monitoraggio della temperatura.|  

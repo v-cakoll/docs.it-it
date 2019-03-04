@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bf86986f9e6f72fca9d6e88ac16699ff7cdb4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606479"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836474"
 ---
 # <a name="applying-attributes"></a>Applicazione di attributi
 Usare il processo seguente per applicare un attributo a un elemento del codice.  
@@ -57,4 +57,5 @@ Usare il processo seguente per applicare un attributo a un elemento del codice.
 - [Attributi](../../../docs/standard/attributes/index.md)
 - [Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Concetti](/cpp/windows/attributed-programming-concepts)
-- [Attributi](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [Attributi (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [Panoramica degli attributi (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)
