@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 7c122f0d342acb3708072be89e08c7465a654815
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660385"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966164"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedura: Ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#)
 In .NET Framework è possibile accedere a informazioni sul file system mediante le classi seguenti:  
@@ -38,7 +38,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra vari modi per accedere alle informazioni su file e cartelle.  
   
- [!code-csharp[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
+ [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Quando si elaborano stringhe di percorso specificate dall'utente, occorre gestire anche le eccezioni per le condizioni seguenti:  
