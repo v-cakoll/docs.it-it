@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362691"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201326"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Eseguire il test di una libreria .NET Standard con .NET Core in Visual Studio 2017
 
@@ -163,7 +163,7 @@ L'esecuzione dei test non ha generato errori ma è opportuno apportare qualche m
 
    ![Finestra di Esplora test con l'errore del metodo Assert Is False](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Rimuovere il codice che è stato aggiunto (`"Error", `) e rieseguire il test. I test verranno superati.
+1. Annullare la modifica apportata nel passaggio 1 e rimuovere la stringa "Error". Eseguire nuovamente il test. I test verranno superati.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Test della versione di rilascio della libreria
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659644"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203389"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -28,7 +28,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
  Prima di tutto, creare una classe base denominata `Shape` e delle classi derivate quali `Rectangle`, `Circle` e `Triangle`. Definire nella classe `Shape` un metodo virtuale denominato `Draw` ed eseguirne l'override in ogni classe derivata per disegnare la particolare forma che la classe rappresenta. Creare un oggetto `List<Shape>` e aggiungervi un cerchio, un triangolo e un rettangolo. Per aggiornare l'area di disegno, usare un ciclo [foreach](../../../csharp/language-reference/keywords/foreach-in.md) per scorrere l'elenco e chiamare il metodo `Draw` su ogni oggetto `Shape` nell'elenco. Anche se ogni oggetto nella lista è dichiarato di tipo `Shape`, sarà il tipo della fase di esecuzione (la versione del metodo di cui è stato eseguito l'override in ogni classe derivata) che verrà richiamato.  
   
- [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
  In C# ogni tipo è polimorfico perché tutti i tipi, incluso i tipi definiti dall'utente, ereditano da <xref:System.Object>.  
   
@@ -45,42 +45,42 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
  Una classe derivata può eseguire l'override di un membro della classe base solo se quest'ultimo è dichiarato come [virtuale](../../../csharp/language-reference/keywords/virtual.md) o [astratto](../../../csharp/language-reference/keywords/abstract.md). Il membro derivato deve usare la parola chiave [override](../../../csharp/language-reference/keywords/override.md) per indicare esplicitamente che il metodo deve partecipare alla chiamata virtuale. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#20)]  
   
  A differenza di metodi, proprietà, eventi e indicizzatori, i campi non possono essere virtuali. Quando una classe derivata esegue l'override di un membro virtuale, quest'ultimo viene chiamato anche nel caso in cui si acceda a un'istanza di tale classe come istanza della classe base. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#21)]  
   
  Metodi virtuali e proprietà consentono alle classi derivate di estendere una classe base senza dover usare l'implementazione della classe base di un metodo. Per altre informazioni, vedere [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Un'interfaccia fornisce un'altra modalità per definire un metodo o un insieme di metodi la cui implementazione è lasciata alle classi derivate. Per altre informazioni, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Nascondere un membro di una classe base con nuovi membri  
  Se si vuole che il membro derivato abbia lo stesso nome di un membro in una classe di base, ma non si vuole che partecipi a una chiamata virtuale, è possibile usare la parola chiave [new](../../../csharp/language-reference/keywords/new.md). La parola chiave `new` viene inserita prima del tipo restituito di un membro di classe che viene sostituito. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
  I membri nascosti della classe base sono comunque accessibili dal codice client se si esegue il cast di un'istanza della classe derivata in un'istanza della classe base. Ad esempio:  
   
- [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
 ### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Impedire alle classi derivate di eseguire l'override di membri virtuali  
  I membri virtuali rimangono sempre tali, indipendentemente dal numero di classi dichiarate fra i membri virtuali e la classe in cui è stato originariamente dichiarato il membro virtuale. Se nella classe A è dichiarato un membro virtuale, la classe B deriva da A e la classe C deriva da B, la classe C erediterà il membro virtuale e potrà eseguirne l'override, indipendentemente dal fatto che nella classe B sia dichiarato un override per tale membro. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#22)]  
   
  Una classe derivata può interrompere l'ereditarietà virtuale dichiarando un override come [sealed](../../../csharp/language-reference/keywords/sealed.md). A tale scopo, è necessario inserire la parola chiave `sealed` prima della parola chiave `override` nella dichiarazione del membro della classe. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#24)]  
   
  Nell'esempio precedente, il metodo `DoWork` non è più virtuale per nessuna classe derivata da C. È ancora virtuale per le istanze di C, anche se ne è stato eseguito il cast nel tipo B o A. I metodi sealed possono essere sostituiti da classi derivate tramite la parola chiave `new`, come illustrato nell'esempio seguente:  
   
- [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#25)]  
   
  In questo caso, se viene chiamato `DoWork` su D usando una variabile di tipo D, verrà chiamato il nuovo `DoWork`. Se per accedere a un'istanza di D viene usata una variabile di tipo C, B o A, una chiamata a `DoWork` seguirà le regole dell'ereditarietà virtuale, indirizzando queste chiamate all'implementazione di `DoWork` sulla classe C.  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Accedere a membri virtuali di una classe base dalle classi derivate  
- Una classe derivata che ha sostituito un metodo o una proprietà, o ne ha eseguito l'override, può ancora accedere al metodo o alla proprietà sulla classe base usando la parola chiave base. Nel codice seguente ne viene illustrato un esempio:  
+ Una classe derivata che ha sostituito un metodo o una proprietà, o ne ha eseguito l'override, può ancora accedere al metodo o alla proprietà sulla classe base usando la parola chiave `base`. Nel codice seguente ne viene illustrato un esempio:  
   
- [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#26)]  
   
  Per altre informazioni, vedere [base](../../../csharp/language-reference/keywords/base.md).  
   

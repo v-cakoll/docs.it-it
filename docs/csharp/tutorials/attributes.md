@@ -4,14 +4,14 @@ description: Informazioni sull'uso degli attributi in C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826824"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975602"
 ---
-# <a name="using-attributes-in-c"></a>Uso degli attributi in C# #
+# <a name="using-attributes-in-c"></a>Uso degli attributi in C\#
 
 Gli attributi consentono di associare informazioni al codice in modo dichiarativo. Offrono anche un elemento riutilizzabile che può essere applicato a vari tipi di destinazioni.
 

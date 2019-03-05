@@ -1,14 +1,14 @@
 ---
 title: 'Procedura dettagliata: Persistenza di un oggetto tramite C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512450"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975823"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C# #
+# <a name="walkthrough-persisting-an-object-using-c"></a>Procedura dettagliata: Persistenza di un oggetto tramite C\#
 
 È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.
 

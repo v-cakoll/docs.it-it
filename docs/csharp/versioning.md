@@ -3,14 +3,14 @@ title: Controllo delle versioni di C# - Guida a C#
 description: Informazioni sul funzionamento del controllo delle versioni in C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243491"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965670"
 ---
-# <a name="versioning-in-c"></a>Controllo delle versioni in C# #
+# <a name="versioning-in-c"></a>Controllo delle versioni in C\#
 
 In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET. Verranno anche presentati i fattori da considerare durante il controllo delle versioni della libreria e verrà descritto l'aggiornamento a una nuova versione di una libreria.
 

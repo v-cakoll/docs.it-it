@@ -3,14 +3,14 @@ title: Interpolazione di stringhe in C#
 description: Informazioni su come includere risultati di espressione formattati in una stringa di risultato in C# con interpolazione.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727859"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976057"
 ---
-# <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
+# <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C\#
 
 Questa esercitazione illustra come usare l'[interpolazione di stringhe](../language-reference/tokens/interpolated.md) per formattare e includere risultati di espressione in una stringa di risultato. Gli esempi presuppongono una buona familiarità con i concetti di base del linguaggio C# e con la formattazione dei tipi in .NET. Se non si ha familiarità con l'interpolazione di stringhe o con la formattazione dei tipi in .NET, vedere prima l'[esercitazione interattiva sull'interpolazione di stringhe](../tutorials/intro-to-csharp/interpolated-strings.yml). Per altre informazioni sulla formattazione dei tipi in .NET, vedere l'argomento [Formattazione di tipi in .NET](../../standard/base-types/formatting-types.md).
 

@@ -1,16 +1,16 @@
 ---
-title: 'Esercitazione: compilare il primo analizzatore con correzione del codice'
+title: 'Esercitazione: Scrivere il primo analizzatore con correzione del codice'
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397998"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201898"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: compilare il primo analizzatore con correzione del codice
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: Scrivere il primo analizzatore con correzione del codice
 
 .NET Compiler Platform SDK fornisce gli strumenti necessari per creare avvisi personalizzati destinati a codice C# o Visual Basic. L'**analizzatore** contiene il codice che riconosce le violazioni della regola. La **correzione del codice** contiene il codice che corregge la violazione. Le regole implementate possono essere di qualsiasi tipo: struttura del codice, stile di codifica, convenzioni di denominazione e altro ancora. .NET Compiler Platform fornisce il framework per l'esecuzione di analisi mentre gli sviluppatori scrivono il codice e tutte le funzionalità dell'interfaccia utente di Visual Studio per la correzione del codice: visualizzazione di linee ondulate nell'editor, informazioni dell'Elenco errori di Visual Studio, creazione di suggerimenti "lampadina" e visualizzazione di un'anteprima dettagliata delle correzioni suggerite.
 
@@ -282,7 +282,7 @@ Sostituire quindi `TestMethod2` con questo test, che assicura che venga generata
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,

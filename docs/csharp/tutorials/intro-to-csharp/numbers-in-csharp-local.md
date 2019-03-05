@@ -3,14 +3,14 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197457"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978618"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C# #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
 Questa esercitazione presenta in modo interattivo i tipi numerici in C#. Si scriveranno piccole quantità di codice, quindi si compilerà ed eseguirà tale codice. L'esercitazione contiene una serie di lezioni che esplorano numeri e operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 

@@ -3,14 +3,14 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186228"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981933"
 ---
-# <a name="the-history-of-c"></a>Cronologia di C# #
+# <a name="the-history-of-c"></a>Cronologia di C\#
 
 Questo articolo include la cronologia di ogni versione principale del linguaggio C#. Il team di C# continua a innovare il prodotto e ad aggiungere nuove funzionalità. Informazioni dettagliate sullo stato delle funzionalità del linguaggio, include le funzionalità prese in considerazione per versioni future, sono reperibili [nel repository dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) su GitHub.
 

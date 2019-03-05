@@ -4,12 +4,12 @@ description: Informazioni su come ospitare il runtime di .NET Core dal codice na
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583849"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980373"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Scrivere un host di .NET Core personalizzato per controllare il runtime di .NET dal codice nativo
 
@@ -68,7 +68,7 @@ Prima di avviare il runtime è necessario preparare alcune proprietà per specif
 
 Le proprietà comuni includono:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Elenco di percorsi di assembly, delimitato da ";" in Windows e da ":" in Linux, che il runtime sarà in grado di risolvere per impostazione predefinita. Alcuni host includono manifesti hardcoded con l'elenco degli assembly che possono caricare. Altri inseriranno una libreria in determinate posizioni, ad esempio accanto a *coreclr.dll*, in questo elenco.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Elenco di percorsi di assembly, delimitato da ";" in Windows e da ":" in Linux, che il runtime riuscirà a risolvere per impostazione predefinita. Alcuni host includono manifesti hardcoded con l'elenco degli assembly che possono caricare. Altri inseriranno una libreria in determinate posizioni, ad esempio accanto a *coreclr.dll*, in questo elenco.
 * `APP_PATHS` Elenco di percorsi in cui eseguire il probe se un assembly non viene trovato nell'elenco degli assembly di piattaforma attendibili (TPA). Poiché l'host ha un maggiore controllo su quali assembly vengono caricati tramite l'elenco TPA, è consigliabile che gli host determinino gli assembly che prevedono di caricare e li elenchino in modo esplicito. Se è necessaria l'esecuzione del probe al runtime, tuttavia, questa proprietà può abilitare tale scenario.
 *  `APP_NI_PATHS` Elenco simile ad APP_PATHS ma che deve includere i percorsi in cui verrà eseguito il probe di immagini native.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Questa proprietà è un elenco di percorsi in cui il caricatore esegue il probe quando cerca librerie native chiamate tramite p/invoke.

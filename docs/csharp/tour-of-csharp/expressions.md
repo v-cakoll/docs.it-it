@@ -3,12 +3,12 @@ title: Espressioni C# - Panoramica del linguaggio C#
 description: Le espressioni, gli operandi e gli operatori sono blocchi predefiniti del linguaggio C#
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154934"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212092"
 ---
 # <a name="expressions"></a>Espressioni
 
@@ -28,49 +28,49 @@ La maggior parte degli operatori può essere*in overload*. L'overload degli oper
 Di seguito sono riepilogati gli operatori di C# e sono elencate le categorie di operatori in ordine di precedenza, a partire da quella più alta. Gli operatori della stessa categoria hanno uguale precedenza. Sotto ciascuna categoria è riportato il relativo elenco di espressioni e la descrizione di ogni tipo di espressione.
 
 * Primario
-    - `x.m`: accesso a membri
-    - `x(...)`: chiamata a metodi e delegati
-    - `x[...]`: accesso a matrici e indicizzatori
-    - `x++`: post-incremento
-    - `x--`: post-decremento
-    - `new T(...)`: creazione di oggetti e delegati
-    - `new T(...){...}`: creazione di oggetti con inizializzatole
-    - `new {...}`: inizializzatore di oggetti anonimo
+    - `x.m`: Accesso ai membri
+    - `x(...)`: Chiamata a metodi e delegati
+    - `x[...]`: Accesso a matrici e indicizzatori
+    - `x++`: Post-incremento
+    - `x--`: Post-decremento
+    - `new T(...)`: Creazione di oggetti e delegati
+    - `new T(...){...}`: creazione di oggetti con inizializzatore
+    - `new {...}`:  inizializzatore di oggetti anonimo
     - `new T[...]`: creazione di matrici
     - `typeof(T)`: ottiene l'oggetto <xref:System.Type> per `T`
-    - `checked(x)`: valuta l'espressione in un contesto controllato
-    - `unchecked(x)`: valuta l'espressione in un contesto non controllato
+    - `checked(x)`: Valutare l'espressione in un contesto controllato (checked)
+    - `unchecked(x)`: Valutare l'espressione in un contesto non controllato (unchecked)
     - `default(T)`: ottiene un valore predefinito di tipo `T`
-    - `delegate {...}`: funzione anonima (metodo anonimo)
+    - `delegate {...}`: Funzione anonima (metodo anonimo)
 * Unario
     - `+x`: identità
-    - `-x`: negazione
-    - `!x`: negazione logica
-    - `~x`: negazione bit per bit
-    - `++x`: pre-incremento
-    - `--x`: pre-decremento
+    - `-x`: Negazione
+    - `!x`: Negazione logica
+    - `~x`: Negazione bit per bit
+    - `++x`: Pre-incremento
+    - `--x`: Pre-decremento
     - `(T)x`: converte in modo esplicito `x` al tipo `T`
     - `await x`: attende in modo asincrono il completamento di `x`
 * Moltiplicazione
-    - `x * y`: moltiplicazione
-    - `x / y`: divisione
-    - `x % y`: resto
+    - `x * y`: Moltiplicazione
+    - `x / y`: Divisione
+    - `x % y`: Resto
 * Addizione
-    - `x + y`: addizione, concatenazione di stringhe, combinazione di delegati
-    - `x – y`: sottrazione, rimozione di delegati
+    - `x + y`: Addizione, concatenazione di stringhe, combinazione di delegati
+    - `x – y`: Sottrazione, rimozione di delegati
 * Shift
-    - `x << y`: spostamento a sinistra
-    - `x >> y`: spostamento a destra
+    - `x << y`: Spostamento a sinistra
+    - `x >> y`: Spostamento a destra
 * Operatori relazionali e operatori di test del tipo
-    - `x < y`: minore di
-    - `x > y`: maggiore di
-    - `x <= y`: minore o uguale a
-    - `x >= y`: maggiore o uguale a
+    - `x < y`: Minore di
+    - `x > y`: Maggiore di
+    - `x <= y`: Minore o uguale
+    - `x >= y`: Maggiore o uguale a
     - `x is T`: restituisce `true` se `x` è un oggetto `T`, altrimenti `false`
     - `x as T`: restituisce `x` tipizzato come `T` oppure `null` se `x` non è un oggetto `T`
 * Uguaglianza
-    - `x == y`: uguale
-    - `x != y`: non uguale
+    - `x == y`: Uguale
+    - `x != y`: Diverso
 * AND logico
     - `x & y`: AND Integer bit per bit, AND logico booleano
 * XOR logico
@@ -86,11 +86,11 @@ Di seguito sono riepilogati gli operatori di C# e sono elencate le categorie di 
 * Condizionale
     - `x ? y : z`: restituisce `y` se `x` è `true`, `z` se `x` è `false`
 * Assegnazione o funzione anonima
-    - `x = y`: assegnazione
+    - `x = y`: Assegnazione
     - `x op= y`: assegnazione composta. Gli operatori supportati sono
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: funzione anonima (espressione lambda)
+    - `(T x) => y`: Funzione anonima (espressione lambda)
 
->[!div class="step-by-step"]
->[Precedente](types-and-variables.md)
->[Successivo](statements.md)
+> [!div class="step-by-step"]
+> [Precedente](types-and-variables.md)
+> [Successivo](statements.md)

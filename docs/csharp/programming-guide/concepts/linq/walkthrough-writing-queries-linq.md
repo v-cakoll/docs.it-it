@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 085a5f27225589989cf5b9d4b5871226624843ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 083f6c05f433436530326cd02b99cd98f86e8606
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554976"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202418"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: Scrittura di query in C# (LINQ)
 Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizzate per scrivere espressioni di query LINQ.  
@@ -53,7 +53,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 -   Aggiungere la classe `Student` e l'elenco di studenti inizializzato alla classe `Program` nel progetto.  
   
-     [!code-csharp[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti  
   
@@ -67,7 +67,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      Si noti anche che la variabile di intervallo della query, `student`, funge da riferimento a ogni `Student` nell'origine, fornendo l'accesso di membro per ogni oggetto.  
   
- [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#12)]  
   
 ## <a name="execute-the-query"></a>Eseguire la query  
   
@@ -81,7 +81,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 2.  Dopo aver aggiunto questo codice, compilare ed eseguire l'applicazione per vedere i risultati nella finestra **Console**.  
   
- [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>Per aggiungere un'altra condizione di filtro  
   
@@ -121,11 +121,11 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Il raggruppamento è una potente funzionalità delle espressioni di query. Una query con una clausola group genera una sequenza di gruppi e ogni gruppo contiene un `Key` e una sequenza costituita da tutti i membri di quel gruppo. La nuova query riportata di seguito raggruppa gli studenti usando la prima lettera del cognome come chiave.  
   
-     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
 2.  Si noti che il tipo della query è stato modificato. Ora genera una sequenza di gruppi che hanno il tipo `char` come chiave e una sequenza di oggetti `Student`. Siccome il tipo della query è cambiato, il codice seguente cambia anche il ciclo di esecuzione `foreach`:  
   
-     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
 3.  Eseguire l'applicazione e visualizzare i risultati nella finestra **Console**.  
   
@@ -135,7 +135,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Codificare in modo esplicito `IEnumerables` di `IGroupings` può risultare noioso. È possibile scrivere la stessa query e ciclo `foreach` in modo molto più semplice usando `var`. La parola chiave `var` non cambia il tipo degli oggetti ma si limita a istruire il compilatore a dedurre i tipi. Cambiare il tipo di `studentQuery` e la variabile di iterazione `group` in `var` ed eseguire di nuovo la query. Si noti che nel ciclo `foreach` interno, la variabile di iterazione è ancora tipizzata come `Student` e la query funziona esattamente come prima. Cambiare la variabile di iterazione `s` in `var` ed eseguire di nuovo la query. Si noti che si ottengono esattamente gli stessi risultati.  
   
-     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
      Per altre informazioni su [var](../../../../csharp/language-reference/keywords/var.md), vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -143,7 +143,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Quando si esegue la query precedente, si nota che i gruppi non sono in ordine alfabetico. Per modificare questa impostazione è necessario fornire una clausola `orderby` dopo la clausola `group`. Ma per usare una clausola `orderby`, è necessario un identificatore che funge da riferimento ai gruppi creati per la clausola `group`. L'identificatore viene fornito usando la parola chiave `into`, come segue:  
   
-     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
      Quando si esegue questa query si può notare che i gruppi vengono disposti in ordine alfabetico.  
   
@@ -151,7 +151,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  È possibile usare la parola chiave `let` per introdurre un identificatore per qualsiasi risultato di espressione nell'espressione di query. Questo identificatore può essere comodo, come nell'esempio seguente, oppure può migliorare le prestazioni archiviando i risultati di un'espressione in modo che non debba essere calcolata più volte.  
   
-     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
      Per altre informazioni, vedere [Clausola let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -159,17 +159,17 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Come descritto in [Sintassi di query e sintassi di metodi in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), alcune operazioni di query possono essere espresse solo usando la sintassi dei metodi. Il codice seguente calcola il punteggio totale per ogni `Student` nella sequenza di origine e quindi chiama il metodo `Average()` sui risultati della query per calcolare il punteggio medio della classe.
   
-     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>Per eseguire trasformazioni o proiezioni nella clausola select  
   
 1.  Un compito molto comune per una query è generare una sequenza i cui elementi differiscono da quelli delle sequenze di origine. Eliminare o impostare come commento il ciclo di query ed esecuzione precedente e sostituirlo con il codice seguente. Si noti che la query restituisce una sequenza di stringhe (non `Students`) e questo si riflette nel ciclo `foreach`.  
   
-     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
 2.  Il codice precedente di questa procedura dettagliata indica che il punteggio medio della classe è pari a circa 334. Per produrre una sequenza di `Students` il cui punteggio totale sia maggiore della media della classe, insieme al loro `Student ID`, è possibile usare un tipo anonimo nell'istruzione `select`:  
   
-     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver acquisito familiarità con i fondamenti dell'uso delle query in C#, è possibile leggere la documentazione e vedere gli esempi per il tipo specifico di provider LINQ a cui si è interessati:  

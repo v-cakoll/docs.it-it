@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601935"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203298"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Uso di indicizzatori (Guida per programmatori C#)
 
-Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, una classe `TempRecord` che rappresenta la temperatura in gradi Farenheit registrata in 10 momenti diversi in un periodo di 24 ore. La classe contiene una matrice `temps` di tipo `float[]` per archiviare i valori di temperatura. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza `TempRecord` come `float temp = tr[4]` invece che come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
+Gli indicizzatori sono una convenzione sintattica che consente di creare una [classe](../../../csharp/language-reference/keywords/class.md), uno [struct](../../../csharp/language-reference/keywords/struct.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) a cui le applicazioni client possono accedere esattamente come a una matrice. Gli indicizzatori sono in genere implementati in tipi il cui scopo principale è incapsulare una raccolta o una matrice interna. Si supponga, ad esempio, una classe `TempRecord` che rappresenta la temperatura in gradi Fahrenheit registrata in 10 momenti diversi in un periodo di 24 ore. La classe contiene una matrice `temps` di tipo `float[]` per archiviare i valori di temperatura. Implementando un indicizzatore in questa classe, i client possono accedere alle temperature in un'istanza `TempRecord` come `float temp = tr[4]` invece che come `float temp = tr.temps[4]`. La notazione dell'indicizzatore non solo semplifica la sintassi per le applicazioni client, ma rende anche la classe e il relativo scopo più intuitivi per gli altri sviluppatori.  
   
 Per dichiarare un indicizzatore in una classe o uno struct, usare la parola chiave [this](../../../csharp/language-reference/keywords/this.md), come nell'esempio seguente:
 
@@ -25,7 +25,7 @@ public int this[int index]    // Indexer declaration
 }  
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il tipo di un indicizzatore e dei relativi parametri deve essere accessibile almeno quanto l'indicizzatore. Per altre informazioni sui livelli di accessibilità, vedere [Modificatori di accesso](../../../csharp/language-reference/keywords/access-modifiers.md).  
   
@@ -53,7 +53,7 @@ Nell'esempio seguente viene illustrato come dichiarare un campo di matrice priva
   
  Si noti che quando viene valutato l'accesso di un indicizzatore, ad esempio in un'istruzione `Console.Write`, viene richiamata la funzione di accesso [get](../../../csharp/language-reference/keywords/get.md). Pertanto, se non esiste alcuna funzione di accesso `get`, si verifica un errore in fase di compilazione.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Indicizzazione tramite altri valori
 
@@ -63,7 +63,7 @@ C# non limita il tipo del parametro dell'indicizzatore a Integer. Può ad esempi
   
 L'esempio seguente dichiara una classe che archivia i giorni della settimana. Una funzione di accesso `get` accetta una stringa e il nome di un giorno e restituisce l'intero corrispondente. Ad esempio, "Domenica" restituisce 0, "Lunedì" restituisce 1 e così via.  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente
 

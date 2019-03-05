@@ -3,14 +3,14 @@ title: Criteri di ricerca - Guida a C#
 description: Informazioni sulle espressioni di criteri di ricerca in C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522026"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969978"
 ---
-# <a name="pattern-matching"></a>Criteri di ricerca #
+# <a name="pattern-matching"></a>Criteri di ricerca
 
 I criteri verificano che un valore abbia una determinata *forma* e possono *estrarre* informazioni dal valore quando ha la forma corrispondente. I criteri di ricerca offrono una sintassi più concisa per gli algoritmi già in uso. Usando la sintassi esistente vengono già creati algoritmi di criteri di ricerca. Vengono scritte istruzioni `if` o `switch` che testano i valori. Quindi, quando le istruzioni corrispondono, si estraggono e si usano le informazioni del valore. I nuovi elementi di sintassi sono estensioni di istruzioni già note: `is` e `switch`. Queste nuove estensioni associano il test di un valore all'estrazione delle informazioni.
 
