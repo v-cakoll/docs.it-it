@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510807"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366387"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: Creare un componente aggiuntivo che costituisce un'interfaccia utente
 In questo esempio viene illustrato come creare un componente aggiuntivo che è un Windows Presentation Foundation (WPF) che è ospitata da un'applicazione WPF autonoma.  
@@ -27,7 +27,7 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
 -   Conoscenza del .NET Framework-in modello, tra cui sviluppo di pipeline, componenti aggiuntivi e host. Se non si ha familiarità con questi concetti, vedere [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Per un'esercitazione che illustra l'implementazione di una pipeline, un componente aggiuntivo e un'applicazione host, vedere [procedura dettagliata: Creazione di un'applicazione estendibile](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Conoscenza delle estensioni di WPF per il modello di componente aggiuntivo di .NET Framework. Visualizzare [Cenni preliminari sui componenti aggiuntivi WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Conoscenza delle estensioni di WPF per il modello di componente aggiuntivo di .NET Framework. Visualizzare [Cenni preliminari sui componenti aggiuntivi WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Esempio  
  Per creare un componente aggiuntivo che è una UI WPF è necessario codice specifico per ogni segmento di pipeline, il componente aggiuntivo e l'applicazione host.  
@@ -37,13 +37,13 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementazione del segmento di pipeline di contratto  
  Quando un componente aggiuntivo è un'interfaccia utente, il contratto per il componente aggiuntivo deve implementare <xref:System.AddIn.Contract.INativeHandleContract>. Nell'esempio riportato `IWPFAddInContract` implementa <xref:System.AddIn.Contract.INativeHandleContract>, come illustrato nel codice seguente.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementazione del segmento di pipeline di visualizzazione componente aggiuntivo  
  Poiché il componente aggiuntivo viene implementato come una sottoclasse di <xref:System.Windows.FrameworkElement> tipo, la visualizzazione componente aggiuntivo deve inoltre creare una sottoclasse <xref:System.Windows.FrameworkElement>. Il codice seguente illustra la visualizzazione componente aggiuntivo del contratto, implementata come il `WPFAddInView` classe.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  In questo caso, la visualizzazione del componente aggiuntivo deriva da <xref:System.Windows.Controls.UserControl>. Di conseguenza, l'interfaccia utente del componente aggiuntivo deve derivare anche da <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementazione del segmento di pipeline dell'adattatore sul lato del componente aggiuntivo  
  Mentre il contratto è un <xref:System.AddIn.Contract.INativeHandleContract>, il componente aggiuntivo è un <xref:System.Windows.FrameworkElement> (come specificato dal segmento di pipeline nella visualizzazione componente aggiuntivo). Pertanto, il <xref:System.Windows.FrameworkElement> deve essere convertito in un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento. Questa operazione viene eseguita dall'adattatore lato componente aggiuntivo tramite la chiamata <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, come illustrato nel codice seguente.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- Del modello di componente aggiuntivo in cui un componente aggiuntivo restituisce un'interfaccia utente (vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), l'adattatore di componente aggiuntivo convertito il <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> deve anche essere chiamato in questo modello, anche se è necessario implementare un metodo da cui scrivere il codice per chiamarla. A tale scopo, si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementare il codice che chiama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se il codice che chiama <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> prevede un <xref:System.AddIn.Contract.INativeHandleContract>. In questo caso il chiamante sarà l'adattatore sul lato host, trattato in una sottosezione successiva.  
+ Del modello di componente aggiuntivo in cui un componente aggiuntivo restituisce un'interfaccia utente (vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](how-to-create-an-add-in-that-returns-a-ui.md)), l'adattatore di componente aggiuntivo convertito il <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> deve anche essere chiamato in questo modello, anche se è necessario implementare un metodo da cui scrivere il codice per chiamarla. A tale scopo, si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementare il codice che chiama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se il codice che chiama <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> prevede un <xref:System.AddIn.Contract.INativeHandleContract>. In questo caso il chiamante sarà l'adattatore sul lato host, trattato in una sottosezione successiva.  
   
 > [!NOTE]
->  È anche necessario eseguire l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in questo modello per abilitare la tabulazione tra interfaccia utente dell'applicazione host e componenti aggiuntivi dell'interfaccia utente. Per altre informazioni, vedere "Limitazioni WPF" nella [Cenni preliminari sui componenti aggiuntivi di WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  È anche necessario eseguire l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in questo modello per abilitare la tabulazione tra interfaccia utente dell'applicazione host e componenti aggiuntivi dell'interfaccia utente. Per altre informazioni, vedere "Limitazioni WPF" nella [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md).  
   
  Poiché l'adattatore lato componente aggiuntivo implementa un'interfaccia che deriva da <xref:System.AddIn.Contract.INativeHandleContract>, è inoltre necessario implementare <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, anche se questo parametro viene ignorato quando <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> viene sottoposto a override.  
   
@@ -106,4 +106,4 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
 ## <a name="see-also"></a>Vedere anche
 - [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Cenni preliminari sui componenti aggiuntivi di WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md)

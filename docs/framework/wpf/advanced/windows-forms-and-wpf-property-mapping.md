@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358561"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapping di proprietà di Windows Form e WPF
 Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologie hanno due proprietà simili ma diversi modelli. *Mapping di proprietà* supporta l'interazione tra le due architetture e offre le funzionalità seguenti:  
@@ -49,7 +49,7 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
  Le proprietà associate in elementi del contenitore sono completamente supportate dal <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
- Per altre informazioni, vedere [Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Per altre informazioni, vedere [Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Aggiornamenti alle proprietà padre  
  Le modifiche per la maggior parte delle proprietà padre determinano le notifiche per il controllo figlio ospitato. Nell'elenco seguente vengono descritte le proprietà che non provocano notifiche quando i loro valori cambiano.  
@@ -89,7 +89,7 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
 -   Enabled  
   
--   Tipo di carattere  
+-   Carattere  
   
 -   ForeColor  
   
@@ -113,11 +113,11 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
 -   Testo  
   
--   Visible  
+-   Visibile  
   
  Il <xref:System.Windows.Forms.Integration.ElementHost> controllo converte predefinito [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] le proprietà da loro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalenti utilizzando la seguente tabella di conversione.  
   
- Per altre informazioni, vedere [Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Per altre informazioni, vedere [Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Hosting di Windows Forms|Windows Presentation Foundation|Comportamento dell'interoperatività|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Interoperatività di WPF e Windows Form](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)
+- [Interoperatività di WPF e Windows Form](wpf-and-windows-forms-interoperation.md)
+- [Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

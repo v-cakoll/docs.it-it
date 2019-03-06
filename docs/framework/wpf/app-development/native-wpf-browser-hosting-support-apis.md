@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863735"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361187"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API native WPF per il supporto dell'hosting del browser
 L'hosting di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] applicazioni nei Web browser è fornita da un server di documenti attivi (noto anche come DocObject) registrato all'esterno dell'Host WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] direttamente può attivare e integrare con un documento attivo. Per l'hosting di applicazioni XBAP e i documenti XAML loose browser Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] offre un plug-in NPAPI, che fornisce un ambiente di hosting simile per il [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi come [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] viene. Tuttavia, il modo più semplice pratico per ospitare le applicazioni XBAP e XAML documenta negli altri browser e applicazioni autonome tramite il controllo Web Browser di Internet Explorer. Il controllo Web Browser fornisce l'ambiente di hosting server documenti attivi complessa, ma include anche un host separato personalizzare, estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  
@@ -32,5 +32,5 @@ enum PresentationHostCommands {
  PHCMDID_TABINTO indica a spostare lo stato attivo per il primo o l'ultimo elemento attivabile e del relativo contenuto, a seconda dello stato del tasto MAIUSC.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+ [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
+ [IWpfHostSupport](iwpfhostsupport.md)

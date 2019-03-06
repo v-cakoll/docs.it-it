@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362149"
 ---
 # <a name="wrappanel"></a>WrapPanel
-Il <xref:System.Windows.Controls.WrapPanel> elemento posiziona gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva sul bordo della casella che contiene.  
+Il <xref:System.Windows.Controls.WrapPanel> elemento posiziona gli elementi figlio in sequenza da sinistra a destra, interrompendo il contenuto nella riga successiva sul bordo della casella che contiene.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
@@ -34,8 +34,8 @@ Il <xref:System.Windows.Controls.WrapPanel> elemento posiziona gli elementi figl
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)

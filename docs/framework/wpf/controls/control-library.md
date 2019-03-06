@@ -7,64 +7,64 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: 0bdd636af78ddfce22c28edc3dd4523654d07611
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5d69a1743941a235b3a1fda38023b11b3f26809
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746011"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354007"
 ---
 # <a name="control-library"></a>Libreria di controlli
 La libreria di controlli Windows Presentation Foundation (WPF) contiene informazioni sui controlli forniti da Windows Presentation Foundation (WPF), elencate in ordine alfabetico.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Bordo](../../../../docs/framework/wpf/controls/border.md)  
- [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [Pulsante](../../../../docs/framework/wpf/controls/button.md)  
- [Calendario](../../../../docs/framework/wpf/controls/calendar.md)  
- [Canvas](../../../../docs/framework/wpf/controls/canvas.md)  
- [CheckBox](../../../../docs/framework/wpf/controls/checkbox.md)  
- [ComboBox](../../../../docs/framework/wpf/controls/combobox.md)  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
- [DatePicker](../../../../docs/framework/wpf/controls/datepicker.md)  
- [DockPanel](../../../../docs/framework/wpf/controls/dockpanel.md)  
- [DocumentViewer](../../../../docs/framework/wpf/controls/documentviewer.md)  
- [Espansore](../../../../docs/framework/wpf/controls/expander.md)  
- [FlowDocumentPageViewer](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
- [FlowDocumentReader](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
- [FlowDocumentScrollViewer](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
- [Frame](../../../../docs/framework/wpf/controls/frame.md)  
- [Griglia](../../../../docs/framework/wpf/controls/grid.md)  
- [GridSplitter](../../../../docs/framework/wpf/controls/gridsplitter.md)  
- [GroupBox](../../../../docs/framework/wpf/controls/groupbox.md)  
- [Immagine](../../../../docs/framework/wpf/controls/image.md)  
- [Etichetta](../../../../docs/framework/wpf/controls/label.md)  
- [ListBox](../../../../docs/framework/wpf/controls/listbox.md)  
- [ListView](../../../../docs/framework/wpf/controls/listview.md)  
- [Menu](../../../../docs/framework/wpf/controls/menu.md)  
- [Pannello](../../../../docs/framework/wpf/controls/panel.md)  
- [PasswordBox](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [Popup](../../../../docs/framework/wpf/controls/popup.md)  
- [ProgressBar](../../../../docs/framework/wpf/controls/progressbar.md)  
- [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
- [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
- [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [Barra di scorrimento](../../../../docs/framework/wpf/controls/scrollbar.md)  
- [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [Separatore](../../../../docs/framework/wpf/controls/separator.md)  
- [Dispositivo di scorrimento](../../../../docs/framework/wpf/controls/slider.md)  
- [StackPanel](../../../../docs/framework/wpf/controls/stackpanel.md)  
- [StatusBar](../../../../docs/framework/wpf/controls/statusbar.md)  
- [TabControl](../../../../docs/framework/wpf/controls/tabcontrol.md)  
- [TextBlock](../../../../docs/framework/wpf/controls/textblock.md)  
- [TextBox](../../../../docs/framework/wpf/controls/textbox.md)  
- [ToolBar](../../../../docs/framework/wpf/controls/toolbar.md)  
- [ToolTip](../../../../docs/framework/wpf/controls/tooltip.md)  
- [TreeView](../../../../docs/framework/wpf/controls/treeview.md)  
- [WrapPanel](../../../../docs/framework/wpf/controls/wrappanel.md)  
- [Viewbox](../../../../docs/framework/wpf/controls/viewbox.md)  
+ [Bordo](border.md)  
+ [BulletDecorator](bulletdecorator.md)  
+ [Pulsante](button.md)  
+ [Calendario](calendar.md)  
+ [Canvas](canvas.md)  
+ [CheckBox](checkbox.md)  
+ [ComboBox](combobox.md)  
+ [ContextMenu](contextmenu.md)  
+ [DataGrid](datagrid.md)  
+ [DatePicker](datepicker.md)  
+ [DockPanel](dockpanel.md)  
+ [DocumentViewer](documentviewer.md)  
+ [Espansore](expander.md)  
+ [FlowDocumentPageViewer](flowdocumentpageviewer.md)  
+ [FlowDocumentReader](flowdocumentreader.md)  
+ [FlowDocumentScrollViewer](flowdocumentscrollviewer.md)  
+ [Frame](frame.md)  
+ [Griglia](grid.md)  
+ [GridSplitter](gridsplitter.md)  
+ [GroupBox](groupbox.md)  
+ [Immagine](image.md)  
+ [Etichetta](label.md)  
+ [ListBox](listbox.md)  
+ [ListView](listview.md)  
+ [Menu](menu.md)  
+ [Pannello](panel.md)  
+ [PasswordBox](passwordbox.md)  
+ [Popup](popup.md)  
+ [ProgressBar](progressbar.md)  
+ [PrintDialog](printdialog.md)  
+ [RadioButton](radiobutton.md)  
+ [RepeatButton](repeatbutton.md)  
+ [RichTextBox](richtextbox.md)  
+ [Barra di scorrimento](scrollbar.md)  
+ [ScrollViewer](scrollviewer.md)  
+ [Separatore](separator.md)  
+ [Dispositivo di scorrimento](slider.md)  
+ [StackPanel](stackpanel.md)  
+ [StatusBar](statusbar.md)  
+ [TabControl](tabcontrol.md)  
+ [TextBlock](textblock.md)  
+ [TextBox](textbox.md)  
+ [ToolBar](toolbar.md)  
+ [ToolTip](tooltip.md)  
+ [TreeView](treeview.md)  
+ [WrapPanel](wrappanel.md)  
+ [Viewbox](viewbox.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls>  
@@ -72,8 +72,8 @@ La libreria di controlli Windows Presentation Foundation (WPF) contiene informaz
  <xref:System.Windows.Controls.Primitives>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Personalizzazione dei controlli](control-customization.md)  
   
- [Controlli per categoria](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [Controlli per categoria](controls-by-category.md)  
   
- [Modello di contenuto WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [Modello di contenuto WPF](wpf-content-model.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682956"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371671"
 ---
 # <a name="attached-events-overview"></a>Cenni preliminari sugli eventi associati
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definisce un componente del linguaggio e un tipo di evento noto come *evento associato*. Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682956"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento si presuppone di aver letto [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md) e [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Questo argomento si presuppone di aver letto [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md) e [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Sintassi per gli eventi associati  
@@ -36,7 +36,7 @@ ms.locfileid: "54682956"
   
  Ad esempio, di seguito viene illustrata la sintassi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per collegare un gestore per un evento associato `NeedsCleaning`:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Si noti il prefisso `aqua:`, necessario in questo caso perché l'evento associato è un evento personalizzato tratto da un xmlns mappato personalizzato.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682956"
   
  In genere, un evento associato [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non è molto diverso da un evento indirizzato [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le differenze sono date dalla modalità di origine dell'evento e della relativa esposizione da parte di una classe come membro, operazione che ha anche effetto sulla sintassi del gestore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- Tuttavia, come indicato in precedenza, gli eventi associati [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esistenti non sono destinati in modo particolare alla gestione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Più spesso, lo scopo dell'evento è quello di consentire la segnalazione di uno stato da parte di un elemento composto a un elemento padre nella composizione, nel qual caso l'evento viene in genere generato nel codice e si basa inoltre sulla gestione della classe nella classe padre rilevante. Ad esempio, gli elementi all'interno di un <xref:System.Windows.Controls.Primitives.Selector> dovrà generare l'oggetto associato <xref:System.Windows.Controls.Primitives.Selector.Selected> evento, che viene quindi gestito dal <xref:System.Windows.Controls.Primitives.Selector> classe e potenzialmente convertito dal <xref:System.Windows.Controls.Primitives.Selector> classe in un evento indirizzato diverso, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Per altre informazioni sugli eventi indirizzati e sulla gestione delle classi, vedere [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Tuttavia, come indicato in precedenza, gli eventi associati [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esistenti non sono destinati in modo particolare alla gestione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Più spesso, lo scopo dell'evento è quello di consentire la segnalazione di uno stato da parte di un elemento composto a un elemento padre nella composizione, nel qual caso l'evento viene in genere generato nel codice e si basa inoltre sulla gestione della classe nella classe padre rilevante. Ad esempio, gli elementi all'interno di un <xref:System.Windows.Controls.Primitives.Selector> dovrà generare l'oggetto associato <xref:System.Windows.Controls.Primitives.Selector.Selected> evento, che viene quindi gestito dal <xref:System.Windows.Controls.Primitives.Selector> classe e potenzialmente convertito dal <xref:System.Windows.Controls.Primitives.Selector> classe in un evento indirizzato diverso, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Per altre informazioni sugli eventi indirizzati e sulla gestione delle classi, vedere [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definizione di eventi associati personalizzati come eventi indirizzati  
@@ -80,10 +80,10 @@ ms.locfileid: "54682956"
   
  Ad esempio, il codice seguente definisce l'evento associato `NeedsCleaning` per la classe del proprietario `Aquarium`, usando la strategia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di dichiarazione dell'evento associato come evento indirizzato.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Si noti che il metodo usato per stabilire il campo dell'identificatore evento associato, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, è in realtà lo stesso metodo usato per registrare un evento indirizzato non associato. Gli eventi associati e gli eventi indirizzati vengono tutti registrati in un archivio interno centralizzato. Questa implementazione dell'archivio degli eventi consente la considerazione del concetto di "eventi come interfaccia" presentata in [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Si noti che il metodo usato per stabilire il campo dell'identificatore evento associato, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, è in realtà lo stesso metodo usato per registrare un evento indirizzato non associato. Gli eventi associati e gli eventi indirizzati vengono tutti registrati in un archivio interno centralizzato. Questa implementazione dell'archivio degli eventi consente la considerazione del concetto di "eventi come interfaccia" presentata in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Generazione di un evento associato WPF  
@@ -92,6 +92,6 @@ ms.locfileid: "54682956"
  Tuttavia, se si sta definendo un evento associato personalizzato basato sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di basare gli eventi associati nella <xref:System.Windows.RoutedEvent>, è possibile usare <xref:System.Windows.UIElement.RaiseEvent%2A> per generare un evento associato da qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>. Genera un evento indirizzato (associato o meno) richiede la dichiarazione di un particolare elemento nell'albero degli elementi come origine evento. tale origine è segnalata come il <xref:System.Windows.UIElement.RaiseEvent%2A> chiamante. È responsabilità del servizio determinare quale elemento viene riportato come origine nell'albero.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Classi XAML e personalizzate per WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
+- [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)
+- [Classi XAML e personalizzate per WPF](xaml-and-custom-classes-for-wpf.md)

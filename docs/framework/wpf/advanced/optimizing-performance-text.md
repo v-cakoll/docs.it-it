@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e233503ec6a31b28134afbdaef229901b11fbaa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741691"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352772"
 ---
 # <a name="optimizing-performance-text"></a>Ottimizzazione delle prestazioni: Testo
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include il supporto per la presentazione di contenuto di testo tramite l'uso di controlli avanzati della [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. In generale, è possibile suddividere il rendering del testo in tre livelli:  
@@ -49,11 +49,11 @@ ms.locfileid: "54741691"
 -   Rappresentazione di documenti con formato fisso, inclusi i client di versioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e altri dispositivi di elaborazione.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> sono progettati per la presentazione di documenti con formato fisso e scenari di stampa. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce diversi elementi per layout generale e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenari, ad esempio <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Per altre informazioni sugli scenari di layout e dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], vedere [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> sono progettati per la presentazione di documenti con formato fisso e scenari di stampa. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce diversi elementi per layout generale e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenari, ad esempio <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Per altre informazioni sugli scenari di layout e dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], vedere [Funzionalità tipografiche di WPF](typography-in-wpf.md).  
   
  Gli esempi seguenti illustrano come definire le proprietà per un <xref:System.Windows.Documents.Glyphs> dell'oggetto [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Il <xref:System.Windows.Documents.Glyphs> oggetto rappresenta l'output di un <xref:System.Windows.Media.GlyphRun> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Negli esempi si presuppone che i tipi di carattere Arial, Courier New e Times New Roman siano installati nella cartella **C:\WINDOWS\Fonts** nel computer locale.  
   
- [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
 ### <a name="using-drawglyphrun"></a>Uso di DrawGlyphRun  
  Se si ha il controllo personalizzato e si desidera per il rendering dei glifi, usare il <xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A> (metodo).  
@@ -62,16 +62,16 @@ ms.locfileid: "54741691"
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>Oggetto FormattedText  
- Il <xref:System.Windows.Media.FormattedText> oggetto consente di disegnare il testo su più righe, in cui ogni carattere del testo può essere formattato singolarmente. Per altre informazioni, vedere [Disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md).  
+ Il <xref:System.Windows.Media.FormattedText> oggetto consente di disegnare il testo su più righe, in cui ogni carattere del testo può essere formattato singolarmente. Per altre informazioni, vedere [Disegno di testo formattato](drawing-formatted-text.md).  
   
- Per creare testo formattato, chiamare il <xref:System.Windows.Media.FormattedText.%23ctor%2A> costruttore per creare un <xref:System.Windows.Media.FormattedText> oggetto. Dopo aver creato la stringa di testo formattato iniziale, è possibile applicare una gamma di stili di formattazione. Se l'applicazione deve implementare un proprio layout, il <xref:System.Windows.Media.FormattedText> oggetto è preferibile rispetto all'uso di un controllo, ad esempio <xref:System.Windows.Controls.TextBlock>. Per altre informazioni sul <xref:System.Windows.Media.FormattedText> oggetti, vedere [disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md) .  
+ Per creare testo formattato, chiamare il <xref:System.Windows.Media.FormattedText.%23ctor%2A> costruttore per creare un <xref:System.Windows.Media.FormattedText> oggetto. Dopo aver creato la stringa di testo formattato iniziale, è possibile applicare una gamma di stili di formattazione. Se l'applicazione deve implementare un proprio layout, il <xref:System.Windows.Media.FormattedText> oggetto è preferibile rispetto all'uso di un controllo, ad esempio <xref:System.Windows.Controls.TextBlock>. Per altre informazioni sul <xref:System.Windows.Media.FormattedText> oggetti, vedere [disegno di testo formattato](drawing-formatted-text.md) .  
   
  Il <xref:System.Windows.Media.FormattedText> oggetto fornisce funzionalità di formattazione del testo di basso livello. È possibile applicare vari stili di formattazione a uno o più caratteri. Ad esempio, è possibile chiamare entrambi i <xref:System.Windows.Media.FormattedText.SetFontSize%2A> e <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> metodi per modificare la formattazione dei primi cinque caratteri del testo.  
   
  L'esempio di codice seguente crea un <xref:System.Windows.Media.FormattedText> dell'oggetto e ne esegue il rendering.  
   
- [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>Controlli FlowDocument, TextBlock e Label  
@@ -80,21 +80,21 @@ ms.locfileid: "54741691"
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>Un elemento FlowDocument influisce sulle prestazioni più di un elemento TextBlock o Label  
  In generale, il <xref:System.Windows.Controls.TextBlock> elemento deve essere usato quando è richiesto, ad esempio una breve frase in un supporto limitato del testo un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> può essere utilizzato quando è necessario il supporto minimo del testo. Il <xref:System.Windows.Documents.FlowDocument> elemento è un contenitore per i documenti rinnovabile che supporta avanzato di presentazione del contenuto e di conseguenza, ha un impatto sulle prestazioni maggiore rispetto all'uso di <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.Label> controlli.  
   
- Per ulteriori informazioni sul <xref:System.Windows.Documents.FlowDocument>, vedere [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ Per ulteriori informazioni sul <xref:System.Windows.Documents.FlowDocument>, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
   
 ### <a name="avoid-using-textblock-in-flowdocument"></a>Evitare di usare TextBlock in FlowDocument  
  Il <xref:System.Windows.Controls.TextBlock> è derivato dal <xref:System.Windows.UIElement>. Il <xref:System.Windows.Documents.Run> è derivato dal <xref:System.Windows.Documents.TextElement>, che è meno dispendioso rispetto all'uso un <xref:System.Windows.UIElement>-oggetto derivato. Quando possibile, usare <xref:System.Windows.Documents.Run> invece <xref:System.Windows.Controls.TextBlock> per visualizzare il testo contenuto in un <xref:System.Windows.Documents.FlowDocument>.  
   
  L'esempio di markup seguente illustra due modi per impostare il contenuto di testo all'interno di un <xref:System.Windows.Documents.FlowDocument>:  
   
- [!code-xaml[Performance#PerformanceSnippet13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
+ [!code-xaml[Performance#PerformanceSnippet13](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
   
 ### <a name="avoid-using-run-to-set-text-properties"></a>Evitare di usare un oggetto Run per impostare proprietà di testo  
  In generale, tramite un <xref:System.Windows.Documents.Run> all'interno di un <xref:System.Windows.Controls.TextBlock> è prestazioni più elevato rispetto all'uso di non esplicita <xref:System.Windows.Documents.Run> affatto dell'oggetto. Se si usa un' <xref:System.Windows.Documents.Run> per impostare le proprietà di testo, impostare le proprietà direttamente nel <xref:System.Windows.Controls.TextBlock> invece.  
   
  L'esempio di markup seguente illustra queste due modalità di impostazione di una proprietà di testo, in questo caso, il <xref:System.Windows.Controls.TextBlock.FontWeight%2A> proprietà:  
   
- [!code-xaml[Performance#PerformanceSnippet12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
+ [!code-xaml[Performance#PerformanceSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
   
  Nella tabella seguente mostra il costo della visualizzazione di 1000 <xref:System.Windows.Controls.TextBlock> gli oggetti con e senza l'esplicita <xref:System.Windows.Documents.Run>.  
   
@@ -124,21 +124,21 @@ ms.locfileid: "54741691"
   
  L'esempio di markup seguente mostra più <xref:System.Windows.Controls.TextBlock> elementi utilizzati per visualizzare i collegamenti ipertestuali:  
   
- [!code-xaml[Performance#PerformanceSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
+ [!code-xaml[Performance#PerformanceSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
   
  Il markup seguente illustra un modo più efficiente per visualizzare i collegamenti ipertestuali, questa volta, utilizzando una singola <xref:System.Windows.Controls.TextBlock>:  
   
- [!code-xaml[Performance#PerformanceSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
+ [!code-xaml[Performance#PerformanceSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
   
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Visualizzazione delle sottolineature nei collegamenti ipertestuali solo in caso di eventi MouseEnter  
- Oggetto <xref:System.Windows.TextDecoration> oggetto è un ornamento visivo che è possibile aggiungere al testo, tuttavia, può essere prestazioni elevate per creare un'istanza. Se si usano ampiamente <xref:System.Windows.Documents.Hyperlink> elementi, è consigliabile visualizzare una sottolineatura solo al momento della generazione di un evento, ad esempio il <xref:System.Windows.ContentElement.MouseEnter> evento. Per altre informazioni, vedere [Specificare se un collegamento ipertestuale è sottolineato](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+ Oggetto <xref:System.Windows.TextDecoration> oggetto è un ornamento visivo che è possibile aggiungere al testo, tuttavia, può essere prestazioni elevate per creare un'istanza. Se si usano ampiamente <xref:System.Windows.Documents.Hyperlink> elementi, è consigliabile visualizzare una sottolineatura solo al momento della generazione di un evento, ad esempio il <xref:System.Windows.ContentElement.MouseEnter> evento. Per altre informazioni, vedere [Specificare se un collegamento ipertestuale è sottolineato](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Collegamenti ipertestuali con TextDecoration](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
+ ![Collegamenti ipertestuali con TextDecoration](./media/textdecoration03.png "TextDecoration03")  
 Visualizzazione di collegamenti ipertestuali in caso di evento MouseEnter  
   
  L'esempio di markup seguente mostra un <xref:System.Windows.Documents.Hyperlink> definito con e senza sottolineatura:  
   
- [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
  Nella tabella seguente viene illustrato l'impatto sulle prestazioni della visualizzazione di 1000 <xref:System.Windows.Documents.Hyperlink> elementi con e senza sottolineatura.  
   
@@ -161,12 +161,12 @@ Visualizzazione di collegamenti ipertestuali in caso di evento MouseEnter
  La funzionalità di paragrafo ottimale del <xref:System.Windows.Documents.FlowDocument> oggetto disporre i paragrafi in modo che gli spazi vuoti vengano distribuiti nel modo più uniforme possibile. Per impostazione predefinita, la funzionalità di paragrafo ottimale è disattivata. È possibile abilitare questa funzionalità impostando l'oggetto <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> proprietà `true`. L'attivazione di questa funzionalità, tuttavia, influisce sulle prestazioni dell'applicazione. È consigliabile quindi usare la funzionalità di paragrafo ottimale solo se necessario.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
+- [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
+- [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [Data binding](optimizing-performance-data-binding.md)
+- [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

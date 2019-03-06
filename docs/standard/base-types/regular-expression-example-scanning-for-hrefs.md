@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582840"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975966"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  
@@ -38,13 +38,13 @@ Nell'esempio riportato di seguito viene cercata una stringa di input e vengono v
   
  Il criterio di ricerca di espressioni regolari `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Modello|Description|  
 |-------------|-----------------|  
 |`href`|Corrisponde alla stringa letterale "href". La corrispondenza non fa distinzione tra maiuscole e minuscole.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
 |`=`|Corrisponde al segno di uguale.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /> <ul><li><p>Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.</p></li><li><p>Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /> <ul><li><p>Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.</p></li><li><p>Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.</p></li></ul>|  
 |`(?<1>[^"']*)`|Assegnare zero o più occorrenze di qualsiasi carattere diverso da una virgoletta o un apostrofo al gruppo di acquisizione denominato `1`.|  
 |`(?<1>\S+)`|Assegnare uno o più caratteri diversi da spazi vuoti al gruppo di acquisizione denominato `1`.|  
   

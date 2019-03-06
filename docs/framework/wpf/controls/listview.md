@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 619f10b36aa55813824483c386b59778fd756118
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376221"
 ---
 # <a name="listview"></a>ListView
 Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura per visualizzare un set di elementi di dati nel layout o visualizzazioni diverse.  
   
  La figura seguente mostra un <xref:System.Windows.Controls.ListView>.  
   
- ![ListView con output GridView ](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView con output GridView ](./media/listviewgridview.JPG "ListViewGridView")  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramiche](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Panoramiche](listview-overviews.md)  
+ [Procedure relative alle proprietà](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ListView>  
@@ -31,5 +31,5 @@ Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura p
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Panoramica sul data binding](../data/data-binding-overview.md)  
+  [Panoramica sui modelli di dati](../data/data-templating-overview.md)

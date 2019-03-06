@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738826"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369851"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,22 +41,22 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
  La figura seguente mostra un layout semplice.  
   
- ![Tipico elemento Grid senza rettangolo di selezione sovrapposto](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Tipico elemento Grid senza rettangolo di selezione sovrapposto](./media/boundingbox1.png "boundingbox1")  
   
  È possibile ottenere questo layout usando il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] seguente.  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Un unico <xref:System.Windows.Controls.TextBlock> elemento è ospitato all'interno di un <xref:System.Windows.Controls.Grid>. Mentre il testo sia contenuto solo l'angolo superiore sinistro della prima colonna, lo spazio allocato per il <xref:System.Windows.Controls.TextBlock> è molto più ampio. Il rettangolo di selezione di qualsiasi <xref:System.Windows.FrameworkElement> può essere recuperato tramite il <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (metodo). La figura seguente mostra il riquadro delimitatore per i <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![Il rettangolo di selezione di TextBlock è ora visibile.](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![Il rettangolo di selezione di TextBlock è ora visibile.](./media/boundingbox2.png "boundingbox2")  
   
  Come mostrato dal rettangolo giallo, lo spazio allocato per il <xref:System.Windows.Controls.TextBlock> elemento è molto più ampio di quanto sembri. Man mano che vengono aggiunti elementi aggiuntivi per il <xref:System.Windows.Controls.Grid>, questa sezione può espandersi o ridursi, a seconda del tipo e dimensione degli elementi che vengono aggiunti.  
   
  Slot del layout del <xref:System.Windows.Controls.TextBlock> viene convertita in un <xref:System.Windows.Shapes.Path> usando il <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (metodo). Questa tecnica può essere utile per la visualizzazione del rettangolo di selezione di un elemento.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>Sistema di layout  
@@ -122,7 +122,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 -   Identificare le modifiche dei valori di proprietà che forzeranno un aggiornamento ricorsivo da parte del sistema di layout.  
   
-     Le proprietà di dipendenza i cui valori possono provocare l'inizializzazione del sistema di layout sono contrassegnate con flag pubblici. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> forniscono indizi utili proprietà che le modifiche dei valori forzeranno una ricorsiva aggiornare il sistema di layout. In generale, qualsiasi proprietà che possono influire sulle dimensioni del rettangolo di selezione di un elemento deve avere un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag impostato su true. Per altre informazioni, vedere [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Le proprietà di dipendenza i cui valori possono provocare l'inizializzazione del sistema di layout sono contrassegnate con flag pubblici. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> e <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> forniscono indizi utili proprietà che le modifiche dei valori forzeranno una ricorsiva aggiornare il sistema di layout. In generale, qualsiasi proprietà che possono influire sulle dimensioni del rettangolo di selezione di un elemento deve avere un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag impostato su true. Per altre informazioni, vedere [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md).  
   
 -   Quando possibile, usare una <xref:System.Windows.UIElement.RenderTransform%2A> anziché un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Argomenti successivi  
- La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per altre informazioni sui contatori <xref:System.Windows.Controls.Panel> elementi, vedere [pannelli Panoramica](../../../../docs/framework/wpf/controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Per un esempio di una classe personalizzata <xref:System.Windows.Controls.Panel> elemento, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire il tutto in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per altre informazioni sui contatori <xref:System.Windows.Controls.Panel> elementi, vedere [pannelli Panoramica](../controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md). Per un esempio di una classe personalizzata <xref:System.Windows.Controls.Panel> elemento, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire il tutto in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Cenni preliminari sugli elementi Panel](../controls/panels-overview.md)
+- [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)

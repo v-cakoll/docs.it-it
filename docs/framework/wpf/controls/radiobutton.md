@@ -7,19 +7,19 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365269"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> i controlli in genere vengono raggruppati per offrire agli utenti un'unica scelta tra diverse opzioni; è possibile selezionare un solo pulsante alla volta.  
+<xref:System.Windows.Controls.RadioButton> i controlli sono in genere raggruppati in modo da offrire agli utenti una scelta singola tra diverse opzioni; è possibile selezionare un solo pulsante alla volta.  
   
- Nella figura seguente viene illustrato un esempio di un <xref:System.Windows.Controls.RadioButton> controllo.  
+ La figura seguente mostra un esempio di un <xref:System.Windows.Controls.RadioButton> controllo.  
   
- ![Gli stati dei pulsanti di opzione](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+ ![Gli stati dei pulsanti di opzione](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
 RadioButton tipico  
   
 ## <a name="reference"></a>Riferimenti  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497931"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351626"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Procedura: Impostare una durata per un'animazione
 Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo di tempo e la lunghezza di tale intervallo viene determinato dalla sequenza temporale <xref:System.Windows.Duration>. Quando un <xref:System.Windows.Media.Animation.Timeline> raggiunge la fine della durata, la riproduzione viene interrotta. Se il <xref:System.Windows.Media.Animation.Timeline> ha sequenze temporali figlio, la relativa riproduzione anche interrotta. Nel caso di un'animazione, il <xref:System.Windows.Duration> specifica il tempo impiegato dall'animazione per eseguire la transizione dal valore iniziale a quello finale.  
@@ -21,8 +21,8 @@ Oggetto <xref:System.Windows.Media.Animation.Timeline> rappresenta un intervallo
  Nel seguente esempio, la larghezza, altezza e riempimento colore di un <xref:System.Windows.Shapes.Rectangle> viene animata. Le durate sono impostate su sequenze temporali di animazione e il contenitore risultante in effetti di animazione tra cui il controllo della velocità percepita di un'animazione e la durata delle sequenze temporali figlio con la durata di una sequenza temporale contenitore viene sottoposto a override.  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Duration>
-- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Cenni preliminari sull'animazione](animation-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671941"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355168"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Procedura: Convalidare e unire PrintTicke
 Il [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [printschema](https://go.microsoft.com/fwlink/?LinkId=186397) include flessibili ed estensibili <xref:System.Printing.PrintCapabilities> e <xref:System.Printing.PrintTicket> elementi. Il primo indica in modo dettagliato le funzionalità di un dispositivo di stampa e specifica il secondo modo in cui il dispositivo deve usare tali funzionalità rispetto a una determinata sequenza di documenti, singoli documenti o singola pagina.  
@@ -48,13 +48,13 @@ Il [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [printsch
   
 6.  L'ultimo elemento significativo è eseguire il commit per la modifica di <xref:System.Printing.PrintQueue.UserPrintTicket%2A> proprietà del <xref:System.Printing.PrintQueue> con il <xref:System.Printing.PrintQueue.Commit%2A> (metodo).  
   
- [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
- [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
  In modo che è possibile testare rapidamente in questo esempio, la parte restante viene presentata di seguito. Creare un progetto e uno spazio dei nomi e quindi incollare entrambi i frammenti di codice in questo articolo il blocco dello spazio dei nomi.  
   
- [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
- [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
+ [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
+ [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Printing.PrintCapabilities>
@@ -64,6 +64,6 @@ Il [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [printsch
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documenti in WPF](documents-in-wpf.md)
+- [Panoramica della stampa](printing-overview.md)
 - [Schema di stampa](https://go.microsoft.com/fwlink/?LinkId=186397)

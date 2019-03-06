@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating add-ins [WPF]
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
-ms.openlocfilehash: 2dcddc42ec1f9f3b16e5b4465be2e4194819a736
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358587"
 ---
 # <a name="how-to-topics"></a>Procedure relative
-Gli argomenti seguenti viene illustrato come creare componenti aggiuntivi di Windows Presentation Foundation (WPF).  
+Gli argomenti seguenti illustrano come creare componenti aggiuntivi di Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare un componente aggiuntivo che restituisca un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [Creare un componente aggiuntivo che costituisca un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+ [Creare un componente aggiuntivo che restituisca un'interfaccia utente](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [Creare un componente aggiuntivo che costituisca un'interfaccia utente](how-to-create-an-add-in-that-is-a-ui.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Cenni preliminari sui componenti aggiuntivi di WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+ [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md)

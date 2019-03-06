@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573936"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375389"
 ---
 # <a name="mcignorable-attribute"></a>Attributo mc:Ignorable
 Specifica quale [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefissi dello spazio dei nomi rilevati in un file di markup possono essere ignorati da un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore. Il `mc:Ignorable` attributo supporta la compatibilità dei markup per il mapping dello spazio dei nomi personalizzati sia per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] controllo delle versioni.  
@@ -59,7 +59,7 @@ Specifica quale [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
   
  Se si implementa una [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore, il processore non deve generare l'analisi o la risoluzione del tipo per qualsiasi elemento o attributo che è qualificato da un prefisso che viene identificato come errori di elaborazione `mc:Ignorable`. Ma l'implementazione del processore può comunque generare eccezioni che sono il risultato secondario di un elemento riesce a caricare o essere elaborato, come illustrato nell'esempio solo elemento figlio riportato in precedenza.  
   
- Per impostazione predefinita, un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore ignorerà il contenuto di un elemento ignorato. Tuttavia, è possibile specificare un attributo aggiuntivo, [attributo mc: ProcessContent](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), richiede l'elaborazione di continuo del contenuto all'interno di un elemento ignorato dall'elemento padre disponibile successivo.  
+ Per impostazione predefinita, un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore ignorerà il contenuto di un elemento ignorato. Tuttavia, è possibile specificare un attributo aggiuntivo, [attributo mc: ProcessContent](mc-processcontent-attribute.md), richiede l'elaborazione di continuo del contenuto all'interno di un elemento ignorato dall'elemento padre disponibile successivo.  
   
  Più prefissi possono essere specificati nell'attributo, usando uno o più caratteri spazio come separatore, ad esempio: `mc:Ignorable="ignore1 ignore2"`.  
 
@@ -67,6 +67,6 @@ Specifica quale [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Markup.XamlReader>
-- [Attributo PresentationOptions:Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Attributo PresentationOptions:Freeze](presentationoptions-freeze-attribute.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Documenti in WPF](documents-in-wpf.md)

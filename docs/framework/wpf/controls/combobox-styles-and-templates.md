@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 5cca162137b603f36dffb044d5954c3947964cf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99869b929e70ab7ae5b68d8c0eb6d70358f4a48d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369305"
 ---
 # <a name="combobox-styles-and-templates"></a>Stili e modelli di ComboBox
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ComboBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ComboBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="combobox-parts"></a>Parti del controllo ComboBox  
  La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.ComboBox> controllo.  
@@ -69,18 +69,18 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 ## <a name="combobox-controltemplate-example"></a>Esempio di ControlTemplate del controllo ComboBox  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.ComboBox> controllo e i tipi associati.  
   
- [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
+ [!code-xaml[ControlTemplateExamples#ComboBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
  L'esempio precedente usa una o più delle seguenti risorse.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Stili e modelli di Control](control-styles-and-templates.md)
+- [Personalizzazione dei controlli](control-customization.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379107"
 ---
 # <a name="application-startup-time"></a>Tempo di avvio delle applicazioni
 La quantità di tempo necessaria per avviare un'applicazione WPF può variare notevolmente. In questo argomento vengono descritte varie tecniche per ridurre il tempo di avvio percepito ed effettivo per un'applicazione Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  L'avvio a caldo si verifica quando la maggior parte delle pagine per i componenti principali di Common Language Runtime (CLR) sono già caricata in memoria, il che consente di risparmiare molto tempo per l'accesso al disco. Ecco perché un'applicazione gestita si avvia più rapidamente quando viene eseguita per la seconda volta.  
   
 ## <a name="implement-a-splash-screen"></a>Implementare la schermata iniziale  
- Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile usare il <xref:System.Windows.SplashScreen> classe per implementare la schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Nei casi in cui c'è un ritardo significativo e inevitabili tra l'avvio di un'applicazione e la visualizzazione della prima interfaccia utente, è possibile ottimizzare il tempo di avvio percepito usando una *schermata iniziale*. Questo approccio consente di visualizzare un'immagine quasi immediatamente dopo l'avvio dell'applicazione da parte dell'utente. Quando l'applicazione è pronta per la visualizzazione della prima interfaccia utente, la schermata iniziale si dissolve. A partire dal [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], è possibile usare il <xref:System.Windows.SplashScreen> classe per implementare la schermata iniziale. Vedere [Aggiungere una schermata iniziale in un'applicazione WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  È anche possibile implementare la schermata iniziale con grafica Win32 nativa. Visualizzare l'implementazione prima di <xref:System.Windows.Application.Run%2A> viene chiamato il metodo.  
   
@@ -53,7 +53,7 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
  È consigliabile evitare la configurazione dell'applicazione. Ad esempio, se un'applicazione ha requisiti di configurazione semplici e tempi di avvio stretti, le voci del registro o di un semplice file INI potrebbero essere un'alternativa di avvio più veloce.  
   
 ## <a name="utilize-the-gac"></a>Usare il GAC  
- Se un assembly non è installato nella Global Assembly Cache (GAC), ci sono ritardi causati dalla verifica hash di assembly con nome sicuro e convalida dell'immagine Ngen se un'immagine nativa per tale assembly è disponibile nel computer. La verifica del nome sicuro viene ignorata per tutti gli assembly installati nella GAC. Per altre informazioni, vedere [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md) (Strumento Global Assembly Cache, Gacutil.exe).  
+ Se un assembly non è installato nella Global Assembly Cache (GAC), ci sono ritardi causati dalla verifica hash di assembly con nome sicuro e convalida dell'immagine Ngen se un'immagine nativa per tale assembly è disponibile nel computer. La verifica del nome sicuro viene ignorata per tutti gli assembly installati nella GAC. Per altre informazioni, vedere [Gacutil.exe (Global Assembly Cache Tool)](../../tools/gacutil-exe-gac-tool.md) (Strumento Global Assembly Cache, Gacutil.exe).  
   
 ## <a name="use-ngenexe"></a>Usare Ngen.exe  
  È consigliabile usare il generatore di immagini native (Ngen.exe) nell'applicazione. L'uso di Ngen.exe indica la negoziazione del consumo di CPU per un maggiore accesso al disco perché l'immagine nativa generata da Ngen.exe è probabilmente più grande dell'immagine MSIL.  
@@ -67,14 +67,14 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
 ### <a name="ngen-and-clickonce"></a>ClickOnce e Ngen  
  Anche il modo in cui si prevede di distribuire l'applicazione può fare la differenza in fase di caricamento. La distribuzione dell'applicazione [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] non supporta Ngen. Se si decide di usare Ngen.exe per l'applicazione, è necessario usare un altro meccanismo di distribuzione, ad esempio Windows Installer.  
   
- Per altre informazioni, vedere [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Per altre informazioni, vedere [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Riassegnazione e conflitti di indirizzi di DLL  
  Se si usa Ngen.exe, tenere presente che la riassegnazione può verificarsi quando le immagini native vengono caricate in memoria. Se una DLL non viene caricata all'indirizzo di base preferito perché tale intervallo di indirizzi è già stato allocato, il caricatore di Windows lo caricherà in un altro indirizzo. Questa può essere un'operazione impegnativa.  
   
  È possibile usare lo strumento Virtual Address Dump (Vadump.exe) per verificare se sono presenti moduli in cui tutte le pagine sono private. In questo caso, il modulo potrebbe stato riassegnato a un indirizzo diverso. Di conseguenza, le pagine non possono essere condivise.  
   
- Per altre informazioni su come impostare l'indirizzo di base, vedere [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Per altre informazioni su come impostare l'indirizzo di base, vedere [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Ottimizzare Authenticode  
  La verifica di Authenticode si aggiunge al tempo di avvio. Gli assembly con firma Authenticode devono essere verificati con l'autorità di certificazione (CA). Questa verifica può richiedere tempi lunghi, in quanto può essere necessario connettersi alla rete più volte per scaricare gli elenchi di revoca dei certificati attuali. Consente inoltre la presenza di una catena completa di certificati validi nel percorso a una fonte attendibile. Questo può causare molti secondi di ritardo, mentre l'assembly viene caricato.  
@@ -91,7 +91,7 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
 </configuration>  
 ```  
   
- Per ulteriori informazioni, vedere [Elemento \<generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Per ulteriori informazioni, vedere [Elemento \<generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Confrontare le prestazioni in Windows Vista  
  Il gestore della memoria in Windows Vista è una tecnologia denominata SuperFetch. SuperFetch analizza i modelli di uso della memoria nel tempo per determinare il contenuto della memoria ottimale per un utente specifico. Funziona in modo continuo per garantire la disponibilità del contenuto in qualsiasi momento.  
@@ -127,6 +127,6 @@ La quantità di tempo necessaria per avviare un'applicazione WPF può variare no
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Aggiungere una schermata iniziale in un'applicazione WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (generatore di immagini native)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Elemento \<generatePublisherEvidence>](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [Aggiungere una schermata iniziale in un'applicazione WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (generatore di immagini native)](../../tools/ngen-exe-native-image-generator.md)
+- [Elemento \<generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

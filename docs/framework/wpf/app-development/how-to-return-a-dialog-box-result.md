@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: restituire un risultato di casella della finestra di dialogo'
+title: 'Procedura: Restituisce un risultato di finestra di dialogo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - dialog boxes [WPF], returning results
 ms.assetid: 4c5cf286-746b-4052-934d-d80cbf8acba3
-ms.openlocfilehash: 8f754577a355a58060238bbbb487c36aea14658c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b574a5bbc08d947371837116915c2fc8c13ec81d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545587"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357768"
 ---
-# <a name="how-to-return-a-dialog-box-result"></a>Procedura: restituire un risultato di casella della finestra di dialogo
-In questo esempio viene illustrato come recuperare il risultato della finestra di dialogo per una finestra che viene aperto chiamando <xref:System.Windows.Window.ShowDialog%2A>.  
+# <a name="how-to-return-a-dialog-box-result"></a>Procedura: Restituisce un risultato di finestra di dialogo
+In questo esempio mostra come recuperare il risultato della finestra di dialogo per una finestra aperta chiamando <xref:System.Windows.Window.ShowDialog%2A>.  
   
 ## <a name="example"></a>Esempio  
- Prima della chiusura di una finestra di dialogo, il relativo <xref:System.Windows.Window.DialogResult%2A> deve essere impostata con un <xref:System.Nullable%601> <xref:System.Boolean> che indica come viene chiusa la finestra di dialogo. Questo valore viene restituito da <xref:System.Windows.Window.ShowDialog%2A> per consentire al codice client determinare la modalità in cui è stata chiusa la finestra di dialogo e, di conseguenza, come elaborare il risultato.  
+ Prima della chiusura di una finestra di dialogo, relativi <xref:System.Windows.Window.DialogResult%2A> deve essere impostata con un <xref:System.Nullable%601> <xref:System.Boolean> che indica come l'utente ha chiuso la finestra di dialogo. Questo valore viene restituito da <xref:System.Windows.Window.ShowDialog%2A> per consentire al codice client determinare come è stata chiusa la finestra di dialogo e, di conseguenza, come elaborare il risultato.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.DialogResult%2A> può essere impostata solo se è stata aperta una finestra chiamando <xref:System.Windows.Window.ShowDialog%2A>.  
+>  <xref:System.Windows.Window.DialogResult%2A> può essere impostato solo se è stata aperta una finestra chiamando <xref:System.Windows.Window.ShowDialog%2A>.  
   
- [!code-csharp[HOWTOWindowManagementSnippets#GetDialogResultCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#getdialogresultcode)]
- [!code-vb[HOWTOWindowManagementSnippets#GetDialogResultCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#getdialogresultcode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#getdialogresultcode)]
+ [!code-vb[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#getdialogresultcode)]  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- La chiamata <xref:System.Windows.Window.ShowDialog%2A> richiede l'autorizzazione per utilizzare tutte le finestre e gli eventi di input utente senza restrizioni.
+ La chiamata a <xref:System.Windows.Window.ShowDialog%2A> richiede l'autorizzazione per usare tutte le finestre e gli eventi input utente senza alcuna restrizione.

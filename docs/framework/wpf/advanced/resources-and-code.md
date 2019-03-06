@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: ff259dae06ef7347dd9fa3afbab68ae67e9146a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725523"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367979"
 ---
 # <a name="resources-and-code"></a>Risorse e codice
-Questo argomento illustra le modalità di accesso alle risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o di creazione delle risorse stesse tramite codice anziché tramite la sintassi [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni sull'uso delle risorse in generale e sulle risorse dal punto di vista della sintassi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vedere [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+Questo argomento illustra le modalità di accesso alle risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o di creazione delle risorse stesse tramite codice anziché tramite la sintassi [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Per altre informazioni sull'uso delle risorse in generale e sulle risorse dal punto di vista della sintassi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vedere [Risorse XAML](xaml-resources.md).  
   
   
   
@@ -29,8 +29,8 @@ Questo argomento illustra le modalità di accesso alle risorse di [!INCLUDE[TLA#
   
  Di seguito è riportato un esempio di codice breve che individua una risorsa in base alla chiave e Usa il valore restituito per impostare una proprietà, implementata come un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore dell'evento.  
   
- [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
- [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
+ [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
+ [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
   
  Un metodo alternativo per l'assegnazione di un riferimento a una risorsa è <xref:System.Windows.FrameworkElement.SetResourceReference%2A>. Questo metodo accetta due parametri: la chiave della risorsa e l'identificatore di una particolare proprietà di dipendenza presente nell'istanza dell'elemento a cui deve essere assegnato il valore della risorsa. A livello funzionale, questo metodo è identico al precedente e presenta il vantaggio di non richiedere il cast dei valori restituiti.  
   
@@ -44,8 +44,8 @@ Questo argomento illustra le modalità di accesso alle risorse di [!INCLUDE[TLA#
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Uso di oggetti come chiavi  
- La chiave di una risorsa sarà impostata come stringa nella maggior parte degli utilizzi di quella risorsa. Diverse funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tuttavia, non usano un tipo stringa per specificare le chiavi, quel parametro sarà un oggetto. La possibilità di disporre di un oggetto come chiave della risorsa viene usata dal supporto degli stili e dei temi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Gli stili dei temi che lo stile predefinito per un controllo in caso contrario non professionale sono ognuno con chiave forniti dal <xref:System.Type> del controllo che dovrebbero essere applicati a. L'uso di un tipo come chiave offre un meccanismo di ricerca affidabile che funziona sulle istanze predefinite di ogni tipo di controllo, pertanto il tipo può essere rilevato mediante reflection e usato per applicare uno stile alle classi derivate, anche se il tipo derivato non disporrebbe altrimenti di uno stile predefinito. È possibile specificare una <xref:System.Type> chiave per una risorsa definita nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tramite il [estensione di Markup X:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Esistono estensioni analoghe per altri utilizzi di chiavi di tipo non stringa che supportano funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], come l'[estensione di markup ComponentResourceKey](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+ La chiave di una risorsa sarà impostata come stringa nella maggior parte degli utilizzi di quella risorsa. Diverse funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tuttavia, non usano un tipo stringa per specificare le chiavi, quel parametro sarà un oggetto. La possibilità di disporre di un oggetto come chiave della risorsa viene usata dal supporto degli stili e dei temi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Gli stili dei temi che lo stile predefinito per un controllo in caso contrario non professionale sono ognuno con chiave forniti dal <xref:System.Type> del controllo che dovrebbero essere applicati a. L'uso di un tipo come chiave offre un meccanismo di ricerca affidabile che funziona sulle istanze predefinite di ogni tipo di controllo, pertanto il tipo può essere rilevato mediante reflection e usato per applicare uno stile alle classi derivate, anche se il tipo derivato non disporrebbe altrimenti di uno stile predefinito. È possibile specificare una <xref:System.Type> chiave per una risorsa definita nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tramite il [estensione di Markup X:Type](../../xaml-services/x-type-markup-extension.md). Esistono estensioni analoghe per altri utilizzi di chiavi di tipo non stringa che supportano funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], come l'[estensione di markup ComponentResourceKey](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Risorse XAML](xaml-resources.md)
+- [Applicazione di stili e modelli](../controls/styling-and-templating.md)

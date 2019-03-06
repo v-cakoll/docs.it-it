@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356721"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Procedura: Specificare l'origine di associazione
 Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i vari modi per specificare l'origine del binding.  
@@ -24,16 +24,16 @@ Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui 
   
  Nell'esempio seguente il contesto dei dati viene stabilito nell'elemento radice dell'applicazione. In questo modo tutti gli elementi figlio ereditano il contesto dei dati. I dati per il binding derivano da una classe di dati personalizzata, `NetIncome`, a cui viene direttamente fatto riferimento tramite un mapping e assegnata la chiave di risorsa di `incomeDataSource`.  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  L'esempio seguente illustra la definizione della classe `NetIncome`.  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  L'esempio precedente crea un'istanza dell'oggetto nel markup e la usa come risorsa. Per eseguire il binding a un oggetto di cui è già stata creata un'istanza nel codice, è necessario impostare la proprietà `DataContext` a livello di codice. Per un esempio, vedere [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  L'esempio precedente crea un'istanza dell'oggetto nel markup e la usa come risorsa. Per eseguire il binding a un oggetto di cui è già stata creata un'istanza nel codice, è necessario impostare la proprietà `DataContext` a livello di codice. Per un esempio, vedere [Rendere i dati disponibili per l'associazione in XAML](how-to-make-data-available-for-binding-in-xaml.md).  
   
  In alternativa, se si desidera specificare l'origine nei singoli binding in modo esplicito, sono disponibili le opzioni seguenti. Queste hanno precedenza sul contesto dei dati ereditato.  
   
@@ -46,7 +46,7 @@ Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui 
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Ereditarietà del valore della proprietà](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Panoramica sulle dichiarazioni di associazione](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Ereditarietà del valore della proprietà](../advanced/property-value-inheritance.md)
+- [Panoramica sul data binding](data-binding-overview.md)
+- [Panoramica sulle dichiarazioni di associazione](binding-declarations-overview.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

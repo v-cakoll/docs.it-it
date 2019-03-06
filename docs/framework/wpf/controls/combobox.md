@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374843"
 ---
 # <a name="combobox"></a>ComboBox
 Il <xref:System.Windows.Controls.ComboBox> controllo presenta agli utenti con un elenco di opzioni. L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa. Nello stato predefinito, l'elenco è compressa, la visualizzazione di sola scelta. L'utente fa clic su un pulsante per visualizzare l'elenco completo delle opzioni.  
   
  La figura seguente mostra un <xref:System.Windows.Controls.ComboBox> nei suoi diversi stati.  
   
- ![Casella combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Casella combinata caselle predefinito e premuto](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Comprimere ed espandere  
   
 ## <a name="reference"></a>Riferimenti  

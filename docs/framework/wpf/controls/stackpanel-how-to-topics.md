@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555120"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351268"
 ---
 # <a name="stackpanel-how-to-topics"></a>Procedure relative all'elemento StackPanel
-Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.StackPanel> elemento dello stack contenuto orizzontalmente o verticalmente.  
+Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.StackPanel> elemento stack del contenuto orizzontalmente o verticalmente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Scegliere tra StackPanel e DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [Creare uno StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [Allineare orizzontalmente o verticalmente il contenuto in un elemento StackPanel](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [Scegliere tra StackPanel e DockPanel](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [Creare uno StackPanel](how-to-create-a-stackpanel.md)  
+ [Allineare orizzontalmente o verticalmente il contenuto in un elemento StackPanel](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:Syst
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)

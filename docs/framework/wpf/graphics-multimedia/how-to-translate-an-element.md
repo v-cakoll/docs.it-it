@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672873"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354908"
 ---
 # <a name="how-to-translate-an-element"></a>Procedura: Convertire un elemento
 In questo esempio viene illustrato come traslare (spostare) un elemento utilizzando un <xref:System.Windows.Media.TranslateTransform>.  
@@ -21,9 +21,9 @@ In questo esempio viene illustrato come traslare (spostare) un elemento utilizza
  L'esempio seguente usa un <xref:System.Windows.Media.TranslateTransform> per spostare un pixel elemento 50 a destra e 50 pixel in basso.  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Cenni preliminari sulle trasformazioni](transforms-overview.md)
