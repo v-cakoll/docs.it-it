@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GridSplitter control [WPF]
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
-ms.openlocfilehash: d173843c17a1881224cffadcfd1538547ce763b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550894"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359276"
 ---
-# <a name="gridsplitter"></a><span data-ttu-id="8a4b7-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="8a4b7-102">GridSplitter</span></span>
-<span data-ttu-id="8a4b7-103">Il <xref:System.Windows.Controls.GridSplitter> ridistribuisce lo spazio tra le colonne o righe di un <xref:System.Windows.Controls.Grid> controllo.</span><span class="sxs-lookup"><span data-stu-id="8a4b7-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
+# <a name="gridsplitter"></a><span data-ttu-id="5b93e-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="5b93e-102">GridSplitter</span></span>
+<span data-ttu-id="5b93e-103">Il <xref:System.Windows.Controls.GridSplitter> ridistribuisce lo spazio tra le colonne o righe di una <xref:System.Windows.Controls.Grid> controllo.</span><span class="sxs-lookup"><span data-stu-id="5b93e-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8a4b7-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8a4b7-104">In This Section</span></span>  
- [<span data-ttu-id="8a4b7-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="8a4b7-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5b93e-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="5b93e-104">In This Section</span></span>  
+ [<span data-ttu-id="5b93e-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="5b93e-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="8a4b7-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="8a4b7-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5b93e-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="5b93e-106">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
-## <a name="related-sections"></a><span data-ttu-id="8a4b7-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="8a4b7-107">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5b93e-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="5b93e-107">Related Sections</span></span>

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370968"
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="d4606-102">Procedure relative agli eventi</span><span class="sxs-lookup"><span data-stu-id="d4606-102">Events How-to Topics</span></span>
-<span data-ttu-id="d4606-103">Negli argomenti di questa sezione viene descritto come utilizzare gli eventi in WPF.</span><span class="sxs-lookup"><span data-stu-id="d4606-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="d91cd-102">Procedure relative agli eventi</span><span class="sxs-lookup"><span data-stu-id="d91cd-102">Events How-to Topics</span></span>
+<span data-ttu-id="d91cd-103">Gli argomenti in questa sezione descrivono come usare gli eventi in WPF.</span><span class="sxs-lookup"><span data-stu-id="d91cd-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d4606-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d4606-104">In This Section</span></span>  
- [<span data-ttu-id="d4606-105">Aggiungere un gestore eventi usando il codice</span><span class="sxs-lookup"><span data-stu-id="d4606-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="d4606-106">Gestire un evento indirizzato</span><span class="sxs-lookup"><span data-stu-id="d4606-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="d4606-107">Creare un evento indirizzato personalizzato</span><span class="sxs-lookup"><span data-stu-id="d4606-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="d4606-108">Cercare l'elemento di origine in un gestore eventi</span><span class="sxs-lookup"><span data-stu-id="d4606-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="d4606-109">Aggiungere la gestione di classi per un evento indirizzato</span><span class="sxs-lookup"><span data-stu-id="d4606-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d91cd-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d91cd-104">In This Section</span></span>  
+ [<span data-ttu-id="d91cd-105">Aggiungere un gestore eventi usando il codice</span><span class="sxs-lookup"><span data-stu-id="d91cd-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="d91cd-106">Gestire un evento indirizzato</span><span class="sxs-lookup"><span data-stu-id="d91cd-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="d91cd-107">Creare un evento indirizzato personalizzato</span><span class="sxs-lookup"><span data-stu-id="d91cd-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="d91cd-108">Cercare l'elemento di origine in un gestore eventi</span><span class="sxs-lookup"><span data-stu-id="d91cd-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="d91cd-109">Aggiungere la gestione di classi per un evento indirizzato</span><span class="sxs-lookup"><span data-stu-id="d91cd-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="d4606-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d4606-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d91cd-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d91cd-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="d4606-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="d4606-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d91cd-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="d91cd-111">Related Sections</span></span>

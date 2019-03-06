@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552045"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371905"
 ---
-# <a name="frame"></a><span data-ttu-id="85f3c-102">Frame</span><span class="sxs-lookup"><span data-stu-id="85f3c-102">Frame</span></span>
-<span data-ttu-id="85f3c-103">Il <xref:System.Windows.Controls.Frame> controllo supporta la navigazione all'interno del contenuto.</span><span class="sxs-lookup"><span data-stu-id="85f3c-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="85f3c-104"><xref:System.Windows.Controls.Frame> può essere ospitata da un elemento radice, ad esempio <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola all'interno di un albero del contenuto a cui appartiene un elemento radice.</span><span class="sxs-lookup"><span data-stu-id="85f3c-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="f0315-102">Frame</span><span class="sxs-lookup"><span data-stu-id="f0315-102">Frame</span></span>
+<span data-ttu-id="f0315-103">Il <xref:System.Windows.Controls.Frame> controllo supporta lo spostamento all'interno del contenuto.</span><span class="sxs-lookup"><span data-stu-id="f0315-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="f0315-104"><xref:System.Windows.Controls.Frame> può essere ospitato da un elemento radice, ad esempio <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola di all'interno di un albero del contenuto a cui appartiene un elemento radice.</span><span class="sxs-lookup"><span data-stu-id="f0315-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="85f3c-105">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="85f3c-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f0315-105">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="f0315-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="85f3c-106">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="85f3c-106">Related Sections</span></span>  
- [<span data-ttu-id="85f3c-107">Cenni preliminari sulla navigazione</span><span class="sxs-lookup"><span data-stu-id="85f3c-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="f0315-106">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f0315-106">Related Sections</span></span>  
+ [<span data-ttu-id="f0315-107">Cenni preliminari sulla navigazione</span><span class="sxs-lookup"><span data-stu-id="f0315-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)
