@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7693111427f3181adcd2127ad5ecb2a317e30921
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36e26101a21471fd840a07deef9f5085a88f2730
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487031"
 ---
-# <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="d4d5f-102">Metodo ICorDebugManagedCallback::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="d4d5f-102">ICorDebugManagedCallback::CreateProcess Method</span></span>
-<span data-ttu-id="d4d5f-103">Quando un processo è stato collegato o avviato per la prima volta, invia una notifica del debugger.</span><span class="sxs-lookup"><span data-stu-id="d4d5f-103">Notifies the debugger when a process has been attached or started for the first time.</span></span>  
+# <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="d631f-102">Metodo ICorDebugManagedCallback::CreateProcess</span><span class="sxs-lookup"><span data-stu-id="d631f-102">ICorDebugManagedCallback::CreateProcess Method</span></span>
+<span data-ttu-id="d631f-103">Quando un processo è stato collegato o avviato per la prima volta, invia una notifica del debugger.</span><span class="sxs-lookup"><span data-stu-id="d631f-103">Notifies the debugger when a process has been attached or started for the first time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4d5f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d4d5f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d631f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d631f-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateProcess (  
@@ -35,21 +35,21 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4d5f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d4d5f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d631f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d631f-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="d4d5f-106">[in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo di cui è stato collegato o avviato.</span><span class="sxs-lookup"><span data-stu-id="d4d5f-106">[in] A pointer to an ICorDebugProcess object that represents the process that has been attached or started.</span></span>  
+ <span data-ttu-id="d631f-106">[in] Un puntatore a un oggetto ICorDebugProcess che rappresenta il processo di cui è stato collegato o avviato.</span><span class="sxs-lookup"><span data-stu-id="d631f-106">[in] A pointer to an ICorDebugProcess object that represents the process that has been attached or started.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d4d5f-107">Note</span><span class="sxs-lookup"><span data-stu-id="d4d5f-107">Remarks</span></span>  
- <span data-ttu-id="d4d5f-108">Questo metodo non viene chiamato fino a quando non viene inizializzato in common language runtime.</span><span class="sxs-lookup"><span data-stu-id="d4d5f-108">This method is not called until the common language runtime is initialized.</span></span> <span data-ttu-id="d4d5f-109">La maggior parte delle [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi restituiranno CORDBG_E_NOTREADY prima il `CreateProcess` callback.</span><span class="sxs-lookup"><span data-stu-id="d4d5f-109">Most of the [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods will return CORDBG_E_NOTREADY before the `CreateProcess` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d631f-107">Note</span><span class="sxs-lookup"><span data-stu-id="d631f-107">Remarks</span></span>  
+ <span data-ttu-id="d631f-108">Questo metodo non viene chiamato fino a quando non viene inizializzato in common language runtime.</span><span class="sxs-lookup"><span data-stu-id="d631f-108">This method is not called until the common language runtime is initialized.</span></span> <span data-ttu-id="d631f-109">La maggior parte delle [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi restituiranno CORDBG_E_NOTREADY prima il `CreateProcess` callback.</span><span class="sxs-lookup"><span data-stu-id="d631f-109">Most of the [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods will return CORDBG_E_NOTREADY before the `CreateProcess` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4d5f-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d4d5f-110">Requirements</span></span>  
- <span data-ttu-id="d4d5f-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4d5f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d631f-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d631f-110">Requirements</span></span>  
+ <span data-ttu-id="d631f-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d631f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4d5f-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4d5f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d631f-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d631f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d4d5f-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4d5f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d631f-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d631f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d4d5f-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4d5f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d631f-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d631f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4d5f-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4d5f-115">See also</span></span>
-- [<span data-ttu-id="d4d5f-116">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="d4d5f-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d631f-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d631f-115">See also</span></span>
+- [<span data-ttu-id="d631f-116">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="d631f-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d809bbfa17ed9e9ae16505852740e874ca11248c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d9671354edfeb4a320a451f355c2125dc8e9dc5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621786"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470035"
 ---
-# <a name="createassemblyenum-function"></a><span data-ttu-id="15dda-102">Funzione CreateAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="15dda-102">CreateAssemblyEnum Function</span></span>
-<span data-ttu-id="15dda-103">Ottiene un puntatore a un [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) istanza che può enumerare gli oggetti nell'assembly con l'oggetto specificato [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span><span class="sxs-lookup"><span data-stu-id="15dda-103">Gets a pointer to an [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) instance that can enumerate the objects in the assembly with the specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span></span>  
+# <a name="createassemblyenum-function"></a><span data-ttu-id="80e2d-102">Funzione CreateAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="80e2d-102">CreateAssemblyEnum Function</span></span>
+<span data-ttu-id="80e2d-103">Ottiene un puntatore a un [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) istanza che può enumerare gli oggetti nell'assembly con l'oggetto specificato [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span><span class="sxs-lookup"><span data-stu-id="80e2d-103">Gets a pointer to an [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) instance that can enumerate the objects in the assembly with the specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15dda-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="15dda-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80e2d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="80e2d-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyEnum (  
@@ -40,35 +40,35 @@ HRESULT CreateAssemblyEnum (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15dda-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="15dda-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80e2d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="80e2d-105">Parameters</span></span>  
  `pEnum`  
- <span data-ttu-id="15dda-106">[out] Puntatore a una posizione di memoria che contiene l'oggetto richiesto `IAssemblyEnum` puntatore.</span><span class="sxs-lookup"><span data-stu-id="15dda-106">[out] Pointer to a memory location that contains the requested `IAssemblyEnum` pointer.</span></span>  
+ <span data-ttu-id="80e2d-106">[out] Puntatore a una posizione di memoria che contiene l'oggetto richiesto `IAssemblyEnum` puntatore.</span><span class="sxs-lookup"><span data-stu-id="80e2d-106">[out] Pointer to a memory location that contains the requested `IAssemblyEnum` pointer.</span></span>  
   
  `pUnkReserved`  
- <span data-ttu-id="15dda-107">[in] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="15dda-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="15dda-108">`pUnkReserved` deve essere un riferimento null.</span><span class="sxs-lookup"><span data-stu-id="15dda-108">`pUnkReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="80e2d-107">[in] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="80e2d-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="80e2d-108">`pUnkReserved` deve essere un riferimento null.</span><span class="sxs-lookup"><span data-stu-id="80e2d-108">`pUnkReserved` must be a null reference.</span></span>  
   
  `pName`  
- <span data-ttu-id="15dda-109">[in] Il `IAssemblyName` dell'assembly richiesto.</span><span class="sxs-lookup"><span data-stu-id="15dda-109">[in] The `IAssemblyName` of the requested assembly.</span></span> <span data-ttu-id="15dda-110">Questo nome viene usato per filtrare l'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="15dda-110">This name is used to filter the enumeration.</span></span> <span data-ttu-id="15dda-111">Può essere null per enumerare tutti gli assembly nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="15dda-111">It can be null to enumerate all assemblies in the global assembly cache.</span></span>  
+ <span data-ttu-id="80e2d-109">[in] Il `IAssemblyName` dell'assembly richiesto.</span><span class="sxs-lookup"><span data-stu-id="80e2d-109">[in] The `IAssemblyName` of the requested assembly.</span></span> <span data-ttu-id="80e2d-110">Questo nome viene usato per filtrare l'enumerazione.</span><span class="sxs-lookup"><span data-stu-id="80e2d-110">This name is used to filter the enumeration.</span></span> <span data-ttu-id="80e2d-111">Può essere null per enumerare tutti gli assembly nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="80e2d-111">It can be null to enumerate all assemblies in the global assembly cache.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="15dda-112">[in] Flag per la modifica del comportamento dell'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="15dda-112">[in] Flags for modifying the enumerator's behavior.</span></span> <span data-ttu-id="15dda-113">Questo parametro contiene esattamente un bit di [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumerazione.</span><span class="sxs-lookup"><span data-stu-id="15dda-113">This parameter contains exactly one bit from the [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="80e2d-112">[in] Flag per la modifica del comportamento dell'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="80e2d-112">[in] Flags for modifying the enumerator's behavior.</span></span> <span data-ttu-id="80e2d-113">Questo parametro contiene esattamente un bit di [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumerazione.</span><span class="sxs-lookup"><span data-stu-id="80e2d-113">This parameter contains exactly one bit from the [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumeration.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="15dda-114">[in] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="15dda-114">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="15dda-115">`pvReserved` deve essere un riferimento null.</span><span class="sxs-lookup"><span data-stu-id="15dda-115">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="80e2d-114">[in] Riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="80e2d-114">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="80e2d-115">`pvReserved` deve essere un riferimento null.</span><span class="sxs-lookup"><span data-stu-id="80e2d-115">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="15dda-116">Note</span><span class="sxs-lookup"><span data-stu-id="15dda-116">Remarks</span></span>  
- <span data-ttu-id="15dda-117">Il `dwFlags` parametro contiene esattamente un bit di `ASM_CACHE_FLAGS` enumerazione.</span><span class="sxs-lookup"><span data-stu-id="15dda-117">The `dwFlags` parameter contains exactly one bit from the `ASM_CACHE_FLAGS` enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="80e2d-116">Note</span><span class="sxs-lookup"><span data-stu-id="80e2d-116">Remarks</span></span>  
+ <span data-ttu-id="80e2d-117">Il `dwFlags` parametro contiene esattamente un bit di `ASM_CACHE_FLAGS` enumerazione.</span><span class="sxs-lookup"><span data-stu-id="80e2d-117">The `dwFlags` parameter contains exactly one bit from the `ASM_CACHE_FLAGS` enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15dda-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="15dda-118">Requirements</span></span>  
- <span data-ttu-id="15dda-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15dda-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80e2d-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="80e2d-118">Requirements</span></span>  
+ <span data-ttu-id="80e2d-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80e2d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15dda-120">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="15dda-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="80e2d-120">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="80e2d-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="15dda-121">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="15dda-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80e2d-121">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="80e2d-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="15dda-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15dda-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80e2d-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80e2d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15dda-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="15dda-123">See also</span></span>
-- [<span data-ttu-id="15dda-124">Interfaccia IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="15dda-124">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [<span data-ttu-id="15dda-125">Interfaccia IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="15dda-125">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="15dda-126">Funzioni statiche globali Fusion</span><span class="sxs-lookup"><span data-stu-id="15dda-126">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="80e2d-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80e2d-123">See also</span></span>
+- [<span data-ttu-id="80e2d-124">Interfaccia IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="80e2d-124">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [<span data-ttu-id="80e2d-125">Interfaccia IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="80e2d-125">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="80e2d-126">Funzioni statiche globali Fusion</span><span class="sxs-lookup"><span data-stu-id="80e2d-126">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

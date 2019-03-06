@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e7679fd8010ebe06f20a2a894cbc8e9864b81f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 174ac8b66c8127c16398de442a7067b742ab58ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705495"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465569"
 ---
-# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="e1691-102">Metodo ICorProfilerCallback::AppDomainShutdownStarted</span><span class="sxs-lookup"><span data-stu-id="e1691-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
-<span data-ttu-id="e1691-103">Notifica al profiler che un dominio dell'applicazione è in corso lo scaricamento da un processo.</span><span class="sxs-lookup"><span data-stu-id="e1691-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
+# <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="e35aa-102">Metodo ICorProfilerCallback::AppDomainShutdownStarted</span><span class="sxs-lookup"><span data-stu-id="e35aa-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
+<span data-ttu-id="e35aa-103">Notifica al profiler che un dominio dell'applicazione è in corso lo scaricamento da un processo.</span><span class="sxs-lookup"><span data-stu-id="e35aa-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1691-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e1691-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e35aa-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e35aa-104">Syntax</span></span>  
   
 ```  
 HRESULT AppDomainShutdownStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e1691-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e1691-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e35aa-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e35aa-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="e1691-106">[in] Identifica il dominio in cui sono archiviati gli assembly dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e1691-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
+ <span data-ttu-id="e35aa-106">[in] Identifica il dominio in cui sono archiviati gli assembly dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="e35aa-106">[in] Identifies the domain in which the application's assemblies are stored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e1691-107">Note</span><span class="sxs-lookup"><span data-stu-id="e1691-107">Remarks</span></span>  
- <span data-ttu-id="e1691-108">Il valore di `appDomainId` non è valida per qualsiasi richiesta di informazioni dopo il `AppDomainShutdownStarted` restituzione del metodo, ovvero si tratta di completamento per ottenere informazioni sul dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="e1691-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e35aa-107">Note</span><span class="sxs-lookup"><span data-stu-id="e35aa-107">Remarks</span></span>  
+ <span data-ttu-id="e35aa-108">Il valore di `appDomainId` non è valida per qualsiasi richiesta di informazioni dopo il `AppDomainShutdownStarted` restituzione del metodo, ovvero si tratta di completamento per ottenere informazioni sul dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="e35aa-108">The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1691-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e1691-109">Requirements</span></span>  
- <span data-ttu-id="e1691-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1691-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e35aa-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e35aa-109">Requirements</span></span>  
+ <span data-ttu-id="e35aa-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e35aa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1691-111">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e1691-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e35aa-111">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e35aa-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e1691-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1691-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e35aa-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e35aa-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e1691-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1691-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e35aa-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e35aa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1691-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1691-114">See also</span></span>
-- [<span data-ttu-id="e1691-115">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e1691-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e35aa-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e35aa-114">See also</span></span>
+- [<span data-ttu-id="e35aa-115">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e35aa-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1cb073c1f93c6d60d86e5160dcfb0cbdaf1cd33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb85c4b2c26c136a5f9fc05221a42c4bc99f37f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414571"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470172"
 ---
-# <a name="icordebugfunctiongetnativecode-method"></a><span data-ttu-id="96935-102">Metodo ICorDebugFunction::GetNativeCode</span><span class="sxs-lookup"><span data-stu-id="96935-102">ICorDebugFunction::GetNativeCode Method</span></span>
-<span data-ttu-id="96935-103">Ottiene il codice nativo per la funzione che è rappresentata da questa istanza di ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="96935-103">Gets the native code for the function that is represented by this ICorDebugFunction instance.</span></span>  
+# <a name="icordebugfunctiongetnativecode-method"></a><span data-ttu-id="bcc97-102">Metodo ICorDebugFunction::GetNativeCode</span><span class="sxs-lookup"><span data-stu-id="bcc97-102">ICorDebugFunction::GetNativeCode Method</span></span>
+<span data-ttu-id="bcc97-103">Ottiene il codice nativo per la funzione rappresentata da questa istanza ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="bcc97-103">Gets the native code for the function that is represented by this ICorDebugFunction instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96935-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="96935-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bcc97-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bcc97-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNativeCode (  
@@ -35,18 +35,18 @@ HRESULT GetNativeCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="96935-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="96935-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bcc97-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bcc97-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="96935-106">[out] Un puntatore all'istanza di ICorDebugCode che rappresenta il codice nativo per questa funzione, o null, se questa funzione è codice Microsoft intermediate language (MSIL) che non è stato just-in-time (JIT) compilati.</span><span class="sxs-lookup"><span data-stu-id="96935-106">[out] A pointer to the ICorDebugCode instance that represents the native code for this function, or null, if this function is Microsoft intermediate language (MSIL) code that has not been just-in-time (JIT) compiled.</span></span>  
+ <span data-ttu-id="bcc97-106">[out] Un puntatore all'istanza ICorDebugCode che rappresenta il codice nativo per questa funzione, o null, se questa funzione è codice Microsoft intermediate language (MSIL) che non è stato just-in-time (JIT) compilato.</span><span class="sxs-lookup"><span data-stu-id="bcc97-106">[out] A pointer to the ICorDebugCode instance that represents the native code for this function, or null, if this function is Microsoft intermediate language (MSIL) code that has not been just-in-time (JIT) compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="96935-107">Note</span><span class="sxs-lookup"><span data-stu-id="96935-107">Remarks</span></span>  
- <span data-ttu-id="96935-108">Se la funzione che è rappresentata da questo `ICorDebugFunction` istanza è stata compilata tramite JIT più volte, come nel caso di tipi generici, `GetNativeCode` restituisce un oggetto di codice nativo casuale.</span><span class="sxs-lookup"><span data-stu-id="96935-108">If the function that is represented by this `ICorDebugFunction` instance has been JIT-compiled more than once, as in the case of generic types, `GetNativeCode` returns a random native code object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bcc97-107">Note</span><span class="sxs-lookup"><span data-stu-id="bcc97-107">Remarks</span></span>  
+ <span data-ttu-id="bcc97-108">Se la funzione rappresentata da questo `ICorDebugFunction` istanza è stata compilata tramite JIT più di una volta, come nel caso di tipi generici, `GetNativeCode` restituisce un oggetto di codice nativa casuale.</span><span class="sxs-lookup"><span data-stu-id="bcc97-108">If the function that is represented by this `ICorDebugFunction` instance has been JIT-compiled more than once, as in the case of generic types, `GetNativeCode` returns a random native code object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96935-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="96935-109">Requirements</span></span>  
- <span data-ttu-id="96935-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96935-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bcc97-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bcc97-109">Requirements</span></span>  
+ <span data-ttu-id="bcc97-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcc97-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96935-111">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="96935-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bcc97-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bcc97-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="96935-112">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="96935-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bcc97-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bcc97-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="96935-113">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96935-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="bcc97-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcc97-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9fe86d6160ebac084625ef94013cce9a27a3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ed5debad7ef6722206daac98aecd7db11155a58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469287"
 ---
-# <a name="icorprofilercallbackassemblyunloadfinished-method"></a><span data-ttu-id="d5a83-102">Metodo ICorProfilerCallback::AssemblyUnloadFinished</span><span class="sxs-lookup"><span data-stu-id="d5a83-102">ICorProfilerCallback::AssemblyUnloadFinished Method</span></span>
-<span data-ttu-id="d5a83-103">Notifica al profiler che un assembly è stato scaricato.</span><span class="sxs-lookup"><span data-stu-id="d5a83-103">Notifies the profiler that an assembly has been unloaded.</span></span>  
+# <a name="icorprofilercallbackassemblyunloadfinished-method"></a><span data-ttu-id="e94fb-102">Metodo ICorProfilerCallback::AssemblyUnloadFinished</span><span class="sxs-lookup"><span data-stu-id="e94fb-102">ICorProfilerCallback::AssemblyUnloadFinished Method</span></span>
+<span data-ttu-id="e94fb-103">Notifica al profiler che un assembly è stato scaricato.</span><span class="sxs-lookup"><span data-stu-id="e94fb-103">Notifies the profiler that an assembly has been unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5a83-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d5a83-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e94fb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e94fb-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyUnloadFinished(  
@@ -35,26 +35,26 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5a83-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d5a83-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e94fb-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e94fb-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="d5a83-106">[in] Identifica l'assembly che sta per essere scaricato.</span><span class="sxs-lookup"><span data-stu-id="d5a83-106">[in] Identifies the assembly that is being unloaded.</span></span>  
+ <span data-ttu-id="e94fb-106">[in] Identifica l'assembly che sta per essere scaricato.</span><span class="sxs-lookup"><span data-stu-id="e94fb-106">[in] Identifies the assembly that is being unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="d5a83-107">[in] HRESULT che indica se l'assembly è stato scaricato correttamente.</span><span class="sxs-lookup"><span data-stu-id="d5a83-107">[in] An HRESULT that indicates whether the assembly was unloaded successfully.</span></span>  
+ <span data-ttu-id="e94fb-107">[in] HRESULT che indica se l'assembly è stato scaricato correttamente.</span><span class="sxs-lookup"><span data-stu-id="e94fb-107">[in] An HRESULT that indicates whether the assembly was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5a83-108">Note</span><span class="sxs-lookup"><span data-stu-id="d5a83-108">Remarks</span></span>  
- <span data-ttu-id="d5a83-109">Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo che il [AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) restituzione del metodo.</span><span class="sxs-lookup"><span data-stu-id="d5a83-109">The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e94fb-108">Note</span><span class="sxs-lookup"><span data-stu-id="e94fb-108">Remarks</span></span>  
+ <span data-ttu-id="e94fb-109">Il valore di `assemblyId` non è valido per una richiesta di informazioni dopo che il [AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) restituzione del metodo.</span><span class="sxs-lookup"><span data-stu-id="e94fb-109">The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) method returns.</span></span>  
   
- <span data-ttu-id="d5a83-110">Alcune parti dello scaricamento dell'assembly potrebbero continuare dopo il `AssemblyUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="d5a83-110">Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback.</span></span> <span data-ttu-id="d5a83-111">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="d5a83-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="d5a83-112">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte di scaricamento dell'assembly ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="d5a83-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="e94fb-110">Alcune parti dello scaricamento dell'assembly potrebbero continuare dopo il `AssemblyUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="e94fb-110">Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback.</span></span> <span data-ttu-id="e94fb-111">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="e94fb-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="e94fb-112">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte di scaricamento dell'assembly ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="e94fb-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5a83-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d5a83-113">Requirements</span></span>  
- <span data-ttu-id="d5a83-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5a83-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e94fb-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e94fb-113">Requirements</span></span>  
+ <span data-ttu-id="e94fb-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e94fb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5a83-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d5a83-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e94fb-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e94fb-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d5a83-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5a83-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e94fb-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e94fb-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5a83-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5a83-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e94fb-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e94fb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5a83-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5a83-118">See also</span></span>
-- [<span data-ttu-id="d5a83-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="d5a83-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e94fb-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e94fb-118">See also</span></span>
+- [<span data-ttu-id="e94fb-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e94fb-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

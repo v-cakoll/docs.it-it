@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354de38e106ea16eef10bd9a9cebf2b27ca44d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 020774778b21cf0f6029a666e0022fe83845c4ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472447"
 ---
-# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="fe0cb-102">Metodo ICorDebugManagedCallback::UnloadClass</span><span class="sxs-lookup"><span data-stu-id="fe0cb-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
-<span data-ttu-id="fe0cb-103">Notifica al debugger che è in corso lo scaricamento di una classe.</span><span class="sxs-lookup"><span data-stu-id="fe0cb-103">Notifies the debugger that a class is being unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="a59a9-102">Metodo ICorDebugManagedCallback::UnloadClass</span><span class="sxs-lookup"><span data-stu-id="a59a9-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
+<span data-ttu-id="a59a9-103">Notifica al debugger che è in corso lo scaricamento di una classe.</span><span class="sxs-lookup"><span data-stu-id="a59a9-103">Notifies the debugger that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe0cb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fe0cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a59a9-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a59a9-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadClass (  
@@ -36,25 +36,25 @@ HRESULT UnloadClass (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fe0cb-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fe0cb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a59a9-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a59a9-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="fe0cb-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente la classe.</span><span class="sxs-lookup"><span data-stu-id="fe0cb-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
+ <span data-ttu-id="a59a9-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente la classe.</span><span class="sxs-lookup"><span data-stu-id="a59a9-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
   
  `c`  
- <span data-ttu-id="fe0cb-107">[in] Un puntatore a un oggetto ICorDebugClass che rappresenta la classe.</span><span class="sxs-lookup"><span data-stu-id="fe0cb-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="a59a9-107">[in] Un puntatore a un oggetto ICorDebugClass che rappresenta la classe.</span><span class="sxs-lookup"><span data-stu-id="a59a9-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe0cb-108">Note</span><span class="sxs-lookup"><span data-stu-id="fe0cb-108">Remarks</span></span>  
- <span data-ttu-id="fe0cb-109">La classe non dovrebbe essere specificata dopo questa chiamata.</span><span class="sxs-lookup"><span data-stu-id="fe0cb-109">The class should not be referenced after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a59a9-108">Note</span><span class="sxs-lookup"><span data-stu-id="a59a9-108">Remarks</span></span>  
+ <span data-ttu-id="a59a9-109">La classe non dovrebbe essere specificata dopo questa chiamata.</span><span class="sxs-lookup"><span data-stu-id="a59a9-109">The class should not be referenced after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe0cb-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fe0cb-110">Requirements</span></span>  
- <span data-ttu-id="fe0cb-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe0cb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a59a9-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a59a9-110">Requirements</span></span>  
+ <span data-ttu-id="a59a9-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a59a9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe0cb-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe0cb-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a59a9-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a59a9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fe0cb-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe0cb-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a59a9-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a59a9-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fe0cb-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe0cb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a59a9-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a59a9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe0cb-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fe0cb-115">See also</span></span>
-- [<span data-ttu-id="fe0cb-116">Metodo LoadClass</span><span class="sxs-lookup"><span data-stu-id="fe0cb-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [<span data-ttu-id="fe0cb-117">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="fe0cb-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a59a9-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a59a9-115">See also</span></span>
+- [<span data-ttu-id="a59a9-116">Metodo LoadClass</span><span class="sxs-lookup"><span data-stu-id="a59a9-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
+- [<span data-ttu-id="a59a9-117">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="a59a9-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
