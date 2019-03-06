@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89515ab0ff08eadfb1eafdf70ead0bc1e0a17628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666243"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487729"
 ---
-# <a name="icordebugstackwalkgetframe-method"></a><span data-ttu-id="16b2d-102">Metodo ICorDebugStackWalk::GetFrame</span><span class="sxs-lookup"><span data-stu-id="16b2d-102">ICorDebugStackWalk::GetFrame Method</span></span>
-<span data-ttu-id="16b2d-103">Ottiene il frame corrente nella [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.</span><span class="sxs-lookup"><span data-stu-id="16b2d-103">Gets the current frame in the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object.</span></span>  
+# <a name="icordebugstackwalkgetframe-method"></a><span data-ttu-id="8a86d-102">Metodo ICorDebugStackWalk::GetFrame</span><span class="sxs-lookup"><span data-stu-id="8a86d-102">ICorDebugStackWalk::GetFrame Method</span></span>
+<span data-ttu-id="8a86d-103">Ottiene il frame corrente nella [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto.</span><span class="sxs-lookup"><span data-stu-id="8a86d-103">Gets the current frame in the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16b2d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16b2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a86d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8a86d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="16b2d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="16b2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8a86d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="8a86d-105">Parameters</span></span>  
  `pFrame`  
- <span data-ttu-id="16b2d-106">[in] Un puntatore all'indirizzo dell'oggetto che rappresenta il frame corrente nello stack frame creato.</span><span class="sxs-lookup"><span data-stu-id="16b2d-106">[in] A pointer to the address of the created frame object that represents the current frame in the stack.</span></span>  
+ <span data-ttu-id="8a86d-106">[in] Un puntatore all'indirizzo dell'oggetto che rappresenta il frame corrente nello stack frame creato.</span><span class="sxs-lookup"><span data-stu-id="8a86d-106">[in] A pointer to the address of the created frame object that represents the current frame in the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="16b2d-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="16b2d-107">Return Value</span></span>  
- <span data-ttu-id="16b2d-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="16b2d-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8a86d-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="8a86d-107">Return Value</span></span>  
+ <span data-ttu-id="8a86d-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="8a86d-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="16b2d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="16b2d-109">HRESULT</span></span>|<span data-ttu-id="16b2d-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="16b2d-110">Description</span></span>|  
+|<span data-ttu-id="8a86d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8a86d-109">HRESULT</span></span>|<span data-ttu-id="8a86d-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8a86d-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="16b2d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="16b2d-111">S_OK</span></span>|<span data-ttu-id="16b2d-112">Il runtime restituito correttamente il frame corrente.</span><span class="sxs-lookup"><span data-stu-id="16b2d-112">The runtime successfully returned the current frame.</span></span>|  
-|<span data-ttu-id="16b2d-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="16b2d-113">E_FAIL</span></span>|<span data-ttu-id="16b2d-114">Il frame corrente non è stato restituito.</span><span class="sxs-lookup"><span data-stu-id="16b2d-114">The current frame was not returned.</span></span>|  
-|<span data-ttu-id="16b2d-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="16b2d-115">S_FALSE</span></span>|<span data-ttu-id="16b2d-116">Il frame corrente è uno stack frame nativo.</span><span class="sxs-lookup"><span data-stu-id="16b2d-116">The current frame is a native stack frame.</span></span>|  
-|<span data-ttu-id="16b2d-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="16b2d-117">E_INVALIDARG</span></span>|<span data-ttu-id="16b2d-118">`pFrame` è null.</span><span class="sxs-lookup"><span data-stu-id="16b2d-118">`pFrame` is null.</span></span>|  
-|<span data-ttu-id="16b2d-119">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="16b2d-119">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="16b2d-120">Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.</span><span class="sxs-lookup"><span data-stu-id="16b2d-120">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
+|<span data-ttu-id="8a86d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="8a86d-111">S_OK</span></span>|<span data-ttu-id="8a86d-112">Il runtime restituito correttamente il frame corrente.</span><span class="sxs-lookup"><span data-stu-id="8a86d-112">The runtime successfully returned the current frame.</span></span>|  
+|<span data-ttu-id="8a86d-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8a86d-113">E_FAIL</span></span>|<span data-ttu-id="8a86d-114">Il frame corrente non è stato restituito.</span><span class="sxs-lookup"><span data-stu-id="8a86d-114">The current frame was not returned.</span></span>|  
+|<span data-ttu-id="8a86d-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="8a86d-115">S_FALSE</span></span>|<span data-ttu-id="8a86d-116">Il frame corrente è uno stack frame nativo.</span><span class="sxs-lookup"><span data-stu-id="8a86d-116">The current frame is a native stack frame.</span></span>|  
+|<span data-ttu-id="8a86d-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="8a86d-117">E_INVALIDARG</span></span>|<span data-ttu-id="8a86d-118">`pFrame` è null.</span><span class="sxs-lookup"><span data-stu-id="8a86d-118">`pFrame` is null.</span></span>|  
+|<span data-ttu-id="8a86d-119">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="8a86d-119">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="8a86d-120">Puntatore ai frame è già alla fine dello stack. di conseguenza, nessun frame aggiuntivi sono accessibili.</span><span class="sxs-lookup"><span data-stu-id="8a86d-120">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="16b2d-121">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="16b2d-121">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="8a86d-121">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="8a86d-121">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16b2d-122">Note</span><span class="sxs-lookup"><span data-stu-id="16b2d-122">Remarks</span></span>  
- <span data-ttu-id="16b2d-123">`ICorDebugStackWalk` Restituisce solo gli stack frame effettivi.</span><span class="sxs-lookup"><span data-stu-id="16b2d-123">`ICorDebugStackWalk` returns only actual stack frames.</span></span> <span data-ttu-id="16b2d-124">Usare la [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo per restituire i frame interni.</span><span class="sxs-lookup"><span data-stu-id="16b2d-124">Use the [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return internal frames.</span></span> <span data-ttu-id="16b2d-125">(Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei).</span><span class="sxs-lookup"><span data-stu-id="16b2d-125">(Internal frames are data structures pushed onto the stack by the runtime to store temporary data.)</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a86d-122">Note</span><span class="sxs-lookup"><span data-stu-id="8a86d-122">Remarks</span></span>  
+ <span data-ttu-id="8a86d-123">`ICorDebugStackWalk` Restituisce solo gli stack frame effettivi.</span><span class="sxs-lookup"><span data-stu-id="8a86d-123">`ICorDebugStackWalk` returns only actual stack frames.</span></span> <span data-ttu-id="8a86d-124">Usare la [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo per restituire i frame interni.</span><span class="sxs-lookup"><span data-stu-id="8a86d-124">Use the [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return internal frames.</span></span> <span data-ttu-id="8a86d-125">(Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei).</span><span class="sxs-lookup"><span data-stu-id="8a86d-125">(Internal frames are data structures pushed onto the stack by the runtime to store temporary data.)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16b2d-126">Requisiti</span><span class="sxs-lookup"><span data-stu-id="16b2d-126">Requirements</span></span>  
- <span data-ttu-id="16b2d-127">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16b2d-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a86d-126">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8a86d-126">Requirements</span></span>  
+ <span data-ttu-id="8a86d-127">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a86d-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16b2d-128">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16b2d-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8a86d-128">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a86d-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="16b2d-129">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16b2d-129">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a86d-129">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a86d-129">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="16b2d-130">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16b2d-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8a86d-130">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a86d-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16b2d-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16b2d-131">See also</span></span>
-- [<span data-ttu-id="16b2d-132">Interfaccia ICorDebugStackWalk</span><span class="sxs-lookup"><span data-stu-id="16b2d-132">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [<span data-ttu-id="16b2d-133">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="16b2d-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="16b2d-134">Debug</span><span class="sxs-lookup"><span data-stu-id="16b2d-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="8a86d-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8a86d-131">See also</span></span>
+- [<span data-ttu-id="8a86d-132">Interfaccia ICorDebugStackWalk</span><span class="sxs-lookup"><span data-stu-id="8a86d-132">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [<span data-ttu-id="8a86d-133">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="8a86d-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8a86d-134">Debug</span><span class="sxs-lookup"><span data-stu-id="8a86d-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

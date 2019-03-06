@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06eaa77ab655d57ad2cc0a3c5613c05444afd903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6daca3d0bf1555713baea561b8f6d8305b3074
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486082"
 ---
-# <a name="icordebugmdagetxml-method"></a><span data-ttu-id="0e11e-102">Metodo ICorDebugMDA::GetXML</span><span class="sxs-lookup"><span data-stu-id="0e11e-102">ICorDebugMDA::GetXML Method</span></span>
-<span data-ttu-id="0e11e-103">Ottiene il flusso XML completo associato con l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="0e11e-103">Gets the full XML stream associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetxml-method"></a><span data-ttu-id="f6128-102">Metodo ICorDebugMDA::GetXML</span><span class="sxs-lookup"><span data-stu-id="f6128-102">ICorDebugMDA::GetXML Method</span></span>
+<span data-ttu-id="f6128-103">Ottiene il flusso XML completo associato con l'assistente al debug gestito (MDA) rappresentato da [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="f6128-103">Gets the full XML stream associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e11e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0e11e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6128-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f6128-104">Syntax</span></span>  
   
 ```  
 HRESULT GetXML (  
@@ -38,28 +38,28 @@ HRESULT GetXML (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0e11e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0e11e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6128-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f6128-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="0e11e-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="0e11e-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="f6128-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="f6128-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="0e11e-107">[out] Puntatore alla lunghezza del flusso XML.</span><span class="sxs-lookup"><span data-stu-id="0e11e-107">[out] A pointer to the length of the XML stream.</span></span>  
+ <span data-ttu-id="f6128-107">[out] Puntatore alla lunghezza del flusso XML.</span><span class="sxs-lookup"><span data-stu-id="f6128-107">[out] A pointer to the length of the XML stream.</span></span>  
   
  `szName`  
- <span data-ttu-id="0e11e-108">[out] Matrice in cui archiviare il flusso XML.</span><span class="sxs-lookup"><span data-stu-id="0e11e-108">[out] An array in which to store the XML stream.</span></span> <span data-ttu-id="0e11e-109">La matrice può essere vuota.</span><span class="sxs-lookup"><span data-stu-id="0e11e-109">The array may be empty.</span></span>  
+ <span data-ttu-id="f6128-108">[out] Matrice in cui archiviare il flusso XML.</span><span class="sxs-lookup"><span data-stu-id="f6128-108">[out] An array in which to store the XML stream.</span></span> <span data-ttu-id="f6128-109">La matrice può essere vuota.</span><span class="sxs-lookup"><span data-stu-id="f6128-109">The array may be empty.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0e11e-110">Note</span><span class="sxs-lookup"><span data-stu-id="0e11e-110">Remarks</span></span>  
- <span data-ttu-id="0e11e-111">Il `GetXML` metodo potenzialmente influire sulle prestazioni, a seconda delle dimensioni del flusso XML associato.</span><span class="sxs-lookup"><span data-stu-id="0e11e-111">The `GetXML` method can potentially affect performance, depending on the size of the associated XML stream.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6128-110">Note</span><span class="sxs-lookup"><span data-stu-id="f6128-110">Remarks</span></span>  
+ <span data-ttu-id="f6128-111">Il `GetXML` metodo potenzialmente influire sulle prestazioni, a seconda delle dimensioni del flusso XML associato.</span><span class="sxs-lookup"><span data-stu-id="f6128-111">The `GetXML` method can potentially affect performance, depending on the size of the associated XML stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e11e-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0e11e-112">Requirements</span></span>  
- <span data-ttu-id="0e11e-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e11e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6128-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f6128-112">Requirements</span></span>  
+ <span data-ttu-id="f6128-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6128-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e11e-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0e11e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f6128-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6128-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0e11e-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e11e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6128-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6128-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e11e-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e11e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f6128-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6128-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e11e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0e11e-117">See also</span></span>
-- [<span data-ttu-id="0e11e-118">Interfaccia ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="0e11e-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="0e11e-119">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="0e11e-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="f6128-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f6128-117">See also</span></span>
+- [<span data-ttu-id="f6128-118">Interfaccia ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="f6128-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="f6128-119">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="f6128-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

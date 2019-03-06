@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a63a72eca636113ec5b339172a89441f3afdb092
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475749"
 ---
-# <a name="exporttype-method"></a><span data-ttu-id="623c8-102">Metodo ExportType</span><span class="sxs-lookup"><span data-stu-id="623c8-102">ExportType Method</span></span>
-<span data-ttu-id="623c8-103">Specifica che un tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="623c8-103">Specifies that a type is exportable.</span></span>  
+# <a name="exporttype-method"></a><span data-ttu-id="874e4-102">Metodo ExportType</span><span class="sxs-lookup"><span data-stu-id="874e4-102">ExportType Method</span></span>
+<span data-ttu-id="874e4-103">Specifica che un tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="874e4-103">Specifies that a type is exportable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="623c8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="623c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="874e4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="874e4-104">Syntax</span></span>  
   
 ```  
 HRESULT ExportType(  
@@ -39,32 +39,32 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="623c8-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="623c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="874e4-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="874e4-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="623c8-106">ID dell'assembly da cui esportare.</span><span class="sxs-lookup"><span data-stu-id="623c8-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="874e4-106">ID dell'assembly da cui esportare.</span><span class="sxs-lookup"><span data-stu-id="874e4-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="623c8-107">Assembly o token ID di file che definisce il tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="623c8-107">File token or assembly ID of file that defines the exportable type.</span></span>  
+ <span data-ttu-id="874e4-107">Assembly o token ID di file che definisce il tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="874e4-107">File token or assembly ID of file that defines the exportable type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="623c8-108">Token del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="623c8-108">Token of type to be made exportable.</span></span>  
+ <span data-ttu-id="874e4-108">Token del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="874e4-108">Token of type to be made exportable.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="623c8-109">Nome completo del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="623c8-109">Fully qualified type name to be made exportable.</span></span>  
+ <span data-ttu-id="874e4-109">Nome completo del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="874e4-109">Fully qualified type name to be made exportable.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="623c8-110">`ComType` ad esempio i flag `tdPublic` o `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="623c8-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="623c8-111">Questo parametro può essere passato a [metodo DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="623c8-111">This parameter may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="874e4-110">`ComType` ad esempio i flag `tdPublic` o `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="874e4-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="874e4-111">Questo parametro può essere passato a [metodo DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="874e4-111">This parameter may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="623c8-112">Riceve il token del tipo esportato.</span><span class="sxs-lookup"><span data-stu-id="623c8-112">Receives token for exported type.</span></span>  
+ <span data-ttu-id="874e4-112">Riceve il token del tipo esportato.</span><span class="sxs-lookup"><span data-stu-id="874e4-112">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="623c8-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="623c8-113">Return Value</span></span>  
- <span data-ttu-id="623c8-114">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="623c8-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="874e4-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="874e4-113">Return Value</span></span>  
+ <span data-ttu-id="874e4-114">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="874e4-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="623c8-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="623c8-115">Requirements</span></span>  
- <span data-ttu-id="623c8-116">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="623c8-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="874e4-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="874e4-115">Requirements</span></span>  
+ <span data-ttu-id="874e4-116">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="874e4-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="623c8-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="623c8-117">See also</span></span>
-- [<span data-ttu-id="623c8-118">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="623c8-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="623c8-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="623c8-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="623c8-120">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="623c8-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="874e4-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="874e4-117">See also</span></span>
+- [<span data-ttu-id="874e4-118">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="874e4-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="874e4-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="874e4-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="874e4-120">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="874e4-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

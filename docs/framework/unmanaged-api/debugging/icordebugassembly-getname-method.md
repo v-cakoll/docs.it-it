@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407519"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487798"
 ---
-# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="44373-102">Metodo ICorDebugAssembly::GetName</span><span class="sxs-lookup"><span data-stu-id="44373-102">ICorDebugAssembly::GetName Method</span></span>
-<span data-ttu-id="44373-103">Ottiene il nome dell'assembly che si `ICorDebugAssembly` istanza.</span><span class="sxs-lookup"><span data-stu-id="44373-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
+# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="362bb-102">Metodo ICorDebugAssembly::GetName</span><span class="sxs-lookup"><span data-stu-id="362bb-102">ICorDebugAssembly::GetName Method</span></span>
+<span data-ttu-id="362bb-103">Ottiene il nome dell'assembly a cui questo `ICorDebugAssembly` istanza rappresenta.</span><span class="sxs-lookup"><span data-stu-id="362bb-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44373-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="44373-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="362bb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="362bb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -37,24 +37,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="44373-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="44373-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="362bb-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="362bb-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="44373-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="44373-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="362bb-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="362bb-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="44373-107">[out] Un puntatore a un intero che specifica la lunghezza effettiva del nome.</span><span class="sxs-lookup"><span data-stu-id="44373-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
+ <span data-ttu-id="362bb-107">[out] Un puntatore a un intero che specifica la lunghezza effettiva del nome.</span><span class="sxs-lookup"><span data-stu-id="362bb-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="44373-108">[out] Matrice che archivia il nome.</span><span class="sxs-lookup"><span data-stu-id="44373-108">[out] An array that stores the name.</span></span>  
+ <span data-ttu-id="362bb-108">[out] Matrice che archivia il nome.</span><span class="sxs-lookup"><span data-stu-id="362bb-108">[out] An array that stores the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="44373-109">Note</span><span class="sxs-lookup"><span data-stu-id="44373-109">Remarks</span></span>  
- <span data-ttu-id="44373-110">Il `GetName` metodo restituisce il nome di file e percorso completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="44373-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="362bb-109">Note</span><span class="sxs-lookup"><span data-stu-id="362bb-109">Remarks</span></span>  
+ <span data-ttu-id="362bb-110">Il `GetName` metodo restituisce il nome di file e percorso completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="362bb-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44373-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="44373-111">Requirements</span></span>  
- <span data-ttu-id="44373-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44373-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="362bb-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="362bb-111">Requirements</span></span>  
+ <span data-ttu-id="362bb-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="362bb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44373-113">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="44373-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="362bb-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="362bb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="44373-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="44373-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="362bb-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="362bb-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="44373-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44373-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="362bb-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="362bb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
