@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670316"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352334"
 ---
 # <a name="drawings-how-to-topics"></a>Procedure relative agli oggetti Drawing
 Negli argomenti di questa sezione viene descritto come utilizzare <xref:System.Windows.Media.Drawing> oggetti per disegnare forme, immagini o testo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Applicare un GuidelineSet a un disegno](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [Creare un disegno composto](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [Creare un oggetto GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [Disegnare un'immagine con ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [Riprodurre contenuti multimediali usando un oggetto VideoDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [Usare un disegno come origine di immagini](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [Applicare un GuidelineSet a un disegno](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [Creare un disegno composto](how-to-create-a-composite-drawing.md)  
+  [Creare un oggetto GeometryDrawing](how-to-create-a-geometrydrawing.md)  
+  [Disegnare un'immagine con ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
+  [Riprodurre contenuti multimediali usando un oggetto VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
+  [Usare un disegno come origine di immagini](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Media.Drawing>
-- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
+- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafica e funzionalità multimediali](index.md)

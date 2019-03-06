@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544232"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350748"
 ---
 # <a name="input-wpf"></a>Input (WPF)
-Windows Presentation Foundation (WPF) include il supporto per diversi tipi di input. Questo input include testo tocco, mouse, comandi, lo stato attivo, tocco, trascinamento e rilascio e input penna. In questa sezione vengono descritti argomenti relativi a WPF di input.  
+Windows Presentation Foundation (WPF) include il supporto per diversi tipi di input. Questo input include i testo tocco, mouse, i comandi, lo stato attivo, tocco, trascinamento e rilascio e input penna digitale. In questa sezione vengono descritti argomenti relativi all'input di WPF.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Procedura dettagliata: Creazione della prima applicazione a tocco](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Input penna](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Cenni preliminari sull'input](input-overview.md)  
+ [Panoramica sull'esecuzione di comandi](commanding-overview.md)  
+ [Panoramica sullo stato attivo](focus-overview.md)  
+ [Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Procedura dettagliata: Creazione della prima applicazione Touch](walkthrough-creating-your-first-touch-application.md)  
+ [Procedure relative alle proprietà](input-and-commands-how-to-topics.md)  
+ [Input penna](digital-ink.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) include il supporto per diversi tipi di in
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli](../../../../docs/framework/wpf/controls/index.md)  
-  [Eventi](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Controlli](../controls/index.md)  
+  [Eventi](events-wpf.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677225"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378806"
 ---
 # <a name="how-to-clone-a-printer"></a>Procedura: Duplicare una stampante
 La maggior parte delle aziende, a un certo punto acquisti più stampanti dello stesso modello. In genere, queste vengono installate con le impostazioni di configurazione praticamente identici. L'installazione di ogni stampante può richiedere molto tempo e tendente all'errore. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e il <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposte con Microsoft .NET Framework consente di installare immediatamente un numero qualsiasi di code di stampa aggiuntive che sono stati clonati da una coda di stampa esistente.  
@@ -52,8 +52,8 @@ La maggior parte delle aziende, a un certo punto acquisti più stampanti dello s
   
  Seguito è riportato un esempio.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ La maggior parte delle aziende, a un certo punto acquisti più stampanti dello s
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documenti in WPF](documents-in-wpf.md)
+- [Panoramica della stampa](printing-overview.md)

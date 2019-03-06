@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 0eda70a7d8cc5abb70b5043cbaa1d4fc418bb1f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357482"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Procedura: Utilizzare una griglia per il layout automatico
 Questo esempio descrive come usare una griglia nell'approccio basato sul layout automatico per la creazione di un'applicazione localizzabile.  
@@ -22,13 +22,13 @@ Questo esempio descrive come usare una griglia nell'approccio basato sul layout 
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene illustrato come usare una griglia.  
   
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  La figura seguente mostra l'output dell'esempio di codice.  
   
- ![Esempio di Grid](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Esempio di Grid](./media/glob-grid.png "glob_grid")  
 Grid  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sull'utilizzo del layout automatico](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Cenni preliminari sull'utilizzo del layout automatico](use-automatic-layout-overview.md)
+- [Utilizzare un layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)
