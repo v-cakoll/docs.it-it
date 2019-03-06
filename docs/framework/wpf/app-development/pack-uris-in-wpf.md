@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513451"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377316"
 ---
 # <a name="pack-uris-in-wpf"></a>URI di tipo pack in WPF
 In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] consentono di identificare e caricare i file in molti modi, inclusi i seguenti:  
@@ -44,7 +44,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ## <a name="the-pack-uri-scheme"></a>Schema URI di tipo pack  
  Il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] lo schema viene usato per il [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) specifica (OPC), che descrive un modello per organizzare e identificare il contenuto. Gli elementi chiave di questo modello sono pacchetti e parti, in cui un *package* è un contenitore logico per uno o più logica *parti*. La figura seguente illustra questo concetto.  
   
- ![Diagramma di pacchetti e parti](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![Diagramma di pacchetti e parti](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
  Per identificare le parti, la specifica OPC sfrutta l'estensibilità di RFC 2396 (Uniform Resource Identifiers (URI): Sintassi generica) per definire il pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dello schema.  
   
@@ -56,7 +56,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Questo concetto è illustrato nella figura seguente:  
   
- ![Relazioni tra pacchetto, autorità e percorso](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![Relazioni tra pacchetto, autorità e percorso](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
   
  Pacchetti e parti sono analoghi ad applicazioni e file, dove un'applicazione (pacchetto) può includere uno o più file (parti), tra cui:  
   
@@ -72,7 +72,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Per accedere a questi tipi di file, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta due autorità: applicazione: Application:/// e siteoforigin:///: / / /. L'autorità application:/// identifica i file di dati dell'applicazione noti al momento della compilazione, inclusi file di risorse e di contenuto. L'autorità siteoforigin:/// identifica i file del sito di origine. La figura seguente illustra l'ambito di ciascuna autorità.  
   
- ![Diagramma dell'URI di tipo pack](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Diagramma dell'URI di tipo pack](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
   
 > [!NOTE]
 >  Il componente di autorità di un pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] è incorporata [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] che punta a un pacchetto e devono essere conformi a RFC 2396. Inoltre, il carattere "/" deve essere sostituito con il carattere "," e i caratteri riservati quali "%" e "?" devono essere preceduti da un carattere di escape. Per informazioni dettagliate, vedere la specifica OPC.  
@@ -377,11 +377,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>Specifica dell'interfaccia utente da visualizzare all'avvio di un'applicazione  
  <xref:System.Windows.Application.StartupUri%2A> Specifica il primo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da visualizzare quando un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] viene avviata l'applicazione. Per le applicazioni autonome di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] può essere una finestra, come illustrato nell'esempio seguente.  
   
- [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
  Le applicazioni autonome e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] può anche specificare una pagina come interfaccia utente iniziale, come illustrato nell'esempio seguente.  
   
- [!code-xaml[PackURIOverviewSnippets#StartupUriPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
   
  Se l'applicazione è un'applicazione autonoma e una pagina viene specificata con <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] si apre un <xref:System.Windows.Navigation.NavigationWindow> per ospitare la pagina. Per [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], viene visualizzata la pagina nel browser host.  
   
@@ -389,17 +389,17 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 #### <a name="navigating-to-a-page"></a>Spostamento su una pagina  
  L'esempio seguente illustra come spostarsi su una pagina.  
   
- [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
   
- Per altre informazioni sui vari modi per spostarsi all'interno [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Per altre informazioni sui vari modi per spostarsi all'interno [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
   
 <a name="Specifying_a_Window_Icon"></a>   
 #### <a name="specifying-a-window-icon"></a>Specifica dell'icona di una finestra  
  L'esempio seguente illustra come usare un URI per specificare l'icona di una finestra.  
   
- [!code-xaml[WindowIconSnippets#WindowIconSetXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
+ [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
   
  Per altre informazioni, vedere <xref:System.Windows.Window.Icon%2A>.  
   
@@ -407,21 +407,21 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 #### <a name="loading-image-audio-and-video-files"></a>Caricamento di file di immagine, audio e video  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente alle applicazioni di usare un'ampia gamma di tipi di supporti, ognuno dei quali possono essere identificati e caricati con Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], come illustrato negli esempi seguenti.  
   
- [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
+ [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   
- [!code-xaml[MediaPlayerAudioSample#AudioPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
+ [!code-xaml[MediaPlayerAudioSample#AudioPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
   
- [!code-xaml[ImageSample#ImagePackURIContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
+ [!code-xaml[ImageSample#ImagePackURIContent](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
   
- Per altre informazioni sull'uso di contenuti multimediali, vedere [grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md).  
+ Per altre informazioni sull'uso di contenuti multimediali, vedere [grafica e funzionalità multimediali](../graphics-multimedia/index.md).  
   
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>   
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>Caricamento di un dizionario risorse dal sito di origine  
  Dizionari risorse (<xref:System.Windows.ResourceDictionary>) possono essere usati per supportare temi per le applicazioni. Un modo per creare e gestire i temi consiste nel creare più temi come dizionari risorse che si trovano nel sito di origine di un'applicazione. In questo modo è possibile aggiungere e aggiornare i temi senza ricompilare e ridistribuire un'applicazione. Questi dizionari risorse possono essere identificati e caricati usando pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], come illustrato nell'esempio seguente.  
   
- [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
+ [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
   
- Per una panoramica dei temi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Per una panoramica dei temi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Styling and Templating](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)

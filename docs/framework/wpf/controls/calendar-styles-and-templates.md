@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: a92882e7e1f1b5c24b613c61b575df8c34832f5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517450"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373413"
 ---
 # <a name="calendar-styles-and-templates"></a>Stili e modelli di Calendar
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.Calendar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.Calendar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="calendar-parts"></a>Parti del calendario  
  La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.Calendar> controllo.  
@@ -119,18 +119,18 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 ## <a name="calendar-controltemplate-example"></a>Esempio di ControlTemplate del calendario  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.Calendar> controllo e i tipi associati.  
   
- [!code-xaml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
+ [!code-xaml[ControlTemplateExamples#Calendar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
  L'esempio precedente usa una o più delle seguenti risorse.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Stili e modelli di Control](control-styles-and-templates.md)
+- [Personalizzazione dei controlli](control-customization.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

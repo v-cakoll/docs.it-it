@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376013"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Le applicazioni che ospitano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenuto tramite PresentationHost.exe implementano questa interfaccia per fornire un punto di integrazione tra l'host e PresentationHost.exe.  
@@ -32,6 +32,6 @@ Le applicazioni che ospitano [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Consente a PresentationHost.exe di individuare i dispositivi di input non elaborato (HID, Human Interface Devices) che interessano l'applicazione host.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Chiamato da PresentationHost.exe ogni volta che viene ricevuto un messaggio, a meno che non venga restituito E_NOTIMPL.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|Per impostazione predefinita, PresentationHost.exe fornisce il proprio avanzamento della distribuzione e l'errore di distribuzione interfacce utente che vengono visualizzate quando si distribuisce contenuto WPF.|
+|[GetRawInputDevices](getrawinputdevices.md)|Consente a PresentationHost.exe di individuare i dispositivi di input non elaborato (HID, Human Interface Devices) che interessano l'applicazione host.|  
+|[FilterInputMessage](filterinputmessage.md)|Chiamato da PresentationHost.exe ogni volta che viene ricevuto un messaggio, a meno che non venga restituito E_NOTIMPL.|  
+|[GetCustomUI](getcustomui.md)|Per impostazione predefinita, PresentationHost.exe fornisce il proprio avanzamento della distribuzione e l'errore di distribuzione interfacce utente che vengono visualizzate quando si distribuisce contenuto WPF.|

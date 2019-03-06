@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8e598b557381bf82b42ea87e2f020ebba4450929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520295"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379601"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Procedura dettagliata: Creazione di contenuto Direct3D9 per l'Hosting in WPF
-Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 in applicazioni WPF, vedere [interoperatività di WPF e Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
+Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 adatto per l'hosting in un'applicazione Windows Presentation Foundation (WPF). Per ulteriori informazioni sull'hosting di contenuto Direct3D9 in applicazioni WPF, vedere [interoperatività di WPF e Direct3D9](wpf-and-direct3d9-interoperation.md).
 
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 
@@ -70,7 +70,7 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 12. In Esplora soluzioni aggiungere un nuovo file di definizione di modulo (def) denominato `D3DContent.def` al progetto.
 
 ## <a name="creating-the-direct3d9-content"></a>Creazione di contenuto Direct3D9
- Per ottenere prestazioni ottimali, il contenuto Direct3D9 necessario utilizzare impostazioni particolare. Il codice seguente viene illustrato come creare una superficie Direct3D9 con le caratteristiche di prestazioni migliori. Per altre informazioni, vedere [considerazioni sulle prestazioni per l'interoperabilità di WPF e Direct3D9](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).
+ Per ottenere prestazioni ottimali, il contenuto Direct3D9 necessario utilizzare impostazioni particolare. Il codice seguente viene illustrato come creare una superficie Direct3D9 con le caratteristiche di prestazioni migliori. Per altre informazioni, vedere [considerazioni sulle prestazioni per l'interoperabilità di WPF e Direct3D9](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
 
 #### <a name="to-create-the-direct3d9-content"></a>Per creare il contenuto di Direct3D9
 
@@ -84,35 +84,35 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 
 2.  Aprire Renderer. h nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
 3.  Aprire Renderer. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
 4.  Aprire RendererManager. H nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
 5.  Aprire RendererManager. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
 6.  Aprire TriangleRenderer. H nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
 7.  Aprire TriangleRenderer. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
 8.  Aprire file stdafx. h nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
 9. Aprire DllMain. cpp nell'Editor del codice e sostituire il codice generato automaticamente con il codice seguente.
 
-     [!code-cpp[System.Windows.Interop.D3DImage#DllMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
+     [!code-cpp[System.Windows.Interop.D3DImage#DllMain](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
 
 10. Aprire D3DContent nell'editor del codice.
 
@@ -137,10 +137,10 @@ Questa procedura dettagliata viene illustrato come creare contenuto Direct3D9 ad
 
 ## <a name="next-steps"></a>Passaggi successivi
 
--   Ospitare il contenuto Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
+-   Ospitare il contenuto Direct3D9 in un'applicazione WPF. Per altre informazioni, vedere [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Interop.D3DImage>
-- [Considerazioni sulle prestazioni per l'interoperabilità fra Direct3D9 e WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Considerazioni sulle prestazioni per l'interoperabilità fra Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Procedura dettagliata: Hosting di contenuto Direct3D9 in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

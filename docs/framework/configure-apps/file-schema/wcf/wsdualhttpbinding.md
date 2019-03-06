@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
 ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759041"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377200"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Definisce un'associazione protetta, affidabile e interoperabile adatta per contratti di servizio duplex o per la comunicazione tramite intermediari SOAP.  
@@ -91,7 +91,8 @@ Definisce un'associazione protetta, affidabile e interoperabile adatta per contr
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- `WSDualHttpBinding` fornisce lo stesso supporto per i protocolli di servizi Web di `WSHttpBinding`, ma esclusivamente per l'uso con contratti duplex. `WSDualHttpBinding` supporta solo la sicurezza SOAP e richiede un sistema di messaggistica affidabile. Per questa associazione è necessario che il client disponga di un URI pubblico che fornisca un endpoint di callback per il servizio. A tale scopo, usare l'attributo `clientBaseAddress`. Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
+ 
+  `WSDualHttpBinding` fornisce lo stesso supporto per i protocolli di servizi Web di `WSHttpBinding`, ma esclusivamente per l'uso con contratti duplex. `WSDualHttpBinding` supporta solo la sicurezza SOAP e richiede un sistema di messaggistica affidabile. Per questa associazione è necessario che il client disponga di un URI pubblico che fornisca un endpoint di callback per il servizio. A tale scopo, usare l'attributo `clientBaseAddress`. Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
   
  Questa associazione può essere usata per comunicare in modo affidabile attraverso uno o più intermediari SOAP.  
   

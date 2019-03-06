@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663206"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364437"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procedura: Associare un comando a un controllo con supporto dei comandi
 Nell'esempio seguente viene illustrato come associare una classe <xref:System.Windows.Input.RoutedCommand> a una classe <xref:System.Windows.Controls.Control> che dispone del supporto incorporato per il comando.  Per un esempio completo in cui i comandi sono associati a più origini, vedere l'esempio [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Creare un esempio di oggetto RoutedCommand personalizzato).  
@@ -31,11 +31,11 @@ Nell'esempio seguente viene illustrato come associare una classe <xref:System.Wi
   
  Viene creata una classe <xref:System.Windows.Controls.MenuItem> e la relativa proprietà <xref:System.Windows.Controls.MenuItem.Command%2A> è impostata sul comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  La proprietà <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> non è impostata esplicitamente sull'oggetto <xref:System.Windows.Controls.TextBox>.  Quando <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> non è impostata, la destinazione per il comando è l'elemento con lo stato attivo della tastiera.  Se l'elemento con lo stato attivo della tastiera non supporta il comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> oppure non è attualmente in grado di eseguire il comando Incolla, ad esempio gli Appunti sono vuoti, <xref:System.Windows.Controls.MenuItem> viene visualizzato in grigio.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Associare un comando a un controllo senza supporto del comando](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
+- [Associare un comando a un controllo senza supporto del comando](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

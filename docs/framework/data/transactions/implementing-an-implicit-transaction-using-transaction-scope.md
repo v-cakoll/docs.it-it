@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645847"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375246"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementazione di una transazione implicita utilizzando l'ambito di transazione
 La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare facilmente un blocco di codice come ambito partecipante a una transazione, senza che sia necessario interagire con la transazione stessa. Un ambito di transazione può selezionare e gestire automaticamente la transazione di ambiente. In quanto efficiente e di facile utilizzo, la classe <xref:System.Transactions.TransactionScope> rappresenta la scelta ideale per sviluppare un'applicazione transazionale.  
@@ -41,7 +41,7 @@ La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare
 ## <a name="rolling-back-a-transaction"></a>Esecuzione del rollback di una transazione  
  Non è consigliabile chiamare il metodo <xref:System.Transactions.TransactionScope.Complete%2A> all'interno dell'ambito di una determinata transazione allo scopo di eseguirne il rollback. Ad esempio, è preferibile generare un'eccezione all'interno dell'ambito. In tal caso, verrà eseguito il rollback della transazione a cui tale ambito partecipa.  
   
-##  <a name="ManageTxFlow"></a> La gestione del flusso delle transazioni mediante l'enumerazione TransactionScopeOption  
+## <a name="ManageTxFlow"></a> La gestione del flusso delle transazioni mediante l'enumerazione TransactionScopeOption  
  Gli ambiti di transazione possono essere annidati chiamando un metodo che utilizza un oggetto <xref:System.Transactions.TransactionScope> dall'interno di un metodo dotato di un proprio ambito, come nel caso del metodo `RootMethod` illustrato nell'esempio seguente  
   
 ```csharp  
@@ -90,9 +90,9 @@ void SomeMethod()
 |Obbligatorio|No|Nuova transazione (sarà la radice)|  
 |RequiresNew|No|Nuova transazione (sarà la radice)|  
 |Suppress|No|Nessuna transazione|  
-|Obbligatorio|Yes|Transazione di ambiente|  
-|RequiresNew|Yes|Nuova transazione (sarà la radice)|  
-|Suppress|Yes|Nessuna transazione|  
+|Obbligatorio|Sì|Transazione di ambiente|  
+|RequiresNew|Sì|Nuova transazione (sarà la radice)|  
+|Suppress|Sì|Nessuna transazione|  
   
  Quando un oggetto <xref:System.Transactions.TransactionScope> si aggiunge a una transazione di ambiente esistente, è possibile che l'eliminazione dell'ambito non comporti il termine della transazione, a meno che quest'ultima non venga interrotta dall'ambito. Se la transazione di ambiente è stata creata da un ambito radice, il metodo <xref:System.Transactions.CommittableTransaction.Commit%2A> viene chiamato sulla transazione solo quando l'ambito radice viene eliminato. Se la transazione è stata creata manualmente, la transazione termina quando il suo creatore la interrompe o ne esegue il commit.  
   

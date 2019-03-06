@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625627"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366543"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
 Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interagisce con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout.  
@@ -30,9 +30,9 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
   
 |Funzionalità di layout|Descrizione|  
 |--------------------|-----------------|  
-|Ridimensionamento automatico|Alcuni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli ridimensionati automaticamente per visualizzare correttamente il rispettivo contenuto. Per altre informazioni, vedere [Cenni preliminari sulle proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
+|Ridimensionamento automatico|Alcuni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli ridimensionati automaticamente per visualizzare correttamente il rispettivo contenuto. Per altre informazioni, vedere [Cenni preliminari sulle proprietà AutoSize](../../winforms/controls/autosize-property-overview.md).|  
 |Ancoraggio e aggancio|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli supportano il posizionamento e ridimensionamento in base al contenitore padre. Per altre informazioni, vedere <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Scalabilità automatica|Controlli contenitore Ridimensiona se stessi e i relativi elementi figlio in base alla risoluzione del dispositivo di output o la dimensione, in pixel, del tipo di carattere contenitore predefinito. Per altre informazioni, vedere [scalabilità automatica in Windows Form](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
+|Scalabilità automatica|Controlli contenitore Ridimensiona se stessi e i relativi elementi figlio in base alla risoluzione del dispositivo di output o la dimensione, in pixel, del tipo di carattere contenitore predefinito. Per altre informazioni, vedere [scalabilità automatica in Windows Form](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Contenitori di layout|Il <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> controlli dispongono i controlli figlio e si ridimensionano in base al relativo contenuto.|  
   
 ## <a name="layout-limitations"></a>Limitazioni di layout  
@@ -73,7 +73,7 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
 |Overflow|Quando la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento converte da `double` valori `int` overflow di valori, è possibile. I valori maggiori <xref:System.Int32.MaxValue> sono impostati su <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Proprietà correlate al layout  
- Le proprietà che controllano il comportamento di layout nella [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli elementi vengono mappati in modo appropriato per il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Per altre informazioni, vedere [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Le proprietà che controllano il comportamento di layout nella [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli elementi vengono mappati in modo appropriato per il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Per altre informazioni, vedere [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>Modifiche al layout nel controllo ospitato  
  Le modifiche di layout in ospitato [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo vengono propagati alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per attivare gli aggiornamenti del layout. Il <xref:System.Windows.UIElement.InvalidateMeasure%2A> metodo sul <xref:System.Windows.Forms.Integration.WindowsFormsHost> garantisce che le modifiche del layout nel controllo ospitato provochino il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'esecuzione del motore di layout.  
@@ -101,7 +101,7 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [I controlli di disposizione Windows Form in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md)
+- [Migrazione e interoperabilità](migration-and-interoperability.md)

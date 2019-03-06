@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553741"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361230"
 ---
 # <a name="stackpanel"></a>StackPanel
-Il <xref:System.Windows.Controls.StackPanel> elemento viene utilizzato per ordinare gli elementi figlio orizzontalmente o verticalmente.  
+Il <xref:System.Windows.Controls.StackPanel> elemento viene usato in stack gli elementi figlio orizzontalmente o verticalmente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Procedure relative alle proprietà](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ Il <xref:System.Windows.Controls.StackPanel> elemento viene utilizzato per ordin
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)

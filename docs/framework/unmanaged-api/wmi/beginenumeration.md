@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695725"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369292"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (funzione)
 Reimposta l'enumeratore all'inizio dell'enumerazione.  
@@ -40,19 +40,20 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>Parametri
 
-`vFunc`  
+`vFunc`\
 [in] Questo parametro è inutilizzato.
 
-`ptr` [in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
+`ptr`\
+[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in] Una combinazione bit per bit del flag o i valori descritti nel [osservazioni](#remarks) sezione che controlla le proprietà incluse nell'enumerazione.
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | La combinazione di flag in `lEnumFlags` non è valido o non valido è stato specificato l'argomento. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Una seconda chiamata a `BeginEnumeration` è stata eseguita senza una chiamata corrispondente a [ `EndEnumeration` ](endenumeration.md). |
@@ -67,14 +68,14 @@ I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento d
 
 **Gruppo 1**
 
-|Costante  |Value  |Descrizione  |
+|Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Include le proprietà che costituiscono solo la chiave. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Include le proprietà che sono solo i riferimenti agli oggetti. |
 
 **Gruppo 2**
 
-Costante  |Value  |Descrizione  |
+Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limitare l'enumerazione per solo le proprietà di sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Include le proprietà locali e propagate ma ne esclude le proprietà di sistema dall'enumerazione. |
@@ -91,7 +92,7 @@ Costante  |Value  |Descrizione  |
 
 Per le istanze:
 
-Costante  |Value  |Descrizione  |
+Costante  |Valore  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione alle proprietà definite o modificato nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione delle proprietà ereditate dalle classi di base. |
@@ -105,4 +106,5 @@ Costante  |Value  |Descrizione  |
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

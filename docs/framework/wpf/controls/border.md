@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551067"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368077"
 ---
 # <a name="border"></a>Bordo
 L'esempio seguente viene illustrato come modificare dinamicamente le proprietà del <xref:System.Windows.Controls.Border> elemento.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Animare un valore BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+ [Animare un valore BorderThickness](how-to-animate-a-borderthickness-value.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Decorator>  
@@ -27,6 +27,6 @@ L'esempio seguente viene illustrato come modificare dinamicamente le proprietà 
  <xref:System.Windows.Controls.Border>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Cenni preliminari sugli elementi Panel](panels-overview.md)  
   
- [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [Panoramica su allineamento, margini e spaziatura interna](../advanced/alignment-margins-and-padding-overview.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 7eb5c4719a18a288ca0ee3acb13c8c2498ab30f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676081"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368138"
 ---
 # <a name="datagrid"></a>DataGrid
-Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e modificare i dati da molte origini diverse, ad esempio da un database SQL, query LINQ o qualsiasi altra origine dati associabili. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e modificare i dati da molte origini diverse, ad esempio da un database SQL, query LINQ o qualsiasi altra origine dati associabili. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](../data/binding-sources-overview.md).  
   
  Le colonne possono visualizzare testo, controlli, ad esempio un <xref:System.Windows.Controls.ComboBox>, o qualsiasi altro contenuto WPF, ad esempio immagini, pulsanti o qualsiasi contenuto presente in un modello. È possibile usare un <xref:System.Windows.Controls.DataGridTemplateColumn> per visualizzare i dati definiti in un modello. Nella tabella seguente elenca i tipi di colonna vengono forniti per impostazione predefinita.  
   
@@ -38,7 +38,7 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e 
 |Alternanza di colori di sfondo|Impostare il <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> proprietà a 2 o più e quindi assegnare un <xref:System.Windows.Media.Brush> per il <xref:System.Windows.Controls.DataGrid.RowBackground%2A> e <xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A> proprietà.|  
 |Definire il comportamento di selezione di celle e righe|Impostare le proprietà <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> e <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A>.|  
 |Personalizzare l'aspetto visivo di intestazioni, le celle e righe|Applicare un nuovo <xref:System.Windows.Style> per il <xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>, <xref:System.Windows.Controls.DataGrid.CellStyle%2A>, o <xref:System.Windows.Controls.DataGrid.RowStyle%2A> proprietà.|  
-|Set di opzioni di ridimensionamento|Impostare il <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, o <xref:System.Windows.FrameworkElement.MinWidth%2A> proprietà. Per altre informazioni, vedere [opzioni di ridimensionamento nel controllo DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md).|  
+|Set di opzioni di ridimensionamento|Impostare il <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, o <xref:System.Windows.FrameworkElement.MinWidth%2A> proprietà. Per altre informazioni, vedere [opzioni di ridimensionamento nel controllo DataGrid](sizing-options-in-the-datagrid-control.md).|  
 |Accedere agli elementi selezionati|Verificare i <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> proprietà da ottenere le celle selezionate e <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> proprietà da ottenere le righe selezionate. Per altre informazioni, vedere <xref:System.Windows.Controls.DataGrid.SelectedCells%2A>.|  
 |Personalizzare le interazioni dell'utente finale|Impostare il <xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>, <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>, <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>, e <xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A> proprietà.|  
 |Annullare o modificare le colonne generate automaticamente|Gestire il <xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn> evento.|  
@@ -49,17 +49,17 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e 
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene descritto come configurare un nuovo progetto WPF, aggiungere un elemento Entity Framework, impostare l'origine e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid>.|  
-|[Procedura: Aggiungere i dettagli della riga a un controllo DataGrid](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|Viene descritto come creare i dettagli delle righe per un <xref:System.Windows.Controls.DataGrid>.|  
-|[Procedura: Implementare la convalida con il controllo DataGrid](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|Viene descritto come convalidare i valori in <xref:System.Windows.Controls.DataGrid> celle e righe e i suggerimenti di convalida visualizzato.|  
-|[Comportamento predefinito di tastiera e mouse nel controllo DataGrid](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Viene descritto come interagire con il <xref:System.Windows.Controls.DataGrid> controllo usando la tastiera e mouse.|  
-|[Procedura: Raggruppare, ordinare e filtrare dati nel controllo DataGrid](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Viene descritto come visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> in modi diversi per il raggruppamento, ordinamento e filtro dei dati.|  
-|[Opzioni di ridimensionamento nel controllo DataGrid](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|Viene descritto come controllare il ridimensionamento automatico e assoluto nel <xref:System.Windows.Controls.DataGrid>.|  
+|[Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene descritto come configurare un nuovo progetto WPF, aggiungere un elemento Entity Framework, impostare l'origine e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procedura: Aggiungere i dettagli della riga a un controllo DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Viene descritto come creare i dettagli delle righe per un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procedura: Implementare la convalida con il controllo DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Viene descritto come convalidare i valori in <xref:System.Windows.Controls.DataGrid> celle e righe e i suggerimenti di convalida visualizzato.|  
+|[Comportamento predefinito di tastiera e mouse nel controllo DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Viene descritto come interagire con il <xref:System.Windows.Controls.DataGrid> controllo usando la tastiera e mouse.|  
+|[Procedura: Raggruppare, ordinare e filtrare dati nel controllo DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Viene descritto come visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> in modi diversi per il raggruppamento, ordinamento e filtro dei dati.|  
+|[Opzioni di ridimensionamento nel controllo DataGrid](sizing-options-in-the-datagrid-control.md)|Viene descritto come controllare il ridimensionamento automatico e assoluto nel <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Controls.DataGrid>
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)
-- [Controlli](../../../../docs/framework/wpf/controls/index.md)
-- [Modello di contenuto WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Panoramica sul data binding](../data/data-binding-overview.md)
+- [Panoramica sui modelli di dati](../data/data-templating-overview.md)
+- [Controlli](index.md)
+- [Modello di contenuto WPF](wpf-content-model.md)

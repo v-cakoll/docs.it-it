@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3577c90af51886868d57796fb5bfae91dedcee16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f663434d3e3d44dc0c406e71592651493bd8f8dc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375415"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>QualifierSet_BeginEnumeration (funzione)
-Reimposta un enumeratore dei qualificatori di un oggetto all'inizio dell'enumerazione.  
+
+Reimposta un enumeratore dei qualificatori di un oggetto all'inizio dell'enumerazione.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 HRESULT QualifierSet_BeginEnumeration (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametri
 
-`vFunc`   
+`vFunc`\
 [in] Questo parametro è inutilizzato.
 
-`ptr`   
+`ptr`\
 [in] Un puntatore a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) istanza.
 
-`lFlags`   
+`lFlags`\
 [in] Una combinazione bit per bit del flag o i valori descritti nel [osservazioni](#remarks) sezione che specifica i qualificatori da includere nell'enumerazione.
 
 ## <a name="return-value"></a>Valore restituito
@@ -59,27 +60,29 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Una seconda chiamata a `QualifierSet_BeginEnumeration` è stata eseguita senza una chiamata corrispondente a [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per iniziare una nuova enumerazione. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
-  
+
 ## <a name="remarks"></a>Note
 
 Questa funzione esegue il wrapping di una chiamata per il [IWbemQualifierSet::BeginEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration) (metodo).
 
 Per enumerare tutti i qualificatori su un oggetto, questo metodo deve essere chiamato prima della prima chiamata a [QualifierSet_Next](qualifierset-next.md). L'ordine in cui vengono enumerati i qualificatori è garantito a essere invariante per un'enumerazione specificata.
 
-I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento di *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.   
+I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento di *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |  | 0 | Restituire i nomi di tutti i qualificatori. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi dei qualificatori specifici per la proprietà corrente o l'oggetto. <br/> Per una proprietà: Restituire solo gli e i qualificatori specifici per la proprietà (incluse le sostituzioni), non tali propagata dalla definizione della classe. <br/> Per un'istanza: Restituire solo i nomi di qualificatore specifici dell'istanza. <br/> Per una classe: Restituire solo i qualificatori specifico beiong la classe derivata.
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Restituire solo i nomi dei qualificatori specifici per la proprietà corrente o l'oggetto. <br/> Per una proprietà: Restituire solo gli e i qualificatori specifici per la proprietà (incluse le sostituzioni), non tali propagata dalla definizione della classe. <br/> Per un'istanza: Restituire solo i nomi di qualificatore specifici dell'istanza. <br/> Per una classe: Restituire solo i qualificatori specifici per la classe derivata.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Restituisce solo i nomi dei qualificatori propagati da un altro oggetto. <br/> Per una proprietà: Restituisce solo i qualificatori propagati a questa proprietà dalla definizione della classe e non quelli dalla proprietà stessa. <br/> Per un'istanza: Restituzione solo tali qualificatori propagati dalla definizione della classe. <br/> Per una classe: Restituisce solo i nomi di qualificatore ereditati dalle classi padre. |
 
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** WMINet_Utils.idl  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisiti
+
+**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Intestazione:** WMINet_Utils.idl
+
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
