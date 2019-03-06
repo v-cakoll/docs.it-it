@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff79f6e439f2bafd598d9d416cc6f7404f4c231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c640e565374adfdc2a409036910f1a7e0f6f8ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547332"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472265"
 ---
-# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="49241-102">Metodo ICorProfilerInfo::SetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="49241-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
-<span data-ttu-id="49241-103">Sostituisce il corpo della funzione specificata nel modulo specificato.</span><span class="sxs-lookup"><span data-stu-id="49241-103">Replaces the body of the specified function in the specified module.</span></span>  
+# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="a9eae-102">Metodo ICorProfilerInfo::SetILFunctionBody</span><span class="sxs-lookup"><span data-stu-id="a9eae-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
+<span data-ttu-id="a9eae-103">Sostituisce il corpo della funzione specificata nel modulo specificato.</span><span class="sxs-lookup"><span data-stu-id="a9eae-103">Replaces the body of the specified function in the specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49241-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="49241-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9eae-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a9eae-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILFunctionBody(  
@@ -36,31 +36,31 @@ HRESULT SetILFunctionBody(
     [in] LPCBYTE     pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="49241-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="49241-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9eae-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a9eae-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="49241-106">[in] L'ID del modulo in cui risiede la funzione.</span><span class="sxs-lookup"><span data-stu-id="49241-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="a9eae-106">[in] L'ID del modulo in cui risiede la funzione.</span><span class="sxs-lookup"><span data-stu-id="a9eae-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodid`  
- <span data-ttu-id="49241-107">[in] Il token della funzione per cui si desidera sostituire il corpo.</span><span class="sxs-lookup"><span data-stu-id="49241-107">[in] The token of the function for which to replace the body.</span></span>  
+ <span data-ttu-id="a9eae-107">[in] Il token della funzione per cui si desidera sostituire il corpo.</span><span class="sxs-lookup"><span data-stu-id="a9eae-107">[in] The token of the function for which to replace the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="49241-108">[in] La nuova intestazione per la funzione.</span><span class="sxs-lookup"><span data-stu-id="49241-108">[in] The new header for the function.</span></span>  
+ <span data-ttu-id="a9eae-108">[in] La nuova intestazione per la funzione.</span><span class="sxs-lookup"><span data-stu-id="a9eae-108">[in] The new header for the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="49241-109">Note</span><span class="sxs-lookup"><span data-stu-id="49241-109">Remarks</span></span>  
- <span data-ttu-id="49241-110">Il `SetILFunctionBody` metodo sostituisce l'indirizzo virtuale relativo della funzione nei metadati in modo che punti al nuovo corpo della funzione e consente di regolare le strutture di dati interno in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="49241-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9eae-109">Note</span><span class="sxs-lookup"><span data-stu-id="a9eae-109">Remarks</span></span>  
+ <span data-ttu-id="a9eae-110">Il `SetILFunctionBody` metodo sostituisce l'indirizzo virtuale relativo della funzione nei metadati in modo che punti al nuovo corpo della funzione e consente di regolare le strutture di dati interno in base alle esigenze.</span><span class="sxs-lookup"><span data-stu-id="a9eae-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
   
- <span data-ttu-id="49241-111">Il `SetILFunctionBody` metodo può essere chiamato solo sulle funzioni che non sono stati compilati mai da un compilatore just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="49241-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
+ <span data-ttu-id="a9eae-111">Il `SetILFunctionBody` metodo può essere chiamato solo sulle funzioni che non sono stati compilati mai da un compilatore just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="a9eae-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
   
- <span data-ttu-id="49241-112">Usare la [GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) metodo per allocare spazio per il nuovo metodo per assicurarsi che il buffer è compatibile.</span><span class="sxs-lookup"><span data-stu-id="49241-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
+ <span data-ttu-id="a9eae-112">Usare la [GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) metodo per allocare spazio per il nuovo metodo per assicurarsi che il buffer è compatibile.</span><span class="sxs-lookup"><span data-stu-id="a9eae-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49241-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="49241-113">Requirements</span></span>  
- <span data-ttu-id="49241-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49241-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9eae-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a9eae-113">Requirements</span></span>  
+ <span data-ttu-id="a9eae-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9eae-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49241-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="49241-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a9eae-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a9eae-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="49241-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49241-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9eae-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9eae-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49241-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49241-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a9eae-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9eae-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49241-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="49241-118">See also</span></span>
-- [<span data-ttu-id="49241-119">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="49241-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a9eae-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9eae-118">See also</span></span>
+- [<span data-ttu-id="a9eae-119">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="a9eae-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
