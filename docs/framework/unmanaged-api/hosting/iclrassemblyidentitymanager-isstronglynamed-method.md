@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a958e38857d2407930cb8c03a08eabdf6574cda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1c1b2d8274baf5fd43991979bc65cd2c2299b46
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484693"
 ---
-# <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="62f94-102">Metodo ICLRAssemblyIdentityManager::IsStronglyNamed</span><span class="sxs-lookup"><span data-stu-id="62f94-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
-<span data-ttu-id="62f94-103">Ottiene un valore che indica se l'assembly specificato è un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="62f94-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  
+# <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="4da23-102">Metodo ICLRAssemblyIdentityManager::IsStronglyNamed</span><span class="sxs-lookup"><span data-stu-id="4da23-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
+<span data-ttu-id="4da23-103">Ottiene un valore che indica se l'assembly specificato è un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="4da23-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62f94-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="62f94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4da23-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4da23-104">Syntax</span></span>  
   
 ```  
 RESULT IsStronglyNamed (  
@@ -36,32 +36,32 @@ RESULT IsStronglyNamed (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62f94-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="62f94-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4da23-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4da23-105">Parameters</span></span>  
  `pwzAssemblyIdentity`  
- <span data-ttu-id="62f94-106">[in] I dati di identità di assembly canonico opaco dell'assembly da valutare.</span><span class="sxs-lookup"><span data-stu-id="62f94-106">[in] The opaque canonical assembly identity data of the assembly to be evaluated.</span></span>  
+ <span data-ttu-id="4da23-106">[in] I dati di identità di assembly canonico opaco dell'assembly da valutare.</span><span class="sxs-lookup"><span data-stu-id="4da23-106">[in] The opaque canonical assembly identity data of the assembly to be evaluated.</span></span>  
   
  `pbIsStronglyNamed`  
- <span data-ttu-id="62f94-107">[out] `true`, se il riferimento all'assembly il `pwzAssemblyIdentity` parametro è fortemente denominato; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="62f94-107">[out] `true`, if the assembly referenced by the `pwzAssemblyIdentity` parameter is strongly named; otherwise, `false`.</span></span>  
+ <span data-ttu-id="4da23-107">[out] `true`, se il riferimento all'assembly il `pwzAssemblyIdentity` parametro è fortemente denominato; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="4da23-107">[out] `true`, if the assembly referenced by the `pwzAssemblyIdentity` parameter is strongly named; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="62f94-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="62f94-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4da23-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4da23-108">Return Value</span></span>  
   
-|<span data-ttu-id="62f94-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="62f94-109">HRESULT</span></span>|<span data-ttu-id="62f94-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="62f94-110">Description</span></span>|  
+|<span data-ttu-id="4da23-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4da23-109">HRESULT</span></span>|<span data-ttu-id="4da23-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4da23-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="62f94-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="62f94-111">S_OK</span></span>|<span data-ttu-id="62f94-112">Il metodo è stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="62f94-112">The method returned successfully.</span></span>|  
-|<span data-ttu-id="62f94-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="62f94-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="62f94-114">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="62f94-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="62f94-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="62f94-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="62f94-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="62f94-116">The call timed out.</span></span>|  
-|<span data-ttu-id="62f94-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="62f94-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="62f94-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="62f94-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="62f94-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="62f94-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="62f94-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="62f94-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="62f94-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="62f94-121">E_FAIL</span></span>|<span data-ttu-id="62f94-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="62f94-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="62f94-123">Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="62f94-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="62f94-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="62f94-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4da23-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4da23-111">S_OK</span></span>|<span data-ttu-id="4da23-112">Il metodo è stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="4da23-112">The method returned successfully.</span></span>|  
+|<span data-ttu-id="4da23-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4da23-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4da23-114">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4da23-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4da23-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4da23-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4da23-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="4da23-116">The call timed out.</span></span>|  
+|<span data-ttu-id="4da23-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4da23-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4da23-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="4da23-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="4da23-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4da23-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4da23-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="4da23-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="4da23-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4da23-121">E_FAIL</span></span>|<span data-ttu-id="4da23-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="4da23-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4da23-123">Se un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="4da23-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4da23-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4da23-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="62f94-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="62f94-125">Requirements</span></span>  
- <span data-ttu-id="62f94-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62f94-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4da23-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4da23-125">Requirements</span></span>  
+ <span data-ttu-id="4da23-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4da23-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62f94-127">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="62f94-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4da23-127">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4da23-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="62f94-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="62f94-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4da23-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4da23-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="62f94-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62f94-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4da23-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4da23-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62f94-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="62f94-130">See also</span></span>
-- [<span data-ttu-id="62f94-131">Interfaccia ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="62f94-131">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4da23-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4da23-130">See also</span></span>
+- [<span data-ttu-id="4da23-131">Interfaccia ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="4da23-131">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527783"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479909"
 ---
-# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="932cf-102">Funzione _EFN_GetManagedObjectName</span><span class="sxs-lookup"><span data-stu-id="932cf-102">_EFN_GetManagedObjectName Function</span></span>
-<span data-ttu-id="932cf-103">Ottiene il nome di un tipo usando il puntatore all'oggetto gestito specificato.</span><span class="sxs-lookup"><span data-stu-id="932cf-103">Gets the name of a type using the provided managed object pointer.</span></span>  
+# <a name="efngetmanagedobjectname-function"></a><span data-ttu-id="108ce-102">Funzione _EFN_GetManagedObjectName</span><span class="sxs-lookup"><span data-stu-id="108ce-102">_EFN_GetManagedObjectName Function</span></span>
+<span data-ttu-id="108ce-103">Ottiene il nome di un tipo usando il puntatore all'oggetto gestito specificato.</span><span class="sxs-lookup"><span data-stu-id="108ce-103">Gets the name of a type using the provided managed object pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="932cf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="932cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="108ce-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="108ce-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectName(  
@@ -37,28 +37,28 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="932cf-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="932cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="108ce-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="108ce-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="932cf-106">[in] Puntatore al client di debug.</span><span class="sxs-lookup"><span data-stu-id="932cf-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="108ce-106">[in] Puntatore al client di debug.</span><span class="sxs-lookup"><span data-stu-id="108ce-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="932cf-107">[in] Un puntatore all'oggetto gestito.</span><span class="sxs-lookup"><span data-stu-id="932cf-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="108ce-107">[in] Un puntatore all'oggetto gestito.</span><span class="sxs-lookup"><span data-stu-id="108ce-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="932cf-108">szName</span><span class="sxs-lookup"><span data-stu-id="932cf-108">szName</span></span>  
- <span data-ttu-id="932cf-109">[out] Il nome del tipo.</span><span class="sxs-lookup"><span data-stu-id="932cf-109">[out] The name of the type.</span></span>  
+ <span data-ttu-id="108ce-108">szName</span><span class="sxs-lookup"><span data-stu-id="108ce-108">szName</span></span>  
+ <span data-ttu-id="108ce-109">[out] Il nome del tipo.</span><span class="sxs-lookup"><span data-stu-id="108ce-109">[out] The name of the type.</span></span>  
   
  `cbName`  
- <span data-ttu-id="932cf-110">[out] Il numero di caratteri disponibili nel buffer di stringa.</span><span class="sxs-lookup"><span data-stu-id="932cf-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="108ce-110">[out] Il numero di caratteri disponibili nel buffer di stringa.</span><span class="sxs-lookup"><span data-stu-id="108ce-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="932cf-111">Note</span><span class="sxs-lookup"><span data-stu-id="932cf-111">Remarks</span></span>  
- <span data-ttu-id="932cf-112">Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.</span><span class="sxs-lookup"><span data-stu-id="932cf-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="108ce-111">Note</span><span class="sxs-lookup"><span data-stu-id="108ce-111">Remarks</span></span>  
+ <span data-ttu-id="108ce-112">Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.</span><span class="sxs-lookup"><span data-stu-id="108ce-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="932cf-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="932cf-113">Requirements</span></span>  
- <span data-ttu-id="932cf-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="932cf-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="108ce-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="108ce-113">Requirements</span></span>  
+ <span data-ttu-id="108ce-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="108ce-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="932cf-115">**Intestazione:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="932cf-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="108ce-115">**Intestazione:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="108ce-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="932cf-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="932cf-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="108ce-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="108ce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="932cf-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="932cf-117">See also</span></span>
-- [<span data-ttu-id="932cf-118">Funzioni statiche globali di debug</span><span class="sxs-lookup"><span data-stu-id="932cf-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="108ce-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="108ce-117">See also</span></span>
+- [<span data-ttu-id="108ce-118">Funzioni statiche globali di debug</span><span class="sxs-lookup"><span data-stu-id="108ce-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
