@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d3be88065d4f29020a794db30c616774db1f4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580850"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491411"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Metodo ISymUnmanagedWriter::DefineSequencePoints
 Definisce un gruppo di punti di sequenza nel metodo corrente. Ogni riga e colonna iniziale definiscono l'inizio di un'istruzione all'interno di un metodo. Ogni riga e colonna finale definiscono la fine di un'istruzione all'interno di un metodo. Le matrici devono essere disposti in ordine crescente di offset. L'offset viene sempre misurata dall'inizio del metodo, in byte.  
@@ -40,7 +40,7 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `document`  
  [in] L'oggetto documento per cui vengono definiti punti di sequenza.  
   

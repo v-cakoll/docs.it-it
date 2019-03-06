@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61f6ed5712f3c98f06f5fa76657f3fa7b70fe84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69976110a227f95cf157b19b270f25cc3808246e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666332"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484108"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>Metodo IGCHost2::SetGCStartupLimitsEx
 Imposta le dimensioni del segmento e le dimensioni massime per la generazione 0.  
@@ -36,7 +36,7 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `SegmentSize`  
  [in] Le dimensioni del segmento usato dal sistema di garbage collection.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9e5a2f7baa1c15ac54950bf1bfc0d448d08f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e887fb5f4f9667bed7eef4a84899f82cada0fcd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567791"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489579"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>Metodo IMetaDataImport::IsValidToken
 Ottiene un valore che indica se il token specificato contiene un riferimento valido a un oggetto codice.  
@@ -35,7 +35,7 @@ BOOL IsValidToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Il token per verificare la validità del riferimento.  
   

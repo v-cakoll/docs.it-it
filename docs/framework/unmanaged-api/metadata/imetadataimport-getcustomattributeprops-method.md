@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4619d5a1444d42c6f3ac43306fbd979a6a70f12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 422ff5d5a2924bf66fee9dad99d57fed9477d0f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484433"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>Metodo IMetaDataImport::GetCustomAttributeProps
 Ottiene il valore dell'attributo personalizzato, dato il relativo token di metadati.  
@@ -39,7 +39,7 @@ HRESULT GetCustomAttributeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cv`  
  [in] Token di metadati che rappresenta l'attributo personalizzato da recuperare.  
   

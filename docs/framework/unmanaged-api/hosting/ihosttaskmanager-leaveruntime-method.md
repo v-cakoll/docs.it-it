@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22ed258390f7adc9bbf8cd425afe208b2f9b12c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2059657a6f4543ee29d795ecae7b93b72876fdf4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607043"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474631"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Metodo IHostTaskManager::LeaveRuntime
 Notifica all'host che l'attività attualmente in esecuzione sta per lasciare common language runtime (CLR) e immettere il codice non gestito.  
@@ -38,7 +38,7 @@ HRESULT LeaveRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `target`  
  [in] L'indirizzo all'interno del file eseguibile portabile con mapping di funzione non gestita da chiamare.  
   

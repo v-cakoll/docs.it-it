@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489891"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>Metodo ICorDebugThread::GetDebugState
 Ottiene lo stato di debug corrente di questo oggetto ICorDebugThread.  
@@ -35,18 +35,18 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pState`  
  [out] Un puntatore a una combinazione bit per bit dei valori di enumerazione CorDebugThreadState che descrive lo stato di debug corrente di questo thread.  
   
 ## <a name="remarks"></a>Note  
- Se il processo è inattivo, `pState` rappresenta lo stato di debug che avrebbe questo thread se il processo continua, non l'effettivo stato corrente di questo thread.  
+ Se il processo è inattivo, `pState` rappresenta lo stato di debug che esisterebbe per questo thread se il processo di proseguire, non lo stato attuale di questo thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 611da2dcb5686f79207e5099661fbbf5e7981421
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fc69ab8b2d3565c49eeee09d8860c81ec8818fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681924"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473857"
 ---
 # <a name="gethashfromfilew-function"></a>Funzione GetHashFromFileW
 Genera un hash basato sul contenuto del file specificato da una stringa Unicode.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `wszFilePath`  
  [in] Il nome di Unicode del file da hash.  
   

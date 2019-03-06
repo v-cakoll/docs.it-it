@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d163de5f2407d5b541573afe070db812d5980229
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474358"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>Metodo IGCHostControl::RequestVirtualMemLimit
 Le richieste all'host di modificare i limiti di memoria virtuale.  
@@ -36,7 +36,7 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `sztMaxVirtualMemMB`  
  [in] Dimensioni richieste di memoria da allocare.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403370"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490463"
 ---
 # <a name="icordebugchaingetcallee-method"></a>Metodo ICorDebugChain::GetCallee
 Ottiene la catena di chiamata da questa catena.  
@@ -35,18 +35,18 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppChain`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di chiamata. Se la catena è attualmente in esecuzione (ovvero, se la catena non è in attesa di una catena di chiamata), `ppChain` sarà null.  
+ [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di chiamate. Se la catena è attualmente in esecuzione (vale a dire se questa catena non è in attesa di una catena di chiamata), `ppChain` sarà null.  
   
 ## <a name="remarks"></a>Note  
- Questa catena dovrà attendere la catena di chiamata restituire prima di riprendere l'esecuzione. La catena di chiamate potrebbe essere in un altro thread nel caso di chiamate di marshalling cross-thread.  
+ Questa catena attenderà la catena di chiamata restituire prima di riprendere l'esecuzione. La catena di chiamate potrebbe essere in un altro thread nel caso di chiamate per il marshalling cross-thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

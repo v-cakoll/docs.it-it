@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b85739f0f9b6771b204f0e0297ab025cd112a12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734351"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476705"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Metodo ICLRDataTarget::GetPointerSize
 Ottiene la dimensione, espressa in byte, del tipo di puntatore che viene utilizzato il processo di destinazione. Questo metodo viene chiamato dai servizi di accesso dati di common language runtime.  
@@ -35,7 +35,7 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pointerSize`  
  [out] Un puntatore a un valore intero che specifica la dimensione, espressa in byte, dell'indicatore di misura sul processo di destinazione.  
   

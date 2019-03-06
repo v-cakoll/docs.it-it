@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482691"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste includono qualità e prestazioni migliorate nel rendering del testo, supporto tipografico di [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], testo internazionale migliorato, supporto avanzato dei tipi di carattere e nuove API (Application Programming Interface) di testo.  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Qualità e prestazioni del testo migliorate  
@@ -36,13 +34,11 @@ Diagramma della pipeline di rendering del testo
   
  Il tipo di carattere [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles contiene glifi aggiuntivi che offrono alternative stilistiche al set di glifi standard. Il testo seguente mostra glifi con stile alternativo.  
   
- ![Testo con glifi con stile alternativo OpenType](./media/opentypefont02.gif "opentypefont02")  
-Testo con glifi con stile alternativo OpenType  
+ ![Testo con glifi con stile alternativo OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "testo con glifi con stile alternativo OpenType")  
   
  I glifi ornati sono glifi decorativi che usano ornamenti elaborati spesso associati alla calligrafia. Il testo seguente mostra glifi standard e ornati per il tipo di carattere Pescadero.  
   
- ![Testo con glifi standard e ornati OpenType](./media/opentypefont08.gif "opentypefont08")  
-Testo con glifi standard e ornati OpenType  
+ ![Testo con glifi standard e ornati OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "testo con glifi standard e ornati OpenType")  
   
  Per informazioni dettagliate sulle funzionalità di [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], vedere [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Interazione tra l'applicazione e TextFormatter
 - [Disegno di testo formattato](drawing-formatted-text.md)
 - [Formattazione del testo avanzata](advanced-text-formatting.md)
 - [per](optimizing-performance-text.md)
-- [Microsoft Typography](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft Typography](https://docs.microsoft.com/typography/)

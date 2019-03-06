@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59bd3b8c427996fe5e44e95aeff51deb1da984a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: de3606e4763596038a2c573002d774c6348071e8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066376"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473513"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>Metodo ICLRDataTarget3::GetExceptionThreadID
 Chiamato dai servizi di accesso ai dati CLR (Common Language Runtime) per ottenere l'ID del thread che ha generato l'eccezione.  
@@ -32,7 +32,7 @@ HRESULT GetExceptionThreadID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `threadID`  
  [out] ID del thread che ha generato l'eccezione.  
   

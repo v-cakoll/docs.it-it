@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f8e9c91ddddd0e0b14c79bef86c7665ff4e3dcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 101e1c83d040f2f6db4585e76e4b353270dd1de1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723321"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484979"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>Metodo ICorRuntimeHost::NextDomain
 Ottiene un puntatore di interfaccia al dominio successivo nell'enumerazione.  
@@ -36,7 +36,7 @@ HRESULT NextDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `hEnum`  
  [in] Enumeratore che è stata ottenuta tramite una chiamata a [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).  
   

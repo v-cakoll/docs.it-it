@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc62c5084d91e99193e9ddc5bfbb400fd8d87772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1deff93744d1dec0ff7d6cab5bb6580f3a8fbad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531067"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490047"
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a>Metodo IHostSyncManager::CreateRWLockWriterEvent
 Crea un oggetto evento auto-reset per l'implementazione di un blocco in scrittura.  
@@ -36,7 +36,7 @@ HRESULT CreateRWLockWriterEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cookie`  
  [in] Un cookie da associare all'evento di reimpostazione automatica.  
   

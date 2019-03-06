@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414053"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475788"
 ---
 # <a name="icordebugilframegetargument-method"></a>Metodo ICorDebugILFrame::GetArgument
-Ottiene il valore dell'argomento specificato in questo stack frame di Microsoft intermediate language (MSIL).  
+Ottiene il valore dell'argomento specificato in questo frame dello stack di Microsoft intermediate language (MSIL).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,9 +36,9 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwIndex`  
- [in] Indice dell'argomento in questo stack frame MSIL.  
+ [in] L'indice dell'argomento in questo stack frame MSIL.  
   
  `ppValue`  
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore recuperato.  
@@ -47,10 +47,10 @@ HRESULT GetArgument (
  Il `GetArgument` metodo può essere utilizzato in uno stack frame MSIL o in un frame compilati just-in-time (JIT).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

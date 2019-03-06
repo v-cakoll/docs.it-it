@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fc7bda648dd19f614eb27ff514da653dcd347fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d91791517350137c71937b4e1b02e070d62efd38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472590"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>Metodo IHostIoCompletionManager::CreateIoCompletionPort
 Richieste all'host di creare una nuova porta di completamento i/o.  
@@ -35,7 +35,7 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `phPort`  
  [out] Un puntatore a un handle per la porta di completamento i/o appena creata, oppure 0 (zero), se non è stato possibile creare la porta.  
   

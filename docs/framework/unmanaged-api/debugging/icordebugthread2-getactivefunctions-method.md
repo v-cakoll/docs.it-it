@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421106"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489930"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>Metodo ICorDebugThread2::GetActiveFunctions
 Ottiene informazioni sulla funzione attiva in ognuno dei frame di questo thread.  
@@ -38,7 +38,7 @@ HRESULT GetActiveFunctions (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cFunctions`  
  [in] Dimensione della matrice `pFunctions`.  
   
@@ -48,18 +48,18 @@ HRESULT GetActiveFunctions (
  `pFunctions`  
  [in, out] Matrice di oggetti COR_ACTIVE_FUNCTION, ognuno dei quali contiene informazioni sulle funzioni attive nei frame di questo thread.  
   
- Il primo elemento verrà utilizzato per il frame foglia e così via fino alla radice dello stack.  
+ Il primo elemento da utilizzare per il frame foglia e così via fino alla radice dello stack.  
   
 ## <a name="remarks"></a>Note  
- Se `pFunctions` è null per l'input, `GetActiveFunctions` restituisce solo il numero di funzioni sullo stack. Vale a dire se `pFunctions` è null per l'input, `GetActiveFunctions` restituisce un valore solo in `pcFunctions`.  
+ Se `pFunctions` è null per input, `GetActiveFunctions` restituisce solo il numero di funzioni sullo stack. Vale a dire, se `pFunctions` è null per input, `GetActiveFunctions` restituisce un valore solo in `pcFunctions`.  
   
- Il `GetActiveFunctions` metodo costituisce un'ottimizzazione acquisizione le stesse informazioni da una traccia dello stack frame e include solo i frame che sarebbe invece un oggetto ICorDebugILFrame per essi nell'analisi dello stack completo.  
+ Il `GetActiveFunctions` metodo è inteso come ottimizzazione acquisizione le stesse informazioni da una traccia dello stack frame e include solo i frame che avrebbe dovuto un oggetto ICorDebugILFrame per essi nell'analisi dello stack completo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405143"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489553"
 ---
 # <a name="icordebugchaingetcaller-method"></a>Metodo ICorDebugChain::GetCaller
 Ottiene la catena che ha chiamato questa catena.  
@@ -35,20 +35,20 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppChain`  
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena di chiamata.  
   
- Se la catena è stata chiamata spontaneamente (come sarebbe se la catena o il debugger inizializzato lo stack di chiamate), `ppChain` sarà null.  
+ Se questa catena è stata chiamata spontaneamente (come sarebbe il caso se questa catena o il debugger inizializzata nello stack di chiamate), `ppChain` sarà null.  
   
 ## <a name="remarks"></a>Note  
- La catena di chiamata potrebbe essere in un thread differente, se è stato effettuato il marshalling della chiamata tra thread.  
+ La catena di chiamata può essere su un thread diverso, se è stato effettuato il marshalling della chiamata tra thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

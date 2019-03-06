@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420095"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488188"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>Metodo ICorDebugProcess::IsTransitionStub
-Ottiene un valore che indica se un indirizzo è all'interno di uno stub che causerà una transizione da codice gestito.  
+Ottiene un valore che indica se un indirizzo è all'interno di uno stub che causa una transizione al codice gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,23 +35,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `address`  
  [in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo in questione.  
   
  `pbTransitionStub`  
- [out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causerà una transizione a codice gestito; in caso contrario *`pbTransitionStub` è `false`.  
+ [out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causa una transizione al codice gestito; in caso contrario, *`pbTransitionStub` è `false`.  
   
 ## <a name="remarks"></a>Note  
- Il `IsTransitionStub` metodo può essere usato da passo a passo il codice non gestito per decidere quando restituire il controllo per il gestore di istruzioni gestito.  
+ Il `IsTransitionStub` metodo utilizzabile dal codice non gestito debug passo a passo per decidere quando restituire il controllo per il gestore gestito di istruzioni.  
   
- È possibile anche gli stub di transizione identità esaminando le informazioni contenute nel file eseguibile portabile (PE).  
+ È anche possibile stub transizione identità esaminando le informazioni contenute nel file eseguibile portabile (PE).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
