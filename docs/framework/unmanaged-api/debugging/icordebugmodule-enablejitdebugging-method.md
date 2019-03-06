@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 642c4fd600d10ef89a08aa32bef5c8e7455552c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415642"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473818"
 ---
-# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="612a8-102">Metodo ICorDebugModule::EnableJITDebugging</span><span class="sxs-lookup"><span data-stu-id="612a8-102">ICorDebugModule::EnableJITDebugging Method</span></span>
-<span data-ttu-id="612a8-103">Controlla se il compilatore di just-in-time (JIT) consente di mantenere le informazioni di debug per i metodi all'interno del modulo.</span><span class="sxs-lookup"><span data-stu-id="612a8-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
+# <a name="icordebugmoduleenablejitdebugging-method"></a><span data-ttu-id="66b30-102">Metodo ICorDebugModule::EnableJITDebugging</span><span class="sxs-lookup"><span data-stu-id="66b30-102">ICorDebugModule::EnableJITDebugging Method</span></span>
+<span data-ttu-id="66b30-103">Controlla se il compilatore JIT just-in-time mantiene le informazioni di debug per i metodi all'interno del modulo.</span><span class="sxs-lookup"><span data-stu-id="66b30-103">Controls whether the just-in-time (JIT) compiler preserves debugging information for methods within this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="612a8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="612a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66b30-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="66b30-104">Syntax</span></span>  
   
 ```  
 HRESULT EnableJITDebugging(  
@@ -36,21 +36,21 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="612a8-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="612a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66b30-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="66b30-105">Parameters</span></span>  
  `bTrackJITInfo`  
- <span data-ttu-id="612a8-106">[in] Impostare questo valore su `true` per consentire al compilatore JIT di mantenere le informazioni di mapping tra la versione di Microsoft intermediate language (MSIL) e la versione compilata tramite JIT di ogni metodo in questo modulo.</span><span class="sxs-lookup"><span data-stu-id="612a8-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
+ <span data-ttu-id="66b30-106">[in] Impostare questo valore su `true` per consentire al compilatore JIT conservare le informazioni di mapping tra la versione di Microsoft intermediate language (MSIL) e la versione di ogni metodo in questo modulo compilato tramite JIT.</span><span class="sxs-lookup"><span data-stu-id="66b30-106">[in] Set this value to `true` to enable the JIT compiler to preserve mapping information between the Microsoft intermediate language (MSIL) version and the JIT-compiled version of each method in this module.</span></span>  
   
  `bAllowJitOpts`  
- <span data-ttu-id="612a8-107">[in] Impostare questo valore su `true` per consentire al compilatore JIT generare il codice con alcune ottimizzazioni JIT specifiche per il debug.</span><span class="sxs-lookup"><span data-stu-id="612a8-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
+ <span data-ttu-id="66b30-107">[in] Impostare questo valore su `true` per consentire al compilatore JIT generare il codice con alcune ottimizzazioni JIT specifiche per il debug.</span><span class="sxs-lookup"><span data-stu-id="66b30-107">[in] Set this value to `true` to enable the JIT compiler to generate code with certain JIT-specific optimizations for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="612a8-108">Note</span><span class="sxs-lookup"><span data-stu-id="612a8-108">Remarks</span></span>  
- <span data-ttu-id="612a8-109">Debug JIT è abilitato per impostazione predefinita per tutti i moduli caricati quando è attivo il debugger.</span><span class="sxs-lookup"><span data-stu-id="612a8-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="612a8-110">A livello di programmazione abilitando o disabilitando le impostazioni di override delle impostazioni globali.</span><span class="sxs-lookup"><span data-stu-id="612a8-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="66b30-108">Note</span><span class="sxs-lookup"><span data-stu-id="66b30-108">Remarks</span></span>  
+ <span data-ttu-id="66b30-109">Debug JIT è abilitato per impostazione predefinita per tutti i moduli che vengono caricati quando il debugger è attivo.</span><span class="sxs-lookup"><span data-stu-id="66b30-109">JIT debugging is enabled by default for all modules that are loaded when the debugger is active.</span></span> <span data-ttu-id="66b30-110">A livello di programmazione abilitando o disabilitando le impostazioni di override delle impostazioni globali.</span><span class="sxs-lookup"><span data-stu-id="66b30-110">Programmatically enabling or disabling the settings overrides global settings.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="612a8-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="612a8-111">Requirements</span></span>  
- <span data-ttu-id="612a8-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="612a8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66b30-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="66b30-111">Requirements</span></span>  
+ <span data-ttu-id="66b30-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66b30-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="612a8-113">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="612a8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="66b30-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="66b30-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="612a8-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="612a8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="66b30-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66b30-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="612a8-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="612a8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="66b30-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66b30-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
