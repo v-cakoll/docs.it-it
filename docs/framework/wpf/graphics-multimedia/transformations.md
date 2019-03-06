@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570525"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352451"
 ---
-# <a name="transformations"></a><span data-ttu-id="9c1cc-102">Trasformazioni</span><span class="sxs-lookup"><span data-stu-id="9c1cc-102">Transformations</span></span>
-<span data-ttu-id="9c1cc-103">Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="9c1cc-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="dfeca-102">Trasformazioni</span><span class="sxs-lookup"><span data-stu-id="dfeca-102">Transformations</span></span>
+<span data-ttu-id="dfeca-103">Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="dfeca-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c1cc-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="9c1cc-104">In This Section</span></span>  
- [<span data-ttu-id="9c1cc-105">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="9c1cc-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="9c1cc-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="9c1cc-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dfeca-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="dfeca-104">In This Section</span></span>  
+ [<span data-ttu-id="dfeca-105">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="dfeca-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="dfeca-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="dfeca-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9c1cc-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9c1cc-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfeca-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dfeca-107">See also</span></span>
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="9c1cc-108">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="9c1cc-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="9c1cc-109">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="9c1cc-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="9c1cc-110">Layout</span><span class="sxs-lookup"><span data-stu-id="9c1cc-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+- [<span data-ttu-id="dfeca-108">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="dfeca-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="dfeca-109">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="dfeca-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="dfeca-110">Layout</span><span class="sxs-lookup"><span data-stu-id="dfeca-110">Layout</span></span>](../advanced/layout.md)
