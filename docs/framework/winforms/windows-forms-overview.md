@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007360"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375324"
 ---
 # <a name="windows-forms-overview"></a>Panoramica sui Windows Form
 
@@ -45,8 +45,8 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
-|Uso dei controlli nei form|[Procedura: Aggiungere controlli a un Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Uso del controllo <xref:System.Windows.Forms.ToolStrip>|[Procedura: creare un controllo ToolStrip di base con elementi standard utilizzando la finestra di progettazione](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Uso dei controlli nei form|[Procedura: Aggiungere controlli a un Windows Form](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Uso del controllo <xref:System.Windows.Forms.ToolStrip>|[Procedura: Creare un controllo ToolStrip di base con elementi Standard utilizzando la finestra di progettazione](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Creazione di grafica con <xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
 |Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
@@ -65,10 +65,10 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
-|Uso del componente <xref:System.Windows.Forms.BindingSource>|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Uso delle origini dati di [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Uso della finestra Origini dati|[Procedura dettagliata: visualizzazione di dati in un Windows Form](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
-|Uso delle impostazioni dell'applicazione|[Procedura: creare le impostazioni applicazione](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Uso del componente <xref:System.Windows.Forms.BindingSource>|[Procedura: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Uso delle origini dati di [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Procedura: Ordinare e filtrare i dati ADO.NET con il Windows Form componente BindingSource](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Uso della finestra Origini dati|[Associare controlli Windows Form ai dati in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
+|Uso delle impostazioni dell'applicazione|[Procedura: Creare le impostazioni dell'applicazione](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Distribuire le app nei computer client
 
@@ -84,7 +84,7 @@ Per un'introduzione completa a [!INCLUDE[ndptecclick](../../../includes/ndpteccl
 
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
-|Distribuzione di un'applicazione mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Distribuzione di un'applicazione mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |Aggiornamento di una distribuzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
 |Gestione della sicurezza con [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Procedura: Abilitare le impostazioni di sicurezza ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
@@ -98,7 +98,7 @@ Per informazioni dettagliate sull'uso di queste funzionalità, vedere i seguenti
 
 |Descrizione|Argomento della Guida|
 |-----------------|----------------|
-|Stampa del contenuto di un form|[Procedura: stampare grafica in Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: stampare un file di testo con più pagine in Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Stampa del contenuto di un form|[Procedura: Stampare grafica in Windows Form](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: Stampare un File di testo con più pagine in Windows Form](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Altre informazioni sulla sicurezza di Windows Form|[Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Vedere anche

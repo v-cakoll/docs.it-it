@@ -7,20 +7,20 @@ helpviewer_keywords:
 - TabControl control [WPF]
 - controls [WPF], TabControl
 ms.assetid: 3d26404b-431e-432d-a82b-ef026feb3fff
-ms.openlocfilehash: dba156139bb8a3bb68b3ef1434177b8d9b839cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33eb4943d2c867b7843952e5c961eb7e66072890
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555977"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372061"
 ---
 # <a name="tabcontrol"></a>TabControl
-<xref:System.Windows.Controls.TabControl> elementi visualizzare il contenuto nelle pagine discrete accessibile selezionando la scheda appropriata. Ogni scheda contiene un <xref:System.Windows.Controls.TabItem>.  
+<xref:System.Windows.Controls.TabControl> elementi di visualizzare il contenuto nelle pagine discrete, accedervi selezionando la scheda appropriata. Ogni scheda contiene un <xref:System.Windows.Controls.TabItem>.  
   
  La figura seguente mostra un <xref:System.Windows.Controls.TabControl>.  
   
- ![Controllo struttura a schede](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")  
-TabControl tipico  
+ ![Controllo struttura a schede](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")  
+Controllo TabControl tipica  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.TabControl>  

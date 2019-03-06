@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 7a1bfde401722333181b3c057b3f58aebd7811a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379185"
 ---
 # <a name="binding-markup-extension"></a>Associazione dell'estensione di markup
 Rinvia un valore della proprietà in un valore associato a dati, creazione di un oggetto di espressione intermedia e interpretando il contesto dati che si applica all'elemento e i relativi binding in fase di esecuzione.  
@@ -41,10 +41,10 @@ Rinvia un valore della proprietà in un valore associato a dati, creazione di un
 |-|-|  
 |`bindProp1, bindPropN`|Il nome del <xref:System.Windows.Data.Binding> o <xref:System.Windows.Data.BindingBase> proprietà da impostare. Non tutti i <xref:System.Windows.Data.Binding> proprietà possono essere impostate con il `Binding` estensione e alcune proprietà possono essere impostate all'interno di un `Binding` espressione solo utilizzando ulteriormente annidati le estensioni di markup. Vedere la sezione "Associazione di proprietà che può essere impostato con l'estensione Binding".|  
 |`value1, valueN`|Il valore su cui impostare la proprietà. La gestione del valore dell'attributo è in definitiva specifica del tipo e per la logica delle specifiche <xref:System.Windows.Data.Binding> proprietà da impostare.|  
-|`path`|La stringa di percorso che imposta l'oggetto implicito <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> proprietà. Vedere anche [sintassi XAML di PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
+|`path`|La stringa di percorso che imposta l'oggetto implicito <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> proprietà. Vedere anche [sintassi XAML di PropertyPath](propertypath-xaml-syntax.md).|  
   
 ## <a name="unqualified-binding"></a>Non qualificato {Binding}  
- Il `{Binding}` utilizzo sono visualizzati in "Utilizzo dell'espressione di Binding" consente di creare un <xref:System.Windows.Data.Binding> dell'oggetto con valori predefiniti, che include un'iniziale <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> di `null`. Si tratta comunque utile in molti scenari, perché l'oggetto creato <xref:System.Windows.Data.Binding> potrebbe basarsi sulle proprietà di associazione di dati della chiave, ad esempio <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> e <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> impostato nel contesto dei dati in fase di esecuzione. Per altre informazioni sul concetto di contesto dei dati, vedere [Data Binding](../../../../docs/framework/wpf/data/data-binding-wpf.md).  
+ Il `{Binding}` utilizzo sono visualizzati in "Utilizzo dell'espressione di Binding" consente di creare un <xref:System.Windows.Data.Binding> dell'oggetto con valori predefiniti, che include un'iniziale <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> di `null`. Si tratta comunque utile in molti scenari, perché l'oggetto creato <xref:System.Windows.Data.Binding> potrebbe basarsi sulle proprietà di associazione di dati della chiave, ad esempio <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> e <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> impostato nel contesto dei dati in fase di esecuzione. Per altre informazioni sul concetto di contesto dei dati, vedere [Data Binding](../data/data-binding-wpf.md).  
   
 ## <a name="implicit-path"></a>Implicit Path  
  Il `Binding` utilizzi di estensione di markup <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> come concettuale "proprietà predefinita", dove `Path=` non necessario nell'espressione. Se si specifica un `Binding` espressione con un percorso implicito, il percorso implicito deve essere visualizzato innanzitutto nell'espressione, prima di qualsiasi altro `bindProp` = `value` coppie posizione in cui il <xref:System.Windows.Data.Binding> proprietà viene specificata in base al nome. Ad esempio: `{Binding PathString}`, dove `PathString` è una stringa che restituisce il valore di <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> nel <xref:System.Windows.Data.Binding> creato per l'utilizzo dell'estensione di markup. È possibile aggiungere un percorso implicito con altre proprietà denominate dopo il virgola come separatore, ad esempio, `{Binding LastName, Mode=TwoWay}`.  
@@ -58,15 +58,15 @@ Rinvia un valore della proprietà in un valore associato a dati, creazione di un
   
 -   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Valore booleano, può essere `true` o `false`. Il valore predefinito è `false`.  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma per eseguire questa operazione richiede un riferimento all'oggetto per il valore, ad esempio un [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). In questo caso, il valore è un'istanza di una classe di convertitore personalizzato.  
+-   <xref:System.Windows.Data.Binding.Converter%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma per eseguire questa operazione richiede un riferimento all'oggetto per il valore, ad esempio un [estensione di Markup StaticResource](staticresource-markup-extension.md). In questo caso, il valore è un'istanza di una classe di convertitore personalizzato.  
   
 -   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: impostabili nell'espressione come un identificatore basato su standard. vedere l'argomento di riferimento per <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del parametro passato. Se si passa un tipo di riferimento per valore, questo tipo di utilizzo richiede un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del parametro passato. Se si passa un tipo di riferimento per valore, questo tipo di utilizzo richiede un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>: si esclude reciprocamente <xref:System.Windows.Data.Binding.RelativeSource%2A> e <xref:System.Windows.Data.Binding.Source%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   <xref:System.Windows.Data.Binding.ElementName%2A>: si esclude reciprocamente <xref:System.Windows.Data.Binding.RelativeSource%2A> e <xref:System.Windows.Data.Binding.Source%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../data/data-binding-overview.md).  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del valore passato. Se il passaggio di un tipo riferimento, è necessario un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del valore passato. Se il passaggio di un tipo riferimento, è necessario un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](staticresource-markup-extension.md).  
   
 -   <xref:System.Windows.Data.Binding.IsAsync%2A>: Valore booleano, può essere `true` o `false`. Il valore predefinito è `false`.  
   
@@ -78,15 +78,15 @@ Rinvia un valore della proprietà in un valore associato a dati, creazione di un
   
 -   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Valore booleano, può essere `true` o `false`. Il valore predefinito è `false`.  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: stringa che descrive il percorso in un oggetto dati o un modello a oggetti generale. Il formato fornisce numerose convenzioni per attraversare un modello a oggetti che non può essere adeguatamente descritta in questo argomento. Visualizzare [sintassi XAML di PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+-   <xref:System.Windows.Data.Binding.Path%2A>: stringa che descrive il percorso in un oggetto dati o un modello a oggetti generale. Il formato fornisce numerose convenzioni per attraversare un modello a oggetti che non può essere adeguatamente descritta in questo argomento. Visualizzare [sintassi XAML di PropertyPath](propertypath-xaml-syntax.md).  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: si esclude reciprocamente con <xref:System.Windows.Data.Binding.ElementName%2A> e <xref:System.Windows.Data.Binding.Source%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../../../../docs/framework/wpf/data/data-binding-overview.md). Richiede un annidato [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md) utilizzo per specificare il valore.  
+-   <xref:System.Windows.Data.Binding.RelativeSource%2A>: si esclude reciprocamente con <xref:System.Windows.Data.Binding.ElementName%2A> e <xref:System.Windows.Data.Binding.Source%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../data/data-binding-overview.md). Richiede un annidato [RelativeSource MarkupExtension](relativesource-markupextension.md) utilizzo per specificare il valore.  
   
--   <xref:System.Windows.Data.Binding.Source%2A>: si esclude reciprocamente <xref:System.Windows.Data.Binding.RelativeSource%2A> e <xref:System.Windows.Data.Binding.ElementName%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../../../../docs/framework/wpf/data/data-binding-overview.md). Richiede un utilizzo dell'estensione annidata, in genere un [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) che fa riferimento a un'origine dati oggetto da un dizionario risorse con chiave.  
+-   <xref:System.Windows.Data.Binding.Source%2A>: si esclude reciprocamente <xref:System.Windows.Data.Binding.RelativeSource%2A> e <xref:System.Windows.Data.Binding.ElementName%2A>; ciascuna di queste proprietà di associazione rappresenta una metodologia di associazione specifica. Visualizzare [Panoramica sul Data Binding](../data/data-binding-overview.md). Richiede un utilizzo dell'estensione annidata, in genere un [estensione di Markup StaticResource](staticresource-markup-extension.md) che fa riferimento a un'origine dati oggetto da un dizionario risorse con chiave.  
   
 -   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: una stringa che descrive una convenzione di formato di stringa per i dati associati. Questo è un concetto di associazione relativamente avanzato; vedere la pagina di riferimento per <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del parametro passato. Se viene passato un tipo di riferimento per il valore, richiede un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: può essere impostato come una `bindProp` = `value` stringa nell'espressione, ma ciò è dipende dal tipo del parametro passato. Se viene passato un tipo di riferimento per il valore, richiede un riferimento all'oggetto, ad esempio nidificate [estensione di Markup StaticResource](staticresource-markup-extension.md).  
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *valore* è un nome di costante dal <xref:System.Windows.Data.UpdateSourceTrigger> enumerazione. Ad esempio `{Binding UpdateSourceTrigger=LostFocus}`. Controlli specifici possono presentare valori predefiniti diversi per questa proprietà di associazione. Vedere <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
@@ -94,7 +94,7 @@ Rinvia un valore della proprietà in un valore associato a dati, creazione di un
   
 -   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Valore booleano, può essere `true` o `false`. Il valore predefinito è `false`. Vedere la sezione Osservazioni.  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: stringa che descrive il percorso nell'oggetto XMLDOM di un'origine dati XML. Visualizzare [associati a dati XML mediante un oggetto XMLDataProvider e query XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+-   <xref:System.Windows.Data.Binding.XPath%2A>: stringa che descrive il percorso nell'oggetto XMLDOM di un'origine dati XML. Visualizzare [associati a dati XML mediante un oggetto XMLDataProvider e query XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Di seguito sono le proprietà della <xref:System.Windows.Data.Binding> che non possono essere impostate tramite il `Binding` estensione di markup /`{Binding}` formato dell'espressione.  
   
@@ -107,23 +107,23 @@ Rinvia un valore della proprietà in un valore associato a dati, creazione di un
 ## <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  In termini di precedenza delle proprietà di dipendenza, un `Binding` è equivalente a impostato localmente espressione valore. Se si imposta un valore locale per una proprietà che in precedenza era necessario un `Binding` espressione, il `Binding` venga completamente rimossa. Per altri dettagli, vedere [Precedenza del valore della proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+>  In termini di precedenza delle proprietà di dipendenza, un `Binding` è equivalente a impostato localmente espressione valore. Se si imposta un valore locale per una proprietà che in precedenza era necessario un `Binding` espressione, il `Binding` venga completamente rimossa. Per altri dettagli, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).  
   
- Descrizione dell'associazione dati a livello di base non è trattata in questo argomento. Visualizzare [Panoramica sul Data Binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Descrizione dell'associazione dati a livello di base non è trattata in questo argomento. Visualizzare [Panoramica sul Data Binding](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  <xref:System.Windows.Data.MultiBinding> e <xref:System.Windows.Data.PriorityBinding> non supportano un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintassi dell'estensione. Usare invece gli elementi di proprietà. Vedere gli argomenti di riferimento per <xref:System.Windows.Data.MultiBinding> e <xref:System.Windows.Data.PriorityBinding>.  
   
  I valori booleani per XAML sono maiuscole e minuscole. Ad esempio è possibile specificare `{Binding NotifyOnValidationError=true}` o `{Binding NotifyOnValidationError=True}`.  
   
- Le associazioni che comportano la convalida dei dati sono in genere specificate dalle esplicita `Binding` elemento anziché come un `{Binding ...}` espressione e impostazione <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> o <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> in un'espressione è insolito. Infatti, la proprietà complementare <xref:System.Windows.Data.Binding.ValidationRules%2A> non è possibile impostare facilmente nella forma espressione. Per altre informazioni, vedere [Implement Binding Validation](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+ Le associazioni che comportano la convalida dei dati sono in genere specificate dalle esplicita `Binding` elemento anziché come un `{Binding ...}` espressione e impostazione <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> o <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> in un'espressione è insolito. Infatti, la proprietà complementare <xref:System.Windows.Data.Binding.ValidationRules%2A> non è possibile impostare facilmente nella forma espressione. Per altre informazioni, vedere [Implement Binding Validation](../data/how-to-implement-binding-validation.md).  
   
- `Binding` è un'estensione di markup. Le estensioni di markup vengono implementate in genere quando è necessario per eseguire l'escape dei valori di attributo devono essere valori letterali o gestore nomi e il requisito è più globale convertitori di tipi con attributi su alcuni tipi o proprietà. Tutte le estensioni di markup in uso XAML il `{` e `}` caratteri nella sintassi degli attributi, vale a dire la convenzione mediante il quale un processore XAML riconosce che il contenuto della stringa deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `Binding` è un'estensione di markup. Le estensioni di markup vengono implementate in genere quando è necessario per eseguire l'escape dei valori di attributo devono essere valori letterali o gestore nomi e il requisito è più globale convertitori di tipi con attributi su alcuni tipi o proprietà. Tutte le estensioni di markup in uso XAML il `{` e `}` caratteri nella sintassi degli attributi, vale a dire la convenzione mediante il quale un processore XAML riconosce che il contenuto della stringa deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
  `Binding` è un'estensione di markup atipica in quanto il <xref:System.Windows.Data.Binding> classe che implementa la funzionalità di estensione per l'implementazione XAML di WPF implementa anche diversi altri metodi e proprietà che non sono correlate a XAML. Gli altri membri vengono utilizzati per rendere <xref:System.Windows.Data.Binding> una classe più versatile e indipendente che consentono di risolvere molti scenari di associazione di dati oltre a funzionare come un'estensione di markup XAML.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Data.Binding>
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Panoramica sul data binding](../data/data-binding-overview.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377281"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante tramite XAML
 L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare un pulsante animato per l'uso in un'applicazione Windows Presentation Foundation (WPF). Questa procedura dettagliata Usa stili e un modello per creare una risorsa pulsante personalizzato che consente il riutilizzo del codice e la separazione della logica di pulsante dalla dichiarazione del pulsante. Questa procedura dettagliata viene scritta interamente in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  Questa procedura dettagliata descrive i passaggi per creare l'applicazione digitando o copiando e incollando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] in Microsoft Visual Studio. Se si preferisce imparare a usare uno strumento di progettazione (Microsoft Expression Blend) per creare la stessa applicazione, vedere [creare un pulsante by Using Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  Questa procedura dettagliata descrive i passaggi per creare l'applicazione digitando o copiando e incollando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] in Microsoft Visual Studio. Se si preferisce imparare a usare uno strumento di progettazione (Microsoft Expression Blend) per creare la stessa applicazione, vedere [creare un pulsante by Using Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  Nella figura seguente mostra i pulsanti completati.  
   
- ![Pulsanti personalizzati che sono stati creati tramite XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![Pulsanti personalizzati che sono stati creati tramite XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>Creare pulsanti di base  
  Iniziamo creando un nuovo progetto e aggiungere alcuni pulsanti alla finestra.  
@@ -49,12 +49,12 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione. si dovrebbe visualizzare un set di pulsanti che è simile al seguente.  
   
-     ![Tre pulsanti di base](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
+     ![Tre pulsanti di base](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
      Dopo avere creato i pulsanti di base, desidera eseguire altre operazioni nel file Window1.xaml. Il resto della procedura dettagliata si concentra sul file app. XAML, la definizione di stili e un modello per i pulsanti.  
   
 ## <a name="set-basic-properties"></a>Impostare le proprietà di base  
- Successivamente, è possibile impostare alcune proprietà dei pulsanti per controllare l'aspetto del pulsante e il layout. Anziché impostare le proprietà sui pulsanti singolarmente, si userà le risorse per definire proprietà dei pulsanti per l'intera applicazione. Le risorse dell'applicazione sono concettualmente simili a esterno [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] per le pagine Web; tuttavia, le risorse sono molto più potenti [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], come verrà visualizzato al termine di questa procedura dettagliata. Per altre informazioni sulle risorse, vedere [risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Successivamente, è possibile impostare alcune proprietà dei pulsanti per controllare l'aspetto del pulsante e il layout. Anziché impostare le proprietà sui pulsanti singolarmente, si userà le risorse per definire proprietà dei pulsanti per l'intera applicazione. Le risorse dell'applicazione sono concettualmente simili a esterno [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] per le pagine Web; tuttavia, le risorse sono molto più potenti [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)], come verrà visualizzato al termine di questa procedura dettagliata. Per altre informazioni sulle risorse, vedere [risorse XAML](../advanced/xaml-resources.md).  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Come utilizzare gli stili per impostare le proprietà di base sui pulsanti  
   
@@ -72,7 +72,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
     </Application>  
     ```  
   
-     Ambito di risorse è determinato da in cui si definisce la risorsa. Definizione delle risorse in `Application.Resources` nell'app. XAML file consente la risorsa essere utilizzato da un punto qualsiasi nell'applicazione. Per altre informazioni sulla definizione dell'ambito delle risorse, vedere [risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Ambito di risorse è determinato da in cui si definisce la risorsa. Definizione delle risorse in `Application.Resources` nell'app. XAML file consente la risorsa essere utilizzato da un punto qualsiasi nell'applicazione. Per altre informazioni sulla definizione dell'ambito delle risorse, vedere [risorse XAML](../advanced/xaml-resources.md).  
   
 2.  **Creare uno stile e definire i valori delle proprietà di base:** Aggiungere il markup seguente per il `Application.Resources` blocco. Questo codice crea un <xref:System.Windows.Style> che si applica a tutti i pulsanti nell'applicazione, impostare il <xref:System.Windows.FrameworkElement.Width%2A> dei pulsanti per 90 e il <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
   
@@ -87,9 +87,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Il <xref:System.Windows.Style.TargetType%2A> proprietà specifica che lo stile applicato a tutti gli oggetti di tipo <xref:System.Windows.Controls.Button>. Ciascuna <xref:System.Windows.Setter> imposta un valore di proprietà diversi per il <xref:System.Windows.Style>. Pertanto, a questo punto ogni pulsante nell'applicazione abbia una larghezza pari a 90 e un margine di 10.  Se si preme F5 per eseguire l'applicazione, viene visualizzata la finestra seguente.  
   
-     ![Pulsanti di una larghezza pari a 90, con un margine di 10](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![Pulsanti di una larghezza pari a 90, con un margine di 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     È molto più che è possibile eseguire con gli stili, inclusi un'ampia gamma di modi per ottimizzare gli oggetti che vengono considerati come destinazione, specificando i valori di proprietà complessa e anche utilizzati come input per altri stili. Per altre informazioni, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+     È molto più che è possibile eseguire con gli stili, inclusi un'ampia gamma di modi per ottimizzare gli oggetti che vengono considerati come destinazione, specificando i valori di proprietà complessa e anche utilizzati come input per altri stili. Per altre informazioni, vedere [Applicazione di stili e modelli](styling-and-templating.md).  
   
 3.  **Impostare il valore di una proprietà di stile a una risorsa:** Risorse consentono di riutilizzare i valori e oggetti comunemente definiti in modo semplice. È particolarmente utile definire valori complessi usando le risorse per rendere più modulare il codice. Aggiungere il markup evidenziato seguente a app. Xaml.  
   
@@ -112,7 +112,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione. Dovrebbe essere simile al seguente.  
   
-     ![I pulsanti con uno sfondo sfumato](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![I pulsanti con uno sfondo sfumato](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>Creare un modello che definisce l'aspetto del pulsante  
  In questa sezione creare un modello che consente di personalizzare l'aspetto (presentazione) del pulsante. La presentazione del pulsante è costituita da oggetti diversi tra cui rettangoli e altri componenti per conferire un aspetto univoco al pulsante.  
@@ -165,7 +165,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione. Dovrebbe essere simile al seguente.  
   
-     ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
+     ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
 3.  **Aggiungere un effetto cristallo al modello:** Successivamente si aggiungerà l'effetto cristallo. È innanzitutto necessario creare alcune risorse che crea un effetto cristallo. Aggiungere queste sfumature risorse in un punto qualsiasi all'interno di `Application.Resources` blocco:  
   
@@ -244,7 +244,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Si noti che il <xref:System.Windows.UIElement.Opacity%2A> del rettangolo con il `x:Name` proprietà di "glassCube" è 0, in modo che quando si esegue l'esempio, non viene visualizzato il rettangolo trasparente sovrapposto nella parte superiore. Questo avviene perché seguito verranno aggiunti i trigger per il modello per quando l'utente interagisce con il pulsante. Tuttavia, è possibile visualizzare il pulsante di come appare ora modificando il <xref:System.Windows.UIElement.Opacity%2A> valore su 1 e l'esecuzione dell'applicazione. Vedere la figura riportata di seguito. Prima di procedere al passaggio successivo, cambiare il <xref:System.Windows.UIElement.Opacity%2A> nuovamente su 0.  
   
-     ![Pulsanti personalizzati che sono stati creati tramite XAML](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![Pulsanti personalizzati che sono stati creati tramite XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>Creare l'interattività del pulsante  
  In questa sezione si creerà i trigger di proprietà e i trigger di evento per modificare i valori delle proprietà ed eseguire animazioni in risposta alle azioni dell'utente, ad esempio spostando il puntatore del mouse su esso e fare clic su.  
@@ -396,7 +396,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Esistono due animazioni che vengono attivate quando il puntatore del mouse passa sul pulsante (<xref:System.Windows.UIElement.MouseEnter> viene generato l'evento). Queste animazioni compattare il rettangolo trasparente lungo l'asse X e Y. Si noti che le proprietà nel <xref:System.Windows.Media.Animation.DoubleAnimation> elementi, ovvero <xref:System.Windows.Media.Animation.Timeline.Duration%2A> e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. Il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> specifica che l'animazione viene eseguita per mezzo secondo, e <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> specifica che l'effetto cristallo viene ridotto del 10%.  
   
-     Il secondo trigger evento (<xref:System.Windows.UIElement.MouseLeave>) interrompe semplicemente il primo. Quando si arresta un <xref:System.Windows.Media.Animation.Storyboard>, tutte le proprietà animate restituiscono i valori predefiniti. Pertanto, quando l'utente sposta il puntatore del mouse dal pulsante, il pulsante Torna al modo in cui che si trovava prima di spostata il puntatore del mouse su esso. Per altre informazioni sulle animazioni, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+     Il secondo trigger evento (<xref:System.Windows.UIElement.MouseLeave>) interrompe semplicemente il primo. Quando si arresta un <xref:System.Windows.Media.Animation.Storyboard>, tutte le proprietà animate restituiscono i valori predefiniti. Pertanto, quando l'utente sposta il puntatore del mouse dal pulsante, il pulsante Torna al modo in cui che si trovava prima di spostata il puntatore del mouse su esso. Per altre informazioni sulle animazioni, vedere [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md).  
   
 5.  **Aggiungere un'animazione quando si fa clic sul pulsante:** Il passaggio finale consiste nell'aggiungere un trigger per quando l'utente fa clic sul pulsante. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco:  
   
@@ -432,8 +432,8 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 -   Personalizzare il comportamento dei pulsanti in risposta alle azioni dell'utente (ad esempio <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) che è includere gli effetti di animazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creare un pulsante usando Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Panoramica sugli effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+- [Creare un pulsante usando Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
+- [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

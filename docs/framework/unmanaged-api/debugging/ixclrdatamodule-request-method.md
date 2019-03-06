@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746661"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374869"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Metodo IXCLRDataModule::Request
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>Parametri
 
-`reqCode` [in] Tipo per l'invio di richiesta.
+`reqCode`\
+[in] Tipo per l'invio di richiesta.
 
-`inBufferSize` [in] dimensione del buffer di input che deve essere passato.
+`inBufferSize`\
+[in] dimensione del buffer di input che deve essere passato.
 
-`inBuffer` [in, size_is(inBufferSize)] Puntatore del buffer per i dati non elaborati da inviare nella richiesta.
+`inBuffer`\
+[in, size_is(inBufferSize)] Puntatore del buffer per i dati non elaborati da inviare nella richiesta.
 
-`outBufferSize` [in] Dimensioni del buffer di output.
+`outBufferSize`\
+[in] Dimensioni del buffer di output.
 
-`outBuffer` [out, size_is(outBufferSize)] Puntatore del buffer usato per archiviare la risposta alla richiesta.
+`outBuffer`\
+[out, size_is(outBufferSize)] Puntatore del buffer usato per archiviare la risposta alla richiesta.
 
 ## <a name="remarks"></a>Note
 
@@ -61,5 +66,5 @@ Il metodo specificato fa parte di `IXCLRDataModule` interfaccia e corrisponde al
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaccia IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Debug](index.md)
+- [Interfaccia IXCLRDataModule](ixclrdatamodule-interface.md)

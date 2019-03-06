@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648193"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370358"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Procedura: Semplificare le animazioni utilizzando oggetti Timeline figlio
 Questo esempio illustra come semplificare le animazioni usando figlio <xref:System.Windows.Media.Animation.ParallelTimeline> oggetti. Oggetto <xref:System.Windows.Media.Animation.Storyboard> è un tipo di <xref:System.Windows.Media.Animation.Timeline> che fornisce informazioni di destinazione per le sequenze temporali in esso contenuti. Usare un <xref:System.Windows.Media.Animation.Storyboard> per fornire informazioni, comprese quelle di oggetti e proprietà di destinazione degli oggetti timeline.  
@@ -23,8 +23,8 @@ Questo esempio illustra come semplificare le animazioni usando figlio <xref:Syst
  **Nota sulle prestazioni:** Sebbene sia possibile annidare <xref:System.Windows.Media.Animation.Storyboard> sequenze temporali all'interno di altre, <xref:System.Windows.Media.Animation.ParallelTimeline>sono più adatti per l'annidamento, poiché richiedono un sovraccarico inferiore. (Il <xref:System.Windows.Media.Animation.Storyboard> classe eredita dal <xref:System.Windows.Media.Animation.ParallelTimeline> classe.)  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Specificare HandoffBehavior tra le animazioni storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Cenni preliminari sull'animazione](animation-overview.md)
+- [Specificare HandoffBehavior tra le animazioni storyboard](how-to-specify-handoffbehavior-between-storyboard-animations.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551752"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370657"
 ---
 # <a name="popup"></a>Popup
-Il <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il contenuto in una finestra separata che può essere spostata rispetto alla finestra dell'applicazione corrente.  
+Il <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il contenuto in una finestra separata mobile rispetto alla finestra dell'applicazione corrente.  
   
- La figura seguente mostra un <xref:System.Windows.Controls.Primitives.Popup> controllo posizionato rispetto a un <xref:System.Windows.Controls.Button> che rappresenta il relativo elemento padre.  
+ La figura seguente mostra una <xref:System.Windows.Controls.Primitives.Popup> controllo posizionato rispetto a un <xref:System.Windows.Controls.Button> che corrisponde al padre.  
   
- ![Illustrazione di popup](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![Illustrazione di popup](./media/popuppicture.JPG "PopupPicture")  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Comportamento del controllo Popup in relazione al posizionamento](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Panoramica sul controllo Popup](popup-overview.md)  
+ [Comportamento del controllo Popup in relazione al posizionamento](popup-placement-behavior.md)  
+ [Procedure relative alle proprietà](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Primitives.Popup>  
