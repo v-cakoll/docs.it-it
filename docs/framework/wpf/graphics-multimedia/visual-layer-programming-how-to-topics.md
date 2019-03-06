@@ -8,27 +8,27 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376933"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="8d985-102">Procedure relative alla programmazione a livello visivo</span><span class="sxs-lookup"><span data-stu-id="8d985-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="8d985-103">Negli argomenti di questa sezione illustrano come usare il livello visivo per la composizione di hit testing e di basso livello.</span><span class="sxs-lookup"><span data-stu-id="8d985-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="10dc1-102">Procedure relative alla programmazione a livello visivo</span><span class="sxs-lookup"><span data-stu-id="10dc1-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="10dc1-103">Negli argomenti di questa sezione illustrano come usare il livello visivo per la composizione di hit testing e di basso livello.</span><span class="sxs-lookup"><span data-stu-id="10dc1-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8d985-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8d985-104">In This Section</span></span>  
- [<span data-ttu-id="8d985-105">Ottenere l'offset di un oggetto visivo</span><span class="sxs-lookup"><span data-stu-id="8d985-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="8d985-106">Enumerare il contenuto del disegno di un oggetto visivo</span><span class="sxs-lookup"><span data-stu-id="8d985-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="8d985-107">Eseguire un hit test della geometria in un oggetto Visual</span><span class="sxs-lookup"><span data-stu-id="8d985-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="8d985-108">Eseguire un hit test utilizzando la geometria come parametro</span><span class="sxs-lookup"><span data-stu-id="8d985-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="8d985-109">Eseguire un hit test utilizzando un contenitore di host Win32</span><span class="sxs-lookup"><span data-stu-id="8d985-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="8d985-110">Eseguire il rendering in un intervallo per frame tramite l'oggetto CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="8d985-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="10dc1-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="10dc1-104">In This Section</span></span>  
+ [<span data-ttu-id="10dc1-105">Ottenere l'offset di un oggetto visivo</span><span class="sxs-lookup"><span data-stu-id="10dc1-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="10dc1-106">Enumerare il contenuto del disegno di un oggetto visivo</span><span class="sxs-lookup"><span data-stu-id="10dc1-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="10dc1-107">Eseguire un hit test della geometria in un oggetto Visual</span><span class="sxs-lookup"><span data-stu-id="10dc1-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="10dc1-108">Eseguire un hit test utilizzando la geometria come parametro</span><span class="sxs-lookup"><span data-stu-id="10dc1-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="10dc1-109">Eseguire un hit test utilizzando un contenitore di host Win32</span><span class="sxs-lookup"><span data-stu-id="10dc1-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="10dc1-110">Eseguire il rendering in un intervallo per frame tramite l'oggetto CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="10dc1-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8d985-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8d985-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10dc1-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10dc1-111">See also</span></span>
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="8d985-112">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="8d985-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="8d985-113">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="8d985-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="10dc1-112">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="10dc1-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="10dc1-113">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="10dc1-113">Graphics and Multimedia</span></span>](index.md)
