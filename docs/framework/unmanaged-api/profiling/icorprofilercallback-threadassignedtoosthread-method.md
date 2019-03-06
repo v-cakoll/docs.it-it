@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e955d2fdca67448897ed49b3200542075b4d534
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651981"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466778"
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="daca3-102">Metodo ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="daca3-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="daca3-103">Notifica al profiler che un thread gestito viene implementato utilizzando un thread di sistema operativo in uso.</span><span class="sxs-lookup"><span data-stu-id="daca3-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="c23a4-102">Metodo ICorProfilerCallback::ThreadAssignedToOSThread</span><span class="sxs-lookup"><span data-stu-id="c23a4-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="c23a4-103">Notifica al profiler che un thread gestito viene implementato utilizzando un thread di sistema operativo in uso.</span><span class="sxs-lookup"><span data-stu-id="c23a4-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="daca3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="daca3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c23a4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c23a4-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadAssignedToOSThread(  
@@ -35,24 +35,24 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="daca3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="daca3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c23a4-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c23a4-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="daca3-106">[in] L'identificatore del thread gestito.</span><span class="sxs-lookup"><span data-stu-id="daca3-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="c23a4-106">[in] L'identificatore del thread gestito.</span><span class="sxs-lookup"><span data-stu-id="c23a4-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="daca3-107">[in] Identificatore del thread del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="daca3-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="c23a4-107">[in] Identificatore del thread del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="c23a4-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="daca3-108">Note</span><span class="sxs-lookup"><span data-stu-id="daca3-108">Remarks</span></span>  
- <span data-ttu-id="daca3-109">Il `ThreadAssignedToOSThread` callback è presente in modo che il profiler può mantenere una mappatura accurata tra i fiber di thread del sistema operativo e i thread gestiti.</span><span class="sxs-lookup"><span data-stu-id="daca3-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c23a4-108">Note</span><span class="sxs-lookup"><span data-stu-id="c23a4-108">Remarks</span></span>  
+ <span data-ttu-id="c23a4-109">Il `ThreadAssignedToOSThread` callback è presente in modo che il profiler può mantenere una mappatura accurata tra i fiber di thread del sistema operativo e i thread gestiti.</span><span class="sxs-lookup"><span data-stu-id="c23a4-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="daca3-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="daca3-110">Requirements</span></span>  
- <span data-ttu-id="daca3-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="daca3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c23a4-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c23a4-110">Requirements</span></span>  
+ <span data-ttu-id="c23a4-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c23a4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="daca3-112">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="daca3-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c23a4-112">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c23a4-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="daca3-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="daca3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c23a4-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c23a4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="daca3-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daca3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c23a4-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c23a4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="daca3-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="daca3-115">See also</span></span>
-- [<span data-ttu-id="daca3-116">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="daca3-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c23a4-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c23a4-115">See also</span></span>
+- [<span data-ttu-id="c23a4-116">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c23a4-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

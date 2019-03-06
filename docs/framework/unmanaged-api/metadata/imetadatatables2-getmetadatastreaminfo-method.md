@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57fa18df1baece984a745725dba614e8c4bb1450
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593966"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471455"
 ---
-# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="b1a31-102">Metodo IMetaDataTables2::GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="b1a31-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
-<span data-ttu-id="b1a31-103">Ottiene il nome, dimensioni e contenuto del flusso di metadati in corrispondenza dell'indice specificato.</span><span class="sxs-lookup"><span data-stu-id="b1a31-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
+# <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="33e1e-102">Metodo IMetaDataTables2::GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="33e1e-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
+<span data-ttu-id="33e1e-103">Ottiene il nome, dimensioni e contenuto del flusso di metadati in corrispondenza dell'indice specificato.</span><span class="sxs-lookup"><span data-stu-id="33e1e-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1a31-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b1a31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33e1e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="33e1e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataStreamInfo (  
@@ -38,28 +38,28 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b1a31-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b1a31-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33e1e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="33e1e-105">Parameters</span></span>  
  `ix`  
- <span data-ttu-id="b1a31-106">[in] L'indice del flusso di richiesta dei metadati.</span><span class="sxs-lookup"><span data-stu-id="b1a31-106">[in] The index of the requested metadata stream.</span></span>  
+ <span data-ttu-id="33e1e-106">[in] L'indice del flusso di richiesta dei metadati.</span><span class="sxs-lookup"><span data-stu-id="33e1e-106">[in] The index of the requested metadata stream.</span></span>  
   
  `ppchName`  
- <span data-ttu-id="b1a31-107">[out] Un puntatore al nome del flusso.</span><span class="sxs-lookup"><span data-stu-id="b1a31-107">[out] A pointer to the name of the stream.</span></span>  
+ <span data-ttu-id="33e1e-107">[out] Un puntatore al nome del flusso.</span><span class="sxs-lookup"><span data-stu-id="33e1e-107">[out] A pointer to the name of the stream.</span></span>  
   
  `ppv`  
- <span data-ttu-id="b1a31-108">[out] Un puntatore al flusso di metadati.</span><span class="sxs-lookup"><span data-stu-id="b1a31-108">[out] A pointer to the metadata stream.</span></span>  
+ <span data-ttu-id="33e1e-108">[out] Un puntatore al flusso di metadati.</span><span class="sxs-lookup"><span data-stu-id="33e1e-108">[out] A pointer to the metadata stream.</span></span>  
   
  `pcb`  
- <span data-ttu-id="b1a31-109">[out] Le dimensioni, in byte, di `ppv`.</span><span class="sxs-lookup"><span data-stu-id="b1a31-109">[out] The size, in bytes, of `ppv`.</span></span>  
+ <span data-ttu-id="33e1e-109">[out] Le dimensioni, in byte, di `ppv`.</span><span class="sxs-lookup"><span data-stu-id="33e1e-109">[out] The size, in bytes, of `ppv`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1a31-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b1a31-110">Requirements</span></span>  
- <span data-ttu-id="b1a31-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1a31-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33e1e-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="33e1e-110">Requirements</span></span>  
+ <span data-ttu-id="33e1e-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33e1e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1a31-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b1a31-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="33e1e-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="33e1e-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b1a31-113">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="b1a31-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="33e1e-113">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="33e1e-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b1a31-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1a31-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="33e1e-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33e1e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1a31-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1a31-115">See also</span></span>
-- [<span data-ttu-id="b1a31-116">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="b1a31-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="b1a31-117">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="b1a31-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a><span data-ttu-id="33e1e-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="33e1e-115">See also</span></span>
+- [<span data-ttu-id="33e1e-116">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="33e1e-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="33e1e-117">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="33e1e-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
