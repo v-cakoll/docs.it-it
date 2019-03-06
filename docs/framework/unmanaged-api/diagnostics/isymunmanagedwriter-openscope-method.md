@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468463"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>Metodo ISymUnmanagedWriter::OpenScope
 Apre un nuovo ambito lessicale nel metodo corrente. L'ambito diventa il nuovo ambito corrente e viene inserito nello stack di ambiti. Gli ambiti devono formare una gerarchia. Elementi di pari livello non possono sovrapporsi.  
@@ -35,7 +35,7 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `startOffset`  
  [in] L'offset della prima istruzione dell'ambito lessicale, in byte, dall'inizio del metodo.  
   

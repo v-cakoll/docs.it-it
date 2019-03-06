@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c03cdb9f9205676d17d6e18b9b2e074132ee26f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826543a224c4d6850f345b187d3aaafc8e1de8cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491490"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>Metodo IHostIoCompletionManager::Bind
 Associa l'handle specificato per una porta di completamento i/o che è stata creata da una precedente chiamata a [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  
@@ -36,7 +36,7 @@ HRESULT Bind (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `hPort`  
  [in] La porta di completamento i/o a cui associare `hHandle`. Se il valore di `hPort` è null, `hHandle` è associata alla porta di completamento i/o predefinito.  
   

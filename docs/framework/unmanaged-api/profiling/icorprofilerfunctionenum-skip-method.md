@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88e52840c579173fd6202f1609dd0508d850cde
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470146"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Metodo ICorProfilerFunctionEnum::Skip
 Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo che venga ignorato il numero specificato di elementi.  
@@ -33,7 +33,7 @@ Sposta in avanti il cursore dell'enumeratore dalla posizione corrente, in modo c
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `celt`  
  [in] Il numero di elementi da ignorare.  
   

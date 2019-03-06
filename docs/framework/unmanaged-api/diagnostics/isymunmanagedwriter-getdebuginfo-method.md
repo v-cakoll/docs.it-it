@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce74b043db67fa1086724dd76001935f9c1c0498
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470948"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>Metodo ISymUnmanagedWriter::GetDebugInfo
 Restituisce le informazioni necessarie per un compilatore scrivere la voce di directory di debug nell'intestazione del file (PE) eseguibile portabile. Compila tutti i campi eccetto per il writer di simboli `TimeDateStamp` e `PointerToRawData`. (Il compilatore è responsabile dell'impostazione di questi due campi in modo appropriato).  
@@ -40,7 +40,7 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pIDD`  
  [in, out] Un puntatore a una IMAGE_DEBUG_DIRECTORY che compilerà il writer di simboli.  
   

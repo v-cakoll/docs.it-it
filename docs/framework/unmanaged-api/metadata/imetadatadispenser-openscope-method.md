@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ffbd2bc3042f7e37e90dceeb28ec50b3c73cef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491971"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Metodo IMetaDataDispenser::OpenScope
 Apre un file esistente su disco e viene eseguito il mapping dei metadati in memoria.  
@@ -38,7 +38,7 @@ HRESULT OpenScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `szScope`  
  [in] Il nome del file da aprire. Il file deve contenere metadati di common language runtime (CLR).  
   

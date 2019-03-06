@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e955d2fdca67448897ed49b3200542075b4d534
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651981"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466778"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>Metodo ICorProfilerCallback::ThreadAssignedToOSThread
 Notifica al profiler che un thread gestito viene implementato utilizzando un thread di sistema operativo in uso.  
@@ -35,7 +35,7 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `managedThreadId`  
  [in] L'identificatore del thread gestito.  
   

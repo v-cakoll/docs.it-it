@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186ea5fd46ca5c6205ff1f98d8964e656655a2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666033"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473968"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>Metodo ISymUnmanagedDocument::GetLanguage
 Ottiene l'identificatore di lingua di questo documento  
@@ -34,7 +34,7 @@ HRESULT GetLanguage(
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pRetVal`  
  [out] Puntatore a una variabile che riceve l'identificatore di lingua.  
   

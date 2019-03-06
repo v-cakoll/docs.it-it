@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475593"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>Metodo ICorDebugHandleValue::GetHandleType
-Ottiene un valore che indica il tipo di handle a cui fa riferimento l'oggetto ICorDebugHandleValue.  
+Ottiene un valore che indica il tipo di handle fa riferimento questo oggetto ICorDebugHandleValue.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pType`  
- [out] Un puntatore a un valore di enumerazione CorDebugHandleType che indica il tipo di questo handle.  
+ [out] Puntatore a un valore dell'enumerazione CorDebugHandleType che indica il tipo di questo handle.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39382b73a0fcd73282dbc69508b15dbfff240463
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61c67e074fc32098fa0d8326ea2f0ecfb1efa952
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669707"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471771"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>Metodo ICorPublishProcess::GetProcessID
 Ottiene l'identificatore del sistema operativo per questo processo.  
@@ -35,7 +35,7 @@ HRESULT GetProcessID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pid`  
  [out] Un puntatore all'identificatore del processo rappresentato da questo [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) oggetto.  
   

@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468268"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Metodo ICoreClrDebugTarget::EnumRuntimes
 Enumera i Common Language Runtime (CLR) nel processo specificato in cui è in esecuzione in un computer remoto.  
@@ -39,7 +39,7 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwInternalProcessID`  
  [in] ID del processo interno per il quale si vogliono enumerare i runtime. Si tratterà `m_dwInternalID` dalle corrispondenti [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
   
