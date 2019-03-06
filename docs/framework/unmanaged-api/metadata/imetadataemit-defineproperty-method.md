@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee9f771a3df1de67bef70cdb6f8c166040150e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543081"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468741"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>Metodo IMetaDataEmit::DefineProperty
 Crea una definizione di proprietà per il tipo specificato, con l'oggetto specificato `get` e `set` funzioni di accesso, metodo e ottiene un token per tale definizione.  
@@ -46,7 +46,7 @@ HRESULT DefineProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `td`  
  [in] Il token per la classe o interfaccia in cui la proprietà è definita.  
   

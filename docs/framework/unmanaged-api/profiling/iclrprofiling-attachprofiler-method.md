@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469001"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Metodo ICLRProfiling::AttachProfiler
 Connette il profiler specificato al processo specificato.  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwProfileeProcessID`  
  [in] ID del processo a cui connettere il profiler. In un computer a 64 bit, il numero di bit del processo profilato deve corrispondere a quello del processo trigger che chiama `AttachProfiler`. Se l'account utente in cui viene chiamato `AttachProfiler` dispone di privilegi amministrativi, il processo di destinazione può essere qualsiasi processo nel sistema. In caso contrario, il processo di destinazione deve essere di proprietà dello stesso account utente.  
   

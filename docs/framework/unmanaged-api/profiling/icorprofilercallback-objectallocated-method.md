@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1c777a2512306c41413377530576fbe8ad8e7ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0deadc3783663fe595d8217a167d18e6916c6be9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582284"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465998"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>Metodo ICorProfilerCallback::ObjectAllocated
 Notifica al profiler che è stata allocata memoria all'interno dell'heap per un oggetto.  
@@ -35,7 +35,7 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `objectId`  
  [in] L'ID dell'oggetto per cui è stata allocata memoria.  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b63756fd300dc300932d070e451d2d072adc6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a705257c150fe0272674c08c7b316ab968766cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621409"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475333"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>Metodo ICorProfilerCallback6::GetAssemblyReferences
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `wszAssemblyPath`  
  [in] Percorso e nome dell'assembly i cui metadati verranno modificati.  
   

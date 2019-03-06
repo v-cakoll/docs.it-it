@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0baecc56df18a8ce346f5c4a9f52dd4006583867
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476399"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>Metodo ICorDebugManagedCallback::BreakpointSetError
 Notifica al debugger che common language runtime è stato possibile associare con precisione un punto di interruzione è stata impostata prima di una funzione si trovava just-in-time (JIT) compilato.  
@@ -38,7 +38,7 @@ HRESULT BreakpointSetError (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppDomain`  
  [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione che contiene il punto di interruzione non associato.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2741f2f1a6c5f92c3d15ba7d0127cd69494afdce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9825901b3e45e31269198e8612464aad1ac626db
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545134"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482431"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Metodo ICorProfilerCallback2::SurvivingReferences
 Indica il layout degli oggetti nell'heap in seguito a un'operazione di Garbage Collection senza compattazione.  
@@ -38,7 +38,7 @@ HRESULT SurvivingReferences(
                 cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cSurvivingObjectIDRanges`  
  [in] Numero di blocchi di oggetti contigui rimasti in seguito alla mancata compattazione dell'operazione di Garbage Collection, ovvero il valore di `cSurvivingObjectIDRanges` è la dimensione delle matrici `objectIDRangeStart` e `cObjectIDRangeLength`, in cui vengono rispettivamente archiviati un `ObjectID` e una lunghezza per ogni blocco di oggetti.  
   

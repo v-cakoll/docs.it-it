@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b136f30b0c1ce9f83228f340ac5e147cc02002b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c6b86c5ce3cc246af600d9b65d2fe12a0427f9f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422029"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485395"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>Metodo ICorDebugType::GetStaticFieldValue
-Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che contiene il valore del campo statico a cui fa riferimento il campo specificato token stack frame specificato.  
+Ottiene un puntatore a interfaccia a un oggetto ICorDebugValue che contiene il valore del campo statico a cui fa riferimento il campo specificato token lo stack frame specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,31 +37,31 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `fieldDef`  
  [in] Un `mdFieldDef` token che specifica il campo statico.  
   
  `pFrame`  
- [in] Puntatore a un'interfaccia ICorDebugFrame che rappresenta lo stack frame.  
+ [in] Un puntatore a un'interfaccia ICorDebugFrame che rappresenta il frame dello stack.  
   
  `ppValue`  
  [out] Un puntatore all'indirizzo di un `ICorDebugValue` che contiene il valore del campo statico.  
   
 ## <a name="remarks"></a>Note  
- Il `GetStaticFieldValue` metodo può essere utilizzato solo se il tipo è ELEMENT_TYPE_CLASS o un ELEMENT_TYPE_VALUETYPE, come indicato dal [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) metodo.  
+ Il `GetStaticFieldValue` metodo può essere usato solo se il tipo è ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, come indicato dal [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) (metodo).  
   
- Per i tipi non generici, l'operazione eseguita da `GetStaticFieldValue` è identica alla chiamata al metodo [ICorDebugClass:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) sull'oggetto restituito da ICorDebugClass [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ Per i tipi non generici, l'operazione eseguita da `GetStaticFieldValue` è identica alla chiamata [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) sull'oggetto restituito da ICorDebugClass [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
   
- Per i tipi generici, un valore del campo statico sarà rispetto alla creazione di un'istanza particolare. Inoltre, se il campo statico può essere relativo a un thread, un contesto o dominio applicazione, quindi lo stack frame consentirà il debugger di determinare il valore appropriato.  
+ Per i tipi generici, un valore del campo statico è relativo alla creazione di un'istanza particolare. Inoltre, se il campo statico può essere relativo a un thread, un contesto o un dominio dell'applicazione, quindi lo stack frame per il debugger di determinare il valore appropriato.  
   
 ## <a name="remarks"></a>Note  
- `GetStaticFieldValue` può essere utilizzato solo quando una chiamata a `ICorDebugType::GetType` restituisce un valore di ELEMENT_TYPE_VALUETYPE o ELEMENT_TYPE_CLASS.  
+ `GetStaticFieldValue` può essere utilizzato solo quando una chiamata a `ICorDebugType::GetType` restituisce un valore di ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

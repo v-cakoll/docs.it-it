@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53a8f9aefa4460493113c035aa05e971b05d5167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92060147677fec5c772b16a61fa6ed5c294132fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471490"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>Metodo ICorProfilerCallback::JITInlining
 Notifica al profiler che il compilatore just-in-time (JIT) sta per inserire una funzione in linea con un'altra funzione.  
@@ -36,7 +36,7 @@ HRESULT JITInlining(
     [out] BOOL      *pfShouldInline);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `callerId`  
  [in] L'ID della funzione in cui il `calleeId` funzione verrà inserita.  
   

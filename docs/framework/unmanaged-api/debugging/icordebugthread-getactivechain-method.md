@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483316"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>Metodo ICorDebugThread::GetActiveChain
-Ottiene un puntatore a interfaccia a catena dello stack (più recente) attiva per questo oggetto ICorDebugThread.  
+Ottiene un puntatore a interfaccia alla catena dello stack (più recente) attiva tohoto objektu ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppChain`  
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena dello stack.  
   
 ## <a name="remarks"></a>Note  
- Il `ppChain` parametro è null se non è attiva alcuna catena dello stack.  
+ Il `ppChain` parametro è null se nessun catena dello stack è attualmente attivo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

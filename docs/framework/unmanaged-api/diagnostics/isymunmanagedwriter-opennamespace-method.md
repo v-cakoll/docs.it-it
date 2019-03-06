@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a108ec27cc4f8ed9d9d3c9227bf6ab0815fa933
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cf0fbcbf6af53c6a7865e2a2cf7874ea44581e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739693"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474618"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>Metodo ISymUnmanagedWriter::OpenNamespace
 Apre un nuovo spazio dei nomi. Chiamare questo metodo prima di definire i metodi o le variabili che occupano uno spazio dei nomi. Gli spazi dei nomi possono essere annidate.  
@@ -34,7 +34,7 @@ HRESULT OpenNamespace(
     [in] const WCHAR *name);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `name`  
  [in] Puntatore al nome del nuovo spazio dei nomi specificato.  
   

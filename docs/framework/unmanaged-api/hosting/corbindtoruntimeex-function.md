@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce8a11b68cc2a7f03060265956c9355dd1a05ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03972ac38a5259443f43a4f91002bf8dc717509f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466297"
 ---
 # <a name="corbindtoruntimeex-function"></a>Funzione CorBindToRuntimeEx
 Consente l'host non gestiti di caricare common language runtime (CLR) in un processo. Il [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` funzioni eseguono la stessa operazione, ma il `CorBindToRuntimeEx` funzione consente di impostare i flag per specificare il comportamento di CLR.  
@@ -57,7 +57,7 @@ HRESULT CorBindToRuntimeEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pwszVersion`  
  [in] Stringa che descrive la versione di CLR a cui si desidera caricare.  
   
@@ -73,7 +73,7 @@ HRESULT CorBindToRuntimeEx (
  Se `pwszBuildFlavor` è impostato su null, la compilazione di workstation viene caricata. Durante l'esecuzione in un computer a processore singolo, la compilazione di workstation viene sempre caricata, anche se `pwszBuildFlavor` è impostata su `svr`. Tuttavia, se `pwszBuildFlavor` è impostata su `svr` e garbage collection simultanea è specificata (vedere la descrizione del `startupFlags` parametro), viene caricata la compilazione di server.  
   
  `startupFlags`  
- [in] Una combinazione di valori del [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione. Questi flag controllano il comportamento di garbage collection simultanea e il codice indipendente dal dominio la `pwszVersion` parametro. Se non è impostato alcun flag, il valore predefinito è singolo dominio. I valori validi sono i seguenti:  
+ [in] Una combinazione di valori del [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione. Questi flag controllano il comportamento di garbage collection simultanea e il codice indipendente dal dominio la `pwszVersion` parametro. Se non è impostato alcun flag, il valore predefinito è singolo dominio. Di seguito vengono illustrati i valori validi.  
   
 -   `STARTUP_CONCURRENT_GC`  
   

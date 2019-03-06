@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 057dd7c25821aedddeee57a31200cf35c6df1273
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a58cba0ce4672a479cf5af9467d024a1b1562fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474289"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>Metodo IMetaDataImport::FindMemberRef
 Ottiene un riferimento che è un puntatore al token MemberRef per il membro racchiusi specificato <xref:System.Type> e avente il nome e i metadati della firma specificata.  
@@ -39,7 +39,7 @@ HRESULT FindMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `td`  
  [in] Il token TypeRef per la classe o interfaccia che racchiude il riferimento al membro da cercare. Se questo valore è `mdTokenNil`, la ricerca viene eseguita per una variabile globale o un riferimento alla funzione globale.  
   

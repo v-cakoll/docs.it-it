@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d58174aa8b8d0e0544566faa6b1d79c2c3d6197
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727157"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472616"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>Metodo ICorProfilerInfo2::GetClassIDInfo2
 Ottiene il modulo padre e i metadati token per aprirla definizione generica della classe specificata, il `ClassID` della relativa classe padre e il `ClassID` per ogni argomento di tipo, se presente, della classe.  
@@ -40,7 +40,7 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `classId`  
  [in] ID della classe per la quale verranno recuperate le informazioni.  
   
@@ -60,7 +60,7 @@ HRESULT GetClassIDInfo2(
  [out] Puntatore al numero complessivo di elementi disponibili.  
   
  `typeArgs`  
- [out] Matrice di valori `ClassID`, ognuno dei quali rappresenta l'ID di un argomento tipo della classe. Quando il metodo restituisce i risultati, `typeArgs` conterrà alcuni o tutti i valori `ClassID` disponibili.  
+ [out] Matrice di valori `ClassID`, ognuno dei quali rappresenta l'ID di un argomento di tipo della classe. Quando il metodo restituisce i risultati, `typeArgs` conterrà alcuni o tutti i valori `ClassID` disponibili.  
   
 ## <a name="remarks"></a>Note  
  Il `GetClassIDInfo2` metodo è simile al [ICorProfilerInfo:: GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metodo, ma `GetClassIDInfo2` Ottiene informazioni aggiuntive su un tipo generico.  

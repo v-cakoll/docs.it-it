@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 574df434360dfab644a4c937dac46ebc3871a53a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49f5ed8b24d81ba8f32a9fe0ad7488693718bde9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399506"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468559"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>Metodo ICorDebugArrayValue::HasBaseIndicies
-Ottiene un valore che indica se le dimensioni di questa matrice hanno un indice di base di diverso da zero.  
+Ottiene un valore che indica se tutte le dimensioni di questa matrice dispone di un indice di base di diverso da zero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT HasBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pbHasBaseIndicies`  
  [out] Un puntatore a un valore booleano che è `true` se una o più dimensioni di questo `ICorDebugArrayValue` oggetto dispone di un indice di base di diverso da zero; in caso contrario, il valore booleano è `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]

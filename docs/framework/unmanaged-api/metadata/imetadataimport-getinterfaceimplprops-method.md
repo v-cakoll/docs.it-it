@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466544"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>Metodo IMetaDataImport::GetInterfaceImplProps
 Ottiene un puntatore al token di metadati per il <xref:System.Type> che implementa il metodo specificato e per l'interfaccia che dichiara tale metodo.
@@ -37,7 +37,7 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `iiImpl`  
  [in] Il token di metadati che rappresenta il metodo per restituire i token di classe e l'interfaccia per.  
   

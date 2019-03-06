@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e78a7358f62ab83c7ecba63eac9f021fc4932d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88de396d946c37b30688ab614d2bcc549c86873
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468130"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Metodo ICorDebugInstanceFieldSymbol::GetOffset
 Ottiene l'offset, in byte, di questo campo di istanza nella relativa classe padre.  
@@ -22,7 +22,7 @@ HRESULT GetOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pcbOffset`  
  Puntatore al numero di byte di offset di questo campo di istanza nella relativa classe padre.  
   

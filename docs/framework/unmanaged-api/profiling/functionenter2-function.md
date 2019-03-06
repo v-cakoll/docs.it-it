@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f01117d52ba49012120546db5095ccad8baa6e73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fb9dd56cb19b62543d14ae02fe6f198c0164107
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468819"
 ---
 # <a name="functionenter2-function"></a>Funzione FunctionEnter2
 Notifica al profiler che controllo viene passato a una funzione e fornisce informazioni sullo stack frame e funzione gli argomenti. Questa funzione sostituisce le [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) (funzione).  
@@ -37,7 +37,7 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `funcId`  
  [in] L'identificatore della funzione a cui il controllo viene passato.  
   

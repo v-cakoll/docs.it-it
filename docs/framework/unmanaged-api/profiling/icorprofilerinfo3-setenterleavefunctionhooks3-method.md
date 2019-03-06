@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc39250021c4f70535eac9653299bd0cb98d5e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72b336f9d71d0b7b7252ba907e8eebd3b42c200
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680962"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473162"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3-method"></a>Metodo ICorProfilerInfo3::SetEnterLeaveFunctionHooks3
 Specifica le funzioni implementate dal profiler che verranno chiamate per il [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), e [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md) funzioni.  
@@ -36,7 +36,7 @@ HRESULT SetEnterLeaveFunctionHooks3(
             [in] FunctionTailcall3 *pFuncTailcall3);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pFuncEnter3`  
  [in] Un puntatore all'implementazione da usare come il `FunctionEnter3` callback.  
   

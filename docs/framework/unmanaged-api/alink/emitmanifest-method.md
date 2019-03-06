@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9217a045a8ddf6ad41adcc71a9568a05fe3fb334
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28be714a70229b8a4628db2efff0dc2d890e231b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485499"
 ---
 # <a name="emitmanifest-method"></a>Metodo EmitManifest
 Crea il manifesto finale. Chiamare questo metodo dopo l'importazione di tutti gli altri file e tutte le opzioni di impostazione. Non chiamare questo metodo per i moduli non associati.  
@@ -37,7 +37,7 @@ HRESULT EmitManifest(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `AssemblyID`  
  ID dell'assembly.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468058"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Metodo IMetaDataImport::GetParamProps
 Ottiene i valori di metadati relativi al parametro a cui fa riferimento il token ParamDef specificato.  
@@ -44,7 +44,7 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Token ParamDef che rappresenta il parametro per restituire i metadati.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 932d4ecbf34a636d37a60af0ba11f3fc149ffcea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ba95eca2a103cffa07247a6ce474263e42e5ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487525"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>Metodo ICorDebugObjectValue::IsValueClass
 Ottiene un valore che indica se questo valore di oggetto è un tipo di valore.  
@@ -35,7 +35,7 @@ HRESULT IsValueClass (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pbIsValueClass`  
  [out] Un puntatore a un valore booleano che è `true` se il valore dell'oggetto, rappresentato da "ICorDebugObjectValue" è un tipo di valore anziché un tipo di riferimento; in caso contrario, `pbIsValueClass` è `false`.  
   

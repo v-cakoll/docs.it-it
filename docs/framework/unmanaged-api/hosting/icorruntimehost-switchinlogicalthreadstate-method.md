@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eebfb98dfefd536998ef0c02d66b57d39414f0cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d12555fb53a6c1b21f161402da77860adcf0a4b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558735"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478908"
 ---
 # <a name="icorruntimehostswitchinlogicalthreadstate-method"></a>Metodo ICorRuntimeHost::SwitchInLogicalThreadState
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -35,7 +35,7 @@ HRESULT SwitchInLogicalThreadState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pFiberCookie`  
  [in] Cookie che indica il fiber da utilizzare.  
   

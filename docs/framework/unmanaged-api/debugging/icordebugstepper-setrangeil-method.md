@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3c24b3a96a03359dc6983bcaac4a800613ff5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478687"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>Metodo ICorDebugStepper::SetRangeIL
-Imposta un valore che specifica se le chiamate a [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passare i valori relativi al codice nativo sono al Microsoft intermedia codice language (MSIL) del metodo che viene incrementata passo passo argomento tramite.  
+Imposta un valore che specifica se le chiamate a [StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passare i valori relativi al codice nativo o relativo alla Microsoft a livello intermedio codice language (MSIL) del metodo che è in corso rientri argomento tramite.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT SetRangeIL (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `bIL`  
- [in] Impostare su `true` per specificare che gli intervalli sono relativi al codice MSIL. Impostare su `false` per specificare che gli intervalli sono relativi al codice nativo. Il valore predefinito è `true`.  
+ [in] Impostare su `true` per specificare che gli intervalli sono relativi al codice MSIL. Impostare su `false` per specificare che gli intervalli sono rispetto al codice nativo. Il valore predefinito è `true`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

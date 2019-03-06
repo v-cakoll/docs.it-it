@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 940d913b2b04a510e2ae0e33eaa78b07ba4237c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f94c12654626e149b0f75327e8fdfa55aefe697
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467117"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>Metodo IMetaDataEmit::GetTokenFromSig
 Ottiene un token per la firma dei metadati specificato.  
@@ -37,7 +37,7 @@ HRESULT GetTokenFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pvSig`  
  [in] La firma di mantenere e archiviati.  
   

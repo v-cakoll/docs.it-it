@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d471ac13061cfb3a0320801445fb5c931718691
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aae7bc60abaedef8c3491a90eae01ebc02cff1ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562924"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469053"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>Metodo IDebuggerInfo::IsDebuggerAttached
 Ottiene un valore che indica se un debugger gestito viene collegato al processo.  
@@ -35,7 +35,7 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pbAttached`  
  [out] Un puntatore a un valore che rappresenta `true` se un debugger gestito viene collegato al processo; in caso contrario, `false`.  
   

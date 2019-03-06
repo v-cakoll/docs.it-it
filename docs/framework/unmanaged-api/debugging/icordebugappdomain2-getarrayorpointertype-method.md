@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484238"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Metodo ICorDebugAppDomain2::GetArrayOrPointerType
-Ottiene una matrice di tipo specificato, o un puntatore o un riferimento al tipo specificato.  
+Ottiene una matrice di tipo specificato, o un puntatore o riferimento al tipo specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,18 +38,18 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `elementType`  
- [in] Valore dell'enumerazione CorElementType che specifica il tipo nativo sottostante (una matrice, un puntatore o riferimento) da creare.  
+ [in] Valore dell'enumerazione CorElementType che specifica il tipo nativo sottostante (una matrice, un puntatore o riferimento) deve essere creato.  
   
  `nRank`  
- [in] La classificazione (numero di dimensioni) della matrice. Questo valore deve essere 0 se `elementType` specifica un tipo puntatore o riferimento.  
+ [in] La classificazione (vale a dire, numero di dimensioni) della matrice. Questo valore deve essere 0 se `elementType` specifica un tipo puntatore o riferimento.  
   
  `pTypeArg`  
- [in] Un puntatore a un oggetto ICorDebugType che rappresenta il tipo di matrice, puntatore o riferimento da creare.  
+ [in] Un puntatore a un oggetto ICorDebugType che rappresenta il tipo di matrice, puntatore o riferimento deve essere creato.  
   
  `ppType`  
- [out] Un puntatore all'indirizzo di un `ICorDebugType` tipo di oggetto che rappresenta la matrice costruito, il tipo di puntatore o riferimento.  
+ [out] Un puntatore all'indirizzo di un `ICorDebugType` il tipo di oggetto che rappresenta la matrice costruita, tipo di puntatore o riferimento.  
   
 ## <a name="remarks"></a>Note  
  Il valore di *elementType* deve essere uno dei seguenti:  
@@ -60,13 +60,13 @@ HRESULT GetArrayOrPointerType (
   
 -   ELEMENT_TYPE_ARRAY o ELEMENT_TYPE_SZARRAY  
   
- Se il valore di *elementType* è ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nDimensioni* deve essere zero.  
+ Se il valore di *elementType* rappresenti ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR *nDimensioni* deve essere zero.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

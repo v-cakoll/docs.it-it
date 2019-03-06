@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d518d5149e43718ae14dcdde96febe63fed7709
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0adee689949b4e3303d8921a826cdec56cc1b3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744600"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484888"
 ---
 # <a name="iclrtaskswitchin-method"></a>Metodo ICLRTask::SwitchIn
 Notifica a common language runtime (CLR) che l'attività che l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza si trova ora in uno stato eseguibile.  
@@ -35,7 +35,7 @@ HRESULT SwitchIn (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `threadHandle`  
  [in] Un handle per il thread fisico in cui l'attività rappresentata dall'oggetto corrente `ICLRTask` istanza è in esecuzione.  
   

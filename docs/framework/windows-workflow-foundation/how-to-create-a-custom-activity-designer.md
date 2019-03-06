@@ -2,48 +2,48 @@
 title: 'Procedura: Creare un ActivityDesigner personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 034b8b8be828288f840dbfd902725c4f63c779ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638184"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466882"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 
 Gli ActivityDesigner personalizzati vengono in genere implementati in modo che le attività associate siano componibili con altre attività le cui finestre di progettazione possono essere rilasciate sull'area di progettazione insieme ad esse. Questa funzionalità richiede che un ActivityDesigner personalizzato fornisca un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria, nonché i mezzi per gestire la raccolta risulta di elementi nell'area di progettazione. In questo argomento viene descritto come creare un ActivityDesigner personalizzato contenente tale area di rilascio e come creare un ActivityDesigner personalizzato che fornisca la funzionalità di modifica necessaria per gestire la raccolta di elementi della finestra di progettazione.
 
- L'ActivityDesigner personalizzato eredita in genere da <xref:System.Activities.Presentation.ActivityDesigner> che è il tipo di ActivityDesigner di base predefinito per qualsiasi attività senza una finestra di progettazione specifica. Questo tipo fornisce una fase di progettazione per l'interazione con la griglia delle proprietà e per la configurazione degli aspetti di base, ad esempio la gestione di colori e icone.
+L'ActivityDesigner personalizzato eredita in genere da <xref:System.Activities.Presentation.ActivityDesigner> che è il tipo di ActivityDesigner di base predefinito per qualsiasi attività senza una finestra di progettazione specifica. Questo tipo fornisce una fase di progettazione per l'interazione con la griglia delle proprietà e per la configurazione degli aspetti di base, ad esempio la gestione di colori e icone.
 
- L'oggetto <xref:System.Activities.Presentation.ActivityDesigner> usa due controlli di supporto, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter>, per facilitare lo sviluppo di ActivityDesigner personalizzati. Questi consentono di gestire funzionalità comuni quali il trascinamento e rilascio di elementi figlio, l'eliminazione, la selezione nonché l'aggiunta di tali elementi figlio. Il <xref:System.Activities.Presentation.WorkflowItemPresenter> consente a un singolo elemento figlio elemento dell'interfaccia utente, fornendo il "area di rilascio", mentre il <xref:System.Activities.Presentation.WorkflowItemsPresenter> può fornire supporto di più elementi dell'interfaccia utente, incluse le funzionalità aggiuntive quali ordinamento, lo spostamento, eliminazione e aggiunta di elementi figlio.
+L'oggetto <xref:System.Activities.Presentation.ActivityDesigner> usa due controlli di supporto, <xref:System.Activities.Presentation.WorkflowItemPresenter> e <xref:System.Activities.Presentation.WorkflowItemsPresenter>, per facilitare lo sviluppo di ActivityDesigner personalizzati. Questi consentono di gestire funzionalità comuni quali il trascinamento e rilascio di elementi figlio, l'eliminazione, la selezione nonché l'aggiunta di tali elementi figlio. Il <xref:System.Activities.Presentation.WorkflowItemPresenter> consente a un singolo elemento figlio elemento dell'interfaccia utente, fornendo il "area di rilascio", mentre il <xref:System.Activities.Presentation.WorkflowItemsPresenter> può fornire supporto di più elementi dell'interfaccia utente, incluse le funzionalità aggiuntive quali ordinamento, lo spostamento, eliminazione e aggiunta di elementi figlio.
 
- L'altro aspetto principale che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui vengono associate le modifiche visive usando il data binding di [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] all'istanza archiviata in memoria degli elementi in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
+L'altro aspetto principale che è opportuno evidenziare nell'implementazione di un ActivityDesigner personalizzato riguarda il modo in cui vengono associate le modifiche visive usando l'associazione dati di [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] all'istanza archiviata in memoria degli elementi in fase di modifica nella finestra di progettazione. Questa operazione viene eseguita dall'albero degli elementi del modello che è inoltre responsabile per l'abilitazione della notifica di modifiche e il rilevamento di eventi quali le modifiche degli stati.
 
- In questo argomento vengono delineate due procedure.
+In questo argomento vengono delineate due procedure.
 
-1.  Nella prima viene descritto come creare un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter> che fornisce l'area di rilascio che riceve altre attività. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) esempio.
+1. Nella prima viene descritto come creare un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter> che fornisce l'area di rilascio che riceve altre attività. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) esempio.
 
-2.  Nella seconda viene descritto come creare un ActivityDesigner personalizzato con un <xref:System.Activities.Presentation.WorkflowItemsPresenter> che fornisce la funzionalità necessaria per modificare una raccolta di elementi contenuti. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) esempio.
+2. Nella seconda viene descritto come creare un ActivityDesigner personalizzato con un <xref:System.Activities.Presentation.WorkflowItemsPresenter> che fornisce la funzionalità necessaria per modificare una raccolta di elementi contenuti. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) esempio.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Per creare un ActivityDesigner personalizzato con un'area di rilascio usando WorkflowItemPresenter
 
-1.  Avviare Visual Studio 2010.
+1. Avviare Visual Studio 2010.
 
-2.  Nel **File** dal menu **New**, quindi selezionare **progetto...** .
+2. Nel **File** dal menu **New**, quindi selezionare **progetto...** .
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3.  Nel **modelli installati** riquadro, selezionare **Windows** dalla categoria di linguaggio preferita.
+3. Nel **modelli installati** riquadro, selezionare **Windows** dalla categoria di linguaggio preferita.
 
-4.  Nel **modelli** riquadro, selezionare **applicazione WPF**.
+4. Nel **modelli** riquadro, selezionare **applicazione WPF**.
 
-5.  Nel **Name** immettere `UsingWorkflowItemPresenter`.
+5. Nel **Name** immettere `UsingWorkflowItemPresenter`.
 
-6.  Nel **posizione** casella, immettere la directory in cui si desidera salvare il progetto oppure fare clic su **Sfoglia** per spostarsi su di esso.
+6. Nel **posizione** casella, immettere la directory in cui si desidera salvare il progetto oppure fare clic su **Sfoglia** per spostarsi su di esso.
 
-7.  Nel **soluzione** casella, accettare il valore predefinito.
+7. Nel **soluzione** casella, accettare il valore predefinito.
 
-8.  Fare clic su **OK**.
+8. Fare clic su **OK**.
 
 9. Fare clic sul file MainWindows nel **Esplora soluzioni**, selezionare **eliminare** e confermare **OK** nel **Microsoft Visual Studio**finestra di dialogo.
 
@@ -106,7 +106,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 
 13. Per associare un ActivityDesigner a un tipo di attività, è necessario registrare tale ActivityDesigner con l'archivio dei metadati. A tal fine, aggiungere il metodo `RegisterMetadata` alla classe `RehostingWFDesigner`. Nell'ambito del metodo `RegisterMetadata` creare un oggetto <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> e chiamare il metodo <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> per aggiungervi attributi. Chiamare il metodo <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> per aggiungere l'oggetto <xref:System.Activities.Presentation.Metadata.AttributeTable> all'archivio dei metadati. Il codice seguente contiene la logica di riallocazione per la finestra di progettazione. Registra i metadati, inserisce `SimpleNativeActivity` nella casella degli strumenti e crea il flusso di lavoro. Inserire il codice seguente nel file RehostingWFDesigner.xaml.cs.
 
-    ```
+    ```csharp
     using System;
     using System.Activities.Core.Presentation;
     using System.Activities.Presentation;
@@ -160,11 +160,11 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 
 16. Tramite la stessa procedura aggiungere riferimenti agli assembly indicati di seguito:
 
-    1.  System.Data.DataSetExtensions.dll
+    1. System.Data.DataSetExtensions.dll
 
-    2.  System.Activities.Presentation.dll
+    2. System.Activities.Presentation.dll
 
-    3.  System.ServiceModel.Activities.dll
+    3. System.ServiceModel.Activities.dll
 
 17. Aprire il file app. XAML e modificare il valore di StartUpUri su "Rehostingwfdesigner".
 
@@ -175,7 +175,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 20. Aprire il file SimpleNativeDesigner.xaml e incollarvi il codice riportato di seguito. Questo codice usa <xref:System.Activities.Presentation.ActivityDesigner> come elemento radice e illustra come usare l'associazione per  integrare <xref:System.Activities.Presentation.WorkflowItemPresenter> nella finestra di progettazione in modo da poter visualizzare un tipo figlio nel CompositeActivityDesigner.
 
     > [!NOTE]
-    >  Lo schema dell'oggetto <xref:System.Activities.Presentation.ActivityDesigner> consente di aggiungere un unico elemento figlio alla definizione dell'ActivityDesigner personalizzato. Questo elemento, tuttavia, potrebbe essere un oggetto `StackPanel`, `Grid` o un altro elemento composito dell'interfaccia utente.
+    > Lo schema dell'oggetto <xref:System.Activities.Presentation.ActivityDesigner> consente di aggiungere un unico elemento figlio alla definizione dell'ActivityDesigner personalizzato. Questo elemento, tuttavia, potrebbe essere un oggetto `StackPanel`, `Grid` o un altro elemento composito dell'interfaccia utente.
 
     ```xml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -217,7 +217,7 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 
 23. Implementare la classe `SimpleNativeActivity` immettendo il codice seguente nel file SimpleNativeActivity.cs.
 
-    ```
+    ```csharp
     using System.Activities;
 
     namespace UsingWorkflowItemPresenter
@@ -225,8 +225,8 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
         public sealed class SimpleNativeActivity : NativeActivity
         {
             // this property contains an activity that will be scheduled in the execute method
-    // the WorkflowItemPresenter in the designer is bound to this to enable editing
-    // of the value
+            // the WorkflowItemPresenter in the designer is bound to this to enable editing
+            // of the value
             public Activity Body { get; set; }
 
             protected override void CacheMetadata(NativeActivityMetadata metadata)
@@ -250,9 +250,9 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>Per creare un ActivityDesigner personalizzato usando WorkflowItemsPresenter
 
-1.  La procedura per il secondo ActivityDesigner personalizzato è la prima con alcune modifiche, il primo dei quali consiste nel denominare la seconda applicazione `UsingWorkflowItemsPresenter`. Questa applicazione non definisce inoltre una nuova attività personalizzata.
+1. La procedura per il secondo ActivityDesigner personalizzato è la prima con alcune modifiche, il primo dei quali consiste nel denominare la seconda applicazione `UsingWorkflowItemsPresenter`. Questa applicazione non definisce inoltre una nuova attività personalizzata.
 
-2.  Le differenze principali sono contenute nei file CustomParallelDesigner.xaml e  RehostingWFDesigner.xaml.cs. Di seguito è riportato il codice del file CustomParallelDesigne.xaml che definisce l'interfaccia utente.
+2. Le differenze principali sono contenute nei file CustomParallelDesigner.xaml e  RehostingWFDesigner.xaml.cs. Ecco il codice dal file XAML che definisce l'interfaccia utente.
 
     ```xml
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"
@@ -298,9 +298,9 @@ Gli ActivityDesigner personalizzati vengono in genere implementati in modo che l
     </sap:ActivityDesigner>
     ```
 
-3.  Di seguito è riportato il codice dal file RehostingWFDesigner.xaml.cs che fornisce la logica di riallocazione.
+3. Di seguito è riportato il codice dal file RehostingWFDesigner.xaml.cs che fornisce la logica di riallocazione.
 
-    ```
+    ```csharp
     using System;
     using System.Activities.Core.Presentation;
     using System.Activities.Presentation;

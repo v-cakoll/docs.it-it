@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31a554fc57611f4abd5322fdc0c147e5dc110fb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25af2c8fa3e3d49b3c2832a69f14b2691585d775
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654945"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489848"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Metodo ICorDebugManagedCallback::DebuggerError
 Notifica al debugger che si è verificato un errore durante il tentativo di gestire un evento da common language runtime (CLR).  
@@ -37,7 +37,7 @@ HRESULT DebuggerError (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pProcess`  
  [in] Un puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo in cui si è verificato l'evento.  
   

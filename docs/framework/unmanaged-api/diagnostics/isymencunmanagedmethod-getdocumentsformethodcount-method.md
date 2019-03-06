@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c13fc4270b44a2483c2e9aabaedcf8f0668d2e7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571db05b5ec33a0bee310afadf205ac236f7048c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471537"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>Metodo ISymENCUnmanagedMethod::GetDocumentsForMethodCount
 Ottiene il numero di documenti che questo metodo è incluse righe.  
@@ -34,7 +34,7 @@ HRESULT GetDocumentsForMethodCount(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pRetVal`  
  [out] Un puntatore a un `ULONG32` che riceve le dimensioni del buffer necessaria per contenere i documenti.  
   

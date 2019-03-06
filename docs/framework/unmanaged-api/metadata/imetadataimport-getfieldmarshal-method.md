@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3c9b879faf49ec7a485641c622d40a684dfb35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647575"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469300"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Metodo IMetaDataImport::GetFieldMarshal
 Ottiene un puntatore al tipo nativo non gestito del campo rappresentato dal token di metadati specificato.  
@@ -37,7 +37,7 @@ HRESULT GetFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Il token di metadati che rappresenta il campo per ottenere le informazioni di marshalling di interoperabilità.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5ae097314a935bc06272c0e8febfbaad620f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52a1f30612899fddc29af1a437fb9437e9a2b93c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490697"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Metodo ISymUnmanagedReader::UpdateSymbolStore
 Aggiorna l'archivio dei simboli esistente con un archivio dei simboli delta. Questo metodo viene utilizzato in scenari di modifica e continuazione per aggiornare l'archivio dei simboli in modo da corrispondere i delta per l'originale file eseguibile portabile (PE).  
@@ -38,7 +38,7 @@ HRESULT UpdateSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `filename`  
  [in] Il nome del file che contiene l'archivio dei simboli.  
   

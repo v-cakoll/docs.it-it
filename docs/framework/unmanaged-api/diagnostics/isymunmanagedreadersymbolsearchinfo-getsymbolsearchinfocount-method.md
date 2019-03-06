@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63b597c6d15310c78397b9aac7b618c52df743ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6764fe1472052e2657fd32078abe987b68cf9643
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465894"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>Metodo ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount
 Ottiene un conteggio di informazioni sui simboli di ricerca.  
@@ -34,7 +34,7 @@ HRESULT GetSymbolSearchInfoCount(
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pcSearchInfo`  
  ] out] puntatore a un `ULONG32` che riceve le dimensioni del buffer necessaria per contenere le informazioni sulla ricerca.  
   

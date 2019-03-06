@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8832d6c19108459ffe261a5cf66f921ff521ddf9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629118"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465829"
 ---
 # <a name="imetadataimportgetrva-method"></a>Metodo IMetaDataImport::GetRVA
 Ottiene l'indirizzo virtuale relativo (RVA) e i flag di implementazione del metodo o del campo rappresentato dal token specificato.  
@@ -37,7 +37,7 @@ HRESULT GetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Un token MethodDef o FieldDef metadati che rappresenta l'oggetto di codice per restituire il RVA per. Se il token FieldDef, il campo deve essere una variabile globale.  
   

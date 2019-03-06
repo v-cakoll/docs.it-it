@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 421b729468cad365c48bccdae3b31132dd1ed894
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88b56f6edb2ec16d8cf46659224ae38cf7a9b14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479701"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>Metodo ICorProfilerCallback::UnmanagedToManagedTransition
 Notifica al profiler che si è verificata una transizione da codice non gestito a codice gestito.  
@@ -35,7 +35,7 @@ HRESULT UnmanagedToManagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `functionId`  
  [in] L'ID della funzione che viene chiamata.  
   

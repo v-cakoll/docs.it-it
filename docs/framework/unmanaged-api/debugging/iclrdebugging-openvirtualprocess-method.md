@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586329"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478024"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Metodo ICLRDebugging::OpenVirtualProcess
 Ottiene l'interfaccia ICorDebugProcess che corrisponde a un modulo common language runtime (CLR) caricato nel processo.  
@@ -41,7 +41,7 @@ HRESULT OpenVirtualProcess(
     [out] CLR_DEBUGGING_PROCESS_FLAGS * pdwFlags);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `moduleBaseAddress`  
  [in] L'indirizzo di base di un modulo nel processo di destinazione. COR_E_NOT_CLR verrà restituito se il modulo specificato non è un modulo CLR.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee72974d42842f63347c76586c4f1316f2a8f3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d9f449c11989091def5e6d34670f5b00f5c0bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683362"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484381"
 ---
 # <a name="functionleave3-function"></a>Funzione FunctionLeave3
 Notifica al profiler che controllo viene restituito da una funzione.  
@@ -32,7 +32,7 @@ Notifica al profiler che controllo viene restituito da una funzione.
 void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `functionOrRemappedID`  
  [in] L'identificatore della funzione da cui il controllo viene restituito.  
   

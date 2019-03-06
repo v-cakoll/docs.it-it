@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465751"
 ---
 # <a name="lockclrversion-function"></a>Funzione LockClrVersion
 Consente all'host determinare quale versione di common language runtime (CLR) da utilizzare all'interno del processo prima di inizializzare in modo esplicito il CLR.  
@@ -39,7 +39,7 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `hostCallback`  
  [in] La funzione che verrà chiamata da CLR in fase di inizializzazione.  
   

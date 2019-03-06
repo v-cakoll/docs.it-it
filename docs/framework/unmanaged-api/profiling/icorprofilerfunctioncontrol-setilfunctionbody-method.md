@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87d466e463cad2d9cd57c341812a0b57e025256
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513181"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479428"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>Metodo ICorProfilerFunctionControl::SetILFunctionBody
 Sostituisce il corpo Common Intermediate Language (CIL) del metodo.  
@@ -35,7 +35,7 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cbNewILMethodHeader`  
  [in] Dimensioni totali del nuovo codice CIL, incluse l'intestazione e tutte strutture successive al corpo.  
   

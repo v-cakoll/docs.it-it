@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8cbc540377c8f2a26b8fafef35c19e94a59c51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddcfe7a4066686da918cf5ed93aebec0d6f306f5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536009"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482041"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>Metodo IAssemblyName::GetDisplayName
 Ottiene il nome leggibile dell'assembly a cui fa riferimento [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) oggetto.  
@@ -37,7 +37,7 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `szDisplayName`  
  [out] Il buffer di stringa che contiene il nome dell'assembly di riferimento.  
   

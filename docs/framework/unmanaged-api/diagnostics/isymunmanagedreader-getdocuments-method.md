@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68f2cc471a33d2c0ea92ceab59d5ba9ecb86e7f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 629f9a62364729984a7eec86090876c3eaebb881
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464555"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>Metodo ISymUnmanagedReader::GetDocuments
 Restituisce una matrice di tutti i documenti definiti nell'archivio simboli.  
@@ -37,7 +37,7 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cDocs`  
  [in] Dimensione della matrice `pDocs`.  
   

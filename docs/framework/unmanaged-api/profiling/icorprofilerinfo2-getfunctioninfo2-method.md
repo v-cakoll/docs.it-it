@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2b0273c0e757be9d6d69a02565f8509a196b803
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478583"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Metodo ICorProfilerInfo2::GetFunctionInfo2
-Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento tipo, se presente, di una funzione.  
+Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento di tipo, se presente, di una funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT GetFunctionInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `funcId`  
  [in] ID della funzione per cui ottenere la classe padre e altre informazioni.  
   

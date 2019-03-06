@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61285b3de76f556b498c9815508275989eb96807
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3de21f4bb91198a5eb77f94789d0389d97123b7a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472486"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Metodo IMetaDataImport::EnumSignatures
 Enumera i token Signature che rappresentano le firme autonome nell'ambito corrente.  
@@ -38,7 +38,7 @@ HRESULT EnumSignatures (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `phEnum`  
  [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
   

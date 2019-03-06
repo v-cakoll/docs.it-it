@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9fe86d6160ebac084625ef94013cce9a27a3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ed5debad7ef6722206daac98aecd7db11155a58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469287"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Metodo ICorProfilerCallback::AssemblyUnloadFinished
 Notifica al profiler che un assembly è stato scaricato.  
@@ -35,7 +35,7 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `assemblyId`  
  [in] Identifica l'assembly che sta per essere scaricato.  
   

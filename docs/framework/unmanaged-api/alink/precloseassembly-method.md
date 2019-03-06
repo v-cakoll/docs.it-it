@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fab522adbdb1b50448dfabfd23d663fb223c6da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1aeffbd5d5b22bea87dd7a49a3268822ce84d38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481175"
 ---
 # <a name="precloseassembly-method"></a>Metodo PreCloseAssembly
 Chiude il file di assembly. Chiamare questo metodo dopo la chiusura di tutti gli altri file, ma prima di chiudere il file di assembly. Non chiamare questo metodo per i moduli non associati.  
@@ -34,7 +34,7 @@ HRESULT PreCloseAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `AssemblyID`  
  ID dell'assembly.  
   

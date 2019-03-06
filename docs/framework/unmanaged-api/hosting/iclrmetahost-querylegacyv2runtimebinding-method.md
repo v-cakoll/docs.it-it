@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd58d38e92f492522008745384459045e007c3ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b21b86e9f5866626f72562f5105b214777e3d5bd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646841"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486903"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>Metodo ICLRMetaHost::QueryLegacyV2RuntimeBinding
 Restituisce un'interfaccia che rappresenta un runtime a cui sono stati associati i criteri dell'attivazione legacy, ad esempio, utilizzando il `useLegacyV2RuntimeActivationPolicy` attributo la [ \<avvio > elemento](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) voce file di configurazione mediante l'utilizzo diretto dell'API di attivazione legacy o chiamando il [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) (metodo).  
@@ -35,7 +35,7 @@ HRESULT QueryLegacyV2RuntimeBinding (
     [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `riid`  
  [in] L'unico valore valido per questo parametro è Required.Currently `IID_ICLRRuntimeInfo`.  
   
