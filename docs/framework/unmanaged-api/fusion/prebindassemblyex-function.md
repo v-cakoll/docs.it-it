@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07b3b3a32796b5805dbf86449921518a77e95d6b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480533"
 ---
 # <a name="prebindassemblyex-function"></a>Funzione PreBindAssemblyEx
 Ottiene il nome visualizzato di post-criteri per un assembly.  
@@ -41,7 +41,7 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppCtx`  
  [in] Identifica il contesto dell'applicazione.  
   

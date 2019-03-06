@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ad18aaca1caef242832bbdae9a1094b2ef2d7be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d0ee533ec0ece308f87c170846ef102bd3a3b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572461"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478865"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Metodo IMetaDataImport2::GetPEKind
 Ottiene un valore che identifica la natura del codice nel file eseguibile portabile (PE) di file, in genere un file DLL o EXE, definito nell'ambito dei metadati corrente.  
@@ -36,7 +36,7 @@ HRESULT GetPEKind (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pdwPEKind`  
  [out] Un puntatore a un valore di [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumerazione che descrive il file PE.  
   
@@ -46,7 +46,7 @@ HRESULT GetPEKind (
 ## <a name="remarks"></a>Note  
  Il valore a cui fanno riferimento le `pdwMachine` parametro può essere uno dei valori seguenti.  
   
-|Value|Architettura del computer|  
+|Valore|Architettura del computer|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  

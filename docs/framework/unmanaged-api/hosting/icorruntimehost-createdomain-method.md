@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0a29222e8f5dfcfbbdfabc6c64d43e2e6a943a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 662a47f75f2eef75b39ee877ea4645311cae6210
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484875"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>Metodo ICorRuntimeHost::CreateDomain
 Crea un dominio dell'applicazione. Il chiamante riceve un puntatore a interfaccia typu <xref:System._AppDomain> a un'istanza del tipo <xref:System.AppDomain?displayProperty=nameWithType>.  
@@ -37,7 +37,7 @@ HRESULT CreateDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pwzFriendlyName`  
  [in] Un parametro facoltativo utilizzato per assegnare un nome descrittivo per il dominio. Questo nome descrittivo può essere visualizzato nelle interfacce utente, ad esempio ai debugger di identificare il dominio.  
   

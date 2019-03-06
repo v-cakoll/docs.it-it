@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481578"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>Metodo ICorDebugModule2::ApplyChanges
 Applica le modifiche nei metadati e le modifiche nel codice Microsoft intermediate language (MSIL) per il processo in esecuzione.  
@@ -38,12 +38,12 @@ HRESULT ApplyChanges (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cbMetadata`  
- [in] Dimensione, in byte, dei metadati delta.  
+ [in] Dimensione, espressa in byte, dei metadati del delta.  
   
  `pbMetadata`  
- [in] Buffer che contiene i metadati delta. Viene restituito l'indirizzo del buffer dal [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) metodo.  
+ [in] Buffer che contiene i metadati del delta. Viene restituito l'indirizzo del buffer dal [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) (metodo).  
   
  Gli indirizzi virtuali relativi (RVA) nei metadati devono essere relativo all'inizio del codice MSIL.  
   
@@ -54,21 +54,21 @@ HRESULT ApplyChanges (
  [in] Buffer che contiene il codice MSIL aggiornato.  
   
 ## <a name="remarks"></a>Note  
- Il `pbMetadata` parametro è in un formato di metadati delta speciale (come output da [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` accetta i metadati precedenti come base e descrive le singole modifiche da applicare alla base.  
+ Il `pbMetadata` parametro è in un formato di metadati speciale delta (come output dal [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` accetta i metadati precedenti come base e vengono descritte le singole modifiche da applicare alla base.  
   
  Al contrario, il `pbIL[`] parametro contiene il nuovo codice MSIL per il metodo aggiornato ed è concepito per sostituire completamente il precedente codice MSIL per il metodo  
   
- Quando il codice MSIL delta e i metadati sono stati creati in memoria del debugger, il debugger chiama `ApplyChanges` per inviare le modifiche in common language runtime (CLR). Il runtime aggiorna le relative tabelle di metadati, inserisce il codice MSIL di nuovo il processo e consente di impostare una compilazione di just-in-time (JIT) di tale codice. Una volta applicate le modifiche, il debugger deve chiamare [IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) per preparare per la sessione di modifica successiva. Il debugger può quindi continuare il processo.  
+ Quando il delta MSIL e i metadati sono stati creati in memoria del debugger, il debugger chiama `ApplyChanges` per inviare le modifiche in common language runtime (CLR). Il runtime aggiorna le relative tabelle di metadati, inserisce il codice MSIL di nuovo nel processo e consente di impostare una compilazione JIT just-in-time del nuovo codice MSIL. Quando le modifiche sono state applicate, il debugger deve chiamare [IMetaDataEmit2::ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) preparare per la sessione di modifica successiva. Il debugger può continuare il processo.  
   
- Ogni volta che il debugger chiama `ApplyChanges` su un modulo che contiene metadati delta, deve anche chiamare [IMetaDataEmit:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) con gli stessi metadati delta su tutte le copie dei metadati del modulo, ad eccezione della copia utilizzato per generare le modifiche. In caso di una copia dei metadati in qualche modo di sincronizzazione con i metadati effettivi, il debugger può sempre eliminare tale copia e ottenere una nuova copia.  
+ Ogni volta che il debugger chiama `ApplyChanges` su un modulo che include metadati differenziali, questo deve chiamare anche [ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) con gli stessi metadati delta in tutte le copie dei metadati del modulo, ad eccezione della copia utilizzato per generare le modifiche. Se una copia dei metadati non è più in qualche modo di sincronizzato con i metadati effettivi, il debugger può sempre sbarazzarsi di tale copia e ottenere una nuova copia.  
   
  Se il `ApplyChanges` metodo ha esito negativo, il debug della sessione è in uno stato non valido e deve essere riavviata.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f9bd6ae34903798a29f8666dfdba3e102fae28db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9c05efefb985e4b9ec9349974f243c4828d9bcf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478817"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>Metodo ISymUnmanagedScope::GetChildren
 Ottiene gli elementi figlio di questo ambito.  
@@ -37,7 +37,7 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cChildren`  
  [in] Oggetto `ULONG32` che indica le dimensioni del `children` matrice.  
   

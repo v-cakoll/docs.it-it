@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412805"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479610"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Metodo ICorDebugEval2::NewParameterizedObject
-Crea un nuovo oggetto di tipo con parametri e chiama il metodo costruttore dell'oggetto.  
+Crea un'istanza di un nuovo oggetto di tipo con parametri e chiama il metodo costruttore dell'oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,30 +39,30 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pConstructor`  
- [in] Un puntatore a un oggetto ICorDebugFunction che rappresenta il costruttore dell'oggetto deve essere creata un'istanza.  
+ [in] Un puntatore a un oggetto ICorDebugFunction che rappresenta il costruttore dell'oggetto da cui creare istanze.  
   
  `nTypeArgs`  
- [in] Il numero di argomenti di tipo passato.  
+ [in] Il numero di argomenti tipo passati.  
   
  `ppTypeArgs`  
- [in] Matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di tipo per l'oggetto che viene creata un'istanza.  
+ [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugType che rappresenta un argomento di tipo per l'oggetto che viene viene creata un'istanza.  
   
  `nArgs`  
- [in] Il numero di argomenti passati al costruttore.  
+ [in] Il numero di argomenti passato al costruttore.  
   
  `ppArgs`  
- [in] Matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugValue che rappresenta un valore dell'argomento che viene passato al costruttore.  
+ [in] Una matrice di puntatori, ognuno dei quali punta a un oggetto ICorDebugValue che rappresenta un valore dell'argomento passato al costruttore.  
   
 ## <a name="remarks"></a>Note  
  Il costruttore dell'oggetto potrebbe richiedere <xref:System.Type> parametri.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

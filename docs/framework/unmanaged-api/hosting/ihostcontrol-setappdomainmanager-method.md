@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fd0cf4f47781afb397c1fdd4b42715c710982e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83461f89be9a16305da2732536dcc6847b45027d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580759"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482561"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>Metodo IHostControl::SetAppDomainManager
 Notifica all'host che è stato creato un dominio dell'applicazione.  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwAppDomainID`  
  [in] L'identificatore numerico dell'oggetto selezionato <xref:System.AppDomain>.  
   

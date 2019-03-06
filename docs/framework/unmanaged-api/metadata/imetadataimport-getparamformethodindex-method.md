@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7455d87caff86c57409f4bb016ec73c365a3d35d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487122"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>Metodo IMetaDataImport::GetParamForMethodIndex
 Ottiene il token che rappresenta un parametro specificato del metodo rappresentato dal token MethodDef specificato.  
@@ -37,7 +37,7 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `md`  
  [in] Un token che rappresenta il metodo per restituire il token del parametro.  
   

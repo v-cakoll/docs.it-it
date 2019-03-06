@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d7b70b8ad014845a60fd66759c96419c46139b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5abc09f06bfd2aec270e5ef91fd4778d6aa9a3b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487369"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>Metodo ICLRStrongName::StrongNameTokenFromAssemblyEx
 Crea un token con nome sicuro dal file di assembly specificato e restituisce la chiave pubblica che rappresenta il token.  
@@ -39,7 +39,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `wszFilePath`  
  [in] Il percorso del file eseguibile portabile (PE) per l'assembly.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22463a56911354c9706bbfbc7d1824aee5d3c74d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0beb952cf658c19b596263e7f8b7721394efae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482379"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>Metodo ICorProfilerInfo2::GetCodeInfo2
 Ottiene gli ambiti del codice nativo associato al parametro `FunctionID` specificato.  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `functionID`  
  [in] ID della funzione alla quale è associato il codice nativo.  
   
