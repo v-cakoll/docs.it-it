@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5380ed63a362b73b0684ef07b638117751ca80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b7125ad38bcec773fa2afa8eca09c1d56d90591
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475771"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>Metodo INotifyConnection2::UnregisterNotifySource
 Rimuove un oggetto di origine di notifica specificato dalla connessione.  
@@ -36,7 +36,7 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `in_pNotifySource`  
  [in] Oggetto di notifica di cui annullare la registrazione.  
   

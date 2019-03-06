@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d992a3eb05ae59f2dc380338531bdc38c37abfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb91a49086eae4d9e8d43a2d38b51d9dd0a6814e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572107"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473729"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>Metodo ICLRSyncManager::GetRWLockOwnerNext
 Ottiene l'oggetto successivo [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza bloccata sul blocco di lettura / scrittura corrente.  
@@ -36,7 +36,7 @@ HRESULT GetRWLockOwnerNext (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `Iterator`  
  [in] L'iteratore creato tramite una chiamata a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
   

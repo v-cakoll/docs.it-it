@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fda739a71a133a8c6177d0c7b8e0402d1dc97c4f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2861a2f0aec66832c618dda7d50dd543920102f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468604"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Metodo ICorDebugRemoteTarget::GetHostName
 Restituisce il nome di dominio completo o l'indirizzo IPv4 del computer di destinazione per il debug remoto. IPV6 non è attualmente supportato.  
@@ -37,7 +37,7 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cchHostName`  
  [in] Le dimensioni, in caratteri, del `szHostName` buffer. Se il parametro è 0 (zero), `szHostName` deve essere Null.  
   

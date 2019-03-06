@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b77e282fd23ee01ea5e7d65bec64f8fb2ecc31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9e94c1904d8675af59e6ed5b49c2229e1214e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469222"
 ---
 # <a name="functionenter3withinfo-function"></a>Funzione FunctionEnter3WithInfo
 Notifica al profiler di controllo viene passato a una funzione e fornisce un handle che può essere passato al [metodo ICorProfilerInfo3::GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) per recuperare gli argomenti di stack frame e la funzione.  
@@ -34,7 +34,7 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `functionIDOrClientID`  
  [in] L'identificatore della funzione a cui il controllo viene passato.  
   

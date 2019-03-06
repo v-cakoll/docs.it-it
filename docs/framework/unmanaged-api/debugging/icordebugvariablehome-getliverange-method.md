@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894629b7cc1c48eb6c1820c65a0a2a41332a8080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c8ae378c10eda986740dfb73f3bf60ea8647a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549691"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468845"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Metodo IcorDebugVariableHome::GetLiveRange
 Ottiene l'intervallo nativo su cui questa variabile è in tempo reale.  
@@ -36,7 +36,7 @@ HRESULT GetLiveRange(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pStartOffset`  
  [out] L'offset logico in cui la variabile è primo in tempo reale.  
   
