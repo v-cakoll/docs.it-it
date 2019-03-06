@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351996"
 ---
 # <a name="property-change-events"></a>Eventi di modifica delle proprietà
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi generati in risposta a una modifica nel valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
@@ -33,7 +33,7 @@ ms.locfileid: "54524000"
   
  Poiché si hanno un valore vecchio e un valore nuovo, può sembrare opportuno usare questo gestore eventi come validator per il valore della proprietà. Quest'uso, tuttavia, non rientra negli intenti di progettazione della maggior parte degli eventi di modifica proprietà. In genere i valori vengono forniti per consentire di eseguire azioni su di essi in altre aree logiche del codice, ma la modifica dei valori dall'interno del gestore eventi non è consigliabile e può causare ricorsione non intenzionale a seconda della modalità di implementazione del gestore.  
   
- Se la proprietà è una proprietà di dipendenza personalizzate, o se si lavora con una classe derivata in cui è stato definito il codice di creazione dell'istanza, è un meccanismo per tenere traccia delle modifiche alle proprietà che è incorporata in più efficiente il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà: il callback del sistema di proprietà <xref:System.Windows.CoerceValueCallback> e <xref:System.Windows.PropertyChangedCallback>. Per informazioni dettagliate su come usare il sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per la convalida e la coercizione, vedere [Callback e convalida delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) e [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Se la proprietà è una proprietà di dipendenza personalizzate, o se si lavora con una classe derivata in cui è stato definito il codice di creazione dell'istanza, è un meccanismo per tenere traccia delle modifiche alle proprietà che è incorporata in più efficiente il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di proprietà: il callback del sistema di proprietà <xref:System.Windows.CoerceValueCallback> e <xref:System.Windows.PropertyChangedCallback>. Per informazioni dettagliate su come usare il sistema di proprietà [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per la convalida e la coercizione, vedere [Callback e convalida delle proprietà di dipendenza](dependency-property-callbacks-and-validation.md) e [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Eventi DependencyPropertyChanged  
  Un'altra coppia di tipi che fanno parte di uno scenario di proprietà degli eventi modificati <xref:System.Windows.DependencyPropertyChangedEventArgs> e <xref:System.Windows.DependencyPropertyChangedEventHandler>. Gli eventi per queste modifiche delle proprietà non sono eventi indirizzati, bensì eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. <xref:System.Windows.DependencyPropertyChangedEventArgs> è un evento insolito segnalazione dei dati tipo poiché non deriva da <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> è una struttura, non una classe.  
@@ -59,8 +59,8 @@ ms.locfileid: "54524000"
   
  I trigger di proprietà sono generalmente adatti negli scenari in cui una o più proprietà di aspetto devono essere modificate, in base allo stato di un'altra proprietà sullo stesso elemento.  
   
- Per altre informazioni sui trigger di proprietà, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Per altre informazioni sui trigger di proprietà, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)

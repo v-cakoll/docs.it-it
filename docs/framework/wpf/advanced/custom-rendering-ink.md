@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362630"
 ---
 # <a name="custom-rendering-ink"></a>Personalizzare il rendering dell'input penna
 Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto consente di specificare l'aspetto di un tratto, ad esempio dimensioni, colore e forma, ma potrebbe capitare che si desidera personalizzare l'aspetto oltre ciò che <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> consentire. È possibile personalizzare l'aspetto dell'input penna eseguendo il rendering con l'aspetto di un aerografo, di una pittura a olio e di molti altri effetti. Windows Presentation Foundation (WPF) consente di personalizzare il rendering dell'input penna implementando una classe personalizzata <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e <xref:System.Windows.Ink.Stroke> oggetto.  
@@ -37,7 +37,7 @@ Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
   
  Per il rendering dinamico dell'input penna è necessario implementare tre classi.  
   
-1.  **DynamicRenderer**: Implementare una classe che derivi da <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Questa classe è un'oggetto specifico <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> che esegue il rendering del tratto mentre viene tracciato. Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> esegue il rendering su un thread separato, in modo che la superficie di input penna sembra raccogliere l'input penna anche quando viene bloccato il thread dell'interfaccia utente dell'applicazione. Per altre informazioni sul modello di threading, vedere [Modello di threading dell'input penna](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md). Per personalizzare il rendering dinamico di un tratto, eseguire l'override di <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> (metodo).  
+1.  **DynamicRenderer**: Implementare una classe che derivi da <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Questa classe è un'oggetto specifico <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> che esegue il rendering del tratto mentre viene tracciato. Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> esegue il rendering su un thread separato, in modo che la superficie di input penna sembra raccogliere l'input penna anche quando viene bloccato il thread dell'interfaccia utente dell'applicazione. Per altre informazioni sul modello di threading, vedere [Modello di threading dell'input penna](the-ink-threading-model.md). Per personalizzare il rendering dinamico di un tratto, eseguire l'override di <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> (metodo).  
   
 2.  **Stroke**: Implementare una classe che derivi da <xref:System.Windows.Ink.Stroke>. Questa classe è responsabile del rendering statico del <xref:System.Windows.Input.StylusPoint> dati dopo che è stato convertito in un <xref:System.Windows.Ink.Stroke> oggetto. Eseguire l'override di <xref:System.Windows.Ink.Stroke.DrawCore%2A> metodo per assicurarsi che il rendering statico del tratto sia coerenza con il rendering dinamico.  
   
@@ -49,10 +49,10 @@ Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
   
  L'esempio seguente illustra un oggetto personalizzato <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> che disegna l'input penna con un effetto pennello a sfumatura lineare.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>Implementazione di tratti personalizzati  
@@ -64,10 +64,10 @@ Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
   
  Il seguente C# codice illustra una classe personalizzata <xref:System.Windows.Ink.Stroke> classe che esegue il rendering <xref:System.Windows.Input.StylusPoint> dati come tratto 3D.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>Implementazione di un oggetto InkCanvas personalizzato  
@@ -83,7 +83,7 @@ Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
   
  Il seguente C# codice illustra una classe personalizzata <xref:System.Windows.Controls.InkCanvas> classe che utilizza un oggetto personalizzato <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> e raccoglie tratti personalizzati.  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  Un' <xref:System.Windows.Controls.InkCanvas> può avere più di uno <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. È possibile aggiungere più <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> gli oggetti per il <xref:System.Windows.Controls.InkCanvas> aggiungendole al <xref:System.Windows.UIElement.StylusPlugIns%2A> proprietà.  
   
@@ -92,4 +92,4 @@ Il <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> proprietà di un tratto
  È possibile personalizzare l'aspetto dell'input penna derivando <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, e <xref:System.Windows.Controls.InkCanvas> classi. Insieme, queste classi assicurano che il tratto abbia un aspetto coerente quando l'utente lo disegna e dopo che viene raccolto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Gestione avanzata dell'input penna](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Gestione avanzata dell'input penna](advanced-ink-handling.md)

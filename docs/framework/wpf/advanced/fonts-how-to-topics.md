@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eb77d478292a5301c0782b860e46edd92ce8478
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356949"
 ---
 # <a name="fonts-how-to-topics"></a>Procedure relative ai tipi di caratteri
 Negli argomenti di questa sezione viene illustrato come utilizzare le caratteristiche del carattere incluse con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Enumerare i tipi di carattere del sistema](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
- [Usare la classe FontSizeConverter](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
+ [Enumerare i tipi di carattere del sistema](how-to-enumerate-system-fonts.md)  
+ [Usare la classe FontSizeConverter](how-to-use-the-fontsizeconverter-class.md)  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Documenti in WPF](documents-in-wpf.md)
+- [Funzionalità tipografiche di WPF](typography-in-wpf.md)

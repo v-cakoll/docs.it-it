@@ -12,27 +12,27 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ada3abcccac4244819cfbef1101a770761df6a50
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: b6490919163a7c4a618bf9a8d0e2aa145f60eda1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372308"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>Campo s_isDebuggerCheckDisabledForTestPurposes
 
 Questo campo privato all'interno di `System.Windows.Diagnostics.VisualDiagnostics` classe viene utilizzata da Visual Studio per determinare se verrà eseguito un controllo interno per un debugger attivo.
 
 ## <a name="syntax"></a>Sintassi
-  
-```csharp  
+
+```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
-  
+
 > [!WARNING]
->  API nel `System.Windows.Diagnostics.VisualDiagnostics` classe sono disponibili solo quando un'applicazione è in esecuzione in un debugger. Impostare `s_isDebuggerCheckDisabledForTestPurposes` a `true` per accedere alle API di fuori di un debugger.  
->   
->  Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.  
+> Le API nel `System.Windows.Diagnostics.VisualDiagnostics` classe sono disponibili solo quando un'applicazione è in esecuzione in un debugger. Impostare `s_isDebuggerCheckDisabledForTestPurposes` a `true` per accedere alle API di fuori di un debugger.
+>
+> Microsoft non supporta l'uso di questo campo in un'applicazione di produzione in alcuna circostanza.
 
 ## <a name="requirements"></a>Requisiti
 

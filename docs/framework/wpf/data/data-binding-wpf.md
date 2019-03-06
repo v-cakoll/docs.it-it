@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555777"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375194"
 ---
 # <a name="data-binding-wpf"></a>Associazione dati (WPF)
-Associazione di dati di Windows Presentation Foundation (WPF) fornisce un modo semplice e coerente per le applicazioni consentire di interagire con i dati. Gli elementi possono essere associati ai dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  
+Associazione di dati di Windows Presentation Foundation (WPF) fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. Gli elementi possono essere associati ai dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Panoramica delle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Panoramica sulle dichiarazioni di associazione](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Panoramica sul data binding](data-binding-overview.md)  
+ [Panoramica delle origini di associazione](binding-sources-overview.md)  
+ [Panoramica sui modelli di dati](data-templating-overview.md)  
+ [Panoramica sulle dichiarazioni di associazione](binding-declarations-overview.md)  
+ [Procedure relative alle proprietà](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Associazione di dati di Windows Presentation Foundation (WPF) fornisce un modo s
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Trascinamento della selezione](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Trascinamento della selezione](../advanced/drag-and-drop.md)  
   
- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Data binding](../advanced/optimizing-performance-data-binding.md)  
   
- [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

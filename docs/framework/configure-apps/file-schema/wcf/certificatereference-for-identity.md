@@ -3,11 +3,11 @@ title: <certificateReference> per <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 44bfb2fd77c4f4db6f7fede296b1cdb74e8d5e7c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254830"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351944"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > per \<identità >
 Specifica le impostazioni per la convalida del certificato X.509. Un client Windows Communication Foundation (WCF) sicuro che si connette a un endpoint con questa identità verifica che le attestazioni presentate dal server contengano l'attestazione di identità usato per costruire tale identità.  

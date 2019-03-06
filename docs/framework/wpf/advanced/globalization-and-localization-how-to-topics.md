@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544472"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369149"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Procedure relative alla globalizzazione e alla localizzazione
-Negli argomenti di questa sezione viene descritto come sviluppare applicazioni world-ready.  
+Gli argomenti in questa sezione descrivono come sviluppare applicazioni internazionalizzate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Localizzare un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [Utilizzare un layout automatico per creare un pulsante](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Usare una griglia per il layout automatico](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [Usare le risorse in applicazioni localizzabili](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [Localizzare un'applicazione](how-to-localize-an-application.md)  
+ [Utilizzare un layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)  
+ [Usare una griglia per il layout automatico](how-to-use-a-grid-for-automatic-layout.md)  
+ [Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [Usare le risorse in applicazioni localizzabili](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ Negli argomenti di questa sezione viene descritto come sviluppare applicazioni w
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Gestione di xml:lang in XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [Gestione di xml:lang in XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate

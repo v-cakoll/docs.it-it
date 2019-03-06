@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363479"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Espressioni lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può essere usato ovunque un delegato è valido. Le espressioni lambda possono essere funzioni o subroutine e possono essere a riga singola o multilinea. È possibile passare i valori dall'ambito corrente a un'espressione lambda.  
@@ -109,7 +109,7 @@ End Class
   
  Per altre informazioni su come creare e usare i metodi asincroni, vedere [programmazione asincrona con Async e Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a> Contesto  
+## <a name="context"></a> Contesto  
  Un'espressione lambda condivide il contesto con l'ambito entro il quale è definito. Include gli stessi diritti di accesso di qualsiasi codice scritto nell'ambito che lo contiene. Ciò include l'accesso a membri variabili, funzioni e subroutine, `Me`e i parametri e variabili locali all'interno dell'ambito contenitore.  
   
  Accesso alle variabili locali e parametri nell'ambito che lo contiene può estendersi oltre la durata di tale ambito. Fino a quando un delegato che fa riferimento a un'espressione lambda non è disponibile per operazioni di garbage collection, accesso alle variabili dell'ambiente originale viene mantenuto. Nell'esempio seguente, variabile `target` è locale rispetto `makeTheGame`, il metodo in cui l'espressione lambda `playTheGame` è definito. Si noti che l'espressione lambda restituita, assegnato a `takeAGuess` nelle `Main`, ha ancora accesso alla variabile locale `target`.  

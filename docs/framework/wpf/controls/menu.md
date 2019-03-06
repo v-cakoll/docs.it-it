@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555789"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370761"
 ---
 # <a name="menu"></a>Menu
-Oggetto <xref:System.Windows.Controls.Menu> è un controllo che consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. Ogni <xref:System.Windows.Controls.Menu> può contenere più <xref:System.Windows.Controls.MenuItem> controlli. Ogni <xref:System.Windows.Controls.MenuItem> può richiamare un comando o richiamare un `Click` gestore dell'evento. Oggetto <xref:System.Windows.Controls.MenuItem> può anche avere più <xref:System.Windows.Controls.MenuItem> gli elementi figlio, creando un sottomenu.  
+Oggetto <xref:System.Windows.Controls.Menu> è un controllo che consente l'organizzazione gerarchica di elementi associati a comandi e gestori eventi. Ciascuna <xref:System.Windows.Controls.Menu> può contenere più <xref:System.Windows.Controls.MenuItem> controlli. Ciascuna <xref:System.Windows.Controls.MenuItem> possono richiamare un comando o richiamare un `Click` gestore dell'evento. Oggetto <xref:System.Windows.Controls.MenuItem> può anche avere più <xref:System.Windows.Controls.MenuItem> elementi come elementi figlio, formando un sottomenu.  
   
- Nella figura seguente mostra i tre diversi stati di un controllo menu. Il valore predefinito è quando nessun dispositivo, ad esempio il puntatore del mouse si sofferma sul <xref:System.Windows.Controls.Menu>. Lo stato attivo si verifica quando il puntatore del mouse viene posizionato sul <xref:System.Windows.Controls.Menu> e premuto si verifica quando si fa clic sul pulsante del mouse su di <xref:System.Windows.Controls.Menu>.  
+ La figura seguente mostra i tre diversi stati di un controllo menu. Il valore predefinito è quando nessun dispositivo, ad esempio il puntatore del mouse si sofferma sul <xref:System.Windows.Controls.Menu>. Lo stato attivo si verifica quando il puntatore del mouse è posizionato sul <xref:System.Windows.Controls.Menu> e premuta si verifica quando si fa clic sul pulsante del mouse su di <xref:System.Windows.Controls.Menu>.  
   
- ![Stati dei menu](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
-Menu in stati diversi  
+ ![Stati dei menu](./media/ss-ctl-menu.gif "SS_CTL_menu")  
+Menu di scelta nei suoi diversi stati  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sulla classe Menu](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Panoramica sulla classe Menu](menu-overview.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Menu>  

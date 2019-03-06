@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: c98e9434f78980ca0dd8156b3828734abb223a8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d68aa0789b73c0ce239a33fe3889c3fba639a17
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679513"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358444"
 ---
 # <a name="annotations-schema"></a>Schema annotazioni
 Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definition) usata da Microsoft Annotations Framework per salvare e recuperare i dati di annotazione dell'utente.  
@@ -587,4 +587,4 @@ Questo argomento descrive la definizione di XML Schema (XSD, XML Schema Definiti
 - <xref:System.Windows.Annotations.Annotation>
 - <xref:System.Windows.Annotations.Storage.AnnotationStore>
 - <xref:System.Windows.Annotations.Storage.XmlStreamStore>
-- [Cenni preliminari sulle annotazioni](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+- [Cenni preliminari sulle annotazioni](annotations-overview.md)

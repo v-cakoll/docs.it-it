@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530788"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376273"
 ---
 # <a name="image-how-to-topics"></a>Procedure relative alle immagini
 Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.Image> elemento.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Usare l'elemento di immagine](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [Convertire un'immagine in scala di grigi](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [Ritagliare un'immagine](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [Ruotare un'immagine](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+ [Usare l'elemento di immagine](how-to-use-the-image-element.md)  
+  [Convertire un'immagine in scala di grigi](how-to-convert-an-image-to-greyscale.md)  
+  [Ritagliare un'immagine](how-to-crop-an-image.md)  
+  [Ruotare un'immagine](how-to-rotate-an-image.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,5 @@ Negli argomenti di questa sezione viene descritto come utilizzare il <xref:Syste
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [Cenni preliminari sulla creazione dell'immagine](../graphics-multimedia/imaging-overview.md)
+- [Procedure relative alle proprietà](../graphics-multimedia/imaging-how-to-topics.md)

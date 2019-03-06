@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363930"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Callback e convalida delle proprietà di dipendenza
 Questo argomento descrive come creare proprietà di dipendenza usando le implementazioni personalizzate alternative per funzionalità correlate alle proprietà, ad esempio la determinazione della convalida, i callback richiamati ogni volta che il valore effettivo della proprietà viene modificato e l'override delle possibili influenze esterne sulla determinazione del valore. In questo argomento vengono anche presentati scenari in cui è possibile espandere i comportamenti predefiniti del sistema di proprietà usando queste tecniche.  
@@ -25,14 +25,14 @@ Questo argomento descrive come creare proprietà di dipendenza usando le impleme
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- Nell'argomento si presuppone la conoscenza degli scenari di base dell'implementazione di una proprietà di dipendenza e del modo in cui i metadati vengono applicati a una proprietà di dipendenza personalizzata. Per il contesto, vedere [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Metadati delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Nell'argomento si presuppone la conoscenza degli scenari di base dell'implementazione di una proprietà di dipendenza e del modo in cui i metadati vengono applicati a una proprietà di dipendenza personalizzata. Per il contesto, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md) e [Metadati delle proprietà di dipendenza](dependency-property-metadata.md).  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Callback di convalida  
  I callback di convalida possono essere assegnati a una proprietà di dipendenza al momento della sua prima registrazione. Il callback di convalida non fa parte dei metadati della proprietà; è un input diretto del <xref:System.Windows.DependencyProperty.Register%2A> (metodo). Di conseguenza, dopo averlo creato per una proprietà di dipendenza, un callback di convalida non può essere sottoposto a override da parte di una nuova implementazione.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  I callback vengono implementati in modo che venga loro fornito un valore di oggetto. Restituiscono `true` se il valore fornito è valido per la proprietà e in caso contrario restituiscono `false`. Si presuppone che la proprietà sia del tipo corretto per il tipo registrato nel sistema di proprietà, quindi all'interno dei callback non viene generalmente eseguito il controllo del tipo. I callback vengono usati dal sistema di proprietà in varie operazioni diverse. Ciò include l'inizializzazione del tipo iniziale dal valore predefinito, modifiche a livello di codice richiamando <xref:System.Windows.DependencyObject.SetValue%2A>, o tenta di eseguire l'override dei metadati con il nuovo valore predefinito fornito. Se il callback di convalida viene richiamato da una di queste operazioni e restituisce `false`, verrà generata un'eccezione. Gli autori di applicazioni devono essere preparati a gestire queste eccezioni. Un uso comune dei callback di convalida è la convalida dei valori di enumerazione o il vincolo di valori di Integer o Double quando la proprietà imposta misure che devono essere uguali o maggiori di zero.  
   
@@ -40,8 +40,8 @@ Questo argomento descrive come creare proprietà di dipendenza usando le impleme
   
  Di seguito è riportato il codice di esempio per uno scenario di callback di convalida molto semplice: convalida che una proprietà tipizzata come le <xref:System.Double> primitivo non è <xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Callback di valori soggetti a coercizione ed eventi di proprietà modificate  
@@ -51,18 +51,18 @@ Questo argomento descrive come creare proprietà di dipendenza usando le impleme
   
  Di seguito viene riportato un brevissimo esempio di codice per una delle tre proprietà di dipendenza che illustrano questa relazione. Nell'esempio viene illustrata la modalità di registrazione della proprietà `CurrentReading` di un set Min/Max/Current di proprietà *Reading. Viene usata la convalida come illustrato nella sezione precedente.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Il callback per proprietà modificate per il valore Current viene usato per inoltrare la modifica ad altre proprietà dipendenti, richiamando in modo esplicito i callback di valori soggetti a coercizione registrati per tali proprietà:  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  Il callback di valori soggetti a coercizione verifica i valori delle proprietà da cui la proprietà corrente è potenzialmente dipendente e assegna il valore corrente, se necessario:  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  I valori predefiniti delle proprietà non vengono assegnati. Valore della proprietà uguale al valore predefinito potrebbe verificarsi se un valore della proprietà ha ancora l'impostazione predefinita iniziale o tramite la cancellazione degli altri valori con <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ Questo argomento descrive come creare proprietà di dipendenza usando le impleme
  Il sistema di proprietà considererà qualsiasi <xref:System.Windows.CoerceValueCallback> che restituisce il valore <xref:System.Windows.DependencyProperty.UnsetValue> come caso speciale. Ciò significa che la modifica della proprietà che ha comportato il <xref:System.Windows.CoerceValueCallback> chiamato deve essere rifiutato dal sistema di proprietà e che il sistema di proprietà deve invece segnalare qualsiasi valore precedente della proprietà. Questo meccanismo può essere utile per controllare che le modifiche a una proprietà avviate in modo asincrono siano ancora valide per lo stato dell'oggetto corrente e per eliminarle in caso non lo siano. Un altro possibile scenario è costituito dalla possibilità di eliminare in modo selettivo un valore a seconda di quale componente della determinazione dei valori di proprietà sia responsabile del valore segnalato. A tale scopo, è possibile usare la <xref:System.Windows.DependencyProperty> passato come input per il callback e l'identificatore della proprietà <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, quindi elaborare il <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Metadati delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Metadati delle proprietà di dipendenza](dependency-property-metadata.md)
+- [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)

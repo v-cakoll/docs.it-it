@@ -6,12 +6,12 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 6977410a596a943a23c3841e80edf4cfed1bf6b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364112"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Procedura: Disegnare un'area con un pennello di sistema
 Il <xref:System.Windows.SystemColors> classe fornisce accesso ai pennelli di sistema e i colori, ad esempio <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, e <xref:System.Windows.SystemColors.DesktopBrush%2A>. Un pennello di sistema è un <xref:System.Windows.Media.SolidColorBrush> che disegna un'area con il colore di sistema specificato. Un pennello di sistema produce sempre un riempimento a tinta unita e non può essere usato per creare una sfumatura.  
@@ -34,19 +34,19 @@ Il <xref:System.Windows.SystemColors> classe fornisce accesso ai pennelli di sis
   
      Ottiene un riferimento dinamico al <xref:System.Windows.Media.Color> struttura del colore di sistema specificato.  
   
- È un colore di sistema un <xref:System.Windows.Media.Color> struttura che può essere usato per configurare un pennello. Ad esempio, è possibile creare una sfumatura con colori di sistema impostando il <xref:System.Windows.Media.GradientStop.Color%2A> delle proprietà di un <xref:System.Windows.Media.LinearGradientBrush> cursori sfumatura con colori di sistema dell'oggetto. Per un esempio, vedere [Usa i colori di sistema in una sfumatura](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ È un colore di sistema un <xref:System.Windows.Media.Color> struttura che può essere usato per configurare un pennello. Ad esempio, è possibile creare una sfumatura con colori di sistema impostando il <xref:System.Windows.Media.GradientStop.Color%2A> delle proprietà di un <xref:System.Windows.Media.LinearGradientBrush> cursori sfumatura con colori di sistema dell'oggetto. Per un esempio, vedere [Usa i colori di sistema in una sfumatura](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa un riferimento di pennello di sistema dinamico per impostare lo sfondo di un pulsante.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorDesktopBrushKeyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemBrushExample.xaml#graphicsmmdynamicsystemcolordesktopbrushkeyexamplewholepage)]  
   
  L'esempio seguente usa un riferimento di pennello di sistema statico per impostare lo sfondo di un pulsante.  
   
- [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
   
- Per un esempio che illustra come usare un colore di sistema in una sfumatura, vedere [Usa colori di sistema in una sfumatura](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
+ Per un esempio che illustra come usare un colore di sistema in una sfumatura, vedere [Usa colori di sistema in una sfumatura](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Usare i colori di sistema in una sfumatura](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)
-- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Usare i colori di sistema in una sfumatura](how-to-use-system-colors-in-a-gradient.md)
+- [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)

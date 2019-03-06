@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358470"
 ---
 # <a name="popup-overview"></a>Cenni preliminari sul controllo Popup
 Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visualizzare il contenuto in una finestra separata mobile rispetto alla finestra dell'applicazione corrente relativo a un determinato elemento o coordinata dello schermo. Questo argomento vengono presentate le <xref:System.Windows.Controls.Primitives.Popup> controllano e vengono fornite informazioni sul relativo utilizzo.  
@@ -22,27 +22,27 @@ Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visuali
  Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il contenuto in una finestra separata in relazione a un elemento o un punto dello schermo. Quando la <xref:System.Windows.Controls.Primitives.Popup> è visibile, il <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> è impostata su `true`.  
   
 > [!NOTE]
->  Oggetto <xref:System.Windows.Controls.Primitives.Popup> non viene aperto automaticamente quando si sposta il puntatore del mouse sul relativo oggetto padre. Se si desidera che un <xref:System.Windows.Controls.Primitives.Popup> per aprire automaticamente, usare il <xref:System.Windows.Controls.ToolTip> o <xref:System.Windows.Controls.ToolTipService> classe. Per altre informazioni, vedere [Panoramica sul controllo ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+>  Oggetto <xref:System.Windows.Controls.Primitives.Popup> non viene aperto automaticamente quando si sposta il puntatore del mouse sul relativo oggetto padre. Se si desidera che un <xref:System.Windows.Controls.Primitives.Popup> per aprire automaticamente, usare il <xref:System.Windows.Controls.ToolTip> o <xref:System.Windows.Controls.ToolTipService> classe. Per altre informazioni, vedere [Panoramica sul controllo ToolTip](tooltip-overview.md).  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>Creazione di un popup  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.Primitives.Popup> controllo che rappresenta l'elemento figlio di un <xref:System.Windows.Controls.Button> controllo. Poiché un <xref:System.Windows.Controls.Button> può avere un solo elemento figlio, in questo esempio inserisce il testo per il <xref:System.Windows.Controls.Button> e il <xref:System.Windows.Controls.Primitives.Popup> controlli in un <xref:System.Windows.Controls.StackPanel>. Il contenuto del <xref:System.Windows.Controls.Primitives.Popup> viene visualizzato in un <xref:System.Windows.Controls.TextBlock> controllo, che visualizza il testo in una finestra separata mobile rispetto alla finestra dell'applicazione accanto al relativo <xref:System.Windows.Controls.Button> controllo.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Controlli che implementano un controllo Popup  
  È possibile compilare <xref:System.Windows.Controls.Primitives.Popup> controlli in altri controlli. I controlli seguenti implementano il <xref:System.Windows.Controls.Primitives.Popup> controllo per usi specifici:  
   
--   <xref:System.Windows.Controls.ToolTip>. Se si desidera creare una descrizione comando per un elemento, usare il <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> classi. Per altre informazioni, vedere [Panoramica sul controllo ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Se si desidera creare una descrizione comando per un elemento, usare il <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> classi. Per altre informazioni, vedere [Panoramica sul controllo ToolTip](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Se si desidera creare un menu di scelta rapida per un elemento, usare il <xref:System.Windows.Controls.ContextMenu> controllo. Per altre informazioni, vedere [Cenni preliminari sull'oggetto ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Se si desidera creare un menu di scelta rapida per un elemento, usare il <xref:System.Windows.Controls.ContextMenu> controllo. Per altre informazioni, vedere [Cenni preliminari sull'oggetto ContextMenu](contextmenu-overview.md).  
   
 -   <xref:System.Windows.Controls.ComboBox>. Se si desidera creare un controllo di selezione che include una casella di riepilogo che può essere mostrate o nascoste, usare il <xref:System.Windows.Controls.ComboBox> controllo.  
   
--   <xref:System.Windows.Controls.Expander>. Se si desidera creare un controllo che visualizza un'intestazione con un'area comprimibile che visualizza il contenuto, usare il <xref:System.Windows.Controls.Expander> controllo. Per altre informazioni, vedere [Cenni preliminari sul controllo Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. Se si desidera creare un controllo che visualizza un'intestazione con un'area comprimibile che visualizza il contenuto, usare il <xref:System.Windows.Controls.Expander> controllo. Per altre informazioni, vedere [Cenni preliminari sul controllo Expander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Comportamento e aspetto del controllo Popup  
@@ -74,13 +74,13 @@ Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visuali
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definizione della posizione di un controllo Popup  
- È possibile posizionare una finestra popup, impostando il <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> proprietà. Per altre informazioni, vedere [Comportamento del controllo Popup in relazione al posizionamento](../../../../docs/framework/wpf/controls/popup-placement-behavior.md). Quando si <xref:System.Windows.Controls.Primitives.Popup> viene visualizzato sullo schermo, riposizionato solo se viene riposizionato il relativo elemento padre.  
+ È possibile posizionare una finestra popup, impostando il <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> proprietà. Per altre informazioni, vedere [Comportamento del controllo Popup in relazione al posizionamento](popup-placement-behavior.md). Quando si <xref:System.Windows.Controls.Primitives.Popup> viene visualizzato sullo schermo, riposizionato solo se viene riposizionato il relativo elemento padre.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Personalizzazione del posizionamento di un controllo Popup  
  È possibile personalizzare il posizionamento di un <xref:System.Windows.Controls.Primitives.Popup> controllo indicando un set di coordinate che si riferiscono il <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> in cui si desidera il <xref:System.Windows.Controls.Primitives.Popup> venga visualizzato.  
   
- Per personalizzare il posizionamento, impostare il <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> proprietà <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Quindi definire un <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegato che restituisce un set di possibili punti di posizionamento e assi primari (in ordine di preferenza) per il <xref:System.Windows.Controls.Primitives.Popup>. Il punto che visualizza la maggior parte del <xref:System.Windows.Controls.Primitives.Popup> viene selezionato automaticamente. Per un esempio, vedere [Procedura: Specificare una posizione personalizzata per un controllo Popup](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Per personalizzare il posizionamento, impostare il <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> proprietà <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Quindi definire un <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegato che restituisce un set di possibili punti di posizionamento e assi primari (in ordine di preferenza) per il <xref:System.Windows.Controls.Primitives.Popup>. Il punto che visualizza la maggior parte del <xref:System.Windows.Controls.Primitives.Popup> viene selezionato automaticamente. Per un esempio, vedere [Procedura: Specificare una posizione personalizzata per un controllo Popup](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Controllo Popup e struttura ad albero visuale  
@@ -96,5 +96,5 @@ Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visuali
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Procedure relative alle proprietà](popup-how-to-topics.md)
+- [Procedure relative alle proprietà](tooltip-how-to-topics.md)

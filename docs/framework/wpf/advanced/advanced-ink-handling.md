@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539029"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367874"
 ---
 # <a name="advanced-ink-handling"></a>Gestione avanzata dell'input penna
-Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene fornito con il <xref:System.Windows.Controls.InkCanvas>, e un elemento è possibile inserire nell'applicazione per avviare subito la raccolta e visualizzare input penna. Tuttavia, se il <xref:System.Windows.Controls.InkCanvas> controllo non fornisce un livello sufficiente di controllo, è possibile mantenere il controllo a un livello superiore personalizzando la propria raccolta di input penna e classi per il rendering di input penna utilizzando <xref:System.Windows.Input.StylusPlugIns>.  
+Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene fornito con il <xref:System.Windows.Controls.InkCanvas>, ed è un elemento che è possibile inserire nell'applicazione per iniziare immediatamente a raccogliere e visualizzare input penna. Tuttavia, se il <xref:System.Windows.Controls.InkCanvas> controllo non fornisce un livello sufficiente di controllo, è possibile mantenere il controllo a un livello superiore personalizzando proprie classi di raccolta e input penna per il rendering usando <xref:System.Windows.Input.StylusPlugIns>.  
   
- Il <xref:System.Windows.Input.StylusPlugIns> classi forniscono un meccanismo per l'implementazione di controllo di basso livello su <xref:System.Windows.Input.Stylus> di input e di input penna per il rendering dinamico. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare un comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali. Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, un tipo specializzato <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, consente di personalizzare in modo dinamico i dati di input penna per il rendering in tempo reale che significa che il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> disegna input penna immediatamente come <xref:System.Windows.Input.StylusPoint> di generazione dei dati, in modo che sembrino "flusso" dallo stilo dispositivo.  
+ Il <xref:System.Windows.Input.StylusPlugIns> classi forniscono un meccanismo per l'implementazione del controllo di basso livello tramite <xref:System.Windows.Input.Stylus> input e il rendering dinamico dell'input penna. Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare il comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali. Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, specializzata <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, consente di personalizzare in modo dinamico i dati di input penna per il rendering in tempo reale in altri termini, il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> disegna input penna digitale immediatamente come <xref:System.Windows.Input.StylusPoint> dati vengono generati in modo che sembri "fluire" dallo stilo dispositivo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Personalizzare il rendering dell'input penna](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Intercettazione dell'input dello stilo](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Creazione di un controllo di input penna](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Modello di threading dell'input penna](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Personalizzare il rendering dell'input penna](custom-rendering-ink.md)  
+  [Intercettazione dell'input dello stilo](intercepting-input-from-the-stylus.md)  
+  [Creazione di un controllo di input penna](creating-an-ink-input-control.md)  
+  [Modello di threading dell'input penna](the-ink-threading-model.md)

@@ -4,6 +4,7 @@ description: 'Guida all''uso dei servizi di Azure conF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Uso di F# in Azure
 
 F# è un linguaggio eccezionale per la programmazione cloud ed è spesso usato per scrivere applicazioni Web, servizi cloud, microservizi ospitati nel cloud, e per l'elaborazione di dati scalabili.
@@ -87,7 +88,7 @@ Gli hub di notifica di Azure possono essere usati con F# in due modi:
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementazione di Webhook in Azure con F\#
 
-Un [webhook](https://en.wikipedia.org/wiki/Webhook) è un callback attivato tramite una richiesta Web. I webhook vengono usati da siti, quali GitHub, per segnalare eventi. 
+Un [webhook](https://en.wikipedia.org/wiki/Webhook) è un callback attivato tramite una richiesta Web. I webhook vengono usati da siti, quali GitHub, per segnalare eventi.
 
 I webhook possono essere implementati in F# e ospitati in Azure tramite una [funzione di Azure in F# con un'associazione ai webhook](/azure/azure-functions/functions-bindings-http-webhook).
 
@@ -109,7 +110,7 @@ Le macchine virtuali di Azure possono essere distribuite e gestite a livello di 
 
 Analogamente, le altre risorse di Azure possono essere anche distribuite e gestite dagli script F# usando gli stessi componenti. Ad esempio, è possibile creare gli account di archiviazione, distribuire servizi Cloud di Azure, creare istanze di Azure Cosmos DB e gestire hub di notifica di Azure a livello di codice da F# script.
 
-L'uso di script F# per distribuire e gestire risorse non è in genere necessario. Ad esempio, le risorse di Azure possono anche essere distribuite dalle descrizioni dei modelli JSON che possono essere parametrizzati. Vedere [Procedure consigliate per la creazione di modelli di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) che include esempi, quali i [modelli di avvio rapido di Azure](https://azure.microsoft.com/resources/templates/).
+L'uso di script F# per distribuire e gestire risorse non è in genere necessario. Ad esempio, le risorse di Azure possono essere distribuite anche direttamente da descrizioni dei modelli JSON, che possono essere parametrizzati. Vedere [Procedure consigliate per la creazione di modelli di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) che include esempi, quali i [modelli di avvio rapido di Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Altre risorse
 

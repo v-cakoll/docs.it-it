@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079399"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373959"
 ---
 # <a name="how-to-animate-in-a-style"></a>Come aggiungere un'animazione in uno stile
 
@@ -20,8 +20,8 @@ Nell'esempio seguente vengono definite all'interno di uno stile e applicate alla
 
 ## <a name="example"></a>Esempio
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 Si noti che quando si anima all'interno di uno stile, è possibile per gli oggetti di destinazione che non esistono. Ad esempio, si supponga che utilizza lo stile di un <xref:System.Windows.Media.SolidColorBrush> per impostare proprietà dello sfondo del pulsante, ma a un certo punto lo stile viene sottoposto a override e lo sfondo del pulsante viene impostato con un <xref:System.Windows.Media.LinearGradientBrush>.  Tentativo di aggiungere un'animazione di <xref:System.Windows.Media.SolidColorBrush> non genererà un'eccezione; l'animazione non verrà semplicemente eseguite automaticamente.
 
-Per altre informazioni sulla sintassi di destinazione per storyboard, vedere la [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Per altre informazioni sulle animazioni, vedere la [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Per altre informazioni sugli stili, vedere la [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Per altre informazioni sulla sintassi di destinazione per storyboard, vedere la [Cenni preliminari sugli storyboard](storyboards-overview.md). Per altre informazioni sulle animazioni, vedere la [Cenni preliminari sull'animazione](animation-overview.md). Per altre informazioni sugli stili, vedere la [stili e modelli](../controls/styling-and-templating.md).

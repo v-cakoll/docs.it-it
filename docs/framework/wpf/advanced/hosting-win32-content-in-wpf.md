@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: fa0457cd44304084355f3882d9fc5c82b29c4827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9764b995cea0ba5c93625495509b7ee2dd8393ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725468"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370033"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosting di contenuto Win32 in WPF
 ## <a name="prerequisites"></a>Prerequisiti  
- Visualizzare [interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ Visualizzare [interoperatività di WPF e Win32](wpf-and-win32-interoperation.md).  
   
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Una procedura dettagliata di Win32 all'interno di Windows Presentation Framework (HwndHost)  
  Per riutilizzare [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] contenuti all'interno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , le applicazioni utilizzano <xref:System.Windows.Interop.HwndHost>, che è un controllo che conferisce un aspetto, ad esempio hwnds di tipo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto.  Ad esempio <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> è semplice da utilizzare: derivano da <xref:System.Windows.Interop.HwndHost> e implementare `BuildWindowCore` e `DestroyWindowCore` metodi, quindi creare un'istanza di <xref:System.Windows.Interop.HwndHost> classe derivata e inserirlo all'interno di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione.  
@@ -357,7 +357,7 @@ public partial class Window1 : Window {
   
  Che offre:  
   
- ![Schermata dell'applicazione WPF](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
+ ![Schermata dell'applicazione WPF](./media/interoparch09.PNG "InteropArch09")  
   
 ## <a name="see-also"></a>Vedere anche
-- [Interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)

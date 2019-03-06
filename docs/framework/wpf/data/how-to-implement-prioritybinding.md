@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745305"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354596"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procedura: Implementare un oggetto PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funziona specificando un elenco di associazioni. L'elenco di associazioni viene ordinata dalla priorità più alta alla priorità più bassa. Se l'associazione con la priorità più alto restituisce un valore correttamente quando viene elaborato quindi non è mai necessario per elaborare le altre associazioni nell'elenco. Potrebbe essere il caso che l'associazione con la priorità più alta richiede molto tempo per essere valutata, verrà utilizzata la priorità più elevata successiva che restituisce un valore correttamente fino a quando un'associazione di una priorità più alta restituisce un valore correttamente.  
@@ -29,12 +29,12 @@ ms.locfileid: "56745305"
 > [!NOTE]
 >  L'esempio ha solo scopo dimostrativo. Il [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] linee guida consigliabile evitare di definire le proprietà che sono più lenti rispetto a un set di campi di ordini di grandezza. Per altre informazioni, vedere [scegliendo tra proprietà e metodi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  Il <xref:System.Windows.Controls.TextBlock.Text%2A> proprietà viene associata a quello precedente `AsyncDS` usando <xref:System.Windows.Data.PriorityBinding>:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  Quando il motore di binding elabora i <xref:System.Windows.Data.Binding> oggetti, inizia con il primo <xref:System.Windows.Data.Binding>, che è associato ai `SlowestDP` proprietà. Quando ciò <xref:System.Windows.Data.Binding> viene elaborato, non restituisce un valore correttamente perché rimane inattivo per 5 secondi, quindi, alla successiva <xref:System.Windows.Data.Binding> elemento viene elaborato. Alla successiva <xref:System.Windows.Data.Binding> non restituisce un valore correttamente in quanto rimane inattivo per 3 secondi. Il motore di binding viene quindi ripetuto sul successivo <xref:System.Windows.Data.Binding> elemento, che è associato il `FastDP` proprietà. Ciò <xref:System.Windows.Data.Binding> restituisce il valore "veloce". Il <xref:System.Windows.Controls.TextBlock> Visualizza ora il valore "veloce".  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745305"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Panoramica sul data binding](data-binding-overview.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

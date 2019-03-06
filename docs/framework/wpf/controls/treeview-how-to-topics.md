@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555400"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357755"
 ---
 # <a name="treeview-how-to-topics"></a>Procedure relative a TreeView
-Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.TreeView> controllo per visualizzare le informazioni in una struttura gerarchica.  
+Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.TreeView> controllo per visualizzare le informazioni in una struttura gerarchica.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare controlli TreeView semplici o complessi](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Associazione di una visualizzazione struttura ad albero a dati di profondità non determinabile](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Migliorare le prestazioni di un controllo TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Trovare un oggetto TreeViewItem in un oggetto TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Creare controlli TreeView semplici o complessi](how-to-create-simple-or-complex-treeviews.md)  
+  [Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Associazione di una visualizzazione struttura ad albero a dati di profondità non determinabile](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Migliorare le prestazioni di un controllo TreeView](how-to-improve-the-performance-of-a-treeview.md)  
+  [Trovare un oggetto TreeViewItem in un oggetto TreeView](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.TreeView>  

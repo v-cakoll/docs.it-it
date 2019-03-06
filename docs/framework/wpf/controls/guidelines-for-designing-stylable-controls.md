@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352984"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Linee guida per la progettazione di controlli a cui è possibile applicare degli stili
 Questo documento offre un riepilogo di una serie di procedure consigliate per la progettazione di un controllo a cui siano facilmente applicabili stili e modelli. Questo è il risultato di molti tentativi ed errori durante l’elaborazione degli stili dei controlli dei temi per il set di controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incorporato. La corretta applicazione degli stili è una funzione che non dipende solo dalla corretta progettazione del modello a oggetti ma anche dallo stile stesso. I destinatari di questo documento sono gli autori dei controlli, non gli autori degli stili.  
@@ -27,7 +27,7 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
 -   Modelli di dati.  
   
- Per un'introduzione all'applicazione di stili e modelli, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Per un'introduzione all'applicazione di stili e modelli, vedere [Applicazione di stili e modelli](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Prima di iniziare: Informazioni sul controllo  
@@ -119,5 +119,5 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
 -   **Gli stili dei temi non devono necessariamente presentare una semantica dei "layout" coerente in tutti i temi**. L'uso dello stile predefinito, ad esempio, non deve garantire che un controllo abbia le stesse dimensioni in tutti i temi o che il contenuto abbia gli stessi margini o la stessa spaziatura interna in tutti i temi.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Cenni preliminari sulla modifica di controlli](control-authoring-overview.md)

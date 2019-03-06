@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557693"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360576"
 ---
 # <a name="data-binding-how-to-topics"></a>Procedure relative all'associazione dati
-Negli argomenti di questa sezione viene descritto come utilizzare l'associazione dati per associare elementi ai dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  
+Gli argomenti in questa sezione descrivono come usare l'associazione dati per associare elementi di dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare un'associazione semplice](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [Specificare l'origine di associazione](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [Procedura: Controllare il momento in cui il database di origine viene aggiornata dal testo di TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [Specificare la direzione dell'associazione](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [Eseguire l'associazione a un'enumerazione](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [Eseguire l'associazione delle proprietà di due controlli](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [Implementare la convalida dell'associazione](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Implementare la logica di convalida negli oggetti personalizzati](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [Procedura: ottenere l'oggetto di binding da una proprietà di destinazione associata](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [Implementare un oggetto CompositeCollection](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [Convertire i dati associati](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [Creare un'associazione nel codice](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [Ottenere la visualizzazione predefinita di una raccolta dati](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [Navigare tra gli oggetti nella visualizzazione di una raccolta dati](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [Filtrare i dati di una visualizzazione](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Ordinare i dati in una visualizzazione](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Ordinare e raggruppare dati con una visualizzazione in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Usare il modello Master-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [Usare il modello Master-Details con dati XML gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Produrre un valore in base a un elenco di elementi associati](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [Implementare la notifica di modifiche alle proprietà](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [Creare ed eseguire l'associazione a una classe ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [Implementare un oggetto PriorityBinding](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [Eseguire l'associazione ai dati XML usando un oggetto XMLDataProvider e le query XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ for XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [Usare gli spazi dei nomi XML nell'associazione dati](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [Procedura: Eseguire l'associazione a un'origine dati ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [Eseguire l'associazione a un metodo](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [Impostare notifiche relative ad aggiornamenti di associazioni](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [Cancellare le associazioni](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [Procedura: trovare elementi generati da un oggetto DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Eseguire l'associazione a un servizio Web](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [Eseguire l'associazione dei risultati di una query LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Creare un'associazione semplice](how-to-create-a-simple-binding.md)  
+ [Specificare l'origine di associazione](how-to-specify-the-binding-source.md)  
+ [Rendere i dati disponibili per l'associazione in XAML](how-to-make-data-available-for-binding-in-xaml.md)  
+ [Procedura: Controllare il momento in cui il database di origine viene aggiornata dal testo di TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [Specificare la direzione dell'associazione](how-to-specify-the-direction-of-the-binding.md)  
+ [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Eseguire l'associazione a un'enumerazione](how-to-bind-to-an-enumeration.md)  
+ [Eseguire l'associazione delle proprietà di due controlli](how-to-bind-the-properties-of-two-controls.md)  
+ [Implementare la convalida dell'associazione](how-to-implement-binding-validation.md)  
+ [Implementare la logica di convalida negli oggetti personalizzati](how-to-implement-validation-logic-on-custom-objects.md)  
+ [Procedura: ottenere l'oggetto di binding da una proprietà di destinazione associata](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [Implementare un oggetto CompositeCollection](how-to-implement-a-compositecollection.md)  
+ [Convertire i dati associati](how-to-convert-bound-data.md)  
+ [Creare un'associazione nel codice](how-to-create-a-binding-in-code.md)  
+ [Ottenere la visualizzazione predefinita di una raccolta dati](how-to-get-the-default-view-of-a-data-collection.md)  
+ [Navigare tra gli oggetti nella visualizzazione di una raccolta dati](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [Filtrare i dati di una visualizzazione](how-to-filter-data-in-a-view.md)  
+ [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)  
+ [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [Usare il modello Master-Details con dati gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Produrre un valore in base a un elenco di elementi associati](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [Implementare la notifica di modifiche alle proprietà](how-to-implement-property-change-notification.md)  
+ [Creare ed eseguire l'associazione a una classe ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)  
+ [Implementare un oggetto PriorityBinding](how-to-implement-prioritybinding.md)  
+ [Eseguire l'associazione ai dati XML usando un oggetto XMLDataProvider e le query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ for XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [Usare gli spazi dei nomi XML nell'associazione dati](how-to-use-xml-namespaces-in-data-binding.md)  
+ [Procedura: Eseguire l'associazione a un'origine dati ADO.NET](how-to-bind-to-an-ado-net-data-source.md)  
+ [Eseguire l'associazione a un metodo](how-to-bind-to-a-method.md)  
+ [Impostare notifiche relative ad aggiornamenti di associazioni](how-to-set-up-notification-of-binding-updates.md)  
+ [Cancellare le associazioni](how-to-clear-bindings.md)  
+ [Procedura: trovare elementi generati da un oggetto DataTemplate](how-to-find-datatemplate-generated-elements.md)  
+ [Eseguire l'associazione a un servizio Web](how-to-bind-to-a-web-service.md)  
+ [Eseguire l'associazione dei risultati di una query LINQ](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ Negli argomenti di questa sezione viene descritto come utilizzare l'associazione
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Data binding](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [Data binding](data-binding-wpf.md)  
   
- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [Data binding](../advanced/optimizing-performance-data-binding.md)

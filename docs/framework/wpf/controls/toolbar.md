@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361928"
 ---
 # <a name="toolbar"></a>ToolBar
-Il <xref:System.Windows.Controls.ToolBar> controllo è un contenitore per un gruppo di comandi o controlli che sono in genere correlati le relative funzioni.  
+Il <xref:System.Windows.Controls.ToolBar> controllo è un contenitore per un gruppo di comandi o controlli che sono in genere correlati alla funzione.  
   
  Le illustrazioni seguenti mostrano orizzontali e verticali <xref:System.Windows.Controls.ToolBar> controlli.  
   
- ![ToolBar orizzontale](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![ToolBar orizzontale](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Toolbar orizzontale  
   
- ![ToolBar verticale](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
-Toolbar verticale  
+ ![Barra degli strumenti verticale](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+Barra degli strumenti verticale  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sui controlli ToolBar](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Applicare uno stile ai controlli di un oggetto ToolBar](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Panoramica sui controlli ToolBar](toolbar-overview.md)  
+  [Applicare uno stile ai controlli di un oggetto ToolBar](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ToolBar>  

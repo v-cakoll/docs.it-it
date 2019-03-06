@@ -2,18 +2,13 @@
 title: Matrici in Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149900"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Matrici in Visual Basic
 
 Una matrice è un set di valori, che sono suddivisi *elementi*, che sono correlate logicamente tra loro. Ad esempio, può essere costituito da una matrice del numero di studenti iscritti a ciascun anno scolastico di una scuola elementare; ogni elemento della matrice è il numero di studenti in un singolo livello. Analogamente, può essere costituito da una matrice di voti di uno studente per una classe. ogni elemento della matrice è un singolo livello.
@@ -87,7 +82,7 @@ Il `students` matrice nell'esempio precedente è una matrice unidimensionale, pe
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Se si dispone di una matrice esistente, è possibile ridefinirne la dimensione utilizzando la [ `Redim` ](../../../language-reference/statements/redim-statement.md) istruzione. È possibile specificare che il `Redim` istruzione mantenere i valori nella matrice o è possibile specificare la creazione di una matrice vuota. L'esempio seguente illustra vari modi di usare l'istruzione `Redim` per modificare la dimensione di una matrice esistente.
+Se si dispone di una matrice esistente, è possibile ridefinirne la dimensione utilizzando la [ `ReDim` ](../../../language-reference/statements/redim-statement.md) istruzione. È possibile specificare che il `ReDim` istruzione mantenere i valori nella matrice o è possibile specificare la creazione di una matrice vuota. L'esempio seguente illustra vari modi di usare l'istruzione `ReDim` per modificare la dimensione di una matrice esistente.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ L'esempio seguente usa una matrice di mesi, ogni elemento del quale è una matri
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Nell'esempio precedente assegna valori alla matrice di matrici in un elemento per elemento di base usando un `For...Next` ciclo. È anche possibile assegnare valori agli elementi di una matrice di matrici tramite valori letterali di matrice annidati. Tuttavia, il tentativo di usare annidati valori letterali di matrice (ad esempio, ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) genera l'errore del compilatore [BC30568](../../../,,/../misc/bc30568.md). Per correggere l'errore, racchiudere i valori letterali di matrice interni tra parentesi. Le parentesi forzano l'espressione letterale di matrice deve essere valutata e i valori risultanti vengono usati con la matrice esterna letterale, come illustrato nell'esempio seguente.
+Nell'esempio precedente assegna valori alla matrice di matrici in un elemento per elemento di base usando un `For...Next` ciclo. È anche possibile assegnare valori agli elementi di una matrice di matrici tramite valori letterali di matrice annidati. Tuttavia, il tentativo di usare annidati valori letterali di matrice (ad esempio, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) genera l'errore del compilatore [BC30568](../../../,,/../misc/bc30568.md). Per correggere l'errore, racchiudere i valori letterali di matrice interni tra parentesi. Le parentesi forzano l'espressione letterale di matrice deve essere valutata e i valori risultanti vengono usati con la matrice esterna letterale, come illustrato nell'esempio seguente.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Nell'esempio seguente suddivide una matrice di stringhe in due matrici in base a
 > [!NOTE]
 > In questa sezione non viene illustrata l'aggiunta di una matrice di stringhe in un'unica stringa. Per informazioni sull'aggiunta di una matrice di stringhe, vedere il <xref:System.String.Join%2A?displayProperty=nameWithType> (metodo).
 
-Prima di copiare gli elementi di ogni matrice nella matrice di nuovo, è necessario assicurarsi che è stata inizializzata la matrice in modo che sia sufficientemente grande da accompodate nuova matrice. Questa operazione può essere eseguita in due modi:
+Prima di copiare gli elementi di ogni matrice nella matrice di nuovo, è necessario assicurarsi che è stata inizializzata la matrice in modo che sia grande abbastanza da contenere la nuova matrice. Questa operazione può essere eseguita in due modi:
 
 - Usare la [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) espandere in modo dinamico la matrice prima di aggiungervi nuovi elementi dell'istruzione. Si tratta della tecnica più semplice, ma può comportare una riduzione delle prestazioni e utilizzo di memoria eccessiva quando si copiano le matrici di grandi dimensioni.
 - Calcolare il numero totale di elementi necessari per la nuova matrice di grandi dimensioni, quindi aggiungere gli elementi di ogni matrice di origine a esso.
@@ -299,9 +294,9 @@ Per altre informazioni sulle raccolte, vedere [Raccolte](../../concepts/collecti
 |Termine|Definizione|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Illustra il numero di dimensioni, o rango, e le dimensioni delle matrici.|
-|[Come si fa: Inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descrive come popolare le matrici con valori iniziali.|
-|[Come si fa: Ordinare una matrice in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Illustra come ordinare alfabeticamente gli elementi di una matrice.|
-|[Come si fa: Assegnare una matrice a un'altra matrice](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descrive regole e passaggi per l'assegnazione di una matrice a un'altra variabile di matrice.|
+|[Procedura: Inizializzare una variabile di matrice in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descrive come popolare le matrici con valori iniziali.|
+|[Procedura: Sort An Array in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Illustra come ordinare alfabeticamente gli elementi di una matrice.|
+|[Procedura: Assegnare una matrice a un'altra matrice](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descrive regole e passaggi per l'assegnazione di una matrice a un'altra variabile di matrice.|
 |[Risoluzione dei problemi relativi alle matrici](../../language-features/arrays/troubleshooting-arrays.md)|Illustra alcuni problemi comuni che si verificano quando si usano le matrici.|
 
 ## <a name="see-also"></a>Vedere anche

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550654"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355543"
 ---
 # <a name="dockpanel-how-to-topics"></a>Procedure relative all'elemento DockPanel
-Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.DockPanel> elemento per posizionare gli elementi figlio lungo il bordo di un contenitore di layout.  
+Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.DockPanel> elemento per posizionare elementi figlio lungo il bordo di un contenitore di layout.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Ottenere o impostare un valore Dock](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [Creare un DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [Partizionare lo spazio usando l'elemento DockPanel](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [Ottenere o impostare un valore Dock](how-to-get-or-set-a-dock-value.md)  
+ [Creare un DockPanel](how-to-create-a-dockpanel.md)  
+ [Partizionare lo spazio usando l'elemento DockPanel](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:Syst
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)

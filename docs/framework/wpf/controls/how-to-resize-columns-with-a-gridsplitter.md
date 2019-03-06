@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid columns
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-ms.openlocfilehash: 6bf09c41145aca8690fe3e80fd76a7a859713ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93106ee25d98a056dfa5ba1a064c9803bebb072e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374128"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Procedura: Ridimensionare le colonne con un GridSplitter
 In questo esempio viene illustrato come creare un parametro vertical <xref:System.Windows.Controls.GridSplitter> per ridistribuire lo spazio tra le due colonne in un <xref:System.Windows.Controls.Grid> senza modificare le dimensioni del <xref:System.Windows.Controls.Grid>.  
@@ -21,9 +21,9 @@ In questo esempio viene illustrato come creare un parametro vertical <xref:Syste
   
  Per specificare una <xref:System.Windows.Controls.GridSplitter> che ridimensiona colonne adiacenti in un <xref:System.Windows.Controls.Grid>, impostare il <xref:System.Windows.Controls.Grid.Column%2A> proprietà associata a una delle colonne che si intende ridimensionare. Se il <xref:System.Windows.Controls.Grid> ha più di una riga, impostare il <xref:System.Windows.Controls.Grid.RowSpan%2A> proprietà associata per il numero di righe. Impostare quindi le <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà <xref:System.Windows.HorizontalAlignment.Left> o <xref:System.Windows.HorizontalAlignment.Right> (l'allineamento impostato dipende dalle due colonne che si intende ridimensionare). Infine, impostare il <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> proprietà <xref:System.Windows.VerticalAlignment.Stretch>.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- Oggetto <xref:System.Windows.Controls.GridSplitter> che non dispone di una propria colonna può essere nascosto da altri controlli presenti il <xref:System.Windows.Controls.Grid>. Per altre informazioni su come evitare questo problema, vedere [Assicurarsi che GridSplitter sia visibile](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ Oggetto <xref:System.Windows.Controls.GridSplitter> che non dispone di una propria colonna può essere nascosto da altri controlli presenti il <xref:System.Windows.Controls.Grid>. Per altre informazioni su come evitare questo problema, vedere [Assicurarsi che GridSplitter sia visibile](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Come creare un oggetto GridSplitter che occupa una colonna**  
   
@@ -31,9 +31,9 @@ In questo esempio viene illustrato come creare un parametro vertical <xref:Syste
   
  Nell'esempio seguente viene illustrato come definire un parametro vertical <xref:System.Windows.Controls.GridSplitter> che occupa una colonna e ridimensiona le colonne ai lati.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Controls.GridSplitter>
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Procedure relative alle proprietà](gridsplitter-how-to-topics.md)

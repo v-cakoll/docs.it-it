@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555008"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367150"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-Il <xref:System.Windows.Controls.Primitives.RepeatButton> è simile a un <xref:System.Windows.Controls.Button>. Tuttavia, <xref:System.Windows.Controls.Primitives.RepeatButton> consentono di elementi controllare quando e come <xref:System.Windows.Controls.Primitives.ButtonBase.Click> si verifica l'evento.  
+Il <xref:System.Windows.Controls.Primitives.RepeatButton> è simile a un <xref:System.Windows.Controls.Button>. Tuttavia <xref:System.Windows.Controls.Primitives.RepeatButton> consentono di elementi determinare quando e come la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento si verifica.  
   
- Nella figura seguente viene illustrato un esempio dei tre stati di un controllo pulsante di ripetizione, Default, PointerFocused e premuto. Il primo pulsante Mostra lo stato predefinito del <xref:System.Windows.Controls.Primitives.RepeatButton>. Il secondo mostra come l'aspetto del pulsante cambia quando si posiziona il puntatore del mouse sul pulsante, assegnargli lo stato attivo. L'ultimo pulsante Mostra l'aspetto del <xref:System.Windows.Controls.Primitives.RepeatButton> quando l'utente preme il pulsante del mouse sul controllo.  
+ La figura seguente mostra un esempio dei tre stati di un controllo pulsante di ripetizione, impostazione predefinita, PointerFocused e premuto. Il primo pulsante Mostra lo stato predefinito del <xref:System.Windows.Controls.Primitives.RepeatButton>. Il secondo mostra come l'aspetto del pulsante cambia quando il puntatore del mouse viene posizionato su esso, assegnandogli lo stato attivo. L'ultimo pulsante Mostra l'aspetto del <xref:System.Windows.Controls.Primitives.RepeatButton> quando l'utente preme il pulsante del mouse sul controllo.  
   
- ![Ripetere gli stati dei pulsanti](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
-RepeatButton tipico  
+ ![Ripetere gli stati dei pulsanti](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+RepeatButton tipica  
   
 ## <a name="in-this-section"></a>In questa sezione  
   

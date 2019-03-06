@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966060"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369656"
 ---
 # <a name="get-function"></a>Funzione Get
+
 Recupera il valore della proprietà specificata, se presente.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintassi  
-  
-```  
+
+## <a name="syntax"></a>Sintassi
+
+```
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,26 +41,30 @@ HRESULT Get (
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parametri
 
-`vFunc`  
+`vFunc`\
 [in] Questo parametro è inutilizzato.
 
-`ptr`  
+`ptr`\
 [in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
-`wszName`  
+`wszName`\
 [in] Il nome della proprietà.
 
-`lFlags` [in] Riservato. Questo parametro deve essere 0.
+`lFlags`\
+[in] Riservato. Questo parametro deve essere 0.
 
-`pVal` [out] Se la funzione termina correttamente, contiene il valore della `wszName` proprietà. Il `pval` argomento è assegnato il tipo corretto e il valore del qualificatore.
+`pVal`\
+[out] Se la funzione termina correttamente, contiene il valore della `wszName` proprietà. Il `pval` argomento è assegnato il tipo corretto e il valore del qualificatore.
 
-`pvtType` [out] Se la funzione termina correttamente, contiene un [costante di tipo CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) che indica il tipo di proprietà. Il valore può anche essere `null`. 
+`pvtType`\
+[out] Se la funzione termina correttamente, contiene un [costante di tipo CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) che indica il tipo di proprietà. Il valore può anche essere `null`. 
 
-`plFlavor` [out] Se la funzione termina correttamente, riceve informazioni sull'origine della proprietà. Il valore può essere `null`, o una delle seguenti costanti WBEM_FLAVOR_TYPE definite nel *WbemCli.h* file di intestazione: 
+`plFlavor`\
+[out] Se la funzione termina correttamente, riceve informazioni sull'origine della proprietà. Il valore può essere `null`, o una delle seguenti costanti WBEM_FLAVOR_TYPE definite nel *WbemCli.h* file di intestazione: 
 
 |Costante  |Value  |Descrizione  |
 |---------|---------|---------|
@@ -78,7 +83,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* fi
 |`WBEM_E_NOT_FOUND` | 0x80041002 | La proprietà specificata non è stata trovata. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per completare l'operazione. |
 |`WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
-  
+
 ## <a name="remarks"></a>Note
 
 Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) (metodo).
@@ -87,12 +92,14 @@ Il `Get` funzione può restituire anche le proprietà di sistema.
 
 Il `pVal` argomento è assegnato il tipo corretto e il valore per il qualificatore e il modello COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) (funzione)
 
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** WMINet_Utils.idl  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisiti
+
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Intestazione:** WMINet_Utils.idl
+
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
