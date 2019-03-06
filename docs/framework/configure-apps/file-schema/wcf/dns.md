@@ -3,46 +3,46 @@ title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
 ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364697"
 ---
-# <a name="dns"></a><span data-ttu-id="08ab5-101">\<dns></span><span class="sxs-lookup"><span data-stu-id="08ab5-101">\<dns></span></span>
-<span data-ttu-id="08ab5-102">Specifica l'identità prevista del server.</span><span class="sxs-lookup"><span data-stu-id="08ab5-102">Specifies the expected identity of the server.</span></span> <span data-ttu-id="08ab5-103">Questa identità è valida per la modalità di autenticazione tramite certificato X509 se il certificato del server contiene un DNS con lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="08ab5-103">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="08ab5-104">Questa identità è inoltre valida per la modalità di autenticazione Windows se il nome SPN presenta lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="08ab5-104">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  
+# <a name="dns"></a><span data-ttu-id="4c490-101">\<dns></span><span class="sxs-lookup"><span data-stu-id="4c490-101">\<dns></span></span>
+<span data-ttu-id="4c490-102">Specifica l'identità prevista del server.</span><span class="sxs-lookup"><span data-stu-id="4c490-102">Specifies the expected identity of the server.</span></span> <span data-ttu-id="4c490-103">Questa identità è valida per la modalità di autenticazione tramite certificato X509 se il certificato del server contiene un DNS con lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="4c490-103">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="4c490-104">Questa identità è inoltre valida per la modalità di autenticazione Windows se il nome SPN presenta lo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="4c490-104">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  
   
- <span data-ttu-id="08ab5-105">Per altre informazioni sull'impostazione del valore dell'elemento, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="08ab5-105">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
+ <span data-ttu-id="4c490-105">Per altre informazioni sull'impostazione del valore dell'elemento, vedere [identità del servizio e autenticazione](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="4c490-105">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
- <span data-ttu-id="08ab5-106">\<identity></span><span class="sxs-lookup"><span data-stu-id="08ab5-106">\<identity></span></span>  
-<span data-ttu-id="08ab5-107">\<dns></span><span class="sxs-lookup"><span data-stu-id="08ab5-107">\<dns></span></span>  
+ <span data-ttu-id="4c490-106">\<identity></span><span class="sxs-lookup"><span data-stu-id="4c490-106">\<identity></span></span>  
+<span data-ttu-id="4c490-107">\<dns></span><span class="sxs-lookup"><span data-stu-id="4c490-107">\<dns></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08ab5-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="08ab5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c490-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4c490-108">Syntax</span></span>  
   
 ```xml  
 <dns value = "String" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="08ab5-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="08ab5-109">Attributes and Elements</span></span>  
- <span data-ttu-id="08ab5-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="08ab5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4c490-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="4c490-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="4c490-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="4c490-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="08ab5-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="08ab5-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4c490-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="4c490-111">Attributes</span></span>  
   
-|<span data-ttu-id="08ab5-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="08ab5-112">Attribute</span></span>|<span data-ttu-id="08ab5-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="08ab5-113">Description</span></span>|  
+|<span data-ttu-id="4c490-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="4c490-112">Attribute</span></span>|<span data-ttu-id="4c490-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4c490-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="08ab5-114">Valore</span><span class="sxs-lookup"><span data-stu-id="08ab5-114">value</span></span>|<span data-ttu-id="08ab5-115">DNS del certificato.</span><span class="sxs-lookup"><span data-stu-id="08ab5-115">The DNS of the certificate.</span></span> <span data-ttu-id="08ab5-116">DNS è un protocollo conforme a standard di settore usato per individuare i computer di una rete basata su IP.</span><span class="sxs-lookup"><span data-stu-id="08ab5-116">DNS is an industry-standard protocol used to locate computers on an IP-based network.</span></span> <span data-ttu-id="08ab5-117">Gli utenti in grado di memorizzare i nomi visualizzati, ad esempio [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) oppure [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), più facile che dover utilizzare indirizzi numerici, ad esempio 207.46.131.137.</span><span class="sxs-lookup"><span data-stu-id="08ab5-117">Users can remember display names, such as [https://go.microsoft.com/fwlink/?prd=10929](https://go.microsoft.com/fwlink/?prd=10929) or [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165), easier than number-based addresses, such as 207.46.131.137.</span></span>|  
+|<span data-ttu-id="4c490-114">Valore</span><span class="sxs-lookup"><span data-stu-id="4c490-114">value</span></span>|<span data-ttu-id="4c490-115">DNS del certificato.</span><span class="sxs-lookup"><span data-stu-id="4c490-115">The DNS of the certificate.</span></span> <span data-ttu-id="4c490-116">DNS è un protocollo conforme a standard di settore usato per individuare i computer di una rete basata su IP.</span><span class="sxs-lookup"><span data-stu-id="4c490-116">DNS is an industry-standard protocol used to locate computers on an IP-based network.</span></span> <span data-ttu-id="4c490-117">Gli utenti in grado di memorizzare i nomi visualizzati, ad esempio [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) oppure [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), più facile che dover utilizzare indirizzi numerici, ad esempio 207.46.131.137.</span><span class="sxs-lookup"><span data-stu-id="4c490-117">Users can remember display names, such as [https://go.microsoft.com/fwlink/?prd=10929](https://go.microsoft.com/fwlink/?prd=10929) or [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165), easier than number-based addresses, such as 207.46.131.137.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="08ab5-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="08ab5-118">Child Elements</span></span>  
- <span data-ttu-id="08ab5-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="08ab5-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4c490-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="4c490-118">Child Elements</span></span>  
+ <span data-ttu-id="4c490-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="4c490-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="08ab5-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="08ab5-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4c490-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="4c490-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="08ab5-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="08ab5-121">Element</span></span>|<span data-ttu-id="08ab5-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="08ab5-122">Description</span></span>|  
+|<span data-ttu-id="4c490-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="4c490-121">Element</span></span>|<span data-ttu-id="4c490-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4c490-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="08ab5-123">\<identity></span><span class="sxs-lookup"><span data-stu-id="08ab5-123">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="08ab5-124">Specifica l'identità del servizio da autenticare presso il client.</span><span class="sxs-lookup"><span data-stu-id="08ab5-124">Specifies the identity of the service to be authenticated by the client.</span></span>|  
+|[<span data-ttu-id="4c490-123">\<identity></span><span class="sxs-lookup"><span data-stu-id="4c490-123">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="4c490-124">Specifica l'identità del servizio da autenticare presso il client.</span><span class="sxs-lookup"><span data-stu-id="4c490-124">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="08ab5-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="08ab5-125">Example</span></span>  
- <span data-ttu-id="08ab5-126">Nel codice di configurazione seguente viene specificato il DNS di un certificato X.509 usato per autenticare un server.</span><span class="sxs-lookup"><span data-stu-id="08ab5-126">The following configuration code specifies the DNS of an X.509 certificate that is used to authenticate a server.</span></span>  
+## <a name="example"></a><span data-ttu-id="4c490-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="4c490-125">Example</span></span>  
+ <span data-ttu-id="4c490-126">Nel codice di configurazione seguente viene specificato il DNS di un certificato X.509 usato per autenticare un server.</span><span class="sxs-lookup"><span data-stu-id="4c490-126">The following configuration code specifies the DNS of an X.509 certificate that is used to authenticate a server.</span></span>  
   
 ```xml  
 <identity>
@@ -50,10 +50,10 @@ ms.locfileid: "55278421"
 </identity>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="08ab5-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08ab5-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c490-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c490-127">See also</span></span>
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
-- [<span data-ttu-id="08ab5-128">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="08ab5-128">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="08ab5-129">\<identity></span><span class="sxs-lookup"><span data-stu-id="08ab5-129">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [<span data-ttu-id="4c490-128">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="4c490-128">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="4c490-129">\<identity></span><span class="sxs-lookup"><span data-stu-id="4c490-129">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

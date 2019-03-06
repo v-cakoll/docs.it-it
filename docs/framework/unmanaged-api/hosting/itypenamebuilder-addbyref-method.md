@@ -17,30 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4335bf477f0eeb8c48a50b9f11fb1f32d21448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690059"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371099"
 ---
-# <a name="itypenamebuilderaddbyref-method"></a><span data-ttu-id="14f7f-102">Metodo ITypeNameBuilder::AddByRef</span><span class="sxs-lookup"><span data-stu-id="14f7f-102">ITypeNameBuilder::AddByRef Method</span></span>
-<span data-ttu-id="14f7f-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="14f7f-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="14f7f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="14f7f-104">Syntax</span></span>  
-  
-```  
-HRESULT AddByRef ( );  
-```  
-  
-## <a name="requirements"></a><span data-ttu-id="14f7f-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="14f7f-105">Requirements</span></span>  
- <span data-ttu-id="14f7f-106">**Piattaforme:** Vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14f7f-106">**Platforms:** WindoSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="14f7f-107">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="14f7f-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="14f7f-108">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="14f7f-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="14f7f-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14f7f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="14f7f-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14f7f-110">See also</span></span>
-- [<span data-ttu-id="14f7f-111">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="14f7f-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+# <a name="itypenamebuilderaddbyref-method"></a><span data-ttu-id="5649b-102">Metodo ITypeNameBuilder::AddByRef</span><span class="sxs-lookup"><span data-stu-id="5649b-102">ITypeNameBuilder::AddByRef Method</span></span>
+
+<span data-ttu-id="5649b-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="5649b-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="5649b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5649b-104">Syntax</span></span>
+
+```cpp
+HRESULT AddByRef ( );
+```
+
+## <a name="requirements"></a><span data-ttu-id="5649b-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5649b-105">Requirements</span></span>
+
+<span data-ttu-id="5649b-106">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5649b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="5649b-107">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5649b-107">**Header:** MSCorEE.h</span></span>
+
+<span data-ttu-id="5649b-108">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5649b-108">**Library:** Included as a resource in MSCorEE.dll</span></span>
+
+<span data-ttu-id="5649b-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5649b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5649b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5649b-110">See also</span></span>
+
+- [<span data-ttu-id="5649b-111">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="5649b-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
