@@ -7,25 +7,25 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356220"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="2e265-102">Procedure relative alle risorse</span><span class="sxs-lookup"><span data-stu-id="2e265-102">Resources How-to Topics</span></span>
-<span data-ttu-id="2e265-103">Negli argomenti di questa sezione viene descritto come utilizzare le risorse di Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="2e265-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="479f4-102">Procedure relative alle risorse</span><span class="sxs-lookup"><span data-stu-id="479f4-102">Resources How-to Topics</span></span>
+<span data-ttu-id="479f4-103">Gli argomenti in questa sezione descrivono come usare le risorse di Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="479f4-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2e265-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="2e265-104">In This Section</span></span>  
- [<span data-ttu-id="2e265-105">Definire e fare riferimento a una risorsa</span><span class="sxs-lookup"><span data-stu-id="2e265-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="2e265-106">Usare le risorse delle applicazioni</span><span class="sxs-lookup"><span data-stu-id="2e265-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="2e265-107">Utilizzare la classe SystemFonts</span><span class="sxs-lookup"><span data-stu-id="2e265-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="2e265-108">Usare chiavi di caratteri del sistema</span><span class="sxs-lookup"><span data-stu-id="2e265-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="2e265-109">Utilizzare SystemParameters</span><span class="sxs-lookup"><span data-stu-id="2e265-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="2e265-110">Usare chiavi dei parametri di sistema</span><span class="sxs-lookup"><span data-stu-id="2e265-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="479f4-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="479f4-104">In This Section</span></span>  
+ [<span data-ttu-id="479f4-105">Definire e fare riferimento a una risorsa</span><span class="sxs-lookup"><span data-stu-id="479f4-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="479f4-106">Usare le risorse delle applicazioni</span><span class="sxs-lookup"><span data-stu-id="479f4-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="479f4-107">Utilizzare la classe SystemFonts</span><span class="sxs-lookup"><span data-stu-id="479f4-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="479f4-108">Usare chiavi di caratteri del sistema</span><span class="sxs-lookup"><span data-stu-id="479f4-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="479f4-109">Utilizzare SystemParameters</span><span class="sxs-lookup"><span data-stu-id="479f4-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="479f4-110">Usare chiavi dei parametri di sistema</span><span class="sxs-lookup"><span data-stu-id="479f4-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="2e265-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="2e265-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="479f4-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="479f4-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "33546161"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="2e265-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="2e265-112">Related Sections</span></span>  
- [<span data-ttu-id="2e265-113">Risorse XAML</span><span class="sxs-lookup"><span data-stu-id="2e265-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="479f4-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="479f4-112">Related Sections</span></span>  
+ [<span data-ttu-id="479f4-113">Risorse XAML</span><span class="sxs-lookup"><span data-stu-id="479f4-113">XAML Resources</span></span>](xaml-resources.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365269"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="a7704-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="a7704-102">RadioButton</span></span>
-<span data-ttu-id="a7704-103"><xref:System.Windows.Controls.RadioButton> i controlli in genere vengono raggruppati per offrire agli utenti un'unica scelta tra diverse opzioni; è possibile selezionare un solo pulsante alla volta.</span><span class="sxs-lookup"><span data-stu-id="a7704-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="304a5-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="304a5-102">RadioButton</span></span>
+<span data-ttu-id="304a5-103"><xref:System.Windows.Controls.RadioButton> i controlli sono in genere raggruppati in modo da offrire agli utenti una scelta singola tra diverse opzioni; è possibile selezionare un solo pulsante alla volta.</span><span class="sxs-lookup"><span data-stu-id="304a5-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="a7704-104">Nella figura seguente viene illustrato un esempio di un <xref:System.Windows.Controls.RadioButton> controllo.</span><span class="sxs-lookup"><span data-stu-id="a7704-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="304a5-104">La figura seguente mostra un esempio di un <xref:System.Windows.Controls.RadioButton> controllo.</span><span class="sxs-lookup"><span data-stu-id="304a5-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="a7704-105">![Gli stati dei pulsanti di opzione](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="a7704-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="a7704-106">RadioButton tipico</span><span class="sxs-lookup"><span data-stu-id="a7704-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="304a5-105">![Gli stati dei pulsanti di opzione](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="304a5-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="304a5-106">RadioButton tipico</span><span class="sxs-lookup"><span data-stu-id="304a5-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a7704-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="a7704-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="304a5-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="304a5-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="a7704-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a7704-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="304a5-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="304a5-108">Related Sections</span></span>
