@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a5eb91d02ce55601f86dcadc744ef23ca430d9c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471693"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Metodo ISymUnmanagedReader::Initialize
 Inizializza il lettore di simboli con l'interfaccia dell'utilità di importazione dei metadati che verrà associato, insieme al nome file del modulo di questo lettore.  
@@ -40,7 +40,7 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `importer`  
  [in] L'interfaccia dell'utilità di importazione di metadati con cui verrà associato questo lettore.  
   

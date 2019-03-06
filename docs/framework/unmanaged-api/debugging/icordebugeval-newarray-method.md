@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471511"
 ---
 # <a name="icordebugevalnewarray-method"></a>Metodo ICorDebugEval::NewArray
-Alloca una nuova matrice del tipo di elemento specificato e le dimensioni.  
+Consente di allocare una nuova matrice del tipo di elemento specificato e le dimensioni.  
   
- Questo metodo è obsoleto in .NET Framework versione 2.0. Utilizzare [ICorDebugEval2::](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) invece.  
+ Questo metodo è obsoleto in .NET Framework versione 2.0. Uso [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) invece.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `elementType`  
  [in] Valore dell'enumerazione CorElementType che specifica il tipo di elemento della matrice.  
   
@@ -52,7 +52,7 @@ HRESULT NewArray (
  [in] Il numero di dimensioni della matrice. In .NET Framework 2.0, questo valore deve essere 1.  
   
  `dims`  
- [in] Le dimensioni in byte, di ciascuna dimensione della matrice.  
+ [in] Le dimensioni, in byte, di ogni dimensione della matrice.  
   
  `lowBounds`  
  [in] Facoltativo. Il limite inferiore di ogni dimensione della matrice. Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.  
@@ -61,10 +61,10 @@ HRESULT NewArray (
  La matrice viene sempre creata nel dominio dell'applicazione in cui il thread è in esecuzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
  **Versioni di .NET framework:** 1.1, 1.0

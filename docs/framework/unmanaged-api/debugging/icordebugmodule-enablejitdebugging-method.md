@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 642c4fd600d10ef89a08aa32bef5c8e7455552c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415642"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473818"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>Metodo ICorDebugModule::EnableJITDebugging
-Controlla se il compilatore di just-in-time (JIT) consente di mantenere le informazioni di debug per i metodi all'interno del modulo.  
+Controlla se il compilatore JIT just-in-time mantiene le informazioni di debug per i metodi all'interno del modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,21 +36,21 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `bTrackJITInfo`  
- [in] Impostare questo valore su `true` per consentire al compilatore JIT di mantenere le informazioni di mapping tra la versione di Microsoft intermediate language (MSIL) e la versione compilata tramite JIT di ogni metodo in questo modulo.  
+ [in] Impostare questo valore su `true` per consentire al compilatore JIT conservare le informazioni di mapping tra la versione di Microsoft intermediate language (MSIL) e la versione di ogni metodo in questo modulo compilato tramite JIT.  
   
  `bAllowJitOpts`  
  [in] Impostare questo valore su `true` per consentire al compilatore JIT generare il codice con alcune ottimizzazioni JIT specifiche per il debug.  
   
 ## <a name="remarks"></a>Note  
- Debug JIT è abilitato per impostazione predefinita per tutti i moduli caricati quando è attivo il debugger. A livello di programmazione abilitando o disabilitando le impostazioni di override delle impostazioni globali.  
+ Debug JIT è abilitato per impostazione predefinita per tutti i moduli che vengono caricati quando il debugger è attivo. A livello di programmazione abilitando o disabilitando le impostazioni di override delle impostazioni globali.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

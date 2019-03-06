@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 874bbf46e74550b325631a00acc16f49d818dc61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9985b5a5547097c0474eb3a5797388d1444083e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471588"
 ---
 # <a name="functionleave2-function"></a>Funzione FunctionLeave2
 Notifica al profiler che una funzione sta per restituire al chiamante e vengono fornite informazioni relative al valore restituito dello stack frame e la funzione.  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `funcId`  
  [in] L'identificatore della funzione che restituisce.  
   

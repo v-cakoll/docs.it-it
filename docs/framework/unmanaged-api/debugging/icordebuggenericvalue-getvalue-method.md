@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d30a9f03d8717486be7cd89bb182d350a82df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53db4dcb13303c9e7bdd77a46b3c9526364bac06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471225"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>Metodo ICorDebugGenericValue::GetValue
 Copia il valore di questo oggetto generico nel buffer specificato.  
@@ -35,15 +35,15 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pTo`  
- [out] Puntatore al valore rappresentato dall'oggetto ICorDebugGenericValue. Il valore può essere un tipo semplice o un tipo di riferimento (ovvero, un puntatore).  
+ [out] Puntatore al valore rappresentato da questo oggetto ICorDebugGenericValue. Il valore può essere un tipo semplice o un tipo riferimento (vale a dire, un puntatore).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

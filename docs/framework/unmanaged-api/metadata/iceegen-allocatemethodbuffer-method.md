@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd51f9c05c49fefc790ce69dcdc3117680c8e6b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5e86461973d24e9bd61df9ce27da5a614a49aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500030"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471013"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Metodo ICeeGen::AllocateMethodBuffer
 Crea un buffer della dimensione specificata per un metodo e ottiene l'indirizzo virtuale relativo del metodo.  
@@ -39,7 +39,7 @@ HRESULT AllocateMethodBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cchBuffer`  
  [in] La lunghezza del buffer da creare.  
   
