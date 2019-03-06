@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128954"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971780"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -93,17 +93,17 @@ In microservizi più avanzati, ad esempio quando si usano approcci basati su CQR
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Progettazione di atomicità e resilienza quando si esegue la pubblicazione nel bus di eventi
 
-Quando si pubblicano eventi di integrazione tramite un sistema di messaggistica distribuito, quale il bus di eventi, si presenta il problema dell'aggiornamento del database originale e della pubblicazione di un evento in modo atomico (ovvero, il completamento di entrambe le operazioni o di nessuna delle due). Nell'esempio semplificato illustrato in precedenza il codice esegue, ad esempio, il commit dei dati nel database in caso di modifica del prezzo del prodotto e quindi pubblica un messaggio ProductPriceChangedIntegrationEvent. Inizialmente, potrebbe risultare fondamentale che queste due operazioni vengano eseguite in modo atomico. Se però si usa una transazione distribuita che interessa il database e il broker messaggi, come in sistemi meno recenti quali [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), questo approccio non è consigliabile per i motivi descritti dal [teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
+Quando si pubblicano eventi di integrazione tramite un sistema di messaggistica distribuito, quale il bus di eventi, si presenta il problema dell'aggiornamento del database originale e della pubblicazione di un evento in modo atomico (ovvero, il completamento di entrambe le operazioni o di nessuna delle due). Nell'esempio semplificato illustrato in precedenza il codice esegue, ad esempio, il commit dei dati nel database in caso di modifica del prezzo del prodotto e quindi pubblica un messaggio ProductPriceChangedIntegrationEvent. Inizialmente, potrebbe risultare fondamentale che queste due operazioni vengano eseguite in modo atomico. Se però si usa una transazione distribuita che interessa il database e il broker messaggi, come in sistemi meno recenti quali [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx), questo approccio non è consigliabile per i motivi descritti dal [teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
 In pratica, si usano i microservizi per creare sistemi scalabili e a disponibilità elevata. Per semplificare, il teorema CAP afferma che non è possibile creare un database (distribuito), o un microservizio proprietario del proprio modello, che sia continuamente disponibile, assolutamente coerente *e* tollerante di qualsiasi partizione. È necessario scegliere due di queste tre proprietà.
 
-Nelle architetture basate su microservizi è consigliabile scegliere disponibilità e tolleranza, dando minore importanza alla coerenza assoluta. Di conseguenza, nella maggior parte delle moderne applicazioni basate su microservizi si preferisce in genere non usare transazioni distribuite nella messaggistica, come si fa quando si implementano le [transazioni distribuite](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) basate su Windows Distributed Transaction Coordinator (DTC) con [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx).
+Nelle architetture basate su microservizi è consigliabile scegliere disponibilità e tolleranza, dando minore importanza alla coerenza assoluta. Di conseguenza, nella maggior parte delle moderne applicazioni basate su microservizi si preferisce in genere non usare transazioni distribuite nella messaggistica, come si fa quando si implementano le [transazioni distribuite](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) basate su Windows Distributed Transaction Coordinator (DTC) con [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
 Torniamo indietro al problema iniziale e al relativo esempio. Se si verifica un arresto anomalo del servizio dopo l'aggiornamento del database (in questo caso, subito dopo la riga di codice con \_context.SaveChangesAsync()), ma prima della pubblicazione dell'evento di integrazione, l'intero sistema potrebbe risultare incoerente. Potrebbe trattarsi di un problema business critical, a seconda della specifica operazione di business gestita.
 
 Come accennato in precedenza nella sezione relativa all'architettura, è possibile adottare diversi approcci per gestire questo problema:
 
--   Uso dello [schema Event Sourcing](https://msdn.microsoft.com/library/dn589792.aspx) completo.
+-   Uso dello [schema Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
 -   Uso dell'[estrazione del log delle transazioni](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
@@ -304,7 +304,7 @@ Alcune operazioni di elaborazione dei messaggi sono intrinsecamente idempotenti.
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Honoring message idempotency** (Rispetto dell'idempotenza dei messaggi) <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplicazione dei messaggi degli eventi di integrazione
 
@@ -337,7 +337,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Communicating Between Bounded Contexts** (Comunicazione tra contesti delimitati) <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **Eventual Consistency** (Coerenza finale) <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -352,7 +352,7 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Introducing Event Sourcing** (Introduzione a Event Sourcing) <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **Database di Event Store**. Sito ufficiale. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,24 +367,21 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Data Consistency Primer** (Introduzione alla coerenza dei dati) <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet** (Il teorema CAP: perché "tutto è diverso" con il cloud e Internet) <br/>
+-   **Rick Saling. The CAP Theorem: Why "Everything is Different" with the Cloud and Internet** (Il teorema CAP: perché "tutto è diverso" con il cloud e Internet) <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
 -   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** (CAP dodici anni dopo: come sono cambiate le "regole") <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Bus di servizio di Azure. Brokered Messaging: Duplicate Detection** (Messaggistica negoziata: rilevamento duplicati)  <br/>
+-   **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Participating in External (DTC) Transactions** (Partecipazione alle transazioni DTC esterne), MSMQ <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
-
--   **Bus di servizio di Azure. Brokered Messaging: Duplicate Detection** (Messaggistica negoziata: rilevamento duplicati) <br/>
+-   **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ <br/>

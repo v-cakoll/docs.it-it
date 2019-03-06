@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827878"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978332"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -172,7 +172,7 @@ Un altro approccio per disaccoppiare l'applicazione dai dettagli di implementazi
 
 ### <a name="feature-organization"></a>Organizzazione basata sulle funzionalità
 
-Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato cartelle di funzionalità o [sezioni di funzionalità](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx). Vedere anche: [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
+Per impostazione predefinita, le applicazioni ASP.NET Core organizzano la struttura delle cartelle in modo da includere controller e visualizzazioni e spesso modelli di visualizzazione. Il codice lato client per supportare queste strutture lato server è in genere archiviato separatamente nella cartella wwwroot. Questa organizzazione, tuttavia, può creare problemi nelle applicazioni di grandi dimensioni poiché l'utilizzo di qualsiasi funzionalità specificata richiede spesso il passaggio da una cartella all'altra. Questa operazione diventa ancora più complessa con un numero più elevato di file e sottocartelle in ogni cartella richiedendo un maggior esplorazione in Esplora soluzioni. Per risolvere questo problema è possibile organizzare il codice dell'applicazione per _funzionalità_ anziché per tipo di file. Questo tipo di organizzazione viene solitamente chiamato cartelle di funzionalità o [sezioni di funzionalità](https://msdn.microsoft.com/magazine/mt763233.aspx). Vedere anche: [Vertical Slices](https://deviq.com/vertical-slices/) (Sezioni verticali).
 
 A tale scopo, ASP.NET Core MVC supporta le aree. Usando le aree è possibile creare set separati di cartelle di controller e visualizzazioni, inclusi i modelli associati, in ogni cartella Area. La figure 7-1 illustra un esempio di struttura di cartelle con aree.
 

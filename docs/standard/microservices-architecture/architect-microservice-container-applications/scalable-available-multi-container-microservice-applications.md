@@ -4,12 +4,12 @@ description: Informazioni sulle opzioni che consentono di orchestrare microservi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307435"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980230"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -137,9 +137,11 @@ Come illustrato nella figura 4-26, la funzionalità che si distingue maggiorment
 
 È possibile impostare uno spazio di sviluppo condiviso in Azure. Ogni sviluppatore può concentrarsi solo sulla parte assegnata dell'applicazione e sviluppare in modo iterativo il codice pre-commit in uno spazio di sviluppo che già contiene tutti gli altri servizi e le risorse del cloud da cui dipendono i suoi scenari. Le dipendenze sono sempre aggiornate e gli sviluppatori lavorano in un ambiente che rispecchia quello di produzione.
 
-Azure Dev Spaces usa il concetto di spazio, che consente di lavorare in isolamento e senza timore di inficiare il lavoro degli altri membri del team. Questa funzionalità si basa sui prefissi URL, perciò se si usa qualsiasi prefisso dello spazio di sviluppo nell'URL, per tutte le richieste del contenitore verrà eseguita una versione speciale del contenitore distribuito per quello spazio, se esistente. In caso contrario, verrà eseguita la versione globale/consolidata.
+Azure Dev Spaces usa il concetto di spazio, che consente di lavorare in relativo isolamento e senza timore di inficiare il lavoro degli altri membri del team. Ogni spazio fa parte di una struttura gerarchica che consente di sostituire uno o più microservizi dello spazio master superiore con un proprio microservizio in corso.
 
-Per un ottenere una visualizzazione pratica basata su un esempio concreto, vedere la [pagina wiki di eShopOnContainers su Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS).
+Questa funzionalità è basata su prefissi di URL, quindi quando si usa un prefisso di spazio di Azure Dev Spaces nell'URL, una richiesta viene gestita dal microservizio di destinazione, se esiste nello spazio, altrimenti viene inoltrata alla prima istanza del microservizio di destinazione trovata nella gerarchia, fino ad arrivare eventualmente allo spazio master superiore.
+
+Per un ottenere una visualizzazione pratica basata su un esempio concreto, vedere la [pagina wiki di eShopOnContainers su Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS).
 
 Per altre informazioni, vedere l'articolo sullo [sviluppo in team con Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

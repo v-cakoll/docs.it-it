@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865839"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835356"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
-Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx) (Gestione di file mappati alla memoria).  
+Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  
   
  Esistono due tipi di file di cui è stato eseguito il mapping alla memoria:  
   
@@ -52,11 +52,11 @@ Più visualizzazioni sovrapposte per un file di cui è stato eseguito il mapping
   
 |Attività|Metodi o proprietà da usare|  
 |----------|----------------------------------|  
-|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file persistente di cui è stato eseguito il mapping alla memoria da un file su disco.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
-|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file non persistente di cui è stato eseguito il mapping alla memoria (non associato a un file su disco).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
-|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> di un file esistente di cui è stato eseguito il mapping alla memoria (persistente o non persistente).|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
-|Ottenere un oggetto <xref:System.IO.UnmanagedMemoryStream> per una visualizzazione accessibile in sequenza per il file di cui è stato eseguito il mapping alla memoria.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
-|Ottenere un oggetto <xref:System.IO.UnmanagedMemoryAccessor> per una visualizzazione di accesso casuale per un file di cui è stato eseguito il mapping alla memoria.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
+|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file persistente di cui è stato eseguito il mapping alla memoria da un file su disco.|Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> .|  
+|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> che rappresenta un file non persistente di cui è stato eseguito il mapping alla memoria (non associato a un file su disco).|Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> .<br /><br /> -oppure-<br /><br /> Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> .|  
+|Ottenere un oggetto <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> di un file esistente di cui è stato eseguito il mapping alla memoria (persistente o non persistente).|Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType> .|  
+|Ottenere un oggetto <xref:System.IO.UnmanagedMemoryStream> per una visualizzazione accessibile in sequenza per il file di cui è stato eseguito il mapping alla memoria.|Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> .|  
+|Ottenere un oggetto <xref:System.IO.UnmanagedMemoryAccessor> per una visualizzazione di accesso casuale per un file di cui è stato eseguito il mapping alla memoria.|Metodo<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> .|  
 |Ottenere un oggetto <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> da usare con il codice non gestito.|Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Proprietà <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
 |Ritardare l'allocazione della memoria finché non viene creata una visualizzazione (solo file non persistenti).<br /><br /> Per determinare la dimensione di paging del sistema corrente, usare la proprietà <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.|Metodo <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con il valore <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> -oppure-<br /><br /> Metodi <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> che hanno un'enumerazione <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> come parametro.|  
   

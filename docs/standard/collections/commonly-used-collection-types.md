@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e1fd970c0aab064fbc7da76d3c4f32f572aca21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571251"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835746"
 ---
 # <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente utilizzate
 I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio tabelle hash, code, stack, contenitori, dizionari ed elenchi.  
@@ -30,11 +30,11 @@ I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio ta
   
  Le raccolte possono variare a seconda di come vengono archiviati gli elementi, la modalità di ordinamento, la modalità di ricerca e confronto. La classe <xref:System.Collections.Queue> e la classe generica <xref:System.Collections.Generic.Queue%601> forniscono elenchi first-in-first-out, mentre la classe <xref:System.Collections.Stack> e la classe generica <xref:System.Collections.Generic.Stack%601> forniscono elenchi last-in-first-out. La classe <xref:System.Collections.SortedList> e la classe generica <xref:System.Collections.Generic.SortedList%602> rappresentano versioni ordinate della classe <xref:System.Collections.Hashtable> e della classe generica <xref:System.Collections.Generic.Dictionary%602>. Gli elementi di una <xref:System.Collections.Hashtable> o <xref:System.Collections.Generic.Dictionary%602> sono accessibili solo con la chiave dell'elemento, ma gli elementi di una <xref:System.Collections.SortedList> o <xref:System.Collections.ObjectModel.KeyedCollection%602> sono accessibili con la chiave oppure con l'indice dell'elemento. Gli indici di tutte le raccolte sono a base zero, ad eccezione di <xref:System.Array>, che consente matrici non a base zero.  
   
- La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli standard `foreach` e forniscono funzioni di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli standard `foreach` e forniscono funzioni di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Raccolte e strutture di dati](../../../docs/standard/collections/index.md)|Vengono descritti i diversi tipi di raccolta disponibili in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], compresi stack, code, elenchi, matrici e dizionari.|  
 |[Tipi di Collection Hashtable e Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Vengono descritte le funzionalità dei tipi di dizionario basati su hash generici e non generici.|  

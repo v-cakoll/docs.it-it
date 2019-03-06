@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479906"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251014"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando scegliere .NET Framework per i contenitori Docker
 
@@ -23,7 +23,7 @@ Nella maggior parte dei casi per questo scenario, non sarà necessario eseguire 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Utilizzo di pacchetti NuGet o di librerie .NET di terze parti non disponibili per .NET Core
 
-Le librerie di terze parti stanno rapidamente adottando [.NET Standard](../../net-standard.md), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e in .NET Core 2.x le applicazioni possono anche fare riferimento direttamente alle librerie .NET Framework esistenti (vedere la [compat shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Le librerie di terze parti stanno rapidamente adottando [.NET Standard](../../net-standard.md), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e in .NET Core 2.x le applicazioni possono anche fare riferimento direttamente alle librerie .NET Framework esistenti. Vedere [.NET Framework 4.6.1 supporting .NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20) (Supporto di .NET Standard 2.0 in .NET Framework 4.6.1).
 
 A novembre 2017 è stato anche rilasciato [Windows Compatibility Pack](../../../core/porting/windows-compat-pack.md) che consente di estendere la superficie dell'API disponibile per .NET Standard 2.0 in Windows. Questo pacchetto consente di ricompilare la maggior parte del codice esistente per .NET Standard 2.x con modifiche minime o nulle, da eseguire in Windows.
 

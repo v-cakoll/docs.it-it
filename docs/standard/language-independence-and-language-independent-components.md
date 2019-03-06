@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842827"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836552"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 .NET Framework è indipendente dal linguaggio. In qualità di sviluppatore, è pertanto possibile usare uno dei numerosi linguaggi destinati a .NET Framework, ad esempio C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. È possibile accedere a tipi e membri di librerie di classi sviluppate per .NET Framework senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, l'accesso al componente può essere eseguito da qualsiasi applicazione .NET Framework, indipendentemente dal linguaggio.  
@@ -28,7 +28,7 @@ ms.locfileid: "48842827"
 > [!NOTE]
 >  La prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, vale a dire componenti che possono essere usati da applicazioni scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#CrossLang) nella seconda parte di questo articolo.  
   
- È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. La specifica CLS (Common Language Specification) è definita nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo <xref:System.CLSCompliantAttribute> al codice sorgente. Per altre informazioni, vedere [Attributo CLSCompliantAttribute](#CLSAttribute).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48842827"
   
 -   Parametri e tipi restituiti di metodi pubblici di classi pubbliche e parametri e tipi restituiti di metodi accessibili alle classi derivate.  
   
- Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è stato copiato alla lettera dallo [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole.  
+ Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è preso letteralmente dallo [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), protetto da copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole.  
   
 |Category|Vedere|Regola|Numero regola|  
 |--------------|---------|----------|-----------------|  
@@ -169,7 +169,7 @@ ms.locfileid: "48842827"
   
  In [Common Type System](../../docs/standard/base-types/common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS.  
   
-|Tipo conforme a CLS|Descrizione|  
+|Tipo conforme a CLS|Description|  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|Unsigned Integer a 8 bit|  
 |<xref:System.Int16>|Signed Integer a 16 bit|  
@@ -185,7 +185,7 @@ ms.locfileid: "48842827"
   
  I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.  
   
-|Tipo non conforme|Descrizione|Alternativa alla conformità a CLS|  
+|Tipo non conforme|Description|Alternativa alla conformità a CLS|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Tipo di dati Signed Integer a 8 bit|<xref:System.Int16>|  
 |<xref:System.TypedReference>|Puntatore a un oggetto e relativo tipo di runtime|nessuno|  
@@ -305,7 +305,7 @@ ms.locfileid: "48842827"
   
      A causa di questa regola, i tipi conformi a CLS non sono necessari per l'implementazione di membri non conformi a CLS. Se tramite un framework conforme a CLS viene esposta una classe mediante la quale viene implementata un'interfaccia non conforme a CLS, è anche consigliabile fornire implementazioni concrete di tutti i membri non conformi a CLS.  
   
- I compilatori di linguaggi conformi a CLS devono anche consentire a una classe di fornire implementazioni separate di membri con lo stesso nome e la stessa firma in più interfacce.  Sia C# sia Visual Basic supportano [implementazioni di interfacce esplicite](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) per offrire diverse implementazioni di metodi denominati in modo identico. Visual Basic supporta anche la parola chiave `Implements`, che consente di definire in modo esplicito l'interfaccia e il membro tramite cui viene implementato un particolare membro. Nell'esempio seguente viene illustrato questo scenario definendo una classe `Temperature` mediante la quale vengono implementate le interfacce `ICelsius` e `IFahrenheit` come implementazioni di interfacce esplicite.  
+ I compilatori di linguaggi conformi a CLS devono anche consentire a una classe di fornire implementazioni separate di membri con lo stesso nome e la stessa firma in più interfacce.  Sia C# sia Visual Basic supportano [implementazioni di interfacce esplicite](../csharp/programming-guide/interfaces/explicit-interface-implementation.md) per offrire diverse implementazioni di metodi denominati in modo identico. Visual Basic supporta anche la parola chiave `Implements`, che consente di definire in modo esplicito l'interfaccia e il membro tramite cui viene implementato un particolare membro. Nell'esempio seguente viene illustrato questo scenario definendo una classe `Temperature` mediante la quale vengono implementate le interfacce `ICelsius` e `IFahrenheit` come implementazioni di interfacce esplicite.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -329,7 +329,7 @@ ms.locfileid: "48842827"
   
     -   Enumerazione che rappresenta un set di flag di bit che possono essere combinati per generare un valore senza nome. Questo tipo di enumerazione è indicato dalla presenza dell'attributo personalizzato <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
-     Per altre informazioni, vedere la documentazione relativa alla struttura <xref:System.Enum>.  
+     Per ulteriori informazioni, vedere la documentazione relativa alla struttura <xref:System.Enum>.  
   
 -   Il valore di un'enumerazione non è limitato all'intervallo dei relativi valori specificati. In altre parole, l'intervallo di valori in una enumerazione è l'intervallo del relativo valore sottostante. È possibile usare il metodo <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> per determinare se un valore specificato è un membro di un'enumerazione.  
   
@@ -337,7 +337,7 @@ ms.locfileid: "48842827"
 ### <a name="type-members-in-general"></a>Membri dei tipi in generale  
  In base alle specifiche CLS (Common Language Specification), l'accesso a tutti i campi e metodi deve essere effettuato come membri di una classe particolare. Pertanto, i campi e i metodi statici globali, vale a dire campi o metodi statici definiti oltre a un tipo, non sono conformi a CLS. Se si tenta di includere un campo o un metodo globale nel codice sorgente, viene generato un errore del compilatore sia dai compilatori C# sia da quelli Visual Basic.  
   
- Le specifiche CLS (Common Language Specification) supportano solo la convenzione di chiamata gestita standard. Non supportano le convenzioni di chiamata non gestite né i metodi con elenchi di argomenti variabili contrassegnati con la parola chiave `varargs`. Per gli elenchi di argomenti variabili compatibili con la convenzione di chiamata gestita standard, usare l'attributo <xref:System.ParamArrayAttribute> o l'implementazione del singolo linguaggio, ad esempio la parola chiave `params` in C# e la parola chiave `ParamArray` in Visual Basic.  
+ Le specifiche CLS (Common Language Specification) supportano solo la convenzione di chiamata gestita standard. Non supportano le convenzioni di chiamata non gestite né i metodi con elenchi di argomenti variabili contrassegnati con la parola chiave `varargs`. Per gli elenchi di argomenti variabili compatibili con la convenzione di chiamata gestita standard, utilizzare l'attributo <xref:System.ParamArrayAttribute> o l'implementazione del singolo linguaggio, ad esempio la parola chiave `params` in C# e la parola chiave `ParamArray` in Visual Basic.  
   
 <a name="MemberAccess"></a>   
 ### <a name="member-accessibility"></a>Accessibilità del membro  
@@ -403,7 +403,7 @@ ms.locfileid: "48842827"
 ### <a name="properties"></a>Proprietà  
  Le proprietà nei tipi conformi a CLS devono rispettare queste regole:  
   
--   Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly questi vengono implementati come metodi speciali, ovvero vengono visualizzati come metodi separati (getter è denominato `get_`*nomeproprietà* e setter è `set_`*nomeproprietà*) contrassegnati come `SpecialName` nei metadati dell'assembly. Tramite i compilatori C# e Visual Basic questa regola viene applicata automaticamente senza la necessità di usare l'attributo <xref:System.CLSCompliantAttribute>.  
+-   Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly questi vengono implementati come metodi speciali, ovvero vengono visualizzati come metodi separati (getter è denominato `get_`*nomeproprietà* e setter è `set_`*nomeproprietà*) contrassegnati come `SpecialName` nei metadati dell'assembly. Tramite i compilatori C# e Visual Basic questa regola viene applicata automaticamente senza la necessità di utilizzare l'attributo <xref:System.CLSCompliantAttribute>.  
   
 -   Un tipo di proprietà è il tipo restituito del metodo Get della proprietà e l'ultimo argomento del metodo Set. È necessario che questi tipi siano conformi a CLS e gli argomenti non possono essere assegnati alla proprietà per riferimento, cioè non possono essere puntatori gestiti.  
   
@@ -494,7 +494,7 @@ ms.locfileid: "48842827"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>Attributo CLSCompliantAttribute  
- L'attributo <xref:System.CLSCompliantAttribute> è usato per indicare se un elemento del programma è conforme a CLS (Common Language Specification). Nel costruttore <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> è incluso un solo parametro obbligatorio, `isCompliant`, che indica se l'elemento del programma è conforme a CLS.  
+ L'attributo <xref:System.CLSCompliantAttribute> è utilizzato per indicare se un elemento del programma è conforme a CLS (Common Language Specification). Nel costruttore <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> è incluso un solo parametro obbligatorio, `isCompliant`, che indica se l'elemento del programma è conforme a CLS.  
   
  In fase di compilazione, tramite il compilatore vengono rilevati gli elementi non conformi che si presuppone siano conformi a CLS e viene generato un avviso. Tramite il compilatore non vengono generati avvisi per i tipi o i membri che vengono dichiarati esplicitamente come non conformi.  
   
@@ -511,7 +511,7 @@ ms.locfileid: "48842827"
   
  Il valore dell'attributo <xref:System.CLSCompliantAttribute> viene ereditato dagli elementi del programma contenuti. Ad esempio, se un assembly è contrassegnato come conforme a CLS, anche i relativi tipi sono conformi a CLS. Se un tipo è contrassegnato come conforme a CLS, anche i relativi membri e tipi annidati sono conformi a CLS.  
   
- È possibile eseguire l'override in modo esplicito della conformità ereditata applicando l'attributo <xref:System.CLSCompliantAttribute> a un elemento del programma contenuto. Ad esempio, è possibile usare l'attributo <xref:System.CLSCompliantAttribute> con un valore `isCompliant` `false` per definire un tipo non conforme in un assembly conforme e l'attributo con un valore `isCompliant` `true` per definire un tipo conforme in un assembly non conforme. È anche possibile definire i membri non conformi in un tipo conforme. Tuttavia, in un tipo non conforme non possono essere inclusi membri conformi, pertanto non è possibile usare l'attributo con un valore `isCompliant` `true` per eseguire l'override dell'ereditarietà da un tipo non conforme.  
+ È possibile eseguire l'override in modo esplicito della conformità ereditata applicando l'attributo <xref:System.CLSCompliantAttribute> a un elemento del programma contenuto. Ad esempio, è possibile utilizzare l'attributo <xref:System.CLSCompliantAttribute> con un valore `isCompliant``false` per definire un tipo non conforme in un assembly conforme e l'attributo con un valore `isCompliant``true` per definire un tipo conforme in un assembly non conforme. È anche possibile definire i membri non conformi in un tipo conforme. Tuttavia, in un tipo non conforme non possono essere inclusi membri conformi, pertanto non è possibile usare l'attributo con un valore `isCompliant` `true` per eseguire l'override dell'ereditarietà da un tipo non conforme.  
   
  Quando si sviluppano componenti, è sempre consigliabile usare l'attributo <xref:System.CLSCompliantAttribute> per indicare se l'assembly e i relativi tipi e membri sono conformi a CLS.  
   
@@ -548,23 +548,23 @@ ms.locfileid: "48842827"
   
  Per includere le due classi in un singolo assembly, è necessario compilarle in moduli. Per compilare il file di codice sorgente di Visual Basic in un modulo, usare il comando seguente:  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Per altre informazioni sulla sintassi della riga di comando del compilatore Visual Basic, vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Per altre informazioni sulla sintassi della riga di comando del compilatore Visual Basic, vedere [Compilazione dalla riga di comando](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  Per compilare il file di codice sorgente di C# in un modulo, usare il comando seguente:  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- Per altre informazioni sulla sintassi della riga di comando del compilatore C#, vedere [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Per altre informazioni sulla sintassi della riga di comando del compilatore C#, vedere [Compilazione dalla riga di comando con csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Usare quindi lo strumento [Link (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) per compilare i due moduli in un assembly:  
+ Usare quindi le [opzioni del linker](/cpp/build/reference/linker-options) per compilare i due moduli in un assembly:  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Per compilare il codice Visual Basic, usare il comando seguente:  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  Per eseguire la compilazione con C#, modificare il nome del compilatore da **vbc** a **csc** e modificare l'estensione del file da vb a cs:  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

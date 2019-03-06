@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9227d10e2c12f88d33b283d1f1328d628b64afa0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903889"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975732"
 ---
 # <a name="introduction-to-plinq"></a>Introduzione a PLINQ
 ## <a name="what-is-a-parallel-query"></a>Che cos'è una query parallela?  
@@ -33,11 +33,11 @@ ms.locfileid: "55903889"
 ## <a name="the-parallelenumerable-class"></a>Classe ParallelEnumerable  
  La classe <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> espone quasi tutte le funzionalità di PLINQ.  Questa classe e gli altri tipi dello spazio dei nomi <xref:System.Linq?displayProperty=nameWithType> vengono compilati nell'assembly System.Core.dll. In Visual Studio i progetti C# e Visual Basic predefiniti fanno riferimento all'assembly e importano lo spazio dei nomi.  
   
- <xref:System.Linq.ParallelEnumerable> include le implementazioni di tutti gli operatori query standard supportati da LINQ to Objects, anche se non tenta di parallelizzare ognuno di essi. Se non si ha familiarità con [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], vedere [Introduzione a LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
+ <xref:System.Linq.ParallelEnumerable> include le implementazioni di tutti gli operatori query standard supportati da LINQ to Objects, anche se non tenta di parallelizzare ognuno di essi. Se non si ha familiarità con [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], vedere [Introduzione a LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) e [Introduzione a LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).  
   
  Oltre agli operatori query standard, la classe <xref:System.Linq.ParallelEnumerable> contiene un set di metodi che rendono possibili comportamenti specifici dell'esecuzione parallela. Questi metodi specifici di PLINQ sono elencati nella tabella seguente.  
   
-|Operatore ParallelEnumerable|Descrizione|  
+|Operatore ParallelEnumerable|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto di ingresso di PLINQ. Specifica che la parte rimanente della query deve essere parallelizzata, se è possibile.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Specifica che la parte rimanente della query deve essere eseguita in sequenza, come una query LINQ non parallela.|  

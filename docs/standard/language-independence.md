@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188183"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203652"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188183"
 > [!NOTE]
 > La prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, vale a dire componenti che possono essere usati da applicazioni scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#cross-language-interoperability) nella seconda parte di questo articolo. 
 
-È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. La specifica CLS (Common Language Specification) è definita nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per altre informazioni, vedere [Attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -150,7 +150,7 @@ L'interfaccia pubblica di una libreria è costituita dagli elementi seguenti:
 
 * Parametri e tipi restituiti di metodi pubblici di classi pubbliche e parametri e tipi restituiti di metodi accessibili alle classi derivate. 
 
-Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è stato copiato alla lettera dallo [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole. 
+Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è preso letteralmente dallo [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), protetto da copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole. 
 
 Category | Vedere | Regola | Numero regola
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ Accessibilità | [Accessibilità del membro](#member-accessibility) | L'accessib
 Accessibilità | [Accessibilità del membro](#member-accessibility) | La visibilità e l'accessibilità di tipi e membri saranno tali che i tipi nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un metodo pubblico che è visibile all'esterno del relativo assembly non deve essere presente un argomento il cui tipo è visibile solo nell'assembly. La visibilità e l'accessibilità di tipi che compongono un tipo generico con istanze usato nella firma di qualsiasi membro saranno visibili e accessibili ogni volta che il membro stesso è visibile e accessibile. Ad esempio, in un tipo generico con istanze presente nella firma di un membro visibile all'esterno del relativo assembly non deve essere disponibile un argomento generico il cui tipo è visibile solo nell'assembly. | 12
 Matrici | [Matrici](#arrays) | Le matrici devono disporre di elementi con un tipo conforme a CLS e i limiti inferiori di tutte le dimensioni della matrice devono essere pari a zero. Solo per il fatto che un elemento sia una matrice, il tipo di elemento della matrice sarà richiesto per eseguire una distinzione tra gli overload. Quando l'overload è basato su due o più i tipi di matrice, i tipi di elemento vengono denominati tipi. | 16
 Attributi | [Attributi](#attributes) | Gli attributi devono essere di tipo [System.Attribute](xref:System.Attribute) o derivati da questo tipo. | 41
-Attributi | [Attributi](#attributes) | La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che verranno visualizzati in queste codifiche sono (vedere la partizione IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS. | 34
+Attributi | [Attributi](#attributes) | La specifica CLS consente solo un subset delle codifiche di attributi personalizzati. Gli unici tipi che compariranno in queste codifiche sono (vedere la partizione IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualsiasi tipo di enumerazione basato su un tipo Integer di base conforme a CLS. | 34
 Attributi | [Attributi](#attributes) | La specifica CLS non consente i modificatori necessari visibili pubblicamente (`modreq`, vedere la partizione II), ma consente i modificatori facoltativi (`modopt`, vedere la partizione II) che non riconosce. | 35
 Costruttori | [Costruttori](#constructors) | Prima di un eventuale accesso ai dati di istanza ereditati, tramite un costruttore di oggetti deve essere effettuata una chiamata a un costruttore di istanze della relativa classe di base. Ciò non si applica ai tipi di valore, che non devono disporre di costruttori.  | 21
 Costruttori | [Costruttori](#constructors) | Un costruttore di oggetti non deve essere chiamato se non come parte della creazione di un oggetto e un oggetto non deve essere inizializzato due volte. | 22
@@ -316,7 +316,7 @@ Tutti i tipi visualizzati nelle firme dei membri, incluso il tipo restituito di 
 In [common type system](common-type-system.md) di .NET Framework è incluso un numero di tipi incorporati supportati direttamente da Common Language Runtime, codificati in particolare nei metadati di un assembly. Di questi tipi intrinseci, i tipi elencati nella tabella seguente sono conformi a CLS. 
 
 
-Tipo conforme a CLS | Descrizione
+Tipo conforme a CLS | Description
 ------------------ | -----------
 [Byte](xref:System.Byte) | Unsigned Integer a 8 bit 
 [Int16](xref:System.Int16) | Signed Integer a 16 bit 
@@ -333,7 +333,7 @@ Tipo conforme a CLS | Descrizione
 I tipi intrinseci elencati nella tabella seguente non sono conformi a CLS.
 
 
-Tipo non conforme | Descrizione | Alternativa alla conformità a CLS
+Tipo non conforme | Description | Alternativa alla conformità a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo di dati Signed Integer a 8 bit | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Intero senza segno a 16 bit | [Int32](xref:System.Int32)
@@ -2058,7 +2058,7 @@ I costruttori nelle classi e strutture conformi a CLS devono rispettare queste r
 
 Le proprietà nei tipi conformi a CLS devono rispettare queste regole:
 
-* Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly questi vengono implementati come metodi speciali, ovvero vengono visualizzati come metodi separati: getter è denominato `get`\_*propertyname* e setter è `set*\_*propertyname*) marked as `SpecialName` nei metadati dell'assembly. Il compilatore C# applica questa regola automaticamente, senza la necessità di usare l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute). 
+* Una proprietà deve disporre di un metodo Set, un metodo Get o di entrambi. In un assembly questi vengono implementati come metodi speciali, ovvero vengono visualizzati come metodi separati (getter è denominato `get`\_*nomeproprietà* e setter è `set`\_*nomeproprietà*) contrassegnati come `SpecialName` nei metadati dell'assembly. Il compilatore C# applica questa regola automaticamente, senza la necessità di usare l'attributo <xref:System.CLSCompliantAttribute>. 
 
 * Un tipo di proprietà è il tipo restituito del metodo Get della proprietà e l'ultimo argomento del metodo Set. È necessario che questi tipi siano conformi a CLS e gli argomenti non possono essere assegnati alla proprietà per riferimento, cioè non possono essere puntatori gestiti. 
 

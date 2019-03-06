@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676172"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836136"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -63,7 +63,7 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
  Il gestore dello spazio dei nomi non esegue convalide sugli spazi dei nomi, ma si presuppone che i prefissi e gli spazi dei nomi siano già stati verificati e siano conformi alla specifica [W3C Namespaces](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) non usa <xref:System.Xml.XmlNamespaceManager> per la gestione degli spazi dei nomi. Per informazioni sulla gestione di spazi dei nomi quando si usa LINQ to XML, vedere [Utilizzo degli spazi dei nomi XML](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) nella documentazione di LINQ.  
+> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) non usano <xref:System.Xml.XmlNamespaceManager> per gestire gli spazi dei nomi. Per informazioni sulla gestione di spazi dei nomi quando si usa LINQ to XML, vedere [Uso degli spazi dei nomi XML (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) e [Uso degli spazi dei nomi XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) nella documentazione di LINQ.  
   
  Di seguito sono riportate alcune attività di gestione e ricerca eseguibili con la classe <xref:System.Xml.XmlNamespaceManager>. Per altre informazioni ed esempi, seguire i collegamenti alla pagina di riferimento per ogni metodo o proprietà.  
   

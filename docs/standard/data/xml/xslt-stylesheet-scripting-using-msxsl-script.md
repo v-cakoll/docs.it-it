@@ -1,5 +1,5 @@
 ---
-title: Scripting dei fogli di stile XSLT utilizzando <msxsl:script>
+title: Scripting dei fogli di stile XSLT con <msxsl:script>
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267300"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835252"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Scripting dei fogli di stile XSLT con \<msxsl:script>
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
@@ -31,7 +31,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  dove `msxsl` è un prefisso associato allo spazio dei nomi `urn:schemas-microsoft-com:xslt`.  
   
- L'attributo `language` non è obbligatorio. Tuttavia, se specificato, deve presentare uno dei seguenti valori: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
+ L'attributo `language` non è obbligatorio ma, se specificato, il relativo valore deve essere uno dei seguenti: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Se omesso, il linguaggio viene impostato su JScript. Poiché nel `language-name` non viene fatta distinzione tra maiuscole e minuscole, "JavaScript" e "javascript" si equivalgono.  
   
  L'attributo `implements-prefix` è obbligatorio. Questo attributo viene usato per dichiarare uno spazio dei nomi e associarlo al blocco di script. Il valore di questo attributo è il prefisso che rappresenta lo spazio dei nomi. È possibile definire lo spazio dei nomi in un punto qualsiasi di un foglio di stile.  
   
@@ -45,14 +45,14 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  Per ottenere l'evidenza dall'assembly, usare `this.GetType().Assembly.Evidence`. Per ottenere l'evidenza da un URI (Uniform Resource Identifier), usare `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityZone> e [Set di autorizzazioni denominati](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityZone> e [Set di autorizzazioni denominati](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
-|Spazi dei nomi predefiniti|Descrizione|  
+|Spazi dei nomi predefiniti|Description|  
 |------------------------|-----------------|  
 |System|Classe di sistema.|  
-|System.Collection|Classi Collection.|  
+|System.Collection|Classi di raccolte.|  
 |System.Text|Classi di testo.|  
 |System.Text.RegularExpressions|Classi di espressioni regolari.|  
 |System.Xml|Classi XML di base.|  
@@ -72,7 +72,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
 |Frammento di albero risultato|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Se la funzione di script utilizza un tipo numerico Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, questo verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
+ Se nella funzione di script viene utilizzato un tipo numerico Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, verrà convertito in Double, che corrisponde al numero del tipo W3C XPath. Tutti gli altri tipi verranno convertiti in stringhe usando il metodo `ToString`.  
   
  Se la funzione di script usa un tipo diverso da quelli specificati in precedenza o se la funzione non viene compilata quando il foglio di stile viene caricato nell'oggetto <xref:System.Xml.Xsl.XslTransform>, verrà generata un'eccezione.  
   

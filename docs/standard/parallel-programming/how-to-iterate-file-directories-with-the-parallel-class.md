@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: scorrere le directory dei file con la classe Parallel'
+title: 'Procedura: Scorrere le directory dei file con la classe Parallel'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965267"
 ---
-# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Procedura: scorrere le directory dei file con la classe Parallel
+# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Procedura: Scorrere le directory dei file con la classe Parallel
 In molti casi, l'iterazione di file è un'operazione che può essere facilmente parallelizzata. L'argomento [Procedura: Scorrere le directory dei file con PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) illustra il modo più semplice per eseguire questa attività per molti scenari. L'operazione può però diventare complessa quando il codice deve gestire molti tipi di eccezioni che possono verificarsi durante l'accesso al file system. L'esempio seguente mostra uno degli approcci al problema. Viene usata un'iterazione basata su stack per attraversare tutti i file e le cartelle in una directory specificata e il codice può intercettare e gestire diverse eccezioni. Naturalmente, la modalità di gestione delle eccezioni dipende dell'utente.  
   
 ## <a name="example"></a>Esempio  
@@ -30,7 +30,7 @@ In molti casi, l'iterazione di file è un'operazione che può essere facilmente 
   
  Nell'esempio viene utilizzata la variabile locale `fileCount` per gestire il conteggio del numero totale di file elaborati. Dal momento che è possibile accedere alla variabile contemporaneamente da più attività, l'accesso a essa viene sincronizzato chiamando il metodo <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   
- Si noti che se viene generata un'eccezione nel thread principale, i thread avviati dal metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A> possono rimanere in esecuzione. Per arrestare questi thread, è possibile impostare una variabile booleana nei gestori di eccezioni e controllarne il valore in ogni iterazione del ciclo parallelo. Se il valore indica che è stata generata un'eccezione, usare la variabile <xref:System.Threading.Tasks.ParallelLoopState> per arrestare o interrompere il ciclo. Per altre informazioni, vedere [Procedura: arrestare o interrompere un ciclo Parallel.For](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
+ Si noti che se viene generata un'eccezione nel thread principale, i thread avviati dal metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A> possono rimanere in esecuzione. Per arrestare questi thread, è possibile impostare una variabile booleana nei gestori di eccezioni e controllarne il valore in ogni iterazione del ciclo parallelo. Se il valore indica che è stata generata un'eccezione, usare la variabile <xref:System.Threading.Tasks.ParallelLoopState> per arrestare o interrompere il ciclo. Per altre informazioni, vedere [Procedura: Arrestare o interrompere un ciclo Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Vedere anche
 

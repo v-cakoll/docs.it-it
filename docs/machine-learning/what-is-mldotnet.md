@@ -4,17 +4,17 @@ description: Informazioni su ML.NET, un framework di apprendimento automatico gr
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55252420"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250962"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Che cos'è ML.NET e come è possibile capire le nozioni fondamentali sull'apprendimento automatico?
 
-ML.NET è un framework di apprendimento automatico gratuito, open source e multipiattaforma che consente di compilare soluzioni di apprendimento automatico personalizzate e di integrarle nelle applicazioni .NET. Con le API ML.NET l'AI viene incorporata nelle app tramite le competenze .NET di cui si dispone già e senza uscire da .NET.
+ML.NET è un framework di apprendimento automatico gratuito, open source e multipiattaforma che consente di compilare soluzioni di apprendimento automatico personalizzate e di integrarle nelle applicazioni .NET. Con le API ML.NET è possibile incorporare intelligenza artificiale nelle app sfruttando le competenze in .NET già acquisite e senza uscire da .NET.
 
 ## <a name="what-is-machine-learning"></a>Che cos'è l'apprendimento automatico?
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144858"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835824"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formati dei percorsi di file nei sistemi Windows
 
-I membri di molti tipi nello spazio dei nomi <xref:System.IO> includono un parametro `path` che consente di specificare un percorso assoluto o relativo di una risorsa del file system. Questo percorso viene quindi passato alle [API del file system Windows](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). Questo argomento descrive i formati per i percorsi di file che è possibile usare nei sistemi Windows.
+I membri di molti tipi nello spazio dei nomi <xref:System.IO> includono un parametro `path` che consente di specificare un percorso assoluto o relativo di una risorsa del file system. Questo percorso viene quindi passato alle [API del file system Windows](/windows/desktop/fileio/file-systems). Questo argomento descrive i formati per i percorsi di file che è possibile usare nei sistemi Windows.
 
 ## <a name="traditional-dos-paths"></a>Percorsi DOS tradizionali
 

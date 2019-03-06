@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620084"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836370"
 ---
 # <a name="selecting-a-collection-class"></a>Selezione di una classe Collection
 Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del tipo errato può limitare l'uso della raccolta. In generale, evitare di usare i tipi nello spazio dei nomi <xref:System.Collections> a meno che la destinazione specifica non sia .NET Framework versione 1.1. È preferibile usare le versioni generiche e simultanee delle raccolte per via di una maggiore indipendenza dai tipi e di altri miglioramenti.  
@@ -75,7 +75,7 @@ Assicurarsi di scegliere con attenzione la classe Collection, poiché l'uso del 
     -   È anche possibile usare una qualsiasi classe di raccolte generiche nello spazio dei nomi <xref:System.Collections.Generic> come raccolte di stringhe fortemente tipizzate specificando la classe <xref:System.String> per i relativi argomenti di tipo generico.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects e PLINQ  
- LINQ to Objects permette agli sviluppatori di usare le query LINQ per accedere agli oggetti in memoria, a condizione che il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli `foreach` standard e forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ LINQ to Objects permette agli sviluppatori di usare le query LINQ per accedere agli oggetti in memoria, a condizione che il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli `foreach` standard e forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) e [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
  PLINQ fornisce un'implementazione parallela di LINQ to Objects in grado di offrire un'esecuzione più rapida delle query in molti scenari, grazie a un uso più efficiente dei computer multicore. Per altre informazioni, vedere [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

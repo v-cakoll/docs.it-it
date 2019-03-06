@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692964"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836422"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -135,7 +135,7 @@ ms.locfileid: "54692964"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Varianza nei delegati generici e non generici  
  Nel codice precedente la firma di `MyMethod` corrisponde esattamente alla firma del delegato generico costruito: `Func<Base, Derived>` (`Func(Of Base, Derived)` in Visual Basic). Nell'esempio viene illustrato che è possibile archiviare questo delegato generico in variabili o parametri del metodo che presentano tipi di parametro più derivati e tipi restituiti meno derivati, purché tutti i tipi delegati vengano costruiti a partire dal tipo delegato generico <xref:System.Func%602>.  
   
- Questo è un punto importante. Gli effetti della covarianza e della controvarianza nei parametri di tipo dei delegati generici sono simili agli effetti della covarianza e della controvarianza nel normale binding di delegati (vedere [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Tuttavia, la varianza nell'associazione di delegati funziona con tutti i tipi delegati, non solo con quelli generici aventi parametri di tipo variante. Inoltre, la varianza nell'associazione di delegati consente l'associazione di un metodo a qualsiasi delegato con tipi di parametro più restrittivi e un tipo restituito meno restrittivo, mentre l'assegnazione di delegati generici funziona solo se entrambi i tipi di delegati sono costruiti a partire dalla stessa definizione di tipo generico.  
+ Questo è un punto importante. Gli effetti della covarianza e della controvarianza nei parametri di tipo dei delegati generici sono simili agli effetti della covarianza e della controvarianza nel normale binding di delegati. Vedere [Varianza nei delegati (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [Varianza nei delegati (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md). Tuttavia, la varianza nell'associazione di delegati funziona con tutti i tipi delegati, non solo con quelli generici aventi parametri di tipo variante. Inoltre, la varianza nell'associazione di delegati consente l'associazione di un metodo a qualsiasi delegato con tipi di parametro più restrittivi e un tipo restituito meno restrittivo, mentre l'assegnazione di delegati generici funziona solo se entrambi i tipi di delegati sono costruiti a partire dalla stessa definizione di tipo generico.  
   
  Nell'esempio seguente sono mostrati gli effetti combinati della varianza nell'associazione di delegati e della varianza nei parametri di tipo generico. Nell'esempio viene definita una gerarchia di tre tipi, da quello meno derivato (`Type1`) a quello più derivato (`Type3`). La varianza nella normale associazione di delegati viene utilizzata per associare un metodo con un tipo di parametro `Type1` e un tipo restituito `Type3` a un delegato generico con un tipo di parametro `Type2` e un tipo restituito `Type2`. Il delegato generico risultante viene quindi assegnato a un'altra variabile il cui tipo delegato generico presenta un parametro di tipo `Type3` e un tipo restituito `Type1`, utilizzando la covarianza e la controvarianza di parametri di tipo generico. Per la seconda assegnazione è necessario che sia il tipo della variabile sia quello del delegato vengano costruiti a partire dalla stessa definizione di tipo generico, in questo caso <xref:System.Func%602>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692964"
   
  Visual Basic e C# non consentono di violare le regole per l'utilizzo di parametri di tipo covariante e controvariante o aggiungere annotazioni di covarianza e controvarianza ai parametri relativi a tipi diversi da interfacce e delegati. L' [assembler MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non esegue tali controlli. Tuttavia, se si tenta di caricare un tipo che viola le regole, viene generato un oggetto <xref:System.TypeLoadException> .  
   
- Per informazioni e codici di esempio, vedere [Varianza nelle interfacce generiche](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Per informazioni e codice di esempio, vedere [Varianza nelle interfacce generiche (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Varianza nelle interfacce generiche (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
  [Torna all'inizio](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692964"
 
 - [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [Varianza nei delegati (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Varianza nei delegati (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
