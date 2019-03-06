@@ -62,7 +62,7 @@ Un'interfaccia presenta le proprietà seguenti:
  [Procedura: Implementare in modo esplicito i membri di due interfacce](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fornisce un esempio di come implementare in modo esplicito i membri delle interfacce con l'ereditarietà.  
   
-##  <a name="BKMK_RelatedSections"></a> Sezioni correlate
+## <a name="BKMK_RelatedSections"></a> Sezioni correlate
 
 - [Proprietà dell'interfaccia](../classes-and-structs/interface-properties.md)  
 - [Indicizzatori nelle interfacce](../indexers/indexers-in-interfaces.md)  

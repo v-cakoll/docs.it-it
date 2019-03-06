@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377045"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre due meccanismi paralleli per modificare l'aspetto visivo di un controllo che riceve lo stato attivo della tastiera. Il primo meccanismo consiste nell'usare setter di proprietà per proprietà, ad esempio <xref:System.Windows.UIElement.IsKeyboardFocused%2A> entro lo stile o il modello che viene applicato al controllo. Il secondo consiste nel fornire uno stile separato come valore del <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> proprietà; la "dello stile di visualizzazione dello stato attivo" Crea un struttura ad albero visuale separato per uno strumento decorativo che viene disegnato sopra il controllo, anziché modificare la struttura ad albero visuale del controllo o altra interfaccia utente elemento sostituendola. Questo argomento descrive gli scenari appropriati a ogni meccanismo.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562594"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Comportamento predefinito dello stile di visualizzazione dello stato attivo  
- Gli stili di visualizzazione dello stato attivo funzionano solo quando l'azione di impostazione dello stato attivo è stata iniziata dalla tastiera. Qualsiasi azione del mouse o modifica dello stato attivo a livello di codice disabilita la modalità degli stili di visualizzazione dello stato attivo. Per altre informazioni sulle differenze tra le modalità dello stato attivo, vedere [Cenni preliminari sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Gli stili di visualizzazione dello stato attivo funzionano solo quando l'azione di impostazione dello stato attivo è stata iniziata dalla tastiera. Qualsiasi azione del mouse o modifica dello stato attivo a livello di codice disabilita la modalità degli stili di visualizzazione dello stato attivo. Per altre informazioni sulle differenze tra le modalità dello stato attivo, vedere [Cenni preliminari sullo stato attivo](focus-overview.md).  
   
  I temi dei controlli includono un comportamento predefinito dello stile di visualizzazione dello stato attivo che diventa lo stile di visualizzazione dello stato attivo per tutti i controlli del tema. Questo stile del tema viene identificato dal valore della chiave statica <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Quando si dichiara uno stile di visualizzazione dello stato attivo personalizzato a livello di applicazione, questo sostituisce il comportamento dello stile predefinito dei temi. In alternativa, se si definisce l'intero tema, è necessario usare questa stessa chiave per definire lo stile del comportamento predefinito per tutto il tema.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562594"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternative all'uso di uno stile di visualizzazione dello stato attivo  
  Per le situazioni in cui non è appropriato usare uno stile di visualizzazione dello stato attivo, perché si sta assegnando uno stile solo a singoli controlli o perché si vuole un controllo maggiore sul modello del controllo, sono disponibili molte altre proprietà e tecniche accessibili che creano un comportamento visivo in risposta alle modifiche apportate allo stato attivo.  
   
- Trigger, setter e setter di eventi sono illustrati in dettaglio in [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md). La gestione degli eventi indirizzati è illustrata in [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Trigger, setter e setter di eventi sono illustrati in dettaglio in [Applicazione di stili e modelli](../controls/styling-and-templating.md). La gestione degli eventi indirizzati è illustrata in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Se è interessati in stato attivo della tastiera, il <xref:System.Windows.UIElement.IsKeyboardFocused%2A> proprietà di dipendenza può essere utilizzata per una proprietà <xref:System.Windows.Trigger>. Un trigger di proprietà in uno stile o in un modello rappresenta una tecnica più appropriata per la definizione di un comportamento dello stato attivo della tastiera specifico per un singolo controllo, che potrebbe non corrispondere visivamente al comportamento dello stato attivo della tastiera di altri controlli.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562594"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Applicazione di stili e modelli](../controls/styling-and-templating.md)
+- [Panoramica sullo stato attivo](focus-overview.md)
+- [Cenni preliminari sull'input](input-overview.md)

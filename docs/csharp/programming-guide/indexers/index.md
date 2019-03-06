@@ -48,7 +48,7 @@ A partire da C# 7.0, le funzioni di accesso get e set possono essere implementat
   
 -   Gli indicizzatori possono avere più di un parametro formale, ad esempio quando si accede a una matrice bidimensionale.  
   
-##  <a name="BKMK_RelatedSections"></a> Sezioni correlate  
+## <a name="BKMK_RelatedSections"></a> Sezioni correlate  
   
 -   [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

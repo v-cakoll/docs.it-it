@@ -50,8 +50,7 @@ Gli assembly costituiscono l'unità fondamentale della distribuzione, del contro
 
  - [Formato dei file di assembly .NET](file-format.md)
  - [Assembly in Common Language Runtime](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Assembly Friend (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Assembly Friend (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Assembly Friend](friend-assemblies.md)  
  - [Procedura: Caricare e scaricare gli assembly (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Procedura: Caricare e scaricare gli assembly (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Procedura: Usare ed eseguire il debug di assembly non caricabili in .NET Core](unloadability-howto.md)
