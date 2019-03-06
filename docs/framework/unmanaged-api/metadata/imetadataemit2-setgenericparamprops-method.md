@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406a8ea4600c1e5ef55c0d905ff3aa4a30d068e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485213"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>Metodo IMetaDataEmit2::SetGenericParamProps
 Imposta i valori di proprietà per la definizione di parametro generico a cui fanno riferimento al token specificato.  
@@ -39,7 +39,7 @@ HRESULT SetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `gp`  
  [in] Il token per la definizione di parametro generico per il quale impostare i valori.  
   

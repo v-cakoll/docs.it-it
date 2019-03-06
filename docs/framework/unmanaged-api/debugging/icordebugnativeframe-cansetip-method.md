@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 204cfc110ec6c8a11ec37505f8cf0c70d619e4b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a8c8650822c5d986e21a456d58b2dc0327f05b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660814"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479521"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>Metodo ICorDebugNativeFrame::CanSetIP
 Ottiene un valore HRESULT che indica se è sicuro impostare il puntatore all'istruzione (IP) alla posizione di offset specificata nel codice nativo.  
@@ -35,7 +35,7 @@ HRESULT CanSetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `nOffset`  
  [in] L'impostazione desiderata per il puntatore all'istruzione.  
   

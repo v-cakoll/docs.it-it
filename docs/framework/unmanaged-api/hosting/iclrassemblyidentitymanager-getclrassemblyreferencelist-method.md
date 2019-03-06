@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479311"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>Metodo ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList
 Ottiene un puntatore a interfaccia a un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) istanza dall'elenco fornito di identità di assembly parziali.  
@@ -37,9 +37,9 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppwzAssemblyReferences`  
- [in] Una matrice di stringhe con terminazione null nella forma "proprietà nome = valore..." che specifica un elenco di identità di assembly parziali.  
+ [in] Matrice di stringhe con terminazione null nella forma "proprietà nome = valore..." che specifica un elenco delle identità di assembly parziali.  
   
  `dwNumOfReferences`  
  [in] Il numero di elementi in `ppwzAssemblyReferences`.  

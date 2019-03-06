@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15890bb4052905ef448501ae759669f8a1dfd444
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5727142f55e143cf144dae842f95a36effb33c68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482236"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Metodo ICLRDataTarget::GetMachineType
 Ottiene l'identificatore per il tipo di set di istruzioni che utilizza il processo di destinazione.  
@@ -35,7 +35,7 @@ HRESULT GetMachineType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `machineType`  
  [out] Usa puntatore a un valore che indica che il set di istruzioni che il processo di destinazione. L'oggetto restituito `machineType` è una delle costanti IMAGE_FILE_MACHINE, che sono definite nel file di intestazione Winnt. H.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd04e6d8bed86039b6f43985a8fb712b4612f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487313"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Metodo ICorDebugProcess2::GetThreadForTaskID
 Ottiene il thread su cui è in esecuzione l'attività con l'identificatore specificato.  
@@ -36,21 +36,21 @@ HRESULT GetThreadForTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `taskid`  
- [in] Identificatore dell'attività.  
+ [in] L'identificatore dell'attività.  
   
  `ppThread`  
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugThread2 che rappresenta il thread da recuperare.  
   
 ## <a name="remarks"></a>Note  
- L'host è possibile impostare l'identificatore di attività tramite il [SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) metodo.  
+ L'host può impostare l'identificatore dell'attività usando il [SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) (metodo).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

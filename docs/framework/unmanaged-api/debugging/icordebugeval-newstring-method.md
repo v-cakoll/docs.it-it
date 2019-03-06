@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480182"
 ---
 # <a name="icordebugevalnewstring-method"></a>Metodo ICorDebugEval::NewString
-Alloca una nuova istanza di stringa con il contenuto specificato.  
+Consente di allocare una nuova istanza di stringa con il contenuto specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT NewString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `string`  
- [in] Puntatore al contenuto per la stringa.  
+ [in] Puntatore al contenuto della stringa.  
   
 ## <a name="remarks"></a>Note  
  La stringa viene sempre creata nel dominio dell'applicazione in cui il thread è in esecuzione.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

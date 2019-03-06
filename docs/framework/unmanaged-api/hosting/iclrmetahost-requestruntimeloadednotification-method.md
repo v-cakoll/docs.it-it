@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a2156b87fb4bf72e8de7c32c7e20d2a017c900
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519125"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479272"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Metodo ICLRMetaHost::RequestRuntimeLoadedNotification
 Fornisce una funzione di callback che viene garantita da chiamare quando viene caricata inizialmente una versione di common language runtime (CLR), ma non ancora iniziata. Questo metodo sostituisce le [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (funzione).  
@@ -34,7 +34,7 @@ HRESULT RequestRuntimeLoadedNotification (
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pCallbackFunction`  
  [in] La funzione di callback che viene richiamata quando è stato caricato un nuovo runtime.  
   

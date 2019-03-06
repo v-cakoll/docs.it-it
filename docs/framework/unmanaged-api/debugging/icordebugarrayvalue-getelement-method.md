@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403344"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485304"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>Metodo ICorDebugArrayValue::GetElement
 Ottiene il valore dell'elemento della matrice specificata.  
@@ -38,14 +38,14 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cdim`  
  [in] Il numero di dimensioni di questo `ICorDebugArrayValue` oggetto.  
   
- Questo valore corrisponde anche alla dimensione del `indices` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.  
+ Questo valore viene anche le dimensioni dei `indices` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.  
   
  `indices`  
- [in] Una matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione di `ICorDebugArrayValue` oggetto.  
+ [in] Una matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione del `ICorDebugArrayValue` oggetto.  
   
  Questo valore non deve essere null.  
   
@@ -53,10 +53,10 @@ HRESULT GetElement (
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

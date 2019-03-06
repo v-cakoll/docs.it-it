@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481638"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>Metodo IHostMAlloc::DebugAlloc
 Richiede che l'host di alloca la quantità specificata di memoria dall'heap e tenere traccia della posizione di allocazione della memoria.  
@@ -39,7 +39,7 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `cbSize`  
  [in] Le dimensioni, in byte, della richiesta di allocazione di memoria corrente.  
   

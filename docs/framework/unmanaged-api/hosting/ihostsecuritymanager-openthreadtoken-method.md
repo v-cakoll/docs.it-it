@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484498"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>Metodo IHostSecurityManager::OpenThreadToken
 Apre il token di accesso discrezionale associato al thread attualmente in esecuzione.  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwDesiredAccess`  
  [in] Maschera di valori di accesso che specificano i tipi di richiesti di accesso ai token del thread. Questi valori sono definiti in Win32 `OpenThreadToken` (funzione). I tipi di richiesta di accesso vengono riconciliati con elenco di controllo di accesso discrezionale (DACL) per determinare i tipi di accesso per concedere o negare del token.  
   

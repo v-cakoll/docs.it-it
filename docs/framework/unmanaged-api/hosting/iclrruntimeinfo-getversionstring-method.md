@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfbf543deb98661ab9116e9dfcb6cb534d3ff13b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfa25300cbed83d36cc43d9a0dd0beb2520dea1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475290"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>Metodo ICLRRuntimeInfo::GetVersionString
 Ottiene common language runtime (CLR) informazioni sulla versione associati con un determinato [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaccia.  
@@ -41,7 +41,7 @@ HRESULT GetVersionString(
     [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pwzBuffer`  
  [out] La versione di compilazione di .NET Framework nel formato "v*un'*. *B*[. *X*] ". *Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build. *X* è facoltativo. Se *X* è non è presente, non è previsto alcun periodo finale.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f34a2fe2bb1f92e75f77c086b03776ec59495600
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482102"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Metodo ICorDebugFunction::GetILCode
-Ottiene l'istanza di ICorDebugCode che rappresenta il codice di Microsoft intermediate language (MSIL) associato all'oggetto ICorDebugFunction.  
+Ottiene l'istanza ICorDebugCode che rappresenta il codice Microsoft intermediate language (MSIL) associato all'oggetto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT GetILCode (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppCode`  
  [out] Un puntatore al `ICorDebugCode` istanza oppure null se la funzione non è stata compilata in MSIL.  
   
 ## <a name="remarks"></a>Note  
- Se Modifica e continuazione è stata consentita in questa funzione, il `GetILCode` metodo verrà visualizzato il codice MSIL corrispondente versione modificata la funzione del codice in common language runtime (CLR).  
+ Se Modifica e continuazione è stata consentita su questa funzione, il `GetILCode` metodo verrà visualizzato il codice MSIL corrispondente alla versione modificata della funzione del codice in common language runtime (CLR).  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

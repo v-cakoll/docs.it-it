@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5995eac780241b5d0a01b99b23ec91c2f325e2a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478804"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>Metodo ICorProfilerInfo2::GetClassLayout
 Ottiene le informazioni sul layout, in memoria, dei campi definiti dalla classe specificata. In altri termini, questo metodo ottiene gli offset dei campi della classe.  
@@ -38,7 +38,7 @@ HRESULT GetClassLayout(
     [out] ULONG *pulClassSize);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `classID`  
  [in] ID della classe per la quale verrà recuperato il layout.  
   

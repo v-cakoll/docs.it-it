@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f9cac2b59f783a81663af0c5eb148367d54e8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df46a3c6beed26e885e7dc13f97a7c68d2abcdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487980"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>Metodo IMetaDataDispenser::DefineScope
 Crea una nuova area in memoria in cui è possibile creare nuovi metadati.  
@@ -38,7 +38,7 @@ HRESULT DefineScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `rclsid`  
  [in] Il CLSID della versione di strutture di metadati da creare. Questo valore deve essere CLSID_CorMetaDataRuntime per .NET Framework versione 2.0.  
   

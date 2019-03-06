@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1243a5ed1a3b741f1691cc4f0847ddcf17ac9669
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478388"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Metodo IMetaDataEmit::TranslateSigWithScope
 Importa un assembly nell'ambito corrente e ottiene una nuova firma dei metadati per l'ambito unito.  
@@ -45,7 +45,7 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAssemImport`  
  [in] L'interfaccia per importare l'assembly (in cui è definita la firma).  
   

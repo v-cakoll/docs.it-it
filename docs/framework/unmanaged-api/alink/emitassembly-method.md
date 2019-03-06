@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c158fa9d7b5574e4f875b8d51e932e30041b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572240"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487306"
 ---
 # <a name="emitassembly-method"></a>Metodo EmitAssembly
 Crea l'assembly. Chiamare questo metodo dopo la chiusura di tutti gli altri file tranne il file di assembly. Non chiamare questo metodo quando si generano i moduli non associati.  
@@ -35,7 +35,7 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `AssemblyID`  
  ID dell'assembly.  
   

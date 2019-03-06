@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b84b4b7ba96d39693abe238427983da086e62b1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1414f01c942a02fe984bc39475bd1451171d79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480689"
 ---
 # <a name="functionleave-function"></a>Funzione FunctionLeave
 Notifica al profiler che una funzione sta per restituire al chiamante.  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `funcID`  
  [in] L'identificatore della funzione che restituisce.  
   

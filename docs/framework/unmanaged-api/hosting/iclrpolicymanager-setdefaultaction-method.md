@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a8d0cb09e057d4bcc3c9713c5b16c22fa45c5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502d6298ec7046dcce2b413d6bfaa3ef27529e49
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602962"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484342"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>Metodo ICLRPolicyManager::SetDefaultAction
 Specifica l'azione di criteri che Common language runtime (CLR) deve intraprendere quando si verifica l'operazione specificata.  
@@ -36,7 +36,7 @@ HRESULT SetDefaultAction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `operation`  
  [in] Uno dei [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) valori, che indica l'azione per cui CLR comportamento deve essere personalizzato.  
   

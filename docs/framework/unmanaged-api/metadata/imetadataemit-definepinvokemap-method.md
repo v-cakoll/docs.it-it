@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 343f4f3cb88f98d1952e2910255d6cceb0cf0cc6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483367"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Metodo IMetaDataEmit::DefinePinvokeMap
 Imposta le funzionalità di firma PInvoke del metodo a cui fa riferimento il token specificato.  
@@ -38,7 +38,7 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Il token per il metodo di destinazione.  
   

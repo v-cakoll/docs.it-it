@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4a1761f088732cf19d55f42d66288bb281885f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96f0b1648c8182b4d075a479f9bd376dbe33ef61
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487903"
 ---
 # <a name="ihostfiltermarktoken-method"></a>Metodo IHostFilter::MarkToken
 Indica che il token di metadati specificato verrà elaborato.  
@@ -35,7 +35,7 @@ HRESULT MarkToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `tk`  
  [in] Il token di metadati da elaborare.  
   

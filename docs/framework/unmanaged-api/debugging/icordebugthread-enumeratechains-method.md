@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482860"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>Metodo ICorDebugThread::EnumerateChains
-Ottiene un puntatore a interfaccia a un enumeratore ICorDebugChainEnum contenente tutte le catene dello stack di questo oggetto ICorDebugThread.  
+Ottiene un puntatore a interfaccia per un enumeratore ICorDebugChainEnum che contiene tutte le catene dello stack in questo oggetto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,12 +35,12 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppChains`  
- [out] Un puntatore all'indirizzo di un `ICorDebugChainEnum` oggetto che consente l'enumerazione dello stack di concatenato in questo thread, a partire da quella attiva (ovvero, la più recente).  
+ [out] Un puntatore all'indirizzo di un `ICorDebugChainEnum` oggetto che consente l'enumerazione di tutti i stack concatenato in questo thread, a partire da quella attiva (ovvero, il più recente).  
   
 ## <a name="remarks"></a>Note  
- La catena dello stack rappresenta lo stack di chiamate fisico per il thread. Le seguenti circostanze creare un limite di catena dello stack:  
+ La catena dello stack rappresenta lo stack di chiamate fisico per il thread. Le circostanze seguenti creare un limite di catena dello stack:  
   
 -   Una transizione da gestito o non gestito a gestito.  
   
@@ -48,15 +48,15 @@ HRESULT EnumerateChains (
   
 -   Un Hijack di un thread di utente del debugger.  
   
- Nel caso più semplice per un thread che esegue codice gestito esclusivamente in un contesto singolo, sarà presente una corrispondenza tra thread e catene dello stack.  
+ Nel caso più semplice per un thread che esegue codice gestito esclusivamente in un singolo contesto, sarà presente una corrispondenza uno a uno tra thread e catene dello stack.  
   
- Un debugger potrebbe essere necessario modificare gli stack di chiamate fisico di tutti i thread in stack di chiamata logico. Ciò comporta l'ordinamento di catene di tutti i thread per le relative relazioni chiamante/chiamato e il relativo raggruppamento.  
+ Un debugger potrebbe essere necessario modificare gli stack di chiamate fisico di tutti i thread in stack di chiamate logici. Ciò comporta l'ordinamento di catene di tutti i thread per le relative relazioni chiamante/chiamato e il relativo raggruppamento.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

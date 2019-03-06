@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7654a91180dd0b4148cfb85b35bf1ce730764f28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25a9d287e6520f1fc7826d85dfbcd8e9a6da22f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422685"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481065"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>Metodo ICorDebugStepper::SetInterceptMask
-Imposta un valore che specifica i tipi di codice che viene eseguito l'accesso.  
+Imposta un valore che specifica i tipi di codice che viene eseguita l'istruzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,20 +35,20 @@ HRESULT SetInterceptMask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `mask`  
- [in] Una combinazione dei valori dell'enumerazione CorDebugIntercept che specifica i tipi di codice.  
+ [in] Una combinazione di valori dell'enumerazione CorDebugIntercept che specifica i tipi di codice.  
   
 ## <a name="remarks"></a>Note  
  Se il bit di un intercettore è impostato, il gestore di istruzioni verrà completata quando viene rilevato il tipo specificato di intercettazione di codice. Se il bit è deselezionato, il codice di intercettazione verrà ignorato.  
   
- Il `SetInterceptMask` metodo potrebbe avere con [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (dal punto di vista dell'utente). Ad esempio, se visibile solo (vale a dire non interna) parte del codice di inizializzazione classe manca le informazioni di mapping e STOP_NO_MAPPING_INFO non è impostato (vedere il [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (metodo) e Enumerazione CorDebugUnmappedStop), il salterà l'inizializzazione della classe. Per impostazione predefinita, solo il valore INTERCEPT_NONE il `CorDebugIntercept` verrà utilizzata l'enumerazione.  
+ Il `SetInterceptMask` metodo può avere interazioni impreviste con [SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (dal punto di vista dell'utente). Ad esempio, se visibile solo (vale a dire, non interno) parte del codice di inizializzazione classe non dispone di informazioni di mapping e non è impostato alcun STOP_NO_MAPPING_INFO (vedere la [SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (metodo) e il Enumerazione CorDebugUnmappedStop), il salterà l'inizializzazione della classe. Per impostazione predefinita, solo il valore INTERCEPT_NONE del `CorDebugIntercept` enumerazione verrà utilizzato.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

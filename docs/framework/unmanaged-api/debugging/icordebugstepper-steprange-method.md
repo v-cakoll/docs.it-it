@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475736"
 ---
 # <a name="icordebugsteppersteprange-method"></a>Metodo ICorDebugStepper::StepRange
-Fa sì che ICorDebugStepper passo a passo del thread e da restituire quando raggiunge il codice oltre l'ultimo degli intervalli specificati.  
+Fa sì che questo ICorDebugStepper passo a passo del thread e da restituire quando raggiunge il codice oltre l'ultimo degli intervalli specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,9 +37,9 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `bStepIn`  
- [in] Impostare su `true` al passaggio a una funzione che viene chiamata all'interno del thread. Impostare su `false` per Esegui istruzione/routine di funzione.  
+ [in] Impostare su `true` al passaggio in una funzione che viene chiamata all'interno del thread. Impostare su `false` per Esegui istruzione/routine di funzione.  
   
  `ranges`  
  [in] Matrice di strutture COR_DEBUG_STEP_RANGE, ognuno dei quali specifica un intervallo.  
@@ -48,17 +48,17 @@ HRESULT StepRange (
  [in] Dimensione della matrice `ranges`.  
   
 ## <a name="remarks"></a>Note  
- Il `StepRange` metodo opera come il [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) metodo, ad eccezione del fatto che non viene completata fino al codice di fuori dell'intervallo specificato viene raggiunto.  
+ Il `StepRange` metodo funziona, ad esempio il [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) metodo, ad eccezione del fatto che non viene completata fino al codice di fuori dell'intervallo specificato viene raggiunto.  
   
- Può essere più efficiente rispetto al debug di un'istruzione alla volta. Gli intervalli vengono specificati come elenco di coppie di offset dall'inizio del frame del gestore di istruzioni.  
+ Ciò può essere più efficiente rispetto al debug di un'istruzione alla volta. Gli intervalli vengono specificati come un elenco di coppie di offset dall'inizio del frame del gestore di istruzioni.  
   
- Gli intervalli sono relativi al codice Microsoft intermediate language (MSIL) di un metodo. Chiamare [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` per rendere gli intervalli relativi al codice nativo di un metodo.  
+ Gli intervalli sono relativi al codice Microsoft intermediate language (MSIL) di un metodo. Chiamare [SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` per rendere gli intervalli relativi al codice nativo di un metodo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

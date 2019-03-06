@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d04bc67013a2227f295ac3a41be027b9f9b04e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418884"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478726"
 ---
 # <a name="icordebugtypegetbase-method"></a>Metodo ICorDebugType::GetBase
 Ottiene un puntatore a interfaccia ICorDebugType che rappresenta il tipo di base, se presente, del tipo rappresentato da questo `ICorDebugType`.  
@@ -35,18 +35,18 @@ HRESULT GetBase (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pBase`  
  [out] Un puntatore all'indirizzo di un `ICorDebugType` oggetto che rappresenta il tipo di base.  
   
 ## <a name="remarks"></a>Note  
- Cercare il tipo di base per un tipo è utile per implementare le funzionalità comuni del debugger, ad esempio la stampa tutti i campi di un oggetto o le relative classi padre.  
+ Cercare il tipo di base per un tipo è utile per implementare le funzionalità comuni del debugger, ad esempio stampando tutti i campi di un oggetto o delle relative classi padre.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
