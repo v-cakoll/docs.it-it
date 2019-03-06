@@ -2,12 +2,12 @@
 title: Informazioni sul chiamante (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375545"
 ---
 # <a name="caller-information-visual-basic"></a>Informazioni sul chiamante (Visual Basic)
 Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante. Queste informazioni sono utili per la tracciatura, il debug e la creazione di strumenti diagnostici.  
@@ -55,7 +55,7 @@ End Sub
   
  È possibile fornire esplicitamente gli argomenti facoltativi per esaminare o nascondere le informazioni sul chiamante.  
   
-###  <a name="MEMBERNAMES"></a> Nomi dei membri  
+### <a name="MEMBERNAMES"></a> Nomi dei membri  
  È possibile utilizzare l'attributo `CallerMemberName` per specificare il nome del membro come argomento `String` al metodo chiamato. Usando questa tecnica, si evita il problema per cui il **refactoring di ridenominazione** non modifica i valori `String`. Questo vantaggio è particolarmente utile per le attività seguenti:  
   
 -   Utilizzo della tracciatura e delle routine di diagnostica.  

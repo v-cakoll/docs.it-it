@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 7e35fd1753f7136d7be1e2190b4bed5116e46aba
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746153"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370501"
 ---
 # <a name="printing-overview"></a>Cenni preliminari sulla stampa
 Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Presentation Foundation (WPF) dispongono di molteplici nuove di stampa e sistema di gestione stampa [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -31,7 +31,7 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
 ## <a name="about-xps"></a>Informazioni su XPS  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] è un formato di documento elettronico, un formato del file di spooling e un linguaggio di descrizione della pagina. Si tratta di un formato di documento aperto basato sull'uso di [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] e di altri standard del settore per creare documenti per più piattaforme. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] semplifica il processo di creazione, condivisione, stampa, visualizzazione e archiviazione di documenti digitali. Per altre informazioni sul [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], vedere [documenti XPS](/windows/desktop/printdocs/documents).  
   
- Varie tecniche di stampa di contenuto basato su [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tramite [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vengono illustrate in [Stampa di file XPS a livello di codice](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Può essere utile fare riferimento a tali esempi durante la lettura di questo argomento. (Gli sviluppatori di codice non gestito dovrebbero riscontrare documentazione per il [funzione MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Gli sviluppatori di Windows Form è necessario usare il [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nella <xref:System.Drawing.Printing> dello spazio dei nomi che non supporta la versione completa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa, ma supporta un percorso di stampa GDI-XPS ibrido. Vedere **Architettura del percorso di stampa** più avanti.  
+ Varie tecniche di stampa di contenuto basato su [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] tramite [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vengono illustrate in [Stampa di file XPS a livello di codice](how-to-programmatically-print-xps-files.md). Può essere utile fare riferimento a tali esempi durante la lettura di questo argomento. (Gli sviluppatori di codice non gestito dovrebbero riscontrare documentazione per il [funzione MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Gli sviluppatori di Windows Form è necessario usare il [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nella <xref:System.Drawing.Printing> dello spazio dei nomi che non supporta la versione completa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa, ma supporta un percorso di stampa GDI-XPS ibrido. Vedere **Architettura del percorso di stampa** più avanti.  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Percorso di stampa XPS  
@@ -66,13 +66,13 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
   
  Di seguito viene illustrato il sottosistema di stampa e vengono definite le parti fornite da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e quelle definite da fornitori di software e hardware.  
   
- ![Sistema di stampa XPS](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
+ ![Sistema di stampa XPS](./media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Stampa XPS di base  
  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] è definita un'[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] di base e un'API avanzata. Per le applicazioni che non richiedono una personalizzazione di stampa capillare o l'accesso a tutte le funzionalità [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], è disponibile un supporto di stampa di base. Il supporto di stampa di base viene esposto tramite un controllo finestra di dialogo di stampa che richiede una configurazione minima e offre un'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] già familiare all'utente. Molte funzionalità [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sono disponibili tramite questo modello di stampa semplificato.  
   
 #### <a name="printdialog"></a>PrintDialog  
- Il controllo <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> rappresenta un singolo punto di ingresso per l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], la configurazione e l'invio di processi [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Per informazioni su come creare un'istanza del controllo e come usarlo, vedere [Richiamare una finestra di dialogo di stampa](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
+ Il controllo <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> rappresenta un singolo punto di ingresso per l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], la configurazione e l'invio di processi [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Per informazioni su come creare un'istanza del controllo e come usarlo, vedere [Richiamare una finestra di dialogo di stampa](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Stampa XPS avanzata  
  Per accedere all'insieme completo delle funzionalità [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], è necessario usare l'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di stampa avanzata. Di seguito vengono descritte in dettaglio diverse [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Per un elenco completo delle [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] percorso di stampa [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], vedere la <xref:System.Windows.Xps> e <xref:System.Printing> riferimenti dello spazio dei nomi.  
@@ -82,27 +82,27 @@ Con Microsoft .NET Framework, gli sviluppatori di applicazioni con Windows Prese
   
  L'esempio riportato di seguito illustra come eseguire una query della classe <xref:System.Printing.PrintCapabilities> di una stampante e creare un oggetto <xref:System.Printing.PrintTicket> tramite il codice.  
   
- [!code-cpp[xpscreate#PrinterCapabilities](../../../../samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
- [!code-csharp[xpscreate#PrinterCapabilities](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
- [!code-vb[xpscreate#PrinterCapabilities](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+ [!code-cpp[xpscreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[xpscreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer e PrintQueue  
  La classe <xref:System.Printing.PrintServer> rappresenta un server di stampa di rete, mentre la classe <xref:System.Printing.PrintQueue> rappresenta una stampante e la coda del processo di output a essa associata. Insieme, queste [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] consentono una gestione avanzata dei processi di stampa di un server. La classe <xref:System.Printing.PrintServer>, o una delle relative classi derivate, consente di gestire la classe <xref:System.Printing.PrintQueue>. Il metodo <xref:System.Printing.PrintQueue.AddJob%2A> consente di inserire un nuovo processo di stampa nella coda.  
   
  L'esempio di codice riportato di seguito illustra come creare un oggetto <xref:System.Printing.LocalPrintServer> e come accedere al relativo oggetto <xref:System.Printing.PrintQueue> predefinito tramite il codice.  
   
- [!code-csharp[xpsprint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[xpsprint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[xpsprint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
  Un oggetto <xref:System.Windows.Xps.XpsDocumentWriter>, con i relativi metodi <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>, consente di scrivere documenti [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] in un oggetto <xref:System.Printing.PrintQueue>. Ad esempio, il metodo <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> viene usato per emettere un documento[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]  e un oggetto <xref:System.Printing.PrintTicket> in modo sincrono. Il metodo <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> viene invece usato per emettere un documento [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] e un oggetto <xref:System.Printing.PrintTicket> in modo asincrono.  
   
  L'esempio riportato di seguito illustra come creare un oggetto <xref:System.Windows.Xps.XpsDocumentWriter> tramite codice.  
   
- [!code-csharp[XpsPrint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[XpsPrint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- I metodi <xref:System.Printing.PrintQueue.AddJob%2A> consentono anche di stampare in diversi modi. Vedere [Stampa di file XPS a livello di codice](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). per informazioni dettagliate.  
+ I metodi <xref:System.Printing.PrintQueue.AddJob%2A> consentono anche di stampare in diversi modi. Vedere [Stampa di file XPS a livello di codice](how-to-programmatically-print-xps-files.md). per informazioni dettagliate.  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>Percorso di stampa GDI  
@@ -142,8 +142,8 @@ Per le applicazioni che non richiedono il supporto o la funzionalità [!INCLUDE[
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Procedure relative alle proprietà](printing-how-to-topics.md)
+- [Documenti in WPF](documents-in-wpf.md)
 - [Documenti XPS](/windows/desktop/printdocs/documents)
-- [Serializzazione e archiviazione di documenti](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Serializzazione e archiviazione di documenti](document-serialization-and-storage.md)
 - [Convertitore di tipi (MXDC) documenti XPS Microsoft](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

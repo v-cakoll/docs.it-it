@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: efe3d06c533d4d2be7364da66ccd3f101c8869d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fbbd400ae842ae24bae0307c362642d8fe1d5bea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188157"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364060"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Cenni preliminari sulle funzionalità bidirezionali di WPF
 A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta molte funzionalità che supportano lo sviluppo rapido di contenuto bidirezionale, ad esempio, misto dati da sinistra a destra e a destra per sinistra nello stesso documento. Allo stesso tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un'esperienza eccellente per gli utenti che richiedono funzionalità bidirezionali, ad esempio gli utenti di lingua araba o ebraica.  
@@ -27,23 +27,23 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Direzione di flusso da sinistra a destra**  
   
- [!code-xaml[LTRRTL#LTR](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
+ [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
  **Direzione di flusso da destra a sinistra**  
   
- [!code-xaml[LTRRTL#RTL](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
+ [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
  La figura seguente illustra il rendering del codice precedente.  
   
  **Figura che illustra FlowDirection**  
   
- ![Allineamento di TextBlock](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
+ ![Allineamento di TextBlock](./media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
   
  Un elemento all'interno di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] albero erediterà il <xref:System.Windows.FrameworkElement.FlowDirection%2A> dal relativo contenitore. Nell'esempio seguente, il <xref:System.Windows.Controls.TextBlock> si trova all'interno una <xref:System.Windows.Controls.Grid>, che risiede in un <xref:System.Windows.Window>. Impostando il <xref:System.Windows.FrameworkElement.FlowDirection%2A> per il <xref:System.Windows.Window> implica la sua impostazione per il <xref:System.Windows.Controls.Grid> e <xref:System.Windows.Controls.TextBlock> anche.  
   
  Nell'esempio seguente viene illustrata l'impostazione <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
- [!code-xaml[FlowDirection#FlowDirection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
+ [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
  Il livello superiore <xref:System.Windows.Window> ha un <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, in modo che tutti gli elementi in esso contenuti anche ereditano lo stesso <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Per un elemento eseguire l'override di un oggetto specificato <xref:System.Windows.FrameworkElement.FlowDirection%2A> è necessario aggiungere una modifica della direzione esplicita, ad esempio il secondo <xref:System.Windows.Controls.TextBlock> nell'esempio precedente in cui viene modificato in <xref:System.Windows.FlowDirection.LeftToRight>. Se non si specifica <xref:System.Windows.FrameworkElement.FlowDirection%2A> è definito, il valore predefinito <xref:System.Windows.FlowDirection.LeftToRight> si applica.  
   
@@ -51,7 +51,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra l'assegnazione esplicita di FlowDirection**  
   
- ![Illustrazione della direzione del flusso](../../../../docs/framework/wpf/advanced/media/flowdir.PNG "FlowDir")  
+ ![Illustrazione della direzione del flusso](./media/flowdir.PNG "FlowDir")  
   
 <a name="FlowDocument"></a>   
 ## <a name="flowdocument"></a>FlowDocument  
@@ -65,7 +65,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra l'uso dell'elemento Span**  
   
- ![Documento con flusso da destra a sinistra](../../../../docs/framework/wpf/advanced/media/flowdocument.PNG "FlowDocument")  
+ ![Documento con flusso da destra a sinistra](./media/flowdocument.PNG "FlowDocument")  
   
  Poiché il testo viene <xref:System.Windows.FlowDirection.RightToLeft>, tutti i particolari caratteri, ad esempio il "\\", separano il testo in un ordine da destra a sinistra. Di conseguenza il collegamento non viene visualizzato nell'ordine corretto, pertanto per risolvere il problema, il testo deve essere incorporato per mantenere un oggetto separato <xref:System.Windows.Documents.Run> trasmessi <xref:System.Windows.FlowDirection.LeftToRight>. Invece di un oggetto separato <xref:System.Windows.Documents.Run> per ogni lingua, un modo migliore per risolvere il problema consiste nell'incorporare il testo inglese usato meno frequentemente in un arabo più grande <xref:System.Windows.Documents.Span>.  
   
@@ -73,11 +73,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra l'uso dell'elemento Run incorporato in un elemento Span**  
   
- ![Screenshot di XamlPad](../../../../docs/framework/wpf/advanced/media/runspan.PNG "RunSpan")  
+ ![Screenshot di XamlPad](./media/runspan.PNG "RunSpan")  
   
  Nell'esempio seguente viene illustrato l'utilizzo <xref:System.Windows.Documents.Run> e <xref:System.Windows.Documents.Span> elementi nei documenti.  
   
- [!code-xaml[RunSpan#RunSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
+ [!code-xaml[RunSpan#RunSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
   
 <a name="SpanElements"></a>   
 ## <a name="span-elements"></a>Elementi Span  
@@ -87,11 +87,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra FlowDirection in vari elemento TextBlock**  
   
- ![Blocchi di testo con direzioni di flusso diverse](../../../../docs/framework/wpf/advanced/media/span.PNG "Span")  
+ ![Blocchi di testo con direzioni di flusso diverse](./media/span.PNG "Span")  
   
  Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Documents.Span> e <xref:System.Windows.Documents.Run> elementi da produrre i risultati mostrati nel grafico precedente.  
   
- [!code-xaml[Span#Span](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
+ [!code-xaml[Span#Span](~/samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
   
  Nel <xref:System.Windows.Controls.TextBlock> gli elementi nell'esempio, il <xref:System.Windows.Documents.Span> elementi vengono disposti in base al <xref:System.Windows.FlowDirection> di padri, ma il testo all'interno di ogni <xref:System.Windows.Documents.Span> elemento flussi in base alla propria <xref:System.Windows.FlowDirection>. Questa condizione può essere applicata all'alfabeto latino e arabo oppure a qualsiasi altra lingua.  
   
@@ -100,7 +100,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra come la visualizzazione di numero usando solo FlowDirection**  
   
- ![Numeri con flusso da destra a sinistra](../../../../docs/framework/wpf/advanced/media/langattribute.PNG "LangAttribute")  
+ ![Numeri con flusso da destra a sinistra](./media/langattribute.PNG "LangAttribute")  
   
  Gli utenti di questa applicazione rimarranno delusi dall'output, anche se il <xref:System.Windows.FlowDirection> corretto i numeri non a forma di come i numeri arabi devono essere modellati.  
   
@@ -110,11 +110,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Figura che illustra l'uso dell'attributo xml:lang**  
   
- ![Numeri arabi con flusso da destra a sinistra](../../../../docs/framework/wpf/advanced/media/langattribute2.PNG "LangAttribute2")  
+ ![Numeri arabi con flusso da destra a sinistra](./media/langattribute2.PNG "LangAttribute2")  
   
  L'esempio seguente aggiunge `xml:lang` all'applicazione.  
   
- [!code-xaml[LangAttribute#LangAttribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
+ [!code-xaml[LangAttribute#LangAttribute](~/samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
   
  Tenere presente che molte lingue hanno diversi `xml:lang` valori a seconda dell'area di destinazione, ad esempio, `"ar-SA"` e `"ar-EG"` rappresentano due varianti dell'arabo. Negli esempi precedenti viene illustrata la necessità di definire sia il `xml:lang` e <xref:System.Windows.FlowDirection> valori.  
   
@@ -124,7 +124,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Immagine che mostra una barra degli strumenti con sfumatura da sinistra a destra**  
   
- ![Screenshot della sfumatura](../../../../docs/framework/wpf/advanced/media/gradient.PNG "Gradient")  
+ ![Screenshot della sfumatura](./media/gradient.PNG "Gradient")  
   
  Dopo aver impostato il <xref:System.Windows.FlowDirection> a <xref:System.Windows.FlowDirection.RightToLeft>, non solo le <xref:System.Windows.Controls.ToolBar> pulsanti sono disposti da destra a sinistra, ma anche il <xref:System.Windows.Media.LinearGradientBrush> riallinea gli offset in modo che scorrano da destra a sinistra.  
   
@@ -132,11 +132,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Immagine che illustra una barra degli strumenti con una sfumatura da destra a sinistra**  
   
- ![Sfumatura con flusso da destra a sinistra](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.PNG "Gradient2_WPF")  
+ ![Sfumatura con flusso da destra a sinistra](./media/gradient2-wpf.PNG "Gradient2_WPF")  
   
  L'esempio seguente disegna un' <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Per disegnarlo da sinistra a destra, rimuovere il <xref:System.Windows.FlowDirection> attributo la <xref:System.Windows.Controls.ToolBar>.  
   
- [!code-xaml[Gradient#Gradient](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
+ [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
 <a name="FlowDirectionExceptions"></a>   
 ### <a name="flowdirection-exceptions"></a>Eccezioni di FlowDirection  
@@ -152,11 +152,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Immagine che illustra un'immagine capovolta**  
   
- ![Screenshot di XamlPad](../../../../docs/framework/wpf/advanced/media/image.PNG "Image")  
+ ![Screenshot di XamlPad](./media/image.PNG "Image")  
   
- Nell'esempio seguente viene dimostrato che la <xref:System.Windows.Controls.Image> non riesce a ereditare la <xref:System.Windows.FlowDirection> dal <xref:System.Windows.Controls.StackPanel> che lo contiene. **Nota** è necessario disporre di un file denominato **ms_logo** nell'unità C:\ per eseguire questo esempio.  
+ Nell'esempio seguente viene dimostrato che la <xref:System.Windows.Controls.Image> non riesce a ereditare la <xref:System.Windows.FlowDirection> dal <xref:System.Windows.Controls.StackPanel> che lo contiene. **Nota** è necessario disporre di un file denominato **ms_logo** nel c:\. unità per eseguire questo esempio.  
   
- [!code-xaml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
+ [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
   
  **Nota** nei file di download è incluso un **ms_logo** file. Nel codice si presuppone che il file con estensione jpg non si trovi all'interno del progetto ma in un'altra posizione nell'unità C:\. È necessario copiare il file con estensione jpg dai file di progetto nell'unità C:\ oppure modificare il codice affinché la ricerca venga eseguita all'interno del progetto. A tale scopo, modificare `Source="file://c:/ms_logo.jpg"` a `Source="ms_logo.jpg"`.  
   
@@ -166,13 +166,13 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  L'esempio seguente disegna una freccia semplice con 3 linee. La prima freccia eredita la <xref:System.Windows.FlowDirection.RightToLeft> dalla direzione del flusso di <xref:System.Windows.Controls.StackPanel> in modo che i punti iniziali e finali vengano misurati da una radice posizionata sul lato destro. La seconda freccia è esplicita <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> inizia anche a destra. Tuttavia, la radice iniziale della terza freccia è collocata sul lato sinistro. Per altre informazioni sul disegno, vedere <xref:System.Windows.Media.LineGeometry> e <xref:System.Windows.Media.GeometryGroup>.  
   
- [!code-xaml[Paths#Paths](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
+ [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
  L'immagine seguente mostra l'output dell'esempio precedente.  
   
  **Immagine che illustra le frecce disegnate usando l'elemento Path**  
   
- ![Paths](../../../../docs/framework/wpf/advanced/media/paths.PNG "Paths")  
+ ![Paths](./media/paths.PNG "Paths")  
   
  Il <xref:System.Windows.Controls.Image> e <xref:System.Windows.Shapes.Path> sono riportati due esempi del modo in cui [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilizza <xref:System.Windows.FlowDirection>. Accanto a disposizione [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi in una direzione specifica all'interno di un contenitore <xref:System.Windows.FlowDirection> può essere usato con gli elementi, ad esempio <xref:System.Windows.Controls.InkPresenter> che esegue il rendering dell'input penna su una superficie <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>. Ogni volta che è necessario un comportamento da destra a sinistra del contenuto che simuli un comportamento da sinistra a destra, o viceversa, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] disponibile tale funzionalità.  
   
@@ -190,11 +190,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Questa proprietà specifica come vengono determinate le impostazioni cultura per i numeri. Accetta uno dei tre <xref:System.Windows.Media.NumberCultureSource> valori di enumerazione.  
   
--   Sostituzione: Impostazioni cultura dei numeri sono quello di <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> proprietà.  
+-   prevalere: Sono costituito dalle impostazioni cultura del numero <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> proprietà.  
   
--   Text: le impostazioni cultura del numero sono quelle della sequenza di testo. Nel markup, il risultato sarà `xml:lang`, o il relativo alias `Language` proprietà (<xref:System.Windows.FrameworkElement.Language%2A> o <xref:System.Windows.FrameworkContentElement.Language%2A>). Inoltre, è il valore predefinito per le classi che derivano da <xref:System.Windows.FrameworkContentElement>. Tali classi includono <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> e così via.  
+-   Testo: Impostazioni cultura del numero sono quelle della sequenza di testo. Nel markup, il risultato sarà `xml:lang`, o il relativo alias `Language` proprietà (<xref:System.Windows.FrameworkElement.Language%2A> o <xref:System.Windows.FrameworkContentElement.Language%2A>). Inoltre, è il valore predefinito per le classi che derivano da <xref:System.Windows.FrameworkContentElement>. Tali classi includono <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> e così via.  
   
--   User: le impostazioni cultura del numero sono quelle del thread corrente. Questa proprietà è il valore predefinito per tutte le sottoclassi della <xref:System.Windows.FrameworkElement> , ad esempio <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> e <xref:System.Windows.Controls.TextBlock>.  
+-   Utente: Impostazioni cultura del numero sono quelle del thread corrente. Questa proprietà è il valore predefinito per tutte le sottoclassi della <xref:System.Windows.FrameworkElement> , ad esempio <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> e <xref:System.Windows.Controls.TextBlock>.  
   
  **CultureOverride**:  
   
@@ -216,13 +216,13 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Cosa significano questi valori per uno sviluppatore di contenuti bidirezionali? Nella maggior parte dei casi, lo sviluppatore deve solo definire <xref:System.Windows.FlowDirection> e la lingua della ognuno testuale [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento, ad esempio `Language="ar-SA"` e il <xref:System.Windows.Media.NumberSubstitution> per la logica esegue automaticamente la visualizzazione dei numeri in base alla corretta [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Nell'esempio seguente viene illustrato come utilizzare numeri arabi e inglesi in un' [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione in esecuzione in una versione araba di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
- [!code-xaml[Numbers#Numbers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
+ [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   
  La figura seguente mostra l'output dell'esempio precedente, se si esegue una versione araba di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
  **Immagine che illustra i numeri arabi e inglesi visualizzati**  
   
- ![Screenshot di XamlPad con numeri](../../../../docs/framework/wpf/advanced/media/numbers.PNG "Numbers")  
+ ![Screenshot di XamlPad con numeri](./media/numbers.PNG "Numbers")  
   
  Il <xref:System.Windows.FlowDirection> era importante in questo caso, poiché l'impostazione di <xref:System.Windows.FlowDirection> a <xref:System.Windows.FlowDirection.LeftToRight> avrebbe prodotto cifre europee. Le sezioni seguenti descrivono come ottenere una visualizzazione unificata delle cifre in tutto il documento. Se l'esempio non viene eseguito nella versione araba di Windows, tutte le cifre vengono visualizzate come cifre europee.  
   
@@ -259,17 +259,17 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  Il finale [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] esempio dovrebbe essere simile all'esempio seguente.  
   
- [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
+ [!code-xaml[Numbers2#Numbers2](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
  Il finale C# esempio dovrebbe essere simile al seguente.  
   
- [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
+ [!code-csharp[NumbersCSharp#NumbersCSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   
  L'immagine seguente mostra l'aspetto della finestra per entrambi i linguaggi di programmazione.  
   
  **Immagine che visualizza i numeri arabi**  
   
- ![Numeri arabi](../../../../docs/framework/wpf/advanced/media/numbers2.PNG "Numbers2")  
+ ![Numeri arabi](./media/numbers2.PNG "Numbers2")  
   
  **Uso della proprietà Substitution**  
   
@@ -279,4 +279,4 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  Nell'esempio seguente, il primo <xref:System.Windows.Controls.TextBlock> non dispone di <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> proprietà è impostata, pertanto l'algoritmo Visualizza le cifre arabe, come previsto. Tuttavia nel secondo <xref:System.Windows.Controls.TextBlock>, la sostituzione è impostata su European, si esegue l'override della sostituzione predefinita per i numeri arabi e vengono visualizzate le cifre europee.  
   
- [!code-xaml[Numbers3#Numbers3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]
+ [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

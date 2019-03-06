@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557264"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366725"
 ---
 # <a name="brushes"></a>Pennelli
-Gli argomenti seguenti descrivono come utilizzare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli per "disegnare" contenuto sullo schermo.  
+Gli argomenti seguenti descrivono come usare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli cui "disegnare" contenuto sullo schermo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sui pennelli di WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Panoramica sulle proprietà di trasformazione Brush](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Panoramica sulle maschere di opacità](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Panoramica sugli oggetti TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Panoramica sui pennelli di WPF](wpf-brushes-overview.md)  
+ [Panoramica sulle proprietà di trasformazione Brush](brush-transformation-overview.md)  
+ [Panoramica sulle maschere di opacità](opacity-masks-overview.md)  
+ [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)  
+ [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)  
+ [Panoramica sugli oggetti TileBrush](tilebrush-overview.md)  
+ [Procedure relative alle proprietà](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ Gli argomenti seguenti descrivono come utilizzare [!INCLUDE[TLA#tla_winclient](.
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafica e funzionalità multimediali](index.md)  
   
- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

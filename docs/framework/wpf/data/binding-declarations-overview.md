@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704017"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363414"
 ---
 # <a name="binding-declarations-overview"></a>Cenni preliminari sulle dichiarazioni di associazione
 In questo argomento vengono illustrati i diversi modi in cui è possibile dichiarare un'associazione.  
@@ -26,9 +26,9 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- Prima di leggere questo argomento, è importante avere familiarità con i concetti e l'utilizzo delle estensioni di markup. Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Prima di leggere questo argomento, è importante avere familiarità con i concetti e l'utilizzo delle estensioni di markup. Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
   
- In questo argomento non vengono illustrati i concetti relativi all'associazione dati. Per informazioni sui concetti relativi all'associazione dati, vedere [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ In questo argomento non vengono illustrati i concetti relativi all'associazione dati. Per informazioni sui concetti relativi all'associazione dati, vedere [Cenni preliminari sull'associazione dati](data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>Dichiarazione di un'associazione in XAML  
@@ -40,9 +40,9 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
   
  Durante la creazione di stringhe di dichiarazione di associazione nel markup, queste devono essere associate alla proprietà di dipendenza specifica di un oggetto di destinazione. Nell'esempio seguente viene illustrato come associare le <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> proprietà usando l'estensione di binding, specificando le <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> proprietà.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- È possibile specificare la maggior parte delle proprietà del <xref:System.Windows.Data.Binding> classe in questo modo. Per altre informazioni sull'estensione dell'associazione anche per un elenco delle <xref:System.Windows.Data.Binding> le proprietà che non possono essere impostate tramite l'estensione di binding, vedere la [estensione di Markup Binding](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Panoramica.  
+ È possibile specificare la maggior parte delle proprietà del <xref:System.Windows.Data.Binding> classe in questo modo. Per altre informazioni sull'estensione dell'associazione anche per un elenco delle <xref:System.Windows.Data.Binding> le proprietà che non possono essere impostate tramite l'estensione di binding, vedere la [estensione di Markup Binding](../advanced/binding-markup-extension.md) Panoramica.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Sintassi degli elementi oggetto  
@@ -50,11 +50,11 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
   
  Di seguito viene riportato un esempio dell'uso sia della sintassi per elementi oggetto, sia dell'estensione di markup:  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  Nell'esempio viene associato il <xref:System.Windows.Controls.TextBlock.Foreground%2A> proprietà dichiarando un'associazione utilizzando la sintassi dell'estensione. La dichiarazione di associazione per il <xref:System.Windows.Controls.TextBlock.Text%2A> proprietà Usa la sintassi degli elementi oggetto.  
   
- Per altre informazioni sui diversi termini, vedere [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Per altre informazioni sui diversi termini, vedere [Descrizione dettagliata della sintassi XAML](../advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding e PriorityBinding  
@@ -64,10 +64,10 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
 ## <a name="creating-a-binding-in-code"></a>Creazione di un'associazione nel codice  
  Un altro modo per specificare un'associazione consiste nell'impostare le proprietà direttamente su un <xref:System.Windows.Data.Binding> oggetto nel codice. Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Data.Binding> dell'oggetto e specificare le proprietà nel codice.  In questo esempio `TheConverter` è un oggetto che implementa il <xref:System.Windows.Data.IValueConverter> interfaccia.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Se l'oggetto di binding è un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.FrameworkContentElement> è possibile chiamare le `SetBinding` metodo sull'oggetto direttamente anziché usare <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Per un esempio, vedere [Creare associazioni nel codice](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Se l'oggetto di binding è un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.FrameworkContentElement> è possibile chiamare le `SetBinding` metodo sull'oggetto direttamente anziché usare <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Per un esempio, vedere [Creare associazioni nel codice](how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Sintassi del percorso di associazione  
@@ -119,14 +119,14 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
   
 -   Se non si imposta <xref:System.Windows.Data.Binding.ConverterCulture%2A>, il motore di binding Usa la `Language` proprietà dell'oggetto di destinazione dell'associazione. In XAML, questo valore viene impostato in modalità predefinita su "en-US" o eredita il valore dell'elemento radice (o qualsiasi elemento) della pagina, se ne è stato impostato uno in modo esplicito.  
   
--   Purché l'associazione dispone già di un contesto di dati (ad esempio, il contesto dati ereditato da un elemento padre) e qualsiasi elemento o raccolta restituita da tale contesto è appropriato per l'associazione senza richiedere ulteriori modifiche di percorso, un dichiarazione di associazione possono essere affatto priva di clausole: `{Binding}` Ciò è spesso il modo in cui che un'associazione è specificata per lo stile dei dati, in cui l'associazione agisce su una raccolta. Per altre informazioni, vedere la sezione "Utilizzo di oggetti interi come origine di associazione" in [Cenni preliminari sulle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Purché l'associazione dispone già di un contesto di dati (ad esempio, il contesto dati ereditato da un elemento padre) e qualsiasi elemento o raccolta restituita da tale contesto è appropriato per l'associazione senza richiedere ulteriori modifiche di percorso, un dichiarazione di associazione possono essere affatto priva di clausole: `{Binding}` Ciò è spesso il modo in cui che un'associazione è specificata per lo stile dei dati, in cui l'associazione agisce su una raccolta. Per altre informazioni, vedere la sezione "Utilizzo di oggetti interi come origine di associazione" in [Cenni preliminari sulle origini di associazione](binding-sources-overview.md).  
   
 -   Il valore predefinito <xref:System.Windows.Data.Binding.Mode%2A> unidirezionale o bidirezionale a seconda della proprietà di dipendenza che viene associata. È sempre possibile dichiarare in modo esplicito la modalità di associazione per garantire che il comportamento sia quello desiderato. Nelle proprietà di un controllo generale e modificabili dall'utente, ad esempio <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, impostazione predefinita su associazioni bidirezionali, mentre la maggior parte delle altre proprietà predefinita su associazioni unidirezionali.  
   
 -   Il valore predefinito <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valore varia tra <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> e <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> a seconda della proprietà di dipendenza associata anche. Il valore predefinito per la maggior parte delle proprietà di dipendenza è <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, mentre la proprietà <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ha il valore predefinito <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Sintassi XAML di PropertyPath](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [Panoramica sul data binding](data-binding-overview.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Data binding](../advanced/optimizing-performance-data-binding.md)
+- [Sintassi XAML di PropertyPath](../advanced/propertypath-xaml-syntax.md)

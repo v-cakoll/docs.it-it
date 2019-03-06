@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716078"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354609"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices (funzione)
 Indica se le credenziali utente di consentono l'accesso all'oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) classe.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>Parametri
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Un puntatore per il [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) oggetto per cui sono necessarie le autorizzazioni.
 
-`strUser`  
+`strUser`\
 [in] Il nome utente.
 
-`strPassword`  
+`strPassword`\
 [in] La password associata `strUser`.
 
-`strAuthority` [in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
+`strAuthority`\
+[in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
 
-`impLevel` [in] Il livello di rappresentazione.
+`impLevel`\
+[in] Il livello di rappresentazione.
 
-`authnLevel` [in] Il livello di autorizzazione.
+`authnLevel`\
+[in] Il livello di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -71,6 +74,7 @@ I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* fil
 | `S_OK` | 0 | La chiamata di funzione è riuscita. | 
 
 ## <a name="requirements"></a>Requisiti  
+
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* fil
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

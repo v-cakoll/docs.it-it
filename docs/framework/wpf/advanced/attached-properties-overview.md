@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706232"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370124"
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 
@@ -20,7 +20,7 @@ Una proprietà associata è un concetto definito da XAML. Una proprietà associa
 
 ## Prerequisiti <a name="prerequisites"></a>
 
-Questo argomento presuppone la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer delle proprietà di dipendenza esistenti nelle classi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Per seguire gli esempi in questo argomento, è anche necessario conoscere XAML e saper scrivere applicazioni WPF.
+Questo argomento presuppone la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer delle proprietà di dipendenza esistenti nelle classi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md). Per seguire gli esempi in questo argomento, è anche necessario conoscere XAML e saper scrivere applicazioni WPF.
 
 ## Perché usare le proprietà associate <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ In XAML, è possibile impostare le proprietà associate usando la sintassi *Prov
 
 Di seguito è riportato un esempio di come è possibile impostare <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> in XAML:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Si noti che l'utilizzo è simile a una proprietà statica; sempre fare riferimento al tipo <xref:System.Windows.Controls.DockPanel> che possiede e si registra la proprietà associata, anziché fare riferimento a qualsiasi istanza specificata in base al nome.
 
-Inoltre, dato che una proprietà associata in XAML è un attributo che viene impostato nel markup, solo l'operazione di impostazione ha una certa rilevanza. Non è possibile ottenere direttamente una proprietà in XAML, sebbene esistano alcuni meccanismi indiretti per confrontare i valori, ad esempio i trigger negli stili. Per altri dettagli, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Inoltre, dato che una proprietà associata in XAML è un attributo che viene impostato nel markup, solo l'operazione di impostazione ha una certa rilevanza. Non è possibile ottenere direttamente una proprietà in XAML, sebbene esistano alcuni meccanismi indiretti per confrontare i valori, ad esempio i trigger negli stili. Per altri dettagli, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementazione delle proprietà associate in WPF
 
@@ -64,8 +64,8 @@ Le proprietà associate in WPF non dispongono dei tipici [!INCLUDE[TLA2#tla_clr]
 
 L'esempio seguente illustra come impostare una proprietà associata nel codice. In questo esempio `myCheckBox` è un'istanza del <xref:System.Windows.Controls.CheckBox> classe.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Caso analogo per il XAML, se `myCheckBox` non fosse già stato aggiunto come elemento figlio di `myDockPanel` dalla terza riga di codice, la quarta riga del codice non genera un'eccezione, ma il valore della proprietà non può interagire con un <xref:System.Windows.Controls.DockPanel> padre e di conseguenza viene eseguita alcuna operazione. Solo un <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> impostata su un elemento figlio combinato con la presenza di un <xref:System.Windows.Controls.DockPanel> elemento padre provocherà un comportamento effettivo nell'applicazione sottoposta a rendering. In questo caso, è possibile impostare la proprietà associata e quindi effettuare l'associazione alla struttura ad albero. In alternativa, è possibile effettuare l'associazione alla struttura ad albero, quindi impostare la proprietà associata. Qualunque sia l'ordine delle azioni, il risultato è il medesimo.
 
@@ -73,7 +73,7 @@ Caso analogo per il XAML, se `myCheckBox` non fosse già stato aggiunto come ele
 
 Quando si registra la proprietà, <xref:System.Windows.FrameworkPropertyMetadata> è impostato per specificare le caratteristiche della proprietà, ad esempio se la proprietà influisce sul rendering, misurazione e così via. I metadati di una proprietà associata non sono in genere diversi rispetto a quelli presenti per una proprietà di dipendenza. Se si specifica un valore predefinito in un override per i metadati di una proprietà associata, tale valore diventa il valore predefinito della proprietà associata implicita nelle istanze della classe che esegue l'override. In particolare, il valore predefinito viene segnalato se un processo esegue una query per recuperare il valore di una proprietà associata tramite la funzione di accesso al metodo `Get` di quella proprietà, specificando un'istanza della classe in cui sono stati definiti i metadati e il valore per quella proprietà collegata non è stato impostato diversamente.
 
-Se si vuole abilitare l'ereditarietà del valore di una proprietà, è necessario usare le proprietà associate anziché le proprietà di dipendenza non associate. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Se si vuole abilitare l'ereditarietà del valore di una proprietà, è necessario usare le proprietà associate anziché le proprietà di dipendenza non associate. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).
 
 ## Proprietà associate personalizzate <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Se si vuole abilitare l'ereditarietà del valore di una proprietà, è necessari
 
 Un altro scenario per l'uso di una proprietà associata è quello in cui la classe rappresenta un servizio e si vuole che le classi siano in grado di integrare il servizio in modo più trasparente.
 
-Infine, un altro scenario prevede di ricevere supporto in Visual Studio WPF Designer, ad esempio **proprietà** la modifica della finestra. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Infine, un altro scenario prevede di ricevere supporto in Visual Studio WPF Designer, ad esempio **proprietà** la modifica della finestra. Per altre informazioni, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).
 
 Come indicato in precedenza, è necessario eseguire la registrazione come proprietà associata se si vuole usare l'ereditarietà del valore della proprietà.
 
@@ -118,8 +118,8 @@ La firma per il **Set_PropertyName_** della funzione di accesso deve essere:
 
 L'esempio seguente illustra la registrazione di proprietà di dipendenza (usando il <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metodo), nonché il **Get_PropertyName_** e **Set_PropertyName_** funzioni di accesso. Nell'esempio, la proprietà associata è denominata `IsBubbleSource`. Pertanto, le funzioni di accesso devono essere chiamate `GetIsBubbleSource` e `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Attributi delle proprietà associate
 
@@ -135,16 +135,16 @@ WPF definisce vari [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../include
 
 ## Ulteriori informazioni sulle proprietà associate <a name="more"></a>
 
--   Per altre informazioni sulla creazione di una proprietà associata, vedere [Registrare una proprietà associata](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Per altre informazioni sulla creazione di una proprietà associata, vedere [Registrare una proprietà associata](how-to-register-an-attached-property.md).
 
--   Per scenari di utilizzo più avanzati delle proprietà di dipendenza e delle proprietà associate, vedere [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Per scenari di utilizzo più avanzati delle proprietà di dipendenza e delle proprietà associate, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md).
 
 -   È anche possibile registrare una proprietà come proprietà associata e proprietà di dipendenza, ma continuare a esporre le implementazioni del "wrapper". In questo caso, la proprietà può essere impostata in tale elemento o in qualsiasi elemento tramite la sintassi per le proprietà associate XAML. Un esempio di una proprietà con uno scenario adatto per gli utilizzi sia standard sia collegati è <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.DependencyProperty>
-- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Registrare una proprietà associata](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Registrare una proprietà associata](how-to-register-an-attached-property.md)

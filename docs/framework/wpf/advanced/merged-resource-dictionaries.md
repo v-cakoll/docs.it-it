@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377038"
 ---
 # <a name="merged-resource-dictionaries"></a>Dizionari risorse uniti
 Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] supportano una funzionalità di dizionari risorse uniti. Questa funzionalità consente di definire la parte delle risorse di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] al di fuori dell'applicazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilata. Le risorse possono quindi essere condivise nelle applicazioni, oltre che isolate più facilmente per la localizzazione.  
@@ -18,9 +18,9 @@ Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
 ## <a name="introducing-a-merged-resource-dictionary"></a>Introduzione di un dizionario risorse unito  
  Nel markup si usa la sintassi seguente per introdurre un dizionario risorse unito in una pagina:  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Si noti che il <xref:System.Windows.ResourceDictionary> elemento non dispone di un [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md), che è in genere necessario per tutti gli elementi in una raccolta di risorse. Ma un'altra <xref:System.Windows.ResourceDictionary> riferimenti interni all'interno di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> raccolta è un caso speciale, riservato per questo scenario di dizionari risorse uniti. Il <xref:System.Windows.ResourceDictionary> che presenta un oggetto unito dizionario risorse non può contenere un [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md). In genere, ognuna <xref:System.Windows.ResourceDictionary> all'interno di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> raccolta specifica un <xref:System.Windows.ResourceDictionary.Source%2A> attributo. Il valore di <xref:System.Windows.ResourceDictionary.Source%2A> deve essere un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] che risolve il percorso del file di risorse da unire. La destinazione di tale [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] deve essere un altro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file, con <xref:System.Windows.ResourceDictionary> come elemento radice.  
+ Si noti che il <xref:System.Windows.ResourceDictionary> elemento non dispone di un [direttiva X:Key](../../xaml-services/x-key-directive.md), che è in genere necessario per tutti gli elementi in una raccolta di risorse. Ma un'altra <xref:System.Windows.ResourceDictionary> riferimenti interni all'interno di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> raccolta è un caso speciale, riservato per questo scenario di dizionari risorse uniti. Il <xref:System.Windows.ResourceDictionary> che presenta un oggetto unito dizionario risorse non può contenere un [direttiva X:Key](../../xaml-services/x-key-directive.md). In genere, ognuna <xref:System.Windows.ResourceDictionary> all'interno di <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> raccolta specifica un <xref:System.Windows.ResourceDictionary.Source%2A> attributo. Il valore di <xref:System.Windows.ResourceDictionary.Source%2A> deve essere un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] che risolve il percorso del file di risorse da unire. La destinazione di tale [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] deve essere un altro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file, con <xref:System.Windows.ResourceDictionary> come elemento radice.  
   
 > [!NOTE]
 >  È consentito definire le risorse all'interno di un <xref:System.Windows.ResourceDictionary> che viene specificato come un dizionario unito, come alternativa alla specifica <xref:System.Windows.ResourceDictionary.Source%2A>, o aggiunta a qualsiasi risorsa inclusa dall'origine specificata. ma questo non è uno scenario comune. Lo scenario principale per i dizionari uniti prevede l'unione delle risorse da percorsi di file esterni. Se si desidera specificare le risorse all'interno del markup per una pagina, è consigliabile definire in genere questi principale <xref:System.Windows.ResourceDictionary> e non nei dizionari uniti.  
@@ -39,7 +39,7 @@ Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
 > [!NOTE]
 >  Non usare l'azione di compilazione Risorsa incorporata. L'azione di compilazione stesso è supportata per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni, ma la risoluzione dello <xref:System.Windows.ResourceDictionary.Source%2A> non incorpora <xref:System.Resources.ResourceManager>e pertanto non è possibile separare la singola risorsa dal flusso. È tuttavia possibile usare risorsa incorporata per altri scopi purché è stato anche usato <xref:System.Resources.ResourceManager> per accedere alle risorse.  
   
- Una tecnica correlata consiste nell'usare un URI di tipo pack di un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e nel farvi riferimento come origine. Un URI di tipo pack abilita i riferimenti ai componenti degli assembly a cui si fa riferimento e altre tecniche. Per altre informazioni sugli URI di tipo pack, vedere [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ Una tecnica correlata consiste nell'usare un URI di tipo pack di un file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e nel farvi riferimento come origine. Un URI di tipo pack abilita i riferimenti ai componenti degli assembly a cui si fa riferimento e altre tecniche. Per altre informazioni sugli URI di tipo pack, vedere [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md).  
   
  Per le risorse non compilate come parte del progetto, l'URI viene valutato in fase di esecuzione. È possibile usare un trasporto URI comune, ad esempio file: o http:, per fare riferimento al file di risorse. Lo svantaggio nell'uso dell'approccio delle risorse non compilate è che l'accesso file: richiede altri passaggi per la distribuzione e l'accesso http: implica la zona di sicurezza Internet.  
   
@@ -49,10 +49,10 @@ Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
  La scrittura di dizionari uniti come file dell'applicazione locali o nello spazio di archiviazione condiviso locale è un altro possibile scenario di distribuzione dell'applicazione/dizionari uniti.  
   
 ### <a name="localization"></a>Localizzazione  
- Se le risorse che è necessario localizzare vengono isolate nei dizionari uniti nei dizionari primari e conservate come [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] libero, questi file possono essere localizzati separatamente. Questa tecnica è un'alternativa leggera alla localizzazione degli assembly di risorse satellite. Per informazioni dettagliate, vedere [Panoramica della globalizzazione e localizzazione WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Se le risorse che è necessario localizzare vengono isolate nei dizionari uniti nei dizionari primari e conservate come [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] libero, questi file possono essere localizzati separatamente. Questa tecnica è un'alternativa leggera alla localizzazione degli assembly di risorse satellite. Per informazioni dettagliate, vedere [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.ResourceDictionary>
-- [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Risorse e codice](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [Risorse XAML](xaml-resources.md)
+- [Risorse e codice](resources-and-code.md)
+- [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md)

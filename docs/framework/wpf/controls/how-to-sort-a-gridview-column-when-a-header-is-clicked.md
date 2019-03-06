@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694087"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365412"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedura: Ordinare una colonna GridView quando si fa clic su un'intestazione
 In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> consente di visualizzare la modalità e ordinare il contenuto quando un utente fa clic su un'intestazione di colonna.  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Panoramica sul controllo ListView](listview-overview.md)
+- [Cenni preliminari su GridView](gridview-overview.md)
+- [Procedure relative alle proprietà](listview-how-to-topics.md)

@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551967"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371943"
 ---
 # <a name="expander"></a>Expander
-Un <xref:System.Windows.Controls.Expander> consente agli utenti di visualizzare un'intestazione ed espandere l'intestazione per visualizzare altri dettagli o per comprimere una sezione fino a un'intestazione.  
+Un <xref:System.Windows.Controls.Expander> consente agli utenti di visualizzare un'intestazione ed espandere tale intestazione per visualizzare altri dettagli o per comprimere una sezione fino a un'intestazione.  
   
- Nella figura seguente viene fornito un esempio di questo controllo nella posizione espansa.  
+ Nella figura seguente viene fornito un esempio di questo controllo nella relativa posizione espanso.  
   
- ![Esempio di Expander](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Esempio di Expander](./media/expanderexample.JPG "ExpanderExample")  
 Expander (controllo)  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo Expander](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Panoramica sul controllo Expander](expander-overview.md)  
+ [Procedure relative alle proprietà](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Expander>  

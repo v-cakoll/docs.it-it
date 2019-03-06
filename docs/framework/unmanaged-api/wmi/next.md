@@ -1,6 +1,6 @@
 ---
 title: Funzione Next (riferimenti alle API non gestite)
-description: Retireves di funzione successiva la proprietà successiva in un'enumerazione.
+description: La funzione successiva recupera la proprietà successiva in un'enumerazione.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,69 +16,69 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971884"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373198"
 ---
 # <a name="next-function"></a>Funzione successiva
-Recupera la proprietà successiva in un'enumerazione che inizia con una chiamata a [BeginEnumeration](beginenumeration.md).  
+Recupera la proprietà successiva in un'enumerazione che inizia con una chiamata a [BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>Parametri
 
-`vFunc`  
+`vFunc`\
 [in] Questo parametro è inutilizzato.
 
-`ptr`  
+`ptr`\
 [in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
-`lFlags`  
+`lFlags`\
 [in] Riservato. Questo parametro deve essere 0.
 
-`pstrName`  
+`pstrName`\
 [out] Un nuovo `BSTR` che contiene il nome della proprietà. È possibile impostare questo parametro su `null` se il nome non è obbligatorio.
 
-`pVal`  
-[out] Oggetto `VARIANT` riempita con il valore della proprietà. È possibile impostare questo parametro su `null` se il valore non è obbligatorio. Se la funzione restituisce un codice di errore, il `VARIANT` passato a `pVal` è invariata a sinistra. 
+`pVal`\
+[out] Oggetto `VARIANT` riempita con il valore della proprietà. È possibile impostare questo parametro su `null` se il valore non è obbligatorio. Se la funzione restituisce un codice di errore, il `VARIANT` passato a `pVal` è invariata a sinistra.
 
-`pvtType`  
-[out] Un puntatore a un `CIMTYPE` variabile (un `LONG` in cui viene inserito il tipo della proprietà). Il valore di questa proprietà può essere un `VT_NULL_VARIANT`, nel qual caso è necessario determinare il tipo effettivo della proprietà. Questo parametro può anche essere `null`. 
+`pvtType`\
+[out] Un puntatore a un `CIMTYPE` variabile (un `LONG` in cui viene inserito il tipo della proprietà). Il valore di questa proprietà può essere un `VT_NULL_VARIANT`, nel qual caso è necessario determinare il tipo effettivo della proprietà. Questo parametro può anche essere `null`.
 
-`plFlavor`  
-[out] `null`, o un valore che riceve informazioni sull'origine della proprietà. Vedere la sezione [note] per i valori possibili. 
+`plFlavor`\
+[out] `null`, o un valore che riceve informazioni sull'origine della proprietà. Vedere la sezione [note] per i valori possibili.
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non valido. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Si è verificato alcun chiamata per il [ `BeginEnumeration` ](beginenumeration.md) (funzione). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insufficiente è disponibile per iniziare una nuova enumerazione. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | La procedura remota chiamare sono corrispondenti del processo corrente e la gestione di Windows non è riuscita. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Chiamata a procedura remota tra il processo corrente e gestione di Windows non è riuscita. |
 | `WBEM_S_NO_ERROR` | 0 | La chiamata di funzione è riuscita.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Non esistono altre proprietà dell'enumerazione. |
-  
+
 ## <a name="remarks"></a>Note
 
 Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) (metodo).
@@ -95,12 +95,14 @@ Se `plFlavor` non è `null`, il `LONG` valore riceve informazioni relative all'o
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Per una classe: La proprietà viene ereditata dalla classe padre. <br> Per un'istanza: La proprietà, mentre ereditata dalla classe padre, non modificata dall'istanza.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Per una classe: La proprietà appartiene alla classe derivata. <br> Per un'istanza: La proprietà viene modificata tramite l'istanza. vale a dire, è stato fornito un valore o un qualificatore è stato aggiunto o modificato. |
 
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** WMINet_Utils.idl  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisiti
+
+**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Intestazione:** WMINet_Utils.idl
+
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

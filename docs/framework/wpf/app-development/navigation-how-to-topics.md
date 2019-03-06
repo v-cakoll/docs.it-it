@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550111"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379744"
 ---
 # <a name="navigation-how-to-topics"></a>Argomenti sulle procedure relative alla navigazione
-Gli argomenti seguenti viene illustrato come utilizzare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigazione.  
+Gli argomenti seguenti illustrano come usare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigazione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Chiamare una funzione di pagina](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [Ottenere il valore restituito di una funzione di pagina](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [Navigare in avanti o indietro nella cronologia di navigazione](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [Restituire un risultato da una funzione di pagina](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+ [Chiamare una funzione di pagina](how-to-call-a-page-function.md)  
+  [Ottenere il valore restituito di una funzione di pagina](how-to-get-the-return-value-of-a-page-function.md)  
+  [Navigare in avanti o indietro nella cronologia di navigazione](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [Restituire un risultato da una funzione di pagina](how-to-return-from-a-page-function.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Cenni preliminari sulla navigazione](navigation-overview.md)  
   
- [Cenni preliminari sulla navigazione strutturata](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md)

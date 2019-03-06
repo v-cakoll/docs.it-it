@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551059"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370332"
 ---
 # <a name="listview-overviews"></a>Cenni preliminari sul controllo ListView
-Negli argomenti di questa sezione viene illustrato come utilizzare un <xref:System.Windows.Controls.ListView> controllo.  
+Gli argomenti in questa sezione illustrano come usare un <xref:System.Windows.Controls.ListView> controllo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [Panoramica sul controllo ListView](listview-overview.md)  
+ [Cenni preliminari su GridView](gridview-overview.md)  
+ [Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ Negli argomenti di questa sezione viene illustrato come utilizzare un <xref:Syst
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Procedure relative alle proprietà](listview-how-to-topics.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740138"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370046"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Procedura: Ridimensionare le righe con un GridSplitter
 Questo esempio viene illustrato come usare un oggetto orizzontale <xref:System.Windows.Controls.GridSplitter> per ridistribuire lo spazio tra le due righe in una <xref:System.Windows.Controls.Grid> senza modificare le dimensioni del <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ Questo esempio viene illustrato come usare un oggetto orizzontale <xref:System.W
   
  Nell'esempio seguente viene illustrato come definire un controllo orizzontale <xref:System.Windows.Controls.GridSplitter> che ridimensiona righe adiacenti.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- Oggetto <xref:System.Windows.Controls.GridSplitter> che non occupa una riga può essere nascosto da altri controlli presenti il <xref:System.Windows.Controls.Grid>. Per altre informazioni su come evitare questo problema, vedere [Assicurarsi che GridSplitter sia visibile](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ Oggetto <xref:System.Windows.Controls.GridSplitter> che non occupa una riga può essere nascosto da altri controlli presenti il <xref:System.Windows.Controls.Grid>. Per altre informazioni su come evitare questo problema, vedere [Assicurarsi che GridSplitter sia visibile](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Come creare un oggetto GridSplitter che occupa una riga**  
   
@@ -33,9 +33,9 @@ Questo esempio viene illustrato come usare un oggetto orizzontale <xref:System.W
   
  Nell'esempio seguente viene illustrato come definire un controllo orizzontale <xref:System.Windows.Controls.GridSplitter> che occupa una riga e ridimensiona le righe ai lati.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Controls.GridSplitter>
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Procedure relative alle proprietà](gridsplitter-how-to-topics.md)

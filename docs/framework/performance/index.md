@@ -2,17 +2,11 @@
 title: Prestazioni di .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance [.NET Framework]
-- reliability [.NET Framework]
+  - 'performance [.NET Framework]'
+  - 'reliability [.NET Framework]'
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221173"
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -49,7 +43,6 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |App [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] scritte in C++, C# e Visual Basic|[Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[Famiglia di prodotti per l'analisi delle prestazioni WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Cenni preliminari sulle prestazioni di ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
-|Windows Form|[Practical Tips for Boosting the Performance of Windows Forms Apps](https://msdn.microsoft.com/magazine/cc163630.aspx) (Suggerimenti pratici per il miglioramento delle prestazioni delle app Windows Form)|  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835265"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352413"
 ---
 # <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF
 Le procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. Ciò le rende un ottimo strumento per iniziare a capire il funzionamento del prodotto o di una particolare area di funzionalità.  
@@ -31,20 +31,20 @@ Le procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. C
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Illustra la creazione di un'applicazione WPF con numerose funzionalità comuni di WPF tra cui controlli, layout e il data binding.|  
-|[Creare un pulsante usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Viene illustrato come creare un pulsante animato.|  
-|[Creare un pulsante usando Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Viene illustrato il processo di creazione di un pulsante personalizzato con Microsoft Expression Blend.|  
-|[Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene illustrato come recuperare i dati da un database di SQL Server e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> controllo.|  
+|[Procedura dettagliata: Prima applicazione desktop WPF](walkthrough-my-first-wpf-desktop-application.md)|Illustra la creazione di un'applicazione WPF con numerose funzionalità comuni di WPF tra cui controlli, layout e il data binding.|  
+|[Creare un pulsante usando XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Viene illustrato come creare un pulsante animato.|  
+|[Creare un pulsante usando Microsoft Expression Blend](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Viene illustrato il processo di creazione di un pulsante personalizzato con Microsoft Expression Blend.|  
+|[Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene illustrato come recuperare i dati da un database di SQL Server e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> controllo.|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Migrazione e interoperabilità in WPF  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Hosting di controlli Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Viene illustrato come ospitare un controllo Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controllo in un'applicazione WPF.|  
-|[Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Viene illustrato come ospitare un controllo composito di immissione di dati di Windows Form in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione.|  
-|[Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Viene illustrato come ospitare un controllo composito di immissione dati WPF in un'applicazione Windows Form.|  
-|[Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Viene illustrato come usare le funzionalità di layout WPF per disporre i controlli Windows Form in un'applicazione ibrida.|  
-|[Procedura dettagliata: Associazione ai dati in applicazioni ibride](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Viene illustrato come utilizzare l'associazione dati in applicazioni ibride che includono controlli Windows Form e WPF.|  
+|[Procedura dettagliata: Hosting di controlli Windows Form in WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Viene illustrato come ospitare un controllo Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controllo in un'applicazione WPF.|  
+|[Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Viene illustrato come ospitare un controllo composito di immissione di dati di Windows Form in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione.|  
+|[Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Viene illustrato come ospitare un controllo composito di immissione dati WPF in un'applicazione Windows Form.|  
+|[Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Viene illustrato come usare le funzionalità di layout WPF per disporre i controlli Windows Form in un'applicazione ibrida.|  
+|[Procedura dettagliata: Associazione ai dati in applicazioni ibride](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Viene illustrato come utilizzare l'associazione dati in applicazioni ibride che includono controlli Windows Form e WPF.|  
   
 ## <a name="related-sections"></a>Sezioni correlate  
   

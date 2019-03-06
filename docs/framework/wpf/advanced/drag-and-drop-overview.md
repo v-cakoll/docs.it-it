@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492573"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356481"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -50,7 +50,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  In un'operazione di copia e incolla, vengono usati gli Appunti di sistema per archiviare temporaneamente i dati trasferiti. In un'operazione di trascinamento della selezione, viene usato un oggetto <xref:System.Windows.DataObject> per archiviare i dati. Concettualmente, un oggetto dati è costituito da una o più coppie di un <xref:System.Object> contenente i dati effettivi e dal corrispondente identificatore di formato dati.  
   
- L'origine di trascinamento avvia un'operazione di trascinamento della selezione chiamando il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> statico e passandogli i dati trasferiti. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> eseguirà il wrapping automatico dei dati in <xref:System.Windows.DataObject>, se necessario. Per un maggiore controllo sul formato dei dati, è possibile eseguire il wrapping dei dati in un <xref:System.Windows.DataObject> prima di passarli al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. L'obiettivo di rilascio è responsabile dell'estrazione dei dati dal <xref:System.Windows.DataObject>. Per altre informazioni sull'uso degli oggetti dati, vedere [Dati e oggetti dati](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ L'origine di trascinamento avvia un'operazione di trascinamento della selezione chiamando il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> statico e passandogli i dati trasferiti. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> eseguirà il wrapping automatico dei dati in <xref:System.Windows.DataObject>, se necessario. Per un maggiore controllo sul formato dei dati, è possibile eseguire il wrapping dei dati in un <xref:System.Windows.DataObject> prima di passarli al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. L'obiettivo di rilascio è responsabile dell'estrazione dei dati dal <xref:System.Windows.DataObject>. Per altre informazioni sull'uso degli oggetti dati, vedere [Dati e oggetti dati](data-and-data-objects.md).  
   
  L'origine e la destinazione di un'operazione di trascinamento della selezione sono elementi dell'interfaccia utente, ma i dati effettivamente trasferiti non hanno di solito una rappresentazione visiva. È possibile scrivere il codice per fornire una rappresentazione visiva dei dati trascinati, come accade quando si trascinano i file in Esplora risorse. Per impostazione predefinita, viene fornito un feedback all'utente modificando il cursore per rappresentare l'effetto che l'operazione di trascinamento della selezione avrà sui dati, ad esempio se i dati verranno spostati o copiati.  
   
@@ -63,7 +63,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Eventi del trascinamento della selezione  
- Le operazioni di trascinamento della selezione supportano un modello basato sugli eventi.  Sia l'origine di trascinamento che l'obiettivo di rilascio usano un set standard di eventi per gestire le operazioni di trascinamento della selezione.  Le tabelle seguenti riepilogano gli eventi di trascinamento della selezione standard. Sono eventi associati nella <xref:System.Windows.DragDrop> classe. Per altre informazioni sugli eventi associati, vedere [Cenni preliminari sugli eventi associati](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Le operazioni di trascinamento della selezione supportano un modello basato sugli eventi.  Sia l'origine di trascinamento che l'obiettivo di rilascio usano un set standard di eventi per gestire le operazioni di trascinamento della selezione.  Le tabelle seguenti riepilogano gli eventi di trascinamento della selezione standard. Sono eventi associati nella <xref:System.Windows.DragDrop> classe. Per altre informazioni sugli eventi associati, vedere [Cenni preliminari sugli eventi associati](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Eventi di origine di trascinamento  
   
@@ -87,7 +87,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Versione tunneling di <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Versione tunneling di <xref:System.Windows.DragDrop.Drop>.|  
   
- Per gestire gli eventi di trascinamento della selezione per le istanze di un oggetto, aggiungere i gestori per gli eventi elencati nelle tabelle precedenti. Per gestire gli eventi di trascinamento della selezione a livello di classe, eseguire l'override dei corrispondenti metodi On*Event e On\*PreviewEvent virtuali. Per altre informazioni, vedere [Gestione delle classi degli eventi indirizzati tramite classi di base dei controlli](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Per gestire gli eventi di trascinamento della selezione per le istanze di un oggetto, aggiungere i gestori per gli eventi elencati nelle tabelle precedenti. Per gestire gli eventi di trascinamento della selezione a livello di classe, eseguire l'override dei corrispondenti metodi On*Event e On\*PreviewEvent virtuali. Per altre informazioni, vedere [Gestione delle classi degli eventi indirizzati tramite classi di base dei controlli](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Implementazione del trascinamento della selezione  
@@ -123,9 +123,9 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Esempi di trascinamento della selezione  
- Questa sezione descrive come implementare il trascinamento della selezione per un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> è sia un'origine di trascinamento che un obiettivo di rilascio. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse. Il codice XAML seguente mostra l'elemento <xref:System.Windows.Shapes.Ellipse> e gli eventi relativi al trascinamento della selezione gestiti. Per completare i passaggi su come implementare trascinamento e rilascio, vedere [procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ Questa sezione descrive come implementare il trascinamento della selezione per un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> è sia un'origine di trascinamento che un obiettivo di rilascio. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse. Il codice XAML seguente mostra l'elemento <xref:System.Windows.Shapes.Ellipse> e gli eventi relativi al trascinamento della selezione gestiti. Per completare i passaggi su come implementare trascinamento e rilascio, vedere [procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Impostazione di un elemento come origine di trascinamento  
  Un oggetto che è un'origine di trascinamento è responsabile di:  
@@ -142,8 +142,8 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  È responsabilità dell'applicazione determinare quando si verifica un trascinamento e quindi avviare l'operazione di trascinamento della selezione chiamando il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Questo di solito avviene quando si verifica un evento <xref:System.Windows.UIElement.MouseMove> sull'elemento da trascinare mentre viene premuto un pulsante del mouse. Il seguente esempio mostra come avviare un'operazione di trascinamento della selezione dal gestore dell'evento <xref:System.Windows.UIElement.MouseMove> di un elemento <xref:System.Windows.Shapes.Ellipse> per impostarlo come origine di trascinamento. I dati trasferiti sono la rappresentazione di stringa della proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> dell'ellisse.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  Nel gestore dell'evento <xref:System.Windows.UIElement.MouseMove> chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> accetta tre parametri:  
   
@@ -153,7 +153,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 -   `allowedEffects`: uno dei valori dell'enumerazione <xref:System.Windows.DragDropEffects>, che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
   
- Qualsiasi oggetto serializzabile può essere passato nel parametro `data`. Se il wrapping dei dati non è già stato eseguito in un <xref:System.Windows.DataObject>, verrà eseguito automaticamente in un nuovo <xref:System.Windows.DataObject>. Per passare più elementi di dati, è necessario creare il <xref:System.Windows.DataObject> manualmente e passarlo al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Per altre informazioni, vedere [Dati e oggetti dati](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Qualsiasi oggetto serializzabile può essere passato nel parametro `data`. Se il wrapping dei dati non è già stato eseguito in un <xref:System.Windows.DataObject>, verrà eseguito automaticamente in un nuovo <xref:System.Windows.DataObject>. Per passare più elementi di dati, è necessario creare il <xref:System.Windows.DataObject> manualmente e passarlo al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Per altre informazioni, vedere [Dati e oggetti dati](data-and-data-objects.md).  
   
  Il parametro `allowedEffects` viene usato per specificare quali azioni l'origine di trascinamento consentirà di eseguire all'obiettivo di rilascio con i dati trasferiti. I valori comuni per un'origine di trascinamento sono <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> e <xref:System.Windows.DragDropEffects.All>.  
   
@@ -192,32 +192,32 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Il seguente esempio mostra il gestore dell'evento <xref:System.Windows.DragDrop.DragEnter> per un elemento <xref:System.Windows.Shapes.Ellipse>. Questo codice visualizza in anteprima gli effetti dell'operazione di trascinamento della selezione salvando il pennello <xref:System.Windows.Shapes.Shape.Fill%2A> corrente. Usa quindi il metodo <xref:System.Windows.DataObject.GetDataPresent%2A> per controllare se il <xref:System.Windows.DataObject> che viene trascinato sull'ellisse contiene dati stringa convertibili in un <xref:System.Windows.Media.Brush>. In tal caso, i dati vengono estratti con il metodo <xref:System.Windows.DataObject.GetData%2A>. Vengono quindi convertiti in un <xref:System.Windows.Media.Brush> e applicati all'ellisse. La modifica viene ripristinata nel gestore dell'evento <xref:System.Windows.DragDrop.DragLeave>. Se i dati non possono essere convertiti in un <xref:System.Windows.Media.Brush>, non viene eseguita alcuna azione.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  L'evento <xref:System.Windows.DragDrop.DragOver> si verifica in modo continuo mentre i dati vengono trascinati sull'obiettivo di rilascio. Questo evento è associato all'evento <xref:System.Windows.DragDrop.GiveFeedback> nell'origine di trascinamento. Nel gestore dell'evento <xref:System.Windows.DragDrop.DragOver>, si usano di solito i metodi <xref:System.Windows.DataObject.GetDataPresent%2A> e <xref:System.Windows.DataObject.GetData%2A> per controllare se i dati trasferiti sono in un formato che l'obiettivo di rilascio può elaborare. È anche possibile controllare se vengono premuti tasti di modifica, che in genere indicano se l'utente intende eseguire un'azione di copia o spostamento. Dopo questi controlli, si imposta la proprietà <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> per notificare all'origine di trascinamento quale effetto avrà il rilascio dei dati. L'origine di trascinamento riceve queste informazioni negli argomenti dell'evento <xref:System.Windows.DragDrop.GiveFeedback> e può impostare un cursore appropriato per fornire feedback all'utente.  
   
  Il seguente esempio mostra il gestore dell'evento <xref:System.Windows.DragDrop.DragOver> per un elemento <xref:System.Windows.Shapes.Ellipse>. Questo codice verifica se il <xref:System.Windows.DataObject> che viene trascinato sull'ellisse contiene dati stringa convertibili in un <xref:System.Windows.Media.Brush>. In tal caso, imposta la proprietà <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> su <xref:System.Windows.DragDropEffects.Copy>. Questo indica all'origine di trascinamento che i dati possono essere copiati nell'ellisse. Se i dati non possono essere convertiti in un <xref:System.Windows.Media.Brush>, la proprietà <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> viene impostata su <xref:System.Windows.DragDropEffects.None>. Questo indica all'origine di trascinamento che l'ellisse non è un obiettivo di rilascio valido per i dati.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  L'evento <xref:System.Windows.DragDrop.DragLeave> si verifica quando i dati vengono trascinati all'esterno del limite della destinazione senza essere rilasciati. Si gestisce questo evento per annullare qualsiasi operazione eseguita nel gestore dell'evento <xref:System.Windows.DragDrop.DragEnter>.  
   
  Il seguente esempio mostra il gestore dell'evento <xref:System.Windows.DragDrop.DragLeave> per un elemento <xref:System.Windows.Shapes.Ellipse>. Questo codice annulla l'anteprima eseguita nel gestore dell'evento <xref:System.Windows.DragDrop.DragEnter> applicando l'oggetto <xref:System.Windows.Media.Brush> salvato all'ellisse.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  L'evento <xref:System.Windows.DragDrop.Drop> si verifica quando i dati vengono rilasciati sull'obiettivo di rilascio. Per impostazione predefinita, questo avviene quando viene rilasciato il pulsante del mouse. Nel gestore dell'evento <xref:System.Windows.DragDrop.Drop>, si usa il metodo <xref:System.Windows.DataObject.GetData%2A> per estrarre i dati trasferiti dal <xref:System.Windows.DataObject> ed eseguire l'elaborazione dati richiesta dall'applicazione. L'evento <xref:System.Windows.DragDrop.Drop> termina l'operazione di trascinamento della selezione.  
   
  Il seguente esempio mostra il gestore dell'evento <xref:System.Windows.DragDrop.Drop> per un elemento <xref:System.Windows.Shapes.Ellipse>. Questo codice applica gli effetti dell'operazione di trascinamento della selezione ed è simile al codice nel gestore dell'evento <xref:System.Windows.DragDrop.DragEnter>. Verifica se il <xref:System.Windows.DataObject> che viene trascinato sull'ellisse contiene dati stringa convertibili in un <xref:System.Windows.Media.Brush>. In tal caso, <xref:System.Windows.Media.Brush> viene applicato all'ellisse. Se i dati non possono essere convertiti in un <xref:System.Windows.Media.Brush>, non viene eseguita alcuna azione.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Clipboard>
-- [Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Trascinamento della selezione](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Procedure relative alle proprietà](drag-and-drop-how-to-topics.md)
+- [Trascinamento della selezione](drag-and-drop.md)

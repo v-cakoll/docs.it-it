@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825953"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352594"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Metodo ISOSDacInterface::GetMethodDescData
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`methodDesc` [in] L'indirizzo del MethodDesc.
+`methodDesc`\
+[in] L'indirizzo del MethodDesc.
 
-`ip` [in] L'indirizzo IP del metodo.
+`ip`\
+[in] L'indirizzo IP del metodo.
 
-`data` [out] I dati associati con la MethodDesc come restituito dall'API interne.
+`data`\
+[out] I dati associati con la MethodDesc come restituito dall'API interne.
 
-`cRevertedRejitVersions` [out] Il numero di versioni rejit ripristinato.
+`cRevertedRejitVersions`\
+[out] Il numero di versioni rejit ripristinato.
 
-`rgRevertedRejitData` [out] I dati associati con le versioni rejit ripristinato come restituito dall'API interne.
+`rgRevertedRejitData`\
+[out] I dati associati con le versioni rejit ripristinato come restituito dall'API interne.
 
-`pcNeededRevertedRejitData` [out] Il numero di byte necessari per archiviare i dati associati con le versioni ReJit ripristinate.
+`pcNeededRevertedRejitData`\
+[out] Il numero di byte necessari per archiviare i dati associati con le versioni ReJit ripristinate.
 
 ## <a name="remarks"></a>Note
 
@@ -68,5 +74,5 @@ Il metodo specificato fa parte di `ISOSDacInterface` interfaccia e corrisponde a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaccia ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Debug](index.md)
+- [Interfaccia ISOSDacInterface](isosdacinterface-interface.md)

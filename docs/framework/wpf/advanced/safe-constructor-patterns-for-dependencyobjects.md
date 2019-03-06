@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661282"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363982"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelli di costruttore sicuri per DependencyObject
 In genere, i costruttori di classe non devono chiamare callback come metodi virtuali o delegati, in quanto possono essere chiamati come inizializzazione di base di costruttori per una classe derivata. L'uso di elementi virtuali può avvenire in un stato incompleto dell'inizializzazione di qualsiasi dato oggetto. Il sistema di proprietà stesso, tuttavia, chiama ed espone internamente i callback come parte del sistema di proprietà di dipendenza. Un'operazione semplice come impostazione di un valore di proprietà di dipendenza con <xref:System.Windows.DependencyObject.SetValue%2A> chiamata potrebbe include un callback in qualche punto del processo di determinazione. Per questa ragione, occorre prestare attenzione quando si impostano i valori delle proprietà di dipendenza all'interno del corpo di un costruttore, perché l'operazione può divenire problematica se il tipo viene usato come classe di base. Un modello particolare per l'implementazione <xref:System.Windows.DependencyObject> costruttori che evita problemi specifici con gli stati delle proprietà di dipendenza e i callback inerenti, come documentato all'indirizzo.  
@@ -20,7 +20,7 @@ In genere, i costruttori di classe non devono chiamare callback come metodi virt
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Metodi virtuali del sistema di proprietà  
- I seguenti metodi virtuali o i callback vengono potenzialmente chiamati durante i calcoli della <xref:System.Windows.DependencyObject.SetValue%2A> chiamata che imposta un valore di proprietà di dipendenza: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Ognuno di questi metodi virtuali o callback serve a uno scopo particolare nell'espansione della versatilità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e delle proprietà di dipendenza. Per altre informazioni su come usare questi elementi virtuali per personalizzare la determinazione del valore della proprietà, vedere [Callback e convalida delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ I seguenti metodi virtuali o i callback vengono potenzialmente chiamati durante i calcoli della <xref:System.Windows.DependencyObject.SetValue%2A> chiamata che imposta un valore di proprietà di dipendenza: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Ognuno di questi metodi virtuali o callback serve a uno scopo particolare nell'espansione della versatilità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e delle proprietà di dipendenza. Per altre informazioni su come usare questi elementi virtuali per personalizzare la determinazione del valore della proprietà, vedere [Callback e convalida delle proprietà di dipendenza](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Confronto tra l'imposizione della regola FXCop e metodi virtuali del sistema di proprietà  
  Se si usa lo strumento Microsoft FXCop come parte del processo di compilazione e si esegue la derivazione da determinate classi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che chiamano il costruttore di base oppure si implementano proprietà di dipendenza personalizzate sulle classi derivate, può verificarsi la violazione di una particolare regola FXCop. La stringa del nome di questa violazione è:  
@@ -115,6 +115,6 @@ public MyClass : SomeBaseClass {
  Questi stessi modelli si applicano se si imposta una proprietà che non hanno un wrapper per l'impostazione pratica delle proprietà e impostare i valori con <xref:System.Windows.DependencyObject.SetValue%2A>. Le chiamate a <xref:System.Windows.DependencyObject.SetValue%2A> che passano tramite parametri del costruttore deve anche chiamare il costruttore della classe predefinito per l'inizializzazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Sicurezza delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Sicurezza delle proprietà di dipendenza](dependency-property-security.md)

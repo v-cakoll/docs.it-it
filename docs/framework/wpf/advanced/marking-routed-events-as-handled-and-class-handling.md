@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378839"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Impostazione degli eventi indirizzati come gestiti e gestione delle classi
 I gestori per un evento indirizzato possono contrassegnare l'evento come gestito all'interno dei dati dell'evento. La gestione dell'evento abbrevia efficacemente la route. La gestione delle classi è un concetto di programmazione supportato dagli eventi indirizzati. Un gestore classi ha l'opportunità di gestire un evento indirizzato specifico a livello di classe con un gestore richiamato prima di qualsiasi gestore istanze in qualsiasi istanza di classe.  
@@ -31,7 +31,7 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento elabora i concetti introdotti in [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Questo argomento elabora i concetti introdotti in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Quando contrassegnare eventi come gestiti  
@@ -47,7 +47,7 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
   
  La connessione tra gli eventi indirizzati di tunneling e bubbling viene eseguita tramite l'implementazione interna del modo in cui ogni classe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] specifica genera i propri eventi indirizzati dichiarati e questo avviene per gli eventi indirizzati di input associati. Tuttavia, se questa implementazione a livello di classe non esiste, non vi è alcuna connessione tra un evento indirizzato di tunneling e un evento indirizzato di bubbling che condividono lo schema di denominazione: senza questa implementazione, i due eventi indirizzati sono completamente separati e non vengono generati in sequenza né condividono i dati degli eventi.  
   
- Per altre informazioni su come implementare coppie di eventi indirizzati di input di tunneling/bubbling in una classe personalizzata, vedere [Creare un evento indirizzato personalizzato](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Per altre informazioni su come implementare coppie di eventi indirizzati di input di tunneling/bubbling in una classe personalizzata, vedere [Creare un evento indirizzato personalizzato](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Gestori classi e gestori istanze  
@@ -100,6 +100,6 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.EventManager>
-- [Eventi di anteprima](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Creare un evento indirizzato personalizzato](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Eventi di anteprima](preview-events.md)
+- [Creare un evento indirizzato personalizzato](how-to-create-a-custom-routed-event.md)
+- [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

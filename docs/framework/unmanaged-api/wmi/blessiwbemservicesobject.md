@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366634"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject (funzione)
-Indica se le credenziali utente di consentono l'accesso a un oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) oggetto.   
-  
+Indica se le credenziali utente di consentono l'accesso a un oggetto specificato [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) oggetto. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
+
+## <a name="syntax"></a>Sintassi
+
+```
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -39,30 +39,33 @@ HRESULT BlessIWbemServicesObject (
    [in] DWORD impLevel, 
    [in] DWORD authnLevel
 );
-```  
+```
 
 ## <a name="parameters"></a>Parametri
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Un puntatore a un oggetto servizio WMI.
 
-`strUser`  
+`strUser`\
 [in] Il nome utente.
 
-`strPassword`  
+`strPassword`\
 [in] La password associata `strUser`.
 
-`strAuthority` [in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
+`strAuthority`\
+[in] Il nome di dominio dell'utente. Vedere le [ConnectServerWmi](connectserverwmi.md) (funzione) per altre informazioni.
 
-`impLevel` [in] Il livello di rappresentazione.
+`impLevel`\
+[in] Il livello di rappresentazione.
 
-`authnLevel` [in] Il livello di autorizzazione.
+`authnLevel`\
+[in] Il livello di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o più argomenti non sono validi. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` è `null`. | 
@@ -70,12 +73,14 @@ I seguenti valori restituiti da questa funzione sono definiti nel *Winerror* fil
 | `E_OUTOFMEMORY` | 0x80000002 | Memoria disponibile è insufficiente per eseguire l'operazione. | 
 | `S_OK` | 0 | La chiamata di funzione è riuscita. | 
 
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** WMINet_Utils.idl  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisiti
+
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Intestazione:** WMINet_Utils.idl
+
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

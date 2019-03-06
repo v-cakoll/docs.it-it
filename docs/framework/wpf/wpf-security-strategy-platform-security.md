@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353062"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi di sicurezza, sfrutta le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
   
- ![Illustrazione della sicurezza WPF](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Illustrazione della sicurezza WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  Nella parte rimanente di questo argomento verranno illustrate le funzionalità specifiche di questi livelli che riguardano in modo specifico [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
@@ -140,14 +140,14 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  La figura seguente illustra la relazione tra aree, set di autorizzazioni, autorizzazioni e risorse.  
   
- ![Set di autorizzazioni CAS](../../../docs/framework/wpf/media/caspermissionsets.png "CASPermissionSets")  
+ ![Set di autorizzazioni CAS](./media/caspermissionsets.png "CASPermissionSets")  
   
  Le restrizioni della sandbox di sicurezza dell'area Internet sono ugualmente applicabili a qualsiasi codice che un'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] importa da una libreria di sistema, compreso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. In questo modo, ogni frammento di codice viene bloccato, anche [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Purtroppo, per poter essere eseguita, un'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] deve eseguire funzionalità che richiedono molte più autorizzazioni rispetto a quelle abilitate dalla sandbox di sicurezza dell'area Internet.  
   
  Si consideri un'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] contenente la seguente pagina:  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Per eseguire questa applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sottostante deve eseguire molte più funzionalità di quelle disponibili all'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] chiamante, tra cui:  
   
@@ -165,8 +165,8 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] viene eseguita usando il **Assert** metodo di un'autorizzazione. Nel codice riportato di seguito viene illustrata questa operazione.  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Il **Assert** impedisce che le autorizzazioni illimitate richieste da [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] vengano limitate dalle Internet autorizzazioni dell'area di [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
   
@@ -182,7 +182,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
 ### <a name="security-critical-methodology"></a>Metodologia critica per la sicurezza  
  Il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] che usa autorizzazioni per abilitare la sandbox dell'area Internet per le applicazioni [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] deve essere mantenuto al livello più elevato possibile di controllo della sicurezza. Per facilitare questo requisito, .NET Framework fornisce un nuovo supporto per la gestione del codice che eleva i privilegi. In particolare, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] consente di identificare il codice che eleva i privilegi e contrassegnarla con il <xref:System.Security.SecurityCriticalAttribute>; qualsiasi codice non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> diventa *trasparente* usando questa metodologia. Viceversa, il codice gestito non contrassegnato con <xref:System.Security.SecurityCriticalAttribute> non può elevare i privilegi.  
   
- La metodologia critico per la sicurezza consente di organizzare [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] codice che eleva i privilegi nel *kernel critico per la sicurezza*, mentre il resto diventa trasparente. Isolando il codice critico per la sicurezza consente la [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] team di progettazione concentrare l'attenzione di un controllo di origine e all'analisi aggiuntiva di sicurezza nel kernel critico per la sicurezza oltre alle procedure di sicurezza standard (vedere [strategia di sicurezza di WPF -Progettazione della sicurezza](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)).  
+ La metodologia critico per la sicurezza consente di organizzare [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] codice che eleva i privilegi nel *kernel critico per la sicurezza*, mentre il resto diventa trasparente. Isolando il codice critico per la sicurezza consente la [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] team di progettazione concentrare l'attenzione di un controllo di origine e all'analisi aggiuntiva di sicurezza nel kernel critico per la sicurezza oltre alle procedure di sicurezza standard (vedere [strategia di sicurezza di WPF -Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)).  
   
  Si noti che .NET Framework consente al codice attendibile di estendere il [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] sandbox dell'area Internet, consentendo agli sviluppatori di scrivere assembly gestiti contrassegnati con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e distribuiti alla Global Assembly Cache (GAC) dell'utente. Contrassegnare un assembly con APTCA è un'operazione estremamente delicata dal punto di vista della sicurezza in quanto consente a qualsiasi codice di chiamare quell'assembly, incluso eventuale codice dannoso proveniente da Internet. È necessario esercitare massima cautela, seguire le procedure consigliate e gli utenti devono scegliere di considerare attendibile un programma software per poterlo installare.  
   
@@ -210,7 +210,7 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
 ## <a name="see-also"></a>Vedere anche
 - [Informazioni sulla sicurezza di Microsoft Internet Explorer 6 in Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
-- [Sicurezza](../../../docs/framework/wpf/security-wpf.md)
-- [Sicurezza con attendibilità parziale in WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [Strategia di sicurezza WPF - Progettazione della sicurezza](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Sicurezza dall'accesso di codice](../misc/code-access-security.md)
+- [Sicurezza](security-wpf.md)
+- [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
+- [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

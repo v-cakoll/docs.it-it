@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688210"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358789"
 ---
 # <a name="graphics-how-to-topics"></a>Procedure relative alle funzionalità grafiche
 Gli argomenti seguenti illustrano come usare le funzionalità grafiche del [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Animare un rettangolo](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [Animare la posizione di un oggetto usando PointAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [Trasformare punti e vettori](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [Estendere l'effetto cristallo a un'applicazione WPF](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Procedura: Migliorare le prestazioni di Rendering memorizzando nella cache un elemento](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Procedura: Usare un elemento memorizzato nella cache come pennello](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Animare un rettangolo](how-to-animate-a-rectangle.md)  
+ [Animare la posizione di un oggetto usando PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Trasformare punti e vettori](how-to-transform-points-and-vectors.md)  
+ [Estendere l'effetto cristallo a un'applicazione WPF](extend-glass-frame-into-a-wpf-application.md)  
+ [Procedura: Migliorare le prestazioni di Rendering memorizzando nella cache un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Procedura: Usare un elemento memorizzato nella cache come pennello](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ Gli argomenti seguenti illustrano come usare le funzionalità grafiche del [!INC
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafica e funzionalità multimediali](index.md)
+- [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

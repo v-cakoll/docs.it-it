@@ -13,8 +13,8 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. È possibile associare gli elementi a dati provenienti da numerose e diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce anche un meccanismo per il trasferimento dei dati tramite operazioni di trascinamento della selezione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Data binding](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Trascinamento della selezione](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Data binding](data-binding-wpf.md)  
+ [Trascinamento della selezione](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Data>  
@@ -26,12 +26,12 @@ Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli](../../../../docs/framework/wpf/controls/index.md)  
+ [Controlli](../controls/index.md)  
   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Applicazione di stili e modelli](../controls/styling-and-templating.md)  
   
- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Data binding](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

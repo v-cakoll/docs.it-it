@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362227"
 ---
 # <a name="listbox"></a>ListBox
 Oggetto <xref:System.Windows.Controls.ListBox> controllo fornisce agli utenti un elenco di elementi selezionabili.  
   
- Nella figura seguente viene illustrata una tipica <xref:System.Windows.Controls.ListBox>.  
+ La figura seguente illustra una tipica <xref:System.Windows.Controls.ListBox>.  
   
- ![Schermata ListBox](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
-Controllo ListBox tipico  
+ ![Schermata ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+Casella di riepilogo tipico  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [Procedure relative alle proprietà](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ListBox>  

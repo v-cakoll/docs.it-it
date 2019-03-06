@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: 9476fad503cf761672ae8460fcffb860ff683310
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba61b30b4ff575bb504f792f8990bbfc64a6c33e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645015"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371476"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Procedura: Modificare il delimitatore alla fine di una linea o di un segmento
 Questo esempio viene illustrato come modificare la forma all'inizio o alla fine di un elemento aperto <xref:System.Windows.Shapes.Shape> elemento. Per modificare il limite all'inizio di un oggetto aperto <xref:System.Windows.Shapes.Shape>, usare il <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> proprietà. Per modificare il delimitatore alla fine di un oggetto aperto <xref:System.Windows.Shapes.Shape>, usare il <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> proprietà. Per visualizzare le terminazioni riga disponibili, vedere il <xref:System.Windows.Media.PenLineCap> enumerazione.  
@@ -22,7 +22,7 @@ Questo esempio viene illustrato come modificare la forma all'inizio o alla fine 
  L'esempio seguente disegna quattro <xref:System.Windows.Shapes.Polyline> elementi e Usa un set diverso di forme alle estremità della ognuno.  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
+ [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
  In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634584"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362012"
 ---
 # <a name="wpf-architecture"></a>Architettura WPF
 In questo argomento fornisce una presentazione guidata della gerarchia di classi Windows Presentation Foundation (WPF). Viene illustrata la maggior parte dei sottosistemi principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]e ne vengono descritte le modalità di interazione. Vengono inoltre forniti i dettagli relativi ad alcune scelte effettuate dagli architetti di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -33,7 +33,7 @@ In questo argomento fornisce una presentazione guidata della gerarchia di classi
   
  La figura riportata di seguito mostra i componenti principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Le sezioni in rosso del diagramma (PresentationFramework, PresentationCore e milcore) sono le parti di codice principali di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Di queste, solo milcore è un componente non gestito. Milcore è scritto in codice non gestito per consentire una stretta integrazione con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tutto viene visualizzato tramite il motore [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], consentendo un rendering efficiente dell'hardware e del software. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ha richiesto anche un controllo dettagliato sulla memoria e sull'esecuzione. Il motore di composizione di milcore è estremamente sensibile alle prestazioni e ha richiesto la rinuncia a molti vantaggi di [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per migliorarne il livello.  
   
- ![Posizione di WPF all'interno di .NET Framework.](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![Posizione di WPF all'interno di .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   
  La comunicazione tra le parti gestite e quelle non gestite di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] viene discussa più avanti in questo argomento. Il resto del modello di programmazione gestito viene descritto di seguito.  
   
@@ -71,7 +71,7 @@ In questo argomento fornisce una presentazione guidata della gerarchia di classi
   
  Durante la programmazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], si crea <xref:System.Windows.Media.Visual> elementi e tipi derivati che comunicano internamente con la struttura ad albero di composizione mediante questo protocollo di messaggistica. Ciascuna <xref:System.Windows.Media.Visual> in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] può creare uno, nessuno o numerosi nodi di composizione.  
   
- ![Struttura ad albero visuale di Windows Presentation Foundation.](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Struttura ad albero visuale di Windows Presentation Foundation.](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  In questo caso va notato un dettaglio molto importante relativo all'architettura: l'intera struttura ad albero degli elementi visivi e delle istruzioni di disegno è memorizzata nella cache. In termini di grafica, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] utilizza un sistema di rendering memorizzato. Ciò fornisce al sistema elevate frequenze di aggiornamento senza che il sistema di composizione si blocchi sui callback al codice utente e consente di impedire la visualizzazione di applicazioni che non rispondono.  
   
@@ -149,6 +149,6 @@ In questo argomento fornisce una presentazione guidata della gerarchia di classi
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
-- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Panoramica sul data binding](../data/data-binding-overview.md)
+- [Layout](layout.md)
+- [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550953"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359393"
 ---
 # <a name="canvas-how-to-topics"></a>Procedure relative all'elemento Canvas
-Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.Canvas> elemento posizionati gli elementi figlio.  
+Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.Canvas> elemento assolutamente posizionare gli elementi figlio.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Disporre un bordo intorno al contenuto di un'area di disegno](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Ottenere o impostare le proprietà di posizionamento delle aree di disegno](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Creare e usare un'area di disegno](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Usare le proprietà associate di un'area di disegno per posizionare gli elementi figlio](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Ridimensionare un'area di disegno usando un cursore](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Disporre un bordo intorno al contenuto di un'area di disegno](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Ottenere o impostare le proprietà di posizionamento delle aree di disegno](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Creare e usare un'area di disegno](how-to-create-and-use-a-canvas.md)  
+ [Usare le proprietà associate di un'area di disegno per posizionare gli elementi figlio](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Ridimensionare un'area di disegno usando un cursore](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:Syst
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Panoramica sull'elemento ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)

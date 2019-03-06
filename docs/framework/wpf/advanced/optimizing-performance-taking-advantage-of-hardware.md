@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 5eb6fb8a7f65c19755a37239e36958daf33cc876
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374258"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Ottimizzazione delle prestazioni: Sfruttare appieno l'hardware
 L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di due pipeline di rendering, hardware e software. In questo argomento fornisce informazioni su queste pipeline di rendering che consentono di prendere decisioni sull'ottimizzazione delle prestazioni delle applicazioni.  
@@ -52,15 +52,15 @@ L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
 -   **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
   
- Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] livelli di rendering, vedere [livelli di Rendering della grafica](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] livelli di rendering, vedere [livelli di Rendering della grafica](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
+- [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
+- [Data binding](optimizing-performance-data-binding.md)
+- [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

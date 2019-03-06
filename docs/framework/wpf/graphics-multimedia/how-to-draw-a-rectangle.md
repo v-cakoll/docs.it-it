@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674677"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363748"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Procedura: Disegnare un rettangolo
 Questo esempio illustra come disegnare un rettangolo utilizzando il <xref:System.Windows.Shapes.Rectangle> elemento.  
@@ -23,14 +23,14 @@ Questo esempio illustra come disegnare un rettangolo utilizzando il <xref:System
  Nell'esempio seguente, due <xref:System.Windows.Shapes.Rectangle> vengono disegnati gli elementi in un <xref:System.Windows.Controls.Canvas>. Il primo rettangolo ha un <xref:System.Windows.Media.Brushes.Blue%2A> interni. Il secondo rettangolo ha un <xref:System.Windows.Media.Brushes.Blue%2A> interno, un <xref:System.Windows.Media.Brushes.Black%2A> la struttura e angoli arrotondati.  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
+ [!code-xaml[drawingwithshapeelements#Rectangle1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- Sebbene questo esempio Usa un' <xref:System.Windows.Controls.Canvas> per contenere i rettangoli, è possibile usare gli elementi rettangolo (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo. Infatti, sono particolarmente utili per fornire gli sfondi delle parti di rettangoli <xref:System.Windows.Controls.Grid> pannelli. Per un esempio, vedere la [panoramica delle tabelle](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ Sebbene questo esempio Usa un' <xref:System.Windows.Controls.Canvas> per contenere i rettangoli, è possibile usare gli elementi rettangolo (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo. Infatti, sono particolarmente utili per fornire gli sfondi delle parti di rettangoli <xref:System.Windows.Controls.Grid> pannelli. Per un esempio, vedere la [panoramica delle tabelle](../advanced/table-overview.md).  
   
  In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Shapes.Rectangle>
 - [Esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Cenni preliminari sull'elemento Table](../../../../docs/framework/wpf/advanced/table-overview.md)
+- [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Cenni preliminari sull'elemento Table](../advanced/table-overview.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552045"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371905"
 ---
 # <a name="frame"></a>Frame
-Il <xref:System.Windows.Controls.Frame> controllo supporta la navigazione all'interno del contenuto. <xref:System.Windows.Controls.Frame> può essere ospitata da un elemento radice, ad esempio <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola all'interno di un albero del contenuto a cui appartiene un elemento radice.  
+Il <xref:System.Windows.Controls.Frame> controllo supporta lo spostamento all'interno del contenuto. <xref:System.Windows.Controls.Frame> può essere ospitato da un elemento radice, ad esempio <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola di all'interno di un albero del contenuto a cui appartiene un elemento radice.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Frame>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+ [Cenni preliminari sulla navigazione](../app-development/navigation-overview.md)

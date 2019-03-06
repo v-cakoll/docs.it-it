@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748077"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352711"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter e XAML
 Questo argomento illustra lo scopo della conversione del tipo string come funzionalità generale del linguaggio XAML. In .NET Framework, il <xref:System.ComponentModel.TypeConverter> classe svolge un ruolo particolare come parte dell'implementazione per una classe gestita personalizzata che può essere utilizzata come valore della proprietà utilizzo degli attributi XAML. Se si scrive una classe personalizzata e si desidera che le istanze della classe perché sia utilizzabile come valori di attributo impostabili XAML, si potrebbe essere necessario applicare una <xref:System.ComponentModel.TypeConverterAttribute> alla classe, scrivere una classe personalizzata <xref:System.ComponentModel.TypeConverter> classe o a entrambe.  
@@ -24,27 +24,22 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
  Un processore XAML necessita di due informazioni per elaborare un valore di attributo. La prima informazione è il tipo di valore della proprietà che si imposta. Qualsiasi stringa che definisce un valore di attributo e che viene elaborata in XAML deve essere convertita o risolta in un valore di quel tipo. Se il valore è una primitiva riconosciuta dal parser XAML (ad esempio un valore numerico), viene tentata una conversione diretta della stringa. Se il valore è un'enumerazione, la stringa viene usata per controllare la corrispondenza di un nome con una costante denominata in tale enumerazione. Se il valore non è né una primitiva riconosciuta dal parser né un'enumerazione, il tipo in questione deve essere in grado di fornire un'istanza del tipo o un valore basato su una stringa convertita. Ciò è possibile indicando una classe di convertitore di tipi. Il convertitore di tipi è una classe helper che fornisce valori di un'altra classe, sia per gli scenari XAML che, potenzialmente, per le chiamate nel codice .NET.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>Uso del comportamento di conversione dei tipi esistente in XAML  
- A seconda del livello di conoscenza dei concetti XAML sottostanti, è possibile che si usi già il comportamento di conversione dei tipi nel codice XAML dell'applicazione di base senza rendersene conto. Ad esempio, WPF definisce centinaia di proprietà che accettano un valore di tipo <xref:System.Windows.Point>. Oggetto <xref:System.Windows.Point> è un valore che descrive una coordinata in uno spazio delle coordinate bidimensionale e include semplicemente due importanti proprietà: <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A>. Quando si specifica un punto in XAML, viene specificato sotto forma di stringa con un delimitatore (in genere una virgola) tra il <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A> valori forniti. Ad esempio: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ A seconda del livello di conoscenza dei concetti XAML sottostanti, è possibile che si usi già il comportamento di conversione dei tipi nel codice XAML dell'applicazione di base senza rendersene conto. Ad esempio, WPF definisce centinaia di proprietà che accettano un valore di tipo <xref:System.Windows.Point>. Oggetto <xref:System.Windows.Point> è un valore che descrive una coordinata in uno spazio delle coordinate bidimensionale e include semplicemente due importanti proprietà: <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A>. Quando si specifica un punto in XAML, viene specificato sotto forma di stringa con un delimitatore (in genere una virgola) tra il <xref:System.Windows.Point.X%2A> e <xref:System.Windows.Point.Y%2A> valori forniti. Ad esempio: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`.  
   
  Anche questo tipo semplice di <xref:System.Windows.Point> e relativo utilizzo di base in XAML implicano un convertitore di tipi. In questo caso si tratta della classe <xref:System.Windows.PointConverter>.  
   
  Convertitore di tipi per <xref:System.Windows.Point> definiti a livello di classe semplifica gli utilizzi del markup di tutte le proprietà che accettano <xref:System.Windows.Point>. Senza un convertitore di tipi, per l'esempio illustrato in precedenza sarebbe necessario ricorrere al seguente markup molto più dettagliato:  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  La scelta tra l'uso di una stringa di conversione del tipo o di una sintassi equivalente più dettagliata è, in genere, una questione di stile di codifica. Anche il flusso di lavoro degli strumenti XAML può influire sul modo in cui vengono impostati i valori. Alcuni strumenti XAML tendono a generare la forma più dettagliata del markup perché è più facile eseguire il round trip nelle visualizzazioni delle finestre di progettazione o nel meccanismo di serializzazione.  
   
@@ -53,7 +48,7 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
 ### <a name="type-converters-and-markup-extensions"></a>Convertitori di tipi ed estensioni di markup  
  Le estensioni di markup e i convertitori di tipi rivestono ruoli ortogonali in termini di comportamento del processore XAML e di scenari ai cui sono applicati. Anche se il contesto è disponibile per gli utilizzi di estensione di markup, il comportamento della conversione di tipi di proprietà in cui un'estensione di markup fornisce un valore in genere non è selezionato nelle implementazioni dell'estensione di markup. In altre parole, anche se un'estensione di markup restituisce una stringa di testo come output di `ProvideValue`, il comportamento di conversione dei tipi su tale stringa così come applicato a una proprietà o a un tipo di valore della proprietà specifico non viene richiamato. In genere, lo scopo di un'estensione di markup è quello di elaborare una stringa e restituire un oggetto senza coinvolgere alcun convertitore di tipi.  
   
- Una situazione comune che richiede un'estensione di markup invece che un convertitore di tipi è il riferimento a un oggetto già esistente. Nella migliore delle ipotesi, un convertitore di tipi senza stato può solo generare una nuova istanza, che potrebbe non essere il comportamento ottimale. Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Una situazione comune che richiede un'estensione di markup invece che un convertitore di tipi è il riferimento a un oggetto già esistente. Nella migliore delle ipotesi, un convertitore di tipi senza stato può solo generare una nuova istanza, che potrebbe non essere il comportamento ottimale. Per altre informazioni sulle estensioni di markup, vedere [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Convertitori di tipi nativi  
  Nell'implementazione WPF e .NET Framework del parser XAML ci sono determinati tipi che prevedono la gestione nativa della conversione del tipo, anche se non si tratta di tipi convenzionalmente considerati primitive. Un esempio dei tipi in questione è <xref:System.DateTime>. Il motivo è basato su come funziona l'architettura di .NET Framework: il tipo <xref:System.DateTime> è definito in mscorlib, la libreria più elementare di .NET. <xref:System.DateTime> non è consentito assegnare a un attributo che deriva da un altro assembly che introduce una dipendenza (<xref:System.ComponentModel.TypeConverterAttribute> è fornito da System) in modo che il consueto meccanismo di individuazione convertitore di tipi mediante assegnazione di attributi non può essere supportato. Il parser XAML ha invece di un elenco di tipi che necessitano di tale elaborazione nativa ed elabora questi tipi in modo analogo all'elaborazione delle primitive effettive. (Nel caso del <xref:System.DateTime> ciò comporta una chiamata a <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ Questo argomento illustra lo scopo della conversione del tipo string come funzio
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.ComponentModel.TypeConverter>
-- [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Descrizione dettagliata della sintassi XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
+- [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)

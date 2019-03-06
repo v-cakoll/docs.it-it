@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365841"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> .NET Framework include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari, le applicazioni devono anche visualizzare le interfacce utente fornite dai componenti aggiuntivi. In questo argomento viene illustrato come WPF integra il modello di componente aggiuntivo .NET Framework per consentire questi scenari, l'architettura sottostante, i vantaggi e le relative limitazioni.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746562"
   
 -   **Comunicazione**: Consentire ai componenti aggiuntivi e ospitare applicazioni di comunicare tra loro attraverso i limiti di isolamento chiamando i metodi e passando i dati.  
   
--   **Gestione della durata**: Caricamento e scaricamento di domini applicazione e i processi in modo netto e prevedibile (vedere [domini applicazione](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Gestione della durata**: Caricamento e scaricamento di domini applicazione e i processi in modo netto e prevedibile (vedere [domini applicazione](../../app-domains/application-domains.md)).  
   
 -   **Controllo delle versioni**: Verificare che le applicazioni host e componenti aggiuntivi possono comunque comunicare quando vengono create nuove versioni.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746562"
   
 6.  L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
   
- Per un esempio che illustra come implementare un componente aggiuntivo che restituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Per un esempio che illustra come implementare un componente aggiuntivo che restituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Componente aggiuntivo che costituisce un'interfaccia utente  
@@ -148,7 +148,7 @@ ms.locfileid: "56746562"
   
 6.  L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
   
- Per un esempio che illustra come implementare un componente aggiuntivo che costituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che costituisce un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Per un esempio che illustra come implementare un componente aggiuntivo che costituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che costituisce un'interfaccia utente](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Restituzione di più interfacce utente da un componente aggiuntivo  
@@ -219,7 +219,7 @@ ms.locfileid: "56746562"
   
 -   Sul lato dell'applicazione host WPF riassembla il <xref:System.Windows.Interop.HwndSource> come classe interna che deriva da WPF <xref:System.Windows.Interop.HwndHost> e consuma <xref:System.AddIn.Contract.INativeHandleContract>. Un'istanza di questa classe viene restituita da <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> all'applicazione host.  
   
- <xref:System.Windows.Interop.HwndHost> disponibile per visualizzare le interfacce utente, identificate dagli handle di finestra, dalle interfacce utente WPF. Per altre informazioni, vedere [Interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> disponibile per visualizzare le interfacce utente, identificate dagli handle di finestra, dalle interfacce utente WPF. Per altre informazioni, vedere [Interoperatività di WPF e Win32](../advanced/wpf-and-win32-interoperation.md).  
   
  In sintesi, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> esiste per consentire l'handle della finestra per una UI di WPF deve essere passato da un componente aggiuntivo a un'applicazione host, in cui viene incapsulato da un <xref:System.Windows.Interop.HwndHost> e visualizzato dell'interfaccia utente dell'applicazione host.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746562"
   
 -   Interfacce utente del componente aggiuntivo visualizzate da un'applicazione host non rispettano la modalità di ritaglio dell'applicazione host.  
   
--   Il concetto di *spazio aereo* negli scenari di interoperabilità si applica anche ai componenti aggiuntivi (vedere [Cenni preliminari sulle aree di tecnologia](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   Il concetto di *spazio aereo* negli scenari di interoperabilità si applica anche ai componenti aggiuntivi (vedere [Cenni preliminari sulle aree di tecnologia](../advanced/technology-regions-overview.md)).  
   
 -   Interfaccia utente dell'applicazione di un host dei servizi, ad esempio ereditarietà delle risorse, l'associazione dati e i comandi non sono automaticamente disponibili per il componente aggiuntivo interfacce utente. Per fornire questi servizi al componente aggiuntivo è necessario aggiornare la pipeline.  
   
--   Un componente aggiuntivo dell'interfaccia utente non può essere ruotata, ridimensionata, inclinata o è coinvolta in una trasformazione (vedere [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Un componente aggiuntivo dell'interfaccia utente non può essere ruotata, ridimensionata, inclinata o è coinvolta in una trasformazione (vedere [Cenni preliminari sulle trasformazioni](../graphics-multimedia/transforms-overview.md)).  
   
 -   Contenuto all'interno di interfacce utente del componente aggiuntivo che viene eseguito il rendering mediante operazioni di disegno di <xref:System.Drawing> dello spazio dei nomi può includere la fusione alfa. Deve essere 100% di opacità; tuttavia, sia un componente aggiuntivo dell'interfaccia utente e l'applicazione host dell'interfaccia utente che lo contiene in altre parole, il `Opacity` proprietà sia deve essere impostata su 1.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746562"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Ottimizzazione delle prestazioni  
- Per impostazione predefinita, quando vengono utilizzati più domini applicazione, gli assembly .NET Framework richiesti da ogni applicazione tutti vengono caricati nel dominio dell'applicazione. Di conseguenza, il tempo necessario per creare nuovi domini dell'applicazione e avviare le applicazioni al loro interno potrebbe influire sulle prestazioni. Tuttavia, .NET Framework fornisce un modo per ridurre i tempi di avvio indicando alle applicazioni di condividere gli assembly nei domini applicazione se sono già caricati. Eseguire questa operazione usando il <xref:System.LoaderOptimizationAttribute> attributo, che deve essere applicato al metodo del punto di ingresso (`Main`). In questo caso, è necessario usare soltanto il codice per implementare la definizione dell'applicazione (vedere [Cenni preliminari sulla gestione di applicazioni](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Per impostazione predefinita, quando vengono utilizzati più domini applicazione, gli assembly .NET Framework richiesti da ogni applicazione tutti vengono caricati nel dominio dell'applicazione. Di conseguenza, il tempo necessario per creare nuovi domini dell'applicazione e avviare le applicazioni al loro interno potrebbe influire sulle prestazioni. Tuttavia, .NET Framework fornisce un modo per ridurre i tempi di avvio indicando alle applicazioni di condividere gli assembly nei domini applicazione se sono già caricati. Eseguire questa operazione usando il <xref:System.LoaderOptimizationAttribute> attributo, che deve essere applicato al metodo del punto di ingresso (`Main`). In questo caso, è necessario usare soltanto il codice per implementare la definizione dell'applicazione (vedere [Cenni preliminari sulla gestione di applicazioni](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.LoaderOptimizationAttribute>
 - [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)
+- [Domini dell'applicazione](../../app-domains/application-domains.md)
 - [Panoramica di .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Oggetti remotizzabili](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Procedure relative alle proprietà](how-to-topics.md)

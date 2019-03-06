@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2abb9939917d4fc10a345b6199e2eb67054bf0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676692"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352737"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: Verificare l'eventuale possibilità di eseguire un processo di stampa in questo preciso momento
 Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati momenti del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo alle 17.00. Tale reparto avrebbe un'altra coda della stampante di altri reparti di manutenzione utilizzano. La coda per gli altri reparti verrebbe impostata sarà disponibile dopo alle 17.00, anche se coda di quella per il reparto può essere impostata per essere sempre disponibile.  
@@ -47,9 +47,9 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
   
  Quando si segnalano ore del giorno, il <xref:System.DateTime.ToShortTimeString%2A> metodo viene chiamato anche perché questo metodo evita di anni, mesi e giorni dall'output. Non è possibile limitare la disponibilità di una coda di stampa o un processo di stampa per determinati anni, mesi o giorni.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
- [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
- [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
+ [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
+ [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
  I due overload del **ReportAvailabilityAtThisTime** metodo sono identici tranne che per il tipo passato ad essi, in modo che solo il <xref:System.Printing.PrintQueue> versione viene presentata di seguito.  
   
@@ -64,19 +64,19 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
   
  Tuttavia, queste due proprietà non sono <xref:System.DateTime> oggetti. Sono <xref:System.Int32>s esprime l'ora come numero di minuti trascorsi dalla mezzanotte UTC. Quindi dobbiamo convertire la <xref:System.DateTime> oggetto minuti dopo la mezzanotte. Al termine, il metodo controlla semplicemente per verificare se "ora" sia tra l'inizio della coda e "until" volte, set sentinel su false se "ora" non è compreso tra i due volte e restituisce la sentinella.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
- [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
- [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
+ [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
+ [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
  Il **TimeConverter** (metodo), illustrato nell'esempio di codice seguente, non usa metodi introdotti con Microsoft .NET Framework, pertanto la discussione è breve. Il metodo ha un'attività di conversione doppie: deve richiedere un numero intero che esprime minuti dopo la mezzanotte e convertirlo in un momento leggibile dall'utente e si deve convertire nell'ora locale. Ciò è possibile tramite la creazione di un <xref:System.DateTime> oggetto che viene impostato sulla mezzanotte UTC e quindi Usa il <xref:System.DateTime.AddMinutes%2A> metodo per aggiungere i minuti che sono stati passati al metodo. Restituisce un nuovo <xref:System.DateTime> esprime l'ora originale che è stato passato al metodo. Il <xref:System.DateTime.ToLocalTime%2A> metodo quindi converte nell'ora locale.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
- [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
- [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
+ [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
+ [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documenti in WPF](documents-in-wpf.md)
+- [Panoramica della stampa](printing-overview.md)

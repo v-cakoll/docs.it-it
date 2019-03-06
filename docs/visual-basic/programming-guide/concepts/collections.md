@@ -2,12 +2,12 @@
 title: Raccolte (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 7fdafce071a77f344eb58e17c4be9d4f204e118d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359354"
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -227,12 +227,12 @@ End Class
  Lo spazio dei nomi <xref:System.Collections.Specialized> offre classi di raccolte fortemente tipizzate e specializzate, ad esempio raccolte di sole stringhe, dizionari ibridi e dizionari a elenchi collegati.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Classe Collection di Visual Basic  
+### <a name="visual-basic-collection-class"></a>Classe Collection di Visual Basic  
  È possibile usare la classe <xref:Microsoft.VisualBasic.Collection> di Visual Basic per accedere a un elemento della raccolta usando un indice numerico o una chiave `String`. Per aggiungere elementi a un oggetto raccolta, è possibile specificare o non specificare una chiave. Se si aggiunge un elemento senza una chiave, è necessario usare il relativo indice numerico per accedervi.  
   
  La classe `Collection` di Visual Basic archivia tutti gli elementi di tipo `Object`, pertanto è possibile aggiungere un elemento di qualsiasi tipo di dati. Non esiste alcuna misura per impedire l'aggiunta di tipi di dati non appropriati.  
   
- Quando si usa la classe `Collection` di Visual Basic, il primo elemento di una raccolta ha indice 1. Questo comportamento è diverso rispetto alle classi di raccolte di .NET Framework, per cui l'indice iniziale è 0.  
+ Quando si usa la classe `Collection` di Visual Basic, il primo elemento di una raccolta ha indice 1. Questo comportamento è diverso rispetto alle classi Collection di .NET Framework, per cui l'indice iniziale è 0.  
   
  Quando possibile, usare le raccolte generiche negli spazi dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType> o <xref:System.Collections.Concurrent> al posto della classe `Collection` di Visual Basic.  
   
@@ -337,7 +337,7 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta  
+## <a name="using-linq-to-access-a-collection"></a>Uso di LINQ per accedere a una raccolta  
  È possibile usare LINQ (Language-Integrated Query) per accedere alle raccolte. Le query LINQ forniscono funzionalità di filtro, ordinamento e raggruppamento. Per altre informazioni, vedere [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Nell'esempio seguente viene eseguita una query LINQ su un oggetto `List` generico. La query LINQ restituisce una raccolta diversa che contiene i risultati.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore Usa un' [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta.  
   
  Chiamare un iteratore usando un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione. Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando si raggiunge un'istruzione `Yield` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  

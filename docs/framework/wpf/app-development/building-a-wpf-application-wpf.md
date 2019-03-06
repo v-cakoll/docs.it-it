@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745638"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364294"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
 Applicazioni Windows Presentation Foundation (WPF) possono essere compilate come [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] file eseguibili (.exe), librerie (DLL) o una combinazione di entrambi i tipi di assembly. Questo argomento illustra come compilare applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descrive i passaggi chiave del processo di compilazione.  
@@ -32,7 +32,7 @@ Applicazioni Windows Presentation Foundation (WPF) possono essere compilate come
 ## <a name="wpf-build-pipeline"></a>Pipeline di compilazione WPF  
  Quando si compila un progetto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], viene richiamata una combinazione di destinazioni specifiche per il linguaggio e per [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Il processo di esecuzione di queste destinazioni è definito pipeline di compilazione e i passaggi principali sono illustrati nella figura seguente.  
   
- ![Processo di compilazione WPF](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![Processo di compilazione WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>Inizializzazioni pre-compilazione  
@@ -167,7 +167,7 @@ End Sub
 -   Non viene ricompilato nulla (se non è stato modificato nulla nel progetto).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Distribuzione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md)
 - [Informazioni di riferimento su MSBuild WPF](/visualstudio/msbuild/wpf-msbuild-reference)
-- [URI di tipo pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [File di dati e di risorse dell'applicazione WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [URI di tipo pack in WPF](pack-uris-in-wpf.md)
+- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)

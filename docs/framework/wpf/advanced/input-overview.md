@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376819"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
 <a name="introduction"></a> Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un potente sottosistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per ottenere input da un'ampia gamma di dispositivi, tra cui il mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
@@ -37,7 +37,7 @@ ms.locfileid: "54592588"
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>API di input
- L'input principale [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] esposizione si trova nelle classi dell'elemento di base: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>.  Per altre informazioni sugli elementi di base, vedere [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md).  Queste classi forniscono funzionalità per gli eventi di input correlati, ad esempio, a pressioni di tasti, pulsanti del mouse, rotellina del mouse, movimento del mouse, gestione dello stato attivo, stato mouse capture e altro. Collocando l'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di input negli elementi di base, invece di considerare tutti gli eventi di input come servizio, l'architettura di input consente di originare gli eventi di input da un particolare oggetto dell'interfaccia utente e di supportare uno schema di routing degli eventi con cui più elementi possono gestire un evento di input. A molti eventi di input è associata una coppia di eventi.  Ad esempio, la chiave di evento di selezione è associata il <xref:System.Windows.Input.Keyboard.KeyDown> e <xref:System.Windows.Input.Keyboard.PreviewKeyDown> eventi.  La differenza tra questi eventi consiste nel modo in cui ne viene eseguito il routing all'elemento di destinazione.  Gli eventi di anteprima scendono lungo l'albero degli elementi (tunneling), dall'elemento radice all'elemento di destinazione.  Gli eventi di bubbling invece salgono dall'elemento di destinazione all'elemento radice.  Il routing degli eventi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è illustrato in modo più dettagliato più avanti in questo articolo e nell'articolo [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ L'input principale [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] esposizione si trova nelle classi dell'elemento di base: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>.  Per altre informazioni sugli elementi di base, vedere [Cenni preliminari sugli elementi di base](base-elements-overview.md).  Queste classi forniscono funzionalità per gli eventi di input correlati, ad esempio, a pressioni di tasti, pulsanti del mouse, rotellina del mouse, movimento del mouse, gestione dello stato attivo, stato mouse capture e altro. Collocando l'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] di input negli elementi di base, invece di considerare tutti gli eventi di input come servizio, l'architettura di input consente di originare gli eventi di input da un particolare oggetto dell'interfaccia utente e di supportare uno schema di routing degli eventi con cui più elementi possono gestire un evento di input. A molti eventi di input è associata una coppia di eventi.  Ad esempio, la chiave di evento di selezione è associata il <xref:System.Windows.Input.Keyboard.KeyDown> e <xref:System.Windows.Input.Keyboard.PreviewKeyDown> eventi.  La differenza tra questi eventi consiste nel modo in cui ne viene eseguito il routing all'elemento di destinazione.  Gli eventi di anteprima scendono lungo l'albero degli elementi (tunneling), dall'elemento radice all'elemento di destinazione.  Gli eventi di bubbling invece salgono dall'elemento di destinazione all'elemento radice.  Il routing degli eventi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è illustrato in modo più dettagliato più avanti in questo articolo e nell'articolo [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
 ### <a name="keyboard-and-mouse-classes"></a>Classi Keyboard e Mouse
  Oltre a input [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] sulle classi di elementi di base, il <xref:System.Windows.Input.Keyboard> classe e <xref:System.Windows.Input.Mouse> classi forniscono ulteriori [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] per l'uso di input del mouse e tastiera.
@@ -46,30 +46,30 @@ ms.locfileid: "54592588"
 
  L'esempio seguente usa il <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> metodo per determinare se un <xref:System.Windows.Input.Key> è nello stato premuto.
 
- [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
- [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
  Esempi di input [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nella <xref:System.Windows.Input.Mouse> classe vengono <xref:System.Windows.Input.Mouse.MiddleButton%2A>, che ottiene lo stato del pulsante centrale del mouse, e <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, che ottiene l'elemento il puntatore del mouse è attualmente posizionato.
 
  L'esempio seguente determina se il <xref:System.Windows.Input.Mouse.LeftButton%2A> del passaggio del mouse si trova il <xref:System.Windows.Input.MouseButtonState.Pressed> dello stato.
 
- [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
- [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
 
  Il <xref:System.Windows.Input.Mouse> e <xref:System.Windows.Input.Keyboard> classi vengono analizzate più dettagliatamente nel corso dell'articolo.
 
 ### <a name="stylus-input"></a>Input dello stilo
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre supporto integrato per la <xref:System.Windows.Input.Stylus>.  Il <xref:System.Windows.Input.Stylus> è un input penna diventato comune con il [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possono trattare lo stilo come un mouse usando l'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] del mouse, ma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone anche un'astrazione del dispositivo stilo che usa un modello analogo a tastiera e mouse.  Tutte le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] correlate allo stilo contengono la parola "Stylus".
 
- Dal momento che lo stilo può funzionare come un mouse, le applicazioni che supportano solo l'input del mouse possono comunque ottenere automaticamente un certo livello di supporto dello stilo. Quando lo stilo viene usato in questo modo, l'applicazione può gestire l'evento dello stilo appropriato gestendo l'evento del mouse corrispondente. Inoltre, tramite l'astrazione del dispositivo stilo, sono disponibili anche servizi di livello superiore, come l'input penna.  Per altre informazioni sull'input penna, vedere [Nozioni di base sull'input penna](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).
+ Dal momento che lo stilo può funzionare come un mouse, le applicazioni che supportano solo l'input del mouse possono comunque ottenere automaticamente un certo livello di supporto dello stilo. Quando lo stilo viene usato in questo modo, l'applicazione può gestire l'evento dello stilo appropriato gestendo l'evento del mouse corrispondente. Inoltre, tramite l'astrazione del dispositivo stilo, sono disponibili anche servizi di livello superiore, come l'input penna.  Per altre informazioni sull'input penna, vedere [Nozioni di base sull'input penna](getting-started-with-ink.md).
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>Routing di eventi
- Oggetto <xref:System.Windows.FrameworkElement> può contenere altri elementi come elementi figlio nel modello di contenuto, formando un albero degli elementi.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'elemento padre può partecipare all'input diretto verso i relativi elementi figlio o agli altri discendenti mediante la gestione degli eventi. Ciò risulta particolarmente utile per la creazione di controlli a partire da controlli più piccoli, processo noto come "composizione di controlli" o "composizione". Per altre informazioni sugli alberi degli elementi e sulla loro relazione con le route degli eventi, vedere [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).
+ Oggetto <xref:System.Windows.FrameworkElement> può contenere altri elementi come elementi figlio nel modello di contenuto, formando un albero degli elementi.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'elemento padre può partecipare all'input diretto verso i relativi elementi figlio o agli altri discendenti mediante la gestione degli eventi. Ciò risulta particolarmente utile per la creazione di controlli a partire da controlli più piccoli, processo noto come "composizione di controlli" o "composizione". Per altre informazioni sugli alberi degli elementi e sulla loro relazione con le route degli eventi, vedere [Strutture ad albero in WPF](trees-in-wpf.md).
 
- Il routing degli eventi è il processo di inoltro degli eventi a più elementi, in modo che un oggetto o un elemento specifico lungo la route possa offrire una risposta significativa (tramite la gestione) a un evento che potrebbe essere stato originato da un elemento diverso.  Gli eventi indirizzati usano uno dei tre meccanismi di routing indicati di seguito: diretto, bubbling e tunneling.  Nel routing diretto, l'elemento di origine è l'unico elemento che riceve la notifica e l'evento non viene indirizzato a nessun altro elemento. Tuttavia, l'evento indirizzato tramite routing diretto offre alcune funzionalità aggiuntive che sono disponibili solo per gli eventi indirizzati e non per gli eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Il bubbling viene eseguito procedendo verso l'alto nell'albero degli elementi, notificando innanzitutto l'elemento che ha originato l'evento, quindi l'elemento padre e così via.  Il tunneling parte dalla radice dell'albero degli elementi e procede verso il basso, terminando con l'elemento di origine.  Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Il routing degli eventi è il processo di inoltro degli eventi a più elementi, in modo che un oggetto o un elemento specifico lungo la route possa offrire una risposta significativa (tramite la gestione) a un evento che potrebbe essere stato originato da un elemento diverso.  Gli eventi indirizzati usano uno dei tre meccanismi di routing indicati di seguito: diretto, bubbling e tunneling.  Nel routing diretto, l'elemento di origine è l'unico elemento che riceve la notifica e l'evento non viene indirizzato a nessun altro elemento. Tuttavia, l'evento indirizzato tramite routing diretto offre alcune funzionalità aggiuntive che sono disponibili solo per gli eventi indirizzati e non per gli eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Il bubbling viene eseguito procedendo verso l'alto nell'albero degli elementi, notificando innanzitutto l'elemento che ha originato l'evento, quindi l'elemento padre e così via.  Il tunneling parte dalla radice dell'albero degli elementi e procede verso il basso, terminando con l'elemento di origine.  Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
- Gli eventi di input [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono in genere a coppie, costituite da un evento di tunneling e un evento di bubbling.  Gli eventi di tunneling si distinguono da quelli di bubbling tramite il prefisso "Preview".  Ad esempio, <xref:System.Windows.Input.Mouse.PreviewMouseMove> è la versione tunneling di un evento di spostamento del mouse e <xref:System.Windows.Input.Mouse.MouseMove> è la versione di bubbling dell'evento. Questa coppia di eventi è una convenzione implementata a livello di elemento e non è una funzionalità intrinseca del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per informazioni dettagliate, vedere la sezione Eventi di input WPF in [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Gli eventi di input [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono in genere a coppie, costituite da un evento di tunneling e un evento di bubbling.  Gli eventi di tunneling si distinguono da quelli di bubbling tramite il prefisso "Preview".  Ad esempio, <xref:System.Windows.Input.Mouse.PreviewMouseMove> è la versione tunneling di un evento di spostamento del mouse e <xref:System.Windows.Input.Mouse.MouseMove> è la versione di bubbling dell'evento. Questa coppia di eventi è una convenzione implementata a livello di elemento e non è una funzionalità intrinseca del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per informazioni dettagliate, vedere la sezione Eventi di input WPF in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Gestione degli eventi di input
@@ -82,33 +82,33 @@ ms.locfileid: "54592588"
 
  La prima sezione dell'esempio crea il <xref:System.Windows.Controls.StackPanel> e il <xref:System.Windows.Controls.Button> e associa il gestore eventi per il <xref:System.Windows.UIElement.KeyDown>.
 
- [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
  La seconda sezione è scritta nel codice e definisce il gestore eventi.  Quando viene premuto il tasto freccia sinistra e il <xref:System.Windows.Controls.Button> ha lo stato attivo della tastiera, il gestore viene eseguito e il <xref:System.Windows.Controls.Control.Background%2A> colore del <xref:System.Windows.Controls.Button> viene modificato.  Se viene premuto il tasto, ma non è il tasto freccia sinistra, il <xref:System.Windows.Controls.Control.Background%2A> color del <xref:System.Windows.Controls.Button> viene nuovamente impostato su colore iniziale.
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>Esempio di evento di input del mouse
  Nell'esempio seguente, il <xref:System.Windows.Controls.Control.Background%2A> colore di un <xref:System.Windows.Controls.Button> viene modificato quando il puntatore del mouse viene spostato il <xref:System.Windows.Controls.Button>.  Il <xref:System.Windows.Controls.Control.Background%2A> colore viene ripristinato quando il mouse lascia il <xref:System.Windows.Controls.Button>.
 
  La prima sezione dell'esempio crea il <xref:System.Windows.Controls.StackPanel> e il <xref:System.Windows.Controls.Button> controllano e associa i gestori eventi per il <xref:System.Windows.UIElement.MouseEnter> e <xref:System.Windows.UIElement.MouseLeave> eventi per il <xref:System.Windows.Controls.Button>.
 
- [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
  La seconda sezione dell'esempio è scritta nel codice e definisce i gestori eventi.  Quando il mouse viene spostato il <xref:System.Windows.Controls.Button>, il <xref:System.Windows.Controls.Control.Background%2A> colori del <xref:System.Windows.Controls.Button> viene modificato in <xref:System.Windows.Media.Brushes.SlateGray%2A>.  Quando il mouse lascia il <xref:System.Windows.Controls.Button>, il <xref:System.Windows.Controls.Control.Background%2A> colore della <xref:System.Windows.Controls.Button> viene nuovamente impostato su <xref:System.Windows.Media.Brushes.AliceBlue%2A>.
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>Input di testo
@@ -122,19 +122,19 @@ ms.locfileid: "54592588"
 
  Il primo segmento di codice o markup crea l'interfaccia utente.
 
- [!code-xaml[InputOvw#Input_OvwTextInputXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
+ [!code-xaml[InputOvw#Input_OvwTextInputXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
 
- [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
 
  Il secondo segmento di codice contiene i gestori eventi.
 
- [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
  Poiché gli eventi di input intercetterà la route dell'evento, il <xref:System.Windows.Controls.StackPanel> riceve l'input indipendentemente dall'elemento che ha lo stato attivo della tastiera. Il <xref:System.Windows.Controls.TextBox> controllo riceve una notifica prima e la `OnTextInputKeyDown` gestore viene chiamato solo se il <xref:System.Windows.Controls.TextBox> non ha gestito l'input. Se il <xref:System.Windows.UIElement.PreviewKeyDown> eventi viene usato invece del <xref:System.Windows.UIElement.KeyDown> evento, il `OnTextInputKeyDown` gestore viene chiamato per primo.
 
- In questo esempio la logica di gestione viene scritta due volte, una per CTRL+O e una per l'evento Click del pulsante. È possibile semplificare questa operazione usando i comandi, invece di gestire direttamente gli eventi di input.  I comandi vengono illustrati in questo articolo e in [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ In questo esempio la logica di gestione viene scritta due volte, una per CTRL+O e una per l'evento Click del pulsante. È possibile semplificare questa operazione usando i comandi, invece di gestire direttamente gli eventi di input.  I comandi vengono illustrati in questo articolo e in [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Tocco e manipolazione
@@ -210,11 +210,11 @@ ms.locfileid: "54592588"
 
 -   <xref:System.Windows.UIElement.LostTouchCapture>
 
- Analogamente agli eventi di tastiera e mouse, gli eventi di tocco sono eventi indirizzati. Gli eventi che iniziano con `Preview` sono eventi di tunneling e gli eventi che iniziano con `Touch` sono eventi di bubbling. Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md). Quando si gestiscono questi eventi, è possibile ottenere la posizione dell'input, rispetto a qualsiasi elemento chiamando il <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> o <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> (metodo).
+ Analogamente agli eventi di tastiera e mouse, gli eventi di tocco sono eventi indirizzati. Gli eventi che iniziano con `Preview` sono eventi di tunneling e gli eventi che iniziano con `Touch` sono eventi di bubbling. Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md). Quando si gestiscono questi eventi, è possibile ottenere la posizione dell'input, rispetto a qualsiasi elemento chiamando il <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> o <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> (metodo).
 
  Per comprendere l'interazione tra gli eventi di tocco, si consideri lo scenario in cui un utente appoggia un dito su un elemento, muove il dito all'interno dell'elemento e quindi solleva il dito dall'elemento. La figura seguente illustra l'esecuzione degli eventi di bubbling. Gli eventi di tunneling vengono omessi per maggiore semplicità.
 
- ![La sequenza di eventi di tocco. ](../../../../docs/framework/wpf/advanced/media/ndp-touchevents.png "NDP_TouchEvents") eventi di tocco
+ ![La sequenza di eventi di tocco. ](./media/ndp-touchevents.png "NDP_TouchEvents") eventi di tocco
 
  L'elenco seguente descrive la sequenza degli eventi della figura precedente.
 
@@ -243,7 +243,7 @@ ms.locfileid: "54592588"
 
  Quando gli oggetti rispondono alle manipolazioni, si può fare in modo che sembrino avere un'inerzia. In questo modo, gli oggetti possono simulare il mondo fisico. Ad esempio se si spinge un libro su un tavolo con sufficiente forza, il libro continuerà a muoversi anche dopo che lo si lascia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di simulare questo comportamento generando eventi di manipolazione dopo che le dita dell'utente rilasciano l'oggetto.
 
- Per informazioni su come creare un'applicazione che consente all'utente di spostare, ridimensionare e ruotare un oggetto, vedere [procedura dettagliata: Creazione della prima applicazione Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Per informazioni su come creare un'applicazione che consente all'utente di spostare, ridimensionare e ruotare un oggetto, vedere [procedura dettagliata: Creazione della prima applicazione Touch](walkthrough-creating-your-first-touch-application.md).
 
  Il <xref:System.Windows.UIElement> definisce gli eventi di manipolazione seguenti.
 
@@ -266,7 +266,7 @@ ms.locfileid: "54592588"
 
  La figura seguente mostra il percorso di esecuzione degli eventi di manipolazione, con informazioni importanti relative a ogni evento.
 
- ![La sequenza di eventi di manipolazione. ](../../../../docs/framework/wpf/advanced/media/ndp-manipulationevents.png "NDP_ManipulationEvents") gli eventi di manipolazione
+ ![La sequenza di eventi di manipolazione. ](./media/ndp-manipulationevents.png "NDP_ManipulationEvents") gli eventi di manipolazione
 
  L'elenco seguente descrive la sequenza degli eventi della figura precedente.
 
@@ -297,7 +297,7 @@ ms.locfileid: "54592588"
 ### <a name="the-relationship-between-touch-and-manipulation-events"></a>Relazione tra eventi di tocco e di manipolazione
  Oggetto <xref:System.Windows.UIElement> può sempre ricevere eventi di tocco. Quando la <xref:System.Windows.UIElement.IsManipulationEnabled%2A> è impostata su `true`, un <xref:System.Windows.UIElement> può ricevere eventi di tocco e di manipolazione.  Se il <xref:System.Windows.UIElement.TouchDown> evento non è gestito (vale a dire, il <xref:System.Windows.RoutedEventArgs.Handled%2A> è di proprietà `false`), la logica di manipolazione acquisisce il tocco per l'elemento e genera gli eventi di manipolazione. Se il <xref:System.Windows.RoutedEventArgs.Handled%2A> è impostata su `true` nel <xref:System.Windows.UIElement.TouchDown> evento, la logica di manipolazione non genera eventi di manipolazione. La figura seguente mostra la relazione tra eventi di tocco ed eventi di manipolazione.
 
- ![Relazione tra gli eventi di tocco e manipolazione](../../../../docs/framework/wpf/advanced/media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") gli eventi di tocco e manipolazione
+ ![Relazione tra gli eventi di tocco e manipolazione](./media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents") gli eventi di tocco e manipolazione
 
  L'elenco seguente descrive la relazione tra gli eventi di tocco e gli eventi di manipolazione illustrati nella figura precedente.
 
@@ -322,10 +322,10 @@ ms.locfileid: "54592588"
 
  L'esempio seguente usa <xref:System.Windows.Input.Keyboard.Focus%2A> impostare lo stato attivo della tastiera su un <xref:System.Windows.Controls.Button>.  La posizione consigliata per impostare lo stato attivo iniziale in un'applicazione è il <xref:System.Windows.FrameworkElement.Loaded> gestore dell'evento.
 
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
 
- Per altre informazioni sullo stato attivo della tastiera, vedere [Cenni preliminari sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md).
+ Per altre informazioni sullo stato attivo della tastiera, vedere [Cenni preliminari sullo stato attivo](focus-overview.md).
 
 ### <a name="logical-focus"></a>Stato attivo logico
  Lo stato attivo logico fa riferimento al <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> nell'ambito di stato attivo.  In un'applicazione possono esserci più elementi con lo stato attivo logico, ma in un determinato ambito di stato attivo può esserci un solo elemento con lo stato attivo logico.
@@ -336,10 +336,10 @@ ms.locfileid: "54592588"
 
  Nell'esempio seguente viene eseguita una <xref:System.Windows.Controls.StackPanel> ambito di stato attivo impostando il <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> proprietà associata.
 
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
 
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
  Le classi nello [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] quali sono gli ambiti di stato attivo per impostazione predefinita viene <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, e <xref:System.Windows.Controls.ContextMenu>.
 
@@ -347,7 +347,7 @@ ms.locfileid: "54592588"
 
  Per determinare l'elemento con un ambito, usare <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>. Per modificare l'elemento con lo stato attivo per un ambito dello stato attivo, usare <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>.
 
- Per altre informazioni sullo stato attivo logico, vedere [Cenni preliminari sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md).
+ Per altre informazioni sullo stato attivo logico, vedere [Cenni preliminari sullo stato attivo](focus-overview.md).
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>Posizione del mouse
@@ -355,7 +355,7 @@ ms.locfileid: "54592588"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Mouse Capture
- I dispositivi di tipo mouse hanno una caratteristica modale specifica nota come mouse capture. Tale caratteristica viene usata per mantenere uno stato di input di transizione all'avvio di un'operazione di trascinamento della selezione, in modo che le altre operazioni che riguardano la posizione su schermo nominale del puntatore del mouse non vengano necessariamente eseguite. Durante il trascinamento, l'utente non può fare clic senza interrompere il trascinamento della selezione, quindi la maggior parte dei segnali di passaggio del mouse risulterà inappropriata quando l'origine del trascinamento mantiene lo stato mouse capture. Il sistema di input espone [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che possono determinare lo stato mouse capture, nonché [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che possono imporre tale stato per un elemento specifico o eliminarlo. Per altre informazioni sulle operazioni di trascinamento della selezione, vedere [Cenni preliminari sul trascinamento della selezione](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md).
+ I dispositivi di tipo mouse hanno una caratteristica modale specifica nota come mouse capture. Tale caratteristica viene usata per mantenere uno stato di input di transizione all'avvio di un'operazione di trascinamento della selezione, in modo che le altre operazioni che riguardano la posizione su schermo nominale del puntatore del mouse non vengano necessariamente eseguite. Durante il trascinamento, l'utente non può fare clic senza interrompere il trascinamento della selezione, quindi la maggior parte dei segnali di passaggio del mouse risulterà inappropriata quando l'origine del trascinamento mantiene lo stato mouse capture. Il sistema di input espone [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che possono determinare lo stato mouse capture, nonché [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che possono imporre tale stato per un elemento specifico o eliminarlo. Per altre informazioni sulle operazioni di trascinamento della selezione, vedere [Cenni preliminari sul trascinamento della selezione](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Comandi
@@ -363,18 +363,18 @@ ms.locfileid: "54592588"
 
  <xref:System.Windows.Input.RoutedCommand> è il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementazione di <xref:System.Windows.Input.ICommand>.  Quando un <xref:System.Windows.Input.RoutedCommand> viene eseguita, un' <xref:System.Windows.Input.CommandManager.PreviewExecuted> e un <xref:System.Windows.Input.CommandManager.Executed> sulla destinazione del comando, il tunneling e bubbling attraverso l'albero degli elementi come altri input vengono generati eventi.  Se non è impostata una destinazione del comando, questa sarà rappresentata dall'elemento con lo stato attivo della tastiera.  La logica che esegue il comando è associata a un <xref:System.Windows.Input.CommandBinding>.  Quando un <xref:System.Windows.Input.CommandManager.Executed> evento raggiunge una <xref:System.Windows.Input.CommandBinding> per quel comando specifico, il <xref:System.Windows.Input.ExecutedRoutedEventHandler> sul <xref:System.Windows.Input.CommandBinding> viene chiamato.  Il gestore esegue l'azione del comando.
 
- Per altre informazioni sui comandi, vedere [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ Per altre informazioni sui comandi, vedere [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce una libreria di comandi comuni che è costituito <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, e <xref:System.Windows.Documents.EditingCommands>, oppure è possibile definire il proprio.
 
  Nell'esempio seguente viene illustrato come configurare un <xref:System.Windows.Controls.MenuItem> in modo che quando si fa clic su di esso venga richiamato il <xref:System.Windows.Input.ApplicationCommands.Paste%2A> comando le <xref:System.Windows.Controls.TextBox>, supponendo che il <xref:System.Windows.Controls.TextBox> ha lo stato attivo della tastiera.
 
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
 
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
 
- Per altre informazioni sui comandi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).
+ Per altre informazioni sui comandi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).
 
 <a name="the_input_system_and_base_elements"></a>
 ## <a name="the-input-system-and-base-elements"></a>Sistema di input ed elementi di base
@@ -388,11 +388,11 @@ ms.locfileid: "54592588"
 ## <a name="whats-next"></a>Argomenti successivi
  A questo punto si conoscono diverse tecniche per la gestione dell'input in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Si dovrebbe anche avere una conoscenza più approfondita dei vari tipi di eventi di input e dei meccanismi degli eventi indirizzati usati in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
- Sono disponibili risorse aggiuntive che illustrano più dettagliatamente gli elementi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e il routing degli eventi. Per altre informazioni generali, vedere [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Cenni preliminari sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md), [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) e [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
+ Sono disponibili risorse aggiuntive che illustrano più dettagliatamente gli elementi del framework [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e il routing degli eventi. Per altre informazioni generali, vedere [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md), [Cenni preliminari sullo stato attivo](focus-overview.md), [Cenni preliminari sugli elementi di base](base-elements-overview.md), [Strutture ad albero in WPF](trees-in-wpf.md) e [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Cenni preliminari sugli elementi di base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
-- [Proprietà](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Panoramica sullo stato attivo](focus-overview.md)
+- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
+- [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
+- [Cenni preliminari sugli elementi di base](base-elements-overview.md)
+- [Proprietà](properties-wpf.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374570"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Metodo IXCLRDataProcess::StartEnumMethodInstancesByAddress
 
@@ -40,11 +40,14 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ### <a name="parameters"></a>Parametri
 
-`address` [in] L'indirizzo dell'istanza del primo metodo.
+`address`\
+[in] L'indirizzo dell'istanza del primo metodo.
 
-`appDomain` [in] Il dominio di applicazione delle istanze del metodo.
+`appDomain`\
+[in] Il dominio di applicazione delle istanze del metodo.
 
-`handle` [out] Handle per l'enumerazione delle istanze di metodo.
+`handle`\
+[out] Handle per l'enumerazione delle istanze di metodo.
 
 ## <a name="remarks"></a>Note
 
@@ -59,6 +62,6 @@ Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde a
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Enumerazione CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess Interface](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debug](index.md)
+- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)

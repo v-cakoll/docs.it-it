@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496913"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373387"
 ---
 # <a name="inline-styles-and-templates"></a>Stili e modelli inline
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce <xref:System.Windows.Style> oggetti e oggetti modello (<xref:System.Windows.FrameworkTemplate> sottoclassi) che consente di definire l'aspetto visivo di un elemento nelle risorse, in modo che possono essere usati più volte. Per questo motivo, gli attributi nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che accettano i tipi <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quasi sempre dei riferimenti alle risorse per gli stili esistenti e i modelli anziché definire nuove colonne inline.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496913"
   
  In genere non è necessario impostare uno stile o modello inline, anche se si intende solo utilizzare tale stile o modello in tale percorso. La maggior parte degli elementi che possono accettare uno stile o modello supportano anche una proprietà di contenuto e un modello di contenuto. Se si usa solo qualsiasi albero logico creare una sola volta tramite stili o modelli, sarebbe ancora più semplice compilare solo tale proprietà di contenuto con gli elementi figlio equivalente nel markup diretta. In tal modo del tutto i meccanismi di stili e modelli.  
   
- Altri tipi di sintassi abilitate per le estensioni di markup che restituiscono un oggetto sono anche possibili per gli stili e modelli. Due tali estensioni con gli scenari possibili includono [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
+ Altri tipi di sintassi abilitate per le estensioni di markup che restituiscono un oggetto sono anche possibili per gli stili e modelli. Due tali estensioni con gli scenari possibili includono [TemplateBinding](templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Applicazione di stili e modelli](../controls/styling-and-templating.md)

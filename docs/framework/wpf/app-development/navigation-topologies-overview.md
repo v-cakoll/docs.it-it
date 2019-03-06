@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: f7aa47d8613cb206273410626ef0c38d226a9365
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498437"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356780"
 ---
 # <a name="navigation-topologies-overview"></a>Cenni preliminari sulle topologie di navigazione
 <a name="introduction"></a> Questa panoramica fornisce un'introduzione alle topologie di navigazione in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Di seguito vengono analizzate tre topologie di navigazione comuni con i relativi esempi.  
   
 > [!NOTE]
->  Prima di leggere questo argomento, è necessario avere familiarità con il concetto di navigazione strutturata in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando funzioni di pagina. Per altre informazioni su entrambi questi argomenti, vedere [Cenni preliminari sulla navigazione strutturata](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
+>  Prima di leggere questo argomento, è necessario avere familiarità con il concetto di navigazione strutturata in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando funzioni di pagina. Per altre informazioni su entrambi questi argomenti, vedere [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md).  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -36,17 +36,17 @@ ms.locfileid: "54498437"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie di navigazione  
- Nella [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], in genere è costituito da navigazione delle pagine (<xref:System.Windows.Controls.Page>) con collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>) che consentono di passare ad altre pagine quando si fa clic. Le pagine di cui ci si sposta sono identificate da [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (vedere [URI di tipo Pack in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)). Si consideri l'esempio seguente che illustra pagine, collegamenti ipertestuali, e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ Nella [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], in genere è costituito da navigazione delle pagine (<xref:System.Windows.Controls.Page>) con collegamenti ipertestuali (<xref:System.Windows.Documents.Hyperlink>) che consentono di passare ad altre pagine quando si fa clic. Le pagine di cui ci si sposta sono identificate da [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (vedere [URI di tipo Pack in WPF](pack-uris-in-wpf.md)). Si consideri l'esempio seguente che illustra pagine, collegamenti ipertestuali, e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
- [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
+ [!code-xaml[NavigationTopologiesOverviewSnippets#Page2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page2.xaml#page2)]  
   
  Queste pagine sono disposte in una *topologia di navigazione* la cui struttura dipende dal modo in cui è possibile spostarsi tra le pagine. Questa particolare topologia di navigazione è adatta in scenari semplici. La navigazione può tuttavia richiedere topologie più complesse, alcune delle quali possono essere definite solo quando un'applicazione è in esecuzione.  
   
  Questo argomento illustra tre topologie di navigazione comuni: *lineare fissa*, *gerarchica fissa*, e *generato dinamicamente*. Ogni topologia di navigazione è illustrato un esempio con un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] come quello illustrato nella figura riportata di seguito:  
   
- ![Pagine di attività con elementi di dati](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Pagine di attività con elementi di dati](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Topologie di navigazione strutturata  
@@ -62,7 +62,7 @@ ms.locfileid: "54498437"
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Navigazione in una topologia lineare fissa  
  Una topologia lineare fissa è analoga alla struttura di una procedura guidata con una o più pagine in cui ci si sposta in una sequenza fissa. La figura seguente illustra la struttura generale e il flusso di una procedura guidata con topologia lineare fissa.  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
   
  I comportamenti tipici per la navigazione in una topologia lineare fissa includono quanto segue:  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54498437"
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Navigazione dinamica in una topologia gerarchica fissa  
  In alcune applicazioni le pagine consentono di spostarsi su due o più altre pagine, come illustrato nella figura seguente.  
   
- ![Pagina che consente di spostarsi su diverse altre pagine](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Pagina che consente di spostarsi su diverse altre pagine](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
   
  Questa struttura è detta topologia gerarchica fissa e la sequenza in cui viene attraversata è spesso determinata in fase di esecuzione dall'applicazione o dall'utente. In fase di esecuzione, ogni pagina della gerarchia che consente di spostarsi su due o più altre pagine raccoglie i dati richiesti per determinare su quale pagina spostarsi. La figura seguente illustra una delle possibili sequenze di navigazione in base alla figura precedente.  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
   
  Anche se la sequenza di navigazione delle pagine in una struttura gerarchica fissa è determinata in fase di esecuzione, l'esperienza utente è la stessa di una topologia lineare fissa:  
   
@@ -116,11 +116,11 @@ ms.locfileid: "54498437"
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navigazione in una topologia generata dinamicamente  
  In alcune applicazioni la sequenza di navigazione di due o più pagine può essere determinata solo in fase di esecuzione dall'utente, dall'applicazione o da dati esterni. La figura seguente illustra un insieme di pagine con una sequenza di navigazione non determinata.  
   
- ![Diagramma della topologia di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
   
  La figura seguente illustra una sequenza di navigazione scelta dall'utente in fase di esecuzione.  
   
- ![Diagramma di navigazione](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Diagramma di navigazione](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
   
  La sequenza di navigazione è indicata come topologia generata dinamicamente. L'esperienza utente è analoga alle topologie di navigazione precedenti:  
   
@@ -144,4 +144,4 @@ ms.locfileid: "54498437"
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Cenni preliminari sulla navigazione strutturata](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+- [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md)

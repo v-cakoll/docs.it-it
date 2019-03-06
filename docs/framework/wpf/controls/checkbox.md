@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377111"
 ---
 # <a name="checkbox"></a>CheckBox
-È possibile utilizzare un <xref:System.Windows.Controls.CheckBox> nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione per rappresentare le opzioni che un utente può selezionare o deselezionare. È possibile usare una singola casella di controllo o è possibile raggruppare due o più caselle di controllo.  
+È possibile usare una <xref:System.Windows.Controls.CheckBox> nella [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione per rappresentare le opzioni che un utente possa selezionare o deselezionare. È possibile usare una singola casella di controllo o è possibile raggruppare due o più caselle di controllo.  
   
  La figura seguente illustra i diversi stati di un <xref:System.Windows.Controls.CheckBox>.  
   
- ![Stati del controllo CheckBox](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
-Controlli CheckBox in stati diversi  
+ ![Stati del controllo CheckBox](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+Controlli casella di controllo nei suoi diversi stati  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.CheckBox>  

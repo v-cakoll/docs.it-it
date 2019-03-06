@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372074"
 ---
 # <a name="styles-and-templates"></a>Stili e modelli
-Lo stile di Windows Presentation Foundation (WPF) e i modelli fa riferimento a un gruppo di funzionalità (stili, modelli, trigger e storyboard) che consente a un'applicazione, documento o finestra di progettazione dell'interfaccia utente di creare applicazioni visivamente accattivanti e per standardizzare un aspetto particolare per il prodotto.  
+Creazione di modelli e stili di Windows Presentation Foundation (WPF), fare riferimento a una suite di funzionalità (stili, modelli, trigger e storyboard) che consentono a un'applicazione, documento o finestra di progettazione dell'interfaccia utente di creare applicazioni visivamente accattivanti e per standardizzare un aspetto specifico del prodotto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Procedura: trovare elementi generati da un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Applicazione di stili e modelli](styling-and-templating.md)  
+  [Procedura: Trovare elementi generati da un oggetto ControlTemplate](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Lo stile di Windows Presentation Foundation (WPF) e i modelli fa riferimento a u
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Avanzate](../../../../docs/framework/wpf/advanced/index.md)  
-  [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Avanzate](../advanced/index.md)  
+  [Personalizzazione dei controlli](control-customization.md)  
+  [Grafica e funzionalità multimediali](../graphics-multimedia/index.md)

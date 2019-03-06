@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358548"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profiler CLR e le app di Windows Store
 
@@ -126,7 +126,7 @@ In primo luogo, è opportuno chiedere all'utente di profiler quali app di Window
 
 È possibile usare il <xref:Windows.Management.Deployment.PackageManager> classe per cui generare questo elenco. `PackageManager` è una classe di Windows Runtime che è disponibile per le app desktop, ed è in realtà *solo* disponibili per le app desktop.
 
-Esempio di codice seguente da un'interfaccia utente Profiler ipotetica scritto come un'app desktop in c# yses il `PackageManager` per generare un elenco di App di Windows:
+Esempio di codice seguente da un'interfaccia utente Profiler ipotetica scritto come un'app desktop in C# Usa la `PackageManager` per generare un elenco di App di Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Si prenda in considerazione il seguente frammento di codice:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Esistono un paio di elementi che è necessario predisporre correttamente:
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Quindi è opportuno eseguire un'operazione simile al seguente:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Per comprendere le conseguenze di questo, è importante comprendere le differenz
 
 Il punto rilevante è che le chiamate effettuate a thread creati per il profiler sono sempre considerate sincrone, anche se tali chiamate vengono eseguite all'esterno di un'implementazione di uno della DLL del Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) metodi. Almeno, che consente di essere il caso. Ora che CLR ha trasformato il thread del profiler in un thread gestito a causa la chiamata a [metodo ForceGC](icorprofilerinfo-forcegc-method.md), che thread non è più considerato thread del profiler. Di conseguenza, il CLR consente di applicare una definizione di più severo di che cosa si intende come sincrono per il thread, vale a dire che una chiamata deve provenire da all'interno di uno della DLL del Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) metodi per qualificarsi come sincrona.
 
-Che cosa significa questo in pratica? La maggior parte degli [ICorProfilerInfo](icorprofilerinfo-interface.md) metodi sono solo sicuri da chiamare in modo sincrono e avrà immediatamente esito negativo in caso contrario. Pertanto, se la DLL del Profiler riusa il [ForceGC (metodo)](icorprofilerinfo-forcegc-method.md) thread per le chiamate effettuate in genere su thread profiler-creato (ad esempio, per [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), oppure [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), che si intende di problemi. Anche una funzione asincrona-safe, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ha regole speciali quando viene chiamato dal thread gestiti. (Vedere il blog post [analisi dello stack di Profiler: nozioni di base e oltre](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) per altre informazioni.)
+Che cosa significa questo in pratica? La maggior parte degli [ICorProfilerInfo](icorprofilerinfo-interface.md) metodi sono solo sicuri da chiamare in modo sincrono e avrà immediatamente esito negativo in caso contrario. Pertanto, se la DLL del Profiler riusa il [ForceGC (metodo)](icorprofilerinfo-forcegc-method.md) thread per le chiamate effettuate in genere su thread profiler-creato (ad esempio, per [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), oppure [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), che si intende di problemi. Anche una funzione asincrona-safe, ad esempio [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ha regole speciali quando viene chiamato dal thread gestiti. (Vedere il blog post [Profiler dello stack: Nozioni di base e oltre](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) per altre informazioni.)
 
 Pertanto, è consigliabile che uno o più thread consente di creare la DLL del Profiler per chiamare [metodo ForceGC](icorprofilerinfo-forcegc-method.md) deve essere utilizzato *solo* allo scopo di attivazione di cataloghi globali e quindi rispondere i callback di Garbage Collection. Non deve chiamare l'API di profilatura per eseguire altre attività come stack di campionamento o la disconnessione.
 
@@ -416,4 +416,4 @@ Tuttavia, le app XAML Windows Store gestite ora fanno largo uso di handle dipend
 
 - [Ottenere una licenza per sviluppatori](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [Interfaccia IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)
+- [IPackageDebugSettings Interface](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

@@ -7,34 +7,34 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353556"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Procedure relative alla grafica tridimensionale
-Negli argomenti di questa sezione viene illustrato come utilizzare [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] grafica in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.  
+Gli argomenti in questa sezione illustrano come usare [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] grafica in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare una scena tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [Applicare un disegno a un modello tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [Applicare materiale con componente emissiva a un oggetto tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [Ridimensionare un modello tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [Applicare più trasformazioni a un modello tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [Aggiungere un'animazione alle conversioni tridimensionali](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [Animare una rotazione tridimensionale usando gli storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Aggiungere un'animazione a una rotazione tridimensionale usando Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [Aggiungere un'animazione a una rotazione tridimensionale usando quaternioni](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [Animare a una rotazione tridimensionale usando i fotogrammi chiave (Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [Animare a una rotazione tridimensionale usando i fotogrammi chiave (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [Animare la posizione e la direzione di una fotocamera in una scena tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [Animare la posizione e la direzione di una fotocamera usando i fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [Animare le proprietà Material in una scena tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Eseguire un hit test in un oggetto Viewport3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Verificare l'uguaglianza e la disuguaglianza di strutture Point4D](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)  
+ [Applicare un disegno a un modello tridimensionale](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [Applicare materiale con componente emissiva a un oggetto tridimensionale](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [Ridimensionare un modello tridimensionale](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [Applicare più trasformazioni a un modello tridimensionale](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [Aggiungere un'animazione alle conversioni tridimensionali](how-to-animate-3-d-translations.md)  
+ [Animare una rotazione tridimensionale usando gli storyboard](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Aggiungere un'animazione a una rotazione tridimensionale usando Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [Aggiungere un'animazione a una rotazione tridimensionale usando quaternioni](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [Animare a una rotazione tridimensionale usando i fotogrammi chiave (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [Animare a una rotazione tridimensionale usando i fotogrammi chiave (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [Animare la posizione e la direzione di una fotocamera in una scena tridimensionale](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [Animare la posizione e la direzione di una fotocamera usando i fotogrammi chiave](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [Animare le proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Eseguire un hit test in un oggetto Viewport3D](how-to-hit-test-in-a-viewport3d.md)  
+ [Verificare l'uguaglianza e la disuguaglianza di strutture Point4D](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -46,4 +46,4 @@ Negli argomenti di questa sezione viene illustrato come utilizzare [!INCLUDE[TLA
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafica e funzionalità multimediali](index.md)

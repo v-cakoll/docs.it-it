@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374427"
 ---
 # <a name="planning-for-application-performance"></a>Pianificazione delle prestazioni dell'applicazione
 La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capacità di sviluppare una strategia di prestazioni. La pianificazione è la prima fase nello sviluppo di qualsiasi prodotto. Questo argomento descrive alcune regole molto semplice per sviluppare una strategia di prestazioni ottimali.  
@@ -33,12 +33,12 @@ La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capaci
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i controlli sono intrinsecamente estensibili, consentendo la diffusa personalizzazione dell'aspetto, mentre non modifica il comportamento di controllo. Grazie all'uso di stili, modelli di dati e modelli di controllo, è possibile creare e sviluppare in modo incrementale un personalizzabile [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] che si adatta ai requisiti di prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
+- [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
+- [Data binding](optimizing-performance-data-binding.md)
+- [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

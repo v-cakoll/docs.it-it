@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378911"
 ---
-# <a name="adorners"></a>Strumenti decorativi
-In questa sezione vengono fornite informazioni sugli strumenti decorativi visuali e [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework Adorner.  
+# <a name="adorners"></a>Elementi grafici
+Questa sezione vengono fornite informazioni sugli strumenti decorativi visuali e [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework dello strumento decorativo visuale.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sugli strumenti decorativi](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+ [Panoramica sugli strumenti decorativi](adorners-overview.md)  
+ [Procedure relative alle proprietà](adorners-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Usare le risorse in applicazioni localizzabili'
+title: 'Procedura: Utilizzare le risorse in applicazioni localizzabili'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applications [WPF], localizable
 - localizable applications [WPF]
 ms.assetid: 08539ad6-7fca-4f34-b82b-ff439e11dfa7
-ms.openlocfilehash: 82a24feb4008b6cfd7c1751c6449c0d8515ffe87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad257e7703bcee8f71da78ad5928d7999365c38f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376161"
 ---
-# <a name="how-to-use-resources-in-localizable-applications"></a>Procedura: Usare le risorse in applicazioni localizzabili
-Localizzazione si intende l'adattamento un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a impostazioni cultura diverse. A questo scopo, testo quale titoli, didascalie, elementi di caselle di riepilogo e così via deve essere tradotto. Per facilitare la traduzione, gli elementi localizzabili vengono raccolti in file di risorse. Vedere [localizzazione di un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md) per informazioni su come creare un file di risorse per la localizzazione. Per rendere un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localizzabili, gli sviluppatori devono compilare tutte le risorse localizzabili in un assembly di risorse dell'applicazione. Assembly di risorse è localizzato in diverse lingue e il code-behind utilizza la gestione delle risorse [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] da caricare. Uno dei file necessari per un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione è un file di progetto (proj). Tutte le risorse usate nell'applicazione devono essere incluse nel file di progetto. Nell'esempio di codice seguente viene illustrata questa operazione.  
+# <a name="how-to-use-resources-in-localizable-applications"></a>Procedura: Utilizzare le risorse in applicazioni localizzabili
+Localizzare significa adattare un' [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a impostazioni cultura diverse. A questo scopo, testo quale titoli, didascalie, elementi di caselle di riepilogo e così via deve essere tradotto. Per facilitare la traduzione, gli elementi localizzabili vengono raccolti in file di risorse. Visualizzare [localizzare un'applicazione](how-to-localize-an-application.md) per informazioni su come creare un file di risorse per la localizzazione. Per rendere un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni localizzabili, gli sviluppatori devono compilare tutte le risorse localizzabili in un assembly di risorse. L'assembly di risorse viene localizzato in lingue diverse e il code-behind Usa la gestione delle risorse [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] da caricare. Uno dei file richiesti per un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione è un file di progetto (proj). Tutte le risorse usate nell'applicazione devono essere incluse nel file di progetto. Nell'esempio di codice seguente viene illustrata questa operazione.  
   
 ## <a name="example"></a>Esempio  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
@@ -22,6 +22,6 @@ Localizzazione si intende l'adattamento un [!INCLUDE[TLA2#tla_ui](../../../../in
   
  `<EmbeddedResource Include="data\stringtable.en-US.restext"/>`  
   
- Per utilizzare una risorsa dell'applicazione, si crea un'istanza <xref:System.Resources.ResourceManager> e caricare la risorsa a cui si desidera utilizzare. L'esempio di codice seguente illustra come eseguire questa operazione.  
+ Per usare una risorsa nell'applicazione, si crea un'istanza <xref:System.Resources.ResourceManager> e caricare la risorsa da usare. L'esempio di codice seguente illustra come eseguire questa operazione.  
   
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]

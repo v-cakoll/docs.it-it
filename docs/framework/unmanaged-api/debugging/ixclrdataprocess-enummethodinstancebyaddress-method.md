@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 825cb8ea94bee980f9e10b90cddf04db32c1a33f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a4b8116573f2ff6469fe612e7b7736651ff03
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354531"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Metodo IXCLRDataProcess::EnumMethodInstanceByAddress
 
@@ -39,9 +39,11 @@ HRESULT EnumMethodInstanceByAddress(
 
 ### <a name="parameters"></a>Parametri
 
-`handle` [in] Handle per l'enumerazione delle istanze di metodo.
+`handle`\
+[in] Handle per l'enumerazione delle istanze di metodo.
 
-`mod` [out] L'istanza del metodo enumerate.
+`mod`\
+[out] L'istanza del metodo enumerate.
 
 ## <a name="remarks"></a>Note
 
@@ -55,6 +57,6 @@ Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde a
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
  
 ## <a name="see-also"></a>Vedere anche
-- [Enumerazione CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess Interface](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Enumerazione CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debug](index.md)
+- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)

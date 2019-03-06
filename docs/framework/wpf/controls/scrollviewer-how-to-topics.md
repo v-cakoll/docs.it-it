@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672098"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367139"
 ---
 # <a name="scrollviewer-how-to-topics"></a>Procedure relative all'elemento ScrollViewer
 Gli argomenti in questa sezione illustrano come usare il <xref:System.Windows.Controls.ScrollViewer> elemento per creare l'area di scorrimento nelle applicazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Gestire l'evento ScrollChanged](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [Scorrere il contenuto usando l'interfaccia IScrollInfo](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [Usare i metodi di scorrimento del contenuto di ScrollViewer](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+ [Gestire l'evento ScrollChanged](how-to-handle-the-scrollchanged-event.md)  
+ [Scorrere il contenuto usando l'interfaccia IScrollInfo](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [Usare i metodi di scorrimento del contenuto di ScrollViewer](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -28,5 +28,5 @@ Gli argomenti in questa sezione illustrano come usare il <xref:System.Windows.Co
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Cenni preliminari sugli elementi Panel](panels-overview.md)
+- [Layout](../advanced/layout.md)

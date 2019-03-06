@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353127"
 ---
 # <a name="digital-ink"></a>Input penna
-In questa sezione viene illustrato l'utilizzo dell'input penna nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In passato è disponibile solo nel SDK di Tablet PC, penna è ora disponibile in Windows Presentation Foundation di base. Ciò significa che è ora possibile sviluppare applicazioni complete di Tablet PC con la potenza di Windows Presentation Foundation.  
+In questa sezione descrive l'uso dell'input penna digitale nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In passato disponibile solo nel SDK di Tablet PC, input penna digitale è ora disponibile in Windows Presentation Foundation di base. Ciò significa che è ora possibile sviluppare applicazioni per Tablet PC complete usando le potenzialità di Windows Presentation Foundation.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramiche](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+ [Panoramiche](digital-ink-overviews.md)  
+  [Procedure relative alle proprietà](digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+ [Windows Presentation Foundation](../index.md)

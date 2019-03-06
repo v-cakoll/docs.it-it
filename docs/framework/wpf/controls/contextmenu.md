@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354635"
 ---
 # <a name="contextmenu"></a>ContextMenu
-Il <xref:System.Windows.Controls.ContextMenu> consente a un controllo visualizzare un <xref:System.Windows.Controls.Menu> che è specifico per il contesto del controllo. In genere, il <xref:System.Windows.Controls.ContextMenu> è esposto nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] tramite il pulsante destro del mouse o tramite il pulsante di menu della tastiera.  
+Il <xref:System.Windows.Controls.ContextMenu> consente a un controllo visualizzare un <xref:System.Windows.Controls.Menu> specifico nel contesto del controllo. In genere, il <xref:System.Windows.Controls.ContextMenu> viene esposto nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] tramite il pulsante destro del mouse o tramite il pulsante di menu della tastiera.  
   
- Nella figura seguente viene illustrato un <xref:System.Windows.Controls.ContextMenu> in due stati diversi: lo stato predefinito e lo stato aperto. Nello stato predefinito, il controllo viene compresso. Premendo il pulsante destro del mouse sull'elemento padre del menu di scelta, il controllo si espande e visualizza le voci di menu.  
+ La figura seguente illustra un <xref:System.Windows.Controls.ContextMenu> in due diversi stati: lo stato predefinito e lo stato aperto. Nello stato predefinito, il controllo è compresso. Quando viene premuto il pulsante destro del mouse sull'elemento padre del menu, il controllo si espande e visualizza le voci di menu.  
   
- ![Stati di ContextMenu](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![Gli stati sull'oggetto ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 Menu di scelta rapida in stati diversi  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sull'oggetto ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Panoramica sull'oggetto ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ContextMenu>  

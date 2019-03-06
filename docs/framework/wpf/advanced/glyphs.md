@@ -10,23 +10,23 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: a629d74c7b76e5daf2460c63b040fbe37a3a36d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353179"
 ---
 # <a name="glyphs"></a>Glifi
 Glifi sono una rappresentazione di basso livello di un carattere da disegnare sullo schermo. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce accesso diretto alle icone per i clienti che vogliono intercettare e salvare in modo permanente il testo dopo la formattazione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Introduzione all'oggetto GlyphRun e all'elemento Glyphs](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Procedura: Creare testo utilizzando glifi](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+ [Introduzione all'oggetto GlyphRun e all'elemento Glyphs](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [Procedura: Creare testo utilizzando glifi](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>
-- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Documenti in WPF](documents-in-wpf.md)
+- [Funzionalità tipografiche di WPF](typography-in-wpf.md)

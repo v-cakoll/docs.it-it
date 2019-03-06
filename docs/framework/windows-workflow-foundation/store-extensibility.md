@@ -2,12 +2,12 @@
 title: Estensibilità dell'archivio
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375428"
 ---
 # <a name="store-extensibility"></a>Estensibilità dell'archivio
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> consente agli utenti di promuovere proprietà personalizzate specifiche dell'applicazione che possono essere usate per eseguire query per istanze nel database di persistenza. L'atto di promuovere una proprietà fa in modo che il valore sia disponibile all'interno di una visualizzazione speciale nel database. Queste proprietà promosse, ovvero proprietà che possono essere usate nelle query utente, possono essere di tipi semplici, ad esempio Int64, Guid, String e DateTime o di un tipo binario serializzato (byte[]).  
@@ -35,9 +35,9 @@ ms.locfileid: "33517920"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     Per ulteriori informazioni sull'aggiunta di un partecipante di persistenza personalizzato, vedere il [i partecipanti di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) esempio.  
+     Per altre informazioni sull'aggiunta di un partecipante di persistenza personalizzato, vedere la [partecipanti di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) esempio.  
   
-3.  Le attività personalizzate nell'applicazione DP popolano diversi campi di stato di **Execute** metodo.  
+3.  Le attività personalizzate nell'applicazione DP popolano diversi campi di stato nel **Execute** (metodo).  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -51,7 +51,7 @@ ms.locfileid: "33517920"
     }  
     ```  
   
-4.  Quando un'istanza del flusso di lavoro raggiunge un punto di persistenza, il **CollectValues** metodo il **DocumentStatusExtension** partecipante di persistenza Salva queste proprietà nei dati di persistenza raccolta.  
+4.  Quando un'istanza del flusso di lavoro raggiunge un punto di persistenza, il **CollectValues** metodo per il **DocumentStatusExtension** partecipante di persistenza Salva queste proprietà nei dati di persistenza raccolta.  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -73,9 +73,9 @@ ms.locfileid: "33517920"
     ```  
   
     > [!NOTE]
-    >  Tutte queste proprietà vengono passate a **SqlWorkflowInstanceStore** dal framework di persistenza tramite la **Saveworkflowcommand** insieme.  
+    >  Tutte queste proprietà vengono passate a **SqlWorkflowInstanceStore** con il framework di persistenza tramite il **Saveworkflowcommand** raccolta.  
   
-5.  L'applicazione DP Inizializza l'archivio di istanze del flusso di lavoro SQL e richiama il **Alza di livello** metodo alzare di livello dati.  
+5.  L'applicazione DP Inizializza il Store di istanza del flusso di lavoro SQL e richiama il **Promote** metodo per promuovere questi dati.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -91,7 +91,7 @@ ms.locfileid: "33517920"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     In base a queste informazioni di innalzamento di livello, **SqlWorkflowInstanceStore** inserisce le proprietà dei dati nelle colonne di [InstancePromotedProperties](#InstancePromotedProperties) visualizzazione.
+     Queste informazioni di innalzamento di livello, in base **SqlWorkflowInstanceStore** inserisce le proprietà dei dati nelle colonne delle [InstancePromotedProperties](#InstancePromotedProperties) visualizzazione.
   
 6.  Per eseguire una query su un subset dei dati dalla tabella di promozione, viene aggiunta una vista personalizzata nella parte superiore di tale vista da parte dell'applicazione DP.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "33517920"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> [Instancepromotedproperties]  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |Nome colonna|Tipo di colonna|Descrizione|  
 |-----------------|-----------------|-----------------|  

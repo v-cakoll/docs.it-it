@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542587"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361213"
 ---
 # <a name="events-wpf"></a>Eventi (WPF)
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vengono introdotti gli eventi indirizzati che possono richiamare i gestori esistenti su vari listener nell'albero degli elementi di un'applicazione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Cenni preliminari sugli eventi associati](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Eventi di durata degli oggetti](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Eventi di anteprima](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Eventi di modifica delle proprietà](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic e la gestione degli eventi WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Modelli di eventi deboli](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Procedure relative agli eventi](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)  
+ [Cenni preliminari sugli eventi associati](attached-events-overview.md)  
+ [Eventi di durata degli oggetti](object-lifetime-events.md)  
+ [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)  
+ [Eventi di anteprima](preview-events.md)  
+ [Eventi di modifica delle proprietà](property-change-events.md)  
+ [Visual Basic e la gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md)  
+ [Modelli di eventi deboli](weak-event-patterns.md)  
+ [Procedure relative agli eventi](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Architettura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementi di base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Albero degli elementi e serializzazione](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Proprietà](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Input](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Risorse](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Modello di contenuto WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Modello di threading](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Architettura WPF](wpf-architecture.md)  
+  [XAML in WPF](xaml-in-wpf.md)  
+  [Elementi di base](base-elements.md)  
+  [Albero degli elementi e serializzazione](element-tree-and-serialization.md)  
+  [Proprietà](properties-wpf.md)  
+  [Input](input-wpf.md)  
+  [Risorse](resources-wpf.md)  
+  [Applicazione di stili e modelli](../controls/styling-and-templating.md)  
+  [Modello di contenuto WPF](../controls/wpf-content-model.md)  
+  [Modello di threading](threading-model.md)

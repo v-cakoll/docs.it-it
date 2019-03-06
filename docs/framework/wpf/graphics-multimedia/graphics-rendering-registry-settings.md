@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375350"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -50,7 +50,7 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
  L'**opzione di disabilitazione dell'accelerazione hardware** consente di disattivare l'accelerazione hardware per scopi di debug e test. Se in un'applicazione si vedono elementi di rendering, provare a disattivare l'accelerazione hardware. Se l'elemento scompare, potrebbe trattarsi di un problema con il driver video.  
   
- L'**opzione di disabilitazione dell'accelerazione hardware** è un valore DWORD che è 0 o 1. Il valore 1 disabilita l'accelerazione hardware. Il valore 0 consente l'accelerazione hardware, purché il sistema soddisfi i requisiti di accelerazione hardware. Per altre informazioni, vedere [Livelli di rendering della grafica](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ L'**opzione di disabilitazione dell'accelerazione hardware** è un valore DWORD che è 0 o 1. Il valore 1 disabilita l'accelerazione hardware. Il valore 0 consente l'accelerazione hardware, purché il sistema soddisfi i requisiti di accelerazione hardware. Per altre informazioni, vedere [Livelli di rendering della grafica](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Valore massimo di multicampionamento  
@@ -98,5 +98,5 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
  L'**opzione per l'uso di unità di rasterizzazione dei riferimenti** accetta un valore DWORD. Il valore 0 indica che l'unità di rasterizzazione dei riferimenti non viene usata. Qualsiasi altro valore diverso da zero forza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a usare l'unità di rasterizzazione dei riferimenti.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Livelli di rendering della grafica](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [Cenni preliminari sul rendering della grafica WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Livelli di rendering della grafica](../advanced/graphics-rendering-tiers.md)
+- [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368168"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Novità di WPF versione 4.5
 <a name="introduction"></a> In questo argomento contiene informazioni sulle funzionalità nuove e migliorate in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versione 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265350"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Supporto migliorato per stabilire un riferimento debole a un evento  
- L'implementazione del modello con riferimenti deboli agli eventi è ora più semplice perché i sottoscrittori di eventi possono parteciparvi senza implementare un'interfaccia aggiuntiva.  Il tipo generico <xref:System.Windows.WeakEventManager> classe consente inoltre ai sottoscrittori di partecipare al modello di eventi deboli se un oggetto dedicato <xref:System.Windows.WeakEventManager> non esiste per un determinato evento.  Per ulteriori informazioni, vedere [Modelli di eventi deboli](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ L'implementazione del modello con riferimenti deboli agli eventi è ora più semplice perché i sottoscrittori di eventi possono parteciparvi senza implementare un'interfaccia aggiuntiva.  Il tipo generico <xref:System.Windows.WeakEventManager> classe consente inoltre ai sottoscrittori di partecipare al modello di eventi deboli se un oggetto dedicato <xref:System.Windows.WeakEventManager> non esiste per un determinato evento.  Per ulteriori informazioni, vedere [Modelli di eventi deboli](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Nuovi metodi per la classe Dispatcher  
- La classe Dispatcher definisce nuovi metodi per le operazioni sincrone e asincrone.  Sincroni <xref:System.Windows.Threading.Dispatcher.Invoke%2A> metodo definisce gli overload che accettano un' <xref:System.Action> o <xref:System.Func%601> parametro. Il nuovo metodo asincrono <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, accetta inoltre un <xref:System.Action> oppure <xref:System.Func%601> come il parametro di callback e restituisce un <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>.   Il <xref:System.Windows.Threading.DispatcherOperation> e <xref:System.Windows.Threading.DispatcherOperation%601> classi definiscono un <xref:System.Threading.Tasks.Task> proprietà.  Quando si chiama <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, è possibile usare il `await` parola chiave con il <xref:System.Windows.Threading.DispatcherOperation> o associato <xref:System.Threading.Tasks.Task>. Se è necessario attendere in modo sincrono il <xref:System.Threading.Tasks.Task> restituito da un <xref:System.Windows.Threading.DispatcherOperation> oppure <xref:System.Windows.Threading.DispatcherOperation%601>, chiamare il <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> metodo di estensione. La chiamata a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> provoca un deadlock se l'operazione viene accodata in un thread di chiamata. Per altre informazioni sull'uso di un <xref:System.Threading.Tasks.Task> per eseguire operazioni asincrone, vedere [parallelismo fra attività (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ La classe Dispatcher definisce nuovi metodi per le operazioni sincrone e asincrone.  Sincroni <xref:System.Windows.Threading.Dispatcher.Invoke%2A> metodo definisce gli overload che accettano un' <xref:System.Action> o <xref:System.Func%601> parametro. Il nuovo metodo asincrono <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, accetta inoltre un <xref:System.Action> oppure <xref:System.Func%601> come il parametro di callback e restituisce un <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>.   Il <xref:System.Windows.Threading.DispatcherOperation> e <xref:System.Windows.Threading.DispatcherOperation%601> classi definiscono un <xref:System.Threading.Tasks.Task> proprietà.  Quando si chiama <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, è possibile usare il `await` parola chiave con il <xref:System.Windows.Threading.DispatcherOperation> o associato <xref:System.Threading.Tasks.Task>. Se è necessario attendere in modo sincrono il <xref:System.Threading.Tasks.Task> restituito da un <xref:System.Windows.Threading.DispatcherOperation> oppure <xref:System.Windows.Threading.DispatcherOperation%601>, chiamare il <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> metodo di estensione. La chiamata a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> provoca un deadlock se l'operazione viene accodata in un thread di chiamata. Per altre informazioni sull'uso di un <xref:System.Threading.Tasks.Task> per eseguire operazioni asincrone, vedere [parallelismo fra attività (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Estensioni di markup per gli eventi  
  WPF 4.5 supporta le estensioni di markup per gli eventi.  Mentre WPF non definisce un'estensione di markup da utilizzare per gli eventi, le terze parti sono in grado di creare un'estensione di markup che può essere utilizzata con gli eventi.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Novità di .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Novità di .NET Framework](../../whats-new/index.md)

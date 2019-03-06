@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520583"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359880"
 ---
 # <a name="property-value-inheritance"></a>Ereditarietà del valore della proprietà
 L'ereditarietà del valore della proprietà è una funzionalità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'ereditarietà del valore della proprietà consente agli elementi figlio in un albero di elementi di ottenere il valore di una determinata proprietà dagli elementi padre, ereditando tale valore con le impostazioni specificate in un punto qualsiasi dell'elemento padre più vicino. Anche l'elemento padre potrebbe aver ottenuto il valore tramite l'ereditarietà del valore della proprietà, pertanto il sistema potrebbe procedere in modo ricorsivo fino alla radice della pagina. L'ereditarietà del valore della proprietà non è il comportamento predefinito del sistema di proprietà. È necessario stabilire una particolare impostazione dei metadati di una proprietà per fare in modo che quest'ultima attivi l'ereditarietà del valore per gli elementi figlio.  
@@ -30,7 +30,7 @@ L'ereditarietà del valore della proprietà è una funzionalità del sistema di 
 ## <a name="making-a-custom-property-inheritable"></a>Rendere ereditabile una proprietà personalizzata  
  Modificando i metadati di una proprietà personalizzata è possibile rendere ereditabili anche le proprietà di questo tipo. Si noti, tuttavia, che quando si definisce una proprietà come ereditabile è necessario fare alcune considerazioni sulle prestazioni. Nei casi in cui quella proprietà non dispone di un valore locale stabilito oppure di un valore ottenuto tramite stili, modelli o data binding, una proprietà ereditabile fornisce i relativi valori di proprietà assegnati a tutti gli elementi figlio dell'albero logico.  
   
- Per fare in modo che una proprietà partecipi all'ereditarietà del valore, creare una proprietà associata personalizzata, come descritto in [Registrare una proprietà associata](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md). Registrare la proprietà con i metadati (<xref:System.Windows.FrameworkPropertyMetadata>) e specificare l'opzione "Inherits" nelle impostazioni di opzioni all'interno dei metadati. Verificare quindi che la proprietà abbia un valore predefinito stabilito, perché quel valore sarà ereditato. Anche se la proprietà è stata registrata come associata, può essere necessario creare un "wrapper" della proprietà per ottenere o impostare l'accesso sul tipo di proprietario, come si farebbe per una proprietà di dipendenza non associata. Al termine dell'operazione, la proprietà ereditabile può essere impostata tramite il wrapper della proprietà diretto nel tipo di proprietario o i tipi derivati oppure può essere impostato utilizzando la sintassi della proprietà associata in qualsiasi <xref:System.Windows.DependencyObject>.  
+ Per fare in modo che una proprietà partecipi all'ereditarietà del valore, creare una proprietà associata personalizzata, come descritto in [Registrare una proprietà associata](how-to-register-an-attached-property.md). Registrare la proprietà con i metadati (<xref:System.Windows.FrameworkPropertyMetadata>) e specificare l'opzione "Inherits" nelle impostazioni di opzioni all'interno dei metadati. Verificare quindi che la proprietà abbia un valore predefinito stabilito, perché quel valore sarà ereditato. Anche se la proprietà è stata registrata come associata, può essere necessario creare un "wrapper" della proprietà per ottenere o impostare l'accesso sul tipo di proprietario, come si farebbe per una proprietà di dipendenza non associata. Al termine dell'operazione, la proprietà ereditabile può essere impostata tramite il wrapper della proprietà diretto nel tipo di proprietario o i tipi derivati oppure può essere impostato utilizzando la sintassi della proprietà associata in qualsiasi <xref:System.Windows.DependencyObject>.  
   
  Le proprietà associate sono concettualmente simili alle proprietà globali. è possibile cercare il valore su qualsiasi <xref:System.Windows.DependencyObject> e ottenere un risultato valido. Lo scenario tipico per le proprietà associate consiste nell'impostare i valori delle proprietà sugli elementi figlio e tale scenario è più efficace se la proprietà in questione è una proprietà associata che è sempre implicitamente presente come proprietà associata su ogni elemento (<xref:System.Windows.DependencyObject>) nell'albero.  
   
@@ -42,6 +42,6 @@ L'ereditarietà del valore della proprietà è una funzionalità del sistema di 
  L'ereditarietà delle proprietà funziona mediante il passaggio attraverso un albero di elementi. Quest'albero spesso è parallelo all'albero logico. Tuttavia, quando si include un oggetto di livello principale WPF nel markup che definisce un albero degli elementi, ad esempio un <xref:System.Windows.Media.Brush>, aver creato un albero logico discontinuo. Un vero albero logico non estende a livello concettuale i <xref:System.Windows.Media.Brush>, in quanto l'albero logico è un concetto a livello di framework WPF. È possibile verificarlo mostrate nei risultati quando si usano i metodi di <xref:System.Windows.LogicalTreeHelper>. Tuttavia, l'ereditarietà del valore della proprietà può colmare questa discontinuità nell'albero logico e comunque possibile passare i valori ereditati, purché la proprietà ereditabile è stata registrata come una proprietà associata e nessun limite di blocco dell'ereditarietà impostato intenzionalmente (ad esempio un <xref:System.Windows.Controls.Frame>) viene rilevato.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Metadati delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Cenni preliminari sulle proprietà associate](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Precedenza del valore della proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Metadati delle proprietà di dipendenza](dependency-property-metadata.md)
+- [Cenni preliminari sulle proprietà associate](attached-properties-overview.md)
+- [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md)

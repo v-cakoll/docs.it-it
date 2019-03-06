@@ -5,28 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: 367caeb1d38203c7a6fe7ff576a1cd8c8eb1d3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63db9aa4d6be0a01b4b5b354a27536c614548c20
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355550"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recupero di identità o di valori numerati automaticamente
 
 Per chiave primaria di un database relazionale si intende una colonna o una combinazione di colonne che contengono sempre valori univoci. Se si conosce il valore della chiave primaria, è possibile individuare la riga che lo contiene. Nei motori dei database relazionali, ad esempio SQL Server, Oracle e Microsoft Access/Jet, è supportata la creazione di colonne a incremento automatico che è possibile impostare come chiavi primarie. Tali valori vengono generati dal server quando si aggiungono righe a una tabella. In SQL Server viene impostata la proprietà Identity di una colonna, in Oracle viene creata una sequenza, mentre in Microsoft Access viene creata una colonna Contatore.
 
- È inoltre possibile usare un oggetto <xref:System.Data.DataColumn> per generare valori a incremento automatico impostando la proprietà <xref:System.Data.DataColumn.AutoIncrement%2A> su true. Se, tuttavia, più applicazioni client generano valori a incremento automatico in modo indipendente l'una dall'altra, è possibile che in istanze distinte di un oggetto <xref:System.Data.DataTable> siano presenti valori duplicati. Se invece i valori a incremento automatico vengono generati dal server, è possibile eliminare possibili conflitti in quanto si consente a ogni utente di recuperare il valore generato per ciascuna riga inserita.
+È inoltre possibile usare un oggetto <xref:System.Data.DataColumn> per generare valori a incremento automatico impostando la proprietà <xref:System.Data.DataColumn.AutoIncrement%2A> su true. Se, tuttavia, più applicazioni client generano valori a incremento automatico in modo indipendente l'una dall'altra, è possibile che in istanze distinte di un oggetto <xref:System.Data.DataTable> siano presenti valori duplicati. Se invece i valori a incremento automatico vengono generati dal server, è possibile eliminare possibili conflitti in quanto si consente a ogni utente di recuperare il valore generato per ciascuna riga inserita.
 
- Durante una chiamata al metodo `Update` di un `DataAdapter`, il database può restituire dati all'applicazione ADO.NET sotto forma di parametri di output o di primo record restituito del set di risultati di un'istruzione SELECT eseguita nello stesso batch dell'istruzione INSERT. ADO.NET può recuperare questi valori e aggiornare le colonne corrispondenti nell'oggetto <xref:System.Data.DataRow> da aggiornare.
+Durante una chiamata al metodo `Update` di un `DataAdapter`, il database può restituire dati all'applicazione ADO.NET sotto forma di parametri di output o di primo record restituito del set di risultati di un'istruzione SELECT eseguita nello stesso batch dell'istruzione INSERT. ADO.NET può recuperare questi valori e aggiornare le colonne corrispondenti nell'oggetto <xref:System.Data.DataRow> da aggiornare.
 
- Alcuni motori di database, ad esempio il motore di database Jet di Microsoft Access, non supportano parametri di output e non sono in grado di elaborare più istruzioni in un unico batch. Quando si usa il motore di database Jet, è possibile recuperare il nuovo valore del campo Contatore generato per una riga inserita eseguendo un comando SELECT distinto in un gestore eventi per l'evento `RowUpdated` di `DataAdapter`.
+Alcuni motori di database, ad esempio il motore di database Jet di Microsoft Access, non supportano parametri di output e non sono in grado di elaborare più istruzioni in un unico batch. Quando si usa il motore di database Jet, è possibile recuperare il nuovo valore del campo Contatore generato per una riga inserita eseguendo un comando SELECT distinto in un gestore eventi per l'evento `RowUpdated` di `DataAdapter`.
 
 > [!NOTE]
 > In alternativa a un valore a incremento automatico, è possibile usare il metodo <xref:System.Guid.NewGuid%2A> di un oggetto <xref:System.Guid> per generare nel computer client un GUID che può essere copiato nel server a ogni nuova riga inserita. Il metodo `NewGuid` genera un valore binario a 16 byte per la cui creazione viene usato un algoritmo che consente con buona probabilità di evitare valori duplicati. In un database SQL Server un GUID viene archiviato in una colonna `uniqueidentifier` che SQL Server è in grado di generare automaticamente usando la funzione Transact-SQL `NEWID()`. L'utilizzo di un GUID come chiave primaria può influire negativamente sulle prestazioni. SQL Server fornisce il supporto per il `NEWSEQUENTIALID()` funzione che genera un GUID sequenziale di cui non è garantita l'univocità a livello globale ma che può essere indicizzato in modo più efficiente.
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>Recupero dei valori delle colonne Identity di SQL Server
- Quando si usa Microsoft SQL Server, è possibile creare una stored procedure con un parametro di output in modo che venga restituito il valore della colonna Identity per una riga inserita. Nella tabella seguente sono descritte le tre funzioni Transact-SQL disponibili in SQL Server che è possibile usare per recuperare i valori delle colonne Identity.
+
+Quando si usa Microsoft SQL Server, è possibile creare una stored procedure con un parametro di output in modo che venga restituito il valore della colonna Identity per una riga inserita. Nella tabella seguente sono descritte le tre funzioni Transact-SQL disponibili in SQL Server che è possibile usare per recuperare i valori delle colonne Identity.
 
 |Funzione|Descrizione|
 |--------------|-----------------|
@@ -45,21 +46,22 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
- È quindi possibile specificare la stored procedure come origine di <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> in un oggetto <xref:System.Data.SqlClient.SqlDataAdapter>. La proprietà <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> di <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> deve essere impostata su <xref:System.Data.CommandType.StoredProcedure>. Per recuperare l'output relativo all'identità, viene creato un oggetto <xref:System.Data.SqlClient.SqlParameter> il cui <xref:System.Data.ParameterDirection> è <xref:System.Data.ParameterDirection.Output>. Quando il `InsertCommand` viene elaborato, il valore identity a incremento automatico viene restituito e inserito nella **CategoryID** colonna della riga corrente se si imposta il <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> proprietà del comando di inserimento a `UpdateRowSource.OutputParameters` o a `UpdateRowSource.Both`.
+È quindi possibile specificare la stored procedure come origine di <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> in un oggetto <xref:System.Data.SqlClient.SqlDataAdapter>. La proprietà <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> di <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> deve essere impostata su <xref:System.Data.CommandType.StoredProcedure>. Per recuperare l'output relativo all'identità, viene creato un oggetto <xref:System.Data.SqlClient.SqlParameter> il cui <xref:System.Data.ParameterDirection> è <xref:System.Data.ParameterDirection.Output>. Quando il `InsertCommand` viene elaborato, il valore identity a incremento automatico viene restituito e inserito nella **CategoryID** colonna della riga corrente se si imposta il <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> proprietà del comando di inserimento a `UpdateRowSource.OutputParameters` o a `UpdateRowSource.Both`.
 
- Se il comando di inserimento esegue un batch in cui sono incluse sia un'istruzione INSERT che un'istruzione SELECT che restituisce il nuovo valore Identity, è possibile recuperare il nuovo valore impostando la proprietà `UpdatedRowSource` del comando di inserimento su `UpdateRowSource.FirstReturnedRecord`.
+Se il comando di inserimento esegue un batch in cui sono incluse sia un'istruzione INSERT che un'istruzione SELECT che restituisce il nuovo valore Identity, è possibile recuperare il nuovo valore impostando la proprietà `UpdatedRowSource` del comando di inserimento su `UpdateRowSource.FirstReturnedRecord`.
 
- [!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
- [!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]
+[!code-csharp[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/CS/source.cs#1)]
+[!code-vb[DataWorks SqlClient.RetrieveIdentityStoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.RetrieveIdentityStoredProcedure/VB/source.vb#1)]
 
 ## <a name="merging-new-identity-values"></a>Unione di nuovi valori Identity
- In uno scenario comune viene chiamato il metodo `GetChanges` di un oggetto `DataTable` per creare una copia che contiene solo le righe modificate e viene usata la nuova copia durante la chiamata al metodo `Update` di un oggetto `DataAdapter`. Tale scenario risulta particolarmente utile quando è necessario effettuare il marshalling delle righe modificate in un componente diverso che esegue l'aggiornamento. In seguito all'aggiornamento, la copia può contenere nuovi valori Identity che devono essere reinseriti nell'oggetto `DataTable` originale. È probabile che i nuovi valori Identity siano diversi dai valori originali di `DataTable`. Per eseguire il merge, i valori originali del **AutoIncrement** devono essere mantenute in colonne di copia, per poter essere in grado di individuare e aggiornare le righe esistenti nell'originale `DataTable`, anziché aggiungere altre righe che contengono i nuovi valori identity. Per impostazione predefinita, i valori originali vengono tuttavia persi dopo una chiamata al metodo `Update` di un oggetto `DataAdapter`, perché viene chiamato implicitamente `AcceptChanges` per ogni `DataRow` aggiornato.
 
- Sono disponibili sono due tecniche per mantenere i valori originali di un oggetto `DataColumn` in un `DataRow` durante un aggiornamento di `DataAdapter`:
+In uno scenario comune viene chiamato il metodo `GetChanges` di un oggetto `DataTable` per creare una copia che contiene solo le righe modificate e viene usata la nuova copia durante la chiamata al metodo `Update` di un oggetto `DataAdapter`. Tale scenario risulta particolarmente utile quando è necessario effettuare il marshalling delle righe modificate in un componente diverso che esegue l'aggiornamento. In seguito all'aggiornamento, la copia può contenere nuovi valori Identity che devono essere reinseriti nell'oggetto `DataTable` originale. È probabile che i nuovi valori Identity siano diversi dai valori originali di `DataTable`. Per eseguire il merge, i valori originali del **AutoIncrement** devono essere mantenute in colonne di copia, per poter essere in grado di individuare e aggiornare le righe esistenti nell'originale `DataTable`, anziché aggiungere altre righe che contengono i nuovi valori identity. Per impostazione predefinita, i valori originali vengono tuttavia persi dopo una chiamata al metodo `Update` di un oggetto `DataAdapter`, perché viene chiamato implicitamente `AcceptChanges` per ogni `DataRow` aggiornato.
 
--   La prima tecnica per mantenere i valori originali consiste nell'impostare la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su `false`. Tale operazione influisce su ogni `DataRow` dell'oggetto `DataTable` da aggiornare. Per altre informazioni ed esempi di codice, vedere <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.
+Sono disponibili sono due tecniche per mantenere i valori originali di un oggetto `DataColumn` in un `DataRow` durante un aggiornamento di `DataAdapter`:
 
--   La seconda tecnica consiste invece nello scrivere codice nel gestore eventi `RowUpdated` di `DataAdapter` per impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` viene aggiornato ma il valore originale di ogni `DataColumn` viene mantenuto. Questa tecnica consente di mantenere i valori originali per alcune righe ma non per altre. Ad esempio, il codice può mantenere i valori originali per le righe aggiunte e non per quelle modificate o eliminate controllando dapprima <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> e quindi impostando <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow> solo per le righe in cui il valore di `StatementType` è `Insert`.
+- La prima tecnica per mantenere i valori originali consiste nell'impostare la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su `false`. Tale operazione influisce su ogni `DataRow` dell'oggetto `DataTable` da aggiornare. Per altre informazioni ed esempi di codice, vedere <xref:System.Data.Common.DataAdapter.AcceptChangesDuringUpdate%2A>.
+
+- La seconda tecnica consiste invece nello scrivere codice nel gestore eventi `RowUpdated` di `DataAdapter` per impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. `DataRow` viene aggiornato ma il valore originale di ogni `DataColumn` viene mantenuto. Questa tecnica consente di mantenere i valori originali per alcune righe ma non per altre. Ad esempio, il codice può mantenere i valori originali per le righe aggiunte e non per quelle modificate o eliminate controllando dapprima <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> e quindi impostando <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow> solo per le righe in cui il valore di `StatementType` è `Insert`.
 
 Quando si usa una di queste soluzioni per mantenere i valori originali di un oggetto `DataRow` durante un aggiornamento di `DataAdapter`, ADO.NET esegue una serie di azioni per impostare i valori correnti di `DataRow` sui valori nuovi restituiti dai parametri di output o dalla prima riga restituita di un set di risultati, pur mantenendo il valore originale in ogni `DataColumn`. Viene innanzitutto chiamato il metodo `AcceptChanges` di `DataRow` per mantenere i valori correnti come valori originali, quindi vengono assegnati i nuovi valori. In seguito a queste azioni, è possibile che inaspettatamente la proprietà `DataRows` degli oggetti <xref:System.Data.DataRow.RowState%2A> la cui proprietà <xref:System.Data.DataRowState.Added> è stata impostata su `RowState` verrà impostata su <xref:System.Data.DataRowState.Modified>.
 
@@ -75,7 +77,8 @@ Nella tabella seguente viene descritto il modo in cui i diversi valori dell'enum
 |<xref:System.Data.UpdateRowSource.OutputParameters>|Viene chiamato `AcceptChanges` e viene eseguito il mapping degli eventuali parametri di output alla riga modificata in `DataTable`, impostando `RowState` su `Modified`. Se non sono disponibili parametri di output, il valore di `RowState` sarà `Unchanged`.|
 
 ### <a name="example"></a>Esempio
- In questo esempio vengono illustrati l'estrazione di righe modificate da un oggetto `DataTable` e l'uso di <xref:System.Data.SqlClient.SqlDataAdapter> per aggiornare l'origine dati e recuperare un nuovo valore per la colonna Identity. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> esegue due istruzioni Transact-SQL: la prima è l'istruzione INSERT, mentre la seconda è un'istruzione SELECT che usa la funzione SCOPE_IDENTITY per recuperare il valore Identity.
+
+In questo esempio vengono illustrati l'estrazione di righe modificate da un oggetto `DataTable` e l'uso di <xref:System.Data.SqlClient.SqlDataAdapter> per aggiornare l'origine dati e recuperare un nuovo valore per la colonna Identity. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> esegue due istruzioni Transact-SQL: la prima è l'istruzione INSERT, mentre la seconda è un'istruzione SELECT che usa la funzione SCOPE_IDENTITY per recuperare il valore Identity.
 
 ```sql
 INSERT INTO dbo.Shippers (CompanyName)
@@ -84,39 +87,41 @@ SELECT ShipperID, CompanyName FROM dbo.Shippers
 WHERE ShipperID = SCOPE_IDENTITY();
 ```
 
- La proprietà `UpdatedRowSource` del comando di inserimento viene impostata su `UpdateRowSource.FirstReturnedRow`, mentre la proprietà <xref:System.Data.MissingSchemaAction> di `DataAdapter` viene impostata su `MissingSchemaAction.AddWithKey`. `DataTable` viene riempito e il codice aggiunge una nuova riga a `DataTable`. Le righe modificate vengono quindi estratte in un nuovo oggetto `DataTable`, che viene passato a `DataAdapter` e usato per l'aggiornamento del server.
+La proprietà `UpdatedRowSource` del comando di inserimento viene impostata su `UpdateRowSource.FirstReturnedRow`, mentre la proprietà <xref:System.Data.MissingSchemaAction> di `DataAdapter` viene impostata su `MissingSchemaAction.AddWithKey`. `DataTable` viene riempito e il codice aggiunge una nuova riga a `DataTable`. Le righe modificate vengono quindi estratte in un nuovo oggetto `DataTable`, che viene passato a `DataAdapter` e usato per l'aggiornamento del server.
 
- [!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
- [!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]
+[!code-csharp[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#1)]
+[!code-vb[DataWorks SqlClient.MergeIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#1)]
 
- Il gestore eventi `OnRowUpdated` verifica la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> di <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> per determinare se la riga è un inserimento. In caso affermativo, la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> viene impostata su <xref:System.Data.UpdateStatus.SkipCurrentRow>. La riga viene aggiornata, tuttavia i valori originali della riga vengono mantenuti. Nel corpo principale della procedura viene chiamato il metodo <xref:System.Data.DataSet.Merge%2A> per unire il nuovo valore Identity nell'oggetto `DataTable` originale e infine viene chiamato `AcceptChanges`.
+Il gestore eventi `OnRowUpdated` verifica la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.StatementType%2A> di <xref:System.Data.SqlClient.SqlRowUpdatedEventArgs> per determinare se la riga è un inserimento. In caso affermativo, la proprietà <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> viene impostata su <xref:System.Data.UpdateStatus.SkipCurrentRow>. La riga viene aggiornata, tuttavia i valori originali della riga vengono mantenuti. Nel corpo principale della procedura viene chiamato il metodo <xref:System.Data.DataSet.Merge%2A> per unire il nuovo valore Identity nell'oggetto `DataTable` originale e infine viene chiamato `AcceptChanges`.
 
- [!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
- [!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]
+[!code-csharp[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/CS/source.cs#2)]
+[!code-vb[DataWorks SqlClient.MergeIdentity#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.MergeIdentity/VB/source.vb#2)]
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Recupero di valori del campo Contatore di Microsoft Access
- Questa sezione include un esempio che illustra come recuperare valori `Autonumber` da un database Jet 4.0. Il motore del database Jet non supporta l'esecuzione di più istruzioni in un batch o l'uso di parametri di output, pertanto non è possibile usare nessuna di queste tecniche per restituire il nuovo valore di `Autonumber` assegnato a una riga inserita. Tuttavia, è possibile aggiungere codice per il `RowUpdated` gestore dell'evento che viene eseguita un'istruzione SELECT @ separata@IDENTITY istruzione per recuperare il nuovo `Autonumber` valore.
+
+Questa sezione include un esempio che illustra come recuperare valori `Autonumber` da un database Jet 4.0. Il motore del database Jet non supporta l'esecuzione di più istruzioni in un batch o l'uso di parametri di output, pertanto non è possibile usare nessuna di queste tecniche per restituire il nuovo valore di `Autonumber` assegnato a una riga inserita. Tuttavia, è possibile aggiungere codice per il `RowUpdated` gestore dell'evento che viene eseguita un'istruzione SELECT @ separata@IDENTITY istruzione per recuperare il nuovo `Autonumber` valore.
 
 ### <a name="example"></a>Esempio
- Anziché aggiungere informazioni sullo schema tramite `MissingSchemaAction.AddWithKey`, in questo esempio viene configurato un oggetto `DataTable` con lo schema corretto prima di chiamare <xref:System.Data.OleDb.OleDbDataAdapter> per riempire un oggetto `DataTable`. In questo caso, il **CategoryID** colonna è configurata per ridurre il valore assegnato a ogni riga inserita a partire da zero, impostando <xref:System.Data.DataColumn.AutoIncrement%2A> al `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> su 0, e <xref:System.Data.DataColumn.AutoIncrementStep%2A> su -1. Il codice aggiunge quindi due nuove righe e usa `GetChanges` per aggiungere le righe modificate a un nuovo oggetto `DataTable` che viene passato al metodo `Update`.
 
- [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
- [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
+Anziché aggiungere informazioni sullo schema tramite `MissingSchemaAction.AddWithKey`, in questo esempio viene configurato un oggetto `DataTable` con lo schema corretto prima di chiamare <xref:System.Data.OleDb.OleDbDataAdapter> per riempire un oggetto `DataTable`. In questo caso, il **CategoryID** colonna è configurata per ridurre il valore assegnato a ogni riga inserita a partire da zero, impostando <xref:System.Data.DataColumn.AutoIncrement%2A> al `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> su 0, e <xref:System.Data.DataColumn.AutoIncrementStep%2A> su -1. Il codice aggiunge quindi due nuove righe e usa `GetChanges` per aggiungere le righe modificate a un nuovo oggetto `DataTable` che viene passato al metodo `Update`.
 
- Il gestore eventi `RowUpdated` usa lo stesso oggetto <xref:System.Data.OleDb.OleDbConnection> aperto come istruzione `Update` di `OleDbDataAdapter`. Verifica il valore di `StatementType` di <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> per le righe inserite. Per ogni riga inserita una nuova <xref:System.Data.OleDb.OleDbCommand> viene creato per eseguire l'istruzione SELECT @@IDENTITY istruzione per la connessione, restituire il nuovo `Autonumber` valore, che viene inserito nella **CategoryID** colonna del `DataRow`. La proprietà `Status` viene quindi impostata su `UpdateStatus.SkipCurrentRow` per sopprimere la chiamata nascosta a `AcceptChanges`. Nel corpo principale della procedura viene chiamato il metodo `Merge` per unire i due oggetti `DataTable` e infine viene chiamato `AcceptChanges`.
+[!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
+[!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
- [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
- [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
+Il gestore eventi `RowUpdated` usa lo stesso oggetto <xref:System.Data.OleDb.OleDbConnection> aperto come istruzione `Update` di `OleDbDataAdapter`. Verifica il valore di `StatementType` di <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> per le righe inserite. Per ogni riga inserita una nuova <xref:System.Data.OleDb.OleDbCommand> viene creato per eseguire l'istruzione SELECT @@IDENTITY istruzione per la connessione, restituire il nuovo `Autonumber` valore, che viene inserito nella **CategoryID** colonna del `DataRow`. La proprietà `Status` viene quindi impostata su `UpdateStatus.SkipCurrentRow` per sopprimere la chiamata nascosta a `AcceptChanges`. Nel corpo principale della procedura viene chiamato il metodo `Merge` per unire i due oggetti `DataTable` e infine viene chiamato `AcceptChanges`.
+
+[!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
+[!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
 
 ### <a name="retrieving-identity-values"></a>Recupero dei valori Identity
 
 Spesso la colonna viene impostata come Identity quando i valori nella colonna devono essere univoci. E a volte è necessario il valore Identity di nuovi dati. Questo esempio illustra come recuperare i valori Identity:
 
--   Crea una stored procedure per inserire dati e restituire un valore Identity.
+- Crea una stored procedure per inserire dati e restituire un valore Identity.
 
--   Esegue un comando per inserire i nuovi dati e visualizzare il risultato.
+- Esegue un comando per inserire i nuovi dati e visualizzare il risultato.
 
--   Usa <xref:System.Data.SqlClient.SqlDataAdapter> per inserire i nuovi dati e visualizzare il risultato.
+- Usa <xref:System.Data.SqlClient.SqlDataAdapter> per inserire i nuovi dati e visualizzare il risultato.
 
 Prima di compilare ed eseguire l'esempio, è necessario creare il database di esempio, usando lo script seguente:
 
@@ -428,7 +433,7 @@ class Program {
       }
    }
 
-   /// For a Jet 4.0 database, we need use the sigle statement and event handler to insert new rows and retrieve the identity value.
+   /// For a Jet 4.0 database, we need use the single statement and event handler to insert new rows and retrieve the identity value.
    static void InsertPersonInJet4Database(String connectionString, String firstName, String lastName) {
       String commandText = "Insert into Person(FirstName,LastName) Values(?,?)";
       using (OleDbConnection conn = new OleDbConnection(connectionString)) {

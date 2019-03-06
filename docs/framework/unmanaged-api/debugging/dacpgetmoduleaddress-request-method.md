@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542600"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351086"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Metodo DacpGetModuleAddress::Request
 
@@ -36,9 +36,10 @@ HRESULT Request(
 );
 ```
 
-### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-`pDataModule` [in] Puntatore al modulo del valore di inizializzazione di dati.
+`pDataModule`\
+[in] Puntatore al modulo del valore di inizializzazione di dati.
 
 ## <a name="remarks"></a>Note
 
@@ -56,5 +57,5 @@ Questa struttura si trova all'interno del runtime e non viene esposto tramite le
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaccia DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)
+- [Debug](index.md)
+- [Interfaccia DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

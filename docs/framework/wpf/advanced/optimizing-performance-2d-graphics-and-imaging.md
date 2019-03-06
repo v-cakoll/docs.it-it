@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371398"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Ottimizzazione delle prestazioni: Grafica bidimensionale e creazione di immagini
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un'ampia gamma di funzionalità di grafica 2D e creazione di immagini che possono essere ottimizzate in base ai requisiti dell'applicazione. Questo argomento fornisce informazioni sull'ottimizzazione delle prestazioni in queste aree.  
@@ -49,7 +49,7 @@ ms.locfileid: "54630814"
   
  Poiché <xref:System.Windows.Shapes.Shape> oggetti derivano dal <xref:System.Windows.FrameworkElement> classe utilizzando li può aggiungere significativamente maggiore consumo di memoria nell'applicazione. Se si necessita di <xref:System.Windows.FrameworkElement> le funzionalità per il contenuto grafico, è consigliabile usare la leggera <xref:System.Windows.Media.Drawing> oggetti.  
   
- Per ulteriori informazioni sul <xref:System.Windows.Media.Drawing> oggetti, vedere [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Per ulteriori informazioni sul <xref:System.Windows.Media.Drawing> oggetti, vedere [Cenni preliminari sugli oggetti Drawing](../graphics-multimedia/drawing-objects-overview.md).  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Oggetto StreamGeometry  
@@ -57,13 +57,13 @@ ms.locfileid: "54630814"
   
  L'esempio seguente usa la sintassi degli attributi per creare una forma di triangolo <xref:System.Windows.Media.StreamGeometry> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- Per ulteriori informazioni sul <xref:System.Windows.Media.StreamGeometry> oggetti, vedere [creare forme tramite un oggetto StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
+ Per ulteriori informazioni sul <xref:System.Windows.Media.StreamGeometry> oggetti, vedere [creare forme tramite un oggetto StreamGeometry](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>Oggetti DrawingVisual  
- Il <xref:System.Windows.Media.DrawingVisual> oggetto è una classe che consente di eseguire il rendering di forme, immagini o testo di disegno semplificata. Questa classe è considerata semplice perché non offre la gestione di layout o eventi, con un conseguente aumento delle prestazioni. Per questo motivo, i disegni sono ideali per sfondi e ClipArt. Per altre informazioni, vedere [Uso degli oggetti DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
+ Il <xref:System.Windows.Media.DrawingVisual> oggetto è una classe che consente di eseguire il rendering di forme, immagini o testo di disegno semplificata. Questa classe è considerata semplice perché non offre la gestione di layout o eventi, con un conseguente aumento delle prestazioni. Per questo motivo, i disegni sono ideali per sfondi e ClipArt. Per altre informazioni, vedere [Uso degli oggetti DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md).  
   
 <a name="Images"></a>   
 ## <a name="images"></a>Immagini  
@@ -77,15 +77,15 @@ ms.locfileid: "54630814"
   
 -   Se possibile, combinare le immagini in un'unica immagine, come una pellicola cinematografica composta da più immagini.  
   
--   Per altre informazioni, vedere [Panoramica della creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+-   Per altre informazioni, vedere [Panoramica della creazione dell'immagine](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Quando si aggiunge un'animazione alla scala di una bitmap, è possibile che l'algoritmo di ricampionamento delle immagini di alta qualità determini un consumo di risorse di sistema tale da rallentare la frequenza dei fotogrammi, provocando lo stuttering delle animazioni. Impostando il <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> proprietà del <xref:System.Windows.Media.RenderOptions> oggetto <xref:System.Windows.Media.BitmapScalingMode.LowQuality> quando si ridimensiona una bitmap, è possibile creare un'animazione più fluida. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> indica la modalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] motore di rendering per passare da un algoritmo ottimizzato per la qualità a un algoritmo ottimizzato per la velocità durante l'elaborazione di immagini.  
   
  Nell'esempio seguente viene illustrato come impostare il <xref:System.Windows.Media.BitmapScalingMode> per un oggetto immagine.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  Per impostazione predefinita [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] memorizza nella cache il contenuto di rendering <xref:System.Windows.Media.TileBrush> oggetti, ad esempio <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Negli scenari statici in cui il contenuto e l'uso del <xref:System.Windows.Media.TileBrush> nella scena, in questo senso, poiché consente di conservare memoria video. Non apporta ha senso se un <xref:System.Windows.Media.TileBrush> con contenuto statico viene usato in modo non statico, ad esempio, quando un valore statico <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> è mappato alla superficie di un oggetto 3D rotante. Il comportamento predefinito di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consiste nell'eseguire nuovamente il rendering dell'intero contenuto del <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> per ogni fotogramma, anche se il contenuto rimane invariato.  
@@ -96,17 +96,17 @@ ms.locfileid: "54630814"
   
  Nell'esempio seguente viene illustrato come utilizzare l'opzione di hint per la memorizzazione nella cache per un <xref:System.Windows.Media.DrawingBrush>.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Suggerimenti sulle animazioni](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
+- [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
+- [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
+- [Data binding](optimizing-performance-data-binding.md)
+- [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)
+- [Suggerimenti sulle animazioni](../graphics-multimedia/animation-tips-and-tricks.md)

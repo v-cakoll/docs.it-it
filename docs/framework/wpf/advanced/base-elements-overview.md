@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 73d854d601de05c2cb7dd6063e4a5f2907b09f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372828"
 ---
 # <a name="base-elements-overview"></a>Cenni preliminari sugli elementi di base
 Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deriva da quattro classi alle quali viene comunemente fatto riferimento nella documentazione [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] come classi degli elementi di base. Queste classi sono <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, e <xref:System.Windows.FrameworkContentElement>. Il <xref:System.Windows.DependencyObject> classe è correlata, perché è una classe di base comune di entrambi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>  
@@ -26,7 +26,7 @@ Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../in
 ## <a name="choosing-which-element-to-derive-from"></a>Scelta dell'elemento da cui derivare  
  Il modo ottimale per creare una classe personalizzata che estende [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consiste nel derivare da una delle classi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mediante cui si ottiene la massima funzionalità desiderata tramite la gerarchia di classi esistente. Questa sezione elenca le funzionalità fornite da tre delle più importanti classi di elementi che consentono di decidere da quale classe ereditare.  
   
- Se si implementa un controllo, ovvero uno dei motivi più comuni per la derivazione da una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (classe), è possibile derivare da una classe che rappresenta un controllo pratico, una classe di base della famiglia controlli o almeno dal <xref:System.Windows.Controls.Control> classe di base. Per istruzioni ed esempi pratici, vedere [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Se si implementa un controllo, ovvero uno dei motivi più comuni per la derivazione da una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (classe), è possibile derivare da una classe che rappresenta un controllo pratico, una classe di base della famiglia controlli o almeno dal <xref:System.Windows.Controls.Control> classe di base. Per istruzioni ed esempi pratici, vedere [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md).  
   
  Se non si crea un controllo ed è necessario derivare da una classe più elevata nella gerarchia, nelle sezioni seguenti vengono fornite informazioni sulle caratteristiche definite in ogni classe degli elementi di base.  
   
@@ -38,57 +38,57 @@ Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../in
   
  Se si crea una classe che deriva da <xref:System.Windows.UIElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.DependencyObject>:  
   
--   Supporto di base per i valori delle proprietà animate. Per altre informazioni, vedere [Panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Supporto di base per i valori delle proprietà animate. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](../../../../docs/framework/wpf/advanced/input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
   
 -   Metodi virtuali di cui è possibile eseguire l'override per fornire informazioni a un sistema di layout.  
   
  Se si crea una classe che deriva da <xref:System.Windows.FrameworkElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.UIElement>:  
   
--   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+-   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sugli storyboard](../graphics-multimedia/storyboards-overview.md).  
   
--   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
   
--   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
   
--   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
   
--   Concetto di albero logico. Per altre informazioni, vedere [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+-   Concetto di albero logico. Per altre informazioni, vedere [Strutture ad albero in WPF](trees-in-wpf.md).  
   
 -   Supporto per l'implementazione pratica a livello di framework WPF del sistema di layout, inclusi un <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override che consentono di rilevare le modifiche alle proprietà che hanno effetto sul layout.  
   
  Se si crea una classe che deriva da <xref:System.Windows.ContentElement>, si ereditano le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.DependencyObject>:  
   
--   Supporto per le animazioni. Per altre informazioni, vedere [Panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Supporto per le animazioni. Per altre informazioni, vedere [Panoramica dell'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](../../../../docs/framework/wpf/advanced/input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Supporto di eventi di input di base e supporto dei comandi. Per altre informazioni, vedere [Cenni preliminari sull’input](input-overview.md) e [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md).  
   
  Se si crea una classe che deriva da <xref:System.Windows.FrameworkContentElement>, si ottengono le funzionalità seguenti oltre a quelle fornite da <xref:System.Windows.ContentElement>:  
   
--   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Supporto per l'uso di stili e storyboard. Per altre informazioni, vedere <xref:System.Windows.Style> e [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md).  
   
--   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Supporto del data binding. Per altre informazioni, vedere la [panoramica del data binding](../data/data-binding-overview.md).  
   
--   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Supporto per i riferimenti di risorse dinamiche. Per altre informazioni, vedere [Risorse XAML](xaml-resources.md).  
   
--   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Supporto dell'ereditarietà dei valori di proprietà e altri flag nei metadati che agevolano la segnalazione di condizioni relative alle proprietà ai servizi del framework, ad esempio data binding, stili o implementazione del layout del framework. Per altre informazioni, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
   
 -   Non si eredita l'accesso alle modifiche del sistema di layout (ad esempio <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Le implementazioni del sistema di layout sono disponibili solo in <xref:System.Windows.FrameworkElement>. Tuttavia, ereditano un' <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> override per rilevare le modifiche alle proprietà che hanno effetto sul layout e segnalarle a qualsiasi host del contenuto.  
   
- I modelli di contenuto sono documentati per una varietà di classi. Il modello di contenuto per una classe è un fattore possibile da considerare per trovare una classe adatta da cui derivare. Per altre informazioni, vedere [Modello di contenuto WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+ I modelli di contenuto sono documentati per una varietà di classi. Il modello di contenuto per una classe è un fattore possibile da considerare per trovare una classe adatta da cui derivare. Per altre informazioni, vedere [Modello di contenuto WPF](../controls/wpf-content-model.md).  
   
 <a name="other_base_classes"></a>   
 ## <a name="other-base-classes"></a>Altre classi di base  
   
 ### <a name="dispatcherobject"></a>DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject> fornisce il supporto per la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di threading e Abilita tutti gli oggetti creati per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alle applicazioni di essere associato un <xref:System.Windows.Threading.Dispatcher>. Anche se non si deriva da <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, o <xref:System.Windows.Media.Visual>, è necessario considerare che deriva da <xref:System.Windows.Threading.DispatcherObject> per ottenere il supporto del modello di threading. Per altre informazioni, vedere [Modello di threading](../../../../docs/framework/wpf/advanced/threading-model.md).  
+ <xref:System.Windows.Threading.DispatcherObject> fornisce il supporto per la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di threading e Abilita tutti gli oggetti creati per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alle applicazioni di essere associato un <xref:System.Windows.Threading.Dispatcher>. Anche se non si deriva da <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, o <xref:System.Windows.Media.Visual>, è necessario considerare che deriva da <xref:System.Windows.Threading.DispatcherObject> per ottenere il supporto del modello di threading. Per altre informazioni, vedere [Modello di threading](threading-model.md).  
   
 ### <a name="visual"></a>Visual  
- <xref:System.Windows.Media.Visual> implementa il concetto di un oggetto 2D che generalmente richiede la presentazione visiva in un'area approssimativamente rettangolare. Il rendering effettivo di una <xref:System.Windows.Media.Visual> avviene in altre classi (non indipendente), ma il <xref:System.Windows.Media.Visual> classe fornisce un tipo noto usato dai processi di rendering a vari livelli. <xref:System.Windows.Media.Visual> implementa l'hit testing, ma non espone eventi che segnalano valori positivi di hit testing (questi siano <xref:System.Windows.UIElement>). Per altre informazioni, vedere [Programmazione a livello visivo](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md).  
+ <xref:System.Windows.Media.Visual> implementa il concetto di un oggetto 2D che generalmente richiede la presentazione visiva in un'area approssimativamente rettangolare. Il rendering effettivo di una <xref:System.Windows.Media.Visual> avviene in altre classi (non indipendente), ma il <xref:System.Windows.Media.Visual> classe fornisce un tipo noto usato dai processi di rendering a vari livelli. <xref:System.Windows.Media.Visual> implementa l'hit testing, ma non espone eventi che segnalano valori positivi di hit testing (questi siano <xref:System.Windows.UIElement>). Per altre informazioni, vedere [Programmazione a livello visivo](../graphics-multimedia/visual-layer-programming.md).  
   
 ### <a name="freezable"></a>Freezable  
- <xref:System.Windows.Freezable> Simula la non modificabilità in un oggetto modificabile fornendo i mezzi per generare copie dell'oggetto quando un oggetto non modificabile è necessario o utile per motivi di prestazioni. Il <xref:System.Windows.Freezable> tipo fornisce una base comune per alcuni elementi grafici, ad esempio geometrie e pennelli, nonché le animazioni. In particolare, un <xref:System.Windows.Freezable> non è un <xref:System.Windows.Media.Visual>; può contenere proprietà che diventano sottoproprietà quando la <xref:System.Windows.Freezable> viene applicato per riempire un valore della proprietà di un altro oggetto, e tali sottoproprietà possono influire sul rendering. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ <xref:System.Windows.Freezable> Simula la non modificabilità in un oggetto modificabile fornendo i mezzi per generare copie dell'oggetto quando un oggetto non modificabile è necessario o utile per motivi di prestazioni. Il <xref:System.Windows.Freezable> tipo fornisce una base comune per alcuni elementi grafici, ad esempio geometrie e pennelli, nonché le animazioni. In particolare, un <xref:System.Windows.Freezable> non è un <xref:System.Windows.Media.Visual>; può contenere proprietà che diventano sottoproprietà quando la <xref:System.Windows.Freezable> viene applicato per riempire un valore della proprietà di un altro oggetto, e tali sottoproprietà possono influire sul rendering. Per altre informazioni, vedere [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md).  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
@@ -99,6 +99,6 @@ Una percentuale elevata di classi in [!INCLUDE[TLA#tla_winclient](../../../../in
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Controls.Control>
-- [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
-- [Architettura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
+- [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md)
+- [Architettura WPF](wpf-architecture.md)
