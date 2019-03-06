@@ -7,30 +7,30 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544472"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369149"
 ---
-# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="82e5c-102">Procedure relative alla globalizzazione e alla localizzazione</span><span class="sxs-lookup"><span data-stu-id="82e5c-102">Globalization and Localization How-to Topics</span></span>
-<span data-ttu-id="82e5c-103">Negli argomenti di questa sezione viene descritto come sviluppare applicazioni world-ready.</span><span class="sxs-lookup"><span data-stu-id="82e5c-103">The topics in this section describe how to develop world-ready applications.</span></span>  
+# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="fa29f-102">Procedure relative alla globalizzazione e alla localizzazione</span><span class="sxs-lookup"><span data-stu-id="fa29f-102">Globalization and Localization How-to Topics</span></span>
+<span data-ttu-id="fa29f-103">Gli argomenti in questa sezione descrivono come sviluppare applicazioni internazionalizzate.</span><span class="sxs-lookup"><span data-stu-id="fa29f-103">The topics in this section describe how to develop world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="82e5c-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="82e5c-104">In This Section</span></span>  
- [<span data-ttu-id="82e5c-105">Localizzare un'applicazione</span><span class="sxs-lookup"><span data-stu-id="82e5c-105">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [<span data-ttu-id="82e5c-106">Utilizzare un layout automatico per creare un pulsante</span><span class="sxs-lookup"><span data-stu-id="82e5c-106">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [<span data-ttu-id="82e5c-107">Usare una griglia per il layout automatico</span><span class="sxs-lookup"><span data-stu-id="82e5c-107">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [<span data-ttu-id="82e5c-108">Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili</span><span class="sxs-lookup"><span data-stu-id="82e5c-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [<span data-ttu-id="82e5c-109">Usare le risorse in applicazioni localizzabili</span><span class="sxs-lookup"><span data-stu-id="82e5c-109">Use Resources in Localizable Applications</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fa29f-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="fa29f-104">In This Section</span></span>  
+ [<span data-ttu-id="fa29f-105">Localizzare un'applicazione</span><span class="sxs-lookup"><span data-stu-id="fa29f-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
+ [<span data-ttu-id="fa29f-106">Utilizzare un layout automatico per creare un pulsante</span><span class="sxs-lookup"><span data-stu-id="fa29f-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="fa29f-107">Usare una griglia per il layout automatico</span><span class="sxs-lookup"><span data-stu-id="fa29f-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="fa29f-108">Usare un oggetto ResourceDictionary per gestire le risorse di tipo stringa localizzabili</span><span class="sxs-lookup"><span data-stu-id="fa29f-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [<span data-ttu-id="fa29f-109">Usare le risorse in applicazioni localizzabili</span><span class="sxs-lookup"><span data-stu-id="fa29f-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a><span data-ttu-id="82e5c-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="82e5c-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fa29f-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="fa29f-110">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="82e5c-111">Gestione di xml:lang in XAML</span><span class="sxs-lookup"><span data-stu-id="82e5c-111">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="fa29f-111">Gestione di xml:lang in XAML</span><span class="sxs-lookup"><span data-stu-id="fa29f-111">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="82e5c-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="82e5c-112">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="fa29f-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="fa29f-112">Related Sections</span></span>

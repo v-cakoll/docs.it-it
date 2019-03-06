@@ -10,30 +10,30 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: 1f6e7255286d065eb26773d524a3147801933406
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367878"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="71426-102">Procedura: Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="71426-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
-<span data-ttu-id="71426-103">In questo esempio mostra come posizionare un menu contestuale personalizzato per un <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="71426-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="9f45c-102">Procedura: Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="9f45c-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
+<span data-ttu-id="9f45c-103">In questo esempio mostra come posizionare un menu contestuale personalizzato per un <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="9f45c-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
- <span data-ttu-id="71426-104">Quando si implementa un menu contestuale personalizzato per un oggetto **RichTextBox**, si è responsabili della gestione del posizionamento del menu contestuale.</span><span class="sxs-lookup"><span data-stu-id="71426-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="71426-105">Per impostazione predefinita, un menu contestuale personalizzato si apre al centro dell'oggetto **RichTextBox**.</span><span class="sxs-lookup"><span data-stu-id="71426-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
+ <span data-ttu-id="9f45c-104">Quando si implementa un menu contestuale personalizzato per un oggetto **RichTextBox**, si è responsabili della gestione del posizionamento del menu contestuale.</span><span class="sxs-lookup"><span data-stu-id="9f45c-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="9f45c-105">Per impostazione predefinita, un menu contestuale personalizzato si apre al centro dell'oggetto **RichTextBox**.</span><span class="sxs-lookup"><span data-stu-id="9f45c-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="71426-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="71426-106">Example</span></span>  
- <span data-ttu-id="71426-107">Per eseguire l'override del comportamento del posizionamento predefinito, aggiungere un listener per il <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> evento.</span><span class="sxs-lookup"><span data-stu-id="71426-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="71426-108">L'esempio seguente illustra come eseguire questa operazione a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="71426-108">The following example shows how to do this programmatically.</span></span>  
+## <a name="example"></a><span data-ttu-id="9f45c-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="9f45c-106">Example</span></span>  
+ <span data-ttu-id="9f45c-107">Per eseguire l'override del comportamento del posizionamento predefinito, aggiungere un listener per il <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> evento.</span><span class="sxs-lookup"><span data-stu-id="9f45c-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="9f45c-108">L'esempio seguente illustra come eseguire questa operazione a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="9f45c-108">The following example shows how to do this programmatically.</span></span>  
   
- [!code-csharp[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
- [!code-vb[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
+ [!code-csharp[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
+ [!code-vb[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
   
-## <a name="example"></a><span data-ttu-id="71426-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="71426-109">Example</span></span>  
- <span data-ttu-id="71426-110">Nell'esempio seguente viene illustrata un'implementazione corrispondente <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> listener di eventi.</span><span class="sxs-lookup"><span data-stu-id="71426-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
+## <a name="example"></a><span data-ttu-id="9f45c-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="9f45c-109">Example</span></span>  
+ <span data-ttu-id="9f45c-110">Nell'esempio seguente viene illustrata un'implementazione corrispondente <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> listener di eventi.</span><span class="sxs-lookup"><span data-stu-id="9f45c-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
   
- [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
- [!code-vb[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
+ [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
+ [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
-## <a name="see-also"></a><span data-ttu-id="71426-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71426-111">See also</span></span>
-- [<span data-ttu-id="71426-112">Cenni preliminari sul controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="71426-112">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
-- [<span data-ttu-id="71426-113">Cenni preliminari sulla classe TextBox</span><span class="sxs-lookup"><span data-stu-id="71426-113">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="9f45c-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9f45c-111">See also</span></span>
+- [<span data-ttu-id="9f45c-112">Cenni preliminari sul controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="9f45c-112">RichTextBox Overview</span></span>](richtextbox-overview.md)
+- [<span data-ttu-id="9f45c-113">Cenni preliminari sulla classe TextBox</span><span class="sxs-lookup"><span data-stu-id="9f45c-113">TextBox Overview</span></span>](textbox-overview.md)

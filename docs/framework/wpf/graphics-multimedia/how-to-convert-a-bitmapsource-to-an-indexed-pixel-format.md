@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: convertire un elemento BitmapSource in un formato a pixel indicizzati'
+title: 'Procedura: Convertire un BitmapSource in un formato a pixel indicizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - converting [WPF], BitmapSource objects to palettized pixel format
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: ccb03a83-8c72-4353-89da-48312d16548b
-ms.openlocfilehash: 6e56958804c5632bac62bfad6eedb2478d229f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69ccf82a42f6ec640106f554a10e7d2c86754220
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560851"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360719"
 ---
-# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="20607-102">Procedura: convertire un elemento BitmapSource in un formato a pixel indicizzati</span><span class="sxs-lookup"><span data-stu-id="20607-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
-<span data-ttu-id="20607-103">In questo esempio viene illustrato come convertire un <xref:System.Windows.Media.Imaging.BitmapSource> in un formato pixel indicizzato.</span><span class="sxs-lookup"><span data-stu-id="20607-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
+# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="47d67-102">Procedura: Convertire un BitmapSource in un formato a pixel indicizzato</span><span class="sxs-lookup"><span data-stu-id="47d67-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
+<span data-ttu-id="47d67-103">In questo esempio viene illustrato come convertire un <xref:System.Windows.Media.Imaging.BitmapSource> in un formato a pixel indicizzato.</span><span class="sxs-lookup"><span data-stu-id="47d67-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="20607-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="20607-104">Example</span></span>  
- [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample2.cs#formatconvertedbitmapcodeexample2wholepage)]
- [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample2.vb#formatconvertedbitmapcodeexample2wholepage)]
+## <a name="example"></a><span data-ttu-id="47d67-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="47d67-104">Example</span></span>  
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample2.cs#formatconvertedbitmapcodeexample2wholepage)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample2.vb#formatconvertedbitmapcodeexample2wholepage)]
