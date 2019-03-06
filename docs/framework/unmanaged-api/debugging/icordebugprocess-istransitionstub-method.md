@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420095"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488188"
 ---
-# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="56ef1-102">Metodo ICorDebugProcess::IsTransitionStub</span><span class="sxs-lookup"><span data-stu-id="56ef1-102">ICorDebugProcess::IsTransitionStub Method</span></span>
-<span data-ttu-id="56ef1-103">Ottiene un valore che indica se un indirizzo è all'interno di uno stub che causerà una transizione da codice gestito.</span><span class="sxs-lookup"><span data-stu-id="56ef1-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
+# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="2a4c1-102">Metodo ICorDebugProcess::IsTransitionStub</span><span class="sxs-lookup"><span data-stu-id="2a4c1-102">ICorDebugProcess::IsTransitionStub Method</span></span>
+<span data-ttu-id="2a4c1-103">Ottiene un valore che indica se un indirizzo è all'interno di uno stub che causa una transizione al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="2a4c1-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56ef1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="56ef1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a4c1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2a4c1-104">Syntax</span></span>  
   
 ```  
 HRESULT IsTransitionStub(  
@@ -35,23 +35,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56ef1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="56ef1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a4c1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2a4c1-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="56ef1-106">[in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo in questione.</span><span class="sxs-lookup"><span data-stu-id="56ef1-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
+ <span data-ttu-id="2a4c1-106">[in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo in questione.</span><span class="sxs-lookup"><span data-stu-id="2a4c1-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="56ef1-107">[out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causerà una transizione a codice gestito; in caso contrario \*`pbTransitionStub` è `false`.</span><span class="sxs-lookup"><span data-stu-id="56ef1-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="2a4c1-107">[out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causa una transizione al codice gestito; in caso contrario, \*`pbTransitionStub` è `false`.</span><span class="sxs-lookup"><span data-stu-id="2a4c1-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56ef1-108">Note</span><span class="sxs-lookup"><span data-stu-id="56ef1-108">Remarks</span></span>  
- <span data-ttu-id="56ef1-109">Il `IsTransitionStub` metodo può essere usato da passo a passo il codice non gestito per decidere quando restituire il controllo per il gestore di istruzioni gestito.</span><span class="sxs-lookup"><span data-stu-id="56ef1-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a4c1-108">Note</span><span class="sxs-lookup"><span data-stu-id="2a4c1-108">Remarks</span></span>  
+ <span data-ttu-id="2a4c1-109">Il `IsTransitionStub` metodo utilizzabile dal codice non gestito debug passo a passo per decidere quando restituire il controllo per il gestore gestito di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="2a4c1-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
   
- <span data-ttu-id="56ef1-110">È possibile anche gli stub di transizione identità esaminando le informazioni contenute nel file eseguibile portabile (PE).</span><span class="sxs-lookup"><span data-stu-id="56ef1-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
+ <span data-ttu-id="2a4c1-110">È anche possibile stub transizione identità esaminando le informazioni contenute nel file eseguibile portabile (PE).</span><span class="sxs-lookup"><span data-stu-id="2a4c1-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56ef1-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="56ef1-111">Requirements</span></span>  
- <span data-ttu-id="56ef1-112">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56ef1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a4c1-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2a4c1-111">Requirements</span></span>  
+ <span data-ttu-id="2a4c1-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a4c1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56ef1-113">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="56ef1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2a4c1-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2a4c1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="56ef1-114">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="56ef1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2a4c1-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2a4c1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="56ef1-115">**Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56ef1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="2a4c1-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a4c1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

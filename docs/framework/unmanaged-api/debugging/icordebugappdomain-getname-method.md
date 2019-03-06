@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405769"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471052"
 ---
-# <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="fda28-102">Metodo ICorDebugAppDomain::GetName</span><span class="sxs-lookup"><span data-stu-id="fda28-102">ICorDebugAppDomain::GetName Method</span></span>
-<span data-ttu-id="fda28-103">Ottiene il nome del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="fda28-103">Gets the name of the application domain.</span></span>  
+# <a name="icordebugappdomaingetname-method"></a><span data-ttu-id="2ad63-102">Metodo ICorDebugAppDomain::GetName</span><span class="sxs-lookup"><span data-stu-id="2ad63-102">ICorDebugAppDomain::GetName Method</span></span>
+<span data-ttu-id="2ad63-103">Ottiene il nome del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2ad63-103">Gets the name of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fda28-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fda28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ad63-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2ad63-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -38,24 +38,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fda28-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fda28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ad63-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2ad63-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="fda28-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="fda28-106">[in] The size of the `szName` array.</span></span> <span data-ttu-id="fda28-107">Impostare questo valore su zero per inserire questo metodo in modalità query.</span><span class="sxs-lookup"><span data-stu-id="fda28-107">Set this value to zero to put this method in query mode.</span></span>  
+ <span data-ttu-id="2ad63-106">[in] Dimensione della matrice `szName`.</span><span class="sxs-lookup"><span data-stu-id="2ad63-106">[in] The size of the `szName` array.</span></span> <span data-ttu-id="2ad63-107">Impostare questo valore su zero per il metodo put in modalità query.</span><span class="sxs-lookup"><span data-stu-id="2ad63-107">Set this value to zero to put this method in query mode.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="fda28-108">[out] Un puntatore alla dimensione del nome o il numero di caratteri effettivamente restituiti nella `szName`.</span><span class="sxs-lookup"><span data-stu-id="fda28-108">[out] A pointer to the size of the name or the number of characters actually returned in `szName`.</span></span> <span data-ttu-id="fda28-109">In modalità query, questo valore consente al chiamante di sapere come un buffer di grandi dimensioni da allocare per il nome.</span><span class="sxs-lookup"><span data-stu-id="fda28-109">In query mode, this value lets the caller know how large a buffer to allocate for the name.</span></span>  
+ <span data-ttu-id="2ad63-108">[out] Un puntatore alla dimensione del nome o il numero di caratteri effettivamente restituiti nella `szName`.</span><span class="sxs-lookup"><span data-stu-id="2ad63-108">[out] A pointer to the size of the name or the number of characters actually returned in `szName`.</span></span> <span data-ttu-id="2ad63-109">In modalità query, questo valore consente al chiamante di sapere come un buffer di grandi dimensioni da allocare per il nome.</span><span class="sxs-lookup"><span data-stu-id="2ad63-109">In query mode, this value lets the caller know how large a buffer to allocate for the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="fda28-110">[out] Matrice che archivia il nome del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="fda28-110">[out] An array that stores the name of the application domain.</span></span>  
+ <span data-ttu-id="2ad63-110">[out] Matrice che archivia il nome del dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2ad63-110">[out] An array that stores the name of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fda28-111">Note</span><span class="sxs-lookup"><span data-stu-id="fda28-111">Remarks</span></span>  
- <span data-ttu-id="fda28-112">Un debugger chiama il `GetName` metodo una volta per ottenere la dimensione del buffer necessaria per il nome.</span><span class="sxs-lookup"><span data-stu-id="fda28-112">A debugger calls the `GetName` method once to get the size of a buffer needed for the name.</span></span> <span data-ttu-id="fda28-113">Il debugger consente di allocare il buffer e quindi chiama il metodo una seconda volta per riempire il buffer.</span><span class="sxs-lookup"><span data-stu-id="fda28-113">The debugger allocates the buffer, and then calls the method a second time to fill the buffer.</span></span> <span data-ttu-id="fda28-114">La prima chiamata, per ottenere la dimensione del nome, è detto *modalità query*.</span><span class="sxs-lookup"><span data-stu-id="fda28-114">The first call, to get the size of the name, is referred to as *query mode*.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ad63-111">Note</span><span class="sxs-lookup"><span data-stu-id="2ad63-111">Remarks</span></span>  
+ <span data-ttu-id="2ad63-112">Un debugger chiama il `GetName` metodo una volta per ottenere la dimensione del buffer necessaria per il nome.</span><span class="sxs-lookup"><span data-stu-id="2ad63-112">A debugger calls the `GetName` method once to get the size of a buffer needed for the name.</span></span> <span data-ttu-id="2ad63-113">Il debugger esegue l'allocazione di buffer e quindi chiama il metodo di una seconda volta per riempire il buffer.</span><span class="sxs-lookup"><span data-stu-id="2ad63-113">The debugger allocates the buffer, and then calls the method a second time to fill the buffer.</span></span> <span data-ttu-id="2ad63-114">La prima chiamata, per ottenere le dimensioni del nome, è detto *modalità query*.</span><span class="sxs-lookup"><span data-stu-id="2ad63-114">The first call, to get the size of the name, is referred to as *query mode*.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fda28-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fda28-115">Requirements</span></span>  
- <span data-ttu-id="fda28-116">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fda28-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ad63-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2ad63-115">Requirements</span></span>  
+ <span data-ttu-id="2ad63-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ad63-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fda28-117">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="fda28-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ad63-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ad63-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fda28-118">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="fda28-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ad63-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ad63-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fda28-119">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fda28-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2ad63-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ad63-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

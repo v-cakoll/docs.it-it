@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ea905443a01f504c1f303f726382b441ae039b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb255330937b00a987ee0d07f0332d04fe1746d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568556"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489982"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="b5135-102">Metodo ICorDebugSymbolProvider::GetAssemblyImageMetadata</span><span class="sxs-lookup"><span data-stu-id="b5135-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
-<span data-ttu-id="b5135-103">Restituisce i metadati da un assembly sottoposto a merge.</span><span class="sxs-lookup"><span data-stu-id="b5135-103">Returns the metadata from a merged assembly.</span></span>  
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="7cff3-102">Metodo ICorDebugSymbolProvider::GetAssemblyImageMetadata</span><span class="sxs-lookup"><span data-stu-id="7cff3-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
+<span data-ttu-id="7cff3-103">Restituisce i metadati da un assembly sottoposto a merge.</span><span class="sxs-lookup"><span data-stu-id="7cff3-103">Returns the metadata from a merged assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5135-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b5135-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cff3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7cff3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyImageMetadata(  
@@ -22,24 +22,24 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b5135-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b5135-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7cff3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="7cff3-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="b5135-106">[out] Un puntatore all'indirizzo di un [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) oggetto che contiene informazioni sulle dimensioni e indirizzo dei metadati dell'assembly sottoposto a merge.</span><span class="sxs-lookup"><span data-stu-id="b5135-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
+ <span data-ttu-id="7cff3-106">[out] Un puntatore all'indirizzo di un [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) oggetto che contiene informazioni sulle dimensioni e indirizzo dei metadati dell'assembly sottoposto a merge.</span><span class="sxs-lookup"><span data-stu-id="7cff3-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b5135-107">Note</span><span class="sxs-lookup"><span data-stu-id="b5135-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cff3-107">Note</span><span class="sxs-lookup"><span data-stu-id="7cff3-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b5135-108">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="b5135-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="7cff3-108">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="7cff3-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5135-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b5135-109">Requirements</span></span>  
- <span data-ttu-id="b5135-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5135-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cff3-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7cff3-109">Requirements</span></span>  
+ <span data-ttu-id="7cff3-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cff3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5135-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5135-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7cff3-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cff3-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b5135-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5135-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7cff3-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cff3-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b5135-113">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5135-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="7cff3-113">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cff3-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5135-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5135-114">See also</span></span>
-- [<span data-ttu-id="b5135-115">Interfaccia ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="b5135-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="b5135-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="b5135-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7cff3-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7cff3-114">See also</span></span>
+- [<span data-ttu-id="7cff3-115">Interfaccia ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="7cff3-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="7cff3-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="7cff3-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

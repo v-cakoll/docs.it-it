@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745154"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489293"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="d748c-102">Metodo ICorDebugObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="d748c-102">ICorDebugObjectEnum::Next Method</span></span>
-<span data-ttu-id="d748c-103">Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.</span><span class="sxs-lookup"><span data-stu-id="d748c-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="79302-102">Metodo ICorDebugObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="79302-102">ICorDebugObjectEnum::Next Method</span></span>
+<span data-ttu-id="79302-103">Ottiene gli indirizzi virtuali relativi (RVA) del numero specificato di oggetti dall'enumerazione, iniziando in corrispondenza della posizione corrente.</span><span class="sxs-lookup"><span data-stu-id="79302-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d748c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d748c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79302-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="79302-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d748c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d748c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79302-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="79302-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="d748c-106">[in] Numero di oggetti da recuperare.</span><span class="sxs-lookup"><span data-stu-id="d748c-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="79302-106">[in] Numero di oggetti da recuperare.</span><span class="sxs-lookup"><span data-stu-id="79302-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="d748c-107">[out] Una matrice di puntatori, ognuno dei quali punta a un oggetto CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="d748c-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="79302-107">[out] Una matrice di puntatori, ognuno dei quali punta a un oggetto CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="79302-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="d748c-108">[out] Puntatore al numero di oggetti effettivamente restituiti.</span><span class="sxs-lookup"><span data-stu-id="d748c-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="d748c-109">Questo valore può essere null se `celt` è uno.</span><span class="sxs-lookup"><span data-stu-id="d748c-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="79302-108">[out] Puntatore al numero di oggetti effettivamente restituiti.</span><span class="sxs-lookup"><span data-stu-id="79302-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="79302-109">Questo valore può essere null se `celt` è uno.</span><span class="sxs-lookup"><span data-stu-id="79302-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d748c-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d748c-110">Requirements</span></span>  
- <span data-ttu-id="d748c-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d748c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79302-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="79302-110">Requirements</span></span>  
+ <span data-ttu-id="79302-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79302-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d748c-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d748c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="79302-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="79302-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d748c-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d748c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="79302-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79302-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d748c-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d748c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="79302-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79302-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d748c-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d748c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79302-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79302-115">See also</span></span>
 

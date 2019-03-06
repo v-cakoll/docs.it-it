@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00eda9ddad65d6618f097a6ca48b5c7c0eba334
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481114"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="b20fe-102">Metodo ISymUnmanagedReader::GetSymbolStoreFileName</span><span class="sxs-lookup"><span data-stu-id="b20fe-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="b20fe-103">Fornisce il nome di file su disco dell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="b20fe-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="4db46-102">Metodo ISymUnmanagedReader::GetSymbolStoreFileName</span><span class="sxs-lookup"><span data-stu-id="4db46-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+<span data-ttu-id="4db46-103">Fornisce il nome di file su disco dell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="4db46-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b20fe-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b20fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4db46-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4db46-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolStoreFileName (  
@@ -37,21 +37,21 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b20fe-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b20fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4db46-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4db46-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="b20fe-106">[in] Le dimensioni del `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="b20fe-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="4db46-106">[in] Le dimensioni del `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="4db46-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="b20fe-107">[out] Un puntatore alla variabile che riceve la lunghezza del nome restituito `szName`, inclusa la terminazione null.</span><span class="sxs-lookup"><span data-stu-id="b20fe-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="4db46-107">[out] Un puntatore alla variabile che riceve la lunghezza del nome restituito `szName`, inclusa la terminazione null.</span><span class="sxs-lookup"><span data-stu-id="4db46-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="b20fe-108">[out] Puntatore alla variabile che riceve il nome del file dell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="b20fe-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="4db46-108">[out] Puntatore alla variabile che riceve il nome del file dell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="4db46-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b20fe-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b20fe-109">Return Value</span></span>  
- <span data-ttu-id="b20fe-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="b20fe-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4db46-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4db46-109">Return Value</span></span>  
+ <span data-ttu-id="4db46-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="4db46-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b20fe-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b20fe-111">Requirements</span></span>  
- <span data-ttu-id="b20fe-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b20fe-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4db46-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4db46-111">Requirements</span></span>  
+ <span data-ttu-id="4db46-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4db46-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b20fe-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b20fe-113">See also</span></span>
-- [<span data-ttu-id="b20fe-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="b20fe-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4db46-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4db46-113">See also</span></span>
+- [<span data-ttu-id="4db46-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="4db46-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
