@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683618"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364417"
 ---
 # <a name="coropenflags-enumeration"></a>Enumerazione CorOpenFlags
 Contiene valori di flag che controllano il comportamento dei metadati all'apertura di file manifesto.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Indica che il file deve essere aperto per la lettura e che una chiamata a `QueryInterface` per un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) non può essere effettuata.|  
 |`ofTakeOwnership`|Indica che la memoria allocata tramite una chiamata a [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) e verrà liberata dai metadati.|  
 |`ofNoTypeLib`|Obsoleta. Questo flag viene ignorato.|  
-|`ofNoTransform`|Indica che le trasformazioni automatiche dei file con estensione winmd devono essere disabilitate. In altre parole, la proiezione di un tipo di Windows Runtime in un tipo di .NET Framework deve essere disabilitata. Per altre informazioni, vedere [visualizzati sotto controllo con .NET e Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Indica che le trasformazioni automatiche dei file con estensione winmd devono essere disabilitate. In altre parole, la proiezione di un tipo di Windows Runtime in un tipo di .NET Framework deve essere disabilitata. Per altre informazioni, vedere [Windows Runtime e CLR - sotto controllo con .NET e Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Riservato per uso interno.|  
 |`ofReserved2`|Riservato per uso interno.|  
 |`ofReserved`|Riservato per uso interno.|  

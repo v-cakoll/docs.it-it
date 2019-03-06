@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-ms.openlocfilehash: c7de491a76ba6f8d5164c91f8c20bea4a8fa56d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9272a2f635a62abdac2746f2c8cce515812706f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355779"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Procedura: Navigare tra gli oggetti nella visualizzazione di una raccolta dati
 Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, a seconda di ordinamento, filtro o di raggruppamento. Viste anche forniscono un concetto di puntatore al record corrente e consentono di spostare il puntatore del mouse. Questo esempio viene illustrato come ottenere l'oggetto corrente, nonché navigare tra gli oggetti in una raccolta di dati utilizzando la funzionalità fornita nel <xref:System.Windows.Data.CollectionView> classe.  
@@ -26,12 +26,12 @@ Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, 
   
  Il <xref:System.Windows.Data.CollectionView.CurrentItem%2A> proprietà della vista viene eseguito il cast come un `Order` per restituire l'elemento corrente dell'ordine nella raccolta.  
   
- [!code-csharp[CollectionView#OnButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
- [!code-vb[CollectionView#OnButton](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
+ [!code-csharp[CollectionView#OnButton](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
+ [!code-vb[CollectionView#OnButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Ordinare i dati in una visualizzazione](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [Filtrare i dati di una visualizzazione](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [Ordinare e raggruppare dati con una visualizzazione in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Panoramica sul data binding](data-binding-overview.md)
+- [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)
+- [Filtrare i dati di una visualizzazione](how-to-filter-data-in-a-view.md)
+- [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

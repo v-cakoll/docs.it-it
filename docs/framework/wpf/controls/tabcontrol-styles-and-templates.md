@@ -9,15 +9,15 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: 164bc17915ba0b1dc48868b913f3deecf93cec15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac8349453eaef2167746de639a7e2c111a019b86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711184"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356312"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>Stili e modelli di TabControl
-In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.TabControl> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.TabControl> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="tabcontrol-parts"></a>Parti del controllo TabControl  
  La tabella seguente elenca le parti denominate di <xref:System.Windows.Controls.TabControl> controllo.  
@@ -61,18 +61,18 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 ## <a name="tabcontrol-controltemplate-example"></a>Esempio di ControlTemplate TabControl  
  Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.TabControl> e <xref:System.Windows.Controls.TabItem> controlli.  
   
- [!code-xaml[ControlTemplateExamples#TabControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
+ [!code-xaml[ControlTemplateExamples#TabControl](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tabcontrol.xaml#tabcontrol)]  
   
  L'esempio precedente usa una o più delle seguenti risorse.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Stili e modelli di Control](control-styles-and-templates.md)
+- [Personalizzazione dei controlli](control-customization.md)
+- [Applicazione di stili e modelli](styling-and-templating.md)
+- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

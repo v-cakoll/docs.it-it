@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], Button
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
-ms.openlocfilehash: e1f40edb88ce1d208ca97b29e4c7daaf0c82ed35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551700"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362721"
 ---
 # <a name="button"></a>Button
-Oggetto <xref:System.Windows.Controls.Button> controllo reagisce all'input dell'utente da un mouse, tastiera, stilo o altro dispositivo di input e genera un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Oggetto <xref:System.Windows.Controls.Button> un Basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] componente che può contenere un contenuto semplice, ad esempio testo e può anche contenere contenuto complesso, ad esempio immagini e <xref:System.Windows.Controls.Panel> controlli.  
+Oggetto <xref:System.Windows.Controls.Button> controllo risponde all'input dell'utente da un mouse, tastiera, dello stilo, o altro dispositivo di input e genera un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Oggetto <xref:System.Windows.Controls.Button> è una semplice [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] componente che può contenere contenuto semplice, ad esempio testo e può anche contenere contenuto complesso, ad esempio immagini e <xref:System.Windows.Controls.Panel> controlli.  
   
- ![Pulsante stati](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
+ ![Pulsante stati](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare un pulsante con un'immagine](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
+ [Creare un pulsante con un'immagine](how-to-create-a-button-that-has-an-image.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Button>  

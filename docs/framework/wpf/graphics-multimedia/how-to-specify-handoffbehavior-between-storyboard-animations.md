@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: a6da3f58fc6e999f5196cf5d8d3fd00f1098fc50
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a919fe2a87cb11ca2197465b288eac7a17976cc3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379068"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Procedura: Specificare HandoffBehavior tra le animazioni storyboard
 In questo esempio viene illustrato come specificare HandoffBehavior tra le animazioni storyboard. Il <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> proprietà di <xref:System.Windows.Media.Animation.BeginStoryboard> specifica come le nuove animazioni interagiscono con quelle esistenti che sono già applicati a una proprietà.  
@@ -18,10 +18,10 @@ In questo esempio viene illustrato come specificare HandoffBehavior tra le anima
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea due pulsanti che aumentare le dimensioni quando il cursore del mouse viene spostato su di essi e diventano più piccole quando il cursore si sposta. Se si passa il mouse su un pulsante e quindi rimuove rapidamente il cursore, la seconda animazione verrà applicata prima del completamento di quella del primo. Quando due animazioni si sovrappongono, ad esempio ciò che è possibile visualizzare la differenza tra il <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> valori di <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> e <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>. Un valore pari <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> combina le animazioni sovrapposte che causa una transizione più uniforme tra le animazioni, mentre un valore di <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> fa sì che la nuova animazione sostituire subito l'animazione precedentemente sovrapposta.  
   
- [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
-- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Cenni preliminari sull'animazione](animation-overview.md)
 - [Animazione e temporizzazione procedure](animation-and-timing-how-to-topics.md)

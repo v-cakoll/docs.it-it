@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981543"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355129"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni di tipo di dati implicite per solo conversioni di ampliamento, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  Nel **Compile** scheda, impostare il valore **Option Strict** casella.  
   
-###  <a name="conditions"></a> Per impostare le configurazioni di avviso nell'IDE  
+### <a name="conditions"></a> Per impostare le configurazioni di avviso nell'IDE  
  Quando si usa la [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo delle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina compilazione** dispone di impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Queste impostazioni sono le seguenti:  
   
 -   **Conversione implicita**  

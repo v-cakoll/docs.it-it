@@ -2,26 +2,27 @@
 title: Associazioni MSMQ transazionali
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 9574320478741f71c7c98d7e21a24c80a31b72a2
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066051"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359881"
 ---
 # <a name="transacted-msmq-binding"></a>Associazioni MSMQ transazionali
+
 Questo esempio illustra come eseguire comunicazioni in coda transazionali utilizzando Accodamento messaggi (MSMQ).
 
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
+> La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.
 
- Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda, il servizio e il client non devono essere in esecuzione contemporaneamente.
+Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda, il servizio e il client non devono essere in esecuzione contemporaneamente.
 
- Quando vengono utilizzate transazioni per inviare e ricevere messaggi, di fatto vi sono due transazioni distinte. Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client. Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione. È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi utilizzano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.
+Quando vengono utilizzate transazioni per inviare e ricevere messaggi, di fatto vi sono due transazioni distinte. Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client. Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione. È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi utilizzano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.
 
- In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione. I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.
+In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione. I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.
 
- Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente. L'interfaccia definisce un servizio unidirezionale adatto per l'utilizzo con le code.
+Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente. L'interfaccia definisce un servizio unidirezionale adatto per l'utilizzo con le code.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -32,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
- Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`. Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo. Garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda. Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima dell'invio in modo che se l'operazione non riesce, il messaggio va perduto. Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene utilizzata per leggere il messaggio dalla coda, come dimostrato nel codice seguente.
+Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`. Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo. Garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda. Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima dell'invio in modo che se l'operazione non riesce, il messaggio va perduto. Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene utilizzata per leggere il messaggio dalla coda, come dimostrato nel codice seguente.
 
 ```csharp
  // This service class that implements the service contract.
@@ -49,7 +50,7 @@ public interface IOrderProcessor
 }
 ```
 
- Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e crearla se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene usato per il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.
+Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e crearla se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene usato per il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -80,7 +81,7 @@ public static void Main()
 }
 ```
 
- Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.
+Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.
 
 ```xml
 <appSettings>
@@ -89,9 +90,9 @@ public static void Main()
 ```
 
 > [!NOTE]
->  Il nome della coda usa un punto (.) per il computer locale e barre rovesciate come separatori all'interno del percorso quando la coda viene creata usando <xref:System.Messaging>. L'endpoint Windows Communication Foundation (WCF) usa l'indirizzo della coda con lo schema NET. MSMQ, Usa "localhost" per indicare il computer locale e le barre nel relativo percorso.
+> Il nome della coda usa un punto (.) per il computer locale e barre rovesciate come separatori all'interno del percorso quando la coda viene creata usando <xref:System.Messaging>. L'endpoint Windows Communication Foundation (WCF) usa l'indirizzo della coda con lo schema NET. MSMQ, Usa "localhost" per indicare il computer locale e le barre nel relativo percorso.
 
- Il client crea un ambito di transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.
+Il client crea un ambito di transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.
 
 ```csharp
 // Create a client.
@@ -133,15 +134,15 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();
 ```
 
- Per verificare che le transazioni stiano funzionando, modificare il client impostando l'ambito della transazione come commento, come mostra il codice di esempio seguente, ricompilare la soluzione ed eseguire il client.
+Per verificare che le transazioni stiano funzionando, modificare il client impostando l'ambito della transazione come commento, come mostra il codice di esempio seguente, ricompilare la soluzione ed eseguire il client.
 
 ```csharp
 //scope.Complete();
 ```
 
- Poiché la transazione non è stata completata, i messaggi non vengono inviati alla coda.
+Poiché la transazione non è stata completata, i messaggi non vengono inviati alla coda.
 
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.
+Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.
 
 ```
 The service is ready.
@@ -158,29 +159,29 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
+2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
-    1.  Aprire Server Manager in Visual Studio 2012.
+    1. Aprire Server Manager in Visual Studio 2012.
 
-    2.  Espandere la **funzionalità** scheda.
+    2. Espandere la **funzionalità** scheda.
 
-    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
 
-    4.  Verificare i **transazionale** casella.
+    4. Verificare i **transazionale** casella.
 
-    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
-3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Nell'associazione sono presenti due proprietà importanti per la sicurezza del trasporto MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfa questi criteri, si riceve un errore.
+Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Nell'associazione sono presenti due proprietà importanti per la sicurezza del trasporto MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfa questi criteri, si riceve un errore.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory
 
-1.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nel codice di configurazione seguente.
+1. Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nel codice di configurazione seguente.
 
     ```xml
     <system.serviceModel>
@@ -198,7 +199,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
               binding="netMsmqBinding"
               bindingConfiguration="Binding1"
            contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />
-          <!-- The mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex. -->
+          <!-- The mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex. -->
           <endpoint address="mex"
                     binding="mexHttpBinding"
                     contract="IMetadataExchange" />
@@ -224,18 +225,16 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
       </system.serviceModel>
     ```
 
-2.  Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.
+2. Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.
 
     > [!NOTE]
-    >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza `Message` su `None`.
+    > L'impostazione di `security mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza `Message` su `None`.
 
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
-  
-## <a name="see-also"></a>Vedere anche
+> È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

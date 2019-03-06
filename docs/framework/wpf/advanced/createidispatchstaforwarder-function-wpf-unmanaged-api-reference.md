@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 215f6ff727b814e7e7d7c708c29a8c5221f5797f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4da322bf779e084f12529d0da6949ef6ada5cf3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379653"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>Funzione CreateIDispatchSTAForwarder (riferimenti alle API WPF non gestite)
 Questa API supporta l'infrastruttura Windows Presentation Foundation (WPF) e non deve essere usato direttamente dal codice.  
@@ -39,7 +39,7 @@ HRESULT CreateIDispatchSTAForwarder(
  Un puntatore all'indirizzo di un `IDispatch` interfaccia.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Visualizzare [requisiti di sistema di .NET Framework](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -50,4 +50,4 @@ HRESULT CreateIDispatchSTAForwarder(
  **Versione di .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Riferimenti alle API non gestite di WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Riferimenti alle API non gestite di WPF](wpf-unmanaged-api-reference.md)

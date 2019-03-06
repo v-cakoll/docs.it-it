@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355155"
 ---
 # <a name="cleartype-overview"></a>Cenni preliminari su ClearType
 Questo argomento offre una panoramica della tecnologia [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] presente disponibile in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Questo argomento offre una panoramica della tecnologia [!INCLUDE[TLA#tla_ct](../
   
  Nei due esempi seguenti viene mostrato come è possibile inserire i glifi su qualsiasi limite del subpixel se si usa il posizionamento dei subpixel. Per il rendering dell'esempio a sinistra viene usata la versione precedente del renderer [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] che non impiega il posizionamento dei subpixel. Per il rendering dell'esempio a destra viene usata la nuova versione del renderer [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], che impiega il posizionamento dei subpixel. Notare che il rendering dei caratteri **e** e **l** nell'immagine a destra è leggermente diverso in quanto ognuno inizia in corrispondenza di un subpixel diverso. Quando il testo viene visualizzato sullo schermo con le dimensioni normali, questa differenza non è ben visibile a causa dell'elevato contrasto dell'immagine del glifo e può essere notata solo grazie al sofisticato filtro colore incorporato in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Testo visualizzato con due versioni di ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Testo visualizzato con due versioni di ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Testo visualizzato con la versione precedente e quella successiva di ClearType  
   
  Nei due esempi seguenti viene confrontato l'output del renderer [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] precedente con la versione nuova del renderer [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Il posizionamento dei subpixel, mostrato a destra, consente di migliorare notevolmente la spaziatura dei tipi sullo schermo, specialmente alle dimensioni più piccole, in cui la differenza tra un subpixel e un pixel intero rappresenta una parte significativa della larghezza del glifo. Notare che la spaziatura tra le lettere è più uniforme nella seconda immagine. Il vantaggio complessivo derivante dal posizionamento dei subpixel sull'aspetto globale di una schermata di testo aumenta in modo notevole e rappresenta un'evoluzione significativa nella tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Text displayed with earlier version of ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Text displayed with earlier version of ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Confronto tra il testo visualizzato con la versione precedente di ClearType e quello visualizzato con la versione successiva  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Confronto tra il testo visualizzato con la versione precedente di ClearType e qu
   
  L'esempio seguente mostra l'effetto dell'assenza di anti-aliasing della direzione y. In questo caso, i bordi frastagliati nella parte superiore e inferiore della lettera sono chiaramente visibili.  
   
- ![Text with jagged edges on shallow curves](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Text with jagged edges on shallow curves](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Testo con bordi frastagliati su curve poco pronunciate  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce l'anti-aliasing del livello della direzione y per smussare tutti i bordi frastagliati. Tale funzionalità è particolarmente importante per migliorare la leggibilità delle lingue asiatiche, nelle quali gli ideogrammi presentano un quantità quasi uguale di curve poco pronunciate orizzontali e verticali.  
   
  L'esempio seguente illustra gli effetti dell'anti-aliasing della direzione Y. In questo caso, la parte superiore e quella inferiore della lettera mostrano una curva uniforme.  
   
- ![Testo con ClearType y&#45;direzione&#45;aliasing](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Testo con ClearType y&#45;direzione&#45;aliasing](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Testo con anti-aliasing della direzione y ClearType  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Testo con anti-aliasing della direzione y ClearType
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Impostazioni del Registro di sistema ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [Impostazioni del Registro di sistema ClearType](cleartype-registry-settings.md)

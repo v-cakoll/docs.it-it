@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 60d939e9b63767a7efef059581983e8d8e8721ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe2efdada43e5dd6aced730ab59d9dd004899822
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639393"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353686"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Procedura: Animare un Double utilizzando i fotogrammi chiave
 In questo esempio illustra come animare il valore di una proprietà che accetta un <xref:System.Double> usando fotogrammi chiave.  
@@ -28,13 +28,13 @@ In questo esempio illustra come animare il valore di una proprietà che accetta 
   
 3.  Nei due secondi finali, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe per riportare il rettangolo alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> creano una transizione variabile tra i valori a seconda del valore del <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> proprietà. In questo esempio, il rettangolo inizia a spostarsi lentamente e quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
- [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
- [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
- [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
+ [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
+ [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
+ [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
- Per coerenza con altri esempi di animazione, nelle versioni del codice di questo esempio usano un' <xref:System.Windows.Media.Animation.Storyboard> oggetto a cui applicare il <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. In alternativa, quando si applica una sola animazione al codice, è più semplice usare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo invece di usare un <xref:System.Windows.Media.Animation.Storyboard>. Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+ Per coerenza con altri esempi di animazione, nelle versioni del codice di questo esempio usano un' <xref:System.Windows.Media.Animation.Storyboard> oggetto a cui applicare il <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. In alternativa, quando si applica una sola animazione al codice, è più semplice usare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo invece di usare un <xref:System.Windows.Media.Animation.Storyboard>. Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
@@ -42,5 +42,5 @@ In questo esempio illustra come animare il valore di una proprietà che accetta 
 - <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
-- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Procedure relative ai fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)
+- [Procedure relative ai fotogrammi chiave](key-frame-animation-how-to-topics.md)

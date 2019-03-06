@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 0ba5f3645156459a711d88b7330b221a5d083e7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611332"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359371"
 ---
 # <a name="how-to-skew-an-element"></a>Procedura: Inclinare un elemento
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.SkewTransform> per inclinare un elemento. L'inclinazione, nota anche come distorsione, è una trasformazione che adatta lo spazio delle coordinate in modo non uniforme. Un utilizzo tipico di un <xref:System.Windows.Media.SkewTransform> sia per la simulazione [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profondità in [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] oggetti.  
@@ -25,19 +25,19 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media
  L'esempio seguente applica un'inclinazione orizzontale di 45 gradi a un <xref:System.Windows.Shapes.Rectangle> da un punto centrale di (0,0).  
   
 ## <a name="example"></a>Esempio  
- [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
+ [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
  L'esempio seguente applica un'inclinazione orizzontale di 45 gradi a un <xref:System.Windows.Shapes.Rectangle> da un punto centrale di (25,25).  
   
- [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
+ [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
  L'esempio seguente applica un'inclinazione verticale di 45 gradi a un <xref:System.Windows.Shapes.Rectangle> da un punto centrale di (25,25).  
   
- [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
+ [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
  La figura seguente illustra le diverse inclinazioni usate in questo esempio.  
   
- ![Esempi di SkewTransform](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
+ ![Esempi di SkewTransform](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 I tre esempi SkewTransform illustrati  
   
  Per l'esempio completo, vedere [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252).  
@@ -45,5 +45,5 @@ I tre esempi SkewTransform illustrati
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
-- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Cenni preliminari sulle trasformazioni](transforms-overview.md)
+- [Procedure relative alle proprietà](transformations-how-to-topics.md)

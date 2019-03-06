@@ -16,59 +16,63 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d9e7b52c9061a1a7b470f9d4abf735e605087dc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576343"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352074"
 ---
 # <a name="gethashfromblob-function"></a>Funzione GetHashFromBlob
-Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.  
-  
- Questa funzione è stata deprecata. Usare la [ICLRStronName:: GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metodo invece.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-HRESULT GetHashFromBlob (  
-    [in]  BYTE    *pbBlob,  
-    [in]  DWORD   cchBlob,  
-    [in, out] unsigned int   *piHashAlg,  
-    [out] BYTE    *pbHash,  
-    [in]  DWORD   cchHash,  
-    [out] DWORD   *pchHash  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `pbBlob`  
- [in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.  
-  
- `cchBlob`  
- [in] La lunghezza, espressa in byte, del blocco di memoria.  
-  
- `piHashAlg`  
- [in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.  
-  
- `pbHash`  
- [out] Il buffer di hash restituito.  
-  
- `cchHash`  
- [in] La dimensione massima richiesta del `pbHash`.  
-  
- `pchHash`  
- [out] Le dimensioni, in byte, del valore restituito `pbHash`.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Intestazione:** StrongName.h  
-  
- **Libreria:** Inclusa come risorsa in Mscoree. dll  
-  
- **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Ottiene un hash dell'assembly all'indirizzo di memoria specificato usando l'algoritmo hash specificato.
+
+Questa funzione è stata deprecata. Usare la [GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metodo invece.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+HRESULT GetHashFromBlob (
+    [in]  BYTE    *pbBlob,
+    [in]  DWORD   cchBlob,
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE    *pbHash,
+    [in]  DWORD   cchHash,
+    [out] DWORD   *pchHash
+);
+```
+
+## <a name="parameters"></a>Parametri
+
+`pbBlob`\
+[in] Un puntatore all'indirizzo del blocco di memoria per eseguire l'hashing.
+
+`cchBlob`\
+[in] La lunghezza, espressa in byte, del blocco di memoria.
+
+`piHashAlg`\
+[in, out] Costante che specifica l'algoritmo hash. Usa lo zero per l'algoritmo predefinito.
+
+`pbHash`\
+[out] Il buffer di hash restituito.
+
+`cchHash`\
+[in] La dimensione massima richiesta del `pbHash`.
+
+`pchHash`\
+[out] Le dimensioni, in byte, del valore restituito `pbHash`.
+
+## <a name="requirements"></a>Requisiti
+
+**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Intestazione:** StrongName.h
+
+**Libreria:** Inclusa come risorsa in Mscoree. dll
+
+**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Vedere anche
-- [Metodo GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
-- [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [Metodo GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md)
+- [Interfaccia ICLRStrongName](../hosting/iclrstrongname-interface.md)

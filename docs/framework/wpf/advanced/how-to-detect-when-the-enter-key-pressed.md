@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Enter key [WPF], detecting
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-ms.openlocfilehash: fbb9b1b9cbb56a49aba018f122a7e903bd4f677d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1796127d33087a3fd4504d03f175f8afe5323630
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592247"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351862"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>Procedura: Rilevare quando il tasto premuto immettere
 Questo esempio viene illustrato come rilevare il momento di <xref:System.Windows.Input.Key.Enter> tasto sulla tastiera.  
@@ -25,13 +25,13 @@ Questo esempio viene illustrato come rilevare il momento di <xref:System.Windows
   
  Quanto segue [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] crea l'interfaccia utente, che è costituito da un <xref:System.Windows.Controls.StackPanel>, un <xref:System.Windows.Controls.TextBlock>e un <xref:System.Windows.Controls.TextBox>.  
   
- [!code-xaml[keydown#KeyDownUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
+ [!code-xaml[keydown#KeyDownUI](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
  Crea il codice seguente sotto il <xref:System.Windows.UIElement.KeyDown> gestore dell'evento.  Se la chiave che viene premuta il <xref:System.Windows.Input.Key.Enter> key, viene visualizzato un messaggio nel <xref:System.Windows.Controls.TextBlock>.  
   
- [!code-csharp[keydown#KeyDownSample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
- [!code-vb[keydown#KeyDownSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
+ [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
+ [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Cenni preliminari sull'input](input-overview.md)
+- [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
