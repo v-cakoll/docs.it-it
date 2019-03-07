@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ec34bde2b94fc6e03cb01647be9e92daa8955a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82da60fc7ce5356c240a179529b9be4f621b2238
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743192"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494929"
 ---
-# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="1b9be-102">Metodo ICLRStrongName::StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="1b9be-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
-<span data-ttu-id="1b9be-103">Libera la memoria allocata con una precedente chiamata a un metodo con nome sicuro, ad esempio [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), o [ ICLRStrongName:: StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span><span class="sxs-lookup"><span data-stu-id="1b9be-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
+# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="9ad79-102">Metodo ICLRStrongName::StrongNameFreeBuffer</span><span class="sxs-lookup"><span data-stu-id="9ad79-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
+<span data-ttu-id="9ad79-103">Libera la memoria allocata con una precedente chiamata a un metodo con nome sicuro, ad esempio [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), o [ ICLRStrongName:: StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span><span class="sxs-lookup"><span data-stu-id="9ad79-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b9be-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1b9be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ad79-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9ad79-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameFreeBuffer (   
@@ -35,21 +35,21 @@ HRESULT StrongNameFreeBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1b9be-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="1b9be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9ad79-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9ad79-105">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="1b9be-106">[in] Puntatore alla memoria da liberare.</span><span class="sxs-lookup"><span data-stu-id="1b9be-106">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="9ad79-106">[in] Puntatore alla memoria da liberare.</span><span class="sxs-lookup"><span data-stu-id="9ad79-106">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1b9be-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="1b9be-107">Return Value</span></span>  
- <span data-ttu-id="1b9be-108">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="1b9be-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9ad79-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="9ad79-107">Return Value</span></span>  
+ <span data-ttu-id="9ad79-108">`S_OK` Se il metodo è stata completata correttamente. in caso contrario, un valore HRESULT indicante un errore (vedere [valori HRESULT comuni](https://go.microsoft.com/fwlink/?LinkId=213878) per un elenco).</span><span class="sxs-lookup"><span data-stu-id="9ad79-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b9be-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="1b9be-109">Requirements</span></span>  
- <span data-ttu-id="1b9be-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b9be-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ad79-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9ad79-109">Requirements</span></span>  
+ <span data-ttu-id="9ad79-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ad79-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b9be-111">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1b9be-111">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9ad79-111">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9ad79-111">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="1b9be-112">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="1b9be-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9ad79-112">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9ad79-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1b9be-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b9be-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9ad79-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ad79-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b9be-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1b9be-114">See also</span></span>
-- [<span data-ttu-id="1b9be-115">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="1b9be-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9ad79-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ad79-114">See also</span></span>
+- [<span data-ttu-id="9ad79-115">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="9ad79-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

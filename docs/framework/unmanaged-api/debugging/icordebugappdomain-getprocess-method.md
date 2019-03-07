@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d172af14aba418d6e97fe77724bf91b0eaf1c56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05c35c810630897e4a7bd28e1cbe8cedefefb1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489358"
 ---
-# <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="35b4f-102">Metodo ICorDebugAppDomain::GetProcess</span><span class="sxs-lookup"><span data-stu-id="35b4f-102">ICorDebugAppDomain::GetProcess Method</span></span>
-<span data-ttu-id="35b4f-103">Ottiene il processo che contiene il dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="35b4f-103">Gets the process containing the application domain.</span></span>  
+# <a name="icordebugappdomaingetprocess-method"></a><span data-ttu-id="8b0f4-102">Metodo ICorDebugAppDomain::GetProcess</span><span class="sxs-lookup"><span data-stu-id="8b0f4-102">ICorDebugAppDomain::GetProcess Method</span></span>
+<span data-ttu-id="8b0f4-103">Ottiene il processo che contiene il dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="8b0f4-103">Gets the process containing the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35b4f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35b4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b0f4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8b0f4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess (  
@@ -35,15 +35,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="35b4f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="35b4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b0f4-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="8b0f4-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="35b4f-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo.</span><span class="sxs-lookup"><span data-stu-id="35b4f-106">[out] A pointer to the address of an ICorDebugProcess object that represents the process.</span></span>  
+ <span data-ttu-id="8b0f4-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo.</span><span class="sxs-lookup"><span data-stu-id="8b0f4-106">[out] A pointer to the address of an ICorDebugProcess object that represents the process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35b4f-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="35b4f-107">Requirements</span></span>  
- <span data-ttu-id="35b4f-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35b4f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b0f4-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8b0f4-107">Requirements</span></span>  
+ <span data-ttu-id="8b0f4-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b0f4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35b4f-109">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="35b4f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8b0f4-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b0f4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="35b4f-110">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="35b4f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b0f4-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b0f4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="35b4f-111">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35b4f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8b0f4-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b0f4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

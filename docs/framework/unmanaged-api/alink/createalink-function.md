@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f809395de68b596f769f9396da8668bf296b1aa2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11117db08d58684cc854400424d1836ec35b8c12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675041"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498009"
 ---
-# <a name="createalink-function"></a><span data-ttu-id="d2b28-102">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="d2b28-102">CreateALink Function</span></span>
-<span data-ttu-id="d2b28-103">Crea un'istanza dell'Assembly Linker e imposta un puntatore all'interfaccia specificata.</span><span class="sxs-lookup"><span data-stu-id="d2b28-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
+# <a name="createalink-function"></a><span data-ttu-id="172df-102">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="172df-102">CreateALink Function</span></span>
+<span data-ttu-id="172df-103">Crea un'istanza dell'Assembly Linker e imposta un puntatore all'interfaccia specificata.</span><span class="sxs-lookup"><span data-stu-id="172df-103">Creates an instance of the Assembly Linker and sets a pointer to the specified interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2b28-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d2b28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="172df-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="172df-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateALink (  
@@ -36,15 +36,15 @@ HRESULT CreateALink (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d2b28-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d2b28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="172df-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="172df-105">Parameters</span></span>  
   
-|<span data-ttu-id="d2b28-106">Parametro</span><span class="sxs-lookup"><span data-stu-id="d2b28-106">Parameter</span></span>|<span data-ttu-id="d2b28-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d2b28-107">Description</span></span>|  
+|<span data-ttu-id="172df-106">Parametro</span><span class="sxs-lookup"><span data-stu-id="172df-106">Parameter</span></span>|<span data-ttu-id="172df-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="172df-107">Description</span></span>|  
 |---------------|-----------------|  
-|`riid`|<span data-ttu-id="d2b28-108">Il nome fisico di una delle interfacce Assembly Linker.</span><span class="sxs-lookup"><span data-stu-id="d2b28-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
-|`ppInterface`|<span data-ttu-id="d2b28-109">Il percorso che, al termine dell'esecuzione, contiene un puntatore al `riid` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="d2b28-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
+|`riid`|<span data-ttu-id="172df-108">Il nome fisico di una delle interfacce Assembly Linker.</span><span class="sxs-lookup"><span data-stu-id="172df-108">The physical name of one of the Assembly Linker interfaces.</span></span>|  
+|`ppInterface`|<span data-ttu-id="172df-109">Il percorso che, al termine dell'esecuzione, contiene un puntatore al `riid` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="172df-109">The location that on successful completion contains a pointer to the `riid` interface.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d2b28-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d2b28-110">Requirements</span></span>  
- <span data-ttu-id="d2b28-111">**Libreria**: ALink. dll</span><span class="sxs-lookup"><span data-stu-id="d2b28-111">**Library**: alink.dll</span></span>  
+## <a name="requirements"></a><span data-ttu-id="172df-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="172df-110">Requirements</span></span>  
+ <span data-ttu-id="172df-111">**Libreria**: ALink. dll</span><span class="sxs-lookup"><span data-stu-id="172df-111">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2b28-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2b28-112">See also</span></span>
-- [<span data-ttu-id="d2b28-113">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="d2b28-113">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="172df-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="172df-112">See also</span></span>
+- [<span data-ttu-id="172df-113">Al.exe (Assembly Linker)</span><span class="sxs-lookup"><span data-stu-id="172df-113">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)

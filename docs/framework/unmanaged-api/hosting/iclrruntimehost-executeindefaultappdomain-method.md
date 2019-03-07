@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41ece0f8ca804acb1614ceaa651ce2ec199c11c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498255"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499082"
 ---
-# <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="4fd4d-102">Metodo ICLRRuntimeHost::ExecuteInDefaultAppDomain</span><span class="sxs-lookup"><span data-stu-id="4fd4d-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
-<span data-ttu-id="4fd4d-103">Chiama il metodo specificato nel tipo specificato nell'assembly gestito specificato.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  
+# <a name="iclrruntimehostexecuteindefaultappdomain-method"></a><span data-ttu-id="84e99-102">Metodo ICLRRuntimeHost::ExecuteInDefaultAppDomain</span><span class="sxs-lookup"><span data-stu-id="84e99-102">ICLRRuntimeHost::ExecuteInDefaultAppDomain Method</span></span>
+<span data-ttu-id="84e99-103">Chiama il metodo specificato nel tipo specificato nell'assembly gestito specificato.</span><span class="sxs-lookup"><span data-stu-id="84e99-103">Calls the specified method of the specified type in the specified managed assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fd4d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4fd4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84e99-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="84e99-104">Syntax</span></span>  
   
 ```  
 HRESULT ExecuteInDefaultAppDomain (  
@@ -39,50 +39,50 @@ HRESULT ExecuteInDefaultAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4fd4d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4fd4d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84e99-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="84e99-105">Parameters</span></span>  
  `pwzAssemblyPath`  
- <span data-ttu-id="4fd4d-106">[in] Il percorso per il <xref:System.Reflection.Assembly> che definisce il <xref:System.Type> il cui metodo deve essere richiamato.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-106">[in] The path to the <xref:System.Reflection.Assembly> that defines the <xref:System.Type> whose method is to be invoked.</span></span>  
+ <span data-ttu-id="84e99-106">[in] Il percorso per il <xref:System.Reflection.Assembly> che definisce il <xref:System.Type> il cui metodo deve essere richiamato.</span><span class="sxs-lookup"><span data-stu-id="84e99-106">[in] The path to the <xref:System.Reflection.Assembly> that defines the <xref:System.Type> whose method is to be invoked.</span></span>  
   
  `pwzTypeName`  
- <span data-ttu-id="4fd4d-107">[in] Il nome del <xref:System.Type> che definisce il metodo da richiamare.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-107">[in] The name of the <xref:System.Type> that defines the method to invoke.</span></span>  
+ <span data-ttu-id="84e99-107">[in] Il nome del <xref:System.Type> che definisce il metodo da richiamare.</span><span class="sxs-lookup"><span data-stu-id="84e99-107">[in] The name of the <xref:System.Type> that defines the method to invoke.</span></span>  
   
  `pwzMethodName`  
- <span data-ttu-id="4fd4d-108">[in] Nome del metodo da richiamare.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-108">[in] The name of the method to invoke.</span></span>  
+ <span data-ttu-id="84e99-108">[in] Nome del metodo da richiamare.</span><span class="sxs-lookup"><span data-stu-id="84e99-108">[in] The name of the method to invoke.</span></span>  
   
  `pwzArgument`  
- <span data-ttu-id="4fd4d-109">[in] Il parametro della stringa da passare al metodo.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-109">[in] The string parameter to pass to the method.</span></span>  
+ <span data-ttu-id="84e99-109">[in] Il parametro della stringa da passare al metodo.</span><span class="sxs-lookup"><span data-stu-id="84e99-109">[in] The string parameter to pass to the method.</span></span>  
   
  `pReturnValue`  
- <span data-ttu-id="4fd4d-110">[out] Valore intero restituito dal metodo richiamato.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-110">[out] The integer value returned by the invoked method.</span></span>  
+ <span data-ttu-id="84e99-110">[out] Valore intero restituito dal metodo richiamato.</span><span class="sxs-lookup"><span data-stu-id="84e99-110">[out] The integer value returned by the invoked method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4fd4d-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4fd4d-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84e99-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="84e99-111">Return Value</span></span>  
   
-|<span data-ttu-id="4fd4d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4fd4d-112">HRESULT</span></span>|<span data-ttu-id="4fd4d-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4fd4d-113">Description</span></span>|  
+|<span data-ttu-id="84e99-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="84e99-112">HRESULT</span></span>|<span data-ttu-id="84e99-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="84e99-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4fd4d-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="4fd4d-114">S_OK</span></span>|<span data-ttu-id="4fd4d-115">`ExecuteInDefaultAppDomain` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-115">`ExecuteInDefaultAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="4fd4d-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4fd4d-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4fd4d-117">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="4fd4d-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4fd4d-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4fd4d-119">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-119">The call timed out.</span></span>|  
-|<span data-ttu-id="4fd4d-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4fd4d-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4fd4d-121">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="4fd4d-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4fd4d-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4fd4d-123">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="4fd4d-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4fd4d-124">E_FAIL</span></span>|<span data-ttu-id="4fd4d-125">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4fd4d-126">Se un metodo viene restituito E_FAIL, il CRL non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-126">If a method returns E_FAIL, the CRL is no longer usable within the process.</span></span> <span data-ttu-id="4fd4d-127">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="84e99-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="84e99-114">S_OK</span></span>|<span data-ttu-id="84e99-115">`ExecuteInDefaultAppDomain` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="84e99-115">`ExecuteInDefaultAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="84e99-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="84e99-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="84e99-117">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="84e99-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="84e99-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="84e99-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="84e99-119">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="84e99-119">The call timed out.</span></span>|  
+|<span data-ttu-id="84e99-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="84e99-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="84e99-121">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="84e99-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="84e99-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="84e99-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="84e99-123">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="84e99-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="84e99-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="84e99-124">E_FAIL</span></span>|<span data-ttu-id="84e99-125">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="84e99-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="84e99-126">Se un metodo viene restituito E_FAIL, il CRL non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="84e99-126">If a method returns E_FAIL, the CRL is no longer usable within the process.</span></span> <span data-ttu-id="84e99-127">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="84e99-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4fd4d-128">Note</span><span class="sxs-lookup"><span data-stu-id="4fd4d-128">Remarks</span></span>  
- <span data-ttu-id="4fd4d-129">Il metodo richiamato deve avere la firma seguente:</span><span class="sxs-lookup"><span data-stu-id="4fd4d-129">The invoked method must have the following signature:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84e99-128">Note</span><span class="sxs-lookup"><span data-stu-id="84e99-128">Remarks</span></span>  
+ <span data-ttu-id="84e99-129">Il metodo richiamato deve avere la firma seguente:</span><span class="sxs-lookup"><span data-stu-id="84e99-129">The invoked method must have the following signature:</span></span>  
   
 ```  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- <span data-ttu-id="4fd4d-130">in cui `pwzMethodName` rappresenta il nome del metodo richiamato, e `pwzArgument` rappresenta il valore di stringa passato come parametro al metodo.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-130">where `pwzMethodName` represents the name of the invoked method, and `pwzArgument` represents the string value passed as a parameter to that method.</span></span> <span data-ttu-id="4fd4d-131">Se il valore HRESULT è impostato su S_OK, `pReturnValue` è impostata sul valore integer restituito dal metodo richiamato.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-131">If the HRESULT value is set to S_OK, `pReturnValue` is set to the integer value returned by the invoked method.</span></span> <span data-ttu-id="4fd4d-132">In caso contrario, `pReturnValue` non è impostata.</span><span class="sxs-lookup"><span data-stu-id="4fd4d-132">Otherwise, `pReturnValue` is not set.</span></span>  
+ <span data-ttu-id="84e99-130">in cui `pwzMethodName` rappresenta il nome del metodo richiamato, e `pwzArgument` rappresenta il valore di stringa passato come parametro al metodo.</span><span class="sxs-lookup"><span data-stu-id="84e99-130">where `pwzMethodName` represents the name of the invoked method, and `pwzArgument` represents the string value passed as a parameter to that method.</span></span> <span data-ttu-id="84e99-131">Se il valore HRESULT è impostato su S_OK, `pReturnValue` è impostata sul valore integer restituito dal metodo richiamato.</span><span class="sxs-lookup"><span data-stu-id="84e99-131">If the HRESULT value is set to S_OK, `pReturnValue` is set to the integer value returned by the invoked method.</span></span> <span data-ttu-id="84e99-132">In caso contrario, `pReturnValue` non è impostata.</span><span class="sxs-lookup"><span data-stu-id="84e99-132">Otherwise, `pReturnValue` is not set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4fd4d-133">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4fd4d-133">Requirements</span></span>  
- <span data-ttu-id="4fd4d-134">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fd4d-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84e99-133">Requisiti</span><span class="sxs-lookup"><span data-stu-id="84e99-133">Requirements</span></span>  
+ <span data-ttu-id="84e99-134">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84e99-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4fd4d-135">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4fd4d-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84e99-135">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="84e99-135">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4fd4d-136">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4fd4d-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84e99-136">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="84e99-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4fd4d-137">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fd4d-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="84e99-137">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84e99-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fd4d-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4fd4d-138">See also</span></span>
-- [<span data-ttu-id="4fd4d-139">Interfaccia ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="4fd4d-139">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="84e99-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84e99-138">See also</span></span>
+- [<span data-ttu-id="84e99-139">Interfaccia ICLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="84e99-139">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
