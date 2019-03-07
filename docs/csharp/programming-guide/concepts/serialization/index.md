@@ -1,12 +1,6 @@
 ---
-title: Serializzazione (C#)
+title: 'Serializzazione (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858317"
 ---
 # <a name="serialization-c"></a>Serializzazione (C#)
 
@@ -68,7 +62,7 @@ Se si vuole che un oggetto venga anche deserializzato in modo personalizzato, è
 
 La serializzazione della finestra di progettazione è una forma speciale di serializzazione che interessa il tipo di persistenza dell'oggetto associato agli strumenti di sviluppo. La serializzazione della finestra di progettazione è il processo di conversione di un oggetto grafico in un file di origine che può essere usato in seguito per recuperare l'oggetto grafico stesso. Un file di origine può contenere codice, markup o anche informazioni su tabelle SQL.
 
-##  <a name="BKMK_RelatedTopics"></a> Argomenti correlati ed esempi  
+## <a name="BKMK_RelatedTopics"></a> Argomenti correlati ed esempi  
 [Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Dimostra in che modo è possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.
 
