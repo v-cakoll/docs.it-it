@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414125"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493037"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>Metodo ICorDebugInternalFrame::GetFrameType
 Ottiene il tipo di questo frame interno.  
@@ -35,18 +35,18 @@ HRESULT GetFrameType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pType`  
- [out] Un puntatore a un valore di enumerazione CorDebugInternalFrameType che indica il tipo di frame interni, rappresentato da questo `ICorDebugInternalFrame` oggetto.  
+ [out] Un puntatore a un valore dell'enumerazione che indica il tipo di frame interno rappresentato da questo CorDebugInternalFrameType `ICorDebugInternalFrame` oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il tipo di frame interni non sarà mai STUBFRAME_NONE. Debugger devono normalmente ignorare i tipi di frame interni non riconosciuto.  
+ Il tipo di frame interno non sarà mai STUBFRAME_NONE. I debugger normalmente devono ignorare i tipi di frame interno non riconosciuto.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
