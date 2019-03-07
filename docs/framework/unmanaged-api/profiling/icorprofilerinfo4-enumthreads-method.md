@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8cfb474eaa0a770c2bb101787d34072e4ed98714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c4d754ea00dae3893b8630e248523b97ae96d78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496781"
 ---
-# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="ddda5-102">Metodo ICorProfilerInfo4::EnumThreads</span><span class="sxs-lookup"><span data-stu-id="ddda5-102">ICorProfilerInfo4::EnumThreads Method</span></span>
-<span data-ttu-id="ddda5-103">Restituisce un enumeratore che fornisce i metodi per scorrere in sequenza la raccolta di tutti i thread gestiti nel processo profilato.</span><span class="sxs-lookup"><span data-stu-id="ddda5-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
+# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="059ea-102">Metodo ICorProfilerInfo4::EnumThreads</span><span class="sxs-lookup"><span data-stu-id="059ea-102">ICorProfilerInfo4::EnumThreads Method</span></span>
+<span data-ttu-id="059ea-103">Restituisce un enumeratore che fornisce i metodi per scorrere in sequenza la raccolta di tutti i thread gestiti nel processo profilato.</span><span class="sxs-lookup"><span data-stu-id="059ea-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddda5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ddda5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="059ea-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="059ea-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumThreads([out]  
             ICorProfilerThreadEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ddda5-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ddda5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="059ea-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="059ea-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="ddda5-106">[out] Un puntatore a un [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="ddda5-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="059ea-106">[out] Un puntatore a un [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaccia.</span><span class="sxs-lookup"><span data-stu-id="059ea-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ddda5-107">Note</span><span class="sxs-lookup"><span data-stu-id="ddda5-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="059ea-107">Note</span><span class="sxs-lookup"><span data-stu-id="059ea-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddda5-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ddda5-108">Requirements</span></span>  
- <span data-ttu-id="ddda5-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddda5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="059ea-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="059ea-108">Requirements</span></span>  
+ <span data-ttu-id="059ea-109">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="059ea-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddda5-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ddda5-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="059ea-110">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="059ea-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ddda5-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ddda5-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="059ea-111">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="059ea-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ddda5-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddda5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="059ea-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="059ea-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddda5-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ddda5-113">See also</span></span>
-- [<span data-ttu-id="ddda5-114">Interfaccia ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="ddda5-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="ddda5-115">Interfaccia ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="ddda5-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="ddda5-116">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="ddda5-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="ddda5-117">Profilatura</span><span class="sxs-lookup"><span data-stu-id="ddda5-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="059ea-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="059ea-113">See also</span></span>
+- [<span data-ttu-id="059ea-114">Interfaccia ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="059ea-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="059ea-115">Interfaccia ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="059ea-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="059ea-116">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="059ea-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="059ea-117">Profilatura</span><span class="sxs-lookup"><span data-stu-id="059ea-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 759b2a9a419989cfec1020b1a6662bd6f8416739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990910b8b30e9794550d71cf9eaf8cd53639f696
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492244"
 ---
-# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="fb6ff-102">Metodo IMetaDataImport::EnumPermissionSets</span><span class="sxs-lookup"><span data-stu-id="fb6ff-102">IMetaDataImport::EnumPermissionSets Method</span></span>
-<span data-ttu-id="fb6ff-103">Enumera le autorizzazioni per gli oggetti in un ambito dei metadati specificato.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
+# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="97dcd-102">Metodo IMetaDataImport::EnumPermissionSets</span><span class="sxs-lookup"><span data-stu-id="97dcd-102">IMetaDataImport::EnumPermissionSets Method</span></span>
+<span data-ttu-id="97dcd-103">Enumera le autorizzazioni per gli oggetti in un ambito dei metadati specificato.</span><span class="sxs-lookup"><span data-stu-id="97dcd-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb6ff-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fb6ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97dcd-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="97dcd-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumPermissionSets  
@@ -40,41 +40,41 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fb6ff-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fb6ff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97dcd-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="97dcd-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="fb6ff-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="fb6ff-107">Per la prima chiamata di questo metodo deve essere NULL.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="97dcd-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="97dcd-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="97dcd-107">Per la prima chiamata di questo metodo deve essere NULL.</span><span class="sxs-lookup"><span data-stu-id="97dcd-107">This must be NULL for the first call of this method.</span></span>  
   
  `tk`  
- <span data-ttu-id="fb6ff-108">[in] Token di metadati che limita l'ambito della ricerca, o NULL per la ricerca nell'ambito più ampio possibile.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
+ <span data-ttu-id="97dcd-108">[in] Token di metadati che limita l'ambito della ricerca, o NULL per la ricerca nell'ambito più ampio possibile.</span><span class="sxs-lookup"><span data-stu-id="97dcd-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
   
  `dwActions`  
- <span data-ttu-id="fb6ff-109">[in] Flag che rappresenta il <xref:System.Security.Permissions.SecurityAction> valori da includere in `rPermission`, oppure zero per restituire tutte le azioni.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
+ <span data-ttu-id="97dcd-109">[in] Flag che rappresenta il <xref:System.Security.Permissions.SecurityAction> valori da includere in `rPermission`, oppure zero per restituire tutte le azioni.</span><span class="sxs-lookup"><span data-stu-id="97dcd-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
   
  `rPermission`  
- <span data-ttu-id="fb6ff-110">[out] Matrice utilizzata per archiviare i token di autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-110">[out] The array used to store the Permission tokens.</span></span>  
+ <span data-ttu-id="97dcd-110">[out] Matrice utilizzata per archiviare i token di autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="97dcd-110">[out] The array used to store the Permission tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="fb6ff-111">[in] Dimensione massima della matrice `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-111">[in] The maximum size of the `rPermission` array.</span></span>  
+ <span data-ttu-id="97dcd-111">[in] Dimensione massima della matrice `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="97dcd-111">[in] The maximum size of the `rPermission` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="fb6ff-112">[out] Il numero di token di autorizzazione restituiti in `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
+ <span data-ttu-id="97dcd-112">[out] Il numero di token di autorizzazione restituiti in `rPermission`.</span><span class="sxs-lookup"><span data-stu-id="97dcd-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fb6ff-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="fb6ff-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="97dcd-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="97dcd-113">Return Value</span></span>  
   
-|<span data-ttu-id="fb6ff-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fb6ff-114">HRESULT</span></span>|<span data-ttu-id="fb6ff-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fb6ff-115">Description</span></span>|  
+|<span data-ttu-id="97dcd-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="97dcd-114">HRESULT</span></span>|<span data-ttu-id="97dcd-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="97dcd-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="fb6ff-116">`EnumPermissionSets` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-116">`EnumPermissionSets` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="fb6ff-117">Non sono presenti token da enumerare.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="fb6ff-118">In tal caso, `pcTokens` è uguale a zero.</span><span class="sxs-lookup"><span data-stu-id="fb6ff-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="97dcd-116">`EnumPermissionSets` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="97dcd-116">`EnumPermissionSets` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="97dcd-117">Non sono presenti token da enumerare.</span><span class="sxs-lookup"><span data-stu-id="97dcd-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="97dcd-118">In tal caso, `pcTokens` è uguale a zero.</span><span class="sxs-lookup"><span data-stu-id="97dcd-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fb6ff-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fb6ff-119">Requirements</span></span>  
- <span data-ttu-id="fb6ff-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb6ff-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97dcd-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="97dcd-119">Requirements</span></span>  
+ <span data-ttu-id="97dcd-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97dcd-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb6ff-121">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="fb6ff-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="97dcd-121">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="97dcd-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fb6ff-122">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="fb6ff-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="97dcd-122">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="97dcd-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fb6ff-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb6ff-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="97dcd-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97dcd-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb6ff-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fb6ff-124">See also</span></span>
-- [<span data-ttu-id="fb6ff-125">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="fb6ff-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="fb6ff-126">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="fb6ff-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="97dcd-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="97dcd-124">See also</span></span>
+- [<span data-ttu-id="97dcd-125">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="97dcd-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="97dcd-126">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="97dcd-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

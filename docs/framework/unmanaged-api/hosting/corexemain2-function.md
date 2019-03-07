@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501682"
 ---
-# <a name="corexemain2-function"></a><span data-ttu-id="9a96c-102">Funzione _CorExeMain2</span><span class="sxs-lookup"><span data-stu-id="9a96c-102">_CorExeMain2 Function</span></span>
-<span data-ttu-id="9a96c-103">Esegue il punto di ingresso nel codice mappato alla memoria specificato.</span><span class="sxs-lookup"><span data-stu-id="9a96c-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="9a96c-104">Questa funzione viene chiamata dal caricatore del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="9a96c-104">This function is called by the operating system loader.</span></span>  
+# <a name="corexemain2-function"></a><span data-ttu-id="8070c-102">Funzione _CorExeMain2</span><span class="sxs-lookup"><span data-stu-id="8070c-102">_CorExeMain2 Function</span></span>
+<span data-ttu-id="8070c-103">Esegue il punto di ingresso nel codice mappato alla memoria specificato.</span><span class="sxs-lookup"><span data-stu-id="8070c-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="8070c-104">Questa funzione viene chiamata dal caricatore del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="8070c-104">This function is called by the operating system loader.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a96c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9a96c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8070c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8070c-105">Syntax</span></span>  
   
 ```  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
@@ -38,30 +38,30 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9a96c-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="9a96c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8070c-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="8070c-106">Parameters</span></span>  
  `pUnmappedPE`  
- <span data-ttu-id="9a96c-107">[in] Puntatore al codice mappato alla memoria.</span><span class="sxs-lookup"><span data-stu-id="9a96c-107">[in] A pointer to the memory-mapped code.</span></span>  
+ <span data-ttu-id="8070c-107">[in] Puntatore al codice mappato alla memoria.</span><span class="sxs-lookup"><span data-stu-id="8070c-107">[in] A pointer to the memory-mapped code.</span></span>  
   
  `cUnmappedPE`  
- <span data-ttu-id="9a96c-108">[in] Il numero di elementi `pUnmappedPE` può contenere.</span><span class="sxs-lookup"><span data-stu-id="9a96c-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
+ <span data-ttu-id="8070c-108">[in] Il numero di elementi `pUnmappedPE` può contenere.</span><span class="sxs-lookup"><span data-stu-id="8070c-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
   
  `pImageNameIn`  
- <span data-ttu-id="9a96c-109">[in] Un puntatore al nome dell'immagine eseguibile.</span><span class="sxs-lookup"><span data-stu-id="9a96c-109">[in] A pointer to the name of the executable image.</span></span>  
+ <span data-ttu-id="8070c-109">[in] Un puntatore al nome dell'immagine eseguibile.</span><span class="sxs-lookup"><span data-stu-id="8070c-109">[in] A pointer to the name of the executable image.</span></span>  
   
  `pLoadersFileName`  
- <span data-ttu-id="9a96c-110">[in] Il nome del file di caricatore.</span><span class="sxs-lookup"><span data-stu-id="9a96c-110">[in] The name of the loader file.</span></span>  
+ <span data-ttu-id="8070c-110">[in] Il nome del file di caricatore.</span><span class="sxs-lookup"><span data-stu-id="8070c-110">[in] The name of the loader file.</span></span>  
   
  `pCmdLine`  
- <span data-ttu-id="9a96c-111">[in] Parametri della riga di comando, se presente.</span><span class="sxs-lookup"><span data-stu-id="9a96c-111">[in] Command-line parameters, if any.</span></span>  
+ <span data-ttu-id="8070c-111">[in] Parametri della riga di comando, se presente.</span><span class="sxs-lookup"><span data-stu-id="8070c-111">[in] Command-line parameters, if any.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a96c-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9a96c-112">Requirements</span></span>  
- <span data-ttu-id="9a96c-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a96c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8070c-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8070c-112">Requirements</span></span>  
+ <span data-ttu-id="8070c-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8070c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a96c-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9a96c-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8070c-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8070c-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9a96c-115">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9a96c-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8070c-115">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="8070c-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9a96c-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a96c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8070c-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8070c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a96c-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a96c-117">See also</span></span>
-- [<span data-ttu-id="9a96c-118">Funzioni statiche globali dei metadati</span><span class="sxs-lookup"><span data-stu-id="9a96c-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="8070c-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8070c-117">See also</span></span>
+- [<span data-ttu-id="8070c-118">Funzioni statiche globali dei metadati</span><span class="sxs-lookup"><span data-stu-id="8070c-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
