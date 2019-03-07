@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715544"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499927"
 ---
 # <a name="iclrtaskreset-method"></a>Metodo ICLRTask::Reset
 Indica a common language runtime (CLR) che l'host ha completato un'attività e consente a CLR di riutilizzare l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) per rappresentare un'altra attività.  
@@ -35,7 +35,7 @@ HRESULT Reset (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `fFull`  
  [in] `true`, se il runtime deve reimpostare tutti i valori relativi ai thread statici oltre alle informazioni di sicurezza e le impostazioni locali relative all'oggetto corrente `ICLRTask` dell'istanza; in caso contrario, `false`.  
   

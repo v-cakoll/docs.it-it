@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502254"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>Metodo ICorDebugArrayValue::GetElementAtPosition
 Ottiene l'elemento in corrispondenza della posizione specificata, considerando la matrice come una matrice unidimensionale in base zero.  
@@ -36,7 +36,7 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `nPosition`  
  [in] La posizione dell'elemento da recuperare.  
   
@@ -44,13 +44,13 @@ HRESULT GetElementAtPosition (
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento.  
   
 ## <a name="remarks"></a>Note  
- Il layout di una matrice multidimensionale segue lo stile C++ layout della matrice.  
+ Il layout di una matrice multidimensionale segue lo stile C++ del layout della matrice.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

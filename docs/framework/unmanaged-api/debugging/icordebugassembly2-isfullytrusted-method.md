@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 895c8bc7b550fd063a9215c60f10f183e24bac83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd3b977a894f8cb1fc9a866f5a43265d917db513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494441"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>Metodo ICorDebugAssembly2::IsFullyTrusted
-Ottiene un valore che indica se l'assembly è stata concessa l'attendibilità totale per il sistema di sicurezza di runtime.  
+Ottiene un valore che indica se l'assembly è stata concessa l'attendibilità totale da sistema di sicurezza di runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT IsFullyTrusted(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pbFullyTrusted`  
- [out] `true` se l'assembly è stata concessa l'attendibilità totale per il sistema di sicurezza runtime; in caso contrario, `false`.  
+ [out] `true` se l'assembly è stata concessa l'attendibilità totale da sistema di sicurezza di runtime; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo restituisce un valore HRESULT di CORDBG_E_NOTREADY se i criteri di sicurezza per l'assembly non sono ancora stato risolto, vale a dire, se nessun codice nell'assembly è stato ancora eseguito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

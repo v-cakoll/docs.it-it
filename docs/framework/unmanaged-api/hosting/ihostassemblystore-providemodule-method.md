@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb0e3bcb563387c5ee7f95d2aa6f6b5ec771f3a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d61e7495a3d95b5326e5051775e23e19cb1b45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503086"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Metodo IHostAssemblyStore::ProvideModule
 Risolve un file di risorse modulo all'interno di un assembly o un collegato (ma non incorporato).  
@@ -38,7 +38,7 @@ HRESULT ProvideModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pBindInfo`  
  [in] Un puntatore a un [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) istanza che descrive il modulo richiesto <xref:System.AppDomain>, assembly e il nome del modulo.  
   

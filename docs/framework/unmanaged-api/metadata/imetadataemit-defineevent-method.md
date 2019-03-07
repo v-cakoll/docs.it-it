@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7d42fe17af5b10d718d0e2b6a7ae33644fa4813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501630"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Metodo IMetaDataEmit::DefineEvent
 Crea una definizione per un evento con la firma dei metadati specificati e ottiene un token di definizione di tale evento.  
@@ -43,7 +43,7 @@ HRESULT DefineEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `td`  
  [in] Il token per la classe di destinazione o l'interfaccia. Questo è un `mdTypeDef` o `mdTypeDefNil` token.  
   

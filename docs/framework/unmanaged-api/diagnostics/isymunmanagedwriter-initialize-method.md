@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9c38a2d87f8c8db0b77dd60460d6d00a73f41ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 626e10dfe6215c8f148a9705c5a97b88f3489b99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501331"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Metodo ISymUnmanagedWriter::Initialize
 Imposta l'interfaccia di emissione dei metadati con il quale verrà associato questo writer e imposta il nome del file di output in cui verranno scritti i simboli di debug.  
@@ -39,7 +39,7 @@ HRESULT Initialize(
     [in] BOOL         fFullBuild);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `emitter`  
  [in] Un puntatore all'interfaccia di emissione dei metadati.  
   

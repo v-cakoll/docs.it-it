@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730776"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501994"
 ---
 # <a name="corvalidateimage-function"></a>Funzione _CorValidateImage
 Convalida delle immagini dei moduli gestiti e notifica al caricatore del sistema operativo dopo che sono stati caricati.  
@@ -35,7 +35,7 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ImageBase`  
  [in] Un puntatore alla posizione iniziale dell'immagine per convalidare come codice gestito. L'immagine deve essere già caricata in memoria.  
   

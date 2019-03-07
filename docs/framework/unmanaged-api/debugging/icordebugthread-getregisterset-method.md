@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc218370779742055e14dc62a8475c42c344c40c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 909bcad035516c494d1f867b71bb8f52939eba13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418734"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496430"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>Metodo ICorDebugThread::GetRegisterSet
-Ottiene un puntatore a interfaccia al set di registri associata con la parte di questo oggetto ICorDebugThread attiva.  
+Ottiene un puntatore di interfaccia al set di registri che è associato con la parte attiva di questo oggetto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppRegisters`  
- [out] Un puntatore all'indirizzo di un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interfaccia che rappresenta il registro impostata per la parte attiva del thread.  
+ [out] Un puntatore all'indirizzo di un [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) oggetto di interfaccia che rappresenta il registro è impostato per la parte attiva del thread.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

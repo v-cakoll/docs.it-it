@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3f9dbbdf7ff560f292fed327a2ca1dd26c29a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671928"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491893"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>Funzione StrongNameSignatureVerificationEx
 Ottiene un valore che indica se il manifesto dell'assembly nel percorso specificato contiene una firma con nome sicuro.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `wszFilePath`  
  [in] Il percorso del file di (.exe o DLL) eseguibile portabile per l'assembly da verificare.  
   

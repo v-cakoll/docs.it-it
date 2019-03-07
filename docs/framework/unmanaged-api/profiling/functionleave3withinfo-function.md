@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc1eed1b129c9fc7efdce6703b3c396633b3436a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 714514d5b6a36d028da442bcc05accc0686417cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500616"
 ---
 # <a name="functionleave3withinfo-function"></a>Funzione FunctionLeave3WithInfo
 Notifica al profiler che controllo viene restituito da una funzione e fornisce un handle che può essere passato al [metodo ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) per recuperare lo stack frame e il valore restituito.  
@@ -34,7 +34,7 @@ void __stdcall FunctionLeave3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `functionIDOrClientID`  
  [in] L'identificatore della funzione da cui il controllo viene restituito.  
   

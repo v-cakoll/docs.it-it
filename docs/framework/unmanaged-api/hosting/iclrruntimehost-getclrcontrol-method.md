@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f426bac735c780d63b75eeaf49151651fd2fa65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c3b060aaeb73b2d834c053cf47f0384ca4a38f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488462"
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>Metodo ICLRRuntimeHost::GetCLRControl
 Ottiene un puntatore a interfaccia typu [interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) che gli host possono usare per personalizzare gli aspetti di common language runtime (CLR).  
@@ -35,7 +35,7 @@ HRESULT GetCLRControl(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pCLRControl`  
  [out] Un puntatore a interfaccia typu [interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) che consente agli host di configurare altri aspetti di CLR.  
   

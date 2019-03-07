@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419068"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494220"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>Metodo ICorDebugProcess::GetHelperThreadID
-Ottiene l'ID di thread del sistema operativo () del thread di supporto interno del debugger.  
+Ottiene l'ID di thread del sistema operativo (OS) del thread di supporto interno del debugger.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,22 +35,22 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pThreadID`  
  [out] ID del thread di supporto interno del debugger di thread di un puntatore al sistema operativo.  
   
 ## <a name="remarks"></a>Note  
- Durante il debug gestito e non gestito, è responsabilità del debugger per assicurarsi che il thread con l'ID specificato rimane in esecuzione se rilevato un punto di interruzione inserito dal debugger. Un debugger può anche scegliere di nascondere questo thread da parte dell'utente. Se nessun thread di supporto nel processo non esiste ancora, la `GetHelperThreadID` metodo restituirà zero in *`pThreadID`.  
+ Durante il debug gestito e non gestito, è responsabilità del debugger per garantire che il thread con l'ID specificato rimanga in esecuzione se raggiunge un punto di interruzione inserito dal debugger. Un debugger può anche scegliere di nascondere questo thread da parte dell'utente. Se l'helper esiste ancora alcun thread nel processo, il `GetHelperThreadID` metodo viene restituito zero in *`pThreadID`.  
   
- È possibile memorizzare nella cache l'ID del thread di supporto, perché può cambiare nel tempo. È necessario eseguire una query nuovamente l'ID di thread a ogni evento di arresto.  
+ È possibile memorizzare nella cache dell'ID del thread di helper, perché può cambiare nel corso del tempo. È necessario ripetere la query l'ID del thread in corrispondenza di ogni evento di arresto.  
   
- L'ID di thread del thread di supporto del debugger sarà corretto in ogni non gestito [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) evento, consentendo in tal modo un debugger determinare l'ID del thread di supporto e di nasconderlo da parte dell'utente. Un thread che durante una funzione non gestita viene identificato come un thread di supporto `ICorDebugManagedCallback::CreateThread` evento non verrà mai eseguito codice utente gestito.  
+ L'ID del thread del thread di supporto del debugger saranno corretto in ogni non gestito [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventi, consentendo in tal modo un debugger determinare l'ID del thread del suo thread helper e lo nasconde da parte dell'utente. Un thread in cui viene identificato come un thread di supporto durante una funzione non gestita `ICorDebugManagedCallback::CreateThread` evento non verrà mai eseguito il codice utente gestito.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl. Cordebug. H  
+ **Intestazione:** CorDebug.idl. Cordebug. H  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

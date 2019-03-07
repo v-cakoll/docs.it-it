@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492023"
 ---
 # <a name="createversionstringfrommodule-function"></a>Funzione CreateVersionStringFromModule
 Crea una stringa di versione da un percorso Common Language Runtime (CLR) in un processo di destinazione.  
@@ -41,7 +41,7 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pidDebuggee`  
  [in] Identificatore del processo nel quale è caricato il CLR di destinazione.  
   
@@ -74,12 +74,12 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` non fa riferimento a un processo valido o a altri errori.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione accetta un processo di CLR identificato da `pidDebuggee` e un percorso della stringa specificato da `szModuleName`. La stringa della versione viene restituita nel buffer al quale punta`pBuffer`. Questa stringa è invisibile all'utente della funzione. In altre parole, non è presente alcun significato intrinseco nella stringa di versione stessa. Viene utilizzato esclusivamente nel contesto di questa funzione e [funzione CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+ Questa funzione accetta un processo di CLR identificato da `pidDebuggee` e un percorso della stringa specificato da `szModuleName`. La stringa della versione viene restituita nel buffer al quale punta`pBuffer`. Questa stringa è invisibile all'utente della funzione. In altre parole, non è presente alcun significato intrinseco nella stringa di versione stessa. Viene usato esclusivamente nel contesto di questa funzione e il [funzione CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
   
  Questa funzione deve essere chiamata due volte. Quando si chiama per la prima volta, passare il valore null per `pBuffer` e `cchBuffer`. Quando si esegue questa operazione, le dimensioni del buffer necessarie per `pBuffer` verranno restituite in `pdwLength`. È possibile, quindi, chiamare la funzione una seconda volta e passare il buffer in `pBuffer` e le sue dimensioni in `cchBuffer`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** dbgshim. h  
   

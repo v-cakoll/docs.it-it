@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d7284399719dd848af43765a392802a589fc33
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492530"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>Puntatore alla funzione PFN_CLRDataCreateInstance
 Punta a una funzione che crea un oggetto di interfaccia per l'elemento di destinazione specificato.  
@@ -36,7 +36,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `iid`  
  [in] L'identificatore dell'interfaccia da cui creare istanze.  
   

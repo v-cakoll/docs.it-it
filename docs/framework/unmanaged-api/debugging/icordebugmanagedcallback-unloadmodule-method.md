@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f2b65b65a5e15239f731ddcb471ee7548e1631
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae4c1cb251f7786a8415449f16b4eb26d15a4fb2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491269"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>Metodo ICorDebugManagedCallback::UnloadModule
 Notifica al debugger che è stato scaricato un modulo di common language runtime (DLL).  
@@ -36,7 +36,7 @@ HRESULT UnloadModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppDomain`  
  [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il modulo.  
   

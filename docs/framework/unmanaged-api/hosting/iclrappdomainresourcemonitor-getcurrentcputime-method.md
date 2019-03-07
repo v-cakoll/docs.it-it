@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63f5687787a9b0cdb30790b7e80e4160cdf413f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e468f10c1c07425f7ecb3589bd114d12180554
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737244"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502592"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>Metodo ICLRAppDomainResourceMonitor::GetCurrentCpuTime
 Ottiene il tempo processore totale che è stato usato da tutti i thread durante l'esecuzione nel dominio dell'applicazione corrente, poiché è stato creato il dominio dell'applicazione.  
@@ -34,7 +34,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
                           [out] ULONGLONG* pMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwAppDomainId`  
  [in] L'ID del dominio dell'applicazione richiesta.  
   

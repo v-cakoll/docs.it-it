@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96deee943f6a4c636a52b41c8f4c2fda86c6bd18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493719"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Metodo ICorDebugInternalFrame2::IsCloserToLeaf
 Controlla se il `this` frame interno è più simile alla foglia a oggetto ICorDebugFrame specificato.  
@@ -34,7 +34,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
                        [out] BOOL * pIsCloser);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pFrameToCompare`  
  [in] Un puntatore al confronto `ICorDebugFrame` oggetto.  
   

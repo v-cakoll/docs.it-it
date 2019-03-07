@@ -2,22 +2,19 @@
 title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-ms.openlocfilehash: 7fa97d5e9d9f83a134e91b0d50f923d72d36f12b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 28b7672a7b557bc9bbbf24d91a17716ab7e3f047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492192"
 ---
 # <a name="designer"></a>Designer
-Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
- Viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.  
-  
- [Programmazione dell'albero degli elementi del modello](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  
- Viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).  
-  
- [Estensibilità della griglia delle proprietà](../../../../docs/framework/windows-workflow-foundation/samples/property-grid-extensibliity.md)  
- Viene illustrato come personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione.
+Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].
+
+## <a name="in-this-section"></a>In questa sezione
+ [Rimuovere la visualizzazione di stato la finestra di progettazione aggiunge a un File XAML](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md) viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove visualizzazione dello stato da un file XAML.
+
+ [Albero degli elementi del modello di programmazione](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md) viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).
+
+ [Estensibilità della griglia delle proprietà](../../../../docs/framework/windows-workflow-foundation/samples/property-grid-extensibility.md) viene illustrato come personalizzare la griglia delle proprietà che viene visualizzato quando un'attività specificata viene selezionata nella finestra di progettazione.

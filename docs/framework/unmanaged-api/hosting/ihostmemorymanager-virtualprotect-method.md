@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b712b7e88e6cb5693c0823799e0980d90e34ff0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492608"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Metodo IHostMemoryManager::VirtualProtect
 Funge da wrapper logico per la funzione Win32 corrispondente. L'implementazione di Win32 di `VirtualProtect` cambia la protezione in un'area delle pagine eseguito il commit nello spazio degli indirizzi virtuali del processo chiamante.  
@@ -38,7 +38,7 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `lpAddress`  
  [in] Un puntatore all'indirizzo di base per la memoria virtuale cui attributi di protezione devono essere modificato.  
   

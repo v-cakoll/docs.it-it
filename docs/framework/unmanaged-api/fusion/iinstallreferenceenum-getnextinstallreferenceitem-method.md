@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba2abaccfc4a9ae2d1f07677a49a72c980acda24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c23494f8c0a977624b899f01e843ba3545a22fbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501644"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>Metodo IInstallReferenceEnum::GetNextInstallReferenceItem
 Ottiene un puntatore al successivo [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) contenuto nell'oggetto [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) oggetto.  
@@ -37,7 +37,7 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppRefItem`  
  [out] L'oggetto restituito `IInstallReferenceItem` puntatore.  
   

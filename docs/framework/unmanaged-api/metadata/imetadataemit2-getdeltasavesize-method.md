@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb59fdb2249d798c70b1990a6bca41c5c14b80c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f617372e3ee808e27c450989e781bd4d8d8fc34
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496235"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>Metodo IMetaDataEmit2::GetDeltaSaveSize
 Ottiene un valore che indica qualsiasi modifica nelle dimensioni dei metadati che risulta dalla sessione corrente di modifica e continuazione.  
@@ -36,7 +36,7 @@ HRESULT GetDeltaSaveSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `fSave`  
  [in] Uno dei [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) valori, che indica il livello di precisione desiderato. Per .NET Framework versione 2.0, questo parametro viene ignorato.  
   

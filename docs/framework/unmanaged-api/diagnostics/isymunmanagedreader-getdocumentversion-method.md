@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf6a08b17819e3d3cdaa62b0e209fc2064de4a4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863ad8e18909a834f1da816c73fe3dc71504caff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688701"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498302"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>Metodo ISymUnmanagedReader::GetDocumentVersion
 Ottiene la versione specificata del documento specificato. La versione del documento inizia da 1 e viene incrementata ogni volta che il documento viene aggiornato usando il [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) (metodo). Se il `pbCurrent` parametro è `true`, questa è la versione più recente del documento.  
@@ -36,7 +36,7 @@ HRESULT GetDocumentVersion (
     [out] BOOL* pbCurrent);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pDoc`  
  [in] Il documento specificato.  
   

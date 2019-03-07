@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8270a1ececccea8581b65f51f563e42016d0432a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c54c21008e5922a5357f503821d87e297f0d00e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650689"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499251"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>Metodo ICorRuntimeHost::CreateEvidence
 Ottiene un puntatore di interfaccia di tipo <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, che consente all'host creare l'evidenza di sicurezza da passare per il [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) oppure [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) (metodo).  
@@ -35,7 +35,7 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pEvidence`  
  [out] Un puntatore a interfaccia per un <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> istanza usata per creare l'evidenza di sicurezza. Il puntatore è tipizzato `IUnknown`, in modo che i chiamanti in genere devono chiamare `QueryInterface` su questa interfaccia per ottenere un puntatore a un <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
   

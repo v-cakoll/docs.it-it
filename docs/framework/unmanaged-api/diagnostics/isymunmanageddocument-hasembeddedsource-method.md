@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 620d303bcd33a4d04155850ec2c1b6293bf788d1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629514"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493258"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Metodo ISymUnmanagedDocument::HasEmbeddedSource
 Restituisce `true` se il documento di origine è incorporata nei simboli di debug; in caso contrario, restituisce `false`.  
@@ -34,7 +34,7 @@ HRESULT HasEmbeddedSource(
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pRetVal`  
  [out] Un puntatore a una variabile che indica se il documento di origine è incorporata nei simboli di debug.  
   

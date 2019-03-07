@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498536"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>Metodo ICorDebugHeapValue2::CreateHandle
-Crea un handle del tipo specificato per il valore di heap rappresentato dall'oggetto ICorDebugHeapValue2.  
+Crea un handle del tipo specificato per il valore di heap rappresentato da questo oggetto ICorDebugHeapValue2.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,23 +36,23 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `type`  
  [in] Valore dell'enumerazione CorDebugHandleType che specifica il tipo di handle da creare.  
   
  `ppHandle`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugHandleValue che rappresenta il nuovo handle per il valore dell'heap.  
+ [out] Un puntatore all'indirizzo di un oggetto ICorDebugHandleValue che rappresenta il nuovo handle per questo valore di heap.  
   
 ## <a name="remarks"></a>Note  
- L'handle verrà creato nel dominio dell'applicazione che è associato il valore dell'heap e non sarà più valido se il dominio applicazione viene scaricato.  
+ L'handle verrà creato nel dominio dell'applicazione che viene associato il valore di heap e non sarà più valida se il dominio dell'applicazione viene scaricato.  
   
  Più chiamate a questa funzione per lo stesso valore di heap creerà più handle. Poiché gli handle di influire sulle prestazioni del garbage collector, il debugger deve limitarsi a un numero relativamente ridotto di handle (circa 256) che sono attive contemporaneamente.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

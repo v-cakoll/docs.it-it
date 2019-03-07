@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede65c03d0756ddab3314c04cf443c29dcea7801
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c6390e0874dfe658911b4e9ce55527b2558bc2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582513"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500226"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>Metodo IHostMemoryManager::CreateMAlloc
 Ottiene un puntatore a interfaccia a un [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) istanza utilizzata per effettuare richieste di allocazione da un heap creato dall'host.  
@@ -36,7 +36,7 @@ HRESULT CreateMalloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwMallocType`  
  [in] Una combinazione di [MALLOC_TYPE](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md) flag che specifica le caratteristiche della memoria viene allocata.  
   

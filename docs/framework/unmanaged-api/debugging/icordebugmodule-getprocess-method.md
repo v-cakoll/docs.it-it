@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: add7239feb1cf6dab0fabe12e178336921211190
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97cecd66462cf6a88012b13dec82dbf617891dd5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414206"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493843"
 ---
 # <a name="icordebugmodulegetprocess-method"></a>Metodo ICorDebugModule::GetProcess
-Ottiene il processo contenente questo modulo.  
+Ottiene il processo contenitore di questo modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,15 +35,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppProcess`  
- [out] Un puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo contenente questo modulo.  
+ [out] Un puntatore all'indirizzo di un oggetto ICorDebugProcess che rappresenta il processo che contiene questo modulo.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 703b2e90aebd61467063b9ac2d8068c1379e645b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95d7070d9f1185560346b9012af0900f82c92c18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523571"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493609"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>Metodo ICLRStrongName::StrongNameSignatureGeneration
 Genera una firma con nome sicuro per l'assembly specificato.  
@@ -40,7 +40,7 @@ HRESULT StrongNameSignatureGeneration (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `wszFilePath`  
  [in] Il percorso del file che contiene il manifesto dell'assembly per le quali verrà generata la firma con nome sicuro.  
   

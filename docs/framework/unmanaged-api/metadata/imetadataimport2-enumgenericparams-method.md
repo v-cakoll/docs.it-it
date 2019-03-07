@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51eeaf79e470e38461450c6f4afbef982cca7a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44e1dc93580c6c4190ca04826824b519c67ee4e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727963"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494928"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>Metodo IMetaDataImport2::EnumGenericParams
 Ottiene un enumeratore per una matrice di parametri generici token associato con il TypeDef o MethodDef specificato token.  
@@ -39,7 +39,7 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `phEnum`  
  [in, out] Un puntatore all'enumeratore.  
   

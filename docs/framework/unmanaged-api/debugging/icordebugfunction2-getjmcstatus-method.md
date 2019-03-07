@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf0ba3938568524479e12b93ae8cebbcf52f909
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d23a0a489cfe13201b7798920feb3528db3b0709
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494610"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>Metodo ICorDebugFunction2::GetJMCStatus
-Ottiene un valore che indica se la funzione che è rappresentata dall'oggetto ICorDebugFunction2 è contrassegnata come codice utente.  
+Ottiene un valore che indica se la funzione rappresentata dall'oggetto ICorDebugFunction2 è contrassegnata come codice utente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,18 +35,18 @@ HRESULT GetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pbIsJustMyCode`  
  [out] Un puntatore a un valore booleano che è `true`, se questa funzione è contrassegnata come codice utente; in caso contrario, il valore è `false`.  
   
 ## <a name="remarks"></a>Note  
- Se la funzione è rappresentato da questo `ICorDebugFunction2` Impossibile eseguire il debug, `pbIsJustMyCode` sarà sempre `false`.  
+ Se la funzione rappresentata da questo `ICorDebugFunction2` non è possibile eseguire il debug, `pbIsJustMyCode` sarà sempre `false`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

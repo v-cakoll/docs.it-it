@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8abe1b63aad7b73b3260553550112ded75b77bb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a928aed73c0287a4cad2432fa6b6ebec43ea285
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489566"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>Metodo ICorDebugManagedCallback::ExitThread
 Notifica al debugger che un thread che stava eseguendo codice gestito è stato terminato.  
@@ -36,7 +36,7 @@ HRESULT ExitThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppDomain`  
  [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread gestito.  
   

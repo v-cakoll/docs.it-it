@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 901603da64502c994f625be609f5a6e21a1db1c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab9a8a672095c31c5395251ce9af99667a7eea27
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519242"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498445"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>Metodo IMetaDataImport::EnumMethodsWithName
 Enumera i metodi che hanno il nome specificato e che sono definiti dal tipo a cui fa riferimento il token TypeDef specificato.  
@@ -40,7 +40,7 @@ HRESULT EnumMethodsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `phEnum`  
  [in, out] Un puntatore all'enumeratore. Per la prima chiamata di questo metodo deve essere NULL.  
   

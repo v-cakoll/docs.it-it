@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8bc4eb1895fe67c25354b42fe3ae1ffe80bca58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607432"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491321"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>Metodo ICorDebugManagedCallback::NameChange
 Notifica al debugger che il nome di un dominio dell'applicazione o un thread è stato modificato.  
@@ -36,7 +36,7 @@ HRESULT NameChange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppDomain`  
  [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio dell'applicazione che è stato modificato un nome oppure che contiene il thread che aveva una modifica del nome.  
   

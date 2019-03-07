@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544d251d7a1140e8604dcf27e049e49f91541fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ef939f915062368d74a0c48bdaee47cbec7b56f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491464"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>Metodo ICLRTaskManager::SetUILocale
 Invia una notifica di common language runtime (CLR) che l'host ha modificato le impostazioni locali dell'interfaccia utente o impostazioni cultura, l'attività attualmente in esecuzione.  
@@ -35,7 +35,7 @@ HRESULT SetUILocale (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `lcid`  
  [in] Il valore dell'identificatore delle impostazioni locali che esegue il mapping per le nuove impostazioni e la lingua dell'interfaccia utente.  
   
