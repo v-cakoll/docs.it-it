@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b8a952bb2827d1946787f15151887fa25b8da52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c001606e1b1642bc10377425d262676cfc2b9f15
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498237"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Metodo ICorProfilerCallback2::FinalizeableObjectQueued
 Notifica al profiler di codice che un oggetto con un finalizzatore è stato accodato al thread del finalizzatore per l'esecuzione del relativo `Finalize` (metodo).  
@@ -35,7 +35,7 @@ HRESULT FinalizeableObjectQueued(
     [in] ObjectID objectID);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `finalizerFlags`  
  [in] Valore di [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumerazione che descrive gli aspetti del finalizzatore.  
   

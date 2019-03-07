@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca9f3488c9fb2280d2ceb99c87a54d99c1a33b6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b102f49a642d2bcd62e7f75a8dd0b9ab782ad674
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491347"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>Metodo ISymUnmanagedWriter::UsingNamespace
 Specifica il nome completo dello spazio dei nomi specificato viene utilizzato all'interno dell'ambito lessicale attualmente aperto. Verrà usato lo spazio dei nomi all'interno di tutti gli ambiti che ereditano dall'ambito attualmente aperto. La chiusura dell'ambito corrente anche interromperà l'utilizzo dello spazio dei nomi.  
@@ -34,7 +34,7 @@ HRESULT UsingNamespace(
     [in] const WCHAR *fullName);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `fullName`  
  [in] Un puntatore al nome completo dello spazio dei nomi.  
   

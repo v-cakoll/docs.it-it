@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1159e91004152b6c1393b87f25ff7964456adffc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498224"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Metodo IMetaDataEmit::SetEventProps
 Imposta o aggiorna la funzionalità specificata di un evento definito da una chiamata precedente a [DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
@@ -41,7 +41,7 @@ HRESULT SetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ev`  
  [in] Il token di evento.  
   

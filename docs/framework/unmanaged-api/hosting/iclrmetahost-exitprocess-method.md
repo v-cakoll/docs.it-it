@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf3c00eafe47556c6b46e1acb687a19df5a2b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eed86f37ccab2d7eefead4997362fb82d310a1d1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502375"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>Metodo ICLRMetaHost::ExitProcess
 Tenta di arresto normale runtime caricati tutti e quindi termina il processo. Sostituisce il [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) (funzione).  
@@ -34,7 +34,7 @@ HRESULT ExitProcess (
     [in] INT32 iExitCode);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `iExitCode`  
  [in] Il codice di uscita del processo.  
   

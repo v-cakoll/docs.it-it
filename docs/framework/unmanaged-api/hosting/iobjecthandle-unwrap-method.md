@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da25055917743481f5a8314023ed94d552fe49ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5539d77b93be1f56102970e9febe6f63599d78e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526418"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502969"
 ---
 # <a name="iobjecthandleunwrap-method"></a>Metodo IObjectHandle::Unwrap
 Annulla il wrapping di un oggetto di effettuare il marshalling per valore da un riferimento indiretto.  
@@ -35,7 +35,7 @@ HRESULT Unwrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppv`  
  [out] Un puntatore all'oggetto per essere annullato il wrapping.  
   

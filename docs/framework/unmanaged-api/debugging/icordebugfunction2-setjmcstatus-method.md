@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412360"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501006"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Metodo ICorDebugFunction2::SetJMCStatus
 Contrassegna la funzione rappresentata da ICorDebugFunction2 per Just My Code l'esecuzione di istruzioni.  
@@ -35,7 +35,7 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `bIsJustMyCode`  
  [in] Impostare su `true` per contrassegnare la funzione come codice utente; in caso contrario, impostato su `false`.  
   
@@ -44,16 +44,16 @@ HRESULT SetJMCStatus (
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |`S_OK`|La funzione è stata contrassegnata.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Impossibile contrassegnare la funzione come codice utente perché è Impossibile eseguire il debug.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|La funzione non può essere contrassegnata come codice utente perché non è possibile eseguire il debug.|  
   
 ## <a name="remarks"></a>Note  
  Un Just My Code ignorerà il codice non utente. Il codice utente deve essere un subset di debug.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

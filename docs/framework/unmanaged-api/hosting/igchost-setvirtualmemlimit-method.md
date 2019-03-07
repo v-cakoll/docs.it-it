@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b25e9c738c95a918b79d3fd324787e4aaf3aaa7f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564279"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502475"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>Metodo IGCHost::SetVirtualMemLimit
 Imposta la dimensione massima di memoria virtuale del runtime.  
@@ -35,7 +35,7 @@ HRESULT SetVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `sztMaxVirtualMemMB`  
  [in] Le dimensioni massime, in megabyte, della memoria virtuale del runtime.  
   

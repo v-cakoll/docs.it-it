@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8519577bb2b9d3ff8fa2138ba007d04d9fde159
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea0cba1f1b9154ccb14d75f7c377a8153c24f2b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499483"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Metodo ISymUnmanagedReader::GetUserEntryPoint
 Restituisce il metodo che è stato specificato come punto di ingresso utente per il modulo, se presente. Questo metodo, ad esempio, potrebbe essere il metodo dell'utente principale anziché stub generato dal compilatore prima del metodo main.  
@@ -34,7 +34,7 @@ HRESULT GetUserEntryPoint (
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pToken`  
  [out] Puntatore a una variabile che riceve il punto di ingresso.  
   

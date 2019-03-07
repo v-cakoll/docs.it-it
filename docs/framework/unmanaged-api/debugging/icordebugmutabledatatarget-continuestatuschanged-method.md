@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9d70bb7b886556dbf87590e9f0717f1d161b0ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9d182dbf7371dfdb572b7ab989eb90288b2006a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559736"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492556"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>Metodo ICorDebugMutableDataTarget::ContinueStatusChanged
 Modifica lo stato di continuazione per l'evento di debug in sospeso sul thread specificato.  
@@ -22,7 +22,7 @@ HRESULT ContinueStatusChanged(
    [in] CORDB_CONTINUE_STATUS continueStatus);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwThreadId`  
  Identificatore del thread definito dal sistema operativo.  
   

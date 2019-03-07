@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91550d3328acfb5f3bf2ab461fb2d826ee34c580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73218a5b63ae53ac125d3d807c1a50bdbf0d9c8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503060"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>Metodo ICorProfilerInfo3::EnumModules
 Restituisce un enumeratore che fornisce i metodi per scorrere in sequenza una raccolta di moduli gestiti caricati nell'applicazione.  
@@ -33,7 +33,7 @@ Restituisce un enumeratore che fornisce i metodi per scorrere in sequenza una ra
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppEnum`  
  [out] Un puntatore a un [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interfaccia.  
   

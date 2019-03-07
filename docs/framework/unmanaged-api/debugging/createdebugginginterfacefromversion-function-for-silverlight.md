@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53571268391011cc1dc0ff112d484e1fa140057f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502380"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Funzione di Silverlight CreateDebuggingInterfaceFromVersion
-Common language runtime (CLR) versione stringa restituito da accetta il [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)e restituisce un'interfaccia del debugger corrispondente (in genere, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+Common language runtime (CLR) versione stringa che viene restituita da accetta il [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)e restituisce un'interfaccia del debugger corrispondente (in genere [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -29,12 +29,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `szDebuggeeVersion`  
- [in] Stringa di versione di CLR nell'oggetto del debug di destinazione, che viene restituito dal [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
+ [in] Stringa di versione di CLR nell'oggetto del debug di destinazione, che viene restituito per il [funzione CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
   
  `ppCordb`  
- [out] Puntatore a un puntatore a un oggetto COM (`IUnknown`). Sarà possibile eseguire il cast di questo oggetto per un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) dell'oggetto prima che venga restituito.  
+ [out] Puntatore a un puntatore a un oggetto COM (`IUnknown`). Questo oggetto sarà possibile eseguire il cast a un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) dell'oggetto prima che venga restituito.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK  
@@ -50,13 +50,13 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  Significa che la versione di mscordaccore.dll o mscordbi.dll non corrisponde a quella del file CoreCLR.dll di destinazione.  
   
  E_FAIL (o altri codici E_ restituiti)  
- Impossibile restituire un [interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
+ Non è possibile restituire un [interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
   
 ## <a name="remarks"></a>Note  
  L'interfaccia restituita fornisce funzionalità per connettersi a un CLR nel processo di destinazione ed eseguire il debug del codice gestito eseguito da CLR.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Intestazione:** dbgshim. h  
   

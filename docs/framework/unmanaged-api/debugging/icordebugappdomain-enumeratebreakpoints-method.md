@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfd7ee890a7f2c3ea8cd3de9fbe830575c0ca10c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b00afc900a27aea94389ee81065ea22ae359440d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498341"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Metodo ICorDebugAppDomain::EnumerateBreakpoints
 Ottiene un enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.  
@@ -35,18 +35,18 @@ HRESULT EnumerateBreakpoints (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppBreakpoints`  
  [out] Un puntatore all'indirizzo di un oggetto ICorDebugBreakpointEnum che è l'enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.  
   
 ## <a name="remarks"></a>Note  
- L'enumeratore include tutti i tipi di punti di interruzione, inclusi i punti di interruzione di funzione e i punti di interruzione di dati.  
+ L'enumeratore include tutti i tipi di punti di interruzione, tra cui i punti di interruzione di funzione e i punti di interruzione dei dati.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

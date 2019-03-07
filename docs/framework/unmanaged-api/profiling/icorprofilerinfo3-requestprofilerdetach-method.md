@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595370"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499108"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Metodo ICorProfilerInfo3::RequestProfilerDetach
 Indica al runtime di disconnettere il profiler.  
@@ -34,7 +34,7 @@ HRESULT RequestProfilerDetach(
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwExpectedCompletionMilliseconds`  
  [in] Tempo, espresso in millisecondi, che Common Language Runtime (CLR) deve attendere prima di verificare se il profiler può essere scaricato in sicurezza.  
   

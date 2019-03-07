@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6e9a10dabc778b91fc738d28e9f841538d7c3f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a644e3e2df2544e8164cdaf3bbef3c44d3cd567f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701807"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502548"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>Funzione CertVerifyAuthenticodeLicense
 Verifica la validità di una licenza Authenticode XrML.  
@@ -31,7 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pLicenseBlob`  
  [in] Licenza Authenticode XrML da verificare.  
   

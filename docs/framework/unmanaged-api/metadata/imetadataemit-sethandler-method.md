@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 511105fef030dbc189b463864035f86d39327032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ada84df2a08b992aa178c2fb63c713b05a8937a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503216"
 ---
 # <a name="imetadataemitsethandler-method"></a>Metodo IMetaDataEmit::SetHandler
 Imposta il metodo specificato fa riferimento `IUnknown` puntatore come un callback di notifica per riassegnazioni di token.  
@@ -35,7 +35,7 @@ HRESULT SetHandler (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pUnk`  
  [in] Il gestore da registrare.  
   
