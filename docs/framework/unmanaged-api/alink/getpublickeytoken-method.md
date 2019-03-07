@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 851ff82a539ce354d5507e829d8c461a0f2494ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0481cfc3fa88aeb6fd7cd6ba93554d426f8eb2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492049"
 ---
 # <a name="getpublickeytoken-method"></a>Metodo GetPublicKeyToken
 Recupera il token di chiave pubblica per un file di chiave specificata o un contenitore di chiavi.  
@@ -37,7 +37,7 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pszKeyFile`  
  Nome file della chiave.  
   

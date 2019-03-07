@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 992626fb3fa085c85d61b9bdd25c985436e96aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f9cc44db9c93a8b018d0586bc1faeda7cfbc9bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498432"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>Metodo IBindingDisplay::GetCurrentDisplay
 Restituisce le informazioni di visualizzazione dell'associazione corrente.  
@@ -35,7 +35,7 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `display`  
  [out, retval] Un puntatore a un safearray contenente le informazioni di visualizzazione dell'associazione.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff2258faa8bc766c8c769f4e135f868334516b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0915027ce6a3768ff854eafc5496c5057081cc4d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422561"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499537"
 ---
 # <a name="icordebugtypegetclass-method"></a>Metodo ICorDebugType::GetClass
 Ottiene un puntatore a interfaccia ICorDebugClass che rappresenta il tipo generico privo di istanze.  
@@ -35,18 +35,18 @@ HRESULT GetClass (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `ppClass`  
  [out] Un puntatore all'indirizzo di un `ICorDebugClass` interfaccia che rappresenta il tipo generico privo di istanze.  
   
 ## <a name="remarks"></a>Note  
- `GetClass` può essere chiamato solo in determinate condizioni. Chiamare [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) prima di chiamare `GetClass`. Se `ICorDebugType::GetType` restituisce un valore CorElementType ELEMENT_TYPE_CLASS o un ELEMENT_TYPE_VALUETYPE, `GetClass` può essere chiamato per ottenere il tipo privo di istanze per un tipo generico.  
+ `GetClass` può essere chiamato solo in determinate condizioni. Chiamare [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) prima di chiamare `GetClass`. Se `ICorDebugType::GetType` restituisce un valore di ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, CorElementType `GetClass` può essere chiamato per ottenere il tipo privo di istanze per un tipo generico.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

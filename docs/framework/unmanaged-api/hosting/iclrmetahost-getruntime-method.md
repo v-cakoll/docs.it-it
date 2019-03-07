@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 273891b0814d9383d9640c79f5df959f2b9398b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707904"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492517"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Metodo ICLRMetaHost::GetRuntime
 Ottiene il [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaccia che corrisponde a una particolare versione di common language runtime (CLR). Questo metodo sostituisce le [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funzione usato con la [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) flag.  
@@ -37,7 +37,7 @@ HRESULT GetRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pwzVersion`  
  [in] La versione di compilazione di .NET Framework archiviata nei metadati, nel formato "v*un'*. *B*[. *X*] ". *Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build.  
   

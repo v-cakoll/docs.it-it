@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 062229245e3ae209de0eda65d4be59e286f4da7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 170d0b20069724a4e1845be0250b2897daa10dee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501240"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>Metodo ICorProfilerCallback8::DynamicMethodJITCompilationStarted
 [Supportato in .NET Framework 4.7 e versioni successive]  
@@ -33,7 +33,7 @@ HRESULT DynamicMethodJITCompilationStarted(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
 [in] `functionId`  
 L'identificatore della funzione in memoria per la quale JIT viene avviata la compilazione.   
 

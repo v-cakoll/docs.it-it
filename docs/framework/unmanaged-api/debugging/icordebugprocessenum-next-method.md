@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493583"
 ---
 # <a name="icordebugprocessenumnext-method"></a>Metodo ICorDebugProcessEnum::Next
-Ottiene il numero specificato di istanze di ICorDebugProcess nell'enumerazione, a partire dalla posizione corrente.  
+Ottiene il numero di istanze ICorDebugProcess specificato dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `celt`  
  [in] Il numero di `ICorDebugProcess` istanze da recuperare.  
   
  `processess`  
- [out] Matrice di puntatori, ognuno dei quali punta a un `ICorDebugProcess` oggetto che rappresenta un processo.  
+ [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugProcess` oggetto che rappresenta un processo.  
   
  `pceltFetched`  
  [out] Puntatore al numero di `ICorDebugProcess` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

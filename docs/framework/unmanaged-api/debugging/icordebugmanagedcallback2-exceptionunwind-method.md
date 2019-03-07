@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80503d180da835f1e5e17538b90883ca8cba4a86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 802d4987b3be86b5a6302b78f75e4f0c02d49f3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668509"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492036"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>Metodo ICorDebugManagedCallback2::ExceptionUnwind
 Fornisce una notifica sullo stato durante il processo di rimozione di eccezione.  
@@ -38,7 +38,7 @@ HRESULT ExceptionUnwind (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pAppDomain`  
  [in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.  
   

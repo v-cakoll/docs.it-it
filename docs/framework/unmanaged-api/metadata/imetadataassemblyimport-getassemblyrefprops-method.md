@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471f4837ff8aee725020f52c09a57d8f3652013c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489865"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Metodo IMetaDataAssemblyImport::GetAssemblyRefProps
 Ottiene il set di proprietà per il riferimento all'assembly con la firma dei metadati specificato.  
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `mdar`  
  [in] Il `mdAssemblyRef` token di metadati che rappresenta il riferimento all'assembly per cui ottenere le proprietà.  
   

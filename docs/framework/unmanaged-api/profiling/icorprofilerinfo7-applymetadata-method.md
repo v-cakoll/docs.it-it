@@ -12,12 +12,12 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5caf7b5e24ac5e583420b45c563f53b8988f1e00
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7fa8e2f06faa399734c44b1a52b41246296ef3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332663"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498913"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>Metodo ICorProfilerInfo7::ApplyMetaData
 [Supportata in .NET Framework 4.6.1 e versioni successive]  
@@ -32,7 +32,7 @@ HRESULT ApplyMetaData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `moduleID`  
  [in] L'identificatore del modulo i cui metadati è stato modificato.  
   

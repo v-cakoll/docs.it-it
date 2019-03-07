@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad95f8ee5188c38bb19882d3c7fa6bf98fcc9d2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 100bb73356379d2f251513bbbed0cf1e90752ff5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625250"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494372"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>Metodo IHostTaskManager::GetStackGuarantee
 Ottiene la quantità di spazio dello stack che viene garantito come disponibile dopo il completamento di un'operazione di stack, ma prima della chiusura di un processo.  
@@ -35,7 +35,7 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pGuarantee`  
  [out] Puntatore al numero di byte che sono disponibili.  
   

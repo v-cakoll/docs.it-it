@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430011"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496391"
 ---
 # <a name="guidmanagedname-attribute"></a>Attributo GUID_ManagedName
-Definisce un attributo di interfaccia personalizzata che specifica il nome di spazio dei nomi gestito per una libreria di componente oggetti modello (COM).  
+Definisce un attributo personalizzato dell'interfaccia che specifica il nome dello spazio dei nomi gestito per una raccolta di componenti oggetto model (COM).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,12 +34,12 @@ Definisce un attributo di interfaccia personalizzata che specifica il nome di sp
 ]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `value`  
- Nome spazio dei nomi gestito per la raccolta.  
+ Il nome dello spazio dei nomi gestito per la libreria.  
   
 ## <a name="definition"></a>Definizione  
- `GUID_ManagedName` viene definito come segue in Cor. h:  
+ `GUID_ManagedName` viene definita nel Cor. h come segue:  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Note  
- Un attributo personalizzato dell'interfaccia definisce i metadati per un oggetto della libreria dei tipi.  
+ Un attributo personalizzato dell'interfaccia definisce i metadati per un oggetto nella libreria dei tipi.  
   
- Utilizzare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> per recuperare il nome gestito dall'attributo.  
+ Uso <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> per recuperare il nome gestito dall'attributo.  
   
- Per ulteriori informazioni, vedere [gli attributi di interfaccia](/cpp/windows/interface-attributes) documentazione di riferimento in Visual C++.  
+ Per altre informazioni, vedere [attributi di interfaccia](/cpp/windows/interface-attributes) in Visual C++ della documentazione di riferimento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una definizione di raccolta utilizzando la `GUID_ManagedName` attributo.  
+ L'esempio seguente illustra una definizione di libreria usando la `GUID_ManagedName` attributo.  
   
 ```  
 [  

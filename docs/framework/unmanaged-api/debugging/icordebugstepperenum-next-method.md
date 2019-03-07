@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494597"
 ---
 # <a name="icordebugstepperenumnext-method"></a>Metodo ICorDebugStepperEnum::Next
-Ottiene il numero specificato di istanze di ICorDebugStepper nell'enumerazione, a partire dalla posizione corrente.  
+Ottiene il numero di istanze ICorDebugStepper specificato dall'enumerazione, iniziando in corrispondenza della posizione corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,21 +38,21 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `celt`  
  [in] Il numero di `ICorDebugStepper` istanze da recuperare.  
   
  `steppers`  
- [out] Matrice di puntatori, ognuno dei quali punta a un `ICorDebugStepper` oggetto.  
+ [out] Una matrice di puntatori, ognuno dei quali punta a un `ICorDebugStepper` oggetto.  
   
  `pceltFetched`  
  [out] Puntatore al numero di `ICorDebugStepper` istanze effettivamente restituite. Questo valore può essere null se `celt` è uno.  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib  
+ **Libreria:** CorGuids.lib  
   
- **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

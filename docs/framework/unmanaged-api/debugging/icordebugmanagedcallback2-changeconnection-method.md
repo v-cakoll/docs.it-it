@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a37d70b0e8675ad4edaf304e08e069073f76af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ff47576fb6a9d1f681aba1157efd63190b8dc23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491386"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>Metodo ICorDebugManagedCallback2::ChangeConnection
 Notifica al debugger che è stato modificato il set di attività associate alla connessione specificata.  
@@ -36,7 +36,7 @@ HRESULT ChangeConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `pProcess`  
  [in] Un puntatore a un oggetto "ICorDebugProcess" che rappresenta il processo che contiene la connessione modificata.  
   

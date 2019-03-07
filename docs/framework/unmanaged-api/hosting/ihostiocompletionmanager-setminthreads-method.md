@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a966c1827f868c51b0a4dce93e9f536e8ae0e51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d127aa1cfa8784f51fcff4eaa774361a2cbbdbc9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659241"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503021"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>Metodo IHostIoCompletionManager::SetMinThreads
 Imposta il numero minimo di thread che l'host deve allocare fino al completamento dei / o.  
@@ -35,7 +35,7 @@ HRESULT SetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
  `dwMinIoCompletionThreads`  
  [in] Il numero minimo di thread di completamento i/o che l'host deve creare.  
   
