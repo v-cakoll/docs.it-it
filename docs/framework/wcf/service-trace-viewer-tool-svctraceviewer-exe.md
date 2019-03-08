@@ -2,12 +2,12 @@
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442893"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680386"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce di diagnostica vengono generate da WCF. Service Trace Viewer offre un modo per unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi del servizio WCF.  
@@ -50,7 +50,13 @@ Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation 
 |ActivityTracing|Eventi di flusso tra attività di elaborazione e componenti.<br /><br /> Questo livello consente ad amministratori e sviluppatori di mettere in correlazione applicazioni nello stesso dominio applicazione.<br /><br /> -Le tracce per limiti di attività: avvio/arresto.<br />-Le tracce per trasferimenti.|  
   
  È possibile utilizzare l'istruzione `add` per specificare il nome e il tipo del listener di traccia che si desidera utilizzare. Nella configurazione dell'esempio il listener viene denominato `sdt` e come tipo viene aggiunto il listener di traccia standard di .NET Framework, ovvero `System.Diagnostics.XmlWriterTraceListener`. Utilizzare l'istruzione `initializeData` per impostare il nome del file di log del Listener. È inoltre possibile sostituire un percorso completo con un semplice nome file.  
-  
+
+A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a contrasto elevato vengono visualizzati nel colore corretto. È possibile disabilitare questa modifica rimuovendo l'impostazione seguente dal *svcTraceViewer.exe.config* file:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Uso dello strumento Visualizzatore di tracce dei servizi  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Apertura e visualizzazione di file di traccia WCF  

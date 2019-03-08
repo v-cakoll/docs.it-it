@@ -4,12 +4,12 @@ description: Scopri l'opzione disponibile per salvare lo stato nelle applicazion
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745998"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678081"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
@@ -19,7 +19,7 @@ Le soluzioni seguenti vengono usate per gestire i dati persistenti nelle applica
 
 Dall'host Docker, come [volumi Docker](https://docs.docker.com/engine/admin/volumes/):
 
-- **Volumi** vengono archiviati in un'area del file System host gestito da Docker.
+- I **volumi** vengono archiviati in un'area del file system dell'host gestito da Docker.
 
 - **Associare i punti di montaggio** può eseguire il mapping a qualsiasi cartella nel file System host, in modo che l'accesso non può essere controllato da un processo di Docker e può comportare un rischio di sicurezza come un contenitore è stato possibile accedere alle cartelle riservate del sistema operativo.
 
@@ -47,7 +47,7 @@ I volumi possono essere denominati o possono essere anonimi (opzione predefinita
 
 **`tmpfs` Consente di montare** sono cartelle virtuali attivi solo in memoria dell'host e non vengono mai scritti nel file System. Sono sicuri e veloci, consumano la memoria e sono applicabili solo a dati non permanenti.
 
-Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi, non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in diversi host Docker, anche se può essere raggiunto con un driver di volume che supporta host remoti.
+Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in host Docker diversi. A tale scopo, si può tuttavia usare un driver del volume che supporta gli host remoti.
 
 ![I volumi possono essere condivisi tra contenitori, ma solo nello stesso host, a meno che non si usi un driver remoto che supporta host remoti. ](./media/image5.png)
 

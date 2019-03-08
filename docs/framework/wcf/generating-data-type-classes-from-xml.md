@@ -2,23 +2,23 @@
 title: Generazione di classi di tipo dati da XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6666f1ba23dd563bd7a005d458cd7fe8253c3af
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498667"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679086"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generazione di classi di tipo dati da XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] include una nuova funzionalità per generare classi di tipi di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per il feed RSS di Blog di .NET.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] include una nuova funzionalità per generare classi di tipi di dati da XML. In questo argomento viene descritto come generare automaticamente i tipi di dati per feed RSS del Blog .NET.  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Acquisizione del codice XML dal .NET Blog RSS feed  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Acquisizione del codice XML dal RSS del Blog .NET feed  
   
-1.  In Internet Explorer, individuare il [feed RSS del Blog di .NET](https://blogs.msdn.microsoft.com/dotnet/feed/).  
+1.  In Internet Explorer passare per il [feed RSS del Blog di .NET](https://devblogs.microsoft.com/dotnet/feed/).  
   
-2.  Fare clic sulla pagina e selezionare **Visualizza origine**.  
+2.  La pagina e scegliere **Visualizza origine**.  
   
-3.  Copiare il testo del feed premendo **Ctrl + A** per selezionare tutto il testo e **Ctrl + C** da copiare.  
+3.  Copiare il testo del feed premendo **Ctrl + B** per selezionare tutto il testo, e **Ctrl + C** da copiare.  
   
 ### <a name="creating-the-data-types"></a>Creazione dei tipi di dati  
   
@@ -26,9 +26,9 @@ ms.locfileid: "33498667"
   
 2.  Posizionare il cursore nel file ma all'esterno di a qualsiasi classe esistente.  
   
-3.  Selezionare **modifica**, **Incolla speciale**, **incolla XML come classi**.  
+3.  Selezionare **Edit**, **Incolla speciale**, **incolla XML come classi**.  
   
-4.  Classi denominate `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` e `rssChannelItemGuid` vengono creati con i membri necessari per l'accesso agli elementi nel feed RSS.  
+4.  Classi denominate `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` e `rssChannelItemGuid` vengono creati con i membri necessari per l'accesso a elementi nel feed RSS.  
   
 ### <a name="using-the-generated-classes"></a>Uso delle classi generate  
   

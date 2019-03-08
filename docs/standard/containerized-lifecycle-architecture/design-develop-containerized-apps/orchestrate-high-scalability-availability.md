@@ -4,12 +4,12 @@ description: Le applicazioni di produzione reale devono essere distribuite e ges
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836162"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679047"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -56,7 +56,7 @@ Il servizio Azure Kubernetes consente di semplificare la creazione, la configura
 
 Il servizio Azure Kubernetes ottimizza la configurazione degli strumenti e delle tecnologie open source più diffusi per clustering Docker in modo specifico per Azure. Si ottiene una soluzione che offre la portabilità per la configurazione di contenitori e applicazioni. È sufficiente selezionare le dimensioni, il numero di host e gli strumenti dell'agente di orchestrazione. Il servizio Azure Kubernetes gestisce tutte le altre operazioni.
 
-![Struttura del cluster Kubernetes: È presente un nodo master che gestisce DNS, utilità di pianificazione, proxy e così via e diversi nodi di lavoro, che ospitano i contenitori.](media/image36.png)
+![Struttura del cluster Kubernetes: è presente un nodo master che gestisce DNS, utilità di pianificazione, proxy e così via e diversi nodi del ruolo di lavoro che ospitano i contenitori.](media/image36.png)
 
 **Figura 4-7**. Struttura semplificata e topologia del cluster Kubernetes
 
@@ -74,13 +74,13 @@ Nell'ambiente di sviluppo che [Docker annunciato nel mese di luglio 2018](https:
 
 Per iniziare a usare servizio contenitore di AZURE, distribuire un cluster del servizio contenitore di AZURE dal portale di Azure o usando l'interfaccia della riga di comando. Per altre informazioni sulla distribuzione di un cluster del servizio Azure Container, vedere [Distribuire un cluster del servizio Azure Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Non sono previsti addebiti per il software installato per impostazione predefinita come parte del servizio Azure Kubernetes. Tutte le opzioni predefinite vengono implementate con software open source. Il servizio Azure Kubernetes è disponibile per più macchine virtuali in Azure. Non vengono applicati addebiti per le istanze di risorse di calcolo scelte, oltre che per le altre risorse di infrastruttura sottostanti usate, ad esempio per le risorse di archiviazione e di rete. Non sono previsti addebiti incrementali per il servizio Azure Kubernetes.
+Non sono previsti addebiti per il software installato per impostazione predefinita come parte del servizio Azure Kubernetes. Tutte le opzioni predefinite vengono implementate con software open source. Il servizio Azure Kubernetes è disponibile per più macchine virtuali in Azure. Vengono applicati addebiti solo per le istanze di risorse di calcolo scelte, oltre che per le altre risorse di infrastruttura sottostanti usate, ad esempio per le risorse di archiviazione e di rete. Non sono previsti addebiti incrementali per il servizio Azure Kubernetes.
 
 Per l'implementazione di ulteriori informazioni sulla distribuzione in Kubernetes basano `kubectl` e originali `.yaml` i file, vedere il post sul [impostazione eShopOnContainers nel servizio contenitore di AZURE (Azure Kubernetes Service)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Distribuire con i grafici Helm nel cluster Kubernetes
 
-Quando si distribuisce un'applicazione a un cluster Kubernetes, è possibile usare originale `kubectl.exe` strumento della riga di comando usando i file di distribuzione basato sul formato nativo (`.yaml` file), come già accennato nella sezione precedente. Tuttavia, per le applicazioni più complesse di Kubernetes, ad esempio durante la distribuzione di applicazioni complesse basate su microservizi, è consigliabile usare [Helm](https://helm.sh/).
+Quando si distribuisce un'applicazione a un cluster Kubernetes, è possibile usare originale `kubectl.exe` strumento della riga di comando usando i file di distribuzione basato sul formato nativo (`.yaml` file), come già accennato nella sezione precedente. Per le applicazioni Kubernetes più complesse, ad esempio durante la distribuzione di applicazioni complesse basate su microservizi, è tuttavia consigliabile usare [Helm](https://helm.sh/).
 
 I grafici Helm consente di definire, versione, installazione, condivisione, aggiornamento o il rollback anche l'applicazione più complessa di Kubernetes.
 
@@ -149,7 +149,7 @@ Per informazioni aggiornate sul supporto di contenitori in Azure Service Fabric,
 
 Service Fabric è un buon esempio di una piattaforma che consente di definire una diversa architettura logica (microservizi aziendali o contesti delimitati) rispetto all'implementazione fisica. Ad esempio, se si implementa [servizi Reliable con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) nelle [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), che vengono introdotti nella sezione successiva, "[senza stato e i microservizi con stato](#stateless-versus-stateful-microservices), "è un concetto di microservizio aziendale con più servizi fisici.
 
-Come illustrato nella figura 4-10 e da una prospettiva di microservizio logico/aziendale, quando si implementa un servizio Reliable Services di Service Fabric con stato, in genere sarà necessario implementare due livelli di servizi. Il primo è il servizio Reliable con stato di back-end, che gestisce più partizioni (ciascuna partizione è un servizio con stato). Il secondo è il servizio front-end, o Servizio gateway, responsabile del routing e dell'aggregazione dei dati in più partizioni o istanze del servizio con stato. Tale Servizio gateway gestisce anche la comunicazione lato client con i cicli di ripetizione che accedono al servizio back-end. Viene chiamato servizio Gateway se si implementa il servizio personalizzato, o in alternativa è anche possibile usare l'infrastruttura di servizio out-of-the-box [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Come illustrato nella figura 4-10 e da una prospettiva di microservizio logico/aziendale, quando si implementa un servizio Reliable Services di Service Fabric con stato, in genere sarà necessario implementare due livelli di servizi. Il primo è il servizio Reliable con stato di back-end, che gestisce più partizioni (ciascuna partizione è un servizio con stato). Il secondo è il servizio front-end, o Servizio gateway, responsabile del routing e dell'aggregazione dei dati in più partizioni o istanze del servizio con stato. Tale Servizio gateway gestisce anche la comunicazione lato client con i cicli di ripetizione che accedono al servizio back-end. Viene chiamato Servizio gateway se si implementa il servizio personalizzato. In alternativa, è possibile usare il [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) di Service Fabric predefinito.
 
 ![Service Fabric ha prescrizione specifica per supportare i diversi servizi reliable con stati in contenitori.](./media/service-fabric-stateful-business-microservice.png)
 
@@ -189,7 +189,7 @@ Ma anche i servizi stessi possono essere senza stato in Service Fabric, e ciò s
 
 Un approccio senza stato è perfettamente valido ed è più facile da implementare rispetto ai microservizi con stato, perché l'approccio è simile agli schemi tradizionali e noti. Tuttavia, i microservizi senza stato impongono la latenza tra il processo e le origini dati, oltre a comportare più elementi quando si prova a migliorare le prestazioni con cache e code aggiuntive. Il risultato è che si può finire con architetture complesse che hanno un numero eccessivo di livelli.
 
-Al contrario, i [microservizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) possono eccellere in scenari avanzati, perché non è prevista alcuna latenza tra la logica di dominio e i dati. L'elaborazione di grandi quantità di dati, i back-end per i giochi, i database come servizio e altri scenari a bassa latenza traggono tutti vantaggio dai servizi con stato, che abilitano lo stato locale per un accesso più rapido.
+Al contrario, i [microservizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) possono rappresentare un'ottima soluzione in scenari avanzati, perché non prevedono alcuna latenza tra la logica di dominio e i dati. L'elaborazione di grandi quantità di dati, i back-end per i giochi, i database come servizio e altri scenari a bassa latenza traggono tutti vantaggio dai servizi con stato, che abilitano lo stato locale per un accesso più rapido.
 
 I servizi con e senza stato sono complementari. Ad esempio, come può notare nel diagramma a destra nella figura 4-31, un servizio con stato può essere suddivisa in più partizioni. Per accedere a tali partizioni, potrebbe essere necessario un servizio senza stato che agisca come servizio gateway che sappia come risolvere ogni partizione in base alle chiavi di partizione.
 

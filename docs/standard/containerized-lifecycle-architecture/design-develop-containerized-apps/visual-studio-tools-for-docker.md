@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835603"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680360"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Usare gli strumenti di Docker in Visual Studio 2017 in Windows
 
@@ -85,9 +85,9 @@ Nella tabella seguente consente di decidere come impostare queste opzioni.
 
 > [! INFORMAZIONI] per altri dettagli sull'implementazione di servizi e l'uso di Visual Studio Tools per Docker, leggere gli articoli seguenti:
 >
->Debug di App in un contenitore Docker locale: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>Debug di App in un contenitore Docker locale: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->Distribuire un contenitore ASP.NET in un registro contenitori con Visual Studio: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>Distribuire un contenitore ASP.NET in un registro contenitori con Visual Studio: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[Precedente](docker-apps-inner-loop-workflow.md)

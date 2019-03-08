@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655712"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677331"
 ---
 # <a name="epolicyaction-enumeration"></a>Enumerazione EPolicyAction
 Descrive le azioni dei criteri dell'host è possibile impostare per le operazioni specificate da [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) e gli errori indicati dal [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|Specifica che common language runtime (CLR) deve interrompere il thread in modo regolare. Interruzione di una normale include i tentativi di eseguire tutti i `finally` consente di bloccare, qualsiasi `catch` i blocchi correlati alle interruzioni di thread e i finalizzatori.|  
 |`eDisableRuntime`|Specifica che Common Language Runtime deve essere stato disabilitato. Alcuna ulteriore codice gestito può essere eseguito nel processo interessato e i thread sono bloccati di accedere a CLR.|  
 |`eExitProcess`|Specifica che Common Language Runtime deve cercare una chiusura normale del processo, inclusi l'esecuzione dei finalizzatori e di pulitura e operazioni di registrazione.|  
-|`eFastExitProcess`|Specifica che Common Language Runtime deve uscire dal processo immediatamente, senza eseguire i finalizzatori o pulizia e operazioni di registrazione. Nowever, notifica viene inviata al debugger.|  
+|`eFastExitProcess`|Specifica che Common Language Runtime deve uscire dal processo immediatamente, senza eseguire i finalizzatori o pulizia e operazioni di registrazione. Tuttavia, notifica viene inviata al debugger.|  
 |`eNoAction`|Specifica che deve essere eseguita alcuna azione.|  
 |`eRudeAbortThread`|Specifica che Common Language Runtime deve eseguire un'interruzione del thread in modo irregolare. Solo a quelli `catch` e `finally` blocchi contrassegnati con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> vengono eseguite.|  
 |`eRudeExitProcess`|Specifica che Common Language Runtime deve uscire dal processo senza esecuzione dei finalizzatori o la registrazione delle operazioni.|  

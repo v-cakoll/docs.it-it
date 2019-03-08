@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Tree Item control type
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ec2783e3841a74ddfbca0d719569242ba5e61224
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f0e3b75664cad86f37200ce464a138f52aa4bd8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654984"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678982"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo TreeItem
 > [!NOTE]
@@ -65,7 +63,7 @@ ms.locfileid: "54654984"
 |Pattern di controllo/proprietà del pattern|Supporto/valore|Note|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|A seconda dei casi|Implementare questo pattern di controllo se il controllo TreeItem dispone di un comando separato su cui è possibile eseguire azioni.|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Yes|Tutti i controlli TreeItem possono essere espansi o compressi.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Sì|Tutti i controlli TreeItem possono essere espansi o compressi.|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Espanso, compresso o nodo foglia|I controlli TreeItem saranno nodi foglia quando non sono espansi o compressi.|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|A seconda dei casi|Implementare questo pattern di controllo se il contenitore dell'albero supporta il pattern di controllo Scroll.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|A seconda dei casi|Implementare questo pattern di controllo se è possibile disporre di una selezione attiva che viene mantenuta quando l'utente torna al contenitore dell'albero.|  

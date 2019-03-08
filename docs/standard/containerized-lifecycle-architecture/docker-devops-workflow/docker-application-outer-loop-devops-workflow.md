@@ -4,12 +4,12 @@ description: Informazioni sulla procedura per il ciclo"esterno" del flusso di la
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836409"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676200"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps ciclo esterno per un'applicazione Docker
 
@@ -114,7 +114,7 @@ Di seguito sono tipi diversi di test che è possibile eseguire con i contenitori
 
 - Testare in produzione e "canary" nelle versioni
 
-Il punto importante è che quando si esegue l'integrazione e test funzionali, è necessario eseguire questi test da fuori dai contenitori. Test non sono contenuti o eseguiti nei contenitori che si sta distribuendo, poiché i contenitori sono basati su immagini statiche che devono essere esattamente come quelle cui dovrà essere distribuito nell'ambiente di produzione.
+Il punto importante è che quando si esegue l'integrazione e test funzionali, è necessario eseguire questi test da fuori dai contenitori. Test non sono contenuti o eseguiti nei contenitori che si esegue la distribuzione, poiché i contenitori sono basati su immagini statiche che devono essere esattamente come quelle cui dovrà essere distribuito nell'ambiente di produzione.
 
 Un'opzione possibile quando i test più scenari avanzati, ad esempio tra diversi cluster (test cluster, cluster di gestione temporanea e cluster di produzione) consiste nel pubblicare le immagini in un registro, in modo che possono essere testata in cluster diversi.
 
@@ -144,7 +144,7 @@ Usa le attività di Docker, eseguire il push di un set di immagini di servizio d
 
 Immutabilità delle immagini Docker assicura una distribuzione ripetibile con ciò che ha sviluppato, testato con integrazione continua ed eseguire nell'ambiente di produzione. Dopo aver creato le immagini Docker applicazione pubblicate nel registro Docker (privato o pubblico), è possibile distribuirle agli ambienti diversi che potrebbe essere (ambiente di produzione, controllo qualità, staging, e così via) dalla pipeline di recapito Continuo tramite servizi di Azure DevOps le attività della pipeline o servizi di Release Management per Azure DevOps.
 
-Tuttavia, a questo punto dipende il tipo di applicazione Docker si distribuiscono. Distribuire una semplice applicazione (da una composizione e la distribuzione punto di vista), ad esempio un monolitica dell'applicazione che comprende alcuni contenitori o servizi e distribuita da alcuni server o macchine virtuali è diversa dalla distribuzione di un'applicazione più complessa, ad esempio un applicazione orientata ai microservizi con capacità su scala molto vasta. Questi due scenari sono illustrati nelle sezioni seguenti.
+Tuttavia, a questo punto dipende il tipo di applicazione Docker si esegue la distribuzione. Distribuire una semplice applicazione (da una composizione e la distribuzione punto di vista), ad esempio un monolitica dell'applicazione che comprende alcuni contenitori o servizi e distribuita da alcuni server o macchine virtuali è diversa dalla distribuzione di un'applicazione più complessa, ad esempio un applicazione orientata ai microservizi con capacità su scala molto vasta. Questi due scenari sono illustrati nelle sezioni seguenti.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Distribuzione composto da applicazioni Docker in più ambienti Docker
 
@@ -202,7 +202,7 @@ Figura 5-11 viene illustrato come è possibile modificare l'attività di distrib
 
 ## <a name="step-5-run-and-manage"></a>Passaggio 5: Eseguire e gestire
 
-Perché è in esecuzione e la gestione delle applicazioni in produzione dell'organizzazione a livello di è un argomento principale in e di se stesso e a causa di un tipo di operazioni e persone che lavorano a tale livello (operazioni IT), nonché l'ambito di grandi dimensioni di quest'area, è stata dedicata l'intero successivamente capitolo per spiegarlo.
+Perché è in esecuzione e la gestione delle applicazioni in produzione dell'organizzazione a livello di è un argomento principale in e di se stesso e a causa di un tipo di operazioni e persone che lavorano a tale livello (operazioni IT), nonché l'ambito di grandi dimensioni di quest'area, l'intero capitolo successivo è dedicata ad spiegarlo.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Passaggio 6: Monitorare e diagnosticare
 

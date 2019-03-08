@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966229"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678824"
 ---
 # <a name="overload-resolution-visual-basic"></a>Risoluzione dell'overload (Visual Basic)
 Quando il compilatore Visual Basic rileva una chiamata a una routine definito in numerose versioni di overload, il compilatore deve decidere quale overload da chiamare. A tale scopo, seguire questa procedura:  
@@ -36,8 +36,7 @@ Quando il compilatore Visual Basic rileva una chiamata a una routine definito in
   
  Nella figura seguente viene illustrato il processo che determina quale versione di un set di versioni di overload da chiamare.  
   
- ![Diagramma di flusso del processo di risoluzione dell'overload](./media/overloadres.gif "OverloadRes")  
-La risoluzione tra le versioni di overload  
+ ![Diagramma di flusso del processo di risoluzione dell'overload](./media/overload-resolution/determine-overloaded-version.gif "risoluzione tra le versioni di overload")    
   
  L'esempio seguente illustra questo processo di risoluzione dell'overload.  
   

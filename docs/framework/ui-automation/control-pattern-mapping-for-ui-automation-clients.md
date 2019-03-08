@@ -5,14 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597199"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679580"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
@@ -66,7 +64,7 @@ ms.locfileid: "54597199"
 |Scheda|Selection|Scroll|nessuno|  
 |TabItem|SelectionItem|nessuno|Invoke|  
 |Tabella|Grid, GridItem, Table, TableItem|nessuno|nessuno|  
-|Testo|nessuno|GridItem, TableItem, Text|Valore|  
+|Testo|nessuno|GridItem, TableItem, Text|Value|  
 |Thumb|Transform|nessuno|nessuno|  
 |TitleBar|nessuno|Nessuna|nessuno|  
 |ToolBar|nessuno|Dock, ExpandCollapse, Transform|nessuno|  

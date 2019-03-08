@@ -2,12 +2,12 @@
 title: proprietà di chiave esterna
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: a33d60e28c7c4e5a90199437fc95a83b5a304b06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8680019f6f1a53233b5c49163f474cf33409b69b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746609"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674471"
 ---
 # <a name="foreign-key-property"></a>proprietà di chiave esterna
 Oggetto *proprietà di chiave esterna* in Entity Data Model (EDM) è un tipo primitivo [proprietà](../../../../docs/framework/data/adonet/property.md) (o un set di proprietà di tipo primitivo) in un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) che contiene il [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) di un altro tipo di entità.  
@@ -17,7 +17,7 @@ Oggetto *proprietà di chiave esterna* in Entity Data Model (EDM) è un tipo pri
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`. Il tipo di entità `Book` dispone di una proprietà, `PublisherId`, che fa riferimento alla chiave di entità del tipo di entità `Publisher` quando si definisce un vincolo di integrità referenziale sull'associazione `PublishedBy`.  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "esempio di un modello di vincolo referenziale")  
   
  Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente usa la proprietà di chiave esterna `PublisherId` per definire un vincolo di integrità referenziale sull'associazione `PublishedBy` illustrata nel modello concettuale precedente.  
   
