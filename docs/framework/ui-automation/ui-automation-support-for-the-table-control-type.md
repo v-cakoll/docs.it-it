@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b341b104b6a028a870d1b6f427dc0d088bc0bbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4e59258550cb2fad92a3eacc726f952f3b0164c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654919"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674523"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Table
 > [!NOTE]
@@ -61,7 +59,7 @@ ms.locfileid: "54654919"
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Il controllo tabella supporta sempre questo pattern di controllo perché gli elementi che contiene dispone di dati visualizzati in una griglia.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Sì (obbligatorio con oggetti figlio)|Gli oggetti interni di una tabella devono supportare sia il pattern di controllo GridItem sia il pattern di controllo TableItem. La tabella stessa non deve supportare il pattern di controllo GridItem o TableItem, a meno che la tabella non faccia parte di un'altra tabella.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Yes|Il controllo tabella supporta sempre l'associazione di intestazioni al contenuto.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Sì|Il controllo tabella supporta sempre l'associazione di intestazioni al contenuto.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|Sì (obbligatorio con oggetti figlio)|Gli oggetti interni di una tabella devono supportare sia il pattern di controllo GridItem sia il pattern di controllo TableItem. La tabella stessa non deve supportare il pattern di controllo GridItem o TableItem, a meno che la tabella non faccia parte di un'altra tabella.|  
   
 <a name="Required_UI_Automation_Events"></a>   

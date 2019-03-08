@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677552"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Eseguire la migrazione dei database relazionali in azure
 
@@ -49,7 +49,7 @@ Istanza gestita di Database SQL di Azure presenta le caratteristiche seguenti:
 
   - Backup nativo e ripristino e il log shipping
 
-Con queste funzionalità, quando si esegue la migrazione di database dell'applicazione esistente al Database SQL di Azure, il modello di istanza gestita offre quasi il 100% dei vantaggi di Paas per SQL Server. Istanza gestita è un ambiente di SQL Server in cui si continuare a usare le funzionalità a livello di istanza senza modificare la progettazione dell'applicazione.
+Con queste funzionalità, quando si esegue la migrazione di database dell'applicazione esistente al Database SQL di Azure, il modello di istanza gestita offre quasi il 100% dei vantaggi di PaaS per SQL Server. Istanza gestita è un ambiente di SQL Server in cui si continuare a usare le funzionalità a livello di istanza senza modificare la progettazione dell'applicazione.
 
 Istanza gestita è probabilmente la soluzione ottimale per le aziende che attualmente utilizzano SQL Server e che richiedono flessibilità per la sicurezza di rete nel cloud. È come avere una rete privata virtuale per i database SQL.
 
@@ -114,7 +114,7 @@ Per informazioni su come eseguire la migrazione di database usando servizio migr
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **Migrazione di database di SQL Server al Database SQL nel cloud**
+- **Migrazione di un database SQL Server al database SQL nel cloud**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Per informazioni su come eseguire la migrazione di database usando servizio migr
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Precedente](lift-and-shift-existing-apps-azure-iaas.md)
->[Successivo](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Precedente](lift-and-shift-existing-apps-azure-iaas.md)
+> [Successivo](modernize-existing-apps-to-cloud-optimized/index.md)

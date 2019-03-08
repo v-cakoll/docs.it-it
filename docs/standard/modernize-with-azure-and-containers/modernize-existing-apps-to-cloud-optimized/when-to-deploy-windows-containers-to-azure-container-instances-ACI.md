@@ -4,24 +4,24 @@ description: Modernizzare le applicazioni .NET esistenti con contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 297461f1403ab2d6ca6fd63a05d5ded7f210483e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128099"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674406"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Casi in cui distribuire i contenitori di Windows per istanze di contenitore di Azure (ACI)
 
-Proposta di valore principale è che è possibile distribuire i contenitori sin da subito ad esso e non è necessario gestire quell'ambiente istanze di contenitore di Azure, non devi aggiornamento/patch per il sistema operativo sulla o le macchine virtuali, tutto questo è trasparente ed è stato distribuito contenitori in un ambiente pronto da usare.
+Proposta di valore principale è che è possibile distribuire i contenitori sin da subito ad esso e non è necessario gestire quell'ambiente istanze di contenitore di Azure, non devi aggiornamento/patch del sistema operativo o le macchine virtuali, tutto questo è trasparente sottostante ed è stato distribuito contenitori in un ambiente pronto da usare.
 
 I motivi e gli scenari quando si vuole usare ACI sono simili agli scenari principali quando si usano macchine virtuali di Azure con i contenitori, essenzialmente, gli scenari principali per l'uso di istanze di contenitore di Azure:
 
--   **Scenari di sviluppo/Test**
--   **Automazione delle attività**
--   **Agenti di integrazione continua/recapito Continuo**
--   **Elaborazione batch di piccole dimensioni e della scala**
--   **App web semplice**
+- **Scenari di sviluppo/Test**
+- **Automazione delle attività**
+- **Agenti di integrazione continua/recapito Continuo**
+- **Elaborazione batch di piccole dimensioni e della scala**
+- **App web semplice**
 
 Lo scenario di App web semplice è uno scenario equo per ACI ma prendere in considerazione che poiché in ACI può avere solo un'istanza di contenitore singolo per ogni immagine del contenitore, si verificherà la disponibilità elevata e dispone solo di una scalabilità limitata.
 
@@ -29,13 +29,13 @@ Tuttavia, anche quando ACI è considerata infrastruttura perché fornisce solo l
 
 I vantaggi principali di istanze di contenitore di Azure (ACI) sono:
 
--   Esegui i contenitori senza gestire server
--   Aumenta la flessibilità con contenitori on demand
--   Distribuire contenitori nel cloud con semplicità senza precedenti e velocità, con un unico comando. 
--   Proteggere le applicazioni con isolamento con hypervisor
+- Esegui i contenitori senza gestire server
+- Aumenta la flessibilità con contenitori on demand
+- Distribuire contenitori nel cloud con semplicità senza precedenti e velocità, con un unico comando.
+- Proteggere le applicazioni con isolamento con hypervisor
 
 In breve, con ACI è possibile sviluppare App rapidamente senza la gestione delle macchine virtuali o che sia necessario imparare nuovi strumenti. È solo la tua applicazione, in un contenitore, in esecuzione nel cloud.
 
->[!div class="step-by-step"]
->[Precedente](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
->[Successivo](when-to-deploy-windows-containers-to-service-fabric.md)
+> [!div class="step-by-step"]
+> [Precedente](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [Successivo](when-to-deploy-windows-containers-to-service-fabric.md)

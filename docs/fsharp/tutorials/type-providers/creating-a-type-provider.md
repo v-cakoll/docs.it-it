@@ -2,12 +2,12 @@
 title: 'Esercitazione: Creare un Provider di tipi'
 description: Informazioni su come creare il proprio F# tipo di provider in F# 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371561"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678423"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
@@ -469,7 +469,7 @@ Tenere presente quanto segue:
 
 - Ogni gruppo denominato comporta una proprietà specificata e l'accesso alla proprietà comporta un uso di un indicizzatore in caso di corrispondenza `Groups` raccolta.
 
-Il codice seguente è il nucleo della logica per implementare un provider di questo tipo, e questo esempio viene omesso l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [ F# 3.0 Service Pack di esempio](https://fsharp3sample.codeplex.com) sul sito Web Codeplex.
+Il codice seguente è il nucleo della logica per implementare un provider di questo tipo, e questo esempio viene omesso l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [ F# 3.0 Service Pack di esempio](https://archive.codeplex.com/?p=fsharp3sample) sul sito Web CodePlex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

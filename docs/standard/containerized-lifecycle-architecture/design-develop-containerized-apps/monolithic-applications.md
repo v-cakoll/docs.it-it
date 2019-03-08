@@ -4,16 +4,16 @@ description: Comprendere i concetti di base per l'inserimento di applicazioni mo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747262"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676837"
 ---
 # <a name="monolithic-applications"></a>Applicazioni monolitiche
 
-In questo scenario, la compilazione di un servizio o applicazione web monolitica e singolo e distribuirla come contenitore. All'interno dell'applicazione, la struttura potrebbe non essere monolitica; può comprendere diverse librerie, componenti o persino livelli (livello dell'applicazione, livello di dominio, il livello di accesso ai dati e così via). Esternamente, è un singolo contenitore, come un singolo processo, singola applicazione web o servizio singolo.
+In questo scenario, si sta compila un'applicazione web monolitica e singolo o un servizio e distribuirlo come un contenitore. All'interno dell'applicazione, la struttura potrebbe non essere monolitica; può comprendere diverse librerie, componenti o persino livelli (livello dell'applicazione, livello di dominio, il livello di accesso ai dati e così via). Esternamente, è un singolo contenitore, come un singolo processo, singola applicazione web o servizio singolo.
 
 Per gestire questo modello, distribuire un singolo contenitore per rappresentare l'applicazione. Per la scalabilità, è sufficiente aggiungere alcune altre copie con un bilanciamento del carico in primo piano. La semplicità deriva dalla gestione di un'unica distribuzione in un singolo contenitore o una macchina virtuale (VM).
 
@@ -71,7 +71,7 @@ Sia perché si vuole ottenere una convalida rapida di un contenitore distribuito
 
 Tramite il servizio App di Azure è intuitivo e avrai e in esecuzione rapidamente perché offre eccezionali Git dell'integrazione del codice, compilare la soluzione in Microsoft Visual Studio e distribuirlo direttamente in Azure. Ma, tradizionalmente (con nessun Docker), se sono necessarie altre funzionalità, Framework o dipendenze che non sono supportate in servizi App, è necessario attendere fino a quando il team di Azure aggiorna tali dipendenze nel servizio App o passa ad altri servizi, ad esempio Service Fabric, servizi Cloud o persino il normale macchine virtuali, per cui si dispone di un'ulteriore controllo e può installare un componente richiesto o un framework per l'applicazione.
 
-A questo punto, come illustrato nella figura 4-4, quando si usa Visual Studio 2017, supporto per i contenitori nel servizio App di Azure offre la possibilità di includere ciò che vuole app nell'ambiente in uso. Se una dipendenza è stato aggiunto alla tua app, perché in esecuzione in un contenitore, si ottiene la funzionalità di inclusione di tali dipendenze nell'immagine del Dockerfile o Docker.
+A questo punto, come illustrato nella figura 4-4, quando si usa Visual Studio 2017, supporto per i contenitori nel servizio App di Azure offre la possibilità di includere ciò che vuole app nell'ambiente in uso. Se una dipendenza è stato aggiunto alla tua app, perché viene eseguito in un contenitore, si ottiene la funzionalità di inclusione di tali dipendenze nell'immagine del Dockerfile o Docker.
 
 ![Visualizzazione della procedura guidata di Visual Studio per la pubblicazione in un servizio app di Azure, evidenziando i selettori per il registro contenitori.](./media/image4.png)
 

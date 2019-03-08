@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 6f9df16a26de37df1f61d8de115a2e9da04a9b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70e1f3a7a738358af938f64116a4bc0d4600711
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512827"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675212"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo RadioButton
 > [!NOTE]
@@ -58,7 +56,7 @@ ms.locfileid: "54512827"
   
 |Pattern di controllo/proprietà del pattern di controllo|Supporto/valore|Note|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Tutti i controlli pulsante di opzione devono supportare il pattern SelectionItem per poter essere selezionati.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Sì|Tutti i controlli pulsante di opzione devono supportare il pattern SelectionItem per poter essere selezionati.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Vedere le note.|La proprietà `SelectionContainerProperty` deve sempre essere completata in modo da consentire a un client di automazione interfaccia utente di determinare quali altri pulsanti di opzione in un contesto specifico sono correlati tra loro.  Per la versione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] del pulsante di opzione questa proprietà non sarà supportata perché non è possibile ottenere questa informazione da tale framework legacy.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|Dopo aver impostato questa proprietà, il pulsante di opzione non può scorrere tra i propri stati.  Questo pattern non deve essere mai supportato nel pulsante di opzione.|  
   

@@ -1,19 +1,19 @@
 ---
 title: Strada per applicazioni moderne basate su contenitori
-description: Comprendere che Docker, contenitori e un'architettura di Microservizi non sono una soluzione completamente adattabile;. Ecco alcuni riferimenti che consentono di scegliere.
+description: Comprendere che Docker, contenitori e un'architettura di Microservizi non sono una soluzione completamente adattabile;. Sono disponibili alcuni riferimenti che consentono di scegliere.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442425"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674432"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Strada per applicazioni moderne basate su contenitori
 
-Si sta leggendo questo libro probabilmente perché si prevede lo sviluppo di nuove applicazioni e/o si desidera valutare l'impatto dell'uso di Docker, contenitori e nuovi approcci, come i Microservizi nell'azienda.
+Probabilmente si sta leggendo questo libro in quanto si pianifica lo sviluppo di nuove applicazioni o valutate sia l'impatto dell'uso di Docker, contenitori e nuovi approcci, come i Microservizi nell'azienda.
 
 L'adozione di nuovi paradigmi di sviluppo necessario con attenzione prima di avviare un progetto, per valutare l'impatto sul team di sviluppo, il tuo budget o dell'infrastruttura.
 

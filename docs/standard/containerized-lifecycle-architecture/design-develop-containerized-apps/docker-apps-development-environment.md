@@ -4,12 +4,12 @@ description: Conoscere i più importanti opzioni dello strumento di sviluppo che
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836175"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677240"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente di sviluppo per le app di Docker
 
@@ -37,7 +37,7 @@ Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi lin
 
 ## <a name="language-and-framework-choices"></a>Opzioni relative a lingua e framework
 
-È possibile sviluppare applicazioni Docker con strumenti di Microsoft con i linguaggi più moderni. Di seguito è riportato un elenco iniziale, ma non si è limitati a esso:
+È possibile sviluppare applicazioni Docker con strumenti di Microsoft con i linguaggi più moderni. Di seguito è riportato un elenco iniziale, ma non è necessario limitarsi a esso:
 
 - .NET Core e ASP.NET Core
 - Node.js

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575161"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674679"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Stili della cella nel controllo DataGridView Windows Form
 Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo può avere il proprio stile di visualizzazione, ad esempio il formato di testo, colore di sfondo, colore di primo piano e del tipo di carattere. In genere, tuttavia, più celle condivideranno le caratteristiche di stile specifico.  
@@ -87,7 +87,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
  Il diagramma seguente illustra questo processo.  
   
- ![Le proprietà di tipo DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![Le proprietà di tipo DataGridViewCellStyle](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells diagramma di ereditarietà")  
   
  È possibile accedere anche gli stili ereditati da colonne e righe specifiche. La colonna <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> proprietà eredita i valori dalle proprietà seguenti.  
   
@@ -122,7 +122,7 @@ Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo pu�
   
  Il diagramma seguente illustra come i vari <xref:System.Windows.Forms.DataGridViewCellStyle> proprietà possono ereditare i relativi valori da posizioni diverse.  
   
- ![Proprietà DataGridView&#45;ereditarietà del valore](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![Proprietà DataGridView&#45;ereditarietà del valore](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells diagramma di ereditarietà di valore")  
   
  Sfruttando l'ereditarietà dello stile, è possibile fornire stili appropriati per l'intero controllo senza la necessità di specificare le stesse informazioni in più posizioni.  
   

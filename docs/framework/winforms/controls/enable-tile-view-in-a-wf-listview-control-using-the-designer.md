@@ -6,19 +6,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303972"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676239"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Abilitare la visualizzazione affiancata in un controllo di ListView Windows Form usando la finestra di progettazione
 La funzionalità di visualizzazione affiancata del <xref:System.Windows.Forms.ListView> controllo consente di fornire un equilibrio visivo tra informazioni grafiche e testuali. Le informazioni testuali visualizzate per un elemento nella visualizzazione affiancata corrisponde alle informazioni della colonna definite per la visualizzazione dettagli. Funzioni di visualizzazione affiancata in combinazione con il raggruppamento oppure dall'inserimento contrassegnare le funzionalità di <xref:System.Windows.Forms.ListView> controllo.  
   
  La visualizzazione affiancata Usa un' 32x32 icona e alcune righe di testo, come illustrato nell'immagine seguente.  
   
- ![Visualizzazione affiancata in un controllo ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![Visualizzazione affiancata in un controllo ListView](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "riquadro Visualizza icone e testo")  
   
  Riquadro proprietà e metodi consentono di specificare i campi colonna da visualizzare per ogni elemento, nonché di controllare le dimensioni e l'aspetto di tutti gli elementi all'interno di una finestra di visualizzazione del riquadro di visualizzazione. Per maggiore chiarezza, la prima riga del testo in un riquadro è sempre il nome dell'elemento; non può essere modificato.  
   
