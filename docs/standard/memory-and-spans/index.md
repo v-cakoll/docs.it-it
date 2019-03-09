@@ -3,34 +3,29 @@ title: Memoria e intervalli
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- Memory<T>
-- Span<T>
-- buffers"
-- pipeline processing
+  - Memory<T>
+  - Span<T>
+  - buffers"
+  - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116c08872385406224972e34feaddfe44122355e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130894"
 ---
+
 # <a name="memory--and-span-related-types"></a>Tipi correlati alla memoria e agli intervalli
 
 A partire da .NET Core 2.1, .NET include un numero di tipi correlati che rappresentano un'area contigua fortemente tipizzata di memoria arbitraria. Sono inclusi:
 
 - <xref:System.Span%601?displayProperty=nameWithType>, un tipo usato per accedere a un'area contigua di memoria. Un'istanza di <xref:System.Span%601> può essere supportata da una matrice di tipo `T`, una classe <xref:System.String>, un buffer allocato con [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) o un puntatore alla memoria non gestita. Poiché deve essere allocato nello stack, presenta alcune restrizioni. Un campo in una classe, ad esempio, non può essere di tipo <xref:System.Span%601> e l'intervallo non può essere usato nelle operazioni asincrone.
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithtype>, una versione non modificabile della struttura <xref:System.Span%601>.
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, una versione non modificabile della struttura <xref:System.Span%601>.
 
 - <xref:System.Memory%601?displayProperty=nameWithType>, un'area contigua della memoria allocata nell'heap gestito invece che nello stack. Un'istanza di <xref:System.Memory%601> può essere supportata da una matrice di tipo `T` o da una classe <xref:System.String>. Poiché può essere archiviato nell'heap gestito, <xref:System.Memory%601> non presenta nessuna delle limitazioni di <xref:System.Span%601>.
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithtype>, una versione non modificabile della struttura <xref:System.Memory%601>.
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, una versione non modificabile della struttura <xref:System.Memory%601>.
 
 - <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>, che alloca blocchi fortemente tipizzati di memoria da un pool di memoria a un proprietario. Le istanze di <xref:System.Buffers.IMemoryOwner%601> possono essere noleggiate dal pool chiamando <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> e restituite al pool chiamando <xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType>.
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, che rappresenta il proprietario di un blocco di memoria e controlla la gestione della durata. 
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>, che rappresenta il proprietario di un blocco di memoria e controlla la gestione della durata.
 
 - <xref:System.Buffers.MemoryManager%601>, una classe di base astratta che può essere usata per sostituire l'implementazione di <xref:System.Memory%601> in modo che <xref:System.Memory%601> possa essere supportato da altri tipi, ad esempio handle sicuri. <xref:System.Buffers.MemoryManager%601> è destinato a scenari avanzati.
 
