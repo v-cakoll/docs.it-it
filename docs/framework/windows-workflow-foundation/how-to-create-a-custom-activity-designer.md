@@ -2,12 +2,12 @@
 title: 'Procedura: Creare un ActivityDesigner personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466882"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716829"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 
@@ -21,9 +21,9 @@ L'altro aspetto principale che è opportuno evidenziare nell'implementazione di 
 
 In questo argomento vengono delineate due procedure.
 
-1. Nella prima viene descritto come creare un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter> che fornisce l'area di rilascio che riceve altre attività. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) esempio.
+1. Nella prima viene descritto come creare un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemPresenter> che fornisce l'area di rilascio che riceve altre attività. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](./samples/custom-composite-designers-workflow-item-presenter.md) esempio.
 
-2. Nella seconda viene descritto come creare un ActivityDesigner personalizzato con un <xref:System.Activities.Presentation.WorkflowItemsPresenter> che fornisce la funzionalità necessaria per modificare una raccolta di elementi contenuti. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) esempio.
+2. Nella seconda viene descritto come creare un ActivityDesigner personalizzato con un <xref:System.Activities.Presentation.WorkflowItemsPresenter> che fornisce la funzionalità necessaria per modificare una raccolta di elementi contenuti. Questa procedura si basa sul [finestre di progettazione Composite personalizzate - relatore di elementi del flusso di lavoro](./samples/custom-composite-designers-workflow-items-presenter.md) esempio.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Per creare un ActivityDesigner personalizzato con un'area di rilascio usando WorkflowItemPresenter
 
@@ -350,4 +350,4 @@ In questo argomento vengono delineate due procedure.
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [Personalizzazione della fase di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Personalizzazione della fase di progettazione del flusso di lavoro](customizing-the-workflow-design-experience.md)

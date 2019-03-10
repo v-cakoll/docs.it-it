@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591587"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724570"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipi di colonna nel controllo DataGridView di Windows Form
 Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di colonna per visualizzare le informazioni e consentire agli utenti di modificare o aggiungere informazioni.  
@@ -30,7 +30,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di c
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|Consente di visualizzare i pulsanti in celle. Generato automaticamente durante l'associazione. In genere utilizzate come colonne non associate.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Consente di visualizzare gli elenchi a discesa nelle celle. Generato automaticamente durante l'associazione. In genere associato a dati manualmente.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|Consente di visualizzare i collegamenti nelle celle. Generato automaticamente durante l'associazione. In genere associato a dati manualmente.|  
-|Il tipo di colonna personalizzato|È possibile creare la propria classe di colonna tramite l'eredità di <xref:System.Windows.Forms.DataGridViewColumn> classe o una qualsiasi delle relative classi derivate per fornire un aspetto personalizzato, il comportamento o controlli ospitati. Per altre informazioni, vedere [Procedura: Personalizzare celle e colonne nel controllo DataGridView Windows Form estendendone il comportamento e aspetto](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|Il tipo di colonna personalizzato|È possibile creare la propria classe di colonna tramite l'eredità di <xref:System.Windows.Forms.DataGridViewColumn> classe o una qualsiasi delle relative classi derivate per fornire un aspetto personalizzato, il comportamento o controlli ospitati. Per altre informazioni, vedere [Procedura: Personalizzare celle e colonne nel controllo DataGridView Windows Form estendendone il comportamento e aspetto](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  Questi tipi di colonna sono descritti più dettagliatamente nelle sezioni seguenti.  
   
@@ -65,7 +65,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di c
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  Con la <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, è possibile visualizzare una colonna di celle che contengono le caselle di riepilogo a discesa. Ciò è utile per l'immissione di dati nei campi che possono includere solo particolari valori, ad esempio la colonna categoria della tabella Products nel database di esempio Northwind.  
   
- È possibile popolare l'elenco di riepilogo a discesa usato per tutte le celle nello stesso modo, potrebbe popolare un <xref:System.Windows.Forms.ComboBox> elenco a discesa, sia manualmente tramite la raccolta restituita dal <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> proprietà, o mediante l'associazione a un'origine dati mediante il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, e <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> proprietà. Per altre informazioni, vedere [controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ È possibile popolare l'elenco di riepilogo a discesa usato per tutte le celle nello stesso modo, potrebbe popolare un <xref:System.Windows.Forms.ComboBox> elenco a discesa, sia manualmente tramite la raccolta restituita dal <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> proprietà, o mediante l'associazione a un'origine dati mediante il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, e <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> proprietà. Per altre informazioni, vedere [controllo ComboBox](combobox-control-windows-forms.md).  
   
  È possibile associare i valori di cella effettivo per l'origine dati usata per il <xref:System.Windows.Forms.DataGridView> controllo impostando il <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> proprietà del <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
@@ -89,7 +89,7 @@ Il <xref:System.Windows.Forms.DataGridView> controllo utilizza diversi tipi di c
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Procedura: Visualizzare immagini in celle del controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Procedura: Usare le colonne di immagini nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Personalizzazione del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [Controllo DataGridView](datagridview-control-windows-forms.md)
+- [Procedura: Visualizzare immagini in celle del controllo DataGridView Windows Form](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Procedura: Usare le colonne di immagini nel controllo DataGridView Windows Form](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Personalizzazione del controllo DataGridView di Windows Form](customizing-the-windows-forms-datagridview-control.md)

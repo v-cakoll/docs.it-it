@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615050"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717856"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form
 <xref:System.Windows.Forms.DataGridView> le colonne sono disponibili tre modalità di ordinamento. La modalità di ordinamento per ogni colonna viene specificata tramite il <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> proprietà della colonna, che può essere impostata su uno dei seguenti <xref:System.Windows.Forms.DataGridViewColumnSortMode> valori di enumerazione.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615050"
   
  Quando un <xref:System.Windows.Forms.DataGridView> è ordinato, è possibile determinare sia la colonna di ordinamento e l'ordinamento, controllare i valori del <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> e <xref:System.Windows.Forms.DataGridView.SortOrder%2A> proprietà. Questi valori non sono significativi dopo un'operazione di ordinamento personalizzata. Per ulteriori informazioni sull'ordinamento personalizzati, vedere la sezione l'ordinamento personalizzato più avanti in questo argomento.  
   
- Quando un <xref:System.Windows.Forms.DataGridView> controllo che contiene le colonne associate e non è ordinato, i valori nelle colonne non associate non è possibile gestire automaticamente. Per mantenere questi valori, è necessario implementare modalità virtuale impostando il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e la gestione di <xref:System.Windows.Forms.DataGridView.CellValueNeeded> e <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventi. Per altre informazioni, vedere [Procedura: Implementare la modalità virtuale nel Windows Form controllo DataGridView](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Ordinamento in base a colonne non associate in modalità di associazione non è supportato.  
+ Quando un <xref:System.Windows.Forms.DataGridView> controllo che contiene le colonne associate e non è ordinato, i valori nelle colonne non associate non è possibile gestire automaticamente. Per mantenere questi valori, è necessario implementare modalità virtuale impostando il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e la gestione di <xref:System.Windows.Forms.DataGridView.CellValueNeeded> e <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventi. Per altre informazioni, vedere [Procedura: Implementare la modalità virtuale nel Windows Form controllo DataGridView](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Ordinamento in base a colonne non associate in modalità di associazione non è supportato.  
   
 ## <a name="programmatic-sorting"></a>Ordinamento a livello di codice  
  È possibile ordinare un <xref:System.Windows.Forms.DataGridView> a livello di programmazione chiamando relativo <xref:System.Windows.Forms.DataGridView.Sort%2A> (metodo).  
@@ -65,6 +65,6 @@ ms.locfileid: "54615050"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Ordinamento di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare la modalità di ordinamento delle colonne nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Procedura: Personalizzare l'ordinamento nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Ordinamento di dati nel controllo DataGridView di Windows Form](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare la modalità di ordinamento delle colonne nel controllo DataGridView Windows Form](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Procedura: Personalizzare l'ordinamento nel controllo DataGridView Windows Form](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

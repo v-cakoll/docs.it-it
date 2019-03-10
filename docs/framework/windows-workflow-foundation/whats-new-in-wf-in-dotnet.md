@@ -2,16 +2,16 @@
 title: Novità in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212404"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718922"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novità in Windows Workflow Foundation in .NET 4.5
 
-Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduce molte nuove funzionalità, come nuove attività, funzionalità di progettazione e modelli di sviluppo del flusso di lavoro. Molte, ma non tutte, le nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità supportate, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Per altre informazioni sulla migrazione delle applicazioni del flusso di lavoro .NET 3.0 e .NET 3.5 per usare la versione più recente, vedere [materiale sussidiario di migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduce molte nuove funzionalità, come nuove attività, funzionalità di progettazione e modelli di sviluppo del flusso di lavoro. Molte, ma non tutte, le nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità supportate, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](wf-features-in-the-rehosted-workflow-designer.md). Per altre informazioni sulla migrazione delle applicazioni del flusso di lavoro .NET 3.0 e .NET 3.5 per usare la versione più recente, vedere [materiale sussidiario di migrazione](migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
 > [!WARNING]
 > Le nuove funzionalità di Windows Workflow Foundation introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono disponibili per i progetti destinati a versioni precedenti del framework. Se un progetto destinato a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] viene reindirizzato a una versione precedente del framework, si possono verificare diversi problemi.
@@ -25,13 +25,13 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
 In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono state introdotte numerose nuove funzionalità di controllo delle versioni basate sulla nuova classe <xref:System.Activities.WorkflowIdentity>. La classe <xref:System.Activities.WorkflowIdentity> fornisce agli autori dell'applicazione flusso di lavoro un meccanismo per eseguire il mapping di un'istanza del flusso di lavoro persistente con la relativa definizione.
 
-- Gli sviluppatori che usano l'hosting di <xref:System.Activities.WorkflowApplication> possono usare la classe <xref:System.Activities.WorkflowIdentity> per consentire l'hosting side-by-side di più versioni di un flusso di lavoro. Le istanze del flusso di lavoro persistenti possono essere caricate usando la nuova classe <xref:System.Activities.WorkflowApplicationInstance>. Successivamente, <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> può essere usato dall'host per fornire la versione corretta della definizione del flusso di lavoro durante la creazione di istanze di <xref:System.Activities.WorkflowApplication>. Per altre informazioni, vedere [uso di WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) e [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Gli sviluppatori che usano l'hosting di <xref:System.Activities.WorkflowApplication> possono usare la classe <xref:System.Activities.WorkflowIdentity> per consentire l'hosting side-by-side di più versioni di un flusso di lavoro. Le istanze del flusso di lavoro persistenti possono essere caricate usando la nuova classe <xref:System.Activities.WorkflowApplicationInstance>. Successivamente, <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> può essere usato dall'host per fornire la versione corretta della definizione del flusso di lavoro durante la creazione di istanze di <xref:System.Activities.WorkflowApplication>. Per altre informazioni, vedere [uso di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md) e [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- L'oggetto <xref:System.ServiceModel.WorkflowServiceHost> è ora un host multiversione. Quando viene distribuita una nuova versione di un servizio del flusso di lavoro, vengono create nuove istanze usando il nuovo servizio, mentre le istanze esistenti vengono completate con la versione precedente. Per altre informazioni, vedere [Side-by-Side più versioni in WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- L'oggetto <xref:System.ServiceModel.WorkflowServiceHost> è ora un host multiversione. Quando viene distribuita una nuova versione di un servizio del flusso di lavoro, vengono create nuove istanze usando il nuovo servizio, mentre le istanze esistenti vengono completate con la versione precedente. Per altre informazioni, vedere [Side-by-Side più versioni in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Viene introdotto l'aggiornamento dinamico che fornisce un meccanismo per aggiornare la definizione di un'istanza del flusso di lavoro persistente. Per altre informazioni, vedere [aggiornamento dinamico](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) e [come: Aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Viene introdotto l'aggiornamento dinamico che fornisce un meccanismo per aggiornare la definizione di un'istanza del flusso di lavoro persistente. Per altre informazioni, vedere [aggiornamento dinamico](dynamic-update.md) e [come: Aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Uno script del database SqlWorkflowInstanceStoreSchemaUpgrade.sql viene fornito per aggiornare i database di persistenza creati mediante gli script del database di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Questo script aggiorna i database di persistenza di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] per supportare nuove funzionalità di controllo delle versioni introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Le istanze persistenti del flusso di lavoro nel database sono valori predefiniti specificati per il controllo delle versioni e possono partecipare all'esecuzione side-by-side e all'aggiornamento dinamico. Per altre informazioni, vedere [l'aggiornamento di .NET Framework 4 i database di persistenza al controllo delle versioni del flusso di lavoro di supporto](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Uno script del database SqlWorkflowInstanceStoreSchemaUpgrade.sql viene fornito per aggiornare i database di persistenza creati mediante gli script del database di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Questo script aggiorna i database di persistenza di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] per supportare nuove funzionalità di controllo delle versioni introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Le istanze persistenti del flusso di lavoro nel database sono valori predefiniti specificati per il controllo delle versioni e possono partecipare all'esecuzione side-by-side e all'aggiornamento dinamico. Per altre informazioni, vedere [l'aggiornamento di .NET Framework 4 i database di persistenza al controllo delle versioni del flusso di lavoro di supporto](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Attività
 
@@ -72,7 +72,7 @@ I flussi di lavoro in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.
 
      Se le eccezioni non devono essere serializzate, assicurarsi che le eccezioni vengano usate all'interno di <xref:System.Activities.Statements.NoPersistScope>.
 
-4. Gli autori di attività devono eseguire l'override <xref:System.Activities.Activity.CacheMetadata%2A> per evitare che il runtime del flusso di lavoro esegua automaticamente la reflection per questo tipo. Gli argomenti e le attività figlio devono essere non Null e <xref:System.Activities.ActivityMetadata.Bind%2A> deve essere chiamato in modo esplicito. Per altre informazioni sull'override <xref:System.Activities.Activity.CacheMetadata%2A>, vedere [esposizione dei dati con CacheMetadata](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md). Inoltre, le istanze di argomenti che sono di un tipo che è `internal` oppure **privati** devono essere esplicitamente create <xref:System.Activities.Activity.CacheMetadata%2A> per evitare di essere create dalla reflection.
+4. Gli autori di attività devono eseguire l'override <xref:System.Activities.Activity.CacheMetadata%2A> per evitare che il runtime del flusso di lavoro esegua automaticamente la reflection per questo tipo. Gli argomenti e le attività figlio devono essere non Null e <xref:System.Activities.ActivityMetadata.Bind%2A> deve essere chiamato in modo esplicito. Per altre informazioni sull'override <xref:System.Activities.Activity.CacheMetadata%2A>, vedere [esposizione dei dati con CacheMetadata](exposing-data-with-cachemetadata.md). Inoltre, le istanze di argomenti che sono di un tipo che è `internal` oppure **privati** devono essere esplicitamente create <xref:System.Activities.Activity.CacheMetadata%2A> per evitare di essere create dalla reflection.
 
 5. I tipi non utilizzeranno <xref:System.Runtime.Serialization.ISerializable> o <xref:System.SerializableAttribute> per la serializzazione; i tipi che devono essere serializzati devono supportare <xref:System.Runtime.Serialization.DataContractSerializer>.
 
@@ -118,7 +118,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le variabili
 
 Nella schermata seguente è illustrato il menu di scelta rapida della finestra di progettazione delle variabili e degli argomenti.
 
-![Variabili e menu di scelta rapida della finestra di progettazione argomenti](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![Variabili e menu di scelta rapida della finestra di progettazione argomenti](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> Auto-surround con sequenza
 
@@ -126,11 +126,11 @@ Poiché un flusso di lavoro o determinate attività contenitore (ad esempio <xre
 
 La schermata riportata di seguito mostra un'attività di `WriteLine` in `Body` di `NoPersistScope`.
 
-![Automatico&#45;racchiudere il percorso di rilascio](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![Automatico&#45;racchiudere il percorso di rilascio](./media/autosurround1.png "AutoSurround1")
 
 La schermata riportata di seguito mostra l'attività automaticamente creata di `Sequence` in `Body` quando un secondo `WriteLine` viene rilasciato sotto il primo.
 
-![Attività sequence creata automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![Attività sequence creata automaticamente](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> Modalità dettaglio
 
@@ -138,7 +138,7 @@ Per spostarsi più facilmente in un flusso di lavoro di grandi dimensioni nella 
 
 Nella schermata seguente viene illustrato il pulsante della modalità dettaglio posizionato nell'angolo inferiore destro della finestra di progettazione del flusso di lavoro.
 
-![Pulsante mano nella finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![Pulsante mano nella finestra di progettazione del flusso di lavoro](./media/panbutton.png "PanButton")
 
 Per ottenere il dettaglio della finestra di progettazione del flusso di lavoro è anche possibile usare il pulsante centrale del mouse o la barra spaziatrice.
 
@@ -152,9 +152,9 @@ Le selezioni di più attività possono anche essere trascinate e rilasciate all'
 
 Per consentire uno spostamento più semplice nei flussi di lavoro gerarchici, i componenti di un flusso di lavoro vengono visualizzati in una visualizzazione ad albero. Visualizzazione della struttura viene visualizzata nei **struttura documento** visualizzazione. Per aprire questa visualizzazione, nel menu principale, selezionare **View**, **Other Windows**, **struttura documento**, oppure premere Ctrl W, U. Facendo clic su un nodo nella visualizzazione Struttura verrà visualizzata l'attività corrispondente nella finestra di progettazione del flusso di lavoro e la visualizzazione Struttura verrà aggiornata in modo da mostrare le attività selezionate nella finestra di progettazione.
 
-Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.
+Lo screenshot seguente del flusso di lavoro completata dal [esercitazione introduttiva su](getting-started-tutorial.md) Mostra la visualizzazione struttura con un flusso di lavoro sequenza.
 
-![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Visualizzazione nella finestra di progettazione del flusso di lavoro struttura](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> Espressioni c#
 
@@ -162,7 +162,7 @@ In precedenza a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutte le e
 
 Le espressioni C# vengono convalidate in fase di progettazione. Gli errori nelle espressioni C# verranno contrassegnati con una sottolineatura ondulata rossa.
 
-Per altre informazioni sulle espressioni di c#, vedere [espressioni c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).
+Per altre informazioni sulle espressioni di c#, vedere [espressioni c#](csharp-expressions.md).
 
 ### <a name="BKMK_Visibility"></a> Maggiore controllo della visibilità della barra della shell e intestazione elementi
 
@@ -174,17 +174,17 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] le connessio
 
 Nella schermata seguente vengono illustrati i punti di associazione che diventano visibili quando un'attività viene trascinata dalla casella degli strumenti.
 
-![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![Nodo iniziale del diagramma di flusso che illustra i punti di connessione automatica](./media/autoconnect1.png "Autoconnect1")
 
 Le attività possono anche essere trascinate nelle connessioni tra i nodi e gli stati del diagramma di flusso per inserire automaticamente un nodo tra altri due. Nella schermata seguente viene illustrata la linea di connessione evidenziata in cui è possibile trascinare e rilasciare le attività dalla casella degli strumenti.
 
-![Automatico&#45;inserire handle per l'eliminazione di attività](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+![Automatico&#45;inserire handle per l'eliminazione di attività](./media/autoinsert.png "Autoinsert")
 
 ### <a name="BKMK_Annotations"></a> Annotazioni della finestra di progettazione
 
 Per semplificare lo sviluppo di flussi di lavoro di grandi dimensioni, la finestra di progettazione supporta ora l'aggiunta di annotazioni per consentire di tenere traccia del processo di progettazione. Le annotazioni possono essere aggiunte ad attività, stati, nodi del diagramma di flusso, variabili e argomenti. Nella schermata seguente è illustrato il menu di scelta rapida usato per aggiungere annotazioni alla finestra di progettazione.
 
-![Menu di scelta rapida annotazione](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![Menu di scelta rapida annotazione](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>Stati di debug
 
@@ -230,12 +230,12 @@ I flussi di lavoro macchina a stati sono stati introdotti come parte di .NET Fra
 
 4. Attività usate per creare i flussi di lavoro macchina a stati, incluse <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>
 
-Lo screenshot seguente illustra il flusso di lavoro alla macchina sullo stato completato il [esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) passaggio [come: Creare un flusso di lavoro macchina a stati](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).
+Lo screenshot seguente illustra il flusso di lavoro alla macchina sullo stato completato il [esercitazione introduttiva](getting-started-tutorial.md) passaggio [come: Creare un flusso di lavoro macchina a stati](how-to-create-a-state-machine-workflow.md).
 
-![Flusso di lavoro macchina a stati completo](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Flusso di lavoro macchina a stati completo](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-Per altre informazioni sulla creazione di flussi, vedere [flussi](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).
+Per altre informazioni sulla creazione di flussi, vedere [flussi](state-machine-workflows.md).
 
 ### <a name="BKMK_ContractFirst"></a> Sviluppo di flussi di lavoro del contratto
 
-Lo strumento di sviluppo di flussi di lavoro contratto consente allo sviluppatore di progettare un contratto in code prima di tutto, quindi, con pochi clic in Visual Studio, generare automaticamente un modello di attività nella casella degli strumenti che rappresenta ogni operazione. Queste attività vengono quindi usate per creare un flusso di lavoro che implementa le operazioni definite dal contratto. La finestra di progettazione del flusso di lavoro convaliderà il servizio di quest'ultimo per garantire che queste operazioni vengano implementate e che la firma del flusso di lavoro corrisponda a quella del contratto. Lo sviluppatore può inoltre associare un servizio del flusso di lavoro a una raccolta di contratti implementati. Per altre informazioni sullo sviluppo di flussi di lavoro contratto di servizio, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+Lo strumento di sviluppo di flussi di lavoro contratto consente allo sviluppatore di progettare un contratto in code prima di tutto, quindi, con pochi clic in Visual Studio, generare automaticamente un modello di attività nella casella degli strumenti che rappresenta ogni operazione. Queste attività vengono quindi usate per creare un flusso di lavoro che implementa le operazioni definite dal contratto. La finestra di progettazione del flusso di lavoro convaliderà il servizio di quest'ultimo per garantire che queste operazioni vengano implementate e che la firma del flusso di lavoro corrisponda a quella del contratto. Lo sviluppatore può inoltre associare un servizio del flusso di lavoro a una raccolta di contratti implementati. Per altre informazioni sullo sviluppo di flussi di lavoro contratto di servizio, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

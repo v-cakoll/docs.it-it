@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645483"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718025"
 ---
 # <a name="how-keyboard-input-works"></a>Funzionamento dell'input da tastiera
-Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md).  
+Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Tipi di tasti  
  Windows Forms identifica gli input da tastiera come codici di tasti virtuali rappresentati dai bit per bit <xref:System.Windows.Forms.Keys> enumerazione. Con la <xref:System.Windows.Forms.Keys> enumerazione, è possibile combinare una serie di tasti premuti in un singolo valore. Questi valori corrispondono ai valori che accompagnano i messaggi di Windows WM_KEYDOWN e WM_SYSKEYDOWN. È possibile rilevare pressioni di tasti più fisiche gestendo il <xref:System.Windows.Forms.Control.KeyDown> o <xref:System.Windows.Forms.Control.KeyUp> gli eventi. I tasti carattere sono un sottoinsieme del <xref:System.Windows.Forms.Keys> enumerazione e corrispondono ai valori che accompagnano i messaggi WM_CHAR e WM_SYSCHAR Windows. Se la combinazione di tasti premuti genera un carattere, è possibile rilevare il carattere gestendo il <xref:System.Windows.Forms.Control.KeyPress> evento. In alternativa, è possibile usare <xref:Microsoft.VisualBasic.Devices.Keyboard>, esposta dall'interfaccia di programmazione Visual Basic, per individuare i tasti premuti e inviare le chiavi. Per altre informazioni, vedere [Accesso alla tastiera](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ Windows Forms elabora gli input della tastiera generando eventi di tastiera in r
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [Oggetto My.Computer.Keyboard](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Accesso alla tastiera](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Utilizzo degli eventi di tastiera](using-keyboard-events.md)

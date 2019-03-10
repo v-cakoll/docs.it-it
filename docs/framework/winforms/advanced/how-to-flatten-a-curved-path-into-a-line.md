@@ -8,17 +8,17 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: aa47a655417cdf82d79fb222dc6ff6f6d8c3a947
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4847124c7af2e0b35d6874f53b85be4891b22df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601818"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711044"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Procedura: Trasformare un percorso curvo in una riga
 Oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto archivia una sequenza di spline di Bézier e righe. È possibile aggiungere diversi tipi di curve (puntini di sospensione, archi e spline cardinali) in un percorso, ma ogni curva viene convertito in una spline di Bézier prima di essere archiviato nel percorso. Rendere flat un percorso è costituito ogni spline di Bézier nel percorso di conversione in una sequenza di linee rette. Nella figura seguente mostra un percorso di prima e dopo l'appiattimento.  
   
- ![Linee rette e curve](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
+ ![Linee rette e curve](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
   
 ### <a name="to-flatten-a-path"></a>Per trasformare un percorso  
   
@@ -26,5 +26,5 @@ Oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto archivia una sequen
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
-- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Costruzione e creazione di percorsi](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Linee, curve e forme](lines-curves-and-shapes.md)
+- [Costruzione e creazione di percorsi](constructing-and-drawing-paths.md)

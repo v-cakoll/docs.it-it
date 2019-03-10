@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610981"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710095"
 ---
 # <a name="webbrowser-control-overview"></a>Cenni preliminari sul controllo WebBrowser
 Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito per il controllo WebBrowser ActiveX. Il wrapper gestito consente di visualizzare le pagine Web nelle applicazioni client Windows Form. È possibile usare il <xref:System.Windows.Forms.WebBrowser> controllo per duplicare funzionalità del browser Web Internet Explorer nell'applicazione oppure è possibile disabilitare la funzionalità predefinite di Internet Explorer e usare il controllo come visualizzatore di documenti HTML semplice. È anche possibile usare il controllo da aggiungere al form di elementi dell'interfaccia utente basati su DHTML e nascondere il fatto che sono ospitati nel <xref:System.Windows.Forms.WebBrowser> controllo. Questo approccio consente di combinare senza problemi i controlli con i controlli Windows Form in una singola applicazione Web.  
@@ -52,9 +52,9 @@ Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito 
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Procedura: Passare a un URL con il controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Procedura: Stampa con un controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [Procedura: Aggiungere funzionalità del Browser Web a un'applicazione di Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Procedura: Implementare comunicazioni bidirezionali tra codice DHTML e il codice dell'applicazione Client](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [Sicurezza dei controlli WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [Procedura: Passare a un URL con il controllo WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Procedura: Stampa con un controllo WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Procedura: Aggiungere funzionalità del Browser Web a un'applicazione di Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Procedura: Implementare comunicazioni bidirezionali tra codice DHTML e il codice dell'applicazione Client](implement-two-way-com-between-dhtml-and-client.md)
+- [Sicurezza dei controlli WebBrowser](webbrowser-security.md)

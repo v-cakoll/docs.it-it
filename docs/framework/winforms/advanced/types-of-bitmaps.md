@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674768"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713215"
 ---
 # <a name="types-of-bitmaps"></a>Tipi di bitmap
 Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit destinati a un singolo pixel determina il numero di colori che possono essere assegnati a tale pixel. Ad esempio, se ogni pixel è rappresentato da 4 bit, quindi un pixel specifico può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). Nella tabella seguente vengono illustrati alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un determinato numero di bit.  
@@ -41,7 +41,7 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
   
  I file di disco che archiviano le bitmap in genere contengono uno o più blocchi di informazioni che archiviano informazioni quali il numero di bit per pixel, numero di pixel in ogni riga e numero di righe nella matrice. Questo file potrebbe contenere anche una tabella di colore (operazione talvolta denominata una tavolozza dei colori). Una tabella dei colori mappa numeri nella bitmap a colori specifici. La figura seguente mostra un'immagine ingrandita insieme alla relativa tabella di mappa di bit e il colore. Ogni pixel è rappresentato da un numero di bit 4, pertanto vi sono 2 ^ 4 = 16 colori nella tabella dei colori. Ogni colore nella tabella è rappresentato da un numero di 24 bit: 8 bit per il rosso, 8 bit per il verde e 8 bit per il blu. I numeri vengono visualizzati in formato esadecimale (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Bitmap sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![Bitmap sample](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  Esaminare il pixel nella riga 3 della colonna 5 dell'immagine. Il numero corrispondente nella bitmap è 1. La tabella dei colori indica che 1 rappresenta il colore rosso in modo che il pixel è rosso. Tutte le voci di riga superiore della mappa di bit sono 3. La tabella dei colori per indicare che 3 rappresenta il blu, in modo che tutti i pixel nella riga superiore dell'immagine sono blu.  
   
@@ -50,7 +50,7 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
   
  Bitmap che archivia gli indici in una tabella dei colori viene chiamata una bitmap con tavolozza-indicizzate. Abbiamo delle bitmap non necessario per una tabella dei colori. Ad esempio, se una bitmap Usa 24 bit per pixel, quella bitmap può archiviare gli stessi colori anziché gli indici in una tabella dei colori. La figura seguente mostra una bitmap che archivia direttamente i colori (24 bit per pixel) invece di usare una tabella dei colori. L'illustrazione mostra anche un ingrandimento dell'immagine corrispondente. Nella mappa di bit, FFFFFF rappresenta white FF0000 rappresenta il rosso, 00FF00 rappresenta il colore verde e 0000FF rappresenta blu.  
   
- ![Bitmap sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![Bitmap sample](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formati di File grafici  
  Esistono numerosi formati standard per il salvataggio di bitmap in file di disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] supporta i file grafici formati descritti nei paragrafi seguenti.  
@@ -66,11 +66,11 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
   
  Il livello di compressione di immagini JPEG è configurabile, ma i livelli di compressione superiori (file più piccoli) causa la perdita più informazioni. Spesso, un rapporto di 20:1 compressione produce un'immagine che occhio umano ma consente di trovare facilmente distinguibili dai originale. La figura seguente mostra un'immagine BMP e due immagini JPEG che sono stati compressi da tale immagine BMP. La prima immagine JPEG è un rapporto di compressione di 4:1 e la seconda immagine JPEG è un rapporto di compressione di 8:1 circa.  
   
- ![Esempi di FileType](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Esempi di FileType](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  Compressione JPEG non funziona anche per disegni di riga, i blocchi di colore a tinta unita e ben strutturata dei limiti. La figura seguente mostra un'immagine BMP con due immagini JPEG e GIF. Le immagini JPEG e GIF sono stati compressi dal BMP. Il rapporto di compressione è 4:1 per il GIF, 4:1 per il più piccolo JPEG e 8:3 per JPEG di dimensioni maggiori. Si noti che il GIF mantiene i limiti sharp lungo le righe, ma le immagini JPEG tendono a sfocare i limiti.  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  Il formato JPEG è uno schema di compressione, non un formato di file. File JFIF JPEG Interchange Format () è un formato file comunemente usato per l'archiviazione e trasferimento di immagini che sono state compresse secondo schema JPEG. File JFIF visualizzati dai Web browser usano l'estensione jpg.  
   
@@ -89,5 +89,5 @@ Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una ma
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
+- [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

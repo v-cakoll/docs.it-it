@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260164"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715555"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Effetti della modifica dell'aspetto di un form di base
 Durante lo sviluppo di applicazioni, spesso potrebbe essere necessario modificare l'aspetto del form di base da cui ereditano altri form nel progetto (o in altri progetti).  
@@ -27,5 +27,5 @@ Durante lo sviluppo di applicazioni, spesso potrebbe essere necessario modificar
   
 ## <a name="see-also"></a>Vedere anche
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Procedura: Ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md)
+- [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)

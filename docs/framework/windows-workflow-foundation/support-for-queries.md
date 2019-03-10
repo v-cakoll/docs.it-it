@@ -2,12 +2,12 @@
 title: Supporto per le query
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517991"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712008"
 ---
 # <a name="support-for-queries"></a>Supporto per le query
 L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà note nell'archivio. Gli utenti possono eseguire query per le istanze basate su queste proprietà. Nell'elenco seguente sono contenute alcune di queste proprietà note:  
@@ -29,12 +29,12 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
 > [!NOTE]
 >  Per gli scenari indipendenti che usano l'host del servizio del flusso di lavoro vengono popolate solo le ultime quattro proprietà. Per gli scenari dell'applicazione flusso di lavoro, viene popolata solo l'ultima proprietà.  
   
- L'esecuzione del flusso di lavoro fornisce valori per le prime tre proprietà. L'host del servizio del flusso di lavoro fornisce il valore per il **Suspend Reason** proprietà. L'archivio di istanze del flusso di lavoro SQL stesso fornisce valori per il **Last Updated Machine** proprietà.  
+ L'esecuzione del flusso di lavoro fornisce valori per le prime tre proprietà. L'host del servizio del flusso di lavoro fornisce il valore per il **Suspend Reason** proprietà. La Store di istanza del flusso di lavoro SQL stesso fornisce valori per il **Last Updated Machine** proprietà.  
   
- La funzionalità di archivio di istanze del flusso di lavoro SQL consente anche di specificare le proprietà personalizzate per cui si desidera archiviare i valori nel database di persistenza e che si desidera usare nelle query. Per ulteriori informazioni sulle promozioni personalizzate, vedere [archivio Extensibility](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
+ La funzionalità di archivio di istanze del flusso di lavoro SQL consente anche di specificare le proprietà personalizzate per cui si desidera archiviare i valori nel database di persistenza e che si desidera usare nelle query. Per altre informazioni sulle promozioni personalizzate, vedere [Store estendibilità](store-extensibility.md).  
   
 ## <a name="views"></a>Visualizzazioni  
- L'archivio di istanze contiene le visualizzazioni seguenti. Vedere [dello Schema di Database di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) per altri dettagli.  
+ L'archivio di istanze contiene le visualizzazioni seguenti. Visualizzare [Schema di Database di persistenza](persistence-database-schema.md) per altri dettagli.  
   
 ### <a name="the-instances-view"></a>Visualizzazione Instances  
  La visualizzazione Instances contiene i campi seguenti:  
@@ -57,9 +57,9 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
   
 9. **CurrentMachine**  
   
-10. **Last Machine.**  
+10. **LastMachine**  
   
-11. **ExecutionStatus nel gruppo**  
+11. **ExecutionStatus**  
   
 12. **IsInitialized**  
   
@@ -91,12 +91,12 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
 5.  **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
- La visualizzazione InstancePromotedProperties contiene i campi seguenti. Per informazioni dettagliate su proprietà innalzate di livello, vedere il [archivio estendibilità](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) argomento.  
+ La visualizzazione InstancePromotedProperties contiene i campi seguenti. Per informazioni dettagliate sulle proprietà innalzate di livello, vedere la [Store estendibilità](store-extensibility.md) argomento.  
   
-1.  **instanceId**  
+1.  **InstanceId**  
   
 2.  **EncodingOption**  
   
 3.  **PromotionName**  
   
-4.  **Valore #** (un intervallo di campi da **Value1** a **Value64**).
+4.  **Valore #** (un intervallo di campi da **Value1** al **Value64**).

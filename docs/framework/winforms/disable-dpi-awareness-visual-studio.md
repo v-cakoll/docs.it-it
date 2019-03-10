@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655998"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710537"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
@@ -21,11 +21,11 @@ Visual Studio è un punti per pollice (DPI) compatibile con applicazioni, ovvero
 
 Il **finestra di progettazione Windows Form** in Visual Studio non dispone di supporto del ridimensionamento. Questo causa problemi di visualizzazione quando si aprono alcuni moduli i **finestra di progettazione Windows Form** in punti per pollice (HDPI) monitoraggi. Per esempi, i controlli possono essere visualizzati a sovrapporsi come illustrato nell'immagine seguente:
 
-![Progettazione di form di Windows sul monitor HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Progettazione di form di Windows sul monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 In Visual Studio 2017 versione 15,8 e versioni successive, quando si apre un modulo nel **finestra di progettazione Windows Form** su un monitor HDPI, Visual Studio visualizza un informativo barra gialla nella parte superiore della finestra di progettazione:
 
-![Barra informativa di Visual Studio per riavviare in modalità non compatibili con DPI](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Barra informativa di Visual Studio per riavviare in modalità non compatibili con DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Legge il messaggio **ridimensionamento dello schermo principale è impostato su 200% (192 dpi). Ciò potrebbe causare problemi di rendering nella finestra di progettazione.**
 
@@ -75,7 +75,7 @@ Impostazione dello schermo al 100% la scalabilità può essere inaccettabile, po
 
 Per disabilitare le notifiche, scegliere **degli strumenti** > **opzioni** per aprire la **opzioni** finestra di dialogo. Quindi, scegliere **finestra di progettazione Windows Form** > **generali**e impostare **le notifiche di ridimensionamento DPI** per **False**.
 
-![Opzione di notifiche di Ridimensionamento in Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Opzione di notifiche di Ridimensionamento in Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Se si desidera abilitare nuovamente in un secondo momento le notifiche di ridimensionamento, impostare la proprietà su **True**.
 

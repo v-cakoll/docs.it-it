@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4f4bcd06067775c6f43063ebe5682730deba1d4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498887"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710278"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro
 
@@ -31,7 +31,7 @@ Prima di usare tale funzionalità, creare un database usato dalla funzionalità 
 >
 > System.Data.SqlClient.SqlException: Impossibile trovare la stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'
 
-Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL. Per altre informazioni sulle proprietà di Store di istanza del flusso di lavoro di SQL, vedere [delle proprietà di SQL del flusso di lavoro istanza Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).
+Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL. Per altre informazioni sulle proprietà di Store di istanza del flusso di lavoro di SQL, vedere [delle proprietà di SQL del flusso di lavoro istanza Store](properties-of-sql-workflow-instance-store.md).
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Abilitazione della persistenza per i flussi di lavoro indipendenti che usano l'oggetto WorkflowApplication
 
@@ -72,7 +72,7 @@ Nelle sezioni seguenti viene descritto come abilitare la persistenza per i fluss
    ```
 
 > [!NOTE]
-> Vedere il [come: Creare ed eseguire un flusso di lavoro in esecuzione lunga](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) passaggio del [esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) per istruzioni dettagliate.
+> Vedere il [come: Creare ed eseguire un flusso di lavoro in esecuzione lunga](how-to-create-and-run-a-long-running-workflow.md) passaggio del [esercitazione introduttiva](getting-started-tutorial.md) per istruzioni dettagliate.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Abilitazione della persistenza per i servizi flussi di lavoro indipendenti che usano l'oggetto WorkflowServiceHost
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 È possibile abilitare la persistenza per i servizi flussi di lavori indipendenti oppure ospitati nel servizio WAS tramite un file di configurazione. Un servizio flusso di lavoro ospitato nel servizio WAS usa l'oggetto WorkflowServiceHost come servizi flussi di lavoro indipendenti.
 
-Il `SqlWorkflowInstanceStoreBehavior`, un comportamento del servizio che consente di modificare in modo semplice le [Store di istanza del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) proprietà tramite la configurazione XML. Per i servizi flussi di lavoro ospitati nel servizio WAS, usare il file Web.config. Nell'esempio di configurazione seguente viene mostrato come configurare l'archivio di istanze del flusso di lavoro SQL tramite l'elemento del comportamento `sqlWorkflowInstanceStore` in un file di configurazione.
+Il `SqlWorkflowInstanceStoreBehavior`, un comportamento del servizio che consente di modificare in modo semplice le [Store di istanza del flusso di lavoro SQL](sql-workflow-instance-store.md) proprietà tramite la configurazione XML. Per i servizi flussi di lavoro ospitati nel servizio WAS, usare il file Web.config. Nell'esempio di configurazione seguente viene mostrato come configurare l'archivio di istanze del flusso di lavoro SQL tramite l'elemento del comportamento `sqlWorkflowInstanceStore` in un file di configurazione.
 
 ```xml
 <serviceBehaviors>

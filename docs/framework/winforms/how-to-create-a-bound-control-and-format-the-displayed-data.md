@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689731"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710498"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: Creare un controllo con associazione e formattare i dati visualizzati
 Con data binding in Windows Form, è possibile formattare i dati visualizzati in un controllo con associazione a dati mediante la **formattazione e associazione avanzata** nella finestra di dialogo.  
@@ -23,11 +23,11 @@ Con data binding in Windows Form, è possibile formattare i dati visualizzati in
   
 1.  Effettuare una connessione a un'origine dati.  
   
-     Per altre informazioni, vedere [ci si connette a un'origine dati](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+     Per altre informazioni, vedere [ci si connette a un'origine dati](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  Nel form selezionare il controllo e aprire la finestra Proprietà.  
   
-3.  Espandere la **(DataBindings)** proprietà, quindi nella **(avanzate)** fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) per visualizzare il **formattazione e associazione avanzata** nella finestra di dialogo include un elenco completo delle proprietà per il controllo.  
+3.  Espandere la **(DataBindings)** proprietà, quindi nella **(avanzate)** fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](./media/vbellipsesbutton.png " vbEllipsesButton")) per visualizzare il **formattazione e associazione avanzata** nella finestra di dialogo include un elenco completo delle proprietà per il controllo.  
   
 4.  Selezionare la proprietà si desidera eseguire l'associazione e quindi scegliere il **Binding** freccia.  
   
@@ -50,11 +50,11 @@ Con data binding in Windows Form, è possibile formattare i dati visualizzati in
     |Valuta|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
     |Data/Ora|Selezionare la data e ora da visualizzare selezionando uno degli elementi nel **tipo** casella di selezione.|  
     |Scientifico|Specificare il numero di posizioni decimali utilizzando **decimali** controllo di scorrimento.|  
-    |Personalizzato|Specificare una stringa di formato personalizzata.<br /><br /> Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md). **Nota:**  Le stringhe di formato personalizzate non eseguono sempre correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per l'associazione e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
+    |Personalizzato|Specificare una stringa di formato personalizzata.<br /><br /> Per altre informazioni, vedere [Formattazione di tipi](../../standard/base-types/formatting-types.md). **Nota:**  Le stringhe di formato personalizzate non eseguono sempre correttamente il round trip tra l'origine dati e il controllo associato. Gestire invece l'evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> per l'associazione e applicare la formattazione personalizzata nel codice di gestione degli eventi.|  
   
 8.  Fare clic su **OK** per chiudere la **formattazione e associazione avanzata** nella finestra di dialogo e tornare alla finestra Proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Convalida dell'input utente in Windows Form](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
-- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Procedura: Creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Convalida dell'input utente in Windows Form](user-input-validation-in-windows-forms.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

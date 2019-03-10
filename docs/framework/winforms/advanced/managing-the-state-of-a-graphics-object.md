@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540858"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717622"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gestione dello stato di un oggetto Graphics
 Il <xref:System.Drawing.Graphics> classe è il fulcro di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Per disegnare qualsiasi elemento, per ottenere un <xref:System.Drawing.Graphics> dell'oggetto, impostarne le proprietà e chiamarne i metodi <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e così via).  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Trasformazioni  
- Oggetto <xref:System.Drawing.Graphics> oggetto mantiene due trasformazioni (pagina e world) che vengono applicate a tutti gli elementi disegnati da tale <xref:System.Drawing.Graphics> oggetto. Tutte le trasformazioni affini possono essere archiviate nella trasformazione globale. Trasformazioni affini includono scalabilità, ruotare, riflettere, inclinare e la conversione. La trasformazione della pagina utilizzabile per la scalabilità e per la modifica delle unità (ad esempio, in pixel su pollici). Per altre informazioni, vedere [sistemi di Coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Oggetto <xref:System.Drawing.Graphics> oggetto mantiene due trasformazioni (pagina e world) che vengono applicate a tutti gli elementi disegnati da tale <xref:System.Drawing.Graphics> oggetto. Tutte le trasformazioni affini possono essere archiviate nella trasformazione globale. Trasformazioni affini includono scalabilità, ruotare, riflettere, inclinare e la conversione. La trasformazione della pagina utilizzabile per la scalabilità e per la modifica delle unità (ad esempio, in pixel su pollici). Per altre informazioni, vedere [sistemi di Coordinate e trasformazioni](coordinate-systems-and-transformations.md).  
   
  L'esempio seguente imposta le trasformazioni globali e di pagina di un <xref:System.Drawing.Graphics> oggetto. La trasformazione globale è impostata su una rotazione di 30 gradi. La trasformazione della pagina viene impostata in modo che le coordinate passate al secondo <xref:System.Drawing.Graphics.DrawEllipse%2A> verrà considerata come millimetri invece di pixel. Il codice effettua due chiamate identiche al <xref:System.Drawing.Graphics.DrawEllipse%2A> (metodo). La trasformazione globale viene applicata al primo <xref:System.Drawing.Graphics.DrawEllipse%2A> chiamata ed entrambe le trasformazioni (pagina e world) vengono applicate al secondo <xref:System.Drawing.Graphics.DrawEllipse%2A> chiamare.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  La figura seguente mostra due ellissi. Si noti che la rotazione di 30 gradi intorno all'origine del sistema di coordinate (nell'angolo superiore sinistro dell'area client), non rispetto al centro dei puntini di sospensione. Si noti inoltre che la larghezza della penna di 1 significa 1 pixel per la prima ellisse e a 1 millimetro della seconda ellisse.  
   
- ![Ovals](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Ovals](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Area di ritaglio  
  Oggetto <xref:System.Drawing.Graphics> oggetto mantiene un'area di ridimensionamento che si applica a tutti gli elementi disegnati da tale <xref:System.Drawing.Graphics> oggetto. È possibile impostare l'area di visualizzazione chiamando il <xref:System.Drawing.Graphics.SetClip%2A> (metodo).  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  La figura seguente mostra le righe tagliate.  
   
- ![Area di ritaglio limitata](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Area di ritaglio limitata](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>Vedere anche
-- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Uso di contenitori di grafica annidati](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
+- [Uso di contenitori di grafica annidati](using-nested-graphics-containers.md)

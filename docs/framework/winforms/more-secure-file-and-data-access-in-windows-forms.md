@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664926"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724544"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
 
@@ -27,7 +27,7 @@ ms.locfileid: "56664926"
  Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
 > [!NOTE]
->  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si decide che si desidera che i vantaggi di sicurezza dell'esecuzione in attendibilità parziale, è necessario modificare questa impostazione predefinita in Visual Studio o uno del [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] strumenti (Mage.exe o MageUI.exe). Per altre informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [protezione in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si decide che si desidera che i vantaggi di sicurezza dell'esecuzione in attendibilità parziale, è necessario modificare questa impostazione predefinita in Visual Studio o uno del [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] strumenti (Mage.exe o MageUI.exe). Per altre informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [protezione in Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accesso ai file  
  La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  
@@ -137,7 +137,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  In Visual c#, assicurarsi di aggiungere codice per abilitare il gestore dell'evento. Usando il codice dell'esempio precedente, il seguente codice mostra come abilitare il gestore eventi.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Altri file  
- Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione. Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale. Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato. Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati. Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato. Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare. Per altre informazioni sull'archiviazione isolata, vedere [isolato](../../../docs/standard/io/isolated-storage.md).  
+ Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione. Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale. Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato. Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati. Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato. Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare. Per altre informazioni sull'archiviazione isolata, vedere [isolato](../../standard/io/isolated-storage.md).  
   
  L'esempio seguente usa lo spazio di memorizzazione isolato per scrivere dati in un file contenuto in un archivio. L'esempio richiede <xref:System.Security.Permissions.IsolatedStorageFilePermission> e il valore dell'enumerazione <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. L'esempio illustra come leggere e scrivere alcuni valori delle proprietà del controllo <xref:System.Windows.Forms.Button> in un file nello spazio di memorizzazione isolato. La funzione `Read` verrà chiamata dopo l'avvio dell'applicazione e la funzione `Write` verrà chiamata prima della chiusura dell'applicazione. Nell'esempio si presuppone che il `Read` e `Write` funzioni esistano come membri di un <xref:System.Windows.Forms.Form> contenente una <xref:System.Windows.Forms.Button> controllo denominato `MainButton`.  
   
@@ -350,7 +350,7 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Accesso database  
- Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati. Per altre informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [Code Access Security and ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati. Per altre informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [Code Access Security and ADO.NET](../data/adonet/code-access-security.md).  
   
  Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per altre informazioni, vedere [dei servizi Web in ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) oppure [Windows Communication Foundation](../wcf/index.md).  
   
@@ -360,9 +360,9 @@ public void Write()
  Poiché non è possibile accedere al Registro di sistema con l'attendibilità parziale, potrebbe essere necessario trovare altri metodi di archiviazione dei dati. Quando si archiviano le impostazioni dell'applicazione, usare lo spazio di memorizzazione isolato invece del Registro di sistema. Lo spazio di memorizzazione isolato può essere usato anche per archiviare altri file specifici dell'applicazione. È anche possibile archiviare informazioni di applicazioni globali relative al server o al sito di origine, perché, per impostazione predefinita, a un'applicazione viene concesso il diritto di accedere al sito di origine.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Stampa più sicura in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Considerazioni aggiuntive sulla sicurezza in Windows Form](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)
-- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Stampa più sicura in Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Considerazioni aggiuntive sulla sicurezza in Windows Form](additional-security-considerations-in-windows-forms.md)
+- [Panoramica della sicurezza in Windows Forms](security-in-windows-forms-overview.md)
+- [Sicurezza di Windows Form](windows-forms-security.md)
+- [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698375"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709926"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedura: Associare un Windows Form controllo ComboBox o ListBox ai dati
 È possibile associare il <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ListBox> ai dati per eseguire attività come l'esplorazione dei dati in un database, immissione di nuovi dati o la modifica dei dati esistenti.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Per associare un controllo ComboBox o ListBox  
   
-1.  Impostare il `DataSource` proprietà a un oggetto origine dati. Origini dati possibili includono una <xref:System.Windows.Forms.BindingSource> associato a dati, una tabella di dati, una vista dati, un set di dati, un vista dati manager, una matrice o qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia. Per altre informazioni, vedere [origini dati supportate da Windows Form](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
+1.  Impostare il `DataSource` proprietà a un oggetto origine dati. Origini dati possibili includono una <xref:System.Windows.Forms.BindingSource> associato a dati, una tabella di dati, una vista dati, un set di dati, un vista dati manager, una matrice o qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia. Per altre informazioni, vedere [origini dati supportate da Windows Form](../data-sources-supported-by-windows-forms.md).  
   
 2.  Se esegue il binding a una tabella, impostare il `DisplayMember` proprietà sul nome di una colonna nell'origine dati.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "54698375"
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Data binding in Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Data binding e Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Data binding in Windows Form](../windows-forms-data-binding.md)
+- [Data binding e Windows Forms](../data-binding-and-windows-forms.md)
+- [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

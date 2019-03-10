@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696867"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715516"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Eccezioni di runtime in app .NET
 È importante testare le build di versione dell'app della piattaforma UWP (Universal Windows Platform) nelle rispettive piattaforme di destinazione, perché le configurazioni di tipo Debug e di tipo Versione sono completamente diverse. Per impostazione predefinita, la configurazione di tipo Debug usa il runtime di .NET Core per compilare l'app, mentre quella di tipo Versione usa .NET Native per compilare l'app nel codice nativo.  
@@ -60,5 +60,5 @@ Additional information: Value does not fall within the expected range.
  Per ottenere lo stack completo, eseguire la build di tipo Debug.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Debug di App universali di Windows nativa .NET](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [Debug di App universali di Windows nativa .NET](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)

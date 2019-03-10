@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543713"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710732"
 ---
 # <a name="events-overview-windows-forms"></a>Cenni preliminari sugli eventi (Windows Form)
 Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel codice. Gli eventi possono essere generati da un'azione utente, ad esempio un clic del mouse o la pressione di un tasto, oppure da codice programma o dal sistema.  
@@ -26,12 +26,12 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
 > [!NOTE]
 >  Molti eventi si verificano insieme ad altri eventi. Ad esempio, quando si verifica l'evento <xref:System.Windows.Forms.Control.DoubleClick>, si verificano anche gli eventi <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> e <xref:System.Windows.Forms.Control.Click>.  
   
- Per informazioni su come generare e utilizzare un evento, vedere [eventi](../../../docs/standard/events/index.md).  
+ Per informazioni su come generare e utilizzare un evento, vedere [eventi](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Delegati e rispettivo ruolo  
  I delegati sono classi usate comunemente in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per creare meccanismi di gestione degli eventi. È possibile paragonare a grandi linee i delegati ai puntatori a funzioni, usati in genere in [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] e in altri linguaggi orientati ad oggetti. A differenza dei puntatori a funzioni, tuttavia, i delegati sono orientati ad oggetti, indipendenti dai tipi e sicuri. Mentre un puntatore a funzioni, inoltre, include solo un riferimento a una funzione specifica, un delegato è costituito da un riferimento a un oggetto e fa riferimento a uno o più metodi nell'oggetto.  
   
- Usa questo modello di eventi *delegati* per associare gli eventi ai metodi che vengono usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per altre informazioni su come definire delegati, vedere [eventi](../../../docs/standard/events/index.md).  
+ Usa questo modello di eventi *delegati* per associare gli eventi ai metodi che vengono usati per gestirli. Il delegato permette alle altre classi di effettuare la registrazione per la notifica di eventi specificando un metodo del gestore. Quando si verifica l'evento, il delegato chiama il metodo associato. Per altre informazioni su come definire delegati, vedere [eventi](../../standard/events/index.md).  
   
  I delegati possono essere associati a un singolo metodo o a più metodi (multicast). Quando si crea un delegato per un evento, l'utente o Progettazione Windows Form creano in genere un evento multicast. Una rara eccezione può essere costituita da un evento che ha come risultato una procedura specifica, ad esempio la visualizzazione di una finestra di dialogo, che non si ripeterebbe in modo logico più volte per un evento. Per informazioni su come creare un delegato multicast, vedere [come: Combinare delegati Multicast](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Un evento è un'azione a cui si può rispondere o che può essere "gestita" nel 
  Il meccanismo di associazione usato con i delegati è dinamico: un delegato può essere associato in fase di esecuzione a qualsiasi metodo la cui firma corrisponda a quella del gestore eventi. Questa funzionalità consente di impostare o modificare il metodo associato in base a una condizione e di collegare in modo dinamico un gestore eventi a un controllo.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creazione di gestori eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Informazioni generali sui gestori eventi](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
+- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)

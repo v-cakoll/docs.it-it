@@ -7,12 +7,12 @@ helpviewer_keywords:
 - color dialog box [Windows Forms], about color dialog box
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
-ms.openlocfilehash: 9ef7d667b582d3b227f0f0e8af5e7e0335cd4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd48c8df0a36262962df596e8efadf4de1c2cd3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570109"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713332"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>Cenni preliminari sul componente ColorDialog (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.ColorDialog> componente è una finestra di dialogo preconfigurata che consente all'utente di selezionare un colore dalla tavolozza e di aggiungere colori personalizzati alla tavolozza. È la stessa finestra di dialogo visualizzata in altre applicazioni basate su Windows per selezionare i colori. e costituisce una semplice soluzione, utilizzabile nell'applicazione basata su Windows creata, per evitare di configurare una propria finestra di dialogo.  
@@ -21,6 +21,6 @@ I moduli di Windows <xref:System.Windows.Forms.ColorDialog> componente è una fi
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ColorDialog>
-- [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
-- [Controlli e componenti della finestra di dialogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
-- [Procedura: Modificare l'aspetto del componente ColorDialog di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [Componente ColorDialog](colordialog-component-windows-forms.md)
+- [Controlli e componenti della finestra di dialogo](dialog-box-controls-and-components-windows-forms.md)
+- [Procedura: Modificare l'aspetto del componente ColorDialog di Windows Form](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
