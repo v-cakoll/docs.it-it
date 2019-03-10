@@ -3,12 +3,12 @@ title: Introduzione a Docker
 description: Questo articolo fornisce un'introduzione e una panoramica di Docker nel contesto di un'applicazione .NET Core.
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656167"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676278"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduzione a .NET e Docker
 
@@ -178,7 +178,7 @@ L'[esempio dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework
 
 Ora che la piattaforma Docker e le diverse immagini Docker sono state illustrate , il passaggio successivo prevede l'esplorazione dell'avanzato ecosistema Docker. I collegamenti seguenti illustrano come gli strumenti Microsoft integrano lo sviluppo dei contenitori.
 
-* [Using .NET and Docker together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) (Uso combinato di .NET e Docker)
+* [Using .NET and Docker together](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/) (Uso combinato di .NET e Docker)
 * [Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker extension](https://code.visualstudio.com/docs/languages/dockerfile) (Estensione Docker di Visual Studio Code)
 * [Learn how to use Azure Service Fabric](/azure/service-fabric/index) (Informazioni su come usare Azure Service Fabric)

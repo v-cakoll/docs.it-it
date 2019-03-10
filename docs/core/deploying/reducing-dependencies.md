@@ -4,16 +4,16 @@ description: Ridurre le dipendenze dei pacchetti durante la creazione di libreri
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168277"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674965"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
 
-Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipendenze dei pacchetti durante la creazione di librerie `project.json`. Al termine dell'articolo, si apprenderà come creare la libreria in modo che usi solo le dipendenze necessarie. 
+Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipendenze dei pacchetti durante la creazione di librerie `project.json`. Al termine dell'articolo, si apprenderà come creare la libreria in modo che usi solo le dipendenze necessarie.
 
 ## <a name="why-its-important"></a>Perché è importante?
 
@@ -27,18 +27,17 @@ Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di rid
 
 1. Fare riferimento a `NETStandard.Library` versione `1.6.0` in una sezione `dependencies` di `project.json`.
 2. Ripristinare i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
-3. Esaminare il file `project.lock.json` e trovare la sezione `NETSTandard.Library`  in genere all'inizio del file.
+3. Esaminare il file `project.lock.json` e trovare la sezione `NETStandard.Library`  in genere all'inizio del file.
 4. Copiare tutti i pacchetti elencati in `dependencies`.
 5. Rimuovere il riferimento `.NETStandard.Library` e sostituirlo con i pacchetti copiati.
 6. Rimuovere i riferimenti ai pacchetti non necessari.
-
 
 È possibile individuare i pacchetti non necessari in uno dei modi seguenti:
 
 1. Tentativi ed errori.  Questo metodo fa riferimento alla rimozione di un pacchetto, al relativo ripristino, se la libreria continua a eseguire la compilazione, e alla ripetizione del processo.
 2. Tramite uno strumento come [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice.  A questo punto, è possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
 
-## <a name="example"></a>Esempio 
+## <a name="example"></a>Esempio
 
 Si supponga di aver scritto una libreria che offre funzionalità aggiuntive per tipi di raccolte generiche.  Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`.  Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
 
@@ -56,7 +55,7 @@ Per ridurre questa libreria, iniziare con il file `project.json` e aggiungere un
 }
 ```
 
-Successivamente, si ripristinano i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)), si analizza il file `project.lock.json` e si trovano tutti i pacchetti ripristinati per `NETSTandard.Library`.
+Successivamente, si ripristinano i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)), si analizza il file `project.lock.json` e si trovano tutti i pacchetti ripristinati per `NETStandard.Library`.
 
 Di seguito è presentata la specifica sezione del file `project.lock.json` quando punta a `netstandard1.0`:
 
