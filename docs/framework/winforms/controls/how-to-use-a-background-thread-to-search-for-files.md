@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536329"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723166"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedura: Usare un Thread in Background per la ricerca file
-Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiunge funzionalità per il <xref:System.Threading> dello spazio dei nomi, tuttavia, il <xref:System.Threading> dello spazio dei nomi è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario. Per altre informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiunge funzionalità per il <xref:System.Threading> dello spazio dei nomi, tuttavia, il <xref:System.Threading> dello spazio dei nomi è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario. Per altre informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](backgroundworker-component-overview.md).  
   
- Poiché Windows Forms è basato su windows Win32 nativo che sono intrinsecamente-threaded apartment, Windows Form usa il modello di apartment a thread singolo (STA). Il modello STA implica che una finestra può essere creata in qualsiasi thread, ma non è possibile passare da un thread dopo la creazione e tutte le chiamate di funzione a esso devono verificarsi sul proprio thread di creazione. All'esterno di Windows Form, le classi in .NET Framework usano il modello di threading free. Per informazioni sul threading in .NET Framework, vedere [Threading](../../../../docs/standard/threading/index.md).  
+ Poiché Windows Forms è basato su windows Win32 nativo che sono intrinsecamente-threaded apartment, Windows Form usa il modello di apartment a thread singolo (STA). Il modello STA implica che una finestra può essere creata in qualsiasi thread, ma non è possibile passare da un thread dopo la creazione e tutte le chiamate di funzione a esso devono verificarsi sul proprio thread di creazione. All'esterno di Windows Form, le classi in .NET Framework usano il modello di threading free. Per informazioni sul threading in .NET Framework, vedere [Threading](../../../standard/threading/index.md).  
   
  Il modello STA richiede che qualsiasi metodo su un controllo che devono essere chiamati dall'esterno thread di creazione del controllo deve essere sottoposto a marshalling (eseguiti nel) thread di creazione del controllo. La classe di base <xref:System.Windows.Forms.Control> fornisce diversi metodi (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, e <xref:System.Windows.Forms.Control.EndInvoke%2A>) per questo scopo. <xref:System.Windows.Forms.Control.Invoke%2A> effettua le chiamate di metodo sincrono. <xref:System.Windows.Forms.Control.BeginInvoke%2A> effettua chiamate al metodo asincrona.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Panoramica sul modello asincrono basato su eventi](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Panoramica sul modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

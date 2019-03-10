@@ -8,17 +8,17 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 8857ebb5a5c29f8e945ea47c290259c4b787b430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723855"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Procedura: Recuperare i dati dagli Appunti
 Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile usare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni usano negli Appunti come un archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Gli Appunti sono anche utili per il trasferimento di informazioni da un'applicazione a altra.  
   
- Alcune applicazioni di archiviano i dati negli Appunti in più formati per aumentare il numero di altre applicazioni che possono utilizzare i dati. Un formato degli Appunti è una stringa che identifica il formato. Un'applicazione che utilizza il formato identificato può recuperare i dati associati negli Appunti. Il <xref:System.Windows.Forms.DataFormats> classe fornisce i nomi di formato predefinito per l'uso. È anche possibile usare i propri nomi di formato o utilizzare un tipo di oggetto come formato. Per informazioni sull'aggiunta di dati negli Appunti, vedere [come: Aggiungere dati agli Appunti](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).  
+ Alcune applicazioni di archiviano i dati negli Appunti in più formati per aumentare il numero di altre applicazioni che possono utilizzare i dati. Un formato degli Appunti è una stringa che identifica il formato. Un'applicazione che utilizza il formato identificato può recuperare i dati associati negli Appunti. Il <xref:System.Windows.Forms.DataFormats> classe fornisce i nomi di formato predefinito per l'uso. È anche possibile usare i propri nomi di formato o utilizzare un tipo di oggetto come formato. Per informazioni sull'aggiunta di dati negli Appunti, vedere [come: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md).  
   
  Per determinare se gli Appunti contengono dati in un formato specifico, usare uno dei `Contains` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Per recuperare dati dagli Appunti, usare uno dei `Get` *formato* metodi o <xref:System.Windows.Forms.Clipboard.GetData%2A> (metodo). Questi metodi sono una novità [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
@@ -33,8 +33,8 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
 1.  Usare la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> (metodo). Facoltativamente, usare la corrispondente `Contains` *formato* metodi per determinare se i dati sono disponibili in un formato particolare. Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
-     [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
+     [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Per recuperare i dati dagli Appunti in un formato personalizzato  
   
@@ -42,20 +42,20 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
      È anche possibile usare nomi di formato predefiniti con il <xref:System.Windows.Forms.Clipboard.SetData%2A> (metodo). Per altre informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
-     [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
-    [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
-    [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
+     [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
+    [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
+    [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Per recuperare i dati dagli Appunti in più formati  
   
 1.  Usare il metodo <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. È necessario utilizzare questo metodo per recuperare i dati dagli Appunti in versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
-     [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
-    [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
-    [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
+     [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
+    [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
+    [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Drag-and-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
-- [Procedura: Aggiungere dati agli Appunti](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
+- [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)

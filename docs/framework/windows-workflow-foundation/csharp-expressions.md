@@ -2,39 +2,39 @@
 title: Espressioni C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: ac123a396bd43bc7b91aff6ce928b18ef4fbe6bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354733"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720579"
 ---
 # <a name="c-expressions"></a>Espressioni C#
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le espressioni c# sono supportate in Windows Workflow Foundation (WF). I nuovi progetti di flusso di lavoro c# creati in Visual Studio 2012 che hanno come destinazione [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usano le espressioni c# e progetti di flusso di lavoro di Visual Basic usano le espressioni Visual Basic. I progetti di flusso di lavoro [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] esistenti che usano espressioni Visual Basic possono essere migrati a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], indipendentemente dal linguaggio del progetto, e sono supportati. In questo argomento viene fornita una panoramica sulle espressioni C# in [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>Utilizzo delle espressioni C# nei flussi di lavoro
 
--   [Utilizzo delle espressioni c# nella finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFDesigner)
+-   [Utilizzo delle espressioni c# nella finestra di progettazione del flusso di lavoro](csharp-expressions.md#WFDesigner)
 
-    -   [Con le versioni precedenti la compatibilità](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#BackwardCompat)
+    -   [Con le versioni precedenti la compatibilità](csharp-expressions.md#BackwardCompat)
 
--   [Utilizzo delle espressioni c# nei flussi di lavoro di codice](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows)
+-   [Utilizzo delle espressioni c# nei flussi di lavoro di codice](csharp-expressions.md#CodeWorkflows)
 
--   [Utilizzo delle espressioni c# nei flussi di lavoro XAML](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#XamlWorkflows)
+-   [Utilizzo delle espressioni c# nei flussi di lavoro XAML](csharp-expressions.md#XamlWorkflows)
 
-    -   [Xaml compilato](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CompiledXaml)
+    -   [Xaml compilato](csharp-expressions.md#CompiledXaml)
 
-    -   [Xaml separato](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#LooseXaml)
+    -   [Xaml separato](csharp-expressions.md#LooseXaml)
 
--   [Utilizzo delle espressioni c# nei servizi del flusso di lavoro XAMLX](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFServices)
+-   [Utilizzo delle espressioni c# nei servizi del flusso di lavoro XAMLX](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> Utilizzo delle espressioni c# nella finestra di progettazione del flusso di lavoro
  A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le espressioni c# sono supportate in Windows Workflow Foundation (WF). Progetti di flusso di lavoro c# creati in Visual Studio 2012 che hanno come destinazione [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usano le espressioni c# mentre i progetti di flusso di lavoro di Visual Basic usano le espressioni Visual Basic. Per specificare l'espressione c# desiderata, digitarla nella casella **immettere un'espressione c#**. Questa etichetta viene visualizzata nella finestra delle proprietà quando l'attività viene selezionata nella finestra di progettazione o sull'attività in Progettazione flussi di lavoro. Nell'esempio seguente, due attività `WriteLine` sono contenute in `Sequence` all'interno di `NoPersistScope`.
 
- ![Attività sequence creata automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+ ![Attività sequence creata automaticamente](./media/autosurround2.png "AutoSurround2")
 
 > [!NOTE]
->  Le espressioni c# sono supportate solo in Visual Studio e non sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità WF45 supportate nella finestra di progettazione ospitata nuovamente, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md).
+>  Le espressioni c# sono supportate solo in Visual Studio e non sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. Per altre informazioni sulle nuove funzionalità WF45 supportate nella finestra di progettazione ospitata nuovamente, vedere [supporto per nuove funzionalità di Workflow Foundation 4.5 in Progettazione flussi di lavoro riallocate](wf-features-in-the-rehosted-workflow-designer.md).
 
 #### <a name="BackwardCompat"></a> Con le versioni precedenti la compatibilità
  Sono supportate le espressioni Visual Basic dei progetti di flusso di lavoro C# di [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] esistenti che sono stati migrati a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Se le espressioni Visual Basic vengono visualizzate nella finestra di progettazione del flusso di lavoro, il testo dell'espressione Visual Basic esistente viene sostituito con **valore impostato in XAML**, a meno che l'espressione Visual Basic è una sintassi c# valida. Se l'espressione Visual Basic è una sintassi C# valida, l'espressione viene visualizzata. Per aggiornare le espressioni Visual Basic a C#, è possibile modificarle nella finestra di progettazione del flusso di lavoro e specificare l'espressione C# equivalente. Non è obbligatorio aggiornare le espressioni Visual Basic a C#, ma una volta che le espressioni vengono aggiornate nella finestra di progettazione del flusso di lavoro, vengono convertite in C# e non possono essere ripristinate in Visual Basic.
@@ -184,14 +184,14 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
 -   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` viene chiamato al posto di `CompiledExpressionInvoker.SetCompiledExpressionRoot`.
 
- Per altre informazioni sull'utilizzo delle espressioni nel codice, vedere [creazione di flussi di lavoro, attività e le espressioni tramite codice imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Per altre informazioni sull'utilizzo delle espressioni nel codice, vedere [creazione di flussi di lavoro, attività e le espressioni tramite codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md).
 
 ### <a name="XamlWorkflows"></a> Utilizzo delle espressioni c# nei flussi di lavoro XAML
  Le espressioni C# sono supportate nei flussi di lavoro XAML. I flussi di lavoro XAML compilato vengono compilati in un tipo e i flussi di lavoro XAML separato vengono caricati dal runtime e compilati in un albero delle attività quando il flusso di lavoro viene eseguito.
 
--   [Xaml compilato](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CompiledXaml)
+-   [Xaml compilato](csharp-expressions.md#CompiledXaml)
 
--   [Xaml separato](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#LooseXaml)
+-   [Xaml separato](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> Xaml compilato
  Le espressioni C# sono supportate nei flussi di lavoro XAML compilato che vengono compilati in un tipo come parte di un progetto di flusso di lavoro C# destinato a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. XAML compilato è il tipo predefinito del flusso di lavoro di creazione in Visual Studio e i progetti di flusso di lavoro c# creati in Visual Studio che hanno come destinazione [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] usano espressioni c#.
@@ -208,10 +208,10 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;
 ```
 
- Per altre informazioni sull'utilizzo dei flussi di lavoro XAML, vedere [serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).
+ Per altre informazioni sull'utilizzo dei flussi di lavoro XAML, vedere [serializzazione di flussi di lavoro e attività da e verso XAML](serializing-workflows-and-activities-to-and-from-xaml.md).
 
 ### <a name="WFServices"></a> Utilizzo delle espressioni c# nei servizi del flusso di lavoro XAMLX
- Le espressioni C# sono supporte nei servizi flusso di lavoro XAMLX. Quando un servizio flusso di lavoro è ospitato in IIS o WAS non sono necessarie ulteriori attività, ma se il servizio flusso di lavoro XAML è indipendente, è necessario compilare le espressioni C#. Per compilare le espressioni c# in un servizio del flusso di lavoro XAMLX indipendente, innanzitutto caricare il file XAMLX in una `WorkflowService`e quindi passare il `Body` delle `WorkflowService` per il `CompileExpressions` metodo descritto nella precedente [con c# espressioni nei flussi di lavoro di codice](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) sezione. Nell'esempio seguente, viene caricato un servizio flusso di lavoro XAMLX, vengono compilate espressioni C# e quindi viene aperto il servizio flusso di lavoro in attesa di richieste.
+ Le espressioni C# sono supporte nei servizi flusso di lavoro XAMLX. Quando un servizio flusso di lavoro è ospitato in IIS o WAS non sono necessarie ulteriori attività, ma se il servizio flusso di lavoro XAML è indipendente, è necessario compilare le espressioni C#. Per compilare le espressioni c# in un servizio del flusso di lavoro XAMLX indipendente, innanzitutto caricare il file XAMLX in una `WorkflowService`e quindi passare il `Body` delle `WorkflowService` per il `CompileExpressions` metodo descritto nella precedente [con c# espressioni nei flussi di lavoro di codice](csharp-expressions.md#CodeWorkflows) sezione. Nell'esempio seguente, viene caricato un servizio flusso di lavoro XAMLX, vengono compilate espressioni C# e quindi viene aperto il servizio flusso di lavoro in attesa di richieste.
 
 ```csharp
 // Load the XAMLX workflow service.
@@ -236,7 +236,7 @@ Console.WriteLine("Press enter to quit");
 Console.ReadLine();
 ```
 
- Se le espressioni C# non sono compilate, l'operazione `Open` viene eseguita, ma il flusso di lavoro non verrà richiamato. Quanto segue `CompileExpressions` metodo è quello utilizzato per il metodo precedente [espressioni con c# nei flussi di lavoro di codice](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) sezione.
+ Se le espressioni C# non sono compilate, l'operazione `Open` viene eseguita, ma il flusso di lavoro non verrà richiamato. Quanto segue `CompileExpressions` metodo è quello utilizzato per il metodo precedente [espressioni con c# nei flussi di lavoro di codice](csharp-expressions.md#CodeWorkflows) sezione.
 
 ```csharp
 static void CompileExpressions(Activity activity)

@@ -2,12 +2,12 @@
 title: Profili di rilevamento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482301"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721372"
 ---
 # <a name="tracking-profiles"></a>Profili di rilevamento
 
@@ -344,7 +344,7 @@ Gli elementi della query di rilevamento vengono usati per creare un profilo di r
 > [!WARNING]
 > Per un servizio WF in cui viene usato l'host del servizio del flusso di lavoro, il profilo di rilevamento viene generalmente creato usando un file di configurazione. È anche possibile creare un profilo di rilevamento con il codice, usando il profilo di rilevamento e l'API della query di rilevamento.
 
-Un profilo configurato come file di configurazione XML viene applicato a un partecipante del rilevamento tramite un'estensione di comportamento. Questo viene aggiunto a un oggetto WorkflowServiceHost come descritto nella sezione successiva [configurazione del rilevamento per un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Un profilo configurato come file di configurazione XML viene applicato a un partecipante del rilevamento tramite un'estensione di comportamento. Questo viene aggiunto a un oggetto WorkflowServiceHost come descritto nella sezione successiva [configurazione del rilevamento per un flusso di lavoro](configuring-tracking-for-a-workflow.md).
 
 Il livello di dettaglio dei record di rilevamento creati dall'host è determinato dalle impostazioni di configurazione all'interno del profilo di rilevamento. Un partecipante del rilevamento sottoscrive i record di rilevamento aggiungendo query a un profilo di rilevamento. Per eseguire la sottoscrizione a tutti i record di rilevamento, è necessario specificare tutte le query di rilevamento utilizzando il profilo di rilevamento "\*" nei campi dei nomi in ognuna delle query.
 
@@ -387,6 +387,6 @@ Di seguito sono riportati alcuni degli esempi comuni di profili di rilevamento.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Rilevamento SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Rilevamento SQL](./samples/sql-tracking.md)
 - [Monitoraggio dell'infrastruttura di App di Windows Server](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitoraggio delle applicazioni con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

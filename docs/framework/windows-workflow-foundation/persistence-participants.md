@@ -2,12 +2,12 @@
 title: Partecipanti di persistenza
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569505"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723764"
 ---
 # <a name="persistence-participants"></a>Partecipanti di persistenza
 Un partecipante di persistenza può far parte di un'operazione di persistenza (Save o Load) attivata da un'applicazione host. Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito con due classi astratte **PersistenceParticipant** e **PersistenceIOParticipant**, che è possibile usare per creare un partecipante di persistenza. Un partecipante di persistenza deriva da una di queste classi, implementa i metodi di interesse, quindi aggiunge un'istanza della classe alla raccolta <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'applicazione host può cercare tali estensioni del flusso di lavoro quando rende persistente un'istanza del flusso di lavoro e richiamare metodi appropriati sui partecipanti di persistenza in momenti appropriati.  
@@ -58,7 +58,7 @@ Un partecipante di persistenza può far parte di un'operazione di persistenza (S
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Procedura: Creare un partecipante di persistenza personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Procedura: Creare un partecipante di persistenza personalizzato](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estendibilità dell'archivio](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Estendibilità dell'archivio](store-extensibility.md)

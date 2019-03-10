@@ -9,12 +9,12 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674648"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721879"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File
 Le finestre di dialogo predefinite Apri e Salva in [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dispongono di un'area sul lato sinistro della finestra di dialogo denominata **Collegamenti preferiti**, che contiene percorsi personalizzati. Il <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> classi consentono di aggiungere cartelle al <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> raccolta.  
@@ -39,4 +39,4 @@ Le finestre di dialogo predefinite Apri e Salva in [!INCLUDE[wiprlhext](../../..
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [GUID di cartella nota per percorsi personalizzati della finestra di dialogo File](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+- [GUID di cartella nota per percorsi personalizzati della finestra di dialogo File](known-folder-guids-for-file-dialog-custom-places.md)

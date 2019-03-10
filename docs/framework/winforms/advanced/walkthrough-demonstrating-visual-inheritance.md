@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564331"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721450"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: Dimostrazione dell'ereditarietà visiva
 L'ereditarietà visiva consente di visualizzare i controlli nel form di base e di aggiungere nuovi controlli. In questa procedura dettagliata verrà creato un form di base che verrà compilato in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo form che eredita dal form di base. Durante questa procedura dettagliata, si apprenderà come:  
@@ -140,7 +140,7 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 5.  Aprire il form ereditato (**Form2**) nella finestra di progettazione facendo doppio clic su esso, se non è già aperto.  
   
-     Nella finestra di progettazione, i pulsanti ereditati sono visualizzato un simbolo (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) nell'angolo superiore, che indica che essi vengono ereditate.  
+     Nella finestra di progettazione, i pulsanti ereditati sono visualizzato un simbolo (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) nell'angolo superiore, che indica che essi vengono ereditate.  
   
 6.  Selezionare il **Say Hello** pulsante e osservare i quadratini di ridimensionamento. Poiché questo pulsante è protetto, gli eredi possono spostarlo, ridimensionarlo, modificarne la didascalia e apportare altre modifiche.  
   
@@ -161,9 +161,9 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
 12. Premere F5 per eseguire l'applicazione e osservare il comportamento del form ereditato.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual c#) istruzione. Per altre informazioni, vedere [Procedura: Ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual c#) istruzione. Per altre informazioni, vedere [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Windows Form](../../../../docs/framework/winforms/index.md)
+- [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md)
+- [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)
+- [Windows Form](../index.md)

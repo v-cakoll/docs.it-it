@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558982"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720865"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procedura: Ereditare Windows Form
 La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è un modo semplice di duplicare ciò che è stato creato senza ripetere ogni volta il medesimo processo di creazione di un form.  
   
- Per altre informazioni sull'ereditarietà di form in fase di progettazione tramite le **Selezione ereditarietà** finestra di dialogo e su come distinguere visivamente i livelli di sicurezza dei controlli ereditati, vedere [come: Ereditare form mediante la finestra di dialogo Selezione ereditarietà](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Per altre informazioni sull'ereditarietà di form in fase di progettazione tramite le **Selezione ereditarietà** finestra di dialogo e su come distinguere visivamente i livelli di sicurezza dei controlli ereditati, vedere [come: Ereditare form mediante la finestra di dialogo Selezione ereditarietà](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
  **Nota** per ereditare da un modulo, il file o lo spazio dei nomi contenente tale form deve essere incorporato in un file eseguibile o DLL. Per compilare il progetto, scegliere **Compila** dal menu **Compila**. È necessario aggiungere un riferimento allo spazio dei nomi anche alla classe che eredita il form. Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -44,5 +44,5 @@ La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è u
 - [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Istruzione Imports (tipo e spazio dei nomi .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md)
+- [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)

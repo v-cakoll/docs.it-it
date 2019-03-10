@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: a9ab771d87c3e5af4726806a262886845724cffd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977049"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723634"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Procedura dettagliata: Modifica di un controllo composito con Visual C\#
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
@@ -146,7 +146,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 4.  Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
   
 ## <a name="testing-the-control"></a>Test del controllo  
- I controlli non sono applicazioni autonome e devono pertanto essere inseriti in un contenitore. Eseguire il test del comportamento del controllo in fase di esecuzione e sperimentare le proprietà con **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ I controlli non sono applicazioni autonome e devono pertanto essere inseriti in un contenitore. Eseguire il test del comportamento del controllo in fase di esecuzione e sperimentare le proprietà con **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Per eseguire il test del controllo  
   
@@ -317,7 +317,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 2.  Aggiungere un pulsante al controllo. Impostare le proprietà del pulsante come illustrato di seguito.  
   
-    |Proprietà|Value|  
+    |Proprietà|Valore|  
     |--------------|-----------|  
     |**Name**|`btnAlarmOff`|  
     |**per**|**Disabilita allarme**|  
@@ -341,7 +341,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
 5.  Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Utilizzo del controllo ereditato in un modulo  
- È possibile testare il controllo ereditato esattamente come si esegue il controllo di classe di base, `ctlClock`: Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ È possibile testare il controllo ereditato esattamente come si esegue il controllo di classe di base, `ctlClock`: Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Per utilizzare il controllo è necessario inserirlo in un modulo. Come i controlli compositi standard, i controlli compositi ereditati non possono essere autonomi e devono essere inclusi in un modulo o in un altro contenitore. Poiché `ctlAlarmClock` include un maggior numero di funzionalità, per eseguire il test è necessario aggiungere del codice. In questa procedura verrà scritto un semplice programma per la verifica delle funzionalità di `ctlAlarmClock`. Verrà inoltre scritto il codice per impostare e visualizzare la proprietà `AlarmTime` di `ctlAlarmClock` e verrà eseguito il test delle funzionalità intrinseche del controllo.  
   
@@ -365,7 +365,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 9. Impostare le proprietà dei controlli come indicato di seguito.  
   
-    |Control|Proprietà|Valore|  
+    |Control|Proprietà|Value|  
     |-------------|--------------|-----------|  
     |`label1`|**per**|`(blank space)`|  
     ||**Name**|`lblTest`|  
@@ -405,6 +405,6 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
      In questa procedura dettagliata sono stati trattati diversi concetti chiave. Si è appreso come creare un controllo composito combinando controlli e componenti in un contenitore controllo composito e come aggiungere proprietà al controllo e scrivere il codice per l'implementazione di funzionalità personalizzate. Nell'ultima sezione sono state illustrate l'estensione delle funzionalità di uno specifico controllo composito mediante ereditarietà e la modifica delle funzionalità dei metodi host mediante override.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
-- [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Procedura dettagliata: Eredità da un controllo di Windows Forms con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Tipi di controlli personalizzati](varieties-of-custom-controls.md)
+- [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedura dettagliata: Eredità da un controllo di Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

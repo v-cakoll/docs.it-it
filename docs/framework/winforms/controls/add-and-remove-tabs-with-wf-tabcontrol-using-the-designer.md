@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: befe0537d3046e7bbdd1860958487bd1d1fe7651
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f58121455c346b2b615a5cf6e617e916618b4d6e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304934"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720319"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form usando la finestra di progettazione
 Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form, contiene due schede per impostazione predefinita. È possibile aggiungere o rimuovere schede tramite la finestra di progettazione.  
   
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.TabControl> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.TabControl> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -29,11 +29,11 @@ Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form
   
      -oppure-  
   
-     Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto a il <xref:System.Windows.Forms.TabControl.TabPages%2A> per aprire la **Editor della raccolta controllo TabPage**. Fare clic sui **Add** oppure **rimuovere** pulsante.  
+     Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto a il <xref:System.Windows.Forms.TabControl.TabPages%2A> per aprire la **Editor della raccolta controllo TabPage**. Fare clic sui **Add** oppure **rimuovere** pulsante.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [Panoramica del controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a un oggetto TabPage](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Procedura: Disabilitare le schede](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Controllo TabControl](tabcontrol-control-windows-forms.md)
+- [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: Disabilitare le schede](how-to-disable-tab-pages.md)
+- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

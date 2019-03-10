@@ -2,48 +2,48 @@
 title: Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373062"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721788"
 ---
 # <a name="contract-first-workflow-service-development"></a>Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) offre una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto. In questo argomento viene fornita una panoramica del mapping di attività e proprietà di un servizio del flusso di lavoro agli attributi di un contratto di servizio. Per un esempio dettagliato di creazione di un servizio del flusso di lavoro di contratto-first, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) offre una maggiore integrazione tra i servizi web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro del contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto. In questo argomento viene fornita una panoramica del mapping di attività e proprietà di un servizio del flusso di lavoro agli attributi di un contratto di servizio. Per un esempio dettagliato di creazione di un servizio del flusso di lavoro di contratto-first, vedere [come: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
--   [Mapping di attributi del contratto di servizio agli attributi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Mapping di attributi del contratto di servizio agli attributi del flusso di lavoro](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Attributi del contratto di servizio](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Attributi del contratto di servizio](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Attributi del contratto di operazione](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [Attributi del contratto di operazione](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Attributi del contratto di messaggio](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [Attributi del contratto di messaggio](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Attributi del contratto dati](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Attributi del contratto dati](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Attributi del contratto di errore](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Attributi del contratto di errore](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Informazioni di implementazione e supporto aggiuntivo](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Informazioni di implementazione e supporto aggiuntivo](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Funzionalità del contratto di servizio non supportato](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Funzionalità del contratto di servizio non supportato](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Generazione di attività di messaggistica configurate](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Generazione di attività di messaggistica configurate](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Mapping di attributi del contratto di servizio agli attributi del flusso di lavoro  
  Le tabelle nelle sezioni seguenti specificano gli attributi e le proprietà WCF e il relativo mapping alle attività e alle proprietà di messaggistica in un flusso di lavoro con priorità al contratto ("contract-first").  
   
--   [Attributi del contratto di servizio](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Attributi del contratto di servizio](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Attributi del contratto di operazione](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [Attributi del contratto di operazione](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Attributi del contratto di messaggio](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [Attributi del contratto di messaggio](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Attributi del contratto dati](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Attributi del contratto dati](contract-first-workflow-service-development.md#DataContract)  
   
--   [Attributi del contratto di errore](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Attributi del contratto di errore](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Attributi del contratto di servizio  
   
@@ -109,9 +109,9 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workf
   
 ## <a name="AdditionalSupport"></a> Informazioni di implementazione e supporto aggiuntivo  
   
--   [Funzionalità del contratto di servizio non supportato](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Funzionalità del contratto di servizio non supportato](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Generazione di attività di messaggistica configurate](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Generazione di attività di messaggistica configurate](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Funzionalità del contratto di servizio non supportato  
   

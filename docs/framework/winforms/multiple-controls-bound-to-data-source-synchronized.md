@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558891"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721385"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati
 Quando si lavora con data binding in Windows Form, spesso più controlli associati alla stessa origine dati. In alcuni casi, è necessario eseguire passaggi aggiuntivi per garantire che le proprietà associate dei controlli restino sincronizzate tra loro e l'origine dati. Questi passaggi sono necessari in due situazioni:  
@@ -29,8 +29,8 @@ Quando si lavora con data binding in Windows Form, spesso più controlli associa
   
  Nell'esempio viene usato un <xref:System.Windows.Forms.BindingSource> per associare l'origine dati e i controlli. In alternativa, è possibile associare i controlli direttamente all'origine dati e recuperare il <xref:System.Windows.Forms.BindingManagerBase> per l'associazione del form <xref:System.Windows.Forms.Control.BindingContext%2A> e quindi gestire le <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> evento per il <xref:System.Windows.Forms.BindingManagerBase>. Per un esempio di come eseguire questa operazione, vedere la pagina della Guida <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> eventi di <xref:System.Windows.Forms.BindingManagerBase>.  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
@@ -41,7 +41,7 @@ Quando si lavora con data binding in Windows Form, spesso più controlli associa
 -   Un form con il <xref:System.Windows.Forms.Form.Load> evento come gestito e una chiamata per il `InitializeControlsAndDataSource` metodo nell'esempio del form <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Condividere dati associati tra form tramite il componente BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Interfacce correlate al data binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Procedura: Condividere dati associati tra form tramite il componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Interfacce correlate al data binding](interfaces-related-to-data-binding.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

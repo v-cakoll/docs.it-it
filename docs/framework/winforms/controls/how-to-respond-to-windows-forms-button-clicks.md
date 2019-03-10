@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539551"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724986"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: Rispondere alle selezioni dei pulsanti di Windows Form
 L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> controllo consiste nell'eseguire codice quando si fa clic sul pulsante.  
@@ -31,7 +31,7 @@ L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> control
   
 ### <a name="to-respond-to-a-button-click"></a>Per rispondere a un clic del pulsante  
   
--   Nel pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire. `Button1_Click` deve essere associato al controllo. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   Nel pulsante `Click` <xref:System.EventHandler> scrivere il codice da eseguire. `Button1_Click` deve essere associato al controllo. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> control
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul controllo Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Modalità di selezione di un controllo Button di Windows Form](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Controllo Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Panoramica sul controllo Button](button-control-overview-windows-forms.md)
+- [Modalità di selezione di un controllo Button di Windows Form](ways-to-select-a-windows-forms-button-control.md)
+- [Controllo Button](button-control-windows-forms.md)

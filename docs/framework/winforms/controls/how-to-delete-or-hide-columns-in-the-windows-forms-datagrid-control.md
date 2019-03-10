@@ -12,16 +12,16 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a697992d4c6c75fe5958a7a17d6df8a7b4f6e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653944"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724515"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  A livello di codice è possibile eliminare o nascondere le colonne nei moduli di Windows <xref:System.Windows.Forms.DataGrid> usando le proprietà e metodi di controllo la <xref:System.Windows.Forms.GridColumnStylesCollection> e <xref:System.Windows.Forms.DataGridColumnStyle> oggetti (che sono membri del <xref:System.Windows.Forms.DataGridTableStyle> classe).  
   
@@ -125,5 +125,5 @@ ms.locfileid: "54653944"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: e698e93f96e0b19d45fb40408249aedcb0edeec7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505835"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723777"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Procedura: Creare una raccolta di caratteri privata
 Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita dal <xref:System.Drawing.Text.FontCollection> classe base astratta. È possibile usare un <xref:System.Drawing.Text.PrivateFontCollection> oggetto per mantenere un set di tipi di carattere specifico per l'applicazione. Una raccolta di caratteri privata può includere i tipi di carattere di sistema installati, nonché i tipi di carattere che non sono stati installati nel computer. Per aggiungere un file del tipo di carattere a una raccolta privata del tipo di carattere, chiamare il <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metodo di un <xref:System.Drawing.Text.PrivateFontCollection> oggetto.  
@@ -39,18 +39,18 @@ Il <xref:System.Drawing.Text.PrivateFontCollection> classe eredita dal <xref:Sys
   
  L'output del codice seguente è simile all'output illustrato nella figura seguente.  
   
- ![I tipi di carattere testo](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
+ ![I tipi di carattere testo](./media/csfontstext7.png "csfontstext7")  
   
  Tff (è stato aggiunto alla raccolta del tipo di carattere privato nell'esempio di codice seguente) è il file del tipo di carattere per lo stile regolare Arial. Si noti tuttavia che l'output del programma illustra alcuni stili disponibili diverso dal normale per il tipo di carattere Arial. Infatti, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possono simulare gli stili grassetto, corsivo e grassetto corsivo dallo stile regolare. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] può inoltre generare barrati e dallo stile regolare.  
   
  Analogamente, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile simulare lo stile grassetto corsivo dallo stile grassetto o corsivo. Viene illustrato l'output del programma che lo stile grassetto corsivo è disponibile per la famiglia di volte in cui anche se tff (Times New Roman, in grassetto) è l'unico file volte nella raccolta.  
   
- [!code-csharp[System.Drawing.FontsAndText#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.FontsAndText#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Drawing.Text.PrivateFontCollection>
-- [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Uso di tipi di carattere e testo](using-fonts-and-text.md)

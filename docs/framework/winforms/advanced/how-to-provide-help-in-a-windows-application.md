@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738602"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724934"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procedura: Visualizzare la Guida in un'applicazione Windows
 È possibile utilizzare il <xref:System.Windows.Forms.HelpProvider> componente collegare gli argomenti della Guida all'interno di un file della Guida a controlli specifici in un Windows Form. Il file della Guida può essere in formato HTML o HTMLHelp 1. x o versione successiva.  
@@ -53,10 +53,10 @@ ms.locfileid: "54738602"
 > [!IMPORTANT]
 >  Assicurarsi di verificare tutte le informazioni inviate da un client prima di usarle nell'applicazione, dal momento che utenti malintenzionati potrebbero tentare di inviare script eseguibili, istruzioni SQL o altro codice. Prima di visualizzare l'input di un utente, archiviarlo in un database o usarlo, assicurarsi che non contenga informazioni potenzialmente pericolose. Un modo per effettuare questo controllo consiste nell'usare un'espressione regolare per cercare parole chiave come "SCRIPT" quando si riceve input da un utente.  
   
- È anche possibile usare il <xref:System.Windows.Forms.HelpProvider> componente per visualizzare la Guida rapida, anche se è stato configurato per visualizzare i file della Guida per i controlli nei Windows Form. Per altre informazioni, vedere [Procedura: Visualizzare la Guida rapida](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ È anche possibile usare il <xref:System.Windows.Forms.HelpProvider> componente per visualizzare la Guida rapida, anche se è stato configurato per visualizzare i file della Guida per i controlli nei Windows Form. Per altre informazioni, vedere [Procedura: Visualizzare la Guida rapida](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Visualizzare la Guida rapida](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Integrazione della Guida dell'utente in Windows Form](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Form](../../../../docs/framework/winforms/index.md)
+- [Procedura: Visualizzare la Guida rapida](how-to-display-pop-up-help.md)
+- [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](control-help-using-tooltips.md)
+- [Integrazione della Guida dell'utente in Windows Form](integrating-user-help-in-windows-forms.md)
+- [Windows Form](../index.md)

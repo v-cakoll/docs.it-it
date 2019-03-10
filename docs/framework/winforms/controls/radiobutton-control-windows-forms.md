@@ -8,21 +8,21 @@ helpviewer_keywords:
 - radio buttons
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-ms.openlocfilehash: e62f3dddb75a5652f1edb3ef5c6bfb7d8029210d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725304"
 ---
 # <a name="radiobutton-control-windows-forms"></a>Controllo RadioButton (Windows Form)
-Windows Form `RadioButton` controlli presentano all'utente un set di due o più opzioni si escludono a vicenda. Mentre i pulsanti di opzione e caselle di controllo sembra funzionare in modo analogo, sussiste una differenza importante: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche altri pulsanti di opzione nello stesso gruppo.  
+Windows Form `RadioButton` controlli presentano un insieme di due o più opzioni si escludono a vicenda all'utente. Anche se i pulsanti di opzione e caselle di controllo sembra funzionare allo stesso modo, è un'importante differenza: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche gli altri pulsanti di opzione nello stesso gruppo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
+ [Panoramica sul controllo RadioButton](radiobutton-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
- [Procedura: Raggruppare controlli RadioButton Windows Form in modo che funzionino come set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [Procedura: Gruppo Windows Form controlli RadioButton funzionino come Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
  Viene illustrato come raggruppare i pulsanti di opzione set, di cui è possibile selezionare solo uno.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -30,5 +30,5 @@ Windows Form `RadioButton` controlli presentano all'utente un set di due o più 
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

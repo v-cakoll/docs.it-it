@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643962"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720293"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ordine degli eventi in Windows Form
-L'ordine in cui gli eventi vengono generati nelle applicazioni Windows Forms è di particolare interesse per gli sviluppatori interessati alla gestione di ciascuno di questi eventi a turno. Quando una situazione richiede una precisa gestione degli eventi, ad esempio quando si riprogettano parti del form, è necessaria la conoscenza dell'ordine esatto in cui vengono generati gli eventi in fase di esecuzione. Questo argomento contiene alcune informazioni dettagliate sull'ordine degli eventi durante le varie fasi importanti nella durata delle applicazioni e dei controlli. Per informazioni dettagliate sull'ordine degli eventi di input del mouse, vedere [eventi Mouse in Windows Form](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Per una panoramica degli eventi in Windows Form, vedere [Cenni preliminari sugli eventi](../../../docs/framework/winforms/events-overview-windows-forms.md). Per informazioni dettagliate sulla creazione di gestori eventi, vedere [Cenni preliminari sui gestori eventi](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+L'ordine in cui gli eventi vengono generati nelle applicazioni Windows Form è di particolare interesse per gli sviluppatori interessati alla gestione di ciascuno di questi eventi a turno. Quando una situazione richiede una precisa gestione degli eventi, ad esempio quando si riprogettano parti del form, è necessaria la conoscenza dell'ordine esatto in cui vengono generati gli eventi in fase di esecuzione. Questo argomento contiene alcune informazioni dettagliate sull'ordine degli eventi durante le varie fasi importanti nella durata delle applicazioni e dei controlli. Per informazioni dettagliate sull'ordine degli eventi di input del mouse, vedere [eventi Mouse in Windows Form](mouse-events-in-windows-forms.md). Per una panoramica degli eventi in Windows Form, vedere [Cenni preliminari sugli eventi](events-overview-windows-forms.md). Per informazioni dettagliate sulla creazione di gestori eventi, vedere [Cenni preliminari sui gestori eventi](event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>Eventi di arresto e avvio dell'applicazione  
  Le classi<xref:System.Windows.Forms.Form> e <xref:System.Windows.Forms.Control> espongono un set di eventi correlati all'avvio e all'arresto dell'applicazione. Quando si avvia un'applicazione Windows Forms, gli eventi di avvio del form principale vengono generati nell'ordine seguente:  
@@ -81,4 +81,4 @@ L'ordine in cui gli eventi vengono generati nelle applicazioni Windows Forms è 
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creazione di gestori eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Architettura del flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: c0e21e514e807196f3a09ae2a6eed6a9e7c55a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513097"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723741"
 ---
 # <a name="windows-workflow-architecture"></a>Architettura del flusso di lavoro di Windows
 Windows Workflow Foundation (WF) innalza il livello di astrazione per lo sviluppo di applicazioni interattive con esecuzione prolungata. Le unità di lavoro vengono incapsulate come attività. Le attività vengono eseguite in un ambiente che fornisce funzionalità per il controllo del flusso, gestione delle eccezioni, propagazione degli errori, persistenza dei dati relativi allo stato, caricamento e scaricamento di flussi di lavoro in corso dalla memoria, rilevamento e flusso della transazione.  
@@ -38,15 +38,15 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-context"></a>Contesto dell'attività  
  L'oggetto <xref:System.Activities.ActivityContext> rappresenta l'interfaccia tra l'autore di attività e l'esecuzione del flusso di lavoro e fornisce l'accesso alle numerose funzionalità di esecuzione. Nell'esempio seguente viene definita un'attività che usa il contesto di esecuzione per creare un segnalibro (meccanismo che consente a un'attività di registrare un punto di continuazione nella relativa esecuzione che può essere ripresa da un host che passa dati all'attività).  
   
- [!code-csharp[CFX_WorkflowApplicationExample#15](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>Ciclo di vita dell'attività  
  Un'istanza di un'attività viene avviata nello stato <xref:System.Activities.ActivityInstanceState.Executing>. A meno che non si verifichino eccezioni, rimane in questo stato finché non vengono completati l'esecuzione di tutte le attività figlio e qualsiasi altro lavoro in sospeso (ad esempio gli oggetti <xref:System.Activities.Bookmark>); a questo punto passa allo stato <xref:System.Activities.ActivityInstanceState.Closed>. L'elemento padre di un istanza dell'attività può richiedere l'annullamento di un elemento figlio. Se quest'ultimo può essere annullato, viene completato nello stato <xref:System.Activities.ActivityInstanceState.Canceled>. Se durante l'esecuzione viene generata un'eccezione, il runtime inserisce l'attività nello stato <xref:System.Activities.ActivityInstanceState.Faulted> e propaga l'eccezione fino alla catena di attività padre. Di seguito sono riportati i tre stati di completamento di un'attività:  
   
--   **Chiudere:** l'attività ha completato il proprio lavoro ed è stato chiuso.  
+-   **Chiuso:** L'attività ha completato il lavoro ed è stato chiuso.  
   
--   **Annullata:** l'attività ha normalmente ha abbandonato il proprio lavoro ed è stato chiuso. Quando viene immesso questo stato, il lavoro non viene sottoposto a rollback in modo esplicito.  
+-   **Annullata:** L'attività normalmente ha abbandonato il proprio lavoro ed è stato chiuso. Quando viene immesso questo stato, il lavoro non viene sottoposto a rollback in modo esplicito.  
   
--   **Faulted:** l'attività ha rilevato un errore ed è stata chiusa senza completamento del lavoro.  
+-   **Con errori:** L'attività ha rilevato un errore ed è stato terminato senza completamento del lavoro.  
   
  Le attività rimangono nello stato <xref:System.Activities.ActivityInstanceState.Executing> quando vengono rese persistenti o scaricate.

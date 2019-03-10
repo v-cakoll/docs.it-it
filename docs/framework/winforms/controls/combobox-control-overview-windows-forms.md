@@ -9,15 +9,15 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
-ms.openlocfilehash: 1c58249df67efe5e782776d4996adef567f71a15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b20c3a5009367d807f548d93b7c1dfb50e5a7d8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724011"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ComboBox (Windows Form)
-I moduli di Windows <xref:System.Windows.Forms.ComboBox> controllo viene usato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il <xref:System.Windows.Forms.ComboBox> controllo viene visualizzato in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che visualizza un elenco di elementi da cui l'utente può selezionare uno. Per altre informazioni sugli altri stili di casella combinata, vedere [quando utilizzare un Windows Form casella combinata anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  
+I moduli di Windows <xref:System.Windows.Forms.ComboBox> controllo viene usato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il <xref:System.Windows.Forms.ComboBox> controllo viene visualizzato in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che visualizza un elenco di elementi da cui l'utente può selezionare uno. Per altre informazioni sugli altri stili di casella combinata, vedere [quando utilizzare un Windows Form casella combinata anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  
   
  Il <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> proprietà restituisce un valore intero che corrisponde all'elemento di elenco selezionato. È possibile modificare l'elemento selezionato a livello di programmazione cambiando le <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> valore nel codice; l'elemento corrispondente nell'elenco verrà visualizzati nella casella di testo della casella combinata. Se è selezionato alcun elemento, il <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> valore è -1. Se è selezionato il primo elemento nell'elenco, quindi il <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> valore è 0. Il <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> proprietà è simile a <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> , ma restituisce l'elemento stesso, in genere un valore di stringa. Il <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> proprietà riflette il numero di elementi nell'elenco e il valore della <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> proprietà è sempre uno, più il più grande possibile <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> valore perché <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> è in base zero.  
   
@@ -25,11 +25,11 @@ I moduli di Windows <xref:System.Windows.Forms.ComboBox> controllo viene usato p
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ComboBox>
-- [Panoramica sul controllo ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
-- [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Procedura: Accedere a specifici elementi in un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [Procedura: Associare un Windows Form controllo ComboBox o ListBox ai dati](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
-- [Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Panoramica sul controllo ListBox](listbox-control-overview-windows-forms.md)
+- [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](add-and-remove-items-from-a-wf-combobox.md)
+- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procedura: Accedere a specifici elementi in un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [Procedura: Associare un Windows Form controllo ComboBox o ListBox ai dati](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)
+- [Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](create-a-lookup-table-for-a-wf-combobox-listbox.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: d0835d7f2c5ffea44f22661a765ab16b1d0130c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 121f285a95d0169db79bdc302d80dba03b3b40c2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619558"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720043"
 ---
 # <a name="how-to-load-and-display-metafiles"></a>Procedura: Carico e visualizzare metafile
 Il <xref:System.Drawing.Imaging.Metafile> classe che eredita dal <xref:System.Drawing.Image> classe, fornisce i metodi per la registrazione, la visualizzazione e analisi di immagini vettoriali.  
@@ -25,13 +25,13 @@ Il <xref:System.Drawing.Imaging.Metafile> classe che eredita dal <xref:System.Dr
   
  La figura seguente mostra il metafile disegnato in corrispondenza della posizione specificata.  
   
- ![Posizione di immagine](../../../../docs/framework/winforms/advanced/media/imageposition2.png "imageposition2")  
+ ![Posizione di immagine](./media/imageposition2.png "imageposition2")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.WorkingWithImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.WorkingWithImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)
