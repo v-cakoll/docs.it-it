@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: b582043b3b576b3750b897b17a5f6e0cbdeb84f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647634"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715243"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form
 Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni basate su Windows è necessario gestire una serie di eventi, in particolare il <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventi. Usando le informazioni disponibili negli argomenti di questi eventi, è possibile facilitare le operazioni di trascinamento della selezione.  
@@ -107,6 +107,6 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
     >  Inoltre, è possibile utilizzare il <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> proprietà, in modo che, a seconda dei tasti premuti durante l'operazione di trascinamento e rilascio, si verifichino determinati effetti (ad esempio, è standard per copiare i dati trascinati quando viene premuto il tasto CTRL).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Aggiungere dati agli Appunti](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [Procedura: Recuperare i dati dagli Appunti](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [Drag-and-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
+- [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)
+- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)

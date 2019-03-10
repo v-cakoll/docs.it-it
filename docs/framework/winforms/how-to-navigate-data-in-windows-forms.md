@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 0d3703019f081f07ecb29bf9229f0a2044764ae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586904"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725337"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procedura: Esplorare dati in Windows Form
 In un'applicazione di Windows, è il modo più semplice per spostarsi tra i record in un'origine dati per associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>. È quindi possibile utilizzare il metodo di navigazione predefiniti in di <xref:System.Windows.Forms.BindingSource> tali una <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usando questi metodi regolerà la <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> delle proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato. È anche possibile trovare un elemento e impostarlo come elemento corrente, impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.  
@@ -28,8 +28,8 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
     > [!NOTE]
     >  Impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà su un valore di là del primo o ultimo record non produce un errore, come il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non consentirà di impostare la posizione su un valore esterno ai limiti dell'elenco. Se è importante per sapere se è stato oltrepassato il primo o ultimo record in un'applicazione, includere la logica per verificare se si supera il numero di elementi di dati.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.NavigatingData#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Per verificare se sono stati passati alla fine o all'inizio  
   
@@ -40,18 +40,18 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
     > [!NOTE]
     >  Tenere presente che, se si modifica l'elenco di navigazione nel codice, è necessario attivare nuovamente il **successivo** pulsante, in modo che gli utenti possono visualizzare l'intera durata del nuovo elenco. Inoltre, tenere presente che il codice precedente <xref:System.Windows.Forms.BindingSource.PositionChanged> eventi per lo specifico <xref:System.Windows.Forms.BindingSource> si lavora con deve essere associato al relativo metodo di gestione degli eventi. Di seguito è riportato un esempio di un metodo per la gestione di <xref:System.Windows.Forms.BindingSource.PositionChanged> evento:  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.NavigatingData#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.NavigatingData#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#3)]  
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Per trovare un elemento e impostarlo come elemento corrente  
   
 1.  Trovare il record che si desidera impostare come elemento corrente. È possibile farlo usando il <xref:System.Windows.Forms.BindingSource.Find%2A> metodo per il <xref:System.Windows.Forms.BindingSource>, se l'origine dati implementa <xref:System.ComponentModel.IBindingList>. Alcuni esempi di dati di origini che implementano <xref:System.ComponentModel.IBindingList> vengono <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.  
   
-     [!code-csharp[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Origini dati supportate da Windows Form](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)
-- [Notifica delle modifiche nel data binding dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)
+- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

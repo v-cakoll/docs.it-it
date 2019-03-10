@@ -9,26 +9,26 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663979"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720410"
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Consente di disegnare linee, rettangoli e le altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate predefinito è l'origine nell'angolo superiore sinistro con l'asse x che punta a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>I blocchi predefiniti di GDI+  
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
+ ![Grafica vettoriale](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
   
  Un monitor del computer consente di creare una visualizzazione personalizzata in una matrice rettangolare di punti definiti elementi immagine o pixel. Il numero di pixel visualizzati sullo schermo varia da un monitor alla successiva e il numero di pixel visualizzati su un monitor specifico può essere configurato in una certa misura in genere dall'utente.  
   
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
+ ![Grafica vettoriale](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
  Quando si usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una riga, nel rettangolo o curve, si forniscono alcune informazioni essenziali sull'elemento da disegnare. Ad esempio, è possibile specificare una riga, fornendo due punti ed è possibile specificare un rettangolo, fornendo un punto, un'altezza e una larghezza. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel che devono essere attivati per mostrare la riga, nel rettangolo o curva. La figura seguente mostra i pixel che vengano impostati su on per visualizzare una linea dal punto (4, 2) per il punto (12, 8).  
   
- ![Grafica vettoriale](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
+ ![Grafica vettoriale](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
  Nel corso del tempo, determinati componenti di base sono rivelati a essere più utili per la creazione di immagini bidimensionale. Questi blocchi predefiniti, che sono tutti supportati da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vengono forniti nell'elenco seguente:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54663979"
   
  Tutti i metodi di disegno di <xref:System.Drawing.Graphics> classe funzionare in combinazione con un <xref:System.Drawing.Pen> oggetto. Per disegnare qualsiasi elemento, è necessario creare almeno due oggetti: una <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto. Il <xref:System.Drawing.Pen> oggetto archivia gli attributi, ad esempio larghezza di riga e il colore dell'elemento da disegnare. Il <xref:System.Drawing.Pen> oggetto viene passato come uno degli argomenti del metodo di disegno. Ad esempio, una variazione del <xref:System.Drawing.Graphics.DrawLine%2A> metodo riceve un <xref:System.Drawing.Pen> oggetto e quattro interi come illustrato nell'esempio seguente, che consente di disegnare un rettangolo con una larghezza pari a 100, con un'altezza pari a 50 e un angolo superiore sinistro del (20, 10):  
   
- [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
- [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
+ [!code-csharp[LinesCurvesAndShapes#11](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
+ [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Linee, curve e forme](lines-curves-and-shapes.md)
+- [Procedura: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md)

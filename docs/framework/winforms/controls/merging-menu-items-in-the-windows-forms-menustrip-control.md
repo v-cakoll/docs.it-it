@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551852"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722350"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Unione delle voci di menu nel controllo MenuStrip Windows Form
 Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è possibile unire le voci di menu o i form figlio interi menu nei menu del form padre.  
@@ -56,6 +56,6 @@ Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è p
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [Procedura: Creare un elenco di finestre MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Controllo MenuStrip](menustrip-control-windows-forms.md)
+- [Procedura: Creare un elenco di finestre MDI con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

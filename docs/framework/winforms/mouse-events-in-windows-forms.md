@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664185"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712305"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
-Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
+Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
   
 ## <a name="mouse-information"></a>Informazioni sul mouse  
  Un oggetto <xref:System.Windows.Forms.MouseEventArgs> viene inviato ai gestori degli eventi del mouse correlati alla pressione di un pulsante e alla registrazione dei movimenti del mouse. <xref:System.Windows.Forms.MouseEventArgs> fornisce informazioni sullo stato corrente del mouse, fra cui la posizione del puntatore nelle coordinate del client, i pulsanti del mouse premuti e se la rotellina del mouse è stata fatta scorrere. Numerosi eventi del mouse, ad esempio quelli che notificano semplicemente il momento in cui il puntatore del mouse entra o esce dai limiti di un controllo, inviano un oggetto <xref:System.EventArgs> al gestore eventi senza altre informazioni.  
@@ -62,7 +62,7 @@ Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizio
   
 8.  Evento<xref:System.Windows.Forms.Control.MouseUp> .  
   
- Per un esempio di codice che illustri l'ordine del mouse fare clic su eventi, vedere [come: L'Input dell'utente di handle di eventi in Windows Form controlli](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Per un esempio di codice che illustri l'ordine del mouse fare clic su eventi, vedere [come: L'Input dell'utente di handle di eventi in Windows Form controlli](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Controlli autonomi  
  I controlli seguenti non sono conformi al comportamento standard dell'evento Click del mouse:  
@@ -142,4 +142,4 @@ Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizio
     >  Se l'utente sposta il puntatore all'esterno del controllo di attivazione/disattivazione mentre il pulsante del mouse è premuto, ad esempio spostando il mouse dal controllo <xref:System.Windows.Forms.Button> mentre il pulsante è premuto, il controllo di attivazione/disattivazione viene disegnato nello stato generato e si verifica solo l'evento <xref:System.Windows.Forms.Control.MouseUp>. In tale situazione l'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> non si verificherà.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)

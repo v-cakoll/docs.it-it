@@ -5,16 +5,16 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509532"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711772"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Tasti di scelta rapida per il controllo DataGrid Windows Form
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  La tabella seguente elenca i tasti di scelta rapida che possono essere utilizzati per la navigazione all'interno di moduli di Windows <xref:System.Windows.Forms.DataGrid> controllo:  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54509532"
 |Immettere un <xref:System.DBNull.Value?displayProperty=nameWithType> valore in una cella in modalità di modifica.|CTRL+0|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Controllo DataGrid](datagrid-control-windows-forms.md)

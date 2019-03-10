@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 0b3662a700d897607780e8d5032c498faff97753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0800acc955ff8cf9efa7bc183f10d2b5cc87aac6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577019"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713715"
 ---
 # <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Procedura: Abilitare il riordino di elementi ToolStrip in fase di esecuzione in Windows Form
 È possibile consentire all'utente di riordinare <xref:System.Windows.Forms.ToolStripItem> ai controlli di <xref:System.Windows.Forms.ToolStrip>.  
@@ -37,6 +37,6 @@ ms.locfileid: "54577019"
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>
-- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
+- [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

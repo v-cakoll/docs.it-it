@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 87b49b025cfb27812933511b76c5a024cde4995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680303"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724656"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Personalizzazione della fase di progettazione del flusso di lavoro
 
@@ -17,15 +17,15 @@ In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli sc
 
 ## <a name="in-this-section"></a>In questa sezione
 
- [Uso di finestre di progettazione e modelli di attività personalizzati](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [Uso di finestre di progettazione e modelli di attività personalizzati](using-custom-activity-designers-and-templates.md)
 
  Viene descritto come creare nuovi ActivityDesigner e modelli personalizzati.
 
- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
 
  Viene descritto come riallocare la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di Visual Studio e come visualizzare gli errori di convalida.
 
- [Uso di un editor di espressioni personalizzato](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [Uso di un editor di espressioni personalizzato](using-a-custom-expression-editor.md)
 
  Viene descritto come implementare un editor di espressioni personalizzato da usare con le finestre di progettazione del flusso di lavoro riallocate all'esterno di Visual Studio 2010.
 
@@ -35,7 +35,7 @@ In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli sc
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Estensione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [Finestra di progettazione](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [ActivityDesigner personalizzati](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [Riallocazione della finestra di progettazione](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [Estensione di Windows Workflow Foundation](extend.md)
+- [Finestra di progettazione](./samples/designer.md)
+- [ActivityDesigner personalizzati](./samples/custom-activity-designers.md)
+- [Riallocazione della finestra di progettazione](./samples/designer-rehosting.md)

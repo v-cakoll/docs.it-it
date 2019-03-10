@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667557"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711278"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Cenni preliminari sul controllo PrintPreviewDialog (Windows Form)
-I moduli di Windows <xref:System.Windows.Forms.PrintPreviewDialog> controllo è una finestra di dialogo preconfigurata che consente di visualizzare come un [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) verrà stampato. Usarlo all'interno dell'applicazione basata su Windows come una soluzione semplice invece di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  
+I moduli di Windows <xref:System.Windows.Forms.PrintPreviewDialog> controllo è una finestra di dialogo preconfigurata che consente di visualizzare come un [PrintDocument](printdocument-component-windows-forms.md) verrà stampato. Usarlo all'interno dell'applicazione basata su Windows come una soluzione semplice invece di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  
   
 ## <a name="key-properties-and-methods"></a>I metodi e proprietà chiave  
  Proprietà chiave del controllo è <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, che imposta il documento da visualizzare in anteprima. Il documento deve essere un <xref:System.Drawing.Printing.PrintDocument> oggetto. Per visualizzare la finestra di dialogo, è necessario chiamare relativo <xref:System.Windows.Forms.Form.ShowDialog%2A> (metodo). Anti-aliasing può rendere il testo vengono visualizzati più uniforme, ma può anche rendere la visualizzazione. per usarlo, impostare il <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> proprietà `true`.  
@@ -53,6 +53,6 @@ Se si usa la <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> even
 
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [Panoramica sul controllo PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [Controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Controlli e componenti della finestra di dialogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [Panoramica sul controllo PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
+- [Controllo PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
+- [Controlli e componenti della finestra di dialogo](dialog-box-controls-and-components-windows-forms.md)

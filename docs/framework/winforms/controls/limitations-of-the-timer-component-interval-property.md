@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: d280d14b116a356e1d9da94ef61d00ccae734b94
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664120"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724388"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Limitazioni della proprietà Interval del componente Timer di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.Timer> componente dispone di un <xref:System.Windows.Forms.Timer.Interval%2A> proprietà che specifica il numero di millisecondi che intercorre tra un evento timer e quella successiva. A meno che il componente è disabilitato, un timer continua a ricevere il <xref:System.Windows.Forms.Timer.Tick> evento quasi uguale a intervalli di tempo.  
@@ -30,5 +30,5 @@ I moduli di Windows <xref:System.Windows.Forms.Timer> componente dispone di un <
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Timer>
-- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Panoramica sul componente Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Componente Timer](timer-component-windows-forms.md)
+- [Panoramica sul componente Timer](timer-component-overview-windows-forms.md)

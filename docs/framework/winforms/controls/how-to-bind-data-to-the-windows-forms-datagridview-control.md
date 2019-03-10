@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584057"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725103"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Procedura: Associare dati al controllo DataGridView di Windows Form
 
-Il <xref:System.Windows.Forms.DataGridView> controllo supporta il modello di associazione dati standard di Windows Form, pertanto è possibile associare a un'ampia gamma di origini dati. In genere, si associa a un <xref:System.Windows.Forms.BindingSource> che gestisce l'interazione con l'origine dati. Il <xref:System.Windows.Forms.BindingSource> può essere qualsiasi origine dati di Windows Form, che consente una notevole flessibilità, la scelta o la modifica del percorso dei dati. Per altre informazioni sulle origini dati di <xref:System.Windows.Forms.DataGridView> controllo supporta, vedere la [Cenni preliminari sul controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+Il <xref:System.Windows.Forms.DataGridView> controllo supporta il modello di associazione dati standard di Windows Form, pertanto è possibile associare a un'ampia gamma di origini dati. In genere, si associa a un <xref:System.Windows.Forms.BindingSource> che gestisce l'interazione con l'origine dati. Il <xref:System.Windows.Forms.BindingSource> può essere qualsiasi origine dati di Windows Form, che consente una notevole flessibilità, la scelta o la modifica del percorso dei dati. Per altre informazioni sulle origini dati di <xref:System.Windows.Forms.DataGridView> controllo supporta, vedere la [Cenni preliminari sul controllo DataGridView](datagridview-control-overview-windows-forms.md).  
 
 Visual Studio offre supporto completo per il data binding al controllo DataGridView. Per altre informazioni, vedere [Procedura: Associare dati al controllo DataGridView di Windows Form usando la finestra di progettazione](bind-data-to-the-datagrid-using-the-designer.md).  
 
@@ -44,8 +44,8 @@ Per compilare ed eseguire questo esempio, incollare il codice nel *Form1* file d
   
 Popolare il `connectionString` variabili nell'esempio con i valori per la connessione di database di esempio Northwind di SQL Server. L'autenticazione di Windows, denominato anche sicurezza integrata, è un modo più sicuro per la connessione al database di archiviare una password nella stringa di connessione. Per altre informazioni sulla sicurezza della connessione, vedere [proteggere le informazioni di connessione](../../data/adonet/protecting-connection-information.md).  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.DataGridView>

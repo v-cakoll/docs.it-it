@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 3793c33d378ee242656889434c7b29c415e9ec9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496205"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714684"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Procedura: Impostare gli attributi dei caratteri per il controllo RichTextBox di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo è disponibili numerose opzioni per la formattazione del testo visualizzato. È possibile apportare i caratteri selezionati in grassetto, corsivo o sottolineato utilizzando il <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> proprietà. Questa proprietà può essere usata anche per modificare le dimensioni e il carattere tipografico dei caratteri selezionati. Il <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> proprietà consente di modificare il colore dei caratteri selezionati.  
@@ -28,11 +28,11 @@ I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo è disponi
   
 1.  Impostare il <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> proprietà a un tipo di carattere appropriato.  
   
-     Per consentire agli utenti di impostare la famiglia di caratteri, dimensioni e il carattere tipografico in un'applicazione, in genere Usa il <xref:System.Windows.Forms.FontDialog> componente. Per informazioni generali, vedere [Cenni preliminari sul componente FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md).  
+     Per consentire agli utenti di impostare la famiglia di caratteri, dimensioni e il carattere tipografico in un'applicazione, in genere Usa il <xref:System.Windows.Forms.FontDialog> componente. Per informazioni generali, vedere [Cenni preliminari sul componente FontDialog](fontdialog-component-overview-windows-forms.md).  
   
 2.  Impostare il <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> proprietà su un colore appropriato.  
   
-     Per consentire agli utenti di impostare il colore in un'applicazione, in genere Usa il <xref:System.Windows.Forms.ColorDialog> componente. Per informazioni generali, vedere [Cenni preliminari sul componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md).  
+     Per consentire agli utenti di impostare il colore in un'applicazione, in genere Usa il <xref:System.Windows.Forms.ColorDialog> componente. Per informazioni generali, vedere [Cenni preliminari sul componente ColorDialog](colordialog-component-overview-windows-forms.md).  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -55,5 +55,5 @@ I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo è disponi
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.RichTextBox>
-- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controllo RichTextBox](richtextbox-control-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

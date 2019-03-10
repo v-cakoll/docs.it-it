@@ -2,21 +2,21 @@
 title: 'Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558423"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721222"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri
 In questa attività si creerà il **casella degli strumenti** e **PropertyGrid** riquadri e aggiungerle a riallocato [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Per riferimento, il codice che deve essere nel file MainWindow.xaml.cs dopo aver completato le tre attività nel [riallocazione della finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) serie di argomenti viene fornito alla fine di questo argomento.  
+ Per riferimento, il codice che deve essere nel file MainWindow.xaml.cs dopo aver completato le tre attività nel [riallocazione della finestra di progettazione del flusso di lavoro](rehosting-the-workflow-designer.md) serie di argomenti viene fornito alla fine di questo argomento.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Per creare la casella degli strumenti e aggiungerla alla griglia  
   
-1.  Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md).  
   
 2.  Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Attività 2: Host di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
+- [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Attività 2: Host di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 5f1a2b220c3fb5d348f8aa45fbf07140844c9adf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441621"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724611"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)
 Può risultare utile visualizzare i dati all'interno di un Windows Form in un formato facilmente riconoscibile dall'utente, ma memorizzare gli stessi dati in un formato che consenta una migliore gestione da parte del programma. Ad esempio un form di ordinazione per generi alimentari può visualizzare le voci di menu ordinate in base al nome in una casella di riepilogo, mentre la tabella dati per la registrazione dell'ordine può contenere i numeri univoci di identificazione corrispondenti a ogni piatto. Nelle tabelle seguenti viene mostrato un esempio di memorizzazione e visualizzazione dei dati contenuti in un form di ordinazione per generi alimentari.  
@@ -71,8 +71,8 @@ Può risultare utile visualizzare i dati all'interno di un Windows Form in un fo
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Data binding e Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Panoramica sul controllo ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
-- [Panoramica sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
-- [Panoramica sul controllo CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
-- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Data binding e Windows Forms](../data-binding-and-windows-forms.md)
+- [Panoramica sul controllo ListBox](listbox-control-overview-windows-forms.md)
+- [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)
+- [Panoramica sul controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

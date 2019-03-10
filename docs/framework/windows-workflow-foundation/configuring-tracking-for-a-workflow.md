@@ -2,12 +2,12 @@
 title: Configurazione del rilevamento per un flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491256"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719403"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurazione del rilevamento per un flusso di lavoro
 
@@ -67,7 +67,7 @@ Per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceM
 In alternativa, per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite il codice. Per aggiungere un partecipante del rilevamento personalizzato, creare una nuova estensione di comportamento e aggiungerla all'oggetto <xref:System.ServiceModel.ServiceHost> come mostrato nel codice di esempio seguente.
 
 > [!NOTE]
-> Se si desidera visualizzare codice di esempio che illustra come creare un elemento di comportamento personalizzato che aggiunge un partecipante del rilevamento personalizzato, vedere la [rilevamento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) esempi.
+> Se si desidera visualizzare codice di esempio che illustra come creare un elemento di comportamento personalizzato che aggiunge un partecipante del rilevamento personalizzato, vedere la [rilevamento](./samples/tracking.md) esempi.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurazione del rilevamento tramite WorkflowInvoker
 
-Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>. Esempio di codice seguente proviene il [rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) esempio.
+Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>. Esempio di codice seguente proviene il [rilevamento personalizzato](./samples/custom-tracking.md) esempio.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ Per visualizzare i record di rilevamento, attenersi alla seguente procedura.
 
 Nell'immagine seguente vengono mostrati gli eventi di rilevamento nel visualizzatore eventi.
 
-![Che mostra il Visualizzatore eventi i record di rilevamento](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Che mostra il Visualizzatore eventi i record di rilevamento](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrazione di un ID provider specifico dell'applicazione
 

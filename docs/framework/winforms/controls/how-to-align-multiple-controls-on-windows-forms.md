@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 003d45f9384caa6a5b63187d20fe3e3e040e3e5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf9213d4d7c5d7586a632374310a284c36f31bb6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519801"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711357"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedura: Allineare più controlli in Windows Form
 Per standardizzare il layout dell'interfaccia utente (UI) dell'applicazione basata su Windows, è possibile posizionare i gruppi di controlli con un unico comando.  
@@ -29,12 +29,12 @@ Per standardizzare il layout dell'interfaccia utente (UI) dell'applicazione basa
 3.  Nel **formato** dal menu **Align**, quindi fare clic su una delle sette opzioni disponibili.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
-- [Procedura: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura: Riassegnare i controlli esistenti a un padre diverso](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+- [Controlli Windows Form](index.md)
+- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura: Riassegnare i controlli esistenti a un padre diverso](how-to-reassign-existing-controls-to-a-different-parent.md)

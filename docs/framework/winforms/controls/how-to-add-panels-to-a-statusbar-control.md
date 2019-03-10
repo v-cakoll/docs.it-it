@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441736"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713287"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Procedura: Aggiungere pannelli a un controllo StatusBar
 > [!IMPORTANT]
 >  Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungano funzionalità rispetto al <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli vengono mantenuti per compatibilità con le versioni precedenti e per un uso futuro, se si Scegliere.  
   
- L'area programmabile all'interno di un [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controllo è costituito da istanze del <xref:System.Windows.Forms.StatusBarPanel> classe. Questi vengono aggiunti tramite aggiunte al <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.  
+ L'area programmabile all'interno di un [controllo StatusBar](statusbar-control-windows-forms.md) controllo è costituito da istanze del <xref:System.Windows.Forms.StatusBarPanel> classe. Questi vengono aggiunti tramite aggiunte al <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Per aggiungere pannelli a una barra di stato  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56441736"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Finestra di dialogo Editor della raccolta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [Procedura: Impostare la dimensione dei pannelli della barra di stato](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Cenni preliminari sul controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Procedura: Impostare la dimensione dei pannelli della barra di stato](how-to-set-the-size-of-status-bar-panels.md)
+- [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

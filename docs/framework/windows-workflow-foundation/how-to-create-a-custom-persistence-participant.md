@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: creare un partecipante di persistenza personalizzato'
+title: 'Procedura: Creare un partecipante di persistenza personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855842"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725077"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Procedura: creare un partecipante di persistenza personalizzato
-Nella procedura riportata di seguito sono illustrati i passaggi per creare un partecipante di persistenza. Vedere le [che fanno parte di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735) campione e [Store estendibilità](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) argomento per le implementazioni di esempio dei partecipanti di persistenza.  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Procedura: Creare un partecipante di persistenza personalizzato
+Nella procedura riportata di seguito sono illustrati i passaggi per creare un partecipante di persistenza. Vedere le [che fanno parte di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735) campione e [Store estendibilità](store-extensibility.md) argomento per le implementazioni di esempio dei partecipanti di persistenza.  
   
 1.  Creare una classe che deriva dalla classe <xref:System.Activities.Persistence.PersistenceParticipant> o <xref:System.Activities.Persistence.PersistenceIOParticipant>. La classe PersistenceIOParticipant offre gli stessi punti di estendibilità della classe PersistenceParticipant oltre a poter partecipare alle operazioni dei / o. Attenersi ad almeno uno dei passaggi seguenti.  
   

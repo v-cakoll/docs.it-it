@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614693"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724557"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Procedura: Scegliere cartelle con il componente FolderBrowserDialog di Windows Form
 Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di selezionare una cartella, nella maggior parte dei casi per salvare un insieme di file. I moduli di Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente consente di eseguire facilmente questa operazione.  
@@ -62,11 +62,11 @@ Spesso nelle applicazioni Windows create è necessario chiedere agli utenti di s
     ```  
   
     > [!IMPORTANT]
-    >  Per usare questa classe, l'assembly richiede un livello di privilegio concesso dal <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> proprietà, che fa parte di <xref:System.Security.Permissions.FileIOPermissionAccess> enumerazione. Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti. Per altre informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+    >  Per usare questa classe, l'assembly richiede un livello di privilegio concesso dal <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> proprietà, che fa parte di <xref:System.Security.Permissions.FileIOPermissionAccess> enumerazione. Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti. Per altre informazioni, vedere [Code Access Security Basics](../../misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
- Per informazioni su come salvare i file, vedere [come: Salvare i file con il componente SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Per informazioni su come salvare i file, vedere [come: Salvare i file con il componente SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Cenni preliminari sul componente FolderBrowserDialog (Windows Form)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [Componente FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [Cenni preliminari sul componente FolderBrowserDialog (Windows Form)](folderbrowserdialog-component-overview-windows-forms.md)
+- [Componente FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

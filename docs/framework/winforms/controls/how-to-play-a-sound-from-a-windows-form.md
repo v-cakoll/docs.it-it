@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607251"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714710"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Procedura: Riprodurre un suono da un Windows Form
 In questo esempio viene riprodotto un suono in un percorso specificato in fase di esecuzione.  
@@ -66,5 +66,5 @@ private void playSimpleSound()
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Media.SoundPlayer>
-- [Procedura: Caricare un suono in modo asincrono in un Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [Procedura: Caricare un suono in modo asincrono in un Windows Form](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 

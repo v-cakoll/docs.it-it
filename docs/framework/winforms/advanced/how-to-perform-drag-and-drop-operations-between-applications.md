@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 89b1b89c01ba80393e0965858d7767d5c9029003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718428"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713436"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni
 Eseguire operazioni di trascinamento e rilascio tra applicazioni non è diverso dal consentire quest'azione nell'ambito di un'applicazione, purché entrambe le applicazioni implicate si comportino in base al "contratto" stabilito tra le proprietà <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> e <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
@@ -24,7 +24,7 @@ Eseguire operazioni di trascinamento e rilascio tra applicazioni non è diverso 
   
 3.  Configurare il controllo <xref:System.Windows.Forms.TextBox> per ricevere dati rilasciati.  
   
-     Per altre informazioni, vedere [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Per altre informazioni, vedere [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 4.  Eseguire l'applicazione basata su Windows e, mentre l'applicazione è in esecuzione, eseguire WordPad.  
   
@@ -36,9 +36,9 @@ Eseguire operazioni di trascinamento e rilascio tra applicazioni non è diverso 
   
      Osservare che quando si passa il mouse sul controllo <xref:System.Windows.Forms.TextBox> (e, di conseguenza, si genera l'evento <xref:System.Windows.Forms.Control.DragEnter>), il cursore cambia ed è possibile rilasciare il testo selezionato sul controllo <xref:System.Windows.Forms.TextBox>.  
   
-     È anche possibile configurare il controllo <xref:System.Windows.Forms.TextBox> per consentire il trascinamento e rilascio delle stringhe di testo in WordPad. Per altre informazioni, vedere [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     È anche possibile configurare il controllo <xref:System.Windows.Forms.TextBox> per consentire il trascinamento delle stringhe di testo in WordPad. Per altre informazioni, vedere [Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Aggiungere dati agli Appunti](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [Procedura: Recuperare i dati dagli Appunti](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [Drag-and-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
+- [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)
+- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)

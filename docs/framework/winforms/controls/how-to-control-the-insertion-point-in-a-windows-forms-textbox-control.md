@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 6ed49cac8341551dd0900a8468990e314a16e7b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660190"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714892"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form
 Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo riceve lo stato attivo, l'inserimento dell'impostazione predefinita all'interno della casella di testo è a sinistra del testo esistente. L'utente può spostare il punto di inserimento con il mouse o tastiera. Se la casella di testo perde e riacquisisce quindi lo stato attivo, il punto di inserimento sarà ovunque l'utente ultima posizione assegnata.  
@@ -28,7 +28,7 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
   
 2.  (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> proprietà per la lunghezza del testo che si desidera selezionare.  
   
-     Il codice seguente restituisce sempre il punto di inserimento su 0. Il `TextBox1_Enter` gestore dell'evento deve essere associato al controllo; per altre informazioni, vedere [creazione di gestori di eventi in Windows Form](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
+     Il codice seguente restituisce sempre il punto di inserimento su 0. Il `TextBox1_Enter` gestore dell'evento deve essere associato al controllo; per altre informazioni, vedere [creazione di gestori di eventi in Windows Form](../creating-event-handlers-in-windows-forms.md).  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -63,10 +63,10 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.TextBox>
-- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo di sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Procedura: Inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Controllo TextBox](textbox-control-windows-forms.md)

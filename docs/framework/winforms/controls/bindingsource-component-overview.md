@@ -7,22 +7,22 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 6fbd089cef6f014979cf8bbdf376b2f76ac9bcf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686946"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724464"
 ---
 # <a name="bindingsource-component-overview"></a>Cenni preliminari sul componente BindingSource
 Il componente <xref:System.Windows.Forms.BindingSource> è progettato per semplificare il processo di associazione di controlli a un'origine dati sottostante. Il componente <xref:System.Windows.Forms.BindingSource> funge da canale e da origine dati per altri controlli a cui associarli. Fornisce un'astrazione della connessione dati del form passando i comandi all'elenco dei dati sottostante. Inoltre, è possibile aggiungervi dati direttamente, in modo che il componente stesso funga da origine dati.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>Componente BindingSource come intermediario  
- Il componente <xref:System.Windows.Forms.BindingSource> funge da origine dati per alcuni o tutti i controlli nel form. In Visual Studio, il <xref:System.Windows.Forms.BindingSource> può essere associato a un controllo per mezzo della `DataBindings` proprietà, che è accessibile dalle **proprietà** finestra. Vedere anche [come: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
+ Il componente <xref:System.Windows.Forms.BindingSource> funge da origine dati per alcuni o tutti i controlli nel form. In Visual Studio, il <xref:System.Windows.Forms.BindingSource> può essere associato a un controllo per mezzo della `DataBindings` proprietà, che è accessibile dalle **proprietà** finestra. Vedere anche [come: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione](bind-wf-controls-with-the-bindingsource.md).  
   
  È possibile associare il componente <xref:System.Windows.Forms.BindingSource> a entrambe le semplici origini dati, ad esempio una singola proprietà di un oggetto o una raccolta di base come <xref:System.Collections.ArrayList>, e origini dati complesse, ad esempio una tabella di database. Il componente <xref:System.Windows.Forms.BindingSource> funge da intermediario che fornisce servizi di associazione e gestione valuta. In fase di progettazione o di esecuzione, è possibile associare un componente <xref:System.Windows.Forms.BindingSource> a un'origine dati complessi impostando le relative proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> e <xref:System.Windows.Forms.BindingSource.DataMember%2A> sul database e sulla tabella, rispettivamente. La figura seguente illustra il punto in cui il componente <xref:System.Windows.Forms.BindingSource> si inserisce nell'architettura di associazione di dati esistente.  
   
- ![Architettura di data binding e origine associazione](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
+ ![Architettura di data binding e origine associazione](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
 >  In fase di progettazione, alcune azioni, ad esempio il trascinamento di una tabella di database da una finestra dei dati in un form vuoto, comporta la creazione del componente <xref:System.Windows.Forms.BindingSource>, la sua associazione all'origine dati sottostante e l'aggiunta dei controlli con supporto dati in un'unica operazione. Vedere anche [Associare i controlli di Windows Form ai dati in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
@@ -30,10 +30,10 @@ Il componente <xref:System.Windows.Forms.BindingSource> è progettato per sempli
 ## <a name="bindingsource-component-as-a-data-source"></a>Componente BindingSource come origine dati  
  Se si avvia l'aggiunta di elementi al componente <xref:System.Windows.Forms.BindingSource> senza prima specificare un elenco a cui associarlo, il componente funge da origine dati list-style e accetta tali elementi aggiunti.  
   
- Inoltre, è possibile scrivere codice per fornire funzionalità "AddNew" personalizzate per mezzo dell'evento <xref:System.Windows.Forms.BindingSource.AddingNew>, che viene generato quando il metodo <xref:System.Windows.Forms.BindingSource.AddNew%2A> viene chiamato prima dell'elemento da aggiungere all'elenco. Per altre informazioni, vedere [Architettura del componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md).  
+ Inoltre, è possibile scrivere codice per fornire funzionalità "AddNew" personalizzate per mezzo dell'evento <xref:System.Windows.Forms.BindingSource.AddingNew>, che viene generato quando il metodo <xref:System.Windows.Forms.BindingSource.AddNew%2A> viene chiamato prima dell'elemento da aggiungere all'elenco. Per altre informazioni, vedere [Architettura del componente BindingSource](bindingsource-component-architecture.md).  
   
 ## <a name="navigation"></a>Navigazione  
- Per gli utenti che devono passare i dati in un form, il componente <xref:System.Windows.Forms.BindingNavigator> consente di esplorare e modificare i dati in coordinamento con un componente <xref:System.Windows.Forms.BindingSource>. Per altre informazioni, vedere [Controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md).  
+ Per gli utenti che devono passare i dati in un form, il componente <xref:System.Windows.Forms.BindingNavigator> consente di esplorare e modificare i dati in coordinamento con un componente <xref:System.Windows.Forms.BindingSource>. Per altre informazioni, vedere [Controllo BindingNavigator](bindingnavigator-control-windows-forms.md).  
   
 ## <a name="data-manipulation"></a>Modifica dei dati  
  L'oggetto <xref:System.Windows.Forms.BindingSource> agisce come <xref:System.Windows.Forms.CurrencyManager> per tutte le associazioni e può, pertanto, fornire l'accesso alle informazioni su valuta e posizione relativamente all'origine dati. La tabella seguente illustra i membri che il componente <xref:System.Windows.Forms.BindingSource> fornisce per l'accesso e la modifica dei dati sottostanti.  
@@ -60,8 +60,8 @@ Il componente <xref:System.Windows.Forms.BindingSource> è progettato per sempli
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Architettura del componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Data binding in Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Architettura del componente BindingSource](bindingsource-component-architecture.md)
+- [Componente BindingSource](bindingsource-component.md)
+- [Controllo BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [Data binding in Windows Form](../windows-forms-data-binding.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

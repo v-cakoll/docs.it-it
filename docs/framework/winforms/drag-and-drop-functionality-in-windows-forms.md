@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664767"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719416"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funzionalità di trascinamento della selezione in Windows Form
 Windows Forms include un set di metodi, eventi e classi che implementano il comportamento di trascinamento e rilascio. Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione in Windows Forms.  Vedere anche [operazioni di trascinamento e rilascio e supporto per gli Appunti](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
@@ -44,4 +44,4 @@ Windows Forms include un set di metodi, eventi e classi che implementano il comp
  La classe <xref:System.Windows.Forms.QueryContinueDragEventArgs> fornisce lo stato corrente dei pulsanti del mouse e dei tasti di modifica della tastiera, un valore che specifica se è stato premuto il tasto ESC e un valore dell'enumerazione <xref:System.Windows.Forms.DragAction> che è possibile impostare per specificare se l'operazione di trascinamento della selezione deve continuare.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)

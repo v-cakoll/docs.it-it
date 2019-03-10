@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441242"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724401"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributi nei controlli Windows Form
 .NET Framework offre un'ampia gamma di attributi che è possibile applicare ai membri dei controlli e dei componenti personalizzati. Alcuni di questi attributi influiscono sul comportamento in fase di esecuzione di una classe, mentre altri influiscono sul comportamento in fase di progettazione.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Attributi per le proprietà del controllo e del componente  
- La tabella seguente illustra gli attributi che è possibile applicare alle proprietà o ad altri membri dei componenti e dei controlli personalizzati. Per un esempio che usa molti di questi attributi, vedere [come: Applicare attributi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ La tabella seguente illustra gli attributi che è possibile applicare alle proprietà o ad altri membri dei componenti e dei controlli personalizzati. Per un esempio che usa molti di questi attributi, vedere [come: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
@@ -62,6 +62,6 @@ ms.locfileid: "56441242"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Attribute>
-- [Procedura: Applicare attributi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Procedura: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)

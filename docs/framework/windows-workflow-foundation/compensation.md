@@ -2,12 +2,12 @@
 title: Compensazione
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607605"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721296"
 ---
 # <a name="compensation"></a>Compensazione
 La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante il quale in precedenza il lavoro completato può essere annullato o compensato (seguendo la logica definita dall'applicazione) quando si verifica un errore successivo. Contenuto della sezione viene illustrato come usare la compensazione nei flussi di lavoro.  
@@ -16,12 +16,12 @@ La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante i
  Una transazione consente di combinare più operazioni in un'unica unità di lavoro. Quando viene usata una transazione, l'applicazione può annullare, ovvero eseguire il rollback, di tutte le modifiche eseguite dall'interno della transazione se si verificano errori durante qualsiasi parte del processo della transazione. L'utilizzo di transazioni potrebbe tuttavia non essere adatto per un lavoro a esecuzione prolungata. Ad esempio, un'applicazione di pianificazione di viaggi viene implementata come flusso di lavoro. I passaggi del flusso di lavoro possono essere costituiti dalla prenotazione di un volo, dall'attesa dell'approvazione da parte del responsabile e dal pagamento del volo. Questo processo potrebbe richiedere molti giorni e non è funzionale che i passaggi di prenotazione e pagamento del volo prendano parte alla stessa transazione. In uno scenario come questo, la compensazione potrebbe essere usata per annullare il passaggio di prenotazione del flusso di lavoro se, successivamente, si verifica un errore nell'elaborazione.  
   
 > [!NOTE]
->  In questo argomento viene illustrato il concetto di compensazione nei flussi di lavoro. Per altre informazioni sulle transazioni nei flussi di lavoro, vedere [transazioni](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) e <xref:System.Activities.Statements.TransactionScope>. Per altre informazioni sulle transazioni, vedere <xref:System.Transactions?displayProperty=nameWithType> e <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  In questo argomento viene illustrato il concetto di compensazione nei flussi di lavoro. Per altre informazioni sulle transazioni nei flussi di lavoro, vedere [transazioni](workflow-transactions.md) e <xref:System.Activities.Statements.TransactionScope>. Per altre informazioni sulle transazioni, vedere <xref:System.Transactions?displayProperty=nameWithType> e <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>Uso di CompensableActivity  
  L'oggetto <xref:System.Activities.Statements.CompensableActivity> è l'attività di compensazione principale di [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Qualsiasi attività che esegue un lavoro che necessita di compensazione viene inserita nell'oggetto <xref:System.Activities.Statements.CompensableActivity.Body%2A> di un oggetto <xref:System.Activities.Statements.CompensableActivity>. In questo esempio il passaggio di prenotazione relativo all'acquisto di un volo viene inserito nell'oggetto <xref:System.Activities.Statements.CompensableActivity.Body%2A> di un oggetto <xref:System.Activities.Statements.CompensableActivity>, mentre l'annullamento della prenotazione viene inserito nell'oggetto <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Subito dopo l'oggetto <xref:System.Activities.Statements.CompensableActivity> nel flusso di lavoro si trovano due attività che attendono l'approvazione del responsabile e successivamente completano il passaggio di acquisto del volo. Se una condizione di errore provoca l'annullamento del flusso di lavoro dopo il corretto completamento dell'oggetto <xref:System.Activities.Statements.CompensableActivity>, le attività nel gestore <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> vengono pianificate e il volo viene annullato.  
   
- [!code-csharp[CFX_CompensationExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
+ [!code-csharp[CFX_CompensationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
   
  L'esempio seguente è il flusso di lavoro in XAML.  
   
@@ -62,7 +62,7 @@ La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante i
   
  In questo esempio viene generata un'eccezione dopo la prenotazione del volo ma prima del passaggio di approvazione da parte del responsabile.  
   
- [!code-csharp[CFX_CompensationExample#2](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
+ [!code-csharp[CFX_CompensationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
   
  In questo esempio viene illustrato il flusso di lavoro in XAML.  
   
@@ -87,7 +87,7 @@ La compensazione in Windows Workflow Foundation (WF) è il meccanismo mediante i
 </Sequence>  
 ```  
   
- [!code-csharp[CFX_CompensationExample#100](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
+ [!code-csharp[CFX_CompensationExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
   
  Quando viene richiamato il flusso di lavoro, l'eccezione della condizione di errore simulata viene gestita dall'applicazione host in <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, il flusso di lavoro viene annullato e la logica di compensazione viene richiamata.  
   
@@ -166,12 +166,12 @@ Activity wf = new Sequence()
 **Eccezione non gestita del flusso di lavoro:**   
 **System.ApplicationException: Condizione di errore simulata nel flusso di lavoro.**   
 **CancelCreditCard: Annulla l'addebito sulla carta di credito.**   
-**Flusso di lavoro completato con stato: Annullato.**  Per altre informazioni sull'annullamento, vedere [annullamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**Flusso di lavoro completato con stato: Annullato.**  Per altre informazioni sull'annullamento, vedere [annullamento](modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Compensazione esplicita tramite l'attività Compensate  
  Nella sezione precedente è stata illustrata la compensazione implicita. Si tratta di un tipo di compensazione che può risultare appropriata per scenari semplici, ma se occorre un controllo più esplicito sulla pianificazione della gestione della compensazione è possibile usare l'attività <xref:System.Activities.Statements.Compensate>. Per iniziare il processo di compensazione con l'attività <xref:System.Activities.Statements.Compensate>, viene usato l'oggetto <xref:System.Activities.Statements.CompensationToken> dell'oggetto <xref:System.Activities.Statements.CompensableActivity> per il quale si desidera la compensazione. L'attività <xref:System.Activities.Statements.Compensate> può essere usata per iniziare la compensazione su qualsiasi oggetto <xref:System.Activities.Statements.CompensableActivity> completato che non è stato confermato o compensato. Ad esempio, un'attività <xref:System.Activities.Statements.Compensate> potrebbe essere usata nella sezione <xref:System.Activities.Statements.TryCatch.Catches%2A> di un'attività <xref:System.Activities.Statements.TryCatch> o in qualsiasi momento dopo il completamento dell'oggetto <xref:System.Activities.Statements.CompensableActivity>. In questo esempio l'attività <xref:System.Activities.Statements.Compensate> viene usata nella sezione <xref:System.Activities.Statements.TryCatch.Catches%2A> di un'attività <xref:System.Activities.Statements.TryCatch> per invertire l'azione dell'oggetto <xref:System.Activities.Statements.CompensableActivity>.  
   
- [!code-csharp[CFX_CompensationExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
+ [!code-csharp[CFX_CompensationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
   
  In questo esempio viene illustrato il flusso di lavoro in XAML.  
   
@@ -251,7 +251,7 @@ Activity wf = new Sequence()
 ### <a name="confirming-compensation"></a>Conferma della compensazione  
  Per impostazione predefinita, le attività compensabili possono essere compensate in qualsiasi momento una volta completate. In alcuni casi però questo potrebbe non essere appropriato. Nell'esempio precedente la compensazione relativa alla prenotazione del biglietto consisteva nell'annullamento della prenotazione. Tuttavia, una volta completato il volo, questo passaggio di compensazione non è più valido. La conferma dell'attività compensabile richiama l'attività specificata da <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Un possibile utilizzo consiste nel consentire a qualsiasi risorsa necessaria di eseguire la compensazione da rilasciare. Una volta confermata, un'attività compensabile non può essere compensata e se si tenta tale operazione, verrà generata un'eccezione <xref:System.InvalidOperationException>. Quando un flusso di lavoro viene completato correttamente, tutte le attività compensabili non confermate e non compensate completate correttamente vengono confermate nell'ordine inverso rispetto al completamento. In questo esempio il volo è prenotato, acquistato e completato, quindi l'attività compensabile è confermata. Per confermare un oggetto <xref:System.Activities.Statements.CompensableActivity>, usare l'attività <xref:System.Activities.Statements.Confirm> e specificare l'oggetto <xref:System.Activities.Statements.CompensationToken> dell'oggetto <xref:System.Activities.Statements.CompensableActivity> da confermare.  
   
- [!code-csharp[CFX_CompensationExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
+ [!code-csharp[CFX_CompensationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
   
  In questo esempio viene illustrato il flusso di lavoro in XAML.  
   

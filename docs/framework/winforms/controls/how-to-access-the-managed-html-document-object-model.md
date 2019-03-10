@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637151"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715945"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Procedura: Accedere al modello a oggetti documenti HTML gestito
 È possibile accedere a Document Object Model (DOM) HTML gestito da due tipi di applicazione:  
@@ -24,18 +24,18 @@ ms.locfileid: "54637151"
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Per accedere a DOM da un'applicazione Windows Form  
   
-1.  Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Forms e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../../docs/standard/events/index.md).  
+1.  Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Form e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../standard/events/index.md).  
   
 2.  Recuperare la classe <xref:System.Windows.Forms.HtmlDocument> per la pagina corrente accedendo alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>.  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Per accedere a DOM da una classe UserControl ospitata in Internet Explorer  
   
-1.  Creare una classe personalizzata derivata dalla classe <xref:System.Windows.Forms.UserControl>. Per altre informazioni, vedere [Procedura: Modificare controlli compositi](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Creare una classe personalizzata derivata dalla classe <xref:System.Windows.Forms.UserControl>. Per altre informazioni, vedere [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md).  
   
 2.  Inserire il codice seguente nel gestore eventi Load per la classe <xref:System.Windows.Forms.UserControl> personalizzata:  
   
- [!code-csharp[AccessHTMLDOMControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
- [!code-vb[AccessHTMLDOMControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
+ [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
+ [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   
@@ -46,4 +46,4 @@ ms.locfileid: "54637151"
 1.  L'applicazione o la classe <xref:System.Windows.Forms.UserControl> richiederà l'attendibilità totale per accedere a DOM HTML gestito. Se si distribuisce un'applicazione Windows Form con [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], è possibile richiedere l'attendibilità totale con l'elevazione delle autorizzazioni o la distribuzione di applicazioni attendibili. Per informazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Utilizzare il Document Object Model HTML gestito](using-the-managed-html-document-object-model.md)

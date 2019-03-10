@@ -2,12 +2,12 @@
 title: 'Attività 1: Creare una nuova applicazione Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679409"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711886"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: Creare una nuova applicazione Windows Presentation Foundation
 In questa attività verranno creare un'applicazione Windows Presentation Foundation (WPF) vuota usando il modello di Visual Studio dell'applicazione WPF e aggiungere i riferimenti appropriati [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] gli assembly del flusso di lavoro.  
@@ -40,8 +40,8 @@ In questa attività verranno creare un'applicazione Windows Presentation Foundat
   
 10. Fare clic su **OK**.  
   
-11. Vedere [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) per informazioni su come ospitare il canvas di progettazione di progettazione del flusso di lavoro.  
+11. Vedere [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md) per informazioni su come ospitare il canvas di progettazione di progettazione del flusso di lavoro.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Attività 2: Host di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
+- [Attività 2: Host di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md)

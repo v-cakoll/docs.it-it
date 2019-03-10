@@ -12,12 +12,12 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726325"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724503"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: Rispondere a un Windows Form controlli CheckBox
 Ogni volta che un utente fa clic su un controllo Windows Form <xref:System.Windows.Forms.CheckBox> (controllo), il <xref:System.Windows.Forms.Control.Click> evento si verifica. È possibile programmare l'applicazione per eseguire un'azione a seconda dello stato della casella di controllo.  
@@ -137,6 +137,6 @@ Ogni volta che un utente fa clic su un controllo Windows Form <xref:System.Windo
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.CheckBox>
-- [Panoramica sul controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Controllo CheckBox](checkbox-control-windows-forms.md)

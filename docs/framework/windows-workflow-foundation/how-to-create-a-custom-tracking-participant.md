@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150635"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720956"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: Creare un partecipante di rilevamento personalizzati
 Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. Windows Workflow Foundation (WF) include un partecipante del rilevamento standard che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
@@ -328,7 +328,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     ```
     
     > [!NOTE]
-    > Queste informazioni sono utili per la scelta dell'intervallo del numero casuale, ma non contiene alcuna informazione sui tentativi effettuati in precedenza. Queste informazioni sono nel passaggio successivo, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+    > Queste informazioni sono utili per la scelta dell'intervallo del numero casuale, ma non contiene alcuna informazione sui tentativi effettuati in precedenza. Queste informazioni sono nel passaggio successivo, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     Annotare l'ID istanza del flusso di lavoro e giocare fino al completamento.
   
@@ -342,4 +342,4 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     Please enter a number between 1 and 10
     ```
 
-    Oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contengono informazioni sul tentativo finale del flusso di lavoro. Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro. Nel passaggio successivo dell'esercitazione, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), l'oggetto esistente `WriteLine` le attività sono state modificate per visualizzare i tentativi dell'utente e un ulteriore `WriteLine` attività viene aggiunta che consente di visualizzare i risultati finali. Dopo che queste modifiche vengano integrate, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro nello stesso momento.
+    Oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contengono informazioni sul tentativo finale del flusso di lavoro. Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro. Nel passaggio successivo dell'esercitazione, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), l'oggetto esistente `WriteLine` le attività sono state modificate per visualizzare i tentativi dell'utente e un ulteriore `WriteLine` attività viene aggiunta che consente di visualizzare i risultati finali. Dopo che queste modifiche vengano integrate, [come: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro nello stesso momento.

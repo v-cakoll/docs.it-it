@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498908"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711317"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono dati nell'applicazione, è possibile verificare che i dati siano validi prima che vengano utilizzati dall'applicazione. Potrebbe essere necessario che alcuni campi di testo non essere a lunghezza zero, che un campo formattato come un numero di telefono o altro tipo di dati in formato corretto o che una stringa non contenga caratteri non sicuri che può essere usati per compromettere la protezione di un database. Windows Form fornisce diversi metodi per convalidare l'input nell'applicazione.  
@@ -22,14 +22,14 @@ Quando gli utenti immettono dati nell'applicazione, è possibile verificare che 
   
  Il linguaggio di mascheramento che viene usato da <xref:System.Windows.Forms.MaskedTextBox> è molto flessibile. Consente di specificare caratteri necessari, caratteri facoltativi, i caratteri letterali, ad esempio trattini e parentesi, valuta caratteri e separatori di Data. Il controllo funziona anche quando è associato a un'origine dati. Il <xref:System.Windows.Forms.Binding.Format> evento su un'associazione di dati può essere utilizzato per riformattare i dati in ingresso per garantire la conformità con la maschera e <xref:System.Windows.Forms.Binding.Parse> evento può essere utilizzato per riformattare i dati in uscita per garantire la conformità con le specifiche del campo dati.  
   
- Per altre informazioni, vedere [controllo MaskedTextBox](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Per altre informazioni, vedere [controllo MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md).  
   
 ## <a name="event-driven-validation"></a>Convalida basata su eventi  
  Se si vuole il controllo completo a livello di codice sulla convalida, o necessario eseguire controlli di convalida complessi, si devono usare gli eventi di convalida incorporati in maggior parte dei controlli Windows Form. Ogni controllo che accetta l'input dell'utente in formato libero ha un <xref:System.Windows.Forms.Control.Validating> evento che si verifica ogni volta che il controllo richiede la convalida dei dati. Nel <xref:System.Windows.Forms.Control.Validating> metodo di gestione degli eventi, è possibile convalidare l'input dell'utente in diversi modi. Ad esempio, se si dispone di una casella di testo che deve contenere un codice postale, è possibile eseguire la convalida nei modi seguenti:  
   
 -   Se il codice postale deve appartenere a un gruppo specifico di codici postali, è possibile eseguire un confronto tra stringhe di input per convalidare i dati immessi dall'utente. Ad esempio, se nel set di {10001 e 10002 10003} deve essere il codice postale, quindi è possibile utilizzare un confronto tra stringhe per convalidare i dati.  
   
--   Se il codice postale deve avere un formato specifico è possibile usare espressioni regolari per convalidare i dati immessi dall'utente. Ad esempio, per convalidare il modulo `#####` oppure `#####-####`, è possibile usare l'espressione regolare `^(\d{5})(-\d{4})?$`. Per convalidare il modulo `A#A #A#`, è possibile usare l'espressione regolare `[A-Z]\d[A-Z] \d[A-Z]\d`. Per altre informazioni sulle espressioni regolari, vedere [espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md) e [esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Se il codice postale deve avere un formato specifico è possibile usare espressioni regolari per convalidare i dati immessi dall'utente. Ad esempio, per convalidare il modulo `#####` oppure `#####-####`, è possibile usare l'espressione regolare `^(\d{5})(-\d{4})?$`. Per convalidare il modulo `A#A #A#`, è possibile usare l'espressione regolare `[A-Z]\d[A-Z] \d[A-Z]\d`. Per altre informazioni sulle espressioni regolari, vedere [espressioni regolari di .NET Framework](../../standard/base-types/regular-expressions.md) e [esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md).  
   
 -   Se il codice postale deve essere un codice postale degli Stati Uniti valido, è possibile chiamare un servizio Web di CAP per convalidare i dati immessi dall'utente.  
   
@@ -94,5 +94,5 @@ Quando gli utenti immettono dati nell'applicazione, è possibile verificare che 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [Controllo MaskedTextBox](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [Esempi di espressioni regolari](../../../docs/standard/base-types/regular-expression-examples.md)
+- [Controllo MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md)
+- [Esempi di espressioni regolari](../../standard/base-types/regular-expression-examples.md)

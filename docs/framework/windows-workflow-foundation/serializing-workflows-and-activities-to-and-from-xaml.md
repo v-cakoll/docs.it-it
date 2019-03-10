@@ -2,12 +2,12 @@
 title: Serializzazione di flussi di lavoro e attività da e verso XAML
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-ms.openlocfilehash: f448d96de742b2d81adf7e3c95865a2dd0cb9fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70ee2e8e0c457e9db2853935ef95b86c7f903fc3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715841"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializzazione di flussi di lavoro e attività da e verso XAML
 Oltre alla compilazione in tipi contenuti in assembly, le definizioni di flusso di lavoro possono essere serializzate anche in XAML. Queste definizioni serializzate possono essere ricaricate per la modifica o l'ispezione, passate a un sistema di compilazione per la compilazione o caricate e richiamate. In questo argomento viene fornita una panoramica della serializzazione di definizioni del flusso di lavoro e dell'utilizzo di definizioni del flusso di lavoro XAML.  
@@ -15,9 +15,9 @@ Oltre alla compilazione in tipi contenuti in assembly, le definizioni di flusso 
 ## <a name="working-with-xaml-workflow-definitions"></a>Uso di definizioni del flusso di lavoro XAML  
  Per creare una definizione di flusso di lavoro per la serializzazione, viene usata la classe <xref:System.Activities.ActivityBuilder>. La creazione di un oggetto <xref:System.Activities.ActivityBuilder> è molto simile alla creazione di <xref:System.Activities.DynamicActivity>. Vengono specificati gli argomenti desiderati e vengono configurate le attività che costituiscono il comportamento. Nell'esempio seguente viene creata un'attività `Add` che accetta due argomenti di input, li somma e restituisce il risultato. Poiché questa attività restituisce un risultato, viene usata la classe <xref:System.Activities.ActivityBuilder%601> generica.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#41](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Ognuna delle istanze di <xref:System.Activities.DynamicActivityProperty> rappresenta uno degli argomenti di input per il flusso di lavoro e <xref:System.Activities.ActivityBuilder.Implementation%2A> contiene le attività che costituiscono la logica del flusso di lavoro. Si noti che le espressioni r-value in questo esempio sono espressioni di Visual Basic. Le espressioni lambda non sono serializzabili nel formato XAML a meno che non si utilizzi <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Se i flussi di lavoro serializzati sono progettati per essere aperti o modificati nella finestra di progettazione del flusso di lavoro, dovranno essere usate le espressioni di Visual Basic. Per altre informazioni, vedere [creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Ognuna delle istanze di <xref:System.Activities.DynamicActivityProperty> rappresenta uno degli argomenti di input per il flusso di lavoro e <xref:System.Activities.ActivityBuilder.Implementation%2A> contiene le attività che costituiscono la logica del flusso di lavoro. Si noti che le espressioni r-value in questo esempio sono espressioni di Visual Basic. Le espressioni lambda non sono serializzabili nel formato XAML a meno che non si utilizzi <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Se i flussi di lavoro serializzati sono progettati per essere aperti o modificati nella finestra di progettazione del flusso di lavoro, dovranno essere usate le espressioni di Visual Basic. Per altre informazioni, vedere [creazione di flussi di lavoro, attività e le espressioni tramite codice imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
  Per serializzare la definizione del flusso di lavoro rappresentata dall'istanza di <xref:System.Activities.ActivityBuilder> in XAML, usare <xref:System.Activities.XamlIntegration.ActivityXamlServices> per creare un oggetto <xref:System.Xaml.XamlWriter>, quindi usare <xref:System.Xaml.XamlServices> per serializzare la definizione del flusso di lavoro tramite <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> contiene metodi per eseguire il mapping delle istanze di <xref:System.Activities.ActivityBuilder> in e da XAML e per caricare i flussi di lavoro XAML e restituire un oggetto <xref:System.Activities.DynamicActivity> che può essere richiamato. Nell'esempio seguente l'istanza di <xref:System.Activities.ActivityBuilder> dall'esempio precedente viene serializzata in una stringa e inoltre salvata in un file.  
   
@@ -64,18 +64,18 @@ sw.Close();
 </Activity>  
 ```  
   
- Per caricare un flusso di lavoro serializzato il <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> viene usato il metodo. che accetta la definizione di flusso di lavoro serializzata e restituisce un oggetto <xref:System.Activities.DynamicActivity> che rappresenta la definizione di flusso di lavoro. Notare che XAML non viene deserializzato fino a che <xref:System.Activities.Activity.CacheMetadata%2A> non viene chiamato nel corpo di <xref:System.Activities.DynamicActivity> durante il processo di convalida. Se la convalida non viene chiamata in modo esplicito, viene quindi eseguita quando viene richiamato il flusso di lavoro. Se la definizione di flusso di lavoro XAML non è valida, verrà generata un'eccezione <xref:System.ArgumentException>. Qualsiasi eccezione generata da <xref:System.Activities.Activity.CacheMetadata%2A> usa caratteri di escape dalla chiamata a <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e deve essere gestite dal chiamante. Nell'esempio seguente il flusso di lavoro serializzato dall'esempio precedente viene caricato e richiamato tramite <xref:System.Activities.WorkflowInvoker>.  
+ Caricare un flusso di lavoro serializzato, il <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> viene usato il metodo. che accetta la definizione di flusso di lavoro serializzata e restituisce un oggetto <xref:System.Activities.DynamicActivity> che rappresenta la definizione di flusso di lavoro. Notare che XAML non viene deserializzato fino a che <xref:System.Activities.Activity.CacheMetadata%2A> non viene chiamato nel corpo di <xref:System.Activities.DynamicActivity> durante il processo di convalida. Se la convalida non viene chiamata in modo esplicito, viene quindi eseguita quando viene richiamato il flusso di lavoro. Se la definizione di flusso di lavoro XAML non è valida, verrà generata un'eccezione <xref:System.ArgumentException>. Qualsiasi eccezione generata da <xref:System.Activities.Activity.CacheMetadata%2A> usa caratteri di escape dalla chiamata a <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e deve essere gestite dal chiamante. Nell'esempio seguente il flusso di lavoro serializzato dall'esempio precedente viene caricato e richiamato tramite <xref:System.Activities.WorkflowInvoker>.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#43](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#43](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
   
  Quando questo flusso di lavoro viene richiamato, nella console viene visualizzato l'output seguente.  
   
  **25 + 15**  
 **40**    
 > [!NOTE]
->  Per ulteriori informazioni sui flussi di lavoro con gli argomenti di input e outpui di chiamata, vedere [utilizzo di WorkflowInvoker e WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) e <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Per altre informazioni sul richiamo di flussi di lavoro con gli argomenti di input e outpui, vedere [uso di WorkflowInvoker e WorkflowApplication](using-workflowinvoker-and-workflowapplication.md) e <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
- Se il flusso di lavoro serializzato contiene le espressioni c#, quindi un <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> istanza con relativo <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> proprietà impostata su `true` deve essere passato come parametro a <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, in caso contrario un <xref:System.NotSupportedException> verrà generata un'eccezione con un messaggio simile al Dopo: `Expression Activity type 'CSharpValue`1' richiede la compilazione per l'esecuzione.  Verificare che il flusso di lavoro è stato compilato.'  
+ Se il flusso di lavoro serializzato contiene C# espressioni, un' <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> dell'istanza con relativo <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> impostata su `true` deve essere passato come parametro al <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>; in caso contrario un <xref:System.NotSupportedException> verrà generata con un messaggio simile per il codice seguente: `Expression Activity type 'CSharpValue`1' richiede la compilazione per l'esecuzione.  Assicurarsi che il flusso di lavoro è stata compilata.'  
   
 ```csharp  
 ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings  
@@ -86,8 +86,8 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- Per altre informazioni, vedere [espressioni c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Per altre informazioni, vedere [ C# espressioni](csharp-expressions.md).  
   
- È anche possibile caricare una definizione di flusso di lavoro serializzato in un <xref:System.Activities.ActivityBuilder> istanza utilizzando il <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> metodo. Una volte che un flusso di lavoro serializzato è stato caricato in un'istanza di <xref:System.Activities.ActivityBuilder>, può essere controllato e modificato. Ciò si rivela utile per gli autori di finestre di progettazione flussi di lavoro personalizzati crea e fornisce un meccanismo per salvare e ricaricare definizioni di flusso di lavoro durante il processo di progettazione. Nell'esempio seguente la definizione di flusso di lavoro serializzato dall'esempio precedente viene caricata e le relative proprietà vengono controllate.  
+ Una definizione del flusso di lavoro serializzato può anche essere caricata in un' <xref:System.Activities.ActivityBuilder> quando si utilizza la <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> (metodo). Una volte che un flusso di lavoro serializzato è stato caricato in un'istanza di <xref:System.Activities.ActivityBuilder>, può essere controllato e modificato. Ciò si rivela utile per gli autori di finestre di progettazione flussi di lavoro personalizzati crea e fornisce un meccanismo per salvare e ricaricare definizioni di flusso di lavoro durante il processo di progettazione. Nell'esempio seguente la definizione di flusso di lavoro serializzato dall'esempio precedente viene caricata e le relative proprietà vengono controllate.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#44](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#44)]
+ [!code-csharp[CFX_WorkflowApplicationExample#44](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#44)]

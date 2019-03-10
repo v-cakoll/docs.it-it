@@ -2,12 +2,12 @@
 title: Aggiornamento dinamico
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496742"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724475"
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 
@@ -17,13 +17,13 @@ L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso d
 
 Per applicare gli aggiornamenti dinamici a un'istanza persistente del flusso di lavoro, viene creato un oggetto <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> contenente le istruzioni per il runtime che spiegano come modificare tale istanza in modo da riflettere le modifiche desiderate. Una volta creata, la mappa di aggiornamento viene applicata alle istanze persistenti del flusso di lavoro desiderate. Dopo che è stato applicato l'aggiornamento dinamico, le istanze di flusso di lavoro possono essere riprese usando la nuova definizione aggiornata del flusso di lavoro. Per la creazione e l'applicazione di una mappa di aggiornamento sono richiesti quattro passaggi.
 
-1. [Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [Preparare la definizione del flusso di lavoro per l'aggiornamento dinamico](dynamic-update.md#Prepare)
 
-2. [Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [Aggiornare la definizione del flusso di lavoro in modo da riflettere le modifiche desiderate](dynamic-update.md#Update)
 
-3. [Creare la mappa di aggiornamento](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [Creare la mappa di aggiornamento](dynamic-update.md#Create)
 
-4. [Applicare la mappa di aggiornamento alle istanze del flusso di lavoro persistente desiderato](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [Applicare la mappa di aggiornamento alle istanze del flusso di lavoro persistente desiderato](dynamic-update.md#Apply)
 
 > [!NOTE]
 > Si noti che i passaggi da 1 a 3, relativi alla creazione della mappa di aggiornamento, possono essere eseguiti indipendentemente dal fatto che l'aggiornamento venga poi applicato o meno. Uno scenario comune che lo sviluppatore del flusso di lavoro verrà creata la mappa di aggiornamento offline e quindi l'amministratore applica l'aggiornamento in un secondo momento.
@@ -37,7 +37,7 @@ Il primo passaggio nel processo di aggiornamento dinamico consiste nel preparare
 Ai fini della preparazione per l'aggiornamento dinamico, un flusso di lavoro XAML può essere caricato in un oggetto <xref:System.Activities.ActivityBuilder>. L'oggetto <xref:System.Activities.ActivityBuilder> verrà quindi passato a <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> Per altre informazioni sull'uso di flussi di lavoro serializzati e <xref:System.Activities.ActivityBuilder>, vedere [la serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).
+> Per altre informazioni sull'uso di flussi di lavoro serializzati e <xref:System.Activities.ActivityBuilder>, vedere [la serializzazione di flussi di lavoro e attività da e verso XAML](serializing-workflows-and-activities-to-and-from-xaml.md).
 
 Nell'esempio riportato di seguito, una definizione di `MortgageWorkflow` (costituita da un oggetto <xref:System.Activities.Statements.Sequence> con varie attività figlio) viene caricata in un oggetto <xref:System.Activities.ActivityBuilder> e successivamente preparata per l'aggiornamento dinamico. Una volta completato il metodo, <xref:System.Activities.ActivityBuilder> contiene la definizione del flusso di lavoro originale nonché una copia.
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 Una volta applicato l'aggiornamento dinamico, è possibile riprendere l'istanza del flusso di lavoro. Si noti che è necessario usare la nuova definizione aggiornata e l'oggetto <xref:System.Activities.WorkflowIdentity>.
 
 > [!NOTE]
-> Per altre informazioni sull'utilizzo con <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere [usando WorkflowIdentity e controllo delle versioni](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).
+> Per altre informazioni sull'utilizzo con <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowIdentity>, vedere [usando WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md).
 
 Nell'esempio riportato di seguito, il flusso di lavoro `MortgageWorkflow_v1.1.xaml` dell'esempio precedente è stato compilato e viene caricato e ripreso usando la definizione aggiornata del flusso di lavoro.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674919"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711792"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto di valori DPI alti in Windows Form
 
@@ -49,7 +49,7 @@ Inoltre, per configurare il supporto di valori DPI alti in un'applicazione Windo
 
 - Abilitare il riconoscimento DPI per monitor nel *app. config* file.
 
-  Introduce un nuovo Windows Form [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) elemento per supportare le nuove funzionalità e le personalizzazioni aggiunte a partire da .NET Framework 4.7. Per sfruttare i vantaggi delle nuove funzionalità che supportano valori DPI alti, aggiungere quanto segue al file di configurazione dell'applicazione.   
+  Introduce un nuovo Windows Form [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) elemento per supportare le nuove funzionalità e le personalizzazioni aggiunte a partire da .NET Framework 4.7. Per sfruttare i vantaggi delle nuove funzionalità che supportano valori DPI alti, aggiungere quanto segue al file di configurazione dell'applicazione.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ Impostando il `DpiAwareness` valore `PerMonitorV2` Abilita le funzionalità di r
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Per un elenco di singole chiavi e i relativi valori, vedere [elemento configurazione di Windows Form Add](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Per un elenco di singole chiavi e i relativi valori, vedere [elemento configurazione di Windows Form Add](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Nuovi eventi di modifica DPI
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Windows Form aggiungere elemento di configurazione](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Regolazione delle dimensioni e della scala di Windows Form](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Form aggiungere elemento di configurazione](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Regolazione delle dimensioni e della scala di Windows Form](adjusting-the-size-and-scale-of-windows-forms.md)

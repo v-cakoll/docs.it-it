@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649414"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722288"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Procedura: Selezionare il testo nel controllo TextBox Windows Form
 È possibile selezionare il testo a livello di codice nei moduli di Windows <xref:System.Windows.Forms.TextBox> controllo. Ad esempio, se si crea una funzione che cerca il testo per una determinata stringa, è possibile selezionare il testo da mostrare all'utente il lettore della posizione della stringa trovata.  
@@ -32,7 +32,7 @@ ms.locfileid: "54649414"
   
 3.  (Facoltativo) Accedere al testo selezionato tramite i <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> proprietà.  
   
-     Il codice seguente consente di selezionare il contenuto del testo di una finestra quando il controllo <xref:System.Windows.Forms.Control.Enter> evento si verifica. In questo esempio controlla se la casella di testo ha un valore per il <xref:System.Windows.Forms.TextBox.Text%2A> proprietà non `null` o una stringa vuota. Quando la casella di testo riceve lo stato attivo, viene selezionato il testo corrente nella casella di testo. Il `TextBox1_Enter` gestore dell'evento deve essere associato al controllo; per altre informazioni, vedere [come: Creare i gestori eventi in fase di esecuzione per Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Il codice seguente consente di selezionare il contenuto del testo di una finestra quando il controllo <xref:System.Windows.Forms.Control.Enter> evento si verifica. In questo esempio controlla se la casella di testo ha un valore per il <xref:System.Windows.Forms.TextBox.Text%2A> proprietà non `null` o una stringa vuota. Quando la casella di testo riceve lo stato attivo, viene selezionato il testo corrente nella casella di testo. Il `TextBox1_Enter` gestore dell'evento deve essere associato al controllo; per altre informazioni, vedere [come: Creare i gestori eventi in fase di esecuzione per Windows Form](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Per testare questo esempio, premere il tasto Tab fino a quando la casella di testo ha lo stato attivo. Se si fa clic nella casella di testo, il testo è deselezionato.  
   
@@ -69,10 +69,10 @@ ms.locfileid: "54649414"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.TextBox>
-- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Procedura: Creare una casella di testo di sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Procedura: Inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Controllo TextBox](textbox-control-windows-forms.md)

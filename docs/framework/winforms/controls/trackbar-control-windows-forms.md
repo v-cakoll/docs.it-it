@@ -6,24 +6,24 @@ helpviewer_keywords:
 - slider controls [Windows Forms]
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-ms.openlocfilehash: 95a2459a75d0f14d0671ce2f38d771258b070053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534732"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711954"
 ---
 # <a name="trackbar-control-windows-forms"></a>Controllo TrackBar (Windows Form)
-Windows Form `TrackBar` controllo (talvolta definito "slider") viene utilizzato per spostarsi di una grande quantità di informazioni o per visivamente un'impostazione numerica. Il `TrackBar` controllo dispone di due parti: il cursore, noto anche come un dispositivo di scorrimento e i segni di graduazione. Il cursore è la parte che può essere modificata. La posizione corrisponde alla <xref:System.Windows.Forms.TrackBar.Value%2A> proprietà. I segni di graduazione sono indicatori visivi disposti a intervalli regolari. Indicatore di avanzamento viene spostato ad incrementi specificati dall'utente e possono essere allineate orizzontalmente o verticalmente. Per l'impostazione di frequenza o il mouse velocità di intermittenza del cursore può essere un esempio di un indicatore di avanzamento.  
+I moduli di Windows `TrackBar` controllo (talvolta definito "slider") viene usato per spostarsi all'interno di una grande quantità di informazioni o per regolare visivamente un'impostazione numerica. Il `TrackBar` controllo è costituito da due parti: il controllo thumb, noto anche come un dispositivo di scorrimento e i segni di graduazione. Il controllo thumb è la parte che può essere modificata. La posizione corrisponde alla <xref:System.Windows.Forms.TrackBar.Value%2A> proprietà. I segni di graduazione sono indicatori visivi che sono disposti a intervalli regolari. Consente di spostare l'indicatore di avanzamento in base a incrementi specificati e possono essere allineate orizzontalmente o verticalmente. Un esempio di uso di un indicatore di avanzamento sarà per l'impostazione del cursore per il lampeggiamento o del mouse la velocità.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
- Introduce i concetti generali relativi il `TrackBar` controllo, che consente agli utenti di spostarsi tra le informazioni visivamente un'impostazione numerica.  
+ [Panoramica sul controllo TrackBar](trackbar-control-overview-windows-forms.md)  
+ Introduce i concetti generali del `TrackBar` controllo, che consente agli utenti di spostarsi tra le informazioni da regolare visivamente un'impostazione numerica.  
   
 ## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TrackBar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

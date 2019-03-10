@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746377"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712695"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
 In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -34,7 +34,7 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
 -   L'icona del componente non appare nella casella degli strumenti  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Impossibile aggiungere un controllo alla casella degli strumenti  
- Se si vuole aggiungere un controllo personalizzato creato in un altro progetto o un controllo di terze parti alla **casella degli strumenti**, è necessario farlo manualmente. Se il progetto corrente include il controllo o il componente, deve automaticamente apparire nella **casella degli strumenti**. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+ Se si vuole aggiungere un controllo personalizzato creato in un altro progetto o un controllo di terze parti alla **casella degli strumenti**, è necessario farlo manualmente. Se il progetto corrente include il controllo o il componente, deve automaticamente apparire nella **casella degli strumenti**. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Per aggiungere un controllo alla casella degli strumenti  
   
@@ -67,7 +67,7 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
          Il controllo viene aggiunto alla **casella degli strumenti**.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Impossibile eseguire il debug del componente o controllo utente di Windows Form  
- Se il controllo deriva dal <xref:System.Windows.Forms.UserControl> (classe), è possibile eseguire il debug, il comportamento in fase di esecuzione con il contenitore di test. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Se il controllo deriva dal <xref:System.Windows.Forms.UserControl> (classe), è possibile eseguire il debug, il comportamento in fase di esecuzione con il contenitore di test. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Altri componenti e controlli personalizzati non sono progetti autonomi. Devono essere ospitati da un'applicazione, ad esempio un progetto Windows Form. Per eseguire il debug di un controllo o un componente, è necessario aggiungerlo a un progetto Windows Form.  
   
@@ -93,7 +93,7 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
      È ora possibile eseguire il debug del controllo o del componente come di consueto.  
   
- Per altre informazioni sul debug, vedere [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [procedura dettagliata: Controlli di debug personalizzato Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Per altre informazioni sul debug, vedere [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [procedura dettagliata: Controlli di debug personalizzato Windows Form in fase di progettazione](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>L'evento viene generato due volte nel componente o controllo ereditato  
  Ciò è probabilmente dovuto a una clausola `Handles` duplicata. Per altre informazioni, vedere [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
@@ -105,12 +105,12 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
  Il <xref:System.STAThreadAttribute> indica a common language runtime (CLR) che Windows Form usa il modello di apartment a thread singolo. È possibile riscontrare un comportamento imprevisto se non si applica questo attributo al metodo `Main` dell'applicazione Windows Form. Ad esempio, le immagini di sfondo potrebbero non essere visualizzato, ad esempio controlli <xref:System.Windows.Forms.ListView>. Alcuni controlli possono inoltre richiedere questo attributo per il funzionamento corretto del completamento automatico e del trascinamento della selezione.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>L'icona del componente non appare nella casella degli strumenti  
- Quando si usa <xref:System.Drawing.ToolboxBitmapAttribute> per associare un'icona con il componente personalizzato, la bitmap non viene visualizzata nella casella degli strumenti per i componenti generati automaticamente. Per visualizzare la bitmap, ricaricare il controllo usando la finestra di dialogo **Scegli elementi della casella degli strumenti**. Per altre informazioni, vedere [Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ Quando si usa <xref:System.Drawing.ToolboxBitmapAttribute> per associare un'icona con il componente personalizzato, la bitmap non viene visualizzata nella casella degli strumenti per i componenti generati automaticamente. Per visualizzare la bitmap, ricaricare il controllo usando la finestra di dialogo **Scegli elementi della casella degli strumenti**. Per altre informazioni, vedere [Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md)
+- [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [Modifica di componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Risoluzione dei problemi relativi allo sviluppo in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

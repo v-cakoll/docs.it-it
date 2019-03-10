@@ -2,12 +2,12 @@
 title: Ambito e visibilità della definizione di attività
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518502"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723842"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ambito e visibilità della definizione di attività
 In modo analogo all'ambito e alla visibilità di un oggetto, per ambito di definizione e visibilità di attività si intende la capacità di altri oggetti o attività di accedere ai membri dell'attività stessa. La definizione di attività viene eseguita tramite le implementazioni seguenti.  
@@ -22,7 +22,7 @@ In modo analogo all'ambito e alla visibilità di un oggetto, per ambito di defin
  Oltre all'ambito dei dati, la visibilità del modello di attività può limitare l'accesso ad altri aspetti dell'attività, ad esempio la convalida, il debug, il rilevamento o l'analisi. Le proprietà di esecuzione usano visibilità e ambito per vincolare caratteristiche dell'esecuzione a un particolare ambito di definizione, mentre le radici secondarie usano visibilità e ambito per vincolare lo stato acquisito da un oggetto <xref:System.Activities.Statements.CompensableActivity> all'ambito di definizione in cui vengono usate le attività compensabili.  
   
 ## <a name="definition-and-usage"></a>Definizione e utilizzo  
- La creazione di nuove attività da cui ereditare dalle classi di attività di base e tramite le attività da un flusso di lavoro viene scritta la [libreria attività incorporata](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). Per usare un'attività, l'autore deve configurare la visibilità di ogni componente della relativa definizione.  
+ Creazione di nuove attività che eredita dalle classi di attività di base e usando le attività eseguite da un flusso di lavoro viene scritta la [libreria attività incorporata](net-framework-4-5-built-in-activity-library.md). Per usare un'attività, l'autore deve configurare la visibilità di ogni componente della relativa definizione.  
   
 ### <a name="activity-members"></a>Membri dell'attività  
  Il modello di attività definisce gli argomenti, le variabili, i delegati e le attività figlio resi disponibili agli utenti dall'attività stessa. Ciascuno di questi membri può essere dichiarato come `public` o `private`. I membri pubblici vengono configurati dall'utente dell'attività, mentre i membri configurati come `private` usano un'implementazione definita dall'autore dell'attività. Le regole di visibilità per l'ambito dei dati sono le seguenti.  

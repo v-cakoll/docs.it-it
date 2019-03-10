@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539896"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723920"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Form
 Una tabella di ricerca è una tabella di dati che include una colonna che mostra i dati presenti nei record di una tabella correlata. Nelle procedure seguenti sarà usato un controllo <xref:System.Windows.Forms.ComboBox> per visualizzare il campo che include la relazione di chiave esterna dalla tabella padre alla tabella figlio.  
@@ -35,7 +35,7 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
  In questo scenario, in una tabella, CustomersTable, sono archiviate le informazioni effettive da visualizzare e salvare. Per risparmiare spazio, tuttavia, la tabella esclude dati che possono rendere più chiare le informazioni. L'altra tabella, OrdersTable, include solo informazioni correlate all'aspetto e relative alle corrispondenze tra numero di ID, data di ordine e ID ordine. Non include informazioni sui nomi dei clienti.  
   
- Nel controllo [ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) sono impostate quattro proprietà importanti per creare la tabella di ricerca.  
+ Nel controllo [ComboBox](combobox-control-windows-forms.md) sono impostate quattro proprietà importanti per creare la tabella di ricerca.  
   
 -   La proprietà <xref:System.Windows.Forms.ComboBox.DataSource%2A> include il nome della tabella.  
   
@@ -53,7 +53,7 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
      Il controllo mostrerà una colonna della tabella padre.  
   
-2.  Trascinare altri controlli per visualizzare i dettagli disponibili nella tabella figlio. La scelta dei controlli dovrebbe dipendere dal formato dei dati nella tabella. Per altre informazioni, vedere [Controlli di Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Trascinare altri controlli per visualizzare i dettagli disponibili nella tabella figlio. La scelta dei controlli dovrebbe dipendere dal formato dei dati nella tabella. Per altre informazioni, vedere [Controlli di Windows Form per funzione](windows-forms-controls-by-function.md).  
   
 3.  Trascinare un controllo <xref:System.Windows.Forms.BindingNavigator> nel form, per permettere di esplorare i dati nella tabella figlio.  
   
@@ -93,6 +93,6 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.BindingSource>
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Componente BindingSource](bindingsource-component.md)
+- [Controllo ComboBox](combobox-control-windows-forms.md)
 - [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

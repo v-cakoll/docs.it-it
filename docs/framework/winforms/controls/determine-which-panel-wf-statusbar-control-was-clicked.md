@@ -13,18 +13,18 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 2907b6344cd4fcc7c7d84c110dbc638cdc86f23c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708324"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712721"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato
 > [!IMPORTANT]
 >  Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungano funzionalità rispetto al <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli vengono mantenuti per compatibilità con le versioni precedenti e per un uso futuro, se si Scegliere.  
   
- Al programma il [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controllo per rispondere all'interazione dell'utente, usare un'istruzione case all'interno di <xref:System.Windows.Forms.StatusBar.PanelClick> evento. L'evento contiene un argomento (pannello), che contiene un riferimento all'oggetto selezionato <xref:System.Windows.Forms.StatusBarPanel>. Usando questo riferimento, è possibile determinare l'indice del pannello selezionato e programmare di conseguenza.  
+ Al programma il [controllo StatusBar](statusbar-control-windows-forms.md) controllo per rispondere all'interazione dell'utente, usare un'istruzione case all'interno di <xref:System.Windows.Forms.StatusBar.PanelClick> evento. L'evento contiene un argomento (pannello), che contiene un riferimento all'oggetto selezionato <xref:System.Windows.Forms.StatusBarPanel>. Usando questo riferimento, è possibile determinare l'indice del pannello selezionato e programmare di conseguenza.  
   
 > [!NOTE]
 >  Verificare che il <xref:System.Windows.Forms.StatusBar> del controllo <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> è impostata su `true`.  
@@ -96,6 +96,6 @@ ms.locfileid: "54708324"
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Procedura: Impostare la dimensione dei pannelli della barra di stato](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Cenni preliminari sul controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Procedura: Impostare la dimensione dei pannelli della barra di stato](how-to-set-the-size-of-status-bar-panels.md)
+- [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

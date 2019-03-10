@@ -5,16 +5,16 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 1cc3d813b77ddf8220242f4a1dfc7fe39f9cb520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512567"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722984"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Procedura: Creare form padre MDI
 > [!IMPORTANT]
->  In questo argomento viene usato il controllo <xref:System.Windows.Forms.MainMenu> che è stato sostituito dal controllo <xref:System.Windows.Forms.MenuStrip>. Il controllo <xref:System.Windows.Forms.MainMenu> viene mantenuto per la compatibilità con le versioni precedenti e per l'uso futuro, se si desidera.  Per informazioni sulla creazione di una MDI Form padre tramite un <xref:System.Windows.Forms.MenuStrip>, vedere [come: Creare un elenco di finestre MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
+>  In questo argomento viene usato il controllo <xref:System.Windows.Forms.MainMenu> che è stato sostituito dal controllo <xref:System.Windows.Forms.MenuStrip>. Il controllo <xref:System.Windows.Forms.MainMenu> viene mantenuto per la compatibilità con le versioni precedenti e per l'uso futuro, se si desidera.  Per informazioni sulla creazione di una MDI Form padre tramite un <xref:System.Windows.Forms.MenuStrip>, vedere [come: Creare un elenco di finestre MDI con MenuStrip](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
   
  La base di un'applicazione MDI (interfaccia a documenti multipli, Multiple Document Interface) è il form padre MDI. Si tratta del form che contiene le finestre figlio MDI che rappresentano le sottofinestre in cui l'utente interagisce con l'applicazione MDI. La creazione di un form padre MDI è semplice sia in Progettazione Windows Form che a livello di codice.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "54512567"
   
      Il primo menu crea e nasconde le voci di menu al runtime, mentre il secondo tiene traccia delle finestre figlio MDI aperte. A questo punto è stata creata una finestra padre MDI.  
   
-4.  Premere **F5** per eseguire l'applicazione. Per informazioni sulla creazione di finestre usate all'interno del form padre MDI figlio MDI, vedere [come: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md).  
+4.  Premere **F5** per eseguire l'applicazione. Per informazioni sulla creazione di finestre usate all'interno del form padre MDI figlio MDI, vedere [come: Creare form figlio MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Procedura: Determinare il figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Procedura: Inviare dati al figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
+- [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
+- [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)
