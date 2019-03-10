@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e4332842a082f7359179dbf4d7539b42bbceb6fc
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305688"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702841"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Procedura: Aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "56305688"
   
  Parte integrante del <xref:System.Windows.Forms.ToolBar> controllo è i pulsanti e aggiungervi. Possono essere usati per fornire l'accesso facile ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.  
   
- La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.ToolBar> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procedura seguente richiede un **applicazione di Windows** progetto con un form contenente un <xref:System.Windows.Forms.ToolBar> controllo. Per informazioni sulla configurazione di un progetto di questo tipo, vedere [come: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [come: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ ms.locfileid: "56305688"
   
 1.  Selezionare il controllo <xref:System.Windows.Forms.ToolBar>.  
   
-2.  Nel **delle proprietà** finestra, fare clic sul <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà per selezionarlo, quindi fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) per aprire la **insieme ToolBarButton**.  
+2.  Nel **delle proprietà** finestra, fare clic sul <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà per selezionarlo, quindi fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) per aprire la **insieme ToolBarButton**.  
   
 3.  Usare la **Add** e **rimuovere** pulsanti per aggiungere e rimuovere pulsanti dal <xref:System.Windows.Forms.ToolBar> controllo.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56305688"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolBar>
-- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Panoramica sul controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Panoramica sul controllo ToolBar](toolbar-control-overview-windows-forms.md)
+- [Controllo ToolBar](toolbar-control-windows-forms.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526730"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715360"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Procedura: Applicazioni di visualizzare l'anteprima di stampa in Windows Form
 È possibile usare il <xref:System.Windows.Forms.PrintPreviewDialog> controllo per consentire agli utenti di visualizzare un documento, spesso prima che venga da stampare.  
   
- A tale scopo, è necessario specificare un'istanza di <xref:System.Drawing.Printing.PrintDocument> classe; questo è il documento da stampare. Per altre informazioni sull'uso dell'anteprima di stampa con il <xref:System.Drawing.Printing.PrintDocument> componente, vedere [come: Stampa in Windows Form tramite l'anteprima di stampa](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ A tale scopo, è necessario specificare un'istanza di <xref:System.Drawing.Printing.PrintDocument> classe; questo è il documento da stampare. Per altre informazioni sull'uso dell'anteprima di stampa con il <xref:System.Drawing.Printing.PrintDocument> componente, vedere [come: Stampa in Windows Form tramite l'anteprima di stampa](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
 >  Usare la <xref:System.Windows.Forms.PrintPreviewDialog> controllo in fase di esecuzione, gli utenti devono avere una stampante installata sul proprio computer, localmente o tramite la rete, in parte il <xref:System.Windows.Forms.PrintPreviewDialog> componente determina l'aspetto del documento stampato.  
@@ -82,7 +82,7 @@ ms.locfileid: "54526730"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [PrintDocument (componente)](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [Controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Form](../../../../docs/framework/winforms/index.md)
+- [PrintDocument (componente)](printdocument-component-windows-forms.md)
+- [Controllo PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
+- [Supporto per la stampa in Windows Forms](../advanced/windows-forms-print-support.md)
+- [Windows Form](../index.md)

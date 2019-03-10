@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658952"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704505"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Accesso ai membri non esposti del Document Object Model HTML gestito
 Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xref:System.Windows.Forms.HtmlElement> che espone le proprietà, metodi ed eventi che hanno in comune di tutti gli elementi HTML. In alcuni casi, tuttavia, è necessario accedere ai membri che l'interfaccia gestita non espone direttamente. In questo argomento esamina due modi per l'accesso a membri non esposti, tra cui [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] e le funzioni VBScript definite all'interno di una pagina Web.  
@@ -49,8 +49,8 @@ Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xr
   
  Dopo il caricamento della pagina nel <xref:System.Windows.Forms.WebBrowser> (controllo), è possibile usare il <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> metodo per recuperare le `FORM` in fase di esecuzione tramite `form1` come argomento.  
   
- [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
- [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
+ [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>L'accesso a interfacce non gestite  
  È anche possibile accedere membri non esposti del DOM HTML gestito tramite le interfacce non gestite modello COM (Component Object) esposte da ogni classe DOM. Ciò è consigliabile se è necessario effettuare diverse chiamate con membri non esposti, o se i membri non esposti restituiscano altre interfacce non gestite non integrate in DOM. HTML gestito  
@@ -72,4 +72,4 @@ Il documento oggetto Model (DOM) HTML gestito contiene una classe denominata <xr
  È possibile chiamare qualsiasi funzione di script è definita in una pagina HTML utilizzando la <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> (metodo). Se il metodo di script restituisce un elemento HTML, è possibile usare un cast per convertire il risultato in un <xref:System.Windows.Forms.HtmlElement>. Per dettagli ed esempio di codice, vedere <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Utilizzare il Document Object Model HTML gestito](using-the-managed-html-document-object-model.md)

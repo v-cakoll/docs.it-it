@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547131"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703531"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfacce correlate al data binding
 Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare molte strutture dati diverse per soddisfare le esigenze di associazione dell'applicazione e dei dati in uso. Si consiglia di creare classi che forniscono o usano dati in Windows Forms. Questi oggetti possono offrire diversi livelli di funzionalità e complessità, dal data binding, all'offerta di supporto in fase di progettazione, al controllo degli errori, alla notifica delle modifiche o anche al supporto per un annullamento strutturato delle modifiche apportate ai dati.  
@@ -150,6 +150,6 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
     >  Una classe che eredita da <xref:System.Windows.Forms.Control> gestisce automaticamente le associazioni mediante relativi <xref:System.Windows.Forms.Control.BindingContext%2A> proprietà, i casi in cui è necessario implementare il <xref:System.Windows.Forms.ICurrencyManagerProvider> sono piuttosto rari.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Procedura: Creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
+- [Procedura: Creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

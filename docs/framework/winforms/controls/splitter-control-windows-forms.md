@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: 4340c4647ffda79bcd919e9bd778dcabab0fc511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534638"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715334"
 ---
 # <a name="splitter-control-windows-forms"></a>Controllo Splitter (Windows Form)
-Windows Form `Splitter` controlli vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il `Splitter` controllo viene spesso usato nei form con controlli che dispongono di diverse lunghezze dei dati per la presentazione, ad esempio Esplora risorse, il cui riquadri contengono informazioni in momenti diversi.  
+Windows Form `Splitter` controlli vengono usati per ridimensionare i controlli ancorati in fase di esecuzione. Il `Splitter` controllo viene spesso usato nei form con controlli che dispongono di diverse lunghezze dei dati per la presentazione, ad esempio Windows Explorer, la cui riquadri dati contengono informazioni diverse di larghezze in momenti diversi.  
   
 > [!NOTE]
->  Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge la funzionalità per il `Splitter` controllo delle versioni precedenti, `Splitter` viene mantenuto per compatibilità con le versioni precedenti e un utilizzo futuro, se si sceglie.  
+>  Sebbene <xref:System.Windows.Forms.SplitContainer> sostituisce e aggiunge funzionalità per il `Splitter` controllo delle versioni precedenti, `Splitter` è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo Splitter](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
+ [Panoramica sul controllo Splitter](splitter-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -28,5 +28,5 @@ Windows Form `Splitter` controlli vengono usati per ridimensionare i controlli a
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)  
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

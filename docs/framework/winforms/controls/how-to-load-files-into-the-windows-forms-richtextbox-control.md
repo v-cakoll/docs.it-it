@@ -15,19 +15,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b550362571c5a4ea1fa8e6f9700ebee4ff04ddbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666046"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703010"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Procedura: Caricare file nel controllo RichTextBox Windows Form
 Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di visualizzare un file come testo normale, testo normale Unicode o in formato RTF (Rich-Text Format). Per eseguire questa operazione, chiamare il metodo <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> . È anche possibile usare <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> per caricare dati da un flusso. Per altre informazioni, vedere <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Per caricare un file nel controllo RichTextBox  
   
-1.  Determinare il percorso del file da aprire usando il componente <xref:System.Windows.Forms.OpenFileDialog> . Per una panoramica, vedere [Cenni preliminari sul componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md).  
+1.  Determinare il percorso del file da aprire usando il componente <xref:System.Windows.Forms.OpenFileDialog> . Per una panoramica, vedere [Cenni preliminari sul componente OpenFileDialog](openfiledialog-component-overview-windows-forms.md).  
   
 2.  Chiamare il metodo <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> <xref:System.Windows.Forms.RichTextBox> specificando il file da caricare e, facoltativamente, un tipo di file. Nell'esempio seguente il file da caricare viene preso dalla proprietà <xref:System.Windows.Forms.OpenFileDialog> del componente <xref:System.Windows.Forms.FileDialog.FileName%2A> . Se si chiama il metodo usando come unico argomento un nome di file, si presuppone che il tipo del file sia RTF. Per specificare un altro tipo di file, chiamare il metodo con un valore dell'enumerazione <xref:System.Windows.Forms.RichTextBoxStreamType> come secondo argomento.  
   
@@ -78,10 +78,10 @@ Il controllo <xref:System.Windows.Forms.RichTextBox> Windows Form consente di vi
     ```  
   
     > [!IMPORTANT]
-    >  Per eseguire questo processo, l'assembly può richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> . Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti. Per altre informazioni, vedere [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+    >  Per eseguire questo processo, l'assembly può richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> . Se l'esecuzione avviene in un contesto parzialmente attendibile, è possibile che il processo generi un'eccezione dovuta a privilegi insufficienti. Per altre informazioni, vedere [Code Access Security Basics](../../misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controllo RichTextBox](richtextbox-control-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

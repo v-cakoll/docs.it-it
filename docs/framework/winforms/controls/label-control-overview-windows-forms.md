@@ -8,22 +8,22 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-ms.openlocfilehash: 282f7fe8117b2c1b0fc23cb97bad7a34f6d106be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13dcd6c63c30a5726a959c33f75c0c54e2810ef4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619474"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710589"
 ---
 # <a name="label-control-overview-windows-forms"></a>Cenni preliminari sul controllo Label (Windows Form)
 Windows Form <xref:System.Windows.Forms.Label> controlli vengono usati per visualizzare un testo o immagini che non possono essere modificate dall'utente. Vengono usati per identificare gli oggetti in un form, per fornire una descrizione dell'azione di un determinato controllo producono se si fa clic, ad esempio, o per visualizzare le informazioni in risposta a un evento di runtime o un processo dell'applicazione. Ad esempio, è possibile usare etichette per aggiungere sottotitoli in lingua originale descrittivi per le caselle di testo, caselle di riepilogo, caselle combinate e così via. È anche possibile scrivere codice che modifica il testo visualizzato da un'etichetta in risposta agli eventi in fase di esecuzione. Ad esempio, se l'applicazione richiede alcuni minuti per elaborare una modifica, è possibile visualizzare un messaggio di stato di elaborazione in un'etichetta.  
   
 ## <a name="working-with-the-label-control"></a>Utilizzo del controllo etichetta  
- Poiché il <xref:System.Windows.Forms.Label> controllo non può ricevere lo stato attivo, può essere utilizzato anche per creare le chiavi di accesso per altri controlli. Una chiave di accesso consente all'utente di selezionare l'altro controllo premendo il tasto ALT con la chiave di accesso. Per altre informazioni, vedere [creazione di chiavi per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) e [come: Creare le chiavi di accesso con i controlli Label di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
+ Poiché il <xref:System.Windows.Forms.Label> controllo non può ricevere lo stato attivo, può essere utilizzato anche per creare le chiavi di accesso per altri controlli. Una chiave di accesso consente all'utente di selezionare l'altro controllo premendo il tasto ALT con la chiave di accesso. Per altre informazioni, vedere [creazione di chiavi per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md) e [come: Creare le chiavi di accesso con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md).  
   
- La didascalia visualizzata nell'etichetta è contenuta nel <xref:System.Windows.Forms.Label.Text%2A> proprietà. Il <xref:System.Windows.Forms.Label.TextAlign%2A> proprietà consente di impostare l'allineamento del testo all'interno dell'etichetta. Per altre informazioni, vedere [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ La didascalia visualizzata nell'etichetta è contenuta nel <xref:System.Windows.Forms.Label.Text%2A> proprietà. Il <xref:System.Windows.Forms.Label.TextAlign%2A> proprietà consente di impostare l'allineamento del testo all'interno dell'etichetta. Per altre informazioni, vedere [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Label>
-- [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md)

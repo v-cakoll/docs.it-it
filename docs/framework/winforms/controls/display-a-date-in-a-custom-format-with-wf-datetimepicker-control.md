@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 489a31474b8ae3e56ba69e59f6d613ecf892a93c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c201455acaa9bde521afd623424d0cfc403b1bff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531291"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705873"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Procedura: Visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.DateTimePicker> controllo ti offre flessibilità nella formattazione la visualizzazione di date e ore nel controllo. Il <xref:System.Windows.Forms.DateTimePicker.Format%2A> proprietà consente di selezionare uno dei formati predefiniti elencati nella <xref:System.Windows.Forms.DateTimePickerFormat>. Se nessuna di esse è adeguata alle proprie esigenze, è possibile creare il proprio stile di formattazione usando caratteri di formattazione elencati nella <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
@@ -64,5 +64,5 @@ I moduli di Windows <xref:System.Windows.Forms.DateTimePicker> controllo ti offr
      A seconda dell'impostazione cultura, i caratteri non racchiusi tra virgolette singole possono essere modificati. Ad esempio, la stringa di formato precedente visualizza la data corrente nel formato "oggi è: 05:30:31 marzo venerdì 02, 2012" nelle impostazioni cultura inglese (Stati Uniti). Si noti che i primi due punti sono racchiuso tra virgolette singole, poiché non è destinato a essere un carattere di delimitazione perché è "hh". In un'altra lingua, il formato potrebbe essere visualizzato come "oggi è: 05.30.31 venerdì marzo 2012" 02,.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controllo DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Controllo DateTimePicker](datetimepicker-control-windows-forms.md)
+- [Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Form](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

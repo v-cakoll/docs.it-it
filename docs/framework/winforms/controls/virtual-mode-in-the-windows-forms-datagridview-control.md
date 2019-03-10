@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672019"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709484"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtuale nel controllo DataGridView di Windows Form
 Con la modalità virtuale, è possibile gestire l'interazione tra il <xref:System.Windows.Forms.DataGridView> controllo e una cache di dati personalizzati. Per implementare la modalità virtuale, impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire uno o più eventi descritti in questo argomento. In genere, è necessario gestire almeno le `CellValueNeeded` evento, che consente il controllo per cercare i valori nella cache dei dati.  
@@ -27,14 +27,14 @@ Con la modalità virtuale, è possibile gestire l'interazione tra il <xref:Syste
 ## <a name="replacing-bound-mode"></a>Sostituzione di modalità di associazione  
  Se la modalità associata non soddisfa le esigenze di prestazioni, è possibile gestire tutti i dati in una cache personalizzata tramite i gestori eventi in modalità virtuale. Ad esempio, è possibile utilizzare la modalità virtuale per implementare un meccanismo che consente di recuperare solo di caricamento di dati just-in-time quantità di dati da un database connesso alla rete è necessaria per ottenere prestazioni ottimali. Questo scenario è particolarmente utile quando si lavora con grandi quantità di dati tramite una connessione di rete lenta o con computer client che hanno una quantità limitata di RAM o spazio di archiviazione.  
   
- Per altre informazioni sull'uso della modalità virtuale in uno scenario just-in-time, vedere [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Per altre informazioni sull'uso della modalità virtuale in uno scenario just-in-time, vedere [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="virtual-mode-events"></a>Eventi in modalità virtuale  
  Se i dati sono di sola lettura, la `CellValueNeeded` evento potrebbe essere l'unico evento, è necessario gestire. Gli eventi in modalità virtuale aggiuntivi consentono di abilitare funzionalità specifiche, ad esempio transazioni a livello di riga, aggiunta delle righe e l'eliminazione e modifiche dell'utente.  
   
  Alcuni standard <xref:System.Windows.Forms.DataGridView> eventi (ad esempio gli eventi che si verificano quando gli utenti di aggiungere o eliminano le righe o quando i valori delle celle sono modificati, analizzati, convalidati o formattati) sono utili in modalità virtuale, nonché. È anche possibile gestire gli eventi che consentono di mantenere i valori non viene in genere archiviati in un'origine dati associata, ad esempio testo della descrizione comando cella, cella e il testo di errore, cella e dei dati dal menu di scelta rapida riga e i dati di altezza di riga.  
   
- Per altre informazioni sull'implementazione della modalità virtuale per gestire i dati di lettura/scrittura con un ambito di commit a livello di riga, vedere [procedura dettagliata: Implementazione della modalità virtuale in Windows il controllo DataGridView form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Per altre informazioni sull'implementazione della modalità virtuale per gestire i dati di lettura/scrittura con un ambito di commit a livello di riga, vedere [procedura dettagliata: Implementazione della modalità virtuale in Windows il controllo DataGridView form](implementing-virtual-mode-wf-datagridview-control.md).  
   
  Per un esempio che implementa la modalità virtuale con un ambito a livello di cella commit, vedere il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> argomento relativo alla proprietà.  
   
@@ -60,12 +60,12 @@ Con la modalità virtuale, è possibile gestire l'interazione tra il <xref:Syste
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Utilizzato dal controllo da recuperare o archiviare le informazioni sull'altezza di riga nella cache dei dati. Chiamare il <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> metodo quando si modificano le informazioni relative all'altezza di riga memorizzata nella cache all'esterno di un <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> gestore eventi per garantire che venga utilizzato il valore corrente nella visualizzazione del controllo.|  
   
 ## <a name="best-practices-in-virtual-mode"></a>Le procedure consigliate in modalità virtuale  
- Se si implementa la modalità virtuale per poter funzionare in modo efficiente con grandi quantità di dati, è inoltre opportuno verificare che si sta lavorando in modo efficiente il <xref:System.Windows.Forms.DataGridView> stesso controllo. Per altre informazioni sull'utilizzo efficiente di stili della cella, il ridimensionamento automatico, le selezioni e condivisione delle righe, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Se si implementa la modalità virtuale per poter funzionare in modo efficiente con grandi quantità di dati, è inoltre opportuno verificare che si sta lavorando in modo efficiente il <xref:System.Windows.Forms.DataGridView> stesso controllo. Per altre informazioni sull'utilizzo efficiente di stili della cella, il ridimensionamento automatico, le selezioni e condivisione delle righe, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form](implementing-virtual-mode-wf-datagridview-control.md)
+- [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

@@ -2,12 +2,12 @@
 title: Attivazione di istanze
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366045"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703400"
 ---
 # <a name="instance-activation"></a>Attivazione di istanze
 L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che attiva e rileva periodicamente istanze del flusso di lavoro eseguibili o attivabili nel database di persistenza. Se rileva un'istanza del flusso di lavoro eseguibile, notifica all'host del flusso di lavoro la possibilità di attivare l'istanza. Se l'archivio di istanze rileva un'istanza del flusso di lavoro attivabile, invia una notifica a un host generico che attiva un host del flusso di lavoro il quale, a sua volta, esegue l'istanza del flusso di lavoro. Nelle sezioni seguenti di questo argomento viene illustrato dettagliatamente il processo di attivazione delle istanze.  
@@ -40,4 +40,4 @@ L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che a
  Per l'attivazione di WAS, un host generico richiede un set di parametri di attivazione per derivare l'indirizzo dell'endpoint in cui possono essere attivati nuovi host. I parametri per l'attivazione di WAS sono: nome del sito, percorso dell'applicazione relativa al sito e percorso del servizio relativo all'applicazione. L'archivio di istanze del flusso di lavoro SQL archivia questi parametri di attivazione durante l'esecuzione dell'oggetto <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
 ## <a name="runnable-instances-detection-period"></a>Runnable Instances Detection Period  
- Il **Runnable Instances Detection Period** proprietà di Store di istanza del flusso di lavoro di SQL specifica il periodo di tempo dopo il quale la Store di istanza del flusso di lavoro SQL esegue un'attività di rilevamento per rilevare qualsiasi flusso di lavoro eseguibile o attivabili istanze nel database di persistenza dopo il ciclo di rilevamento precedente. Visualizzare [Runnable Instances Detection Period](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) per altri dettagli su questa proprietà.
+ Il **Runnable Instances Detection Period** proprietà di Store di istanza del flusso di lavoro di SQL specifica il periodo di tempo dopo il quale la Store di istanza del flusso di lavoro SQL esegue un'attività di rilevamento per rilevare qualsiasi flusso di lavoro eseguibile o attivabili istanze nel database di persistenza dopo il ciclo di rilevamento precedente. Visualizzare [Runnable Instances Detection Period](runnable-instances-detection-period.md) per altri dettagli su questa proprietà.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496283"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705831"
 ---
 # <a name="how-to-validate-application-settings"></a>Procedura: Convalidare le impostazioni applicazione
 In questo argomento viene illustrato come convalidare le impostazioni dell'applicazione prima dell'operazione che le rende persistenti.  
@@ -40,9 +40,9 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 -   Per gli eventi generati prima delle azioni associate, quali <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, viene utilizzato il <xref:System.ComponentModel.CancelEventArgs> argomento per annullare l'operazione.  
   
- Per altre informazioni sulla gestione degli eventi, vedere [Informazioni generali sui gestori eventi](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Per altre informazioni sulla gestione degli eventi, vedere [Informazioni generali sui gestori eventi](../event-handlers-overview-windows-forms.md).  
   
- Le procedure seguenti illustrano come testare una data di nascita sia valida usando il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o il <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento. Le procedure sono state scritte in base al presupposto che le impostazioni dell'applicazione siano già state create. In questo esempio, si eseguirà il controllo di un'impostazione denominata `DateOfBirth`. Per altre informazioni sulla creazione di impostazioni, vedere [come: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Le procedure seguenti illustrano come testare una data di nascita sia valida usando il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o il <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> evento. Le procedure sono state scritte in base al presupposto che le impostazioni dell'applicazione siano già state create. In questo esempio, si eseguirà il controllo di un'impostazione denominata `DateOfBirth`. Per altre informazioni sulla creazione di impostazioni, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Per ottenere l'oggetto delle impostazioni dell'applicazione  
   
@@ -161,5 +161,5 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creazione di gestori eventi in Windows Form](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Procedura: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Creazione di gestori eventi in Windows Form](../creating-event-handlers-in-windows-forms.md)
+- [Procedura: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md)

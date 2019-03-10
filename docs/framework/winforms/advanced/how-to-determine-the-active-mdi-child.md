@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512554"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714326"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procedura: Determinare il figlio MDI attivo
 In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo stato attivo del form figlio attualmente attivo. Si supponga, ad esempio, che si vuole copiare negli Appunti il testo selezionato dalla casella di testo del form figlio. È necessario creare una routine che copia il testo selezionato negli Appunti mediante il <xref:System.Windows.Forms.Control.Click> evento della voce di menu copia il menu di modifica standard.  
@@ -30,7 +30,7 @@ In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo s
 1.  All'interno di un metodo, copiare il testo del controllo attivo del form figlio attivo negli Appunti.  
   
     > [!NOTE]
-    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo s
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Procedura: Inviare dati al figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
+- [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
+- [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

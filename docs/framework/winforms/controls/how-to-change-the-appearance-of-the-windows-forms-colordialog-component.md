@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530290"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702789"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedura: Modificare l'aspetto del componente ColorDialog di Windows Form
 È possibile configurare l'aspetto delle forme Windows <xref:System.Windows.Forms.ColorDialog> componente con un numero di proprietà. La finestra di dialogo include due sezioni, ovvero uno che mostra i colori di base e uno che consente all'utente di definire colori personalizzati.  
@@ -51,5 +51,5 @@ ms.locfileid: "54530290"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ColorDialog>
-- [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
-- [Cenni preliminari sul componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+- [Componente ColorDialog](colordialog-component-windows-forms.md)
+- [Cenni preliminari sul componente ColorDialog](colordialog-component-overview-windows-forms.md)

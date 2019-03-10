@@ -7,15 +7,15 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 1d2c6419e19aee73717bed6cfc17782d2a3f5a4a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3b829b1eea68eed7ff8ded80496620af628d3510
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442739"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707361"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Sviluppo di un controllo Windows Form composto
-È possibile sviluppare un controllo Windows Form composito combinando altri controlli Windows Form. I controlli compositi che derivano da <xref:System.Web.UI.UserControl> sono denominati controlli utente. La classe base, <xref:System.Windows.Forms.UserControl>, fornisce il routing della tastiera per i controlli figlio, garantendo così che i controlli figlio possano ricevere lo stato attivo. Per un esempio di un controllo utente, vedere la <xref:System.Windows.Forms.UserControl> esempio in [come: Applicare attributi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+È possibile sviluppare un controllo Windows Form composito combinando altri controlli Windows Form. I controlli compositi che derivano da <xref:System.Web.UI.UserControl> sono denominati controlli utente. La classe base, <xref:System.Windows.Forms.UserControl>, fornisce il routing della tastiera per i controlli figlio, garantendo così che i controlli figlio possano ricevere lo stato attivo. Per un esempio di un controllo utente, vedere la <xref:System.Windows.Forms.UserControl> esempio in [come: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md).  
   
  Progettazione Windows Form in Visual Studio offre supporto avanzato in fase di progettazione per la creazione di controlli utente.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "56442739"
 -   [Procedura: Creare un controllo di Windows Form che sfrutta i vantaggi della funzionalità Design-Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Applicare attributi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Procedura: Applicare attributi nei controlli di Windows Form](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

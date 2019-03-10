@@ -2,12 +2,12 @@
 title: Ispezione dell'albero delle attività
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516841"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705493"
 ---
 # <a name="activity-tree-inspection"></a>Ispezione dell'albero delle attività
 L'ispezione dell'albero delle attività viene usata dagli autori dell'applicazione flusso di lavoro per controllare i flussi di lavoro ospitati dall'applicazione. Tramite l'oggetto <xref:System.Activities.WorkflowInspectionServices>, nei flussi di lavoro è possibile cercare attività figlio specifiche, enumerare attività singole e le relative proprietà, nonché memorizzare nella cache i metadati di runtime delle attività in un momento specifico. In questo argomento viene fornita una panoramica sull'oggetto <xref:System.Activities.WorkflowInspectionServices> e viene descritto come usarlo per controllare un albero delle attività.  
@@ -15,36 +15,36 @@ L'ispezione dell'albero delle attività viene usata dagli autori dell'applicazio
 ## <a name="using-workflowinspectionservices"></a>Utilizzo dell'oggetto WorkflowInspectionServices  
  Il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> viene usato per enumerare tutte le attività nell'albero delle attività specificato. <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> restituisce un enumerabile che tocca tutte le attività all'interno dell'albero, inclusi gli elementi figlio, i gestori delegato, le impostazioni predefinite variabili e le espressioni argomento. Nell'esempio seguente viene creata una definizione di flusso di lavoro tramite gli oggetti <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine> e le espressioni. Una volta creata, la definizione di flusso di lavoro viene richiamata, quindi viene chiamato il metodo `InspectActivity`.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#45](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#45)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#45](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#45)]  
   
  Per enumerare le attività, viene chiamato <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> nell'attività radice e di nuovo in modo ricorsivo in ogni attività restituita. Nell'esempio seguente la proprietà <xref:System.Activities.Activity.DisplayName%2A> di ogni attività ed espressione dell'albero delle attività viene scritta nella console.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#46](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#46)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#46](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#46)]  
   
  Questo codice di esempio fornisce l'output seguente.  
   
- **Elemento dell'elenco 1**  
-**Elemento di elenco 2**   
-**Elemento di elenco 3**   
-**Elemento 4 dell'elenco**   
-**Elemento di elenco 5**   
+ **Voce di elenco 1**  
+**Elencare l'elemento 2**   
+**Elemento dell'elenco 3**   
+**Elemento dell'elenco 4**   
+**Elemento dell'elenco 5**   
 **Elementi aggiunti alla raccolta.**   
-**sequenza**   
+**Sequenza**   
  **Valore letterale < elenco\<stringa >>**  
  **While**  
- **AddToCollection\<stringa >**  
- **VariableValue < ICollection\<stringa >>**  
- **LambdaValue\<stringa >**  
+ **AddToCollection\<String>**  
+ **Valorevariabile < ICollection\<stringa >>**  
+ **LambdaValue\<String>**  
  **LocationReferenceValue < elenco\<stringa >>**  
- **LambdaValue\<booleano >**  
+ **LambdaValue\<Boolean>**  
  **LocationReferenceValue < elenco\<stringa >>**  
- **ForEach\<stringa >**  
- **VariableValue < IEnumerable\<stringa >>**  
+ **ForEach\<String>**  
+ **VariableValue<IEnumerable\<String>>**  
  **WriteLine**  
- **DelegateArgumentValue\<stringa >**  
- **sequenza**  
+ **DelegateArgumentValue\<String>**  
+ **Sequence**  
  **WriteLine**  
- **Valore letterale\<stringa >** per recuperare un'attività specifica anziché enumerare tutte le attività, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> viene utilizzato. Entrambi i metodi <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> e <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> eseguono la memorizzazione dei metadati nella cache se non è stato precedentemente chiamato l'oggetto `WorkflowInspectionServices.CacheMetadata`. Se il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> è stato chiamato, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> si basa sui metadati esistenti. Pertanto, se sono state apportate modifiche all'albero dall'ultima chiamata al metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> potrebbe fornire risultati imprevisti. Se sono state apportate modifiche al flusso di lavoro dopo la chiamata <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, i metadati possono essere nuovamente memorizzati nella cache chiamando il <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> metodo. La memorizzazione dei metadati nella cache è descritta nella prossima sezione.  
+ **Valore letterale\<String >** per recuperare un'attività specifica anziché enumerare tutte le attività, <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> viene usato. Entrambi i metodi <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> e <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> eseguono la memorizzazione dei metadati nella cache se non è stato precedentemente chiamato l'oggetto `WorkflowInspectionServices.CacheMetadata`. Se il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> è stato chiamato, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> si basa sui metadati esistenti. Pertanto, se sono state apportate modifiche all'albero dall'ultima chiamata al metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>, il metodo <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> potrebbe fornire risultati imprevisti. Se sono state apportate modifiche al flusso di lavoro dopo la chiamata <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, i metadati possono essere memorizzati nuovamente chiamando la <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> (metodo). La memorizzazione dei metadati nella cache è descritta nella prossima sezione.  
   
 ### <a name="caching-metadata"></a>Memorizzazione dei metadati nella cache  
  La memorizzazione dei metadati nella cache per un'attività compila e convalida una descrizione degli argomenti dell'attività, delle variabili, delle attività figlio e dei delegati di attività. Per impostazione predefinita, i metadati vengono memorizzati nella cache dal runtime quando un'attività viene preparata per l'esecuzione. Se un autore dell'host del flusso di lavoro desidera memorizzare i metadati nella cache per un'attività o un albero delle attività prima di questa fase, ad esempio per accettare in anticipo tutto il costo, è possibile usare il metodo <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> per memorizzare i metadati nella cache nel momento desiderato.

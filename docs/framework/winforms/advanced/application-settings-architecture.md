@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687245"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710680"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -34,12 +34,12 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
   
 -   Convalida delle impostazioni, prima che vengano modificate o prima che vengano salvate  
   
- Le impostazioni possono essere descritte usando una serie di attributi definiti all'interno di <xref:System.Configuration> dello spazio dei nomi; questi sono descritti nella [Application Settings Attributes](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Quando si definisce un'impostazione, è necessario applicarlo con uno <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, che descrive se l'impostazione si applica all'intera applicazione o semplicemente per l'utente corrente.  
+ Le impostazioni possono essere descritte usando una serie di attributi definiti all'interno di <xref:System.Configuration> dello spazio dei nomi; questi sono descritti nella [Application Settings Attributes](application-settings-attributes.md). Quando si definisce un'impostazione, è necessario applicarlo con uno <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, che descrive se l'impostazione si applica all'intera applicazione o semplicemente per l'utente corrente.  
   
  L'esempio di codice seguente definisce una classe di impostazioni personalizzate con una singola impostazione, `BackgroundColor`.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Persistenza delle impostazioni  
  Il <xref:System.Configuration.ApplicationSettingsBase> classe non mantiene o carica le impostazioni; tale operazione è effettuata dal provider di impostazioni, una classe che deriva da <xref:System.Configuration.SettingsProvider>. Se una classe derivata di <xref:System.Configuration.ApplicationSettingsBase> non specifica un provider di impostazioni tramite i <xref:System.Configuration.SettingsProviderAttribute>, quindi il provider predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, viene usato.  
@@ -88,7 +88,7 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
 </configuration>  
 ```  
   
- Per una definizione degli elementi all'interno della sezione di impostazioni applicazione di un file di configurazione, vedere [Application Settings Schema](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md) (Schema di impostazioni applicazione).  
+ Per una definizione degli elementi all'interno della sezione di impostazioni applicazione di un file di configurazione, vedere [Application Settings Schema](../../configure-apps/file-schema/application-settings-schema.md) (Schema di impostazioni applicazione).  
   
 ### <a name="settings-bindings"></a>Associazioni delle impostazioni  
  Le impostazioni applicazione usano l'architettura di associazione dati di Windows Form per consentire la comunicazione bidirezionale degli aggiornamenti delle impostazioni tra i componenti e l'oggetto impostazioni. Se si usa Visual Studio per creare le impostazioni dell'applicazione e assegnarle alle proprietà del componente, queste associazioni vengono generate automaticamente.  
@@ -106,7 +106,7 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
   
 3.  Determina quali impostazioni vanno inserite in ciascun file, in base all'attributo dell'impostazione.  
   
- Se si implementa una propria classe di impostazioni, è possibile usare la <xref:System.Configuration.SettingsSerializeAsAttribute> per contrassegnare un'impostazione per la serializzazione binaria o personalizzata usando il <xref:System.Configuration.SettingsSerializeAs> enumerazione. Per altre informazioni sulla creazione di una propria classe di impostazioni nel codice, vedere [come: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Se si implementa una propria classe di impostazioni, è possibile usare la <xref:System.Configuration.SettingsSerializeAsAttribute> per contrassegnare un'impostazione per la serializzazione binaria o personalizzata usando il <xref:System.Configuration.SettingsSerializeAs> enumerazione. Per altre informazioni sulla creazione di una propria classe di impostazioni nel codice, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Percorsi dei file delle impostazioni  
  Il percorso dei file `app`.exe.config e *user*.config variano in base alle modalità di installazione dell'applicazione. Per un'applicazione basata su Windows Form copiata nel computer locale, `app`. exe. config si trovi nella stessa directory della directory di base del file eseguibile principale dell'applicazione, e *utente*. config si troverà di percorso specificato da di <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> proprietà. Per un'applicazione installata tramite [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], entrambi questi file si troveranno nella Directory dati [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] %InstallRoot%\Documents e Impostazioni\\*nome utente*\Impostazioni locali.  
@@ -127,8 +127,8 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
   
  Il provider dovrà implementare una proprietà e un metodo le cui implementazioni possono non essere evidenti. Il <xref:System.Configuration.SettingsProvider.ApplicationName%2A> è una proprietà astratta di <xref:System.Configuration.SettingsProvider>; è necessario programmarla affinché restituisca quanto segue:  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  La classe derivata deve implementare anche un metodo `Initialize` che non accetta argomenti e non restituisce alcun valore. Questo metodo non è definito da <xref:System.Configuration.SettingsProvider>.  
   
@@ -136,8 +136,8 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
   
  Dopo aver implementato e compilato il provider, è necessario istruire una classe di impostazioni affinché usi questo provider invece di quello predefinito. Eseguire tale operazione mediante la <xref:System.Configuration.SettingsProviderAttribute>. Se applicato a un'intera classe di impostazioni, viene utilizzato il provider per ogni impostazione che definisce la classe; Se applicato a singole impostazioni, architettura Impostazioni applicazione usa il provider solo per determinate impostazioni e Usa <xref:System.Configuration.LocalFileSettingsProvider> per il resto. L'esempio di codice seguente illustra come indicare alla classe di impostazioni l'uso del provider personalizzato.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  Un provider può essere chiamato da più thread contemporaneamente, ma scriverà sempre nello stesso percorso di archiviazione; pertanto l'architettura di Impostazioni applicazione creerà sempre una sola istanza della classe del provider.  
   
@@ -150,7 +150,7 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings)
-- [Schema Application Settings](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [Schema Application Settings](../../configure-apps/file-schema/application-settings-schema.md)

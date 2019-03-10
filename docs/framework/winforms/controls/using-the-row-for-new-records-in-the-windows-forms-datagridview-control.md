@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734957"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703920"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form
 Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei dati nell'applicazione, spesso si desidera offrire agli utenti la possibilità di aggiungere nuove righe di dati nell'archivio dati. Il <xref:System.Windows.Forms.DataGridView> controllo supporta questa funzionalità, fornendo una riga per i nuovi record, che viene sempre visualizzata come ultima riga. È contrassegnato con un simbolo di asterisco (*) l'intestazione di riga. Le sezioni seguenti illustrano alcune delle attività che è necessario considerare quando si programma con la riga per i nuovi record abilitato.  
@@ -24,7 +24,7 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>Compilazione della riga per i nuovi record con i dati predefiniti  
  Quando l'utente seleziona la riga per i nuovi record della riga corrente, il <xref:System.Windows.Forms.DataGridView> controllare genera il <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> evento.  
   
- Questo evento fornisce l'accesso al nuovo <xref:System.Windows.Forms.DataGridViewRow> e consente all'utente popolare la nuova riga con i dati predefiniti. Per altre informazioni, vedere [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Questo evento fornisce l'accesso al nuovo <xref:System.Windows.Forms.DataGridViewRow> e consente all'utente popolare la nuova riga con i dati predefiniti. Per altre informazioni, vedere [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>La raccolta di righe  
  La riga per i nuovi record è contenuta nel <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.Rows%2A> raccolta ma si comporta in modo diverso per due aspetti:  
@@ -34,7 +34,7 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
 -   È possibile aggiungere alcuna riga dopo la riga per i nuovi record. Un <xref:System.InvalidOperationException> viene generato se si tenta. Di conseguenza, la riga per i nuovi record è sempre l'ultima riga il <xref:System.Windows.Forms.DataGridView> controllo. I metodi sul <xref:System.Windows.Forms.DataGridViewRowCollection> che aggiungono righe, ovvero<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, e <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>, ovvero tutti chiamano metodi di inserimento internamente quando è presente la riga per i nuovi record.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Personalizzazione della visualizzazione della riga per i nuovi record  
- Quando viene creata la riga per i nuovi record, si basa sulla riga specificata per il <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> proprietà. Gli stili delle celle che non sono specificati per questa riga vengono ereditati da altre proprietà. Per altre informazioni sull'ereditarietà, vedere [stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ Quando viene creata la riga per i nuovi record, si basa sulla riga specificata per il <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> proprietà. Gli stili delle celle che non sono specificati per questa riga vengono ereditati da altre proprietà. Per altre informazioni sull'ereditarietà, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  I valori iniziali visualizzati dalle celle nella riga per nuovi record vengono recuperati da ogni cella <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> proprietà. Per le celle di tipo <xref:System.Windows.Forms.DataGridViewImageCell>, questa proprietà restituisce un'immagine segnaposto. In caso contrario la proprietà restituisce `null`. È possibile eseguire l'override di questa proprietà per restituire un valore personalizzato. Tuttavia, i valori iniziali possono essere sostituiti da un <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> gestore dell'evento quando lo stato attivo viene spostato la riga per i nuovi record.  
   
@@ -55,10 +55,10 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
  La riga per i nuovi record viene sempre creata nello stato deselezionato.  
   
 ## <a name="virtual-mode"></a>Modalità virtuale  
- Se si implementa la modalità virtuale, è necessario tenere traccia di quando è necessaria una riga per i nuovi record nel modello di dati e quando il rollback dell'aggiunta della riga. L'implementazione esatta di questa funzionalità dipende dall'implementazione del modello di dati e la relativa semantica di transazione, ad esempio, se il commit ambito è a livello di riga o cella. Per altre informazioni, vedere [modalità virtuale nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Se si implementa la modalità virtuale, è necessario tenere traccia di quando è necessaria una riga per i nuovi record nel modello di dati e quando il rollback dell'aggiunta della riga. L'implementazione esatta di questa funzionalità dipende dall'implementazione del modello di dati e la relativa semantica di transazione, ad esempio, se il commit ambito è a livello di riga o cella. Per altre informazioni, vedere [modalità virtuale nel controllo DataGridView Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Immissione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Immissione di dati nel controllo DataGridView di Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](specify-default-values-for-new-rows-in-the-datagrid.md)

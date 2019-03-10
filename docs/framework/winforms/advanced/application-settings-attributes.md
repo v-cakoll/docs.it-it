@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442555"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714658"
 ---
 # <a name="application-settings-attributes"></a>Attributi delle impostazioni delle applicazioni
 L'architettura di impostazioni dell'applicazione fornisce numerosi attributi che possono essere applicati per la classe wrapper di impostazioni o alle singole proprietà. Questi attributi vengono esaminati in fase di esecuzione per l'infrastruttura di impostazioni dell'applicazione, spesso in modo specifico il provider di impostazioni, per adattare il suo funzionamento alle esigenze del wrapper personalizzate dichiarate.  
@@ -40,5 +40,5 @@ L'architettura di impostazioni dell'applicazione fornisce numerosi attributi che
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Application Settings Architecture](application-settings-architecture.md)
 - [Procedura: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md)

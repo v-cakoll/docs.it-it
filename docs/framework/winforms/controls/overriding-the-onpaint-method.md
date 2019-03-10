@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: d688818e24084dbb3db81f418e37d724e9f48512
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666254"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713231"
 ---
 # <a name="overriding-the-onpaint-method"></a>Override del metodo OnPaint
 I passaggi di base per eseguire l'override di qualsiasi evento definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono identiche e sono riepilogate nell'elenco seguente.  
@@ -26,7 +26,7 @@ I passaggi di base per eseguire l'override di qualsiasi evento definito nel [!IN
   
  Il <xref:System.Windows.Forms.Control.Paint> perché è necessario eseguire l'override di tutti i controlli Windows Form, l'evento è discusso in dettaglio di seguito il <xref:System.Windows.Forms.Control.Paint> evento che eredita da <xref:System.Windows.Forms.Control>. La base <xref:System.Windows.Forms.Control> classe non sa come un controllo derivato deve essere disegnato e non fornisce alcuna logica di disegno di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo). Il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo di <xref:System.Windows.Forms.Control> invia semplicemente il <xref:System.Windows.Forms.Control.Paint> ricevitori di eventi registrati dell'evento.  
   
- Se si è lavorato tramite l'esempio in [come: Sviluppare un semplice controllo di Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), è stato illustrato un esempio di override di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo). Il frammento di codice seguente è tratto dall'esempio.  
+ Se si è lavorato tramite l'esempio in [come: Sviluppare un semplice controllo di Windows Forms](how-to-develop-a-simple-windows-forms-control.md), è stato illustrato un esempio di override di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo). Il frammento di codice seguente è tratto dall'esempio.  
   
 ```vb  
 Public Class FirstControl  
@@ -87,6 +87,6 @@ public class PaintEventArgs : EventArgs {
  Richiama un controllo relativo <xref:System.Windows.Forms.Control.OnPaint%2A> metodo ogni volta che è necessario modificare l'aspetto. Questo metodo è a sua volta genera il <xref:System.Windows.Forms.Control.Paint> evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Eventi](../../../../docs/standard/events/index.md)
-- [Rendering di un controllo di Windows Form](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)
-- [Definizione di un evento](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+- [Eventi](../../../standard/events/index.md)
+- [Rendering di un controllo di Windows Form](rendering-a-windows-forms-control.md)
+- [Definizione di un evento](defining-an-event-in-windows-forms-controls.md)

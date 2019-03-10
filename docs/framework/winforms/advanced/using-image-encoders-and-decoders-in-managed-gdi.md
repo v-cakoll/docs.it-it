@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: b2e51587209cb4df41ea1fd18ce5c2088ee07a2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf0d3a64ce8860d67f0dcfd37c780f03fbd7471a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524501"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713262"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+
-Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini. Utilizzando i codificatori in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile scrivere le immagini dalla memoria su disco. Utilizzando i decodificatori di immagini in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile caricare immagini dal disco nella memoria. Un decodificatore converte i dati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto in un formato di file di disco designato. Un decodificatore converte i dati in un file su disco per il formato richiesto dal <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti.  
+Il <xref:System.Drawing> spazio dei nomi fornisce le <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica delle immagini. Usando codificatori di immagini in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile scrivere le immagini dalla memoria su disco. Utilizzando i decodificatori di immagine in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile caricare immagini dal disco in memoria. Un codificatore converte i dati in un' <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto in un formato di file di disco designato. Un decodificatore converte i dati in un file di disco per il formato richiesto per il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dispone di codificatori e decodificatori che supportano i seguenti tipi di file incorporati:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ha incorporati codificatori e decodificatori di immagini che supportano i tipi di file seguenti:  
   
 -   BMP  
   
@@ -27,30 +27,30 @@ Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image>
   
 -   TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono inoltre decodificatori incorporati che supportano i tipi di file seguenti:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili anche decodificatori di immagini predefinite che supportano i tipi di file seguenti:  
   
 -   WMF  
   
 -   EMF  
   
--   ICONA  
+-   ICON  
   
- Gli argomenti seguenti descrivono i codificatori e decodificatori in modo più dettagliato:  
+ Gli argomenti seguenti descrivono i codificatori e decodificatori di immagini in modo più dettagliato:  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Elencare i codificatori installati](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
- Viene descritto come elencare i codificatori disponibili in un computer.  
+ [Procedura: Elencare i codificatori installati](how-to-list-installed-encoders.md)  
+ Descrive come elencare i codificatori disponibili in un computer.  
   
- [Procedura: Elencare i decodificatori installati](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
+ [Procedura: Elencare i decodificatori installati](how-to-list-installed-decoders.md)  
  Viene descritto come elencare i decodificatori disponibili in un computer.  
   
- [Procedura: Determinare i parametri supportati da un codificatore](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ [Procedura: Determinare i parametri supportati da un codificatore](how-to-determine-the-parameters-supported-by-an-encoder.md)  
  Viene illustrato come elencare le <xref:System.Drawing.Imaging.EncoderParameters> supportati da un codificatore.  
   
- [Procedura: Convertire un'immagine BMP in un'immagine PNG](../../../../docs/framework/winforms/advanced/how-to-convert-a-bmp-image-to-a-png-image.md)  
- Viene descritto come salvare un'immagine in un formato di immagine diverso.  
+ [Procedura: Convertire un'immagine BMP in un'immagine PNG](how-to-convert-a-bmp-image-to-a-png-image.md)  
+ Viene descritto come salvare un'immagine in un formato di immagine diversi.  
   
- [Procedura: Impostare il livello di compressione JPEG](../../../../docs/framework/winforms/advanced/how-to-set-jpeg-compression-level.md)  
+ [Procedura: Impostare il livello di compressione JPEG](how-to-set-jpeg-compression-level.md)  
  Viene descritto come modificare il livello di qualità di un'immagine.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -65,6 +65,6 @@ Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image>
  <xref:System.Drawing.Imaging.Encoder>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Informazioni sul codice gestito GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [Informazioni sul codice gestito GDI+](about-gdi-managed-code.md)  
   
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+ [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)

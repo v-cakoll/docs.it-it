@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441983"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705207"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Considerazioni sull'inserimento di controlli ActiveX in Windows Form
 Anche se Windows Form è stato ottimizzato per ospitare i controlli Windows Form, è tuttavia possibile usare i controlli ActiveX. Quando si pianifica un'applicazione che usa i controlli ActiveX, tenere presenti le considerazioni seguenti:  
@@ -29,8 +29,8 @@ Anche se Windows Form è stato ottimizzato per ospitare i controlli Windows Form
     >  Se il nome di un membro del controllo ActiveX corrisponde a un nome definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], quindi il Control Importer di ActiveX verrà prefisso al nome del membro **Ctl** quando crea il <xref:System.Windows.Forms.AxHost> classe derivata. Se, ad esempio, il controllo ActiveX contiene un membro denominato **Layout**, questo verrà rinominato **CtlLayout** nella classe derivata da AxHost perché l'evento **Layout** è definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Aggiungere i controlli ActiveX a Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Sicurezza dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md)
+- [Procedura: Aggiungere i controlli ActiveX a Windows Form](how-to-add-activex-controls-to-windows-forms.md)
+- [Sicurezza dall'accesso di codice](../../misc/code-access-security.md)
 - [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
+- [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)
+- [Controlli Windows Form](index.md)

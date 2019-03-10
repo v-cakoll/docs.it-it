@@ -2,15 +2,16 @@
 title: Archivio di istanze del flusso di lavoro SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538297"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715672"
 ---
 # <a name="sql-workflow-instance-store"></a>Archivio di istanze del flusso di lavoro SQL
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] viene fornito con l'archivio di istanze del flusso di lavoro SQL che consente ai flussi di lavoro di rendere persistenti le informazioni sullo stato delle istanze del flusso di lavoro in un database di SQL Server 2005 o di SQL Server 2008. Questa funzionalità viene implementata principalmente nel formato della classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> che deriva dalla classe <xref:System.Runtime.DurableInstancing.InstanceStore> astratta del framework di persistenza. La funzionalità di archivio di istanze del flusso di lavoro SQL costituisce un provider di persistenza SQL, ovvero un'implementazione concreta dell'API di persistenza usata da un host per inviare i comandi di persistenza all'archivio.  
+
+  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] viene fornito con l'archivio di istanze del flusso di lavoro SQL che consente ai flussi di lavoro di rendere persistenti le informazioni sullo stato delle istanze del flusso di lavoro in un database di SQL Server 2005 o di SQL Server 2008. Questa funzionalità viene implementata principalmente nel formato della classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> che deriva dalla classe <xref:System.Runtime.DurableInstancing.InstanceStore> astratta del framework di persistenza. La funzionalità di archivio di istanze del flusso di lavoro SQL costituisce un provider di persistenza SQL, ovvero un'implementazione concreta dell'API di persistenza usata da un host per inviare i comandi di persistenza all'archivio.  
   
  L'archivio di istanze del flusso di lavoro SQL supporta sia flussi di lavoro indipendenti o i servizi dei flussi di lavoro che usano l'oggetto <xref:System.Activities.WorkflowApplication> o <xref:System.ServiceModel.WorkflowServiceHost> sia i servizi ospitati in WAS tramite l'oggetto <xref:System.ServiceModel.WorkflowServiceHost>. La funzionalità di archivio di istanze del flusso di lavoro SQL può essere configurata a livello di codice per i servizi indipendenti tramite il modello a oggetti esposto dalla funzionalità. Questa funzionalità può essere configurata per i servizi ospitati dall'oggetto <xref:System.ServiceModel.WorkflowServiceHost> sia a livello di codice tramite il modello a oggetti sia tramite un file di configurazione XML.  
   
@@ -22,19 +23,19 @@ ms.locfileid: "54538297"
   
 ## <a name="in-this-section"></a>In questa sezione  
   
--   [Proprietà dell'archivio di istanze del flusso di lavoro SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+-   [Proprietà dell'archivio di istanze del flusso di lavoro SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Attivazione di istanze](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+-   [Attivazione di istanze](instance-activation.md)  
   
--   [Supporto per le query](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+-   [Supporto per le query](support-for-queries.md)  
   
--   [Estendibilità dell'archivio](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+-   [Estendibilità dell'archivio](store-extensibility.md)  
   
--   [Sicurezza](../../../docs/framework/windows-workflow-foundation/security.md)  
+-   [Sicurezza](security.md)  
   
--   [Database di persistenza di SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+-   [Database di persistenza di SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Vedere anche
 - [Esempi di persistenza](https://go.microsoft.com/fwlink/?LinkID=177735)

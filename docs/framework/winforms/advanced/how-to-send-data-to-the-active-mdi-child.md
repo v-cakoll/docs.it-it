@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589934"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707404"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Procedura: Inviare dati al figlio MDI attivo
-Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti multipli (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), si dovrà inviare dati alla finestra figlio attivi, ad esempio quando l'utente Incolla i dati dagli Appunti in un'applicazione MDI.  
+Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), si dovrà inviare dati alla finestra figlio attivi, ad esempio quando l'utente Incolla i dati dagli Appunti in un'applicazione MDI.  
   
 > [!NOTE]
->  Per informazioni sulla verifica della finestra figlio ha lo stato attivo e inviare il contenuto negli Appunti, vedere [determinare il figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Per informazioni sulla verifica della finestra figlio ha lo stato attivo e inviare il contenuto negli Appunti, vedere [determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md).  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Per inviare dati alla finestra figlio MDI attiva dagli Appunti  
   
 1.  All'interno di un metodo, copiare il testo negli Appunti per il controllo attivo del form figlio attivo.  
   
     > [!NOTE]
-    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -92,8 +92,8 @@ Spesso, all'interno del contesto di [le applicazioni di interfaccia a documenti 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Procedura: Determinare il figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
+- [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
+- [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
+- [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)

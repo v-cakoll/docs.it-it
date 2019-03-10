@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491779"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712734"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Puntatori del mouse in Windows Form
 Il puntatore del mouse *puntatore*, talvolta detta il cursore è una bitmap che specifica un punto di stato attivo nella schermata di input dell'utente con il mouse. Questo argomento viene fornita una panoramica del puntatore del mouse in Windows Forms e illustra alcuni dei modi per modificare e controllare il puntatore del mouse.  
@@ -32,5 +32,5 @@ Il puntatore del mouse *puntatore*, talvolta detta il cursore è una bitmap che 
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Cursor>
-- [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Funzionalità di trascinamento della selezione in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funzionalità di trascinamento della selezione in Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

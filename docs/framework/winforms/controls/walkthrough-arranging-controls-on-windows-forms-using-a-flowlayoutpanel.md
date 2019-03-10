@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: c6bd35965c3e7f0e92ecdf98d4aa9052ebb9e35b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdb92a1ec9aa349c8768b5dc4ddf3d403297cf7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573514"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703540"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel
 Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi automaticamente alle eventuali modifiche alle dimensioni del form o del contenuto del form. Per usare un layout dinamico senza gestire gli eventi <xref:System.Windows.Forms.Control.Layout> in modo esplicito nel codice è possibile usare un pannello di layout.  
   
  I controlli <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> offrono modalità intuitive per disporre i controlli nel form. Entrambi i controlli forniscono una funzionalità configurabile e automatica per la verifica delle posizioni relative dei controlli figlio contenuti e funzionalità di layout dinamico in fase di esecuzione in modo che i controlli figlio possano essere ridimensionati e riposizionati quando le dimensioni del form padre cambiano. I pannelli layout possono essere annidati in altri pannelli layout per consentire la realizzazione di interfacce utente sofisticate.  
   
- Il <xref:System.Windows.Forms.TableLayoutPanel> dispone i contenuti in una griglia, fornendo una funzionalità simile al codice HTML \<tabella > elemento. Le celle vengono disposte in righe e colonne, e queste possono avere dimensioni diverse. Per altre informazioni, vedere [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+ Il <xref:System.Windows.Forms.TableLayoutPanel> dispone i contenuti in una griglia, fornendo una funzionalità simile al codice HTML \<tabella > elemento. Le celle vengono disposte in righe e colonne, e queste possono avere dimensioni diverse. Per altre informazioni, vedere [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> dispone i contenuti in una direzione di flusso specifica: orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo. Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
@@ -124,7 +124,7 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
   
 1.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.FlowLayoutPanel> , <xref:System.Windows.Forms.Control.Dock%2A> , su <xref:System.Windows.Forms.DockStyle.Fill>. Se il form è sufficientemente ampio, i controlli <xref:System.Windows.Forms.Button> verranno spostati nella prima colonna del controllo <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
-2.  Modificare il valore della proprietà <xref:System.Windows.Forms.FlowLayoutPanel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su **20**. Per altre informazioni, vedere [Procedura dettagliata: Definire il layout dei Windows Form controlli con spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Si noti come i controlli figlio vengano spostati verso il centro del controllo <xref:System.Windows.Forms.FlowLayoutPanel> . L'aumento del valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A> provoca l'allontanamento dei controlli figlio dai bordi del controllo <xref:System.Windows.Forms.FlowLayoutPanel> .  
+2.  Modificare il valore della proprietà <xref:System.Windows.Forms.FlowLayoutPanel> del controllo <xref:System.Windows.Forms.Control.Padding%2A> espandendo la voce <xref:System.Windows.Forms.Control.Padding%2A> nella finestra **Proprietà** e impostando la proprietà <xref:System.Windows.Forms.Padding.All%2A> su **20**. Per altre informazioni, vedere [Procedura dettagliata: Definire il layout dei Windows Form controlli con spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md). Si noti come i controlli figlio vengano spostati verso il centro del controllo <xref:System.Windows.Forms.FlowLayoutPanel> . L'aumento del valore della proprietà <xref:System.Windows.Forms.Control.Padding%2A> provoca l'allontanamento dei controlli figlio dai bordi del controllo <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 3.  Selezionare tutti i controlli <xref:System.Windows.Forms.Button> in <xref:System.Windows.Forms.FlowLayoutPanel> e impostare il valore della proprietà <xref:System.Windows.Forms.Control.Margin%2A> su **20**. La spaziatura tra i controlli <xref:System.Windows.Forms.Button> aumenta in modo da allontanarli tra loro. Potrebbe essere necessario ingrandire il controllo <xref:System.Windows.Forms.FlowLayoutPanel> in modo da vedere tutti i controlli figlio.  
   
@@ -190,10 +190,10 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Esperienza utente di Microsoft Windows, Linee guida ufficiali per analisti e sviluppatori dell'interfaccia utente). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Panoramica sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [Procedura: Ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Procedura: Ancoraggio dei controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: Ancoraggio dei controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
+- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

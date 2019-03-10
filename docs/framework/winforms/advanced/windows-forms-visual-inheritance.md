@@ -10,12 +10,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524413"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705298"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Ereditarietà visiva di Windows Form
 In alcuni casi è possibile impostare un progetto in modo che richiami un modulo simile a uno creato in un progetto precedente. In altri casi, può rivelarsi utile creare un modulo di base con impostazioni quali una filigrana o il layout di un determinato controllo da usare successivamente all'interno di un progetto, con modifiche al modello del modulo originale contenute in ogni iterazione. L'ereditarietà dei moduli consente di creare un modulo di base e di ereditare da tale modulo, quindi di apportare modifiche conservando le impostazioni originali necessarie.  
@@ -23,19 +23,19 @@ In alcuni casi è possibile impostare un progetto in modo che richiami un modulo
  È possibile creare moduli che derivano da classi a livello di codice oppure mediante la finestra di selezione dell'ereditarietà visiva.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: ereditare Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md)  
  Vengono fornite indicazioni per creare nel codice moduli ereditati.  
   
- [Procedura: ereditare moduli mediante la finestra di dialogo Selezione ereditarietà](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ [Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
  Vengono fornite indicazioni per creare form ereditati mediante la finestra di selezione dell'ereditarietà.  
   
- [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
+ [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md)  
  Vengono fornite indicazioni per modificare i controlli di un modulo di base e le relative proprietà.  
   
- [Procedura dettagliata: dimostrazione dell'ereditarietà visiva](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [Procedura dettagliata: Dimostrazione dell'ereditarietà visiva](walkthrough-demonstrating-visual-inheritance.md)  
  Viene descritta la creazione di un Windows Form di base e la relativa compilazione in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo modulo che eredita dal modulo di base.  
   
- [Procedura: utilizzare modificatori e proprietà GenerateMember](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
+ [Procedura: Usare i modificatori e proprietà GenerateMember](how-to-use-the-modifiers-and-generatemember-properties.md)  
  Vengono fornite indicazioni per l'utilizzo delle proprietà `GenerateMember` e `Modifiers`, che sono pertinenti quando in Progettazione Windows Form viene generata una variabile membro per un componente.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964248"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702776"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: Creare una nuova impostazione in fase di progettazione
 È possibile creare una nuova impostazione in fase di progettazione tramite Progettazione impostazioni. Progettazione impostazioni è un'interfaccia stile griglia che consente di creare nuove impostazioni e specificare le proprietà per tali impostazioni. È necessario specificare nome, valore, tipo e ambito per le nuove impostazioni. Dopo aver creata un'impostazione, è possibile accedere nel codice.  
@@ -32,6 +32,6 @@ ms.locfileid: "56964248"
 3.  Nella finestra di progettazione impostazioni, impostare il nome, valore, tipo e ambito per l'impostazione. Ogni riga rappresenta una singola impostazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso delle impostazioni applicazione e delle impostazioni utente](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Cenni preliminari sulle impostazioni delle applicazioni](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Procedura: Modificare il valore di un'impostazione esistente in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)
+- [Procedura: Modificare il valore di un'impostazione esistente in fase di progettazione](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

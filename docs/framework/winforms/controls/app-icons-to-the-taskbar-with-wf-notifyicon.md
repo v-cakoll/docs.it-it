@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 925134e4a0317322d7a4f4cfdc9ac8e3780cf9e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650691"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714255"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Procedura: Aggiungere le icone dell'applicazione alla barra delle applicazioni con il componente NotifyIcon di Windows Form
 I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente di visualizzare una singola icona nell'area di notifica dello stato della barra delle applicazioni. Per visualizzare le icone più nell'area di stato, è necessario disporre di più <xref:System.Windows.Forms.NotifyIcon> componenti nel form. Per impostare l'icona visualizzata per un controllo, usare il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. È anche possibile scrivere codice <xref:System.Windows.Forms.NotifyIcon.DoubleClick> gestore dell'evento in modo che si verifica un evento quando l'utente fa doppio clic sull'icona. Ad esempio, si è stato possibile visualizzare una finestra di dialogo per l'utente debba configurare il processo in background rappresentato dall'icona.  
@@ -28,7 +28,7 @@ I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente d
   
 ### <a name="to-set-the-icon"></a>Per impostare l'icona  
   
-1.  Assegnare un valore per il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. Il valore deve essere di tipo `System.Drawing.Icon` e possono essere caricati da un file con estensione ico. È possibile specificare il file dell'icona nel codice o facendo clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà nel  **Le proprietà** finestra e quindi selezionare il file nei **Open** finestra di dialogo visualizzata.  
+1.  Assegnare un valore per il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. Il valore deve essere di tipo `System.Drawing.Icon` e possono essere caricati da un file con estensione ico. È possibile specificare il file dell'icona nel codice o facendo clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà nel  **Le proprietà** finestra e quindi selezionare il file nei **Open** finestra di dialogo visualizzata.  
   
 2.  Impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> su `true`.  
   
@@ -74,6 +74,6 @@ I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente d
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Procedura: Associare un Menu di scelta rapida a un componente NotifyIcon di Windows Form](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [Panoramica sul componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [Procedura: Associare un Menu di scelta rapida a un componente NotifyIcon di Windows Form](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Componente NotifyIcon](notifyicon-component-windows-forms.md)
+- [Panoramica sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

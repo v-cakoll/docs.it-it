@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723342"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705221"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procedura: Creare processi di stampa Standard di Windows Form
 Del processo di stampa in Windows Form è la <xref:System.Drawing.Printing.PrintDocument> componente, in particolare, il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. Scrivendo codice per gestire il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, è possibile specificare cosa stampare e come stamparlo.  
@@ -72,10 +72,10 @@ Del processo di stampa in Windows Form è la <xref:System.Drawing.Printing.Print
      È anche possibile scrivere codice per il <xref:System.Drawing.Printing.PrintDocument.BeginPrint> e <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventi, includendo un intero che rappresenta il numero totale di pagine da stampare decrementato che mano che verrà stampate le pagine.  
   
     > [!NOTE]
-    >  È possibile aggiungere un <xref:System.Windows.Forms.PrintDialog> al form per fornire un'interfaccia utente pulita ed efficienti (UI) per gli utenti. Impostando il <xref:System.Windows.Forms.PrintDialog.Document%2A> proprietà del <xref:System.Windows.Forms.PrintDialog> Abilita componente è possibile impostare le proprietà correlate alla stampa di documenti si lavora con sul form. Per altre informazioni sul <xref:System.Windows.Forms.PrintDialog> componente, vedere [componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md).  
+    >  È possibile aggiungere un <xref:System.Windows.Forms.PrintDialog> al form per fornire un'interfaccia utente pulita ed efficienti (UI) per gli utenti. Impostando il <xref:System.Windows.Forms.PrintDialog.Document%2A> proprietà del <xref:System.Windows.Forms.PrintDialog> Abilita componente è possibile impostare le proprietà correlate alla stampa di documenti si lavora con sul form. Per altre informazioni sul <xref:System.Windows.Forms.PrintDialog> componente, vedere [componente PrintDialog](../controls/printdialog-component-windows-forms.md).  
   
      Per altre informazioni sulle specifiche di Windows Form i processi di stampa, incluse quelle sulla creazione di un processo di stampa a livello di codice, vedere <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)

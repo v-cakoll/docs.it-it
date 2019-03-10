@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716127"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Procedura: Creare un elenco di finestre MDI con MenuStrip (Windows Form)
 Usare l'interfaccia a documenti multipli (MDI) per creare applicazioni che possono aprire i documenti diverse alla stessa ora e copia e Incolla il contenuto da un documento a altro.  
@@ -82,6 +82,6 @@ Usare l'interfaccia a documenti multipli (MDI) per creare applicazioni che posso
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Procedura: Creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Procedura: Creare form padre MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Procedura: Creare form figlio MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Controllo MenuStrip](menustrip-control-windows-forms.md)

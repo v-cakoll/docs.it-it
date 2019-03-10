@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713538"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713202"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Procedura: Definire le proprietà della pagina con il componente PageSetupDialog
-Il componente [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) presenta layout, dimensioni del foglio e altre opzioni relative al layout di pagina per un documento.  
+Il componente [PageSetupDialog](pagesetupdialog-component-windows-forms.md) presenta layout, dimensioni del foglio e altre opzioni relative al layout di pagina per un documento.  
   
  È necessario specificare un'istanza della classe <xref:System.Drawing.Printing.PrintDocument> , che rappresenta il documento da stampare. È inoltre necessario che sul computer dell'utente sia installata una stampante, locale o di rete, tramite la quale il componente <xref:System.Windows.Forms.PageSetupDialog> determina in parte le scelte di formattazione della pagina presentate all'utente.  
   
@@ -89,5 +89,5 @@ Il componente [PageSetupDialog](../../../../docs/framework/winforms/controls/pag
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Procedura: Creare processi di stampa Standard di Windows Form](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [Componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [Procedura: Creare processi di stampa Standard di Windows Form](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Componente PageSetupDialog](pagesetupdialog-component-windows-forms.md)

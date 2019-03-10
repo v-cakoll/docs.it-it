@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518813"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705025"
 ---
 # <a name="about-gdi-managed-code"></a>Informazioni sul codice gestito GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è la parte del sistema operativo Windows che fornisce grafica vettoriale bidimensionale, immagini e funzionalità tipografiche. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] migliora [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la Graphics Device Interface inclusa con le versioni precedenti di Windows) aggiungendo nuove funzionalità e ottimizzando quelle esistenti.  
@@ -21,13 +21,13 @@ ms.locfileid: "33518813"
  In questa sezione vengono fornite informazioni sull'API [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per i programmatori che usano codice gestito.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Linee, curve e forme](lines-curves-and-shapes.md)  
  Illustra la grafica vettoriale.  
   
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)  
  Descrive il tipo di immagini disponibili e il relativo uso.  
   
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Sistemi di coordinate e trasformazioni](coordinate-systems-and-transformations.md)  
  Illustra come trasformare la grafica con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Riferimenti  
@@ -59,5 +59,5 @@ ms.locfileid: "33518813"
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Utilizzo di classi grafiche gestite](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md).  
+ [Uso di classi grafiche gestite](using-managed-graphics-classes.md).  
  Contiene collegamenti ad argomenti in cui è illustrato l'uso dell'interfaccia di programmazione `Graphics`.
