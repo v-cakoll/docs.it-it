@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 30dbe55711d92ea1fdbbbfd147a65b27d0dc9a50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a77f55e28055ef097f0b4604c316f7751abdbe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711505"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702685"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="53928-102">Procedura: Aggiungere e rimuovere nodi con il controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="53928-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
-<span data-ttu-id="53928-103">I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Archivia i nodi di primo livello nel relativo <xref:System.Windows.Forms.TreeView.Nodes%2A> raccolta.</span><span class="sxs-lookup"><span data-stu-id="53928-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="53928-104">Ciascuna <xref:System.Windows.Forms.TreeNode> inoltre dispone di una propria <xref:System.Windows.Forms.TreeNode.Nodes%2A> raccolta per archiviare i relativi nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="53928-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="53928-105">Entrambe le proprietà della raccolta sono di tipo <xref:System.Windows.Forms.TreeNodeCollection>, che fornisce i membri della raccolta standard che consentono di aggiungere, rimuovere e ridisporre i nodi in un singolo livello della gerarchia di nodi.</span><span class="sxs-lookup"><span data-stu-id="53928-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="8133b-102">Procedura: Aggiungere e rimuovere nodi con il controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8133b-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
+<span data-ttu-id="8133b-103">I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Archivia i nodi di primo livello nel relativo <xref:System.Windows.Forms.TreeView.Nodes%2A> raccolta.</span><span class="sxs-lookup"><span data-stu-id="8133b-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="8133b-104">Ciascuna <xref:System.Windows.Forms.TreeNode> inoltre dispone di una propria <xref:System.Windows.Forms.TreeNode.Nodes%2A> raccolta per archiviare i relativi nodi figlio.</span><span class="sxs-lookup"><span data-stu-id="8133b-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="8133b-105">Entrambe le proprietà della raccolta sono di tipo <xref:System.Windows.Forms.TreeNodeCollection>, che fornisce i membri della raccolta standard che consentono di aggiungere, rimuovere e ridisporre i nodi in un singolo livello della gerarchia di nodi.</span><span class="sxs-lookup"><span data-stu-id="8133b-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
   
-### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="53928-106">Per aggiungere nodi a livello di codice</span><span class="sxs-lookup"><span data-stu-id="53928-106">To add nodes programmatically</span></span>  
+### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="8133b-106">Per aggiungere nodi a livello di codice</span><span class="sxs-lookup"><span data-stu-id="8133b-106">To add nodes programmatically</span></span>  
   
-1.  <span data-ttu-id="53928-107">Usare la <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="53928-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
+1.  <span data-ttu-id="8133b-107">Usare la <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="8133b-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -43,9 +43,9 @@ ms.locfileid: "54711505"
     treeView1->SelectedNode->Nodes->Add(newNode);  
     ```  
   
-### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="53928-108">Rimozione di nodi a livello di codice</span><span class="sxs-lookup"><span data-stu-id="53928-108">To remove nodes programmatically</span></span>  
+### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="8133b-108">Rimozione di nodi a livello di codice</span><span class="sxs-lookup"><span data-stu-id="8133b-108">To remove nodes programmatically</span></span>  
   
-1.  <span data-ttu-id="53928-109">Usare la <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà per rimuovere un singolo nodo, o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodo per cancellare tutti i nodi.</span><span class="sxs-lookup"><span data-stu-id="53928-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
+1.  <span data-ttu-id="8133b-109">Usare la <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà per rimuovere un singolo nodo, o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodo per cancellare tutti i nodi.</span><span class="sxs-lookup"><span data-stu-id="8133b-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -70,10 +70,10 @@ ms.locfileid: "54711505"
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="53928-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="53928-110">See also</span></span>
-- [<span data-ttu-id="53928-111">Controllo TreeView</span><span class="sxs-lookup"><span data-stu-id="53928-111">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [<span data-ttu-id="53928-112">Panoramica sul controllo TreeView</span><span class="sxs-lookup"><span data-stu-id="53928-112">TreeView Control Overview</span></span>](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)
-- [<span data-ttu-id="53928-113">Procedura: Impostare icone per il controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="53928-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [<span data-ttu-id="53928-114">Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="53928-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [<span data-ttu-id="53928-115">Procedura: Individuare il nodo di TreeView scelto</span><span class="sxs-lookup"><span data-stu-id="53928-115">How to: Determine Which TreeView Node Was Clicked</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [<span data-ttu-id="53928-116">Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="53928-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="8133b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8133b-110">See also</span></span>
+- [<span data-ttu-id="8133b-111">Controllo TreeView</span><span class="sxs-lookup"><span data-stu-id="8133b-111">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="8133b-112">Panoramica sul controllo TreeView</span><span class="sxs-lookup"><span data-stu-id="8133b-112">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
+- [<span data-ttu-id="8133b-113">Procedura: Impostare icone per il controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8133b-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [<span data-ttu-id="8133b-114">Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="8133b-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [<span data-ttu-id="8133b-115">Procedura: Individuare il nodo di TreeView scelto</span><span class="sxs-lookup"><span data-stu-id="8133b-115">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [<span data-ttu-id="8133b-116">Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="8133b-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)

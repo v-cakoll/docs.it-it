@@ -12,19 +12,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: 73e49c96c20f145490a2d494177e21bc957605b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727625"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715256"
 ---
-# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="6a843-102">Procedura: Nascondere ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="6a843-102">How to: Hide ToolStripMenuItems</span></span>
-<span data-ttu-id="6a843-103">Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente dell'applicazione e limitare i comandi dell'utente.</span><span class="sxs-lookup"><span data-stu-id="6a843-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="6a843-104">Spesso, è consigliabile nascondere un intero menu quando tutte le voci di menu su di esso non sono disponibili.</span><span class="sxs-lookup"><span data-stu-id="6a843-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="6a843-105">Evitare distrazioni per l'utente.</span><span class="sxs-lookup"><span data-stu-id="6a843-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="6a843-106">Inoltre, si potrebbe voler nascondere e disabilitare il menu o la voce di menu, come nascondere da solo non impedisce all'utente di accesso a un comando di menu tramite un tasto di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="6a843-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
+# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="9b202-102">Procedura: Nascondere ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="9b202-102">How to: Hide ToolStripMenuItems</span></span>
+<span data-ttu-id="9b202-103">Se si nasconde le voci di menu è un modo per controllare l'interfaccia utente dell'applicazione e limitare i comandi dell'utente.</span><span class="sxs-lookup"><span data-stu-id="9b202-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="9b202-104">Spesso, è consigliabile nascondere un intero menu quando tutte le voci di menu su di esso non sono disponibili.</span><span class="sxs-lookup"><span data-stu-id="9b202-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="9b202-105">Evitare distrazioni per l'utente.</span><span class="sxs-lookup"><span data-stu-id="9b202-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="9b202-106">Inoltre, si potrebbe voler nascondere e disabilitare il menu o la voce di menu, come nascondere da solo non impedisce all'utente di accesso a un comando di menu tramite un tasto di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="9b202-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
   
-### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="6a843-107">Per nascondere qualsiasi voce di menu a livello di codice</span><span class="sxs-lookup"><span data-stu-id="6a843-107">To hide any menu item programmatically</span></span>  
+### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="9b202-107">Per nascondere qualsiasi voce di menu a livello di codice</span><span class="sxs-lookup"><span data-stu-id="9b202-107">To hide any menu item programmatically</span></span>  
   
--   <span data-ttu-id="6a843-108">All'interno del metodo in cui si impostano le proprietà della voce di menu, aggiungere il codice per impostare il <xref:System.Windows.Forms.ToolStripItem.Visible%2A> proprietà `false`.</span><span class="sxs-lookup"><span data-stu-id="6a843-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
+-   <span data-ttu-id="9b202-108">All'interno del metodo in cui si impostano le proprietà della voce di menu, aggiungere il codice per impostare il <xref:System.Windows.Forms.ToolStripItem.Visible%2A> proprietà `false`.</span><span class="sxs-lookup"><span data-stu-id="9b202-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
   
     ```vb  
     MenuItem3.Visible = False  
@@ -38,8 +38,8 @@ ms.locfileid: "54727625"
     menuItem3->Visible = false;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a843-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a843-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b202-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9b202-109">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [<span data-ttu-id="6a843-110">Panoramica sul controllo MenuStrip</span><span class="sxs-lookup"><span data-stu-id="6a843-110">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="6a843-111">Procedura: Disabilitare i ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="6a843-111">How to: Disable ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)
+- [<span data-ttu-id="9b202-110">Panoramica sul controllo MenuStrip</span><span class="sxs-lookup"><span data-stu-id="9b202-110">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="9b202-111">Procedura: Disabilitare i ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="9b202-111">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)
