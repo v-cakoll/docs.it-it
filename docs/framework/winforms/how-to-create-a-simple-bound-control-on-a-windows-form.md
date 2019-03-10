@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643572"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708340"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedura: Creare un controllo con associazione semplice in un Windows Form
 Con *associazione semplice*, è possibile visualizzare un singolo elemento di dati, ad esempio un valore di colonna da una tabella di set di dati, in un controllo. È possibile un'associazione semplice di qualsiasi proprietà di un controllo a un valore di dati.  
@@ -20,7 +20,7 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
   
 ### <a name="to-simple-bind-a-control"></a>Per un controllo di un'associazione semplice  
   
-1.  Effettuare una connessione a un'origine dati. Per altre informazioni, vedere [ci si connette a un'origine dati](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Effettuare una connessione a un'origine dati. Per altre informazioni, vedere [ci si connette a un'origine dati](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  Selezionare il controllo nel form e visualizzare il **proprietà** finestra.  
   
@@ -28,7 +28,7 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
   
      Le proprietà associate in genere sono visualizzate sotto le **(DataBindings)** proprietà. Ad esempio, nella maggior parte dei controlli, il **testo** più di frequente è associata la proprietà.  
   
-4.  Se la proprietà si desidera binding non è uno dei più comunemente associate, selezionare la **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) nei **(avanzate)** casella per visualizzare i **formattazione e associazione avanzata** finestra di dialogo contenente un elenco completo delle proprietà per il controllo.  
+4.  Se la proprietà si desidera binding non è uno dei più comunemente associate, selezionare la **puntini di sospensione** pulsante (![schermata di VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) nei **(avanzate)** casella per visualizzare i **formattazione e associazione avanzata** finestra di dialogo contenente un elenco completo delle proprietà per il controllo.  
   
 5.  Selezionare la proprietà si desidera eseguire il binding e fare clic sulla freccia a discesa sotto **Binding**.  
   
@@ -47,5 +47,5 @@ Con *associazione semplice*, è possibile visualizzare un singolo elemento di da
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Binding>
-- [Data binding in Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)

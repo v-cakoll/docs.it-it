@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: f36df117ee7bb7bcdb79ccb134c914288ec6903d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c93db7b333f231bc328b3a16d51cfb5243ba098
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602676"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714034"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Procedura: Creare un controllo ToolStrip di base di Windows Form con elementi Standard utilizzando la finestra di progettazione
 La procedura seguente viene illustrato come creare un <xref:System.Windows.Forms.ToolStrip> e aggiungere sette <xref:System.Windows.Forms.ToolStripButton> controlli che rappresentano le attività tipiche.  
@@ -30,7 +30,7 @@ La procedura seguente viene illustrato come creare un <xref:System.Windows.Forms
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolStrip>
-- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Controllo ToolStrip](toolstrip-control-windows-forms.md)
+- [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
+- [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

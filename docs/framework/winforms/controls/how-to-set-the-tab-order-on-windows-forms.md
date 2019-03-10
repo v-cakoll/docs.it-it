@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675210"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705879"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procedura: Impostare l'ordine di tabulazione in Windows Form
 L'ordine di tabulazione è l'ordine in cui un utente si sposta lo stato attivo da un controllo a un'altra premendo il tasto TAB. Ogni modulo contiene un proprio ordine di tabulazione. Per impostazione predefinita, l'ordine di tabulazione è lo stesso l'ordine in cui sono stati creati i controlli. Ordine di tabulazione la numerazione inizia da zero.  
@@ -32,7 +32,7 @@ L'ordine di tabulazione è l'ordine in cui un utente si sposta lo stato attivo d
 2.  Scegliere i controlli in modo sequenziale per stabilire l'ordine di tabulazione desiderato.  
   
     > [!NOTE]
-    >  Posizione di un controllo all'interno dell'ordine di tabulazione possibile impostare su qualsiasi valore maggiore o uguale a 0. Quando si verificano i duplicati, l'ordine z dei due controlli viene valutata e il controllo nella parte superiore a schede per primo. (Nell'ordine z è disposizione visiva di controlli in un form insieme all'asse z del form [profondità]. L'ordine z determina quali controlli vengono prima di altri controlli.) Per altre informazioni sull'ordine z, vedere [disposizione di oggetti in Windows Form](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Posizione di un controllo all'interno dell'ordine di tabulazione possibile impostare su qualsiasi valore maggiore o uguale a 0. Quando si verificano i duplicati, l'ordine z dei due controlli viene valutata e il controllo nella parte superiore a schede per primo. (Nell'ordine z è disposizione visiva di controlli in un form insieme all'asse z del form [profondità]. L'ordine z determina quali controlli vengono prima di altri controlli.) Per altre informazioni sull'ordine z, vedere [disposizione di oggetti in Windows Form](how-to-layer-objects-on-windows-forms.md).  
   
 3.  Al termine, fare clic su **ordine di tabulazione** nel **visualizzazione** menu nuovo per uscire dalla modalità di ordine di tabulazione.  
   
@@ -52,10 +52,10 @@ L'ordine di tabulazione è l'ordine in cui un utente si sposta lo stato attivo d
      Controllare l'oggetto la cui proprietà <xref:System.Windows.Forms.Control.TabStop%2A> proprietà è stata impostata `false` ancora mantiene la propria posizione nell'ordine di tabulazione, anche se il controllo viene ignorato quando si passano tra i controlli con il tasto TAB.  
   
     > [!NOTE]
-    >  Un gruppo di pulsanti di opzione ha una sola scheda di arrestare in fase di esecuzione. Il pulsante selezionato (, ovvero il pulsante con relativo <xref:System.Windows.Forms.RadioButton.Checked%2A> proprietà impostata su `true`) è relativo <xref:System.Windows.Forms.Control.TabStop%2A> automaticamente impostata su `true`, mentre per gli altri pulsanti relativi <xref:System.Windows.Forms.Control.TabStop%2A> proprietà impostata su `false`. Per altre informazioni sul raggruppamento <xref:System.Windows.Forms.RadioButton> controlli, vedere [raggruppamento controlli RadioButton Windows Form alla funzione come un Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Un gruppo di pulsanti di opzione ha una sola scheda di arrestare in fase di esecuzione. Il pulsante selezionato (, ovvero il pulsante con relativo <xref:System.Windows.Forms.RadioButton.Checked%2A> proprietà impostata su `true`) è relativo <xref:System.Windows.Forms.Control.TabStop%2A> automaticamente impostata su `true`, mentre per gli altri pulsanti relativi <xref:System.Windows.Forms.Control.TabStop%2A> proprietà impostata su `false`. Per altre informazioni sul raggruppamento <xref:System.Windows.Forms.RadioButton> controlli, vedere [raggruppamento controlli RadioButton Windows Form alla funzione come un Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
-- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Controlli Windows Form](index.md)
+- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

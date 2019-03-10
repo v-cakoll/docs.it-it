@@ -5,42 +5,42 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716439"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Sviluppo di controlli Windows Form personalizzati con .NET Framework
 I controlli Windows Form sono componenti riutilizzabili che incapsulano funzionalità dell'interfaccia utente e vengono usati nelle applicazioni basate su Windows sul lato client. Windows Form fornisce numerosi controlli pronti per l'uso, nonché l'infrastruttura per lo sviluppo di controlli personalizzati. È possibile combinare ed estendere i controlli esistenti oppure creare controlli personalizzati. Questa sezione fornisce informazioni complementari ed esempi per lo sviluppo di controlli Windows Form.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sull'utilizzo di controlli in Windows Form](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ [Cenni preliminari sull'utilizzo di controlli in Windows Form](overview-of-using-controls-in-windows-forms.md)  
  Evidenzia gli elementi essenziali dell'uso di controlli nelle applicazioni Windows Forms.  
   
- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Tipi di controlli personalizzati](varieties-of-custom-controls.md)  
  Descrive i diversi tipi di controlli personalizzati che è possibile creare con lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
- [Nozioni fondamentali sullo sviluppo di controlli Windows Form](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Nozioni fondamentali sullo sviluppo di controlli Windows Form](windows-forms-control-development-basics.md)  
  Descrive i passaggi iniziali dello sviluppo di un controllo Windows Form.  
   
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)  
  Mostra come aggiungere le proprietà ai controlli Windows Form.  
   
- [Eventi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)  
  Mostra come gestire e definire gli eventi nei controlli Windows Form.  
   
- [Attributi nei controlli Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Attributi nei controlli Windows Forms](attributes-in-windows-forms-controls.md)  
  Descrive gli attributi che è possibile applicare alle proprietà o ad altri membri e componenti dei controlli personalizzati.  
   
- [Disegno e rendering di controlli personalizzati](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ [Disegno e rendering di controlli personalizzati](custom-control-painting-and-rendering.md)  
  Mostra come personalizzare l'aspetto dei controlli.  
   
- [Layout di controlli Windows Form](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ [Layout di controlli Windows Form](layout-in-windows-forms-controls.md)  
  Mostra come creare layout sofisticati per controlli e form.  
   
- [Multithreading nei controlli Windows Form](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ [Multithreading nei controlli Windows Form](multithreading-in-windows-forms-controls.md)  
  Mostra come implementare i controlli con multithreading.  
   
 ## <a name="reference"></a>Riferimenti  

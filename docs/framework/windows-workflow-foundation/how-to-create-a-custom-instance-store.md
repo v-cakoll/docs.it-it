@@ -2,16 +2,16 @@
 title: 'Procedura: Creare un Store di istanza personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503190"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707768"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Procedura: Creare un Store di istanza personalizzate
 
-In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è presente <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un archivio di istanze che usa SQL Server per rendere persistenti i dati del flusso di lavoro. Se l'applicazione deve rendere persistenti i dati del flusso di lavoro in un altro supporto, ad esempio un altro database o un file system, è possibile implementare un archivio di istanze personalizzato. L'archivio di istanze personalizzato viene creato estendendo la classe astratta <xref:System.Runtime.DurableInstancing.InstanceStore> e implementando i metodi obbligatori per l'implementazione. Per un'implementazione completa di un archivio di istanze personalizzato, vedere la [processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) esempio.
+In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è presente <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un archivio di istanze che usa SQL Server per rendere persistenti i dati del flusso di lavoro. Se l'applicazione deve rendere persistenti i dati del flusso di lavoro in un altro supporto, ad esempio un altro database o un file system, è possibile implementare un archivio di istanze personalizzato. L'archivio di istanze personalizzato viene creato estendendo la classe astratta <xref:System.Runtime.DurableInstancing.InstanceStore> e implementando i metodi obbligatori per l'implementazione. Per un'implementazione completa di un archivio di istanze personalizzato, vedere la [processo di acquisto aziendale](./samples/corporate-purchase-process.md) esempio.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementazione del metodo BeginTryCommand
 
@@ -226,11 +226,11 @@ Il metodo <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2
 
 ## <a name="using-a-custom-instance-store"></a>Uso di un archivio di istanze personalizzato
 
-Per implementare un archivio di istanze personalizzato, assegnare un'istanza dell'archivio di istanze a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>e implementare il metodo <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Vedere il [come: Creare ed eseguire un flusso di lavoro in esecuzione lunga](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) esercitazione per informazioni specifiche.
+Per implementare un archivio di istanze personalizzato, assegnare un'istanza dell'archivio di istanze a <xref:System.Activities.WorkflowApplication.InstanceStore%2A>e implementare il metodo <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Vedere il [come: Creare ed eseguire un flusso di lavoro in esecuzione lunga](how-to-create-and-run-a-long-running-workflow.md) esercitazione per informazioni specifiche.
 
 ## <a name="a-sample-instance-store"></a>Esempio di archivio di istanze
 
-L'esempio di codice seguente è un'implementazione di archivio di istanza completa, tratta dal [processo di acquisto aziendale](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) esempio. Questo archivio di istanze rende persistenti i dati del flusso di lavoro a un file mediante XML.
+L'esempio di codice seguente è un'implementazione di archivio di istanza completa, tratta dal [processo di acquisto aziendale](./samples/corporate-purchase-process.md) esempio. Questo archivio di istanze rende persistenti i dati del flusso di lavoro a un file mediante XML.
 
 ```csharp
 using System;

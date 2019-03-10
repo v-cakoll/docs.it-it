@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562310"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702257"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Procedura: Impostare l'immagine visualizzata da un Windows Form mediante la finestra di progettazione
 Vari controlli Windows Form consente di visualizzare immagini. L'immagine può essere un'icona che illustra lo scopo del controllo, ad esempio un'icona del disco su un pulsante indica la **salvare** comando. In alternativa, è possibile utilizzare un'immagine di sfondo per fornire il controllo l'aspetto desiderato.  
@@ -26,7 +26,7 @@ Vari controlli Windows Form consente di visualizzare immagini. L'immagine può e
   
 1.  Nel **proprietà** finestra, seleziona la **immagine** oppure **BackgroundImage** proprietà del controllo, quindi fare clic sul pulsante con i puntini di sospensione (  
   
-     ![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) per visualizzare il **Seleziona risorsa** nella finestra di dialogo.  
   
@@ -36,4 +36,4 @@ Vari controlli Windows Form consente di visualizzare immagini. L'immagine può e
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

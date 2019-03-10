@@ -2,12 +2,12 @@
 title: Estensibilità dell'archivio
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465727"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703265"
 ---
 # <a name="store-extensibility"></a>Estensibilità dell'archivio
 
@@ -36,7 +36,7 @@ La classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> di
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Per altre informazioni sull'aggiunta di un partecipante di persistenza personalizzato, vedere la [partecipanti di persistenza](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) esempio.
+     Per altre informazioni sull'aggiunta di un partecipante di persistenza personalizzato, vedere la [partecipanti di persistenza](persistence-participants.md) esempio.
 
 3. Le attività personalizzate nell'applicazione DP popolano diversi campi di stato nel **Execute** (metodo).
 

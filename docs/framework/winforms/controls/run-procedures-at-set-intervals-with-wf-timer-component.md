@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663990"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705571"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Procedura: Eseguire routine a intervalli predefiniti con il componente Timer di Windows Form
 A volte può essere necessario creare una routine che venga eseguita a intervalli di tempo specificati fino alla conclusione di un ciclo oppure al termine di un intervallo di tempo predefinito. Il componente <xref:System.Windows.Forms.Timer> rende possibile una procedura di questo tipo.  
@@ -26,7 +26,7 @@ A volte può essere necessario creare una routine che venga eseguita a intervall
  Questo componente è progettato per l'ambiente Windows Form. Per informazioni su un timer adatto a un ambiente server, vedere [Introduzione ai timer basati su server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  L'uso del componente <xref:System.Windows.Forms.Timer> presenta alcune limitazioni. Per altre informazioni, vedere [limitazioni della proprietà di Interval del componente Timer di Windows Form](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
+>  L'uso del componente <xref:System.Windows.Forms.Timer> presenta alcune limitazioni. Per altre informazioni, vedere [limitazioni della proprietà di Interval del componente Timer di Windows Form](limitations-of-the-timer-component-interval-property.md).  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Per eseguire una routine a intervalli predefiniti con il componente Timer  
   
@@ -244,5 +244,5 @@ private:
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.Timer>
-- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Panoramica sul componente Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Componente Timer](timer-component-windows-forms.md)
+- [Panoramica sul componente Timer](timer-component-overview-windows-forms.md)

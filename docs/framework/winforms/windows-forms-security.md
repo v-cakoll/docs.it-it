@@ -9,27 +9,27 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746785"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709549"
 ---
 # <a name="windows-forms-security"></a>Sicurezza di Windows Form
 Form di Windows dispongono di un modello di sicurezza che è basata su codice (sicurezza livelli sono impostati per il codice, indipendentemente dall'utente che esegue il codice). Si tratta di oltre agli eventuali schemi di sicurezza che potrebbero essere già presenti nel sistema informatico. Tra cui gli schemi nel browser (ad esempio, la sicurezza basata sull'area disponibile in Internet Explorer) o il sistema operativo (ad esempio, la sicurezza basata su credenziali di Windows NT).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica della sicurezza in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Panoramica della sicurezza in Windows Forms](security-in-windows-forms-overview.md)  
  Viene illustrato brevemente il modello di sicurezza di .NET Framework e i passaggi di base necessari per assicurare che i form di Windows nell'applicazione siano protetti.  
   
- [Accesso più sicuro a file e dati in Windows Form](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [Accesso più sicuro a file e dati in Windows Form](more-secure-file-and-data-access-in-windows-forms.md)  
  Viene descritto come accedere ai file e i dati in un ambiente parzialmente attendibile.  
   
- [Stampa più sicura in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Stampa più sicura in Windows Forms](more-secure-printing-in-windows-forms.md)  
  Viene descritto come accedere alle funzionalità di stampa in un ambiente parzialmente attendibile.  
   
- [Considerazioni aggiuntive sulla sicurezza in Windows Form](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Considerazioni aggiuntive sulla sicurezza in Windows Form](additional-security-considerations-in-windows-forms.md)  
  Descrive finestre, mediante gli Appunti ed eseguire chiamate a codice non gestito in un ambiente parzialmente attendibile.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
@@ -39,19 +39,19 @@ Form di Windows dispongono di un modello di sicurezza che è basata su codice (s
  [Amministrazione generale dei criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  Fornisce informazioni sull'amministrazione di criteri di sicurezza di .NET Framework e sull'elevazione delle autorizzazioni.  
   
- [Autorizzazioni pericolose e amministrazione dei criteri](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
+ [Autorizzazioni pericolose e amministrazione dei criteri](../misc/dangerous-permissions-and-policy-administration.md)  
  Vengono descritte alcune autorizzazioni di.NET Framework che possono potenzialmente consentire al sistema di sicurezza di essere aggirate.  
   
- [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)  
+ [Linee guida per la generazione di codice sicuro](../../standard/security/secure-coding-guidelines.md)  
  Vengono forniti collegamenti ad argomenti che illustrano le procedure consigliate per la scrittura in modo sicuro di codice rispetto a .NET Framework.  
   
  [Richiesta di autorizzazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  Viene illustrato l'utilizzo di attributi per informare il runtime di quali autorizzazioni deve eseguire il codice.  
   
- [Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)  
+ [Concetti chiave sulla sicurezza](../../standard/security/key-security-concepts.md)  
  Collegamenti ad argomenti che trattano gli aspetti di base della sicurezza di codice.  
   
- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)  
+ [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../misc/code-access-security-basics.md)  
  Vengono illustrate le nozioni fondamentali sull'utilizzo dei criteri di sicurezza del runtime di .NET Framework.  
   
  [Determinazione della necessità di modificare i criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  

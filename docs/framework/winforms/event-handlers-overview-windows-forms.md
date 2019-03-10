@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: cab35250f4fedf0a08dc7198430a668c7428c207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567751"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703387"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Cenni preliminari sui gestori eventi (Windows Form)
 Un gestore eventi è un metodo che è associato a un evento. Quando viene generato l'evento, viene eseguito il codice nel gestore eventi. Ogni gestore di evento fornisce due parametri che consentono di gestire correttamente l'evento. Nell'esempio seguente viene illustrato un gestore eventi per un <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> evento.  
@@ -46,8 +46,8 @@ private:
   
  In genere ogni evento produce un gestore eventi con un tipo di evento a un oggetto diverso per il secondo parametro. Alcuni gestori di eventi, ad esempio quelli per il <xref:System.Windows.Forms.Control.MouseDown> e <xref:System.Windows.Forms.Control.MouseUp> eventi, hanno lo stesso tipo di oggetto per il secondo parametro. Per questi tipi di eventi, è possibile usare lo stesso gestore eventi per gestire entrambi gli eventi.  
   
- È anche possibile usare lo stesso gestore eventi per gestire l'evento stesso per diversi controlli. Ad esempio, se si dispone di un gruppo di <xref:System.Windows.Forms.RadioButton> controlli in un form, è possibile creare un unico gestore eventi per il <xref:System.Windows.Forms.Control.Click> evento e ogni controllo <xref:System.Windows.Forms.Control.Click> eventi associati al gestore di evento singolo. Per altre informazioni, vedere [Procedura: Connettere più eventi a un unico gestore eventi in Windows Form](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ È anche possibile usare lo stesso gestore eventi per gestire l'evento stesso per diversi controlli. Ad esempio, se si dispone di un gruppo di <xref:System.Windows.Forms.RadioButton> controlli in un form, è possibile creare un unico gestore eventi per il <xref:System.Windows.Forms.Control.Click> evento e ogni controllo <xref:System.Windows.Forms.Control.Click> eventi associati al gestore di evento singolo. Per altre informazioni, vedere [Procedura: Connettere più eventi a un unico gestore eventi in Windows Form](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creazione di gestori eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Informazioni generali sugli eventi](../../../docs/framework/winforms/events-overview-windows-forms.md)
+- [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
+- [Informazioni generali sugli eventi](events-overview-windows-forms.md)

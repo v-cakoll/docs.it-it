@@ -10,20 +10,20 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 50079e1666f2069ea7fe3c0183b9fc104a19eabd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568907"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705339"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] durante il disegno, che ridurrebbe le prestazioni, può ridimensionare automaticamente un'immagine. In alternativa, è possibile controllare il ridimensionamento dell'immagine, passando le dimensioni del rettangolo di destinazione per il <xref:System.Drawing.Graphics.DrawImage%2A> (metodo).  
   
  Ad esempio, la chiamata seguente al <xref:System.Drawing.Graphics.DrawImage%2A> metodo specifica un angolo superiore sinistro del (50, 30) ma non specifica un rettangolo di destinazione.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.WorkingWithImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
  Anche se questa è la versione più semplice del <xref:System.Drawing.Graphics.DrawImage%2A> metodo in termini di numero di argomenti obbligatori, non è necessariamente il più efficiente. Se la risoluzione utilizzata da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (in genere 96 punti per pollice) è diversa da quella memorizzata nel <xref:System.Drawing.Image> oggetto, quindi il <xref:System.Drawing.Graphics.DrawImage%2A> l'immagine verrà adattata (metodo). Ad esempio, si supponga che un <xref:System.Drawing.Image> oggetto ha una larghezza pari a 216 pixel e il valore archiviato risoluzione orizzontale 72 punti per pollice. Trattandosi di 3, 216/72 <xref:System.Drawing.Graphics.DrawImage%2A> l'immagine verrà adattata in modo che abbia una larghezza pari a 3 pollici una risoluzione di 96 punti per pollice. Vale a dire, <xref:System.Drawing.Graphics.DrawImage%2A> verranno visualizzati un'immagine con una larghezza pari a 96 x 3 = 288 pixel.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "54568907"
 ## <a name="example"></a>Esempio  
  L'esempio seguente disegna due volte la stessa immagine. Nel primo caso, la larghezza e altezza del rettangolo di destinazione non sono specificati e l'immagine viene ridimensionata automaticamente. Nel secondo caso, la larghezza e altezza, espresso in pixel, del rettangolo di destinazione vengono specificate sia lo stesso come la larghezza e altezza dell'immagine originale. La figura seguente mostra l'immagine visualizzata due volte.  
   
- ![Trama ridimensionata](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ ![Trama ridimensionata](./media/csscaledtexture1.png "csscaledtexture1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire texture. jpg con un nome di immagine e il percorso che sono validi per il sistema.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
+- [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

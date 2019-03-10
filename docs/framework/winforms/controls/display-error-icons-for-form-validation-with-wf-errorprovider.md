@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: fa230e326a91853d6b23d5901317a86f628f6c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679110"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707638"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form
 È possibile usare un controllo Windows Form <xref:System.Windows.Forms.ErrorProvider> componente per visualizzare un'icona di errore quando l'utente immette i dati non validi. È necessario disporre almeno due controlli sul form per scheda tra di essi e quindi richiamare il codice di convalida.  
@@ -27,7 +27,7 @@ ms.locfileid: "54679110"
   
 2.  Aggiungere un <xref:System.Windows.Forms.ErrorProvider> componente al form.  
   
-3.  Selezionare il primo controllo e aggiungere codice al relativo <xref:System.Windows.Forms.Control.Validating> gestore dell'evento. Affinché il codice funzioni correttamente, la routine deve essere collegata all'evento. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3.  Selezionare il primo controllo e aggiungere codice al relativo <xref:System.Windows.Forms.Control.Validating> gestore dell'evento. Affinché il codice funzioni correttamente, la routine deve essere collegata all'evento. Per altre informazioni, vedere [Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Il codice seguente verifica la validità dei dati che immessi dall'utente; Se i dati non sono validi, il <xref:System.Windows.Forms.ErrorProvider.SetError%2A> viene chiamato il metodo. Il primo argomento del <xref:System.Windows.Forms.ErrorProvider.SetError%2A> metodo specifica che il controllo viene visualizzata l'icona accanto a. Il secondo argomento è il testo di errore da visualizzare.  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54679110"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [Panoramica sul componente ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Panoramica sul componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
+- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

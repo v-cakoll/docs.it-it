@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 42c3d9c681da9ca87125a274fa12af623269bd70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745248"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708847"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo ToolBar (Windows Form)
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "54745248"
   
  Quando la <xref:System.Windows.Forms.ToolBar.Appearance%2A> è impostata su <xref:System.Windows.Forms.ToolBarAppearance>, i pulsanti della barra degli strumenti appaiono in rilievo e tridimensionali. È possibile impostare il <xref:System.Windows.Forms.ToolBar.Appearance%2A> proprietà della barra degli strumenti a <xref:System.Windows.Forms.ToolBarAppearance> per offrire la barra degli strumenti e dei relativi pulsanti un aspetto bidimensionale. I pulsanti assumono un aspetto tridimensionale quando il puntatore del mouse viene spostato su di essi. I pulsanti della barra degli strumenti possono essere suddivisi in gruppi logici tramite dei separatori. Un separatore è un pulsante della barra degli strumenti con il <xref:System.Windows.Forms.ToolBarButton.Style%2A> impostata su <xref:System.Windows.Forms.ToolBarButtonStyle>. Viene visualizzato sulla barra degli strumenti come uno spazio vuoto. Quando per la barra degli strumenti viene impostato l'aspetto piatto, i separatori sono visualizzati come linee anziché come spazi tra i pulsanti.  
   
- Il <xref:System.Windows.Forms.ToolBar> controllo consente di creare barre degli strumenti aggiungendo <xref:System.Windows.Forms.Button> gli oggetti per un <xref:System.Windows.Forms.ToolBar.Buttons%2A> raccolta. È possibile usare l'Editor della raccolta per aggiungere pulsanti a un <xref:System.Windows.Forms.ToolBar> controllo, ognuna delle quali <xref:System.Windows.Forms.Button> oggetto deve essere testo o un'immagine, anche se è possibile assegnare a entrambi. L'immagine viene fornita da un componente [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) associato. In fase di esecuzione, è possibile aggiungere o rimuovere pulsanti dal <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> usando il <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> e <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> metodi. Per programmare i pulsanti di un <xref:System.Windows.Forms.ToolBar>, aggiungere codice per il <xref:System.Windows.Forms.ToolBar.ButtonClick> gli eventi del <xref:System.Windows.Forms.ToolBar>, usando il <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> proprietà del <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe per determinare quale pulsante è stato fatto clic.  
+ Il <xref:System.Windows.Forms.ToolBar> controllo consente di creare barre degli strumenti aggiungendo <xref:System.Windows.Forms.Button> gli oggetti per un <xref:System.Windows.Forms.ToolBar.Buttons%2A> raccolta. È possibile usare l'Editor della raccolta per aggiungere pulsanti a un <xref:System.Windows.Forms.ToolBar> controllo, ognuna delle quali <xref:System.Windows.Forms.Button> oggetto deve essere testo o un'immagine, anche se è possibile assegnare a entrambi. L'immagine viene fornita da un componente [ImageList](imagelist-component-windows-forms.md) associato. In fase di esecuzione, è possibile aggiungere o rimuovere pulsanti dal <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> usando il <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> e <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> metodi. Per programmare i pulsanti di un <xref:System.Windows.Forms.ToolBar>, aggiungere codice per il <xref:System.Windows.Forms.ToolBar.ButtonClick> gli eventi del <xref:System.Windows.Forms.ToolBar>, usando il <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> proprietà del <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe per determinare quale pulsante è stato fatto clic.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolBar>
-- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [Procedura: Aggiungere pulsanti a un controllo ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Controllo ToolBar](toolbar-control-windows-forms.md)
+- [Procedura: Aggiungere pulsanti a un controllo ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti](how-to-trigger-menu-events-for-toolbar-buttons.md)

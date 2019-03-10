@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 06a25179a3afc004029972bbf7d4d5691d42b25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707334"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Procedura: Usare una tabella di riassociazione cromatica
 Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di rimappatura dei colori. La tabella di riassociazione cromatica è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Ciascuna <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice ha un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.  
@@ -28,14 +28,14 @@ Modifica del mapping è il processo di conversione dei colori in un'immagine in 
   
  Nella figura seguente mostra l'immagine originale a sinistra e l'immagine rimappato a destra.  
   
- ![Rimappatura dei colori](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")  
+ ![Rimappatura dei colori](./media/colortrans7.png "colortrans7")  
   
- [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Ricolorazione di immagini](recoloring-images.md)
+- [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)

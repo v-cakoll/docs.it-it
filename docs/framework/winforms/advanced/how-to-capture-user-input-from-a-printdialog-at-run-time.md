@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: a15563560615f5b857220c0b548fc57f31ee4e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527666"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707329"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Procedura: Acquisire l'Input dell'utente da un elemento PrintDialog in fase di esecuzione
 Mentre è possibile impostare le opzioni relative alla stampa in fase di progettazione, talvolta si desidera modificare queste opzioni in fase di esecuzione, probabilmente a causa di scelte effettuate dall'utente. È possibile acquisire l'input dell'utente per la stampa di un documento usando il <xref:System.Windows.Forms.PrintDialog> e il <xref:System.Drawing.Printing.PrintDocument> componenti.  
@@ -56,5 +56,5 @@ Mentre è possibile impostare le opzioni relative alla stampa in fase di progett
 4.  Le scelte dell'utente stampa nella finestra di dialogo verranno copiate il <xref:System.Drawing.Printing.PrinterSettings> proprietà del <xref:System.Drawing.Printing.PrintDocument> componente.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Stampare un File di testo con più pagine in Windows Form](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Supporto per la stampa in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Procedura: Stampare un File di testo con più pagine in Windows Form](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)

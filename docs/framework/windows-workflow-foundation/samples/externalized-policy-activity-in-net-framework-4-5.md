@@ -2,24 +2,24 @@
 title: Attività ExternalizedPolicy in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850237"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706371"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Attività ExternalizedPolicy in .NET Framework 4.5
 
-Questo esempio viene illustrato come l'attività ExternalizedPolicy4 consenta l'esecuzione esistente [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> gli oggetti in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) direttamente tramite il motore regole che viene fornito in WF 3.5. Usando questa attività, è possibile aprire ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> esistente di WF 3.5. Per altre informazioni sul motore regole di WF 3.5 incluso come parte di Windows Workflow Foundation, leggere [Introduzione al motore di regole di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Per altre informazioni sulla migrazione delle regole per [!INCLUDE[wf1](../../../../includes/wf1-md.md)] nel [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], leggere le istruzioni di migrazione [materiale sussidiario di migrazione](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+Questo esempio viene illustrato come l'attività ExternalizedPolicy4 consenta l'esecuzione esistente [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> gli oggetti in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) direttamente tramite il motore regole che viene fornito in WF 3.5. Usando questa attività, è possibile aprire ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> esistente di WF 3.5. Per altre informazioni sul motore regole di WF 3.5 incluso come parte di Windows Workflow Foundation, leggere [Introduzione al motore di regole di Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Per altre informazioni sulla migrazione delle regole per [!INCLUDE[wf1](../../../../includes/wf1-md.md)] nel [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], leggere le istruzioni di migrazione [materiale sussidiario di migrazione](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio
 
 |Nome progetto|Descrizione|File principali|
 |-|-|-|
-|ExternalizedPolicy4|Contiene l'attività ExternalizedPolicy4 e la relativa finestra di progettazione di WF 4.5.|**ExternalizedPolicy4.cs**: definizione di attività.<br /><br /> **ExternalizedPolicy4Designer.xaml**: finestra di progettazione personalizzata per l'attività ExternalizedPolicy4. Usa l'editor delle regole (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) dal motore per le regole di WF 3.5.|
-|ImperativeCodeClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione ExternalizedPolicy4 e il codice C# imperativo (non viene usata alcuna finestra di progettazione).|**ApplyDiscount**: File con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definizioni delle regole.<br /><br /> **Order.cs**: tipo che rappresenta un ordine del cliente. Le regole vengono applicate agli oggetti di questo tipo.<br /><br /> **Program.cs**: configura ed esegue un flusso di lavoro che dispone di un'attività Policy4 per applicare le regole definite in ApplyDiscount alle istanze di oggetti Order.<br /><br /> App.config: file di configurazione con il percorso del file delle regole.|
-|DesignerClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione ExternalPolicy4 nella finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: flusso di lavoro sequenza che usa un'attività Policy4 per eseguire valutazioni delle regole.<br /><br /> **Program.cs**: esegue un'istanza del flusso di lavoro definito in Sequence1.xaml.|
+|ExternalizedPolicy4|Contiene l'attività ExternalizedPolicy4 e la relativa finestra di progettazione di WF 4.5.|**ExternalizedPolicy4.cs**: definizione di attività.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Finestra di progettazione personalizzata per l'attività ExternalizedPolicy4. Usa l'editor delle regole (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) dal motore per le regole di WF 3.5.|
+|ImperativeCodeClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione ExternalizedPolicy4 e il codice C# imperativo (non viene usata alcuna finestra di progettazione).|**ApplyDiscount.rules**: File con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definizioni delle regole.<br /><br /> **Order.cs**: Tipo che rappresenta un ordine del cliente. Le regole vengono applicate agli oggetti di questo tipo.<br /><br /> **Program.cs**: Configura ed esegue un flusso di lavoro che dispone di un'attività Policy4 per applicare le regole definite in ApplyDiscount alle istanze di oggetti Order.<br /><br /> App.config: File di configurazione con il percorso del file di regole.|
+|DesignerClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione ExternalPolicy4 nella finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: Flusso di lavoro sequenza che usa un'attività Policy4 per eseguire valutazioni delle regole.<br /><br /> **Program.cs**: Esegue un'istanza del flusso di lavoro definito in Sequence1.xaml.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Attività ExternalizedPolicy4
 
@@ -62,7 +62,7 @@ L'attività relativa ai criteri consente di creare ed eseguire un set di regole 
 
 Per eseguire questo esempio non è necessaria alcuna configurazione particolare. Aprire la soluzione in Visual Studio e quindi premere **F5** per eseguire l'applicazione.
 
-In questo esempio sono contenute due applicazioni client: ImperativeCodeClientSample e DesignerClientSample. Nel client ImperativeCodeClientSample viene illustrato come configurare ed eseguire l'attività ExternalizedPolicy4 tramite il codice imperativo C#. In DesignerClientSample viene illustrato come configurare ed eseguire l'attività ExternalizedPolicy4 tramite la finestra di progettazione.
+In questo esempio contiene due applicazioni client: ImperativeCodeClientSample e DesignerClientSample. Nel client ImperativeCodeClientSample viene illustrato come configurare ed eseguire l'attività ExternalizedPolicy4 tramite il codice imperativo C#. In DesignerClientSample viene illustrato come configurare ed eseguire l'attività ExternalizedPolicy4 tramite la finestra di progettazione.
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Eseguire l'applicazione ImperativeCodeClientSample
 

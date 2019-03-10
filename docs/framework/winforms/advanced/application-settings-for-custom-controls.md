@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526743"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714346"
 ---
 # <a name="application-settings-for-custom-controls"></a>Impostazioni delle applicazioni per i controlli personalizzati
 È necessario completare alcune attività per consentire ai controlli personalizzati la possibilità di mantenere le impostazioni dell'applicazione quando i controlli sono ospitati nelle applicazioni di terze parti.  
@@ -26,7 +26,7 @@ ms.locfileid: "54526743"
   
 2.  Creare questa classe di impostazioni personalizzati dopo il controllo è stato creato e inserito in un form, ad esempio il modulo <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
   
- Per istruzioni sulla creazione di una classe di impostazioni personalizzate, vedere [come: Creare le impostazioni dell'applicazione](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Per istruzioni sulla creazione di una classe di impostazioni personalizzate, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Le chiavi delle impostazioni e le impostazioni condivise  
  Alcuni controlli possono essere utilizzati più volte all'interno del modulo stesso. La maggior parte dei casi, è consigliabile questi controlli per rendere persistenti le proprie impostazioni. Con il <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> proprietà <xref:System.Configuration.IPersistComponentSettings>, è possibile fornire una stringa univoca che agisce per evitare ambiguità tra più versioni di un controllo in un form.  
@@ -48,4 +48,4 @@ ms.locfileid: "54526743"
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Application Settings Architecture](application-settings-architecture.md)

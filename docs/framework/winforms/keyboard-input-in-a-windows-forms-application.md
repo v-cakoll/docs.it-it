@@ -1,33 +1,33 @@
 ---
-title: Input da tastiera in un'applicazione Windows Forms
+title: Input da tastiera in un'applicazione Windows Form
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-ms.openlocfilehash: 90070ec6fb27e2f9892a3874cc326fe77af1a063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537073"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715828"
 ---
-# <a name="keyboard-input-in-a-windows-forms-application"></a>Input da tastiera in un'applicazione Windows Forms
-Windows Form include eventi di tastiera standard che consentono di rispondere alle specifiche pressioni dei tasti e fornisce anche metodi per intercettare, modificare e utilizzare tali pressioni a livello di applicazione, form e livello di controllo.  
+# <a name="keyboard-input-in-a-windows-forms-application"></a>Input da tastiera in un'applicazione Windows Form
+Windows Form include gli eventi della tastiera standard che consentono di rispondere a pressioni di tasti specifiche e fornisce anche metodi per intercettare, modificare e utilizzare le pressioni dei tasti nell'applicazione, form, e a livello di controllo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Funzionamento dell'input da tastiera](../../../docs/framework/winforms/how-keyboard-input-works.md)  
+ [Funzionamento dell'input da tastiera](how-keyboard-input-works.md)  
  Viene descritto come i messaggi della tastiera vengono elaborati e trasformati in eventi della tastiera.  
   
- [Utilizzo degli eventi di tastiera](../../../docs/framework/winforms/using-keyboard-events.md)  
- Vengono fornite informazioni sui tipi di eventi di tastiera e le informazioni che viene ricevute da gestori eventi della tastiera.  
+ [Utilizzo degli eventi di tastiera](using-keyboard-events.md)  
+ Fornisce informazioni sui tipi di eventi della tastiera e le informazioni che viene ricevute dai gestori eventi della tastiera.  
   
- [Procedura: Modificare l'input da tastiera in un controllo standard](../../../docs/framework/winforms/how-to-modify-keyboard-input-to-a-standard-control.md)  
- Viene presentato un esempio di codice viene illustrato come modificare i valori di chiave, prima che raggiungano un controllo.  
+ [Procedura: Modificare l'Input da tastiera in un controllo Standard](how-to-modify-keyboard-input-to-a-standard-control.md)  
+ Presenta un esempio di codice che illustra come modificare i valori delle chiavi prima che raggiungano un controllo.  
   
- [Procedura: Determinare quale tasto di modifica è stato premuto](../../../docs/framework/winforms/how-to-determine-which-modifier-key-was-pressed.md)  
- Viene illustrato come determinare se è stato premuto MAIUSC, ALT o CTRL, oltre a un'altra chiave.  
+ [Procedura: Determinare quale tasto di modifica è stato premuto](how-to-determine-which-modifier-key-was-pressed.md)  
+ Viene illustrato come determinare se è stato premuto MAIUSC, ALT o CTRL oltre a un'altra chiave.  
   
- [Procedura: Gestire gli input da tastiera a livello di form](../../../docs/framework/winforms/how-to-handle-keyboard-input-at-the-form-level.md)  
- Viene presentato un esempio di codice viene illustrato come intercettare i tasti prima che raggiungano un controllo.
+ [Procedura: Gestire l'Input da tastiera a livello di Form](how-to-handle-keyboard-input-at-the-form-level.md)  
+ Viene presentato un esempio di codice che illustra come intercettare i tasti prima che raggiungano un controllo.

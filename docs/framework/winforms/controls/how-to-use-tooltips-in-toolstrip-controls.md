@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: 60d024dcb023b3d6cfafb68263291acefb38e14a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7177daef469f6c601cfa468c6437deb9653ffc85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519164"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707469"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Procedura: Utilizzare le descrizioni comandi nei controlli ToolStrip
 È possibile visualizzare un <xref:System.Windows.Forms.ToolTip> per il <xref:System.Windows.Forms.ToolStrip> controllo mediante l'impostazione del controllo cui si desidera <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> proprietà `true`.  
@@ -40,4 +40,4 @@ ms.locfileid: "54519164"
 - <xref:System.Windows.Forms.ToolStripButton>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
 - <xref:System.Windows.Forms.ToolStripSplitButton>
-- [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)

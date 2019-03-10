@@ -9,12 +9,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643598"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707963"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Procedura: Determinare gli elementi selezionati nel controllo CheckedListBox Windows Form
 Quando la presentazione dei dati in un controllo Windows Form <xref:System.Windows.Forms.CheckedListBox> (controllo), è possibile scorrere la raccolta archiviata nel <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> proprietà o esaminare l'elenco utilizzando il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo per determinare quali elementi vengono controllati. Il <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> metodo accetta un numero di indice di elemento come argomento e restituisce `true` o `false`. Contrariamente a quanto si potrebbe pensare, la <xref:System.Windows.Forms.ListBox.SelectedItems%2A> e <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> proprietà non determinano quali elementi sono selezionati; esse determinano a quali elementi vengono evidenziati.  
@@ -112,4 +112,4 @@ Quando la presentazione dei dati in un controllo Windows Form <xref:System.Windo
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form usati per elencare opzioni](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

@@ -2,12 +2,12 @@
 title: Argomenti obbligatori e gruppi di overload
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452901"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707872"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argomenti obbligatori e gruppi di overload
 Le attività possono essere configurate in modo che venga richiesta l'associazione di determinati argomenti affinché l'attività risulti valida per l'esecuzione. L'attributo `RequiredArgument` viene usato per indicare che determinati argomenti di un'attività sono obbligatori mentre l'attributo `OverloadGroup` viene usato per raggruppare insieme categorie di argomenti obbligatori. Tramite gli attributi, gli autori dell'attività possono fornire configurazioni di convalida di attività semplici o complesse.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand1'.**  
 > [!NOTE]
-> Per altre informazioni sulla ricerca e gestione di errori di convalida e avvisi, vedere [richiamo di convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Per altre informazioni sulla ricerca e gestione di errori di convalida e avvisi, vedere [richiamo di convalida delle attività](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Uso di gruppi di overload
 
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  L'obiettivo di questa attività è specificare un percorso negli Stati Uniti. A questo scopo, l'utente dell'attività può specificare il percorso usando uno di tre gruppi di argomenti. Per specificare le combinazioni di argomenti valide, vengono definiti tre gruppi di overload. `G1` contiene gli argomenti `Latitude` e `Longitude`. `G2` contiene `Street`, `City` e `State`. `G3` contiene `Street` e `Zip`. `Name` è anche un argomento obbligatorio, ma non fa parte di un gruppo di overload. Affinché questa attività sia valida, `Name` dovrebbe essere associato insieme a tutti gli argomenti di un unico gruppo di overload soltanto.  
   
- Nell'esempio seguente, estratto dal [attività di accesso al Database](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) esempio, sono presenti due gruppi di overload: `ConnectionString` e `ConfigFileSectionName`. Perché questa attività sia valida, gli argomenti `ProviderName` e `ConnectionString` o l'argomento `ConfigName`, ma non tutti, devono essere associati.  
+ Nell'esempio seguente, estratto dal [attività di accesso al Database](./samples/database-access-activities.md) esempio, sono presenti due gruppi di overload: `ConnectionString` e `ConfigFileSectionName`. Perché questa attività sia valida, gli argomenti `ProviderName` e `ConnectionString` o l'argomento `ConfigName`, ma non tutti, devono essere associati.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

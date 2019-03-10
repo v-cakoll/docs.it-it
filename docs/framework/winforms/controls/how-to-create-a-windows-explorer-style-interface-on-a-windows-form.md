@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511098"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705012"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: Creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form
 Windows Explorer è una soluzione di interfaccia utente comune per le applicazioni a causa di relativa familiarità pronto.  
@@ -51,7 +51,7 @@ Windows Explorer è una soluzione di interfaccia utente comune per le applicazio
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.SplitContainer>
-- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Procedura: Suddividere una finestra orizzontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
-- [Controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Procedura: Suddividere una finestra orizzontalmente](how-to-split-a-window-horizontally.md)
+- [Controllo SplitContainer](splitcontainer-control-windows-forms.md)

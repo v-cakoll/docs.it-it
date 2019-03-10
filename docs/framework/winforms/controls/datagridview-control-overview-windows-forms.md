@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: a327b225dca3dfcab8444567d37a6a5ebe7490ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7ff88f877f73382f69874c58392c3374a83c019
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710534"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706000"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGridView (Windows Form)
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Con la <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visualizzare e modificare dati tabulari forniti da molti tipi diversi di origini dati.  
   
@@ -46,41 +46,41 @@ ms.locfileid: "54710534"
   
  Il <xref:System.Windows.Forms.DataGridView> controllo supporta il data binding per le proprietà degli oggetti restituiti da queste interfacce pubbliche o alla raccolta di proprietà restituito da un <xref:System.ComponentModel.ICustomTypeDescriptor> interfaccia, se implementata in oggetti restituiti.  
   
- In genere, verrà associato a un <xref:System.Windows.Forms.BindingSource> componente e associare il <xref:System.Windows.Forms.BindingSource> componente a un'altra origine dati o viene popolato con oggetti business. Il <xref:System.Windows.Forms.BindingSource> componente è l'origine dati preferito perché può eseguire l'associazione a un'ampia gamma di origini dati e di risolvere automaticamente molti problemi relativi all'associazione dati. Per altre informazioni, vedere [componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md).  
+ In genere, verrà associato a un <xref:System.Windows.Forms.BindingSource> componente e associare il <xref:System.Windows.Forms.BindingSource> componente a un'altra origine dati o viene popolato con oggetti business. Il <xref:System.Windows.Forms.BindingSource> componente è l'origine dati preferito perché può eseguire l'associazione a un'ampia gamma di origini dati e di risolvere automaticamente molti problemi relativi all'associazione dati. Per altre informazioni, vedere [componente BindingSource](bindingsource-component.md).  
   
- Il <xref:System.Windows.Forms.DataGridView> controllo può essere usato anche nel *non associato* modalità con alcun archivio dati sottostante. Per un esempio di codice che usa un oggetto non associato <xref:System.Windows.Forms.DataGridView> controllano, vedere [procedura dettagliata: Creazione di un Windows non associato di controllo DataGridView form](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
+ Il <xref:System.Windows.Forms.DataGridView> controllo può essere usato anche nel *non associato* modalità con alcun archivio dati sottostante. Per un esempio di codice che usa un oggetto non associato <xref:System.Windows.Forms.DataGridView> controllano, vedere [procedura dettagliata: Creazione di un Windows non associato di controllo DataGridView form](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
   
  Il <xref:System.Windows.Forms.DataGridView> controllo è altamente configurabili ed estensibile e offre molte proprietà, metodi ed eventi per personalizzare l'aspetto e comportamento. Quando si desidera che l'applicazione Windows Form per visualizzare dati tabulari, è consigliabile usare la <xref:System.Windows.Forms.DataGridView> controllo prima degli altri (ad esempio, <xref:System.Windows.Forms.DataGrid>). Se si sta visualizzando una piccola griglia di valori di sola lettura o se si abilita un utente di modificare una tabella con milioni di record, il <xref:System.Windows.Forms.DataGridView> controllo fornirà all'utente una soluzione facilmente programmabile e utilizzo efficiente della memoria.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Riepilogo della tecnologia del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
+ [Riepilogo della tecnologia del controllo DataGridView](datagridview-control-technology-summary-windows-forms.md)  
  Vengono riepilogati <xref:System.Windows.Forms.DataGridView> controllano i concetti e l'uso di classi correlate.  
   
- [Architettura del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [Architettura del controllo DataGridView](datagridview-control-architecture-windows-forms.md)  
  Viene descritta l'architettura del <xref:System.Windows.Forms.DataGridView> controllo, ne viene illustrata la struttura gerarchia ed ereditarietà del tipo.  
   
- [Scenari del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
+ [Scenari del controllo DataGridView](datagridview-control-scenarios-windows-forms.md)  
  Vengono descritti gli scenari più comuni in cui <xref:System.Windows.Forms.DataGridView> i controlli vengono usati.  
   
- [Directory del codice del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
+ [Directory del codice del controllo DataGridView](datagridview-control-code-directory-windows-forms.md)  
  Vengono forniti collegamenti a esempi di codice nella documentazione per i diversi <xref:System.Windows.Forms.DataGridView> attività. Questi esempi sono suddivisi in categorie in base al tipo di attività.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Tipi di colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Tipi di colonne nel controllo DataGridView di Windows Form](column-types-in-the-windows-forms-datagridview-control.md)  
  Vengono descritti i tipi di colonna nei moduli di Windows <xref:System.Windows.Forms.DataGridView> controllo utilizzato per visualizzare le informazioni e consentire agli utenti di modificare o aggiungere informazioni.  
   
- [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Visualizzazione di dati nel controllo DataGridView di Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Fornisce argomenti che descrivono come popolare il controllo con i dati manualmente o da un'origine dati esterna.  
   
- [Personalizzazione del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Personalizzazione del controllo DataGridView di Windows Form](customizing-the-windows-forms-datagridview-control.md)  
  Fornisce argomenti che descrivono come disegnare celle e righe personalizzate di <xref:System.Windows.Forms.DataGridView> e come creare tipi di cella, colonna e riga derivati.  
   
- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Fornisce argomenti che descrivono come usare il controllo in modo efficiente per evitare problemi di prestazioni quando si lavora con grandi quantità di dati.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Funzionalità predefinite nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Gestione predefinita di tastiera e mouse nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Controllo DataGridView](datagridview-control-windows-forms.md)
+- [Funzionalità predefinite nel controllo DataGridView di Windows Form](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [Gestione predefinita di tastiera e mouse nel controllo DataGridView di Windows Form](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

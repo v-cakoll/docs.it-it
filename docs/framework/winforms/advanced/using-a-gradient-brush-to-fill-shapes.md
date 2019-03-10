@@ -6,30 +6,30 @@ helpviewer_keywords:
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525034"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704388"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilizzo di un pennello a sfumatura per il riempimento di forme
-È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore gradualmente. Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con colore che cambia gradualmente man mano che si sposta dal bordo sinistro della forma al bordo destro. Si supponga di un rettangolo con un bordo sinistro di colore nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto margine (rappresentato da 255, 0, 0). Se il rettangolo è 256 pixel in larghezza, il componente rosso di un determinato pixel sarà una maggiore il componente rosso di pixel alla sua sinistra. Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel è (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino a ottenere il pixel più a destra, che include componenti di colore (255, 0, 0). Questi valori di colore interpolata è costituiscono la sfumatura di colore.  
+È possibile usare un pennello a sfumatura per riempire una forma con un colore gradualmente. Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con il colore che cambia gradualmente quando si spostano tra il bordo sinistro della forma per il bordo destro. Si immagini un rettangolo con un bordo nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto ovvero bordo rosso (rappresentato da 255, 0, 0). Se il rettangolo è 256 pixel in larghezza, il componente rosso di un pixel specifico sarà una maggiore del componente rosso del pixel alla sua sinistra. Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel ha (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino ad arrivare al pixel più a destra, che include componenti di colore (255, 0, 0). Questi valori di colore interpolata costituiscono la sfumatura di colore.  
   
- Sfumatura lineare cambia colore quando si sposta orizzontalmente, verticalmente o parallela a una determinata riga inclinata. Quando si sposta sulla parte interna e limiti di un percorso, una sfumatura percorso cambia colore. È possibile personalizzare i gradienti del percorso per raggiungere una vasta gamma di effetti.  
+ Una sfumatura lineare cambia colore quando si sposta orizzontalmente, verticalmente o in parallelo per una riga obliqua specificata. Una sfumatura percorso cambia colore quando si sposta sulla parte interna e limiti di un percorso. È possibile personalizzare le sfumature di percorso per ottenere un'ampia gamma di effetti.  
   
- Nella figura seguente viene illustrato un rettangolo riempito con pennello sfumato lineare e un'ellisse riempita con un pennello a sfumatura.  
+ La figura seguente mostra un rettangolo riempito con un pennello sfumato lineare e un'ellisse riempito con un pennello a sfumatura.  
   
- ![Sfumatura](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
+ ![Sfumatura](./media/gradient2.png "gradient2")  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Creare una sfumatura lineare](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- Viene illustrato come creare una sfumatura lineare utilizzando la <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe.  
+ [Procedura: Creare una sfumatura lineare](how-to-create-a-linear-gradient.md)  
+ Viene illustrato come creare una sfumatura lineare utilizzando il <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe.  
   
- [Procedura: Creare una sfumatura percorso](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
+ [Procedura: Creare una sfumatura percorso](how-to-create-a-path-gradient.md)  
  Viene descritto come creare una sfumatura di percorso utilizzando il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
   
- [Procedura: Applicare la correzione gamma a una sfumatura](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ [Procedura: Applicare la correzione Gamma a una sfumatura](how-to-apply-gamma-correction-to-a-gradient.md)  
  Viene illustrato come utilizzare la correzione gamma con un pennello sfumato.  
   
 ## <a name="reference"></a>Riferimenti  

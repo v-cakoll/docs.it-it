@@ -8,49 +8,49 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: f37e30959d5d802376f17a0537188bfcbd6a196e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524703"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707391"
 ---
 # <a name="lines-curves-and-shapes"></a>Linee, curve e forme
-La grafica vettoriale di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] viene usato per disegnare linee, curve e per disegnare il riempimento di forme.  
+La grafica vettoriale di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] viene utilizzato per tracciare linee e curve e per disegnare e il riempimento di forme.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sulla grafica vettoriale](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
+ [Panoramica sulla grafica vettoriale](vector-graphics-overview.md)  
  Illustra la grafica vettoriale.  
   
- [Penne, linee e rettangoli in GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ [Penne, linee e rettangoli in GDI+](pens-lines-and-rectangles-in-gdi.md)  
  Illustra il disegno di linee e rettangoli.  
   
- [Ellissi e archi in GDI+](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
- Definisce gli archi e puntini di sospensione e identifica le classi necessarie per eseguirne il disegno.  
+ [Ellissi e archi in GDI+](ellipses-and-arcs-in-gdi.md)  
+ Definisce ellissi e archi e identifica le classi necessarie per eseguirne il disegno.  
   
- [Poligoni in GDI+](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
+ [Poligoni in GDI+](polygons-in-gdi.md)  
  Definisce i poligoni e identifica le classi necessarie per eseguirne il disegno.  
   
- [Spline di tipo Cardinal in GDI+](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
- Spline cardinali definisce e identifica le classi necessarie per eseguirne il disegno.  
+ [Spline di tipo Cardinal in GDI+](cardinal-splines-in-gdi.md)  
+ Definisce cardinali e identifica le classi necessarie per eseguirne il disegno.  
   
- [Spline di Bézier in GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- Definisce una spline di Bézier e identifica le classi necessarie per eseguirne il disegno.  
+ [Spline di Bézier in GDI+](bezier-splines-in-gdi.md)  
+ Definisce la spline di Bézier e identifica le classi necessarie per eseguirne il disegno.  
   
- [Percorsi di oggetti Graphics in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
+ [Percorsi di oggetti Graphics in GDI+](graphics-paths-in-gdi.md)  
  Viene descritto come creare e di disegno e percorsi.  
   
- [Pennelli e forme con riempimento in GDI+](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
- Vengono descritti i tipi di pennello e sul loro utilizzo.  
+ [Pennelli e forme con riempimento in GDI+](brushes-and-filled-shapes-in-gdi.md)  
+ Vengono descritti i tipi di pennello e come usarli.  
   
- [Curve aperte e chiuse in GDI+](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
- Definisce le curve aperte e chiuse e come creare e compilare i campi.  
+ [Curve aperte e chiuse in GDI+](open-and-closed-curves-in-gdi.md)  
+ Definisce come disegnare e li riempie e curve aperte e chiuse.  
   
- [Regioni in GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- Descrive i metodi associati alle aree.  
+ [Regioni in GDI+](regions-in-gdi.md)  
+ Descrive i metodi associati aree.  
   
- [Limitazione della superficie di disegno in GDI+](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
- Viene descritto il ritaglio e come utilizzarla.  
+ [Limitazione della superficie di disegno in GDI+](restricting-the-drawing-surface-in-gdi.md)  
+ Descrive il ridimensionamento e come usarlo.  
   
- [Anti-aliasing con linee e curve](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
+ [Anti-aliasing con linee e curve](antialiasing-with-lines-and-curves.md)  
  Definisce l'anti-aliasing e la modalità di utilizzo anti-aliasing durante il disegno di linee e curve.

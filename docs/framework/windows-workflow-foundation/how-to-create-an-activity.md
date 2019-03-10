@@ -1,18 +1,18 @@
 ---
-title: "Procedura: creare un'attività"
+title: "Procedura: Creare un'attività"
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872957"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709016"
 ---
-# <a name="how-to-create-an-activity"></a>Procedura: creare un'attività
+# <a name="how-to-create-an-activity"></a>Procedura: Creare un'attività
 
 Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La logica di esecuzione di un'attività può essere implementata nel codice gestito oppure tramite altre attività. In questo argomento viene illustrato come creare due attività. La prima è un'attività semplice che usa il codice per implementare la propria logica di esecuzione. L'implementazione della seconda attività viene definita tramite altre attività. Queste attività vengono usate nei seguenti passaggi dell'esercitazione.
 
@@ -42,8 +42,8 @@ Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../
 
 4.  Sostituire la definizione dell'attività `ReadInt` esistente con la definizione seguente.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > L'attività `ReadInt` deriva da <xref:System.Activities.NativeActivity%601> anziché <xref:System.Activities.CodeActivity>, che è l'attività predefinita per il modello di attività codice. L'oggetto <xref:System.Activities.CodeActivity%601> può essere usato se l'attività fornisce un singolo risultato, che viene esposto tramite l'argomento <xref:System.Activities.Activity%601.Result%2A>, ma <xref:System.Activities.CodeActivity%601> non supporta l'uso dei segnalibri, quindi viene usato l'oggetto <xref:System.Activities.NativeActivity%601>.
@@ -100,13 +100,13 @@ Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per istruzioni su come creare un flusso di lavoro tramite queste attività, vedere il passaggio successivo dell'esercitazione [procedura: creare un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+Per istruzioni su come creare un flusso di lavoro tramite queste attività, vedere il passaggio successivo dell'esercitazione, [come: Creare un flusso di lavoro](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Progettazione e implementazione di attività personalizzate](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Procedura: Creare un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Progettazione e implementazione di attività personalizzate](designing-and-implementing-custom-activities.md)
+- [Esercitazione introduttiva](getting-started-tutorial.md)
+- [Procedura: Creare un flusso di lavoro](how-to-create-a-workflow.md)
+- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

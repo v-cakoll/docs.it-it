@@ -8,48 +8,48 @@ helpviewer_keywords:
 - fonts [Windows Forms], using in Windows Forms
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-ms.openlocfilehash: d157b51e24009d847dede9ea6a9f81c8898c5b06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526263"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703368"
 ---
 # <a name="using-fonts-and-text"></a>Utilizzo di tipi di carattere e testo
-Sono disponibili diverse classi offerto da [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] per il disegno di testo in Windows Form. Il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> classe dispone di numerosi <xref:System.Drawing.Graphics.DrawString%2A> metodi che consentono di specificare varie funzionalità di testo, ad esempio percorso, formato, carattere e rettangolo di delimitazione. Inoltre, è possibile disegnare e misurare il testo con [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] mediante il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> e <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> metodi offerti dalla `TextRenderer` classe. Il [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metodi consentono anche di specificare il percorso, tipo di carattere e formato. È possibile scegliere una [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] o [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering del testo; tuttavia, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] in genere offre migliori prestazioni e la misurazione più accurata di testo. Le altre classi che contribuiscono al rendering del testo `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, e `TextFormatFlags`.  
+Sono disponibili diverse classi offerte dal [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] per disegnare il testo in Windows Form. Il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> classe dispone di numerose <xref:System.Drawing.Graphics.DrawString%2A> metodi che consentono di specificare diverse caratteristiche del testo, ad esempio percorso, rettangolo, tipo di carattere e il formato di delimitazione. Inoltre, è possibile disegnare e misurare il testo con [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] usando il metodo statico <xref:System.Windows.Forms.TextRenderer.DrawText%2A> e <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> metodi offerti dal `TextRenderer` classe. Il [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metodi consentono anche di specificare posizione, tipo di carattere e il formato. È possibile scegliere [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] oppure [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering del testo; tuttavia, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] in genere offre migliori prestazioni e la misurazione del testo più accurate. Le altre classi che contribuiscono al rendering del testo `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, e `TextFormatFlags`.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Creare caratteri e gruppi di caratteri](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [Procedura: Costruire i tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)  
  Viene illustrato come creare `Font` e `FontFamily` oggetti.  
   
- [Procedura: Creare testo in una posizione specificata](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
- Viene descritto come disegnare testo in una determinata posizione utilizzando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ [Procedura: Disegnare testo in una posizione specificata](how-to-draw-text-at-a-specified-location.md)  
+ Descrive come disegnare testo in una determinata posizione utilizzando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Procedura: Creare testo disposto su più righe in un rettangolo](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
+ [Procedura: Disegnare testo sottoposto a wrapping in un rettangolo](how-to-draw-wrapped-text-in-a-rectangle.md)  
  Illustra come disegnare il testo in un rettangolo utilizzando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Procedura: Creare testo con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- Viene illustrato come utilizzare [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] per il disegno di testo.  
+ [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)  
+ Viene illustrato come utilizzare [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] per disegnare il testo.  
   
- [Procedura: Allineare il testo creato](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
+ [Procedura: Allineare il testo creato](how-to-align-drawn-text.md)  
  Viene illustrato come formattare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] e [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] testo.  
   
- [Procedura: Creare testo verticale](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
- Viene descritto come disegnare il testo allineato verticalmente con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Procedura: Creare testo verticale](how-to-create-vertical-text.md)  
+ Viene descritto come disegnare il testo allineato in senso verticale con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Procedura: Impostare punti di tabulazione nel testo disegnato](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
- Viene illustrato come disegnare testo con tabulazioni con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Procedura: Impostare punti di tabulazione nel testo disegnato](how-to-set-tab-stops-in-drawn-text.md)  
+ Viene illustrato come disegnare il testo con le tabulazioni con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Procedura: Enumerare i tipi di carattere installati](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
+ [Procedura: Enumerare i tipi di carattere installati](how-to-enumerate-installed-fonts.md)  
  Viene illustrato come elencare i nomi dei tipi di carattere installati.  
   
- [Procedura: Creare una raccolta di caratteri privata](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
+ [Procedura: Creare una raccolta di caratteri privata](how-to-create-a-private-font-collection.md)  
  Viene descritto come creare un <xref:System.Drawing.Text.PrivateFontCollection> oggetto.  
   
- [Procedura: Recuperare i criteri di misurazione dei caratteri](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
- Viene illustrato come ottenere la metrica di tipo di carattere, ad esempio ascent di cella e dei valori descent con.  
+ [Procedura: Ottenere le metriche del tipo di carattere](how-to-obtain-font-metrics.md)  
+ Viene illustrato come ottenere le metriche del tipo di carattere, ad esempio ascent di cella e dei valori descent con.  
   
- [Procedura: Usare l'antialiasing nel testo](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
+ [Procedura: Usare l'antialiasing nel testo](how-to-use-antialiasing-with-text.md)  
  Viene illustrato come utilizzare l'anti-aliasing durante il disegno di testo.  
   
 ## <a name="reference"></a>Riferimenti  

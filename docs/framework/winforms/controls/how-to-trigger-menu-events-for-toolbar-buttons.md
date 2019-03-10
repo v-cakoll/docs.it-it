@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609590"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707547"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Procedura: Attivare eventi di Menu per i pulsanti della barra degli strumenti
 > [!NOTE]
@@ -136,6 +136,6 @@ ms.locfileid: "54609590"
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Forms.ToolBar>
-- [Procedura: Aggiungere pulsanti a un controllo ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Procedura: Aggiungere pulsanti a un controllo ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Procedura: Definire un'icona per un pulsante della barra degli strumenti](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Controllo ToolBar](toolbar-control-windows-forms.md)
