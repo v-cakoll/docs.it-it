@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636969"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719312"
 ---
 # <a name="application-settings-for-windows-forms"></a>Impostazioni delle applicazioni per Windows Form
 La funzionalità Impostazioni applicazione di Windows Form semplifica le operazioni di creazione, archiviazione e gestione delle preferenze personalizzate a livello di applicazione e utente nel computer client. Impostazioni applicazione consente non solo di archiviare dati relativi all'applicazione, quali stringhe di connessione a database, ma anche dati specifici dell'utente, quali le posizioni delle barre degli strumenti e gli elenchi usati di recente.  
@@ -22,7 +22,7 @@ La funzionalità Impostazioni applicazione di Windows Form semplifica le operazi
  Descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
   
  [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md)  
- Descrive il funzionamento della funzionalità Impostazioni applicazione e analizza le funzionalità avanzate dell'architettura, come i raggruppamenti di impostazioni e le chiavi delle impostazioni.  
+ Descrive il funzionamento della funzionalità Impostazioni applicazione e analizza le funzioni avanzate dell'architettura, come i raggruppamenti di impostazioni e le chiavi delle impostazioni.  
   
  [Attributi delle impostazioni delle applicazioni](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
  Elenca e descrive gli attributi che è possibile applicare a una classe wrapper delle impostazioni dell'applicazione o alle proprietà delle impostazioni.  
@@ -38,7 +38,7 @@ La funzionalità Impostazioni applicazione di Windows Form semplifica le operazi
   
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Sezione di configurazione di Windows Form](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Sezione di configurazione di Windows Form](../../configure-apps/file-schema/winforms/index.md)    
 I documenti supportano le impostazioni per abilitare valori DPI alti in Windows Forms Application a partire da .NET Framework 4.7.
 
 ## <a name="see-also"></a>Vedere anche

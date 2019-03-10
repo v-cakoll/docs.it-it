@@ -9,12 +9,12 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 6d74b382230b2ab11bb9fce8d6314e3a0e533572
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 486564f8092733ad253aac4ad9ee60ff0f83dce7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583407"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719767"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: Ridimensionare i controlli Windows Form
 È possibile ridimensionare i singoli controlli ed è possibile ridimensionare più controlli di tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  
@@ -33,9 +33,9 @@ ms.locfileid: "56583407"
 2.  Nel **formato** menu, scegliere **Rendi uguali**, selezionare una delle quattro opzioni. I primi tre comandi modificano le dimensioni dei controlli in modo che corrisponda il primo controllo selezionato.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)
-- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Controlli Windows Form](index.md)
+- [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
+- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
+- [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)
 - [Procedura: Ridimensionare Windows Form usando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

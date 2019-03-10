@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601831"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719357"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -41,7 +41,7 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
   
 6.  Selezionare il componente.  
   
-     Il componente verrà aggiunto al progetto in **Esplora soluzioni**. Se il componente include un'interfaccia utente, i controlli che fanno parte del modulo ereditato saranno contraddistinti da un glifo (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, una volta selezionati, verranno visualizzati con un bordo che indica il livello di sicurezza del controllo sul form impostato come superclasse. I comportamenti che corrispondono ai vari livelli di sicurezza sono elencati nella tabella seguente.  
+     Il componente verrà aggiunto al progetto in **Esplora soluzioni**. Se il componente include un'interfaccia utente, i controlli che fanno parte del modulo ereditato saranno contraddistinti da un glifo (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, una volta selezionati, verranno visualizzati con un bordo che indica il livello di sicurezza del controllo sul form impostato come superclasse. I comportamenti che corrispondono ai vari livelli di sicurezza sono elencati nella tabella seguente.  
   
     |Livello di sicurezza del controllo|Interazione possibile nella finestra di progettazione e nell'editor di codice con il form ereditato|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
     |Internal (Friend in Visual Basic)|Bordo standard senza quadratini di ridimensionamento, visualizzato nel form, con proprietà visibili nella finestra **Proprietà**. Tutti gli aspetti del controllo saranno tuttavia considerati di sola lettura. Non è possibile spostare il controllo, ridimensionarlo né modificarne le proprietà. Se il controllo è un contenitore di altri controlli, come una casella di gruppo, non è possibile aggiungere nuovi controlli né rimuovere i controlli esistenti, anche in caso di controlli con livello di sicurezza Public. È possibile accedere al controllo solo tramite altri membri dell'assembly che lo contiene.|  
     |Private|Bordo standard senza quadratini di ridimensionamento, visualizzato nel form, con proprietà visibili nella finestra **Proprietà**. Tutti gli aspetti del controllo saranno tuttavia considerati di sola lettura. Non è possibile spostare il controllo, ridimensionarlo né modificarne le proprietà. Se il controllo è un contenitore di altri controlli, come una casella di gruppo, non è possibile aggiungere nuovi controlli né rimuovere i controlli esistenti, anche in caso di controlli con livello di sicurezza Public. È possibile accedere al controllo solo tramite la classe che lo dichiara.|  
   
-     Per informazioni su come modificare l'aspetto di un modulo di base, vedere [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
+     Per informazioni su come modificare l'aspetto di un modulo di base, vedere [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Quando si uniscono controlli e componenti ereditati con controlli e componenti standard in Windows Form, possono verificarsi conflitti nell'ordinamento z. È possibile correggere il problema modificando l'ordine z. Fare clic sul menu **Formato**, scegliere **Ordine** e quindi fare clic su **Porta in primo piano** o **Porta in secondo piano**. Per altre informazioni sull'ordine z dei controlli, vedere [come: Livello oggetti in Windows Form](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Quando si uniscono controlli e componenti ereditati con controlli e componenti standard in Windows Form, possono verificarsi conflitti nell'ordinamento z. È possibile correggere il problema modificando l'ordine z. Fare clic sul menu **Formato**, scegliere **Ordine** e quindi fare clic su **Porta in primo piano** o **Porta in secondo piano**. Per altre informazioni sull'ordine z dei controlli, vedere [come: Livello oggetti in Windows Form](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
 - [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Effetti della modifica dell'aspetto di un modulo di base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md)
+- [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)
