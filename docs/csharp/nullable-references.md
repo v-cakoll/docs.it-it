@@ -2,12 +2,12 @@
 title: Tipi riferimento nullable
 description: Questo articolo offre una panoramica dei tipi riferimento nullable, aggiunti in C# 8. Si apprenderà come la funzionalità offra sicurezza contro le eccezioni dei riferimenti Null, per progetti nuovi ed esistenti.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411546"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725025"
 ---
 # <a name="nullable-reference-types"></a>Tipi riferimento nullable
 
@@ -41,7 +41,7 @@ Il compilatore usa l'analisi statica per determinare se un riferimento nullable 
 name!.Length;
 ```
 
-Per informazioni dettagliate su questo operatore, vedere la proposta di specifica sulla [bozza di tipi riferimento nullable](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) in GitHub.
+Per informazioni dettagliate su questo operatore, vedere la proposta di specifica sulla [bozza di tipi riferimento nullable](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) in GitHub.
 
 ## <a name="nullability-of-types"></a>Supporto dei valori Null dei tipi
 
