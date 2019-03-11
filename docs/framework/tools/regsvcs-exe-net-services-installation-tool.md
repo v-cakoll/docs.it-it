@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc349e13aba84de8c266442e9be8130e5f8604c2
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219776"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466748"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -39,13 +39,13 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|File di assembly di origine. L'assembly deve essere firmato con un nome sicuro. Per altre informazioni, vedere [Firma di un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/appdir:** *percorso*|Specifica la directory radice dell'applicazione.|  
 |**/appname:** *nomeApplicazione*|Specifica il nome dell'applicazione COM+ da trovare o creare.|  

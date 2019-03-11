@@ -3,12 +3,12 @@ title: Numeri in C# - Esercitazione introduttiva su C#
 description: Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978618"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673860"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Modificare numeri a virgola mobile e integrali in C\#
 
@@ -20,7 +20,7 @@ Questa esercitazione prevede la presenza di un computer da usare per lo sviluppo
 
 Creare una directory denominata **numbers-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console -n NumbersInCSharp -o .`.
 
-Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.Writeline("Hello World!");` con quanto segue:
+Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.WriteLine("Hello World!");` con quanto segue:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Eseguire questo codice digitando `dotnet run` nella finestra di comando. 
+Eseguire questo codice digitando `dotnet run` nella finestra di comando.
 
 Questa è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Eseguire questo codice digitando `dotnet run` nella finestra di comando. 
-    
+Eseguire questo codice digitando `dotnet run` nella finestra di comando.
+
 È anche possibile sperimentare eseguendo più operazioni matematiche nella stessa riga. Provare, esempio, `c = a + b - 12 * 17;`. È consentita la combinazione di variabili e numeri costanti.
 
 > [!TIP]
 > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra per scoprire che cosa correggere.
-> Questo esercizio sarà utile per imparare la struttura del codice C#.     
+> Questo esercizio sarà utile per imparare la struttura del codice C#.
 
 Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `WorkingWithIntegers` e scrivere un nuovo metodo `Main` che chiama `WorkingWithIntegers`. Al termine, il codice dovrebbe risultare simile al seguente:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Esplorare la precisione e i limiti delle operazioni su interi
+
 L'ultimo esempio dimostra che la divisione di interi tronca il risultato.
 È possibile ottenere il **resto** usando l'operatore **modulo**, ovvero il carattere `%`. Provare il codice seguente nel metodo `Main`:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 Il tipo integer in C# è diverso dagli interi matematici per un altro aspetto, ovvero per il tipo `int` esistono limiti minimi e massimi. Aggiungere questo codice al metodo `Main` per visualizzare tali limiti:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Se un calcolo produce un valore che supera questi limiti, si genera una condizio
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Si noti che la risposta è molto vicina all'intero minimo (negativo). È uguale a `min + 2`. L'operazione di addizione **ha causato l'overflow** dei valori consentiti per gli interi.
+
+Si noti che la risposta è molto vicina all'intero minimo (negativo). È uguale a `min + 2`.
+L'operazione di addizione **ha causato l'overflow** dei valori consentiti per gli interi.
 La risposta è un numero negativo molto grande, poiché un overflow "ritorna a capo" proseguendo dal valore intero più grande possibile a quello più piccolo.
 
 Esistono altri tipi numerici con limiti e precisione diversi che è possibile usare quando il tipo `int` non soddisfa le proprie esigenze. Questi tipi verranno presentati nelle prossime lezioni.
 
-Ancora una volta il codice scritto in questa sezione verrà spostato in un metodo separato. Assegnargli il nome `TestLimits`. 
+Ancora una volta il codice scritto in questa sezione verrà spostato in un metodo separato. Assegnargli il nome `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Usare il tipo double
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Questi valori vengono stampati con la notazione scientifica. Il numero a sinistra di `E` rappresenta il significando. Il numero a destra è l'esponente, come potenza di 10. 
+Questi valori vengono stampati con la notazione scientifica. Il numero a sinistra di `E` rappresenta il significando. Il numero a destra è l'esponente, come potenza di 10.
 
 Come per i numeri decimali in matematica, i valori double in C# possono presentare errori di arrotondamento. Provare questo codice:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 Il suffisso `M` nei numeri è il modo in cui si indica che una costante deve usare il tipo `decimal`.
 
-Si noti che le operazioni matematiche con il tipo decimal includono più cifre a destra del separatore decimale. 
+Si noti che le operazioni matematiche con il tipo decimal includono più cifre a destra del separatore decimale.
 
 ***Esercizio***
 
-Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore. 
+Dopo aver esaminato i diversi tipi numerici, scrivere codice che calcola l'area di un cerchio con raggio di 2,5 cm. Ricordarsi che l'area di un cerchio si calcola moltiplicando il quadrato del raggio per Pi greco. Suggerimento: .NET contiene una costante per Pi greco, <xref:System.Math.PI?displayProperty=nameWithType>, che è possibile usare per tale valore.
 
 Si otterrà una risposta compresa tra 19 e 20.
 È possibile controllare la risposta [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
-È anche possibile provare alcune altre formule. 
+È anche possibile provare alcune altre formule.
 
 È stata completata la guida introduttiva "Numeri in C#". È possibile continuare con la guida introduttiva [Rami e cicli](branches-and-loops-local.md) nel proprio ambiente di sviluppo.
 
 Negli argomenti seguenti sono disponibili ulteriori informazioni sui numeri in C#:
 
-[Tabella dei tipi integrali](../../language-reference/keywords/integral-types-table.md)   
-[Tabella dei tipi a virgola mobile](../../language-reference/keywords/floating-point-types-table.md)   
-[Tabella dei tipi predefiniti](../../language-reference/keywords/built-in-types-table.md)   
-[Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tabella dei tipi integrali](../../language-reference/keywords/integral-types-table.md)
+- [Tabella dei tipi a virgola mobile](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabella dei tipi incorporati](../../language-reference/keywords/built-in-types-table.md)
+- [Tabella delle conversioni numeriche implicite](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabella delle conversioni numeriche esplicite](../../language-reference/keywords/explicit-numeric-conversions-table.md)

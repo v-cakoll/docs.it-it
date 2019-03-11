@@ -2,12 +2,12 @@
 title: Tipi restituiti async (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548247"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368181"
 ---
 # <a name="async-return-types-c"></a>Tipi restituiti async (C#)
 I metodi asincroni possono avere i seguenti tipi restituiti:
@@ -24,7 +24,7 @@ Per altre informazioni sulla funzionalità dei metodi asincroni, vedere [Asynchr
   
 Ogni tipo restituito viene esaminato in una delle sezioni seguenti e alla fine dell'argomento è disponibile un esempio completo che usa tutti i tre tipi.  
   
-##  Tipo restituito <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
+## Tipo restituito <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
 Il tipo restituito <xref:System.Threading.Tasks.Task%601> viene usato per un metodo asincrono che contiene un'istruzione [return](../../../../csharp/language-reference/keywords/return.md) (C#) in cui il tipo dell'operando è `TResult`.  
   
 Nell'esempio seguente il metodo asincrono `GetLeisureHours` contiene un'istruzione `return` che restituisce un valore intero. La dichiarazione del metodo deve quindi specificare un tipo restituito di `Task<int>`.  Il metodo asincrono <xref:System.Threading.Tasks.Task.FromResult%2A> è un segnaposto per un'operazione che restituisce una stringa.
@@ -40,7 +40,7 @@ Quando `GetLeisureHours` viene chiamato da un'espressione await nel metodo `Show
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Tipo restituito Task  
+## <a name="BKMK_TaskReturnType"></a> Tipo restituito Task  
 I metodi asincroni che non contengono un'istruzione `return` o che contengono un'istruzione `return` che non restituisce un operando hanno in genere il tipo restituito <xref:System.Threading.Tasks.Task>. Questi metodi restituiscono `void` se eseguiti in modo sincrono. Se si usa un tipo restituito <xref:System.Threading.Tasks.Task> per un metodo asincrono, un metodo chiamante può usare un operatore `await` per sospendere il completamento del chiamante fino a quando il metodo asincrono chiamato non abbia terminato l'operazione.  
   
 Nell'esempio seguente il metodo asincrono `WaitAndApologize` non contiene un'istruzione `return`, quindi il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task>. Ciò consente l'attesa di `WaitAndApologize`. Si noti che il tipo <xref:System.Threading.Tasks.Task> non include una proprietà `Result` perché non ha un valore restituito.  
@@ -55,7 +55,7 @@ Il codice seguente separa la chiamata del metodo `WaitAndApologize` dall'attesa 
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Tipo restituito void
+## <a name="BKMK_VoidReturnType"></a> Tipo restituito void
 
 Usare il tipo restituito `void` nei gestori eventi asincroni, che richiedono un tipo restituito `void`. Per i metodi diversi dai gestori eventi che non restituiscono un valore, è invece necessario restituire <xref:System.Threading.Tasks.Task>, perché non è possibile impostare l'attesa per un metodo asincrono che restituisce `void`. Qualsiasi chiamante di questo metodo deve poter continuare fino al completamento senza attendere il completamento del metodo asincrono chiamato e il chiamante deve essere indipendente da qualsiasi eccezione o valore generato dal metodo asincrono.  
   

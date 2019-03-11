@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 286399a7049f47640ccef07e834ee47a0761b963
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481755"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (utilità di importazione della libreria dei tipi)
 L'utilità di importazione della libreria dei tipi consente di convertire le definizioni dei tipi presenti in una libreria dei tipi COM nelle definizioni equivalenti in un assembly di Common Language Runtime. L'output di Tlbimp.exe è un file binario (assembly) che contiene i metadati di runtime per i tipi definiti all'interno della libreria dei tipi originale. È possibile esaminare questo file con strumenti quali [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -32,13 +32,13 @@ L'utilità di importazione della libreria dei tipi consente di convertire le def
 tlbimp tlbFile [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |*tlbFile*|Nome di un file che contiene una libreria dei tipi COM.|  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Specifica il numero di versione dell'assembly da produrre. Specificare *versionnumber* nel *formato major.minor.build.revision*.|  
 |**/company:** `companyinformation`|Aggiunge le informazioni sulla società all'assembly di output.|  

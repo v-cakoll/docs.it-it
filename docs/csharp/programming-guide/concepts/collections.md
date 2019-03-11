@@ -2,12 +2,12 @@
 title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675413"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373439"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -193,7 +193,7 @@ public class Galaxy
   
  La tabella seguente elenca alcune delle classi di uso frequente dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>:  
 
-|Classe|Descrizione| 
+|Classe|Description| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Rappresenta una raccolta di coppie chiave/valore organizzate in base alla chiave.|  
 |<xref:System.Collections.Generic.List%601>|Rappresenta un elenco di oggetti accessibile in base all'indice. Fornisce metodi per la ricerca, l'ordinamento e la modifica degli elenchi.|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  La tabella seguente elenca alcune classi di uso frequente nello spazio dei nomi `System.Collections`:  
   
-|Classe|Descrizione|  
+|Classe|Description|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Rappresenta una matrice di oggetti le cui dimensioni sono incrementate in modo dinamico in base alle esigenze.|  
 |<xref:System.Collections.Hashtable>|Rappresenta una raccolta di coppie chiave/valore organizzate in base al codice hash della chiave.|  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield return](../../../csharp/language-reference/keywords/yield.md) per restituire ogni elemento della raccolta, uno alla volta.  
   
  Per chiamare un iteratore usare un'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Ogni iterazione del ciclo `foreach` chiama l'iteratore. Quando si raggiunge un'istruzione `yield return` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  

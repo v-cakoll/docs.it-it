@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665045"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361265"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opzione del compilatore C#)
 Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con estensione NETMODULE.  
@@ -28,7 +28,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
  `assembly_name`  
  Nome dell'assembly i cui tipi non pubblici sono accessibili dal file con estensione netmodule.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario usare **-moduleassemblyname** quando si compila un file con estensione netmodule, se sono soddisfatte le condizioni seguenti:  
   
 -   Tramite il file con estensione netmodule deve essere possibile accedere a tipi non pubblici in un assembly esistente.  
@@ -39,7 +39,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
   
  Per altre informazioni sulla compilazione di un file con estensione netmodule, vedere [-target:module (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Per altre informazioni sugli assembly Friend, vedere [Assembly Friend ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Per altre informazioni sugli assembly Friend, vedere [Assembly Friend ](../../../standard/assembly/friend-assemblies.md).  
   
  L'opzione non è disponibile all'interno dell'ambiente di sviluppo, ma soltanto durante la compilazione dalla riga di comando.  
   

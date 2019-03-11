@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264434"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492439"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 
@@ -30,13 +30,13 @@ Al prompt dei comandi digitare quanto segue:
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|Description|
 |---------------|-----------------|
 |*fileAssembly*|Assembly da registrare con COM.|
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**/codebase**|Crea una voce Codebase nel Registro di sistema che specifica il percorso del file di un assembly non installato nella Global Assembly Cache. È consigliabile non specificare questa opzione se successivamente si intende installare nella Global Assembly Cache l'assembly che si sta registrando. L'argomento *fileAssembly* specificato con l'opzione **/codebase** deve essere un [assembly con nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md).|
 |**/registered**|Specifica che questo strumento includerà riferimenti solo alle librerie dei tipi che sono già state registrate.|
@@ -52,7 +52,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Le opzioni della riga di comando di Regasm.exe non sono soggette alla distinzione tra maiuscole e minuscole. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/t:** *outfile.tlb* equivale a **/tlb:** *outfile.tlb*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 È possibile usare l'opzione **/regfile** per generare un file REG contenente le voci del Registro di sistema, anziché apportare le modifiche direttamente in tale Registro. Per aggiornare il Registro di sistema su un computer è necessario importare il file .reg con lo strumento Editor del Registro di sistema (Regedit.exe). Si noti che il file .reg non contiene alcun aggiornamento del Registro di sistema che può essere effettuato mediante funzioni del Registro di sistema definite dall'utente.  Si noti che l'opzione **/regfile** crea solo voci del Registro di sistema per le classi gestite.  Non vengono create voci per `TypeLibID` o `InterfaceID`.
 

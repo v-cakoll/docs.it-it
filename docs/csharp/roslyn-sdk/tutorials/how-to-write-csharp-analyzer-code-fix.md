@@ -3,12 +3,12 @@ title: 'Esercitazione: Scrivere il primo analizzatore con correzione del codice'
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201898"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677175"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: Scrivere il primo analizzatore con correzione del codice
 
@@ -199,7 +199,7 @@ Tutte le correzioni del codice derivano da <xref:Microsoft.CodeAnalysis.CodeFixe
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-Modificare quindi l'ultima riga per registrare una correzione del codice. La correzione creerà un nuovo documento risultante dall'aggiunta del modificatore `const` a una dichiarazione esistente:  
+Modificare quindi l'ultima riga per registrare una correzione del codice. La correzione creerà un nuovo documento risultante dall'aggiunta del modificatore `const` a una dichiarazione esistente:
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,7 +275,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-È possibile creare una nuova riga di dati per questo test definendo un frammento di codice che non deve causare l'attivazione di un avviso di diagnostica. Questo overload di `VerifyCSharpDiagnostic` ha esito positivo quando non viene attivata alcuna diagnostica per il frammento di codice sorgente.  
+È possibile creare una nuova riga di dati per questo test definendo un frammento di codice che non deve causare l'attivazione di un avviso di diagnostica. Questo overload di `VerifyCSharpDiagnostic` ha esito positivo quando non viene attivata alcuna diagnostica per il frammento di codice sorgente.
 
 Sostituire quindi `TestMethod2` con questo test, che assicura che venga generata una diagnostica e applicata una correzione del codice per il frammento di codice sorgente:
 
@@ -426,7 +426,7 @@ Ci siamo quasi. Esistono alcune altre condizioni che l'analizzatore deve gestire
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Inoltre, i tipi di riferimento non sono gestiti correttamente. L'unico valore costante consentito per un tipo di riferimento è `null`, tranne che nel caso di <xref:System.String?displayPropert=nameWIthType>, che consente valori letterali stringa. In altre parole, `const string s = "abc"` è consentito, mentre `const object s = "abc"` non lo è. Tale condizione viene verificata da questo frammento di codice:
+Inoltre, i tipi di riferimento non sono gestiti correttamente. L'unico valore costante consentito per un tipo di riferimento è `null`, tranne che nel caso di <xref:System.String?displayProperty=nameWIthType>, che consente valori letterali stringa. In altre parole, `const string s = "abc"` è consentito, mentre `const object s = "abc"` non lo è. Tale condizione viene verificata da questo frammento di codice:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ Queste modifiche aggiornano le dichiarazioni delle righe di dati per entrambi i 
 
 Fortunatamente, tutti i bug precedenti possono essere corretti con le stesse tecniche appena descritte.
 
-Per correggere il primo bug, aprire **DiagnosticAnalyzer.cs** e individuare il ciclo foreach in cui viene controllato ognuno degli inizializzatori della dichiarazione locale per garantire che gli vengano assegnati valori costanti. Subito _prima_ del primo ciclo foreach, chiamare `context.SemanicModel.GetTypeInfo()` per recuperare informazioni dettagliate sul tipo dichiarato della dichiarazione locale:
+Per correggere il primo bug, aprire **DiagnosticAnalyzer.cs** e individuare il ciclo foreach in cui viene controllato ognuno degli inizializzatori della dichiarazione locale per garantire che gli vengano assegnati valori costanti. Subito _prima_ del primo ciclo foreach, chiamare `context.SemanticModel.GetTypeInfo()` per recuperare informazioni dettagliate sul tipo dichiarato della dichiarazione locale:
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;

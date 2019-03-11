@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411441"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675784"
 ---
 # <a name="customizing-structure-marshalling"></a>Personalizzazione del marshalling delle strutture
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Usando i valori `UmanagedType.U1` o `UnmanagedType.I1` di seguito, è possibile indicare al runtime di effettuare il marshalling del campo `b` come tipo `bool` nativo a 1 byte.
+Usando i valori `UnmanagedType.U1` o `UnmanagedType.I1` di seguito, è possibile indicare al runtime di effettuare il marshalling del campo `b` come tipo `bool` nativo a 1 byte.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 In Windows è possibile effettuare il marshalling di campi di tipo `object` in codice nativo. È possibile effettuare il marshalling di questi campi in uno di tre tipi:
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 Per impostazione predefinita, un campo di tipo `object` verrà sottoposto a marshalling come `IUnknown*` che esegue il wrapping dell'oggetto.
 

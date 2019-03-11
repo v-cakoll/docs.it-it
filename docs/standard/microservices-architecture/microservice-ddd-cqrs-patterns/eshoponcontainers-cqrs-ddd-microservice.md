@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362708"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
@@ -41,7 +41,7 @@ Diversi contesti delimitati useranno schemi differenti. Poiché hanno responsabi
 
 Esiste una sola architettura dell'applicazione: l'architettura del sistema o dell'applicazione end-to-end che si sta progettando, ad esempio l'architettura di microservizi. Tuttavia la progettazione di ogni contesto delimitato o microservizio all'interno dell'applicazione riflette i compromessi e le decisioni di progettazione interne al livello degli schemi di architettura. Non provare ad applicare gli stessi schemi architetturali, come CQRS o DDD, ovunque.
 
-####  <a name="additional-resources"></a>Risorse aggiuntive
+### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Martin Fowler. CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

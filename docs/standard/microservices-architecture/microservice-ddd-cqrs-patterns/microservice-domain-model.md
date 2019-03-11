@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066268"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676369"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -78,7 +78,7 @@ Una persona con un nome e un cognome, in genere, costituisce un'entità perché 
 
 Gli oggetti valore sono difficili da gestire nei database relazionali e in ORM come Entity Framework, mentre nei database orientati ai documenti sono più facili da implementare e usare.
 
-EF Core 2.0 include la funzionalità [Entità di proprietà](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) che semplifica la gestione degli oggetti valore, come si vedrà in dettaglio più avanti.
+EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) che semplifica la gestione degli oggetti valore, come si vedrà in dettaglio più avanti.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 

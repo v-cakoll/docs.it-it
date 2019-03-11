@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
+  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030516"
+  ms.lasthandoff: 03/05/2019
+  ms.locfileid: "57370319"
 items:
 - durationInMinutes: 1
   content: >
@@ -259,7 +259,7 @@ items:
     Esistono altri due metodi simili, <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> che consentono di cercare sottostringhe in una stringa, in particolare di trovare una sottostringa all'inizio o alla fine della stringa. Provare a modificare l'esempio precedente per usare <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> invece di <xref:System.String.Contains%2A>. Cercare "You" o "goodbye" all'inizio di una stringa. Cercare "hello" o "goodbye" alla fine di una stringa.
 
 
-    > [!Note]
+    > [!NOTE]
 
     > Tenere conto della punteggiatura per la ricerca del testo alla fine della stringa. Se la stringa termina con un punto, è necessario cercare una stringa che termina con un punto.
 

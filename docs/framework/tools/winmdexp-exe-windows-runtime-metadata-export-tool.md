@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496833"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Runtime Metadata Export Tool)
 Lo strumento di esportazione dei metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) trasforma un modulo .NET Framework in un file che contiene metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Anche se gli assembly .NET Framework e i file di metadati di [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzano lo stesso formato fisico, esistono differenze nel contenuto delle tabelle dei metadati, con la conseguenza che gli assembly .NET Framework non sono automaticamente utilizzabili come componenti di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Il processo di trasformazione di un modulo .NET Framework in un componente di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è denominato *esportazione*. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] il file di metadati di Windows (.winmd) risultante contiene sia i metadati che l'implementazione.  
@@ -29,9 +29,9 @@ Lo strumento di esportazione dei metadati di [!INCLUDE[wrt](../../../includes/wr
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
-|Argomento o opzione|Descrizione|  
+|Argomento o opzione|Description|  
 |------------------------|-----------------|  
 |`winmdmodule`|Specifica il modulo (.winmdobj) da esportare. È consentito un solo modulo. Per creare questo modulo, utilizzare l'opzione del compilatore `/target` con destinazione `winmdobj`. Vedere [/target:winmdobj (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) o [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Specifica il file di documentazione XML di output che verrà prodotto da Winmdexp.exe. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] il file di output è sostanzialmente lo stesso file di documentazione XML di input.|  

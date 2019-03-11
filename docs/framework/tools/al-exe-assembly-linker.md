@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492257"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -23,7 +23,7 @@ Lo strumento Assembly Linker consente di generare un file con un manifesto dell'
 > [!NOTE]
 > A partire da Visual Studio 2008, i compilatori C# e Visual Basic incorporano automaticamente un manifesto Win32 nell'assembly. Per altre informazioni, vedere [/win32manifest (opzioni del compilatore C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il Prompt dei comandi per gli sviluppatori per Visual Studio (o il prompt dei comandi di Visual Studio in Windows 7). Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Al prompt dei comandi digitare quanto segue:
 
@@ -33,7 +33,7 @@ Al prompt dei comandi digitare quanto segue:
 al sources options
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
 È possibile specificare una o più `sources` tra quelle riportate di seguito.
 
@@ -79,7 +79,7 @@ al sources options
 |`@filename`|Specifica un file di risposta contenente i comandi di *Al.exe*.<br /><br /> Nel file di risposta i comandi possono essere disposti uno per riga oppure tutti sulla stessa riga, separati da uno o più spazi.|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Tutti i compilatori di Visual Studio producono assembly. Tuttavia, se sono presenti uno o più moduli, ovvero metadati senza un manifesto, è possibile usare *Al.exe* per creare un assembly con il manifesto in un file separato.
 

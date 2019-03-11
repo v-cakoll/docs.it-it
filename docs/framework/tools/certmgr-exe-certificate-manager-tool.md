@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2284baf7057ec8c0c947325b1efeced7fdd4acbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eceff4380fa5965ef38fb98f4ead81b052da3460
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496924"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (strumento di gestione certificati)
 Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi di scopi consentiti ai certificati ed elenchi di revoche di certificati (CRL, Certificate Revocation List).  
@@ -44,7 +44,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
 |Argomento|Description|  
 |--------------|-----------------|  
@@ -72,7 +72,7 @@ Lo strumento di gestione certificati (Certmgr.exe) gestisce certificati, elenchi
 |**/7**|Salva l'archivio di destinazione come oggetto PKCS #7.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Certmgr.exe svolge le seguenti funzioni di base:  
   
 -   Visualizza certificati, elenchi di scopi consentiti e CRL sulla console.  

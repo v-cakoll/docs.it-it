@@ -2,12 +2,12 @@
 title: Attributi comuni (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374804"
 ---
 # <a name="common-attributes-c"></a>Attributi comuni (C#)
 Questo argomento descrive gli attributi usati più di frequente nei programmi C#.  
@@ -20,7 +20,7 @@ Questo argomento descrive gli attributi usati più di frequente nei programmi C#
   
 -   [Attributi informativi sul chiamante](#CallerInfo)  
   
-##  <a name="Global"></a> Attributi globali  
+## <a name="Global"></a> Attributi globali  
  La maggior parte degli attributi viene applicata a elementi specifici del linguaggio quali classi o metodi. Alcuni attributi sono invece globali e vengono applicati a un intero assembly o a un intero modulo. Ad esempio, l'attributo <xref:System.Reflection.AssemblyVersionAttribute> può essere usato per incorporare informazioni sulla versione in un assembly, nel modo seguente:  
   
 ```csharp  
@@ -72,7 +72,7 @@ Questo argomento descrive gli attributi usati più di frequente nei programmi C#
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definisce un attributo personalizzato che specifica una configurazione assembly per un manifesto dell'assembly.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definisce un alias predefinito descrittivo per un manifesto dell'assembly.|  
   
-##  <a name="Obsolete"></a> Attributo Obsolete  
+## <a name="Obsolete"></a> Attributo Obsolete  
  L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Ad esempio:  
   
 ```csharp  
@@ -111,7 +111,7 @@ b.NewMethod();
   
  `Obsolete` è un attributo monouso e può essere applicato a qualsiasi entità che supporta gli attributi. `Obsolete` è un alias per <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Attributo Conditional  
+## <a name="Conditional"></a> Attributo Conditional  
  L'attributo `Conditional` rende l'esecuzione di un metodo dipendente da un identificatore di pre-elaborazione. L'attributo `Conditional` è un alias per <xref:System.Diagnostics.ConditionalAttribute> e può essere applicato a un metodo o a una classe Attribute.  
   
  In questo esempio, `Conditional` viene applicato a un metodo per attivare o disattivare la visualizzazione di informazioni di diagnostica specifiche del programma:  
@@ -216,7 +216,7 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a> Attributi di informazioni sul chiamante  
+## <a name="CallerInfo"></a> Attributi di informazioni sul chiamante  
  Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante.  
   
  È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi. Ogni parametro facoltativo specifica un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
