@@ -4,6 +4,7 @@ description: Informazioni su come eseguire attività specifiche per agevolare la
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guide pratiche di Machine Learning per .NET - ML.NET
 
 Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte alle domande più frequenti. In alcuni casi gli articoli sono presenti in più sezioni per facilitarne la lettura.
@@ -44,7 +45,7 @@ Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte a
 
 * [Applicare la progettazione di funzionalità per il training del modello ai dati testuali con ML.NET.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Esegui 
+## <a name="run"></a>Esegui
 
 * [Esaminare i valori dei dati intermedi durante l'elaborazione della pipeline di ML.NET.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ Nella sezione Guida pratica della guida di ML.NET sono disponibili le risposte a
 
 * [Usare PredictionFunction per effettuare una stima alla volta.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Programmazione probabalistica (Infer.NET)
+## <a name="probabilistic-infernet"></a>Programmazione probabalistica (Infer.NET)
 
 * [Creare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica.](matchup-app-infer-net.md)
-

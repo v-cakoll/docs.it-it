@@ -1,19 +1,13 @@
 ---
-title: Riferimenti per C#
+title: 'Riferimenti per C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472503"
 ---
 # <a name="c-reference"></a>Riferimenti per C#
 Questa sezione offre informazioni di riferimento su parole chiave, operatori, caratteri speciali, direttive del preprocessore, opzioni del compilatore ed errori e avvisi del compilatore in C#.  
@@ -37,8 +31,11 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [Errori del compilatore C#](../../csharp/language-reference/compiler-messages/index.md)  
  Include frammenti di codice che illustrano la causa e la correzione per gli errori del compilatore e gli avvisi di C#.  
   
- [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification/index.md)  
- Collegamenti alle versioni più recenti della specifica del linguaggio C#.  
+ [Specifiche del linguaggio C#](../../../_csharplang/spec/introduction.md)  
+ Specifica del linguaggio C# 6.0. Si tratta di una proposta bozza per il linguaggio C# 6.0. La versione 5.0 è stata rilasciata a dicembre 2017 come documento [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+  
+ [Proposte per il linguaggio C# 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ Esistono varie nuove funzionalità implementate in C# 7.0, tra le quali criteri di ricerca, funzioni locali, dichiarazioni di variabili out, espressioni throw, valori letterali binari e separatori di cifre. Questa cartella contiene le specifiche per ognuna di tali funzionalità.
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
