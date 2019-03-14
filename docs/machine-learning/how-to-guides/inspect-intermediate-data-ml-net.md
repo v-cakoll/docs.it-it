@@ -1,16 +1,21 @@
 ---
 title: Esaminare i valori dei dati intermedi durante l'elaborazione della pipeline di ML.NET
 description: Informazioni su come esaminare i valori effettivi dei dati intermedi durante l'elaborazione della pipeline di apprendimento automatico di ML.NET
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675010"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678644"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Esaminare i valori dei dati intermedi durante l'elaborazione della pipeline di ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Durante l'esperimento è possibile osservare e convalidare i risultati dell'elaborazione dei dati in un determinato momento. Non è facile poiché le operazioni di ML.NET sono differite e costruiscono oggetti che sono "promesse" di dati.
 

@@ -19,7 +19,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Compilazione di una libreria di classi con Visual Basic](vb-library-with-visual-studio.md)
 - [Test di una libreria di classi](testing-library-with-visual-studio.md)
 - [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: Introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con Visual Studio Code
 

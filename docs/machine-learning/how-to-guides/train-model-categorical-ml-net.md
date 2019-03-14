@@ -1,16 +1,21 @@
 ---
 title: Applicare la progettazione di caratteristiche per il training del modello ai dati delle categorie - ML.NET
 description: Informazioni su come applicare la progettazione di caratteristiche per il training del modello di Machine Learning ai dati delle categorie con ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968413"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677279"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>Applicare la progettazione di caratteristiche per il training del modello ai dati delle categorie - ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 È necessario convertire i dati non float in tipi di dati `float` perché tutti gli elementi `learners` di ML.NET prevedono funzionalità di tipo `float vector`.
 

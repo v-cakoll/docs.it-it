@@ -1,16 +1,21 @@
 ---
 title: Determinare l'importanza delle caratteristiche dei modelli con Permutation Feature Importance in ML.NET
 description: Comprendere l'importanza delle caratteristiche dei modelli con Permutation Feature Importance in ML.NET
-ms.date: 02/01/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a61e5dbbd544aa7df56291db9207343cb6f03e6e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b0457bc07168579403e5a00383864c5612e1d17f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738812"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675550"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>Determinare l'importanza delle caratteristiche dei modelli con Permutation Feature Importance in ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Quando si creano modelli di Machine Learning, spesso non è sufficiente eseguire semplicemente stime. Spesso gli sviluppatori, i responsabili delle decisioni e gli utenti interessati ai modelli devono comprendere quali criteri vengono adottati dai modelli di Machine Learning per prendere decisioni e quali caratteristiche contribuiscono alle relative prestazioni. `Permutation Feature Importance` (PFI) è uno strumento per la comprensibilità dei modelli che viene usato internamente presso Microsoft per aiutare gli sviluppatori di Machine Learning a comprendere meglio l'importanza delle caratteristiche dei modelli.
 

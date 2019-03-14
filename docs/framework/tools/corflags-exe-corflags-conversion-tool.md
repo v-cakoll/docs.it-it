@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690748"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496495"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
 Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.  
@@ -28,7 +28,7 @@ Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
 |Parametro obbligatorio.|Description|  
 |------------------------|-----------------|  
@@ -47,9 +47,9 @@ CorFlags.exe assembly [options]
 |**/ILONLY-**|Cancella il flag ILONLY.|  
 |**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|  
 |**/RevertCLRHeader**|Ripristina la versione 2.0 dell'intestazione CLR.|  
-|**/UpgradeCLRHeader**|Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5. **Nota:**  Per essere eseguiti a livello nativo, gli assembly devono disporre di un'intestazione CLR versione 2.5 o successiva.|  
+|**/UpgradeCLRHeader**|Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5. **Nota:**  per l'esecuzione nativa, gli assembly devono avere un'intestazione CLR versione 2.5 o successiva.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se non viene specificata alcuna opzione, lo strumento di conversione CorFlags visualizza i flag relativi all'assembly specificato.  
   
 ## <a name="see-also"></a>Vedere anche

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967971"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676018"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)
 
@@ -76,19 +76,19 @@ Il bus di eventi è correlato allo schema Observer e allo schema publish-subscri
 
 Nello [schema Observer](https://en.wikipedia.org/wiki/Observer_pattern) l'oggetto principale (noto come Observable) notifica agli altri oggetti interessati (noti come Observer) le informazioni pertinenti (eventi).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Schema di pubblicazione/sottoscrizione (Pub/Sub) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Schema di pubblicazione/sottoscrizione (Pub/Sub)
 
 Lo scopo dello [schema di pubblicazione/sottoscrizione](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) corrisponde a quello dello schema Observer, e cioè notificare agli altri servizi quando si verificano determinati eventi. Ma esiste una differenza importante tra gli schemi Observer e Pub/Sub. Nello schema Observer, la trasmissione viene eseguita direttamente dall'oggetto Observable agli oggetti Observer, in modo che "si riconoscano" tra loro. Ma quando si usa uno schema Pub/Sub, esiste un terzo componente, denominato broker o broker dei messaggi o bus di eventi, noto sia a chi pubblica sia a chi sottoscrive. Di conseguenza, quando si usa lo schema di pubblicazione/sottoscrizione, chi pubblica viene disaccoppiato con precisione dai sottoscrittori, grazie al già citato bus di eventi o broker di messaggi.
 
-### <a name="the-middleman-or-event-bus"></a>L'intermediario, o bus di eventi 
+### <a name="the-middleman-or-event-bus"></a>L'intermediario, o bus di eventi
 
 Come è possibile ottenere anonimato tra autore e sottoscrittore? Un modo semplice è fare in modo che un intermediario si occupi di tutte le comunicazioni. Tale intermediario è un bus di eventi,
 
 che in genere è costituito da due parti:
 
--   l'astrazione o interfaccia
+- l'astrazione o interfaccia
 
--   una o più implementazioni
+- una o più implementazioni
 
 Nella figura 6-19 è possibile vedere come, dal punto di vista dell'applicazione, il bus di eventi non è nient'altro che un canale di pubblicazione/sottoscrizione. La modalità di implementazione di questa comunicazione asincrona può variare, perché può avere più implementazioni per poter passare dall'una all'altra, a seconda dei requisiti di ambiente (ad esempio, ambienti di produzione e di sviluppo).
 
@@ -129,6 +129,6 @@ Il metodo `Publish` è semplice. Il bus di eventi trasmetterà l'evento di integ
 
 I metodi `Subscribe` (sono possibili diverse implementazioni, a seconda degli argomenti) vengono usati dai microservizi che vogliono ricevere gli eventi. Questo metodo prevede due argomenti. Il primo è l'evento di integrazione da sottoscrivere (`IntegrationEvent`). Il secondo argomento è il gestore dell'evento di integrazione (o metodo di callback), denominato `IIntegrationEventHandler<T>`, da eseguire quando il microservizio di tipo ricevitore riceve il messaggio di evento di integrazione.
 
->[!div class="step-by-step"]
->[Precedente](database-server-container.md)
->[Successivo](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Precedente](database-server-container.md)
+> [Successivo](rabbitmq-event-bus-development-test-environment.md)

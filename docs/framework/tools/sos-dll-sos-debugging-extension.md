@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6f2d001c6513211cf15993285e3564f7613402
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "47863663"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356897"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
 
@@ -27,13 +27,13 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 
 ## <a name="commands"></a>Comandi:
 
-|Comando|Descrizione|
+|Comando|Description|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Visualizza le informazioni sull'ultimo evento di memoria insufficiente verificatosi in una richiesta di allocazione all'heap di Garbage Collection (in Garbage Collection per il server, visualizza le informazioni sulla memoria insufficiente, se disponibili, per ogni heap di Garbage Collection).|
 |**BPMD** [**-nofuturemodule**] [\<*nome modulo*> \<*nome metodo*>] [**-md** <`MethodDesc`>] **-list** **-clear** \<*numero punto di interruzione*> **-clearall**|Crea un punto di interruzione in corrispondenza del metodo specificato nel modulo specificato.<br /><br /> Se il modulo e il metodo specificati non sono stati caricati, questo comando attende una notifica del caricamento e della compilazione JIT (just-in-time) del modulo prima di creare un punto di interruzione.<br /><br /> È possibile gestire l'elenco di punti di interruzione in sospeso usando le opzioni **-list**, **-clear** e **-clearall**:<br /><br /> L'opzione **-list** genera un elenco di tutti i punti di interruzione in sospeso. Se un punto di interruzione in sospeso dispone di un ID modulo diverso da zero, il punto di interruzione è specifico di una funzione in quel particolare modulo caricato. Se il punto di interruzione in sospeso dispone di un ID modulo pari a zero, il punto di interruzione si applica a moduli che non sono stati ancora caricati.<br /><br /> Usare l'opzione **-clear** o **-clearall** per rimuovere punti di interruzione in sospeso dall'elenco.|
 |**CLRStack** [**-a**] [**-l**] [**-p**] [**-n**]|Fornisce l'analisi dello stack del solo codice gestito.<br /><br /> L'opzione **-p** mostra gli argomenti della funzione gestita.<br /><br /> L'opzione **-l** mostra le informazioni sulle variabili locali in un frame. Poiché i nomi locali non possono essere recuperati dall'estensione del debugger SOS, l'output dei nomi locali viene espresso nel formato \<*indirizzo locale*> **=** \<*valore*>.<br /><br /> L'opzione **-a** (tutto) è una scelta rapida per la combinazione di **-l** e **-p**.<br /><br /> L'opzione **-n** disabilita la visualizzazione dei nomi dei file di origine e dei numeri di riga. Se nel debugger è specificata l'opzione SYMOPT_LOAD_LINES, verranno ricercati i simboli di ogni frame gestito e, in caso di esito positivo, verranno visualizzati il nome del file di origine e il numero di riga corrispondenti. È possibile specificare il parametro **-n** (nessun numero di riga) per disabilitare questo comportamento.<br /><br /> L'estensione del debugger SOS non supporta la visualizzazione di frame di transizione su piattaforme basate su x64 e IA-64.|
 |**COMState**|Elenca il modello di apartment COM per ogni thread e un puntatore `Context`, se disponibile.|
-|**DumpArray** [**-start** \<*indiceIniziale*>] [**-length** \<*lunghezza*>] [**-details**] [**-nofields**] \<*indirizzo oggetto matrice*><br /><br /> oppure<br /><br /> **DA** [**-start** \<*indiceIniziale*>] [**-length** \<*lunghezza*>] [**-detail**] [**-nofields**] *indirizzo oggetto matrice*>|Esamina gli elementi di un oggetto matrice.<br /><br /> L'opzione **-start** specifica l'indice iniziale in corrispondenza del quale devono essere visualizzati gli elementi.<br /><br /> L'opzione **-length** specifica il numero di elementi da visualizzare.<br /><br /> L'opzione **-details** visualizza dettagli dell'elemento usando i formati **DumpObj** e **DumpVC**.<br /><br /> L'opzione **-nofields** impedisce la visualizzazione delle matrici. È disponibile solo se viene specificata l'opzione **-detail**.|
+|**DumpArray** [**-start** \<*indiceIniziale*>] [**-length** \<*lunghezza*>] [**-details**] [**-nofields**] \<*indirizzo oggetto matrice*><br /><br /> -oppure-<br /><br /> **DA** [**-start** \<*indiceIniziale*>] [**-length** \<*lunghezza*>] [**-detail**] [**-nofields**] *indirizzo oggetto matrice*>|Esamina gli elementi di un oggetto matrice.<br /><br /> L'opzione **-start** specifica l'indice iniziale in corrispondenza del quale devono essere visualizzati gli elementi.<br /><br /> L'opzione **-length** specifica il numero di elementi da visualizzare.<br /><br /> L'opzione **-details** visualizza dettagli dell'elemento usando i formati **DumpObj** e **DumpVC**.<br /><br /> L'opzione **-nofields** impedisce la visualizzazione delle matrici. È disponibile solo se viene specificata l'opzione **-detail**.|
 |**DumpAssembly** \<*indirizzo assembly*>|Visualizza informazioni su un assembly.<br /><br /> Il comando **DumpAssembly** elenca più moduli, se esistenti.<br /><br /> È possibile ottenere l'indirizzo di un assembly usando il comando **DumpDomain**.|
 |**DumpClass** \<*indirizzo EEClass*>|Visualizza informazioni sulla struttura `EEClass` associata a un tipo.<br /><br /> Il comando **DumpClass** visualizza valori di campi statici e non visualizza valori di campi non statici.<br /><br /> Usare il comando **DumpMT**, **DumpObj**, **Name2EE** o **Token2EE** per ottenere l'indirizzo di una struttura `EEClass`.|
 |**DumpDomain** [\<*indirizzo dominio*>]|Enumera tutti gli oggetti <xref:System.Reflection.Assembly> caricati all'interno dell'indirizzo dell'oggetto <xref:System.AppDomain> specificato.  In caso di chiamata senza parametri, il comando **DumpDomain** elenca tutti gli oggetti <xref:System.AppDomain> in un processo.|
@@ -44,7 +44,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**DumpMT** [**-MD**] \<*indirizzo MethodTable*>|Visualizza informazioni su una tabella dei metodi in corrispondenza dell'indirizzo specificato. Specificando l'opzione **-MD** è possibile visualizzare un elenco di tutti i metodi definiti con l'oggetto.<br /><br /> Ogni oggetto gestito contiene un puntatore alla tabella dei metodi.|
 |**DumpMethodSig** \<*sigaddr*> <*moduleadd*`r`>|Visualizza informazioni su una struttura `MethodSig` in corrispondenza dell'indirizzo specificato.|
 |**DumpModule** [**-mt**] \<*indirizzo modulo*>|Visualizza informazioni su un modulo in corrispondenza dell'indirizzo specificato. L'opzione **-mt** visualizza i tipi definiti in un modulo e i tipi a cui fa riferimento il modulo.<br /><br /> È possibile usare il comando **DumpDomain** o **DumpAssembly** per recuperare l'indirizzo di un modulo.|
-|**DumpObj** [**-nofields**] \<*indirizzo oggetto*><br /><br /> oppure<br /><br /> **DO** \<*indirizzo oggetto*>|Visualizza informazioni su un oggetto in corrispondenza dell'indirizzo specificato. Il comando **DumpObj** visualizza i campi, le informazioni sulla struttura `EEClass`, la tabella dei metodi e la dimensione dell'oggetto.<br /><br /> È possibile usare il comando **DumpStackObjects** per recuperare l'indirizzo di un oggetto.<br /><br /> Il comando **DumpObj** può essere eseguito sui campi di tipo `CLASS` perché sono anch'essi oggetti.<br /><br /> L'opzione `-`**nofields** impedisce la visualizzazione dei campi dell'oggetto. Utile per gli oggetti di tipo String.|
+|**DumpObj** [**-nofields**] \<*indirizzo oggetto*><br /><br /> -oppure-<br /><br /> **DO** \<*indirizzo oggetto*>|Visualizza informazioni su un oggetto in corrispondenza dell'indirizzo specificato. Il comando **DumpObj** visualizza i campi, le informazioni sulla struttura `EEClass`, la tabella dei metodi e la dimensione dell'oggetto.<br /><br /> È possibile usare il comando **DumpStackObjects** per recuperare l'indirizzo di un oggetto.<br /><br /> Il comando **DumpObj** può essere eseguito sui campi di tipo `CLASS` perché sono anch'essi oggetti.<br /><br /> L'opzione `-`**nofields** impedisce la visualizzazione dei campi dell'oggetto. Utile per gli oggetti di tipo String.|
 |**DumpRuntimeTypes**|Visualizza gli oggetti di tipo runtime nell'heap del Garbage Collector ed elenca i nomi dei tipi e le tabelle dei metodi associati.|
 |**DumpStack** [**-EE**] [**-n**] [`top` *stack* [`bottom` *stac*`k`]]|Visualizza l'analisi di uno stack.<br /><br /> L'opzione **-EE** fa sì che il comando **DumpStack** visualizzi solo funzioni gestite. Utilizzare i parametri `top` e `bottom` per limitare gli stack frame visualizzati sulle piattaforme x86.<br /><br /> L'opzione **-n** disabilita la visualizzazione dei nomi dei file di origine e dei numeri di riga. Se nel debugger è specificata l'opzione SYMOPT_LOAD_LINES, verranno ricercati i simboli di ogni frame gestito e, in caso di esito positivo, verranno visualizzati il nome del file di origine e il numero di riga corrispondenti. È possibile specificare il parametro **-n** (nessun numero di riga) per disabilitare questo comportamento.<br /><br /> Nelle piattaforme x86 e x64 il comando **DumpStack** crea un'analisi dello stack dettagliata.<br /><br /> Nelle piattaforme basate su IA-64 il comando **DumpStack** simula il comando **K** del debugger. I parametri `top` e `bottom` vengono ignorati sulle piattaforme basate su IA-64.|
 |**DumpSig** \<*sigaddr*> \<*moduleaddr*>|Visualizza informazioni su una struttura `Sig` in corrispondenza dell'indirizzo specificato.|
@@ -62,7 +62,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**GCHandles** [**-perdomain**]|Visualizza le statistiche relative agli handle del Garbage Collector nel processo.<br /><br /> L'opzione **-perdomain** organizza le statistiche per dominio dell'applicazione.<br /><br /> Usare il comando **GCHandles** per trovare perdite di memoria causate da perdite degli handle del Garbage Collector. Una perdita di memoria si verifica ad esempio se nel codice viene mantenuta una matrice di grandi dimensioni perché un handle sicuro del Garbage Collector che punta ancora a essa viene eliminato senza liberarla.|
 |**GCHandleLeaks**|Ricerca nella memoria i riferimenti a handle sicuri e bloccati del Garbage Collector nel processo e visualizza i risultati. Se viene trovato un handle, il comando **GCHandleLeaks** visualizza l'indirizzo del riferimento. Se invece in memoria non viene trovato alcun handle, il comando visualizza una notifica.|
 |**GCInfo** \<*indirizzo MethodDesc*>\<*indirizzo codice*>|Visualizza i dati che indicano quando nei registri o nei percorsi dello stack sono contenuti oggetti gestiti. Se si verifica un'operazione di Garbage Collection, il Garbage Collector deve conoscere le posizioni dei riferimenti agli oggetti in modo da poterli aggiornare con i nuovi valori dei puntatori agli oggetti.|
-|**GCRoot** [**-nostacks**] \<*indirizzo oggetto*>|Visualizza informazioni sui riferimenti (o radici) a un oggetto in corrispondenza dell'indirizzo specificato.<br /><br /> Il comando **GCRoot** esamina l'intero heap gestito e la tabella degli handle per cercare gli handle in altri oggetti e handle nello stack. In ogni stack viene quindi eseguita la ricerca dei puntatori agli oggetti. Viene eseguita la ricerca anche nella coda del finalizzatore.<br /><br /> Questo comando non determina se la radice di uno stack è valida o viene ignorata. Usare i comandi **CLRStack** e **U** per disassemblare il frame a cui appartiene il valore dell'argomento o quello locale per poter determinare se la radice dello stack è ancora in uso.<br /><br /> L'opzione **-nostacks** restringe l'ambito della ricerca agli handle del Garbage Collector e agli oggetti raggiungibili con il metodo Finalize.|
+|**GCRoot** [**-nostacks**] \<*indirizzo oggetto*>|Visualizza informazioni sui riferimenti (o radici) a un oggetto in corrispondenza dell'indirizzo specificato.<br /><br /> Il comando **GCRoot** esamina l'intero heap gestito e la tabella degli handle per cercare gli handle in altri oggetti e handle nello stack. In ogni stack viene quindi eseguita la ricerca dei puntatori agli oggetti. Viene eseguita la ricerca anche nella coda del finalizzatore.<br /><br /> Questo comando non determina se la radice di uno stack è valida o viene ignorata. Usare i comandi **CLRStack** e **U** per disassemblare il frame a cui appartiene il valore dell'argomento o quello locale per poter determinare se la radice dello stack è ancora in uso.<br /><br /> L'opzione **-nostacks** restringe l'ambito della ricerca agli handle del Garbage Collector e agli oggetti raggiungibili.|
 |**GCWhere**  *\<indirizzo oggetto>*|Visualizza il percorso e le dimensioni dell'argomento passato nell'heap di Garbage Collection. Quando l'argomento rientra nell'heap gestito ma non è un indirizzo di oggetto valido, la dimensione viene visualizzata come 0 (zero).|
 |**help** [\<*comando*>] [`faq`]|Visualizza tutti i comandi disponibili se non è specificato alcun parametro oppure visualizza informazioni di Guida dettagliate sul comando specificato.<br /><br /> Il parametro `faq` visualizza le risposte alle domande frequenti.|
 |**HeapStat** [**-inclUnrooted** &#124; **-iu**]|Visualizza le dimensioni della generazione per ogni heap e lo spazio disponibile totale in ogni generazione su ogni heap. Se viene specificata l'opzione -**inclUnrooted**, il report include informazioni sugli oggetti gestiti dall'heap di Garbage Collection che non contiene più una radice.|
@@ -74,7 +74,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**IP2MD** \<*indirizzo codice*>|Visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo specificato nel codice con compilazione JIT.|
 |`ListNearObj` (`lno`) *<indirizzo_oggetto>*|Visualizza gli oggetti che precedono e seguono l'indirizzo specificato. Il comando cerca l'indirizzo nell'heap di Garbage Collection che sembra un inizio valido di un oggetto gestito (in base a una tabella dei metodi valida) e l'oggetto che segue l'indirizzo dell'argomento.|
 |**MinidumpMode** [**0**] [**1**]|Impedisce l'esecuzione di comandi non sicuri quando si utilizza un minidump.<br /><br /> Passare **0** per disabilitare la funzionalità o **1** per abilitarla. Per impostazione predefinita, il valore **MinidumpMode** è impostato su **0**.<br /><br /> I minidump creati con il comando **.dump /m** o **.dump** contengono una quantità limitata di dati specifici di CLR e consentono la corretta esecuzione solo di un subset di comandi SOS. È possibile che alcuni comandi abbiano esito negativo con errori imprevisti perché aree richieste di memoria non sono mappate o sono mappate solo parzialmente. Questa opzione impedisce l'esecuzione di comandi non sicuri sui minidump.|
-|**Name2EE** \<*nome modulo*> \<*nome tipo o metodo*><br /><br /> oppure<br /><br /> **Name2EE** \<*nome modulo*>**!**\<*nome tipo o metodo*>|Visualizza le strutture `MethodTable` e `EEClass` per il tipo o il metodo specificato nel modulo specificato.<br /><br /> Il modulo specificato deve essere caricato nel processo.<br /><br /> Per ottenere il nome del tipo corretto, esplorare il modulo usando [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). È inoltre possibile passare `*` come parametro del nome del modulo per eseguire la ricerca in tutti i moduli gestiti caricati. Il parametro *nome modulo* può anche essere il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.<br /><br /> Questo comando supporta la sintassi del debugger Windows di <`module`>`!`<`type`>. Il tipo deve essere completo.|
+|**Name2EE** \<*nome modulo*> \<*nome tipo o metodo*><br /><br /> -oppure-<br /><br /> **Name2EE** \<*nome modulo*>**!**\<*nome tipo o metodo*>|Visualizza le strutture `MethodTable` e `EEClass` per il tipo o il metodo specificato nel modulo specificato.<br /><br /> Il modulo specificato deve essere caricato nel processo.<br /><br /> Per ottenere il nome del tipo corretto, esplorare il modulo usando [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). È inoltre possibile passare `*` come parametro del nome del modulo per eseguire la ricerca in tutti i moduli gestiti caricati. Il parametro *nome modulo* può anche essere il nome del debugger di un modulo, ad esempio `mscorlib` o `image00400000`.<br /><br /> Questo comando supporta la sintassi del debugger Windows di <`module`>`!`<`type`>. Il tipo deve essere completo.|
 |**ObjSize** [\<*indirizzo oggetto*>] &#124; [**-aggregate**] [**-stat**]|Visualizza la dimensione dell'oggetto specificato. Se non si specifica alcun parametro, il comando **ObjSize** visualizza la dimensione di tutti gli oggetti trovati nei thread gestiti, visualizza tutti gli handle del Garbage Collector nel processo e somma la dimensione di tutti gli oggetti a cui puntano tali handle. Il comando **ObjSize** include la dimensione di tutti gli oggetti figlio oltre a quella dell'entità principale.<br /><br /> L'opzione **-aggregate** può essere usata con l'argomento **-stat** per ottenere una visualizzazione dettagliata dei tipi che contengono ancora una radice. Usando **!dumpheap -stat** e **!objsize -aggregate -stat** è possibile determinare quali oggetti non contengono più una radice e diagnosticare vari problemi relativi alla memoria.|
 |**PrintException** [**-nested**] [**-lines**] [\<*indirizzo oggetto Exception*>]<br /><br /> oppure<br /><br /> **PE** [**-nested**] [\<*indirizzo oggetto Exception*>]|Visualizza e formatta i campi di qualsiasi oggetto derivato dalla classe <xref:System.Exception> in corrispondenza dell'indirizzo specificato. Se non si specifica un indirizzo, il comando **PrintException** visualizza l'ultima eccezione generata nel thread corrente.<br /><br /> L'opzione **-nested** visualizza dettagli sugli oggetti eccezione annidati.<br /><br /> L'opzione **-lines** visualizza informazioni sull'origine, se disponibili.<br /><br /> È possibile utilizzare questo comando per formattare e visualizzare il campo `_stackTrace`, che è una matrice binaria.|
 |**ProcInfo** [**-env**] [**-time**] [**-mem**]|Visualizza le variabili di ambiente del processo, il tempo CPU del kernel e le statistiche di utilizzo della memoria.|
@@ -94,7 +94,7 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 |**VMMap**|Attraversa lo spazio degli indirizzi virtuali e visualizza il tipo di protezione applicato a ogni regione.|
 |**VMStat**|Fornisce una visualizzazione di riepilogo dello spazio degli indirizzi virtuali, ordinata in base a ogni tipo di protezione applicato alla memoria (free, reserved, committed, private, mapped, image). La colonna TOTAL visualizza il risultato della colonna AVERAGE moltiplicato per la colonna BLK COUNT.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'estensione del debugger SOS consente di visualizzare informazioni sul codice in esecuzione nell'ambiente CLR. È ad esempio possibile utilizzarla per visualizzare informazioni sull'heap gestito, cercare eventuali danneggiamenti dell'heap, visualizzare i tipi di dati interni utilizzati dal runtime e visualizzare informazioni su tutto il codice gestito in esecuzione nel runtime.
 
@@ -126,79 +126,79 @@ Il comando riportato di seguito visualizza il contenuto di una matrice in corris
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
- Il comando riportato di seguito visualizza il contenuto di un assembly in corrispondenza dell'indirizzo `1ca248`.
+Il comando riportato di seguito visualizza il contenuto di un assembly in corrispondenza dell'indirizzo `1ca248`.
 
 ```
 !dumpassembly 1ca248
 ```
 
- Il comando riportato di seguito visualizza informazioni sull'heap del Garbage Collector.
+Il comando riportato di seguito visualizza informazioni sull'heap del Garbage Collector.
 
 ```
 !dumpheap
 ```
 
- Il comando riportato di seguito scrive il contenuto del log di stress in memoria in un file (predefinito) denominato StressLog.tx nella directory corrente.
+Il comando riportato di seguito scrive il contenuto del log di stress in memoria in un file (predefinito) denominato StressLog.tx nella directory corrente.
 
 ```
 !DumpLog
 ```
 
- Il comando riportato di seguito visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo `902f40`.
+Il comando riportato di seguito visualizza la struttura `MethodDesc` in corrispondenza dell'indirizzo `902f40`.
 
 ```
 !dumpmd 902f40
 ```
 
- Il comando riportato di seguito visualizza informazioni su un modulo in corrispondenza dell'indirizzo `1caa50`.
+Il comando riportato di seguito visualizza informazioni su un modulo in corrispondenza dell'indirizzo `1caa50`.
 
 ```
 !dumpmodule 1caa50
 ```
 
- Il comando riportato di seguito visualizza informazioni su un oggetto in corrispondenza dell'indirizzo `a79d40`.
+Il comando riportato di seguito visualizza informazioni su un oggetto in corrispondenza dell'indirizzo `a79d40`.
 
 ```
 !DumpObj a79d40
 ```
 
- Il comando riportato di seguito visualizza i campi di una classe di valori in corrispondenza dell'indirizzo `00a79d9c` utilizzando la tabella dei metodi in corrispondenza dell'indirizzo `0090320c`.
+Il comando riportato di seguito visualizza i campi di una classe di valori in corrispondenza dell'indirizzo `00a79d9c` utilizzando la tabella dei metodi in corrispondenza dell'indirizzo `0090320c`.
 
 ```
 !DumpVC 0090320c 00a79d9c
 ```
 
- Il comando riportato di seguito visualizza la memoria di processo utilizzata dal Garbage Collector.
+Il comando riportato di seguito visualizza la memoria di processo utilizzata dal Garbage Collector.
 
 ```
 !eeheap -gc
 ```
 
- Il comando riportato di seguito visualizza tutti gli oggetti per i quali è pianificata la finalizzazione.
+Il comando riportato di seguito visualizza tutti gli oggetti per i quali è pianificata la finalizzazione.
 
 ```
 !finalizequeue
 ```
 
- Il comando riportato di seguito determina il dominio applicazione di un oggetto in corrispondenza dell'indirizzo `00a79d98`.
+Il comando riportato di seguito determina il dominio applicazione di un oggetto in corrispondenza dell'indirizzo `00a79d98`.
 
 ```
 !findappdomain 00a79d98
 ```
 
- Il comando riportato di seguito visualizza tutti gli handle del Garbage Collector nel processo corrente.
+Il comando riportato di seguito visualizza tutti gli handle del Garbage Collector nel processo corrente.
 
 ```
 !gcinfo 5b68dbb8
 ```
 
- Il comando riportato di seguito visualizza le strutture `MethodTable` e `EEClass` per il metodo `Main` nella classe `MainClass` nel modulo `unittest.exe`.
+Il comando riportato di seguito visualizza le strutture `MethodTable` e `EEClass` per il metodo `Main` nella classe `MainClass` nel modulo `unittest.exe`.
 
 ```
 !name2ee unittest.exe MainClass.Main
 ```
 
- Il comando riportato di seguito visualizza informazioni sul token di metadati in corrispondenza dell'indirizzo `02000003` nel modulo `unittest.exe`.
+Il comando riportato di seguito visualizza informazioni sul token di metadati in corrispondenza dell'indirizzo `02000003` nel modulo `unittest.exe`.
 
 ```
 !token2ee unittest.exe 02000003

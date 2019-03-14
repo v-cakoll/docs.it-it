@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220811"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675160"
 ---
 # <a name="deploying-an-interop-application"></a>Distribuzione di una applicazione di interoperabilità
 Un'applicazione di interoperabilità in genere include un assembly client .NET, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati. Visual Studio e [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] forniscono strumenti per importare e convertire una libreria dei tipi in un assembly di interoperabilità, come illustrato in [Importing a Type Library as an Assembly](importing-a-type-library-as-an-assembly.md) (Importazione di una libreria dei tipi come assembly). Un'applicazione di interoperabilità può essere distribuita in due modi:  
@@ -38,8 +38,7 @@ Un'applicazione di interoperabilità in genere include un assembly client .NET, 
 ### <a name="private-assemblies"></a>Assembly privati  
  Per installare un assembly da usare privatamente, sia l'eseguibile dell'applicazione che l'assembly di interoperabilità contenente i tipi COM importati devono essere installati nella stessa struttura di directory. La figura seguente illustra un assembly di interoperabilità non firmato che verrà usato privatamente da Client1.exe e Client2.exe, che si trovano in directory dell'applicazione separate. L'assembly di interoperabilità, denominato LOANLib.dll in questo esempio, viene installato due volte.  
   
- ![Struttura delle directory e Registro di sistema di Windows](media/comdeployprivate.gif "comdeployprivate")  
-Struttura delle directory e voci del Registro di sistema per una distribuzione privata  
+ ![Struttura di directory e Registro di sistema di Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Struttura delle directory e voci del Registro di sistema per una distribuzione privata")  
   
  Tutti i componenti COM associati all'applicazione devono essere installati nel Registro di sistema di Windows. Se Client1.exe e Client2.exe della figura vengono installati in computer diversi, è necessario registrare i componenti COM in entrambi i computer.  
   

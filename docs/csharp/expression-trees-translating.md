@@ -3,12 +3,12 @@ title: Traduzione degli alberi delle espressioni
 description: Informazioni su come visitare ogni nodo in un albero delle espressioni, creando una copia modificata di tale albero delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200535"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490073"
 ---
 # <a name="translating-expression-trees"></a>Traduzione degli alberi delle espressioni
 
@@ -75,7 +75,7 @@ var addition = Expression.Add(one, two);
 var add2 = Expression.Add(three, four);
 var sum = Expression.Add(addition, add2);
 
-// Declare the delegate, so we can call it 
+// Declare the delegate, so we can call it
 // from itself recursively:
 Func<Expression, int> aggregate = null;
 // Aggregate, return constants, or the sum of the left and right operand.
@@ -93,7 +93,7 @@ Useremo qui il codice, ma i concetti sono molto intuitivi.
 Questo codice visita gli elementi figlio in una prima ricerca profondità. Quando incontra un nodo della costante, il visitatore restituisce il valore della costante. Dopo che il visitatore ha visitato entrambi gli elementi figlio, verrà calcolata la somma per essi, per questo sottoalbero. A questo punto, il nodo di addizione può calcolare la somma.
 Dopo aver visitato tutti i noti dell'albero delle espressioni, verrà calcolata la somma. È possibile tracciare l'esecuzione eseguendo l'esempio nel debugger.
 
-Semplifichiamo il tracciamento dell'analisi dei nodi e delle modalità di calcolo della somma tramite l'attraversamento dell'albero. Di seguito è riportata una versione aggiornata del metodo Aggregate che include una certa quantità di informazioni di tracciamento:
+È possibile semplificare il tracciamento dell'analisi dei nodi e delle modalità di calcolo della somma tramite l'attraversamento dell'albero. Di seguito è riportata una versione aggiornata del metodo Aggregate che include una certa quantità di informazioni di tracciamento:
 
 ```csharp
 private static int Aggregate(Expression exp)

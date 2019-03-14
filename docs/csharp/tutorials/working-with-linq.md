@@ -3,12 +3,12 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170808"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679654"
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -16,13 +16,13 @@ ms.locfileid: "53170808"
 
 Questa esercitazione illustra le funzionalità disponibili in .NET Core e nel linguaggio C#. Verranno affrontati gli argomenti seguenti:
 
-*   Come generare sequenze con LINQ
-*   Come scrivere i metodi da usare facilmente nelle query LINQ
-*   Come distinguere le modalità di valutazione eager e lazy
+- Come generare sequenze con LINQ
+- Come scrivere i metodi da usare facilmente nelle query LINQ
+- Come distinguere le modalità di valutazione eager e lazy
 
 Si apprenderanno queste tecniche creando un'applicazione che illustra una delle abilità di base di un prestigiatore: il [miscuglio faro](https://en.wikipedia.org/wiki/Faro_shuffle). In breve, il miscuglio faro è una tecnica che consiste nel tagliare un mazzo di carte esattamente a metà e quindi nel sovrapporre alternativamente le carte delle due metà per ricostruire il mazzo originale.
 
-I prestigiatori adottano questa tecnica perché, dopo ogni miscuglio, ciascuna carta si trova in una posizione nota e le carte vengono ordinate in base a uno schema ripetitivo. 
+I prestigiatori adottano questa tecnica perché, dopo ogni miscuglio, ciascuna carta si trova in una posizione nota e le carte vengono ordinate in base a uno schema ripetitivo.
 
 Ai fini dell'esercitazione, questa tecnica offre un modo scherzoso per illustrare la manipolazione di sequenze di dati. Si creerà un'applicazione che costruisce un mazzo di carte ed esegue una serie di miscugli scrivendo ogni volta la sequenza ottenuta. Si confronterà inoltre l'ordine aggiornato con quello originale.
 
@@ -36,7 +36,7 @@ Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile
 
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi per creare i file di avvio per un'applicazione "Hello World" di base.
 
-Se non si è mai usato C#, [questa esercitazione](console-teleprompter.md) illustra la struttura di un programma C#. È possibile leggerla e tornare qui per ottenere altre informazioni su LINQ. 
+Se non si è mai usato C#, [questa esercitazione](console-teleprompter.md) illustra la struttura di un programma C#. È possibile leggerla e tornare qui per ottenere altre informazioni su LINQ.
 
 ## <a name="creating-the-data-set"></a>Creazione del set di dati
 
@@ -82,6 +82,7 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+
 Inserire questi metodi sotto il metodo `Main` nel file `Program.cs`. Questi due metodi usano entrambi la sintassi `yield return` per generare una sequenza durante l'esecuzione. Il compilatore crea un oggetto che implementa <xref:System.Collections.Generic.IEnumerable%601> e genera la sequenza di stringhe a mano a mano che vengono richieste.
 
 Usare ora questi metodi Iterator per creare il mazzo di carte. Si inserirà la query LINQ nel metodo `Main`. Ecco come appare:
@@ -98,16 +99,18 @@ static void Main(string[] args)
     foreach (var card in startingDeck)
     {
         Console.WriteLine(card);
-    } 
+    }
 }
 ```
 
 Le clausole `from` multiple generano un <xref:System.Linq.Enumerable.SelectMany%2A> che crea una singola sequenza tramite la combinazione di ogni elemento nella prima sequenza con ogni elemento nella seconda. L'ordine è importante ai fini di questa esercitazione. Il primo elemento nella prima sequenza di origine (semi) viene combinato con ogni elemento della seconda sequenza (valori). Si ottengono così le 13 carte appartenenti al primo seme. Il processo viene ripetuto con ogni elemento della prima sequenza, ovvero i semi. Il risultato finale è un mazzo di carte ordinato in base ai semi e quindi in base ai valori.
 
 È importante tenere presente che, sia che si scelga di scrivere la query LINQ nella sintassi di query usata sopra o di usare invece la sintassi del metodo, è sempre possibile passare da un formato di sintassi all'altro. La query riportata sopra, scritta nella sintassi di query, può essere scritta nella sintassi del metodo nel modo seguente:
+
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
+
 Il compilatore converte le istruzioni LINQ scritte con la sintassi di query nella sintassi del metodo equivalente. Pertanto, indipendentemente dalla sintassi scelta, le due versioni della query producono lo stesso risultato. Scegliere la sintassi più adatta per la propria situazione: ad esempio, se si lavora in un team in cui alcuni membri non hanno dimestichezza con la sintassi del metodo, preferire la sintassi di query.
 
 Andare avanti ed eseguire l'esempio che si è creato finora. Verranno visualizzate le 52 carte del mazzo. Può essere molto utile eseguire questo esempio in un debugger per osservare come vengono eseguiti i metodi `Suits()` e `Ranks()`. È possibile vedere chiaramente che in ogni sequenza ciascuna stringa viene generata solo quando è necessario.
@@ -131,7 +134,7 @@ public static void Main(string[] args)
         Console.WriteLine(c);
     }
 
-    // 52 cards in a deck, so 52 / 2 = 26    
+    // 52 cards in a deck, so 52 / 2 = 26
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
 }
@@ -141,7 +144,7 @@ Non esiste tuttavia un metodo per mischiare le carte nella libreria standard, qu
 
 Per aggiungere alcune funzionalità per l'interazione con l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> che verrà restituita dalle query LINQ,è necessario scrivere dei tipi speciali di metodi detti [metodi di estensione](../../csharp/programming-guide/classes-and-structs/extension-methods.md). In breve, un metodo di estensione è uno speciale *metodo statico* che aggiunge nuove funzionalità a un tipo già esistente senza bisogno di modificare il tipo originale a cui si vogliono aggiungere funzionalità.
 
-Assegnare ai metodi di estensione una nuova posizione aggiungendo al programma un nuovo file di classe *statica* denominato `Extensions.cs`, quindi iniziare a compilare il primo metodo di estensione: 
+Assegnare ai metodi di estensione una nuova posizione aggiungendo al programma un nuovo file di classe *statica* denominato `Extensions.cs`, quindi iniziare a compilare il primo metodo di estensione:
 
 ```csharp
 // Extensions.cs
@@ -191,7 +194,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
     var shuffle = top.InterleaveSequenceWith(bottom);
@@ -211,7 +214,7 @@ Scrivere un metodo per determinare se due sequenze sono uguali è un'operazione 
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Questo esempio illustra un secondo termine del linguaggio LINQ: i metodi terminali. Questi metodi accettano una sequenza come input (o, in questo caso, due sequenze) e restituiscono un singolo valore scalare. Quando si usa un metodo terminale, questo è sempre il metodo finale in una catena di metodi per una query LINQ, da qui il nome "terminale". 
+Questo esempio illustra un secondo termine del linguaggio LINQ: i metodi terminali. Questi metodi accettano una sequenza come input (o, in questo caso, due sequenze) e restituiscono un singolo valore scalare. Quando si usa un metodo terminale, questo è sempre il metodo finale in una catena di metodi per una query LINQ, da qui il nome "terminale".
 
 È possibile notare questo comportamento nella pratica quando si usa il metodo per determinare quando viene ripristinato l'ordine originale del mazzo. Inserire in un ciclo il codice per mischiare il mazzo e arrestare l'esecuzione quando viene ripristinato l'ordine originale della sequenza applicando il metodo `SequenceEquals()`. È possibile notare che questo sarebbe sempre il metodo finale in qualsiasi query poiché restituisce un singolo valore anziché una sequenza:
 
@@ -279,7 +282,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
@@ -321,24 +324,24 @@ Si noti che la registrazione non viene eseguita ogni volta che si accede a una q
 
 Ora il numero di query per mischiare le carte esterne è ridotto a 30. Eseguire nuovamente il programma per mischiare anche le carte interne e si noteranno miglioramenti analoghi: ora vengono eseguite 162 query.
 
-Questo esempio è stato **progettato** per mettere in evidenza i casi d'uso in cui la valutazione lazy può causare problemi di prestazioni. Sebbene sia importante capire dove la valutazione lazy può influire sulle prestazioni del codice, è altrettanto importante comprendere che non tutte le query devono essere eseguite in modalità eager. La riduzione delle prestazioni che si verifica senza usare <xref:System.Linq.Enumerable.ToArray%2A> avviene perché ogni nuova configurazione del mazzo di carte è basata sulla configurazione precedente. Quando si usa la valutazione lazy, ogni nuova configurazione del mazzo è basata sul mazzo originale, anche eseguendo il codice che ha creato `startingDeck`. Questo comportamento determina una grande quantità di operazioni aggiuntive. 
+Questo esempio è stato **progettato** per mettere in evidenza i casi d'uso in cui la valutazione lazy può causare problemi di prestazioni. Sebbene sia importante capire dove la valutazione lazy può influire sulle prestazioni del codice, è altrettanto importante comprendere che non tutte le query devono essere eseguite in modalità eager. La riduzione delle prestazioni che si verifica senza usare <xref:System.Linq.Enumerable.ToArray%2A> avviene perché ogni nuova configurazione del mazzo di carte è basata sulla configurazione precedente. Quando si usa la valutazione lazy, ogni nuova configurazione del mazzo è basata sul mazzo originale, anche eseguendo il codice che ha creato `startingDeck`. Questo comportamento determina una grande quantità di operazioni aggiuntive.
 
 In pratica, per alcuni algoritmi è più efficiente la valutazione eager, mentre per altri è preferibile la valutazione lazy. Per l'uso quotidiano, quest'ultima rappresenta in genere la scelta migliore quando l'origine dati è costituita da un processo separato, ad esempio un motore di database. Per i database, la valutazione lazy consente alle query più complesse di eseguire un solo round trip al processo di database e di tornare al resto del codice. LINQ offre la stessa flessibilità sia che si scelga di usare la valutazione lazy o eager. Misurare pertanto i processi e scegliere il tipo di valutazione che offre le prestazioni migliori.
 
 ## <a name="conclusion"></a>Conclusione
 
 In questo progetto sono stati illustrati gli argomenti seguenti:
-* Uso di query LINQ per aggregare i dati in una sequenza significativa
-* Scrittura di metodi di estensione per aggiungere funzionalità personalizzate alle query LINQ
-* Individuazione delle aree del codice in cui le query LINQ potrebbero riscontrare problemi di prestazioni, ad esempio una riduzione della velocità
-* Valutazione lazy e valutazione eager relativamente alle query LINQ e implicazioni che potrebbero avere sulle prestazioni delle query
+- Uso di query LINQ per aggregare i dati in una sequenza significativa
+- Scrittura di metodi di estensione per aggiungere funzionalità personalizzate alle query LINQ
+- Individuazione delle aree del codice in cui le query LINQ potrebbero riscontrare problemi di prestazioni, ad esempio una riduzione della velocità
+- Valutazione lazy e valutazione eager relativamente alle query LINQ e implicazioni che potrebbero avere sulle prestazioni delle query
 
 Oltre a LINQ, è stata illustrata una tecnica usata dai prestigiatori per i trucchi con le carte. I prestigiatori usano il miscuglio Faro perché possono controllare lo spostamento di ogni carta nel mazzo. È una tecnica che, per mantenere la sua magia, dovrebbe restare nota a pochi.
 
 Per altre informazioni su LINQ, vedere:
-* [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
-    * [Introduzione a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    * [Nozioni di base su LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md)
+    - [Introduzione a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [Nozioni di base su LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [Operazioni di query LINQ di base (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [Trasformazioni dati con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
         - [Sintassi di query e sintassi di metodi in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

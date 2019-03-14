@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219932"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496950"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
@@ -43,9 +43,9 @@ Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a
 caspol [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> oppure<br /><br /> **-af** *assembly_file*|Aggiunge un assembly che implementa un oggetto di sicurezza personalizzato, ad esempio un'autorizzazione o una condizione di appartenenza personalizzata, nell'elenco di assembly completamente attendibili per uno specifico livello di criteri. L'argomento *file_assembly* specifica l'assembly da aggiungere. Il file deve essere firmato con un [nome sicuro](../../../docs/framework/app-domains/strong-named-assemblies.md). A questo scopo è possibile usare lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Ogni volta che un set di autorizzazioni contenente un'autorizzazione personalizzata viene aggiunto ai criteri, è necessario aggiungere l'assembly che implementa l'autorizzazione personalizzata all'elenco completamente attendibile per tale livello di criteri. Gli assembly che implementano oggetti di sicurezza personalizzati, quali condizioni di appartenenza o gruppi di codice personalizzati, utilizzati nei criteri di sicurezza, ad esempio i criteri del computer, devono essere sempre aggiunti all'elenco di assembly completamente attendibili. **Attenzione:**  Se l'assembly che implementa l'oggetto di sicurezza personalizzato fa riferimento ad altri assembly, aggiungere all'elenco di assembly completamente attendibili prima quelli a cui si fa riferimento. Gli oggetti di sicurezza personalizzati creati con Visual Basic, C++ e JScript fanno riferimento rispettivamente a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll o Microsoft.JScript.dll. Per impostazione predefinita, questi assembly non sono contenuti nell'elenco degli assembly totalmente attendibili, per cui è necessario aggiungere l'assembly appropriato all'elenco prima di aggiungere un oggetto di sicurezza personalizzato. Se questa operazione non riesce si verificheranno problemi nel sistema di sicurezza, provocando il mancato caricamento di tutti gli assembly. In questa situazione, l'opzione **-all -reset** di Caspol.exe non è in grado di ripristinare la sicurezza. Per ripristinare la sicurezza, modificare manualmente i file di sicurezza per rimuovere l'oggetto di sicurezza personalizzato.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> oppure<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Aggiunge un nuovo gruppo di codice alla gerarchia dei gruppi di codice. È possibile specificare *parent_label* oppure *parent_name*. L'argomento *parent_label* specifica l'etichetta (ad esempio 1. o 1.1.) del gruppo di codice padre del gruppo di codice aggiunto. L'argomento *parent_name* specifica il nome del gruppo di codice padre del gruppo di codice aggiunto. Dal momento che è possibile usare indifferentemente *parent_label* e *parent_name*, Caspol.exe deve essere in grado di distinguerli. Pertanto *parent_name* non può iniziare con un numero. Inoltre, *parent_name* può contenere solo i caratteri dalla A alla Z, i numeri da 0 a 9 e il carattere di sottolineatura.<br /><br /> L'argomento *mship* specifica la condizione di appartenenza del nuovo gruppo di codice. Per altre informazioni, vedere la tabella degli argomenti *mship* più avanti in questa sezione.<br /><br /> L'argomento *pset_name* è il nome del set di autorizzazioni che verrà associato al nuovo gruppo di codice. È anche possibile impostare uno o più argomenti *flags* per il nuovo gruppo. Per altre informazioni, vedere la tabella degli argomenti *flags* più avanti in questa sezione.|  
@@ -81,7 +81,7 @@ caspol [options]
   
  L'argomento *mship*, che specifica la condizione di appartenenza di un gruppo di codice, è utilizzabile con le opzioni **-addgroup** e **-chggroup**. Ogni argomento *mship* viene implementato come classe di .NET Framework. Per specificare *mship*, usare uno degli argomenti elencati di seguito.  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |**-allcode**|Specifica tutto il codice. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Specifica la directory dell'applicazione. Se si specifica **-appdir** come condizione di appartenenza, l'evidenza URL del codice verrà confrontata con l'evidenza della directory dell'applicazione di tale codice. Se i valori delle evidenze sono identici, questa condizione di appartenenza è soddisfatta. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
@@ -90,12 +90,12 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Specifica il codice che include l'editore di software specificato, come indicato da un file di certificato, da una firma su un file o dalla rappresentazione esadecimale di un certificato X509. Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Specifica il codice che include il sito di origine specificato. Ad esempio:<br /><br /> `-site** www.proseware.com`<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Specifica il codice che include un nome sicuro specifico, composto dal nome del file, dal nome dell'assembly sotto forma di stringa e dalla versione dell'assembly nel formato *major*.*minor*.*build*.*revision*. Ad esempio:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, ad esempio `http://` o `ftp://`. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:**  Poiché un URL può essere identificato utilizzando più nomi, l'utilizzo di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Specifica il codice che deriva dall'URL specificato. L'URL deve includere un protocollo, ad esempio `http://` o `ftp://`. È anche possibile usare un carattere jolly (\*) per specificare più assembly da un determinato URL. **Nota:**  Poiché un URL può essere identificato usando più nomi, l'uso di un URL come condizione di appartenenza non è un metodo sicuro per determinare l'identità del codice. Se possibile, è consigliabile utilizzare una condizione di appartenenza con un nome sicuro, una condizione di appartenenza editore o una condizione di appartenenza hash. <br /><br /> Per altre informazioni su questa condizione di appartenenza, vedere <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Specifica il codice con la zona di origine specificata. L'argomento *zonename* può essere impostato su uno dei valori seguenti: **MyComputer**, **Intranet**, **Trusted**, **Internet** o **Untrusted**. Per ulteriori informazioni su questa condizione di appartenenza, vedere la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  L'argomento *flags*, utilizzabile con le opzioni **-addgroup** e **-chggroup**, viene specificato mediante uno degli argomenti elencati di seguito.  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |--------------|-----------------|  
 |**-description** "*description*"|Se viene usato con l'opzione **-addgroup**, specifica la descrizione di un gruppo di codice da aggiungere. Se viene usato con l'opzione **-chggroup**, specifica la descrizione di un gruppo di codice da modificare. L'argomento *description* deve essere racchiuso tra virgolette doppie.|  
 |**-exclusive** {**on**&#124;**off**}|Quando è impostato su **on**, indica che solo il set di autorizzazioni associato al gruppo di codice da aggiungere o da modificare verrà considerato quando del codice soddisferà la condizione di appartenenza del gruppo di codice. Quando questa opzione è impostata su **off**, vengono considerati i set di autorizzazioni di tutti i gruppi di codice corrispondenti nel livello di criteri.|  

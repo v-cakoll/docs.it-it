@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479607"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674653"
 ---
 # <a name="official-net-docker-images"></a>Immagini Docker .NET ufficiali
 
@@ -23,9 +23,9 @@ La maggior parte dei repository di immagini fornisce contrassegni completi che c
 
 Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare l'attenzione sugli scenari principali seguenti:
 
--   Immagini usate per *sviluppare* e compilare app .NET Core.
+- Immagini usate per *sviluppare* e compilare app .NET Core.
 
--   Immagini usate per *eseguire* app .NET Core.
+- Immagini usate per *eseguire* app .NET Core.
 
 Perché sono disponibili più immagini? Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni in contenitori, è necessario tenere conto di diverse priorità. Fornendo immagini diverse per queste attività separate, Microsoft consente di ottimizzare i processi per lo sviluppo, la compilazione e la distribuzione di app.
 
@@ -50,6 +50,6 @@ Durante l'esplorazione dei repository di immagini .NET nell'hub Docker, si trove
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, con ottimizzazioni ASP.NET Core e solo runtime, in Linux e Windows (multiarchitettura) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core, con SDK inclusi, in Linux e Windows (multiarchitettura)                                  |
 
->[!div class="step-by-step"]
->[Precedente](net-container-os-targets.md)
->[Successivo](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Precedente](net-container-os-targets.md)
+> [Successivo](../architect-microservice-container-applications/index.md)

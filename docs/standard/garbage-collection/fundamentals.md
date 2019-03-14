@@ -1,6 +1,7 @@
 ---
 title: Principi fondamentali di Garbage Collection
-ms.date: 03/30/2017
+description: Informazioni su come funziona il Garbage Collector e su come può essere configurato per ottenere prestazioni ottimali.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066323"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712474"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -30,28 +31,8 @@ ms.locfileid: "55066323"
   
 -   Garantisce protezione per la memoria assicurando che un oggetto non possa usare il contenuto di un altro oggetto.  
   
- In questo argomento vengono descritti i concetti principali di Garbage Collection. Include le sezioni seguenti:  
-  
--   [Nozioni fondamentali sulla memoria](#fundamentals_of_memory)  
-  
--   [Condizioni per un'operazione di Garbage Collection](#conditions_for_a_garbage_collection)  
-  
--   [Heap gestito](#the_managed_heap)  
-  
--   [Generazioni](#generations)  
-  
--   [Fasi di un'operazione di Garbage Collection](#what_happens_during_a_garbage_collection)  
-  
--   [Modifica delle risorse non gestite](#manipulating_unmanaged_resources)  
-  
--   [Operazione di Garbage Collection per workstation e server](#workstation_and_server_garbage_collection)  
-  
--   [Garbage Collection contemporanea](#concurrent_garbage_collection)  
-  
--   [Garbage Collection della workstation in background](#background_garbage_collection)  
-  
--   [Garbage Collection del server in background](#background_server_garbage_collection)  
-  
+ In questo argomento vengono descritti i concetti principali di Garbage Collection. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Nozioni fondamentali sulla memoria  
  Nell'elenco seguente sono riepilogati concetti importanti relativi alla memoria CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066323"
   
  L'impatto (frequenza e durata) delle operazioni di Garbage Collection è il risultato del volume di allocazioni e della quantità di memoria esclusa nell'heap gestito.  
   
- L'heap può essere considerato l'insieme di due heap: l'heap degli oggetti grandi e l'heap degli oggetti piccoli.  
+ L'heap può essere considerato l'insieme di due heap: l'[heap degli oggetti grandi](large-object-heap.md) e l'heap degli oggetti piccoli.  
   
- L'heap oggetti grandi contiene oggetti di dimensioni pari o superiori a 85.000 byte. Gli oggetti sull'heap oggetti grandi sono in genere matrici. È raro che un oggetto istanza sia particolarmente grande.  
+ L'[heap degli oggetti grandi](large-object-heap.md) contiene oggetti molto grandi di dimensioni pari o superiori a 85.000 byte. Gli oggetti sull'heap oggetti grandi sono in genere matrici. È raro che un oggetto istanza sia particolarmente grande.  
   
  [Torna all'inizio](#top)  
   

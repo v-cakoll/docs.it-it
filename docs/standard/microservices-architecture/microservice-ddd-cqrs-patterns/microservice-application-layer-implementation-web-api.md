@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 39aa2b9b97e9f683521193ad8e647c73bb4dd140
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353088"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementare il livello dell'applicazione del microservizio usando l'API Web
 
@@ -38,15 +38,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -54,14 +54,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -283,11 +283,11 @@ public class CreateOrderCommand
 }
 ```
 
-In sostanza, la classe del comando contiene tutti i dati necessari per eseguire una transazione aziendale usando gli oggetti modello di dominio. I comandi quindi sono semplicemente strutture dei dati contenenti dati di sola lettura e nessun comportamento. Il nome del comando ne indica lo scopo. In diversi linguaggi, ad esempio C\#, i comandi sono rappresentati come classi, ma non si tratta di vere e proprie classi nel senso degli oggetti.
+In sostanza, la classe del comando contiene tutti i dati necessari per eseguire una transazione aziendale usando gli oggetti modello di dominio. I comandi quindi sono semplicemente strutture dei dati contenenti dati di sola lettura e nessun comportamento. Il nome del comando ne indica lo scopo. In numerosi linguaggi, come C#, i comandi sono rappresentati come classi, ma non si tratta di vere e proprie classi nel senso degli oggetti.
 
-Un'altra caratteristica dei comandi è di non essere modificabili, perché l'utilizzo previsto è che vengano elaborati direttamente dal modello di dominio. Non è necessario modificarli nell'arco della durata prevista. In una classe C\# l'immutabilità può essere realizzata anche senza setter o altri metodi che modificano lo stato interno.
+Un'altra caratteristica dei comandi è di non essere modificabili, perché l'utilizzo previsto è che vengano elaborati direttamente dal modello di dominio. Non è necessario modificarli nell'arco della durata prevista. In una classe C# l'immutabilità può essere ottenuta anche senza setter o altri metodi che modificano lo stato interno.
 
-Tenere presente che se si intende o si prevede che i comandi vengano sottoposti a un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMemeber]` (o `[JsonProperty]`), altrimenti il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti.
+Tenere presente che se si intende o si prevede che i comandi vengano sottoposti a un processo di serializzazione/deserializzazione, le proprietà devono avere un setter privato e l'attributo `[DataMember]` (o `[JsonProperty]`), altrimenti il deserializzatore non sarà in grado di ricostruire l'oggetto nella destinazione con i valori richiesti.
 
 Ad esempio, la classe del comando per la creazione di un ordine è probabilmente simile, in termini di dati, all'ordine che si vuole creare, ma è altrettanto probabile che non siano necessari gli stessi attributi. CreateOrderCommand, ad esempio, non ha un ID ordine, perché l'ordine non è ancora stato creato.
 
@@ -348,15 +348,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -364,14 +364,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -480,7 +480,7 @@ Verrà prima di tutto esaminato un controller API Web di esempio, in cui è effe
 ```csharp
 public class MyMicroserviceController : Controller
 {
-    public MyMicroserviceController(IMediator mediator, 
+    public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
     // ...
 ```
@@ -489,11 +489,11 @@ Si può osservare che il Mediator fornisce un controller API Web essenziale. Ino
 
 ```csharp
 [Route("new")]
-[HttpPost] 
-public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand 
-                                                               runOperationCommand) 
+[HttpPost]
+public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
+                                                               runOperationCommand)
 {
-    var commandResult = await _mediator.SendAsync(runOperationCommand); 
+    var commandResult = await _mediator.SendAsync(runOperationCommand);
 
     return commandResult ? (IActionResult)Ok() : (IActionResult)BadRequest();
 }
@@ -506,17 +506,17 @@ In **eShopOnContainers** un esempio più avanzato di quello precedente prevede l
 L'azione di invio del comando a MediatR è però molto simile, come illustrato nel codice seguente.
 
 ```csharp
-var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,     
-                                                eventMsg.UserId, eventMsg.City, 
+var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,
+                                                eventMsg.UserId, eventMsg.City,
                                                 eventMsg.Street, eventMsg.State,
                                                 eventMsg.Country, eventMsg.ZipCode,
-                                                eventMsg.CardNumber, 
-                                                eventMsg.CardHolderName, 
+                                                eventMsg.CardNumber,
+                                                eventMsg.CardHolderName,
                                                 eventMsg.CardExpiration,
-                                                eventMsg.CardSecurityNumber,  
+                                                eventMsg.CardSecurityNumber,
                                                 eventMsg.CardTypeId);
 
-var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand, 
+var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand,
                                                                         eventMsg.RequestId);
 result = await _mediator.Send(requestCreateOrder);
 ```
@@ -545,14 +545,14 @@ Quindi l'elemento CommandHandler per l'elemento IdentifiedCommand denominato [Id
 
 ```csharp
 // IdentifiedCommandHandler.cs
-public class IdentifiedCommandHandler<T, R> : 
+public class IdentifiedCommandHandler<T, R> :
                                    IAsyncRequestHandler<IdentifiedCommand<T, R>, R>
                                    where T : IRequest<R>
 {
     private readonly IMediator _mediator;
     private readonly IRequestManager _requestManager;
 
-    public IdentifiedCommandHandler(IMediator mediator, 
+    public IdentifiedCommandHandler(IMediator mediator,
                                     IRequestManager requestManager)
     {
         _mediator = mediator;
@@ -575,10 +575,10 @@ public class IdentifiedCommandHandler<T, R> :
         {
             await _requestManager.CreateRequestForCommandAsync<T>(message.Id);
 
-            // Send the embeded business command to mediator 
-            // so it runs its related CommandHandler 
+            // Send the embedded business command to mediator
+            // so it runs its related CommandHandler
             var result = await _mediator.Send(message.Command);
-                
+
             return result;
         }
     }
@@ -599,15 +599,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -616,10 +616,10 @@ public class CreateOrderCommandHandler
         // Add/Update the Buyer AggregateRoot
         var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,  
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -689,7 +689,7 @@ public class MediatorModule : Autofac.Module
                               typeof(CreateOrderCommand).GetTypeInfo().Assembly).
                                    AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
         // Other types registration
-        //...        
+        //...
         builder.RegisterGeneric(typeof(LoggingBehavior<,>)).
                                                    As(typeof(IPipelineBehavior<,>));
         builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).
@@ -701,7 +701,7 @@ public class MediatorModule : Autofac.Module
 Tale classe [LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) può essere implementata come il codice seguente, che registra le informazioni sul gestore comando che viene eseguito e l'esito positivo o negativo.
 
 ```csharp
-public class LoggingBehavior<TRequest, TResponse> 
+public class LoggingBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
@@ -724,7 +724,7 @@ Semplicemente implementando questa classe di comportamento e registrandola nella
 Il microservizio degli ordini di eShopOnContainers applica anche un secondo comportamento per le convalide di base, la classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) che si basa sulla libreria [FluentValidation](https://github.com/JeremySkinner/FluentValidation), come illustrato nel codice seguente:
 
 ```csharp
-public class ValidatorBehavior<TRequest, TResponse> 
+public class ValidatorBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly IValidator<TRequest>[] _validators;
@@ -767,12 +767,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         RuleFor(command => command.State).NotEmpty();
         RuleFor(command => command.Country).NotEmpty();
         RuleFor(command => command.ZipCode).NotEmpty();
-        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19); 
+        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19);
         RuleFor(command => command.CardHolderName).NotEmpty();
-        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date"); 
-        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3); 
+        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date");
+        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3);
         RuleFor(command => command.CardTypeId).NotEmpty();
-        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found"); 
+        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found");
     }
 
     private bool BeValidExpirationDate(DateTime dateTime)
@@ -835,6 +835,6 @@ In modo simile, è possibile implementare altri comportamenti per ulteriori aspe
 - **Jeremy Skinner. FluentValidation.** Repository GitHub. \
   [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
->[!div class="step-by-step"]
->[Precedente](microservice-application-layer-web-api-design.md)
->[Successivo](../implement-resilient-applications/index.md)
+> [!div class="step-by-step"]
+> [Precedente](microservice-application-layer-web-api-design.md)
+> [Successivo](../implement-resilient-applications/index.md)

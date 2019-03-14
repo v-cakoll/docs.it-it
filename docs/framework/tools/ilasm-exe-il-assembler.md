@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492583"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembler IL)
 
@@ -34,7 +34,7 @@ Al prompt dei comandi digitare quanto segue:
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>Parametri
+## <a name="parameters"></a>Parametri
 
 | Argomento | Description |
 | -------- | ----------- |
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > Tutte le opzioni di *Ilasm.exe* non sono soggette alla distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/lis** equivale a **/listing** e **/res**:myresfile.res equivale a **/resource**:myresfile.res. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output**:*file.ext*, ad esempio, equivale a **/output**=*file.ext*.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'assembler IL consente ai fornitori di strumenti di progettare e implementare generatori IL. Grazie a *Ilasm.exe*, gli sviluppatori di strumenti e compilatori possono concentrarsi su IL e sulla generazione di metadati senza doversi preoccupare di emettere IL nel formato di file di tipo PE.
 

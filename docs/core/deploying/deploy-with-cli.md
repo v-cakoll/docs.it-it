@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359731"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
 Questo articolo illustra come pubblicare l'applicazione .NET Core dalla riga di comando. .NET Core offre tre modi per pubblicare le applicazioni. La distribuzione dipendente dal framework genera un file con estensione dll multipiattaforma che usa il runtime di .NET Core installato in locale. L'eseguibile dipendente dal framework genera un file eseguibile specifico della piattaforma che usa il runtime di .NET Core installato in locale. L'eseguibile autonomo genera un file eseguibile specifico della piattaforma e include una copia locale del runtime di .NET Core.
 
-Per una panoramica di queste modalità di pubblicazione, vedere [Distribuzione di applicazioni .NET Core](index.md). 
+Per una panoramica di queste modalità di pubblicazione, vedere [Distribuzione di applicazioni .NET Core](index.md).
 
 Per un aiuto rapido sull'uso dell'interfaccia della riga di comando, la tabella seguente illustra alcuni esempi di pubblicazione di un'app. È possibile specificare il framework di destinazione con il parametro `-f <TFM>` o modificando il file di progetto. Per altre informazioni, vedere [Nozioni di base sulla pubblicazione](#publishing-basics).
 
@@ -33,8 +33,8 @@ Per un aiuto rapido sull'uso dell'interfaccia della riga di comando, la tabella 
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
->[!IMPORTANT]
->\*Quando si usa l'SDK versione 3.0, il file eseguibile dipendente dal framework è la modalità di pubblicazione predefinita durante l'esecuzione del comando `dotnet publish` di base. Ciò si applica solo ai progetti che hanno come destinazione **.NET Core 2.1** o **.NET Core 3.0**.
+> [!IMPORTANT]
+> \*Quando si usa l'SDK versione 3.0, il file eseguibile dipendente dal framework è la modalità di pubblicazione predefinita durante l'esecuzione del comando `dotnet publish` di base. Ciò si applica solo ai progetti che hanno come destinazione **.NET Core 2.1** o **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Nozioni di base sulla pubblicazione
 
@@ -42,7 +42,7 @@ L'impostazione `<TargetFramework>` del file di progetto specifica il framework d
 
 Se si vuole impostare più framework di destinazione, è possibile impostare `<TargetFrameworks>` su più valori di moniker framework di destinazione separati da punto e virgola. È possibile pubblicare uno dei framework con il comando `dotnet publish -f <TFM>`. Ad esempio, se è stato specificato `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` e si esegue `dotnet publish -f netcoreapp2.1`, viene creato un file binario che ha come destinazione .NET Core 2.1.
 
-Se non è stata impostata diversamente, la directory di output del comando [`dotnet publish`](../tools/dotnet-publish.md) è `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. La modalità **BUILD-CONFIGURATION** predefinita è **Debug** a meno che non venga modificata con il parametro `-c`. Ad esempio, `dotnet publish -c Release -f netcoreapp2.1` pubblica in `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Se non è stata impostata diversamente, la directory di output del comando [`dotnet publish`](../tools/dotnet-publish.md) è `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. La modalità **BUILD-CONFIGURATION** predefinita è **Debug** a meno che non venga modificata con il parametro `-c`. Ad esempio, `dotnet publish -c Release -f netcoreapp2.1` pubblica in `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
 Se si usa .NET Core SDK 3.0, la modalità di pubblicazione predefinita per le app che hanno come destinazione .NET Core versione 2.1, 2.2 o 3.0 è un file eseguibile dipendente dal framework.
 
@@ -50,7 +50,7 @@ Se si usa .NET Core SDK 2.1, la modalità di pubblicazione predefinita per le ap
 
 ### <a name="native-dependencies"></a>Dipendenze native
 
-Se l'app ha dipendenze native, è possibile che non venga eseguita in un sistema operativo diverso. Ad esempio, se usa l'API Win32 nativa, l'app non viene eseguita in macOS o Linux. Sarà necessario specificare un codice specifico della piattaforma e compilare un file eseguibile per ogni piattaforma. 
+Se l'app ha dipendenze native, è possibile che non venga eseguita in un sistema operativo diverso. Ad esempio, se usa l'API Win32 nativa, l'app non viene eseguita in macOS o Linux. Sarà necessario specificare un codice specifico della piattaforma e compilare un file eseguibile per ogni piattaforma.
 
 Tenere presente anche che se una libreria a cui viene fatto riferimento include una dipendenza nativa, è possibile che l'app non venga eseguita in ogni piattaforma. Tuttavia, è possibile che un pacchetto NuGet cui viene fatto riferimento includa versioni specifiche della piattaforma per gestire automaticamente le dipendenze native necessarie.
 
@@ -85,6 +85,7 @@ namespace apptest1
     }
 }
 ```
+
 ```vb
 Imports System
 
@@ -128,34 +129,30 @@ La pubblicazione di un eseguibile dipendente dal framework crea un'app che esegu
 
 Per pubblicare un eseguibile dipendente dal framework è necessario usare le opzioni seguenti con il comando `dotnet publish` (ad eccezione di .NET Core 3.x con la piattaforma corrente come destinazione):
 
-- `-r <RID>`  
-  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
-- `--self-contained false`  
-  Questa opzione specifica in .NET Core SDK la creazione di un eseguibile come eseguibile dipendente dal framework.
+- `--self-contained false` Questa opzione indica a .NET Core SDK di creare un eseguibile come eseguibile dipendente dal framework.
 
 Ogni volta che viene usata l'opzione `-r`, il percorso della cartella di output viene modificato in: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
 Se si usa l'[app di esempio](#sample-app), eseguire `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Questo comando crea l'eseguibile seguente: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-> [!Note]
+> [!NOTE]
 > È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per altre informazioni sulla **modalità invariante della globalizzazione** e su come abilitarla, vedere [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modalità invariante della globalizzazione di .NET Core)
 
 ## <a name="self-contained-deployment"></a>Distribuzione autonoma
 
-Quando si pubblica una distribuzione autonoma, .NET Core SDK crea un eseguibile specifico della piattaforma. La pubblicazione di una distribuzione autonoma include tutti i file .NET Core necessari per eseguire l'app ma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Queste dipendenze devono essere presenti nel sistema prima dell'esecuzione dell'app. 
+Quando si pubblica una distribuzione autonoma, .NET Core SDK crea un eseguibile specifico della piattaforma. La pubblicazione di una distribuzione autonoma include tutti i file .NET Core necessari per eseguire l'app ma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Queste dipendenze devono essere presenti nel sistema prima dell'esecuzione dell'app.
 
 La pubblicazione di una distribuzione autonoma crea un'app che non esegue il roll forward alla versione più recente disponibile della patch di protezione di .NET Core. Per altre informazioni sul binding di versione in fase di compilazione, vedere [Selezionare la versione di .NET Core da usare](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 È necessario usare le opzioni seguenti con il comando `dotnet publish` per pubblicare una distribuzione autonoma:
 
-- `-r <RID>`  
-  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
-- `--self-contained true`  
-  Questa opzione specifica in .NET Core SDK la creazione di un eseguibile come distribuzione autonoma.
+- `--self-contained true` Questa opzione indica a .NET Core SDK di creare un eseguibile come distribuzione autonoma.
 
-> [!Note]
+> [!NOTE]
 > È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per altre informazioni sulla **modalità invariante della globalizzazione** e su come abilitarla, vedere [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modalità invariante della globalizzazione di .NET Core)
 
 

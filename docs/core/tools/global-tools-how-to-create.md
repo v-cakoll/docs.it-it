@@ -4,12 +4,12 @@ description: Descrive come creare uno strumento globale. Lo strumento globale è
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826421"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677864"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creare uno strumento globale Core .NET tramite l'interfaccia della riga di comando di .NET Core
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ Tutti gli argomenti dopo il delimitatore `--` vengono passati all'applicazione.
 
 Prima di inserire in un pacchetto e distribuire l'applicazione come uno strumento globale, è necessario modificare il file di progetto. Aprire il file `botsay.csproj` e aggiungere tre nuovi nodi XML al nodo `<Project><PropertyGroup>`:
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [OBBLIGATORIO] Indica che verrà creato un pacchetto dell'applicazione per l'installazione come strumento globale.
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [FACOLTATIVO] Nome alternativo per lo strumento. Se non viene specificato, il nome del comando per lo strumento verrà assegnato in base al file di progetto. È possibile includere più strumenti in un pacchetto, scegliendo un nome descrittivo e univoco che consenta di differenziarli dagli altri strumenti contenuti nello stesso pacchetto.
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [FACOLTATIVO] Percorso in cui verrà creato il pacchetto NuGet. Il pacchetto NuGet viene usato dagli strumenti globali dell'interfaccia della riga di comando di .NET Core per installare lo strumento.
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 Il file `botsay.1.0.0.nupkg` viene creato nella cartella identificata dal valore XML `<PackageOutputPath>` dal file `botsay.csproj`, ovvero in questo esempio la cartella `./nupkg`. Questo ne rende più semplice l'installazione e il test. Per rilasciare pubblicamente uno strumento, caricarlo in [https://www.nuget.org](https://www.nuget.org). Quando lo strumento è disponibile in NuGet, gli sviluppatori possono eseguire un'installazione a livello di utente dello strumento usando l'opzione `--global` del comando [dotnet tool install](dotnet-tool-install.md).
 
-Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto: 
+Dopo aver creato un pacchetto, installare lo strumento da tale pacchetto:
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay

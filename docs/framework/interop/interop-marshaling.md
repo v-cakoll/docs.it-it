@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221251"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677214"
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221251"
   
  Il marshalling di interoperabilità viene usato sia da platform invoke che dall'interoperabilità COM per spostare con precisione gli argomenti dei metodi tra chiamante e chiamato e viceversa, se necessario. Come mostrato nella figura seguente, una chiamata al metodo di platform invoke viene effettuata dal codice gestito al codice non gestito e mai viceversa, ad eccezione del caso in cui sono coinvolte [funzioni di callback](callback-functions.md). Benché il flusso delle chiamate platform invoke possa andare solo dal codice gestito a quello non gestito, il flusso dei dati può essere in entrambe le direzioni, come parametri di input o di output. Le chiamate al metodo di interoperabilità COM possono scorrere in entrambe le direzioni.  
   
- ![Platform invoke](./media/interopmarshaling.png "interopmarshaling")  
-Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM  
+ ![Platform invoke](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM")  
   
  Al livello inferiore, lo stesso servizio di marshalling di interoperabilità viene usato da entrambi i meccanismi. Alcuni tipi di dati sono tuttavia supportati esclusivamente dall'interoperabilità COM o da platform invoke. Per informazioni dettagliate, vedere [Comportamento di marshalling predefinito](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM
   
  Poiché il client e il server si trovano nello stesso apartment, tutto il marshalling dei dati viene gestito automaticamente dal servizio di marshalling di interoperabilità. L'illustrazione seguente mostra il servizio di marshalling di interoperabilità tra gli heap gestiti e non gestiti all'interno dello stesso apartment di tipo COM.  
   
- ![Marshalling di interoperabilità](./media/interopheap.gif "interopheap")  
-Processo di marshalling nello stesso apartment  
+ ![Marshalling di interoperabilità tra heap gestiti e non gestiti](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Processo di marshalling all'interno dello stesso apartment")  
   
  Se si intende esportare un server gestito, ricordare che il client COM determina l'apartment del server. Un server gestito chiamato da un client COM inizializzato in un MTA deve garantire la thread safety.  
   
@@ -84,8 +82,7 @@ Processo di marshalling nello stesso apartment
   
  Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene eseguito dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
   
- ![Marshalling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-Chiamata su diversi apartment tra un client .NET e un oggetto COM  
+ ![Marshalling COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Chiamata su diversi apartment tra un client .NET e un oggetto COM")  
   
  Per effettuare il marshalling su diversi apartment, procedere come indicato di seguito:  
   
@@ -110,14 +107,12 @@ Chiamata su diversi apartment tra un client .NET e un oggetto COM
   
  Nell'illustrazione seguente viene mostrato come il marshalling di interoperabilità e il marshalling COM forniscano canali di comunicazione attraverso i limiti dell'host e del processo.  
   
- ![Marshalling COM](./media/interophost.gif "interophost")  
-Marshalling su diversi processi  
+ ![Marshalling COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Marshalling tra processi")  
   
 ### <a name="preserving-identity"></a>Mantenimento dell'identità  
  In Common Language Runtime l'identità di riferimenti gestiti e non gestiti viene mantenuta. L'illustrazione riportata di seguito mostra il flusso di riferimenti non gestiti diretti (prima riga) e di riferimenti gestiti diretti (ultima riga) attraverso i limiti dell'host e del processo.  
   
- ![COM callable wrapper e runtime callable wrapper](./media/interopdirectref.gif "interopdirectref")  
-Passaggio dei riferimenti attraverso i limiti dell'host e del processo  
+ ![COM Callable Wrapper e Runtime Callable Wrapper](./media/interop-marshaling/interop-direct-ref-across-process.gif "Riferimenti attraverso i limiti dell'host e del processo")  
   
  In questa illustrazione:  
   
@@ -133,7 +128,7 @@ Passaggio dei riferimenti attraverso i limiti dell'host e del processo
 ### <a name="managed-remoting"></a>Servizi remoti gestiti  
  Tra i servizi di runtime vengono inoltre forniti servizi remoti gestiti, utilizzabili per stabilire un canale di comunicazione tra gli oggetti gestiti attraverso i limiti dell'host e del processo. I servizi remoti gestiti possono contenere un firewall tra i componenti di comunicazione, come mostrato nell'illustrazione riportata di seguito.  
   
- ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP o TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel")  
 Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel  
   
  È possibile incanalare tramite SOAP alcune chiamate non gestite, ad esempio quelle tra i componenti serviti e COM.  
@@ -143,7 +138,7 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Comportamento di marshalling predefinito](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|  
 |[Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|  

@@ -1,16 +1,21 @@
 ---
 title: Eseguire il training di un modello di regressione per stimare un valore usando ML.NET
 description: Informazioni su come eseguire il training di un modello di Machine Learning basato sulla regressione per stimare un valore usando ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092904"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673145"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>Eseguire il training di un modello di regressione per stimare un valore usando ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Per il training del modello in ML.NET è in genere necessario eseguire tre passaggi:
 

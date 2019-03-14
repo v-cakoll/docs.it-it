@@ -1,16 +1,21 @@
 ---
 title: Usare modelli additivi generalizzati e funzioni di forma per la comprensibilità dei modelli in ML.NET
 description: Usare modelli additivi generalizzati e funzioni di forma per la comprensibilità dei modelli in ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c6f30a8cc5c07d97c62ded065f1e18a4f0523617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093112"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675589"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Usare modelli additivi generalizzati e funzioni di forma per la comprensibilità dei modelli in ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Quando si creano modelli di Machine Learning, spesso non è sufficiente eseguire semplicemente stime. Spesso gli sviluppatori, i responsabili delle decisioni e gli utenti interessati ai modelli devono comprendere quali criteri vengono adottati dai modelli di Machine Learning per prendere decisioni e quali caratteristiche contribuiscono alle relative prestazioni. I **modelli additivi personalizzati** (GAM, Generalized Additive Model) vengono usati internamente presso Microsoft per la comprensibilità dei modelli in modo da aiutare gli sviluppatori di Machine Learning a creare modelli con capacità elevata facilmente interpretabili da altri.
 

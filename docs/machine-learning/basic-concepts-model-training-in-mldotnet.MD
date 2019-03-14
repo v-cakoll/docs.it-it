@@ -1,19 +1,21 @@
 ---
 title: Concetti di base per il training dei modelli in ML.NET
 description: Questo articolo illustra i concetti di base relativi agli scenari di *training dei modelli* in ML.NET. Non tutti i concetti sono rilevanti per lo scenario più semplice di *stima con un modello esistente*.
-ms.date: 02/13/2019
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303660"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675563"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>Concetti di base per il training dei modelli in ML.NET
 
 Questo articolo illustra i concetti di base relativi agli scenari di *training dei modelli* in ML.NET. Non tutti i concetti sono rilevanti per lo scenario più semplice di *stima con un modello esistente*.
+
+Questo articolo e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 ## <a name="model-training-concepts"></a>Concetti relativi al training dei modelli
 

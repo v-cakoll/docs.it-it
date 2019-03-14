@@ -4,12 +4,12 @@ description: Informazioni su come implementare i gateway API con Ocelot e come u
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: e6ffef646f860a07920c37d239ee7f2e379aac92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143857"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679489"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementare gateway API con Ocelot
 
@@ -28,17 +28,17 @@ Il seguente diagramma dell'architettura illustra in che modo i gateway API vengo
 
 **Figura 6-28**. Architettura di eShopOnContainers con gateway API
 
-Questo diagramma illustra in che modo l'intera applicazione viene distribuita in un singolo host Docker o un computer di sviluppo con "Docker per Windows" o "Docker per Mac". La distribuzione in un qualsiasi agente di orchestrazione, tuttavia, sarebbe piuttosto simile ma qualsiasi contenitore nel diagramma potrebbe venire ridimensionato orizzontalmente nell'agente di orchestrazione. 
+Questo diagramma illustra in che modo l'intera applicazione viene distribuita in un singolo host Docker o un computer di sviluppo con "Docker per Windows" o "Docker per Mac". La distribuzione in un qualsiasi agente di orchestrazione, tuttavia, sarebbe piuttosto simile ma qualsiasi contenitore nel diagramma potrebbe venire ridimensionato orizzontalmente nell'agente di orchestrazione.
 
 Le risorse dell'infrastruttura, inoltre, ad esempio i database, la cache e i broker dei messaggi, devono essere scaricate dall'agente di orchestrazione e distribuite in sistemi a disponibilità elevata per l'infrastruttura, ad esempio Database SQL di Azure, Azure Cosmos DB, Redis di Azure, bus di servizio di Azure o qualsiasi altra soluzione di clustering a disponibilità elevata locale.
 
-Come si può notare nel diagramma, la presenza di più gateway API consente a più team di sviluppo di essere autonomi (in questo caso, le funzionalità di Marketing e le funzionalità di Shopping) nello sviluppo e nella distribuzione di microservizi con i propri gateway API correlati. 
+Come si può notare nel diagramma, la presenza di più gateway API consente a più team di sviluppo di essere autonomi (in questo caso, le funzionalità di Marketing e le funzionalità di Shopping) nello sviluppo e nella distribuzione di microservizi con i propri gateway API correlati.
 
 Un unico gateway API monolitico significherebbe un unico punto che i vari team di sviluppo devono aggiornare, con conseguente rischio di duplicazione di tutti i microservizi con una singola parte dell'applicazione.
 
 Analizzando il progetto più a fondo, un gateway API specifico può talvolta essere limitato anche a un singolo microservizio aziendale a seconda dell'architettura scelta. Se per il gateway API si usano limiti stabiliti dall'azienda o dal dominio, si avrà una progettazione migliore.
 
-La granularità a livello di gateway API può essere particolarmente utile per le applicazioni con interfaccia utente composita più avanzate basate su microservizi, perché il concetto di gateway API specifico è analogo a quello di un servizio di composizione dell'interfaccia utente. 
+La granularità a livello di gateway API può essere particolarmente utile per le applicazioni con interfaccia utente composita più avanzate basate su microservizi, perché il concetto di gateway API specifico è analogo a quello di un servizio di composizione dell'interfaccia utente.
 
 Altri dettagli sono illustrati nella sezione precedente [Creazione dell'interfaccia utente composita basata su microservizi](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md).
 
@@ -89,13 +89,13 @@ La richiesta HTTP eseguirà quel genere di codice C# durante l'accesso al databa
 
 Per quanto riguarda l'URL del microservizio, quando i contenitori vengono distribuiti nel PC di sviluppo locale (host Docker locale), ogni contenitore del microservizio ha sempre una porta interna, in genere la porta 80, specificata nel dockerfile, come illustrato di seguito:
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0.5 AS base
 WORKDIR /app
 EXPOSE 80
 ```
 
-La porta 80 indicata nel codice è interna all'host Docker, quindi non può essere raggiunta dalle app client. 
+La porta 80 indicata nel codice è interna all'host Docker, quindi non può essere raggiunta dalle app client.
 
 Le app client possono accedere solo alle porte esterne (se presenti) pubblicate durante la distribuzione con `docker-compose`.
 
@@ -105,7 +105,7 @@ Quando si sviluppa, invece, è utile accedere direttamente al microservizio/cont
 
 Ecco un esempio del file `docker-compose.override.yml` per il microservizio Catalog:
 
-```
+```yml
 catalog.api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
@@ -113,7 +113,7 @@ catalog.api:
     - ConnectionString=YOUR_VALUE
     - ... Other Environment Variables
   ports:
-    - "5101:80"   # Important: In a production environment you should remove the external port (5101) kept here for microservice debugging purposes. 
+    - "5101:80"   # Important: In a production environment you should remove the external port (5101) kept here for microservice debugging purposes.
                   # The API Gateway redirects and access through the internal port (80).
 ```
 
@@ -123,7 +123,7 @@ In genere non si distribuisce con docker-compose in un ambiente di produzione pe
 
 Eseguire il microservizio Catalog nell'host Docker locale eseguendo la soluzione eShopOnContainers completa da Visual Studio (eseguirà tutti i servizi nei file docker-compose) o semplicemente avviando il microservizio Catalog con il comando docker-compose in CMD o PowerShell posizionato nella cartella in cui si trovano `docker-compose.yml` e docker-compose.override.yml.
 
-```
+```console
 docker-compose run --service-ports catalog.api
 ```
 
@@ -147,7 +147,7 @@ Ocelot è progettato per funzionare solo con ASP.NET Core. È destinato a netsta
 
 È possibile installare Ocelot e le relative dipendenze nel progetto ASP.NET Core con il [pacchetto NuGet di Ocelot](https://www.nuget.org/packages/Ocelot/) da Visual Studio.
 
-```
+```powershell
 Install-Package Ocelot
 ```
 
@@ -175,7 +175,7 @@ namespace OcelotApiGw
         {
             var builder = WebHost.CreateDefaultBuilder(args);
 
-            builder.ConfigureServices(s => s.AddSingleton(builder))                
+            builder.ConfigureServices(s => s.AddSingleton(builder))
                                                           .ConfigureAppConfiguration(
                               ic => ic.AddJsonFile(Path.Combine("configuration",
                                                                 "configuration.json")))
@@ -189,7 +189,7 @@ namespace OcelotApiGw
 
 Il punto importante qui per Ocelot è il file `configuration.json` che è necessario indicare al compilatore tramite il metodo `AddJsonFile()`. Nel file `configuration.json` si specificano tutti i reindirizzamenti del gateway API, vale a dire gli endpoint esterni con porte specifiche e gli endpoint interni correlati, che in genere usano porte diverse.
 
-```
+```json
 {
     "ReRoutes": [],
     "GlobalConfiguration": {}
@@ -200,7 +200,7 @@ La configurazione prevede due sezioni. Una matrice di reindirizzamenti (ReRoutes
 
 Di seguito è riportato un esempio semplificato di [file di configurazione del reindirizzamento](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) di uno dei gateway API di eShopOnContainers.
 
-```
+```json
 {
   "ReRoutes": [
     {
@@ -231,7 +231,7 @@ Di seguito è riportato un esempio semplificato di [file di configurazione del r
         "AllowedScopes": []
       }
     }
-    
+
   ],
     "GlobalConfiguration": {
       "RequestIdKey": "OcRequestId",
@@ -244,7 +244,7 @@ La funzionalità principale di un gateway API Ocelot consiste nel ricevere le ri
 
 Si pensi ad esempio a uno dei reindirizzamenti nel file configuration.json precedente, la configurazione del microservizio Basket.
 
-```
+```json
 {
       "DownstreamPathTemplate": "/api/{version}/{everything}",
       "DownstreamScheme": "http",
@@ -263,7 +263,7 @@ Si pensi ad esempio a uno dei reindirizzamenti nel file configuration.json prece
 }
 ```
 
-Gli oggetti DownstreamPathTemplate, Scheme e DownstreamHostAndPorts costituiscono l'URL del microservizio a cui sarà inoltrata questa richiesta. 
+Gli oggetti DownstreamPathTemplate, Scheme e DownstreamHostAndPorts costituiscono l'URL del microservizio a cui sarà inoltrata questa richiesta.
 
 La porta è la porta interna usata dal servizio. Quando si usano i contenitori, è la porta specificata nel relativo dockerfile.
 
@@ -273,11 +273,11 @@ DownstreamHostAndPorts è una matrice che contiene l'host e la porta di tutti i 
 
 L'oggetto UpstreamPathTemplate è l'URL che Ocelot userà per identificare quale oggetto DownstreamPathTemplate usare per una determinata richiesta del client. Viene infine usato l'oggetto UpstreamHttpMethod per consentire a Ocelot di distinguere tra le varie richieste (GET, POST, PUT) allo stesso URL.
 
-È possibile a questo punto che si abbia un unico gateway API Ocelot (ASP.NET Core WebHost) che usa uno o [più file configuration.json uniti](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) oppure è possibile archiviare la [configurazione in un archivio Consul KV](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
+È possibile a questo punto che si abbia un unico gateway API Ocelot (ASP.NET Core WebHost) che usa uno o [più file configuration.json uniti](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) oppure è possibile archiviare la [configurazione in un archivio Consul KV](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
 Se tuttavia, come detto nelle sezioni sull'architettura e la progettazione, si intende veramente avere microservizi autonomi, potrebbe essere più opportuno suddividere il singolo gateway API monolitico in più gateway API e/o BFF (back-end per front-end). Vediamo a tale scopo come implementare questo approccio con i contenitori Docker.
 
-### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>Utilizzo di una singola immagine del contenitore Docker per eseguire più tipi di contenitore gateway API/BFF 
+### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>Utilizzo di una singola immagine del contenitore Docker per eseguire più tipi di contenitore gateway API/BFF
 
 In eShopOnContainers viene usata una singola immagine del contenitore Docker con il gateway API Ocelot ma successivamente, in fase di esecuzione, vengono creati servizi/contenitori diversi per ogni tipo di API-Gateway/BFF specificando un file configuration.json diverso che usa un volume Docker per accedere a una cartella del PC diversa per ogni servizio.
 
@@ -287,20 +287,19 @@ In eShopOnContainers viene usata una singola immagine del contenitore Docker con
 
 In eShopOnContainers l'"immagine generica del Docker del gateway API Ocelot" viene creata con il progetto denominato "OcelotApiGw" e il nome di immagine "eshop/ocelotapigw" specificato nel file docker-compose.yml. Durante la distribuzione in Docker, saranno presenti quattro contenitori API-Gateway creati dalla stessa immagine di Docker, come mostrato nel seguente estratto del file docker-compose.yml.
 
-```
-
+```yml
   mobileshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
       context: .
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
- 
+
   mobilemarketingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
       context: .
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
- 
+
   webshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
@@ -316,31 +315,31 @@ In eShopOnContainers l'"immagine generica del Docker del gateway API Ocelot" vie
 
 Inoltre, come si può notare nel file docker-compose.override.yml, l'unica differenza tra questi contenitori API-Gateway è il file di configurazione Ocelot, che è diverso per ogni contenitore di servizi e viene specificato in fase di esecuzione tramite un volume Docker.
 
-```
+```yml
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5200:80"   
+    - "5200:80"
   volumes:
     - ./src/ApiGateways/Mobile.Bff.Shopping/apigw:/app/configuration
- 
+
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5201:80"   
+    - "5201:80"
   volumes:
     - ./src/ApiGateways/Mobile.Bff.Marketing/apigw:/app/configuration
 
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5202:80"   
+    - "5202:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Shopping/apigw:/app/configuration
 
@@ -360,7 +359,7 @@ A causa del codice precedente e, come illustrato di seguito in Visual Studio Exp
 
 **Figura 6-34**. L'unico file necessario per definire ogni gateway API/BFF con Ocelot è un file di configurazione
 
-Suddividendo il gateway API in più gateway API, i diversi team di sviluppo impegnati su subset diversi di microservizi possono gestire i propri gateway API usando file di configurazione Ocelot indipendenti. Possono inoltre usare contemporaneamente la stessa immagine Docker Ocelot. 
+Suddividendo il gateway API in più gateway API, i diversi team di sviluppo impegnati su subset diversi di microservizi possono gestire i propri gateway API usando file di configurazione Ocelot indipendenti. Possono inoltre usare contemporaneamente la stessa immagine Docker Ocelot.
 
 Se a questo punto si esegue eShopOnContainers con i gateway API (inclusi per impostazione predefinita in VS quando si apre la soluzione eShopOnContainers-ServicesAndWebApps.sln e si esegue "docker-compose up"), verranno eseguiti gli indirizzamenti di esempio indicati di seguito.
 
@@ -392,7 +391,7 @@ Nel diagramma seguente è possibile vedere in che modo i servizi di aggregazione
 
 Entrando maggiormente in dettaglio, nell'area di business "Shopping" nell'immagine seguente è possibile vedere che le comunicazioni frammentate tra le app client e i microservizi diminuiscono quando si usano i servizi di aggregazione nei gateway API.
 
- ![Architettura di eShopOnContainers ingrandita, con i servizi di aggregazione, che "assembla" una risposta "unendo" le risposte di diversi microservizi per ridurre le comunicazioni frammentate con il client finale.](./media/image38.png)
+![Architettura di eShopOnContainers ingrandita, con i servizi di aggregazione, che "assembla" una risposta "unendo" le risposte di diversi microservizi per ridurre le comunicazioni frammentate con il client finale.](./media/image38.png)
 
 **Figura 6-38**. Visualizzazione in dettaglio dei servizi di aggregazione
 
@@ -406,13 +405,13 @@ In un gateway API Ocelot è possibile inserire un servizio di autenticazione, ad
 
 Poiché eShopOnContainers usa più gateway API con limiti basati su aree di business e BFF, il servizio di gestione delle identità/autenticazione viene lasciato al di fuori dei gateway API, come evidenziato in giallo nel diagramma seguente.
 
- ![Diagramma dell'architettura di eShopOnContainers con il microservizio di gestione delle identità nel gateway API.](./media/image39.png)
+![Diagramma dell'architettura di eShopOnContainers con il microservizio di gestione delle identità nel gateway API.](./media/image39.png)
 
 **Figura 6-39**. Posizione del servizio di gestione delle identità in eShopOnContainers
 
 Ocelot supporta tuttavia anche il posizionamento del microservizio di gestione delle identità/autenticazione all'interno del limite del gateway API, come illustrato in questo altro diagramma.
 
- ![Autenticazione con il servizio di gestione delle identità nel gateway API (AG): 1) AG richiede un token di autenticazione al microservizio di gestione delle identità, 2) Il microservizio di gestione delle identità restituisce il token ad AG, 3-4) AG invia le richieste ai microservizi usando il token di autenticazione.](./media/image40.png)
+![Autenticazione con il microservizio di gestione delle identità nel gateway API (AG): 1) AG richiede un token di autenticazione al microservizio di gestione delle identità, 2) Il microservizio di gestione delle identità restituisce il token ad AG, 3-4) AG invia le richieste ai microservizi usando il token di autenticazione.](./media/image40.png)
 
 **Figura 6-40**. Autenticazione in Ocelot
 
@@ -422,7 +421,7 @@ Se l'app è protetta a livello di gateway API, in ogni caso il modulo di autenti
 
 Per proteggere con autenticazione qualsiasi servizio a livello di gateway API, occorre impostare AuthenticationProviderKey nelle relative impostazioni nel file configuration.json.
 
-```
+```json
     {
       "DownstreamPathTemplate": "/api/{version}/{everything}",
       "DownstreamScheme": "http",
@@ -443,7 +442,7 @@ Per proteggere con autenticazione qualsiasi servizio a livello di gateway API, o
 
 In fase di esecuzione, Ocelot cerca nella sezione dei reindirizzamenti (ReRoutes) la voce AuthenticationOptions.AuthenticationProviderKey e verifica che sia stato registrato un provider di autenticazione con la chiave specificata. In caso negativo, Ocelot non viene avviato. In caso affermativo, invece, il reindirizzamento userà tale provider durante l'esecuzione.
 
-Poiché il WebHost Ocelot è configurato con `authenticationProviderKey = "IdentityApiKey"`, sarà necessaria l'autenticazione ogni volta che il servizio riceverà richieste senza token di autenticazione. 
+Poiché il WebHost Ocelot è configurato con `authenticationProviderKey = "IdentityApiKey"`, sarà necessaria l'autenticazione ogni volta che il servizio riceverà richieste senza token di autenticazione.
 
 ```csharp
 namespace OcelotApiGw
@@ -495,8 +494,8 @@ Le voci ValidAudiences, ad esempio "basket", sono correlate al pubblico definito
 // prevent from mapping "sub" claim to nameidentifier.
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-var identityUrl = Configuration.GetValue<string>("IdentityUrl"); 
-                
+var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+
 services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -512,9 +511,9 @@ services.AddAuthentication(options =>
 
 Se si prova ad accedere a qualsiasi microservizio protetto, ad esempio il microservizio Basket con un URL di reindirizzamento basato sul gateway API, quale `http://localhost:5202/api/v1/b/basket/1`, verrà restituito l'errore 401 di utente non autorizzato, a meno che non si specifichi un token valido. D'altra parte, se un URL di reindirizzamento viene autenticato, Ocelot richiamerà qualsiasi schema di downstream ad esso associato (l'URL interno del microservizio).
 
-**Autorizzazione a livello di reindirizzamenti di Ocelot.**  Ocelot supporta l'autorizzazione basata su attestazioni valutata dopo l'autenticazione. L'autorizzazione viene impostata a livello di route aggiungendo le righe seguenti alla configurazione di reindirizzamento. 
+**Autorizzazione a livello di reindirizzamenti di Ocelot.**  Ocelot supporta l'autorizzazione basata su attestazioni valutata dopo l'autenticazione. L'autorizzazione viene impostata a livello di route aggiungendo le righe seguenti alla configurazione di reindirizzamento.
 
-```
+```json
 "RouteClaimsRequirement": {
     "UserType": "employee"
 }
@@ -524,9 +523,9 @@ In questo esempio, quando viene chiamato il middleware di autorizzazione, Ocelot
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Utilizzo dell'oggetto Ingress di Kubernetes insieme ai gateway API Ocelot
 
-Quando si usa Kubernetes (come in un cluster del servizio Azure Kubernetes), in genere si uniscono tutte le richieste HTTP attraverso il [livello di oggetto Ingress di Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) basato su *Nginx*.
+Quando si usa Kubernetes (come in un cluster del servizio Kubernetes di Azure), in genere si uniscono tutte le richieste HTTP attraverso il [livello di oggetto Ingress di Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) basato su *Nginx*.
 
-In Kubernetes, se non si usa un alcun approccio con oggetto Ingress, i servizi e i pod hanno indirizzi IP instradabili solo dalla rete di cluster. 
+In Kubernetes, se non si usa un alcun approccio con oggetto Ingress, i servizi e i pod hanno indirizzi IP instradabili solo dalla rete di cluster.
 
 Se invece si usa un approccio con oggetto Ingress, si avrà un livello intermedio tra Internet e i servizi (inclusi i gateway API), che agisce come proxy inverso.
 
@@ -534,9 +533,9 @@ Come definizione, un oggetto Ingress è una raccolta di regole che consentono al
 
 In eShopOnContainers, quando lo sviluppo avviene in locale e si usa solo il computer di sviluppo come host Docker, non si usa alcun oggetto Ingress, ma solo più gateway API.
 
-Quando invece la destinazione è un ambiente di "produzione" basato su Kubernetes, eShopOnContainers usa un oggetto Ingress davanti ai gateway API. I client, in questo modo, chiamano lo stesso URL di base, ma le richieste vengono instradate a più gateway API o BFF. 
+Quando invece la destinazione è un ambiente di "produzione" basato su Kubernetes, eShopOnContainers usa un oggetto Ingress davanti ai gateway API. I client, in questo modo, chiamano lo stesso URL di base, ma le richieste vengono instradate a più gateway API o BFF.
 
-I gateway API sono front-end o facciate che espongono solo i servizi, ma non le applicazioni Web che di solito non rientrano nel loro ambito. I gateway API possono inoltre nascondere determinati microservizi interni. 
+I gateway API sono front-end o facciate che espongono solo i servizi, ma non le applicazioni Web che di solito non rientrano nel loro ambito. I gateway API possono inoltre nascondere determinati microservizi interni.
 
 L'oggetto Ingress, invece, si limita a reindirizzare le richieste HTTP ma non tenta di nascondere alcun microservizio o app Web.
 
@@ -579,6 +578,6 @@ Esistono altre importanti funzionalità da cercare e usare quando si usa un gate
 - **Limite di frequenza** \
   [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
->[!div class="step-by-step"]
->[Precedente](background-tasks-with-ihostedservice.md)
->[Successivo](../microservice-ddd-cqrs-patterns/index.md)
+> [!div class="step-by-step"]
+> [Precedente](background-tasks-with-ihostedservice.md)
+> [Successivo](../microservice-ddd-cqrs-patterns/index.md)

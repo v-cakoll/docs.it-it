@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835434"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674445"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -273,7 +273,7 @@ A partire da C# 8.0, è possibile creare e utilizzare i flussi in modo asincrono
 1. Restituisce <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 1. Il metodo contiene istruzioni `yield return` per restituire gli elementi successivi nel flusso asincrono.
 
-Per utilizzare un flusso asincrono, è necessario aggiungere la parola chiave `await` prima della parola chiave `foreach` quando si enumerano gli elementi del flusso. Per l'aggiunta della parola chiave `await`, il metodo che enumera il flusso asincrono deve essere dichiarato con il modificatore `async` e restituire un tipo consentito per un metodo `async`. In genere ciò significa restituire <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Può anche essere <xref:System.Threading.Tasks.ValueTask> o <xref:System.Threading.Tasks.ValueTask%601>. Un metodo può sia utilizzare che produrre un flusso asincrono, il che significa che restituirebbe <xref:System.Collections.Generic.IAsyncEnumerable%601>. Il codice seguente genera una sequenza da 1 a 20, con un'attesa di 100 ms tra la generazione di ogni numero:
+Per utilizzare un flusso asincrono, è necessario aggiungere la parola chiave `await` prima della parola chiave `foreach` quando si enumerano gli elementi del flusso. Per l'aggiunta della parola chiave `await`, il metodo che enumera il flusso asincrono deve essere dichiarato con il modificatore `async` e restituire un tipo consentito per un metodo `async`. In genere ciò significa restituire <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Può anche essere <xref:System.Threading.Tasks.ValueTask> o <xref:System.Threading.Tasks.ValueTask%601>. Un metodo può sia utilizzare che produrre un flusso asincrono, il che significa che restituirebbe <xref:System.Collections.Generic.IAsyncEnumerable%601>. Il codice seguente genera una sequenza da 0 a 19, con un'attesa di 100 ms tra la generazione di ogni numero:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -335,7 +335,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 Il codice seguente crea un intervallo secondario con le parole "quick", "brown" e "fox". Include da `words[1]` a `words[3]`. L'elemento `words[4]` non è compreso nell'intervallo.
 
 ```csharp
-var brownFox = words[1..4];
+var quickBrownFox = words[1..4];
 ```
 
 Il codice seguente crea un intervallo secondario con "lazy" e "dog". Include `words[^2]` e `words[^1]`. L'indice finale `words[^0]` non viene incluso:

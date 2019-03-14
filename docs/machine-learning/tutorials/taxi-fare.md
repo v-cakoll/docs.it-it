@@ -3,22 +3,24 @@ title: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato
 description: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 02/08/2019
+ms.date: 03/05/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251092"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678393"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET
+
+Questa esercitazione illustra come usare ML.NET per creare un [modello di regressione](../resources/glossary.md#regression) per la stima dei prezzi, precisamente delle tariffe dei taxi a New York.
 
 > [!NOTE]
 > Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Questa esercitazione illustra come usare ML.NET per creare un [modello di regressione](../resources/glossary.md#regression) per la stima dei prezzi, precisamente delle tariffe dei taxi a New York.
+Questa esercitazione e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 In questa esercitazione si imparerà a:
 > [!div class="checklist"]

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759132"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680269"
 ---
 # <a name="net-api-analyzer"></a>Analizzatore di API .NET
 
@@ -44,7 +44,7 @@ Quando un'API deprecata, ad esempio <xref:System.Net.WebClient>, viene usata nel
 
 La finestra **Elenco errori** contiene avvisi con un ID univoco per ogni API deprecata, come illustrato nell'esempio seguente (`DE004`): 
 
-!["Screenshot della finestra Elenco errori con l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings.jpg)
+!["Screenshot della finestra Elenco errori con l'ID e la descrizione dell'avviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Finestra Elenco errori che include gli avvisi.")
 
 Facendo clic sull'ID si passa a una pagina Web con informazioni dettagliate sul motivo per cui l'API è stata deprecata e suggerimenti per le API alternative utilizzabili.
 
@@ -112,5 +112,5 @@ L'utente decide come devono essere gestiti i dati diagnostici, ovvero come avvis
 
 ## <a name="see-also"></a>Vedere anche
 
-- Post di blog [Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) (Introduzione all'analizzatore di API).
+- Post di blog [Introducing API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) (Introduzione all'analizzatore di API).
 - Video dimostrativo sull'[analizzatore di API](https://youtu.be/eeBEahYXGd0) su YouTube.

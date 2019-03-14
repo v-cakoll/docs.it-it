@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0176c2fe62d871b265ecd652d2789c7acdfdb765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631841"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479155"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
@@ -27,7 +27,7 @@ Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
 |Argomento|Description|  
 |--------------|-----------------|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Specifica un algoritmo hash facoltativo da usare quando si cerca un file in un catalogo.|  
 |`/kp`|Specifica che la verifica deve essere eseguita con i criteri di firma del driver in modalità kernel.|  
 |`/ms`|Usa semantica di verifica multipla. Questo è il comportamento predefinito di una chiamata [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) in [!INCLUDE[win8](../../../includes/win8-md.md)] e versioni successive.|  
-|`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  L'utilizzo dell'opzione `/o` è consigliato. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
+|`/o` *Versione*|Verifica il file in base alla versione del sistema operativo. *Versione* ha il formato seguente: *IDPiattaforma*:*VersionePrincipale*.*VersioneSecondaria*.*NumeroBuild*. *IDPiattaforma* rappresenta il valore sottostante di un membro dell'enumerazione <xref:System.PlatformID>. **Importante:**  L'uso dell'opzione `/o` è consigliato. Se `/o` non è specificata, è possibile che vengano restituiti risultati imprevisti. Ad esempio, se non si include l'opzione `/o`, i cataloghi di sistema che vengono convalidati correttamente in un sistema operativo precedente potrebbero non essere convalidati correttamente in un sistema operativo più nuovo.|  
 |`/p7`|Verifica i file PKCS #7. Non viene usato alcun criterio esistente per la convalida PKCS #7. La firma viene controllata e viene creata una catena per il certificato di firma.|  
 |`/pa`|Specifica che devono essere usati i criteri di verifica Authenticode predefiniti. Se l'opzione `/pa` non è specificata, vengono usati i criteri di verifica dei driver di Windows. Non è possibile usare questa opzione con le opzioni `catdb`.|  
 |`/pg` *GUIDCriteri*|Specifica i criteri di verifica in base al GUID. *GUIDCriteri* corrisponde all'IDAzione dei criteri di verifica. Non è possibile usare questa opzione con le opzioni `catdb`.|  

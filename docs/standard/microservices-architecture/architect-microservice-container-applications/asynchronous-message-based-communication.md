@@ -1,15 +1,15 @@
 ---
 title: Comunicazione asincrona basata su messaggi
-description: Architettura di Microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | La comunicazione asincrona basata su messaggi è un concetto essenziale nell'architettura dei microservizi, perché è il modo migliore per mantenere i microservizi al contempo indipendenti uno dall'altro e sincronizzati.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5010b521dc80a61718de1c797ae451bb1f5ad93
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969362"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674666"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -106,6 +106,6 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)** \
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
->[!div class="step-by-step"]
->[Precedente](communication-in-microservice-architecture.md)
->[Successivo](maintain-microservice-apis.md)
+> [!div class="step-by-step"]
+> [Precedente](communication-in-microservice-architecture.md)
+> [Successivo](maintain-microservice-apis.md)

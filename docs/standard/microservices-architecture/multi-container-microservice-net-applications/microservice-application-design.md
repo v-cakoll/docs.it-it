@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981881"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674393"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
@@ -91,7 +91,7 @@ Pertanto, le unità di distribuzione per i microservizi (e anche per i database 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento**  
+- **Repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi
@@ -142,7 +142,7 @@ Come accennato nella sezione relativa all'architettura, durante la progettazione
 
 L'architettura esterna è costituita dall'architettura di microservizi composta da più servizi, in base ai principi descritti nella sezione sull'architettura di questa guida. Tuttavia, a seconda della natura di ogni microservizio e indipendentemente dall'architettura di microservizi di alto livello scelta, è comune e in alcuni casi consigliabile disporre di diverse architetture interne, ognuna basata su schemi differenti, per microservizi diversi. I microservizi possono anche usare tecnologie e linguaggi di programmazione differenti. La figura 6-2 illustra questa diversità.
 
-![Differenza tra architettura esterna (modelli di microservizio, gateway API, comunicazioni resilienti, pubblicazione/sottoscrizione e così via) e architettura interna (basata su dati/CRUD, modelli DDD, inserimento di dipendenze, librerie multiple e così via).](./media/image2.png)
+![Differenza tra l'architettura esterna (modelli di microservizio, gateway API, comunicazioni resilienti, pubblicazione/sottoscrizione e così via) e l'architettura interna (basata su dati/CRUD, modelli DDD, inserimento di dipendenze, librerie multiple e così via).](./media/image2.png)
 
 **Figura 6-2**. Architettura e progettazione esterne e interne a confronto
 
@@ -150,7 +150,7 @@ Ad esempio, nell'esempio *eShopOnContainers* i microservizi del catalogo, del ca
 
 Un altro motivo per usare una tecnologia differente per ogni microservizio potrebbe essere la natura dei diversi microservizi. Ad esempio, potrebbe essere preferibile usare un linguaggio di programmazione funzionale quale F\# o addirittura un linguaggio come R se si fa riferimento a domini di Machine Learning e intelligenza artificiale, invece di un linguaggio di programmazione più orientato a oggetti come C\#.
 
-In conclusione, ogni microservizio può avere un'architettura interna differente in base ai diversi schemi progettuali. Non tutti i microservizi devono essere implementati usando schemi DDD avanzati, dal momento che questo approccio apporterebbe troppe modifiche alla progettazione. Analogamente, i microservizi complessi con una logica di business in continua evoluzione non dovrebbero essere implementati come componenti CRUD perché il risultato potrebbe essere un codice di scarsa qualità. 
+In conclusione, ogni microservizio può avere un'architettura interna differente in base ai diversi schemi progettuali. Non tutti i microservizi devono essere implementati usando schemi DDD avanzati, dal momento che questo approccio apporterebbe troppe modifiche alla progettazione. Analogamente, i microservizi complessi con una logica di business in continua evoluzione non dovrebbero essere implementati come componenti CRUD perché il risultato potrebbe essere un codice di scarsa qualità.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Il nuovo mondo: più schemi architetturali e microservizi poliglotti
 

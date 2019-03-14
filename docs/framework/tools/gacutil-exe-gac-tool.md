@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492491"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (strumento Global Assembly Cache)
 Lo strumento Global Assembly Cache consente di visualizzare e modificare il contenuto della Global Assembly Cache e della Download Cache.  
@@ -39,7 +39,7 @@ Lo strumento Global Assembly Cache consente di visualizzare e modificare il cont
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
 |Argomento|Description|  
 |--------------|-----------------|  
@@ -63,13 +63,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Specifica un riferimento analizzato a uno o più assembly da installare o disinstallare. Specificare questa opzione con le opzioni **/i**, **/il**, **/u** o **/ul**.<br /><br /> Per installare un assembly, specificare i parametri *assemblyPath*, *scheme*, *id* e *description* con questa opzione. Per disinstallare un assembly, specificare i parametri *assemblyName*, *scheme*, *id* e *description*.<br /><br /> Per rimuovere un riferimento a un assembly, è necessario specificare gli stessi parametri *scheme*, *id* e *description* specificati con le opzioni **/i** e **/r** (o **/ir**) al momento dell'installazione dell'assembly. Se si sta disinstallando un assembly, questo viene rimosso anche dalla Global Assembly Cache se si tratta dell'ultimo riferimento da rimuovere e se in Windows Installer non ci sono riferimenti residui all'assembly.<br /><br /> Il parametro *scheme* specifica il tipo di schema di installazione. È possibile specificare uno dei valori seguenti:<br /><br /> - UNINSTALL_KEY: specificare questo valore se il programma di installazione aggiunge l'applicazione a Installazione applicazioni in Microsoft Windows. La applicazioni si aggiungono a Installazione applicazioni aggiungendo una chiave del Registro di sistema a HKLM\Software\Microsoft\Windows\CurrentVersion.<br />- FILEPATH: specificare questo valore se il programma di installazione non aggiunge l'applicazione a Installazione applicazioni.<br />- OPAQUE: specificare questo valore se l'inserimento di una chiave del Registro di sistema o di un percorso di file non è applicabile al proprio scenario di installazione. Questo valore consente di specificare informazioni personalizzate per il parametro *id*.<br /><br /> Il valore da specificare per il parametro *id* dipende dal valore specificato per il parametro *scheme*:<br /><br /> -  Se si specifica UNINSTALL_KEY per il parametro *scheme*, specificare il nome dell'applicazione impostato nella chiave del Registro di sistema HKLM\Software\Microsoft\Windows\CurrentVersion. Se ad esempio la chiave del Registro di sistema è HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, specificare MyApp per il parametro *id*.<br />-  Se si specifica FILEPATH per il parametro *scheme*, specificare il percorso completo del file eseguibile che installa l'assembly come parametro *id*.<br />-  Se si specifica OPAQUE per il parametro *scheme*, è possibile specificare qualsiasi porzione di dati come parametro *id*. I dati specificati devono essere racchiusi tra virgolette ("").<br /><br /> Il parametro *description* consente di specificare testo descrittivo sull'applicazione da installare. Queste informazioni vengono visualizzate quando vengono enumerati i riferimenti.|  
 |**/silent**|Evita la visualizzazione di tutto l'output.|  
 |**/u**  *assemblyName*|Disinstalla un assembly dalla cache di assembly globale.|  
-|**/uf**  *assemblyName*|Forza la disinstallazione di un assembly specificato rimuovendone tutti i riferimenti.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/f**. **Nota:**  Non è possibile utilizzare questa opzione per rimuovere un assembly installato utilizzando Microsoft Windows Installer. Se si tenta di eseguire questa operazione, verrà visualizzato un messaggio di errore.|  
+|**/uf**  *assemblyName*|Forza la disinstallazione di un assembly specificato rimuovendone tutti i riferimenti.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/f**. **Nota:**  Non è possibile usare questa opzione per rimuovere un assembly installato con Microsoft Windows Installer. Se si tenta di eseguire questa operazione, verrà visualizzato un messaggio di errore.|  
 |**/ul** *assemblyListFile*|Disinstalla uno o più assembly specificati in *assemblyListFile* dalla Global Assembly Cache.|  
 |**/u**[**ngen**] *assemblyName*|Disinstalla un assembly specificato dalla Global Assembly Cache. Se l'assembly specificato dispone di conteggi dei riferimenti esistenti, verranno visualizzati i conteggi dei riferimenti e l'assembly non verrà rimosso dalla Global Assembly Cache. **Nota:**  In .NET Framework versione 2.0 l'opzione `/ungen` non è supportata. Usare invece il comando `uninstall` di [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> Se si specifica **/ungen** in .NET Framework versioni 1.0 e 1.1, Gacutil.exe rimuove l'assembly dalla cache delle immagini native. In questa cache vengono archiviate le immagini native degli assembly create usando il [generatore di immagini native (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|Disinstalla un riferimento a un assembly specificato dalla Global Assembly Cache. Per rimuovere un riferimento a un assembly, è necessario specificare gli stessi parametri *scheme*, *id* e *description* specificati con le opzioni **/i** e **/r** (o **/ir**) al momento dell'installazione dell'assembly. Per una descrizione dei valori validi che è possibile specificare per questi parametri, vedere l'opzione **/r**.<br /><br /> Specificare questa opzione equivale a specificare contemporaneamente le opzioni **/u** e **/r**.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]
 >  È necessario disporre dei privilegi di amministratore per utilizzare Gacutil.exe.  

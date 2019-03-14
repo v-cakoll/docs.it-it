@@ -4,14 +4,14 @@ description: Come specificare la composizione di microservizi per un'applicazion
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973509"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712357"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
 Il file [docker-compose.yml](https://docs.docker.com/compose/compose-file/) è stato introdotto nella sezione [Passaggio 4 di questa guida. Definire i servizi in docker-compose.yml quando si compila un'applicazione Docker a più contenitori](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Tuttavia esistono altri modi per usare i file docker-compose che vale la pena di esplorare in maggiore dettaglio.
 
@@ -117,21 +117,21 @@ Concentrandosi su un singolo contenitore, la definizione del microservizio conte
 
 La configurazione base di questo servizio con contenitore è la seguente:
 
--   Si basa sull'immagine eshop/catalog.api personalizzata. Per semplicità non esiste un'impostazione chiave build: nel file. Ciò significa che l'immagine deve essere stata compilata in precedenza (con docker build) oppure è stata scaricata (con il comando docker pull) da un registro Docker.
+- Si basa sull'immagine eshop/catalog.api personalizzata. Per semplicità non esiste un'impostazione chiave build: nel file. Ciò significa che l'immagine deve essere stata compilata in precedenza (con docker build) oppure è stata scaricata (con il comando docker pull) da un registro Docker.
 
--   Definisce una variabile di ambiente denominata ConnectionString con la stringa di connessione che Entity Framework deve usare per accedere all'istanza di SQL Server contenente il modello di dati di catalogo. In questo caso, lo stesso contenitore SQL Server contiene più database. Pertanto la memoria necessaria nel computer di sviluppo per Docker è inferiore. Tuttavia è possibile anche distribuire un contenitore SQL Server per ogni database di microservizi.
+- Definisce una variabile di ambiente denominata ConnectionString con la stringa di connessione che Entity Framework deve usare per accedere all'istanza di SQL Server contenente il modello di dati di catalogo. In questo caso, lo stesso contenitore SQL Server contiene più database. Pertanto la memoria necessaria nel computer di sviluppo per Docker è inferiore. Tuttavia è possibile anche distribuire un contenitore SQL Server per ogni database di microservizi.
 
--   Il nome SQL Server è sql.data, ovvero lo stesso nome usato per il contenitore in cui è in esecuzione l'istanza di SQL Server per Linux. Questo approccio è vantaggioso perché la possibilità di usare questa risoluzione di nomi (interna all'host Docker) risolverà l'indirizzo di rete e non è quindi necessario conoscere l'IP interno per i contenitori a cui si sta accedendo da altri contenitori.
+- Il nome SQL Server è sql.data, ovvero lo stesso nome usato per il contenitore in cui è in esecuzione l'istanza di SQL Server per Linux. Questo approccio è vantaggioso perché la possibilità di usare questa risoluzione di nomi (interna all'host Docker) risolverà l'indirizzo di rete e non è quindi necessario conoscere l'IP interno per i contenitori a cui si sta accedendo da altri contenitori.
 
 Poiché la stringa di connessione viene definita da una variabile di ambiente, è possibile impostare questa variabile tramite un meccanismo diverso e in un momento diverso. Ad esempio, è possibile impostare una stringa di connessione diversa durante la distribuzione in produzione negli host finali oppure dalle pipeline CI/CD in Azure DevOps Services o dal sistema DevOps preferito.
 
--   Espone la porta 80 per l'accesso interno al servizio catalog.api all'interno dell'host Docker. L'host è attualmente una VM Linux perché si basa su un'immagine Docker per Linux, ma è possibile configurare il contenitore per l'esecuzione su un'immagine per Windows.
+- Espone la porta 80 per l'accesso interno al servizio catalog.api all'interno dell'host Docker. L'host è attualmente una VM Linux perché si basa su un'immagine Docker per Linux, ma è possibile configurare il contenitore per l'esecuzione su un'immagine per Windows.
 
--   Inoltra la porta 80 esposta sul contenitore alla porta esterna 5101 sul computer host Docker (la VM Linux).
+- Inoltra la porta 80 esposta sul contenitore alla porta esterna 5101 sul computer host Docker (la VM Linux).
 
--   Collega il servizio Web al servizio sql.data, ossia l'istanza di SQL Server per il database Linux in esecuzione in un contenitore. Quando si specifica questa dipendenza, il contenitore catalog.api verrà avviato solo dopo l'avvio del contenitore sql.data; questo aspetto è importante perché per catalog.api è necessario che prima sia in esecuzione il database SQL Server. Tuttavia, questo tipo di dipendenza di contenitore non è sufficiente in molti casi poiché Docker esegue il controllo solo a livello di contenitore. In alcuni casi il servizio, in questo caso SQL Server, potrebbe non essere ancora pronto ed è quindi consigliabile implementare la logica di ripetizione con il backoff esponenziale nei microservizi client. In questo modo, se un contenitore di dipendenza non è pronto per un breve periodo di tempo, l'applicazione sarà ancora resiliente.
+- Collega il servizio Web al servizio sql.data, ossia l'istanza di SQL Server per il database Linux in esecuzione in un contenitore. Quando si specifica questa dipendenza, il contenitore catalog.api verrà avviato solo dopo l'avvio del contenitore sql.data; questo aspetto è importante perché per catalog.api è necessario che prima sia in esecuzione il database SQL Server. Tuttavia, questo tipo di dipendenza di contenitore non è sufficiente in molti casi poiché Docker esegue il controllo solo a livello di contenitore. In alcuni casi il servizio, in questo caso SQL Server, potrebbe non essere ancora pronto ed è quindi consigliabile implementare la logica di ripetizione con il backoff esponenziale nei microservizi client. In questo modo, se un contenitore di dipendenza non è pronto per un breve periodo di tempo, l'applicazione sarà ancora resiliente.
 
--   Viene configurata per consentire l'accesso ai server esterni: l'impostazione extra\_hosts consente di accedere ai server esterni o ai computer all'esterno dell'host Docker (quindi all'esterno della VM predefinita che è un host Docker di sviluppo), ad esempio un'istanza locale di SQL Server sul PC di sviluppo.
+- Viene configurata per consentire l'accesso ai server esterni: l'impostazione extra\_hosts consente di accedere ai server esterni o ai computer all'esterno dell'host Docker (quindi all'esterno della VM predefinita che è un host Docker di sviluppo), ad esempio un'istanza locale di SQL Server sul PC di sviluppo.
 
 Altre impostazioni più avanzate del file docker-compose.yml verranno illustrate nelle sezioni successive.
 
@@ -155,7 +155,7 @@ Un aspetto importante di qualsiasi processo di distribuzione continua (CD) o di 
 
 Con Docker Compose è possibile creare ed eliminare definitivamente l'ambiente isolato molto facilmente usando alcuni comandi al prompt dei comandi o script, come i comandi seguenti:
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
 docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
@@ -207,7 +207,7 @@ services:
     image: eshop/basket.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
       - basket.data
       - identity.api
@@ -217,7 +217,7 @@ services:
     image: eshop/catalog.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
       - sql.data
       - rabbitmq
@@ -226,7 +226,7 @@ services:
     image: eshop/marketing.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
       - sql.data
       - nosql.data
@@ -237,7 +237,7 @@ services:
     image: eshop/webmvc:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Web/WebMVC/Dockerfile    
+      dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
       - catalog.api
       - ordering.api
@@ -253,7 +253,7 @@ services:
 
   basket.data:
     image: redis
-      
+
   rabbitmq:
     image: rabbitmq:3-management
 
@@ -263,13 +263,13 @@ I valori nel file docker-compose.yml base non devono essere modificati in base a
 
 Se, ad esempio, si esamina con attenzione la definizione del servizio webmvc, si nota come queste informazioni sono più o meno le stesse indipendentemente dall'ambiente di destinazione. Sono disponibili le seguenti informazioni:
 
--   Il nome del servizio: webmvc.
+- Il nome del servizio: webmvc.
 
--   L'immagine personalizzata del contenitore: eshop/webmvc.
+- L'immagine personalizzata del contenitore: eshop/webmvc.
 
--   Il comando per compilare l'immagine personalizzata di Docker, che indica il Dockerfile da usare.
+- Il comando per compilare l'immagine personalizzata di Docker, che indica il Dockerfile da usare.
 
--   Le dipendenze da altri servizi, per cui questo contenitore viene avviato solo dopo che sono stati avviati gli altri contenitori di dipendenza.
+- Le dipendenze da altri servizi, per cui questo contenitore viene avviato solo dopo che sono stati avviati gli altri contenitori di dipendenza.
 
 È possibile avere una configurazione aggiuntiva, ma il punto importante è che nel file docker-compose.yml base si impostano solo le informazioni comuni tra gli ambienti. Nel file docker-compose.override.yml o nei file simili per la produzione o lo staging si inserisce la configurazione specifica per ogni ambiente.
 
@@ -279,19 +279,19 @@ In genere, il file docker-compose.override.yml viene usato per l'ambiente di svi
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
 version: '3.4'
 
-services: 
-# Simplified number of services here: 
-      
+services:
+# Simplified number of services here:
+
   basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api              
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureServiceBusEnabled=False
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -305,10 +305,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_CATALOG_NAME}
       - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_CATALOG_KEY}
       - UseCustomizationData=True
@@ -328,8 +328,8 @@ services:
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
-      - identityUrl=http://identity.api              
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -374,7 +374,7 @@ services:
       - "27017:27017"
   basket.data:
     ports:
-      - "6379:6379"      
+      - "6379:6379"
   rabbitmq:
     ports:
       - "15672:15672"
@@ -386,13 +386,13 @@ In questo esempio, la configurazione di override dello sviluppo espone alcune po
 
 Quando si esegue `docker-compose up` o lo si avvia da Visual Studio, il comando legge automaticamente le sostituzioni come se stesse unendo entrambi i file.
 
-Si supponga di voler creare un altro file Compose per l'ambiente di produzione, con diversi valori di configurazione, porte o stringhe di connessione. È possibile creare un altro file di override, ad esempio un file denominato `docker-compose.prod.yml` con diverse impostazioni e variabili di ambiente.  Questo file potrebbe essere archiviato in un diverso repository Git oppure gestito e protetto da un team diverso.
+Si supponga di voler creare un altro file Compose per l'ambiente di produzione, con diversi valori di configurazione, porte o stringhe di connessione. È possibile creare un altro file di override, ad esempio un file denominato `docker-compose.prod.yml` con diverse impostazioni e variabili di ambiente. Questo file potrebbe essere archiviato in un diverso repository Git oppure gestito e protetto da un team diverso.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Come distribuire un file di override specifico
 
 Per usare più file di override o un file di override con un nome diverso, è possibile usare l'opzione -f con il comando docker-compose e specificare i file. Compose unisce i file nell'ordine in che cui vengono specificati alla riga di comando. Nell'esempio seguente viene illustrato come eseguire la distribuzione con i file di override.
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
@@ -422,17 +422,17 @@ Si noti che i valori impostati nell'ambiente di runtime eseguono sempre l'overri
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Panoramica di Docker Compose** <br/>
+- **Panoramica di Docker Compose** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Più file Compose** <br/>
+- **Più file Compose** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Creazione di immagini Docker ottimizzate con ASP.NET Core
 
 Se si esplorano Docker e .NET Core sulle origini su Internet, si troveranno Dockerfile che illustrano la semplicità di creazione di un'immagine Docker copiando l'origine in un contenitore. Questi esempi suggeriscono che usando una configurazione semplice è possibile disporre di un'immagine Docker con l'ambiente fornito con l'applicazione. Nell'esempio seguente viene illustrato un Dockerfile semplice in questa ottica.
 
-```
+```Dockerfile
 FROM microsoft/dotnet
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
@@ -446,30 +446,30 @@ Un Dockerfile come questo funzionerà correttamente. Tuttavia è possibile ottim
 
 Nel modello basato su contenitori e microservizi si avviano costantemente contenitori. L'utilizzi tipico dei contenitori non comporta il riavvio di un contenitore in sospensione perché il contenitore è eliminabile. Gli agenti di orchestrazione, ad esempio Kubernetes e Azure Service Fabric, creano semplicemente nuove istanze delle immagini. È quindi necessario ottimizzare precompilando l'applicazione quando viene compilata in modo che il processo di creazione dell'istanza sia più veloce. Quando viene avviato, il contenitore deve essere pronto per l'esecuzione. Non eseguire il ripristino e la compilazione in fase di esecuzione, usando i comandi `dotnet restore` e `dotnet build` dall'interfaccia della riga di comando dotnet, come indicato in molti post di blog su .NET Core e Docker.
 
-Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un framework ottimizzato per i contenitori. Non solo .NET Core è un framework leggero con un footprint della memoria ridotto, il team si è concentrato sulle immagini Docker ottimizzate per i tre scenari principali e le ha pubblicate in un registro dell'hub Docker in <span class="underline">microsoft/dotnet</span>, a partire dalla versione 2.1:
+Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un framework ottimizzato per i contenitori. Non solo .NET Core è un framework leggero con un footprint della memoria ridotto, il team si è concentrato sulle immagini Docker ottimizzate per i tre scenari principali e le ha pubblicate in un registro dell'hub Docker in *microsoft/dotnet*, a partire dalla versione 2.1:
 
-1.  **Sviluppo**: la priorità è la possibilità di scorrere e sottoporre a debug rapidamente le modifiche; la dimensione è secondaria.
+1. **Sviluppo**: la priorità è la possibilità di scorrere e sottoporre a debug rapidamente le modifiche e le dimensioni sono secondarie.
 
-2.  **Compilazione**: la priorità è la compilazione dell'applicazione; sono inclusi file binari e altre dipendenze per ottimizzare i file binari.
+2. **Compilazione**: la priorità è la compilazione dell'applicazione; sono inclusi file binari e altre dipendenze per ottimizzare i file binari.
 
-3.  **Produzione**: la priorità è la rapidità di distribuzione e avvio dei contenitori, quindi queste immagini sono limitate ai file binari e al contenuto necessario per eseguire l'applicazione.
+3. **Produzione**: la priorità è la rapidità di distribuzione e avvio dei contenitori, quindi queste immagini sono limitate ai file binari e al contenuto necessario per eseguire l'applicazione.
 
 A tale scopo, il team .NET offre tre varianti di base in [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (nell'hub Docker):
 
-1.  **SDK**: per gli scenari di sviluppo e compilazione.
-2.  **runtime**: per lo scenario di produzione e
-3.  **runtime-deps**: per lo scenario di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **SDK**: per gli scenari di sviluppo e compilazione.
+2. **runtime**: per lo scenario di produzione e
+3. **runtime-deps**: per lo scenario di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#self-contained-deployments-scd).
 
-Le immagini del runtime indicano anche l'impostazione automatica di aspnetcore\_urls sulla porta 80 e la cache pre-ngend degli assembly per consentire un avvio più rapido.
+Per velocizzare l'avvio, le immagini di runtime impostano anche automaticamente aspnetcore\_urls sulla porta 80 e usano Ngen per creare una cache di immagini native degli assembly.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Compilazione di immagini Docker ottimizzate con ASP.NET Core** <br/>
+- **Compilazione di immagini Docker ottimizzate con ASP.NET Core** <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
--   **Compilazione di immagini Docker per applicazioni .NET Core** <br/>
+- **Compilazione di immagini Docker per applicazioni .NET Core** <br/>
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
->[!div class="step-by-step"]
->[Precedente](data-driven-crud-microservice.md)
->[Successivo](database-server-container.md)
+> [!div class="step-by-step"]
+> [Precedente](data-driven-crud-microservice.md)
+> [Successivo](database-server-container.md)

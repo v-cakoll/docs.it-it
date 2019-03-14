@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066389"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492634"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  
@@ -40,7 +40,7 @@ Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri]
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+## <a name="parameters"></a>Parametri  
   
 |Opzione|Description|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Per essere valide, le opzioni di Sn.exe devono essere digitate esattamente come indicato, rispettando con precisione la combinazione di maiuscole e minuscole.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le opzioni **-R** e **–Rc** sono utili con gli assembly per cui è stata impostata la firma ritardata. In questo scenario solo la chiave pubblica viene impostata in fase di compilazione e la firma viene apposta in un secondo tempo, quando sarà nota la chiave privata.  
   
 > [!NOTE]

@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126446"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360420"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementare le letture/query in un microservizio CQRS
 
@@ -95,13 +95,13 @@ L'aspetto importante è che, usando un tipo dinamico, la raccolta dei dati resti
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel come classi DTO predefinite
 
-**Vantaggi:** avere classi ViewModel predefinite statiche, ad esempio "contratti" basati su classi DTO esplicite, è decisamente migliore per le API pubbliche, ma anche per i microservizi a lungo termine, anche se vengono usati solo dall'applicazione stessa.
+**Vantaggi:** avere classi ViewModel predefinite statiche, ad esempio "contratti" basati su classi DTO esplicite, è decisamente meglio per le API pubbliche, ma anche per i microservizi a lungo termine, anche se vengono usati solo dall'applicazione stessa.
 
 Se si vogliono specificare i tipi di risposta per Swagger, è necessario usare le classi DTO esplicite come tipo restituito. Di conseguenza, le classi DTO predefinite consentono di offrire informazioni più complete da Swagger. In tal modo, la documentazione e la compatibilità delle API migliora durante il loro utilizzo.
 
 **Svantaggi:** come indicato in precedenza, durante il suo aggiornamento, il codice richiede alcuni ulteriori passaggi per aggiornare le classi DTO.
 
-*Suggerimenti basati sulla nostra esperienza:* nelle query implementate nel microservizio degli ordini in eShopOnContainers, abbiamo iniziato a sviluppare usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Tuttavia, una volta che lo sviluppo si è stabilizzato, è stato scelto di eseguire il refactoring delle API e di usare DTO statici o predefiniti per i ViewModel, perché era più chiaro per i consumer del microservizio conoscere i tipi di DTO espliciti, usati come "contratti".
+*Suggerimenti basati sull'esperienza Microsoft*: nelle query implementate nel microservizio degli ordini in eShopOnContainers, lo sviluppo è iniziato usando ViewModel dinamici perché era molto semplice e agile nelle prime fasi di sviluppo. Tuttavia, una volta che lo sviluppo si è stabilizzato, è stato scelto di eseguire il refactoring delle API e di usare DTO statici o predefiniti per i ViewModel, perché era più chiaro per i consumer del microservizio conoscere i tipi di DTO espliciti, usati come "contratti".
 
 Nell'esempio seguente, è possibile visualizzare in che modo la query restituisce dati usando una classe DTO ViewModel esplicita: la classe OrderSummary.
 
@@ -188,13 +188,13 @@ Nella figura seguente, è possibile vedere in che modo l'interfaccia utente di S
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Punti dati - Dapper, Entity Framework e app ibride (articolo Mag. MSDN)** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **Pagine della Guida dell'API Web ASP.NET Core con Swagger** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[Precedente](eshoponcontainers-cqrs-ddd-microservice.md)

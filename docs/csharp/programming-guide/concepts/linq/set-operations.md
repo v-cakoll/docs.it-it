@@ -2,12 +2,12 @@
 title: Operazioni sui set (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 8a9cf898faeccdf513daf1ae384e811cd559e72a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692181"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675511"
 ---
 # <a name="set-operations-c"></a>Operazioni sui set (C#)
 Le operazioni sui set in LINQ si riferiscono alle operazioni di query che generano un set di risultati basato sulla presenza o sull'assenza di elementi equivalenti all'interno delle stesse Collection oppure di Collection (o set) distinte.  
@@ -33,7 +33,7 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
 ### <a name="except"></a>Eccezione  
  Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La sequenza restituita contiene solo gli elementi dalla prima sequenza di input che non sono presenti nella seconda sequenza di input.  
   
- ![Grafico che mostra l'azione di Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![Grafico che mostra l'azione di Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Mostra il comportamento di Except.")  
   
 ### <a name="intersect"></a>Interseca  
  Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La sequenza restituita contiene gli elementi comuni a entrambe le sequenze di input.  

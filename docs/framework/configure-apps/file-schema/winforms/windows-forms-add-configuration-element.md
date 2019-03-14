@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371372"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788479"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form aggiungere elemento di configurazione
 
@@ -41,14 +41,14 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 | `key` Nome | Valori | Descrizione |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se i controlli ancorati vengono ridimensionati in un unico passaggio. "true" per disabilitare la singola passare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#Remarks) per altre informazioni. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se i controlli ancorati vengono ridimensionati in un unico passaggio. "true" per disabilitare la singola passare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#remarks) per altre informazioni. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica se un'applicazione è compatibile con DPI. Impostare la chiave per "PerMonitorV2" per supportare la compatibilità con Dpi; in caso contrario, impostarla su "false". Compatibilità con DPI è una funzionalità che prevede il consenso esplicito; Per sfruttare i vantaggi del supporto di valori DPI alti dei moduli di Windows, è necessario impostare il relativo valore su "PerMonitorV2". Vedere le [osservazioni](#remarks) sezione per altre informazioni. |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.CheckedListBox> controllo consente di sfruttare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" per rifiutare esplicitamente i miglioramenti di layout e caling; in caso contrario, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.DataGridView> controllare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" rifiutare esplicitamente la compatibilità con DPI; "false" in caso contrario. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" rifiutare esplicitamente la ricezione di messaggi correlati a DPI ridimensionamento le modifiche. "false" in caso contrario. Vedere le [osservazioni](#remarks) sezione per altre informazioni. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica se un'applicazione Windows Form viene ridimensionata automaticamente a causa di modifiche di ridimensionamento DPI. "true" per abilitare il ridimensionamento automatico; in caso contrario, false. |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.Form> viene ridimensionata in un unico passaggio. single-pass "true" per disabilitare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#Remarks) per altre informazioni. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.MonthCalendar> controllo viene ridimensionato in un unico passaggio. single-pass "true" per disabilitare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#Remarks) per altre informazioni. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.Form> viene ridimensionata in un unico passaggio. single-pass "true" per disabilitare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#remarks) per altre informazioni. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.MonthCalendar> controllo viene ridimensionato in un unico passaggio. single-pass "true" per disabilitare la scalabilità; in caso contrario, false. Vedere la sezione "Singolo pass scalabilità" nel [osservazioni](#remarks) per altre informazioni. |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Indica se il <xref:System.Windows.Forms.ToolStrip> controllo consente di sfruttare la scalabilità e il layout i miglioramenti introdotti con .NET Framework 4.7. "true" rifiutare esplicitamente la compatibilità con DPI; "false" in caso contrario. |
 
 ### <a name="child-elements"></a>Elementi figlio
@@ -61,7 +61,7 @@ Nessuno.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Consente di configurare il supporto per nuove funzionalità delle applicazioni Windows Form. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Sezione Osservazioni
+## <a name="remarks"></a>Note
 
 A partire da .NET Framework 4.7, l'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` consente di configurare le applicazioni Windows Form in modo da sfruttare i vantaggi delle funzionalità aggiunte nelle versioni recenti di .NET Framework.
 
@@ -96,6 +96,7 @@ L'unico acconsenti esplicitamente impostazione predefinita fornito tramite l'imp
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 In genere, consenso esplicito all'esterno di una determinata funzionalità perché si è scelto di gestirla a livello di codice.
 
 Per altre informazioni su sfruttare i vantaggi del supporto di valori DPI alti in applicazioni Windows Forms, vedere [supporto di valori DPI elevato in Windows Form](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).

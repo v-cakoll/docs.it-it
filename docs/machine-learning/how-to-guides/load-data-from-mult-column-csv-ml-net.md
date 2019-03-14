@@ -1,16 +1,21 @@
 ---
 title: Caricare dati con più colonne da un file con estensione csv per l'elaborazione con Machine Learning - ML.NET
 description: Informazioni su come caricare dati con molte colonne da un file con estensione csv per usarli nelle attività di creazione, training e assegnazione di punteggio per modelli di Machine Learning con ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091968"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675953"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Caricare dati con più colonne da un file con estensione csv per l'elaborazione con Machine Learning - ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 `TextLoader` viene usato per caricare dati da file di testo. È necessario specificare le colonne di dati, i tipi delle colonne e la relativa posizione nel file di testo.
 

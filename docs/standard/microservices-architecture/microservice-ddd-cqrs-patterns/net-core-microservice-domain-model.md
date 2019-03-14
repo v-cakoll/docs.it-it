@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065908"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363020"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementare un modello di dominio del microservizio con .NET Core 
 
@@ -171,11 +171,11 @@ Ad esempio, nell'esempio di codice OrderAggregate precedente, sono presenti dive
 - **Vaughn Vernon. Modellazione di aggregazioni con DDD ed Entity Framework.** Si osservi che *non* si tratta di Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. Data Points - Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Punti dati - Creazione di codice per strutture basate sui domini: suggerimenti per lo sviluppo incentrato sui dati)
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. How to create fully encapsulated Domain Models** \ (Come creare modelli di dominio completamente incapsulati)
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Precedente](microservice-domain-model.md)

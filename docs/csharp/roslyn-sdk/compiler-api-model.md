@@ -3,12 +3,12 @@ title: Concetti e modello a oggetti di .NET Compiler Platform SDK
 description: Questa panoramica include le informazioni di base necessarie per utilizzare in modo efficiente l'SDK del compilatore .NET. Vengono presentati i livelli dell'API, i tipi principali coinvolti e il modello a oggetti generale.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a3104313efa0110699c45a4ce7bca99aab20542a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363688"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675706"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informazioni sul modello di .NET Compiler Platform SDK
 

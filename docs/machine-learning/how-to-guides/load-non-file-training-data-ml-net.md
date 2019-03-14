@@ -1,16 +1,21 @@
 ---
 title: Eseguire il training di un modello di Machine Learning con dati non contenuti in un file di testo - ML.NET
 description: Informazioni sull'uso di ML.NET per caricare dati di training non basati su file per il training di un modello di Machine Learning nell'ambito della pipeline di stima.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4ffbc69629aa9dc6cea5d33c704bc9c57a4a612c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 27b327a63cb55b7fce0f4ff7facd3ee7c4a1c85c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092020"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678615"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Eseguire il training di un modello di Machine Learning con dati non contenuti in un file di testo - ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Nel caso d'uso solitamente illustrato per ML.NET viene usato `TextLoader` per la lettura dei dati di training da un file.
 In scenari di training in tempo reale, tuttavia, i dati possono trovarsi altrove. Ad esempio:

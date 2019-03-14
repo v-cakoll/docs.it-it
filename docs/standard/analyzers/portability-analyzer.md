@@ -1,17 +1,15 @@
 ---
 title: .NET Portability Analyzer | .NET
 description: Informazioni su come usare lo strumento .NET Portability Analyzer per valutare la portabilità del codice tra le diverse implementazioni di .NET, inclusi .NET Core, .NET Standard, UWP e Xamarin.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205757"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717648"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -21,9 +19,9 @@ ms.locfileid: "44205757"
 
 * [.NET Core](../../core/index.md): ha una struttura modulare, con assembly affiancato ed è destinato a scenari multi-piattaforma. La modalità affiancata consente di adottare le nuove versioni di .NET Core senza interrompere le altre applicazioni.
 * [ASP.NET Core](/aspnet/core): è un framework Web moderno basato su .NET Core che offre agli sviluppatori gli stessi vantaggi.
-* [Piattaforma UWP (Universal Windows Platform)](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): offre una compilazione statica di .NET Native che consente di migliorare le prestazioni delle app Windows Store eseguite su computer ARM e x64. 
-* .NET Core + Estensioni di piattaforma: incluse le API .NET Core oltre ad altre API nell'ecosistema .NET, ad esempio WCF, ASP.NET Core, FSharp e Azure.
-* .NET Standard + Estensioni di piattaforma: include le API .NET Standard oltre ad altre API nell'ecosistema .NET, ad esempio WCF, ASP.NET Core, FSharp e Azure.
+* [Piattaforma UWP (Universal Windows Platform)](https://devblogs.microsoft.com/dotnet/net-native-performance/): usa la compilazione statica di .NET Native che consente di migliorare le prestazioni delle app Windows Store eseguite in computer ARM e x64. 
+* .NET Core + estensioni di piattaforma: include le API .NET Core oltre ad altre API nell'ecosistema .NET, ad esempio WCF, ASP.NET Core, FSharp e Azure.
+* .NET Standard + estensioni di piattaforma: include le API .NET Standard oltre ad altre API nell'ecosistema .NET, ad esempio WCF, ASP.NET Core, FSharp e Azure.
 
 ## <a name="how-to-use-portability-analyzer"></a>Come usare Portability Analyzer
 

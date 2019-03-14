@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: a65d09c6449a14dbb74d80247afa18a6f3a601d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969947"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674081"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passaggio di parametri di tipo di riferimento (Guida per programmatori C#)
-Una variabile di un [tipo riferimento](../../../csharp/language-reference/keywords/reference-types.md) non contiene direttamente i dati, ma solo un riferimento a essi. Quando si passa un parametro di tipo riferimento per valore, è possibile modificare i dati appartenenti all'oggetto di riferimento, ad esempio il valore del membro di una classe. Non è tuttavia possibile modificare il valore del riferimento stesso; ad esempio, non è possibile usare il riferimento per allocare memoria per una nuova classe e fare in modo che sia persistente anche all'esterno del metodo. In questo caso, è necessario passare il parametro usando la parola chiave [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Per semplicità, negli esempi seguenti viene usato `ref`.  
+Una variabile di un [tipo riferimento](../../../csharp/language-reference/keywords/reference-types.md) non contiene direttamente i dati, ma solo un riferimento a essi. Quando si passa un parametro di tipo riferimento per valore, è possibile modificare i dati appartenenti all'oggetto di riferimento, ad esempio il valore del membro di una classe. Non è tuttavia possibile modificare il valore del riferimento stesso. Ad esempio, non è possibile usare lo stesso riferimento per allocare memoria per un nuovo oggetto e per renderlo persistente all'esterno del metodo. In questo caso, è necessario passare il parametro usando la parola chiave [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Per semplicità, negli esempi seguenti viene usato `ref`.  
   
 ## <a name="passing-reference-types-by-value"></a>Passaggio di tipi riferimento per valore  
  Nell'esempio seguente viene illustrato il passaggio per valore di un parametro di tipo riferimento, `arr`, a un metodo, `Change`. Poiché il parametro è un riferimento a `arr`, è possibile modificare i valori degli elementi della matrice. Il tentativo di riassegnare il parametro a una diversa posizione in memoria, tuttavia, è efficace solo all'interno del metodo e non ha alcun effetto sulla variabile originale `arr`.  

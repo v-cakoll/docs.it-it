@@ -1,16 +1,21 @@
 ---
 title: Eseguire il training di un modello di Machine Learning tramite convalida incrociata - ML.NET
 description: Informazioni su come eseguire il training di un modello di Machine Learning tramite convalida incrociata con ML.NET per ottenere un maggiore livello di accuratezza per le stime del modello
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092280"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676538"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Eseguire il training di un modello di Machine Learning tramite convalida incrociata - ML.NET
+
+> [!NOTE]
+> Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 La [convalida incrociata](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) è una tecnica utile per le applicazioni di Machine Learning. Consente di stimare la varianza della qualità del modello da un'esecuzione all'altra ed elimina anche la necessità di estrarre un set di test separato per la valutazione.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533208"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788427"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 
@@ -43,7 +43,7 @@ Nella tabella seguente vengono riepilogate le varie funzionalità fornite da que
 
 Lo strumento ha un timeout di cinque minuti durante il recupero dei metadati. Questo timeout si applica solo al recupero di metadati sulla rete. Non si applica a qualsiasi elaborazione dei metadati.
 
-### <a name="multi-targetting"></a>Multitargeting
+### <a name="multi-targeting"></a>Multitargeting
 
 Lo strumento non supporta il multitargeting. Se si desidera generare un artefatto .NET 4 da *svcutil.exe*, utilizzare il *svcutil.exe* dal SDK di .NET 4. Per generare un artefatto .NET 3.5, utilizzare l'eseguibile nell'SDK di .NET 3.5.
 
@@ -71,7 +71,7 @@ Lo strumento Svcutil.exe è in grado di generare codice per contratti di servizi
 
 È possibile usare la *SvcUtil.exe* strumento per generare contratti di servizio e dei dati basati su un documento WSDL predefinito. Utilizzare l'opzione /serviceContract e specificare un URL o un percorso di file in cui il documento WSDL possa essere scaricato o trovato. Questo genera i contratti di servizio e i dati definiti nel documento WSDL che può quindi essere utilizzato per implementare un servizio conforme. Per altre informazioni, vedere [Procedura: Recuperare i metadati e implementare un servizio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Per un servizio con un endpoint BasicHttpContextbinding *Svcutil.exe* genera un BasicHttpBinding con la `allowCookies` attributo impostato su `true` invece. I cookie vengono utilizzati come contesto sul server. Se si desidera gestire il contesto sul client quando il servizio utilizza cookie, è possibile modificare la configurazione per utilizzare un elemento di associazione del contesto.
+Per un servizio con un endpoint BasicHttpContextBinding *Svcutil.exe* genera un BasicHttpBinding con la `allowCookies` attributo impostato su `true` invece. I cookie vengono utilizzati come contesto sul server. Se si desidera gestire il contesto sul client quando il servizio utilizza cookie, è possibile modificare la configurazione per utilizzare un elemento di associazione del contesto.
 
 > [!CAUTION]
 > Lo strumento Svcutil.exe consente di generare il client in base al WSDL o al file dei criteri ricevuto dal servizio. Il nome dell'entità utente (UPN) è generato concatenando nome utente, "\@" e un nome di dominio completo (FQDN). Per utenti registrati su Active Directory, questo formato non è tuttavia valido e l’UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il messaggio di errore che “Tentativo di accesso non riuscito”. Per risolvere questo problema è necessario correggere manualmente il file client generato da questo strumento.
@@ -90,7 +90,7 @@ Per un servizio con un endpoint BasicHttpContextbinding *Svcutil.exe* genera un 
 |/collectionType:\<type>|Specifica il tipo di raccolta elenco per un client WCF.<br/><br /> Valore predefinito: tipo di raccolta è System. Array. <br /><br /> Forma abbreviata: `/ct`|
 |/config:\<configFile>|Specifica il nome file per il file di configurazione generato.<br /><br /> Impostazione predefinita: output.config|
 |/dataContractOnly|Genera solo codice per tipi di contratto dati. I tipi di contratto di servizio non vengono generati.<br /><br /> Per questa opzione è necessario specificare soltanto file di metadati locali.<br /><br /> Forma abbreviata: `/dconly`|
-|/enableDataBinding|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi di contratto dati per consentire l'associazione dati.<br /><br /> Forma abbreviata: `/edb`|
+|/enableDataBinding|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi di contratto dati per consentire il data binding.<br /><br /> Forma abbreviata: `/edb`|
 |/excludeType:\<type>|Specifica un nome tipo completo o un nome completo del tipo dell’assembly da escludere dai tipi di contratto a cui si fa riferimento.<br /><br /> Se si utilizza questo commutatore insieme con `/r` di DLL distinte, viene fatto riferimento al nome completo della classe XSD.<br /><br /> Forma abbreviata: `/et`|
 |/importXmlTypes|Configura il serializzatore DataContract per l'importazione di tipi diversi da DataContract come tipi IXmlSerializable.|
 |/internal|Genera classi contrassegnate come interne. Impostazione predefinita: generare soltanto classi pubbliche.<br /><br /> Forma abbreviata: `/i`|
