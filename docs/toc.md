@@ -1209,6 +1209,7 @@
 ### Usare il modello con training
 #### [Eseguire una stima alla volta con PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Rendere operativo un modello con training](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Funzioni di Azure modello server](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Programmazione probabilistica con Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Riferimenti

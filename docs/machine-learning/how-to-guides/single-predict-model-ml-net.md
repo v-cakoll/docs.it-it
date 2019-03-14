@@ -1,24 +1,29 @@
 ---
 title: Usare PredictionEngine per eseguire una stima alla volta - ML.NET
 description: Informazioni su come usare PredictionEngine in ML.NET per eseguire una stima alla volta
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 328067816be37c9490ae71974e3f6da4ae079f25
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 68837888c53409b4249bbece481888fb4167a5ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092033"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673808"
 ---
-# <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a><span data-ttu-id="e945b-103">Usare PredictionEngine per eseguire una stima alla volta - ML.NET</span><span class="sxs-lookup"><span data-stu-id="e945b-103">Use the PredictionEngine to make one prediction at a time - ML.NET</span></span> 
+# <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a><span data-ttu-id="cb87b-103">Usare PredictionEngine per eseguire una stima alla volta - ML.NET</span><span class="sxs-lookup"><span data-stu-id="cb87b-103">Use the PredictionEngine to make one prediction at a time - ML.NET</span></span> 
 
-<span data-ttu-id="e945b-104">Poiché qualsiasi modello ML.NET è un oggetto Transformer, si usa `model.Transform` per applicare il modello alla `DataView` al fine di eseguire stime.</span><span class="sxs-lookup"><span data-stu-id="e945b-104">Since any ML.NET model is a transformer, you use `model.Transform` to apply the model to the `DataView` to make predictions.</span></span> 
+> [!NOTE]
+> <span data-ttu-id="cb87b-104">Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche.</span><span class="sxs-lookup"><span data-stu-id="cb87b-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="cb87b-105">Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="cb87b-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="e945b-105">Un caso più tipico, tuttavia, si verifica quando non è presente alcun set di dati su cui eseguire stime, ma al contrario si riceve un esempio alla volta.</span><span class="sxs-lookup"><span data-stu-id="e945b-105">A more typical case, though, is when there is no 'dataset' that you want to predict on, but instead you receive one example at a time.</span></span> <span data-ttu-id="e945b-106">Ad esempio, quando si esegue il modello come parte del sito Web ASP.NET ed è necessario eseguire una stima relativa a una richiesta HTTP in ingresso.</span><span class="sxs-lookup"><span data-stu-id="e945b-106">For instance, you run the model as part of your ASP.NET website, and need to make a prediction for an incoming HTTP request.</span></span>
+<span data-ttu-id="cb87b-106">Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10**.</span><span class="sxs-lookup"><span data-stu-id="cb87b-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="cb87b-107">Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="cb87b-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="e945b-107">`PredictionEngine` esegue un esempio alla volta tramite la pipeline di stima.</span><span class="sxs-lookup"><span data-stu-id="e945b-107">The `PredictionEngine` runs one example at a time through the prediction pipeline.</span></span>
+<span data-ttu-id="cb87b-108">Poiché qualsiasi modello ML.NET è un oggetto Transformer, si usa `model.Transform` per applicare il modello alla `DataView` al fine di eseguire stime.</span><span class="sxs-lookup"><span data-stu-id="cb87b-108">Since any ML.NET model is a transformer, you use `model.Transform` to apply the model to the `DataView` to make predictions.</span></span> 
 
-<span data-ttu-id="e945b-108">Ecco un esempio completo in cui viene usato un modello di set di dati predefinito per la stima di iris:</span><span class="sxs-lookup"><span data-stu-id="e945b-108">Here is the full example using a prebuilt Iris prediction dataset model:</span></span>
+<span data-ttu-id="cb87b-109">Un caso più tipico, tuttavia, si verifica quando non è presente alcun set di dati su cui eseguire stime, ma al contrario si riceve un esempio alla volta.</span><span class="sxs-lookup"><span data-stu-id="cb87b-109">A more typical case, though, is when there is no 'dataset' that you want to predict on, but instead you receive one example at a time.</span></span> <span data-ttu-id="cb87b-110">Ad esempio, quando si esegue il modello come parte del sito Web ASP.NET ed è necessario eseguire una stima relativa a una richiesta HTTP in ingresso.</span><span class="sxs-lookup"><span data-stu-id="cb87b-110">For instance, you run the model as part of your ASP.NET website, and need to make a prediction for an incoming HTTP request.</span></span>
+
+<span data-ttu-id="cb87b-111">`PredictionEngine` esegue un esempio alla volta tramite la pipeline di stima.</span><span class="sxs-lookup"><span data-stu-id="cb87b-111">The `PredictionEngine` runs one example at a time through the prediction pipeline.</span></span>
+
+<span data-ttu-id="cb87b-112">Ecco un esempio completo in cui viene usato un modello di set di dati predefinito per la stima di iris:</span><span class="sxs-lookup"><span data-stu-id="cb87b-112">Here is the full example using a prebuilt Iris prediction dataset model:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -60,7 +65,7 @@ var pipeline =
 var model = pipeline.Fit(trainData);
 ```
 
-<span data-ttu-id="e945b-109">Per usare il meccanismo di [comprensione dello schema](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) per la stima, definire una coppia di classi simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="e945b-109">To use [schema comprehension](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) for prediction, define a pair of classes like the following:</span></span>
+<span data-ttu-id="cb87b-113">Per usare il meccanismo di [comprensione dello schema](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) per la stima, definire una coppia di classi simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="cb87b-113">To use [schema comprehension](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md) for prediction, define a pair of classes like the following:</span></span>
 
 ```csharp
 private class IrisInput
@@ -81,7 +86,7 @@ private class IrisPrediction
 }
 ```
 
-<span data-ttu-id="e945b-110">Il codice relativo alla stima ha ora un aspetto simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="e945b-110">The prediction code now looks as follows:</span></span>
+<span data-ttu-id="cb87b-114">Il codice relativo alla stima ha ora un aspetto simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="cb87b-114">The prediction code now looks as follows:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
