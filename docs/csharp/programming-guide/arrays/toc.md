@@ -5,5 +5,4 @@
 ## [Matrici irregolari](jagged-arrays.md)
 ## [Uso di foreach con matrici](using-foreach-with-arrays.md)
 ## [Passaggio di matrici come argomenti](passing-arrays-as-arguments.md)
-## [Passaggio di matrici usando ref e out](passing-arrays-using-ref-and-out.md)
 ## [Matrici tipizzate in modo implicito](implicitly-typed-arrays.md)
