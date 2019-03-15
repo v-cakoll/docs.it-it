@@ -1,16 +1,11 @@
 ---
-title: Panoramica di C# | Guida a C#
-description: Introduzione a C# Informazioni di base sul linguaggio.
+title: 'Panoramica di C# | Guida a C#'
+description: 'Introduzione a C# Informazioni di base sul linguaggio.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150394"
 ---
-# <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#  
+
+# <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
 
 C#, pronunciato "See Sharp", è un linguaggio di programmazione semplice, moderno, orientato a oggetti e indipendente dai tipi. C# ha le sue radici nella famiglia di linguaggi C e risulterà immediatamente familiare ai programmatori di C, C++, Java e JavaScript.
 
@@ -73,7 +68,7 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
 * [Delegati](delegates.md)
     - Un ***tipo delegato*** rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
 * [Attributi](attributes.md)
-    * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
+     * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
 
->[!div class="step-by-step"]
->[avanti](program-structure.md)
+> [!div class="step-by-step"]
+> [avanti](program-structure.md)
