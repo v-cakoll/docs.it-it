@@ -2,12 +2,12 @@
 title: Strumento con priorità al contratto ("contract-first")
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261615"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846181"
 ---
 # <a name="contract-first-tool"></a>Strumento con priorità al contratto ("contract-first")
 I contratti di servizio devono spesso essere creati a partire da servizi esistenti. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] le classi dei contratti dati possono essere create automaticamente dai servizi esistenti utilizzando lo strumento con priorità al contratto ("contract-first"). Per utilizzare lo strumento con priorità al contratto ("contract-first") è necessario che il file di definizione di XML Schema (XSD) sia scaricato localmente; lo strumento non può importare i contratti dati remoti tramite HTTP.
@@ -69,31 +69,31 @@ I contratti di servizio devono spesso essere creati a partire da servizi esisten
 
  Per la generazione di codice dai contratti è possibile configurare le seguenti impostazioni avanzate. Attualmente, le impostazioni possono essere configurate solo per tutti i file del progetto e non per singoli file.
 
--   **Modalità serializzatore**: questa impostazione determina il serializzatore che viene utilizzato per la lettura dei file di contratto di servizio. Quando **XML Serializer** è selezionata, il **tipi di raccolta** e **Riutilizza tipi** opzioni vengono disabilitate. Queste opzioni si applicano solo per i **Data Contract Serializer**.
+-   **Modalità serializzatore**: Questa impostazione determina il serializzatore che viene usato per la lettura dei file di contratto di servizio. Quando **XML Serializer** è selezionata, il **tipi di raccolta** e **Riutilizza tipi** opzioni vengono disabilitate. Queste opzioni si applicano solo per i **Data Contract Serializer**.
 
--   **Riutilizza tipi**: questa impostazione specifica che le librerie sono usate per riutilizzare il tipo. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
+-   **Riutilizza tipi**: Questa impostazione specifica che le librerie sono usate per riutilizzare il tipo. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **Tipo di raccolta**: questa impostazione specifica il tipo completo o qualificato dall'assembly da utilizzare per il tipo di raccolta dati. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
+-   **Tipo di raccolta**: Questa impostazione specifica il tipo completo o qualificato dall'assembly da utilizzare per il tipo di raccolta dati. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **Tipo di dizionario**: questa impostazione specifica il tipo completo o qualificato dall'assembly da utilizzare per il tipo di dati del dizionario.
+-   **Tipo di dizionario**: Questa impostazione specifica il tipo completo o qualificato dall'assembly da utilizzare per il tipo di dati del dizionario.
 
--   **EnableDataBinding**: questa impostazione specifica se implementare il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia su tutti i tipi di dati per implementare il data binding.
+-   **EnableDataBinding**: Questa impostazione specifica se implementare il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia su tutti i tipi di dati per implementare il data binding.
 
 -   **ExcludedTypes**: questa impostazione specifica l'elenco di tipi completi o completi di assembly da escludere dagli assembly di riferimento. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **GenerateInternalTypes**: questa impostazione specifica se generare classi contrassegnate come interne. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
+-   **GenerateInternalTypes**: Questa impostazione specifica se generare classi contrassegnate come interne. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **GenerateSerializableTypes**: questa impostazione specifica se generare classi con la <xref:System.SerializableAttribute> attributo. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
+-   **GenerateSerializableTypes**: Questa impostazione specifica se generare classi con la <xref:System.SerializableAttribute> attributo. Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **/Importxmltypes**: questa impostazione specifica se è necessario configurare il serializzatore dei contratti dati per applicare la <xref:System.SerializableAttribute> attributo alle classi senza il <xref:System.Runtime.Serialization.DataContractAttribute> attributo.  Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
+-   **/Importxmltypes**: Questa impostazione specifica se è necessario configurare il serializzatore dei contratti dati per applicare la <xref:System.SerializableAttribute> attributo alle classi senza il <xref:System.Runtime.Serialization.DataContractAttribute> attributo.  Questa impostazione si applica solo se **modalità serializzatore** è impostata su **Data Contract Serializer**.
 
--   **SupportFx35TypedDataSets**: questa impostazione specifica se fornire funzionalità aggiuntive per i set di dati tipizzati creati per .net Framework 3.5. Quando **modalità serializzatore** è impostata su **XML Serializer**, il <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> estensione verrà aggiunti nell'utilità di importazione di XML schema quando questo valore è impostato su True. Quando **modalità serializzatore** è impostata su **Data Contract Serializer**, il tipo <xref:System.DateTimeOffset> verranno esclusi dai riferimenti quando questo valore è impostato su False, in modo che un <xref:System.DateTimeOffset> viene sempre generato per versioni precedenti del framework.
+-   **SupportFx35TypedDataSets**: Questa impostazione specifica se fornire funzionalità aggiuntive per i set di dati tipizzati creati per .NET Framework 3.5. Quando **modalità serializzatore** è impostata su **XML Serializer**, il <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> estensione verrà aggiunti nell'utilità di importazione di XML schema quando questo valore è impostato su True. Quando **modalità serializzatore** è impostata su **Data Contract Serializer**, il tipo <xref:System.DateTimeOffset> verranno esclusi dai riferimenti quando questo valore è impostato su False, in modo che un <xref:System.DateTimeOffset> viene sempre generato per versioni precedenti del framework.
 
--   **InputXsdFiles**: questa impostazione specifica l'elenco dei file di input. Ogni file deve contenere un XML Schema valido.
+-   **InputXsdFiles**: Questa impostazione specifica l'elenco dei file di input. Ogni file deve contenere un XML Schema valido.
 
--   **Linguaggio**: questa impostazione specifica il linguaggio del codice contratto generato. L'impostazione deve essere riconoscibile da <xref:System.CodeDom.Compiler.CodeDomProvider>.
+-   **Linguaggio**: Questa impostazione specifica il linguaggio del codice contratto generato. L'impostazione deve essere riconoscibile da <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
--   **NamespaceMappings**: questa impostazione specifica i mapping degli spazi dei nomi di destinazione XSD agli spazi dei nomi CLR. Ogni mapping deve utilizzare il formato seguente:
+-   **NamespaceMappings**: Questa impostazione specifica i mapping degli spazi dei nomi di destinazione XSD agli spazi dei nomi CLR. Ogni mapping deve utilizzare il formato seguente:
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ I contratti di servizio devono spesso essere creati a partire da servizi esisten
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: questa impostazione specifica la directory in cui verranno generati i file di codice.
+-   **OutputDirectory**: Questa impostazione specifica la directory in cui verranno generati i file di codice.
 
  Le impostazioni verranno utilizzate per generare i tipi di contratti di servizio dai relativi file quando il progetto viene compilato.
 

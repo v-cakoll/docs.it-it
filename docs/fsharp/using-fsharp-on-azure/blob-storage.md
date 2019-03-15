@@ -3,12 +3,12 @@ title: Iniziare a usare archiviazione Blob di AzureF#
 description: Store dati non strutturati nel cloud con archiviazione Blob di Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981907"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846428"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione Blob di Azure con F\#
 
@@ -102,14 +102,14 @@ Per elencare i BLOB in un contenitore, ottenere prima un riferimento al contenit
 
 Ad esempio, si consideri il seguente set di BLOB in blocchi in un contenitore denominato `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 Quando si chiama `ListBlobs` su un contenitore (come nell'esempio precedente), viene restituito un elenco gerarchico. Se contiene entrambe `CloudBlobDirectory` e `CloudBlockBlob` oggetti, che rappresenta la directory e i BLOB nel contenitore, rispettivamente, quindi l'output risultante è simile al seguente:
 

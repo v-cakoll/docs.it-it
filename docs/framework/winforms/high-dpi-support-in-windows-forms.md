@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711792"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843609"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Supporto di valori DPI alti in Windows Form
 
-A partire da .NET Framework 4.7, Windows Form include miglioramenti per valori DPI alti comuni e scenari DPI dinamici. Sono inclusi: 
+A partire da .NET Framework 4.7, Windows Form include miglioramenti per valori DPI alti comuni e scenari DPI dinamici. Sono inclusi:
 
-- Miglioramenti per il ridimensionamento e layout di un numero di Windows Form controlli, ad esempio la <xref:System.Windows.Forms.MonthCalendar> controllo e il <xref:System.Windows.Forms.CheckedListBox> controllo. 
+- Miglioramenti per il ridimensionamento e layout di un numero di Windows Form controlli, ad esempio la <xref:System.Windows.Forms.MonthCalendar> controllo e il <xref:System.Windows.Forms.CheckedListBox> controllo.
 
 - Scalabilità-passaggio singolo.  In .NET Framework 4.6 e versioni precedenti, la scalabilità è stata eseguita tramite più passaggi, che ha causato alcuni controlli ridimensionare più di era necessario.
 
@@ -30,7 +30,7 @@ Nelle versioni di .NET Framework a partire da .NET Framework 4.7, supporto di va
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Configurazione dell'app di Windows Form per il supporto di valori DPI alti
 
-Le nuove funzionalità di Windows Form che supportano la compatibilità con DPI elevato sono disponibili solo nelle applicazioni destinate a .NET Framework 4.7 e sono in esecuzione nei sistemi operativi Windows a partire da Windows 10 Creators Update. 
+Le nuove funzionalità di Windows Form che supportano la compatibilità con DPI elevato sono disponibili solo nelle applicazioni destinate a .NET Framework 4.7 e sono in esecuzione nei sistemi operativi Windows a partire da Windows 10 Creators Update.
 
 Inoltre, per configurare il supporto di valori DPI alti in un'applicazione Windows Form, è necessario eseguire le operazioni seguenti:
 
@@ -49,27 +49,27 @@ Inoltre, per configurare il supporto di valori DPI alti in un'applicazione Windo
 
 - Abilitare il riconoscimento DPI per monitor nel *app. config* file.
 
-  Introduce un nuovo Windows Form [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) elemento per supportare le nuove funzionalità e le personalizzazioni aggiunte a partire da .NET Framework 4.7. Per sfruttare i vantaggi delle nuove funzionalità che supportano valori DPI alti, aggiungere quanto segue al file di configurazione dell'applicazione.   
+  Introduce un nuovo Windows Form [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) elemento per supportare le nuove funzionalità e le personalizzazioni aggiunte a partire da .NET Framework 4.7. Per sfruttare i vantaggi delle nuove funzionalità che supportano valori DPI alti, aggiungere quanto segue al file di configurazione dell'applicazione.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > Nelle versioni precedenti di .NET Framework, il manifesto è utilizzato per aggiungere il supporto di valori DPI alti. Questo approccio non è più consigliato, poiché viene eseguito l'override delle impostazioni definite nel file app. config.
-   
+
 - Chiamare il metodo statico <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> (metodo).
-   
+
   Deve essere la prima chiamata al metodo nel punto di ingresso dell'applicazione. Ad esempio:
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ Impostando il `DpiAwareness` valore `PerMonitorV2` Abilita le funzionalità di r
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 Per un elenco di singole chiavi e i relativi valori, vedere [elemento configurazione di Windows Form Add](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).

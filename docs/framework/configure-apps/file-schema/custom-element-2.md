@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693798"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845709"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizzato per NameValueSectionHandler e DictionarySectionHandler
 
 Definisce le impostazioni per le sezioni di configurazione personalizzati che usano il <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> classi.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
 &nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>Attributi
@@ -37,7 +37,7 @@ nessuno
 |     | Descrizione |
 | --- | ----------- |
 | [**\<aggiungere >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Aggiunge impostazioni personalizzate dell'applicazione. |
-| [**\<rimuovere >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> |    Rimuove un'impostazione definita in precedenza. |
+| [**\<rimuovere >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Rimuove un'impostazione definita in precedenza. |
 | [**\<Cancella >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) per <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Cancella tutte le impostazioni definite in precedenza in una sezione. |
 
 ## <a name="remarks"></a>Note
@@ -53,7 +53,7 @@ Nella tabella seguente mostra che il tipo di oggetto, il metodo GetConfig restit
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come dichiarare le sezioni che usano il <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classi. 
+Nell'esempio seguente viene illustrato come dichiarare le sezioni che usano il <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler> classi.
 
 Il primo elemento personalizzato viene  **\<dictionarySample >**, che contiene le impostazioni lette dal <xref:System.Configuration.DictionarySectionHandler> classe la `System.dll` assembly. Il secondo elemento personalizzato viene  **\<mySection >**, che contiene le impostazioni lette dal <xref:System.Configuration.NameValueSectionHandler> classe la `System.dll` assembly.
 

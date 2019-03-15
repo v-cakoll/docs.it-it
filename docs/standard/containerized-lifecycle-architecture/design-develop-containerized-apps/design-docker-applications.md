@@ -4,18 +4,18 @@ description: Fai clic qui per un riferimento a una guida approfondita su archite
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 858147883b3b4a5a5f487856028fdbfa84f6cca9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675186"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846330"
 ---
 # <a name="design-docker-applications"></a>Progettare applicazioni Docker
 
 Capitolo 1 di sono stati introdotti i concetti fondamentali relative a contenitori e Docker. Tali informazioni sono il livello di base di informazioni necessarie per iniziare. Tuttavia, le applicazioni aziendali possono essere complessi e composte da più servizi anziché un singolo servizio o contenitore. Per i casi di utilizzo facoltativo, è necessario conoscere altri approcci alla progettazione, ad esempio Service-Oriented Architecture (SOA) e i concetti di microservizi più avanzati e un contenitore ai concetti di orchestrazione. L'ambito di questo documento non è limitato ai microservizi, ma per qualsiasi ciclo di vita delle applicazioni di Docker, pertanto, non esplori architettura di microservizi in modo approfondito perché è anche possibile usare i contenitori e Docker con regolare SOA, le attività in background o processi o persino con gli approcci di distribuzione applicazione monolitica.
 
-**Altre informazioni** per altre informazioni sulle applicazioni aziendali e architettura di microservizi in profondità, leggere la Guida [NET Microservizi: Architettura per applicazioni .NET in contenitori](https://docs.microsoft.com/dotnet/standard/microservices-architecture) che è anche possibile scaricare da <https://aka.ms/MicroservicesEbook>.
+**Altre informazioni** per altre informazioni sulle applicazioni aziendali e architettura di microservizi in profondità, leggere la Guida [NET Microservizi: Architettura per applicazioni .NET in contenitori](../../microservices-architecture/index.md) che è anche possibile scaricare da <https://aka.ms/MicroservicesEbook>.
 
 Tuttavia, prima di addentrarsi il ciclo di vita dell'applicazione e DevOps, è importante conoscere come verrà orchestrata per progettare e costrutto dell'applicazione e quali sono le scelte di progettazione.
 

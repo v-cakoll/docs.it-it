@@ -2,12 +2,12 @@
 title: Riferimento per parole chiave
 description: Fare clic sui collegamenti alle informazioni relative a tutte le F# parole chiave del linguaggio.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857905"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845294"
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -50,7 +50,7 @@ La tabella seguente illustra tutti i F# parole chiave in ordine alfabetico, insi
 |`inline`|[Funzioni](functions/index.md)<br /><br />[Funzioni inline](functions/inline-functions.md)|Utilizzato per indicare che una funzione che deve essere integrata direttamente nel codice del chiamante.|
 |`interface`|[Interfacce](interfaces.md)|Usato per dichiarare e implementare interfacce.|
 |`internal`|[Controllo di accesso](access-control.md)|Consente di specificare che un membro è visibile all'interno di un assembly, ma non al suo esterno.|
-|`lazy`|[Calcoli differiti](lazy-computations.md)|Consente di specificare un calcolo che deve essere eseguita solo quando è necessario un risultato.|
+|`lazy`|[Espressioni Lazy](lazy-expressions.md)|Utilizzato per specificare un'espressione che deve essere eseguita solo quando è necessario un risultato.|
 |`let`|[`let` associazioni](functions/let-bindings.md)|Utilizzato per associare o di binding, un nome a un valore o una funzione.|
 |`let!`|[Flussi di lavoro asincroni](asynchronous-workflows.md)<br /><br />[Espressioni di calcolo](computation-expressions.md)|Usato nei flussi di lavoro asincrone per associare un nome al risultato di un calcolo asincrono o, in altre espressioni di calcolo, utilizzati per associare un nome a un risultato, che è del tipo di calcolo.|
 |`match`|[Espressioni match](match-expressions.md)|Utilizzato al ramo confrontando un valore a un modello.|

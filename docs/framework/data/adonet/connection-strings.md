@@ -2,12 +2,12 @@
 title: Stringhe di connessione in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627564"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844872"
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 
@@ -16,9 +16,9 @@ Una stringa di connessione contiene informazioni di inizializzazione che vengono
 ## <a name="connection-string-syntax"></a>Sintassi della stringa di connessione
 
 Una stringa di connessione è un elenco delimitato da punto e virgola di coppie chiave/valore parametro:
-  
+
     keyword1=value; keyword2=value;
-  
+
 Le parole chiave non sono tra maiuscole e minuscole. I valori, tuttavia, potrebbero essere tra maiuscole e minuscole, a seconda dell'origine dati. Entrambe le parole chiave e i valori possono contenere [spazi vuoti](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Spazi vuoti iniziali e finali viene ignorato nelle parole chiave e senza virgolette i valori.
 
 Se il valore contiene il punto e virgola, [caratteri di controllo Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniziali o finali lo spazio vuoto, deve essere racchiuso tra virgolette singole o doppie. Ad esempio:
@@ -44,19 +44,21 @@ Errori di digitazione può provocare errori. Ad esempio, `Integrated Security=tr
 
 Le stringhe di connessione costruite manualmente in fase di esecuzione dall'input dell'utente non convalidato sono vulnerabili agli attacchi injection di stringa e compromettano sicurezza nell'origine dati. Per risolvere questi problemi *ADO.NET* 2.0 ha introdotto [generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md) per ogni *.NET Framework* provider di dati. I generatori di stringhe di connessione espongono parametri come proprietà fortemente tipizzate e consentono di convalidare la stringa di connessione prima che venga inviata all'origine dati.
 
-## <a name="in-this-section"></a>In questa sezione  
- [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.
-  
- [Stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.
-  
- [Sintassi di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.
-  
- [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.
-  
+## <a name="in-this-section"></a>In questa sezione
+
+[Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.
+
+[Le stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.
+
+[Sintassi della stringa di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.
+
+[Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+Vengono illustrate tecniche per proteggere le informazioni usate per la connessione a un'origine dati.
+
 ## <a name="see-also"></a>Vedere anche
+
 - [Connessione a un'origine dati](/cpp/data/odbc/connecting-to-a-data-source)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

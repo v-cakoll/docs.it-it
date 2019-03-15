@@ -2,12 +2,12 @@
 title: Funzionalità di semplificazione WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467181"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845275"
 ---
 # <a name="wcf-simplification-features"></a>Funzionalità di semplificazione WCF
 
@@ -96,7 +96,7 @@ Nella tabella seguente vengono descritte le impostazioni che sono state modifica
 
 |Proprietà|Attivato|Nuova impostazione predefinita|Altre informazioni|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|Questa proprietà determina il possibile tempo necessario per l'autenticazione di una connessione TCP utilizzando il protocollo .Net Framing. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Questo timeout viene reso intenzionalmente più piccolo rispetto a ReceiveTimeout (10 min) in modo che eventuali client non autenticati dannosi non possano mantenere le connessioni al server per molto tempo. Il valore predefinito è 30 secondi. Per altre informazioni <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondi|Questa proprietà determina quanto tempo può richiedere una connessione TCP per l'autenticazione usando il protocollo .NET Framing. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Questo timeout viene reso intenzionalmente più piccolo rispetto a ReceiveTimeout (10 min) in modo che eventuali client non autenticati dannosi non possano mantenere le connessioni al server per molto tempo. Il valore predefinito è 30 secondi. Per altre informazioni <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * numero di processori|È la proprietà a livello di socket che descrive il numero di richieste "in attesa di accettazione" da mettere in coda. Se la coda del backlog in ascolto si riempie, le nuove richieste del socket verranno rifiutate. Per altre informazioni <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * il numero di processori per trasporto<br /><br /> 4 \* numero di processori per SMSvcHost.exe|Questa proprietà limita il numero di canali che il server può avere in attesa su un listener. Se i dati MaxPendingAccepts sono troppo bassi, si verificherà un piccolo intervallo di tempo in cui tutti canali in attesa hanno avviato connessioni di servizio, ma nessun nuovo canale ha iniziato l'ascolto. Durante questo intervallo può verificarsi una connessione che non riuscirà perché nulla è in sua attesa sul server. Questa proprietà può essere configurata impostando la proprietà <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> su un numero più grande. Per altre informazioni, vedere <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> e [configurazione del servizio di condivisione porta Net. TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * il numero di processori|Questa proprietà controlla il numero di connessioni che sono state accettate da un trasporto, ma non prelevate dal dispatcher ServiceModel. Per impostare questo valore, utilizzare `MaxConnections` nell'associazione o `maxOutboundConnectionsPerEndpoint` nell'elemento di associazione. Per altre informazioni <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

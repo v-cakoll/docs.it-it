@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366127"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846129"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -38,9 +38,9 @@ Per altre informazioni sulla funzionalità di programmazione asincrona introdott
 
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Uso di nuovi metodi async di SqlDataReader in .net 4.5 (parte 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [Uso di nuovi metodi async di SqlDataReader in .NET 4.5 (parte 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [Uso di nuovi metodi async di SqlDataReader in .net 4.5 (parte 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [Uso di nuovi metodi async di SqlDataReader in .NET 4.5 (parte 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 Quando l'interfaccia utente non risponde o il server non è scalabile, si potrebbe aver bisogno di un codice più asincrono. La scrittura di codice asincrono ha richiesto in genere l'installazione di un callback (denominato anche continuazione) per esprimere la logica che si verifica al termine dell'operazione asincrona. Ciò complica la struttura del codice asincrono rispetto al codice sincrono.
 

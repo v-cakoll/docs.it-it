@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570200"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845666"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -94,7 +94,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Messaggio: contesto di transazione in uso da parte di un'altra sessione.  
   
- Fonte: "Provider di dati .Net SqlClient"  
+ Origine: Provider di dati SqlClient .NET  
   
  Previsto: (null)  
   

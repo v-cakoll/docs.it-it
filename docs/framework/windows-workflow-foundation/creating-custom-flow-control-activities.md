@@ -2,15 +2,15 @@
 title: Creazione di attività di controllo del flusso personalizzate
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: de1378cc0dd304db37aefd437d1ce6feac9f2ed2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724665"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57847011"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Creazione di attività di controllo del flusso personalizzate
-.NET Framework contiene una gamma di attività di controllo del flusso che funzionano in modo analogo alle strutture di programmazione astratte (come <xref:System.Activities.Statements.Flowchart>) o alle istruzioni di programmazione standard (come <xref:System.Activities.Statements.If>). In questo argomento viene illustrata l'architettura di uno dei progetti di esempio, [Non-Generic ForEach](./samples/non-generic-foreach.md).  
+.NET Framework contiene un'ampia gamma di attività di controllo di flusso che funzionano in modo analogo a strutture di programmazione astratte (ad esempio <xref:System.Activities.Statements.Flowchart>) o per le istruzioni di programmazione standard (ad esempio <xref:System.Activities.Statements.If>). In questo argomento viene illustrata l'architettura di uno dei progetti di esempio, [Non-Generic ForEach](./samples/non-generic-foreach.md).  
   
 ## <a name="creating-the-custom-class"></a>Creazione della classe personalizzata  
  Poiché la classe Non-Generic ForEach dovrà pianificare le attività figlio, dovrà effettuare la derivazione da <xref:System.Activities.NativeActivity>, dal momento che le attività che derivano da <xref:System.Workflow.Activities.CodeActivity> non dispongono di questa funzionalità.  

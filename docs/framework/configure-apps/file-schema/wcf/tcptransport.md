@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272019"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845960"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
@@ -49,7 +49,7 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Ottiene o imposta il limite di tempo per l'inizializzazione di un canale da accettare.  Periodo massimo di tempo entro il quale un canale può trovarsi nello stato di inizializzazione prima della disconnessione, espresso in secondi. La quota include il tempo necessario per l'autenticazione di una connessione TCP usando il protocollo .Net Message Framing. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Il valore predefinito è 30 secondi.|  
+|channelInitializationTimeout|Ottiene o imposta il limite di tempo per l'inizializzazione di un canale da accettare.  Periodo massimo di tempo entro il quale un canale può trovarsi nello stato di inizializzazione prima della disconnessione, espresso in secondi. Questa quota include il tempo che può richiedere una connessione TCP per l'autenticazione usando il protocollo .NET Message Framing. Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione. Il valore predefinito è 30 secondi.|  
 |connectionBufferSize|Ottiene o imposta la dimensione del buffer utilizzato per trasmettere un blocco del messaggio serializzato in transito dal client o servizio.|  
 |hostNameComparisonMode|Ottiene o imposta un valore che indica se viene utilizzato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.|  
 |listenBacklog|Numero massimo di richieste di connessione in coda che possono essere in sospeso per un servizio Web. L'attributo `connectionLeaseTimeout` limita il tempo di attesa della connessione da parte del client prima che venga generata un'eccezione. Si tratta di una proprietà a livello di socket che controlla il numero massimo di richieste di connessione in coda che possono essere in attesa di un servizio Web. Quando ListenBacklog è troppo basso, WCF sarà non accetta più richieste e quindi eliminare le nuove connessioni fino a quando il server riconosce alcune delle connessioni esistenti in coda. Il valore predefinito è 16 * numero di processori.|  

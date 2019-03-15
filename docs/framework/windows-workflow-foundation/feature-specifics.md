@@ -2,12 +2,12 @@
 title: Specifiche delle funzionalità di Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721853"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846545"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 
@@ -101,7 +101,7 @@ Lo schema di configurazione di WCF è complesso e fornisce agli utenti molte fun
 
 - [Elemento Endpoint standard](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Miglioramenti dei servizi configurazione in .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Miglioramenti della configurazione del servizio in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Errore comune dell'utente in .NET 4: Errata digitazione del nome di configurazione del servizio WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -271,7 +271,7 @@ Il servizio di Routing è progettato per essere un Router che è possibile contr
 
 - I servizi venivano adeguatamente diversificati molto raramente: è più facile far comunicare il client con un servizio che implementa tutto piuttosto che dover scegliere tra più servizi.
 
-Il servizio di routing in .NET 4 è progettato per semplificare la risoluzione di questi problemi. Il nuovo servizio di routing offre le funzionalità seguenti:
+Il servizio di routing in .NET 4 è progettato per rendere più semplice risolvere questi problemi. Il nuovo servizio di routing offre le funzionalità seguenti:
 
 1. Routing basato sul contenuto (gli oggetti<xref:System.ServiceModel.Dispatcher.MessageFilter> esaminano un messaggio per stabilire dove deve essere inviato).
 
@@ -327,7 +327,7 @@ Un sviluppatore non desidera impostare gli endpoint come hardcoded, in quanto no
 
 ## <a name="tracking"></a>Rilevamento
 
-Flusso di lavoro di rilevamento fornisce approfondimenti l'esecuzione di un'istanza del flusso di lavoro. Gli eventi di rilevamento vengono generati da un flusso di lavoro a livello di istanza del flusso di lavoro e quando eseguono le attività all'interno del flusso di lavoro. Per sottoscrivere i record di rilevamento, è necessario aggiungere all'host del flusso di lavoro un partecipante del rilevamento del flusso di lavoro. I record di rilevamento vengono filtrati usando un profilo di rilevamento. .NET Framework fornisce un partecipante del rilevamento ETW (Event Tracing for Windows) e nel file machine.config. viene installato un profilo di base.
+Flusso di lavoro di rilevamento fornisce approfondimenti l'esecuzione di un'istanza del flusso di lavoro. Gli eventi di rilevamento vengono generati da un flusso di lavoro a livello di istanza del flusso di lavoro e quando eseguono le attività all'interno del flusso di lavoro. Per sottoscrivere i record di rilevamento, è necessario aggiungere all'host del flusso di lavoro un partecipante del rilevamento del flusso di lavoro. I record di rilevamento vengono filtrati usando un profilo di rilevamento. .NET Framework fornisce un partecipante del rilevamento ETW (evento di traccia per Windows), e viene installato un profilo di base nel file Machine. config.
 
 ### <a name="getting-started"></a>Introduzione
 

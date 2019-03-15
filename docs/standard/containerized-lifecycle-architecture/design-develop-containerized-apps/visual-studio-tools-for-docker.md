@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680360"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844249"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Usare gli strumenti di Docker in Visual Studio 2017 in Windows
 
@@ -20,7 +20,8 @@ Il flusso di lavoro per gli sviluppatori quando si usano gli strumenti di Docker
 
 Con le versioni più recenti di Docker per Windows, è più facile che mai, per sviluppare applicazioni Docker perché il programma di installazione è semplice, come spiegato nei riferimenti ai seguenti.
 
-> [! INFORMAZIONI] per altre informazioni sull'installazione di Docker per Windows, passare a (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Per altre informazioni sull'installazione di Docker per Windows, passare a (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Supporto docker in Visual Studio 2017
 
@@ -83,7 +84,8 @@ Nella tabella seguente consente di decidere come impostare queste opzioni.
 > [!WARNING]
 > Se non è attendibile il certificato SSL localhost e si seleziona la casella per eliminare la richiesta, richieste web HTTPS potrebbero non riuscire in fase di esecuzione nell'app o nel servizio. In tal caso, deselezionare il **non chiedere conferma** casella di controllo, eseguire il progetto e indicare attendibilità al prompt.
 
-> [! INFORMAZIONI] per altri dettagli sull'implementazione di servizi e l'uso di Visual Studio Tools per Docker, leggere gli articoli seguenti:
+> [!TIP]
+> Per altri dettagli sull'implementazione di servizi e l'uso di Visual Studio Tools per Docker, leggere gli articoli seguenti:
 >
 >Debug di App in un contenitore Docker locale: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

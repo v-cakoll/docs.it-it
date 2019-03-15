@@ -1,17 +1,11 @@
 ---
-title: Riferimenti per il linguaggio F#
-description: Trovare informazioni funzionalità del linguaggio F# da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.
+title: 'Riferimenti per il linguaggio F#'
+description: 'Trovare F# informazioni sulle funzionalità di linguaggio da questo riferimento al token delle lingue, i concetti, tipi, le espressioni e gli argomenti supportati dal compilatore costrutto.'
 ms.date: 05/16/2016
-ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45646415"
 ---
 # <a name="f-language-reference"></a>Riferimenti per il linguaggio F#
 
-In questa sezione è un riferimento al linguaggio F#, un linguaggio di programmazione multi-paradigmatico destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
+In questa sezione è un riferimento per il F# lingua, un linguaggio di programmazione multi-paradigmatico destinato a .NET. Il linguaggio F# supporta modelli di programmazione funzionali, orientati a oggetti e imperativi.
 
 ## <a name="f-tokens"></a>Token F#
 
@@ -44,10 +38,10 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |[Asserzioni](assertions.md)|Descrive l'espressione `assert`, che è una funzionalità di debug che è possibile usare per verificare un'espressione. In caso di errore in modalità Debug, un'asserzione genera una finestra di dialogo di errore di sistema.|
 |[Gestione delle eccezioni](exception-handling/index.md)|Contiene informazioni sul supporto di gestione delle eccezioni nel linguaggio F#.|
 |[Attributi](attributes.md)|Descrive gli attributi, che abilitano i metadati da applicare a un costrutto di programmazione.|
-|[Gestione delle risorse: parola chiave `use` ](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
+|[Gestione delle risorse: Parola chiave `use`](resource-management-the-use-keyword.md)|Descrive le parole chiave `use` e `using`, che possono controllare l'inizializzazione e il rilascio delle risorse.|
 |[Spazi dei nomi](namespaces.md)|Descrive il supporto degli spazi dei nomi in F#. Uno spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate perché consente di collegare un nome a un raggruppamento di elementi di programma.|
 |[Moduli](modules.md)|Descrive i moduli. Un modulo F# è un raggruppamento di codice F#, ad esempio valori, tipi e valori di funzioni, in un programma F#. Il codice di raggruppamento nei moduli consente di tenere insieme il codice correlato e consente di evitare conflitti di nome nel programma.|
-|[Dichiarazioni di importazione: parola chiave `open`](import-declarations-the-open-keyword.md)|Descrive il funzionamento di `open`. Una dichiarazione di importazione specifica un modulo o uno spazio dei nomi ai cui elementi è possibile fare riferimento senza usare un nome completo.|
+|[Dichiarazioni di importazione: Parola chiave `open`](import-declarations-the-open-keyword.md)|Descrive il funzionamento di `open`. Una dichiarazione di importazione specifica un modulo o uno spazio dei nomi ai cui elementi è possibile fare riferimento senza usare un nome completo.|
 |[Firme](signatures.md)|Descrive le firme e i file delle firme. Un file della firma contiene informazioni sulle firme pubbliche di un set di elementi del programma F#, ad esempio i tipi, gli spazi dei nomi e i moduli. Può essere usato per specificare l'accessibilità di questi elementi del programma.|
 |[Documentazione di XML](xml-documentation.md)|Descrive il supporto per generare file di documentazione per i commenti ai documenti XML, noti anche come commenti a barra tripla. È possibile produrre documentazione dai commenti di codice in F# come in altri linguaggi .NET.|
 |[Sintassi dettagliata](verbose-syntax.md)|Descrive la sintassi per i costrutti F# quando la sintassi leggera non è abilitata. La sintassi dettagliata è indicata dalla direttiva `#light "off"` che si trova nella parte superiore del file di codice.|
@@ -59,7 +53,7 @@ La tabella seguente illustra gli argomenti di riferimento disponibili che descri
 |Titolo|Descrizione|
 |-----|-----------|
 |[Valori](values/index.md)|Descrive i valori, ovvero quantità non modificabili che hanno un tipo specifico. I valori possono essere numeri interi o a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.|
-|[Tipi di base](basic-types.md)|Descrive i tipi di base fondamentali usati nel linguaggio F#. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
+|[Tipi di base](basic-types.md)|Vengono descritti i tipi di base fondamentali utilizzati in di F# linguaggio. Specifica anche i tipi .NET corrispondenti e i valori minimi e massimi per ogni tipo.|
 |[Tipo di unità](unit-type.md)|Descrive il tipo `unit`, ovvero un tipo che indica l'assenza di un valore specifico. Il tipo `unit` ha un solo valore, che funge da segnaposto quando nessun altro valore è presente o necessario.|
 |[Stringhe](strings.md)|Descrive le stringhe in F#. Il tipo `string` rappresenta un testo non modificabile come sequenza di caratteri Unicode. `string` è un alias per `System.String` in .NET Framework.|
 |[Tuple](tuples.md)|Descrive le tuple, ovvero un raggruppamento di valori senza nome, ma ordinati, di tipi potenzialmente diversi.|
@@ -91,11 +85,11 @@ La tabella seguente elenca gli argomenti che descrivono le espressioni F#.
 |-----|-----------|
 |[Espressioni condizionali: `if...then...else`](conditional-expressions-if-then-else.md)|Descrive l'espressione `if...then...else`, che esegue diversi rami di codice e restituisce un valore diverso in base all'espressione booleana specificata.|
 |[Espressioni match](match-expressions.md)|Descrive l'espressione `match`, che consente il controllo del branching basato sul confronto di un'espressione con un set di modelli.|
-|[Cicli: espressione `for...to`](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
-|[Cicli: espressione `for...in`](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
-|[Cicli: espressione `while...do`](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
+|[Cicli: `for...to` Expression](loops-for-to-expression.md)|Descrive l'espressione `for...to`, che viene usata per eseguire l'iterazione di un ciclo sopra un intervallo di valori di una variabile di ciclo.|
+|[Cicli: `for...in` Expression](loops-for-in-expression.md)|Descrive l'espressione `for...in`, un costrutto di ciclo usato per eseguire l'iterazione sopra le corrispondenze di un modello in una raccolta enumerabile, ad esempio un'espressione di intervallo, una sequenza, un elenco, una matrice o un altro costrutto che supporta l'enumerazione.|
+|[Cicli: `while...do` Expression](loops-while-do-expression.md)|Descrive l'espressione `while...do`, usata per l'esecuzione iterativa (ciclo) quando una specifica condizione di verifica è true.|
 |[Espressioni di oggetto](object-expressions.md)|Descrive le espressioni di oggetto, ovvero le espressioni che creano nuove istanze di un tipo di oggetto creato dinamicamente, di un tipo di oggetto anonimo basato su un tipo di base, un'interfaccia o un set di interfacce esistenti.|
-|[Calcoli differiti](lazy-computations.md)|Descrive i calcoli differiti, ovvero calcoli che non vengono eseguiti immediatamente, ma solo quando il risultato è effettivamente necessario.|
+|[Espressioni Lazy](lazy-expressions.md)|Descrive le espressioni lazy, ovvero calcoli che non vengono eseguiti immediatamente, ma solo quando il risultato è effettivamente necessario.|
 |[Espressioni di calcolo](computation-expressions.md)|Descrive le espressioni di calcolo in F#, che specificano una sintassi efficiente per la scrittura di calcoli che possono essere ordinati in sequenza e combinati tramite costrutti di flusso di controllo e associazioni. Possono essere usati per specificare una sintassi efficiente per *monads*, ovvero una funzionalità di programmazione funzionale che può essere usata per gestire i dati, il controllo e gli effetti collaterali nei programmi funzionali. Un solo tipo di espressione di calcolo, ovvero il flusso di lavoro asincrono, offre supporto per i calcoli paralleli e asincroni. Per altre informazioni, vedere [Flussi di lavoro asincroni](asynchronous-workflows.md).|
 |[Flussi di lavoro asincroni](asynchronous-workflows.md)|Descrive i flussi di lavoro asincroni, una funzionalità del linguaggio che consente di scrivere codice asincrono in modo molto simile a quello normale in cui si scrive codice sincrono.|
 |[Citazioni di codice](code-quotations.md)|Descrive le citazioni di codice, una funzionalità del linguaggio che consente di generare e usare espressioni di codice F# a livello di codice.|

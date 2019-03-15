@@ -2,47 +2,49 @@
 title: Prestazioni delle query concatenate (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: 8a4893a000bc80fa703e7d47aa5d73f02b95a8ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8634ca224f5892918721996114649c392a5080a0
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601870"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845576"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Prestazioni delle query concatenate (LINQ to XML) (Visual Basic)
-Uno dei più importanti vantaggi di LINQ (e di LINQ to XML) consiste nel fatto che le query concatenate possono offrire le stesse prestazioni di una singola query di dimensioni maggiori e più complessa.  
-  
- Una query concatenata è una query che usa un'altra query come origine. Nel semplice codice seguente, ad esempio, `query2` è l'origine di `query1`:  
-  
-```vb  
-Dim root As New XElement("Root", New XElement("Child", 1), New XElement("Child", 2), New XElement("Child", 3), New XElement("Child", 4))  
-  
-Dim query1 = From x In root.Elements("Child") Where CInt(x) >= 3x  
-  
-Dim query2 = From e In query1 Where CInt(e) Mod 2 = 0e  
-  
-For Each i As var In query2  
-    Console.WriteLine("{0}", CInt(i))  
-Next  
-```  
-  
- Questo esempio produce il seguente output:  
-  
-```  
-4  
-```  
-  
- Questa query concatenata offre lo stesso profilo di prestazioni dell'iterazione in un elenco collegato.  
-  
--   L'asse <xref:System.Xml.Linq.XContainer.Elements%2A> offre essenzialmente le stesse prestazioni dell'iterazione in un elenco collegato. <xref:System.Xml.Linq.XContainer.Elements%2A> viene implementato come iteratore con esecuzione posticipata. Questo significa che esegue alcune operazioni in aggiunta all'iterazione nell'elenco collegato, ad esempio l'allocazione dell'oggetto iteratore e la registrazione dello stato di esecuzione. Queste operazioni possono essere divise in due categorie: le operazioni eseguite al momento della configurazione dell'iteratore e quelle eseguite durante ogni iterazione. Le operazioni di configurazione implicano una quantità di lavoro piccola e fissa, mentre quelle eseguite durante ogni iterazione sono proporzionali al numero di elementi nella raccolta di origine.  
-  
--   In `query1` la clausola `Where` comporta la chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> da parte della query. Questo metodo è implementato anche come iteratore. Le operazioni di configurazione consistono nella creazione di un'istanza del delegato che fa riferimento all'espressione lambda, nonché nelle normali operazioni di configurazione per un iteratore. A ogni iterazione, il delegato viene chiamato per eseguire il predicato. Le operazioni di configurazione e quelle eseguite durante ogni iterazione sono simili a quelle eseguite durante l'iterazione nell'asse.  
-  
--   In `query1` la clausola select comporta la chiamata al metodo <xref:System.Linq.Enumerable.Select%2A> da parte della query. Questo metodo ha lo stesso profilo di prestazioni del metodo <xref:System.Linq.Enumerable.Where%2A>.  
-  
--   In `query2` sia la clausola `Where` che la clausola `Select` hanno lo stesso profilo di prestazioni, come in `query1`.  
-  
- L'iterazione in `query2` è pertanto direttamente proporzionale al numero di elementi nell'origine della prima query, in altre parole un tempo lineare.  
-  
+
+Uno dei più importanti vantaggi di LINQ (e di LINQ to XML) consiste nel fatto che le query concatenate possono offrire le stesse prestazioni di una singola query di dimensioni maggiori e più complessa.
+
+Una query concatenata è una query che usa un'altra query come origine. Nel semplice codice seguente, ad esempio, `query2` è l'origine di `query1`:
+
+```vb
+Dim root As New XElement("Root", New XElement("Child", 1), New XElement("Child", 2), New XElement("Child", 3), New XElement("Child", 4))
+
+Dim query1 = From x In root.Elements("Child") Where CInt(x) >= 3x
+
+Dim query2 = From e In query1 Where CInt(e) Mod 2 = 0e
+
+For Each i As var In query2
+    Console.WriteLine("{0}", CInt(i))
+Next
+```
+
+Questo esempio produce il seguente output:
+
+```
+4
+```
+
+Questa query concatenata offre lo stesso profilo di prestazioni dell'iterazione in un elenco collegato.
+
+- L'asse <xref:System.Xml.Linq.XContainer.Elements%2A> offre essenzialmente le stesse prestazioni dell'iterazione in un elenco collegato. <xref:System.Xml.Linq.XContainer.Elements%2A> viene implementato come iteratore con esecuzione posticipata. Questo significa che esegue alcune operazioni in aggiunta all'iterazione nell'elenco collegato, ad esempio l'allocazione dell'oggetto iteratore e la registrazione dello stato di esecuzione. Queste operazioni possono essere divise in due categorie: le operazioni eseguite al momento della configurazione dell'iteratore e quelle eseguite durante ogni iterazione. Le operazioni di configurazione implicano una quantità di lavoro piccola e fissa, mentre quelle eseguite durante ogni iterazione sono proporzionali al numero di elementi nella raccolta di origine.
+
+- In `query1` la clausola `Where` comporta la chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> da parte della query. Questo metodo è implementato anche come iteratore. Le operazioni di configurazione consistono nella creazione di un'istanza del delegato che fa riferimento all'espressione lambda, nonché nelle normali operazioni di configurazione per un iteratore. A ogni iterazione, il delegato viene chiamato per eseguire il predicato. Le operazioni di configurazione e quelle eseguite durante ogni iterazione sono simili a quelle eseguite durante l'iterazione nell'asse.
+
+- In `query1` la clausola select comporta la chiamata al metodo <xref:System.Linq.Enumerable.Select%2A> da parte della query. Questo metodo ha lo stesso profilo di prestazioni del metodo <xref:System.Linq.Enumerable.Where%2A>.
+
+- In `query2` sia la clausola `Where` che la clausola `Select` hanno lo stesso profilo di prestazioni, come in `query1`.
+
+ L'iterazione in `query2` è pertanto direttamente proporzionale al numero di elementi nell'origine della prima query, in altre parole un tempo lineare.
+
 ## <a name="see-also"></a>Vedere anche
+
 - [Prestazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
