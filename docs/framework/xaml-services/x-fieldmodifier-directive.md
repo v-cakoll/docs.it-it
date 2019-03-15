@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0ce219ca5477c5714225cfc86fe29334bea30a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611202"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042447"
 ---
 # <a name="xfieldmodifier-directive"></a>Direttiva x:FieldModifier
 È possibile modificare il comportamento di compilazione XAML in modo che i campi per i riferimenti agli oggetti denominati sono definiti con <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> accesso anziché il <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> il comportamento predefinito.  
@@ -29,7 +29,7 @@ ms.locfileid: "54611202"
 |*Public*|La stringa esatta da passare per specificare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> rispetto a <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varia a seconda del linguaggio di programmazione di code-behind che viene usato. Vedere la sezione Osservazioni.|  
   
 ## <a name="dependencies"></a>Dipendenze  
- Se viene utilizzata una produzione XAML `x:FieldModifier` ovunque, l'elemento radice di tale ambiente di produzione XAML è necessario dichiarare un' [direttiva X:Class](../../../docs/framework/xaml-services/x-class-directive.md).  
+ Se viene utilizzata una produzione XAML `x:FieldModifier` ovunque, l'elemento radice di tale ambiente di produzione XAML è necessario dichiarare un' [direttiva X:Class](x-class-directive.md).  
   
 ## <a name="remarks"></a>Note  
  `x:FieldModifier` non è rilevante per la dichiarazione del livello di accesso generale di una classe o i relativi membri. È rilevante solo per l'elaborazione di XAML comportamento quando un determinato oggetto XAML che fa parte di una produzione XAML viene elaborato e diventa un oggetto che è potenzialmente accessibile nell'oggetto grafico di un'applicazione. Per impostazione predefinita, il riferimento di campo per tale tipo di oggetto è privato, che impedisce ai consumer dei controlli di modifica direttamente l'oggetto grafico. Al contrario, i consumer di controllo dovrebbero modificare il grafico di oggetti dall'utilizzo di modelli standard che sono abilitati per i modelli di programmazione, ad esempio ottenendo la radice di layout, l'elemento figlio di raccolte di elementi, le proprietà pubbliche dedicate, e così via.  
@@ -46,13 +46,13 @@ ms.locfileid: "54611202"
   
  <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> è il comportamento predefinito, in quanto è insolito che codice esterno all'assembly compilato il XAML deve accedere a un elemento XAML-creato. Architettura di sicurezza WPF con il comportamento di compilazione XAML non vengono dichiarati i campi che archiviano le istanze dell'elemento come pubblico, a meno che non si imposti la `x:FieldModifier` per consentire l'accesso pubblico.  
   
- `x:FieldModifier` è rilevante solo per gli elementi con un [direttiva X:Name](../../../docs/framework/xaml-services/x-name-directive.md) perché tale nome viene usato per fare riferimento al campo dopo che è pubblico.  
+ `x:FieldModifier` è rilevante solo per gli elementi con un [direttiva X:Name](x-name-directive.md) perché tale nome viene usato per fare riferimento al campo dopo che è pubblico.  
   
- Per impostazione predefinita, la classe parziale per l'elemento radice è pubblica; Tuttavia, è possibile renderlo non pubblici tramite il [direttiva X:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md). Il [direttiva X:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md) interesserà anche il livello di accesso dell'istanza della classe dell'elemento radice. È possibile inserire entrambe `x:Name` e `x:FieldModifier` nella radice del solo elemento, ma questo crea una copia di campo pubblico dell'elemento radice, con il principale effettiva classe accesso livello elemento ancora controllata da [direttiva X:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
+ Per impostazione predefinita, la classe parziale per l'elemento radice è pubblica; Tuttavia, è possibile renderlo non pubblici tramite il [direttiva X:ClassModifier](x-classmodifier-directive.md). Il [direttiva X:ClassModifier](x-classmodifier-directive.md) interesserà anche il livello di accesso dell'istanza della classe dell'elemento radice. È possibile inserire entrambe `x:Name` e `x:FieldModifier` nella radice del solo elemento, ma questo crea una copia di campo pubblico dell'elemento radice, con il principale effettiva classe accesso livello elemento ancora controllata da [direttiva X:ClassModifier](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Classi XAML e personalizzate per WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Code-behind e XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Direttiva x:Name](../../../docs/framework/xaml-services/x-name-directive.md)
-- [Compilazione di un'applicazione WPF (WPF)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [Direttiva x:ClassModifier](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Classi XAML e personalizzate per WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Code-behind e XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Direttiva x:Name](x-name-directive.md)
+- [Compilazione di un'applicazione WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [Direttiva x:ClassModifier](x-classmodifier-directive.md)

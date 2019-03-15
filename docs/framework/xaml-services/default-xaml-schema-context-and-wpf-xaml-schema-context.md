@@ -2,12 +2,12 @@
 title: Contesto dello schema XAML predefinito e contesto dello schema XAML WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492195"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018529"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contesto dello schema XAML predefinito e contesto dello schema XAML WPF
 Un contesto dello schema XAML è un'entità concettuale che può fregiarsi come una produzione XAML che usa un vocabolario XAML specifico interagisce con l'oggetto di comportamento, tra cui come vengono risolti mapping dei tipi, come gli assembly vengono caricati, come determinato reader e writer di scrittura le impostazioni vengono interpretate. Questo argomento descrive le funzionalità di servizi XAML di .NET Framework e il contesto dello schema XAML predefinito associato, che si basa sul sistema di tipi CLR. Questo argomento descrive anche il contesto dello schema XAML utilizzato per WPF.  
@@ -89,4 +89,4 @@ Un contesto dello schema XAML è un'entità concettuale che può fregiarsi come 
     -   Usare nome breve e token di chiave pubblica per chiamare <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Informazioni su strutture e concetti del flusso del nodo XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [Informazioni su strutture e concetti del flusso del nodo XAML](understanding-xaml-node-stream-structures-and-concepts.md)

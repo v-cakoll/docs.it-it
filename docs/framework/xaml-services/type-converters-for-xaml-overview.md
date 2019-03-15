@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659150"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049493"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Panoramica dei convertitori di tipi per XAML
 I convertitori di tipi forniscono la logica per un writer di oggetti che esegue una conversione da una stringa nel markup XAML in particolari oggetti in un oggetto grafico. Nei servizi XAML di .NET Framework, il convertitore di tipi deve essere una classe che deriva da <xref:System.ComponentModel.TypeConverter>. Alcuni convertitori supportano anche il percorso di salvataggio XAML e possono essere usati per serializzare un oggetto in un formato stringa nel markup di serializzazione. Questo argomento descrive come e quando vengono richiamati i convertitori di tipi in XAML e vengono forniti consigli di implementazione per gli override del metodo di <xref:System.ComponentModel.TypeConverter>.  
@@ -29,7 +29,7 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
 >  Le direttive del linguaggio XAML non usano convertitori di tipi.  
   
 ### <a name="type-converters-and-markup-extensions"></a>Convertitori di tipi ed estensioni di markup  
- Gli utilizzi di estensioni di markup devono essere gestiti da un processore XAML prima che questo verifichi il tipo di proprietà e altre considerazioni. Ad esempio, se una proprietà impostata come attributo viene associata normalmente a una conversione di tipi, ma in un caso particolare viene impostata mediante un utilizzo dell'estensione di markup, viene innanzitutto elaborato il comportamento dell'estensione di markup. Una situazione comune che richiede un'estensione di markup è la creazione di un riferimento a un oggetto già esistente. Per questo scenario, un convertitore di tipi senza stato può solo generare una nuova istanza, che non necessariamente è appropriata. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Gli utilizzi di estensioni di markup devono essere gestiti da un processore XAML prima che questo verifichi il tipo di proprietà e altre considerazioni. Ad esempio, se una proprietà impostata come attributo viene associata normalmente a una conversione di tipi, ma in un caso particolare viene impostata mediante un utilizzo dell'estensione di markup, viene innanzitutto elaborato il comportamento dell'estensione di markup. Una situazione comune che richiede un'estensione di markup è la creazione di un riferimento a un oggetto già esistente. Per questo scenario, un convertitore di tipi senza stato può solo generare una nuova istanza, che non necessariamente è appropriata. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Convertitori di tipi nativi  
  Nelle implementazioni dei servizi di WPF e XAML di .NET, esistono determinati tipi CLR che dispongono di gestione della conversione del tipo nativo, tuttavia, tali tipi CLR non sono propriamente considerati primitive. Un esempio dei tipi in questione è <xref:System.DateTime>. Un motivo consiste nel funzionamento dell'architettura di .NET Framework: il tipo <xref:System.DateTime> è definito in mscorlib, la libreria più elementare di .NET. Poiché non è consentito assegnare a<xref:System.DateTime> un attributo fornito da un altro assembly che introduce una dipendenza (<xref:System.ComponentModel.TypeConverterAttribute> è fornito da System), il consueto meccanismo di individuazione del convertitore di tipi mediante assegnazione di attributi non può essere supportato. Il parser XAML dispone invece di un elenco di tipi che necessitano di elaborazione nativa ed elabora questi tipi con modalità analoghe all'elaborazione delle primitive effettive. Nel caso di <xref:System.DateTime>, l'elaborazione comporta una chiamata a <xref:System.DateTime.Parse%2A>.  
@@ -60,7 +60,7 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sono metodi di supporto usati quando un servizio esegue una query sulle funzionalità dell'implementazione di <xref:System.ComponentModel.TypeConverter> . È necessario implementare questi metodi per restituire `true` per i casi specifici del tipo supportati dai metodi di conversione equivalenti del convertitore. Per XAML, si tratta in genere del tipo <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informazioni relative alle impostazioni cultura e convertitori di tipi per XAML  
- Ogni implementazione di <xref:System.ComponentModel.TypeConverter> può interpretare in modo univoco il concetto di stringa valida per una conversione e può quindi usare o ignorare la descrizione del tipo passata come parametri. Una considerazione importante circa le impostazioni cultura e la conversione di tipi XAML: anche se l'uso di stringhe localizzabili come valori di attributo è supportato da XAML, non è possibile usare queste stringhe come input del convertitore di tipi con requisiti specifici per le impostazioni cultura. Questa limitazione è dovuta al fatto che i convertitori di tipi per i valori di attributo XAML implicano necessariamente un comportamento di elaborazione XAML basato su un'unica lingua che usa le impostazioni cultura `en-US` . Per altre informazioni sui motivi legati alla progettazione di questa limitazione, vedere la specifica del linguaggio XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) o [WPF Panoramica della globalizzazione e localizzazione](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Ogni implementazione di <xref:System.ComponentModel.TypeConverter> può interpretare in modo univoco il concetto di stringa valida per una conversione e può quindi usare o ignorare la descrizione del tipo passata come parametri. Una considerazione importante circa le impostazioni cultura e la conversione di tipi XAML: anche se l'uso di stringhe localizzabili come valori di attributo è supportato da XAML, non è possibile usare queste stringhe come input del convertitore di tipi con requisiti specifici per le impostazioni cultura. Questa limitazione è dovuta al fatto che i convertitori di tipi per i valori di attributo XAML implicano necessariamente un comportamento di elaborazione XAML basato su un'unica lingua che usa le impostazioni cultura `en-US` . Per altre informazioni sui motivi legati alla progettazione di questa limitazione, vedere la specifica del linguaggio XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) o [WPF Panoramica della globalizzazione e localizzazione](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Un esempio delle problematiche che possono presentarsi con le impostazioni cultura è rappresentato dal separatore decimale per i numeri in formato stringa, che per alcune impostazioni cultura è la virgola anziché il punto. Quest'uso è in conflitto con il comportamento di molti convertitori di tipi esistenti, che prevede l'uso della virgola come delimitatore. Il passaggio di impostazioni cultura tramite `xml:lang` nel codice XAML adiacente non risolve il problema.  
   
@@ -101,7 +101,7 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Accesso al contesto del provider di servizi da un'implementazione dell'estensione di markup  
- I servizi disponibili sono gli stessi per qualsiasi convertitore di valori. L'unica differenza risiede nel modo in cui ogni convertitore di valori riceve il contesto del servizio. L'accesso ai servizi e i servizi disponibili sono illustrati nell'argomento [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ I servizi disponibili sono gli stessi per qualsiasi convertitore di valori. L'unica differenza risiede nel modo in cui ogni convertitore di valori riceve il contesto del servizio. L'accesso ai servizi e i servizi disponibili sono illustrati nell'argomento [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Convertitori di tipi nel flusso di nodi XAML  
@@ -109,5 +109,5 @@ I convertitori di tipi forniscono la logica per un writer di oggetti che esegue 
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [Convertitori di tipi ed estensioni di markup per XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Convertitori di tipi ed estensioni di markup per XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

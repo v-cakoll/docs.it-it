@@ -2,12 +2,12 @@
 title: Spazi dei nomi XAML per i servizi XAML di .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736799"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030518"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Spazi dei nomi XAML per i servizi XAML di .NET Framework
 Uno spazio dei nomi XAML è un concetto che si espande sulla definizione di uno spazio dei nomi XML. Simile a uno spazio dei nomi XML, è possibile definire un spazio dei nomi XAML utilizzando un `xmlns` attributo nel markup. Gli spazi dei nomi XAML sono rappresentati anche in altre API di servizi XAML e il flusso di nodi XAML. In questo argomento viene definito il concetto di spazio dei nomi XAML e viene descritto come gli spazi dei nomi XAML possono essere definiti e servono da contesti dello schema XAML e altri aspetti di servizi XAML di .NET Framework.  
@@ -44,14 +44,14 @@ Uno spazio dei nomi XAML è un concetto che si espande sulla definizione di uno 
   
  *assemblyName* rappresenta qualsiasi stringa valida come un <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> input. Questa stringa può includere le impostazioni cultura, chiave pubblica o le informazioni sulla versione (definizioni di questi concetti sono definite nell'argomento di riferimento per <xref:System.Reflection.Assembly>). Formato COFF formato e l'evidenza (come utilizzato da altri overload di <xref:System.Reflection.Assembly.Load%2A>) non sono rilevanti per scopi di caricamento degli assembly XAML tutte le informazioni sul caricamento deve essere presentati come una stringa.  
   
- Specifica una chiave pubblica per l'assembly è una tecnica utile per la sicurezza XAML o per rimuovere possibili ambiguità che possono esistere se gli assembly vengono caricati in base al nome semplice o pre-esistano in un dominio applicazione o della cache. Per altre informazioni, vedere [XAML Security Considerations](../../../docs/framework/xaml-services/xaml-security-considerations.md).  
+ Specifica una chiave pubblica per l'assembly è una tecnica utile per la sicurezza XAML o per rimuovere possibili ambiguità che possono esistere se gli assembly vengono caricati in base al nome semplice o pre-esistano in un dominio applicazione o della cache. Per altre informazioni, vedere [XAML Security Considerations](xaml-security-considerations.md).  
   
 ## <a name="xaml-namespace-declarations-in-the-xaml-services-api"></a>Dichiarazioni di Namespace XAML nei servizi XAML di API  
  Nell'API di servizi XAML, una dichiarazione dello spazio dei nomi XAML è rappresentata da un <xref:System.Xaml.NamespaceDeclaration> oggetto. Se si dichiara uno spazio dei nomi XAML nel codice, si chiama il <xref:System.Xaml.NamespaceDeclaration.%23ctor%28System.String%2CSystem.String%29> costruttore. Il `ns` e `prefix` parametri vengono specificati come stringhe e l'input per specificare per questi parametri corrisponde alla definizione dell'identificatore dello spazio dei nomi XAML e il prefisso dello spazio dei nomi XAML come indicato in precedenza in questo argomento.  
   
  Se le informazioni dello spazio dei nomi XAML come parte di un flusso di nodi XAML o tramite un altro accesso al sistema di tipi XAML, se si siano esaminando <xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType> segnala l'identificatore dello spazio dei nomi XAML, e <xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType> segnala il prefisso dello spazio dei nomi XAML.  
   
- In un flusso di nodi XAML, le informazioni dello spazio dei nomi XAML possono apparire come un nodo XAML che precede l'entità a cui viene applicata. Sono inclusi i casi in cui le informazioni dello spazio dei nomi XAML precede il `StartObject` dell'elemento radice XAML. Per altre informazioni, vedere [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ In un flusso di nodi XAML, le informazioni dello spazio dei nomi XAML possono apparire come un nodo XAML che precede l'entità a cui viene applicata. Sono inclusi i casi in cui le informazioni dello spazio dei nomi XAML precede il `StartObject` dell'elemento radice XAML. Per altre informazioni, vedere [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md).  
   
  Per molti scenari che usano l'API di servizi XAML di .NET Framework, è necessario almeno una dichiarazione di spazio dei nomi XAML che esista e la dichiarazione deve contenere o fare riferimento alle informazioni necessarie per un contesto dello schema XAML. Gli spazi dei nomi XAML deve specificare gli assembly da caricare o la risoluzione dei tipi specifici all'interno di spazi dei nomi e gli assembly che sono già caricati o noti con il contesto dello schema XAML.  
   
@@ -61,7 +61,7 @@ Uno spazio dei nomi XAML è un concetto che si espande sulla definizione di uno 
   
  Se è necessario per il popolamento preliminare delle informazioni dello spazio dei nomi XAML, nei casi in cui lo spazio dei nomi XAML si intende il contesto dello schema XAML da utilizzare non è definito nel markup, è possibile usare una tecnica consiste nel dichiarare le dichiarazioni dello spazio dei nomi XML nel <xref:System.Xml.XmlParserContext> per un <xref:System.Xml.XmlReader>. Quindi usare tale <xref:System.Xml.XmlReader> come input per un costruttore di reader XAML o <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Due altre API che sono rilevanti per spazio dei nomi XAML gestisce nei servizi XAML di .NET Framework sono gli attributi <xref:System.Windows.Markup.XmlnsDefinitionAttribute> e <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Questi attributi si applicano agli assembly. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> usato da un contesto dello schema XAML per interpretare qualsiasi dichiarazione dello spazio dei nomi XAML che include un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> viene usato dagli strumenti che generano XAML in modo che un determinato spazio dei nomi XAML può essere serializzato con un prefisso prevedibile. Per altre informazioni, vedere [Related attributi CLR per tipi personalizzati e le librerie](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Due altre API che sono rilevanti per spazio dei nomi XAML gestisce nei servizi XAML di .NET Framework sono gli attributi <xref:System.Windows.Markup.XmlnsDefinitionAttribute> e <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Questi attributi si applicano agli assembly. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> usato da un contesto dello schema XAML per interpretare qualsiasi dichiarazione dello spazio dei nomi XAML che include un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> viene usato dagli strumenti che generano XAML in modo che un determinato spazio dei nomi XAML può essere serializzato con un prefisso prevedibile. Per altre informazioni, vedere [Related attributi CLR per tipi personalizzati e le librerie](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Informazioni su strutture e concetti del flusso del nodo XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [Informazioni su strutture e concetti del flusso del nodo XAML](understanding-xaml-node-stream-structures-and-concepts.md)

@@ -2,12 +2,12 @@
 title: La cartella di destinazione è un file
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: eff48eadf57e749c768f88e11f5a36b79912f558
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738604"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58035082"
 ---
 # <a name="target-folder-is-a-file"></a>La cartella di destinazione è un file
 Si sta specificando un file durante il tentativo di eseguire un'azione correlata a una cartella.  
@@ -17,6 +17,7 @@ Si sta specificando un file durante il tentativo di eseguire un'azione correlata
 -   Controllare il percorso fornito per assicurarsi di specificare una cartella anziché un file.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Analizzare percorsi di file](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Creazione, eliminazione e spostamento di file e directory](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
