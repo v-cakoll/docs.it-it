@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839092"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048682"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipi incorporati per primitive del linguaggio XAML comuni
 XAML 2009 introduce il supporto del livello di linguaggio XAML per diversi tipi di dati che sono primitive di uso frequente in Common Language Runtime (CLR) e in altri linguaggi di programmazione. XAML 2009 aggiunge il supporto per queste primitive: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`e `x:Array`  
@@ -66,14 +66,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdecimal"></a>x:Decimal  
  Per il supporto CLR, la primitiva `x:Decimal` corrisponde a <xref:System.Decimal>.  
   
- Si noti che l'analisi XAML viene eseguita intrinsecamente con le impostazioni cultura `en-US`. Con le impostazioni cultura `en-US` , il separatore corretto per i componenti di un numero decimale è sempre un punto (`.`) indipendentemente dalle impostazioni cultura dell'ambiente di sviluppo o dell'eventuale destinazione client in cui XAML viene caricato in fase di esecuzione.  
+ Si noti che l'analisi XAML viene eseguita intrinsecamente con le impostazioni cultura `en-US` . Con le impostazioni cultura `en-US` , il separatore corretto per i componenti di un numero decimale è sempre un punto (`.`) indipendentemente dalle impostazioni cultura dell'ambiente di sviluppo o dell'eventuale destinazione client in cui XAML viene caricato in fase di esecuzione.  
   
  Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.14 e 5.4.8 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xsingle"></a>x:Single  
  Per il supporto CLR, la primitiva `x:Single` corrisponde a <xref:System.Single>.  
   
- Oltre ai valori numerici, nella sintassi del testo per `x:Single` è consentito anche l'uso dei token `Infinity`, `-Infinity` e `NaN`. Per questi token viene rilevata la distinzione tra maiuscole e minuscole.  
+ Oltre ai valori numerici, nella sintassi del testo per `x:Single` è consentito anche l'uso dei token `Infinity`, `-Infinity`e `NaN`. Per questi token viene rilevata la distinzione tra maiuscole e minuscole.  
   
  `x:Single` può supportare valori nel formato di notazione scientifico, se il primo carattere nella sintassi del testo è `e` o `E`.  
   
@@ -82,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  Per il supporto CLR, la primitiva `x:Double` corrisponde a <xref:System.Double>.  
   
- Oltre ai valori numerici, nella sintassi del testo per `x:Double` è consentito l'uso dei token `Infinity`, `-Infinity` e `NaN`. Per questi token viene rilevata la distinzione tra maiuscole e minuscole.  
+ Oltre ai valori numerici, nella sintassi del testo per `x:Double` è consentito l'uso dei token `Infinity`, `-Infinity`e `NaN`. Per questi token viene rilevata la distinzione tra maiuscole e minuscole.  
   
  `x:Double` può supportare valori nel formato di notazione scientifico. Utilizzare il carattere `e` o `E` per introdurre la parte dell'esponente.  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  Per il supporto CLR, la primitiva `x:Array` corrisponde a <xref:System.Array>.  
   
- In XAML 2006 è possibile definire una matrice utilizzando una sintassi dell'estensione di markup, mentre la sintassi di XAML 2009 è una primitiva definita dal linguaggio che non richiede l'accesso a un'estensione di markup. Per ulteriori informazioni sul supporto di XAML 2006, vedere [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ In XAML 2006 è possibile definire una matrice utilizzando una sintassi dell'estensione di markup, mentre la sintassi di XAML 2009 è una primitiva definita dal linguaggio che non richiede l'accesso a un'estensione di markup. Per ulteriori informazioni sul supporto di XAML 2006, vedere [x:Array Markup Extension](x-array-markup-extension.md).  
   
  Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] 5.2.18 del documento](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>Supporto WPF  
  In WPF è possibile usare le funzionalità di XAML 2009, ma solo per il codice XAML non compilato dal markup. Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.  
   
- Uno scenario in cui è possibile usare le funzionalità di XAML 2009 con WPF consiste di creazione di XAML separato e nel successivo caricamento di XAML in un grafico di runtime e l'oggetto WPF con <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. L'applicazione WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> e il relativo <xref:System.Windows.Markup.XamlReader.Load%2A> possono elaborare parole chiave del linguaggio XAML 2009 e le funzionalità in una rappresentazione grafica dell'oggetto valido.
+ Un scenario in cui è possibile usare le funzionalità di XAML 2009 con WPF consiste nella creazione di XAML separato e nel successivo caricamento in un runtime di WPF e in un oggetto grafico con <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. L'oggetto <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> di WPF e il relativo metodo <xref:System.Windows.Markup.XamlReader.Load%2A> possono elaborare parole chiave e funzionalità del linguaggio XAML 2009 in una rappresentazione dell'oggetto grafico valida.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498047"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030258"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Tipo XAML intrinseco x:XData
 Consente il posizionamento di isole di dati XML all'interno di una produzione XAML. Gli elementi XML presenti `x:XData` non devono essere considerati dai processori XAML come se facessero parte di spazio dei nomi XAML predefinito attivo o qualsiasi altro spazio dei nomi XAML. `x:XData` può contenere codice XML ben formato arbitrario.  
@@ -45,11 +45,11 @@ Consente il posizionamento di isole di dati XML all'interno di una produzione XA
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
  Il `x:XData` oggetto viene utilizzato principalmente come un oggetto figlio di un <xref:System.Windows.Data.XmlDataProvider>, o in alternativa, l'oggetto figlio di <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> proprietà (in XAML, questo valore viene in genere espresso nella sintassi degli elementi di proprietà).  
   
- I dati in genere devono ridefinire lo spazio dei nomi XML di base all'interno dell'isola di dati da un nuovo spazio dei nomi XML predefinito (impostato su una stringa vuota). Ciò è più semplice per le isole di dati semplici in quanto il <xref:System.Windows.Data.Binding.XPath%2A> espressioni che vengono usate per fare riferimento e associare ai dati possono evitare di includere i prefissi. Isole di dati più complesse potrebbero definire più prefissi per i dati e usare un prefisso specifico per lo spazio dei nomi XML in corrispondenza della radice. In questo caso, tutti <xref:System.Windows.Data.Binding.XPath%2A> espressione che fa riferimento deve includere il prefisso di mapping dello spazio dei nomi appropriato. Per altre informazioni, vedere la [panoramica del data binding](../../../docs/framework/wpf/data/data-binding-overview.md).  
+ I dati in genere devono ridefinire lo spazio dei nomi XML di base all'interno dell'isola di dati da un nuovo spazio dei nomi XML predefinito (impostato su una stringa vuota). Ciò è più semplice per le isole di dati semplici in quanto il <xref:System.Windows.Data.Binding.XPath%2A> espressioni che vengono usate per fare riferimento e associare ai dati possono evitare di includere i prefissi. Isole di dati più complesse potrebbero definire più prefissi per i dati e usare un prefisso specifico per lo spazio dei nomi XML in corrispondenza della radice. In questo caso, tutti <xref:System.Windows.Data.Binding.XPath%2A> espressione che fa riferimento deve includere il prefisso di mapping dello spazio dei nomi appropriato. Per altre informazioni, vedere la [panoramica del data binding](../wpf/data/data-binding-overview.md).  
   
  Tecnicamente `x:XData` può essere utilizzato come il contenuto di qualsiasi proprietà di tipo <xref:System.Xml.Serialization.IXmlSerializable>. Tuttavia, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> è l'unica implementazione rilevante.  
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Panoramica sul data binding](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Estensione di markup Binding](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [Panoramica sul data binding](../wpf/data/data-binding-overview.md)
+- [Estensione di markup Binding](../wpf/advanced/binding-markup-extension.md)
