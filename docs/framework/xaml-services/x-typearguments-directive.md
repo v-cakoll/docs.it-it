@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520178"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043267"
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 o XAML 2006 senza WPF 3.0 o 3.5 WPF delle dipendenze  
  Nei servizi XAML di .NET Framework per XAML 2006 o XAML 2009, sono flessibili le restrizioni sull'utilizzo XAML generico basate su WPF. È possibile creare un'istanza di un elemento oggetto generico in qualsiasi posizione nel markup XAML in grado di supportare il modello di sistema e l'oggetto di tipo sottostante.  
   
- Se si utilizza XAML 2009, anziché eseguire il mapping di CLR di base dei tipi per ottenere i tipi XAML per primitive di linguaggio comuni, è possibile usare [i tipi nativi per primitive del linguaggio XAML comuni](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) come elementi di informazione in un `typeString`. Ad esempio, si potrebbe dichiarare seguenti (non illustrato mapping del prefisso, ma x è lo spazio dei nomi XAML del linguaggio XAML di XAML 2009):  
+ Se si utilizza XAML 2009, anziché eseguire il mapping di CLR di base dei tipi per ottenere i tipi XAML per primitive di linguaggio comuni, è possibile usare [i tipi nativi per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md) come elementi di informazione in un `typeString`. Ad esempio, si potrebbe dichiarare seguenti (non illustrato mapping del prefisso, ma x è lo spazio dei nomi XAML del linguaggio XAML di XAML 2009):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -82,7 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  In WPF e quando la destinazione [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare le funzionalità di XAML 2009 con `x:TypeArguments` ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009. Se è necessario di una compilazione di markup di XAML, è necessario operare con le restrizioni indicate nella sezione "XAML 2006 e WPF XAML utilizzi generici".  
   
 ## <a name="see-also"></a>Vedere anche
-- [Direttiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Estensione di markup x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Tipi incorporati per primitive del linguaggio XAML comuni](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
-- [Generics in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+- [Direttiva x:Class](x-class-directive.md)
+- [Estensione di markup x:Type](x-type-markup-extension.md)
+- [Tipi incorporati per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md)
+- [Generics in XAML](generics-in-xaml.md)
