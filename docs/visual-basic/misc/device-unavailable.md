@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 033da165bfc0535f0091c79230b45c0d89dead31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3cc9fff42e702e7d52f37332689c84ce85c4c12
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736442"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047356"
 ---
 # <a name="device-unavailable"></a>Dispositivo non disponibile
 La connessione di rete è stata persa o il dispositivo a cui si tenta di accedere è offline o non esiste.  
@@ -21,4 +21,5 @@ La connessione di rete è stata persa o il dispositivo a cui si tenta di acceder
 2.  Ristabilire la connessione alla rete e riprovare.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)

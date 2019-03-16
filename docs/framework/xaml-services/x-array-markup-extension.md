@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699740"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047878"
 ---
 # <a name="xarray-markup-extension"></a>Estensione del markup x:Array
 Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'estensione di markup. Corrisponde al `x:ArrayExtension` tipo XAML in [MS-XAML].  
@@ -46,9 +46,9 @@ Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'esten
   
  `x:Array` è un'estensione di markup. Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà. `x:Array` infatti parzialmente un'eccezione alla regola invece di fornire la gestione dei valori di attributo alternativo, `x:Array` fornisce la gestione alternativa del contenuto di testo interno. Questo comportamento consente a tipi che potrebbero non essere supportati da un modello di contenuto esistente per essere raggruppate in una matrice e fa riferimento in un secondo momento nel code-behind accesso all'array denominato; è possibile chiamare <xref:System.Array> metodi per ottenere i singoli elementi della matrice.  
   
- Tutte le estensioni di markup in XAML usano le parentesi graffe ({,} `)` nella sintassi degli attributi, che è la convenzione mediante il quale un processore XAML riconosce che il valore dell'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni sulle estensioni di markup in generale, vedere [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Tutte le estensioni di markup in XAML usano le parentesi graffe ({,} `)` nella sintassi degli attributi, che è la convenzione mediante il quale un processore XAML riconosce che il valore dell'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni sulle estensioni di markup in generale, vedere [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- XAML 2009, `x:Array` viene definito come un tipo primitivo invece di un'estensione di markup del linguaggio. Per altre informazioni, vedere [i tipi nativi per primitive del linguaggio XAML comuni](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ XAML 2009, `x:Array` viene definito come un tipo primitivo invece di un'estensione di markup del linguaggio. Per altre informazioni, vedere [i tipi nativi per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
  In genere, gli elementi di oggetti che popolano un `x:Array` non sono gli elementi esistenti nel [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] dello spazio dei nomi XAML e richiede un mapping del prefisso di uno spazio dei nomi XAML non predefinito.  
@@ -67,8 +67,8 @@ Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'esten
   
  `</x:Array>`  
   
- Per i tipi personalizzati che vengono utilizzati come elementi della matrice, la classe deve anche supportare i requisiti per la creazione di un'istanza in XAML come elementi oggetto. Per altre informazioni, vedere [XAML e classi personalizzate per WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Per i tipi personalizzati che vengono utilizzati come elementi della matrice, la classe deve anche supportare i requisiti per la creazione di un'istanza in XAML come elementi oggetto. Per altre informazioni, vedere [XAML e classi personalizzate per WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estensioni di markup e XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Tipi migrati da WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
