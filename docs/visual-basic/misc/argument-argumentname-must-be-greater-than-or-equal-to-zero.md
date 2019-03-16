@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-ms.openlocfilehash: c1987958e463ade5d1d8caead99d801b0a076c77
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 733869f834160b6ab2a8bdffafb757477e018df6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257924"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026265"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>Argomento '\<NomeArgomento >' deve essere maggiore o uguale a zero
 Un argomento non è valido perché è minore di zero.  
@@ -21,5 +21,5 @@ Un argomento non è valido perché è minore di zero.
 2.  Controllare le operazioni precedenti nelle variabili dell'espressione, specialmente quelle passate alla routine come argomenti da altre routine.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Passaggio di argomenti per valore e per riferimento](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 
+- [Passaggio di argomenti per valore e per riferimento](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

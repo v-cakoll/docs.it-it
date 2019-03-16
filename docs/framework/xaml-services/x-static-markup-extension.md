@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619322"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037686"
 ---
 # <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
 Fa riferimento a qualsiasi entità di codice statico in base al valore definito in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modalità conforme. La proprietà statica a cui viene fatto riferimento è utilizzabile per fornire il valore di una proprietà in XAML.  
@@ -69,7 +69,7 @@ Esistono due altri utilizzi XAML che fanno tecnicamente possibili. Tuttavia, que
 
 Nell'implementazione di servizi XAML di .NET Framework, la gestione di questa estensione di markup viene definita per il <xref:System.Windows.Markup.StaticExtension> classe.  
 
-`x:Static` è un'estensione di markup. Tutte le estensioni di markup in uso XAML il `{` e `}` caratteri nella sintassi degli attributi, vale a dire la convenzione per cui un processore XAML riconosce che un'estensione di markup deve fornire un valore. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+`x:Static` è un'estensione di markup. Tutte le estensioni di markup in uso XAML il `{` e `}` caratteri nella sintassi degli attributi, vale a dire la convenzione per cui un processore XAML riconosce che un'estensione di markup deve fornire un valore. Per ulteriori informazioni sulle estensioni di markup, vedere [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
  Spazio dei nomi XAML predefinito utilizzato per la programmazione WPF non contiene molte proprietà statica utili e la maggior parte delle proprietà statiche utile dispongono di supporto, ad esempio i convertitori di tipi che semplificano l'uso senza richiedere `{x:Static}` . Per le proprietà statiche, è necessario eseguire il mapping di un prefisso per uno spazio dei nomi XAML se viene soddisfatta una delle operazioni seguenti:  
@@ -78,10 +78,10 @@ Nell'implementazione di servizi XAML di .NET Framework, la gestione di questa es
   
 -   Si fa riferimento a un tipo da un assembly personalizzato.  
   
--   Si fa riferimento a un tipo esistente in un assembly WPF, ma questo tipo è all'interno di uno spazio dei nomi CLR che non è stato eseguito il mapping come parte dello spazio dei nomi XAML WPF predefinito. Viene eseguito il mapping degli spazi dei nomi CLR nello spazio dei nomi XAML predefinito per WPF dalle definizioni in vari assembly WPF (per ulteriori informazioni su questo concetto, vedere [spazi dei nomi XAML e Mapping Namespace per XAML WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Possono esistere spazi dei nomi CLR non mappati se tale spazio dei nomi CLR è composto principalmente le definizioni delle classi che non sono in genere destinati al XAML, ad esempio <xref:System.Windows.Threading>.  
+-   Si fa riferimento a un tipo esistente in un assembly WPF, ma questo tipo è all'interno di uno spazio dei nomi CLR che non è stato eseguito il mapping come parte dello spazio dei nomi XAML WPF predefinito. Viene eseguito il mapping degli spazi dei nomi CLR nello spazio dei nomi XAML predefinito per WPF dalle definizioni in vari assembly WPF (per ulteriori informazioni su questo concetto, vedere [spazi dei nomi XAML e Mapping Namespace per XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Possono esistere spazi dei nomi CLR non mappati se tale spazio dei nomi CLR è composto principalmente le definizioni delle classi che non sono in genere destinati al XAML, ad esempio <xref:System.Windows.Threading>.  
   
- Per altre informazioni su come usare i prefissi e spazi dei nomi XAML per WPF, vedere [spazi dei nomi XAML e Mapping di Namespace per XAML WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Per altre informazioni su come usare i prefissi e spazi dei nomi XAML per WPF, vedere [spazi dei nomi XAML e Mapping di Namespace per XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estensione di markup x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Tipi migrati da WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Estensione di markup x:Type](x-type-markup-extension.md)
+- [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
