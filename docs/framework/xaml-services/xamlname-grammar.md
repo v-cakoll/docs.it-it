@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514801"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031597"
 ---
 # <a name="xamlname-grammar"></a>Grammatica XamlName
 Grammatica XamlName è una grammatica specifica che viene definita nella specifica del linguaggio XAML [MS-XAML], che viene riprodotto di seguito per praticità.  
@@ -55,7 +55,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML definisce una grammatica di secondo, DottedXamlName, che viene usato per la proprietà ed evento riferimenti completi e anche per membri associati. Per altre informazioni, vedere <xref:System.Windows.DependencyProperty> e [Cenni preliminari su XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ XAML definisce una grammatica di secondo, DottedXamlName, che viene usato per la proprietà ed evento riferimenti completi e anche per membri associati. Per altre informazioni, vedere <xref:System.Windows.DependencyProperty> e [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
   
  I valori di tipo che DottedXamlName deve essere conforme alla grammatica seguente stringa:  
   
