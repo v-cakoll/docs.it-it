@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365724"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034753"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 
@@ -232,7 +232,7 @@ Alcune direttive sono finalizzate in modo specifico a fornire maggiori informazi
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Comportamento di XamlObjectWriter e ordine dei nodi
 
-`StartObject` per <xref:System.Xaml.XamlObjectWriter> non segnala necessariamente al writer di oggetti XAML di costruire immediatamente l'istanza dell'oggetto. XAML include diverse funzionalità del linguaggio che consentono di inizializzare un oggetto con un input aggiuntivo senza fare completamente affidamento sulla richiamata di un costruttore predefinito per produrre l'oggetto iniziale e quindi impostare le proprietà. Tali funzionalità includono <xref:System.Windows.Markup.XamlDeferLoadAttribute>, testo di inizializzazione, [x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md), parametri posizionali di un'estensione di markup, metodi factory e nodi [x:Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) associati (XAML 2009). Ognuno di questi casi ritarda la costruzione effettiva dell'oggetto e poiché il flusso di nodi viene riordinato, il writer di oggetti XAML può dipendere da un comportamento che prevede la costruzione effettiva dell'istanza ogni volta che viene rilevato un membro iniziale che non è specificamente una direttiva di costruzione per tale tipo di oggetto.
+`StartObject` per <xref:System.Xaml.XamlObjectWriter> non segnala necessariamente al writer di oggetti XAML di costruire immediatamente l'istanza dell'oggetto. XAML include diverse funzionalità del linguaggio che consentono di inizializzare un oggetto con un input aggiuntivo senza fare completamente affidamento sulla richiamata di un costruttore predefinito per produrre l'oggetto iniziale e quindi impostare le proprietà. Tali funzionalità includono <xref:System.Windows.Markup.XamlDeferLoadAttribute>, testo di inizializzazione, [x:TypeArguments](x-typearguments-directive.md), parametri posizionali di un'estensione di markup, metodi factory e nodi [x:Arguments](x-arguments-directive.md) associati (XAML 2009). Ognuno di questi casi ritarda la costruzione effettiva dell'oggetto e poiché il flusso di nodi viene riordinato, il writer di oggetti XAML può dipendere da un comportamento che prevede la costruzione effettiva dell'istanza ogni volta che viene rilevato un membro iniziale che non è specificamente una direttiva di costruzione per tale tipo di oggetto.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Alcune direttive sono finalizzate in modo specifico a fornire maggiori informazi
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Xaml.XamlObjectReader>
-- [Servizi XAML](../../../docs/framework/xaml-services/index.md)
-- [Spazi dei nomi XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [Servizi XAML](index.md)
+- [Spazi dei nomi XAML](xaml-namespaces-for-net-framework-xaml-services.md)
