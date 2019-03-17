@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 6fc4e12bb7532019a0571095263b5447e4b0d1ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702516"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126279"
 ---
-# <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="1508b-102">Procedura: Disegnare una singola B&#233;Spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="1508b-102">How to: Draw a Single B&#233;zier Spline</span></span>
-<span data-ttu-id="1508b-103">Viene definita una spline di Bézier da quattro punti: un punto di partenza, due punti di controllo e un endpoint.</span><span class="sxs-lookup"><span data-stu-id="1508b-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  
+# <a name="how-to-draw-a-single-b233zier-spline"></a><span data-ttu-id="a1bd5-102">Procedura: Disegnare una singola B&#233;Spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="a1bd5-102">How to: Draw a Single B&#233;zier Spline</span></span>
+<span data-ttu-id="a1bd5-103">Viene definita una spline di Bézier da quattro punti: un punto di partenza, due punti di controllo e un endpoint.</span><span class="sxs-lookup"><span data-stu-id="a1bd5-103">A Bézier spline is defined by four points: a start point, two control points, and an endpoint.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1508b-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="1508b-104">Example</span></span>  
- <span data-ttu-id="1508b-105">L'esempio seguente disegna una spline di Bézier con endpoint (200, 100) e il punto di inizio (10, 100).</span><span class="sxs-lookup"><span data-stu-id="1508b-105">The following example draws a Bézier spline with start point (10, 100) and endpoint (200, 100).</span></span> <span data-ttu-id="1508b-106">I punti di controllo sono (100, 10) e (150, 150).</span><span class="sxs-lookup"><span data-stu-id="1508b-106">The control points are (100, 10) and (150, 150).</span></span>  
+## <a name="example"></a><span data-ttu-id="a1bd5-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="a1bd5-104">Example</span></span>  
+ <span data-ttu-id="a1bd5-105">L'esempio seguente disegna una spline di Bézier con endpoint (200, 100) e il punto di inizio (10, 100).</span><span class="sxs-lookup"><span data-stu-id="a1bd5-105">The following example draws a Bézier spline with start point (10, 100) and endpoint (200, 100).</span></span> <span data-ttu-id="a1bd5-106">I punti di controllo sono (100, 10) e (150, 150).</span><span class="sxs-lookup"><span data-stu-id="a1bd5-106">The control points are (100, 10) and (150, 150).</span></span>  
   
- <span data-ttu-id="1508b-107">La figura seguente mostra la spline di Bézier risulta con il punto iniziale, i punti di controllo ed endpoint.</span><span class="sxs-lookup"><span data-stu-id="1508b-107">The following illustration shows the resulting Bézier spline along with its start point, control points, and endpoint.</span></span> <span data-ttu-id="1508b-108">L'illustrazione mostra anche struttura convessa della spline, che è un poligono costituito dalla connessione di quattro punti con linee rette.</span><span class="sxs-lookup"><span data-stu-id="1508b-108">The illustration also shows the spline's convex hull, which is a polygon formed by connecting the four points with straight lines.</span></span>  
+ <span data-ttu-id="a1bd5-107">La figura seguente mostra la spline di Bézier risulta con il punto iniziale, i punti di controllo ed endpoint.</span><span class="sxs-lookup"><span data-stu-id="a1bd5-107">The following illustration shows the resulting Bézier spline along with its start point, control points, and endpoint.</span></span> <span data-ttu-id="a1bd5-108">L'illustrazione mostra anche struttura convessa della spline, che è un poligono costituito dalla connessione di quattro punti con linee rette.</span><span class="sxs-lookup"><span data-stu-id="a1bd5-108">The illustration also shows the spline's convex hull, which is a polygon formed by connecting the four points with straight lines.</span></span>  
   
- <span data-ttu-id="1508b-109">![Bezier Spline](./media/bezierspline1.png "BezierSpline1")</span><span class="sxs-lookup"><span data-stu-id="1508b-109">![Bezier Spline](./media/bezierspline1.png "BezierSpline1")</span></span>  
+ ![Illustrazione di una Spline di Bézier.](./media/how-to-draw-a-single-bezier-spline/bezier-spline-illustration.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1508b-110">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="1508b-110">Compiling the Code</span></span>  
- <span data-ttu-id="1508b-111">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="1508b-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a1bd5-110">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="a1bd5-110">Compiling the Code</span></span>  
+ <span data-ttu-id="a1bd5-111">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="a1bd5-111">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1508b-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1508b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1bd5-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a1bd5-112">See also</span></span>
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
-- [<span data-ttu-id="1508b-113">Spline di Bézier in GDI+</span><span class="sxs-lookup"><span data-stu-id="1508b-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
-- [<span data-ttu-id="1508b-114">Procedura: Disegnare una sequenza di spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="1508b-114">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)
+- [<span data-ttu-id="a1bd5-113">Spline di Bézier in GDI+</span><span class="sxs-lookup"><span data-stu-id="a1bd5-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
+- [<span data-ttu-id="a1bd5-114">Procedura: Disegnare una sequenza di spline di Bézier</span><span class="sxs-lookup"><span data-stu-id="a1bd5-114">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)
