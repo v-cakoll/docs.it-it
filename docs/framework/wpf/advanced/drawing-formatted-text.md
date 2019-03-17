@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372178"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125434"
 ---
 # <a name="drawing-formatted-text"></a>Disegno di testo formattato
 In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Media.FormattedText> oggetto. che offre un controllo di basso livello per il disegno di testo nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -24,8 +24,7 @@ In questo argomento viene fornita una panoramica delle funzionalità del <xref:S
 ## <a name="technology-overview"></a>Informazioni generali sulla tecnologia  
  Il <xref:System.Windows.Media.FormattedText> oggetto consente di disegnare il testo su più righe, in cui ogni carattere del testo può essere formattato singolarmente. L'esempio seguente mostra un testo a cui sono stati applicati diversi formati.  
   
- ![Testo visualizzato usando l'oggetto FormattedText](./media/formattedtext01.jpg "FormattedText01")  
-Testo visualizzato con il metodo FormattedText  
+ ![Testo visualizzato usando l'oggetto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  Per gli sviluppatori che eseguono la migrazione dall'API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], nella tabella della sezione [Migrazione Win32](#win32_migration) sono elencati i flag DrawText di [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] e gli elementi corrispondenti in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -42,8 +41,7 @@ Testo visualizzato con il metodo FormattedText
   
  Usare il <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> proprietà per limitare il testo a una larghezza specifica. Il testo andrà a capo automaticamente per evitare di superare la larghezza specificata. Usare il <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> proprietà per limitare il testo a un'altezza specifica. Saranno visualizzati dei puntini di sospensione ("...") nel caso in cui il testo superi l'altezza specificata.  
   
- ![Testo visualizzato usando l'oggetto FormattedText](./media/formattedtext02.png "FormattedText02")  
-Testo visualizzato con ritorno a capo automatico e puntini di sospensione  
+ ![Testo visualizzato con ritorno a capo automatico e puntini di sospensione.](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  È possibile applicare vari stili di formattazione a uno o più caratteri. Ad esempio, è possibile chiamare entrambi i <xref:System.Windows.Media.FormattedText.SetFontSize%2A> e <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> metodi per modificare la formattazione dei primi cinque caratteri del testo.  
   
@@ -62,19 +60,15 @@ Testo visualizzato con ritorno a capo automatico e puntini di sospensione
 ### <a name="converting-formatted-text-to-a-geometry"></a>Conversione del testo formattato in una geometria  
  È possibile convertire il testo formattato in <xref:System.Windows.Media.Geometry> oggetti, consentendo di creare altri tipi di testo dall'aspetto accattivante. Ad esempio, è possibile creare un <xref:System.Windows.Media.Geometry> oggetto in base alla struttura di una stringa di testo.  
   
- ![Struttura di testo con pennello sfumato lineare](./media/outlinedtext02.jpg "OutlinedText02")  
-Struttura di testo con pennello sfumato lineare  
+ ![Struttura di testo con pennello sfumato lineare](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  Gli esempi seguenti illustrano diverse modalità di creazione di effetti visivi interessanti tramite la modifica del tratto, del riempimento e dell'evidenziazione del testo convertito.  
   
- ![Testo con colori diversi per tratto e riempimento](./media/outlinedtext03.jpg "OutlinedText03")  
-Esempio di impostazione di tratto e riempimento in colori diversi  
+ ![Testo con colori diversi per tratto e riempimento](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Testo con pennello immagine applicato al tratto](./media/outlinedtext04.jpg "OutlinedText04")  
-Esempio di un pennello immagine applicato al tratto  
+ ![Testo con tratto con immagine applicato](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Testo con pennello immagine applicato al tratto](./media/outlinedtext05.jpg "OutlinedText05")  
-Esempio di un pennello immagine applicato al tratto ed evidenziazione  
+ ![Testo con pennello immagine applicato per tracciare ed evidenziare](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Quando il testo viene convertito in un <xref:System.Windows.Media.Geometry> dell'oggetto, non è più una raccolta di caratteri, non è possibile modificare i caratteri nella stringa di testo. Tuttavia, è possibile intervenire sull'aspetto del testo convertito modificandone le proprietà del tratto e del riempimento. Il tratto fa riferimento alla struttura del testo convertito, mentre il riempimento fa riferimento all'area all'interno della struttura del testo convertito. Per altre informazioni, vedere [Creare testo con contorni](how-to-create-outlined-text.md).  
   
@@ -82,15 +76,14 @@ Esempio di un pennello immagine applicato al tratto ed evidenziazione
   
  L'esempio seguente mostra il testo formattato che è stato convertito in un <xref:System.Windows.Media.PathGeometry> oggetto. Un'ellisse animata segue il percorso dei tratti del testo di cui è stato eseguito il rendering.  
   
- ![Sfera che segue la geometria del percorso del testo](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Sfera che segue la geometria del percorso del testo](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 Sfera che segue la geometria del percorso del testo  
   
  Per altre informazioni, vedere [Procedura: Creare animazioni PathGeometry per il testo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  È possibile creare altri usi interessanti del testo formattato dopo che è stata convertita in un <xref:System.Windows.Media.PathGeometry> oggetto. Ad esempio, è possibile ritagliare video da visualizzare all'interno del testo.  
   
- ![Video visualizzato nella geometria del percorso del testo](./media/videotextdemo01.png "VideoTextDemo01")  
-Video visualizzato nella geometria del percorso del testo  
+ ![Video visualizzato nella geometria del percorso del testo](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Migrazione Win32  

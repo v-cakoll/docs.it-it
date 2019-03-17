@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968933"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125564"
 ---
 # <a name="goto-statement"></a>Istruzione GoTo
 Rami in modo incondizionato a una determinata riga in una procedura.  
@@ -54,8 +54,7 @@ GoTo line
   
  Nell'illustrazione seguente uno `Try` costruzione annidato in un altro. Vari rami tra blocchi di due costruzioni sono indicati come validi o non valido.  
   
- ![Diagramma grafico dei rami in costruzioni Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Validi e non validi i rami in costruzioni Try  
+ ![Diagramma grafico dei rami in costruzioni Try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `GoTo` istruzione al ramo in etichette di riga in una procedura.  

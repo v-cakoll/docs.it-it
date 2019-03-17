@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720397"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126227"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
 Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
@@ -26,13 +26,13 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
   
 -   Nell'esempio seguente viene compilato un'ellisse con un pennello a sfumatura. Colore centrale è impostato su blu e il colore del limite è impostato su azzurro. La figura seguente mostra l'ellisse piena.  
   
-     ![Percorso sfumatura](./media/pathgradient1.png "pathgradient1")  
+     ![Percorso sfumatura riempimento di un'ellisse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Per impostazione predefinita, un pennello a sfumatura non si estende all'esterno dei limiti del percorso. Se si usa il pennello a sfumatura per riempire una figura di seguito che si estende oltre il limite del percorso, l'area dello schermo all'esterno del percorso non essere compilato.  
   
-     La figura seguente mostra cosa accade se si modifica il <xref:System.Drawing.Graphics.FillEllipse%2A> chiamare il codice seguente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     La figura seguente mostra cosa accade se si modifica il <xref:System.Drawing.Graphics.FillEllipse%2A> chiamare il codice seguente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Percorso sfumatura](./media/pathgradient2.png "pathgradient2")  
+     ![Percorso sfumatura estesa oltre i limiti del percorso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   L'esempio seguente disegna una sfumatura percorso senza un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto nel codice. Il particolare <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> costruttore nell'esempio riceve una matrice di punti, ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che il <xref:System.Drawing.Drawing2D.PathGradientBrush> utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è maggiore di tracciato chiuso usata per definire il pennello, in modo da parte del rettangolo non viene disegnato dal pennello. La figura seguente mostra il rettangolo (linea tratteggiata) e la parte del rettangolo disegnato dal pennello a sfumatura.  
+-   L'esempio seguente disegna una sfumatura percorso senza un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto nel codice. Il particolare <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> costruttore nell'esempio riceve una matrice di punti, ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che il <xref:System.Drawing.Drawing2D.PathGradientBrush> utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è maggiore di tracciato chiuso usata per definire il pennello, in modo da parte del rettangolo non viene disegnato dal pennello. La figura seguente mostra il rettangolo (linea tratteggiata) e la parte del rettangolo disegnato dal pennello a sfumatura: 
   
-     ![Sfumatura](./media/gradient4.png "gradient4")  
+     ![Sfumatura parte disegnato dal pennello a sfumatura.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
   
      L'immagine seguente illustra l'output del codice riportato di seguito. Puntini di sospensione a sinistra è aqua solo al punto centrale. Puntini di sospensione a destra è aqua ovunque all'interno del tracciato interno.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Effetto sfumatura delle scale messa a fuoco](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
   
      La figura seguente mostra il triangolo riempito con il pennello a sfumatura percorso personalizzato.  
   
-     ![Percorso sfumatura](./media/pathgradient4.png "pathgradient4")  
+     ![Triangolo riempita con pennello sfumato percorso personalizzato.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     La figura seguente mostra l'ellisse con riempimento e il punto centrale di pennello a sfumatura.  
+     La figura seguente mostra l'ellisse con riempimento e il punto centrale di pennello a sfumatura:  
   
-     ![Percorso sfumatura](./media/pathgradient5.png "pathgradient5")  
+     ![Percorso sfumatura con colorato puntini di sospensione e il punto centrale.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   È possibile impostare il punto centrale di un pennello a sfumatura in una posizione all'esterno del percorso che è stato usato per costruire il pennello. Nell'esempio seguente sostituisce la chiamata per impostare il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà nel codice precedente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Nella figura seguente mostra l'output con questa modifica.  
+     Nella figura seguente mostra l'output con questa modifica:  
   
-     ![Percorso sfumatura](./media/pathgradient6.png "pathgradient6")  
+     ![Percorso sfumatura con punto centrale all'esterno del percorso.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      Nella figura precedente, i punti all'estrema destra dell'ellisse non sono perfettamente blu (anche se sono molto simili). I colori nella sfumatura vengono posizionati come se il riempimento raggiunto il punto (145, 35) in cui il colore sarebbe pure blu (0, 0, 255). Ma non raggiunga mai il riempimento (145, 35) perché consente di disegnare un pennello a sfumatura solo all'interno di relativo percorso.  
   

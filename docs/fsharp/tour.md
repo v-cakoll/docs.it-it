@@ -2,12 +2,12 @@
 title: Panoramica di F#
 description: Esaminare alcune delle principali funzionalità del linguaggio in questa presentazione con esempi di codice di programmazione F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968296"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125577"
 ---
 # <a name="tour-of-f"></a>Panoramica di F\#
 
@@ -136,10 +136,6 @@ Impossibilità di seguire il codice precedente comporterà un errore di compilaz
 [Criteri di corrispondenza](language-reference/pattern-matching.md) è la funzionalità del linguaggio F# che consente la correttezza per l'uso di tipi F#.  Negli esempi precedenti, si sarà probabilmente notato qualche `match x with ...` sintassi.  Questo costrutto consente al compilatore, che può comprendere la "forma" dei tipi di dati, per forzare per conto di tutti i casi possibili quando utilizza un tipo di dati tramite ciò che è noto come esaustivo criteri di ricerca.  Ciò è incredibilmente potente per la correttezza e prosegue senza soste utilizzabile per "solleva" che normalmente sarebbe un problema di runtime in fase di compilazione.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-È anche possibile usare la sintassi abbreviata `function` costrutto per criteri di ricerca, che è utile quando si scrivono usano le funzioni che rendono [applicazione parziale](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Qualcosa si può notare è l'uso del `_` pattern.  Questo è noto come il [modello carattere jolly](language-reference/pattern-matching.md#wildcard-pattern), che è un concetto viene espresso indicando ", non mi preoccupo qualcosa What ' s".  Anche se utile, è possibile ignorare accidentalmente esaustivo criteri di ricerca e non è più vantaggioso si applicano le regole in fase di compilazione se non si presta attenzione nell'uso `_`.  Risulta particolarmente utile quando non si è interessati determinate parti di un tipo scomposto quando modello corrispondenza o la clausola finale quando si sono enumerati tutti i casi significativi in un'espressione di corrispondenza.
 
