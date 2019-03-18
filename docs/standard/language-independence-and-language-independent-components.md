@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836552"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846467"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 .NET Framework è indipendente dal linguaggio. In qualità di sviluppatore, è pertanto possibile usare uno dei numerosi linguaggi destinati a .NET Framework, ad esempio C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. È possibile accedere a tipi e membri di librerie di classi sviluppate per .NET Framework senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, l'accesso al componente può essere eseguito da qualsiasi applicazione .NET Framework, indipendentemente dal linguaggio.  
@@ -343,7 +343,7 @@ ms.locfileid: "56836552"
 ### <a name="member-accessibility"></a>Accessibilità del membro  
  Tramite l'override di un membro ereditato non è possibile modificare l'accessibilità del membro in questione. Ad esempio, un metodo pubblico in una classe di base non può essere sottoposto a override da un metodo privato in una classe derivata. Vi è un'eccezione: un membro `protected internal` (in C#) o `Protected Friend` (in Visual Basic) in un assembly sottoposto a override da un tipo in un assembly diverso. In questo caso, l'accessibilità dell'override è `Protected`.  
   
- Nell'esempio seguente viene illustrato l'errore generato quando l'attributo <xref:System.CLSCompliantAttribute> è impostato su `true` e tramite `Person`, cioè una classe derivata da `Animal`, si tenta di modificare l'accessibilità della proprietà `Species` da pubblica a privata. L'esempio viene compilato correttamente se la relativa accessibilità è stata modificata in pubblica.  
+ Nell'esempio seguente viene illustrato l'errore generato quando l'attributo <xref:System.CLSCompliantAttribute> è impostato su `true` e tramite `Human`, cioè una classe derivata da `Animal`, si tenta di modificare l'accessibilità della proprietà `Species` da pubblica a privata. L'esempio viene compilato correttamente se la relativa accessibilità è stata modificata in pubblica.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

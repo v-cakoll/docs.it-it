@@ -3,12 +3,12 @@ title: Introduzione alla trasformazione della sintassi (API Roslyn)
 description: Introduzione all'attraversamento, all'esecuzione di query e all'esplorazione di alberi della sintassi.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122583"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788440"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introduzione alla trasformazione della sintassi
 
@@ -152,7 +152,7 @@ A questo punto, aggiungere l'istruzione seguente per eseguire il binding dell'es
 
 Infine, aggiungere l'istruzione `if` seguente per sostituire il nome del tipo esistente con la parola chiave `var` se il tipo di espressione dell'inizializzatore corrisponde al tipo specificato:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 L'operazione condizionale è necessaria perché la dichiarazione può esegue il cast dell'espressione dell'inizializzatore su un'interfaccia o una classe di base. Se si vuole ottenere tale risultato, i tipi sul lato sinistro e destro dell'assegnazione non corrispondono. La rimozione del tipo esplicito in questi casi comporterebbe la modifica della semantica di un programma. `var` viene specificato come un identificatore anziché come una parola chiave poiché `var` è una parola chiave contestuale. Gli elementi semplici iniziali e finali (spazio) vengono trasferiti dal nome del tipo precedente alla parola chiave `var` per mantenere lo spazio vuoto verticale e il rientro. È più semplice usare `ReplaceNode` anziché `With*` per trasformare <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, perché il nome del tipo è di fatto il nipote dell'istruzione di dichiarazione.
 

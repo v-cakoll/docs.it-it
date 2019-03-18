@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147548"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846142"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -123,7 +123,7 @@ La *firma* di un metodo deve essere univoca nell'ambito della classe in cui vien
 
 I parametri consentono di passare ai metodi valori o riferimenti a variabili. I parametri di un metodo ottengono i valori effettivi dagli *argomenti* specificati quando viene richiamato il metodo. Esistono quattro tipi di parametri: parametri di valore, parametri di riferimento, i parametri di output e matrici di parametri.
 
-Un *parametro di valore* viene usato per passare argomenti di input. Corrisponde a una variabile locale che ottiene il valore iniziale dall'argomento passato per il parametro. Eventuali modifiche a un parametro di valore non interessano l'argomento passato per il parametro. 
+Un *parametro di valore* viene usato per passare argomenti di input. Corrisponde a una variabile locale che ottiene il valore iniziale dall'argomento passato per il parametro. Eventuali modifiche a un parametro di valore non interessano l'argomento passato per il parametro.
 
 I parametri di valore possono essere facoltativi specificando un valore predefinito. In questo caso gli argomenti corrispondenti possono essere omessi.
 
@@ -293,6 +293,6 @@ Al Garbage Collector viene lasciata ampia scelta per decidere quando raccogliere
 
 L'istruzione `using` offre una soluzione più efficace per l'eliminazione di oggetti.
 
->[!div class="step-by-step"]
->[Precedente](statements.md)
->[Successivo](structs.md)
+> [!div class="step-by-step"]
+> [Precedente](statements.md)
+> [Successivo](structs.md)

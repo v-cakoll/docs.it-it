@@ -4,12 +4,12 @@ description: Informazioni su come implementare i gateway API con Ocelot e come u
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679489"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846103"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementare gateway API con Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ L'oggetto Ingress, invece, si limita a reindirizzare le richieste HTTP ma non te
 
 La presenza di un livello Ingress Nginx in Kubernetes davanti alle applicazioni Web oltre ai diversi gateway API/BFF Ocelot rappresenta l'architettura ideale, come illustrato nel diagramma seguente.
 
- ![Un oggetto Ingress di Kubernetes funge da proxy inverso per tutto il traffico diretto all'app, incluse le applicazioni Web che di solito non rientrano nell'ambito del gateway API.](./media/image41.png)
+![Un oggetto Ingress di Kubernetes funge da proxy inverso per tutto il traffico diretto all'app, incluse le applicazioni Web che di solito non rientrano nell'ambito del gateway API.](./media/image41.png)
 
 **Figura 6-41**. Livello Ingress in eShopOnContainers quando distribuito in Kubernetes
 
 Quando viene distribuito in Kubernetes, eShopOnContainers espone alcuni servizi o endpoint tramite _Ingress_, fondamentalmente l'elenco seguente di suffissi negli URL:
 
--   `/` per l'applicazione Web SPA client
--   `/webmvc` per l'applicazione Web MVC client
--   `/webstatus` per l'app Web client che mostra lo stato o i controlli di integrità
--   `/webshoppingapigw` per i processi aziendali Web di BFF e Shopping
--   `/webmarketingapigw` per i processi aziendali Web di BFF e Marketing
--   `/mobileshoppingapigw` per i processi aziendali per dispositivi mobili di BFF e Shopping
--   `/mobilemarketingapigw` per i processi aziendali per dispositivi mobili di BFF e Marketing
+- `/` per l'applicazione Web SPA client
+- `/webmvc` per l'applicazione Web MVC client
+- `/webstatus` per l'app Web client che mostra lo stato o i controlli di integrità
+- `/webshoppingapigw` per i processi aziendali Web di BFF e Shopping
+- `/webmarketingapigw` per i processi aziendali Web di BFF e Marketing
+- `/mobileshoppingapigw` per i processi aziendali per dispositivi mobili di BFF e Shopping
+- `/mobilemarketingapigw` per i processi aziendali per dispositivi mobili di BFF e Marketing
 
 Durante la distribuzione in Kubernetes, ogni gateway API Ocelot usa un file "configuration.json" diverso per ogni _pod_ che esegue i gateway API. Questi file "configuration.json" vengono specificati montando (originariamente con lo script deploy.ps1) un volume creato in base a una _mappa di configurazione_ di Kubernetes denominata "ocelot". Ogni contenitore monta il file di configurazione correlato nella cartella del contenitore denominata `/app/configuration`.
 

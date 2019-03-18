@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981933"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126149"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -84,7 +84,7 @@ C# versione 3.0 è stato rilasciato alla fine del 2007, insieme a Visual Studio 
 - [Proprietà implementate automaticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Tipi anonimi](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Espressioni di query](../linq/query-expression-basics.md)
-- [Espressioni lambda](../lambda-expressions.md)
+- [Espressioni lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Alberi delle espressioni](../expression-trees.md)
 - [Metodi di estensione](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variabili locali tipizzate in modo implicito](../language-reference/keywords/var.md)
