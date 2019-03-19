@@ -43,7 +43,11 @@ Tutte le esercitazioni introduttive successive alla lezione relativa a Hello Wor
 
 ## <a name="explore-new-features-in-c"></a>Esplorare le nuove funzionalità in C\#
 
-Provare le nuove funzionalità in [C# 6](../whats-new/csharp-6.md) in questa [esplorazione interattiva](exploration/csharp-6.yml).
+* [Provare le nuove funzionalità in C# 6 in modo interattivo](exploration/csharp-6.yml): esplorare le funzionalità aggiunte in [C# 6](../whats-new/csharp-6.md) in modo interattivo nel browser.
+* [Interpolazione di stringhe](string-interpolation.md): illustra come usare l'interpolazione di stringhe per creare stringhe formattate in C#.
+* [Tipi riferimento nullable](nullable-reference-types.md): viene illustrato come usare i tipi riferimento nullable per esprimere le proprie intenzioni per i riferimenti Null.
+* [Aggiornare un progetto per usare i tipi riferimento nullable](upgrade-to-nullable-references.md): illustra le tecniche per aggiornare un progetto esistente per poter usare i tipi riferimento nullable.
+* [Estendere le funzionalità per i dati usando i criteri di ricerca](pattern-matching.md): illustra come usare i criteri di ricerca per estendere i tipi oltre le funzionalità di base.
 
 ## <a name="general-tutorials"></a>Esercitazioni generali
 
@@ -53,6 +57,4 @@ Le esercitazioni seguenti consentono di creare programmi C# usando [.NET Core](.
 * [Client REST](console-webapiclient.md): questa esercitazione illustra le comunicazioni Web, la serializzazione JSON e le funzionalità orientate agli oggetti nel linguaggio C#.
 * [Ereditarietà in C# e .NET](inheritance.md): questa esercitazione illustra l'ereditarietà in C#, tra cui l'uso dell'ereditarietà per definire le classi di base, le classi di base astratte e le classi derivate.
 * [Uso di LINQ](working-with-linq.md): questa esercitazione illustra molte delle funzionalità di LINQ e gli elementi del linguaggio che supportano questa tecnologia.
-* [Interpolazione di stringhe](string-interpolation.md): illustra come usare l'interpolazione di stringhe per creare stringhe formattate in C#.
 * [Uso degli attributi](attributes.md): illustra come creare e usare gli attributi in C#.
-* [Tipi riferimento nullable](nullable-reference-types.md): viene illustrato come usare i tipi riferimento nullable per esprimere le proprie intenzioni per i riferimenti Null.
