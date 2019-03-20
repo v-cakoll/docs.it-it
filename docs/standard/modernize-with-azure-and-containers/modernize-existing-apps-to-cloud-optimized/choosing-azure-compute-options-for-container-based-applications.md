@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125496"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186104"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Scegliere le piattaforme di calcolo di Azure per le applicazioni basate su contenitore
 
@@ -17,12 +17,12 @@ Come è stato certamente notato dopo la lettura delle sezioni precedenti, Azure 
 
 Come un *per impostazione predefinita* raccomandazione, di seguito è riportato il criterio principale consigliato in questa guida:
 
-  - **Singola app monolitica, occorre:** Scegliere servizio App di Azure
-  - **App a più livelli:** Scegliere gli agenti di orchestrazione, ad esempio servizio App, Service Fabric (SF) o Azure Kubernetes Service (AKS) se si dispone di uno o alcuni servizi di back-end
-  - **Microservizi di Linux:** Scegliere servizio contenitore di AZURE/Kubernetes
-  - **Microservizi di Windows:** Scegliere Service Fabric
-  - **Le funzioni senza server e i gestori eventi:** Scegliere le funzioni di Azure
-  - **Batch su vasta scala:** Scegli Azure Batch
+- **Singola app monolitica, occorre:** Scegliere servizio App di Azure
+- **App a più livelli:** Scegliere gli agenti di orchestrazione, ad esempio servizio App, Service Fabric (SF) o Azure Kubernetes Service (AKS) se si dispone di uno o alcuni servizi di back-end
+- **Microservizi di Linux:** Scegliere servizio contenitore di AZURE/Kubernetes
+- **Microservizi di Windows:** Scegliere Service Fabric
+- **Le funzioni senza server e i gestori eventi:** Scegliere le funzioni di Azure
+- **Batch su vasta scala:** Scegli Azure Batch
 
 Tuttavia, questa raccomandazione attenzione con un con avvicinamento delle dita di salt, come selezione del prodotto varia in base alle esigenze e le caratteristiche dell'applicazione specifico. Non tutte le applicazioni sono gli stessi, anche se inizialmente risultino tipi simili.
 
@@ -36,6 +36,6 @@ Si noti come il sottostante del sistema operativo (Windows Visual Studio. Linux)
 
 Tuttavia, tali differenze nel livello di maturità del sistema operativo verranno dissolvenza in entrata in futuro e più piattaforme abbiano confrontabili maturità del sistema operativo e la decisione si troveranno altre preferenze basata su funzionalità specifiche dell'applicazione potrebbe essere necessario o base ecosistema di ciascuna piattaforma motivi.
 
->[!div class="step-by-step"]
->[Precedente](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Successivo](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Precedente](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Successivo](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

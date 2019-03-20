@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520464"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185727"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
 È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocchi all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo viene detto *nidificata*.  
@@ -25,7 +25,7 @@ ms.locfileid: "54520464"
   
  Nell'esempio seguente, la procedura `sumRows` somma tra gli elementi positivi di ogni riga della matrice.  
   
-```  
+```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
     Dim i, j As Integer  
     For i = 0 To UBound(a, 1)  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="nesting-different-kinds-of-control-structures"></a>Nidificazione di diversi tipi di strutture di controllo  
  È possibile annidare un tipo di struttura di controllo all'interno di un altro tipo. L'esempio seguente usa una `With` blocchi all'interno di un `For Each` ciclo e nidificate `If` blocca all'interno del `With` blocco.  
   
-```  
+```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
     With ctl  
         .BackColor = System.Drawing.Color.Yellow  

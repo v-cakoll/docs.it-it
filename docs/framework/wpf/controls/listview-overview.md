@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379146"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186117"
 ---
 # <a name="listview-overview"></a>Panoramica sul controllo ListView
 Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura per visualizzare un set di elementi di dati nel layout o visualizzazioni diverse. Ad esempio, un utente può scegliere di visualizzare gli elementi dei dati in una tabella e anche di ordinarne le colonne.  
@@ -33,7 +33,7 @@ Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura p
   
  La figura seguente illustra come vengono visualizzati i dati per l'esempio precedente.  
   
- ![ListView con output GridView ](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Screenshot che mostra un ListView con output GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  È possibile creare una modalità di visualizzazione personalizzata definendo una classe che eredita dal <xref:System.Windows.Controls.ViewBase> classe. Il <xref:System.Windows.Controls.ViewBase> classe fornisce l'infrastruttura che è necessario creare una visualizzazione personalizzata. Per altre informazioni su come creare una visualizzazione personalizzata, vedere [Creare una modalità di visualizzazione personalizzata per un controllo ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
