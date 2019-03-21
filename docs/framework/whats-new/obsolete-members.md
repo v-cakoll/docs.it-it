@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635975"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038180"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membri obsoleti in .NET Framework
-Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework 4.5 e versioni successive, organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md).  
+Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework 4.5 e versioni successive, organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](obsolete-types.md).  
   
 -   [Membri obsoleti negli assembly di sistema](#SystemMembers)  
   
@@ -799,5 +799,5 @@ Nelle tabelle di questo articolo sono elencati i tipi obsoleti in .NET Framework
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La chiave del Registro di sistema `DynData` funziona solo su Win9x, che non è supportato da questa versione di .NET Framework. Usare invece la chiave del Registro di sistema `PerformanceData`. Questa proprietà verrà rimossa da una versione futura di Framework.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md)
+- [Elementi obsoleti nella libreria di classi](whats-obsolete.md)
+- [Tipi obsoleti](obsolete-types.md)

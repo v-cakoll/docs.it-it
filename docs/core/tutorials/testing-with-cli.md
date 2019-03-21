@@ -4,12 +4,12 @@ description: Questa esercitazione illustra come organizzare e testare i progetti
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242712"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845908"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizzazione e test di progetti con la riga di comando di .NET Core
 
@@ -48,7 +48,7 @@ La navigazione e la manutenzione risultano più facili nei progetti che raggrupp
 
 Nelle fasi successive è possibile seguire [il progetto di esempio NewTypes Pets](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) o creare file e cartelle personalizzati. I tipi sono organizzati mediante codice in una struttura di cartelle che consente l'aggiunta di più tipi in un secondo momento. A loro volta i test sono inseriti mediante codice in cartelle che consentono l'aggiunta di altri test in un secondo momento.
 
-L'esempio contiene due tipi `Dog` e `Cat` e definisce l'implementazione dell'interfaccia comune `IPet`. Per il progetto `NewTypes` l'obiettivo è l'organizzazione dei tipi associati agli animali domestici in una cartella *Pets*. Se in seguito viene aggiunto un altro set di tipi, ad esempio *WildAnimals*, questi vengono inseriti nella cartella *NewTypes* allo stesso livello della cartella *Pets*. La cartella *WildAnimals* può contenere tipi corrispondenti ad animali non domestici, ad esempio i tipi `Squirrel` e `Rabbit`. In questo modo mano a mano che vengono aggiunti dei tipi il progetto mantiene un'organizzazione ottimale. 
+L'esempio contiene due tipi `Dog` e `Cat` e definisce l'implementazione dell'interfaccia comune `IPet`. Per il progetto `NewTypes` l'obiettivo è l'organizzazione dei tipi associati agli animali domestici in una cartella *Pets*. Se in seguito viene aggiunto un altro set di tipi, ad esempio *WildAnimals*, questi vengono inseriti nella cartella *NewTypes* allo stesso livello della cartella *Pets*. La cartella *WildAnimals* può contenere tipi corrispondenti ad animali non domestici, ad esempio i tipi `Squirrel` e `Rabbit`. In questo modo mano a mano che vengono aggiunti dei tipi il progetto mantiene un'organizzazione ottimale.
 
 Creare la seguente struttura di cartelle con il contenuto di file indicato:
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ Di seguito viene riportata la struttura completa del progetto:
 
 Iniziare nella directory *test/NewTypesTests*. Ripristinare il progetto di test con il comando [`dotnet restore`](../tools/dotnet-restore.md). Eseguire i test con il comando [`dotnet test`](../tools/dotnet-test.md). Questo comando avvia il Test Runner specificato nel file di progetto.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Come previsto, i test hanno esito negativo e la console visualizza il seguente output:
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 I test hanno esito positivo. I metodi dei tipi di animali da compagnia restituiscono i valori corretti nei messaggi trasmessi al proprietario.
 
 Si sono apprese tecniche per l'organizzazione e il test di progetti con xUnit. Continuare con queste tecniche applicandole nei propri progetti. *Buona codifica!*
-

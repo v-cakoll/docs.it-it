@@ -4,12 +4,12 @@ description: Informazioni su come eseguire un'applicazione console .NET Framewor
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145280"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126084"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Esecuzione di applicazioni console in contenitori Windows
 
@@ -50,7 +50,7 @@ I contenitori di Windows sono supportati in [Aggiornamento dell'anniversario di 
 
 Per il supporto dei contenitori Windows è necessario avere Docker per Windows versione 1.12 Beta 26 o versione successiva. Per impostazione predefinita, Docker abilita contenitori basati su Linux. Per passare ai contenitori Windows, fare clic con il pulsante destro del mouse sull'icona di Docker nell'area di notifica e selezionare **Switch to Windows containers** (Passa a contenitori Windows). Docker eseguirà il processo di modifica e potrebbe essere necessario un riavvio.
 
-![Contenitori di Windows](./media/console/SwitchContainer.png)
+![Screenshot dell'opzione di menu dei contenitori Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Compilazione dell'applicazione
 In genere le applicazioni console vengono distribuite attraverso un programma di installazione, FTP o una distribuzione di condivisione file. Quando si esegue la distribuzione in un contenitore, le risorse devono essere compilate e inserite temporaneamente in un percorso che può essere usato quando viene creata l'immagine Docker.

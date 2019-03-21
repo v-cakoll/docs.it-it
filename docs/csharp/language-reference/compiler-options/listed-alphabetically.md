@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677730"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58037703"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
 
@@ -29,7 +29,7 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |[-baseaddress](baseaddress-compiler-option.md)|Specifica l'indirizzo di base della libreria da compilare.|
 |[-bugreport](bugreport-compiler-option.md)|Crea un file di report sui bug. Questo file verrà inviato con le informazioni sull'arresto anomalo se viene usato con -errorreport:prompt o -errorreport:send.|
 |[/fullpaths](checked-compiler-option.md)|Fa generare al compilatore i controlli dell'overflow.|
-|-checksumalgorithm:\<alg>|Specifica l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.|
+|-checksumalgorithm:\<alg>|Specifica l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.<br>A causa di problemi di conflitto con SHA1, Microsoft consiglia SHA256. |
 |[-codepage](codepage-compiler-option.md)|Specifica la tabella di codici da utilizzare per l'apertura dei file di origine.|
 |[-debug](debug-compiler-option.md)|Crea informazioni di debug.|
 |[-define](define-compiler-option.md)|Definisce i simboli di compilazione condizionale.|

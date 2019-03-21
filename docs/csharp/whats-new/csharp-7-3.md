@@ -2,12 +2,12 @@
 title: Novità di C# 7.3
 description: Panoramica delle nuove funzionalità in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873800"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028682"
 ---
 # <a name="whats-new-in-c-73"></a>Novità di C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-Nelle versioni precedenti di C# era necessario bloccare una variabile per accedere a uno dei valori Integer che fanno parte di `myFixedField`. Ora è possibile usare il codice seguente per eseguire la compilazione in un contesto sicuro:
+Nelle versioni precedenti di C# era necessario bloccare una variabile per accedere a uno dei valori Integer che fanno parte di `myFixedField`. Il codice seguente viene ora compilato senza bloccare la variabile `p` in un'istruzione `fixed` separata:
 
 ```csharp
 class C

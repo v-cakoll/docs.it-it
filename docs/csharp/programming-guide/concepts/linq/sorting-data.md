@@ -2,19 +2,19 @@
 title: Ordinamento dei dati (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721985"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125720"
 ---
 # <a name="sorting-data-c"></a>Ordinamento dei dati (C#)
 Un'operazione di ordinamento consente di ordinare gli elementi di una sequenza in base a uno o più attributi. Il primo criterio di ordinamento consente di applicare un ordinamento principale agli elementi. Specificando un secondo criterio di ordinamento, è possibile ordinare gli elementi all'interno di ogni gruppo di ordinamento principale.  
   
- La figura seguente illustra i risultati di un'operazione di ordinamento alfabetico in una sequenza di caratteri.  
+ La figura seguente illustra i risultati di un'operazione di ordinamento alfabetico in una sequenza di caratteri: 
   
- ![Operazione di ordinamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![Immagine che illustra un'operazione di ordinamento alfabetico.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  La sezione seguente elenca i metodi dell'operatore query standard che ordina i dati.  
   
