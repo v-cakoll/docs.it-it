@@ -21,7 +21,7 @@ Il nome della struct deve essere un [nome di identificatore](../inside-a-program
 
 Qualsiasi classe o struct che implementa l'interfaccia <xref:System.IEquatable%601> deve contenere una definizione per un metodo <xref:System.IEquatable%601.Equals%2A> che corrisponde alla firma specificata dall'interfaccia. Di conseguenza, è possibile affidarsi a una classe che implementa `IEquatable<T>` per contenere un metodo `Equals` con cui un'istanza della classe può determinare se sia uguale a un'altra istanza della stessa classe.  
   
-La definizione di `IEquatable<T>` non fornisce un'implementazione per `Equals`. L'interfaccia definisce solo la firma. In tal modo, un'interfaccia in C# è simile a una classe astratta in cui tutti i metodi sono astratti. Tuttavia, una classe o struct può implementare più interfacce, ma una classe può ereditare una sola classe, astratta o meno. Usando le interfacce, è quindi possibile includere il comportamento di più origini in una classe.  
+La definizione di `IEquatable<T>` non fornisce un'implementazione per `Equals`. L'interfaccia definisce solo la firma. In tal modo, un'interfaccia in C# è simile a una classe astratta in cui tutti i metodi sono astratti. Tuttavia, una classe o struct può implementare più interfacce, ma una classe può ereditare una sola classe, astratta o meno.
   
 Per altre informazioni sulle classi astratte, vedere [Classi e membri delle classi astratte e sealed](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -45,7 +45,7 @@ Una classe base può implementare anche i membri di interfaccia usando membri vi
 
 Un'interfaccia presenta le proprietà seguenti:  
 
-- Un'interfaccia è uguale a una classe base astratta. Qualsiasi classe o struct che implementa l'interfaccia deve implementarne tutti i membri.
+- Un'interfaccia è paragonabile a una classe di base astratta contente solo membri astratti. Qualsiasi classe o struct che implementa l'interfaccia deve implementarne tutti i membri.
 - Non è possibile creare direttamente un'istanza di un'interfaccia. I membri vengono implementati da qualsiasi classe o struct che implementa l'interfaccia.
 - Le interfacce possono contenere eventi, indicizzatori, metodi e proprietà.
 - Le interfacce non contengono implementazioni di metodi.
