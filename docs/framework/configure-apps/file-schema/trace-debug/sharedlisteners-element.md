@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254938"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348817"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > elemento
 Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di traccia.  Questi listener non ricevono tutte le tracce per impostazione predefinita e non è possibile recuperare questi listener in fase di esecuzione. I listener identificati come listener condivisi possono essere aggiunti alle origini o delle tracce in base al nome.  
@@ -85,7 +85,7 @@ Contiene i listener a cui può fare riferimento qualsiasi origine o elemento di 
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vedere anche
