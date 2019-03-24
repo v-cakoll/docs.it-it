@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066441"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185636"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -81,9 +81,9 @@ Visualizza i .NET Core SDK installati.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Definisce il comportamento quando il framework condiviso richiesto non è disponibile. `N` può essere:
- * `0` - Disabilitare anche il roll forward per la versione secondaria.
- * `1` - Eseguire il roll forward per la versione secondaria, ma non la versione principale. Comportamento predefinito.
- * `2` - Eseguire il roll forward per le versioni principali e secondarie.
+* `0` - Disabilitare anche il roll forward per la versione secondaria.
+* `1` - Eseguire il roll forward per la versione secondaria, ma non la versione principale. Comportamento predefinito.
+* `2` - Eseguire il roll forward per le versioni principali e secondarie.
 
  Per altre informazioni, vedere [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -258,7 +258,7 @@ Comando | Funzione
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Disinstalla uno strumento globale dal computer.
 [dotnet tool update](dotnet-tool-update.md) | Aggiorna uno strumento globale nel computer.
 
-### <a name="additional-tools"></a>Altri strumenti
+### <a name="additional-tools"></a>Strumenti aggiuntivi
 
 A partire da .NET Core SDK 2.1.300, numerosi strumenti precedentemente disponibili solo a livello di singolo progetto usando `DotnetCliToolReference` sono ora disponibili come parte di .NET Core SDK. Tali strumenti sono elencati nella tabella seguente:
 
