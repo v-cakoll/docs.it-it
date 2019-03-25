@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 15a33d05cb3ca4fd40f04170bd1756e466631275
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366361"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410615"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Procedura: Eseguire un hit test utilizzando la geometria come parametro
 Questo esempio viene illustrato come eseguire un hit test su un oggetto visivo usando un <xref:System.Windows.Media.Geometry> come relativo parametro di test.  
@@ -27,8 +27,7 @@ Questo esempio viene illustrato come eseguire un hit test su un oggetto visivo u
   
  Il <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> proprietà di <xref:System.Windows.Media.GeometryHitTestResult> fornisce informazioni sui risultati di un hit test che usa un <xref:System.Windows.Media.Geometry> come relativo parametro di test. La figura seguente mostra la relazione tra la geometria di hit test (cerchio blu) e il contenuto sottoposto a rendering dell'oggetto visivo di destinazione (quadrato rosso).  
   
- ![Diagramma di IntersectionDetail usato nell'hit testing](./media/intersectiondetail01.png "IntersectionDetail01")  
-Intersezione tra la geometria di hit test e l'oggetto visivo di destinazione  
+ ![Diagramma che mostra IntersectionDetail usato nell'hit testing.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
  Nell'esempio seguente viene illustrato come implementare un callback dell'hit test quando un <xref:System.Windows.Media.Geometry> viene usato come parametro di hit test. Il `result` parametro viene eseguito il cast a un <xref:System.Windows.Media.GeometryHitTestResult> per recuperare il valore della <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> proprietà. Il valore della proprietà consente di determinare se il <xref:System.Windows.Media.Geometry> parametro di hit test è contenuto completamente o parzialmente all'interno di contenuto di cui viene eseguito il rendering di destinazione dell'hit test. In questo caso, il codice di esempio aggiunge i risultati dell'hit test all'elenco solo per gli oggetti visivi completamente contenuti all'interno del limite della destinazione.  
   

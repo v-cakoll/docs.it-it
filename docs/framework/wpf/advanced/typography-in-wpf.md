@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125629"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412136"
 ---
 # <a name="typography-in-wpf"></a>Funzionalità tipografiche di WPF
 Questo argomento presenta le principali funzionalità tipografiche di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Queste includono qualità e prestazioni migliorate nel rendering del testo, supporto tipografico di [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], testo internazionale migliorato, supporto avanzato dei tipi di carattere e nuove API (Application Programming Interface) di testo.  
@@ -121,7 +121,7 @@ Testo con anti-aliasing della direzione y ClearType
  Per altre informazioni, vedere [Documenti in WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Disegno di testo leggero  
- È possibile disegnare testo direttamente al [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli oggetti utilizzando il <xref:System.Windows.Media.DrawingContext.DrawText%2A> metodo del <xref:System.Windows.Media.DrawingContext> oggetto. Per usare questo metodo, si crea un <xref:System.Windows.Media.FormattedText> oggetto. Questo oggetto consente di creare testo su più righe, in cui ogni carattere può essere formattato singolarmente. La funzionalità del <xref:System.Windows.Media.FormattedText> oggetto contiene la maggior parte delle funzionalità dei flag DrawText nell'API Win32. Inoltre, il <xref:System.Windows.Media.FormattedText> oggetto contiene funzionalità quali il supporto di puntini di sospensione, in cui i puntini di sospensione viene visualizzata quando il testo supera i limiti. L'esempio seguente illustra un testo a cui sono stati applicati diversi formati, inclusa una sfumatura lineare sulla seconda e la terza parola.  
+ È possibile disegnare testo direttamente al [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli oggetti utilizzando il <xref:System.Windows.Media.DrawingContext.DrawText%2A> metodo del <xref:System.Windows.Media.DrawingContext> oggetto. Per usare questo metodo, si crea un <xref:System.Windows.Media.FormattedText> oggetto. Questo oggetto consente di creare testo su più righe, in cui ogni carattere può essere formattato singolarmente. La funzionalità del <xref:System.Windows.Media.FormattedText> oggetto contiene la maggior parte delle funzionalità dei flag DrawText nell'API di Windows. Inoltre, il <xref:System.Windows.Media.FormattedText> oggetto contiene funzionalità quali il supporto di puntini di sospensione, in cui i puntini di sospensione viene visualizzata quando il testo supera i limiti. L'esempio seguente illustra un testo a cui sono stati applicati diversi formati, inclusa una sfumatura lineare sulla seconda e la terza parola.  
   
  ![Testo visualizzato usando l'oggetto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

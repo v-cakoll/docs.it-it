@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718909"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409393"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerazioni aggiuntive sulla sicurezza in Windows Form
-Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla capacità di chiamare l'API Microsoft Win32 o altre API non verificabili dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
+Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla possibilità di chiamare l'API di Windows Microsoft o altre API che non possono essere verificato dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
   
- Le sezioni seguenti illustrano come usare gli Appunti, modificare le finestre e chiamare l'API Win32 dalle applicazioni in esecuzione in un ambiente ad attendibilità parziale.  
+ Le sezioni seguenti illustrano come usare gli Appunti, eseguire la modifica delle finestre e chiamare l'API di Windows da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
 ## <a name="clipboard-access"></a>Accesso agli Appunti  
  Il <xref:System.Security.Permissions.UIPermission> classe Controlla accesso agli Appunti e associato <xref:System.Security.Permissions.UIPermissionClipboard> valore di enumerazione indica il livello di accesso. Nella tabella seguente sono elencati i livelli di autorizzazione possibili.  
@@ -69,8 +69,8 @@ Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdns
   
  Per limitare questo rischio, usare solo controlli di terze parti considerati attendibili. Se si usano controlli di terze parti scaricati da origini non verificabili, si consiglia di esaminarne il codice sorgente alla ricerca di exploit potenziali. Dopo aver verificato che l'origine non è dannosa, compilare l'assembly da sé per assicurarsi che l'origine corrisponda.  
   
-## <a name="win32-api-calls"></a>Chiamate API Win32  
- Se la progettazione dell'applicazione richiede la chiamata a una funzione dell'API Win32, si accederà a codice non gestito. In questo caso, lavorando con le chiamate o i valori dell'API Win32, non è possibile determinare le azioni del codice relativamente alla finestra o al sistema operativo. Il <xref:System.Security.Permissions.SecurityPermission> classe e il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> pari al <xref:System.Security.Permissions.SecurityPermissionFlag> controlla l'accesso al codice non gestito. Un'applicazione può accedere a codice non gestito solo quando viene concesso il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> l'autorizzazione. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono chiamare codice non gestito.  
+## <a name="windows-api-calls"></a>Chiamate API di Windows  
+ Se la progettazione dell'applicazione richiede la chiamata a una funzione dall'API di Windows, si accede a codice non gestito. In questo caso non è possibile determinare le azioni del codice alla finestra o al sistema operativo quando si lavora con chiamate all'API di Windows o i valori. Il <xref:System.Security.Permissions.SecurityPermission> classe e il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> pari al <xref:System.Security.Permissions.SecurityPermissionFlag> controlla l'accesso al codice non gestito. Un'applicazione può accedere a codice non gestito solo quando viene concesso il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> l'autorizzazione. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono chiamare codice non gestito.  
   
  Alcuni membri di Windows Form offrono accesso non gestito che richiede il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> l'autorizzazione. Nella tabella seguente elenca i membri di <xref:System.Windows.Forms> dello spazio dei nomi che richiedono l'autorizzazione. Per altre informazioni sulle autorizzazioni necessarie per un membro, vedere la documentazione della libreria di classi .NET Framework.  
   
@@ -84,7 +84,7 @@ Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdns
 |<xref:System.Windows.Forms.Screen>|-    Metodo <xref:System.Windows.Forms.Screen.FromHandle%2A>|  
 |<xref:System.Windows.Forms.SendKeys>|-    Metodo <xref:System.Windows.Forms.SendKeys.Send%2A><br />-    Metodo <xref:System.Windows.Forms.SendKeys.SendWait%2A>|  
   
- Se l'applicazione non è autorizzato a chiamare codice non gestito, l'applicazione deve richiedere <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> autorizzazione oppure è necessario prendere in considerazione modi alternativi di implementazione di funzionalità, in molti casi, Windows Form fornisce un'alternativa gestita alle API Win32 funzioni. Se non esistono metodi alternativi e l'applicazione deve accedere a codice non gestito, sarà necessario elevare le autorizzazioni per l'applicazione.  
+ Se l'applicazione non è autorizzato a chiamare codice non gestito, l'applicazione deve richiedere <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> autorizzazione oppure è necessario prendere in considerazione modi alternativi di implementazione di funzionalità, in molti casi, Windows Form fornisce un'alternativa gestita alle Windows Funzioni API. Se non esistono metodi alternativi e l'applicazione deve accedere a codice non gestito, sarà necessario elevare le autorizzazioni per l'applicazione.  
   
  L'autorizzazione a chiamare codice non gestito consente a un'applicazione di eseguire praticamente qualsiasi operazione. Fornire pertanto tale autorizzazione solo alle applicazioni provenienti da fonti attendibili. In alternativa, a seconda dell'applicazione, la caratteristica che esegue la chiamata al codice non gestite potrebbe essere facoltativa oppure abilitata solo in un ambiente ad attendibilità totale. Per altre informazioni sulle autorizzazioni pericolose, vedere [Autorizzazioni pericolose e amministrazione dei criteri](../misc/dangerous-permissions-and-policy-administration.md). Per altre informazioni sull'elevazione delle autorizzazioni, vedere [General Security Policy Administration](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)) (Amministrazione generale dei criteri di sicurezza).  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352772"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409406"
 ---
 # <a name="optimizing-performance-text"></a>Ottimizzazione delle prestazioni: Testo
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include il supporto per la presentazione di contenuto di testo tramite l'uso di controlli avanzati della [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. In generale, è possibile suddividere il rendering del testo in tre livelli:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352772"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Visualizzazione delle sottolineature nei collegamenti ipertestuali solo in caso di eventi MouseEnter  
  Oggetto <xref:System.Windows.TextDecoration> oggetto è un ornamento visivo che è possibile aggiungere al testo, tuttavia, può essere prestazioni elevate per creare un'istanza. Se si usano ampiamente <xref:System.Windows.Documents.Hyperlink> elementi, è consigliabile visualizzare una sottolineatura solo al momento della generazione di un evento, ad esempio il <xref:System.Windows.ContentElement.MouseEnter> evento. Per altre informazioni, vedere [Specificare se un collegamento ipertestuale è sottolineato](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Collegamenti ipertestuali con TextDecoration](./media/textdecoration03.png "TextDecoration03")  
-Visualizzazione di collegamenti ipertestuali in caso di evento MouseEnter  
+  L'immagine seguente mostra come l'evento MouseEnter attiva il collegamento ipertestuale sottolineato:
+
+  ![Collegamenti ipertestuali con TextDecoration](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  L'esempio di markup seguente mostra un <xref:System.Windows.Documents.Hyperlink> definito con e senza sottolineatura:  
   

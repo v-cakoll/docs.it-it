@@ -2,21 +2,21 @@
 title: Uso di NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658728"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411070"
 ---
 # <a name="using-the-nethttpbinding"></a>Uso di NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita. L'oggetto <xref:System.ServiceModel.NetHttpBinding> rileverà se viene usato con un contratto request/reply o un contratto duplex e modificherà il comportamento di conseguenza. Utilizzerà HTTP per i contratti request/reply e WebSockets per i contratti duplex. È possibile eseguire l'override di questo comportamento usando l'impostazione <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:  
   
-1. `Always` -Forza WebSocket per essere usato anche per i contratti request / reply.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Forza WebSocket per essere usato anche per i contratti request / reply.  
   
-2. `Never` -Ciò impedisce l'utilizzo WebSockets. Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -Ciò impedisce l'utilizzo WebSockets. Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.  
   
-3. `WhenDuplex` -Questo è il valore predefinito e si comporta come descritto in precedenza.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -Questo è il valore predefinito e si comporta come descritto in precedenza.  
   
  <xref:System.ServiceModel.NetHttpBinding> supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket. Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303647"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411031"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: Lo scambio di messaggi in coda con endpoint WCF
 Le code garantiscono che la messaggistica affidabile può verificarsi tra un client e un servizio Windows Communication Foundation (WCF), anche se il servizio non è disponibile al momento della comunicazione. Le procedure seguenti illustrano come assicurare una comunicazione durevole tra un client e un servizio utilizzando lo standard di associazione in coda quando si implementa il servizio WCF.  
@@ -24,7 +24,7 @@ Le code garantiscono che la messaggistica affidabile può verificarsi tra un cli
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Quando il contratto di servizio passa tipi definiti dall'utente, è necessario definire contratti dati per tali tipi. Nel codice seguente vengono illustrati due contratti dati, `PurchaseOrder` e `PurchaseOrderLineItem`. Questi due tipi definiscono i dati inviati al servizio. Si noti che le classi che definiscono questo contratto dati definiscono anche un certo numero di metodi. Questi non vengono considerati parte del contratto dati. Solo i membri che sono dichiarati con l'attributo `DataMember` fanno parte del contratto dati.  
+2.  Quando il contratto di servizio passa tipi definiti dall'utente, è necessario definire contratti dati per tali tipi. Nel codice seguente vengono illustrati due contratti dati, `PurchaseOrder` e `PurchaseOrderLineItem`. Questi due tipi definiscono i dati inviati al servizio. Si noti che le classi che definiscono questo contratto dati definiscono anche un certo numero di metodi. Questi non vengono considerati parte del contratto dati. Solo i membri che sono dichiarati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> fanno parte del contratto dati.  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

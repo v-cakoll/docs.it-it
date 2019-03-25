@@ -2,12 +2,12 @@
 title: Criteri attivi
 description: Informazioni su come usare i modelli attivi per definire partizioni denominate che suddividono i dati di input di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612842"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412084"
 ---
 # <a name="active-patterns"></a>Criteri attivi
 
@@ -86,23 +86,23 @@ Come indicato di seguito è riportato l'output dell'esempio precedente:
 Something else : Not matched.
 ```
 
-Quando si usano i modelli attivi parziali, in alcuni casi le singole scelte possono essere contigui o si escludono a vicenda, ma non è necessario. Nell'esempio seguente, il quadrato di modello e il modello di cubo non sono non contigui, perché alcuni numeri sono entrambi quadrati e cubi, ad esempio 64. Il seguente programma stampa tutti i numeri interi fino a 1000000 quadrati e i cubi.
+Quando si usano i modelli attivi parziali, in alcuni casi le singole scelte possono essere contigui o si escludono a vicenda, ma non è necessario. Nell'esempio seguente, il quadrato di modello e il modello di cubo non sono non contigui, perché alcuni numeri sono entrambi quadrati e cubi, ad esempio 64. Il programma seguente usa il modello AND per combinare i modelli quadrato e il cubo. Vengono stampati tutti i numeri interi fino a 1000 che sono entrambi quadrati e cubi, nonché quelle che sono soltanto i cubi. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 L'output è indicato di seguito:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Criteri attivi con parametri

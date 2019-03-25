@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580863"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411005"
 ---
 # <a name="shadowing-in-visual-basic"></a>Shadowing in Visual Basic
 Quando due elementi di programmazione condividono lo stesso nome, è possibile nascondere uno di essi, oppure *shadow*, un altro. In questo caso, l'elemento nascosto non è disponibile per riferimento; al contrario, quando il codice usi il nome dell'elemento, il compilatore Visual Basic si risolve nell'elemento di shadowing.  
@@ -41,8 +41,7 @@ Quando due elementi di programmazione condividono lo stesso nome, è possibile n
   
  La figura seguente illustra due variabili, entrambi denominati `temp`. La variabile locale `temp` nasconde la variabile membro `temp` quando si accede da all'interno della relativa routine `p`. Tuttavia, il `MyClass` parola chiave ignora lo shadowing e accede alla variabile membro.  
   
- ![Diagramma grafico dello shadowing tramite l'ambito](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Shadowing tramite l'ambito  
+ ![Figura che illustra shadowing tramite l'ambito.](./media/shadowing/shadow-scope-diagram.gif)
   
  Per un esempio di shadowing tramite l'ambito, vedere [come: Nascondere una variabile con lo stesso nome di un'altra variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Shadowing tramite l'ambito
   
  La figura seguente mostra una classe di base `b` e una classe derivata `d` che eredita da `b`. La classe di base definisce una routine denominata `proc`, mentre la classe derivata nasconde con un'altra routine con lo stesso nome. Il primo `Call` istruzione accede allo shadowing `proc` nella classe derivata. Tuttavia, il `MyBase` parola chiave ignora lo shadowing e accedere alla routine nascosta nella classe di base.  
   
- ![Diagramma grafico dello shadowing tramite eredità](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Shadowing tramite eredità  
+ ![Diagramma grafico dello shadowing tramite eredità](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Per un esempio dello shadowing tramite eredità, vedere [come: Nascondere una variabile con lo stesso nome di variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) e [come: Nascondere una variabile ereditata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

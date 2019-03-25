@@ -2,12 +2,12 @@
 title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563769"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409848"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -29,7 +29,7 @@ Il servizio di routing fornisce un intermediario SOAP di collegamento generico i
  Ciò significa che se gli endpoint di destinazione usano contratti con più modelli di comunicazione (ad esempio una combinazione di operazioni unidirezionali e bidirezionali), non è possibile creare un singolo endpoint servizio in grado di ricevere e indirizzare i messaggi a tutti. È necessario determinare quali endpoint dispongono di forme compatibili e definire uno o più endpoint servizio che verranno usati per ricevere i messaggi da indirizzare agli endpoint di destinazione.  
   
 > [!NOTE]
-> Quando si usano contratti che specificano più modelli di comunicazione (ad esempio una combinazione di operazioni unidirezionali e bidirezionali), una soluzione alternativa è rappresentata dall'utilizzo di un contratto di tipo duplex nel servizio di routing, ad esempio <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Ciò implica tuttavia che l'associazione deve supportare la comunicazione duplex, il che potrebbe non essere possibile per tutti gli scenari. Negli scenari in cui questa soluzione non è possibile, può risultare necessario eseguire il factoring della comunicazione in più endpoint oppure modificare l'applicazione.  
+> Quando si usano contratti che specificano più modelli di comunicazione (ad esempio una combinazione di operazioni unidirezionali e bidirezionali), una soluzione alternativa è rappresentata dall'uso di un contratto di tipo duplex nel servizio di routing, ad esempio <xref:System.ServiceModel.Routing.IDuplexSessionRouter>. Ciò implica tuttavia che l'associazione deve supportare la comunicazione duplex, il che potrebbe non essere possibile per tutti gli scenari. Negli scenari in cui questa soluzione non è possibile, può risultare necessario eseguire il factoring della comunicazione in più endpoint oppure modificare l'applicazione.  
   
  Per altre informazioni sui contratti di routing, vedere [contratti di Routing](routing-contracts.md).  
   
@@ -354,22 +354,22 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 ### <a name="supported-error-patterns"></a>Modelli di errore supportati  
  Nella tabella seguente vengono descritti i modelli compatibili con l'uso di elenchi di endpoint di backup, insieme a note che descrivono dettagli specifici di gestione degli errori.  
   
-|Criterio|Sessione|Transazione|Contesto di ricezione|Elenco di backup supportato|Note|  
+|Modello|Sessione|Transazione|Contesto di ricezione|Elenco di backup supportato|Note|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
-|Unidirezionale||||Sì|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Se per il messaggio viene usata la trasmissione multicast, solo il messaggio nel canale con errori viene spostato alla relativa destinazione di backup.|  
-|Unidirezionale||![Segno di spunta](media/checkmark.gif "segno di spunta")||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
-|Unidirezionale|||![Segno di spunta](media/checkmark.gif "segno di spunta")|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che il messaggio viene ricevuto correttamente, completare tutti i contesti di ricezione. Se il messaggio non viene ricevuto correttamente da uno o più endpoint, non completare il contesto di ricezione.<br /><br /> Se per il messaggio viene usata la trasmissione multicast, il contesto di ricezione viene completato solo se il messaggio viene ricevuto correttamente da almeno un endpoint (primario o di backup). Se nessuno degli endpoint in uno o più percorsi multicast riceve correttamente il messaggio, non completare il contesto di ricezione.|  
-|Unidirezionale||![Segno di spunta](media/checkmark.gif "segno di spunta")|![Segno di spunta](media/checkmark.gif "segno di spunta")|Yes|Interrompere la transazione precedente, creare una nuova transazione e inviare nuovamente tutti i messaggi. I messaggi per i quali si verifica un errore vengono trasmessi a una destinazione di backup.<br /><br /> Dopo che è stata creata una transazione in cui tutte le trasmissioni hanno esito positivo, completare i contesti di ricezione ed eseguire il commit della transazione.|  
-|Unidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")|||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. In un scenario multicast vengono inviati di nuovo a destinazioni di backup solo i messaggi in una sessione nella quale si è verificato un errore o in una sessione la cui chiusura ha avuto esito negativo.|  
-|Unidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")|![Segno di spunta](media/checkmark.gif "segno di spunta")||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
-|Unidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")||![Segno di spunta](media/checkmark.gif "segno di spunta")|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che tutte le operazioni di invio dei messaggi vengono completate senza errori, la sessione indica che non sono presenti altri messaggi e il servizio di routing chiude correttamente tutti i canali di sessione in uscita, tutti i contesti di ricezione vengono completati e il canale di sessione in ingresso viene chiuso.|  
-|Unidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")|![Segno di spunta](media/checkmark.gif "segno di spunta")|![Segno di spunta](media/checkmark.gif "segno di spunta")|Yes|Interrompere la transazione corrente e crearne una nuova. Inviare di nuovo tutti i messaggi precedenti nella sessione. Dopo che è stata creata una transazione in cui tutti i messaggi vengono inviati correttamente e la sessione indica che non sono presenti altri messaggi, tutti i canali di sessione in uscita vengono chiusi, i contesti di ricezione vengono tutti completati con la transazione, il canale di sessione in ingresso viene chiuso e viene eseguito il commit della transazione.<br /><br /> Quando per le sessioni viene usata la trasmissione multicast, i messaggi senza errori vengono inviati di nuovo alla stessa destinazione, mentre quelli per i quali si è verificato un errore vengono inviati a destinazioni di backup.|  
-|Bidirezionale||||Sì|Inviare a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
-|Bidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")|||Yes|Inviare tutti i messaggi nel canale a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
-|Bidirezionale||![Segno di spunta](media/checkmark.gif "segno di spunta")||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
-|Bidirezionale|![Segno di spunta](media/checkmark.gif "segno di spunta")|![Segno di spunta](media/checkmark.gif "segno di spunta")||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
+|Unidirezionale||||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Se per il messaggio viene usata la trasmissione multicast, solo il messaggio nel canale con errori viene spostato alla relativa destinazione di backup.|  
+|Unidirezionale||✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
+|Unidirezionale|||✓|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che il messaggio viene ricevuto correttamente, completare tutti i contesti di ricezione. Se il messaggio non viene ricevuto correttamente da uno o più endpoint, non completare il contesto di ricezione.<br /><br /> Se per il messaggio viene usata la trasmissione multicast, il contesto di ricezione viene completato solo se il messaggio viene ricevuto correttamente da almeno un endpoint (primario o di backup). Se nessuno degli endpoint in uno o più percorsi multicast riceve correttamente il messaggio, non completare il contesto di ricezione.|  
+|Unidirezionale||✓|✓|Yes|Interrompere la transazione precedente, creare una nuova transazione e inviare nuovamente tutti i messaggi. I messaggi per i quali si verifica un errore vengono trasmessi a una destinazione di backup.<br /><br /> Dopo che è stata creata una transazione in cui tutte le trasmissioni hanno esito positivo, completare i contesti di ricezione ed eseguire il commit della transazione.|  
+|Unidirezionale|✓|||Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. In un scenario multicast vengono inviati di nuovo a destinazioni di backup solo i messaggi in una sessione nella quale si è verificato un errore o in una sessione la cui chiusura ha avuto esito negativo.|  
+|Unidirezionale|✓|✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
+|Unidirezionale|✓||✓|Yes|Tenta di inviare di nuovo il messaggio a un endpoint di backup. Dopo che tutte le operazioni di invio dei messaggi vengono completate senza errori, la sessione indica che non sono presenti altri messaggi e il servizio di routing chiude correttamente tutti i canali di sessione in uscita, tutti i contesti di ricezione vengono completati e il canale di sessione in ingresso viene chiuso.|  
+|Unidirezionale|✓|✓|✓|Yes|Interrompere la transazione corrente e crearne una nuova. Inviare di nuovo tutti i messaggi precedenti nella sessione. Dopo che è stata creata una transazione in cui tutti i messaggi vengono inviati correttamente e la sessione indica che non sono presenti altri messaggi, tutti i canali di sessione in uscita vengono chiusi, i contesti di ricezione vengono tutti completati con la transazione, il canale di sessione in ingresso viene chiuso e viene eseguito il commit della transazione.<br /><br /> Quando per le sessioni viene usata la trasmissione multicast, i messaggi senza errori vengono inviati di nuovo alla stessa destinazione, mentre quelli per i quali si è verificato un errore vengono inviati a destinazioni di backup.|  
+|Bidirezionale||||Yes|Inviare a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
+|Bidirezionale|✓|||Yes|Inviare tutti i messaggi nel canale a una destinazione di backup.  Dopo che un canale restituisce un messaggio di risposta, viene restituita la risposta al client originale.|  
+|Bidirezionale||✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
+|Bidirezionale|✓|✓||No|Viene generata un'eccezione e viene eseguito il rollback della transazione.|  
 |Duplex||||No|La comunicazione duplex non di sessione non è attualmente supportata.|  
-|Duplex|![Segno di spunta](media/checkmark.gif "segno di spunta")|||Yes|Inviare a una destinazione di backup.|  
+|Duplex|✓|||Yes|Inviare a una destinazione di backup.|  
   
 ## <a name="hosting"></a>Hosting  
  Poiché il servizio di routing viene implementato come servizio WCF, deve essere indipendente all'interno di un'applicazione o ospitato da IIS o WAS. È consigliabile che il servizio di routing sia ospitato in IIS, WAS o un'applicazione di servizio Windows per sfruttare le funzionalità di avvio automatico e di gestione del ciclo di vita disponibili in tali ambienti di hosting.  

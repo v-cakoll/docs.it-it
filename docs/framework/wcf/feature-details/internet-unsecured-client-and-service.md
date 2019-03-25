@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643806"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410667"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Client e servizio non protetti in Internet
-La figura seguente mostra un esempio di client Windows Communication Foundation (WCF) pubblica, protetta e servizio.  
+La figura seguente mostra un esempio di client Windows Communication Foundation (WCF) pubblica, protetta e servizio:  
   
- ![Non protetto scenario Internet non sicuri e il servizio](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![Screenshot che mostra uno scenario di Internet non protetto](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|None|  
+|Modalità di sicurezza|nessuno|  
 |Trasporto|HTTP|  
 |Binding|<xref:System.ServiceModel.BasicHttpBinding> nel codice, o la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento nella configurazione.|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
-|Autenticazione|None|  
-|Integrità|None|  
-|Riservatezza|None|  
+|Autenticazione|nessuno|  
+|Integrità|nessuno|  
+|Riservatezza|nessuno|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353595"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408756"
 ---
 # <a name="use-automatic-layout-overview"></a>Cenni preliminari sull'utilizzo del layout automatico
 In questo argomento illustra le linee guida per gli sviluppatori su come scrivere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le applicazioni con localizzabile [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In passato, la localizzazione di un'interfaccia utente era un processo molto tempo. Ogni lingua dell'interfaccia utente è stato adattato per richiedeva modifiche pixel per pixel. Oggi, con la progettazione e standard, di codifica corretti [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] può essere costruito in modo che i localizzatori hanno ridimensionamento e riposizionamento a scopo. L'approccio alla scrittura di applicazioni che è possibile ridimensionare e riposizionare con maggiore semplicità viene definito layout automatico e può essere ottenuta utilizzando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] progettazione dell'applicazione.  
@@ -39,10 +39,9 @@ In questo argomento illustra le linee guida per gli sviluppatori su come scriver
   
  [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- La figura seguente mostra l'output degli esempi di codice.  
+ La figura seguente mostra l'output degli esempi di codice:  
   
- ![Lo stesso pulsante con testo in lingue diverse](./media/globalizationbutton.png "GlobalizationButton")  
-Pulsante a ridimensionamento automatico  
+ ![Lo stesso pulsante con testo in lingue diverse](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>Layout automatico e standard di codifica  

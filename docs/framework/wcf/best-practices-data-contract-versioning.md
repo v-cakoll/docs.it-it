@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738352"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409471"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per altre informazioni sui contratti dati, vedere gli argomenti in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
     2.  Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. Per altre informazioni sui callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  La proprietà `Order` su `DataMemberAttribute` deve essere usata per assicurarsi che tutti i nuovi membri dati aggiunti siano posizionati dopo i membri dati esistenti. È consigliabile eseguire questa operazione come segue: Nessuno dei membri dei dati nella prima versione del contratto dati deve avere i `Order` set di proprietà. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
+    3.  Il <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> proprietà deve essere usata per assicurarsi che tutti i membri dati appena aggiunti vengono visualizzati dopo i membri dati esistenti. È consigliabile eseguire questa operazione come segue: Nessuno dei membri dei dati nella prima versione del contratto dati deve avere i `Order` set di proprietà. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
   
 9. Non rimuovere i membri dati nelle versioni più recenti, anche se per la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> è stato lasciato il valore predefinito `false` nelle versioni precedenti.  
   

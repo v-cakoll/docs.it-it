@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8aed2b2efa0408371a8da47fef64340fd30fffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577100"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410420"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio Windows Communication Foundation (WCF) funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  
@@ -54,7 +54,7 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
   
 -   [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornisce un esempio di creazione di un'associazione nel codice.  
   
--   [Procedura: Configurare un Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) fornisce un esempio di creazione di un client utilizzando la configurazione.  
+-   [Esercitazione: Creare un client Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fornisce un esempio di creazione di un client tramite configurazione.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)

@@ -1,13 +1,13 @@
 ---
 title: Valori Null
 description: Informazioni su come viene usato il valore null in di F# linguaggio di programmazione.
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610996"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409640"
 ---
 # <a name="null-values"></a>Valori Null
 
@@ -19,7 +19,7 @@ Il valore null non è in genere usato F# per i valori o le variabili. Tuttavia, 
 
 Per un tipo definito F# e viene usato esclusivamente dal F#, l'unico modo per creare un valore null tramite il F# libreria direttamente consiste nell'utilizzare [unchecked. defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) oppure [Array. zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). Tuttavia, per un F# tipo che viene usato da altri linguaggi .NET, o se si usa un'API che non viene scritto in tale tipo F#, come .NET Framework, possono verificarsi i valori null.
 
-È possibile usare la `option` digitare F# quando è possibile usare una variabile di riferimento con un valore null in un altro linguaggio .NET. Anziché null, con un F# `option` tipo, si utilizza il valore dell'opzione `None` se è presente alcun oggetto. Si utilizza il valore dell'opzione `Some(obj)` con un oggetto `obj` quando è presente un oggetto. Per altre informazioni, vedere [opzioni](../options.md).
+È possibile usare la `option` digitare F# quando è possibile usare una variabile di riferimento con un valore null in un altro linguaggio .NET. Anziché null, con un F# `option` tipo, si utilizza il valore dell'opzione `None` se è presente alcun oggetto. Si utilizza il valore dell'opzione `Some(obj)` con un oggetto `obj` quando è presente un oggetto. Per altre informazioni, vedere [Opzioni](../options.md). Si noti che è comunque possibile comprimere una `null` valore in un'opzione if, per `Some x`, `x` risulta essere `null`. Per questo motivo, è importante usi `None` quando un valore è `null`.
 
 Il `null` parola chiave è una parola chiave valida nel F# lingua e si può essere utilizzato quando si lavora con API di .NET Framework o altre API che sono scritti in un altro linguaggio .NET. Due situazioni in cui potrebbe essere necessario un valore null sono quando si chiama un'API .NET e passa un valore null come argomento e quando si interpreta il valore restituito o parametro di output da una chiamata al metodo .NET.
 

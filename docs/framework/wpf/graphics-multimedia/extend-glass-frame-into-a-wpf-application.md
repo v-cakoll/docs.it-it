@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843532"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412214"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estendere l'effetto cristallo a un'applicazione WPF
 
@@ -26,11 +26,9 @@ In questo argomento viene illustrato come estendere il [!INCLUDE[TLA#tla_winvist
 
 ## <a name="example"></a>Esempio
 
-L'immagine seguente illustra il fotogramma effetto cristallo esteso alla barra degli indirizzi di Internet Explorer 7.
+L'immagine seguente illustra il fotogramma effetto cristallo esteso la barra indirizzi di Internet Explorer 7:
 
-**Internet Explorer con il fotogramma effetto cristallo esteso dietro la barra degli indirizzi.**
-
-![IE7 con il fotogramma effetto cristallo esteso dietro la barra degli indirizzi.](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Screenshot che illustra il fotogramma effetto cristallo esteso dietro la barra degli indirizzi di Internet Explorer 7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Per estendere il fotogramma effetto cristallo su un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario accedere a [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] non gestita. L'esempio di codice seguente esegue Platform Invoke (pinvoke) per le due [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] necessarie per estendere il fotogramma all'area client. Ognuna di queste [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] vengono dichiarate in una classe denominata **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ Nell'esempio seguente viene illustrata una semplice finestra in cui il fotogramm
 </Window>
 ```
 
-Nell'immagine seguente viene illustrato il fotogramma effetto cristallo esteso in un'applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+L'immagine seguente illustra il fotogramma effetto cristallo esteso in un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione:
 
-**Estensione dell'effetto cristallo a un'applicazione**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **.**
-
-![Estensione dell'effetto cristallo a un'applicazione WPF.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Screenshot che mostra un fotogramma effetto cristallo esteso in un'applicazione WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Vedere anche
 

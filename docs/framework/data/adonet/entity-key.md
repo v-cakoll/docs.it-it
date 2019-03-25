@@ -2,12 +2,12 @@
 title: chiave di entità
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664017"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408964"
 ---
 # <a name="entity-key"></a>chiave di entità
 Un' *chiave di entità* è un [proprietà](../../../../docs/framework/data/adonet/property.md) o un set di proprietà di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) che vengono utilizzati per determinare l'identità. Le proprietà che costituiscono una chiave di entità vengono scelte in fase di progettazione. I valori delle proprietà chiave di entità devono identificare in modo univoco un'istanza del tipo di entità all'interno di un' [set di entità](../../../../docs/framework/data/adonet/entity-set.md) in fase di esecuzione. Le proprietà che costituiscono una chiave di entità devono essere scelte per garantire univocità delle istanze in un set di entità.  
@@ -25,7 +25,7 @@ Un' *chiave di entità* è un [proprietà](../../../../docs/framework/data/adone
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`. Le proprietà di ogni tipo di entità che costituiscono la chiave di entità vengono indicate con "(Key)". Si noti che il tipo di entità `Author` dispone di una chiave di entità costituita da due proprietà, `Name` e `Address`.  
   
- ![Modello di esempio](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Modello di esempio con tre tipi di entità](./media/entity-key/example-model-three-entity-types.gif)  
   
  Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL) denominato conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente. Si noti che la chiave di entità viene definita facendo riferimento alla proprietà `ISBN` del tipo di entità.  
   

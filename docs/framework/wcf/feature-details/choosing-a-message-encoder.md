@@ -2,17 +2,17 @@
 title: Scelta di un codificatore di messaggi
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538427"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409484"
 ---
 # <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
 In questo argomento vengono descritti i criteri per la scelta tra i codificatori di messaggi che sono inclusi in Windows Communication Foundation (WCF): file binario, testo e Message Transmission Optimization Mechanism (MTOM).  
   
- In WCF, specificare la modalità di trasferimento dati attraverso una rete tra endpoint per mezzo di una *associazione*, che è costituito da una sequenza di *elementi di associazione*. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi nello stack dell'associazione. Un'associazione include elementi facoltativi binding del protocollo, ad esempio un elemento di associazione di sicurezza o un elemento di associazione di messaggistica affidabile, un elemento di associazione di codifica dei messaggi obbligatorio e un elemento di associazione di trasporto obbligatorio.  
+ In WCF, specificare la modalità di trasferimento dati attraverso una rete tra endpoint per mezzo di una *associazione*, che è costituito da una sequenza di *elementi di associazione*. Un codificatore di messaggi è rappresentato da un elemento di associazione di codifica dei messaggi nello stack dell'associazione. Un'associazione include elementi facoltativi di associazione del protocollo, ad esempio un elemento di associazione di sicurezza o un elemento di associazione di messaggistica affidabile, un elemento di associazione di codifica dei messaggi obbligatorio e un elemento di associazione di trasporto obbligatorio.  
   
  L'elemento di associazione di codifica dei messaggi si trova sotto gli elementi facoltativi binding del protocollo e sopra l'elemento associazione del trasporto obbligatorio. Sul lato in uscita, un codificatore di messaggi serializza <xref:System.ServiceModel.Channels.Message> in uscita e lo passa al trasporto. Sul lato in ingresso, un codificatore di messaggi riceve il formato serializzato di un <xref:System.ServiceModel.Channels.Message> dal trasporto e lo passa al livello di protocollo superiore, se presente. In caso contrario, lo passa all'applicazione.  
   
@@ -65,9 +65,9 @@ L'impostazione IgnoreWhitespace viene ignorata.
 
 A partire da WCF 4.5, il codificatore binario WCF aggiunge il supporto per la compressione. Questo consente di utilizzare l'algoritmo gzip/deflate per inviare messaggi compressi da un client WCF, nonché rispondere con messaggi compressi da un servizio WCF self-hosted. Questa funzionalità consente la compressione sui trasporti TCP e HTTP. Un servizio WCF ospitato da IIS può sempre essere abilitato per l'invio di risposte compresse configurando il server host di IIS. Il tipo di compressione è configurato con la proprietà <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Questa proprietà è impostata su uno dei valori dell'enumerazione <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>:
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Poiché questa proprietà viene esposta solo su binaryMessageEncodingBindingElement, sarà necessario creare un'associazione personalizzata simile al seguente per usare questa funzionalità:
 

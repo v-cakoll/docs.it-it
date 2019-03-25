@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826264"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411564"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -73,7 +73,7 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
 |`AllowBlankPassword`|Viene usata per consentire o meno l'immissione di una password vuota in una stringa di connessione. Valori validi sono `true`, per consentire l'uso di password vuote, e `false`, per impedire l'uso di password vuote. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|Viene usata per identificare una stringa di connessione consentita. È possibile identificare più stringhe di connessione. **Nota:**  Non includere un identificatore utente o una password nella stringa di connessione. In questa versione non è possibile modificare le restrizioni relative alle stringhe di connessione usando lo strumento Configurazione .NET Framework. <br /><br /> La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictions`|Viene usata per identificare i parametri delle stringhe di connessione consentiti o non consentiti. Parametri della stringa di connessione vengono identificati nel formato  *\<nome parametro > =*. Per specificare più parametri, separarli con un punto e virgola (;). **Nota:**  Se non viene specificata alcuna `KeyRestrictions` e la proprietà `KeyRestrictionBehavior` è impostata su `AllowOnly` o `PreventUsage`, non saranno consentiti parametri aggiuntivi per la stringa di connessione. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Viene usata per identificare i parametri della stringa di connessione come unici parametri aggiuntivi consentiti (`AllowOnly`) oppure per identificare i parametri aggiuntivi non consentiti (`PreventUsage`). Il valore predefinito è `AllowOnly`. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Viene usata per identificare i parametri della stringa di connessione come unici parametri aggiuntivi consentiti (`AllowOnly`) oppure per identificare i parametri aggiuntivi non consentiti (`PreventUsage`). `AllowOnly` è il valore predefinito. La proprietà viene ereditata da <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Ottiene un identificatore univoco per l'attributo quando viene implementato in una classe derivata. La proprietà viene ereditata da <xref:System.Attribute>.|  
 |`Unrestricted`|Indica che esiste una dichiarazione di accesso senza limitazioni alla risorsa. La proprietà viene ereditata da <xref:System.Security.Permissions.SecurityAttribute>.|  
   
@@ -190,7 +190,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilità con codice non gestito  
- Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Win32. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md).  
+ Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). I componenti COM, le interfacce ActiveX e le funzioni API Windows sono esempi di codice non gestito. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md).  
   
  In .NET Framework la compatibilità con versioni precedenti di componenti COM esistenti viene supportata fornendo l'accesso tramite l'interoperabilità COM. È possibile incorporare componenti COM in un'applicazione .NET Framework usando gli strumenti di interoperabilità COM per importare i tipi COM attinenti. Una volta importati, i tipi COM sono pronti per l'uso. L'interoperabilità COM consente anche ai client COM di accedere a codice gestito esportando i metadati dell'assembly in una libreria dei tipi e registrando il componente gestito come componente COM. Per altre informazioni, vedere [interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828345"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409952"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Stringhe di connessione e file di configurazione
 Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.  
@@ -81,7 +81,7 @@ Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, 
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Stringa di connessione. È mappata all'attributo **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Esempio: Elenca tutte le stringhe di connessione  
- In questo esempio viene scorsa la raccolta `ConnectionStringSettings` e vengono visualizzate le proprietà <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> nella finestra della console.  
+ Questo esempio viene scorsa la <xref:System.Configuration.ConnectionStringSettingsCollection> e consente di visualizzare il <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, e <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> proprietà nella finestra della console.  
   
 > [!NOTE]
 >  System.Configuration.dll non è incluso in tutti i tipi di progetto e potrebbe essere necessario impostare un riferimento a questo file per usare le classi di configurazione. Il nome e il percorso di un determinato file di configurazione dell'applicazione variano in base al tipo di applicazione e al processo di hosting.  
@@ -139,7 +139,7 @@ Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, 
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa l'algoritmo di crittografia RSA per crittografare e decrittografare i dati. L'algoritmo RSA può essere usato per la crittografia a chiave pubblica e per le firme digitali. È anche noto come crittografia a "chiave pubblica" o asimmetrica perché impiega due chiavi diverse. È possibile usare lo [strumento di registrazione di IIS per ASP.NET (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) per crittografare le sezioni di un file Web.config e gestire le chiavi di crittografia. In ASP.NET il file di configurazione viene decrittografato al momento dell'elaborazione. L'identità dell'applicazione ASP.NET deve disporre di accesso in lettura alla chiave di crittografia usata per crittografare e decrittografare le sezioni crittografate.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Usa DPAPI (Data Protection API) di Windows per crittografare le sezioni di configurazione. Usa i servizi di crittografia incorporati di Windows e può essere configurato per la protezione specifica del computer o specifica dell'account utente. La protezione specifica del computer risulta utile quando più applicazioni sullo stesso server devono condividere informazioni. La protezione specifica dell'account utente può essere usata con i servizi eseguiti con un'identità utente specifica, ad esempio un ambiente di hosting condiviso. Ogni applicazione viene eseguita con un'identità distinta, limitando l'accesso a risorse quali file e database.|  
   
- Entrambi i provider offrono una crittografia avanzata per i dati. Se tuttavia si prevede di usare lo stesso file di configurazione crittografato in più server, ad esempio una Web farm, solo `RsaProtectedConfigurationProvider` consente di esportare le chiavi di crittografia usate per crittografare i dati e importarle in un altro server. Per altre informazioni, vedere [Importazione ed esportazione di contenitori di chiavi RSA della configurazione protetta](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Entrambi i provider offrono una crittografia avanzata per i dati. Se tuttavia si prevede di usare lo stesso file di configurazione crittografato in più server, ad esempio una Web farm, solo <xref:System.Configuration.RsaProtectedConfigurationProvider> consente di esportare le chiavi di crittografia usate per crittografare i dati e importarle in un altro server. Per altre informazioni, vedere [Importazione ed esportazione di contenitori di chiavi RSA della configurazione protetta](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Utilizzo delle classi di configurazione  
  Lo spazio dei nomi <xref:System.Configuration> fornisce classi per specificare le impostazioni di configurazione a livello di codice. La classe <xref:System.Configuration.ConfigurationManager> fornisce accesso a file di configurazione del computer, dell'applicazione e dell'utente. Se si crea un'applicazione ASP.NET, è possibile usare la classe <xref:System.Web.Configuration.WebConfigurationManager>, che fornisce la stessa funzionalità consentendo anche di accedere a impostazioni che sono univoche per le applicazioni ASP.NET, ad esempio quelle disponibili in **\<system.web>**.  

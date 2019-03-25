@@ -52,8 +52,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  IIS può specificare più associazioni per ogni sito, il che comporta più indirizzi di base per ogni schema. Nelle versioni precedenti a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF non supporta più indirizzi per uno schema e, se sono stati specificati, ha generato un <xref:System.ArgumentException> durante l'attivazione.  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] consente ai provider di servizi Internet di ospitare più applicazioni con indirizzi di base diversi per lo stesso schema sullo stesso sito.  
   
  Un sito potrebbe contenere, ad esempio, gli indirizzi di base seguenti:  
   
@@ -78,8 +77,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
  Nell'esempio precedente, `net.tcp://payroll.myorg.com:8000` e `http://shipping.myorg.com:8000` sono solo gli indirizzi di base, i rispettivi schemi, che vengono passati.  
   
- 
-  `baseAddressPrefixFilter` non supporta caratteri jolly.  
+ `baseAddressPrefixFilter` non supporta caratteri jolly.  
   
  Gli indirizzi di base forniti da IIS possono disporre di indirizzi associati ad altri schemi non presenti nell'elenco `baseAddressPrefixFilters`. Questi indirizzi non vengono filtrati.  
   
@@ -135,8 +133,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
 -   Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro dell'indirizzo SOAP personalizzato  
- 
-  <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  
   
  In alcuni scenari, un endpoint riceve tutti i messaggi che arrivano sul trasporto sottostante e non solo quelli con l'intestazione `To` appropriata. Affinché ciò sia possibile, l'utente può utilizzare la classe <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   

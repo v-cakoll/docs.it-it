@@ -2,12 +2,12 @@
 title: Join di operazioni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 6113949986aafdcaa2afa55d0a56d8e2186811b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527861"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411148"
 ---
 # <a name="join-operations-visual-basic"></a>Join di operazioni (Visual Basic)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
@@ -18,7 +18,7 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
   
  L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.  
   
- ![Due cerchi sovrapposti che indicano inner join&#47;outer join.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "Cerchi di join")  
+ ![Due cerchi sovrapposti che interna&#47;esterno.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Metodi  
   

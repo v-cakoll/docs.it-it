@@ -2,12 +2,12 @@
 title: Utilizzo di feed OData da un flusso di lavoro - WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ac7a5aef6a699f85ac5a1ce7417d02d42f6c0281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275821"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408995"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Utilizzo di feed OData da un flusso di lavoro
 
@@ -25,7 +25,7 @@ In WCF Data Services sono disponibili librerie client che consentono di usare co
 
 Per generare le librerie client Northwind, è possibile usare la **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio 2012 per aggiungere un riferimento al servizio Northwind OData.
 
-![Aggiungi riferimento al servizio](./media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
+![Screenshot che mostra la finestra di dialogo Aggiungi riferimento al servizio.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Si noti che non sono presenti operazioni del servizio esposte dal servizio stesso e che nell'elenco **Servizi** sono contenuti elementi che rappresentano le entità esposte dal servizio dati Northwind. Quando si aggiunge il riferimento al servizio, le classi verranno generate per queste entità e sarà possibile usarle nel codice client. Negli esempi di questo argomento vengono usate tali classi e la classe `NorthwindEntities` per eseguire le query.
 
@@ -43,7 +43,7 @@ Per risolvere possibili problemi di latenza che potrebbero verificarsi quando si
 
 La classe <xref:System.Data.Services.Client.DataServiceQuery%601> fornisce i metodi <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> e <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> per l'esecuzione asincrona di una query su un servizio OData. Tali metodi possono essere chiamati da <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> , mentre <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> esegue l'override di una classe <xref:System.Activities.AsyncCodeActivity> derivata. Quando viene restituito l'override <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> , il flusso di lavoro può diventare inattivo (ma non persistente) e, dopo il completamento delle operazioni asincrone, il metodo <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> viene richiamato dal runtime.
 
-Nell'esempio seguente viene definita un'attività `OrdersByCustomer` che dispone di due argomenti di input. L'argomento `CustomerId` rappresenta il cliente che identifica gli ordini da restituire, mentre l'argomento `ServiceUri` rappresenta l'URI del servizio OData su cui eseguire una query. Poiché l'attività deriva da `AsyncCodeActivity<IEnumerable<Order>>` , è presente anche un argomento di output <xref:System.Activities.Activity%601.Result%2A> usato per restituire i risultati della query. L'override <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> crea una query LINQ che seleziona tutti gli ordini del cliente specificato. Tale query viene specificata come la proprietà <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> dell'oggetto <xref:System.Activities.AsyncCodeActivityContext>passato e successivamente viene chiamato il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> della query. Si noti che il callback e lo stato passati al metodo <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> della query sono gli stessi passati al metodo <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> dell'attività. Dopo che la query è stata eseguita, viene richiamato il metodo <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dell'attività. Successivamente, la query viene recuperata da <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>e viene chiamato il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> della query che restituisce un oggetto <xref:System.Collections.Generic.IEnumerable%601> del tipo di entità specificato, in questo caso `Order`. Poiché `IEnumerable<Order>` è il tipo generico di <xref:System.Activities.AsyncCodeActivity%601>, questo elemento `IEnumerable` viene impostato come <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> dell'attività.
+Nell'esempio seguente viene definita un'attività `OrdersByCustomer` che dispone di due argomenti di input. L'argomento `CustomerId` rappresenta il cliente che identifica gli ordini da restituire, mentre l'argomento `ServiceUri` rappresenta l'URI del servizio OData su cui eseguire una query. Poiché l'attività deriva da `AsyncCodeActivity<IEnumerable<Order>>` , è presente anche un argomento di output <xref:System.Activities.Activity%601.Result%2A> usato per restituire i risultati della query. L'override <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> crea una query LINQ che seleziona tutti gli ordini del cliente specificato. Tale query viene specificata come la proprietà <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> dell'oggetto <xref:System.Activities.AsyncCodeActivityContext>passato e successivamente viene chiamato il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> della query. Si noti che il callback e lo stato passati al metodo <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> della query sono gli stessi passati al metodo <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> dell'attività. Dopo che la query è stata eseguita, viene richiamato il metodo <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dell'attività. Successivamente, la query viene recuperata da <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>e viene chiamato il metodo <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> della query che restituisce un oggetto <xref:System.Collections.Generic.IEnumerable%601> del tipo di entità specificato, in questo caso `Order`. Poiché `IEnumerable<Order>` è il tipo generico di <xref:System.Activities.AsyncCodeActivity%601>, questo elemento <xref:System.Collections.IEnumerable> viene impostato come <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> dell'attività.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 

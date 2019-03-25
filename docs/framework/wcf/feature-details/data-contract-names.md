@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196694"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408873"
 ---
 # <a name="data-contract-names"></a>Nomi di contratto dati
 
@@ -64,7 +64,7 @@ In questo esempio, il tipo `Drawing<Square,RegularRedBrush>` ha il nome di contr
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Personalizzazione dei nomi di contratto dati per i tipi generici
 
-I nomi di contratto dati generati per i tipi generici, come descritto prima, talvolta sono inaccettabili. Si potrebbe ad esempio sapere in anticipo che non si verificheranno collisioni di nomi e si potrebbe volere rimuovere l'hash. In questo caso, è possibile utilizzare la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> dell'attributo `DataContractAttribute` per specificare un modo diverso di generare nomi. È possibile utilizzare numeri tra parentesi graffe all'interno della proprietà `Name` per fare riferimento a nomi di contratto dati dei parametri generici. 0 si riferiscono al primo parametro, 1 si riferisce al secondo e così via. È possibile utilizzare un simbolo cancelletto (#) tra parentesi graffe per fare riferimento all'hash. È possibile utilizzare ogni riferimento più volte o non utilizzarlo affatto.
+I nomi di contratto dati generati per i tipi generici, come descritto prima, talvolta sono inaccettabili. Si potrebbe ad esempio sapere in anticipo che non si verificheranno collisioni di nomi e si potrebbe volere rimuovere l'hash. In questo caso, è possibile usare il <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> proprietà per specificare un modo diverso per generare nomi. È possibile utilizzare numeri tra parentesi graffe all'interno della proprietà `Name` per fare riferimento a nomi di contratto dati dei parametri generici. 0 si riferiscono al primo parametro, 1 si riferisce al secondo e così via. È possibile utilizzare un simbolo cancelletto (#) tra parentesi graffe per fare riferimento all'hash. È possibile utilizzare ogni riferimento più volte o non utilizzarlo affatto.
 
 Ad esempio, il tipo `Drawing` generico precedente avrebbe potuto essere dichiarato come illustrato nell'esempio seguente.
 

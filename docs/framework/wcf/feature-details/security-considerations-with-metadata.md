@@ -2,12 +2,12 @@
 title: Considerazioni sulla sicurezza con metadati
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585565"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411913"
 ---
 # <a name="security-considerations-with-metadata"></a>Considerazioni sulla sicurezza con metadati
 Quando si usano le funzionalità dei metadati Windows Communication Foundation (WCF), considerare le implicazioni di sicurezza della pubblicazione, il recupero e l'utilizzo dei metadati del servizio.  
@@ -28,7 +28,7 @@ Quando si usano le funzionalità dei metadati Windows Communication Foundation (
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Uso di tecniche sicure per l'elaborazione dei metadati  
  I metadati del servizio vengono spesso recuperati da un servizio su una rete usando protocolli standardizzati, ad esempio WS-MetadataExchange (MEX). Molti formati dei metadati includono meccanismi di riferimento per puntare a ulteriori metadati. Il tipo <xref:System.ServiceModel.Description.MetadataExchangeClient> elabora automaticamente i riferimenti in documenti WSDL (Web Services Description Language), XML Schema e documenti MEX. La dimensione dell'oggetto <xref:System.ServiceModel.Description.MetadataSet> creato dai metadati recuperati è direttamente proporzionale al valore di <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> per l'istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient> usata e al valore di `MaxReceivedMessageSize` per l'associazione usata dall'istanza di <xref:System.ServiceModel.Description.MetadataExchangeClient> in questione. Impostare queste quote sui valori appropriati, in base alle necessità dello scenario.  
   
- In WCF, i metadati del servizio vengono elaborati come XML. Quando si elaborano documenti XML, le applicazioni devono proteggersi da strutture XML dannose. Usare la `XmlDictionaryReader` con le quote appropriate durante l'elaborazione XML e anche impostare la <xref:System.Xml.XmlTextReader.DtdProcessing%2A> proprietà `Prohibit`.  
+ In WCF, i metadati del servizio vengono elaborati come XML. Quando si elaborano documenti XML, le applicazioni devono proteggersi da strutture XML dannose. Usare la <xref:System.Xml.XmlDictionaryReader> con le quote appropriate durante l'elaborazione XML e anche impostare la <xref:System.Xml.XmlTextReader.DtdProcessing%2A> proprietà <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  Il sistema di metadati in WCF è estendibile e le estensioni dei metadati possono essere registrate nel file di configurazione dell'applicazione (vedere [estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Le estensioni dei metadati possono eseguire codice arbitrario, pertanto è necessario proteggere il file di configurazione dell'applicazione con elenchi di controllo di accesso (ACL) appropriati e registrare solo le implementazioni delle estensioni dei metadati attendibili.  
   

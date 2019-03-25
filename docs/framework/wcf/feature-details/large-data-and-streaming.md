@@ -2,12 +2,12 @@
 title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674115"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411057"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basato su XML. Poiché i dati XML sono comunemente codificati in formato di testo standard definito nel [specifica XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)connesse, architetti e sviluppatori di sistemi riguarda in genere il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo di XML comporta particolari difficoltà per il trasferimento efficiente di dati binari.  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
   
 |Elemento di associazione del codificatore|Descrizione|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Il codificatore del messaggio di testo è il codificatore predefinito per tutte le associazioni basate su HTTP e rappresenta la scelta giusta per tutte le associazioni personalizzate in cui l'interoperabilità ha la massima priorità. Questo codificatore legge e scrive messaggi di testo SOAP 1.1/SOAP 1.2 standard senza gestire in modo particolare i dati binari. Se la classe <xref:System.ServiceModel.Channels.MessageVersion> di un messaggio è impostata su `None`, il wrapper della SOAP envelope viene omesso nell'output e solo il contenuto del corpo di messaggio viene serializzato.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Il codificatore del messaggio di testo è il codificatore predefinito per tutte le associazioni basate su HTTP e rappresenta la scelta giusta per tutte le associazioni personalizzate in cui l'interoperabilità ha la massima priorità. Questo codificatore legge e scrive messaggi di testo SOAP 1.1/SOAP 1.2 standard senza gestire in modo particolare i dati binari. Se il <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> di un messaggio è impostata su <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, il wrapper della SOAP envelope viene omesso nell'output e viene serializzato solo il contenuto del corpo del messaggio.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Il codificatore dei messaggi MTOM è un codificatore di testo che implementa una gestione speciale per i dati binari e, per impostazione predefinita, non viene utilizzato nelle associazioni standard poiché è un'utilità di ottimizzazione che valuta caso per caso. Se il messaggio contiene dati binari che superano la soglia entro la quale la codifica MTOM produce un vantaggio, i dati vengono esternalizzati in una parte MIME che segue l'envelope del messaggio. Vedere Attivazione di MTOM più avanti in questa sezione.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Il codificatore di messaggi binari è il codificatore predefinito per le associazioni Net * e la scelta più appropriata ogni volta che entrambe le parti in comunicazione sono basate su WCF. Il codificatore di messaggi binari utilizza il formato XML binario di .NET, una rappresentazione binaria specifica per Microsoft degli Infoset (set di informazioni XML) che generalmente produce un footprint più piccolo rispetto alla rappresentazione XML 1.0 equivalente e codifica dati binari come un flusso di byte.|  
   

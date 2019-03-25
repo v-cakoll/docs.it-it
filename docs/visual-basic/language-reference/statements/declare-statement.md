@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973171"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411538"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Dichiara un riferimento a una routine implementata in un file esterno.  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Meccanismo.** Visual Basic Usa .NET Framework *PInvoke* meccanismo (PInvoke) per risolvere e accedere alle routine esterne. Il `Declare` istruzione e <xref:System.Runtime.InteropServices.DllImportAttribute> classe entrambi usano questo meccanismo automaticamente e non è necessaria alcuna conoscenza di una chiamata PInvoke. Per altre informazioni, vedere [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Se la routine esterna viene eseguito all'esterno di common language runtime (CLR), si tratta *codice non gestito*. Quando si chiama questo tipo una routine, ad esempio una funzione API Win32 o un metodo COM, si potrà esporre l'applicazione a rischi di sicurezza. Per altre informazioni, vedere [Secure linee guida di codifica per il codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Se la routine esterna viene eseguito all'esterno di common language runtime (CLR), si tratta *codice non gestito*. Quando si chiama questo tipo una routine, ad esempio una funzione API di Windows o un metodo COM, si potrà esporre l'applicazione a rischi di sicurezza. Per altre informazioni, vedere [Secure linee guida di codifica per il codice non gestito](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente dichiara un riferimento esterno a un `Function` procedure che restituisce il nome dell'utente corrente. Quindi chiama la routine esterna `GetUserNameA` come parte di `getUser` procedure.  

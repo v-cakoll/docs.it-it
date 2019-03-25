@@ -3,12 +3,12 @@ title: Modello di identità basata sulle attestazioni
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197942"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411734"
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
@@ -73,10 +73,10 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
   
  In questo diagramma viene mostrato un sito Web (l'applicazione relying party, RP) configurato per utilizzare WIF per l'autenticazione e un client, un Web browser, tramite cui si intende utilizzare il sito in questione.  
   
-1.  Quando un utente non autenticato richiede una pagina, il browser viene reindirizzato alle pagine del provider di identità (IP).  
+1.  Quando un utente non autenticato richiede una pagina, il browser viene reindirizzato alle pagine identity provider (IdP).  
   
-2.  Il provider di identità richiede all'utente di presentare le credenziali, ad esempio nome utente/password, Kerberos e così via.  
+2.  Il provider di identità richiede all'utente di presentare le credenziali, ad esempio nome utente/password o l'autenticazione Kerberos.  
   
-3.  Il provider di identità emette di nuovo un token che viene restituito al browser.  
+3.  I problemi di provider di identità nuovo un token che viene restituito al browser.  
   
 4.  Il browser viene ora di nuovo reindirizzato alla pagina richiesta originariamente in cui WIF determina se il token soddisfa i requisiti di accesso alla pagina. In questo caso viene emesso un cookie per stabilire una sessione in modo che l'autenticazione deve essere eseguita una sola volta e il controllo viene passato all'applicazione.

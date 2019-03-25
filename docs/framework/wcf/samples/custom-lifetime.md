@@ -2,12 +2,12 @@
 title: Durata personalizzata
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520771"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410381"
 ---
 # <a name="custom-lifetime"></a>Durata personalizzata
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Infine il <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementazione è collegata al modello di servizio usando il <xref:System.ServiceModel.Description.IServiceBehavior> implementazione. Tale implementazione viene posizionata nella classe `CustomLeaseTimeAttribute` e deriva dalla classe di base `Attribute` per esporre questo comportamento come attributo.
+ Infine il <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementazione è collegata al modello di servizio usando il <xref:System.ServiceModel.Description.IServiceBehavior> implementazione. Tale implementazione viene posizionata nella classe `CustomLeaseTimeAttribute` e deriva dalla classe di base <xref:System.Attribute> per esporre questo comportamento come attributo.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono v
 
 1. Assicurarsi di aver eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Per compilare l'edizione c# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building Windows Communication Foundation Samples](building-the-samples.md).
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
 3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](running-the-samples.md).
 

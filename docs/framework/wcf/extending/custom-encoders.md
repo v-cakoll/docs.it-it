@@ -2,12 +2,12 @@
 title: Codificatori personalizzati
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509363"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411369"
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
@@ -50,7 +50,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 ### <a name="pooling"></a>Pooling  
  Ognuna delle implementazioni del codificatore tenta di eseguire il massimo numero possibile di operazioni pooling. La riduzione delle allocazioni è la misura più comunemente adottata per migliorare le prestazioni del codice gestito. Per eseguire queste operazioni di pooling le implementazioni usano la classe `SynchronizedPool`. Il file C# contiene una descrizione delle ottimizzazioni aggiuntive usate da questa classe.  
   
- Le istanze `XmlDictionaryReader` e `XmlDictionaryWriter` vengono inserite nel pool e reinizializzate per impedire l'allocazione di nuove istanze per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ Le istanze <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> vengono inserite nel pool e reinizializzate per impedire l'allocazione di nuove istanze per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codifica binaria  
  Quando la codifica binaria usa sessioni, la stringa del dizionario dinamica deve essere comunicata al destinatario del messaggio. Questa operazione viene eseguita anteponendo al messaggio le stringhe del dizionario dinamiche. Il destinatario rimuove le stringhe, le aggiunge alla sessione ed elabora il messaggio. Perché le stringhe del dizionario vengano passate correttamente è necessario che il trasporto venga memorizzato nel buffer.  

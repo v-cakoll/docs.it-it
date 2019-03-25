@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363085"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411434"
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 
@@ -276,7 +276,7 @@ Il possibile autore di un attacco potrebbe inviare un messaggio dannoso come que
 
 - Fare attenzione quando si utilizzano tipi legacy contrassegnati con l'attributo <xref:System.SerializableAttribute> . Molti di essi sono progettati per essere utilizzati con la comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per l'utilizzo esclusivamente con dati attendibili. I tipi esistenti contrassegnati con questo attributo possono non essere stati progettati tenendo presente la sicurezza dello stato.
 
-- Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero`o `invalid`.
+- Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero`o `invalid`.
 
 - Non considerare mai attendibile un oggetto grafico deserializzato da un'origine dati non attendibile senza prima convalidarlo. Ogni singolo oggetto può essere in uno stato coerente, ma l'oggetto grafico nell'insieme potrebbe non esserlo, inoltre, anche se la modalità di mantenimento è disattivata, se l'oggetto grafico viene deserializzato può contenere più riferimenti allo stesso oggetto o riferimenti circolari. Per altre informazioni, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Notare i seguenti problemi riguardanti minacce correlate a codice in esecuzione 
 
 - Se si consente l'accesso di codice parzialmente attendibile di <xref:System.Runtime.Serialization.DataContractSerializer> istanza oppure in caso contrario, controllare il [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), è possibile esercitare una notevole controllo sul processo di serializzazione/deserializzazione. Ad esempio, può inserire tipi arbitrari, portare alla diffusione di informazioni, manomettere  l'oggetto grafico risultante o i dati serializzati, oppure provocare l'overflow del conseguente flusso serializzato. Una minaccia equivalente <xref:System.Runtime.Serialization.NetDataContractSerializer> viene descritta nella sezione "Utilizzo sicuro di NetDataContractSerializer".
 
-- Se l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato a un tipo (o al tipo contrassegnato come `[Serializable]` ma che non è `ISerializable`) il deserializzatore può creare un'istanza di tale tipo anche se tutti i costruttori non sono pubblici o sono protetti dalle richieste.
+- Se l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato a un tipo (o al tipo contrassegnato come <xref:System.SerializableAttribute> ma che non è <xref:System.Runtime.Serialization.ISerializable>) il deserializzatore può creare un'istanza di tale tipo anche se tutti i costruttori non sono pubblici o sono protetti dalle richieste.
 
 - Non fidarsi mai del risultato della deserializzazione, a meno che i dati da deserializzare siano attendibili e si sia certi che tutti i tipi noti risultino essere tipi attendibili . Si noti che, in caso di esecuzione in condizioni di attendibilità parziale, i tipi noti non vengono caricati dal file di configurazione dell'applicazione, ma vengono caricati dal file di configurazione del computer.
 
-- Se si passa un'istanza di `DataContractSerializer` con l'aggiunta di un surrogato al codice parzialmente attendibile, il codice può cambiare impostazioni modificabili nel surrogato.
+- Se si passa un'istanza di <xref:System.Runtime.Serialization.DataContractSerializer> con l'aggiunta di un surrogato al codice parzialmente attendibile, il codice può cambiare impostazioni modificabili nel surrogato.
 
 - Per un oggetto deserializzato, se il lettore XML (o i dati inclusi) proviene da codice parzialmente attendibile, trattare l'oggetto deserializzato risultante come dati non attendibili,
 
 - Il fatto che il tipo <xref:System.Runtime.Serialization.ExtensionDataObject> non abbia membri pubblici non significa che i dati al suo interno siano sicuri. Se, ad esempio, si esegue la deserializzazione da un'origine dati privilegiata in un oggetto nel quale risiedono dati e quindi si passa tale oggetto a codice parzialmente attendibile, quest'ultimo potrà leggere i dati contenuti in `ExtensionDataObject` serializzando l'oggetto. Impostare <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> su `true` quando la deserializzazione viene eseguita da un'origine dati privilegiata in un oggetto che in seguito viene passato a codice parzialmente attendibile.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supportano la serializzazione di membri privati, protetti, interni e pubblici in condizioni di attendibilità totale. In condizioni di attendibilità parziale, tuttavia, solo i membri pubblici possono essere serializzati. Se un'applicazione tenta di serializzare un membro non pubblico, viene generata un'eccezione `SecurityException` .
+- <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supportano la serializzazione di membri privati, protetti, interni e pubblici in condizioni di attendibilità totale. In condizioni di attendibilità parziale, tuttavia, solo i membri pubblici possono essere serializzati. Se un'applicazione tenta di serializzare un membro non pubblico, viene generata un'eccezione <xref:System.Security.SecurityException> .
 
-    Per consentire che i membri interni o protetti possano essere serializzati in condizioni di attendibilità parziale, utilizzare l'attributo dell'assembly `System.Runtime.CompilerServices.InternalsVisibleTo` . Questo attributo consente a un assembly di dichiarare che i propri membri interni sono visibili ad altri assembly. In questo caso, un assembly per cui i membri interni devono essere serializzati dichiara che tali membri sono visibili a System.Runtime.Serialization.dll.
+    Per consentire che i membri interni o protetti possano essere serializzati in condizioni di attendibilità parziale, utilizzare l'attributo dell'assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> . Questo attributo consente a un assembly di dichiarare che i propri membri interni sono visibili ad altri assembly. In questo caso, un assembly per cui i membri interni devono essere serializzati dichiara che tali membri sono visibili a System.Runtime.Serialization.dll.
 
     Il vantaggio di questo approccio è rappresentato dal fatto che non è necessario un percorso di generazione di codice con privilegi elevati.
 
     Sono tuttavia presenti due svantaggi principali.
 
-    Il primo svantaggio è costituito dal fatto che la proprietà di scelta esplicita dell'attributo `InternalsVisibleTo` è a livello di assembly. Questo significa che non è possibile specificare che solo una determinata classe può disporre di membri interni serializzati. Chiaramente, è comunque possibile scegliere di non serializzare un membro interno specifico aggiungendo semplicemente un attributo `DataMember` a tale membro. In modo analogo, uno sviluppatore può scegliere di rendere interno un membro anziché privato o protetto, con problemi di visibilità non significativi.
+    Il primo svantaggio è costituito dal fatto che la proprietà di scelta esplicita dell'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> è a livello di assembly. Questo significa che non è possibile specificare che solo una determinata classe può disporre di membri interni serializzati. Chiaramente, è comunque possibile scegliere di non serializzare un membro interno specifico aggiungendo semplicemente un attributo <xref:System.Runtime.Serialization.DataMemberAttribute> a tale membro. In modo analogo, uno sviluppatore può scegliere di rendere interno un membro anziché privato o protetto, con problemi di visibilità non significativi.
 
     Il secondo svantaggio è rappresentato dal fatto che non sono ancora supportati membri privati o protetti.
 
-    Per illustrare l'utilizzo dell'attributo `InternalsVisibleTo` in condizioni di attendibilità parziale, considerare il programma seguente:
+    Per illustrare l'utilizzo dell'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> in condizioni di attendibilità parziale, considerare il programma seguente:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    Nell'esempio precedente `PermissionsHelper.InternetZone` corrisponde a `PermissionSet` in condizioni di attendibilità parziale. Attualmente, senza `InternalsVisibleToAttribute`, non sarà possibile eseguire l'applicazione e verrà generata un'eccezione `SecurityException` che indica che membri non pubblici non possono essere serializzati in condizioni di attendibilità parziale.
+    Nell'esempio precedente `PermissionsHelper.InternetZone` corrisponde a <xref:System.Security.PermissionSet> in condizioni di attendibilità parziale. A questo punto, senza la <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attributo, l'applicazione avrà esito negativo, genera un <xref:System.Security.SecurityException> che indica che i membri non pubblici non possono essere serializzati in attendibilità parziale.
 
     Se al file di origine si aggiunge tuttavia la riga seguente, il programma viene eseguito correttamente.
 
