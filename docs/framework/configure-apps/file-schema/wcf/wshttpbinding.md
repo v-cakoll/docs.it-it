@@ -96,8 +96,7 @@ Definisce un'associazione protetta, affidabile, interoperabile adatta per contra
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- 
-  `WSHttpBinding` è simile a `BasicHttpBinding` ma fornisce più funzionalità del servizio Web. Usa il trasporto HTTP e fornisce sicurezza dei messaggi, in modo analogo a BasicHttpBinding, ma offre inoltre funzionalità per transazioni, messaggistica affidabile e WS-Addressing, attivate per impostazione predefinita o disponibili tramite l'impostazione di un singolo controllo.  
+ `WSHttpBinding` è simile a `BasicHttpBinding` ma fornisce più funzionalità del servizio Web. Usa il trasporto HTTP e fornisce sicurezza dei messaggi, in modo analogo a BasicHttpBinding, ma offre inoltre funzionalità per transazioni, messaggistica affidabile e WS-Addressing, attivate per impostazione predefinita o disponibili tramite l'impostazione di un singolo controllo.  
   
 ## <a name="example"></a>Esempio  
   

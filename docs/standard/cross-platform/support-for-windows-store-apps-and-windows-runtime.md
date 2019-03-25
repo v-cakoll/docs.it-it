@@ -19,8 +19,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57708405"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta numerosi scenari di sviluppo software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Questi scenari sono suddivisi in tre categorie:
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta numerosi scenari di sviluppo software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Questi scenari sono suddivisi in tre categorie:
 
 -   Sviluppare [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] le app con controlli XAML, come descritto in [app di Guida di orientamento per Windows Store scritte in c# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [come procedure (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), e [panoramica delle app .NET per Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
