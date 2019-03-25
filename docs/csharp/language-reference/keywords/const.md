@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: f0b2b3632e767710bd31f5f6edaccaf0c2ef8c85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526977"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307889"
 ---
 # <a name="const-c-reference"></a>const (Riferimenti per C#)
 
 Si usa la parola chiave `const` per dichiarare un campo costante o una variabile locale costante. I campi e le variabili locali costanti non sono variabili e non sono quindi modificabili. Gli elementi costanti possono essere numeri, valori booleani, stringhe o un riferimento Null. Non creare una costante per rappresentare informazioni di cui si prevede la modifica in qualsiasi momento. Un campo costante, ad esempio, non deve essere usato per archiviare il prezzo di un servizio, il numero di versione di un prodotto o il nome dell'organizzazione di una società. Tali valori potrebbero cambiare nel tempo e, poiché i compilatori propagano le costanti, eventuale altro codice compilato con quelle librerie dovrebbe essere ricompilato per riflettere le modifiche. Vedere anche la parola chiave [readonly](../../../csharp/language-reference/keywords/readonly.md). Ad esempio:
 
 ```csharp
-const int x = 0;
-public const double gravitationalConstant = 6.673e-11;
-private const string productName = "Visual C#";
+const int X = 0;
+public const double GravitationalConstant = 6.673e-11;
+private const string ProductName = "Visual C#";
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il tipo di una dichiarazione di costante specifica il tipo di membri introdotti dalla dichiarazione. L'inizializzatore di una variabile locale costante o di un campo costante deve essere un'espressione costante che possa essere convertita in modo implicito nel tipo di destinazione.
 
@@ -34,7 +34,7 @@ Un'espressione di costanti è un'espressione che può essere valutata interament
 La dichiarazione di costante può includere più costanti, ad esempio:
 
 ```csharp
-public const double x = 1.0, y = 2.0, z = 3.0;
+public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
 Il modificatore `static` non è consentito in una dichiarazione di costante.
@@ -42,8 +42,8 @@ Il modificatore `static` non è consentito in una dichiarazione di costante.
 Una costante può far parte di un'espressione costante, ad esempio:
 
 ```csharp
-public const int c1 = 5;
-public const int c2 = c1 + 100;
+public const int C1 = 5;
+public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]

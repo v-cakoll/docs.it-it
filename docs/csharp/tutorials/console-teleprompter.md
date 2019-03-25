@@ -3,12 +3,12 @@ title: Applicazione console
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058399"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348830"
 ---
 # <a name="console-application"></a>Applicazione console
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Inserire la classe in un nuovo file e includerla nello spazio dei nomi `Teleprom
 ```csharp
 using static System.Math;
 ```
-
-L'altra nuova funzionalità di linguaggio consiste nell'istruzione [`lock`](../language-reference/keywords/lock-statement.md). Questa istruzione garantisce che in un determinato momento possa essere presente un solo thread nel codice. Se un thread si trova nella sezione bloccata, gli altri thread devono attendere che il primo esca da tale sezione. L'istruzione `lock` usa un oggetto che protegge la sezione bloccata. Questa classe segue un linguaggio standard per bloccare un oggetto privato nella classe.
 
 Sarà quindi necessario aggiornare i metodi `ShowTeleprompter` e `GetInput` affinché usino il nuovo oggetto `config`. Scrivere un ultimo metodo `Task` di restituzione dell'oggetto `async`, in grado di avviare entrambe le attività e chiudere la prima attività nel momento in cui viene completata:
 

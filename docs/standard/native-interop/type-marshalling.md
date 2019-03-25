@@ -4,12 +4,12 @@ description: Informazioni su come .NET effettua il marshalling dei tipi in una r
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411430"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185415"
 ---
 # <a name="type-marshalling"></a>Marshalling dei tipi
 
@@ -38,8 +38,8 @@ La prima tabella descrive i mapping per i vari tipi per i quali il marshalling Ã
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | `char` oppure `char16_t` a seconda del `CharSet` di P/Invoke o della struttura. Vedere la [documentazione sui set di caratteri](/.charset.md). |
-| `string`  | `char*` oppure `char16_t*` a seconda del `CharSet` di P/Invoke o della struttura. Vedere la [documentazione sui set di caratteri](/.charset.md). |
+| `char`    | `char` oppure `char16_t` a seconda del `CharSet` di P/Invoke o della struttura. Vedere la [documentazione sui set di caratteri](charset.md). |
+| `string`  | `char*` oppure `char16_t*` a seconda del `CharSet` di P/Invoke o della struttura. Vedere la [documentazione sui set di caratteri](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Tipi di puntatore .NET (ad esempio `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Per alcuni tipi Ã¨ possibile effettuare il marshalling solo come parametri e non
 
 | Tipo .NET | Tipo nativo (solo parametro) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | `char*` oppure `char16_t*` a seconda del `CharSet` di P/Invoke.  Vedere la [documentazione sui set di caratteri](/.charset.md). |
+| `System.Text.StringBuilder` | `char*` oppure `char16_t*` a seconda del `CharSet` di P/Invoke.  Vedere la [documentazione sui set di caratteri](charset.md). |
 | `System.ArgIterator` | `va_list` (solo in Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

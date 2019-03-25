@@ -2,12 +2,12 @@
 title: Novità di C# 7.2
 description: Panoramica delle nuove funzionalità in C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673223"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185350"
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -35,10 +35,10 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
 
 Le funzionalità del linguaggio introdotte nella versione 7.2 consentono di lavorare con i tipi valore usando allo stesso tempo la semantica di riferimento. Queste funzionalità sono state progettate per migliorare le prestazioni riducendo al minimo la copia dei tipi valore senza dover sostenere le allocazioni di memoria associate all'uso dei tipi riferimento. Sono incluse le funzionalità seguenti:
 
- - Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato. L'aggiunta del modificatore `in` a un argomento è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes).
- - Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto. L'aggiunta del modificatore `ref readonly` è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes), se il valore restituito viene assegnato a un valore. L'aggiunta del modificatore `readonly` a un'istruzione return `ref` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). Richiede ai chiamanti di aggiornare la dichiarazione delle variabili locali `ref` per includere il modificatore `readonly`.
- - La dichiarazione `readonly struct` per indicare che uno struct non è modificabile e deve essere passato come parametro `in` ai relativi metodi membro. L'aggiunta del modificatore `readonly` a una dichiarazione di struct esistente è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
- - La dichiarazione `ref struct` per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere allocato nello stack. L'aggiunta del modificatore `ref` a una dichiarazione `struct` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). `ref struct` non può essere un membro di una classe o usato in altre posizioni in cui potrebbe allocato nell'heap.
+- Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato. L'aggiunta del modificatore `in` a un argomento è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes).
+- Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto. L'aggiunta del modificatore `ref readonly` è una [modifica compatibile a livello di codice sorgente](version-update-considerations.md#source-compatible-changes), se il valore restituito viene assegnato a un valore. L'aggiunta del modificatore `readonly` a un'istruzione return `ref` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). Richiede ai chiamanti di aggiornare la dichiarazione delle variabili locali `ref` per includere il modificatore `readonly`.
+- La dichiarazione `readonly struct` per indicare che uno struct non è modificabile e deve essere passato come parametro `in` ai relativi metodi membro. L'aggiunta del modificatore `readonly` a una dichiarazione di struct esistente è una [modifica compatibile a livello binario](version-update-considerations.md#binary-compatible-changes).
+- La dichiarazione `ref struct` per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere allocato nello stack. L'aggiunta del modificatore `ref` a una dichiarazione `struct` esistente è una [modifica incompatibile](version-update-considerations.md#incompatible-changes). `ref struct` non può essere un membro di una classe o usato in altre posizioni in cui potrebbe allocato nell'heap.
 
 È possibile leggere altre informazioni su tutte queste modifiche in [Scrivere codice efficiente e sicuro](../write-safe-efficient-code.md).
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212209"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185740"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -254,12 +254,12 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un'at
 
 È consigliabile non dipendere dallo stato di oggetti globali o dall'esecuzione di alcuni metodi. È preferibile dipendere dai valori restituiti dei metodi. Perché?
 
-  * Sarà più facile valutare il codice.
-  * Sarà più facile testare il codice.
-  * La combinazione di codice sincrono e asincrono è molto più semplice.
-  * È possibile evitare completamente le race condition.
-  * La dipendenza dai valori restituiti semplifica il coordinamento di codice asincrono.
-  * (Extra) funziona particolarmente bene con l'inserimento di dipendenze.
+* Sarà più facile valutare il codice.
+* Sarà più facile testare il codice.
+* La combinazione di codice sincrono e asincrono è molto più semplice.
+* È possibile evitare completamente le race condition.
+* La dipendenza dai valori restituiti semplifica il coordinamento di codice asincrono.
+* (Extra) funziona particolarmente bene con l'inserimento di dipendenze.
 
 È consigliabile raggiungere una completa o quasi completa [trasparenza referenziale](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) nel codice. Ciò risulterà in una base di codice completamente prevedibile, testabile e gestibile.
 
