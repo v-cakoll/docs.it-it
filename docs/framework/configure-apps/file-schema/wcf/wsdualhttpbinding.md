@@ -91,8 +91,7 @@ Definisce un'associazione protetta, affidabile e interoperabile adatta per contr
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
- 
-  `WSDualHttpBinding` fornisce lo stesso supporto per i protocolli di servizi Web di `WSHttpBinding`, ma esclusivamente per l'uso con contratti duplex. `WSDualHttpBinding` supporta solo la sicurezza SOAP e richiede un sistema di messaggistica affidabile. Per questa associazione è necessario che il client disponga di un URI pubblico che fornisca un endpoint di callback per il servizio. A tale scopo, usare l'attributo `clientBaseAddress`. Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
+ `WSDualHttpBinding` fornisce lo stesso supporto per i protocolli di servizi Web di `WSHttpBinding`, ma esclusivamente per l'uso con contratti duplex. `WSDualHttpBinding` supporta solo la sicurezza SOAP e richiede un sistema di messaggistica affidabile. Per questa associazione è necessario che il client disponga di un URI pubblico che fornisca un endpoint di callback per il servizio. A tale scopo, usare l'attributo `clientBaseAddress`. Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
   
  Questa associazione può essere usata per comunicare in modo affidabile attraverso uno o più intermediari SOAP.  
   
