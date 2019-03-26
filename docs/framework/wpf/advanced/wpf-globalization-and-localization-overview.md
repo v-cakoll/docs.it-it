@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492669"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412032"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 
@@ -144,9 +144,9 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  Si noti che l'esempio Usa la funzionalità di ridimensionamento condiviso di <xref:System.Windows.Controls.Grid>. Le ultime tre colonne sfruttano questo inserendo stessi nello stesso <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Come si evince dal nome della proprietà, in questo modo le colonne possono condividere le stesse dimensioni. Pertanto, quando la "Sfoglia..." viene localizzato nella stringa più lunga "Durchsuchen...", tutti i pulsanti aumenta in larghezza invece di avere un piccolo pulsante "OK" e un pulsante "Durchsuchen..." estremamente grande.  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  Si noti che il [XML: lang gestisce in XAML](../../xaml-services/xml-lang-handling-in-xaml.md) posizionato in corrispondenza dell'elemento radice del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Questa proprietà descrive le impostazioni cultura di un determinato elemento e dei relativi elementi figlio. Questo valore viene usato da diverse funzionalità in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve essere modificata in modo appropriato durante la localizzazione. Questo valore cambia il dizionario in lingua usato per la sillabazione e il controllo ortografico delle parole. Influisce anche sulla visualizzazione delle cifre e sulla selezione del tipo di carattere da usare da parte del sistema di fallback dei tipi di carattere. Infine, la proprietà influisce sulla visualizzazione dei numeri e sulla forma dei testi scritti in lingue con alfabeti non latini. Il valore predefinito è "en-US".  
   
@@ -190,7 +190,7 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:  
   
-|Chiave di risorsa|Categoria di localizzazione|Value|  
+|Chiave di risorsa|Categoria di localizzazione|Valore|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|OK|  
 |Button_2:System.Windows.Controls.Button.$Content|Pulsante|Abbrechen|  
