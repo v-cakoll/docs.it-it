@@ -681,7 +681,7 @@ End Class
 
 È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| nome                                 | Value                                     |
+| nome                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -839,8 +839,7 @@ End Function
 
 **Supporto SignedXml per la generazione di hash SHA-2**
 
-
-  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre il supporto per la classe <xref:System.Security.Cryptography.Xml.SignedXml> per i metodi di firma PKCS#1 per RSA-SHA256, RSA-SHA384 e RSA-SHA512 e SHA256, SHA384 e SHA512 fanno riferimento agli algoritmi con classificazione.
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre il supporto per la classe <xref:System.Security.Cryptography.Xml.SignedXml> per i metodi di firma PKCS#1 per RSA-SHA256, RSA-SHA384 e RSA-SHA512 e SHA256, SHA384 e SHA512 fanno riferimento agli algoritmi con classificazione.
 
 Le costanti URI sono tutte esposte in <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -869,7 +868,7 @@ Questo comportamento è da evitare quando ci si connette ai database SQL di Azur
 
 L'aggiunta della nuova parola chiave `PoolBlockingPeriod` consente di selezionare il periodo di blocco più adatto per l'applicazione. I valori includono:
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 Il periodo di blocco del pool di connessioni per un'applicazione che si connette a un database SQL di Azure è disabilitato e il periodo di blocco del pool di connessioni per un'applicazione che si connette a qualsiasi altra istanza di SQL Server è abilitato. Rappresenta il valore predefinito. Se il nome dell'endpoint server termina in uno dei modi seguenti, vengono considerati i database SQL di Azure:
 
@@ -881,11 +880,11 @@ Il periodo di blocco del pool di connessioni per un'applicazione che si connette
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 Il periodo di blocco del pool di connessioni è sempre abilitato.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 Il periodo di blocco del pool di connessioni è sempre disabilitato.
 
