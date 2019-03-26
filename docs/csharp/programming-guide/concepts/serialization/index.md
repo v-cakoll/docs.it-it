@@ -8,9 +8,9 @@ Il termine serializzazione indica il processo di conversione di un oggetto in un
 
 ## <a name="how-serialization-works"></a>Funzionamento della serializzazione
 
-La figura seguente illustra il processo complessivo di serializzazione.
+La figura seguente illustra il processo complessivo di serializzazione:
 
-![Grafico serializzazione](./media/serialization.gif "serializzazione")
+![Rappresentazione grafica della serializzazione](./media/index/serialization-process.gif)
 
 L'oggetto viene serializzato in un flusso che contiene non solo i dati, ma anche informazioni sul tipo di oggetto, ad esempio la versione, le impostazioni cultura e il nome dell'assembly. Da questo flusso è possibile archiviare l'oggetto in un database, in un file oppure nella memoria.
 
