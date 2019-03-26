@@ -1,8 +1,0 @@
-# [Matrici](index.md)
-## [Matrici come oggetti](arrays-as-objects.md)
-## [Matrici unidimensionali](single-dimensional-arrays.md)
-## [Matrici multidimensionali](multidimensional-arrays.md)
-## [Matrici irregolari](jagged-arrays.md)
-## [Uso di foreach con matrici](using-foreach-with-arrays.md)
-## [Passaggio di matrici come argomenti](passing-arrays-as-arguments.md)
-## [Matrici tipizzate in modo implicito](implicitly-typed-arrays.md)
