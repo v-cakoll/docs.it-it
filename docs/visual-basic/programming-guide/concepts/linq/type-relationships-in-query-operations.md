@@ -11,18 +11,17 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979099"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465217"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene usata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini usati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sulle parti di una query, vedere [operazioni di Query (Visual Basic) base](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
- ![Query pseudocodice con elementi evidenziati. ](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-Parti di una query LINQ  
+ ![Screenshot che mostra una query pseudocodice con elementi evidenziati.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  Il tipo della variabile di intervallo nella query deve essere compatibile con il tipo degli elementi nell'origine dati. Il tipo della variabile di query deve essere compatibile con l'elemento della sequenza definita nel `Select` clausola. Infine, il tipo degli elementi sequenza inoltre deve essere compatibile con il tipo della variabile di controllo del ciclo che viene utilizzata per il `For Each` istruzione che esegue la query. Questa forte tipizzazione forte semplifica l'identificazione degli errori di tipo in fase di compilazione.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351482"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463319"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: Utilizzare il modello Master-Details con dati gerarchici
 In questo esempio viene illustrato come implementare lo scenario master-dettagli.  
@@ -23,7 +23,7 @@ In questo esempio viene illustrato come implementare lo scenario master-dettagli
   
  Lo screenshot seguente mostra l'esempio. Il `Divisions` <xref:System.Windows.Controls.ListBox> tiene automaticamente traccia delle selezioni nel `Leagues` <xref:System.Windows.Controls.ListBox> e visualizzare i dati corrispondenti. Il `Teams` <xref:System.Windows.Controls.ListBox> tiene traccia delle selezioni negli altri due <xref:System.Windows.Controls.ListBox> controlli.  
   
- ![Master&#45;esempio di detail](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Screenshot che mostra un Master&#45;esempio di scenario di dettaglio.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  I due aspetti da notare in questo esempio sono:  
   

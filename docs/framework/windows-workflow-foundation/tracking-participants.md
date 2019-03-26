@@ -2,12 +2,12 @@
 title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711967"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462994"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
 I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
@@ -60,7 +60,7 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
  Nell'illustrazione seguente viene mostrato il flusso di dati di rilevamento tramite il partecipante del rilevamento ETW. Una volta che i dati di rilevamento hanno raggiunto la sessione ETW, è possibile accedervi in diversi modi. Uno dei modi più utili per accedere a questi eventi è tramite il Visualizzatore eventi, uno strumento Windows comune usato per la visualizzazione di log e di tracce da applicazioni e servizi.  
   
- ![Il flusso di rilevamento e Provider di rilevamento ETW](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Flusso di dati tramite il provider del rilevamento ETW di rilevamento.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Dati evento del partecipante del rilevamento  
  Un partecipante del rilevamento serializza i dati evento rilevati in una sessione ETW nel formato di un evento per il record di rilevamento.  Un evento viene identificato usando un ID compreso nell'intervallo tra 100 e 199. Per le definizioni di evento di rilevamento i record generati da un partecipante del rilevamento, vedere la [riferimento agli eventi di rilevamento](tracking-events-reference.md) argomento.  

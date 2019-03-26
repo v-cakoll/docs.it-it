@@ -3,17 +3,17 @@ title: Modello di programmazione attestazioni WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316506"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462812"
 ---
 # <a name="wif-claims-programming-model"></a>Modello di programmazione attestazioni WIF
 Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in genere le interfacce IIdentity e IPrincipal per lavorare con le informazioni sull'identità dell'utente. In .NET 4.5 è stato integrato Windows Identity Foundation (WIF), in modo che le attestazioni siano ora sempre presenti per qualsiasi entità di sicurezza, come illustrato nel diagramma seguente:
 
- ![Modello di programmazione attestazioni WIF](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Diagramma che mostra il modello di programmazione attestazioni WIF.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  In .NET 4.5 System.Security.Claims contiene le nuove classi ClaimsPrincipal e ClaimsIdentity (vedere il diagramma precedente). Tutte le entità di sicurezza in .NET derivano ora da ClaimsPrincipal. Tutte le classi di identità predefinite, come FormsIdentity per ASP.NET e WindowsIdentity, derivano ora da ClaimsIdentity. Analogamente, tutte le classi di entità di sicurezza predefinite, come GenericPrincipal e WindowsPrincipal, derivano da ClaimsPrincipal.
 

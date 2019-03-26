@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530853"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465711"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Protezione dei messaggi con un client di certificato
-Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti tramite la modalità sicurezza messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti tramite la modalità sicurezza messaggio. Sia il client che il servizio sono autenticati mediante certificati. Per altre informazioni, vedere [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+
+ ![Screenshot che mostra un client con certificato.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  Per un'applicazione di esempio, vedere [certificato di sicurezza dei messaggi](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
- ![Client con certificato](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
@@ -25,12 +26,12 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 |Interoperabilità|Solo WCF|  
 |Autenticazione (server)|Utilizzo del certificato del servizio|  
 |Autenticazione (client)|Utilizzo del certificato client|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
+|Integrità|Yes|  
+|Riservatezza|Yes|  
 |Trasporto|HTTP|  
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  

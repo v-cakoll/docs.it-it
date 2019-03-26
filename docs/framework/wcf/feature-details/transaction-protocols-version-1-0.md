@@ -2,12 +2,12 @@
 title: Protocolli di transazione versione 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258019"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463904"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
 Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. Per altre informazioni sulla versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei
   
  In questo argomento vengono illustrate una composizione della specifica WS-Atomic Transaction (WS-AT) con protezione e l'associazione protetta per la comunicazione tra i gestori di transazioni. L'approccio descritto in questo documento è stato testato con successo con altre implementazioni di WS-AT e WS-Coordination, compresi IBM, IONA, Sun Microsystems e altri.  
   
- Nella figura seguente è riportata l'interoperabilità tra due gestori di transazioni, Gestore transazioni 1 e Gestore transazioni 2 e due applicazioni, Applicazione 1 e Applicazione 2.  
+ Nella figura seguente viene illustrata l'interoperabilità tra due gestori di transazioni, gestore transazioni 1 e gestore transazioni 2 e due applicazioni, applicazione 1 e 2 dell'applicazione:  
   
- ![Protocolli di transazione](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![Screenshot che mostra l'interazione tra transazioni responsabili.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Si consideri un tipico scenario WS-Coordination/WS-Atomic Transaction con un Iniziatore (I) e un Partecipante (P). Sia l'Iniziatore che il Partecipante hanno gestori transazioni (ITM e PTM, rispettivamente). In questo argomento, il commit in due fasi viene chiamato 2PC.  
   
@@ -85,7 +85,7 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei
 #### <a name="activation-and-registration-binding-configuration"></a>Attivazione e configurazione dell'associazione di registrazione  
  WCF richiede l'associazione duplex di tipo request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>Configurazione dell'associazione del protocollo 2PC  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
  WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
  B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  
@@ -101,7 +101,7 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei
   
  B1221: WCF utilizza associazioni HTTPS duplex (descritte in [protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) per i messaggi di attivazione. I messaggi di richiesta e risposta sono correlati utilizzando WS-Addressing 2004/08.  
   
- Nella specifica WS-Atomic Transaction, Sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio dei messaggi.  
+ Specifica di WS-Atomic Transaction, sezione 8, vengono descritti più dettagliatamente la correlazione e i modelli di scambio di messaggi.  
   
 -   R1222: Al momento della ricezione una `CreateCoordinationContext`, il coordinatore deve emettere un `SecurityContextToken` con il segreto associato `STx`. Tale token viene restituito in un'intestazione `t:IssuedTokens` dopo la specifica WS-Trust.  
   
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) versione 1 implementa la versione 1.0 dei
   
  Il `wsse:Timestamp` elemento deve essere firmato usando il `SecurityContextToken STx` emesso. Questa firma è una prova del possesso del token associato a una particolare transazione ed è utilizzata per autenticare l'inserimento di un partecipante nella transazione. Il messaggio RegistrationResponse viene inviato su HTTPS.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>Configurazione dell'associazione del protocollo 2PC  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
  WCF supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
  B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione dei messaggi 2PC di WCF.  

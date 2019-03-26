@@ -4,12 +4,12 @@ description: Informazioni sulla procedura per il ciclo"esterno" del flusso di la
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676200"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462981"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Passaggi nel flusso di lavoro DevOps ciclo esterno per un'applicazione Docker
 
@@ -90,13 +90,13 @@ Con queste attività di Visual Studio Team Services, una compilazione Host Docke
 > [! INFORMAZIONI] per leggere ulteriori informazioni su un'integrazione continua Docker di Azure DevOps servizi di assemblaggio di pipeline e visualizzare le procedure dettagliate, visitare i siti seguenti:
 >
 > - Esecuzione di un agente di Visual Studio Team Services (ora servizi di DevOps di Azure) come contenitore Docker: \
->   [*https://hub.docker.com/r/microsoft/vsts-agent/*](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
 >
 > - Creazione di immagini Linux Docker per .NET Core con i servizi di Azure DevOps: \
->   [*https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/*](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
 >
 > - Creazione di un basato su Linux con Visual Studio Team Service consentono di creare macchina con supporto Docker: \
->   [*http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support*](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>Integrare, testare e convalidare le applicazioni Docker multi-contenitore
 

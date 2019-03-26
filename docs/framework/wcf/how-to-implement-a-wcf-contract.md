@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: fcf96af11bae701585acd92001c8000125858449
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: fa8c5457c636d7f37215f0d4b4fdbb1c96c9481e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410082"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463618"
 ---
 # <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Esercitazione: Implementare un contratto di servizio Windows Communication Foundation
 
@@ -119,16 +119,15 @@ End Namespace
 ## <a name="edit-appconfig"></a>Modificare app. config
 
 Modificare **app. config** nelle **GettingStartedLib** in modo da riflettere le modifiche apportate al codice.
-   - Per oggetto visivo C# progetti:
-       - Modificare la riga 14 per `<service name="GettingStartedLib.CalculatorService">`
-       - Modificare la riga 17 per `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-       - Modificare la riga 22 per `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+- Per oggetto visivo C# progetti:
+  - Modificare la riga 14 per `<service name="GettingStartedLib.CalculatorService">`
+  - Modificare la riga 17 per `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Modificare la riga 22 per `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
-   - Per i progetti di Visual Basic:
-       - Modificare la riga 14 per `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
-       - Modificare la riga 17 per `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-       - Modificare la riga 22 per `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
-
+- Per i progetti di Visual Basic:
+  - Modificare la riga 14 per `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+  - Modificare la riga 17 per `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Modificare la riga 22 per `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
 ## <a name="compile-the-code"></a>Compilare il codice
 

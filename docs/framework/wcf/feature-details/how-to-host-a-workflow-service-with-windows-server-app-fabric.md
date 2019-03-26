@@ -2,12 +2,12 @@
 title: 'Procedura: Ospitare un servizio del flusso di lavoro con Windows Server AppFabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651188"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465126"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Procedura: Ospitare un servizio del flusso di lavoro con Windows Server AppFabric
 L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in IIS/WAS. L'unica differenza consiste nel fatto che tramite gli strumenti di AppFabric sono garantiti la distribuzione, il monitoraggio e la gestione dei servizi di flusso di lavoro. Questo argomento viene utilizzato il servizio del flusso di lavoro creato nel [creazione di un servizio del flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). in cui viene presentata la procedura dettagliata per la creazione di un servizio di flusso di lavoro. In questo argomento verrà invece illustrato come ospitare il servizio di flusso di lavoro mediante AppFabric. Per altre informazioni su Windows Server AppFabric, vedere [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Prima di completare i passaggi seguenti, assicurarsi di aver installato Windows Server AppFabric.  Per questo scopo, aprire Internet Information Services (inetmgr.exe), fare clic sul nome del server nella **connessioni** consente di visualizzare, fare clic su siti e fare clic su **sito Web predefinito**. Nel lato destro dello schermo viene visualizzato una sezione intitolata **AppFabric**. Se tale sezione non viene visualizzata (controllare nella parte superiore del riquadro di destra), AppFabric non è installato. Per altre informazioni sull'installazione di Windows Server AppFabric, vedere [installazione di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -56,13 +56,13 @@ L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in I
   
 8.  Selezionare il **avvio automatico** scheda. In questo modo è possibile specificare impostazioni di avvio automatico per i servizi di flusso di lavoro nell'applicazione come mostrato nella schermata seguente.  
   
-     ![App Fabric automatica&#45;Avvia configurazione](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![Screenshot che mostra l'App Fabric automatica&#45;avviare la configurazione.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      Per altre informazioni sulla configurazione di avvio automatico, vedere [configurazione dell'avvio automatico con AppFabric](https://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Selezionare il **limitazione** scheda. In questo modo è possibile configurare impostazioni di limitazione per il servizio di flusso di lavoro come mostrato nella schermata seguente.  
   
-     ![La limitazione delle richieste di configurazione App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![Screenshot che mostra la limitazione delle richieste di configurazione App Fabric.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      Per altre informazioni sulla configurazione di limitazione delle richieste, vedere [configurazione della limitazione](https://go.microsoft.com/fwlink/?LinkId=193149).  
   
@@ -82,11 +82,11 @@ L'hosting di servizi di flusso di lavoro in AppFabric è simile all'hosting in I
   
 4.  L'applicazione client consentirà di chiamare immediatamente il servizio di flusso di lavoro e successivamente si verificherà un periodo di attesa. Il servizio di flusso di lavoro diventerà inattivo e sarà salvato in modo permanente. Tale condizione può essere verificata avviando Internet Information Services (inetmgr.exe), passando a OrderService nel riquadro Connessioni e selezionandolo. Successivamente, fare clic sull'icona del dashboard di AppFabric nel riquadro di destra. In Istanze WF permanenti si osserverà la presenza di un'istanza del servizio di flusso di lavoro salvato in modo permanente come mostrato nella schermata seguente.  
   
-     ![App Fabric Dashboard](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![Screenshot che mostra il Dashboard di AppFabric.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      Il **cronologia istanze WF** Elenca le informazioni relative al servizio del flusso di lavoro, ad esempio il numero di attivazioni del servizio del flusso di lavoro, il numero di completamenti dell'istanza del servizio del flusso di lavoro e il numero di istanze del flusso di lavoro con errori. In Istanze attive o inattive viene visualizzato un collegamento; facendo clic su di esso verranno visualizzate ulteriori informazioni sulle istanze del flusso di lavoro inattive come mostrato nella schermata seguente.  
   
-     ![Dettagli dell'istanza del flusso di lavoro persistente](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![Screenshot che mostra i dettagli dell'istanza del flusso di lavoro persistente.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      Per altre informazioni su Windows Server AppFabric vedere le funzionalità e come usarli [funzionalità di Hosting di Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

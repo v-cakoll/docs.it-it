@@ -2,12 +2,6 @@
 title: Schema di configurazione di WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675361"
 ---
 # <a name="wcf-configuration-schema"></a>Schema di configurazione di WCF
 Gli elementi di configurazione Windows Communication Foundation (WCF) consentono di configurare le applicazioni di servizio e client WCF. È possibile usare lo [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) per creare e modificare i file di configurazione di client e servizi. Poiché i file di configurazione sono in formato XML, per modificarli manualmente usando un editor di testo è necessario avere familiarità con il linguaggio XML. In caso contrario, è possibile che si verifichino problemi. È ad esempio possibile che un tag di elemento XML o un attributo venga digitato in modo errato. Per i tag di elemento XML e gli attributi viene applicata la distinzione tra maiuscole e minuscole.  
@@ -18,9 +12,9 @@ Gli elementi di configurazione Windows Communication Foundation (WCF) consentono
   
  [Blocco delle impostazioni di configurazione](https://go.microsoft.com/fwlink/?LinkId=95338)  
   
- Questa sezione descrive tutti i valori possibili di ogni elemento di configurazione e le relative interazioni con gli altri elementi di configurazione di WCF. Nella mappa seguente viene illustrato lo schema di configurazione di WCF.  
+ Questa sezione descrive tutti i valori possibili di ogni elemento di configurazione e le relative interazioni con gli altri elementi di configurazione di WCF. La mappa seguente viene illustrato lo schema di configurazione di WCF:  
   
- ![Schema di configurazione di WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ ![Diagramma che mostra lo schema di configurazione WCF.](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
 >  È consigliabile proteggere i file di configurazione dell'applicazione (app. config) con appropriato controllo di accesso Elenca (ACL) per evitare qualsiasi rischio di sicurezza le sezioni di configurazione WCF.  Ad esempio, è necessario garantire che solo gli utenti appropriati siano in grado di accedere o apportare modifiche alla sezione del modello dei servizi del file di configurazione di un servizio o alle impostazioni di sicurezza relative alle associazioni dell'applicazione.  

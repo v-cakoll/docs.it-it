@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573949"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465139"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procedura: Creare un gestore autorizzazioni personalizzato per un servizio
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) supporta un modello di autorizzazione basata sulle attestazioni estensibili. Le attestazioni vengono estratte dai token, elaborate facoltativamente da criteri di autorizzazione personalizzati e quindi inserite in una classe <xref:System.IdentityModel.Policy.AuthorizationContext>. Un gestore autorizzazioni esamina le attestazioni contenute nel contesto <xref:System.IdentityModel.Policy.AuthorizationContext> per prendere decisioni di autorizzazione.  
@@ -119,5 +119,4 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
   
 ## <a name="see-also"></a>Vedere anche
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)

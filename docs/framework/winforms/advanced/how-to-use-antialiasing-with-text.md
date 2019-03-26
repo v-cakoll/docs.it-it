@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718571"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464723"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Procedura: Usare l'antialiasing nel testo
 *Anti-aliasing* si intende l'anti-aliasing dei bordi irregolari della grafica e testo per migliorarne la leggibilità o aspetto disegnati. Con managed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] classi, è possibile eseguire il rendering di testo con anti-aliasing di elevata qualità, nonché il testo di qualità inferiore. In genere, il rendering di qualità superiore impiega più tempo di elaborazione rispetto il rendering di qualità inferiore. Per impostare il livello di qualità del testo, impostare il <xref:System.Drawing.Graphics.TextRenderingHint%2A> proprietà di un <xref:System.Drawing.Graphics> a uno degli elementi del <xref:System.Drawing.Text.TextRenderingHint> enumerazione  
@@ -29,7 +29,7 @@ ms.locfileid: "57718571"
  
  Nella figura seguente mostra l'output del codice di esempio:  
   
- ![I tipi di carattere testo](./media/fontstext10.png "FontsText10")  
+ ![Screenshot che mostra il testo con due diverse impostazioni di qualità.](./media/how-to-use-antialiasing-with-text/antialiasing-text-quality-settings.png)  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Esempio di codice precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  

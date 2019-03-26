@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379640"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464957"
 ---
 # <a name="toolbar-overview"></a>Cenni preliminari sui controlli ToolBar
 <xref:System.Windows.Controls.ToolBar> i controlli sono contenitori per un gruppo di comandi o controlli che sono in genere correlati alla funzione. Oggetto <xref:System.Windows.Controls.ToolBar> contiene in genere pulsanti che richiamano comandi.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379640"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Oggetti ToolBar con elementi di overflow  
- Spesso <xref:System.Windows.Controls.ToolBar> controlli contengono più elementi quelli può adattarsi alla dimensione della barra degli strumenti. In questo caso, il <xref:System.Windows.Controls.ToolBar> consente di visualizzare un pulsante di overflow. Per visualizzare gli elementi di overflow, un utente fa clic sul pulsante di overflow e gli elementi vengono visualizzati in una finestra popup seguente il <xref:System.Windows.Controls.ToolBar>. Il grafico seguente mostra un <xref:System.Windows.Controls.ToolBar> con elementi di overflow.  
+ Spesso <xref:System.Windows.Controls.ToolBar> controlli contengono più elementi quelli può adattarsi alla dimensione della barra degli strumenti. In questo caso, il <xref:System.Windows.Controls.ToolBar> consente di visualizzare un pulsante di overflow. Per visualizzare gli elementi di overflow, un utente fa clic sul pulsante di overflow e gli elementi vengono visualizzati in una finestra popup seguente il <xref:System.Windows.Controls.ToolBar>. Il grafico seguente mostra un <xref:System.Windows.Controls.ToolBar> con elementi di overflow:  
   
- ![Barra degli strumenti con overflow](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Oggetto Toolbar con elementi di overflow  
+ ![Screenshot che mostra una barra degli strumenti con elementi di overflow.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  È possibile specificare quando un elemento in una barra degli strumenti viene posizionato nel Pannello di overflow impostando il <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> proprietà associata <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, o <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. L'esempio seguente specifica che gli ultimi quattro pulsanti della barra degli strumenti devono essere sempre posizionati nel pannello di overflow.  
   

@@ -2,12 +2,12 @@
 title: Architettura di attivazione WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557107"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465759"
 ---
 # <a name="was-activation-architecture"></a>Architettura di attivazione WAS
 In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).  
@@ -27,7 +27,7 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
   
  Quando WAS attiva un'istanza del processo di lavoro, carica i gestori del protocollo del processo necessari nel processo di lavoro e utilizza il gestore applicazioni per creare un dominio applicazione per ospitare l'applicazione. Il dominio applicazione carica il codice dell'applicazione e i gestori del protocollo AppDomain richiesti dai protocolli di rete utilizzati dall'applicazione.  
   
- ![Architettura WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Screenshot che mostra l'architettura WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adattatori listener  
  Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano. La tabella seguente elenca gli adattatori listener per i protocolli di Windows Communication Foundation (WCF).  

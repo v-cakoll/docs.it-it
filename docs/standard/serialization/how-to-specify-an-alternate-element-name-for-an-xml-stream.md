@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968530"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465477"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: Specificare un nome di elemento alternativo per un flusso XML
   
@@ -99,5 +99,4 @@ public class SerializeOverride()
 - [Serializzazione SOAP e XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Procedura: Serializzare un oggetto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Procedura: Deserializzare un oggetto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

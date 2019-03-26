@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714125"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462864"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procedura: Usare la modalità di composizione per controllare la fusione alfa
 Può accadere quando si desidera creare una bitmap fuori schermo che presenta le caratteristiche seguenti:  
@@ -34,7 +34,7 @@ Può accadere quando si desidera creare una bitmap fuori schermo che presenta le
   
  Nella figura seguente mostra l'output dell'esempio di codice. Si noti che i puntini di sospensione vengono combinati con lo sfondo, ma non devono essere smussati tra loro.  
   
- ![Copia di origine](./media/sourcecopy.png "sourcecopy")  
+ ![Diagramma che mostra ellissi sfumato con lo sfondo, non tra loro.](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
  L'esempio di codice contiene l'istruzione seguente:  
   
@@ -48,7 +48,7 @@ Può accadere quando si desidera creare una bitmap fuori schermo che presenta le
   
  Nella figura seguente mostra l'output del codice modificato.  
   
- ![Origine su](./media/sourceover.png "sourceover")  
+ ![Diagramma che mostra i puntini di sospensione combinati tra loro e con lo sfondo.](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  

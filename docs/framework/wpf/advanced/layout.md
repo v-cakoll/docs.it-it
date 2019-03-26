@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369851"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464567"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,7 +41,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
  La figura seguente mostra un layout semplice.  
   
- ![Tipico elemento Grid senza rettangolo di selezione sovrapposto](./media/boundingbox1.png "boundingbox1")  
+ ![Screenshot che mostra un tipico oggetto grid senza riquadro sovrapposto.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  È possibile ottenere questo layout usando il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] seguente.  
   
@@ -49,7 +49,7 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
  Un unico <xref:System.Windows.Controls.TextBlock> elemento è ospitato all'interno di un <xref:System.Windows.Controls.Grid>. Mentre il testo sia contenuto solo l'angolo superiore sinistro della prima colonna, lo spazio allocato per il <xref:System.Windows.Controls.TextBlock> è molto più ampio. Il rettangolo di selezione di qualsiasi <xref:System.Windows.FrameworkElement> può essere recuperato tramite il <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> (metodo). La figura seguente mostra il riquadro delimitatore per i <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![Il rettangolo di selezione di TextBlock è ora visibile.](./media/boundingbox2.png "boundingbox2")  
+ ![Screenshot che mostra che il rettangolo di selezione di TextBlock è ora visibile.](./media/layout/visible-textblock-bounding-box.png)  
   
  Come mostrato dal rettangolo giallo, lo spazio allocato per il <xref:System.Windows.Controls.TextBlock> elemento è molto più ampio di quanto sembri. Man mano che vengono aggiunti elementi aggiuntivi per il <xref:System.Windows.Controls.Grid>, questa sezione può espandersi o ridursi, a seconda del tipo e dimensione degli elementi che vengono aggiunti.  
   

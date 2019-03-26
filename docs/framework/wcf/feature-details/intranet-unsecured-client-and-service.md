@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603118"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466231"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Client e servizio Intranet non protetti
 La figura seguente illustra un semplice servizio Windows Communication Foundation (WCF) sviluppato per fornire informazioni su una rete privata protetta a un'applicazione WCF. Sicurezza non è necessaria perché i dati sono di importanza bassa, la rete è considerata naturalmente protetta o sicurezza viene fornita tramite un livello sottostante l'infrastruttura WCF.  
   
- ![Uno scenario di servizio e client non sicuri Intranet](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Client non sicuri Intranet e scenario del servizio.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|None|  
+|Modalità di sicurezza|nessuno|  
 |Trasporto|TCP|  
 |Binding|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interoperabilità|Solo WCF|  
-|Autenticazione|None|  
-|Integrità|None|  
-|Riservatezza|None|  
+|Autenticazione|nessuno|  
+|Integrità|nessuno|  
+|Riservatezza|nessuno|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  

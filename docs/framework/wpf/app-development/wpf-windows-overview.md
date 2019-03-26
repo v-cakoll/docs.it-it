@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373097"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466218"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Foundation (WPF) in windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Standalone [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni forniscono finestre proprie tramite la <xref:System.Windows.Window> classe. Questo argomento vengono presentate <xref:System.Windows.Window> prima di esporre i concetti fondamentali di creazione e gestione delle finestre in applicazioni autonome.  
@@ -44,9 +44,9 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
- La figura seguente mostra le parti che costituiscono una finestra.  
+ La figura seguente illustra le parti costituenti di una finestra:  
   
- ![Elementi di una finestra](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Screenshot che mostra gli elementi della finestra.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Un finestra è suddivisa in due aree: l'area non client e l'area client.  
   
@@ -146,7 +146,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  La finestra viene infine aperta chiamando il <xref:System.Windows.Window.Show%2A> metodo; il risultato è illustrato nella figura seguente.  
   
- ![Finestra aperta mediante la chiamata di Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Una finestra aperta mediante la chiamata di Window. Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Una finestra aperta chiamando <xref:System.Windows.Window.Show%2A> è una finestra non modale, che significa che l'applicazione opera in una modalità che consente agli utenti di attivare altre finestre nella stessa applicazione.  
   
@@ -282,13 +282,13 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventi di durata di una finestra  
- La figura seguente mostra la sequenza degli eventi principali per la durata di una finestra.  
+ Nella figura seguente illustra la sequenza degli eventi principali nel ciclo di vita di una finestra:  
   
- ![Durata di una finestra](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagramma che mostra gli eventi nel corso della durata di una finestra.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Nella figura seguente è illustrata la sequenza degli eventi principali nel ciclo di vita di una finestra che viene visualizzata senza attivazione (<xref:System.Windows.Window.ShowActivated%2A> è impostata su `false` prima della visualizzazione della finestra).  
+ Nella figura seguente è illustrata la sequenza degli eventi principali nel ciclo di vita di una finestra che viene visualizzata senza attivazione (<xref:System.Windows.Window.ShowActivated%2A> è impostata su `false` prima della visualizzazione della finestra):  
   
- ![Durata di una finestra &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagramma che mostra gli eventi nel corso della durata di una finestra senza attivazione.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Posizione della finestra  
@@ -351,21 +351,21 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  **Per le proprietà di altezza:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Per le proprietà di larghezza:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- L'effetto di questi stili di finestra viene mostrato nella figura seguente.  
+ L'effetto di questi stili di finestra sono illustrati nella figura riportata di seguito:  
   
- ![Stili di finestra](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Illustrazione di stili del bordo di finestra.](./media/wpf-windows-overview/window-border-styles.png)  
   
  È possibile impostare <xref:System.Windows.Window.WindowStyle%2A> usando uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup o codice; perché è improbabile modificare nel corso della durata di una finestra, si sarà probabilmente configurarlo mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup.  
   
@@ -448,9 +448,9 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
 #### <a name="non-rectangular-window-style"></a>Stile di finestra non rettangolare  
  Esistono però situazioni in cui stili del bordo <xref:System.Windows.Window.WindowStyle%2A> consente di avere non sono sufficienti. Ad esempio, si desidera creare un'applicazione con un bordo non rettangolare, ad esempio [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Usa.  
   
- Ad esempio, si consideri la finestra a fumetto mostrata nella figura seguente.  
+ Si consideri, ad esempio, la finestra a fumetto illustrata nella figura riportata di seguito:  
   
- ![Finestra non rettangolare](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Una finestra a fumetto con la dicitura Me di trascinamento.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Questo tipo di finestra può essere creato impostando il <xref:System.Windows.Window.WindowStyle%2A> proprietà <xref:System.Windows.WindowStyle.None>e utilizzando il supporto speciale che <xref:System.Windows.Window> per la trasparenza.  
   
@@ -460,9 +460,10 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Presenza sulla barra delle applicazioni  
- L'aspetto predefinito di una finestra include un pulsante sulla barra delle applicazioni, come quello mostrato nella figura seguente.  
-  
- ![Finestra con un pulsante sulla barra delle applicazioni](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+L'aspetto predefinito di una finestra include un pulsante della barra delle applicazioni, come quella mostrata nella figura seguente:
+
+ ![Screenshot che mostra una finestra con un pulsante della barra delle applicazioni.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Alcuni tipi di windows non dispongono di un pulsante sulla barra, ad esempio le finestre di messaggio e le finestre di dialogo (vedere [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md)). È possibile controllare se il pulsante della barra attività per una finestra è visualizzato, impostando il <xref:System.Windows.Window.ShowInTaskbar%2A> proprietà (`true` per impostazione predefinita).  
   

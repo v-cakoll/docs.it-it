@@ -2,12 +2,12 @@
 title: Panoramica sul flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718753"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464684"
 ---
 # <a name="windows-workflow-overview"></a>Panoramica sul flusso di lavoro di Windows
 Un flusso di lavoro è un set di unità elementari chiamate *attività* che vengono archiviati come un modello che descrive un processo reale. I flussi di lavoro forniscono un metodo per descrivere l'ordine di esecuzione e le relazioni dipendenti tra porzioni di lavoro di breve o lunga durata. Questo lavoro passa attraverso il modello dall'inizio alla fine e le attività possono essere eseguite da persone o da funzioni del sistema.  
@@ -31,7 +31,7 @@ Componenti del flusso di lavoro nel processo host
 ## <a name="interaction-between-workflow-components"></a>Interazione tra componenti del flusso di lavoro  
  Nel diagramma seguente viene illustrata la modalità di interazione tra i componenti del flusso di lavoro.  
   
- ![Interazione del flusso di lavoro](./media/workflowinteraction.gif "WorkflowInteraction")  
+ ![Diagramma che mostra come interagiscono i componenti del flusso di lavoro.](./media/overview/workflow-component-interatction.gif)  
   
  Nel diagramma precedente, il metodo <xref:System.Activities.WorkflowInvoker.Invoke%2A> della classe <xref:System.Activities.WorkflowInvoker> viene usato per richiamare più istanze del flusso di lavoro. <xref:System.Activities.WorkflowInvoker> viene usata per flussi di lavoro semplici che non richiedono la gestione da parte dell'host. Tali flussi di lavoro (ad esempio la ripresa di <xref:System.Activities.Bookmark>) devono essere eseguiti usando invece il metodo <xref:System.Activities.WorkflowApplication.Run%2A>. Non è necessario attendere il completamento di un'istanza del flusso di lavoro prima di richiamare un altro; il motore di runtime supporta l'esecuzione simultanea di più istanze del flusso di lavoro.  Di seguito sono riportati i flussi di lavoro richiamati:  
   

@@ -2,15 +2,15 @@
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594811"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465061"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
-In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che usano Service Trace Viewer per risolvere i problemi dell'applicazione.  
+In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che utilizzano Service Trace Viewer per risolvere i problemi dell'applicazione.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Uso dello strumento Visualizzatore di tracce dei servizi  
  Lo strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di correlare le tracce di diagnostica prodotte dai listener WCF per individuare la causa radice di un errore. Lo strumento fornisce un modo per visualizzare, raggruppare e filtrare le tracce in modo che è possibile diagnosticare, riparare e verificare i problemi dei servizi WCF con facilità. Per altre informazioni sull'uso di questo strumento, vedere [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -130,20 +130,23 @@ In questo argomento viene illustrato il formato dei dati di traccia, come visual
 > [!NOTE]
 >  WCF, illustra i messaggi di risposta elaborati inizialmente in un'attività separata (elaborazione messaggio) vengono correlati all'attività elaborazione azione corrispondente che include il messaggio di richiesta, tramite un trasferimento. Ciò vale per i messaggi dell'infrastruttura e le richieste asincrone ed è dovuto al fatto che è necessario ispezionare il messaggio, leggere l'intestazione activityId e identificare l'attività Elaborazione azione esistente con quell'ID per correlarla ad esso. Per le richieste sincrone, viene bloccata la risposta e pertanto viene riconosciuta a quale Elaborazione azione è correlata la risposta.  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
-Elenco delle attività client WCF in base all'ora di creazione (riquadro sinistro) e alle relative tracce e attività annidate (riquadro superiore destro)  
+L'immagine seguente mostra l'attività client WCF elencate in base al momento della creazione (riquadro sinistro) e le tracce (riquadro superiore destro) e le attività annidate:
+
+ ![Screenshot che mostra di attività elencate in base al momento della creazione di client WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-activities-creation-time.gif)  
   
  Quando si seleziona un'attività nel riquadro sinistro, le tracce e le attività annidate compaiono nel riquadro in alto a destra. Questa è pertanto una visualizzazione gerarchica ridotta dell'elenco delle attività sulla sinistra, basato sull'attività padre selezionata. Dato che l'Elaborazione azione di aggiunta è la prima richiesta fatta, questa attività contiene l'attività Impostazione sessione di sicurezza (trasferimento a, trasferimento da) e le tracce per l'elaborazione effettiva dell'azione di aggiunta.  
   
  Se si fa doppio clic di elaborazione azione attività Aggiungi nel pannello sinistro, noteremo una rappresentazione grafica delle attività client WCF correlati da aggiungere. La prima attività sulla sinistra è l'attività radice (0000), che è l'attività predefinita. WCF trasferimenti all'esterno dell'attività di ambiente. Se non è definito, WCF trasferisce fuori da 0000. Qui, la seconda attività, Add di Elaborazione azione, viene trasferita fuori da 0. Quindi si vede l'attività di impostazione della sessione di sicurezza.  
-  
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Visualizzazione grafico delle attività client WCF: Ambiente (qui 0) attività elaborazione azione e impostazione sessione di sicurezza  
+
+ L'immagine seguente mostra una visualizzazione Diagramma del client WCF di attività, in particolare attività di ambiente (qui 0), elaborazione azione e configurare una sessione protetta:   
+
+ ![Nel Visualizzatore di traccia che Mostra azione di processo e attività di ambiente del grafico.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-activities-graph-ambient-process.gif)   
   
  Nel riquadro in alto a destra, è possibile vedere tutte le tracce relative all'attività Add di Elaborazione azione. In particolare, è stato inviato il messaggio di richiesta ("Messaggio inviato tramite canale") ed è stata ricevuta la risposta ("Ricevuto un messaggio tramite canale") nella stessa attività, come illustrato nel grafico seguente. Per maggiore chiarezza, nel grafico l'attività Impostazione sessione di sicurezza è compressa.  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
-Elenco di tracce per l'attività Elaborazione azione: nella stessa attività viene inviata la richiesta e viene ricevuta la risposta.  
+ L'immagine seguente mostra un elenco delle tracce per l'attività elaborazione azione. Si invia la richiesta e ricevere la risposta nella stessa attività.
+ 
+ ![Screenshot del Visualizzatore di tracce che mostra un elenco delle tracce per l'attività elaborazione azione](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/process-action-traces.gif)  
   
  In questo caso, si caricano le tracce del client solo per maggiore chiarezza, ma le tracce del servizio (messaggio di richiesta ricevuto e messaggio di risposta inviato) vengono visualizzati nella stessa attività se vengono anche caricati nello strumento e `propagateActivity` è stata impostata su `true.` come illustrato in una figura seguente.  
   
@@ -162,14 +165,17 @@ Elenco di tracce per l'attività Elaborazione azione: nella stessa attività vie
 6.  Per l'azione out-of-process, viene creata un'attività "Codice utente Execute" per isolare le tracce emesse nel codice utente da quelle emesse in WCF. Nell'esempio precedente, la traccia "Servizio invia la risposta Add" viene emessa nell'attività "Esecuzione codice utente" non nell'attività propagata dal client, se applicabile.  
   
  Nella figura seguente, la prima attività sulla sinistra è l'attività radice (0000), ed è l'attività predefinita. Le tre attività seguenti interessano l'apertura di ServiceHost. L'attività nella colonna 5 è il listener e le attività rimanenti (da 6 a 8) descrivono l'elaborazione WCF di un messaggio, dall'elaborazione dei byte all'attivazione del codice utente.  
+
+ L'immagine seguente mostra una visualizzazione grafico delle attività del servizio WCF:   
+
+ ![Screenshot del Visualizzatore di traccia che visualizza un elenco delle attività del servizio WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
-Elenco delle attività del servizio WCF  
   
  Nella schermata seguente vengono illustrate le attività sia per il client che per il servizio e viene evidenziata l'attività Add di Elaborazione azione nei processi (arancione). Le frecce indicano i messaggi di richiesta e di risposta inviati e ricevuti dal client e dal servizio. Le tracce di Elaborazione azione sono separate nei processi nel grafico, ma sono riportate come parte della stessa attività nel riquadro in alto a destra. In questo riquadro è possibile vedere le tracce del client per i messaggi inviati, seguite dalle tracce del servizio per i messaggi ricevuti ed elaborati.  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
-Visualizzazione grafica delle attività di client e servizio WCF  
+ Le immagini seguenti viene illustrata una visualizzazione grafico di entrambe le attività del client e servizio WCF  
+ 
+ ![Grafico dal Visualizzatore di traccia contenente entrambe le attività del client e servizio WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-service-activities.gif)   
   
  Nello scenario di errore seguente, le tracce di errore e di avviso nel servizio e nel client sono correlate. Un'eccezione viene generata prima nel codice utente nel servizio (attività verde più a destra che include una traccia di avviso per l'eccezione relativa all'impossibilità per il servizio di elaborare la richiesta nel codice utente). Quando la risposta viene inviata al client, viene emessa di nuovo una traccia di avviso per indicare il messaggio di errore (attività rosa a sinistra). Il client chiude quindi il proprio client WCF (attività gialla in basso a sinistra), causando l'interruzione della connessione al servizio. Il servizio genera un errore (attività rosa più lunga a destra).  
   
@@ -181,22 +187,24 @@ Correlazione dell'errore tra il servizio e il client
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>Risoluzione dei problemi tramite Service Trace Viewer  
  Quando si caricano file di traccia nello strumento Servize Trace Viewer, è possibile selezionare qualsiasi attività rossa o gialla nel riquadro di sinistra per individuare la causa di un problema nell'applicazione. L'attività 000 in genere ha eccezioni non gestite che vengono visualizzate all'utente.  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
-Selezione dell'attività rossa o gialla per individuare la causa di un problema  
+  L'immagine seguente mostra come selezionare un'attività rossa o gialla per individuare la radice di un problema.   
+ ![Screenshot dell'attività rossa o gialla per individuare la radice di un problema.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
+ 
   
  Nel riquadro in alto a destra, è possibile esaminare le tracce per l'attività selezionata nel riquadro di sinistra. È quindi possibile esaminare le tracce rosse o gialle in quel riquadro e vedere come sono correlate. Nel grafico precedente, le tracce di avviso sia per il client che per il servizio sono riportate nella stessa attività Elaborazione azione.  
   
- Se queste tracce non forniscono la causa principale dell'errore, è possibile usare il grafico facendo doppio clic sull'attività selezionata nel riquadro di sinistra (qui Elaborazione azione). Viene quindi visualizzato il grafico con attività correlate. È quindi possibile espandere le attività correlate (facendo il segno "+") per trovare la prima traccia emessa in rosso o giallo in un'attività correlata. Continuare a espandere le attività che si verificano subito prima della traccia rossa o gialla di interesse, seguendo i trasferimenti alle attività correlate o il flusso dei messaggi tra gli endpoint, fino a individuare la causa radice del problema.  
+ Se queste tracce non forniscono la causa radice dell'errore, è possibile usare il grafico facendo doppio clic sull'attività selezionata nel riquadro di sinistra (qui Elaborazione azione). Viene quindi visualizzato il grafico con attività correlate. È quindi possibile espandere le attività correlate (facendo il segno "+") per trovare la prima traccia emessa in rosso o giallo in un'attività correlata. Continuare a espandere le attività che si verificano subito prima della traccia rossa o gialla di interesse, seguendo i trasferimenti alle attività correlate o il flusso dei messaggi tra gli endpoint, fino a individuare la causa principale del problema.  
   
  ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
-Espansione delle attività per individuare la causa radice di un problema  
+Espansione delle attività per individuare la causa principale di un problema  
   
  Se `ActivityTracing` di ServiceModel è disattivata, ma la traccia di ServiceModel è attiva, è possibile visualizzare le tracce di ServiceModel emesse nell'attività 0000. In questo caso, tuttavia, è richiesto un maggior impegno per comprendere la correlazione di queste tracce.  
   
- Se Registrazione messaggi è attivata, è possibile usare la scheda Messaggio per vedere qual è il messaggio su cui influisce l'errore. Facendo doppio clic su un messaggio in rosso o in giallo, è possibile visualizzare la rappresentazione grafica delle attività correlate. Queste attività sono quelle più strettamente legate alla richiesta in cui si è verificato un errore.  
+ Se Registrazione messaggi è attivata, è possibile utilizzare la scheda Messaggio per vedere qual è il messaggio su cui influisce l'errore. Facendo doppio clic su un messaggio in rosso o in giallo, è possibile visualizzare la rappresentazione grafica delle attività correlate. Queste attività sono quelle più strettamente legate alla richiesta in cui si è verificato un errore.  
   
- ![Uso del Visualizzatore di tracce](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
-Per iniziare la risoluzione dei problemi, è anche possibile scegliere una traccia dei messaggi rossa o gialla e fare doppio clic su di essa per individuare la causa radice  
+ ![Screenshot del Visualizzatore di tracce con la registrazione messaggi attivata.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/message-logging-enabled.gif)  
+
+Per avviare la risoluzione dei problemi, è anche possibile selezionare una traccia dei messaggi rossa o gialla e fare doppio clic per individuare la causa radice.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 4d3f81039fc9d4447816901c55ad0af5e501dc2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668847"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463930"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Protezione del trasporto con l'autenticazione di base
 La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client. Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per altre informazioni sull'abilitazione dell'autenticazione base in Internet Information Services (IIS), vedere [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
   
- ![Sicurezza del trasporto con autenticazione di base](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+ ![Screenshot che mostra di sicurezza del trasporto con autenticazione di base.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (usando HTTPS)<br /><br /> Sì (usando nome utente/password).|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
+|Integrità|Yes|  
+|Riservatezza|Yes|  
 |Trasporto|HTTPS|  
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  

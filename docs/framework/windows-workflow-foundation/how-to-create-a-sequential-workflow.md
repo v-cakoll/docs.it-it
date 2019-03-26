@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262570"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463800"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedura: Creare un flusso di lavoro sequenziale
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. In questo argomento illustra la creazione di un flusso di lavoro che vengono usate sia attività incorporate, ad esempio la <xref:System.Activities.Statements.Sequence> attività e le attività personalizzate dal precedente [come: Creare un'attività](how-to-create-an-activity.md) argomento. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -147,9 +147,9 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     "Your guess is too high."  
     ```  
   
-     Nell'esempio seguente viene illustrato il flusso di lavoro completato.  
+     L'esempio seguente illustra il flusso di lavoro completato:  
   
-     ![Flusso di lavoro sequenza completo](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![Screenshot che mostra il flusso di lavoro sequenza completata.](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
 ## <a name="to-build-the-workflow"></a>Per compilare il flusso di lavoro  
   

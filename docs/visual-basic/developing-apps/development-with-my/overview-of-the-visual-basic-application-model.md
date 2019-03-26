@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517383"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464099"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Cenni preliminari sul modello di applicazione Visual Basic
 Visual Basic fornisce un modello ben definito per il controllo del comportamento delle applicazioni Windows Forms: il modello di applicazione Visual Basic. Questo modello include gli eventi per la gestione dell'applicazione avvio e arresto, nonché gli eventi per intercettare eccezioni non gestite. Fornisce inoltre il supporto per lo sviluppo di applicazioni a istanza singola. Il modello applicativo è estensibile, in modo che gli sviluppatori che devono esercitare un controllo più possono personalizzare i relativi metodi sottoponibili a override.  
@@ -26,9 +26,9 @@ Visual Basic fornisce un modello ben definito per il controllo del comportamento
   
 -   Ogni successivo tentativo di avviare l'applicazione, mentre la prima istanza è in esecuzione, comporta un comportamento molto diverso. Il tentativo successivo notifica la prima istanza sugli argomenti della riga di comando e quindi chiude immediatamente. La prima istanza gestisce il `StartupNextInstance` individuare gli argomenti della riga di comando dell'istanza successiva e continua l'esecuzione dell'evento.  
   
-     Questo diagramma illustra come un'istanza successiva segnala la prima istanza.  
+     Questo diagramma mostra come un'istanza successiva segnala la prima istanza:  
   
-     ![Singola istanza dell'applicazione immagine](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Diagramma che mostra l'immagine di un'applicazione di istanza singola.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  Gestendo i `StartupNextInstance` evento, è possibile controllare il comportamento dell'applicazione a istanza singola. Ad esempio, Microsoft Outlook in genere viene eseguito come un'applicazione a istanza singola. Quando Outlook è in esecuzione e si prova ad avviare Outlook anche in questo caso, lo stato attivo passa all'istanza originale ma non si apre un'altra istanza.  
   

@@ -2,12 +2,12 @@
 title: Servizi WCF e ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282607"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463475"
 ---
 # <a name="wcf-services-and-aspnet"></a>Servizi WCF e ASP.NET
 
@@ -17,7 +17,7 @@ Questo argomento viene illustrato l'hosting Windows Communication Foundation (WC
 
 Servizi WCF ospitati in Internet Information Services (IIS) possono trovarsi con. Le pagine ASPX e servizi Web ASMX all'interno di un singolo dominio applicazione comune. ASP.NET fornisce servizi di infrastruttura comuni quali la gestione di AppDomain e compilazione dinamica per il runtime HTTP ASP.NET e WCF. La configurazione predefinita per WCF è side-by-side con ASP.NET.
 
-![Servizi WCF e ASP .NET: condivisione dello stato](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Screenshot che mostra i servizi WCF e ASP .NET: condivisione dello stato.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 Il runtime HTTP ASP.NET gestisce richieste ASP.NET ma non fa parte dell'elaborazione di richieste destinate per i servizi WCF, anche se questi servizi sono ospitati nello stesso AppDomain, perché è contenuto ASP.NET. Al contrario, il modello di servizio WCF intercetta i messaggi indirizzati ai servizi WCF e li instrada tramite lo stack trasporto/canale WCF.
 
@@ -29,7 +29,7 @@ I risultati del modello affiancato sono i seguenti:
 
 - All'interno di un AppDomain, le funzionalità implementate dal runtime HTTP si applicano al contenuto ASP.NET ma non da WCF. Molte funzionalità specifiche di HTTP della piattaforma dell'applicazione ASP.NET non si applicano ai servizi WCF ospitati in un AppDomain con contenuto ASP.NET. Ne sono esempi le seguenti:
 
-    - HttpContext: <xref:System.Web.HttpContext.Current%2A> è sempre `null` quando si accede da all'interno di un servizio WCF. In alternativa, usare <xref:System.ServiceModel.Channels.RequestContext>.
+    - HttpContext: <xref:System.Web.HttpContext.Current%2A> è sempre `null` quando si accede da all'interno di un servizio WCF. In alternativa, utilizzare <xref:System.ServiceModel.Channels.RequestContext>.
 
     - Autorizzazione basata su file: Il modello di sicurezza WCF non consente l'elenco di controllo di accesso (ACL) applicato al file con estensione svc del servizio quando si decide se una richiesta di servizio è autorizzata.
 

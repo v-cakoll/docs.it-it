@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 687143273a07acba4b4d60acb1be25eee165b91d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710485"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464697"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Procedura: Disegnare spline di tipo Cardinal
 Spline di tipo cardinal è una curva che passa attraverso un set specificato di punti. Per disegnare spline di tipo cardinal, creare un <xref:System.Drawing.Graphics> , quindi passare l'indirizzo di una matrice di punti di <xref:System.Drawing.Graphics.DrawCurve%2A> (metodo).  
@@ -23,16 +23,16 @@ Spline di tipo cardinal è una curva che passa attraverso un set specificato di 
   
 -   Nell'esempio seguente disegna una spline di tipo cardinal a forma di campana che passa attraverso cinque punti designati. La figura seguente mostra la curva e cinque punti.  
   
-     ![Cardinal Spline](./media/cardinalspline1.png "CardinalSpline1")  
+     ![Diagramma che mostra una spline di tipo cardinal a campana.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Disegnare una curva Spline cardinale chiusa  
   
--   Usare la <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metodo del <xref:System.Drawing.Graphics> classe per disegnare una curva spline cardinale chiusa. In una spline di tipo cardinal chiusa, la curva continua fino all'ultimo punto della matrice e si connette con il primo punto della matrice. L'esempio seguente disegna una spline di tipo cardinal chiusa che attraversa sei punti designati. La figura seguente mostra la spline chiusa e i punti di sei.  
+-   Usare la <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metodo del <xref:System.Drawing.Graphics> classe per disegnare una curva spline cardinale chiusa. In una spline di tipo cardinal chiusa, la curva continua fino all'ultimo punto della matrice e si connette con il primo punto della matrice. L'esempio seguente disegna una spline di tipo cardinal chiusa che attraversa sei punti designati. La figura seguente mostra la spline di tipo chiusa insieme a sei punti:  
   
- ![Cardinal Spline](./media/cardinalspline1a.png "CardinalSpline1A")  
+ ![Diagramma che mostra una spline di tipo cardinal chiusa.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
@@ -41,7 +41,7 @@ Spline di tipo cardinal è una curva che passa attraverso un set specificato di 
   
 -   Modificare la modalità di una spline di tipo cardinal devia passando un argomento di tensione per la <xref:System.Drawing.Graphics.DrawCurve%2A> (metodo). L'esempio seguente disegna una spline di tipo cardinal tre che passano attraverso lo stesso set di punti. La figura seguente illustra le tre curve insieme ai relativi valori di tensione. Si noti che quando la tensione è 0, i punti connessi da linee rette.  
   
- ![Cardinal Spline](./media/cardinalspline2.png "CardinalSpline2")  
+ ![Diagramma che mostra tre spline cardinale.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
