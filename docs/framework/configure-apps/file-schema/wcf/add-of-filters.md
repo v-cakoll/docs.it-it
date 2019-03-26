@@ -2,23 +2,23 @@
 title: <add> di <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 0e42766cd94b58562bc5728d517e65e80f558cda
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1340b70cf4656b764370a14955a2f4d6f6209fe4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288795"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466023"
 ---
-# <a name="add-of-filters"></a><span data-ttu-id="ea689-102">\<aggiungere > di \<filtri ></span><span class="sxs-lookup"><span data-stu-id="ea689-102">\<add> of \<filters></span></span>
-<span data-ttu-id="ea689-103">Filtro XPath che specifica il tipo di messaggio da registrare.</span><span class="sxs-lookup"><span data-stu-id="ea689-103">A XPath filter that specifies the kind of message to be logged.</span></span>  
+# <a name="add-of-filters"></a><span data-ttu-id="58ec1-102">\<aggiungere > di \<filtri ></span><span class="sxs-lookup"><span data-stu-id="58ec1-102">\<add> of \<filters></span></span>
+<span data-ttu-id="58ec1-103">Filtro XPath che specifica il tipo di messaggio da registrare.</span><span class="sxs-lookup"><span data-stu-id="58ec1-103">A XPath filter that specifies the kind of message to be logged.</span></span>  
   
- <span data-ttu-id="ea689-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ea689-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ea689-105">\<diagnostica ></span><span class="sxs-lookup"><span data-stu-id="ea689-105">\<diagnostic></span></span>  
-<span data-ttu-id="ea689-106">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="ea689-106">\<messageLogging></span></span>  
-<span data-ttu-id="ea689-107">\<filters></span><span class="sxs-lookup"><span data-stu-id="ea689-107">\<filters></span></span>  
-<span data-ttu-id="ea689-108">\<add></span><span class="sxs-lookup"><span data-stu-id="ea689-108">\<add></span></span>  
+ <span data-ttu-id="58ec1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="58ec1-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="58ec1-105">\<diagnostica ></span><span class="sxs-lookup"><span data-stu-id="58ec1-105">\<diagnostic></span></span>  
+<span data-ttu-id="58ec1-106">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="58ec1-106">\<messageLogging></span></span>  
+<span data-ttu-id="58ec1-107">\<filters></span><span class="sxs-lookup"><span data-stu-id="58ec1-107">\<filters></span></span>  
+<span data-ttu-id="58ec1-108">\<add></span><span class="sxs-lookup"><span data-stu-id="58ec1-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea689-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ea689-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58ec1-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="58ec1-109">Syntax</span></span>  
   
 ```xml  
 <filters>
@@ -26,35 +26,35 @@ ms.locfileid: "55288795"
 </filters>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ea689-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ea689-110">Attributes and Elements</span></span>  
- <span data-ttu-id="ea689-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ea689-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="58ec1-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="58ec1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="58ec1-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="58ec1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ea689-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="ea689-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="58ec1-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="58ec1-112">Attributes</span></span>  
   
-|<span data-ttu-id="ea689-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="ea689-113">Attribute</span></span>|<span data-ttu-id="ea689-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ea689-114">Description</span></span>|  
+|<span data-ttu-id="58ec1-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="58ec1-113">Attribute</span></span>|<span data-ttu-id="58ec1-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58ec1-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ea689-115">filtro</span><span class="sxs-lookup"><span data-stu-id="ea689-115">filter</span></span>|<span data-ttu-id="ea689-116">Stringa che specifica una query su un documento XML definito da un'espressione di XPath 1.0.</span><span class="sxs-lookup"><span data-stu-id="ea689-116">A string that specifies a query on an XML document defined by an XPath 1.0 expression.</span></span> <span data-ttu-id="ea689-117">Per altre informazioni, vedere <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span><span class="sxs-lookup"><span data-stu-id="ea689-117">For more information, see <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span></span>|  
+|<span data-ttu-id="58ec1-115">filtro</span><span class="sxs-lookup"><span data-stu-id="58ec1-115">filter</span></span>|<span data-ttu-id="58ec1-116">Stringa che specifica una query su un documento XML definito da un'espressione di XPath 1.0.</span><span class="sxs-lookup"><span data-stu-id="58ec1-116">A string that specifies a query on an XML document defined by an XPath 1.0 expression.</span></span> <span data-ttu-id="58ec1-117">Per altre informazioni, vedere <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span><span class="sxs-lookup"><span data-stu-id="58ec1-117">For more information, see <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ea689-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ea689-118">Child Elements</span></span>  
- <span data-ttu-id="ea689-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="ea689-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="58ec1-118">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="58ec1-118">Child Elements</span></span>  
+ <span data-ttu-id="58ec1-119">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="58ec1-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ea689-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ea689-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="58ec1-120">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="58ec1-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="ea689-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="ea689-121">Element</span></span>|<span data-ttu-id="ea689-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ea689-122">Description</span></span>|  
+|<span data-ttu-id="58ec1-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="58ec1-121">Element</span></span>|<span data-ttu-id="58ec1-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58ec1-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ea689-123">\<filters></span><span class="sxs-lookup"><span data-stu-id="ea689-123">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|<span data-ttu-id="ea689-124">Contiene una raccolta di filtri di XPath usati per controllare il tipo di messaggio registrato.</span><span class="sxs-lookup"><span data-stu-id="ea689-124">Contains a collection of XPath filters used to control what kind of message is logged.</span></span>|  
+|[<span data-ttu-id="58ec1-123">\<filters></span><span class="sxs-lookup"><span data-stu-id="58ec1-123">\<filters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|<span data-ttu-id="58ec1-124">Contiene una raccolta di filtri di XPath usati per controllare il tipo di messaggio registrato.</span><span class="sxs-lookup"><span data-stu-id="58ec1-124">Contains a collection of XPath filters used to control what kind of message is logged.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ea689-125">Note</span><span class="sxs-lookup"><span data-stu-id="ea689-125">Remarks</span></span>  
- <span data-ttu-id="ea689-126">I filtri vengono applicati solo al livello di trasporto, specificato da `logMessagesAtTransportLevel` impostato `true`.</span><span class="sxs-lookup"><span data-stu-id="ea689-126">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="ea689-127">I filtri non influiscono sulla registrazione dei messaggi a livello di servizio e in formato non valido.</span><span class="sxs-lookup"><span data-stu-id="ea689-127">Service level and malformed message logging are not affected by filters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58ec1-125">Note</span><span class="sxs-lookup"><span data-stu-id="58ec1-125">Remarks</span></span>  
+ <span data-ttu-id="58ec1-126">I filtri vengono applicati solo al livello di trasporto, specificato da `logMessagesAtTransportLevel` impostato `true`.</span><span class="sxs-lookup"><span data-stu-id="58ec1-126">Filters are applied only at the transport layer, specified by `logMessagesAtTransportLevel` is `true`.</span></span> <span data-ttu-id="58ec1-127">I filtri non influiscono sulla registrazione dei messaggi a livello di servizio e in formato non valido.</span><span class="sxs-lookup"><span data-stu-id="58ec1-127">Service level and malformed message logging are not affected by filters.</span></span>  
   
- <span data-ttu-id="ea689-128">Per aggiungere un filtro alla raccolta, usare la parola chiave `add`.</span><span class="sxs-lookup"><span data-stu-id="ea689-128">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="ea689-129">Quando sono definiti uno o più filtri, solo i messaggi che corrispondono almeno a uno dei filtri vengono registrati.</span><span class="sxs-lookup"><span data-stu-id="ea689-129">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="ea689-130">Se non è definito alcun filtro, passeranno tutti i messaggi.</span><span class="sxs-lookup"><span data-stu-id="ea689-130">If no filter is defined, all messages pass through.</span></span>  
+ <span data-ttu-id="58ec1-128">Per aggiungere un filtro alla raccolta, usare la parola chiave `add`.</span><span class="sxs-lookup"><span data-stu-id="58ec1-128">To add a filter to the collection, use the `add` keyword.</span></span> <span data-ttu-id="58ec1-129">Quando sono definiti uno o più filtri, solo i messaggi che corrispondono almeno a uno dei filtri vengono registrati.</span><span class="sxs-lookup"><span data-stu-id="58ec1-129">When one or more filters are defined, only messages that match at least one of the filters are logged.</span></span> <span data-ttu-id="58ec1-130">Se non è definito alcun filtro, passeranno tutti i messaggi.</span><span class="sxs-lookup"><span data-stu-id="58ec1-130">If no filter is defined, all messages pass through.</span></span>  
   
- <span data-ttu-id="ea689-131">I filtri supportano la sintassi Xpath completa e sono applicati nell'ordine in cui vengono visualizzati nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ea689-131">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="ea689-132">Un filtro sintatticamente errato determina un'eccezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="ea689-132">A syntactically incorrect filter results in a configuration exception.</span></span>  
+ <span data-ttu-id="58ec1-131">I filtri supportano la sintassi Xpath completa e sono applicati nell'ordine in cui vengono visualizzati nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="58ec1-131">Filters support the full XPath syntax, and are applied in the order they appear in the configuration file.</span></span> <span data-ttu-id="58ec1-132">Un filtro sintatticamente errato determina un'eccezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="58ec1-132">A syntactically incorrect filter results in a configuration exception.</span></span>  
   
- <span data-ttu-id="ea689-133">Nell'esempio seguente viene illustrato come configurare un filtro che registra solo messaggi con una sezione intestazione SOAP.</span><span class="sxs-lookup"><span data-stu-id="ea689-133">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
+ <span data-ttu-id="58ec1-133">Nell'esempio seguente viene illustrato come configurare un filtro che registra solo messaggi con una sezione intestazione SOAP.</span><span class="sxs-lookup"><span data-stu-id="58ec1-133">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ea689-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="ea689-134">Example</span></span>  
- <span data-ttu-id="ea689-135">Nell'esempio seguente viene illustrato come configurare un filtro che registra solo messaggi con una sezione intestazione SOAP.</span><span class="sxs-lookup"><span data-stu-id="ea689-135">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
+## <a name="example"></a><span data-ttu-id="58ec1-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="58ec1-134">Example</span></span>  
+ <span data-ttu-id="58ec1-135">Nell'esempio seguente viene illustrato come configurare un filtro che registra solo messaggi con una sezione intestazione SOAP.</span><span class="sxs-lookup"><span data-stu-id="58ec1-135">The following is an example of how to configure a filter that records only messages that have a SOAP Header section.</span></span>  
   
 ```xml  
 <messageLogging logEntireMessage="true"
@@ -70,7 +70,7 @@ ms.locfileid: "55288795"
 </messageLogging>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ea689-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ea689-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58ec1-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="58ec1-136">See also</span></span>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
@@ -78,6 +78,5 @@ ms.locfileid: "55288795"
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [<span data-ttu-id="ea689-137">Configurazione della registrazione dei messaggi</span><span class="sxs-lookup"><span data-stu-id="ea689-137">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [<span data-ttu-id="ea689-138">Configurazione della registrazione dei messaggi</span><span class="sxs-lookup"><span data-stu-id="ea689-138">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [<span data-ttu-id="ea689-139">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="ea689-139">\<messageLogging></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [<span data-ttu-id="58ec1-137">Configurazione della registrazione dei messaggi</span><span class="sxs-lookup"><span data-stu-id="58ec1-137">Configuring Message Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [<span data-ttu-id="58ec1-138">\<messageLogging></span><span class="sxs-lookup"><span data-stu-id="58ec1-138">\<messageLogging></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
