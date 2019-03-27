@@ -1,0 +1,38 @@
+items:
+- name: Amministrazione e diagnostica
+  href: index.md
+- name: Registrazione messaggi
+  href: message-logging.md
+  items:
+  - name: Cenni preliminari sul flusso di messaggi
+    href: message-flow-overview.md
+  - name: Configurazione della registrazione dei messaggi
+    href: configuring-message-logging.md
+  - name: Visualizzazione dei log dei messaggi
+    href: viewing-message-logs.md
+  - name: Problemi di sicurezza per la registrazione dei messaggi
+    href: security-concerns-for-message-logging.md
+  - name: Traccia
+    href: tracing/
+  - name: Traccia analitica con ETW
+    href: etw/
+  - name: Contatori delle prestazioni
+    href: performance-counters/
+  - name: Registrazione eventi
+    href: event-logging/
+  - name: Uso di Strumentazione gestione Windows (WMI) per la diagnostica
+    href: wmi/
+  - name: Riferimenti per le eccezioni
+    href: exceptions-reference/
+- name: Configurazione dell'applicazione
+  href: configuring-your-application.md
+- name: Strumento di registrazione di ServiceModel
+  href: servicemodel-registration-tool.md
+- name: Distribuzione di servizi
+  href: deploying-services.md
+ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469596"

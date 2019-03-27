@@ -1,0 +1,30 @@
+items:
+- name: Linee guida per le librerie open source
+  href: index.md
+  items:
+  - name: Introduzione
+    href: get-started.md
+  - name: Specifica di destinazioni multipiattaforma
+    href: cross-platform-targeting.md
+  - name: Denominazione sicura
+    href: strong-naming.md
+  - name: NuGet
+    href: nuget.md
+    items:
+    - name: Dipendenze
+      href: dependencies.md
+    - name: Collegamento all'origine
+      href: sourcelink.md
+    - name: Pubblicazione
+      href: publish-nuget-package.md
+  - name: Controllo delle versioni
+    href: versioning.md
+    items:
+    - name: Modifiche che causano un'interruzione
+      href: breaking-changes.md
+ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468701"

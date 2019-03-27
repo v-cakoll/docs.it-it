@@ -1,0 +1,48 @@
+items:
+- name: LINQ (Language-Integrated Query)
+  href: index.md
+  items:
+  - name: Nozioni fondamentali sulle espressioni di query
+    href: query-expression-basics.md
+  - name: LINQ in C#
+    href: linq-in-csharp.md
+  - name: Scrivere query LINQ in C#
+    href: write-linq-queries.md
+  - name: Eseguire query in una raccolta di oggetti
+    href: query-a-collection-of-objects.md
+  - name: Ottenere una query da un metodo
+    href: return-a-query-from-a-method.md
+  - name: Archiviare i risultati di una query in memoria
+    href: store-the-results-of-a-query-in-memory.md
+  - name: Raggruppare i risultati di una query
+    href: group-query-results.md
+  - name: Creare un gruppo annidato
+    href: create-a-nested-group.md
+  - name: Eseguire una sottoquery su un'operazione di raggruppamento
+    href: perform-a-subquery-on-a-grouping-operation.md
+  - name: Raggruppare i risultati per chiavi contigue
+    href: group-results-by-contiguous-keys.md
+  - name: Specificare dinamicamente i filtri dei predicati in fase di esecuzione
+    href: dynamically-specify-predicate-filters-at-runtime.md
+  - name: Eseguire inner join
+    href: perform-inner-joins.md
+  - name: Eseguire join raggruppati
+    href: perform-grouped-joins.md
+  - name: Eseguire left outer join
+    href: perform-left-outer-joins.md
+  - name: Ordinare i risultati di una clausola join
+    href: order-the-results-of-a-join-clause.md
+  - name: Eseguire un join usando chiavi composte
+    href: join-by-using-composite-keys.md
+  - name: Eseguire operazioni di join personalizzate
+    href: perform-custom-join-operations.md
+  - name: Gestire i valori Null nelle espressioni di query
+    href: handle-null-values-in-query-expressions.md
+  - name: Gestire le eccezioni nelle espressioni di query
+    href: handle-exceptions-in-query-expressions.md
+ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468696"

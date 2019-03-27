@@ -1,0 +1,153 @@
+items:
+- name: Contatori delle prestazioni
+  href: index.md
+  items:
+  - name: Contatori delle prestazioni per l'operazione
+    href: operation-performance-counters.md
+    items:
+    - name: Chiamate
+      href: calls.md
+    - name: Chiamate al secondo
+      href: calls-per-second.md
+    - name: Chiamate in sospeso
+      href: calls-outstanding.md
+    - name: Chiamate non riuscite
+      href: calls-failed.md
+    - name: Chiamate non riuscite al secondo
+      href: calls-failed-per-second.md
+    - name: Chiamate con errori
+      href: calls-faulted.md
+    - name: Chiamate non riuscite al secondo
+      href: calls-faulted-per-second.md
+    - name: Durata chiamate
+      href: calls-duration.md
+    - name: Errori di convalida e di autenticazione della protezione
+      href: security-validation-and-authentication-failures.md
+    - name: Errori di convalida di sicurezza e di autenticazione al secondo
+      href: security-validation-and-authentication-failures-per-second.md
+    - name: Chiamate di sicurezza non autorizzate
+      href: security-calls-not-authorized.md
+    - name: Chiamate di sicurezza non autorizzate al secondo
+      href: security-calls-not-authorized-per-second.md
+    - name: Transazioni propagate
+      href: transactions-flowed.md
+    - name: Transazioni propagate al secondo
+      href: transactions-flowed-per-second.md
+  - name: Contatori delle prestazioni del servizio
+    href: service-performance-counters.md
+    items:
+    - name: Chiamate
+      href: service-calls.md
+    - name: Chiamate al secondo
+      href: service-calls-per-second.md
+    - name: Chiamate in sospeso
+      href: service-calls-outstanding.md
+    - name: Chiamate non riuscite
+      href: service-calls-failed.md
+    - name: Chiamate non riuscite al secondo
+      href: service-calls-failed-per-second.md
+    - name: Chiamate con errori
+      href: service-calls-faulted.md
+    - name: Chiamate non riuscite al secondo
+      href: service-calls-faulted-per-second.md
+    - name: Durata chiamate
+      href: service-calls-duration.md
+    - name: Istanze
+      href: instances.md
+    - name: Istanze al secondo
+      href: instances-per-second.md
+    - name: Percentuale del numero massimo di chiamate simultanee
+      href: percent-of-max-concurrent-calls.md
+    - name: Percentuale del numero massimo di istanze simultanee
+      href: percent-of-max-concurrent-instances.md
+    - name: Percentuale del numero massimo di sessioni simultanee
+      href: percent-of-max-concurrent-sessions.md
+    - name: Messaggi in coda eliminati
+      href: queue-dropped-messages.md
+    - name: Messaggi in coda eliminati al secondo
+      href: queue-dropped-messages-per-second.md
+    - name: Messaggi non elaborabili in coda
+      href: queued-poison-messages.md
+    - name: Messaggi non elaborabili in coda al secondo
+      href: queued-poison-messages-per-second.md
+    - name: Messaggi in coda rifiutati
+      href: queued-rejected-messages.md
+    - name: Messaggi in coda rifiutati al secondo
+      href: queued-rejected-messages-per-second.md
+    - name: Messaggi di messaggistica affidabile ignorati
+      href: reliable-messaging-messages-dropped.md
+    - name: Messaggi di messaggistica affidabile ignorati al secondo
+      href: reliable-messaging-messages-dropped-per-second.md
+    - name: Sessioni di messaggistica affidabile con errori
+      href: reliable-messaging-sessions-faulted.md
+    - name: Sessioni di messaggistica affidabile con errori per secondo
+      href: reliable-messaging-sessions-faulted-per-second.md
+    - name: Chiamate di sicurezza non autorizzate
+      href: service-security-calls-not-authorized.md
+    - name: Chiamate di sicurezza non autorizzate al secondo
+      href: service-security-calls-not-authorized-per-second.md
+    - name: Errori di convalida e di autenticazione della protezione
+      href: service-security-validation-and-authentication-failures.md
+    - name: Errori di convalida di sicurezza e di autenticazione al secondo
+      href: service-security-validation-and-authentication-failures-per-second.md
+    - name: Transazioni propagate
+      href: service-transactions-flowed.md
+    - name: Transazioni propagate al secondo
+      href: service-transactions-flowed-per-second.md
+    - name: Operazioni transazionali interrotte
+      href: transacted-operations-aborted.md
+    - name: Operazioni transazionali interrotte ogni secondo
+      href: transacted-operations-aborted-per-second.md
+    - name: Operazioni transazionali con commit eseguito
+      href: transacted-operations-committed.md
+    - name: Operazioni transazionali con commit eseguito al secondo
+      href: transacted-operations-committed-per-second.md
+    - name: Operazioni transazionali incerte
+      href: transacted-operations-in-doubt.md
+    - name: Operazioni transazionali in dubbio al secondo
+      href: transacted-operations-in-doubt-per-second.md
+  - name: Contatori delle prestazioni dell'endpoint
+    href: endpoint-performance-counters.md
+    items:
+    - name: Chiamate
+      href: endpoint-calls.md
+    - name: Chiamate al secondo
+      href: endpoint-calls-per-second.md
+    - name: Chiamate in sospeso
+      href: endpoint-calls-outstanding.md
+    - name: Chiamate non riuscite
+      href: endpoint-calls-failed.md
+    - name: Chiamate non riuscite al secondo
+      href: endpoint-calls-failed-per-second.md
+    - name: Chiamate con errori
+      href: endpoint-calls-faulted.md
+    - name: Chiamate non riuscite al secondo
+      href: endpoint-calls-faulted-per-second.md
+    - name: Durata chiamate
+      href: endpoint-calls-duration.md
+    - name: Messaggi di messaggistica affidabile ignorati
+      href: endpoint-reliable-messaging-messages-dropped.md
+    - name: Messaggi di messaggistica affidabile ignorati al secondo
+      href: endpoint-reliable-messaging-messages-dropped-per-second.md
+    - name: Sessioni di messaggistica affidabile con errori
+      href: endpoint-reliable-messaging-sessions-faulted.md
+    - name: Sessioni di messaggistica affidabile con errori per secondo
+      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+    - name: Chiamate di sicurezza non autorizzate
+      href: endpoint-security-calls-not-authorized.md
+    - name: Chiamate di sicurezza non autorizzate al secondo
+      href: endpoint-security-calls-not-authorized-per-second.md
+    - name: Errori di convalida e di autenticazione della protezione
+      href: endpoint-security-validation-and-authentication-failures.md
+    - name: Errori di convalida di sicurezza e di autenticazione al secondo
+      href: endpoint-security-validation-and-authentication-failures-per-second.md
+    - name: Transazioni propagate
+      href: endpoint-transactions-flowed.md
+    - name: Transazioni propagate al secondo
+      href: endpoint-transactions-flowed-per-second.md
+ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468768"

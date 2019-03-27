@@ -3,16 +3,11 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: Documentazione di .NET
-description: Informazioni su come usare .NET per creare un'ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
+description: 'Informazioni su come usare .NET per creare un''ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.'
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 1eb9f263c26dd86873df1320f77c3944e9bfd7d2
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286507"
 ---
+<!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
