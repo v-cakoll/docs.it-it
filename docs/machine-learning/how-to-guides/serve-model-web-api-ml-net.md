@@ -3,12 +3,12 @@ title: Fornire il modello di Machine Learning nell'API Web ASP.NET Core
 description: Fornire il modello di Machine Learning per l'analisi del sentiment ML.NET tramite Internet usando l'API Web ASP.NET Core
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856703"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307915"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Procedura: Fornire il modello di Machine Learning tramite l'API Web ASP.NET Core
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Creare il servizio di previsione
+## <a name="register-predictionengine-for-use-in-application"></a>Registrare PredictionEngine per usarlo nell'applicazione
 
-Per organizzare e riutilizzare la logica di previsione nell'intera applicazione, creare un servizio di previsione.
-
-1. Nel progetto creare una directory denominata *Services* in cui archiviare i servizi usati dall'applicazione:
-
-    In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi > Nuova cartella**. Digitare "Services" e premere **INVIO**.
-
-1. In Esplora soluzioni fare clic con il pulsante destro del mouse sulla directory *Services* e quindi scegliere **Aggiungi > Nuovo elemento**.
-1. Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Classe** e modificare il valore del campo **Nome** impostando *PredictionService.cs*. Selezionare quindi il pulsante **Aggiungi**. Il file *PredictionService.cs* viene aperto nell'editor del codice. Aggiungere l'istruzione using seguente all'inizio del file *PredictionService.cs*:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Rimuovere la definizione di classe esistente e aggiungere il codice seguente al file *PredictionService.cs*:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Registrare il servizio di previsione per usarlo nell'applicazione
-
-Per usare il servizio di previsione nell'applicazione, lo si dovrà creare ogni volta che sarà necessario. In tal caso, una procedura consigliata da prendere in considerazione è l'inserimento delle dipendenze in ASP.NET.
+Per eseguire una sola stima, è possibile usare `PredictionEngine`. Per usare `PredictionEngine` nell'applicazione, è necessario crearlo ogni volta che è necessario. In tal caso, una procedura consigliata da prendere in considerazione è l'inserimento delle dipendenze in ASP.NET.
 
 Il collegamento seguente fornisce altre informazioni sull'[inserimento delle dipendenze](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Aggiungere le righe di codice seguenti al metodo *ConfigureServices*:
+2. Aggiungere le righe di codice seguenti al metodo *ConfigureServices*:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` non è thread-safe. Per limitare il costo della creazione dell'oggetto, la durata del servizio deve essere di tipo *Con ambito*. Gli oggetti *con ambito* sono gli stessi all'interno di una richiesta, ma variano nelle diverse richieste. Visitare il collegamento seguente per altre informazioni sulle [durate dei servizi](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
 
 In generale, questo codice inizializza automaticamente gli oggetti e i servizi quando vengono richiesti dall'applicazione invece di doverlo fare manualmente.
 
@@ -202,9 +156,10 @@ Per elaborare le richieste HTTP in ingresso, è necessario creare un controller.
 1. Nel prompt impostare il campo **Nome controller** su *PredictController.cs*. Selezionare quindi il pulsante Aggiungi. Il file *PredictController.cs* viene aperto nell'editor del codice. Aggiungere l'istruzione using seguente all'inizio del file *PredictController.cs*:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Rimuovere la definizione di classe esistente e aggiungere il codice seguente al file *PredictController.cs*:
@@ -212,12 +167,12 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente al 
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Il servizio di previsione viene quindi assegnato passandolo al costruttore del controller ottenuto tramite l'inserimento delle dipendenze. Nel metodo POST di questo controller il servizio di previsione viene poi usato per eseguire previsioni e restituire i risultati all'utente in caso di esito positivo.
+`PredictionEngine` viene quindi assegnato passandolo al costruttore del controller ottenuto tramite l'inserimento delle dipendenze. Nel metodo POST di questo controller `PredictionEngine` viene poi usato per eseguire previsioni e restituire i risultati all'utente in caso di esito positivo.
 
 ## <a name="test-web-api-locally"></a>Testare l'API Web in locale
 

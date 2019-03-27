@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843939"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262582"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 I criteri discard nell'espressione switch precedente individuano una corrispondenza quando `x` o `y` è 0, ma non entrambi. Un'espressione switch deve produrre un valore o generare un'eccezione. Se nessuno dei casi corrisponde, l'espressione switch genera un'eccezione. Il compilatore genera un avviso per l'utente se non è possibile includere tutti i casi possibili nell'espressione switch.
+
+È possibile esplorare le tecniche dei criteri di ricerca in questa [esercitazione avanzata sui criteri di ricerca](../tutorials/pattern-matching.md).
 
 ## <a name="using-declarations"></a>Dichiarazioni using
 

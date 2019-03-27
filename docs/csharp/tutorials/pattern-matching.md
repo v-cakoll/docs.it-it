@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125811"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262518"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -17,9 +17,9 @@ In C# 7 sono state introdotte le funzionalità dei criteri di ricerca di base. T
 In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
-> * Come riconoscere le situazioni in cui usare i criteri di ricerca.
-> * Come usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
-> * Come combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
+> * Riconoscere le situazioni in cui usare i criteri di ricerca.
+> * Usare le espressioni dei criteri di ricerca per implementare il comportamento in base ai tipi e ai valori delle proprietà.
+> * Combinare i criteri di ricerca con altre tecniche per creare algoritmi completi.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -45,12 +45,12 @@ In base a questa breve descrizione, potrebbe essere stata rapidamente delineata 
 
 ## <a name="pattern-matching-designs"></a>Progettazioni di criteri di ricerca
 
-Lo scenario usato in questa esercitazione evidenzia i tipi di problemi che è possibile risolvere usando i criteri di ricerca: 
+Lo scenario usato in questa esercitazione evidenzia i tipi di problemi che è possibile risolvere usando i criteri di ricerca:
 
 - Gli oggetti da usare non sono in una gerarchia di oggetti che corrisponde ai propri obiettivi. È possibile che si stiano usando classi che fanno parte di sistemi non correlati.
 - Le funzionalità che si stanno aggiungendo non fanno parte dell'astrazione fondamentale per queste classi. Il pedaggio pagato da un veicolo *cambia* per i diversi tipi di veicoli, ma il pedaggio non è una funzione fondamentale del veicolo.
 
-Quando la *forma* dei dati e le *operazioni* su tali dati non sono descritte insieme, le funzionalità dei criteri di ricerca in C# ne semplificano l'uso. 
+Quando la *forma* dei dati e le *operazioni* su tali dati non sono descritte insieme, le funzionalità dei criteri di ricerca in C# ne semplificano l'uso.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implementare i calcoli di base per i pedaggi
 
@@ -61,7 +61,7 @@ Il calcolo dei pedaggi più semplice si basa solo sul tipo di veicolo:
 - Un veicolo `Bus` paga $ 5,00.
 - Un veicolo `DeliveryTruck` paga $ 10,00
 
-Creare una nuova classe `TollCalculator` e implementare i criteri di ricerca per il tipo di veicolo per ottenere l'ammontare dei pedaggi.
+Creare una nuova classe `TollCalculator` e implementare i criteri di ricerca per il tipo di veicolo per ottenere l'ammontare dei pedaggi. Nel codice seguente viene illustrata l'implementazione di `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-Il codice precedente usa un'**espressione switch** (diversa da un'istruzione [`switch`](../language-reference/keywords/switch.md)) che testa il **criterio del tipo**. Un'**espressione switch** inizia con la variabile, `vehicle` nel codice precedente, seguita dalla parola chiave `switch`. Seguono quindi tutti gli **elementi switch** tra parentesi graffe. L'espressione `switch` perfeziona ulteriormente la sintassi che racchiude l'istruzione `switch`. La parola chiave `case` viene omessa e il risultato di ogni elemento è un'espressione. Gli ultimi due elementi mostrano una nuova funzionalità del linguaggio. Il case `{ }` corrisponde a eventuali oggetti non Null che non corrispondevano a un elemento precedente. Questo elemento rileva eventuali tipi non corretti passati a questo metodo. Il criterio `null` infine rileva quando `null` viene passato a questo metodo. Il criterio `null` può essere l'ultimo perché gli altri criteri dei tipi corrispondono solo a un oggetto non Null del tipo corretto.
+Il codice precedente usa un'**espressione switch** (diversa da un'istruzione [`switch`](../language-reference/keywords/switch.md)) che testa il **criterio del tipo**. Un'**espressione switch** inizia con la variabile, `vehicle` nel codice precedente, seguita dalla parola chiave `switch`. Seguono quindi tutti gli **elementi switch** tra parentesi graffe. L'espressione `switch` perfeziona ulteriormente la sintassi che racchiude l'istruzione `switch`. La parola chiave `case` viene omessa e il risultato di ogni elemento è un'espressione. Gli ultimi due elementi mostrano una nuova funzionalità del linguaggio. Il case `{ }` corrisponde a eventuali oggetti non Null che non corrispondevano a un elemento precedente. Questo elemento rileva eventuali tipi non corretti passati a questo metodo.  Il case `{ }` deve seguire i case per ogni tipo di veicolo. Se l'ordine è stato invertito, il case `{ }` deve avere la precedenza. Il criterio `null` infine rileva quando `null` viene passato a questo metodo. Il criterio `null` può essere l'ultimo perché gli altri criteri dei tipi corrispondono solo a un oggetto non Null del tipo corretto.
 
 Per testare questo codice, usare il codice seguente in `Program.cs`:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ L'autorità di regolazione dei pedaggi vuole incoraggiare i conducenti a viaggia
 - Gli autobus con meno del 50% dei posti occupati pagano un extra di $ 2,00.
 - Gli autobus con più del 90% dei posti occupati usufruiscono di uno sconto di $ 1,00.
 
-Queste regole possono essere implementate usando il **criterio di proprietà** nella stessa espressione switch. Dopo aver determinato il tipo, il criterio di proprietà esamina le proprietà dell'oggetto.  Il case singolo di `Car` si espande a quattro case diversi:
+Queste regole possono essere implementate usando il **criterio di proprietà** nella stessa espressione switch. Dopo aver determinato il tipo, il criterio di proprietà esamina le proprietà dell'oggetto. Il case singolo di `Car` si espande a quattro case diversi:
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-I primi tre case testano il tipo come `Car`, quindi controllano il valore della proprietà `Passengers`. Se entrambi corrispondono, l'espressione viene valutata e restituita. La clausola finale è la clausola `when` di un elemento switch. La clausola `when` viene usata per testare condizioni diverse dall'uguaglianza per una proprietà. Nell'esempio precedente la clausola `when` verifica che nell'auto ci siano più di 2 passeggeri, anche se non è strettamente necessaria in questo esempio.
+I primi tre case testano il tipo come `Car`, quindi controllano il valore della proprietà `Passengers`. Se entrambi corrispondono, l'espressione viene valutata e restituita.
 
 Si espanderanno in modo analogo anche i case dei taxi:
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-L'autorità di regolazione dei pedaggi non considera il numero di passeggeri dei furgoni, ma applica tariffe più elevate in base alla categoria di peso dei furgoni. I furgoni oltre le 5000 libbre (2268 kg) pagano un extra di $ 5,00. I furgoni leggeri, sotto le 3000 libbre (1360 kg), usufruiscono di uno sconto di $ 2,00.  Tale regola viene implementata con il codice seguente:
+L'autorità di regolazione dei pedaggi non considera il numero di passeggeri dei furgoni, ma applica tariffe più elevate in base alla categoria di peso dei furgoni. I furgoni oltre le 5000 libbre (2268 kg) pagano un extra di $ 5,00. I furgoni leggeri, sotto le 3000 libbre (1360 kg), usufruiscono di uno sconto di $ 2,00. Tale regola viene implementata con il codice seguente:
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Al termine, si avrà un metodo molto simile al seguente:
+Il codice precedente illustra la clausola `when` di un elemento switch. La clausola `when` viene usata per testare condizioni diverse dall'uguaglianza per una proprietà. Al termine, si avrà un metodo molto simile al seguente:
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -309,7 +309,7 @@ La tabella seguente mostra le combinazioni dei valori di input e il moltiplicato
 
 Sono presenti 16 combinazioni diverse delle tre variabili. Combinando alcune delle condizioni, si semplificherà l'espressione switch finale.
 
-Il sistema che raccoglie i pedaggi usa una struttura <xref:System.DateTime> per l'ora in cui il pedaggio è stato riscosso. Compilare metodi membro che creano le variabili dalla tabella precedente.  La funzione seguente usa come criterio di ricerca l'espressione switch per esprimere se <xref:System.DateTime> rappresenta il fine settimana o un giorno feriale:
+Il sistema che raccoglie i pedaggi usa una struttura <xref:System.DateTime> per l'ora in cui il pedaggio è stato riscosso. Compilare metodi membro che creano le variabili dalla tabella precedente. La funzione seguente usa come criterio di ricerca l'espressione switch per esprimere se <xref:System.DateTime> rappresenta il fine settimana o un giorno feriale:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -372,9 +372,9 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Questo esempio evidenzia uno dei vantaggi dei criteri di ricerca. I rami dei criteri vengono valutati nell'ordine indicato. Se si modifica l'ordine in modo che un ramo precedente gestisce uno dei case successivi, il compilatore avvisa l'utente. Grazie alle regole del linguaggio, è stato più facile eseguire le semplificazioni precedenti con la certezza che il codice non fosse modificato.
+Questo esempio illustra uno dei vantaggi dei criteri di ricerca. I rami dei criteri vengono infatti valutati in ordine. Se si modifica l'ordine in modo che un ramo precedente gestisce uno dei case successivi, il compilatore avvisa l'utente perché il codice non è raggiungibile. Grazie alle regole del linguaggio, è stato più facile eseguire le semplificazioni precedenti con la certezza che il codice non fosse modificato.
 
-I criteri di ricerca offrono una sintassi naturale per implementare soluzioni diverse da quelle create se si usano le tecniche orientate a oggetti. Nel cloud i dati e le funzionalità sono separati. La *forma* dei dati e le *operazioni* su di essi non sono necessariamente descritte insieme. In questa esercitazione i dati esistenti sono stati utilizzati in modi completamente diversi dalla funzione originale. I criteri di ricerca hanno consentito di scrivere funzionalità che hanno eseguito l'override di tali tipi, anche se non è stato possibile estenderli.
+I criteri di ricerca rendono alcuni tipi di codice più leggibili e costituiscono un'alternativa a tecniche orientate a oggetti quando non è possibile aggiungere codice alle classi. Nel cloud i dati e le funzionalità sono separati. La *forma* dei dati e le *operazioni* su di essi non sono necessariamente descritte insieme. In questa esercitazione i dati esistenti sono stati utilizzati in modi completamente diversi dalla funzione originale. I criteri di ricerca hanno consentito di scrivere funzionalità che hanno eseguito l'override di tali tipi, anche se non è stato possibile estenderli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

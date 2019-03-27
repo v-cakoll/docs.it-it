@@ -1,29 +1,23 @@
 ---
-title: Operatori C#
+title: 'Operatori C#'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333408"
 ---
 # <a name="c-operators"></a>Operatori C#
 
@@ -47,9 +41,9 @@ Sono gli operatori con la precedenza più alta.
 
 [a&#91;x&#93;](index-operator.md): indicizzazione oggetto aggregato.
 
-[x++](increment-operator.md): incremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
+[x++](arithmetic-operators.md#increment-operator-): incremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
 
-[x--](decrement-operator.md): decremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
+[x--](arithmetic-operators.md#decrement-operator---): decremento suffisso. Restituisce il valore di x e quindi aggiorna la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
 
 [new](../keywords/new-operator.md): creazione di un'istanza del tipo.
 
@@ -79,9 +73,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [~x](bitwise-complement-operator.md): complemento bit per bit.
 
-[~x](increment-operator.md): incremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
+[~x](arithmetic-operators.md#increment-operator-): incremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
 
-[--x](decrement-operator.md): decremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
+[--x](arithmetic-operators.md#decrement-operator---): decremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta minore (in genere sottrae il numero intero 1).
 
 [(T)x](invocation-operator.md): cast di tipo.
 
@@ -95,19 +89,19 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x * y](multiplication-operator.md): moltiplicazione.
+[x * y](arithmetic-operators.md#multiplication-operator-): moltiplicazione.
 
-[x / y](division-operator.md): divisione. Se gli operandi sono numeri interi, il risultato è un numero intero troncato verso zero (ad esempio, `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-): divisione. Se gli operandi sono numeri interi, il risultato è un numero intero troncato verso zero (ad esempio, `-7 / 2 is -3`).
 
-[x % y](remainder-operator.md): resto. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r` 
+[x % y](arithmetic-operators.md#remainder-operator-): resto. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r` 
 
 ## <a name="additive-operators"></a>Operatori additivi
 
 Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x + y](addition-operator.md): addizione.
+[x + y](arithmetic-operators.md#addition-operator-): addizione.
 
-[x – y](subtraction-operator.md): sottrazione.
+[x – y](arithmetic-operators.md#subtraction-operator--): sottrazione.
 
 ## <a name="shift-operators"></a>Operatori shift
 
@@ -195,9 +189,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [x -= y](multiplication-assignment-operator.md): assegnazione di moltiplicazione. Moltiplica il valore di `y` per il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x -= y](division-assignment-operator.md): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x -= y](arithmetic-operators.md#compound-assignment): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x %= y](remainder-assignment-operator.md): assegnazione di resto. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.
+[x %= y](arithmetic-operators.md#compound-assignment): assegnazione di resto. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.
 
 [x &= y](and-assignment-operator.md): assegnazione dell'operatore AND. Applica AND al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
@@ -210,20 +204,6 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 [x >>= y](right-shift-assignment-operator.md): assegnazione di spostamento a destra. Sposta il valore di `x` verso destra di `y` posti, archivia il risultato in `x` e restituisce il nuovo valore.
 
 [=>](lambda-operator.md): dichiarazione lambda.
-
-## <a name="arithmetic-overflow"></a>Overflow aritmetico
-
-Gli operatori aritmetici ([+](addition-operator.md), [-](subtraction-operator.md), [*](multiplication-operator.md), [/](division-operator.md)) possono produrre risultati non compresi nell'intervallo dei valori possibili per il tipo numerico coinvolto. È consigliabile fare riferimento alla sezione di un particolare operatore per i dettagli, ma in generale:
-
-- L'overflow aritmetico di interi genera un'eccezione <xref:System.OverflowException> o rimuove i bit più significativi del risultato. La divisione di interi per zero genera sempre un'eccezione <xref:System.DivideByZeroException>.
-
-   Quando si verifica un overflow di interi, ciò che accade dipende dal contesto dell'esecuzione, che può essere [verificato o non verificato](../keywords/checked-and-unchecked.md). In un contesto verificato, viene generata un'eccezione <xref:System.OverflowException>. In un contesto non verificato, i bit più significativi del risultato vengono rimossi e l'esecuzione continua. C# consente dunque di scegliere se gestire o ignorare l'overflow. Per impostazione predefinita, le operazioni aritmetiche vengono eseguite in un contesto *non verificato*.
-
-   Oltre alle operazioni aritmetiche, anche i cast da tipo integrale a tipo integrale possono causare l'overflow, ad esempio il cast di [long](../keywords/long.md) a [int](../keywords/int.md), e sono soggetti a esecuzione verificata o non verificata. Tuttavia, gli operatori bit per bit e gli operatori shift non causano mai l'overflow.
-
-- L'overflow aritmetico a virgola mobile o la divisione per zero non genera mai un'eccezione, perché i tipi a virgola mobile si basano su IEEE 754 e quindi dispongono del provisioning per la rappresentazione dell'infinito e di NaN (Not a Number).
-
-- L'overflow aritmetico [decimale](../keywords/decimal.md) genera sempre un'eccezione <xref:System.OverflowException>. La divisione di decimali per zero genera sempre un'eccezione <xref:System.DivideByZeroException>.
 
 ## <a name="see-also"></a>Vedere anche
 
