@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516513"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463007"
 ---
 # <a name="using-the-assert-method"></a>Utilizzo del metodo Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516513"
   
 -   Il metodo A è incluso nell'assembly A, il metodo B nell'assembly B e così via.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Uso di Assert  
+ ![Diagramma che mostra gli assembly del metodo Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  In questo scenario, il metodo a chiama B, B chiama C, C chiama E, E chiama F. metodo C effettua un'asserzione dell'autorizzazione per leggere i file nell'unità C (autorizzazione P1) e (metodo) E richiede l'autorizzazione per leggere i file con estensione txt nell'unità C (autorizzazione P1A). Quando viene rilevata la richiesta in F in fase di esecuzione, viene eseguita un'analisi dello stack per controllare le autorizzazioni di tutti i chiamanti di F, a partire E. E dispone dell'autorizzazione P1A, pertanto il percorso stack procede esaminando le autorizzazioni di C, in cui viene individuata l'asserzione di C. Poiché l'autorizzazione richiesta (P1A) è un subset dell'autorizzazione oggetto dell'asserzione (P1), il percorso stack si interrompe e automaticamente il controllo di sicurezza ha esito positivo. Non è importante che agli assembly A e B non sia stata concessa l'autorizzazione P1A. Con l'asserzione di P1, il metodo C garantisce che i chiamanti possano accedere alla risorsa protetta da P1, anche se non è stata loro concessa l'autorizzazione di accesso.  
   
