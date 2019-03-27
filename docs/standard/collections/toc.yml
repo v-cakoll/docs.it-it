@@ -1,0 +1,24 @@
+items:
+- name: Raccolte e strutture di dati
+  href: index.md
+  items:
+  - name: Selezione di una classe Collection
+    href: selecting-a-collection-class.md
+  - name: Tipi di raccolte comunemente utilizzate
+    href: commonly-used-collection-types.md
+  - name: Quando utilizzare raccolte generiche
+    href: when-to-use-generic-collections.md
+  - name: Confronti e ordinamenti all'interno delle raccolte
+    href: comparisons-and-sorts-within-collections.md
+  - name: Tipi di raccolta ordinati
+    href: sorted-collection-types.md
+  - name: Tipi di Collection Hashtable e Dictionary
+    href: hashtable-and-dictionary-collection-types.md
+  - name: Raccolte thread-safe
+    href: thread-safe/
+ms.openlocfilehash: c9d534277d71f3cb3f18ac90809698a3e63e5145
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469427"

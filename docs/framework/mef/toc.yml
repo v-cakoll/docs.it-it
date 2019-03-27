@@ -1,0 +1,16 @@
+items:
+- name: Managed Extensibility Framework (MEF)
+  href: index.md
+  items:
+  - name: Panoramica sul modello di programmazione con attributi (MEF)
+    href: attributed-programming-model-overview-mef.md
+  - name: Strumento di analisi composizione (Mefx)
+    href: composition-analysis-tool-mefx.md
+  - name: MEF per .NET per app Windows Store
+    href: mef-for-net-for-windows-store-apps.md
+ms.openlocfilehash: de9b31206949c867343b112769d71d7b9c9035fa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468690"

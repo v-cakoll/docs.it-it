@@ -1,0 +1,45 @@
+items:
+- name: Elaborazione delle transazioni
+  href: index.md
+  items:
+  - name: Nozioni fondamentali sulle transazioni
+    href: transaction-fundamentals.md
+  - name: Funzionalità offerte da System.Transactions
+    href: features-provided-by-system-transactions.md
+    items:
+    - name: Scrittura di un'applicazione transazionale
+      href: writing-a-transactional-application.md
+      items:
+      - name: Implementazione di una transazione implicita utilizzando l'ambito di transazione
+        href: implementing-an-implicit-transaction-using-transaction-scope.md
+      - name: Implementazione di una transazione esplicita utilizzando CommittableTransaction
+        href: implementing-an-explicit-transaction-using-committabletransaction.md
+      - name: Gestione della concorrenza con DependentTransaction
+        href: managing-concurrency-with-dependenttransaction.md
+      - name: Interoperabilità con transazioni COM+ ed Enterprise Services
+        href: interoperability-with-enterprise-services-and-com-transactions.md
+      - name: Escalation della gestione delle transazioni
+        href: transaction-management-escalation.md
+      - name: Tracce di diagnostica
+        href: diagnostic-traces.md
+      - name: Uso di System.Transactions in ASP.NET
+        href: using-system-transactions-in-aspnet.md
+    - name: Implementazione della gestione risorse
+      href: implementing-a-resource-manager.md
+      items:
+      - name: Integrazione di risorse come partecipanti a una transazione
+        href: enlisting-resources-as-participants-in-a-transaction.md
+      - name: Commit di una transazione in monofase e multifase
+        href: committing-a-transaction-in-single-phase-and-multi-phase.md
+      - name: Esecuzione del ripristino
+        href: performing-recovery.md
+      - name: Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza
+        href: security-trust-levels-in-accessing-resources.md
+      - name: Ottimizzazione mediante commit monofase e notifica monofase promuovibile
+        href: optimization-spc-and-promotable-spn.md
+ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469074"

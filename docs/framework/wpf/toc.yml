@@ -1,0 +1,35 @@
+items:
+- name: Windows Presentation Foundation
+  href: index.md
+  items:
+  - name: Introduzione
+    href: getting-started/
+  - name: Sviluppo di applicazioni
+    href: app-development/
+  - name: Avanzate
+    href: advanced/
+  - name: Controlli
+    href: controls/
+  - name: Dati
+    href: data/
+  - name: Grafica e funzionalità multimediali
+    href: graphics-multimedia/
+  - name: Sicurezza
+    href: security-wpf.md
+    items:
+    - name: Sicurezza con attendibilità parziale in WPF
+      href: wpf-partial-trust-security.md
+    - name: Strategia di sicurezza di WPF - Sicurezza della piattaforma
+      href: wpf-security-strategy-platform-security.md
+    - name: Strategia di sicurezza WPF - Progettazione della sicurezza
+      href: wpf-security-strategy-security-engineering.md
+  - name: Esempi WPF
+    href: wpf-samples.md
+  - name: Libreria di classi
+    href: class-library-wpf.md
+ms.openlocfilehash: 1e228336e8538f045cbcd2574850a9cf7fac4f21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469163"
