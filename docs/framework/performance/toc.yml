@@ -1,0 +1,71 @@
+items:
+- name: Prestazioni
+  href: index.md
+  items:
+  - name: Scrittura di app grandi e reattive in .NET Framework
+    href: writing-large-responsive-apps.md
+  - name: Memorizzazione nella cache in applicazioni .NET Framework
+    href: caching-in-net-framework-applications.md
+  - name: Inizializzazione differita
+    href: lazy-initialization.md
+    items:
+    - name: "Procedura: Eseguire l'inizializzazione lazy di oggetti"
+      href: how-to-perform-lazy-initialization-of-objects.md
+  - name: Eventi ETW in .NET Framework
+    href: etw-events.md
+    items:
+    - name: Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ
+      href: etw-events-in-task-parallel-library-and-plinq.md
+    - name: Eventi ETW in Common Language Runtime
+      href: etw-events-in-the-common-language-runtime.md
+      items:
+      - name: Controllo della registrazione di .NET Framework
+        href: controlling-logging.md
+      - name: Provider ETW di CLR
+        href: clr-etw-providers.md
+      - name: Parole chiave e livelli ETW di CLR
+        href: clr-etw-keywords-and-levels.md
+      - name: Eventi ETW di CLR
+        href: clr-etw-events.md
+        items:
+        - name: Eventi di informazione di runtime
+          href: runtime-information-etw-events.md
+        - name: Evento di eccezione generata_V1
+          href: exception-thrown-v1-etw-event.md
+        - name: Eventi di conflitto
+          href: contention-etw-events.md
+        - name: Eventi del pool di thread
+          href: thread-pool-etw-events.md
+        - name: Eventi del caricatore
+          href: loader-etw-events.md
+        - name: Eventi dei metodi
+          href: method-etw-events.md
+        - name: Eventi di Garbage Collection
+          href: garbage-collection-etw-events.md
+        - name: Eventi di traccia JIT
+          href: jit-tracing-etw-events.md
+        - name: Eventi di interoperabilità
+          href: interop-etw-events.md
+        - name: Eventi ARM
+          href: application-domain-resource-monitoring-arm-etw-events.md
+        - name: Eventi di sicurezza
+          href: security-etw-events.md
+        - name: Evento di stack
+          href: stack-etw-event.md
+  - name: Affidabilità
+    href: reliability.md
+    items:
+    - name: programmazione per SQL Server e attributi di protezione host
+      href: sql-server-programming-and-host-protection-attributes.md
+    - name: Procedure consigliate per l'ottimizzazione dell'affidabilità
+      href: reliability-best-practices.md
+    - name: aree di esecuzione vincolate
+      href: constrained-execution-regions.md
+  - name: Suggerimenti sulle prestazioni
+    href: performance-tips.md
+ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469284"

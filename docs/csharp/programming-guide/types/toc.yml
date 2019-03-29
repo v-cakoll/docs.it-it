@@ -1,0 +1,25 @@
+items:
+- name: Tipi
+  href: index.md
+  items:
+  - name: Esecuzione del cast e conversioni di tipi
+    href: casting-and-type-conversions.md
+  - name: Boxing e unboxing
+    href: boxing-and-unboxing.md
+  - name: Uso del tipo dinamico
+    href: using-type-dynamic.md
+    items:
+    - name: 'Procedura dettagliata: Creazione e uso di oggetti dinamici (C# e Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md
+  - name: 'Procedura: Convertire una matrice di byte in un int'
+    href: how-to-convert-a-byte-array-to-an-int.md
+  - name: 'Procedura: Convertire una stringa in un numero'
+    href: how-to-convert-a-string-to-a-number.md
+  - name: 'Procedura: Eseguire la conversione tra stringhe esadecimali e tipi numerici'
+    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468762"

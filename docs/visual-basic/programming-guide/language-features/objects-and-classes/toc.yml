@@ -1,0 +1,30 @@
+items:
+- name: Oggetti e classi
+  href: index.md
+  items:
+  - name: 'Procedura dettagliata: Definizione delle classi'
+    href: walkthrough-defining-classes.md
+  - name: Metodi e proprietà di overload
+    href: overloaded-properties-and-methods.md
+  - name: Nozioni fondamentali sull'ereditarietà
+    href: inheritance-basics.md
+  - name: 'Durata degli oggetti: come creare e distruggere oggetti'
+    href: object-lifetime-how-objects-are-created-and-destroyed.md
+  - name: 'Inizializzatori di oggetti: tipi anonimi e denominati'
+    href: object-initializers-named-and-anonymous-types.md
+    items:
+    - name: 'Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto'
+      href: how-to-declare-an-object-by-using-an-object-initializer.md
+  - name: Tipi anonimi
+    href: anonymous-types.md
+    items:
+    - name: 'Procedura: Dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo'
+      href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
+    - name: Definizione di tipo anonimo
+      href: anonymous-type-definition.md
+ms.openlocfilehash: e048ae6781560ee70ff6121814f5ad93b6ea30f4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468821"

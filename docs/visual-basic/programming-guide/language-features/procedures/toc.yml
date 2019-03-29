@@ -1,0 +1,121 @@
+items:
+- name: Routine in Visual Basic
+  href: index.md
+  items:
+  - name: 'Procedura: Creare una routine'
+    href: how-to-create-a-procedure.md
+  - name: Routine Sub
+    href: sub-procedures.md
+    items:
+    - name: 'Procedura: Chiamare una routine che non restituisce un valore'
+      href: how-to-call-a-procedure-that-does-not-return-a-value.md
+    - name: "Procedura: Chiamare un gestore dell'evento"
+      href: how-to-call-an-event-handler.md
+  - name: Routine Function
+    href: function-procedures.md
+    items:
+    - name: 'Procedura: Creare una routine che restituisce un valore'
+      href: how-to-create-a-procedure-that-returns-a-value.md
+    - name: 'Procedura: Restituire un valore da una routine'
+      href: how-to-return-a-value-from-a-procedure.md
+    - name: 'Procedura: Creare una routine che restituisce un valore'
+      href: how-to-call-a-procedure-that-returns-a-value.md
+  - name: Routine di proprietà
+    href: property-procedures.md
+    items:
+    - name: Proprietà implementate automaticamente
+      href: auto-implemented-properties.md
+    - name: Differenze tra proprietà e variabili
+      href: differences-between-properties-and-variables.md
+    - name: 'Procedura: Creare una proprietà'
+      href: how-to-create-a-property.md
+    - name: 'Procedura: Dichiarare una proprietà con livelli di accesso misti'
+      href: how-to-declare-a-property-with-mixed-access-levels.md
+    - name: 'Procedura: Chiamare una routine di proprietà'
+      href: how-to-call-a-property-procedure.md
+    - name: 'Procedura: Dichiarare e chiamare una proprietà predefinita'
+      href: how-to-declare-and-call-a-default-property.md
+    - name: 'Procedura: Inserire un valore in una proprietà'
+      href: how-to-put-a-value-in-a-property.md
+    - name: 'Procedura: Ottenere un valore da una proprietà'
+      href: how-to-get-a-value-from-a-property.md
+  - name: Routine di operatore
+    href: operator-procedures.md
+    items:
+    - name: 'Procedura: Definire un operatore'
+      href: how-to-define-an-operator.md
+    - name: 'Procedura: Definire un operatore di conversione'
+      href: how-to-define-a-conversion-operator.md
+    - name: 'Procedura: Chiamare una routine di operatore'
+      href: how-to-call-an-operator-procedure.md
+    - name: 'Procedura: Usare una classe che definisce gli operatori'
+      href: how-to-use-a-class-that-defines-operators.md
+  - name: Parametri e argomenti delle routine
+    href: procedure-parameters-and-arguments.md
+    items:
+    - name: Differenze tra parametri e argomenti
+      href: differences-between-parameters-and-arguments.md
+    - name: 'Procedura: Definire un parametro per una routine'
+      href: how-to-define-a-parameter-for-a-procedure.md
+    - name: 'Procedura: Passare argomenti a una routine'
+      href: how-to-pass-arguments-to-a-procedure.md
+    - name: Passaggio di argomenti per valore e per riferimento
+      href: passing-arguments-by-value-and-by-reference.md
+      items:
+      - name: Differenze tra argomenti modificabili e non modificabili
+        href: differences-between-modifiable-and-nonmodifiable-arguments.md
+      - name: Differenze tra il passaggio di un argomento per valore e per riferimento
+        href: differences-between-passing-an-argument-by-value-and-by-reference.md
+      - name: 'Procedura: Cambiare il valore di un argomento di routine'
+        href: how-to-change-the-value-of-a-procedure-argument.md
+      - name: 'Procedura: Impedire la modifica del valore di un argomento di routine'
+        href: how-to-protect-a-procedure-argument-against-value-changes.md
+      - name: 'Procedura: Forzare il passaggio di un argomento per valore'
+        href: how-to-force-an-argument-to-be-passed-by-value.md
+    - name: Passaggio di argomenti per posizione e nome
+      href: passing-arguments-by-position-and-by-name.md
+    - name: Parametri facoltativi
+      href: optional-parameters.md
+    - name: Matrici di parametri
+      href: parameter-arrays.md
+  - name: Valori restituiti di riferimento
+    href: ref-return-values.md
+  - name: Routine ricorsive
+    href: recursive-procedures.md
+  - name: Overload delle routine
+    href: procedure-overloading.md
+    items:
+    - name: 'Procedura: Definire più versioni di una routine'
+      href: how-to-define-multiple-versions-of-a-procedure.md
+    - name: 'Procedura: Chiamare una routine di overload'
+      href: how-to-call-an-overloaded-procedure.md
+    - name: "Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi"
+      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+    - name: "Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri"
+      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+    - name: Considerazioni sull'overload di routine
+      href: considerations-in-overloading-procedures.md
+    - name: Overload Resolution
+      href: overload-resolution.md
+  - name: Risoluzione dei problemi relativi alle routine
+    href: troubleshooting-procedures.md
+  - name: Metodi di estensione
+    href: extension-methods.md
+    items:
+    - name: 'Procedura: Scrivere un metodo di estensione'
+      href: how-to-write-an-extension-method.md
+    - name: 'Procedura: Chiamare un metodo di estensione'
+      href: how-to-call-an-extension-method.md
+  - name: Espressioni lambda
+    href: lambda-expressions.md
+    items:
+    - name: "Procedura: Creare un'espressione lambda"
+      href: how-to-create-a-lambda-expression.md
+  - name: Metodi parziali
+    href: partial-methods.md
+ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468869"

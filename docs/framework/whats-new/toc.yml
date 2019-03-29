@@ -1,0 +1,19 @@
+items:
+- name: Novità
+  href: index.md
+  items:
+  - name: Nuove funzionalità di accessibilità
+    href: whats-new-in-accessibility.md
+  - name: Elementi obsoleti nella libreria di classi
+    href: whats-obsolete.md
+    items:
+    - name: Tipi obsoleti
+      href: obsolete-types.md
+    - name: Membri obsoleti
+      href: obsolete-members.md
+ms.openlocfilehash: 2c01bcec7ed118bc8d32338a04686d158770d140
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468761"

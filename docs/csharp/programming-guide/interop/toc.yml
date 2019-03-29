@@ -1,0 +1,22 @@
+items:
+- name: Interoperabilità
+  href: index.md
+  items:
+  - name: Panoramica dell'interoperabilità
+    href: interoperability-overview.md
+  - name: 'Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#'
+    href: how-to-access-office-onterop-objects.md
+  - name: "Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM"
+    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+  - name: 'Procedura: Usare platform invoke per riprodurre un file audio'
+    href: how-to-use-platform-invoke-to-play-a-wave-file.md
+  - name: 'Procedura dettagliata: Programmazione di Office (C# e Visual Basic)'
+    href: walkthrough-office-programming.md
+  - name: Esempio di classe COM
+    href: example-com-class.md
+ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469121"

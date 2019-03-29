@@ -1,0 +1,42 @@
+items:
+- name: E-book sulle app serverless
+  href: index.md
+  items:
+  - name: Approcci all'architettura
+    href: architecture-approaches.md
+    items:
+    - name: Approcci alla distribuzione dell'architettura
+      href: architecture-deployment-approaches.md
+  - name: Architettura serverless
+    href: serverless-architecture.md
+    items:
+    - name: Considerazioni sull'architettura serverless
+      href: serverless-architecture-considerations.md
+    - name: Esempi di progettazione serverless
+      href: serverless-design-examples.md
+  - name: La piattaforma serverless di Azure
+    href: azure-serverless-platform.md
+    items:
+    - name: Funzioni di Azure
+      href: azure-functions.md
+    - name: Application Insights
+      href: application-insights.md
+    - name: App per la logica di Azure
+      href: logic-apps.md
+    - name: Griglia di eventi di Azure
+      href: event-grid.md
+  - name: Funzioni Durable di Azure
+    href: durable-azure-functions.md
+    items:
+    - name: Modelli di orchestrazione
+      href: orchestration-patterns.md
+  - name: Scenari di business serverless e casi d'uso
+    href: serverless-business-scenarios.md
+  - name: Conclusione
+    href: serverless-conclusion.md
+ms.openlocfilehash: d8d15dc77dd19b6e32319a98be21ddfa43073202
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469355"

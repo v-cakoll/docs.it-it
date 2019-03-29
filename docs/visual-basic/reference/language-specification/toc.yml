@@ -1,0 +1,40 @@
+items:
+- name: Specifica del linguaggio Visual Basic
+  href: index.md
+  items:
+  - name: Introduzione
+    href: ../../../../_vblang/spec/introduction.md
+  - name: Grammatica lessicale
+    href: ../../../../_vblang/spec/lexical-grammar.md
+  - name: Direttive di pre-elaborazione
+    href: ../../../../_vblang/spec/preprocessing-directives.md
+  - name: Concetti generali
+    href: ../../../../_vblang/spec/general-concepts.md
+  - name: Attributi
+    href: ../../../../_vblang/spec/attributes.md
+  - name: File di origine e spazi dei nomi
+    href: ../../../../_vblang/spec/source-files-and-namespaces.md
+  - name: Tipi
+    href: ../../../../_vblang/spec/types.md
+  - name: Conversioni
+    href: ../../../../_vblang/spec/conversions.md
+  - name: Membri dei tipi
+    href: ../../../../_vblang/spec/type-members.md
+  - name: Istruzioni
+    href: ../../../../_vblang/spec/statements.md
+  - name: Espressioni
+    href: ../../../../_vblang/spec/expressions.md
+  - name: Commenti sulla documentazione
+    href: ../../../../_vblang/spec/documentation-comments.md
+  - name: Grammatica
+    items:
+    - name: vb.html
+      href: https://ljw1004.github.io/vbspec/vb.html
+    - name: vb.g4 - formato ANTLR
+      href: https://ljw1004.github.io/vbspec/vb.g4?raw=true
+ms.openlocfilehash: 03281728455fee8303e6e1c4750779a0695130de
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468953"

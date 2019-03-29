@@ -1,0 +1,41 @@
+items:
+- name: Applicazioni di servizio di Windows
+  href: index.md
+  items:
+  - name: Introduzione alle applicazioni di servizio Windows
+    href: introduction-to-windows-service-applications.md
+  - name: "Procedura dettagliata: Creare un'app di servizio di Windows"
+    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - name: Architettura di programmazione delle applicazioni di servizio
+    href: service-application-programming-architecture.md
+  - name: 'Procedura: Creare servizi Windows'
+    href: how-to-create-windows-services.md
+    items:
+    - name: 'Procedura: Scrivere servizi a livello di codice'
+      href: how-to-write-services-programmatically.md
+    - name: "Procedura: Aggiungere programmi di installazione all'applicazione di servizio"
+      href: how-to-add-installers-to-your-service-application.md
+    - name: 'Procedura: Specificare il contesto di sicurezza per i servizi'
+      href: how-to-specify-the-security-context-for-services.md
+    - name: 'Procedura: installare e disinstallare servizi'
+      href: how-to-install-and-uninstall-services.md
+    - name: 'Procedura: Avviare servizi'
+      href: how-to-start-services.md
+    - name: 'Procedura: Sospendere un servizio Windows (Visual Basic)'
+      href: how-to-pause-a-windows-service-visual-basic.md
+    - name: 'Procedura: Continuare un servizio Windows (Visual Basic)'
+      href: how-to-continue-a-windows-service-visual-basic.md
+    - name: 'Procedura: Eseguire il debug di applicazioni di servizio di Windows'
+      href: how-to-debug-windows-service-applications.md
+    - name: 'Procedura: Registrare informazioni sui servizi'
+      href: how-to-log-information-about-services.md
+    - name: 'Risoluzione dei problemi: Eseguire il debug di servizi Windows'
+      href: troubleshooting-debugging-windows-services.md
+    - name: "Risoluzione dei problemi: Impossibile installare l'applicazione di servizio"
+      href: troubleshooting-service-application-wont-install.md
+ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468864"

@@ -1,0 +1,584 @@
+items:
+- name: Profilatura
+  href: index.md
+  items:
+  - name: Cenni preliminari sulla profilatura
+    href: profiling-overview.md
+  - name: Configurazione di un ambiente di profilatura
+    href: setting-up-a-profiling-environment.md
+  - name: Profiler CLR e app di Windows Store
+    href: clr-profilers-and-windows-store-apps.md
+  - name: CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+    href: corprof-e-unsupported-call-sequence-hresult.md
+  - name: Interfacce di profilatura
+    href: profiling-interfaces.md
+    items:
+    - name: Interfaccia ICLRProfiling
+      href: iclrprofiling-interface.md
+      items:
+      - name: Metodo AttachProfiler
+        href: iclrprofiling-attachprofiler-method.md
+    - name: Interfaccia ICorProfilerAssemblyReferenceProvider
+      href: icorprofilerassemblyreferenceprovider-interface.md
+      items:
+      - name: Metodo AddAssemblyReference
+        href: icorprofilerassemblyreferenceprovider-addassemblyreference-method.md
+    - name: Interfaccia ICorProfilerCallback
+      href: icorprofilercallback-interface.md
+      items:
+      - name: Metodo AppDomainCreationFinished
+        href: icorprofilercallback-appdomaincreationfinished-method.md
+      - name: Metodo AppDomainCreationStarted
+        href: icorprofilercallback-appdomaincreationstarted-method.md
+      - name: Metodo AppDomainShutdownFinished
+        href: icorprofilercallback-appdomainshutdownfinished-method.md
+      - name: Metodo AppDomainShutdownStarted
+        href: icorprofilercallback-appdomainshutdownstarted-method.md
+      - name: Metodo AssemblyLoadFinished
+        href: icorprofilercallback-assemblyloadfinished-method.md
+      - name: Metodo AssemblyLoadStarted
+        href: icorprofilercallback-assemblyloadstarted-method.md
+      - name: Metodo AssemblyUnloadFinished
+        href: icorprofilercallback-assemblyunloadfinished-method.md
+      - name: Metodo AssemblyUnloadStarted
+        href: icorprofilercallback-assemblyunloadstarted-method.md
+      - name: Metodo ClassLoadFinished
+        href: icorprofilercallback-classloadfinished-method.md
+      - name: Metodo ClassLoadStarted
+        href: icorprofilercallback-classloadstarted-method.md
+      - name: Metodo ClassUnloadFinished
+        href: icorprofilercallback-classunloadfinished-method.md
+      - name: Metodo ClassUnloadStarted
+        href: icorprofilercallback-classunloadstarted-method.md
+      - name: Metodo COMClassicVTableCreated
+        href: icorprofilercallback-comclassicvtablecreated-method.md
+      - name: Metodo COMClassicVTableDestroyed
+        href: icorprofilercallback-comclassicvtabledestroyed-method.md
+      - name: Metodo ExceptionCatcherEnter
+        href: icorprofilercallback-exceptioncatcherenter-method.md
+      - name: Metodo ExceptionCatcherLeave
+        href: icorprofilercallback-exceptioncatcherleave-method.md
+      - name: Metodo ExceptionCLRCatcherExecute
+        href: icorprofilercallback-exceptionclrcatcherexecute-method.md
+      - name: Metodo ExceptionCLRCatcherFound
+        href: icorprofilercallback-exceptionclrcatcherfound-method.md
+      - name: Metodo ExceptionOSHandlerEnter
+        href: icorprofilercallback-exceptionoshandlerenter-method.md
+      - name: Metodo ExceptionOSHandlerLeave
+        href: icorprofilercallback-exceptionoshandlerleave-method.md
+      - name: Metodo ExceptionSearchCatcherFound
+        href: icorprofilercallback-exceptionsearchcatcherfound-method.md
+      - name: Metodo ExceptionSearchFilterEnter
+        href: icorprofilercallback-exceptionsearchfilterenter-method.md
+      - name: Metodo ExceptionSearchFilterLeave
+        href: icorprofilercallback-exceptionsearchfilterleave-method.md
+      - name: Metodo ExceptionSearchFunctionEnter
+        href: icorprofilercallback-exceptionsearchfunctionenter-method.md
+      - name: Metodo ExceptionSearchFunctionLeave
+        href: icorprofilercallback-exceptionsearchfunctionleave-method.md
+      - name: Metodo ExceptionThrown
+        href: icorprofilercallback-exceptionthrown-method.md
+      - name: Metodo ExceptionUnwindFinallyEnter
+        href: icorprofilercallback-exceptionunwindfinallyenter-method.md
+      - name: Metodo ExceptionUnwindFinallyLeave
+        href: icorprofilercallback-exceptionunwindfinallyleave-method.md
+      - name: Metodo ExceptionUnwindFunctionEnter
+        href: icorprofilercallback-exceptionunwindfunctionenter-method.md
+      - name: Metodo ExceptionUnwindFunctionLeave
+        href: icorprofilercallback-exceptionunwindfunctionleave-method.md
+      - name: Metodo FunctionUnloadStarted
+        href: icorprofilercallback-functionunloadstarted-method.md
+      - name: Metodo Initialize
+        href: icorprofilercallback-initialize-method.md
+      - name: Metodo JITCachedFunctionSearchFinished
+        href: icorprofilercallback-jitcachedfunctionsearchfinished-method.md
+      - name: Metodo JITCachedFunctionSearchStarted
+        href: icorprofilercallback-jitcachedfunctionsearchstarted-method.md
+      - name: Metodo JITCompilationFinished
+        href: icorprofilercallback-jitcompilationfinished-method.md
+      - name: Metodo JITCompilationStarted
+        href: icorprofilercallback-jitcompilationstarted-method.md
+      - name: Metodo JITFunctionPitched
+        href: icorprofilercallback-jitfunctionpitched-method.md
+      - name: Metodo JITInlining
+        href: icorprofilercallback-jitinlining-method.md
+      - name: Metodo ManagedToUnmanagedTransition
+        href: icorprofilercallback-managedtounmanagedtransition-method.md
+      - name: Metodo ModuleAttachedToAssembly
+        href: icorprofilercallback-moduleattachedtoassembly-method.md
+      - name: Metodo ModuleLoadFinished
+        href: icorprofilercallback-moduleloadfinished-method.md
+      - name: Metodo ModuleLoadStarted
+        href: icorprofilercallback-moduleloadstarted-method.md
+      - name: Metodo ModuleUnloadFinished
+        href: icorprofilercallback-moduleunloadfinished-method.md
+      - name: Metodo ModuleUnloadStarted
+        href: icorprofilercallback-moduleunloadstarted-method.md
+      - name: Metodo MovedReferences
+        href: icorprofilercallback-movedreferences-method.md
+      - name: Metodo ObjectAllocated
+        href: icorprofilercallback-objectallocated-method.md
+      - name: Metodo ObjectReferences
+        href: icorprofilercallback-objectreferences-method.md
+      - name: Metodo ObjectsAllocatedByClass
+        href: icorprofilercallback-objectsallocatedbyclass-method.md
+      - name: Metodo RemotingClientInvocationFinished
+        href: icorprofilercallback-remotingclientinvocationfinished-method.md
+      - name: Metodo RemotingClientInvocationStarted
+        href: icorprofilercallback-remotingclientinvocationstarted-method.md
+      - name: Metodo RemotingClientReceivingReply
+        href: icorprofilercallback-remotingclientreceivingreply-method.md
+      - name: Metodo RemotingClientSendingMessage
+        href: icorprofilercallback-remotingclientsendingmessage-method.md
+      - name: Metodo RemotingServerInvocationReturned
+        href: icorprofilercallback-remotingserverinvocationreturned-method.md
+      - name: Metodo RemotingServerInvocationStarted
+        href: icorprofilercallback-remotingserverinvocationstarted-method.md
+      - name: Metodo RemotingServerReceivingMessage
+        href: icorprofilercallback-remotingserverreceivingmessage-method.md
+      - name: Metodo RemotingServerSendingReply
+        href: icorprofilercallback-remotingserversendingreply-method.md
+      - name: Metodo RootReferences
+        href: icorprofilercallback-rootreferences-method.md
+      - name: Metodo RuntimeResumeFinished
+        href: icorprofilercallback-runtimeresumefinished-method.md
+      - name: Metodo RuntimeResumeStarted
+        href: icorprofilercallback-runtimeresumestarted-method.md
+      - name: Metodo RuntimeSuspendAborted
+        href: icorprofilercallback-runtimesuspendaborted-method.md
+      - name: Metodo RuntimeSuspendFinished
+        href: icorprofilercallback-runtimesuspendfinished-method.md
+      - name: Metodo RuntimeSuspendStarted
+        href: icorprofilercallback-runtimesuspendstarted-method.md
+      - name: Metodo RuntimeThreadResumed
+        href: icorprofilercallback-runtimethreadresumed-method.md
+      - name: Metodo RuntimeThreadSuspended
+        href: icorprofilercallback-runtimethreadsuspended-method.md
+      - name: Metodo Shutdown
+        href: icorprofilercallback-shutdown-method.md
+      - name: Metodo ThreadAssignedToOSThread
+        href: icorprofilercallback-threadassignedtoosthread-method.md
+      - name: Metodo ThreadCreated
+        href: icorprofilercallback-threadcreated-method.md
+      - name: Metodo ThreadDestroyed
+        href: icorprofilercallback-threaddestroyed-method.md
+      - name: Metodo UnmanagedToManagedTransition
+        href: icorprofilercallback-unmanagedtomanagedtransition-method.md
+    - name: Interfaccia ICorProfilerCallback2
+      href: icorprofilercallback2-interface.md
+      items:
+      - name: Metodo FinalizeableObjectQueued
+        href: icorprofilercallback2-finalizeableobjectqueued-method.md
+      - name: Metodo GarbageCollectionFinished
+        href: icorprofilercallback2-garbagecollectionfinished-method.md
+      - name: Metodo GarbageCollectionStarted
+        href: icorprofilercallback2-garbagecollectionstarted-method.md
+      - name: Metodo HandleCreated
+        href: icorprofilercallback2-handlecreated-method.md
+      - name: Metodo HandleDestroyed
+        href: icorprofilercallback2-handledestroyed-method.md
+      - name: Metodo RootReferences2
+        href: icorprofilercallback2-rootreferences2-method.md
+      - name: Metodo SurvivingReferences
+        href: icorprofilercallback2-survivingreferences-method.md
+      - name: Metodo ThreadNameChanged
+        href: icorprofilercallback2-threadnamechanged-method.md
+    - name: Interfaccia ICorProfilerCallback3
+      href: icorprofilercallback3-interface.md
+      items:
+      - name: Metodo InitializeForAttach
+        href: icorprofilercallback3-initializeforattach-method.md
+      - name: Metodo ProfilerAttachComplete
+        href: icorprofilercallback3-profilerattachcomplete-method.md
+      - name: Metodo ProfilerDetachSucceeded
+        href: icorprofilercallback3-profilerdetachsucceeded-method.md
+    - name: Interfaccia ICorProfilerCallback4
+      href: icorprofilercallback4-interface.md
+      items:
+      - name: Metodo GetReJITParameters
+        href: icorprofilercallback4-getrejitparameters-method.md
+      - name: Metodo MovedReferences2
+        href: icorprofilercallback4-movedreferences2-method.md
+      - name: Metodo ReJITCompilationFinished
+        href: icorprofilercallback4-rejitcompilationfinished-method.md
+      - name: Metodo ReJITCompilationStarted
+        href: icorprofilercallback4-rejitcompilationstarted-method.md
+      - name: Metodo ReJITError
+        href: icorprofilercallback4-rejiterror-method.md
+      - name: Metodo SurvivingReferences2
+        href: icorprofilercallback4-survivingreferences2-method.md
+    - name: Interfaccia ICorProfilerCallback5
+      href: icorprofilercallback5-interface.md
+      items:
+      - name: Metodo ConditionalWeakTableElementReferences
+        href: icorprofilercallback5-conditionalweaktableelementreferences-method.md
+    - name: Interfaccia ICorProfilerCallback6
+      href: icorprofilercallback6-interface.md
+      items:
+      - name: Metodo GetAssemblyReferences
+        href: icorprofilercallback6-getassemblyreferences-method.md
+    - name: Interfaccia ICorProfilerCallback7
+      href: icorprofilercallback7-interface.md
+      items:
+      - name: Metodo ModuleInMemorySymbolsUpdated
+        href: icorprofilercallback7-moduleinmemorysymbolsupdated-method.md
+    - name: Interfaccia ICorProfilerFunctionControl
+      href: icorprofilerfunctioncontrol-interface.md
+      items:
+      - name: Metodo SetCodegenFlags
+        href: icorprofilerfunctioncontrol-setcodegenflags-method.md
+      - name: Metodo SetILFunctionBody
+        href: icorprofilerfunctioncontrol-setilfunctionbody-method.md
+      - name: Metodo SetILInstrumentedCodeMap
+        href: icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md
+    - name: Interfaccia ICorProfilerCallback8
+      href: icorprofilercallback8-interface.md
+      items:
+      - name: Metodo DynamicMethodJITCompilationStarted
+        href: icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md
+      - name: Metodo DynamicMethodJITCompilationFinished
+        href: icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md
+    - name: Interfaccia ICorProfilerCallback9
+      href: icorprofilercallback9-interface.md
+      items:
+      - name: Metodo DynamicMethodUnloaded
+        href: icorprofilercallback9-dynamicmethodunloaded-method.md
+    - name: Interfaccia ICorProfilerFunctionEnum
+      href: icorprofilerfunctionenum-interface.md
+      items:
+      - name: Metodo Clone
+        href: icorprofilerfunctionenum-clone-method.md
+      - name: Metodo GetCount
+        href: icorprofilerfunctionenum-getcount-method.md
+      - name: Metodo Next
+        href: icorprofilerfunctionenum-next-method.md
+      - name: Metodo Reset
+        href: icorprofilerfunctionenum-reset-method.md
+      - name: Metodo Skip
+        href: icorprofilerfunctionenum-skip-method.md
+    - name: Interfaccia ICorProfilerInfo
+      href: icorprofilerinfo-interface.md
+      items:
+      - name: Metodo BeginInprocDebugging
+        href: icorprofilerinfo-begininprocdebugging-method.md
+      - name: Metodo EndInprocDebugging
+        href: icorprofilerinfo-endinprocdebugging-method.md
+      - name: Metodo ForceGC
+        href: icorprofilerinfo-forcegc-method.md
+      - name: Metodo GetAppDomainInfo
+        href: icorprofilerinfo-getappdomaininfo-method.md
+      - name: Metodo GetAssemblyInfo
+        href: icorprofilerinfo-getassemblyinfo-method.md
+      - name: Metodo GetClassFromObject
+        href: icorprofilerinfo-getclassfromobject-method.md
+      - name: Metodo GetClassFromToken
+        href: icorprofilerinfo-getclassfromtoken-method.md
+      - name: Metodo GetClassIDInfo
+        href: icorprofilerinfo-getclassidinfo-method.md
+      - name: Metodo GetCodeInfo
+        href: icorprofilerinfo-getcodeinfo-method.md
+      - name: Metodo GetCurrentThreadID
+        href: icorprofilerinfo-getcurrentthreadid-method.md
+      - name: Metodo GetEventMask
+        href: icorprofilerinfo-geteventmask-method.md
+      - name: Metodo GetFunctionFromIP
+        href: icorprofilerinfo-getfunctionfromip-method.md
+      - name: Metodo GetFunctionFromToken
+        href: icorprofilerinfo-getfunctionfromtoken-method.md
+      - name: Metodo GetFunctionInfo
+        href: icorprofilerinfo-getfunctioninfo-method.md
+      - name: Metodo GetHandleFromThread
+        href: icorprofilerinfo-gethandlefromthread-method.md
+      - name: Metodo GetILFunctionBody
+        href: icorprofilerinfo-getilfunctionbody-method.md
+      - name: Metodo GetILFunctionBodyAllocator
+        href: icorprofilerinfo-getilfunctionbodyallocator-method.md
+      - name: Metodo GetILToNativeMapping
+        href: icorprofilerinfo-getiltonativemapping-method.md
+      - name: Metodo GetInprocInspectionInterface
+        href: icorprofilerinfo-getinprocinspectioninterface-method.md
+      - name: Metodo GetInprocInspectionIThisThread
+        href: icorprofilerinfo-getinprocinspectionithisthread-method.md
+      - name: Metodo GetModuleInfo
+        href: icorprofilerinfo-getmoduleinfo-method.md
+      - name: Metodo GetModuleMetaData
+        href: icorprofilerinfo-getmodulemetadata-method.md
+      - name: Metodo GetObjectSize
+        href: icorprofilerinfo-getobjectsize-method.md
+      - name: Metodo GetThreadContext
+        href: icorprofilerinfo-getthreadcontext-method.md
+      - name: Metodo GetThreadInfo
+        href: icorprofilerinfo-getthreadinfo-method.md
+      - name: Metodo GetTokenAndMetadataFromFunction
+        href: icorprofilerinfo-gettokenandmetadatafromfunction-method.md
+      - name: Metodo IsArrayClass
+        href: icorprofilerinfo-isarrayclass-method.md
+      - name: Metodo SetEnterLeaveFunctionHooks
+        href: icorprofilerinfo-setenterleavefunctionhooks-method.md
+      - name: Metodo SetEventMask
+        href: icorprofilerinfo-seteventmask-method.md
+      - name: Metodo SetFunctionIDMapper
+        href: icorprofilerinfo-setfunctionidmapper-method.md
+      - name: Metodo SetFunctionReJIT
+        href: icorprofilerinfo-setfunctionrejit-method.md
+      - name: Metodo SetILFunctionBody
+        href: icorprofilerinfo-setilfunctionbody-method.md
+      - name: Metodo SetILInstrumentedCodeMap
+        href: icorprofilerinfo-setilinstrumentedcodemap-method.md
+    - name: Interfaccia ICorProfilerInfo2
+      href: icorprofilerinfo2-interface.md
+      items:
+      - name: Metodo DoStackSnapshot
+        href: icorprofilerinfo2-dostacksnapshot-method.md
+      - name: Metodo EnumModuleFrozenObjects
+        href: icorprofilerinfo2-enummodulefrozenobjects-method.md
+      - name: Metodo GetAppDomainStaticAddress
+        href: icorprofilerinfo2-getappdomainstaticaddress-method.md
+      - name: Metodo GetArrayObjectInfo
+        href: icorprofilerinfo2-getarrayobjectinfo-method.md
+      - name: Metodo GetBoxClassLayout
+        href: icorprofilerinfo2-getboxclasslayout-method.md
+      - name: Metodo GetClassFromTokenAndTypeArgs
+        href: icorprofilerinfo2-getclassfromtokenandtypeargs-method.md
+      - name: Metodo GetClassIDInfo2
+        href: icorprofilerinfo2-getclassidinfo2-method.md
+      - name: Metodo GetClassLayout
+        href: icorprofilerinfo2-getclasslayout-method.md
+      - name: Metodo GetCodeInfo2
+        href: icorprofilerinfo2-getcodeinfo2-method.md
+      - name: Metodo GetContextStaticAddress
+        href: icorprofilerinfo2-getcontextstaticaddress-method.md
+      - name: Metodo GetFunctionFromTokenAndTypeArgs
+        href: icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md
+      - name: Metodo GetFunctionInfo2
+        href: icorprofilerinfo2-getfunctioninfo2-method.md
+      - name: Metodo GetGenerationBounds
+        href: icorprofilerinfo2-getgenerationbounds-method.md
+      - name: Metodo GetNotifiedExceptionClauseInfo
+        href: icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md
+      - name: Metodo GetObjectGeneration
+        href: icorprofilerinfo2-getobjectgeneration-method.md
+      - name: Metodo GetRVAStaticAddress
+        href: icorprofilerinfo2-getrvastaticaddress-method.md
+      - name: Metodo GetStaticFieldInfo
+        href: icorprofilerinfo2-getstaticfieldinfo-method.md
+      - name: Metodo GetStringLayout
+        href: icorprofilerinfo2-getstringlayout-method.md
+      - name: Metodo GetThreadAppDomain
+        href: icorprofilerinfo2-getthreadappdomain-method.md
+      - name: Metodo GetThreadStaticAddress
+        href: icorprofilerinfo2-getthreadstaticaddress-method.md
+      - name: Metodo SetEnterLeaveFunctionHooks2
+        href: icorprofilerinfo2-setenterleavefunctionhooks2-method.md
+    - name: Interfaccia ICorProfilerInfo3
+      href: icorprofilerinfo3-interface.md
+      items:
+      - name: Metodo EnumJITedFunctions
+        href: icorprofilerinfo3-enumjitedfunctions-method.md
+      - name: Metodo EnumModules
+        href: icorprofilerinfo3-enummodules-method.md
+      - name: Metodo GetAppDomainsContainingModule
+        href: icorprofilerinfo3-getappdomainscontainingmodule-method.md
+      - name: Metodo GetFunctionEnter3Info
+        href: icorprofilerinfo3-getfunctionenter3info-method.md
+      - name: Metodo GetFunctionLeave3Info
+        href: icorprofilerinfo3-getfunctionleave3info-method.md
+      - name: Metodo GetFunctionTailcall3Info
+        href: icorprofilerinfo3-getfunctiontailcall3info-method.md
+      - name: Metodo GetModuleInfo2
+        href: icorprofilerinfo3-getmoduleinfo2-method.md
+      - name: Metodo GetRuntimeInformation
+        href: icorprofilerinfo3-getruntimeinformation-method.md
+      - name: Metodo GetStringLayout2
+        href: icorprofilerinfo3-getstringlayout2-method.md
+      - name: Metodo GetThreadStaticAddress2
+        href: icorprofilerinfo3-getthreadstaticaddress2-method.md
+      - name: Metodo RequestProfilerDetach
+        href: icorprofilerinfo3-requestprofilerdetach-method.md
+      - name: Metodo SetEnterLeaveFunctionHooks3
+        href: icorprofilerinfo3-setenterleavefunctionhooks3-method.md
+      - name: Metodo SetEnterLeaveFunctionHooks3WithInfo
+        href: icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md
+      - name: Metodo SetFunctionIDMapper2
+        href: icorprofilerinfo3-setfunctionidmapper2-method.md
+    - name: Interfaccia ICorProfilerInfo4
+      href: icorprofilerinfo4-interface.md
+      items:
+      - name: Metodo EnumJITedFunctions2
+        href: icorprofilerinfo4-enumjitedfunctions2-method.md
+      - name: Metodo EnumThreads
+        href: icorprofilerinfo4-enumthreads-method.md
+      - name: Metodo GetCodeInfo3
+        href: icorprofilerinfo4-getcodeinfo3-method.md
+      - name: Metodo GetFunctionFromIP2
+        href: icorprofilerinfo4-getfunctionfromip2-method.md
+      - name: Metodo GetILToNativeMapping2
+        href: icorprofilerinfo4-getiltonativemapping2-method.md
+      - name: Metodo GetObjectSize2
+        href: icorprofilerinfo4-getobjectsize2-method.md
+      - name: Metodo GetReJITIDs
+        href: icorprofilerinfo4-getrejitids-method.md
+      - name: Metodo InitializeCurrentThread
+        href: icorprofilerinfo4-initializecurrentthread-method.md
+      - name: Metodo RequestReJIT
+        href: icorprofilerinfo4-requestrejit-method.md
+      - name: Metodo RequestRevert
+        href: icorprofilerinfo4-requestrevert-method.md
+    - name: Interfaccia ICorProfilerInfo5
+      href: icorprofilerinfo5-interface.md
+      items:
+      - name: Metodo GetEventMask2
+        href: icorprofilerinfo5-geteventmask2-method.md
+      - name: Metodo SetEventMask2
+        href: icorprofilerinfo5-seteventmask2-method.md
+    - name: Interfaccia ICorProfilerInfo6
+      href: icorprofilerinfo6-interface.md
+      items:
+      - name: Metodo ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
+        href: icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md
+    - name: Interfaccia ICorProfilerInfo7
+      href: icorprofilerinfo7-interface.md
+      items:
+      - name: Metodo ApplyMetaData
+        href: icorprofilerinfo7-applymetadata-method.md
+      - name: Metodo GetInMemorySymbolsLength
+        href: icorprofilerinfo7-getinmemorysymbolslength-method.md
+      - name: ReadInMemorySymbols
+        href: icorprofilerinfo7-readinmemorysymbols.md
+    - name: Interfaccia ICorProfilerModuleEnum
+      href: icorprofilermoduleenum-interface.md
+      items:
+      - name: Metodo Clone
+        href: icorprofilermoduleenum-clone-method.md
+      - name: Metodo GetCount
+        href: icorprofilermoduleenum-getcount-method.md
+      - name: Metodo Next
+        href: icorprofilermoduleenum-next-method.md
+      - name: Metodo Reset
+        href: icorprofilermoduleenum-reset-method.md
+      - name: Metodo Skip
+        href: icorprofilermoduleenum-skip-method.md
+    - name: Interfaccia ICorProfilerObjectEnum
+      href: icorprofilerobjectenum-interface.md
+      items:
+      - name: Metodo Clone
+        href: icorprofilerobjectenum-clone-method.md
+      - name: Metodo GetCount
+        href: icorprofilerobjectenum-getcount-method.md
+      - name: Metodo Next
+        href: icorprofilerobjectenum-next-method.md
+      - name: Metodo Reset
+        href: icorprofilerobjectenum-reset-method.md
+      - name: Metodo Skip
+        href: icorprofilerobjectenum-skip-method.md
+    - name: Interfaccia ICorProfilerThreadEnum
+      href: icorprofilerthreadenum-interface.md
+      items:
+      - name: Metodo Clone
+        href: icorprofilerthreadenum-clone-method.md
+      - name: Metodo GetCount
+        href: icorprofilerthreadenum-getcount-method.md
+      - name: Metodo Next
+        href: icorprofilerthreadenum-next-method.md
+      - name: Metodo Reset
+        href: icorprofilerthreadenum-reset-method.md
+      - name: Metodo Skip
+        href: icorprofilerthreadenum-skip-method.md
+    - name: Interfaccia IMethodMalloc
+      href: imethodmalloc-interface.md
+      items:
+      - name: Metodo Alloc
+        href: imethodmalloc-alloc-method.md
+  - name: Funzioni statiche globali di profilatura
+    href: profiling-global-static-functions.md
+    items:
+    - name: Funzione FunctionEnter
+      href: functionenter-function.md
+    - name: Funzione FunctionEnter2
+      href: functionenter2-function.md
+    - name: Funzione FunctionEnter3
+      href: functionenter3-function.md
+    - name: Funzione FunctionEnter3WithInfo
+      href: functionenter3withinfo-function.md
+    - name: Funzione FunctionIDMapper
+      href: functionidmapper-function.md
+    - name: Funzione FunctionIDMapper2
+      href: functionidmapper2-function.md
+    - name: Funzione FunctionLeave
+      href: functionleave-function.md
+    - name: Funzione FunctionLeave2
+      href: functionleave2-function.md
+    - name: Funzione FunctionLeave3
+      href: functionleave3-function.md
+    - name: Funzione FunctionLeave3WithInfo
+      href: functionleave3withinfo-function.md
+    - name: Funzione FunctionTailcall
+      href: functiontailcall-function.md
+    - name: Funzione FunctionTailcall2
+      href: functiontailcall2-function.md
+    - name: Funzione FunctionTailcall3
+      href: functiontailcall3-function.md
+    - name: Funzione FunctionTailcall3WithInfo
+      href: functiontailcall3withinfo-function.md
+    - name: Funzione StackSnapshotCallback
+      href: stacksnapshotcallback-function.md
+  - name: Enumerazioni di profilatura
+    href: profiling-enumerations.md
+    items:
+    - name: Enumerazione COR_PRF_CLAUSE_TYPE
+      href: cor-prf-clause-type-enumeration.md
+    - name: Enumerazione COR_PRF_CODEGEN_FLAGS
+      href: cor-prf-codegen-flags-enumeration.md
+    - name: Enumerazione COR_PRF_FINALIZER_FLAGS
+      href: cor-prf-finalizer-flags-enumeration.md
+    - name: Enumerazione COR_PRF_GC_GENERATION
+      href: cor-prf-gc-generation-enumeration.md
+    - name: Enumerazione COR_PRF_GC_REASON
+      href: cor-prf-gc-reason-enumeration.md
+    - name: Enumerazione COR_PRF_GC_ROOT_FLAGS
+      href: cor-prf-gc-root-flags-enumeration.md
+    - name: Enumerazione COR_PRF_GC_ROOT_KIND
+      href: cor-prf-gc-root-kind-enumeration.md
+    - name: Enumerazione COR_PRF_HIGH_MONITOR
+      href: cor-prf-high-monitor-enumeration.md
+    - name: Enumerazione COR_PRF_JIT_CACHE
+      href: cor-prf-jit-cache-enumeration.md
+    - name: Enumerazione COR_PRF_MISC
+      href: cor-prf-misc-enumeration.md
+    - name: Enumerazione COR_PRF_MODULE_FLAGS
+      href: cor-prf-module-flags-enumeration.md
+    - name: Enumerazione COR_PRF_MONITOR
+      href: cor-prf-monitor-enumeration.md
+    - name: Enumerazione COR_PRF_RUNTIME_TYPE
+      href: cor-prf-runtime-type-enumeration.md
+    - name: Enumerazione COR_PRF_SNAPSHOT_INFO
+      href: cor-prf-snapshot-info-enumeration.md
+    - name: Enumerazione COR_PRF_STATIC_TYPE
+      href: cor-prf-static-type-enumeration.md
+    - name: Enumerazione COR_PRF_SUSPEND_REASON
+      href: cor-prf-suspend-reason-enumeration.md
+    - name: Enumerazione COR_PRF_TRANSITION_REASON
+      href: cor-prf-transition-reason-enumeration.md
+  - name: Strutture di profilatura
+    href: profiling-structures.md
+    items:
+    - name: Struttura COR_PRF_ASSEMBLY_REFERENCE_INFO
+      href: cor-prf-assembly-reference-info-structure.md
+    - name: Struttura COR_PRF_CODE_INFO
+      href: cor-prf-code-info-structure.md
+    - name: Struttura COR_PRF_EX_CLAUSE_INFO
+      href: cor-prf-ex-clause-info-structure.md
+    - name: Struttura COR_PRF_FUNCTION
+      href: cor-prf-function-structure.md
+    - name: Struttura COR_PRF_FUNCTION_ARGUMENT_INFO
+      href: cor-prf-function-argument-info-structure.md
+    - name: Struttura COR_PRF_FUNCTION_ARGUMENT_RANGE
+      href: cor-prf-function-argument-range-structure.md
+    - name: Struttura COR_PRF_GC_GENERATION_RANGE
+      href: cor-prf-gc-generation-range-structure.md
+ms.openlocfilehash: 78778093792858c085a1c13bb23c6afb6703c129
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469589"

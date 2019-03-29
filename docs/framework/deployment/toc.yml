@@ -1,0 +1,43 @@
+items:
+- name: Distribuzione
+  href: index.md
+  items:
+  - name: Distribuzione di .NET Framework
+    href: deploying-the-net-framework.md
+    items:
+    - name: Guida alla distribuzione per gli sviluppatori
+      href: deployment-guide-for-developers.md
+    - name: Guida alla distribuzione per amministratori
+      href: guide-for-administrators.md
+    - name: Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
+      href: reducing-system-restarts.md
+    - name: "Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5"
+      href: how-to-get-progress-from-the-dotnet-installer.md
+    - name: "Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente"
+      href: initialization-errors-managing-the-user-experience.md
+    - name: 'Procedura: debug dei problemi di attivazione CLR'
+      href: how-to-debug-clr-activation-issues.md
+  - name: Distribuzione di applicazioni .NET Framework
+    href: net-framework-applications.md
+    items:
+    - name: Come il runtime individua gli assembly
+      href: how-the-runtime-locates-assemblies.md
+    - name: Procedure consigliate per il caricamento di assembly
+      href: best-practices-for-assembly-loading.md
+  - name: .NET Framework Client Profile
+    href: client-profile.md
+  - name: Esecuzione side-by-side
+    href: side-by-side-execution.md
+    items:
+    - name: Configurazione del reindirizzamento dell'associazione di assembly
+      href: configuring-assembly-binding-redirection.md
+    - name: Linee guida per la creazione di componenti per l'esecuzione affiancata di più versioni
+      href: guidelines-for-creating-components-for-side-by-side-execution.md
+    - name: Esecuzione side-by-side in-process
+      href: in-process-side-by-side-execution.md
+ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469140"

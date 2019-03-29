@@ -1,0 +1,48 @@
+items:
+- name: .NET Compiler Platform SDK (API Roslyn)
+  href: index.md
+  items:
+  - name: Informazioni sul modello delle API del compilatore
+    href: compiler-api-model.md
+  - name: Utilizzare la sintassi
+    href: work-with-syntax.md
+  - name: Utilizzare la semantica
+    href: work-with-semantics.md
+  - name: Utilizzare un'area di lavoro
+    href: work-with-workspace.md
+  - name: Esplorare il codice con il visualizzatore di sintassi
+    href: syntax-visualizer.md
+  - name: Guide introduttive
+    items:
+    - name: Analisi della sintassi
+      href: get-started/syntax-analysis.md
+    - name: Analisi semantica
+      href: get-started/semantic-analysis.md
+    - name: Trasformazione della sintassi
+      href: get-started/syntax-transformation.md
+  - name: Esercitazioni
+    items:
+    - name: Compilare il primo analizzatore e la prima correzione del codice
+      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
+    - name: Introduzione alla scrittura di analizzatori personalizzati e correzioni del codice
+  - name: Esercitazioni
+    items:
+    - name: Creare il primo analizzatore
+    - name: Creare la prima correzione del codice
+    - name: Distribuire l'analizzatore come VSIX
+    - name: Distribuire l'analizzatore come pacchetto NuGet
+- name: Esempi
+  items:
+  - name: Pacchetti asincroni
+  - name: Classificatore console
+  - name: Convertire in proprietà automatica
+  - name: Formattare la soluzione
+  - name: Implementare la proprietà di notifica modificata
+  - name: MakeConst
+  - name: Guide alle procedure
+ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469139"
