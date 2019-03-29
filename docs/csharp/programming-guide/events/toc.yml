@@ -1,0 +1,22 @@
+items:
+- name: Eventi
+  href: index.md
+  items:
+  - name: 'Procedura: Eseguire e annullare la sottoscrizione a eventi'
+    href: how-to-subscribe-to-and-unsubscribe-from-events.md
+  - name: 'Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework'
+    href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
+  - name: 'Procedura: Generare eventi di classe base nelle classi derivate'
+    href: how-to-raise-base-class-events-in-derived-classes.md
+  - name: 'Procedura: Implementare eventi di interfaccia'
+    href: how-to-implement-interface-events.md
+  - name: 'Procedura: Usare un dizionario per archiviare istanze di evento'
+    href: how-to-use-a-dictionary-to-store-event-instances.md
+  - name: 'Procedura: Implementare funzioni di accesso a eventi personalizzati'
+    href: how-to-implement-custom-event-accessors.md
+ms.openlocfilehash: ad3adc4026915e1173dacd33dde9746cfb0adcdd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471043"

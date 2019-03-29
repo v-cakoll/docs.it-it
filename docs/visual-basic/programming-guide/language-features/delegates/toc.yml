@@ -1,0 +1,16 @@
+items:
+- name: Delegati
+  href: index.md
+  items:
+  - name: 'Procedura: Chiamare un metodo delegato'
+    href: how-to-invoke-a-delegate-method.md
+  - name: "Procedura: Passare una routine a un'altra routine"
+    href: how-to-pass-procedures-to-another-procedure.md
+  - name: Conversione di tipo relaxed del delegato
+    href: relaxed-delegate-conversion.md
+ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468798"

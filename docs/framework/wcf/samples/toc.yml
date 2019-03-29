@@ -1,0 +1,525 @@
+items:
+- name: Esempi di Windows Communication Foundation
+  href: index.md
+  items:
+  - name: Istruzioni di configurazione
+    href: set-up-instructions.md
+    items:
+    - name: Procedura di installazione singola per gli esempi di Windows Communication Foundation
+      href: one-time-setup-procedure-for-the-wcf-samples.md
+      items:
+      - name: Istruzioni del firewall
+        href: firewall-instructions.md
+      - name: Istruzioni per l'hosting su IIS (Internet Information Services)
+        href: internet-information-service-hosting-instructions.md
+      - name: Istruzioni di installazione certificato server IIS (Internet Information Services)
+        href: iis-server-certificate-installation-instructions.md
+      - name: Istruzioni per la configurazione di directory virtuali
+        href: virtual-directory-setup-instructions.md
+      - name: Installazione accodamento messaggi (MSMQ)
+        href: installing-message-queuing-msmq.md
+    - name: Generazione degli esempi Windows Communication Foundation
+      href: building-the-samples.md
+    - name: Esecuzione degli esempi di Windows Communication Foundation
+      href: running-the-samples.md
+  - name: Basic
+    href: basic.md
+    items:
+    - name: Introduzione
+      href: getting-started-sample.md
+    - name: AJAX
+      href: ajax.md
+      items:
+      - name: JSONP
+        href: jsonp.md
+      - name: Serializzazione JSON
+        href: json-serialization.md
+      - name: Servizio AJAX di base
+        href: basic-ajax-service.md
+      - name: Servizio AJAX con il protocollo HTTP POST
+        href: ajax-service-using-http-post.md
+      - name: Servizio AJAX senza configurazione
+        href: ajax-service-without-configuration.md
+      - name: Servizio AJAX che usa tipi complessi
+        href: ajax-service-using-complex-types-sample.md
+      - name: Servizio AJAX con esempi JSON e XML
+        href: ajax-service-with-json-and-xml-sample.md
+    - name: Binding
+      href: binding.md
+      items:
+      - name: Associazione di base
+        href: basic-binding.md
+        items:
+        - name: Esempio sulla sicurezza dei messaggi
+          href: message-security-sample.md
+        - name: BasicBinding con sicurezza del trasporto
+          href: basicbinding-with-transport-security.md
+        - name: BasicBinding
+          href: basicbinding.md
+      - name: Associazione personalizzata
+        href: custom-binding.md
+        items:
+        - name: Codice imperativo per associazioni personalizzate
+          href: custom-binding-imperative.md
+        - name: Trasporto dell'associazione personalizzata e codifica
+          href: custom-binding-transport-and-encoding.md
+        - name: Sessione affidabile di associazione personalizzata
+          href: custom-binding-reliable-session.md
+        - name: Sessione affidabile di associazione personalizzata su HTTPS
+          href: custom-binding-reliable-session-over-https.md
+        - name: Sicurezza delle associazioni personalizzate
+          href: custom-binding-security.md
+      - name: Associazione Net
+        href: net-binding.md
+        items:
+        - name: Associazione Net MSMQ
+          href: net-msmq-binding.md
+          items:
+          - name: Associazioni MSMQ transazionali
+            href: transacted-msmq-binding.md
+          - name: Comunicazione volatile in coda
+            href: volatile-queued-communication.md
+          - name: Code di messaggi non recapitabili
+            href: dead-letter-queues.md
+          - name: Gestione dei messaggi non elaborabili in MSMQ 4,0
+            href: poison-message-handling-in-msmq-4-0.md
+          - name: Sessioni e code
+            href: sessions-and-queues.md
+          - name: Comunicazione bidirezionale
+            href: two-way-communication.md
+          - name: SRMP
+            href: srmp.md
+          - name: Sicurezza dei messaggi nell'accodamento messaggi
+            href: message-security-over-message-queuing.md
+        - name: Integrazione dell'accodamento di messaggi
+          href: message-queueing-integration.md
+          items:
+          - name: Accodamento messaggi in Windows Communication Foundation
+            href: message-queuing-to-wcf.md
+          - name: Da Windows Communication Foundation a Accodamento messaggi
+            href: wcf-to-message-queuing.md
+          - name: Correlazione dei messaggi
+            href: message-correlation.md
+        - name: NetTCPBinding
+          href: nettcpbinding.md
+          items:
+          - name: Associazione NetTcpBinding predefinita
+            href: default-nettcpbinding.md
+          - name: Esempio di condivisione delle porte Net.TCP
+            href: net-tcp-port-sharing-sample.md
+        - name: NetNamedPipeBinding
+          href: netnamedpipebinding.md
+      - name: Associazione WS
+        href: ws-binding.md
+        items:
+        - name: Associazione HTTP WS 2007 Federation
+          href: ws-2007-federation-http-binding.md
+        - name: HTTP duale WS
+          href: ws-dual-http.md
+        - name: Codifica MTOM
+          href: mtom-encoding.md
+        - name: WSHttpBinding
+          href: wshttpbinding.md
+        - name: Sessioni affidabili WS
+          href: ws-reliable-session.md
+        - name: Sicurezza del trasporto WS
+          href: ws-transport-security.md
+        - name: Associazioni di sicurezza ai messaggi
+          href: message-security-binding.md
+          items:
+          - name: Sicurezza dei messaggi anonima
+            href: message-security-anonymous.md
+          - name: Certificato di sicurezza dei messaggi
+            href: message-security-certificate.md
+          - name: Sicurezza dei messaggi tramite nome utente
+            href: message-security-user-name.md
+          - name: Sicurezza dei messaggi di Windows
+            href: message-security-windows.md
+        - name: Trasporto WS con credenziali del messaggio
+          href: ws-transport-with-message-credential.md
+        - name: Flusso delle transazioni WS
+          href: ws-transaction-flow.md
+    - name: Client
+      href: client.md
+      items:
+      - name: Interoperabilità client
+        href: client-interoperability.md
+        items:
+        - name: Interoperabilità con servizi Web ASMX
+          href: interoperating-with-asmx-web-services.md
+        - name: Esempio XmlSerializer
+          href: xmlserializer-sample.md
+      - name: Intestazioni di indirizzo
+        href: address-headers.md
+      - name: Channel Factory
+        href: channel-factory.md
+      - name: Eccezioni previste
+        href: expected-exceptions.md
+      - name: Recupero di metadati
+        href: retrieve-metadata.md
+      - name: Usare Chiudi e Interrompi per rilasciare risorse client WCF
+        href: use-close-abort-release-wcf-client-resources.md
+      - name: Client tipizzati
+        href: typed-client.md
+    - name: Contratto
+      href: contract.md
+      items:
+      - name: Contratti dati
+        href: data-contracts.md
+        items:
+        - name: Contratto dati di base
+          href: basic-data-contract.md
+        - name: Esempio di DataContractSerializer
+          href: datacontractserializer-sample.md
+        - name: Tipi conosciuti
+          href: known-types.md
+        - name: Riferimenti a oggetti
+          href: object-references.md
+        - name: Supporto POCO
+          href: poco-support.md
+        - name: Utilizzo del gestore di associazione della serializzazione
+          href: usage-of-serialization-binder.md
+      - name: Contratti di messaggio
+        href: message-contracts.md
+        items:
+        - name: Impostazione predefinita dei contratti di messaggio
+          href: default-message-contract.md
+        - name: Richiesta/risposta non tipizzata
+          href: untyped-request-reply.md
+        - name: Messaggi non incapsulati
+          href: unwrapped-messages.md
+        - name: Impostazione delle proprietà Use e Style
+          href: setting-the-use-and-style-properties.md
+        - name: Esempio di XmlReader
+          href: xmlreader-sample.md
+      - name: Contratti di servizio
+        href: service-contracts.md
+        items:
+        - name: Duplex
+          href: duplex.md
+        - name: Contratto di errore
+          href: fault-contract.md
+        - name: Unidirezionale
+          href: one-way.md
+        - name: Sessione
+          href: session.md
+        - name: Flusso
+          href: stream.md
+        - name: Errori di XmlSerializer
+          href: xmlserializer-faults.md
+      - name: DataContractResolver
+        href: datacontractresolver.md
+      - name: KnownAssemblyAttribute
+        href: knownassemblyattribute.md
+      - name: Uso di DataContractSerializer e DataContractResolver per fornire la funzionalità di NetDataContractSerializer
+        href: datacontractserializer-datacontractresolver-netdatacontractserializer.md
+    - name: Individuazione
+      href: discovery-samples.md
+      items:
+      - name: Annunci
+        href: announcements-sample.md
+      - name: Basic
+        href: basic-sample.md
+      - name: Configurazione
+        href: configuration-sample.md
+      - name: Individuazione con ambiti
+        href: discovery-with-scopes-sample.md
+      - name: Criteri di ricerca personalizzati
+        href: custom-find-criteria.md
+      - name: Esempio di individuazione del flusso di lavoro
+        href: workflow-discovery-sample.md
+      - name: Servizio router di individuazione
+        href: discovery-router-service.md
+    - name: Gestione
+      href: management.md
+      items:
+      - name: Servizi WCF e traccia eventi per Windows
+        href: wcf-services-and-event-tracing-for-windows.md
+      - name: Traccia analitica WCF
+        href: wcf-analytic-tracing.md
+      - name: Analisi circolare
+        href: circular-tracing.md
+      - name: Traccia ETW
+        href: etw-tracing.md
+      - name: Estensione della funzionalità di traccia
+        href: extending-tracing.md
+      - name: Blocco della sicurezza delle informazioni personali
+        href: pii-security-lockdown.md
+      - name: Utilizzo dei contatori delle prestazioni
+        href: using-performance-counters.md
+      - name: Traccia e registrazione dei messaggi
+        href: tracing-and-message-logging.md
+      - name: Convalida della sicurezza
+        href: security-validation.md
+      - name: Provider WMI
+        href: wmi-provider.md
+    - name: Servizi di routing
+      href: routing-services.md
+      items:
+      - name: Hello World con il servizio di routing
+        href: hello-world-with-the-routing-service.md
+    - name: Sicurezza
+      href: security-in-wcf.md
+      items:
+      - name: Agilità di crittografia nella sicurezza WCF
+        href: cryptographic-agility-in-wcf-security.md
+    - name: Servizi
+      href: services.md
+      items:
+      - name: Hosting
+        href: hosting.md
+        items:
+        - name: Attivazione dei processi di Windows
+          href: windows-process-activation.md
+          items:
+          - name: Attivazione di NamedPipe
+            href: namedpipe-activation.md
+          - name: Attivazione TCP
+            href: tcp-activation.md
+          - name: Attivazione MSMQ
+            href: msmq-activation.md
+        - name: Esempio di integrazione di SystemWebRouting
+          href: systemwebrouting-integration-sample.md
+        - name: Compatibilità con ASP.NET
+          href: aspnet-compatibility.md
+        - name: Hosting IIS mediante il codice inline
+          href: iis-hosting-using-inline-code.md
+        - name: Host del servizio Windows
+          href: windows-service-host.md
+        - name: Servizio indipendente
+          href: self-host.md
+      - name: Interoperabilità dei servizi
+        href: service-interoperability.md
+        items:
+        - name: Utilizzo del moniker WCF con i client COM
+          href: using-the-wcf-moniker-with-com-clients.md
+        - name: Client ASMX con un servizio WCF
+          href: asmx-client-with-a-wcf-service.md
+      - name: comportamenti
+        href: behaviors.md
+        items:
+        - name: Concorrenza
+          href: concurrency.md
+        - name: Comportamento predefinito del servizio
+          href: default-service-behavior.md
+        - name: creazione di istanze
+          href: instancing.md
+        - name: Comportamento di pubblicazione dei metadati
+          href: metadata-publishing-behavior.md
+        - name: Comportamento delle transazioni di un servizio
+          href: service-transaction-behavior.md
+        - name: Comportamento di debug del servizio
+          href: service-debug-behavior.md
+        - name: Limitazione
+          href: throttling.md
+        - name: Sicurezza dei comportamenti
+          href: behavior-security.md
+          items:
+          - name: Comportamento di controllo dei servizi
+            href: service-auditing-behavior.md
+          - name: Provider di appartenenza e di ruoli
+            href: membership-and-role-provider.md
+          - name: Autorizzazione dell'accesso alle operazioni del servizio
+            href: authorizing-access-to-service-operations.md
+          - name: Rappresentazione di client
+            href: impersonating-the-client.md
+      - name: Configurazione semplificata per servizi WCF
+        href: simplified-configuration-for-wcf-services.md
+      - name: Uso di endpoint standard
+        href: usage-of-standard-endpoints.md
+      - name: Criteri di protezione estesa
+        href: extended-protection-policy.md
+      - name: Configurazione di una channel factory
+        href: configuration-channel-factory.md
+      - name: Indirizzamento
+        href: addressing.md
+      - name: Imperativo
+        href: imperative.md
+      - name: Più contratti
+        href: multiple-contracts.md
+      - name: Più endpoint
+        href: multiple-endpoints.md
+      - name: Più endpoint su un solo ListenUri
+        href: multiple-endpoints-at-a-single-listenuri.md
+      - name: OperationContextScope
+        href: operationcontextscope.md
+      - name: Descrizione del servizio
+        href: service-description.md
+      - name: ConcurrencyMode.Reentrant
+        href: concurrencymode-reentrant.md
+      - name: Sicurezza del servizio
+        href: service-security.md
+        items:
+        - name: Esempio identità del servizio
+          href: service-identity-sample.md
+    - name: Diffusione
+      href: syndication.md
+      items:
+      - name: Feed di diagnostica autonomo
+        href: stand-alone-diagnostics-feed-sample.md
+      - name: Estensioni non fortemente tipizzate
+        href: loosely-typed-extensions-sample.md
+    - name: Web
+      href: web.md
+      items:
+      - name: Servizio HTTP di base
+        href: basic-http-service.md
+      - name: Endpoint SOAP e HTTP
+        href: soap-and-http-endpoints.md
+      - name: Integrazione della memorizzazione nella cache di ASP.NET
+        href: aspnet-caching-integration.md
+      - name: UriTemplate
+        href: uritemplate-sample.md
+      - name: Tabella UriTemplate
+        href: uritemplate-table-sample.md
+      - name: Dispatcher della tabella UriTemplate
+        href: uritemplate-table-dispatcher-sample.md
+  - name: Estendibilità
+    href: extensibility.md
+    items:
+    - name: Estensibilità delle associazioni
+      href: binding-extensibility.md
+      items:
+      - name: WSStreamedHttpBinding
+        href: wsstreamedhttpbinding.md
+    - name: Estensibilità dei canali
+      href: channels-extensibility.md
+      items:
+      - name: Canale locale
+        href: local-channel.md
+      - name: Reliable Secure Profile
+        href: reliable-secure-profile.md
+      - name: Dispatcher di canali personalizzati
+        href: custom-channel-dispatcher.md
+      - name: Chunking del canale
+        href: chunking-channel.md
+      - name: HttpCookieSession
+        href: httpcookiesession.md
+      - name: Intercettore dei messaggi personalizzati
+        href: custom-message-interceptor.md
+    - name: Estensibilità delle istanze
+      href: instancing-extensibility.md
+      items:
+      - name: Contesto dell'istanza durevole
+        href: durable-instance-context.md
+      - name: Durata personalizzata
+        href: custom-lifetime.md
+      - name: Inizializzazione della creazione di istanze
+        href: instancing-initialization.md
+      - name: Pooling
+        href: pooling.md
+    - name: Estensibilità dell'interoperabilità
+      href: interop-extensibility.md
+      items:
+      - name: Distribuzione in base all'elemento corpo
+        href: dispatch-by-body-element.md
+      - name: Routing in base al corpo
+        href: route-by-body.md
+    - name: Estensibilità del codificatore di messaggi
+      href: message-encoder-extensibility.md
+      items:
+      - name: 'Codificatore di messaggi personalizzati: Codificatore di testo personalizzato'
+        href: custom-message-encoder-custom-text-encoder.md
+      - name: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
+        href: custom-message-encoder-compression-encoder.md
+    - name: Estensibilità dei metadati
+      href: metadata-extensibility.md
+      items:
+      - name: Endpoint di metadati protetto personalizzato
+        href: custom-secure-metadata-endpoint.md
+      - name: Pubblicazione WSDL personalizzata
+        href: custom-wsdl-publication.md
+    - name: Estensibilità della sicurezza
+      href: security-extensibility.md
+      items:
+      - name: Provider di token rilasciati in modo durevole
+        href: durable-issued-token-provider.md
+      - name: Provider di token SAML
+        href: saml-token-provider.md
+      - name: Token di supporto
+        href: supporting-tokens.md
+      - name: Autenticatore token
+        href: token-authenticator.md
+      - name: Provider di token
+        href: token-provider.md
+      - name: Validator del nome utente e password
+        href: user-name-password-validator.md
+      - name: Validator del certificato X.509
+        href: x-509-certificate-validator.md
+      - name: Criteri di autorizzazione
+        href: authorization-policy.md
+      - name: Token personalizzato
+        href: custom-token.md
+      - name: Convalida client
+        href: client-validation.md
+    - name: Esempi di estendibilità della diffusione
+      href: syndication-extensibility-samples.md
+      items:
+      - name: Estensioni fortemente tipizzate
+        href: strongly-typed-extensions-sample.md
+      - name: Formattatore di feed (JSON)
+        href: feed-formatter-json.md
+      - name: Trasmissione feed
+        href: streaming-feeds-sample.md
+    - name: Estensibilità del trasporto
+      href: transport-extensibility.md
+      items:
+      - name: Attivazione UDP
+        href: udp-activation.md
+      - name: 'Trasporto: transazioni personalizzate tramite UDP'
+        href: transport-custom-transactions-over-udp-sample.md
+      - name: 'Trasporto: UDP'
+        href: transport-udp.md
+      - name: 'Trasporto: interoperabilità WSE 3.0 TCP'
+        href: transport-wse-3-0-tcp-interoperability.md
+    - name: Formattatore e selettore dell'operazione
+      href: operation-formatter-and-operation-selector.md
+    - name: Filtro messaggi personalizzato
+      href: custom-message-filter.md
+    - name: Host di servizi personalizzati
+      href: custom-service-host.md
+    - name: Surrogato di DataContract
+      href: datacontract-surrogate.md
+    - name: Estensione del controllo sulla gestione e sulla segnalazione degli errori
+      href: extending-control-over-error-handling-and-reporting.md
+    - name: Controlli messaggi
+      href: message-inspectors.md
+    - name: WebContentTypeMapper
+      href: webcontenttypemapper-sample.md
+  - name: Scenario
+    href: scenario.md
+    items:
+    - name: Scenari di associazione dati
+      href: data-binding-scenarios.md
+      items:
+      - name: Associazione dati in un client Windows Form
+        href: data-binding-in-a-windows-forms-client.md
+      - name: Data binding in un client ASP.NET
+        href: data-binding-in-an-aspnet-client.md
+      - name: Associazione dati in un client Windows Presentation Foundation
+        href: data-binding-in-a-wpf-client.md
+    - name: Esempio di sicurezza di individuazione
+      href: discovery-security-sample.md
+    - name: Esempio di federazione
+      href: federation-sample.md
+    - name: Serializzazione JSON con tipizzazione debole (AJAX)
+      href: weakly-typed-json-serialization-sample.md
+    - name: Servizio facciata attendibile
+      href: trusted-facade-service.md
+    - name: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
+      href: design-patterns-list-based-publish-subscribe.md
+  - name: Esempi di strumenti
+    href: tool-samples.md
+    items:
+    - name: ConfigurationCodeGenerator
+      href: configurationcodegenerator.md
+    - name: CustomChannelsTester
+      href: customchannelstester.md
+    - name: FindPrivateKey
+      href: findprivatekey.md
+ms.openlocfilehash: 3c198d8f9f00d86343d05a59df52b703d35d1bcf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469368"

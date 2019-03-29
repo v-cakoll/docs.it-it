@@ -1,0 +1,18 @@
+items:
+- name: Alberi delle espressioni
+  href: index.md
+  items:
+  - name: 'Procedura: Eseguire alberi delle espressioni'
+    href: how-to-execute-expression-trees.md
+  - name: 'Procedura: Modificare alberi delle espressioni'
+    href: how-to-modify-expression-trees.md
+  - name: 'Procedura: Usare alberi delle espressioni per la compilazione di query dinamiche'
+    href: how-to-use-expression-trees-to-build-dynamic-queries.md
+  - name: Debug degli alberi delle espressioni in Visual Studio
+    href: debugging-expression-trees-in-visual-studio.md
+ms.openlocfilehash: 4f5abd220c0835eec40fd815088ef5dca1dca417
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469332"

@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   Nel CTS ogni tipo è definito come *tipo valore* o *tipo riferimento*. In queste due categorie sono inclusi anche tutti i tipi personalizzati nella libreria di classi .NET e i tipi definiti dall'utente. I tipi definiti tramite la parola chiave [struct](../../../csharp/language-reference/keywords/struct.md) sono tipi valore e tutti i tipi numerici incorporati sono tipi `structs`. I tipi definiti tramite la parola chiave [class](../../../csharp/language-reference/keywords/class.md) sono tipi riferimento. I tipi riferimento e i tipi valore hanno regole diverse in fase di compilazione e un comportamento diverso in fase di esecuzione.  
   
- La figura seguente illustra la relazione tra tipi valore e tipi riferimento nel CTS.  
+ La figura seguente illustra la relazione tra tipi valore e tipi riferimento nel CTS.
+
+ L'immagine seguente illustra tipi valore e tipi riferimento nel CTS: 
   
- ![Tipi valore e tipi di riferimento](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-Tipi valore e tipi riferimento nel CTS  
+  
+ ![Screenshot che illustra i tipi valore e i tipi riferimento nel CTS.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  È possibile osservare come i tipi usati con maggiore frequenza siano tutti organizzati nello spazio dei nomi <xref:System>. L'inserimento di un tipo in uno spazio dei nomi, tuttavia, è indipendente dalla categoria a cui appartiene il tipo.  

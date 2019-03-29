@@ -1,0 +1,48 @@
+items:
+- name: Date, ore e fusi orari
+  href: index.md
+  items:
+  - name: Panoramica sui fusi orari
+    href: time-zone-overview.md
+  - name: Scelta tra DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
+    href: choosing-between-datetime.md
+  - name: Ricerca dei fusi orari definiti in un sistema locale
+    href: finding-the-time-zones-on-local-system.md
+  - name: 'Procedura: Enumerare i fusi orari presenti in un computer'
+    href: enumerate-time-zones.md
+  - name: "Procedura: Accedere agli oggetti predefiniti dell'ora UTC e del fuso orario locale"
+    href: access-utc-and-local.md
+  - name: "Procedura: Creare un'istanza di un oggetto TimeZoneInfo"
+    href: instantiate-time-zone-info.md
+  - name: Creazione di un'istanza di un oggetto DateTimeOffset
+    href: instantiating-a-datetimeoffset-object.md
+  - name: 'Procedura: Creare fusi orari senza regole di regolazione'
+    href: create-time-zones-without-adjustment-rules.md
+  - name: 'Procedura: Creare fusi orari con regole di regolazione'
+    href: create-time-zones-with-adjustment-rules.md
+  - name: Salvataggio e ripristino dei fusi orari
+    href: saving-and-restoring-time-zones.md
+  - name: 'Procedura: Salvare fusi orari in una risorsa incorporata'
+    href: save-time-zones-to-an-embedded-resource.md
+  - name: 'Procedura: Ripristinare i fusi orari da una risorsa incorporata'
+    href: restore-time-zones-from-an-embedded-resource.md
+  - name: Utilizzo di calendari
+    href: working-with-calendars.md
+  - name: Esecuzione di operazioni aritmetiche con date e ore
+    href: performing-arithmetic-operations.md
+  - name: "Procedura: Usare fusi orari nell'aritmetica di data e ora"
+    href: use-time-zones-in-arithmetic.md
+  - name: Conversione tra DateTime e DateTimeOffset
+    href: converting-between-datetime-and-offset.md
+  - name: Conversione degli orari tra fusi orari
+    href: converting-between-time-zones.md
+  - name: 'Procedura: Risolvere orari ambigui'
+    href: resolve-ambiguous-times.md
+  - name: 'Procedura: Consentire agli utenti di risolvere orari ambigui'
+    href: let-users-resolve-ambiguous-times.md
+ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469115"

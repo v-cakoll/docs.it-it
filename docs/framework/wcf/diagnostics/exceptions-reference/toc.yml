@@ -1,0 +1,58 @@
+items:
+- name: Riferimenti per le eccezioni
+  href: index.md
+  items:
+  - name: Integrazione COM+
+    href: com-integration.md
+  - name: Configurazione
+    href: configuration.md
+  - name: 'Comunicazioni di base: framework di canale'
+    href: core-communications-channel-framework.md
+  - name: 'Comunicazioni di base: framework di connessione'
+    href: core-communications-connection-framework.md
+  - name: 'Comunicazioni di base: canali di trasporto HTTP/HTTPS'
+    href: core-communications-http-https-transport-channels.md
+  - name: 'Comunicazioni di base: canali di trasporto duplex interni'
+    href: core-communications-internal-duplex-transport-channels.md
+  - name: 'Comunicazioni di base: canali di trasporto named pipe'
+    href: core-communications-named-pipe-transport-channels.md
+  - name: 'Comunicazioni di base: canali di trasporto TCP'
+    href: core-communications-tcp-transport-channels.md
+  - name: 'Comunicazioni di base: framework di trasporto'
+    href: core-communications-transport-framework.md
+  - name: 'Comunicazioni di base: Utilità'
+    href: core-communications-utilities.md
+  - name: 'Comunicazioni di base: supporto WebHost'
+    href: core-communications-webhost-support.md
+  - name: Hosting
+    href: hosting-exceptions.md
+  - name: IdentityModel
+    href: identitymodel-exceptions.md
+  - name: Trasporto di integrazione MSMQ
+    href: msmq-integration-transport.md
+  - name: Trasporto MSMQ
+    href: msmq-transport.md
+  - name: Canale del peer
+    href: peer-channel.md
+  - name: Messaggistica affidabile
+    href: reliable-messaging.md
+  - name: Eccezioni di sicurezza
+    href: security-exceptions.md
+  - name: Framework dei servizi
+    href: service-framework.md
+  - name: Dati Framework del servizio
+    href: service-framework-data.md
+  - name: Metadati del framework dei servizi
+    href: service-framework-metadata.md
+  - name: Transazione
+    href: transaction-exceptions.md
+  - name: Formattatore delle transazioni
+    href: transaction-formatter.md
+  - name: Strumenti
+    href: tools.md
+ms.openlocfilehash: e3ba9b5630ceaa9e4124fb4577759cfddb536951
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468774"

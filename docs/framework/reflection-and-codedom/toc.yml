@@ -1,0 +1,61 @@
+items:
+- name: Programmazione dinamica
+  href: index.md
+  items:
+  - name: Reflection
+    href: reflection.md
+    items:
+    - name: Visualizzazione delle informazioni sul tipo
+      href: viewing-type-information.md
+    - name: Reflection e tipi generici
+      href: reflection-and-generic-types.md
+    - name: 'Procedura: Esaminare e creare istanze di tipi generici tramite reflection'
+      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+    - name: Considerazioni sulla sicurezza in relazione alla reflection
+      href: security-considerations-for-reflection.md
+    - name: Caricamento e utilizzo dinamico dei tipi
+      href: dynamically-loading-and-using-types.md
+    - name: 'Procedura: Caricare assembly nel contesto Reflection-Only'
+      href: how-to-load-assemblies-into-the-reflection-only-context.md
+    - name: Accesso ad attributi personalizzati
+      href: accessing-custom-attributes.md
+    - name: Specifica di nomi di tipo completi
+      href: specifying-fully-qualified-type-names.md
+    - name: 'Procedura: Associare un delegato tramite reflection'
+      href: how-to-hook-up-a-delegate-using-reflection.md
+    - name: Reflection in .NET Framework per applicazioni Windows Store
+      href: reflection-for-windows-store-apps.md
+  - name: Creazione di assembly e metodi dinamici
+    href: emitting-dynamic-methods-and-assemblies.md
+    items:
+    - name: Problemi di sicurezza nella reflection emit
+      href: security-issues-in-reflection-emit.md
+    - name: 'Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale'
+      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+    - name: 'Procedura: Definire ed eseguire metodi dinamici'
+      href: how-to-define-and-execute-dynamic-methods.md
+    - name: 'Procedura: Definire un tipo generico tramite reflection emit'
+      href: how-to-define-a-generic-type-with-reflection-emit.md
+    - name: 'Procedura: Definire un metodo generico tramite reflection emit'
+      href: how-to-define-a-generic-method-with-reflection-emit.md
+    - name: Assembly ritirabili per la generazione di tipi dinamici
+      href: collectible-assemblies.md
+  - name: Cenni preliminari su Dynamic Language Runtime
+    href: dynamic-language-runtime-overview.md
+  - name: Generazione e compilazione dinamica di codice sorgente
+    href: dynamic-source-code-generation-and-compilation.md
+    items:
+    - name: Utilizzo di CodeDOM
+      href: using-the-codedom.md
+    - name: Generazione e compilazione di codice sorgente a partire da un grafo CodeDOM
+      href: generating-and-compiling-source-code-from-a-codedom-graph.md
+    - name: 'Procedura: Creare un file di documentazione XML tramite CodeDOM'
+      href: how-to-create-an-xml-documentation-file-using-codedom.md
+    - name: 'Procedura: Creare una classe tramite CodeDOM'
+      href: how-to-create-a-class-using-codedom.md
+ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468809"

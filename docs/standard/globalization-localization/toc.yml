@@ -1,0 +1,32 @@
+items:
+- name: Globalizzazione e localizzazione
+  href: index.md
+  items:
+  - name: Globalizzazione
+    href: globalization.md
+  - name: Revisione della localizzabilità
+    href: localizability-review.md
+  - name: Localizzazione
+    href: localization.md
+  - name: Operazioni sulle stringhe indipendenti dalle impostazioni cultura
+    href: culture-insensitive-string-operations.md
+    items:
+    - name: Eseguire operazioni sulle stringhe indipendenti dalle impostazioni cultura
+      href: performing-culture-insensitive-string-operations.md
+      items:
+      - name: Confronti tra stringhe
+        href: performing-culture-insensitive-string-comparisons.md
+      - name: Modifica di maiuscole e minuscole
+        href: performing-culture-insensitive-case-changes.md
+      - name: Operazioni di stringa nelle raccolte
+        href: performing-culture-insensitive-string-operations-in-collections.md
+      - name: Operazioni di stringa nelle matrici
+        href: performing-culture-insensitive-string-operations-in-arrays.md
+  - name: Procedure consigliate per lo sviluppo di app internazionali
+    href: best-practices-for-developing-world-ready-apps.md
+ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469212"
