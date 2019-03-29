@@ -2,12 +2,12 @@
 title: 'Campi espliciti: Val (parola chiave)'
 description: Scopri la F# parola chiave 'val', che viene usata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773627"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634011"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: Val (parola chiave)
 
@@ -40,9 +40,9 @@ Ad esempio, un campo non modificabile chiamato `someField` è un campo di suppor
 Per un campo modificabile, la rappresentazione compilata .NET è un campo .NET.
 
 >[!WARNING]
-`Note` Lo spazio dei nomi .NET Framework `System.ComponentModel` contiene un attributo che ha lo stesso nome. Per altre informazioni sull'attributo, vedere `System.ComponentModel.DefaultValueAttribute`.
+>Lo spazio dei nomi .NET Framework `System.ComponentModel` contiene un attributo che ha lo stesso nome. Per altre informazioni sull'attributo, vedere `System.ComponentModel.DefaultValueAttribute`.
 
-Nel codice seguente viene illustrato l'uso di campi espliciti e, per il confronto, un'associazione `let` in una classe che dispone di un costruttore primario. Si noti che il campo associato `let` `myInt1` è privato. Quando si fa riferimento al campo associato `let` `myInt1` da un metodo membro, l'autoidentificatore `this` non è necessario. Ma quando si fa riferimento ai campi espliciti `myInt2` e `myString`, l'autoidentificatore è obbligatorio.
+Nel codice seguente viene illustrato l'uso di campi espliciti e, per il confronto, un'associazione `let` in una classe che dispone di un costruttore primario. Si noti che il campo associato `let``myInt1` è privato. Quando si fa riferimento al campo associato `let``myInt1` da un metodo membro, l'autoidentificatore `this` non è necessario. Ma quando si fa riferimento ai campi espliciti `myInt2` e `myString`, l'autoidentificatore è obbligatorio.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 

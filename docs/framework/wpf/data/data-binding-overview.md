@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364827"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634557"
 ---
 # <a name="data-binding-overview"></a>Panoramica sul data binding
 Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e di interagire con essi. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s, ad esempio <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> dispongono di funzionalità incorporate per abilitare lo stile flessibile dei singoli elementi di dati o raccolte di elementi di dati. In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
@@ -61,7 +61,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Indipendentemente dall'elemento che si intende associare e dalla natura dell'origine dati, ogni binding si basa sempre sul modello illustrato nella figura seguente:  
   
- ![Diagramma di data binding di base](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagramma che mostra il modello di associazione dati di base.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Come illustrato nella figura precedente, il data binding funge essenzialmente da ponte tra la destinazione e l'origine del binding. La figura illustra i concetti fondamentali seguenti relativi al data binding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
@@ -101,7 +101,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Il valore di origine viene aggiornato durante la modifica del testo o dopo aver apportato le modifiche del testo e aver spostato il mouse da TextBox? Il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà dell'associazione determina ciò che attiva l'aggiornamento dell'origine. I puntini delle frecce a destra nella figura seguente viene illustrato il ruolo del <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà:  
   
- ![Diagramma di UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Diagramma che mostra il ruolo della proprietà UpdateSourceTrigger.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Se il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valore è <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, quindi il valore a cui punta di freccia a destra <xref:System.Windows.Data.BindingMode.TwoWay> o il <xref:System.Windows.Data.BindingMode.OneWayToSource> binding viene aggiornato non appena le modifiche alle proprietà di destinazione. Tuttavia, se il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valore è <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, quindi tale valore viene aggiornato soltanto con il nuovo valore quando la proprietà di destinazione perde lo stato attivo.  
   
@@ -132,7 +132,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Se si applica questo esempio al diagramma di base, la figura risultante sarà simile alla seguente. Si tratta di un <xref:System.Windows.Data.BindingMode.OneWay> associazione perché la proprietà Background supporta <xref:System.Windows.Data.BindingMode.OneWay> binding per impostazione predefinita.  
   
- ![Diagramma di data binding](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Diagramma che mostra la proprietà di associazione dati in Background.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  È lecito chiedersi perché ciò funziona anche se il *ColorName* proprietà è di tipo stringa mentre la <xref:System.Windows.Controls.Control.Background%2A> proprietà è di tipo <xref:System.Windows.Media.Brush>. In questo caso viene usata la conversione di tipi predefinita, descritta nella sezione [Conversione dei dati](#data_conversion).  
   
@@ -185,7 +185,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Se si aggiungono queste informazioni alla figura nella sezione [Creazione di un binding](#creating_a_binding), si ottiene un diagramma analogo al seguente:  
   
- ![Diagramma di data binding](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Diagramma che mostra la proprietà predefinita di associazione dati.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Cosa accade però se anziché una proprietà di stringa del tipo di oggetto origine del binding è un *colore* vlastnosti typu <xref:System.Windows.Media.Color>? In tal caso, affinché l'associazione da usare è necessario prima disattivare la *colore* valore della proprietà in un elemento che il <xref:System.Windows.Controls.Control.Background%2A> proprietà accetta. È necessario creare un convertitore personalizzato implementando il <xref:System.Windows.Data.IValueConverter> interfaccia, come nell'esempio seguente:  
   
@@ -196,7 +196,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Il convertitore personalizzato viene ora usato al posto della conversione predefinita e il diagramma si presenta come segue:  
   
- ![Diagramma di data binding](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Diagramma che mostra il convertitore personalizzato di associazione dati.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Come già detto, le conversioni predefinite possono essere disponibili o meno a seconda dei convertitori presenti nel tipo a cui si esegue il binding. Questo comportamento dipenderà dai convertitori di tipi disponibili nella destinazione. In caso di dubbio, creare un convertitore personalizzato.  
   
@@ -217,7 +217,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
   
  Anche in questo caso è possibile applicare il diagramma di base. Quando si associa un <xref:System.Windows.Controls.ItemsControl> a una raccolta, il diagramma appare come segue:  
   
- ![Diagramma di data binding di ItemsControl](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Diagramma che mostra l'oggetto ItemsControl associazione dati.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Come illustrato nella figura seguente, per associare un' <xref:System.Windows.Controls.ItemsControl> a un oggetto collection, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> è la proprietà da utilizzare. È possibile pensare <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> come contenuto della proprietà di <xref:System.Windows.Controls.ItemsControl>. Si noti che è l'associazione <xref:System.Windows.Data.BindingMode.OneWay> perché il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> supporta proprietà <xref:System.Windows.Data.BindingMode.OneWay> binding per impostazione predefinita.  
   
@@ -340,7 +340,7 @@ Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wi
 ## <a name="data-templating"></a>Modelli di dati  
  Senza l'utilizzo di modelli di dati, l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dell'applicazione illustrata nella sezione [Definizione di data binding](#what_is_data_binding) avrebbe un aspetto simile al seguente:  
   
- ![Demo di data binding senza modelli di dati](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Data Binding Demo senza Data Templates](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Come illustrato nell'esempio nella sezione precedente, sia la <xref:System.Windows.Controls.ListBox> controllo e il <xref:System.Windows.Controls.ContentControl> associati all'intero oggetto collection (o più in particolare, la visualizzazione sull'oggetto collection) di *AuctionItem*s. Senza istruzioni specifiche visualizzare la raccolta dei dati, il <xref:System.Windows.Controls.ListBox> Visualizza una rappresentazione di stringa di ogni oggetto nella raccolta sottostante e <xref:System.Windows.Controls.ContentControl> Visualizza una rappresentazione di stringa dell'oggetto è associato a.  
   

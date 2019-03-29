@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356507"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634219"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -323,7 +323,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 ### <a name="unhandled-exceptions"></a>Eccezioni non gestite  
  A volte un'applicazione può essere arrestata in base a condizioni anomale, ad esempio quando viene generata un'eccezione imprevista. In questo caso, l'applicazione potrebbe non avere il codice per rilevare ed elaborare l'eccezione. Questo tipo di eccezione è un'eccezione non gestita. Prima che l'applicazione venga chiusa, viene visualizzata una notifica simile a quella mostrata nella figura seguente.  
   
- ![Notifica di eccezione non gestita](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Screenshot che mostra una notifica di eccezione non gestita.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Dal punto di vista dell'esperienza utente, è preferibile per un'applicazione evitare il comportamento predefinito eseguendo alcune o tutte le operazioni seguenti:  
   

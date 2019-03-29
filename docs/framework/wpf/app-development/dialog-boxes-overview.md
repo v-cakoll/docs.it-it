@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359133"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634453"
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
 Le applicazioni autonome hanno in genere una finestra principale in cui vengono visualizzati i dati principali su cui opera l'applicazione ed espone la funzionalità di elaborazione dei dati tramite [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] meccanismi come le barre dei menu, barre degli strumenti e le barre di stato. In un'applicazione più complessa sono inoltre disponibili finestre aggiuntive per l'esecuzione delle operazioni riportate di seguito:  
@@ -40,7 +40,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ## <a name="message-boxes"></a>Finestre di messaggio  
  Oggetto *MessageBox* è una finestra di dialogo che può essere utilizzata per visualizzare le informazioni testuali e consentire agli utenti di prendere decisioni più intelligenti con i pulsanti. Di seguito è illustrata una finestra di messaggio in cui vengono visualizzate informazioni di testo, viene posta una domanda e sono disponibili tre pulsanti per fornire una risposta.  
   
- ![Finestra di dialogo Elaboratore di testo](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Chiude una finestra di dialogo elaboratore di testo che chiede se si desidera salvare le modifiche apportate al documento prima che l'applicazione.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Per creare una finestra di messaggio, si utilizza il <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> Consente di configurare il testo della finestra di messaggio, titolo, icona e i pulsanti, usando codice simile al seguente.  
   
@@ -73,7 +73,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ### <a name="open-file-dialog"></a>Finestra di dialogo Apri  
  La finestra di dialogo Apri illustrata di seguito viene utilizzata dalla funzionalità di apertura file per recuperare il nome di un file da aprire.  
   
- ![Finestra di dialogo Apri](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Una finestra di dialogo Apri che mostra il percorso in cui recuperare il file.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  La finestra di dialogo Apri file comuni viene implementato come le <xref:Microsoft.Win32.OpenFileDialog> classe e si trova nel <xref:Microsoft.Win32> dello spazio dei nomi. Il codice seguente illustra come creare, configurare e visualizzare questa finestra di dialogo, nonché come elaborare il relativo risultato.  
   
@@ -89,7 +89,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ### <a name="save-file-dialog-box"></a>Finestra di dialogo Salva con nome  
  La finestra di dialogo Salva con nome illustrata di seguito viene utilizzata dalla funzionalità di salvataggio file per recuperare il nome di un file da salvare.  
   
- ![Finestra di dialogo Salva con nome](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Salva con nome finestra di dialogo che mostra il percorso in cui salvare il file.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Salva con nome finestra di dialogo file comune viene implementata come le <xref:Microsoft.Win32.SaveFileDialog> classe e si trova nel <xref:Microsoft.Win32> dello spazio dei nomi. Il codice seguente illustra come creare, configurare e visualizzare questa finestra di dialogo, nonché come elaborare il relativo risultato.  
   
@@ -102,7 +102,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ### <a name="print-dialog-box"></a>Finestra di dialogo Stampa  
  La finestra di dialogo Stampa illustrata di seguito viene utilizzata dalla funzionalità di stampa per la scelta e la configurazione della stampante su cui stampare dati.  
   
- ![Finestra di dialogo Stampa](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Screenshot che mostra una finestra di dialogo di stampa.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  La finestra di dialogo Stampa comune viene implementata come le <xref:System.Windows.Controls.PrintDialog> classe e si trova nel <xref:System.Windows.Controls> dello spazio dei nomi. Il codice seguente illustra come creare, configurare e visualizzare una finestra di dialogo di questo tipo.  
   
@@ -119,7 +119,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ### <a name="creating-a-modal-custom-dialog-box"></a>Creazione di una finestra di dialogo modale personalizzata  
  In questo argomento viene illustrato come utilizzare <xref:System.Windows.Window> per creare un'implementazione tipica di finestra di dialogo modale, utilizzando il `Margins` finestra di dialogo, ad esempio (vedere [esempio di finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984)). Il `Margins` nella finestra di dialogo è illustrata nella figura seguente.  
   
- ![Finestra di dialogo Margini](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Finestra di dialogo margini con i campi di definizione margine sinistro, del margine superiore, del margine destro e il margine inferiore.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Configurazione di una finestra di dialogo modale  
  L'interfaccia utente di una finestra di dialogo tipica include gli elementi riportati di seguito:  
@@ -208,7 +208,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
  Una volta associata, la regola di convalida [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verranno automaticamente applicati quando vengono immessi dati nel controllo associato. Quando un elemento control contiene dati non validi, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verrà visualizzato un bordo rosso intorno al controllo non valido, come illustrato nella figura seguente.  
   
- ![Margine sinistro non valido](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Una finestra di dialogo margini con un bordo rosso intorno al valore di margine sinistro non valido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] l'utente non rimane bloccato sul controllo non valido finché non vengono immessi dati validi. In questo modo, l'utente sarà libero di spostarsi tra i controlli della finestra di dialogo anche se i dati immessi non sono validi. Tuttavia, ciò significa che un utente può immettere dati non validi e premere il **OK** pulsante. Per questo motivo, il codice deve anche convalidare tutti i controlli in una finestra di dialogo quando il **OK** pulsante viene premuto gestendo il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
@@ -277,7 +277,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Creazione di una finestra di dialogo non modale personalizzata  
  Una finestra di dialogo non modale, ad esempio la finestra di dialogo Trova illustrata di seguito, presenta sostanzialmente lo stesso aspetto di una finestra di dialogo modale.  
   
- ![Finestra di dialogo Trova](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Screenshot che mostra una finestra di dialogo Trova.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  Il comportamento è invece leggermente diverso, come descritto nelle sezioni riportate di seguito.  
   

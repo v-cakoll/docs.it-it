@@ -3,8 +3,7 @@ title: Proprietà SqlChars.Stream (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -15,14 +14,14 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 36a6b3f45f0832ed651dc0a613f50e7170517497
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4858d9f8878e5b56a0811edf92a2faa729775156
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827682"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633998"
 ---
-# <a name="sqlcharsstream-property"></a>Proprietà SqlChars.Stream
+# <a name="sqlcharsstream-property"></a>SqlChars.Stream Property
 
 Ottiene o imposta il flusso di caratteri. L'assembly che contiene questa proprietà ha una relazione di tipo friend SQLAccess. Si tratta per l'uso da SQL Server. Per altri database, usare il meccanismo di hosting fornito da tale database.
 

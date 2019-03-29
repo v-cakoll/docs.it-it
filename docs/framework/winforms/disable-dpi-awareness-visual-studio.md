@@ -1,17 +1,17 @@
 ---
 title: Disabilitare la compatibilità con DPI in Visual Studio
 description: Descrive le limitazioni di progettazione form di Windows su schermi HDPI e su come eseguire Visual Studio come un processo non compatibili con DPI.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710537"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633868"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
@@ -23,11 +23,14 @@ Il **finestra di progettazione Windows Form** in Visual Studio non dispone di su
 
 ![Progettazione di form di Windows sul monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-In Visual Studio 2017 versione 15,8 e versioni successive, quando si apre un modulo nel **finestra di progettazione Windows Form** su un monitor HDPI, Visual Studio visualizza un informativo barra gialla nella parte superiore della finestra di progettazione:
+Quando si apre un modulo nel **finestra di progettazione Windows Form** in Visual Studio su un monitor HDPI, Visual Studio visualizza un informativo barra gialla nella parte superiore della finestra di progettazione:
 
 ![Barra informativa di Visual Studio per riavviare in modalità non compatibili con DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Legge il messaggio **ridimensionamento dello schermo principale è impostato su 200% (192 dpi). Ciò potrebbe causare problemi di rendering nella finestra di progettazione.**
+
+> [!NOTE]
+> Questa barra informativa è stata introdotta in Visual Studio 2017 versione 15.8.
 
 Se si non funzionano nella finestra di progettazione e non essere necessario modificare il layout del form, è possibile ignorare la barra informativa e continuare a lavorare nell'editor del codice o in altri tipi di finestre di progettazione. (È anche possibile [disabilitare le notifiche](#disable-notifications) in modo che la barra informativa non vengono ancora visualizzati.) Solo le **finestra di progettazione Windows Form** è interessato. Se è necessario lavorare nel **finestra di progettazione Windows Form**, nella sezione successiva consente [risolvere il problema](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Quando Visual Studio viene eseguito come processo non compatibili con DPI, vengo
 
 Visual Studio è possibile contrassegnare come non compatibili con DPI modificando il Registro di sistema. Aprire **dell'Editor del Registro di sistema** e aggiungere una voce per il **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** sottochiave:
 
-**Voce**: C:\Programmi\Microsoft file (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Voce**: A seconda se si usa Visual Studio 2017 o 2019, usare uno dei valori seguenti:
 
-   > [!NOTE]
-   > Se si usa l'edizione Professional o Enterprise di Visual Studio 2017, sostituire **Community** con **Professional** oppure **Enterprise** nella voce. Sostituire la lettera di unità in base alle esigenze.
+- C:\Programmi\Microsoft file (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Programmi\Microsoft file (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Se si usa l'edizione Professional o Enterprise di Visual Studio, sostituire **Community** con **Professional** oppure **Enterprise** nella voce. Sostituire la lettera di unità in base alle esigenze.
 
 **Tipo**: REG_SZ
 

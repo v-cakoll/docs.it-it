@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708532"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634167"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 Oggetto *dimensione* è una direzione in cui è possibile modificare la specifica di elementi della matrice. Matrice contenente le vendite totali per ogni giorno del mese ha una dimensione (il giorno del mese). Matrice contenente le vendite totali per reparto per ciascun giorno del mese ha due dimensioni (il numero di reparto e il giorno del mese). Il numero di dimensioni è una matrice viene chiamato relativa *rank*.  
@@ -27,14 +27,11 @@ Oggetto *dimensione* è una direzione in cui è possibile modificare la specific
   
  Le illustrazioni seguenti mostrano la struttura concettuale di matrici con intervalli diversi. Ogni elemento nelle figure Mostra i valori di indice che vi accedono. Ad esempio, è possibile accedere il primo elemento della seconda riga della matrice bidimensionale specificando gli indici `(1, 0)`.  
   
- ![Diagramma grafico di una&#45;matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Matrice unidimensionale  
+ ![Diagramma che mostra una matrice unidimensionale.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Diagramma grafico di due&#45;matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-matrice bidimensionale  
+ ![Diagramma che mostra una matrice bidimensionale.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Diagramma grafico di tre&#45;matrice dimensionale](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-Matrice tridimensionale  
+ ![Diagramma che mostra una matrice tridimensionale.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Una dimensione  
  Le matrici molti hanno solo una dimensione, ad esempio il numero di persone di ogni età. L'unico requisito per specificare un elemento è il periodo di validità per il quale questo elemento contiene il conteggio. Pertanto, ad esempio una matrice Usa un solo indice. L'esempio seguente dichiara una variabile per contenere una *matrice unidimensionale* di età conta rivolto a 0 e 120.  
