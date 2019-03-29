@@ -131,9 +131,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x == y](equality-comparison-operator.md): uguaglianza. Per impostazione predefinita, per i tipi di riferimento diversi da `string`, restituisce l'uguaglianza dei riferimenti (test dell'identità). Tuttavia, i tipi possono eseguire l'overload di `==`, quindi, se si prevede di testare l'identità, è meglio usare il metodo `ReferenceEquals` su `object`.
+[x == y](equality-operators.md#equality-operator-): uguaglianza. Per impostazione predefinita, per i tipi di riferimento diversi da `string`, restituisce l'uguaglianza dei riferimenti (test dell'identità). Tuttavia, i tipi possono eseguire l'overload di `==`, quindi, se si prevede di testare l'identità, è meglio usare il metodo `ReferenceEquals` su `object`.
 
-[x != y](not-equal-operator.md): diverso da. Vedere il commento per `==`. Se un tipo esegue l'overload di `==`, deve eseguire l'overload di `!=`.
+[x != y](equality-operators.md#inequality-operator-): diverso da. Vedere il commento per `==`. Se un tipo esegue l'overload di `==`, deve eseguire l'overload di `!=`.
 
 ## <a name="logical-and-operator"></a>AND (operatore logico)
 
