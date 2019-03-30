@@ -2,12 +2,12 @@
 title: Proprietà
 description: Informazioni su F# proprietà, che sono membri che rappresentano valori associati a un oggetto.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614506"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675692"
 ---
 # <a name="properties"></a>Proprietà
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 L'output del codice precedente mostra che il valore di AutoProperty rimane invariato quando viene chiamato più volte, mentre il ExplicitProperty cambia ogni volta che viene chiamato. Ciò dimostra che l'espressione per una proprietà implementata automaticamente non viene valutata ogni volta, perché è il metodo di richiamo della proprietà esplicite.
 
 >[!WARNING]
-Esistono alcune librerie, ad esempio Entity Framework (`System.Data.Entity`) che eseguono operazioni personalizzate nei costruttori di classe di base che non funzionano correttamente con l'inizializzazione di proprietà implementate automaticamente. In questi casi, provare a usare le proprietà esplicite.
+>Esistono alcune librerie, ad esempio Entity Framework (`System.Data.Entity`) che eseguono operazioni personalizzate nei costruttori di classe di base che non funzionano correttamente con l'inizializzazione di proprietà implementate automaticamente. In questi casi, provare a usare le proprietà esplicite.
 
 Le proprietà possono essere membri di classi, strutture, unioni discriminate, record, interfacce e le estensioni di tipo e possono anche essere definite nelle espressioni di oggetto.
 

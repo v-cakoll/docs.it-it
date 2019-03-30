@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371983"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654315"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a> Durante lo sviluppo di Windows Presentation Foundation (WPF) applicazioni autonome e ospitate da browser, è necessario considerare il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** set di autorizzazioni), se distribuite mediante Windows Installer (MSI), XCopy, o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host di attendibilità totale può creare una relazione di trust parziale <xref:System.AppDomain> usando il modello di componente aggiuntivo di .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti aggiuntivi di WPF](./app-development/wpf-add-ins-overview.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "57371983"
   
  La *navigazione tramite applicazione* consiste nel passaggio tra elementi di contenuto all'interno di un'applicazione ospitata da un browser. La *navigazione tramite browser* implica la modifica del contenuto e dell'URL del percorso del browser stesso. La relazione tra la navigazione tramite applicazione (in genere XAML) e la navigazione tramite browser (in genere HTML) è illustrata nella figura seguente:
   
- ![Diagramma della navigazione](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![Relazione fra la navigazione tramite applicazione e navigazione tramite browser.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  Il tipo di contenuto considerato sicuro per un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] per passare alla è principalmente determinato dal fatto che viene utilizzata la navigazione tramite applicazione o la navigazione tramite browser.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "57371983"
   
      Il **impostazioni di sicurezza** verrà visualizzata la finestra di dialogo ed è possibile configurare le impostazioni di sicurezza per l'area selezionata.  
   
-     ![Finestra di dialogo Impostazioni di sicurezza](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![Screenshot che mostra la finestra di dialogo Impostazioni di sicurezza.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  È anche possibile passare alla finestra di dialogo Opzioni Internet tramite Internet Explorer. Fare clic su **degli strumenti** e quindi fare clic su **Opzioni Internet**.  

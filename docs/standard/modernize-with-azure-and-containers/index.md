@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows (2nd edition)
 
-![Immagine di copertina](./media/cover.png)
+![Immagine copertina della Guida .NET modernizzare le applicazioni.](./media/index/web-application-guide-cover-image.png)
 
 PUBBLICATO DA  
 Microsoft Press e Microsoft DevDiv  
