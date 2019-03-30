@@ -2,15 +2,15 @@
 title: Scenari sincroni con trasporti HTTP, TCP o pipe con nome
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28e612b190f4993e1ce7da0d1083c4e55f827d4a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810174"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654003"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scenari sincroni con trasporti HTTP, TCP o pipe con nome
-In questo argomento vengono descritte le attività e i trasferimenti di esecuzione in vari scenari request/reply sincroni che prevedono un client a thread singolo e che utilizzano un trasporto HTTP, TCP o pipe con nome. Vedere [scenari asincroni con HTTP, TCP o Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) per ulteriori informazioni sulle richieste a thread multipli.  
+In questo argomento vengono descritte le attività e i trasferimenti di esecuzione in vari scenari request/reply sincroni che prevedono un client a thread singolo e che utilizzano un trasporto HTTP, TCP o pipe con nome. Visualizzare [scenari asincroni con HTTP, TCP o Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) per altre informazioni sulle richieste a thread multipli.  
   
 ## <a name="synchronous-requestreply-without-errors"></a>Request/reply sincrono senza errori  
  Contenuto della sezione vengono descritte le attività e i trasferimenti di esecuzione in uno scenario request/reply sincrono senza errori con un client a thread singolo.  
@@ -18,7 +18,7 @@ In questo argomento vengono descritte le attività e i trasferimenti di esecuzio
 ### <a name="client"></a>Client  
   
 #### <a name="establishing-communication-with-service-endpoint"></a>Apertura delle comunicazioni con un endpoint di servizio  
- Un client viene costruito e aperto. Per ognuno di questi passaggi, l'attività di ambiente (A) viene trasferita a un "Costruzione Client" (B) e "Apertura Client" (C) attività rispettivamente. Ogni volta che viene trasferita a un'altra attività, l'attività di ambiente viene sospesa fino al trasferimento di restituzione, ovvero fino all'esecuzione del codice di ServiceModel.  
+ Un client viene costruito e aperto. Per ognuno di questi passaggi, l'attività di ambiente (A) viene trasferita rispettivamente a una "Costruzione Client" (B) e "Apertura Client" (C) attività. Ogni volta che viene trasferita a un'altra attività, l'attività di ambiente viene sospesa fino al trasferimento di restituzione, ovvero fino all'esecuzione del codice di ServiceModel.  
   
 #### <a name="making-a-request-to-service-endpoint"></a>Invio di una richiesta all'endpoint di servizio  
  L'attività di ambiente viene trasferita a un'attività "ProcessAction" (D). Questa attività prevede l'invio di un messaggio di richiesta e la ricezione di un messaggio di risposta. L'attività termina quando il controllo viene restituito al codice utente. Poiché si tratta di una richiesta sincrona, l'attività di ambiente viene sospesa fino alla restituzione del controllo.  
@@ -34,7 +34,7 @@ In questo argomento vengono descritte le attività e i trasferimenti di esecuzio
  Un'attività di listener (P) viene creata tramite l'apertura di un ServiceHost per ogni listener. L'attività di listener attende la ricezione e l'elaborazione dei dati.  
   
 #### <a name="receiving-data-on-the-wire"></a>Ricezione di dati in transito  
- All'arrivo dei dati in transito, un'attività "ReceiveBytes" viene creata se non esiste già (Q) per elaborare i dati ricevuti. Inoltre, questa attività può essere riutilizzata per più messaggi appartenenti a una connessione o a una coda.  
+ Quando arrivano i dati in transito, viene creata un'attività "ReceiveBytes" Se non esiste già (Q) per elaborare i dati ricevuti. Inoltre, questa attività può essere riutilizzata per più messaggi appartenenti a una connessione o a una coda.  
   
  Se dispone di una quantità sufficiente di dati per formare un messaggio di azione SOAP, l'attività "ReceiveBytes" avvia un'attività "ProcessMessage" (R).  
   
@@ -45,17 +45,17 @@ In questo argomento vengono descritte le attività e i trasferimenti di esecuzio
 #### <a name="closing-a-service-host"></a>Chiusura di un ServiceHost  
  L'attività di chiusura di un ServiceHost (Z) viene creata a partire dall'attività di ambiente.  
   
- ![Scenari sincroni con HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronizzazione")  
+ ![Diagramma che mostra scenari sincroni: HTTP, TCP o named pipe.](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
   
- In \<a: name >, `A` è un simbolo di scelta rapida che descrive l'attività contenuta nel testo precedente e nella tabella 3. mentre `Name` è un nome abbreviato dell'attività.  
+ Nelle \<a: name >, `A` è un simbolo di collegamento che descrive l'attività contenuta nel testo precedente e nella tabella 3. mentre `Name` è un nome abbreviato dell'attività.  
   
- Se `propagateActivity` = `true`, elaborazione azione nel client e servizio hanno lo stesso ID di attività.  
+ Se `propagateActivity` = `true`, Processaction nel client sia servizio hanno lo stesso ID di attività.  
   
 ## <a name="synchronous-requestreply-with-errors"></a>Request/reply sincrono con errori  
  L'unica differenza rispetto allo scenario precedente è che viene restituito un messaggio di errore SOAP come messaggio di risposta. Se `propagateActivity` = `true`, l'ID attività del messaggio di richiesta viene aggiunta al messaggio di errore SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Unidirezionale sincrono senza errori  
- L'unica differenza rispetto al primo scenario è che non viene restituito alcun messaggio al server. Inoltre, per i protocolli basati su HTTP, il sistema invia al client uno stato che indica l'eventuale presenza di errori. Infatti, quest'ultimo è l'unico protocollo avente una semantica request / reply che fa parte dello stack di protocolli WCF. Poiché l'elaborazione TCP è nascosta da WCF, viene inviato alcun acknowledgement al client.  
+ L'unica differenza rispetto al primo scenario è che non viene restituito alcun messaggio al server. Inoltre, per i protocolli basati su HTTP, il sistema invia al client uno stato che indica l'eventuale presenza di errori. Questo avviene perché HTTP è l'unico protocollo avente una semantica request / reply che fa parte dello stack del protocollo WCF. Poiché l'elaborazione TCP è nascosta da WCF, viene inviato alcun acknowledgement al client.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Unidirezionale sincrono con errori  
  Se durante l'elaborazione del messaggio (Q o successivo) si verifica un errore, al client non viene restituita alcuna notifica. Questo comportamento è identico allo scenario "Sincrono unidirezionale senza errori". Se si desidera ricevere un messaggio di errore, evitare di utilizzare uno scenario unidirezionale.  

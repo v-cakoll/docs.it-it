@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356091"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654588"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Fornisce la configurazione per il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ Fornisce la configurazione per il <xref:System.IdentityModel.Services.WSFederati
 |---------------|-----------------|  
 |authenticationType|URI che specifica il tipo di autenticazione. Imposta il parametro wauth di richiesta di accesso WS-Federation. Facoltativo. Il valore predefinito è una stringa vuota, che specifica che il parametro wauth non è incluso nella richiesta.|  
 |impostazione della validità|La durata massima desiderata delle richieste di autenticazione, in pochi minuti. Imposta il parametro wfresh di richiesta di accesso WS-Federation. Facoltativo. Il valore predefinito è zero. Facoltativo. **Avviso:**  Nella prossima versione di .NET Framework 4.5, il `freshness` attributo sarà di tipo `xs:string` e il relativo valore predefinito sarà `null`.|  
-|homeRealm|L'area di autenticazione principale del provider di identità (IP) da usare per l'autenticazione. Imposta il parametro whr di richiesta di accesso WS-Federation. Facoltativo. Il valore predefinito è una stringa vuota, che specifica che il parametro whr non è incluso nella richiesta.|  
+|homeRealm|L'area di autenticazione principale del provider di identità (IdP) da usare per l'autenticazione. Imposta il parametro whr di richiesta di accesso WS-Federation. Facoltativo. Il valore predefinito è una stringa vuota, che specifica che il parametro whr non è incluso nella richiesta.|  
 |issuer|L'URI dell'emittente del token previsto. Imposta la base URL di WS-Federation le richieste di accesso e le richieste di disconnessione necessari.|  
 |persistentCookiesOnPassiveRedirects|Specifica se i cookie permanenti vengono eseguiti sull'autenticazione. Facoltativo. Il valore predefinito è "false", non vengono emessi cookie.|  
 |passiveRedirectEnabled|Specifica se il WSFAM è abilitato per reindirizzare automaticamente le richieste non autorizzate a un servizio token di sicurezza. Facoltativo. Il valore predefinito è "true", vengono automaticamente reindirizzate le richieste non autorizzate.|  

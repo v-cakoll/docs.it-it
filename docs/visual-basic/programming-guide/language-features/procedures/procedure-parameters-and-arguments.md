@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972548"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654237"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametri e argomenti delle routine (Visual Basic)
 Nella maggior parte dei casi, una procedura richiede alcune informazioni sulle circostanze in cui è stato chiamato. Una routine che esegue attività ripetute o condivise Usa informazioni diverse per ogni chiamata. Queste informazioni è costituito da variabili, costanti ed espressioni che viene passato alla procedura quando si chiama.  
@@ -36,8 +36,7 @@ Nella maggior parte dei casi, una procedura richiede alcune informazioni sulle c
   
  La figura seguente illustra codice che chiama la routine `safeSquareRoot` da due posizioni diverse. La prima chiamata passa il valore della variabile `x` (4.0) per il parametro `number`e il valore restituito nella `root` (2.0) viene assegnato alla variabile `y`. La seconda chiamata passa il valore letterale 9.0 `number`e assegna il valore restituito (3.0) alla variabile `z`.  
   
- ![Diagramma grafico del passaggio di argomento al parametro](./media/parametersargue.gif "ParametersArgue")  
-Passa un argomento a un parametro  
+ ![Diagramma che mostra il passaggio di un argomento a un parametro](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Per altre informazioni, vedere [differenze tra parametri e argomenti](./differences-between-parameters-and-arguments.md).  
   

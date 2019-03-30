@@ -2,12 +2,12 @@
 title: Espressioni di query
 description: Informazioni sul supporto di espressione di query di LINQ in di F# linguaggio di programmazione.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463228"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654822"
 ---
 # <a name="query-expressions"></a>Espressioni di query
 
@@ -60,7 +60,7 @@ Tabella 1 sono illustrati gli operatori di query disponibili. Inoltre, vedere Ta
 
 Questa tabella si presuppone un database nel formato seguente:
 
-![Diagramma di Database di esempio](../media/StudentCourseDB.png)
+![Diagramma che mostra un database di esempio.](./media/query-expressions/student-course-database.png)
 
 Il codice nelle tabelle riportate di seguito presuppone anche il seguente codice di connessione di database. I progetti è necessario aggiungere riferimenti agli assembly System. Data, LINQ e Typeproviders. Il codice che crea il database è incluso alla fine di questo argomento.
 

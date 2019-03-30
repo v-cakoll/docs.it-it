@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359718"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654224"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando è presente un investimento sostanziale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace riutilizzare almeno parte di tale codice nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione anziché riscriverla da zero. Lo scenario più comune è quando si dispone di controlli Windows Form esistenti. In alcuni casi, è possibile che non si abbia accesso al codice sorgente di questi controlli. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre una procedura semplice per l'hosting di tali controlli in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione. Ad esempio, è possibile usare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per la maggior parte della programmazione e che ospita lo specializzato <xref:System.Windows.Forms.DataGridView> controlli.  
@@ -36,9 +36,10 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementazione del controllo Windows Forms composito  
  Del controllo di Windows Forms composito usato in questo esempio è una forma semplice immissione di dati. Questo form accetta nome e indirizzo dell'utente e quindi usa un evento personalizzato per restituire le informazioni all'host. La figura seguente mostra il controllo sottoposto a rendering.  
-  
- ![Controllo semplice Windows Form](./media/wfcontrol.gif "WFControl")  
-Controllo Windows Forms composito  
+
+ L'immagine seguente mostra un controllo Windows Forms composito:  
+
+ ![Screenshot che mostra un controllo Windows Form semplice.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Creazione del progetto  
  Per avviare il progetto:  
@@ -128,7 +129,9 @@ Controllo Windows Forms composito
 ## <a name="implementing-the-wpf-host-application"></a>Implementazione dell'applicazione host WPF
  Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ospitare l'applicazione utilizza le <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo host `MyControl1`. L'applicazione gestisce il `OnButtonClick` eventi per ricevere i dati dal controllo. Include anche una raccolta di pulsanti di opzione che consentono di modificare alcune delle proprietà del controllo dal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione. La figura seguente illustra l'applicazione finita.
 
- ![Controllo incorporato in una pagina WPF](./media/avalonhost.gif "AvalonHost") l'applicazione completa, che mostra il controllo incorporato nell'applicazione WPF
+L'immagine seguente mostra l'applicazione completa, tra cui il controllo incorporato nell'applicazione WPF:
+
+ ![Screenshot che mostra un controllo incorporato in una pagina WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Creazione del progetto
  Per avviare il progetto:

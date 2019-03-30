@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: a23026e0ac377294e3e4356d341c45d31b4ecd79
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724440"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653821"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Procedura: Disegnare una Bitmap esistente sullo schermo
 È possibile creare facilmente un'immagine esistente sullo schermo. Prima di tutto è necessario creare un <xref:System.Drawing.Bitmap> utilizzando il costruttore di mappa di bit che accetta un nome file, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Questo costruttore accetta le immagini con diversi formati di file diversi, tra cui BMP, GIF, JPEG, PNG e TIFF. Dopo aver creato il <xref:System.Drawing.Bitmap> dell'oggetto, quindi passare tale <xref:System.Drawing.Bitmap> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.  
@@ -22,15 +22,15 @@ ms.locfileid: "57724440"
 ## <a name="example"></a>Esempio  
  Questo esempio viene creato un <xref:System.Drawing.Bitmap> oggetto da un file JPEG e quindi consente di disegnare la bitmap con relativo angolo superiore sinistro a (60, 10).  
   
- La figura seguente mostra la bitmap disegnata in corrispondenza della posizione specificata.  
+ La figura seguente mostra la bitmap disegnata in corrispondenza della posizione specificata:  
   
- ![Posizione di immagine](./media/csimageposition1.png "csimageposition1")  
+ ![Screenshot che mostra un'immagine in una posizione specificata.](./media/how-to-draw-an-existing-bitmap-to-the-screen/bitmap-specified-position.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.WorkingWithImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)

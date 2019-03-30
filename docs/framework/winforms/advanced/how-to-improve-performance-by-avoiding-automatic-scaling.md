@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705339"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653795"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] durante il disegno, che ridurrebbe le prestazioni, può ridimensionare automaticamente un'immagine. In alternativa, è possibile controllare il ridimensionamento dell'immagine, passando le dimensioni del rettangolo di destinazione per il <xref:System.Drawing.Graphics.DrawImage%2A> (metodo).  
@@ -30,15 +30,15 @@ ms.locfileid: "57705339"
  Anche se è diversa da 96 punti per pollice, della risoluzione dello schermo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verrà probabilmente la scala dell'immagine come se la risoluzione dello schermo fosse 96 punti per pollice. Infatti, una [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> oggetto è associato un contesto di periferica e quando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] query il contesto di dispositivo per la risoluzione dello schermo, il risultato in genere è 96, indipendentemente dalla risoluzione dello schermo effettivo. È possibile evitare il ridimensionamento automatico, specificando il rettangolo di destinazione nel <xref:System.Drawing.Graphics.DrawImage%2A> (metodo).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente disegna due volte la stessa immagine. Nel primo caso, la larghezza e altezza del rettangolo di destinazione non sono specificati e l'immagine viene ridimensionata automaticamente. Nel secondo caso, la larghezza e altezza, espresso in pixel, del rettangolo di destinazione vengono specificate sia lo stesso come la larghezza e altezza dell'immagine originale. La figura seguente mostra l'immagine visualizzata due volte.  
+ L'esempio seguente disegna due volte la stessa immagine. Nel primo caso, la larghezza e altezza del rettangolo di destinazione non sono specificati e l'immagine viene ridimensionata automaticamente. Nel secondo caso, la larghezza e altezza, espresso in pixel, del rettangolo di destinazione vengono specificate sia lo stesso come la larghezza e altezza dell'immagine originale. Nella figura seguente mostra l'immagine visualizzata due volte:  
   
- ![Trama ridimensionata](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Screenshot che mostra le immagini con trama in scala.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire texture. jpg con un nome di immagine e il percorso che sono validi per il sistema.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire texture. jpg con un nome di immagine e il percorso che sono validi per il sistema.  
   
 ## <a name="see-also"></a>Vedere anche
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)

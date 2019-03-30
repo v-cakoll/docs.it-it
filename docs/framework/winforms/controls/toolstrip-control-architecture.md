@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719386"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654770"
 ---
 # <a name="toolstrip-control-architecture"></a>Architettura del controllo ToolStrip
 Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> classi forniscono un sistema flessibile ed estendibile per la visualizzazione degli elementi della barra degli strumenti, stato e menu. Tutte queste classi sono contenute nel <xref:System.Windows.Forms> dello spazio dei nomi e sono tutti in genere vengono denominati con il prefisso "ToolStrip" (ad esempio <xref:System.Windows.Forms.ToolStripOverflow>) o con il suffisso "Strisce" (, ad esempio <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,8 +19,7 @@ Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripI
   
  <xref:System.Windows.Forms.ToolStrip> è la classe base astratta per <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, e <xref:System.Windows.Forms.ContextMenuStrip>. L'oggetto seguente modello Mostra il <xref:System.Windows.Forms.ToolStrip> gerarchia di ereditarietà.  
   
- ![Modello a oggetti ToolStrip](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-Modello a oggetti ToolStrip  
+ ![Diagramma che mostra il modello a oggetti ToolStrip.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  È possibile accedere a tutti gli elementi in un <xref:System.Windows.Forms.ToolStrip> attraverso il <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta. È possibile accedere a tutti gli elementi in un <xref:System.Windows.Forms.ToolStripDropDownItem> attraverso il <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> raccolta. In una classe derivata da <xref:System.Windows.Forms.ToolStrip>, è anche possibile usare il <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> proprietà a cui accedere solo gli elementi attualmente visualizzati. Questi sono gli elementi che non sono attualmente in un menu di overflow.  
   
@@ -198,7 +197,7 @@ Modello a oggetti ToolStrip
 ##### <a name="stack-layouts"></a>Layout di stack  
  Impilamento è la disposizione degli elementi adiacenti a entrambe le estremità del <xref:System.Windows.Forms.ToolStrip>. L'elenco seguente descrive i layout di stack.  
   
--   Il valore predefinito è <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow>. Questa impostazione fa in modo che il <xref:System.Windows.Forms.ToolStrip> per modificare il layout automaticamente in base al <xref:System.Windows.Forms.ToolStrip.Orientation%2A> proprietà per gestire il trascinamento e gli scenari di ancoraggio.  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> è il valore predefinito. Questa impostazione fa in modo che il <xref:System.Windows.Forms.ToolStrip> per modificare il layout automaticamente in base al <xref:System.Windows.Forms.ToolStrip.Orientation%2A> proprietà per gestire il trascinamento e gli scenari di ancoraggio.  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> esegue il rendering di <xref:System.Windows.Forms.ToolStrip> elementi verticalmente accanto a altro.  
   
@@ -251,8 +250,7 @@ Modello a oggetti ToolStrip
   
  <xref:System.Windows.Forms.ToolStripItem> è la classe base astratta per tutti gli elementi che costituiscono un <xref:System.Windows.Forms.ToolStrip>. L'oggetto seguente modello Mostra il <xref:System.Windows.Forms.ToolStripItem> gerarchia di ereditarietà.  
   
- ![Modello a oggetti ToolStripItem](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-Modello a oggetti ToolStripItem  
+ ![Diagramma che mostra il modello a oggetti ToolStripItem.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> classi di ereditare direttamente da <xref:System.Windows.Forms.ToolStripItem>, o ereditare indirettamente <xref:System.Windows.Forms.ToolStripItem> attraverso <xref:System.Windows.Forms.ToolStripControlHost> o <xref:System.Windows.Forms.ToolStripDropDownItem>.  
   
@@ -265,7 +263,7 @@ Modello a oggetti ToolStripItem
   
 |Elemento contenuto|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|Sì|No|No|No|Yes|  
+|<xref:System.Windows.Forms.ToolStripButton>|Yes|No|No|No|Yes|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|Yes|Yes|Yes|No|Yes|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Yes|No|No|Yes|Yes|  
 |<xref:System.Windows.Forms.ToolStripLabel>|Yes|No|No|Yes|Yes|  
@@ -275,7 +273,7 @@ Modello a oggetti ToolStripItem
 |<xref:System.Windows.Forms.ToolStripMenuItem>|No|Yes|Yes|No|No|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|No|No|No|Sì|No|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Sì|No|No|Sì|No|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|Yes|Yes|No|Yes|Sì|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|Yes|Yes|No|Yes|Yes|  
   
 ### <a name="toolstripbutton"></a>ToolStripButton  
  <xref:System.Windows.Forms.ToolStripButton> è l'elemento pulsante <xref:System.Windows.Forms.ToolStrip>. È possibile visualizzarla con vari stili di bordo ed è possibile usarlo per rappresentare e attivare gli stati operativi. È anche possibile definire in modo che abbia lo stato attivo per impostazione predefinita.  

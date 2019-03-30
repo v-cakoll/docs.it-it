@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965826"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654328"
 ---
 # <a name="option-infer-statement"></a>Option Infer (istruzione)
 Abilita l'uso dell'inferenza del tipo di variabile locale nelle variabili dichiaranti.  
@@ -31,23 +31,25 @@ Option Infer { On | Off }
   
 |Termine|Definizione|  
 |---|---|  
-|`On`|Parametro facoltativo. Abilita l'inferenza del tipo di variabile locale.|  
-|`Off`|Parametro facoltativo. Disabilita l'inferenza del tipo di variabile locale.|  
+|`On`|Facoltativo. Abilita l'inferenza del tipo di variabile locale.|  
+|`Off`|Facoltativo. Disabilita l'inferenza del tipo di variabile locale.|  
   
 ## <a name="remarks"></a>Note  
  Per impostare `Option Infer` in un file, digitare `Option Infer On` oppure `Option Infer Off` all'inizio del file, prima di qualsiasi altro codice sorgente. Se il valore impostato per `Option Infer` in un file è in conflitto con il valore impostato nell'IDE o sulla riga di comando, il valore nel file ha precedenza.  
   
  Quando si imposta `Option Infer` su `On`, è possibile dichiarare variabili locali senza dichiarare in modo esplicito un tipo di dati. Tramite l'inferenza, il compilatore deriva il tipo di dati di una variabile dal tipo della relativa espressione di inizializzazione.  
   
- Nella figura seguente, l'istruzione `Option Infer` è abilitata. La variabile nella dichiarazione `Dim someVar = 2` viene dichiarata come Integer in base all'inferenza del tipo.  
+ Nella figura seguente, l'istruzione `Option Infer` è abilitata. La variabile nella dichiarazione `Dim someVar = 2` viene dichiarata come Integer in base all'inferenza del tipo.
+
+ Lo screenshot seguente mostra IntelliSense quando Option Infer è attivato: 
   
- ![Visualizzazione IntelliSense della dichiarazione. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-IntelliSense quando Option Infer è attivato  
+ ![Screenshot della visualizzazione di IntelliSense quando Option Infer è attivato.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
  Nella figura seguente, l'istruzione `Option Infer` è disabilitata. La variabile nella dichiarazione `Dim someVar = 2` viene dichiarata come `Object` in base all'inferenza del tipo. In questo esempio, il **Option Strict** è impostato su **Off** sul [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Visualizzazione IntelliSense della dichiarazione. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-IntelliSense quando Option Infer è disabilitato  
+ Lo screenshot seguente mostra IntelliSense quando Option Infer è disabilitato:
+ 
+ ![Screenshot della visualizzazione di IntelliSense quando Option Infer è disabilitato.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  Quando una variabile viene dichiarata come `Object`, il tipo di runtime può essere modificato mentre il programma è in esecuzione. Visual Basic esegue operazioni chiamate *boxing* e *unboxing* per la conversione tra un `Object` e un tipo valore, che rende l'esecuzione più lenta. Per informazioni sulle conversioni boxing e unboxing, vedere la [specifiche del linguaggio Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).
@@ -79,9 +81,9 @@ IntelliSense quando Option Infer è disabilitato
 |Tipo di dati specificato?|Inizializzatore specificato?|Esempio|Risultato|  
 |---|---|---|---|  
 |No|No|`Dim qty`|Se `Option Strict` è disabilitato (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|No|Sì|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per altre informazioni, vedere [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|No|Yes|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|Yes|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per altre informazioni, vedere [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Yes|Yes|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano come l'istruzione `Option Infer` permette di usare inferenza del tipo di variabile locale.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707430"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653990"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizzo delle trasformazioni per scalare i colori
 Una trasformazione di ridimensionamento Moltiplica uno o più di quattro componenti di colore da un numero. Le voci di matrice di colore che rappresentano la scalabilità sono indicate nella tabella seguente.  
@@ -31,9 +31,9 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra.  
+ Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra:  
   
- ![Scalare i colori](./media/colortrans3.png "colortrans3")  
+ ![Screenshot che confronta i colori originali e in scala.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo il ridimensionamento blu. Si noti che il componente blu nella barra dei colori quarto passato da 0,8 a 0,6. Infatti, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] mantiene solo la parte frazionaria del risultato. Ad esempio, (2)(0.8) Version=1.6, e la parte frazionaria di 1.6 è 0,6. Mantenendo solo la parte frazionaria garantisce che il risultato è sempre nell'intervallo [0, 1].  
   
@@ -50,9 +50,9 @@ Una trasformazione di ridimensionamento Moltiplica uno o più di quattro compone
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra.  
+ Nella figura seguente mostra l'immagine originale a sinistra e l'immagine adattata a destra:  
   
- ![Scalare i colori](./media/colortrans4.png "colortrans4")  
+ ![Screenshot che confronta i colori originali e in scala.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo il ridimensionamento rosso, verde e blu.  
   

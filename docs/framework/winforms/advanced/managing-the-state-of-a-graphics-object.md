@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717622"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653782"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gestione dello stato di un oggetto Graphics
 Il <xref:System.Drawing.Graphics> classe è il fulcro di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Per disegnare qualsiasi elemento, per ottenere un <xref:System.Drawing.Graphics> dell'oggetto, impostarne le proprietà e chiamarne i metodi <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e così via).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  La figura seguente mostra due ellissi. Si noti che la rotazione di 30 gradi intorno all'origine del sistema di coordinate (nell'angolo superiore sinistro dell'area client), non rispetto al centro dei puntini di sospensione. Si noti inoltre che la larghezza della penna di 1 significa 1 pixel per la prima ellisse e a 1 millimetro della seconda ellisse.  
   
- ![Ovals](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Figura che mostra due ellissi: larghezza di rotazione e penna.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Area di ritaglio  
  Oggetto <xref:System.Drawing.Graphics> oggetto mantiene un'area di ridimensionamento che si applica a tutti gli elementi disegnati da tale <xref:System.Drawing.Graphics> oggetto. È possibile impostare l'area di visualizzazione chiamando il <xref:System.Drawing.Graphics.SetClip%2A> (metodo).  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- La figura seguente mostra le righe tagliate.  
+ La figura seguente illustra le linee tagliate:  
   
- ![Area di ritaglio limitata](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagramma che mostra l'area di ritaglio limitata.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Vedere anche
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
