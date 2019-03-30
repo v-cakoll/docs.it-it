@@ -2,7 +2,7 @@
 title: Analizzatori basati su Roslyn - .NET
 description: Informazioni sugli analizzatori basati su Roslyn che consentono di individuare problemi e suggeriscono correzioni per tali problemi.
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---
