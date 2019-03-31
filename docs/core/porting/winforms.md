@@ -2,14 +2,15 @@
 title: Convertire un'app Windows Forms in .NET Core 3.0
 description: Illustra come convertire un'applicazione Windows Forms .NET Framework in .NET Core 3.0 per Windows.
 author: Thraka
+ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 89540ebbed834f41ce9d84c32e69e6f5e1ab0a21
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57681496"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675861"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedura: Convertire un'app desktop Windows Forms in .NET Core
 
@@ -17,7 +18,7 @@ Questo articolo descrive come convertire un'app desktop basata su Windows Forms 
 
 In questo articolo vengono usati vari nomi per identificare i tipi di file usati per la migrazione. Durante la migrazione del progetto personale i file verranno denominati in modo diverso, pertanto abbinarli mentalmente a quelli elencati di seguito:
 
-| File | Descrizione |
+| File | Description |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyForms.csproj** | Nome del progetto Windows Forms di .NET Framework da convertire. |
@@ -189,7 +190,7 @@ Se è necessario convertire un progetto di libreria di controlli di Windows Form
 
 Riprendendo l'esempio del passaggio precedente, è possibile procedere espandendo i progetti e i file usati.
 
-| File | Descrizione |
+| File | Description |
 | ---- | ----------- |
 | **MyApps.sln** | Nome del file di soluzione. |
 | **MyControls.csproj** | Nome del progetto per controlli Windows Forms di .NET Framework da convertire. |
@@ -223,7 +224,7 @@ Tenere conto delle differenze tra il progetto `MyControlsCore.csproj` e il proge
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 -    <AssemblyName>MyCoreApp</AssemblyName>
 -    <RootNamespace>WindowsFormsApp1</RootNamespace>
-+    <AssemblyName>MyCoreControls</AssemblyName>
++    <AssemblyName>MyControlsCore</AssemblyName>
 +    <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
    </PropertyGroup>
 
@@ -265,14 +266,14 @@ Come si può notare, il nodo `<OutputType>` è stato rimosso e per questo il com
 Successivamente, nel progetto **MyFormsCore.csproj** .NET Core principale aggiungere un riferimento alla nuova libreria di controlli Windows Forms .NET Core. Aggiungere un riferimento con Visual Studio o con l'interfaccia della riga di comando di .NET Core dalla directory **SolutionFolder**:
 
 ```cli
-dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCoreProject.csproj
+dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
 Il comando precedente consente di aggiungere il codice seguente al progetto **MyFormsCore.csproj**:
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCoreProject.csproj" />
+    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCore.csproj" />
   </ItemGroup>
 ```
 

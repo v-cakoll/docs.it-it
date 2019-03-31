@@ -4,12 +4,12 @@ description: Questo documento specifica i passaggi e il flusso di lavoro da segu
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788453"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409497"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
@@ -215,7 +215,7 @@ Impostare un punto di interruzione nell'istruzione `WriteLine` nel metodo `Main`
 
 Aprire la scheda del debugger selezionando l'icona Debug sulla barra degli strumenti di Visual Studio Code, selezionando **Visualizza > Debug** nella barra dei menu o tramite il tasto di scelta rapida <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
 
-![Debugger di Visual Studio Code](./media/using-on-macos/vscodedebugger.png)
+![Debugger di Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 
 Premere il pulsante per la riproduzione per avviare l'applicazione nel debugger. L'applicazione inizia l'esecuzione e procede fino al punto di interruzione, in cui si arresta. Eseguire un'istruzione nel metodo `Get` e assicurarsi di aver passato gli argomenti corretti. Confermare che la risposta è 42.
 
