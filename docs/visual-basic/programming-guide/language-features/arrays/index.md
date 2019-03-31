@@ -56,7 +56,7 @@ La figura seguente illustra il `students` matrice. Per ogni elemento della matri
 
 - Il valore contenuto nell'elemento rappresenta il numero degli studenti iscritti a tale anno scolastico.
 
-![Immagine di matrice che illustra il numero di studenti](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") elementi della matrice "students"
+![Diagramma che mostra una matrice di numeri di studenti](./media/index/students-array-elements.gif)
 
 L'esempio seguente contiene il codice Visual Basic che crea e Usa la matrice:
 
