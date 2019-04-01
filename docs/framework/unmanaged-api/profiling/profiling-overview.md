@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862316"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654094"
 ---
 # <a name="profiling-overview"></a>Cenni preliminari sulla profilatura
 <a name="top"></a> Un profiler è uno strumento che consente di monitorare l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.  
@@ -78,8 +78,7 @@ ms.locfileid: "43862316"
   
  La figura seguente mostra la modalità di interazione della DLL del profiler con l'applicazione che si sta profilando e con CLR.  
   
- ![Architettura di profilatura](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Architettura di profilatura  
+ ![Screenshot che mostra l'architettura di profilatura.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Interfacce di notifica  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) possono essere considerate interfacce di notifica. Queste interfacce costituite da metodi quali [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), e [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Ogni volta che CLR carica o scarica una classe, compila una funzione e così via, chiama il metodo corrispondente nell'interfaccia `ICorProfilerCallback` o `ICorProfilerCallback2` del profiler.  
@@ -162,7 +161,7 @@ Architettura di profilatura
 ## <a name="security"></a>Sicurezza  
  Una DLL del profiler è una DLL non gestita che viene eseguita parte del motore di Common Language Runtime. Di conseguenza, il codice nella DLL del profiler non è soggetto alle restrizioni di sicurezza dall'accesso di codice gestito. Le uniche limitazioni relative alla DLL del profiler sono quelle imposte dal sistema operativo all'utente che sta eseguendo l'applicazione profilata.  
   
- Per evitare problemi relativi alla sicurezza, gli autori del profiler devono adottare le precauzioni appropriate. Ad esempio, durante l'installazione, è necessario aggiungere la DLL di un profiler a un elenco di controllo di accesso (ACL), in modo da renderne impossibile la modifica da parte di un utente malintenzionato.  
+ Per evitare problemi relativi alla sicurezza, gli autori del profiler devono adottare le precauzioni appropriate.  Ad esempio, durante l'installazione, è necessario aggiungere la DLL di un profiler a un elenco di controllo di accesso (ACL), in modo da renderne impossibile la modifica da parte di un utente malintenzionato.  
   
  [Torna all'inizio](#top)  
   
@@ -172,11 +171,11 @@ Architettura di profilatura
   
  Una verifica dell'API di profilatura di CLR potrebbe dare l'impressione che sia possibile scrivere un profiler contenente componenti gestiti e non gestiti che comunicano tra loro mediante l'interoperabilità COM o chiamate indirette.  
   
- Sebbene sia possibile dal punto di vista della progettazione, l'API di profilatura non supporta i componenti gestiti. Un profiler CLR deve essere completamente non gestito. Tentativi di combinare codice gestito e codice non gestito in un profiler CLR possono provocare violazioni di accesso, errori di esecuzione del programma o deadlock. I componenti gestiti del profiler genererebbero eventi nei relativi componenti non gestiti, che a loro volta effettuerebbero chiamate ai componenti gestiti, dando origine a riferimenti circolari.  
+  Sebbene sia possibile dal punto di vista della progettazione, l'API di profilatura non supporta i componenti gestiti. Un profiler CLR deve essere completamente non gestito. Tentativi di combinare codice gestito e codice non gestito in un profiler CLR possono provocare violazioni di accesso, errori di esecuzione del programma o deadlock. I componenti gestiti del profiler genererebbero eventi nei relativi componenti non gestiti, che a loro volta effettuerebbero chiamate ai componenti gestiti, dando origine a riferimenti circolari.  
   
  L'unico percorso in cui un profiler CLR può chiamare in modo sicuro il codice gestito è il corpo di un metodo in codice MSIL (Microsoft Intermediate Language). Le procedure consigliate per modificare il corpo MSIL consiste nell'usare i metodi di ricompilazione JIT nel [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfaccia.  
   
- È anche possibile usare i metodi di strumentazione precedenti per modificare MSIL. Prima che venga completata la compilazione just-in-time (JIT) di una funzione, il profiler può inserire le chiamate gestite nel corpo MSIL di un metodo e quindi la compilazione JIT, (vedere la [ICorProfilerInfo:: GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) (metodo)). Questa tecnica può essere usata, con buoni risultati, per la strumentazione selettiva di codice gestito oppure per la raccolta di statistiche e dati sulle prestazioni relativi a JIT.  
+ È anche possibile utilizzare i metodi di strumentazione precedenti per modificare MSIL. Prima che venga completata la compilazione just-in-time (JIT) di una funzione, il profiler può inserire le chiamate gestite nel corpo MSIL di un metodo e quindi la compilazione JIT, (vedere la [ICorProfilerInfo:: GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) (metodo)). Questa tecnica può essere usata, con buoni risultati, per la strumentazione selettiva di codice gestito oppure per la raccolta di statistiche e dati sulle prestazioni relativi a JIT.  
   
  In alternativa, un Code Profiler può inserire hook nativi nel corpo MSIL di ogni funzione gestita che effettua chiamate nel codice non gestito. Questa tecnica può essere usata per la strumentazione e il code coverage. Ad esempio, un Code Profiler potrebbe inserire degli hook di strumentazione dopo ogni blocco di codice MSIL per garantire l'esecuzione del blocco. La modifica del corpo MSIL di un metodo è un'operazione molto delicata ed è necessario prendere in considerazione molteplici fattori.  
   

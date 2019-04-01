@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203110"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545442"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: Definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
 Quando si definisce una classe o uno struct, si decide se è opportuno creare una definizione personalizzata di uguaglianza di valore, o equivalenza, per il tipo. In genere, l'uguaglianza di valori viene implementata quando si prevede che oggetti del tipo vengano aggiunti a una raccolta, o quando lo scopo principale di tali oggetti consiste nell'archiviare un set di campi o di proprietà. È possibile basare la definizione di uguaglianza di valori su un confronto di tutti i campi e di tutte le proprietà nel tipo, oppure su un sottoinsieme. Ma in entrambi i casi e in entrambe le classi e gli struct, l'implementazione deve seguire le cinque garanzie di equivalenza:  
@@ -37,7 +37,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
 2.  Implementare l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType> definendo un metodo `Equals` specifico per il tipo. È in questo passaggio che viene eseguito il confronto di equivalenza effettivo. Ad esempio, è possibile definire l'uguaglianza confrontando solo uno o due campi nel tipo. Non generare eccezioni da `Equals`. Solo per le classi: questo metodo deve esaminare solo i campi che vengono dichiarati nella classe. Deve chiamare `base.Equals` per esaminare i campi presenti nella classe di base. Non eseguire questa operazione se il tipo eredita direttamente da <xref:System.Object>, perché l'implementazione <xref:System.Object> di <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> esegue un controllo di uguaglianza dei riferimenti.  
   
-3.  Facoltativo ma consigliato: eseguire l'overload degli operatori [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [! =](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Facoltativo ma consigliato: eseguire l'overload degli operatori [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Eseguire l'override di <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> in modo che due oggetti con uguaglianza di valori producano lo stesso codice hash.  
   
@@ -61,7 +61,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
  Per gli struct, l'implementazione predefinita di <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, che è la versione sottoposta a override in <xref:System.ValueType?displayProperty=nameWithType>, esegue un controllo di uguaglianza dei valori usando il processo di reflection per confrontare i valori di ogni campo nel tipo. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale `Equals` in uno struct, lo scopo è specificare un mezzo più efficiente per la verifica dell'uguaglianza di valori e facoltativamente basare il confronto su alcuni subset del campo o delle proprietà dello struct.  
   
- Gli operatori [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md) non possono funzionare con uno struct a meno che lo struct non ne esegua esplicitamente l'overload.  
+ Gli operatori [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) e [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) non possono funzionare con uno struct a meno che lo struct non ne esegua esplicitamente l'overload.  
   
 ## <a name="see-also"></a>Vedere anche
 

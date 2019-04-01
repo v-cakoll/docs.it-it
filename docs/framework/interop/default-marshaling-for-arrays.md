@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219685"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410745"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
   
  Con l'[ottimizzazione del blocco](copying-and-pinning.md), può sembrare che una matrice copiabile da BLT funzioni come parametro In/Out quando interagisce con oggetti nello stesso apartment. Se tuttavia in seguito si esporta il codice in una libreria dei tipi usata per generare il proxy tra computer e la libreria viene usata per effettuare il marshalling delle chiamate tra gli apartment, le chiamate possono ripristinare il vero e proprio comportamento del parametro In.  
   
- Le matrici sono complesse per natura e le distinzioni tra matrici gestite e non gestite richiedono più informazioni degli altri tipi non copiabili da BLT. Questo argomento fornisce le informazioni seguenti sul marshalling delle matrici:  
+ Le matrici sono complesse per natura e le distinzioni tra matrici gestite e non gestite richiedono più informazioni degli altri tipi non copiabili da BLT.  
   
--   [Matrici gestite](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Matrici non gestite](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [Passaggio dei parametri delle matrici al codice .NET](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [Passaggio di matrici a COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Matrici gestite  
  I tipi di matrici gestite possono variare, ma la classe <xref:System.Array?displayProperty=nameWithType> è la classe base di tutti i tipi di matrici. La classe **System.Array** ha proprietà per determinare priorità, lunghezza e limiti inferiori e superiori di una matrice, oltre a metodi per accedere, ordinare, cercare, copiare e creare matrici.  
   
@@ -46,11 +37,9 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
 |**ELEMENT_TYPE_CLASS**|Sconosciuto|Sconosciuto|Sconosciuto|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Specificato dal tipo.|1|0|*type* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrici non gestite  
  Le matrici non gestite sono matrici protette di tipo COM o matrici di tipo C con lunghezza fissa o variabile. Le matrici protette sono matrici autodescrittive che contengono il tipo, la priorità e i limiti dei dati della matrice associati. Le matrici di tipo C sono matrici tipizzate unidimensionali con un limite inferiore fisso pari a 0. Il servizio di marshalling ha un supporto limitato per entrambi i tipi di matrici.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>Passaggio dei parametri delle matrici al codice .NET  
  Sia le matrici di tipo C che le matrici protette possono essere passate al codice .NET dal codice non gestito come matrice protetta o matrice di tipo C. La tabella seguente illustra il valore del tipo non gestito e il tipo importato.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  Il gestore di marshalling di interoperabilità usa i metodi **CoTaskMemAlloc** e **CoTaskMemFree** per allocare e recuperare la memoria. Anche l'allocazione della memoria eseguita dal codice non gestito deve usare questi metodi.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>Passaggio di matrici a COM  
  Tutti i tipi di matrici gestite possono essere passati al codice non gestito dal codice gestito. A seconda del tipo gestito e degli attributi applicati, la matrice è accessibile come matrice protetta o matrice di tipo C, come illustrato nella tabella seguente.  
   

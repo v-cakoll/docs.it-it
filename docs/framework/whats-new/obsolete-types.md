@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049735"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412344"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](obsolete-members.md).
@@ -85,7 +85,7 @@ ms.locfileid: "58049735"
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La classe <xref:System.Configuration.Assemblies.AssemblyHash> è stata deprecata.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5. Usare invece la classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> nello spazio dei nomi System.Runtime.CompilerServices.|
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|È disponibile un'API alternativa: generare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|
@@ -96,18 +96,18 @@ ms.locfileid: "58049735"
 |<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato e sarà rimosso nelle versioni future.|
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> è stato deprecato.|
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. I domini applicazione non rispettano più i limiti del contesto di attivazione nelle chiamate a IDispatch.|
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|
@@ -181,7 +181,7 @@ ms.locfileid: "58049735"
 
 |Tipo|Messaggio|
 |----------|-------------|
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, usare <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, utilizzare <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> e <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|
@@ -205,7 +205,7 @@ ms.locfileid: "58049735"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Questa interfaccia è stata deprecata. Aggiungere un oggetto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> per gestire la proprietà <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> del tipo.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|In alternativa, usare <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> per usare il nuovo modello delle impostazioni.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. In alternativa, usare <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>. Per specificare ad esempio una finestra di progettazione radice per CodeDom, usare `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. In alternativa, utilizzare <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Questa classe è stata deprecata.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, usare i contatori di prestazioni tramite la classe <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Questa classe è stata deprecata. Usare in alternativa <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> per l'accesso e l'impostazione del proxy globale predefinito. Usare "null" anziché <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|

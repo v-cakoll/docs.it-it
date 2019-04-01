@@ -4,12 +4,12 @@ description: Esaminare diverse modalità di comunicazione tra i microservizi, co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1e8f15e2a02c8f6e7456a2e3a2f6756277ec6314
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127173"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466192"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicazione in un'architettura di microservizi
 
@@ -90,10 +90,10 @@ L'uso di servizi REST HTTP come linguaggio di definizione dell'interfaccia offre
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Martin Fowler. Richardson Maturity Model** Una descrizione del modello REST. \
-  [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 - **Swagger** Il sito ufficiale. \
-  [*https://swagger.io/*](https://swagger.io/)
+  [https://swagger.io/](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Comunicazione push e in tempo reale basata su HTTP
 
