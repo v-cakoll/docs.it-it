@@ -1,9 +1,15 @@
 ---
-title: 'Programmazione asincrona in C#'
-description: 'Panoramica del supporto del linguaggio C# per la programmazione asincrona con async, await, Task e Task<T>'
+title: Programmazione asincrona in C#
+description: Panoramica del supporto del linguaggio C# per la programmazione asincrona con async, await, Task e Task<T>
 ms.date: 03/18/2019
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504366"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Modello di programmazione asincrona Task in C# #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>Modello di programmazione asincrona Task in C\#
 
 Il modello di programmazione asincrona Task (TAP) offre un'astrazione su codice asincrono. Scrivere il codice come sequenza di istruzioni secondo la normale procedura. È possibile leggere il codice come se ogni istruzione venisse completata prima che venga iniziata quella successiva. Il compilatore esegue una serie di trasformazioni poiché alcune delle istruzioni potrebbero essere eseguite e restituire <xref:System.Threading.Tasks.Task> che rappresenta il lavoro in corso.
 
