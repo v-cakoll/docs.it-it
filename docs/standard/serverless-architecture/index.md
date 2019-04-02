@@ -1,19 +1,14 @@
 ---
 title: 'App serverless: architettura, modelli e implementazione di Azure'
-description: Guida all'architettura serverless. Informazioni su quando, come e perché implementare un'architettura serverless, anziché un'architettura IaaS [infrastruttura distribuita come servizio] o PaaS [piattaforma distribuita come servizio], per le applicazioni aziendali.
+description: 'Guida all''architettura serverless. Informazioni su quando, come e perché implementare un''architettura serverless, anziché un''architettura IaaS [infrastruttura distribuita come servizio] o PaaS [piattaforma distribuita come servizio], per le applicazioni aziendali.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745316"
 ---
+
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>App serverless: architettura, modelli e implementazione di Azure
 
-![](./media/Cover.jpg)
+![Screenshot con la copertina dell'e-book App serverless.](./media/index/serverless-apps-cover.jpg)
 
 > Download disponibile all'indirizzo: <https://aka.ms/serverless-ebook>
 
@@ -43,7 +38,7 @@ Tutti gli altri marchi e logo appartengono ai rispettivi proprietari.
 
 Autore:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Sr. Cloud Developer Advocate, APEX, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Senior Cloud Developer Advocate, APEX, Microsoft Corp.
 
 Collaboratore:
 

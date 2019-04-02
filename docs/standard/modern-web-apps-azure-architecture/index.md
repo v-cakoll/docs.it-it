@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Progettare applicazioni Web moderne con ASP.NET Core e Azure
 
-![Immagine di copertina](./media/cover.png)
+![Immagine della copertina della guida Progettare applicazioni Web moderne.](./media/index/web-application-guide-cover-image.png)
 
 PUBBLICATO DA
 
