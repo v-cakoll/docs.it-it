@@ -32,6 +32,7 @@ Questa sezione discute le attività di programmazione da approfondire per la cre
  Include documentazione su come accedere al file system mediante l'oggetto `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzionalità del linguaggio Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Nozioni di base sulla programmazione](../../../visual-basic/programming-guide/concepts/index.md)
 - [Raccolte](../../../visual-basic/programming-guide/concepts/collections.md)
