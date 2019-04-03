@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827552"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463709"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testare app ASP.NET Core MVC
 
@@ -66,7 +66,7 @@ I test di integrazione vengono scritti dal punto di vista dello sviluppatore per
 
 > "Spesso lo sviluppo di un sistema viene paragonato alla costruzione di una casa. Questa analogia non è completamente corretta, ma è possibile estenderla per consentire la comprensione delle differenze tra unit test e test funzionali. Uno unit test può essere paragonato a un ispettore che visita il cantiere di un'abitazione. L'ispettore concentra l'attenzione sulle varie parti interne della casa: le fondamenta, gli infissi, l'impianto elettrico, quello idraulico e così via, per assicurarsi (testare) che le parti della casa funzionino correttamente e in modo sicuro, ovvero soddisfino le normative edilizie (il codice di compilazione). In questo scenario, i test funzionali sono paragonabili al proprietario della casa che visita questo stesso cantiere. Il proprietario presuppone che gli impianti interni della casa funzionino come si deve, dato che di questo si occupa l'ispettore. Il proprietario concentra l'attenzione sulla qualità della vita in quella casa, preoccupandosi dell'aspetto della casa stessa, dell'adeguatezza delle dimensioni delle stanze, della capacità della casa di soddisfare le esigenze della famiglia e dell'orientamento delle finestre, che devono lasciar entrare il sole del mattino. Il proprietario esegue il test funzionale della casa. Il suo punto di vista è quello dell'utente finale. L'ispettore esegue gli unit test della casa. Il suo punto di vista è quello del compilatore."
 
-Origine: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Unit test e test funzionali)
+Fonte: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Unit test e test funzionali)
 
 Gli sviluppatori possono sbagliare in due modi: creando una cosa nel modo sbagliato o creando la cosa sbagliata. Gli unit test consentono di verificare che si stia creando qualcosa nel modo corretto. I test funzionali consentono di verificare che si stia creando la cosa giusta.
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Spesso, prima dell'esecuzione di ogni test è necessario eseguire un'ulteriore configurazione del sito, ad esempio la configurazione dell'applicazione per l'uso di un archivio dati in memoria e il seeding dell'applicazione con i dati di test. A tale scopo, è necessario creare una propria sottoclasse di WebApplicationFactory<TEntry> ed eseguire l'override del suo metodo ConfigureWebHost. L'esempio seguente è tratto dal progetto FunctionalTests di eShopOnWeb e viene usato come parte dei test sull'applicazione Web principale.
+Spesso, prima dell'esecuzione di ogni test è necessario eseguire un'ulteriore configurazione del sito, ad esempio la configurazione dell'applicazione per l'uso di un archivio dati in memoria e il seeding dell'applicazione con i dati di test. A tale scopo, è necessario creare una sottoclasse di WebApplicationFactory\<TEntry> ed eseguire l'override del metodo ConfigureWebHost. L'esempio seguente è tratto dal progetto FunctionalTests di eShopOnWeb e viene usato come parte dei test sull'applicazione Web principale.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

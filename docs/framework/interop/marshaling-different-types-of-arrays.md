@@ -10,26 +10,26 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219464"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654614"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
 Una matrice è un tipo di riferimento nel codice gestito che contiene uno o più elementi dello stesso tipo. Anche se le matrici sono tipi di riferimento, vengono passate come parametri in alle funzioni non gestite. Questo comportamento non è coerente con il modo in cui le matrici gestite vengono passate agli oggetti gestiti, ovvero come parametri in/out. Per altri dettagli, vedere [Copia e blocco](copying-and-pinning.md).  
   
  La tabella seguente elenca le opzioni di marshalling delle matrici e ne descrive l'utilizzo.  
   
-|Matrice|Descrizione|  
+|Matrice|Description|  
 |-----------|-----------------|  
 |Di Integer in base al valore.|Passa una matrice di Integer come un parametro in.|  
 |Di Integer in base al riferimento.|Passa una matrice di Integer come un parametro in/out.|  
 |Di Integer in base al valore (bidimensionale).|Passa una matrice di Integer come un parametro in.|  
 |Di stringhe in base al valore.|Passa una matrice di stringhe come un parametro in.|  
 |Di strutture con Integer.|Passa una matrice di strutture che contengono Integer come un parametro in.|  
-|Di strutture con stringhe.|Passa una matrice di strutture che contengono solo Integer come un parametro in/out. È possibile modificare i membri della matrice.|  
+|Di strutture con stringhe.|Passa una matrice di strutture che contengono solo stringhe come parametro In/Out. È possibile modificare i membri della matrice.|  
   
 ## <a name="example"></a>Esempio  
  Questo esempio illustra come passare i tipi di matrice seguenti:  

@@ -2,12 +2,12 @@
 title: Operazioni di join (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537946"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411460"
 ---
 # <a name="join-operations-c"></a>Operazioni di join (C#)
 Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
@@ -18,7 +18,7 @@ Un *join* di due origini dati è un'associazione di oggetti in un'origine dati c
   
  L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.  
   
- ![Due cerchi sovrapposti che indicano inner join&#47;outer join.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "Cerchi di join")  
+ ![Due cerchi sovrapposti che illustrano interno&#47;esterno.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Metodi  
   

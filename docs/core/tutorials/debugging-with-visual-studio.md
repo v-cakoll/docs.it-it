@@ -3,12 +3,12 @@ title: Eseguire il debug dell'applicazione .NET Core Hello World con Visual Stud
 description: Informazioni su come eseguire il debug di un'app Hello World scritta in C# o Visual Basic con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170665"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463423"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Eseguire il debug dell'applicazione .NET Core Hello World C# o Visual Basic con Visual Studio 2017
 
@@ -39,7 +39,7 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
 1. L'esecuzione del programma si arresta quando raggiunge il punto di interruzione e prima che il metodo `Console.WriteLine` venga eseguito. Nella finestra **Auto** vengono visualizzati i valori delle variabili usate nella riga corrente. Nella finestra **Variabili locali** (visualizzabile facendo clic sulla scheda **Variabili locali**) vengono visualizzati i valori delle variabili definite nel metodo attualmente in esecuzione.
 
-   ![Finestra dell'applicazione in Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Screenshot di un punto di interruzione in Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. È possibile modificare il valore delle variabili per vedere in che modo tale operazione influisce sul programma. Se la **Finestra di controllo immediato** non è visibile, visualizzarla scegliendo la voce di menu **Debug** > **Finestre** > **Controllo immediato**. La **Finestra di controllo immediato** consente di interagire con l'applicazione in fase di debug.
 

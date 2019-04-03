@@ -10,20 +10,22 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219523"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654133"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
   
  Il runtime crea esattamente un RCW per ciascun oggetto COM, indipendentemente dal numero di riferimenti all'oggetto. Il runtime mantiene un solo RCW a processo per ciascun oggetto.  Se si crea un RCW in un apartment o dominio applicazione e si passa quindi un riferimento a un altro apartment o dominio applicazione, verrà usato un proxy al primo oggetto.  Come illustrato nella figura che segue, un numero qualsiasi di client gestiti può stabilire un riferimento agli oggetti COM che espongono le interfacce INew e INewer.  
-  
- ![RCW](./media/rcw.gif "rcw")  
-Accesso a oggetti COM tramite Runtime Callable Wrapper  
+
+La figura seguente illustra il processo per accedere a oggetti COM tramite Runtime Callable Wrapper:
+
+ ![Processo per accedere a oggetti COM tramite RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+   
   
  Usando i metadati derivati da una libreria dei tipi, il runtime crea sia l'oggetto COM che si sta chiamando che il relativo wrapper. Ogni RCW mantiene una cache dei puntatori a interfaccia impostati sull'oggetto COM di cui effettua il wrapping e rilascia i riferimenti all'oggetto COM quando l'RCW non è più necessario. Il runtime esegue la procedura di Garbage Collection sull'RCW.  
   
@@ -32,16 +34,17 @@ Accesso a oggetti COM tramite Runtime Callable Wrapper
  Il wrapper standard applica le regole di marshalling incorporate. Quando ad esempio un client .NET passa come parte di un argomento un tipo String a un oggetto gestito, il wrapper converte la stringa in un tipo BSTR. Nel caso in cui l'oggetto COM dovesse restituire un valore di tipo BSTR, il relativo chiamante gestito riceverebbe una stringa. Sia il client che il server inviano e ricevono dati rispettivamente noti. Gli altri tipi non richiedono alcuna conversione. Un wrapper standard, ad esempio, trasferirà sempre un intero di 4 byte tra il codice gestito e quello non gestito senza operare alcuna conversione di tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Interfacce sottoposte a marshalling  
- L'obiettivo principale di un oggetto [Runtime Callable Wrapper](runtime-callable-wrapper.md) (RCW) è quello di nascondere le differenze tra i modelli di programmazione gestiti e non gestiti. Per semplificare la transizione, l'RCW usa interfacce COM selezionate senza esporle al client .NET, come illustrato nella figura che segue.  
+ L'obiettivo principale di un oggetto [Runtime Callable Wrapper](runtime-callable-wrapper.md) (RCW) è quello di nascondere le differenze tra i modelli di programmazione gestiti e non gestiti. Per semplificare la transizione, l'RCW usa interfacce COM selezionate senza esporle al client .NET, come illustrato nella figura che segue. 
+
+ L'immagine seguente illustra le interfacce COM e Runtime Callable Wrapper: 
   
- ![RCW con interfacce](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
-Interfacce COM e il Runtime Callable Wrapper  
+ ![Screenshot di Runtime Callable Wrapper con interfacce.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
  Quando viene creato come oggetto ad associazione anticipata, l'RCW è specifico del tipo. Esso implementa le interfacce implementate dall'oggetto COM ed espone i metodi, le proprietà e gli eventi delle interfacce dell'oggetto. Nella figura l'oggetto RCW espone l'interfaccia INew, ma utilizza le interfacce **IUnknown** e **IDispatch**. L'RCW espone inoltre al client .NET tutti i membri dell'interfaccia INew.  
   
  L'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |**IDispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
@@ -50,7 +53,7 @@ Interfacce COM e il Runtime Callable Wrapper
   
  RCW usa facoltativamente le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.  
   
-|Interfaccia|Descrizione|  
+|Interfaccia|Description|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|Talvolta l'RCW usa le interfacce elencate nella tabella che segue, che sono esposte dall'oggetto di cui effettua il wrapping.|  
 |**IDispatchEx**|Se la classe implementa **IDispatchEx**, l'oggetto RCW implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  

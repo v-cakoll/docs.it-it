@@ -2,12 +2,12 @@
 title: Eseguire un'iterazione sulle raccolte in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720798"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464320"
 ---
 # <a name="iterators-c"></a>Iteratori (C#)
 
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 Un iteratore può verificarsi come metodo o funzione di accesso `get`. Un iteratore non può verificarsi in un evento, in un costruttore di istanze, in un costruttore statico o in un finalizzatore statico.
 
-Deve esistere una conversione implicita dal tipo di espressione nell'istruzione `yield return` all'argomento del tipo per IEnumerable<T> restituito dall'iteratore.
+Deve esistere una conversione implicita dal tipo di espressione nell'istruzione `yield return` all'argomento tipo per l'elemento IEnumerable\<T> restituito dall'iteratore.
 
 In C# un metodo iteratore non può avere parametri `in`, `ref` o `out`.
 

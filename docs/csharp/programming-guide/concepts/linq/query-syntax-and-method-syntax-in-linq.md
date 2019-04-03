@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978650"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654042"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintassi di query e sintassi di metodi in LINQ (C#)
 La maggior parte delle query presenti nella documentazione di Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sono scritte usando la sintassi di query dichiarativa di LINQ. Tuttavia, la sintassi di query deve essere convertita in chiamate al metodo per Common Language Runtime (CLR) di .NET quando il codice viene compilato. Queste chiamate al metodo richiamano gli operatori query standard, che hanno nomi come `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. È possibile chiamarli direttamente usando la sintassi di metodo anziché la sintassi di query.  
@@ -26,7 +26,7 @@ La maggior parte delle query presenti nella documentazione di Language Integrate
   
  Per capire meglio la query basata su metodo, esaminiamola più da vicino. Sul lato destro dell'espressione, si può notare che la clausola `where` viene ora espressa come metodo di istanza per l'oggetto `numbers` che, come si ricorderà, ha un tipo di `IEnumerable<int>`. Chi ha familiarità con l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> sa che non ha un metodo `Where`. Tuttavia, se si richiama l'elenco di completamento IntelliSense nell'IDE di Visual Studio, si vedrà non solo un metodo `Where` ma molti altri metodi, ad esempio `Select`, `SelectMany`, `Join` e `Orderby`. Sono tutti operatori di query standard.  
   
- ![Operatori query standard in Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Screenshot di tutti gli operatori query standard in Intellisense.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Sebbene possa sembrare che <xref:System.Collections.Generic.IEnumerable%601> sia stata ridefinita in modo da includere questi metodi aggiuntivi, di fatto non è così. Gli operatori di query standard vengono implementati come un nuovo tipo di metodo denominato *metodo di estensione*. I metodi di estensione "estendono" un tipo esistente. Possono essere chiamati come se fossero metodi di istanza per il tipo. Gli operatori di query standard estendono <xref:System.Collections.Generic.IEnumerable%601> e questo è il motivo per cui è possibile scrivere `numbers.Where(...)`.  
   

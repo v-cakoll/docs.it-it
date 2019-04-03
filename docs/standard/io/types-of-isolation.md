@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654659"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466153"
 ---
 # <a name="types-of-isolation"></a>Tipi di isolamento
 L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente che l'ha creata. Per implementare questo tipo di isolamento, Common Language Runtime usa la stessa nozione di identità utente riconosciuta dal sistema operativo, ovvero l'identità associata al processo in cui è in esecuzione il codice quando viene aperto lo spazio di memorizzazione. Sebbene sia un'identità utente autenticata, è possibile che con la rappresentazione l'identità dell'utente corrente venga modificata dinamicamente.  
@@ -46,10 +46,9 @@ L'accesso allo spazio di memorizzazione isolato è sempre limitato all'utente ch
   
  Ognuno di questi isolamenti può essere combinato con un profilo di utente roaming. Per altre informazioni, vedere la sezione [Spazio di memorizzazione isolato e roaming](#Roaming).  
   
- Nella figura seguente viene illustrato il modo in cui vengono isolati gli spazi di memorizzazione in ambiti diversi.  
+ La figura seguente illustra come vengono isolati gli archivi in ambiti diversi:  
   
- ![Isolamento in base all'utente e all'assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Tipi di spazio di memorizzazione isolato  
+ ![Diagramma che illustra l'isolamento in base a utente e assembly.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Si osservi che, fatta eccezione per gli spazi di memorizzazione roaming, lo spazio di memorizzazione isolato viene sempre isolato implicitamente in base al computer, poiché usa le funzioni di memorizzazione locali del computer in uso.  
   

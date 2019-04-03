@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675030"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466140"
 ---
 # <a name="subscribing-to-events"></a>Sottoscrizione di eventi
 
@@ -324,68 +324,68 @@ Se il flag di nuovo recapito è impostato, il ricevitore deve tenerlo in conside
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Fork di eShopOnContainers tramite NServiceBus (software Particular)** <br/>
-    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
+- **Fork di eShopOnContainers tramite NServiceBus (Particular Software)** \
+    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
 
-- **Event Driven Messaging** (Messaggistica basata su eventi) <br/>
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+- **Event Driven Messaging** \ (Messaggistica basata su eventi)
+    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** (Refactoring e resilienza: valutazione dell'accoppiamento) <br/>
-    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)** \
+    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
-- **Publish-Subscribe channel** (Canale di pubblicazione-sottoscrizione) <br/>
-    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+- **Publish-Subscribe channel** \ (Canale di pubblicazione-sottoscrizione)
+    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
-- **Communicating Between Bounded Contexts** (Comunicazione tra contesti delimitati) <br/>
+- **Communicating Between Bounded Contexts** \ (Comunicazione tra contesti delimitati)
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** (Coerenza finale) <br/>
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+- **Eventual Consistency** \ (Coerenza finale)
+    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown. Strategies for Integrating Bounded Contexts** (Strategie per l'integrazione di contesti delimitati) <br/>
-    [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+- **Philip Brown. Strategies for Integrating Bounded Contexts** \ (Strategie per l'integrazione di contesti delimitati)
+    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** (Sviluppo di microservizi transazionali usando aggregazioni, Event Sourcing e CQRS - Parte 2) <br/>
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** \ (Sviluppo di microservizi transazionali usando aggregazioni, Event Sourcing e CQRS - Parte 2)
+    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
-- **Chris Richardson. Event Sourcing pattern** (Schema Event Sourcing) <br/>
-    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
+- **Chris Richardson. Event Sourcing pattern** \ (Schema Event Sourcing)
+    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
 
-- **Introducing Event Sourcing** (Introduzione a Event Sourcing) <br/>
+- **Introducing Event Sourcing** \ (Introduzione a Event Sourcing)
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
-- **Database di Event Store**. Sito ufficiale. <br/>
-    [*https://geteventstore.com/*](https://geteventstore.com/)
+- **Database di Event Store**. Sito ufficiale. \
+    [https://geteventstore.com/](https://geteventstore.com/)
 
-- **Patrick Nommensen. Event-Driven Data Management for Microservices** (Gestione di dati basati su eventi per microservizi) <br/>
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
+- **Patrick Nommensen. Event-Driven Data Management for Microservices** \ (Gestione di dati basati su eventi per microservizi)
+    <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **Il teorema CAP** <br/>
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+- **Il teorema CAP** \
+    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **What is CAP Theorem?** (Che cos'è il teorema CAP) <br/>
-    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
+- **What is CAP Theorem?** (Che cos'è il teorema CAP) \
+    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
 
-- **Data Consistency Primer** (Introduzione alla coerenza dei dati) <br/>
+- **Data Consistency Primer** \ (Introduzione alla coerenza dei dati)
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. The CAP Theorem: Why "Everything is Different" with the Cloud and Internet** (Il teorema CAP: perché "tutto è diverso" con il cloud e Internet) <br/>
-    [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+- **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet** \ (Il teorema CAP: perché "tutto è diverso" con il cloud e Internet)
+    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
-- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** (CAP dodici anni dopo: come sono cambiate le "regole") <br/>
-    [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** \ (CAP dodici anni dopo: come sono cambiate le "regole")
+    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
-- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati**  <br/>
-    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati**  \
+    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
-- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ* <br/>
-    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
+- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
+    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
-- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati** <br/>
-    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+- **Bus di servizio di Azure. Messaggistica negoziata: Rilevamento duplicati** \
+    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
-- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ <br/>
-    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+- **Reliability Guide** (Guida all'affidabilità), documentazione RabbitMQ \
+    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Precedente](rabbitmq-event-bus-development-test-environment.md)

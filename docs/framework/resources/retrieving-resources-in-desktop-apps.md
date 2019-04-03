@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221225"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653925"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recupero di risorse nelle applicazioni desktop
 Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , vedere [Creazione e recupero di risorse nelle app di Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) nel Windows Dev Center.  
@@ -149,10 +149,11 @@ GetObject.exe
  Se si sceglie di non distribuire le risorse in assembly satellite, è comunque possibile utilizzare direttamente un oggetto <xref:System.Resources.ResourceManager> per accedere alle risorse dai file .resources. A tale scopo, è necessario distribuire i file .resources correttamente. Utilizzare quindi il metodo <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> per creare un'istanza di un oggetto <xref:System.Resources.ResourceManager> e specificare la directory contenente i file .resources autonomi.  
   
 ### <a name="deploying-resources-files"></a>Distribuzione di file .resources  
- Quando si incorporano i file .resources in un assembly dell'applicazione e in assembly satellite, ogni assembly satellite ha lo stesso nome file, ma viene collocato in una sottodirectory che corrisponde alle impostazioni cultura dell'assembly satellite. Al contrario, quando si accede direttamente alle risorse dai file .resources, è possibile inserire tutti i file .resources in una singola directory, in genere una sottodirectory della directory dell'applicazione. Il nome del file .resources predefinito dell'applicazione è costituito solo da un nome radice, senza indicare le impostazioni cultura, ad esempio strings.resources. Le risorse per ogni impostazione cultura localizzata vengono archiviate in un file il cui nome è costituito dal nome radice seguito dalle impostazioni cultura, ad esempio strings.ja.resources o strings.de-DE.resources. La figura seguente mostra dove collocare i file di risorse nella struttura di directory.  
-  
- ![Directory principale dell'applicazione](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-Struttura della directory e convenzioni di denominazione per i file .resources  
+ Quando si incorporano i file .resources in un assembly dell'applicazione e in assembly satellite, ogni assembly satellite ha lo stesso nome file, ma viene collocato in una sottodirectory che corrisponde alle impostazioni cultura dell'assembly satellite. Al contrario, quando si accede direttamente alle risorse dai file .resources, è possibile inserire tutti i file .resources in una singola directory, in genere una sottodirectory della directory dell'applicazione. Il nome del file .resources predefinito dell'applicazione è costituito solo da un nome radice, senza indicare le impostazioni cultura, ad esempio strings.resources. Le risorse per ogni impostazione cultura localizzata vengono archiviate in un file il cui nome è costituito dal nome radice seguito dalle impostazioni cultura, ad esempio strings.ja.resources o strings.de-DE.resources. 
+ 
+ La figura seguente mostra dove collocare i file di risorse nella struttura di directory. Illustra anche le convenzioni di denominazione per i file di risorse.  
+
+ ![Figura che illustra la directory principale per l'applicazione.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Utilizzo del gestore di risorse  
  Dopo aver creato e inserito le risorse nella directory appropriata, creare un oggetto <xref:System.Resources.ResourceManager> per utilizzare le risorse chiamando il metodo <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . Il primo parametro specifica il nome radice del file .resources predefinito dell'applicazione, ovvero "stringa" per l'esempio nella sezione precedente. Il secondo parametro specifica il percorso delle risorse, ovvero "Resources" per l'esempio precedente. Il terzo parametro specifica l'implementazione di <xref:System.Resources.ResourceSet> da usare. Se il terzo parametro è `null`, viene utilizzato il runtime predefinito <xref:System.Resources.ResourceSet> .  

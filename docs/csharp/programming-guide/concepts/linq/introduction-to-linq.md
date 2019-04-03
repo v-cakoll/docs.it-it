@@ -2,12 +2,12 @@
 title: Introduzione a LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: c74c4d3261354bdd2b8194371b4b37f014397e85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea17de41bbbc03158179f207aa0bc9fc9cceb863
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626563"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410693"
 ---
 # <a name="introduction-to-linq-c"></a>Introduzione a LINQ (C#)
 LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Framework versione 3.5 che colma il divario tra il mondo degli oggetti e il mondo dei dati.  
@@ -18,9 +18,9 @@ LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Fram
   
  È possibile usare le query LINQ nei nuovi progetti o insieme alle query non LINQ nei progetti esistenti. L'unico requisito è che il progetto sia destinato a .NET Framework 3.5 o versione successiva.  
   
- Nella figura seguente presa da Visual Studio viene illustrata una query LINQ parzialmente completata per un database di SQL Server in C# e Visual Basic con controllo completo del tipo e supporto IntelliSense.  
+ Nella figura seguente presa da Visual Studio viene illustrata una query LINQ completata parzialmente su un database di SQL Server in C# e Visual Basic con controllo completo del tipo e supporto IntelliSense:  
   
- ![Query LINQ con Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")  
+ ![Diagramma che illustra una query LINQ con Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Per altre informazioni dettagliate su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione introduttiva [Introduzione all'uso di LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md) e quindi leggere la documentazione per la tecnologia LINQ a cui si è interessati:  

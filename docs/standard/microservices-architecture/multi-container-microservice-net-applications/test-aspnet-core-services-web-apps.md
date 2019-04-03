@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per le applicazioni .NET incluse 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 99f17f713a1193e82ad64036a4b3f5e0caa20fd7
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57845973"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463137"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -103,26 +103,26 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Steve Smith. Test dei controller**  (ASP.NET Core) <br/>
-    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+- **Steve Smith. Test dei controller** (ASP.NET Core) \
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
-- **Steve Smith. Test di integrazione** (ASP.NET Core) <br/>
-    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+- **Steve Smith. Test di integrazione** (ASP.NET Core) \
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
-- **Testing unità in .NET Core tramite test dotnet** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+- **Testing unità in .NET Core usando il test dotnet** \
+    [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
-- **xUnit.net**. Sito ufficiale. <br/>
-    [*https://xunit.github.io/*](https://xunit.github.io/)
+- **xUnit.net**. Sito ufficiale. \
+    [https://xunit.github.io/](https://xunit.github.io/)
 
-- **Nozioni di base sugli unit test** <br/>
-    [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
+- **Nozioni di base sugli unit test** \
+    [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
-- **Moq**. Repository GitHub. <br/>
-    [*https://github.com/moq/moq*](https://github.com/moq/moq)
+- **Moq**. Repository GitHub. \
+    [https://github.com/moq/moq](https://github.com/moq/moq)
 
-- **NUnit**. Sito ufficiale. <br/>
-    [*https://www.nunit.org/*](https://www.nunit.org/)
+- **NUnit**. Sito ufficiale. \
+    [https://www.nunit.org/](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementazione di test di servizio in un'applicazione a più contenitori
 
@@ -202,11 +202,11 @@ Come si può notare, questi file docker-compose avviano solo i microservizi di R
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Tests README file** (File LEGGIMI dei test) nel repository di eShopOnContainers in GitHub <br/>
-    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+- **File LEGGIMI dei test** nel repository di eShopOnContainers in GitHub \
+    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
-- **Load tests README file** (File LEGGIMI dei test di carico) nel repository di eShopOnContainers in GitHub <br/>
-    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+- **File LEGGIMI dei test di carico** nel repository di eShopOnContainers in GitHub \
+    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
 > [!div class="step-by-step"]
 > [Precedente](subscribe-events.md)

@@ -4,12 +4,12 @@ description: Informazioni sulle nuove funzionalità in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679893"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464073"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novità di .NET Core 2.0
 
@@ -144,7 +144,7 @@ Per altre informazioni, vedere [Live Unit Testing con Visual Studio 2017](/visua
 
 Se è necessario ricompilare un progetto per più framework di destinazione, è ora possibile selezionare la piattaforma di destinazione dal menu di primo livello. Nella figura seguente un progetto denominato SCD1 è destinato a macOS X 10.11 a 64 bit (`osx.10.11-x64`) e a Windows 10/Windows Server 2016 a 64 bit (`win10-x64`). È possibile selezionare il framework di destinazione prima di selezionare il pulsante per compilare il progetto, in questo caso per eseguire una build di debug.
 
-![Selezione del framework di destinazione per la compilazione di un progetto](media/multitarget.png)
+![Screenshot che illustra la selezione del framework di destinazione al momento della compilazione di un progetto.](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Supporto di .NET Core SDK affiancati
 

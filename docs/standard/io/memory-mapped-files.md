@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835356"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654354"
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
 Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Gestione di file mappati alla memoria).  
@@ -42,10 +42,11 @@ Un file mappato alla memoria include il contenuto di un file nella memoria virtu
   
  I file di cui è stato eseguito il mapping alla memoria sono accessibili tramite il gestore della memoria del sistema operativo, in modo che il file venga automaticamente partizionato in un numero di pagine e sia accessibile se necessario. Non è necessario occuparsi personalmente della gestione della memoria.  
   
- La figura seguente illustra come più processi possono avere contemporaneamente più visualizzazioni sovrapposte per lo stesso file di cui è stato eseguito il mapping alla memoria.  
+ La figura seguente illustra come più processi possono avere contemporaneamente più visualizzazioni sovrapposte per lo stesso file di cui è stato eseguito il mapping alla memoria.
+
+ L'immagine seguente illustra più visualizzazioni sovrapposte per un file di cui è stato eseguito il mapping alla memoria:  
   
- ![Mostra le visualizzazioni per un file di cui è stato eseguito il mapping alla memoria.](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Più visualizzazioni sovrapposte per un file di cui è stato eseguito il mapping alla memoria  
+ ![Screenshot che illustra le visualizzazioni per un file di cui è stato eseguito il mapping alla memoria.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programmazione con i file di cui è stato eseguito il mapping alla memoria  
  La tabella seguente fornisce una guida all'uso di oggetti di file di cui è stato eseguito il mapping alla memoria e dei relativi membri.  

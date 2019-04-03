@@ -2,12 +2,12 @@
 title: Novità di C# 8.0 - Guida a C#
 description: Panoramica delle nuove funzionalità disponibili in C# 8.0. Questo articolo è aggiornato alla versione di anteprima 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262582"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545559"
 ---
 # <a name="whats-new-in-c-80"></a>Novità di C# 8.0
 
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-Il metodo seguente usa i **criteri per la posizione** per estrarre i valori di `x` e `y`. Usa quindi una clausola `when` per determinare il quadrante del punto:
+Considerare anche l'enumerazione seguente, che rappresenta posizioni diverse in un quadrante:
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+Il metodo seguente usa i **criteri per la posizione** per estrarre i valori di `x` e `y`. Quindi usa una clausola `when` per determinare l'elemento `Quadrant` del punto:
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-I criteri discard nell'espressione switch precedente individuano una corrispondenza quando `x` o `y` è 0, ma non entrambi. Un'espressione switch deve produrre un valore o generare un'eccezione. Se nessuno dei casi corrisponde, l'espressione switch genera un'eccezione. Il compilatore genera un avviso per l'utente se non è possibile includere tutti i casi possibili nell'espressione switch.
+I criteri discard nell'espressione switch precedente trovano una corrispondenza quando `x` o `y` è uguale a 0, ma non entrambi. Un'espressione switch deve produrre un valore o generare un'eccezione. Se nessuno dei casi corrisponde, l'espressione switch genera un'eccezione. Il compilatore genera un avviso per l'utente se non è possibile includere tutti i casi possibili nell'espressione switch.
 
 È possibile esplorare le tecniche dei criteri di ricerca in questa [esercitazione avanzata sui criteri di ricerca](../tutorials/pattern-matching.md).
 
@@ -229,7 +244,7 @@ In entrambi i casi, il compilatore genera la chiamata a `Dispose()`. Il compilat
 
 ## <a name="static-local-functions"></a>Funzioni locali statiche
 
-È ora possibile aggiungere il modificatore `static` alle funzioni locali per assicurarsi che tale funzione locale non acquisisca (faccia riferimento a) variabili dall'ambito di inclusione. In questo modo viene generato l'errore `CS8421`, "A static local function can't contain a reference to <variable>." (Una funzione locale statica non può fare riferimento a 'variabile') 
+È ora possibile aggiungere il modificatore `static` alle funzioni locali per assicurarsi che tale funzione locale non acquisisca (faccia riferimento a) variabili dall'ambito di inclusione. In questo modo viene generato l'errore `CS8421` "A static local function can't contain a reference to \<variable>" (Una funzione locale statica non può fare riferimento a <variabile>). 
 
 Si consideri il codice seguente. La funzione locale `LocalFunction` accede alla variabile `y`, dichiarata nell'ambito di inclusione (il metodo `M`). Pertanto, non è possibile dichiarare `LocalFunction` con il modificatore `static`:
 

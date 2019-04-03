@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a4b8a03661650a3ef1d96b656798c3c3d39a5705
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "58467074"
+---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>Il tentativo di connessione TCP/IP a un database di SQL Server corrispondente a `localhost` non riesce
 
 |   |   |

@@ -4,12 +4,12 @@ description: Informazioni sul ruolo dei registri di immagini del contenitore nel
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 60afb2e06c0c9a37104a82a74de016da5c134a61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145845"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466348"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Indirizzabilità dei microservizi e registro del servizio
 
@@ -23,14 +23,14 @@ Si noti che esiste una certa sovrapposizione tra il registro del servizio e lo s
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-- **Chris Richardson. Modello: Registro del servizio** \
-  [*https://microservices.io/patterns/service-registry.html*](https://microservices.io/patterns/service-registry.html)
+- **Chris Richardson. Pattern: Service registry** \ (Modello: registro del servizio)
+  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
 
 - **Auth0. Il registro del servizio** \
-  [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
 - **Gabriel Schenker. Individuazione del servizio** \
-  [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 >[!div class="step-by-step"]
 >[Precedente](maintain-microservice-apis.md)

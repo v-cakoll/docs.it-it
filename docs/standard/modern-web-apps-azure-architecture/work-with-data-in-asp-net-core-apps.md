@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Usar
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827175"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463735"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext deve avere un costruttore che accetta DbContextOptions e deve passare questo argomento al costruttore DbContext di base. Si noti che se l'applicazione contiene una sola classe DbContext, è possibile passare un'istanza di DbContextOptions, ma se ne contiene di più di una, è necessario usare il tipo generico DbContextOptions<T>, passando il tipo DbContext come parametro generico.
+DbContext deve avere un costruttore che accetta DbContextOptions e deve passare questo argomento al costruttore DbContext di base. Si noti che se l'applicazione contiene una sola classe DbContext, è possibile passare un'istanza di DbContextOptions, ma se ne contiene più di una, è necessario usare il tipo generico DbContextOptions\<T>, passando il tipo DbContext come parametro generico.
 
 ### <a name="configuring-ef-core"></a>Configurazione di EF Core
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Nell'esempio precedente è importante aggiungere la chiamata a ToListAsync per eseguire immediatamente la query. In caso contrario, l'istruzione assegnerà oggetto IQueryable<SelectListItem> a brandItems, che non sarà eseguito finché non sarà enumerato. Esistono vantaggi e svantaggi nella restituzione di risultati IQueryable dai metodi. La query costruita da EF Core può essere ulteriormente modificata, ma può anche generare errori che si verificano solo in fase di esecuzione, se alla query vengono aggiunte operazioni che EF Core non può convertire. È generalmente preferibile passare tutti i filtri al metodo che esegue l'accesso ai dati e restituire una raccolta in memoria (ad esempio, List<T>) come risultato.
+Nell'esempio precedente è importante aggiungere la chiamata a ToListAsync per eseguire immediatamente la query. In caso contrario, l'istruzione assegnerà a brandItems un IQueryable\<SelectListItem> che verrà eseguito solo dopo che è stato enumerato. Esistono vantaggi e svantaggi nella restituzione di risultati IQueryable dai metodi. La query costruita da EF Core può essere ulteriormente modificata, ma può anche generare errori che si verificano solo in fase di esecuzione, se alla query vengono aggiunte operazioni che EF Core non può convertire. È generalmente preferibile passare i filtri al metodo che esegue l'accesso ai dati e restituire una raccolta in memoria (ad esempio, List\<T>) come risultato.
 
 EF Core tiene traccia delle modifiche apportate alle entità che vengono recuperate dalla persistenza. Per salvare le modifiche a un'entità rilevata, chiamare semplicemente il metodo SaveChanges in DbContext, assicurandosi che sia la stessa istanza di DbContext usata per recuperare l'entità. L'aggiunta e la rimozione delle entità avvengono direttamente nella proprietà DbSet appropriata, con una chiamata a SaveChanges per eseguire i comandi di database. Nell'esempio seguente vengono dimostrate le operazioni di aggiunta, aggiornamento e rimozione delle entità dalla persistenza.
 

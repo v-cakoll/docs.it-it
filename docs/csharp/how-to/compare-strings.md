@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563990"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634232"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Come confrontare stringhe in C\#
 
@@ -55,7 +55,7 @@ Quando si esegue un confronto ordinale senza distinzione tra maiuscole e minusco
 ## <a name="linguistic-comparisons"></a>Confronti linguistici
 
 Le stringhe possono anche essere ordinate in base alle regole linguistiche delle impostazioni cultura correnti.
-Questo ordinamento è detto anche "ordinamento di Word". Quando si esegue un confronto linguistico, è possibile che a determinati caratteri Unicode non alfanumerici venga assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di istanze di <xref:System.Char>. L'esempio seguente usa la frase "Ballano per strada." in tedesco con "ss" (U+0073 U+0073) in una stringa e 'ß' (U+00DF) in un'altra. Dal punto di vista linguistico (in Windows), "ss" è equivalente al carattere tedesco Eszett "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
+Questo ordinamento è detto anche "ordinamento di Word". Quando si esegue un confronto linguistico, è possibile che a determinati caratteri Unicode non alfanumerici venga assegnata una valenza specifica. Ad esempio il trattino "-" può avere una valenza ridotta, pertanto le parole "co-op"e "coop" vengono visualizzate l'una accanto all'altra nell'ordinamento. Alcuni caratteri Unicode possono anche essere equivalenti a una sequenza di istanze di <xref:System.Char>. L'esempio seguente usa la frase "Ballano per strada." in tedesco con "ss" (U+0073 U+0073) in una stringa e 'ß' (U+00DF) in un'altra. Dal punto di vista linguistico (in Windows), "ss" equivale al carattere tedesco Esszet "ß", sia nelle impostazioni cultura "en-US" che in quelle "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

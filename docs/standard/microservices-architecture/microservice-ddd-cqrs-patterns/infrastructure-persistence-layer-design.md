@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147736"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463059"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Progettare il livello di persistenza dell'infrastruttura
 
@@ -35,7 +35,7 @@ Se l'utente apporta modifiche, i dati da aggiornare proverranno dal livello di p
 
 È importante sottolineare di nuovo che è consigliabile definire un solo repository per ogni radice di aggregazione, come illustrato nella figura 7-17. Per raggiungere l'obiettivo della radice dell'aggregazione per mantenere la coerenza delle transazioni tra tutti gli oggetti all'interno dell'aggregazione, è consigliabile non creare mai un repository per ogni tabella nel database.
 
-![Relazioni tra i livelli di infrastruttura e di dominio: l'aggregazione Buyer dipende da IBuyerRepository e l'aggregazione Order dipende dalle interfacce IOrderRepository. Queste interfacce vengono implementate nel livello di infrastruttura dai repository corrispondenti che dipendono da UnitOfWork, implementato anch'esso qui, che accede alle tabelle nel livello Dati.](./media/image18.png)
+![Relazioni tra i livelli di dominio e infrastruttura: l'aggregazione Buyer dipende da IBuyerRepository e l'aggregazione Order dipende dalle interfacce IOrderRepository. Queste interfacce vengono implementate nel livello di infrastruttura dai repository corrispondenti che dipendono da UnitOfWork, implementato anch'esso qui, che accede alle tabelle nel livello dati.](./media/image18.png)
 
 **Figura 7-17**. Relazione tra repository, aggregazioni e tabelle del database
 
@@ -111,24 +111,24 @@ I repository possono essere utili ma non sono fondamentali per la progettazione 
 ### <a name="repository-pattern"></a>Schema Repository
 
 - **The Repository pattern** \ (Lo schema Repository)
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
 
 - **Edward Hieatt and Rob Mee. Repository pattern** (Schema Repository). \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
 
 - **The Repository pattern** \ (Lo schema Repository)
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro; include una trattazione dello schema repository) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software) (Libro; include una trattazione dello schema repository) \
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Schema Unit of Work
 
 - **Martin Fowler. Unit of Work pattern** (Schema Unit of Work). \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 - **Implementazione degli schemi Repository e Unit of Work in un'applicazione ASP.NET MVC** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 >[!div class="step-by-step"]
 >[Precedente](domain-events-design-implementation.md)

@@ -3,6 +3,12 @@ title: Strumenti dell'interfaccia della riga di comando di .NET Core
 description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826314"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
@@ -116,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Driver
 
-Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipendente dal framework](../deploying/index.md) ed eseguire un comando. `dotnet` non è accompagnato da un comando solo quando viene usato per avviare un'applicazione.
+Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipendente dal framework](../deploying/index.md) ed eseguire un comando. 
 
-Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il driver, ad esempio `dotnet /path/to/my_app.dll`. Se si esegue il comando dalla cartella in cui si trova la DLL dell'app, è sufficiente eseguire `dotnet my_app.dll`.
+Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il driver, ad esempio `dotnet /path/to/my_app.dll`. Se si esegue il comando dalla cartella in cui si trova la DLL dell'app, è sufficiente eseguire `dotnet my_app.dll`. Se si vuole usare una versione specifica del runtime .NET Core, usare l'opzione `--fx-version <VERSION>` (vedere il riferimento per il [comando dotnet](dotnet.md)).
 
-Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Come prima operazione, il driver determina la versione dell'SDK da usare. Se la versione non è specificata nelle opzioni di comando, il driver usa la versione più recente disponibile. Per specificare una versione diversa dall'ultima versione installata, usare l'opzione `--fx-version <VERSION>` (vedere l'articolo di riferimento sul [comando dotnet](dotnet.md)). Dopo aver determinato la versione dell'SDK, il driver esegue il comando.
+Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Ad esempio:
+
+```bash
+> dotnet build
+```
+
+Come prima operazione, il driver determina la versione dell'SDK da usare. Se non è presente nessuna voce ['global.json'](global-json.md) viene usata la versione più recente disponibile del SDK. Può essere una versione di anteprima o una versione stabile, a seconda di qual è la più recente disponibile nel computer.  Dopo aver determinato la versione del SDK il driver esegue il comando.
 
 ### <a name="command-verb"></a>Comando ("verbo")
 

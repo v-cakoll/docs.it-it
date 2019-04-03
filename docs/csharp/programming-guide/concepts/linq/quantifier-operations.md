@@ -2,19 +2,19 @@
 title: Operazioni del quantificatore (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 22d7b86a5935c7721b7ab13eea1252231d6ac095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 090bc53c3dcedc82972ab7d16fa2968011a7db65
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509214"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412253"
 ---
 # <a name="quantifier-operations-c"></a>Operazioni del quantificatore (C#)
 Le operazioni del quantificatore restituiscono un valore <xref:System.Boolean>, che indica se alcuni o tutti gli elementi di una sequenza soddisfano una condizione.  
   
  La figura seguente illustra due diverse operazioni del quantificatore in due diverse sequenze di origine. La prima operazione chiede se uno o più elementi sono il carattere "A" e il risultato è `true`. La seconda operazione chiede se tutti gli elementi sono il carattere "A" e il risultato è `true`.  
   
- ![Operazioni con quantificatore LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_quantifier.png "LINQ_Quantifier")  
+ ![Operazioni con quantificatore LINQ](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  La sezione seguente elenca i metodi dell'operatore query standard che eseguono operazioni del quantificatore.  
   

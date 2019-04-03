@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084719"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463254"
 ---
 # <a name="switch-c-reference"></a>switch (Riferimenti per C#)
 
@@ -59,7 +59,7 @@ Un'istruzione `switch` può contenere qualsiasi numero di sezioni opzioni e ogni
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case (<case label>) a un'altra."
+Viene eseguita una sola sezione opzioni in un'istruzione switch. C# non consente di continuare l'esecuzione da una sezione opzioni a quella successiva. Per questo motivo, il codice seguente genera un errore di compilazione CS0163: "Il controllo non può passare da un'etichetta case (\<case label>) a un'altra."
 
 ```csharp
 switch (caseSwitch)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 821369734e64648714bf89efb0c02d12d4d816e3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0dd3aa8976c10f0adc5dc7620237991202f772ee
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256553"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545546"
 ---
 # <a name="-operator-c-reference"></a>Operatore >= (Riferimenti per C#)
 
@@ -40,5 +40,5 @@ Per altre informazioni, vedere la sezione [Operatori relazionali e di test del t
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Operatori C#](index.md)
 - [Operatore >](greater-than-operator.md)
-- [Operatore ==](equality-comparison-operator.md)
+- [Operatore ==](equality-operators.md#equality-operator-)
 - <xref:System.IComparable%601?displayProperty=nameWithType>

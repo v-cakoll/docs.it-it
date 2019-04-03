@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788310"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545364"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
@@ -119,7 +119,8 @@ L'operazione è ora completata.  `Program.cs` offre innumerevoli possibilità di
 
 ## <a name="working-with-multiple-files"></a>Uso di più file
 
-I file singoli vanno bene per semplici programmi One-Off, ma se si crea un'app più complessa, molto probabilmente si avranno più file di risorse nel progetto. Dall'esempio precedente con i numeri di Fibonacci si crea ora un'app inserendo alcuni valori di Fibonacci nella cache e aggiungendo alcune funzionalità ricorsive.
+Per singoli programmi basilari è possibile usare un singolo file, ma se si sta compilando un'app più complessa, il progetto conterrà probabilmente più file di origine.
+Verrà ora sviluppato il precedente esempio di Fibonacci memorizzando nella cache alcuni valori di Fibonacci e verranno aggiunte alcune funzionalità ricorsive.
 
 1. Aggiungere un nuovo file nella directory *Hello* denominato *FibonacciGenerator.cs* con il codice seguente:
 

@@ -3,12 +3,12 @@ title: Classi e oggetti in C# - Panoramica del linguaggio C#
 description: Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846142"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466258"
 ---
 # <a name="classes-and-objects"></a>Classi e oggetti
 
@@ -217,7 +217,7 @@ Come illustrato nell'esempio, è sempre possibile selezionare un metodo specific
 
 I membri che contengono codice eseguibile sono noti come *membri funzione* di una classe. Nella sezione precedente sono stati descritti i metodi, che costituiscono i membri di funzione principali. In questa sezione vengono descritti altri membri di funzione supportati da C#: costruttori, proprietà, indicizzatori, eventi, operatori e finalizzatori.
 
-Di seguito è illustrata una classe generica denominata List<T>, che implementa un elenco espandibile di oggetti. Nella classe sono contenuti alcuni esempi di membri di funzione più comuni.
+Di seguito è illustrata una classe generica denominata List\<T> che implementa un elenco di oggetti espandibile. Nella classe sono contenuti alcuni esempi di membri di funzione più comuni.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395161"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654601"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
   
  Nella figura riportata di seguito viene illustrato l'uso di due diverse versioni runtime da parte di più applicazioni sullo stesso computer. Nelle applicazioni A, B e C viene usata la versione runtime 1.0, mentre nell'applicazione D viene usata la versione runtime 1.1.  
   
- ![Esecuzione side&#45;by&#45;side](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-Esecuzione side-by-side di due versioni runtime  
+ ![Esecuzione side-by-side di versioni runtime diverse](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  .NET Framework è costituito dal Common Language Runtime e da una raccolta di assembly contenenti i tipi di API. Per il runtime e gli assembly .NET Framework vengono usate versioni distinte. La versione runtime 4.0, ad esempio, corrisponde in realtà alla versione 4.0.319, mentre la versione 1.0 degli assembly .NET Framework rappresenta la versione 1.0.3300.0.  
   
  Nella figura riportata di seguito viene illustrato l'uso di due diverse versioni di un componente da parte di più applicazioni sullo stesso computer. Nelle applicazioni A e B viene usata la versione 1.0 del componente, mentre nell'applicazione C viene usata la versione 2.0 dello stesso componente.  
   
- ![Esecuzione side&#45;by&#45;side](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-Esecuzione side-by-side di due versioni di un componente  
+ ![Diagramma che illustra l'esecuzione side-by-side di un componente.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  L'esecuzione side-by-side offre un maggiore controllo sulle versioni di un componente a cui viene associata un'applicazione, nonché sulla versione runtime usata da un'applicazione.  
   
@@ -113,9 +111,9 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
-|[Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Viene descritto come associare un'applicazione a una versione specifica di un assembly.|  
+|[Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Viene descritto come associare un'applicazione a una versione specifica di un assembly.|  
 |[Configuring Assembly Binding Redirection](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md) (Configurazione del reindirizzamento di associazione di assembly)|Viene illustrato come reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly di .NET Framework.|  
 |[In-Process Side-by-Side Execution](../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)|Viene illustrato come usare l'attivazione dell'host di runtime side-by-side in-process per eseguire più versioni di CLR in un solo processo.|  
 |[Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Viene fornita una panoramica sui concetti di base relativi agli assembly.|  

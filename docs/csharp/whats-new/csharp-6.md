@@ -2,18 +2,18 @@
 title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084680"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654575"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
 La versione 6.0 di C# contiene molte funzionalità che consentono agli sviluppatori di migliorare la produttività. L'effetto generale di queste funzionalità è che il codice che si scrive è più conciso e anche più leggibile. La sintassi è più semplice e lineare per molte delle procedure più comuni. È più facile visualizzare le finalità di progettazione se la sintassi è più snella. L'apprendimento approfondito di queste funzionalità consentirà di ottenere una maggiore produttività e di scrivere codice più leggibile, concentrandosi più sulle funzionalità da sviluppare che sui costrutti del linguaggio.
 
-Il resto di questo articolo offre una panoramica di ognuna di queste funzionalità, con un collegamento per esplorare ciascuna di esse più in dettaglio. È anche possibile esplorare le funzionalità in un'[esercitazione interattiva su C# 6](../tutorials/exploration/csharp-6.yml) nella sezione delle esercitazioni.
+Il resto di questo articolo offre una panoramica di ognuna di queste funzionalità, con un collegamento per esplorare ciascuna di esse più in dettaglio. È anche possibile esplorare le funzionalità in un'[esplorazione interattiva di C# 6](../tutorials/exploration/csharp-6.yml) nella sezione delle esercitazioni.
 
 ## <a name="read-only-auto-properties"></a>Proprietà automatiche di sola lettura
 

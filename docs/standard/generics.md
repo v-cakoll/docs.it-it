@@ -4,16 +4,16 @@ description: Informazioni sul modo in cui i tipi generici (generics) vengono usa
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835291"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465425"
 ---
 # <a name="generic-types-overview"></a>Panoramica dei tipi generici
 
-Gli sviluppatori usano sempre generics in .NET, in modo implicito o esplicito. Quando si usa LINQ in .NET, forse non si è mai notato l'uso di <xref:System.Collections.Generic.IEnumerable%601>. Oppure, visualizzando un esempio online di un "repository generico" che comunica con database tramite Entity Framework, si è notato che la maggior parte dei metodi restituisce IQueryable<T>? Probabilmente ci si sarà chiesti che cos'è la **T** in questi esempi e perché è presente.
+Gli sviluppatori usano sempre generics in .NET, in modo implicito o esplicito. Quando si usa LINQ in .NET, forse non si è mai notato l'uso di <xref:System.Collections.Generic.IEnumerable%601>. Oppure, visualizzando un esempio online di un "repository generico" per la comunicazione con i database tramite Entity Framework, si è notato che la maggior parte dei metodi restituisce IQueryable\<T>? Probabilmente ci si sarà chiesti che cos'è la **T** in questi esempi e perché è presente.
 
 Introdotti per la prima volta in .NET Framework 2.0, i **generics** sono essenzialmente un "modello di codice" che permette agli sviluppatori di definire strutture dei dati [indipendenti dai tipi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) senza il commit in un tipo di dati effettivo. Ad esempio, <xref:System.Collections.Generic.List%601> è una [raccolta generica](xref:System.Collections.Generic) che può essere dichiarata e usata con qualsiasi tipo, tra cui `List<int>`, `List<string>` o `List<Person>`.
 

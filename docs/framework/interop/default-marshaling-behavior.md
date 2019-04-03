@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221290"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409445"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -33,7 +33,7 @@ Il marshalling di interoperabilità opera sulle regole che stabiliscono il compo
   
 ### <a name="unmanaged-signature"></a>Firma non gestita  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Rappresentazione di libreria dei tipi  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Marshalling predefinito per i tipi di valore  
  La maggior parte dei tipi valore, ad esempio numeri a virgola mobile e interi, è [copiabile da BLT](blittable-and-non-blittable-types.md) e non richiede di effettuare il marshalling. Altri tipi [non copiabili da BLT](blittable-and-non-blittable-types.md) hanno rappresentazioni diverse nella memoria gestita e non gestita e richiedono il marshalling. Altri tipi ancora richiedono la formattazione esplicita oltre i limiti di interoperabilità.  
   
- Questo argomento fornisce le informazioni seguenti sui tipi di valore formattati:  
+ Questa sezione contiene informazioni sui tipi di valore formattati seguenti:  
   
--   [Tipi valore usati in platform invoke](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Tipi valore usati in platform invoke](#value-types-used-in-platform-invoke)  
   
--   [Tipi valore usati nell'interoperabilità COM](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [Tipi valore usati nell'interoperabilità COM](#value-types-used-in-com-interop)  
   
- Oltre a descrivere i tipi formattati, questo argomento identifica i [tipi valore di sistema](#cpcondefaultmarshalingforvaluetypesanchor1) che presentano un comportamento di marshalling insolito.  
+ Oltre a descrivere i tipi formattati, questo argomento identifica i [tipi valore di sistema](#system-value-types) che presentano un comportamento di marshalling insolito.  
   
  Un tipo formattato è un tipo complesso che contiene informazioni che controllano in modo esplicito il layout dei relativi membri in memoria. Le informazioni sul layout dei membri vengono fornite tramite l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Il layout può essere uno dei seguenti valori di enumerazione <xref:System.Runtime.InteropServices.LayoutKind>:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Indica che i membri vengono disposti in base all'oggetto <xref:System.Runtime.InteropServices.FieldOffsetAttribute> fornito con ogni campo.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Tipi di valore usati in platform invoke  
  Nell'esempio seguente i tipi `Point` e `Rect` forniscono informazioni sul layout dei membri usando **StructLayoutAttribute**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Quando si effettua il marshalling nel codice non gestito, questi tipi formattati vengono sottoposti a marshalling come strutture di tipo C. Ciò consente di chiamare in modo semplice un'API non gestita con argomenti di struttura. Ad esempio, le strutture `POINT` e `RECT` possono essere passate alla funzione **PtInRect** dell'API Win32 Microsoft come indicato di seguito:  
+ Quando si effettua il marshalling nel codice non gestito, questi tipi formattati vengono sottoposti a marshalling come strutture di tipo C. Ciò consente di chiamare in modo semplice un'API non gestita con argomenti di struttura. Ad esempio, le strutture `POINT` e `RECT` possono essere passate alla funzione **PtInRect** dell'API Microsoft Windows come indicato di seguito:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  È possibile passare le strutture usando la definizione di platform invoke seguente:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  Il tipo di valore `Rect` deve essere passato mediante riferimento in quanto l'API non gestita richiede che alla funzione venga passato un puntatore a un oggetto `RECT`. Il tipo di valore `Point` viene passato mediante valore in quanto l'API non gestita richiede che nello stack venga passato un oggetto `POINT`. Questa sottile differenza è molto importante. I riferimenti vengono passati al codice non gestito come puntatori. I valori vengono passati al codice non gestito nello stack.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Se un tipo di riferimento dispone di membri di tipi non copiabili da BLT, è necessario eseguire la conversione due volte: la prima volta quando un argomento viene passato al lato non gestito e la seconda volta quando viene restituito dalla chiamata. A causa di questo sovraccarico aggiuntivo, è necessario applicare in modo esplicito i parametri in/out a un argomento se il chiamante desidera visualizzare le modifiche apportate dall'oggetto chiamato.  
   
- Nell'esempio seguente la classe `SystemTime` ha un layout dei membri sequenziale e può essere passata alla funzione **GetSystemTime** dell'API Win32.  
+ Nell'esempio seguente la classe `SystemTime` ha un layout dei membri sequenziale e può essere passata alla funzione **GetSystemTime** dell'API Windows.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  La funzione **GetSystemTime** è definita come indicato di seguito:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  La definizione di platform invoke equivalente per **GetSystemTime** è la seguente:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Si noti che l'argomento `SystemTime` non è tipizzato come argomento di riferimento poiché `SystemTime` è una classe e non un tipo di valore. A differenza dei tipi di valore, le classi vengono sempre passate mediante riferimento.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>Tipi di valore usati nell'interoperabilità COM  
  I tipi formattati possono anche essere passati alle chiamate ai metodi di interoperabilità COM. Quando vengono esportati in una libreria dei tipi, infatti, i tipi di valore vengono convertiti automaticamente in strutture. Come illustrato nell'esempio seguente, il tipo di valore `Point` diventa una definizione di tipo (typedef) con il nome `Point`. Tutti i riferimenti al tipo di valore `Point` in altre posizioni nella libreria dei tipi vengono sostituiti con la definizione di tipo `Point`.  
   
  **Rappresentazione di libreria dei tipi**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Le strutture con valore di enumerazione <xref:System.Runtime.InteropServices.LayoutKind> impostato su **Explicit** non possono essere usate nell'interoperabilità COM perché la libreria dei tipi esportata non può esprimere un layout esplicito.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Tipi di valore di sistema  
  Lo spazio dei nomi <xref:System> include diversi tipi di valore che rappresentano il formato sottoposto a conversione boxing dei tipi primitivi di runtime. Ad esempio, la struttura <xref:System.Int32?displayProperty=nameWithType> del tipo valore rappresenta il formato sottoposto a conversione boxing di **ELEMENT_TYPE_I4**. Anziché effettuare il marshalling di questi tipi come strutture, come nel caso di altri tipi formattati, si effettua il marshalling nello stesso modo dei tipi primitivi di cui viene eseguita la conversione boxing. Per **System.Int32** viene quindi effettuato il marshalling come **ELEMENT_TYPE_I4** invece che come struttura contenente un singolo membro di tipo **long**. La tabella seguente contiene un elenco dei tipi valore nello spazio dei nomi **System** che costituiscono rappresentazioni sottoposte a conversione boxing di tipi primitivi.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Rappresentazione di libreria dei tipi  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Rappresentazione di libreria dei tipi  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

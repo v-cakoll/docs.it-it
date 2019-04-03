@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202731"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654029"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -86,10 +86,9 @@ In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati 
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense usa le parentesi per indicare parametri facoltativi, come mostrato nell'immagine seguente.  
+ IntelliSense usa le parentesi per indicare parametri facoltativi, come illustrato nell'immagine seguente:  
   
- ![Informazioni rapide di IntelliSense per il metodo ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-Parametri facoltativi in ExampleMethod  
+ ![Screenshot con le informazioni rapide di IntelliSense per il metodo ExampleMethod.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  È possibile anche dichiarare parametri facoltativi usando la classe .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. I parametri `OptionalAttribute` non richiedono un valore predefinito.  
@@ -102,10 +101,9 @@ Parametri facoltativi in ExampleMethod
 ## <a name="com-interfaces"></a>Interfacce COM  
  Gli argomenti denominati e facoltativi, insieme al supporto per gli oggetti dinamici e ad altri miglioramenti, aumentano considerevolmente l'interoperabilità con le API COM, quali le API di automazione di Office.  
   
- Ad esempio, il metodo <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> nell'interfaccia <xref:Microsoft.Office.Interop.Excel.Range> di Microsoft Office Excel ha sette parametri facoltativi. Questi parametri sono illustrati nell'immagine seguente.  
+ Ad esempio, il metodo <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> nell'interfaccia <xref:Microsoft.Office.Interop.Excel.Range> di Microsoft Office Excel ha sette parametri facoltativi. Questi parametri sono illustrati nell'immagine seguente:  
   
- ![Informazioni rapide di IntelliSense per il metodo AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-Parametri di AutoFormat  
+ ![Screenshot con le informazioni rapide di IntelliSense per il metodo AutoFormat.](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  In C# 3.0 e versioni precedenti è necessario un argomento per ogni parametro, come illustrato nell'esempio seguente.  
   
