@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: ce0010762374baf5b19ab2e64f50e12fefda2dee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966965"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831254"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Procedura: Creare una routine che restituisce un valore (Visual Basic)
 Si utilizza un `Function` procedure per restituire un valore al codice chiamante.  
@@ -37,6 +37,7 @@ Si utilizza un `Function` procedure per restituire un valore al codice chiamante
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Property](./property-procedures.md)
