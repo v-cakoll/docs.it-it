@@ -2,20 +2,21 @@
 title: LINQ e Reflection (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2548a731-0cd8-48de-8d48-664d1b7d7526
-ms.openlocfilehash: f752eac7ee22a6cb75324e02ecfc2263513ceeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed4627fc10c1b6b56194520461146315f98f15f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586605"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813683"
 ---
-# <a name="linq-and-reflection-visual-basic"></a><span data-ttu-id="06556-102">LINQ e Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06556-102">LINQ and Reflection (Visual Basic)</span></span>
-<span data-ttu-id="06556-103">L'API di reflection della libreria di classi .NET Framework consente di esaminare i metadati in un assembly .NET e creare raccolte di tipi, membri dei tipi, parametri e così via, che si trovano in tale assembly.</span><span class="sxs-lookup"><span data-stu-id="06556-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="06556-104">Poiché queste raccolte supportano l'interfaccia generica `IEnumerable`, è possibile eseguire query su tali raccolte tramite LINQ.</span><span class="sxs-lookup"><span data-stu-id="06556-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  
+# <a name="linq-and-reflection-visual-basic"></a><span data-ttu-id="c14b2-102">LINQ e Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c14b2-102">LINQ and Reflection (Visual Basic)</span></span>
+<span data-ttu-id="c14b2-103">L'API di reflection della libreria di classi .NET Framework consente di esaminare i metadati in un assembly .NET e creare raccolte di tipi, membri dei tipi, parametri e così via, che si trovano in tale assembly.</span><span class="sxs-lookup"><span data-stu-id="c14b2-103">The .NET Framework class library reflection APIs can be used to examine the metadata in a .NET assembly and create collections of types, type members, parameters, and so on that are in that assembly.</span></span> <span data-ttu-id="c14b2-104">Poiché queste raccolte supportano l'interfaccia generica `IEnumerable`, è possibile eseguire query su tali raccolte tramite LINQ.</span><span class="sxs-lookup"><span data-stu-id="c14b2-104">Because these collections support the generic `IEnumerable` interface, they can be queried by using LINQ.</span></span>  
   
- <span data-ttu-id="06556-105">Questa sezione contiene i seguenti argomenti:</span><span class="sxs-lookup"><span data-stu-id="06556-105">This section contains the following topics:</span></span>  
+ <span data-ttu-id="c14b2-105">Questa sezione contiene i seguenti argomenti:</span><span class="sxs-lookup"><span data-stu-id="c14b2-105">This section contains the following topics:</span></span>  
   
- [<span data-ttu-id="06556-106">Procedura: Eseguire query sui metadati di un Assembly tramite Reflection (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06556-106">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- <span data-ttu-id="06556-107">Viene illustrato come usare LINQ con la reflection.</span><span class="sxs-lookup"><span data-stu-id="06556-107">Shows how to use LINQ with reflection.</span></span>  
+ [<span data-ttu-id="c14b2-106">Procedura: Eseguire query sui metadati di un Assembly tramite Reflection (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c14b2-106">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
+ <span data-ttu-id="c14b2-107">Viene illustrato come usare LINQ con la reflection.</span><span class="sxs-lookup"><span data-stu-id="c14b2-107">Shows how to use LINQ with reflection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06556-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="06556-108">See also</span></span>
-- [<span data-ttu-id="06556-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06556-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="c14b2-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c14b2-108">See also</span></span>
+
+- [<span data-ttu-id="c14b2-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c14b2-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
