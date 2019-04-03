@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412032"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819580"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 
@@ -94,9 +94,9 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  La figura seguente mostra un tipico flusso di lavoro di localizzazione basato sul modulo BAML di XAML. Questo diagramma si presuppone che lo sviluppatore scriva l'applicazione in lingua inglese. Lo sviluppatore crea e globalizza l'applicazione WPF. Nel file di progetto lo sviluppatore imposta `<UICulture>en-US</UICulture>` in modo che in fase di compilazione, venga generato un assembly principale indipendente dalla lingua con un satellite. Resources contenente tutte le risorse localizzabili. In alternativa, è possibile mantenere la lingua di origine nell'assembly principale poiché le API di localizzazione WPF supportano l'estrazione dall'assembly principale. Dopo il processo di compilazione, il codice XAML viene compilato in BAML. Il file MyDialog.exe.resources.dll indipendente dalla lingua viene distribuito ai clienti di lingua inglese.  
   
- ![Flusso di lavoro di localizzazione](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![Diagramma che mostra il flusso di lavoro di localizzazione.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![Flusso di lavoro non localizzato](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![Diagramma che mostra il flusso di lavoro non localizzato.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>Esempi di localizzazione WPF
 
@@ -108,11 +108,11 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  **Inglese:**  
   
- ![Finestra di dialogo Esegui in inglese](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![Screenshot che mostra la finestra di dialogo Esegui in inglese.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **Tedesco:**  
   
- ![Finestra di dialogo Esegui in tedesco](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![Screenshot che mostra una finestra di dialogo German Run.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **Progettazione di una finestra di dialogo Esegui globale**  
   
@@ -190,7 +190,7 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  La localizzazione dell'applicazione in tedesco richiede le seguenti traduzioni:  
   
-|Chiave di risorsa|Categoria di localizzazione|Valore|  
+|Chiave di risorsa|Categoria di localizzazione|Value|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|OK|  
 |Button_2:System.Windows.Controls.Button.$Content|Pulsante|Abbrechen|  
@@ -226,13 +226,13 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  **Inglese:**  
   
- ![Pagina inglese](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![Screenshot che mostra una pagina home in lingua inglese.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **Arabo:**  
   
- ![Pagina in arabo](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![Screenshot che mostra una pagina in arabo home.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>Progettazione di una home page Microsoft globale  
+### <a name="designing-a-global-microsoft-home-page"></a>Progettazione di una home page Microsoft globale  
  Questo modello di sito Web Microsoft per l'Arabia Saudita illustra le funzionalità di globalizzazione disponibili per le lingue da destra a sinistra. Lingue quali l'ebraico e arabo hanno un ordine di lettura da destra a sinistra, pertanto il layout di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] spesso deve essere disposto in modo molto diverso rispetto a come sarebbe nelle lingue da sinistra a destra, ad esempio inglese. La localizzazione da una lingua da sinistra a destra in una lingua da destra a sinistra o viceversa può risultare piuttosto complessa. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è stato progettato per semplificare tali processi di localizzazione.  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
  **FlowDirection="LeftToRight"**  
   
- ![Flusso da sinistra a destra](./media/lefttoright.PNG "LeftToRight")  
+ ![Screenshot che mostra la direzione della sfumatura da sinistra a destra.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![Flusso da destra a sinistra](./media/righttoleft.PNG "RightToLeft")  
+ ![Screenshot che mostra la direzione della sfumatura da destra a sinistra.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **Evitare l'utilizzo di dimensioni fisse per riquadri e controlli**  
   

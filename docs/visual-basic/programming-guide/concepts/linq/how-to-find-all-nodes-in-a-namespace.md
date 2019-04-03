@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640683"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813847"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Procedura: Trovare tutti i nodi in un Namespace (Visual Basic)
 È possibile applicare un filtro sullo spazio dei nomi di ogni elemento o attributo per trovare tutti i nodi inclusi in questo determinato spazio dei nomi.  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Esempio  
  Il file XML cui accede la seguente query contiene gli ordini di acquisto in due spazi dei nomi diversi. Con la query viene creato un nuovo albero contenente solo gli elementi di uno degli spazi dei nomi.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: ordini di acquisto consolidati](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -110,4 +110,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

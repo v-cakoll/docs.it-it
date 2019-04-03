@@ -2,17 +2,23 @@
 title: Associazione anticipata e tardiva (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'early binding [Visual Basic]'
-  - 'objects [Visual Basic], late-bound'
-  - 'objects [Visual Basic], early-bound'
-  - 'objects [Visual Basic], late bound'
-  - 'early binding [Visual Basic], Visual Basic compiler'
-  - 'binding [Visual Basic], late and early'
-  - 'objects [Visual Basic], early bound'
-  - 'Visual Basic compiler, early and late binding'
-  - 'late binding [Visual Basic]'
-  - 'late binding [Visual Basic], Visual Basic compiler'
+- early binding [Visual Basic]
+- objects [Visual Basic], late-bound
+- objects [Visual Basic], early-bound
+- objects [Visual Basic], late bound
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
+- objects [Visual Basic], early bound
+- Visual Basic compiler, early and late binding
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
+ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824793"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Associazione anticipata e tardiva (Visual Basic)
 Il compilatore Visual Basic esegue un processo denominato `binding` quando un oggetto viene assegnato a una variabile oggetto. Un oggetto è *ad associazione anticipata* quando viene assegnato a una variabile di un tipo object specifico. Gli oggetti ad associazione anticipata consentono al compilatore di allocare memoria ed effettuare altre ottimizzazioni prima dell'esecuzione di un'applicazione. Il frammento di codice seguente, ad esempio, dichiara una variabile di tipo <xref:System.IO.FileStream>:  
@@ -32,6 +38,7 @@ Il compilatore Visual Basic esegue un processo denominato `binding` quando un og
 >  L'associazione tardiva può essere usata soltanto per accedere ai membri di tipi che vengono dichiarati come `Public`. L'accesso a membri dichiarati come `Friend` o `Protected Friend` determina un errore di run-time.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
 - [Durata degli oggetti: Come gli oggetti vengono creati ed eliminati](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

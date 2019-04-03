@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285194"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813405"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Necessario riferimento all'assembly '\<identitàassembly >' contenente il tipo '\<nomeTipo >', ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra dei progetti\<projectname1 >' e '\< projectname2 >'
 In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'interfaccia, un'enumerazione o un delegato, definito all'esterno del progetto. Tuttavia, sono presenti riferimenti di progetto a più assembly che definiscono quel tipo.  
@@ -30,6 +30,7 @@ In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'
 2.  Nelle proprietà del progetto aggiungere un riferimento al file contenente l'assembly che definisce il tipo in uso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)
 - [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: e33d396dac8ae5f9afd057a27f27bee700092f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634350"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819684"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomi di elementi e attributi XML dichiarati (Visual Basic)
 In questo argomento vengono fornite linee guida di Visual Basic per denominare gli elementi XML e attributi nei valori letterali XML.  In un valore letterale XML, è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, i due punti e un nome locale. Per altre informazioni sui prefissi dello spazio dei nomi XML, vedere [letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -45,5 +45,6 @@ In questo argomento vengono fornite linee guida di Visual Basic per denominare g
  Quando si crea un elemento XML letterale, è possibile specificare il prefisso dello spazio dei nomi XML per il nome dell'elemento. Per altre informazioni, vedere [letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

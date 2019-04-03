@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826171"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)
 È possibile derivare classi Visual Basic da `Public` classi di oggetti COM, anche quelli creati in versioni precedenti di Visual Basic. Le proprietà e metodi delle classi ereditate dagli oggetti COM possono essere sottoposto a override o overload solo come proprietà e metodi di qualsiasi altra classe base possono essere sottoposto a override o overload. Ereditarietà dagli oggetti COM è utile quando si dispone di una libreria di classi esistenti che non si desidera ricompilare.  
@@ -130,6 +130,7 @@ ms.locfileid: "56980451"
 -   Proprietà che utilizzano `ByRef` parametri non possono essere sottoposto a override.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interoperabilità COM nelle applicazioni .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)

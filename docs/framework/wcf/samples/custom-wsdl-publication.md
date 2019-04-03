@@ -2,12 +2,12 @@
 title: Pubblicazione WSDL personalizzata
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e09e79725b0a9e4ee34e4062c1434415cfc25d03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 211f3d80917e490748e5d0445ff3dfad9ce29047
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831427"
 ---
 # <a name="custom-wsdl-publication"></a>Pubblicazione WSDL personalizzata
 Nell'esempio viene illustrato come eseguire le seguenti operazioni:  
@@ -167,7 +167,7 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Client Svcutil  
- In questo esempio non viene utilizzato Svcutil.exe. Il contratto viene fornito nel file generatedClient.cs in modo che dopo che la dimostrazione dell'importazione WSDL personalizzata e della generazione di codice nell'esempio, il servizio può essere richiamato. Per utilizzare l'utilità di importazione WSDL personalizzata seguente per questo esempio, è possibile eseguire Svcutil.exe e specificare l'opzione `/svcutilConfig`, fornendo il percorso al file di configurazione client utilizzato in questo esempio, che fa riferimento alla libreria `WsdlDocumentation.dll`. Per caricare `WsdlDocumentationImporter`, tuttavia, Svuctil.exe deve essere in grado di trovare e caricare la libreria `WsdlDocumentation.dll`, la quale deve pertanto essere registrata nella Global Assembly Cache nel percorso o essere inclusa nella stessa directory di Svcutil.exe. Per un esempio di base attinente, la procedura più facile consiste nel copiare Svcutil.exe e il file di configurazione client nella stessa directory di `WsdlDocumentation.dll` ed eseguirlo da quella posizione.  
+ In questo esempio non viene utilizzato Svcutil.exe. Il contratto viene fornito nel file generatedClient.cs in modo che dopo che la dimostrazione dell'importazione WSDL personalizzata e della generazione di codice nell'esempio, il servizio può essere richiamato. Per usare l'utilità di importazione WSDL personalizzata seguente per questo esempio, è possibile eseguire Svcutil.exe e specificare l'opzione `/svcutilConfig`, fornendo il percorso al file di configurazione client usato in questo esempio, che fa riferimento alla libreria `WsdlDocumentation.dll`. Per caricare `WsdlDocumentationImporter`, tuttavia, Svuctil.exe deve essere in grado di trovare e caricare la libreria `WsdlDocumentation.dll`, la quale deve pertanto essere registrata nella Global Assembly Cache nel percorso o essere inclusa nella stessa directory di Svcutil.exe. Per un esempio di base attinente, la procedura più facile consiste nel copiare Svcutil.exe e il file di configurazione client nella stessa directory di `WsdlDocumentation.dll` ed eseguirlo da quella posizione.  
   
 ## <a name="the-custom-wsdl-importer"></a>Unità di importazione WSDL personalizzata  
  L'oggetto <xref:System.ServiceModel.Description.IWsdlImportExtension> personalizzato, `WsdlDocumentationImporter`, implementa anche <xref:System.ServiceModel.Description.IContractBehavior> e <xref:System.ServiceModel.Description.IOperationBehavior> per essere aggiunto ai ServiceEndpoints importati e <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> per essere richiamato per modificare la generazione del codice quando viene creato il contratto o il codice dell'operazione.  
@@ -304,4 +304,3 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   
-## <a name="see-also"></a>Vedere anche

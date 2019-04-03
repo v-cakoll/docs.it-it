@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373089"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816915"
 ---
 # <a name="wpf-content-model"></a>Modello di contenuto WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è una piattaforma di presentazione che offre numerosi controlli e tipi simili a controlli il cui scopo principale consiste nel visualizzare tipi di contenuto diversi. Per stabilire quale controllo usare o da quale controllo eseguire la derivazione, è consigliabile comprendere i tipi di oggetti che possono essere visualizzati in modo ottimale da un determinato controllo.  
@@ -38,9 +38,9 @@ ms.locfileid: "57373089"
 |<xref:System.Windows.Controls.ItemsControl>|Una raccolta di oggetti arbitrari.|  
 |<xref:System.Windows.Controls.HeaderedItemsControl>|Un'intestazione e una raccolta di elementi, che costituiscono tutti oggetti arbitrari.|  
   
- I controlli che ereditano da queste classi possono contenere lo stesso tipo di contenuto e gestiscono il contenuto nello stesso modo. La figura seguente illustra un controllo di ogni modello di contenuto che contiene un'immagine e del testo.  
+ I controlli che ereditano da queste classi possono contenere lo stesso tipo di contenuto e gestiscono il contenuto nello stesso modo. Nella figura seguente illustra un controllo di ogni modello di contenuto che contiene un'immagine e testo:  
   
- ![Button, GroupBox, Listbax, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Screenshot che mostra quattro diversi controlli, uno da ogni modello di contenuto.](./media/wpf-content-model/control-content-model-image-text.png)  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Controlli che contengono un singolo oggetto arbitrario  
  Il <xref:System.Windows.Controls.ContentControl> classe contiene un singolo elemento di contenuto arbitrario. Proprietà di contenuto corrispondente è <xref:System.Windows.Controls.ContentControl.Content%2A>. I controlli seguenti ereditano da <xref:System.Windows.Controls.ContentControl> e usano il corrispondente modello di contenuto:  
@@ -85,10 +85,9 @@ ms.locfileid: "57373089"
   
 -   <xref:System.Windows.Window>  
   
- La figura seguente illustra quattro pulsanti la cui <xref:System.Windows.Controls.ContentControl.Content%2A> è impostata su una stringa, un <xref:System.DateTime> oggetto, un <xref:System.Windows.Shapes.Rectangle>e un <xref:System.Windows.Controls.Panel> che contiene un' <xref:System.Windows.Shapes.Ellipse> e un <xref:System.Windows.Controls.TextBlock>.  
+ La figura seguente illustra quattro pulsanti la cui <xref:System.Windows.Controls.ContentControl.Content%2A> è impostata su una stringa, un <xref:System.DateTime> oggetto, un <xref:System.Windows.Shapes.Rectangle>e un <xref:System.Windows.Controls.Panel> che contiene un' <xref:System.Windows.Shapes.Ellipse> e un <xref:System.Windows.Controls.TextBlock>:  
   
- ![Quattro pulsanti](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
-Quattro pulsanti che dispongono di tipi di contenuto diversi  
+ ![Screenshot che mostra quattro pulsanti con diversi tipi di contenuto.](./media/wpf-content-model/control-content-model-buttons.png)  
   
  Per un esempio di come impostare il <xref:System.Windows.Controls.ContentControl.Content%2A> proprietà, vedere <xref:System.Windows.Controls.ContentControl>.  
   
@@ -105,8 +104,7 @@ Quattro pulsanti che dispongono di tipi di contenuto diversi
   
  La figura seguente mostra due <xref:System.Windows.Controls.TabItem> oggetti. Il primo <xref:System.Windows.Controls.TabItem> ha <xref:System.Windows.UIElement> oggetti come i <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e il <xref:System.Windows.Controls.ContentControl.Content%2A>. Il <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> è impostata su una <xref:System.Windows.Controls.StackPanel> che contiene un' <xref:System.Windows.Shapes.Ellipse> e un <xref:System.Windows.Controls.TextBlock>. Il <xref:System.Windows.Controls.ContentControl.Content%2A> è impostata su una <xref:System.Windows.Controls.StackPanel> che contiene un <xref:System.Windows.Controls.TextBlock> e un <xref:System.Windows.Controls.Label>. La seconda <xref:System.Windows.Controls.TabItem> dispone di una stringa nel <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e una <xref:System.Windows.Controls.TextBlock> nel <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
-TabControl con tipi diversi nella proprietà Header  
+ ![TabControl con tipi diversi di proprietà dell'intestazione.](./media/wpf-content-model/control-content-model-tab.png)  
   
  Per un esempio di come creare <xref:System.Windows.Controls.TabItem> oggetti, vedere <xref:System.Windows.Controls.HeaderedContentControl>.  
   
@@ -147,8 +145,7 @@ TabControl con tipi diversi nella proprietà Header
   
 -   Oggetto <xref:System.Windows.Controls.Panel> che contiene un <xref:System.Windows.Shapes.Ellipse> e un <xref:System.Windows.Controls.TextBlock>.  
   
- ![ListBox con quattro tipi di contenuto](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
-ListBox con più tipi di oggetti  
+ ![Screenshot che mostra un controllo ListBox con quattro tipi di contenuto.](./media/wpf-content-model/control-content-model-listbox.png)  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Controlli che contengono un'intestazione e una raccolta di oggetti arbitrari  
  Il <xref:System.Windows.Controls.HeaderedItemsControl> classe eredita da <xref:System.Windows.Controls.ItemsControl> e può contenere più elementi, ad esempio stringhe, oggetti, o altri elementi e un'intestazione. Eredita le <xref:System.Windows.Controls.ItemsControl> proprietà, del contenuto <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, e <xref:System.Windows.Controls.ItemsControl.Items%2A>, e definisce il <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> proprietà che può essere un oggetto arbitrario.  

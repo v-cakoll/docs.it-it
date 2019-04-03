@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977552"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829330"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic
 Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura che il codice possa accedere senza specificarla. Quando si chiama codice nomi una classe o struttura, ma non una proprietà e il contesto consente l'accesso a una proprietà, Visual Basic viene risolto l'accesso a tale classe o una proprietà predefinita della struttura, se disponibile.  
@@ -82,6 +82,7 @@ Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura c
  A causa di questi svantaggi, è necessario considerare che non definisce le proprietà predefinite. Per la leggibilità del codice, è necessario considerare anche fare sempre riferimento a tutte le proprietà in modo esplicito, anche le proprietà predefinite.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)

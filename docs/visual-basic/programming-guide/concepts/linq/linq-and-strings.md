@@ -2,12 +2,12 @@
 title: LINQ e stringhe (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569992"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818956"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ e stringhe (Visual Basic)
 È possibile usare LINQ per eseguire query e trasformare stringhe e raccolte di stringhe. LINQ può essere particolarmente utile con i dati semistrutturati nei file di testo. Le query LINQ possono essere usate in associazione a funzioni per valori stringa tradizionali ed espressioni regolari. Ad esempio, è possibile usare il metodo <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A> per creare una matrice di stringhe in cui sarà possibile eseguire query o apportare modifiche usando LINQ. È possibile usare il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> nella clausola `where` di una query LINQ. È anche possibile usare LINQ per eseguire query o modificare i risultati <xref:System.Text.RegularExpressions.MatchCollection> restituiti da un'espressione regolare.  
@@ -60,5 +60,6 @@ ms.locfileid: "54569992"
  Descrive come eseguire calcoli matematici in dati di testo in file con estensione csv.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ (Language-Integrated Query) (Visual Basic)](index.md)
 - [Procedura: Generare XML da file CSV](how-to-generate-xml-from-csv-files.md)

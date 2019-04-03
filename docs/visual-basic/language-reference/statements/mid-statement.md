@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ee0f2e771a938619bf988263b176464080e60e7a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: df83fd527612af1a6a4b8131ffa2643ef0d1d7dd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974835"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818566"
 ---
 # <a name="mid-statement"></a>Istruzione Mid
 Sostituisce un numero specificato di caratteri in un `String` variabili con i caratteri da un'altra stringa.  
@@ -70,6 +70,7 @@ Mid( _
  **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - [Stringhe](../../../visual-basic/programming-guide/language-features/strings/index.md)
 - [Introduzione alle stringhe in Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

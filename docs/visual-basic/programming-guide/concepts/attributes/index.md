@@ -2,6 +2,12 @@
 title: Panoramica degli attributi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827692"
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
 Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Attributi](../../../../standard/attributes/index.md)

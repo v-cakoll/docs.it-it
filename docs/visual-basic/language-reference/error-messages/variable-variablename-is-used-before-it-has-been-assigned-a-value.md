@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268834"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819359"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variabile '\<nomevariabile >' viene usato prima che sia stato assegnato un valore
 Variabile '\<nomevariabile >' viene usato prima che sia stato assegnato un valore. È possibile che in fase di esecuzione venga restituita un'eccezione dovuta a un riferimento Null.  
@@ -32,6 +32,7 @@ Variabile '\<nomevariabile >' viene usato prima che sia stato assegnato un valor
 -   Un modo per garantire che la variabile ha sempre un valore valido consiste nell'inizializzare come parte della relativa dichiarazione. Vedere "Inizializzazione" nella [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Risoluzione dei problemi relativi alle variabili](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

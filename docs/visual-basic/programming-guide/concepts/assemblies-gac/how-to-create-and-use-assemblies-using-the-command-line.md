@@ -2,12 +2,12 @@
 title: 'Procedura: Creare e usare assembly dalla riga di comando (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746390"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819401"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedura: Creare e usare assembly dalla riga di comando (Visual Basic)
 Un assembly, o libreria a collegamento dinamico (DLL), viene collegato al programma in fase di esecuzione. Per illustrare la creazione e l'uso di una DLL, si consideri lo scenario seguente:  
@@ -118,6 +118,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
  Per altre informazioni sulla compilazione dalla riga di comando, vedere e [compilazione dalla riga di comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Creazione di una classe che contenga le funzioni DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

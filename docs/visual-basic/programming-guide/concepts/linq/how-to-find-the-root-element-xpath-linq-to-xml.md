@@ -2,12 +2,12 @@
 title: "Procedura: Trovare l'elemento radice (XPath-LINQ to XML) (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 6a08817c16bafb2ba1f91931f9718d6ef5053fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0936300a51c697eaff5a1aeafff70e37b04a2a96
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687336"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816753"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare l'elemento radice (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere l'elemento radice con XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -19,7 +19,7 @@ In questo argomento viene illustrato come ottenere l'elemento radice con XPath e
 ## <a name="example"></a>Esempio  
  In questo esempio viene trovato l'elemento radice.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -46,4 +46,5 @@ PurchaseOrders
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

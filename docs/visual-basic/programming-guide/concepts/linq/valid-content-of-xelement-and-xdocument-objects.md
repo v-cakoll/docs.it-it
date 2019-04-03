@@ -2,12 +2,12 @@
 title: Contenuto valido di oggetti XElement e XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 168c87f23d4545afe7b80579673c050068ee697b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502702"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828802"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenuto valido di oggetti XElement e XDocument
 In questo argomento vengono illustrati gli argomenti validi che è possibile passare a costruttori e i metodi usati per aggiungere contenuto a elementi e documenti.  
@@ -89,4 +89,5 @@ In questo argomento vengono illustrati gli argomenti validi che è possibile pas
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Sostituisce un nodo con nuovo contenuto.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

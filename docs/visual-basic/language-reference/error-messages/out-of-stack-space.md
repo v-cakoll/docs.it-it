@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655491"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814601"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Spazio dello stack insufficiente (Visual Basic)
 Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con le esigenze del programma in esecuzione. Sono stati superati i limiti massimi.  
@@ -29,4 +29,5 @@ Lo stack è un'area di lavoro di memoria aumenta e si ridotta dinamicamente con 
 6.  Assicurarsi che non si ha provocato una "catena di eventi" generando un evento che chiama una routine evento già nello stack. Una catena di eventi è simile a una chiamata di routine ricorsive senza terminazione, ma è meno ovvio, poiché viene effettuata la chiamata da Visual Basic piuttosto che una chiamata esplicita nel codice. Usare il `Calls` finestra di dialogo per visualizzare quali procedure attive nello stack.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Finestra Memoria](/visualstudio/debugger/memory-windows)

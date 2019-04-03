@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare elementi discendenti (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578679"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833399"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare elementi discendenti (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere gli elementi discendenti con un determinato nome.  
@@ -17,7 +17,7 @@ In questo argomento viene illustrato come ottenere gli elementi discendenti con 
 ## <a name="example"></a>Esempio  
  In questo esempio vengono trovati tutti i discendenti denominati `Name`.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: più ordini di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -52,4 +52,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

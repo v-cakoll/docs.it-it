@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825157"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: Inserire più valori in una variabile (Visual Basic)
 Una variabile contiene più di un valore se si dichiara che questo sia di un *tipo di dati composito*.  
@@ -42,6 +42,7 @@ Una variabile contiene più di un valore se si dichiara che questo sia di un *ti
 5.  Seguire il `As` parola chiave con il nome del tipo di dati compositi appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
 - [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

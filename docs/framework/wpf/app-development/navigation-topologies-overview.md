@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819593"
 ---
 # <a name="navigation-topologies-overview"></a>Cenni preliminari sulle topologie di navigazione
 <a name="introduction"></a> Questa panoramica fornisce un'introduzione alle topologie di navigazione in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Di seguito vengono analizzate tre topologie di navigazione comuni con i relativi esempi.  
@@ -46,7 +46,7 @@ ms.locfileid: "57356780"
   
  Questo argomento illustra tre topologie di navigazione comuni: *lineare fissa*, *gerarchica fissa*, e *generato dinamicamente*. Ogni topologia di navigazione è illustrato un esempio con un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] come quello illustrato nella figura riportata di seguito:  
   
- ![Pagine di attività con elementi di dati](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Pagine di attività con gli elementi di dati e i pulsanti di navigazione.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Topologie di navigazione strutturata  
@@ -60,9 +60,9 @@ ms.locfileid: "57356780"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Navigazione in una topologia lineare fissa  
- Una topologia lineare fissa è analoga alla struttura di una procedura guidata con una o più pagine in cui ci si sposta in una sequenza fissa. La figura seguente illustra la struttura generale e il flusso di una procedura guidata con topologia lineare fissa.  
+ Una topologia lineare fissa è analoga alla struttura di una procedura guidata con una o più pagine in cui ci si sposta in una sequenza fissa. La figura seguente mostra la struttura di alto livello e il flusso di una procedura guidata con una topologia lineare fissa:  
   
- ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Diagramma che illustra una topologia lineare fissa.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  I comportamenti tipici per la navigazione in una topologia lineare fissa includono quanto segue:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356780"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Navigazione dinamica in una topologia gerarchica fissa  
- In alcune applicazioni le pagine consentono di spostarsi su due o più altre pagine, come illustrato nella figura seguente.  
+ In alcune applicazioni, le pagine consentono di spostarsi su due o più altre pagine, come illustrato nella figura seguente: 
   
- ![Pagina che consente di spostarsi su diverse altre pagine](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Diagramma che mostra una pagina che può spostarsi su più pagine.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Questa struttura è detta topologia gerarchica fissa e la sequenza in cui viene attraversata è spesso determinata in fase di esecuzione dall'applicazione o dall'utente. In fase di esecuzione, ogni pagina della gerarchia che consente di spostarsi su due o più altre pagine raccoglie i dati richiesti per determinare su quale pagina spostarsi. La figura seguente illustra una delle possibili sequenze di navigazione in base alla figura precedente.  
+ Questa struttura è detta topologia gerarchica fissa e la sequenza in cui viene attraversata è spesso determinata in fase di esecuzione dall'applicazione o dall'utente. In fase di esecuzione, ogni pagina della gerarchia che consente di spostarsi su due o più altre pagine raccoglie i dati richiesti per determinare su quale pagina spostarsi. Nella figura seguente viene illustrata una delle possibili sequenze di navigazione in base alla figura precedente:  
   
- ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Diagramma che mostra una sequenza di navigazione possibili.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  Anche se la sequenza di navigazione delle pagine in una struttura gerarchica fissa è determinata in fase di esecuzione, l'esperienza utente è la stessa di una topologia lineare fissa:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356780"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navigazione in una topologia generata dinamicamente  
- In alcune applicazioni la sequenza di navigazione di due o più pagine può essere determinata solo in fase di esecuzione dall'utente, dall'applicazione o da dati esterni. La figura seguente illustra un insieme di pagine con una sequenza di navigazione non determinata.  
+ In alcune applicazioni la sequenza di navigazione di due o più pagine può essere determinata solo in fase di esecuzione dall'utente, dall'applicazione o da dati esterni. La figura seguente illustra un set di pagine con una sequenza di navigazione non determinata:  
   
- ![Diagramma della topologia di navigazione](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Un set di pagine con una sequenza di navigazione non determinata.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- La figura seguente illustra una sequenza di navigazione scelta dall'utente in fase di esecuzione.  
+ La figura successiva illustra una sequenza di navigazione che è stato scelto dall'utente in fase di esecuzione:  
   
- ![Diagramma di navigazione](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Diagramma che mostra una sequenza di navigazione scelta in fase di esecuzione.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  La sequenza di navigazione è indicata come topologia generata dinamicamente. L'esperienza utente è analoga alle topologie di navigazione precedenti:  
   

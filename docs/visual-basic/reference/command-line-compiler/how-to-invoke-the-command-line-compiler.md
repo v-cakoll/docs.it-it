@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503729"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817188"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedura: Richiamare il compilatore della riga di comando (Visual Basic)
 È possibile richiamare il compilatore della riga di comando digitando il nome del relativo file eseguibile nella riga di comando, noto anche come il prompt dei comandi MS-DOS. Se si esegue la compilazione dal prompt dei comandi di Windows predefinito, è necessario digitare il percorso completo del file eseguibile. Per eseguire l'override di questo comportamento predefinito, è possibile usare il prompt dei comandi per gli sviluppatori per Visual Studio, o modificare la variabile di ambiente PATH. Entrambi consentono di compilare da qualsiasi directory, è sufficiente digitare il nome del compilatore.  
@@ -58,5 +58,6 @@ ms.locfileid: "54503729"
      Ad esempio, se il codice sorgente è memorizzato in una directory denominata `SourceFiles`, viene aperto il prompt dei comandi e il tipo `cd SourceFiles` per passare a tale directory. Se la directory contiene un file di origine denominato `Source.vb`, è possibile compilarlo digitando `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Compilazione condizionale](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

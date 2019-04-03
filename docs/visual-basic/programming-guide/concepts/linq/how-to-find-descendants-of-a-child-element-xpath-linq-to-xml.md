@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare discendenti di un elemento figlio (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: 5d5ccd46a595a7ec7477246dd9a9cd351614fdf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 178729640898556244657e6e2917373825a4e51e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520958"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819008"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare discendenti di un elemento figlio (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come ottenere gli elementi discendenti di un elemento figlio con un determinato nome.  
@@ -70,4 +70,5 @@ This is the start of a sentence.  This is a second sentence.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

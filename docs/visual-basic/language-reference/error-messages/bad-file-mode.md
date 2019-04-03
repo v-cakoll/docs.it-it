@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 1d85f49ce0aed44dea12c9ba16135425e6e2e431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565748"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819983"
 ---
 # <a name="bad-file-mode"></a>Modalità file non valida
 Istruzioni utilizzate nella manipolazione di contenuto del file devono essere appropriate per la modalità in cui è stato aperto il file. Fra le cause possibili vi sono le seguenti:  
@@ -35,5 +35,6 @@ Istruzioni utilizzate nella manipolazione di contenuto del file devono essere ap
 -   Usare la funzionalità disponibile nell'oggetto `My.Computer.FileSystem` .  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.FileSystem>
 - [Risoluzione dei problemi: Lettura e scrittura nei file di testo](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

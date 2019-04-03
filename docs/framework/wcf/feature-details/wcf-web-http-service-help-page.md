@@ -2,21 +2,21 @@
 title: Pagina della Guida del servizio HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121207"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826834"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Pagina della Guida del servizio HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] include una pagina automatica della Guida per i servizi HTTP WEB WCF. Questa pagina della Guida contiene una descrizione di ogni operazione, formato di richiesta e risposta e schema. Per impostazione predefinita, questa funzionalità è disabilitata. Quando un utente passa a un servizio HTTP WEB WCF e aggiunge "/help" alla fine dell'URL, ad esempio `http://localhost:8000/Customers/Help`, una pagina della Guida, come viene visualizzato il seguente.  
   
- ![Pagina della Guida REST WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Aprire un browser con la pagina della Guida REST WCF.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  L'utente può quindi fare clic su qualsiasi metodo elencato nella pagina della Guida e viene visualizzata la pagina dettagliata per l'operazione specificata, contenente ulteriori informazioni sul metodo, quali i formati del messaggio e le risposte di esempio. L'immagine seguente rappresenta un esempio di una pagina della Guida per un metodo.  
   
- ![Pagina della Guida REST WCF in dettaglio](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Aprire un browser con i dettagli della pagina della Guida REST WCF per il metodo GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilizzo della pagina della Guida relativa a HTTP Web WCF  
  La pagina della Guida relativa a HTTP WEB WCF contiene una breve descrizione per ogni operazione, a condizione che ne venga specificata una mediante <xref:System.ComponentModel.DescriptionAttribute>. Questo attributo utilizza una stringa che contiene una breve descrizione dell'operazione a cui è applicato. Il codice seguente indica ad esempio come utilizzare l'elemento <xref:System.ComponentModel.DescriptionAttribute> per fornire una breve descrizione.  
@@ -45,7 +45,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Per abilitare la pagina della Guida relativa a HTTP WEB WCF nel codice, aggiungere un endpoint servizio e un elemento <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> su `true`. A tale scopo, osservare il codice indicato di seguito.  
+ Per abilitare la pagina della Guida relativa a HTTP WEB WCF nel codice, aggiungere un endpoint servizio e un elemento <xref:System.ServiceModel.Description.WebHttpBehavior> all'endpoint impostando <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> su `true`. A tal fine, osservare il codice indicato di seguito.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 62b072058951fd6b4f85e93407d699c3346ff5f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699138"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829187"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log (oggetto)
 Fornisce una proprietà e i metodi per scrivere le informazioni relative a eventi ed eccezioni nei listener di log dell'applicazione.  
@@ -30,4 +30,5 @@ Fornisce una proprietà e i metodi per scrivere le informazioni relative a event
  **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Oggetto My.Application](../../../visual-basic/language-reference/objects/my-application-object.md)

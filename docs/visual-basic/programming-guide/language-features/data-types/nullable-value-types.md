@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665695"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825142"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipi di valori nullable (Visual Basic)
 In alcuni casi si lavora con un tipo di valore che non hanno un valore definito in determinate circostanze. Ad esempio, un campo in un database potrebbe essere necessario distinguere tra l'assegnazione di un valore significativo e che non presentano un valore assegnato. I tipi di valore possono essere esteso per sfruttare i relativi valori normale o un valore null. Tale estensione viene chiamato un *tipo nullable*.  
@@ -98,6 +98,7 @@ In alcuni casi si lavora con un tipo di valore che non hanno un valore definito 
  Un database è uno dei posti più importanti da usare tipi nullable. Non tutti gli oggetti di database attualmente supportano i tipi nullable, mentre gli adattatori di tabella generati dalla finestra di progettazione. Vedere "Supporto TableAdapter per i tipi Nullable" nella [panoramica degli oggetti TableAdapter](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Uso dei tipi nullable](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: 85fd6b9264fa80c3636f2cb839c8fc5ed855ddc8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818488"
 ---
 # <a name="isfalse-operator-visual-basic"></a>Operatore IsFalse (Visual Basic)
 Determina se un'espressione è `False`.  
@@ -30,6 +30,7 @@ Determina se un'espressione è `False`.
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatore IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [Operatore AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)

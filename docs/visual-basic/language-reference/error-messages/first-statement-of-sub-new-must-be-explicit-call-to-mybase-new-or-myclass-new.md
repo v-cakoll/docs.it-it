@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814094"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>La prima istruzione di questo 'Sub New' deve essere una chiamata esplicita a 'MyBase. New' o 'MyClass. New' perché il '\<nomecostruttore >' nella classe base\<nomeclassebase >' di '\<nomeclassederivata >' è contrassegnato come obsoleto: '\< messaggio di errore >'
 Un costruttore di classe non chiama esplicitamente un costruttore della classe base e il costruttore della classe base implicito è contrassegnato con l'attributo <xref:System.ObsoleteAttribute> e la direttiva di considerarlo come un errore.  
@@ -30,5 +30,5 @@ Un costruttore di classe non chiama esplicitamente un costruttore della classe b
 2.  Includere una chiamata a `MyBase.New()` o `MyClass.New()` come prima istruzione di `Sub New` nella classe derivata.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 
+- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638756"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819281"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 Indica se un eseguibile a 64 bit o un eseguibile contrassegnato dal [/platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) opzione del compilatore supporta ASLR a entropia elevata Address Space Layout Randomization (ASLR).  
@@ -31,5 +31,6 @@ Indica se un eseguibile a 64 bit o un eseguibile contrassegnato dal [/platform: 
  Quando l'opzione è on, l'eseguibile di destinazione e tutti i moduli in cui esso dipende deve essere in grado di gestire i valori puntatore maggiori di 4 gigabyte (GB) quando questi moduli vengono eseguiti come processi a 64 bit.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

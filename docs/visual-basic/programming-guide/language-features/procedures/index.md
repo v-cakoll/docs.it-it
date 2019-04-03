@@ -2,12 +2,18 @@
 title: Routine in Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814926"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
 Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  
@@ -56,6 +62,7 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
 -   Dopo aver sviluppato le routine da usare in un programma, è possibile usarle in altri programmi, spesso senza modificarle o apportando modifiche minime. Questo consente di evitare la duplicazione del codice.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Creare una stored Procedure](./how-to-create-a-procedure.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)

@@ -2,14 +2,14 @@
 title: 'File XML di esempio: Dati numerici in uno spazio dei nomi1'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 410e3df37c0e6f38f984e65cf3a9d4cc0a338110
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585237"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816200"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>File XML di esempio: Dati numerici in un Namespace
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>File XML di esempio: dati numerici in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento. L'XML si trova in uno spazio dei nomi.  
   
 ## <a name="data"></a>Dati  
@@ -56,4 +56,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

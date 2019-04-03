@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend non firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: f5e475f3a0fdc9350e43b89db16724ef0f544071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369565"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819385"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend non firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly non firmati.  
@@ -85,6 +85,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
  Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `Friend`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Assembly Friend](../../../../standard/assembly/friend-assemblies.md)

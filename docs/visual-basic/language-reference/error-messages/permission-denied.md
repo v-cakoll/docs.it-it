@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: 43ec20382a2043868fb54e2f472cb316ebfbd623
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d904ee48ee187d073647b6e09af57264c8c318f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717831"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813951"
 ---
 # <a name="permission-denied-visual-basic"></a>Autorizzazione negata (Visual Basic)
 È stato effettuato un tentativo di scrivere in un disco protetto da scrittura o accedere a un file bloccato.  
@@ -23,4 +23,5 @@ ms.locfileid: "54717831"
 3.  Per accedere a Registro di sistema, verificare che le autorizzazioni degli utenti includono questo tipo di accesso del Registro di sistema.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

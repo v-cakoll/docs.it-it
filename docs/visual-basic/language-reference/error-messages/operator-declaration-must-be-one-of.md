@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 7acec56be60f88147bac1ba4179ad0234ea1c6e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270056"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819372"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>La dichiarazione dell'operatore deve essere uno di: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, non \< \<, >>...
 È possibile dichiarare solo gli operatori che sono idoneo per l'overload. Nella tabella seguente vengono elencati gli operatori che è possibile dichiarare.  
@@ -34,6 +34,7 @@ ms.locfileid: "55270056"
 2.  Se è necessario eseguire l'overload di un operatore che non può essere sottoposto a overload direttamente, creare una routine `Function` che accetti i parametri appropriati e restituisca il valore appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

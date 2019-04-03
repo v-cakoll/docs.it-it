@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276614"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817162"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Quando il valore del parametro 'ByRef' '\<nomeparametro >' nell'argomento corrispondente viene convertito dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >'
 Una routine viene chiamata con un argomento che può ampliarsi nel tipo di parametro corrispondente e la conversione dal parametro per l'argomento è di restrizione.  
@@ -34,6 +34,7 @@ Una routine viene chiamata con un argomento che può ampliarsi nel tipo di param
 -   Se è necessario restituire un valore nell'argomento chiamante, definire l'operatore di conversione inverso come [Widening](../../../visual-basic/language-reference/modifiers/widening.md), se possibile.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Parametri e argomenti delle routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Passaggio di argomenti per valore e per riferimento](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

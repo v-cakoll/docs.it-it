@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 15fdf3efb953810a5f4b2f9fe544cb3bc7114c4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a929c3bff9f6b2602a78775cdd5020220dc1f9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696516"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815940"
 ---
 # <a name="basicbinding"></a>BasicBinding
 Nell'esempio seguente viene illustrato l'utilizzo di `basicHttpBinding`, che fornisce la comunicazione HTTP e la massima interoperabilità con servizi Web di prima e seconda generazione.  
@@ -27,7 +27,7 @@ Nell'esempio seguente viene illustrato l'utilizzo di `basicHttpBinding`, che for
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
   
- Per utilizzare l'associazione di base con comportamento predefinito è necessario solo il nome di sezione dell'associazione. Se si desidera configurare l'associazione di base   e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione. L'endpoint deve fare riferimento alla configurazione di associazione in base al nome utilizzando il `bindingConfiguration` attributo del <`endpoint`> elemento, come illustrato nell'esempio di codice seguente.  
+ Per utilizzare l'associazione di base con comportamento predefinito è necessario solo il nome di sezione dell'associazione. Se si desidera configurare l'associazione di base e modificare alcune delle relative impostazioni, è necessario definire una configurazione di associazione. L'endpoint deve fare riferimento alla configurazione di associazione in base al nome utilizzando il `bindingConfiguration` attributo del <`endpoint`> elemento, come illustrato nell'esempio di codice seguente.  
   
 ```xml  
 <services>  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
   
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vedere anche

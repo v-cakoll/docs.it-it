@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: 70200b38ea3d1497daa091fa407accabaf3c4eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f9917a7fb807cf7da92a3bba2d3edec8045bd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715777"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813520"
 ---
 # <a name="bad-dll-calling-convention"></a>Convenzione di chiamata DLL non valida
 Argomenti passati a una libreria di collegamento dinamico (DLL) devono corrispondere esattamente a quelli previsti per la routine. Convenzioni di chiamata riguardano numero, tipo e ordine degli argomenti. Il programma può chiamare una routine in una DLL che viene passata il tipo non corretto o il numero di argomenti.  
@@ -23,6 +23,7 @@ Argomenti passati a una libreria di collegamento dinamico (DLL) devono corrispon
 3.  Se la routine di DLL sono previsti argomenti per valore, assicurarsi che `ByVal` specificato per tali argomenti nella dichiarazione della routine.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Istruzione Call](../../../visual-basic/language-reference/statements/call-statement.md)
 - [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

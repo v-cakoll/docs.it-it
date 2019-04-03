@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650483"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814983"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipi di dati dei risultati degli operatori (Visual Basic)
 Visual Basic determina il tipo di dati del risultato di un'operazione in base ai tipi di dati degli operandi. In alcuni casi potrebbe trattarsi di un tipo di dati con un intervallo maggiore rispetto a quello degli operandi.  
@@ -112,7 +112,7 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
 |`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Decimale|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimale|  
-|`ULong`|Decimal|Decimale|ULong|Decimale|ULong|Decimale|ULong|Decimale|ULong|  
+|`ULong`|Decimale|Decimale|ULong|Decimale|ULong|Decimale|ULong|Decimale|ULong|  
   
 ### <a name="-operator"></a>Operatore \  
  La tabella seguente illustra il risultato tipi di dati per il `\` operatore. Si noti che questa tabella è simmetrica. per una determinata combinazione di tipi di dati di operando, il tipo di dati del risultato è lo stesso indipendentemente dall'ordine degli operandi.  
@@ -176,6 +176,7 @@ Visual Basic determina il tipo di dati del risultato di un'operazione in base ai
  Il `Like` operatore è definito solo per i criteri di ricerca `String` operandi. Visual Basic tenta di convertire ogni operando in base alle esigenze per `String` prima dell'operazione. Il tipo di dati del risultato è sempre `Boolean`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
 - [Operatori ed espressioni](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
