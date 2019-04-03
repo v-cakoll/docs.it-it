@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843102"
 ---
 # <a name="access-levels-in-visual-basic"></a>Livelli di accesso in Visual Basic
 Il *livello di accesso* di un elemento dichiarato è l'extent della possibilità di accedervi, vale a dire, il tipo di codice dispone dell'autorizzazione di lettura o scrittura. Ciò è determinato non solo dal modo in cui si dichiara l'elemento stesso, ma anche dal livello di accesso del contenitore dell'elemento. Il codice che non è possibile accedere a un elemento contenitore non può accedere a uno qualsiasi dei relativi elementi contenuti, anche quelli dichiarati come `Public`. Ad esempio, un `Public` di una variabile in un `Private` struttura sono accessibili all'interno della classe che contiene la struttura, ma non all'esterno di tale classe.  
@@ -115,6 +115,7 @@ Le parole chiave che specificano il livello di accesso vengono chiamate *modific
 |`Private Protected`|Il codice della classe che dichiara un elemento protetto privato o codice in una classe derivata trovato nello stesso assembly della classe di bas.|Interfacce<br /><br /> Classi<br /><br /> Strutture<br /><br /> Procedure<br /><br /> Proprietà<br /><br /> Variabili membro<br /><br /> Costanti<br /><br /> Enumerazioni<br /><br /> Eventi<br /><br /> Dichiarazioni esterne<br /><br /> Delegati|Classe|
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

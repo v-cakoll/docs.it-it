@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49935c471d10e438763e41b07944047b0924af09
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864670"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465802"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
@@ -86,7 +86,7 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Nella tabella seguente vengono descritti i membri della rete.  
   
-|Member|Tipo|Descrizione|  
+|Member|Tipo|Description|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta il percorso di una cartella come input e genera una raccolta di oggetti <xref:System.Drawing.Bitmap> come output.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta una raccolta di oggetti <xref:System.Drawing.Bitmap> come input e genera una bitmap composita come output.|  
@@ -95,9 +95,9 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
  Per connettere i blocchi di flussi di dati per formare una rete, questo esempio usa il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. Il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> contiene una versione di overload che accetta un oggetto <xref:System.Predicate%601> che determina se il blocco di destinazione accetta o rifiuta un messaggio. Questo processo di filtraggio consente ai blocchi di messaggi di ricevere solo certi valori. In questo esempio, la rete può creare un ramo in due modi. Il ramo principale carica le immagini dal disco, crea un'immagine composita e visualizza tale immagine nel modulo. Il ramo alternativo annulla l'operazione in corso. Gli oggetti <xref:System.Predicate%601> consentono ai blocchi di flussi di dati lungo il ramo principale di passare al ramo alternativo rifiutando determinati messaggi. Ad esempio, se l'utente annulla l'operazione, il blocco del flusso di dati `createCompositeBitmap` genera `null` (`Nothing` in Visual Basic) come output. Il blocco del flusso di dati `displayCompositeBitmap` rifiuta i valori di input `null` e pertanto, il messaggio viene offerto a `operationCancelled`. Il blocco del flusso di dati `operationCancelled` accetta tutti i messaggi e visualizza quindi un'immagine per indicare che l'operazione viene annullata.  
   
- Nella figura seguente viene illustrata la rete di elaborazione di immagini.  
+ Nella figura seguente viene illustrata la rete di elaborazione delle immagini:  
   
- ![Rete di elaborazione delle immagini](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
+ ![Figura che illustra la rete di elaborazione delle immagini.](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
  Poiché i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono usati nell'interfaccia utente, è importante che queste azioni si verifichino nel thread di interfaccia utente. A questo scopo, durante la costruzione ognuno di questi oggetti fornisce un oggetto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> la cui proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> è impostata su <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> viene creato un oggetto <xref:System.Threading.Tasks.TaskScheduler> mediante il quale viene eseguito il lavoro nel contesto di sincronizzazione corrente. Poiché il metodo `CreateImageProcessingNetwork` viene chiamato dal gestore del pulsante **Scegli cartella**, che viene eseguito nel thread di interfaccia utente, anche le azioni per i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono eseguite nel thread di interfaccia utente.  
   

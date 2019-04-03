@@ -2,12 +2,12 @@
 title: Persistenza di un oggetto in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690436"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841581"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (Visual Basic)
 Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefiniti in fase di progettazione, tutti i valori immessi in fase di esecuzione vengono persi quando l'oggetto viene eliminato. È possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
@@ -216,5 +216,6 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
  A questo punto, è nuovamente possibile compilare ed eseguire l'applicazione. Inizialmente i valori predefiniti vengono visualizzati nelle caselle di testo. Provare a modificare i valori e immettere un nome nella quarta casella di testo. Chiudere l'applicazione ed eseguirla nuovamente. Si noti che i nuovi valori ora appaiono nelle caselle di testo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Serializzazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)

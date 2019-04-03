@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288977"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840458"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non conforme a CLS \<membername > non è consentita in un'interfaccia conforme a CLS
 Una proprietà, routine o evento in un'interfaccia è contrassegnata come `<CLSCompliant(True)>` quando l'interfaccia stessa viene contrassegnata come `<CLSCompliant(False)>` o non è contrassegnata.  
@@ -36,5 +36,5 @@ Una proprietà, routine o evento in un'interfaccia è contrassegnata come `<CLSC
 -   Se è necessario che il membro rimanga nell'interfaccia corrente, rimuovere il <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
 
+- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)

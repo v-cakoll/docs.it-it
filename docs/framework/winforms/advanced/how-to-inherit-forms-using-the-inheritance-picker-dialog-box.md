@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719357"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841165"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -41,7 +41,7 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
   
 6.  Selezionare il componente.  
   
-     Il componente verrà aggiunto al progetto in **Esplora soluzioni**. Se il componente include un'interfaccia utente, i controlli che fanno parte del modulo ereditato saranno contraddistinti da un glifo (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) e, una volta selezionati, verranno visualizzati con un bordo che indica il livello di sicurezza del controllo sul form impostato come superclasse. I comportamenti che corrispondono ai vari livelli di sicurezza sono elencati nella tabella seguente.  
+     Il componente verrà aggiunto al progetto in **Esplora soluzioni**. Se è presente un'interfaccia utente, i controlli che fanno parte del form ereditato saranno contraddistinti un glifo (![Screenshot del simbolo di ereditarietà Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) e, quando selezionato, hanno un bordo che indica il livello di sicurezza con il controllo per il form impostato come superclasse. I comportamenti che corrispondono ai vari livelli di sicurezza sono elencati nella tabella seguente.  
   
     |Livello di sicurezza del controllo|Interazione possibile nella finestra di progettazione e nell'editor di codice con il form ereditato|  
     |-------------------------------|--------------------------------------------------------------------------------|  

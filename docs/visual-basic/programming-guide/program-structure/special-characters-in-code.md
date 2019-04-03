@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971897"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835557"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caratteri speciali nel codice (Visual Basic)
 A volte è necessario usare caratteri speciali nel codice, vale a dire, alcuni caratteri non alfabetici o numerici. La punteggiatura e caratteri speciali nel set di caratteri Visual Basic hanno vari utilizzi, dall'organizzazione del testo di programma alla definizione di attività che esegue il compilatore o il programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione.  
@@ -88,5 +88,6 @@ A volte è necessario usare caratteri speciali nel codice, vale a dire, alcuni c
  Il `!` carattere viene usato anche come il `Single` Digita carattere.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Caratteri tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

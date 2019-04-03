@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-ms.openlocfilehash: 55295997e5e534b091063815d5ad1a37b81638ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cb58064e7249273051ead87cbc6841d13cdf5ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840445"
 ---
 # <a name="resume-without-error"></a>Resume senza errore
 Oggetto `Resume` istruzione all'esterno di codice di gestione degli errori, o il codice passato in un gestore degli errori, anche se si è verificato alcun errore.  
@@ -21,5 +21,6 @@ Oggetto `Resume` istruzione all'esterno di codice di gestione degli errori, o il
 2.  Passa alle etichette non sono consentiti tra le procedure, quindi è necessario cercare la procedura per l'etichetta che identifica il gestore degli errori. Se si trova un'etichetta duplicata specificata come destinazione di una `GoTo` istruzione che non sia un `On Error GoTo` istruzione, modificare l'etichetta di riga per essere conforme alla destinazione prevista.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Resume](../../../visual-basic/language-reference/statements/resume-statement.md)
 - [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 98d264cb081af0c0ed96b7e439f93224608467d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09941ce5fcf33380cbf3455866e63918edd2ea20
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717415"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842200"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Trasporto dell'associazione personalizzata e codifica
 Un'associazione personalizzata viene definita da un elenco ordinato di elementi di associazione discreti. Questo esempio illustra come configurare un'associazione personalizzata con vari elementi di codifica di trasporto e messaggio.  
@@ -46,7 +46,7 @@ Un'associazione personalizzata viene definita da un elenco ordinato di elementi 
   
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client e del servizio. Il client comunica con ognuno dei tre endpoint, accedendo prima a HTTP, quindi a TCP e finalmente a NamedPipe. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  
   
- L'associazione `namedPipeTransport`  non supporta operazioni da computer a computer. Viene utilizzata solo per la comunicazione sullo stesso computer. Pertanto, quando si esegue l'esempio in un scenario a più computer, impostare come commento le righe seguenti nel file contenente il codice client:  
+ L'associazione `namedPipeTransport` non supporta operazioni da computer a computer. Viene utilizzata solo per la comunicazione sullo stesso computer. Pertanto, quando si esegue l'esempio in un scenario a più computer, impostare come commento le righe seguenti nel file contenente il codice client:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -86,4 +86,3 @@ client.Close()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
   
-## <a name="see-also"></a>Vedere anche

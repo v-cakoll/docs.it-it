@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834712"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello dell'applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati come l'applicazione si avvia e arresta.  
@@ -19,13 +19,13 @@ ms.locfileid: "39245648"
   
  L'immagine seguente mostra la sequenza di chiamate dell'applicazione del modello in un'applicazione Visual Basic Windows Form normale. La sequenza inizia quando la `Sub Main` chiamate a procedure il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> (metodo).  
   
- ![Modello di applicazione Visual Basic &#45; &#45; eseguiti](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Diagramma che mostra la sequenza di chiamate di modello di applicazione.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  Il modello di applicazione Visual Basic fornisce anche il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventi. L'immagine seguente mostra il meccanismo per la generazione di questi eventi.  
   
- ![Modello di applicazione Visual Basic &#45; &#45; dell'istanza accanto](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Diagramma che mostra il metodo OnStartupNextInstance generando l'evento StartupNextInstance.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Eccezione non gestita del modello di applicazione Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![Diagramma che mostra il metodo OnUnhandledException generando l'evento di eccezione UnhandledException.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>L'override dei metodi Base  
  Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metodo definisce l'ordine in cui il `Application` metodi di esecuzione. Per impostazione predefinita, il `Sub Main` procedure per un'applicazione Windows Forms viene chiamato il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> (metodo).  
@@ -44,7 +44,7 @@ ms.locfileid: "39245648"
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Consente a una finestra di progettazione generare il codice che inizializza la schermata iniziale.  
   
-         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si seleziona una schermata iniziale per l'applicazione in Visual Basic **creazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà in una nuova istanza del modulo a schermata iniziale .  
+         Per impostazione predefinita, questo metodo non effettua alcuna operazione. Se si seleziona una schermata iniziale per l'applicazione in Visual Basic **creazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà in una nuova istanza del modulo a schermata iniziale .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornisce un punto di estendibilità per la generazione di `Startup` evento. La sequenza di avvio dell'applicazione viene interrotta se questa funzione restituisce `False`.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "39245648"
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornisce un modo per una finestra di progettazione generare il codice che inizializza il modulo principale.  
   
-         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Tuttavia, quando si seleziona un modulo principale per l'applicazione in Visual Basic **creazione progetti**, esegue l'override della finestra di progettazione il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà in una nuova istanza del form principale.  
+         Per impostazione predefinita, questo metodo non effettua alcuna operazione. Tuttavia, quando si seleziona un modulo principale per l'applicazione in Visual Basic **creazione progetti**, esegue l'override della finestra di progettazione il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà in una nuova istanza del form principale.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se l'applicazione dispone di una schermata iniziale ed è aperto, questo metodo chiude la schermata iniziale.  
   
@@ -90,13 +90,14 @@ ms.locfileid: "39245648"
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se l'applicazione salva automaticamente le modifiche delle impostazioni utente dell'applicazione alla chiusura dell'applicazione.|**Salva My. Settings alla chiusura** casella di controllo|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Qual è la causa l'interruzione, ad esempio quando si chiude il form di avvio o quando si chiude l'ultimo modulo dell'applicazione.|**Modalità di arresto** elenco|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>Vedere anche
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

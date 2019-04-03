@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842252"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Valore letterale elemento XML (Visual Basic)
 
@@ -160,6 +160,7 @@ Un valore letterale che rappresenta un <xref:System.Xml.Linq.XElement> oggetto.
  Si noti che il compilatore converte il prefisso dello spazio dei nomi XML globali in una definizione del prefisso dello spazio dei nomi XML. Il \<ns:middle > elemento consente di ridefinire il prefisso dello spazio dei nomi XML per il \<ns:inner1 > elemento. Tuttavia, il \<ns:inner2 > elemento utilizza lo spazio dei nomi definito dal `Imports` istruzione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Xml.Linq.XElement>
 - [Nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [Valore letterale di commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

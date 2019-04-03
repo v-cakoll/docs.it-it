@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: fa009168be3781c727cd5a9cb6976b8c16fb2843
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967490"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835466"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= Operatore (Visual Basic)
 Concatena una `String` espressione da un `String` proprietà o variabile e assegna il risultato alla variabile o proprietà.  
@@ -45,6 +45,7 @@ variableorproperty &= expression
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatore &](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [Operatore +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
 - [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)

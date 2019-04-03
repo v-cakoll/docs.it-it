@@ -2,12 +2,12 @@
 title: Toolkit di RuleSet esterno
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840237"
 ---
 # <a name="external-ruleset-toolkit"></a>Toolkit di RuleSet esterno
 
@@ -28,11 +28,9 @@ L'esempio è costituito dai componenti seguenti:
 
 - Un'attività `ExternalPolicy` che richiede un RuleSet dal servizio di RuleSet e lo esegue in base al flusso di lavoro.
 
-L'interazione dei componenti viene mostrata nella Figura 1. Nelle sezioni seguenti viene descritto ogni componente.
+L'interazione dei componenti è illustrato nell'immagine seguente. Nelle sezioni seguenti viene descritto ogni componente.
 
-![Panoramica concettuale di esempio di RuleSet esterno](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-Figura 1: Panoramica dell'esempio
+![Diagramma che illustra la panoramica di esempio di Toolkit di RuleSet esterno.](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.
@@ -45,19 +43,15 @@ Figura 1: Panoramica dell'esempio
 
 ## <a name="ruleset-tool"></a>Strumento di RuleSet
 
-Nella Figura 2 è mostrata una schermata dello strumento di RuleSet. Dal **Store regola** menu, è possibile caricare i ruleSet disponibili dal database e salvare i ruleSet modificati nuovamente all'archivio. Un file di configurazione dell'applicazione fornisce una stringa di connessione al database per il database di RuleSet. Quando si avvia lo strumento, carica automaticamente RuleSet dal database configurato.
+Di seguito è riportato uno screenshot dello strumento di RuleSet. Dal **Store regola** menu, è possibile caricare i ruleSet disponibili dal database e salvare i ruleSet modificati nuovamente all'archivio. Un file di configurazione dell'applicazione fornisce una stringa di connessione al database per il database di RuleSet. Quando si avvia lo strumento, carica automaticamente RuleSet dal database configurato.
 
-![Output di esempio di Toolkit di RuleSet esterno](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-Figura 2: Browser di RuleSet
+![Screenshot che mostra il Browser di RuleSet.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 Lo strumento di RuleSet applica numeri di versioni principali e secondarie ai RuleSet, consentendo di gestire e archiviare simultaneamente più versioni (lo strumento non fornisce blocco o altra funzionalità di gestione della configurazione oltre alla funzionalità di controllo delle versioni). Usando lo strumento, è possibile creare nuove versioni di RuleSet o eliminare versioni esistenti. Quando fa clic su **New**, lo strumento crea un nuovo nome di RuleSet e applica la versione 1.0. Quando si copia una versione, lo strumento crea una copia della versione dell'oggetto RuleSet selezionata, incluse le regole contenute e assegna numeri di versione nuovi e univoci. Questi numeri di versione sono basati sui numeri di versione di RuleSet esistenti. È possibile modificare il nome e i numeri di versione di RuleSet usando i campi associati sulla maschera.
 
-Quando fa clic su **Modifica regole**, l'editor di RuleSet si avvia, come illustrato nella figura 3.
+Quando fa clic su **Modifica regole**, l'editor di RuleSet si avvia, come illustrato nell'immagine seguente:
 
-![Output di esempio di Toolkit di RuleSet esterno](./media/ruleseteditor.gif "RuleSetEditor")
-
-Figura 3: Editor di RuleSet
+![Screenshot che mostra l'Editor di RuleSet.](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 Si tratta di una riallocazione della finestra di dialogo dell'editor che fa parte del componente aggiuntivo di Windows Workflow Foundation Visual Studio. Fornisce la stessa funzionalità, incluso il supporto di Intellisense. Le regole vengono create in base a un tipo di destinazione (ad esempio, un flusso di lavoro) che viene associato al RuleSet nello strumento; Quando fa clic su **esplorare** nella finestra di dialogo principale dello strumento, il **flusso di lavoro/selettore del tipo** finestra di dialogo viene visualizzata, come illustrato nella figura 4.
 
@@ -69,21 +63,17 @@ Figura 4: Selettore flusso di lavoro/tipo
 
 Il percorso del file di assembly e il tipo `name are stored with the` RuleSet nel database, in modo che quando il RuleSet viene recuperato dal database, lo strumento tenta di caricare automaticamente il tipo di destinazione.
 
-Quando fa clic su **OK** nel **flusso di lavoro/selettore del tipo** finestra di dialogo Convalida il tipo selezionato per il set di regole, assicurarsi che il tipo di destinazione abbia tutti i membri a cui fanno riferimento le regole. Gli errori vengono visualizzati una **gli errori di convalida** finestra di dialogo (vedere la figura 5). È possibile scegliere di continuare con la modifica nonostante gli errori oppure fare clic su **annullare**. Dal **degli strumenti** dal menu nella finestra di dialogo principale dello strumento, è possibile fare clic **Validate** per convalidare nuovamente la versione di RuleSet rispetto all'attività di destinazione.
+Quando fa clic su **OK** nel **flusso di lavoro/selettore del tipo** finestra di dialogo Convalida il tipo selezionato per il set di regole, assicurarsi che il tipo di destinazione abbia tutti i membri a cui fanno riferimento le regole. Gli errori vengono visualizzati una **gli errori di convalida** finestra di dialogo. È possibile scegliere di continuare con la modifica nonostante gli errori oppure fare clic su **annullare**. Dal **degli strumenti** dal menu nella finestra di dialogo principale dello strumento, è possibile fare clic **Validate** per convalidare nuovamente la versione di RuleSet rispetto all'attività di destinazione.
 
-![Errori di convalida di esempio di RuleSet esterno](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-Figura 5: Errori di convalida
+![Screenshot che mostra la finestra di dialogo errori di convalida.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 Dal **dati** menu nello strumento, è possibile importare ed esportare RuleSet. Quando fa clic su **importazione**, viene visualizzata una finestra di dialogo di selezione di file, da cui è possibile selezionare un file con estensione rules. Ciò potrebbe o non sia un file inizialmente creato in Visual Studio. Il file con estensione rules deve contenere un'istanza `RuleDefinitions` serializzata contenente una raccolta di condizioni e una raccolta di RuleSet. Lo strumento non usa la raccolta di condizioni, ma usa il `RuleDefinitions` formato con estensione rules per consentire l'interazione con l'ambiente di Visual Studio.
 
-Dopo aver selezionato un file con estensione rules, un **selettore RuleSet** viene visualizzata la finestra (vedere la figura 6). È possibile usare la finestra di dialogo per selezionare gli oggetti RuleSet dal file che si desidera importare (l'impostazione predefinita specifica tutti gli oggetti RuleSet). I RuleSet nel file con estensione rules non hanno numeri di versione, in quanto il loro controllo delle versioni all’interno di un progetto WF corrisponde alla versione dell'assembly. Durante il processo di importazione, lo strumento assegna automaticamente il numero di versione principale disponibile successivo (che è possibile modificare dopo l'importazione); è possibile visualizzare i numeri di versione assegnato nel **selettore RuleSet** elenco.
+Dopo aver selezionato un file con estensione rules, un **selettore RuleSet** viene visualizzata la finestra. È possibile usare la finestra di dialogo per selezionare gli oggetti RuleSet dal file che si desidera importare (l'impostazione predefinita specifica tutti gli oggetti RuleSet). I RuleSet nel file con estensione rules non hanno numeri di versione, in quanto il loro controllo delle versioni all’interno di un progetto WF corrisponde alla versione dell'assembly. Durante il processo di importazione, lo strumento assegna automaticamente il numero di versione principale disponibile successivo (che è possibile modificare dopo l'importazione); è possibile visualizzare i numeri di versione assegnato nel **selettore RuleSet** elenco.
 
-Per ogni RuleSet importato, lo strumento tenta di individuare il tipo associato dalla cartella bin\Debug nel percorso del file con estensione rules (se esiste), basato sui membri usati in RuleSet. Se trova più tipi corrispondenti, lo strumento tenta di scegliere un tipo in base alla corrispondenza tra il nome del file con estensione rules e il nome del tipo (ad esempio, il tipo `Workflow1` corrisponde a Workflow1.rules). Se esistono più corrispondenze, viene richiesto di selezionare il tipo. Se questo meccanismo di identificazione automatica non riesce a individuare un assembly o un tipo corrispondente, quindi dopo l'importazione è possibile fare clic su **esplorare** nella finestra di dialogo principale dello strumento per passare al tipo associato.
+Per ogni RuleSet importato, lo strumento tenta di individuare il tipo associato dalla cartella bin\Debug nel percorso del file con estensione rules (se esiste), basato sui membri usati in RuleSet. Se trova più tipi corrispondenti, lo strumento tenta di scegliere un tipo in base alla corrispondenza tra il nome del file con estensione rules e il nome del tipo (ad esempio, il tipo `Workflow1` corrisponde a Workflow1.rules). Se esistono più corrispondenze, viene richiesto di selezionare il tipo. Se questo meccanismo di identificazione automatica non riesce a individuare un assembly o un tipo corrispondente, quindi dopo l'importazione è possibile fare clic su **esplorare** nella finestra di dialogo principale dello strumento per passare al tipo associato. L'immagine seguente illustra il selettore di set di regole:
 
-![Selettore ruleSet](./media/rulesetselector.gif "RuleSetSelector")
-
-Figura 6: Selettore RuleSet
+![Screenshot che mostra la finestra di dialogo di selezione di RuleSet.](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 Quando fa clic su **esportazione di dati** dal menu principale dello strumento, il **selettore RuleSet** finestra di dialogo viene visualizzato anche in questo caso, da cui è possibile determinare il ruleSet del database che deve essere esportato. Quando fa clic su **OK**, un **Salva File** finestra di dialogo viene visualizzata, in cui è possibile specificare il nome e il percorso del file con estensione rules risultante. Dato che il file con estensione rules non contiene informazioni sulla versione, è possibile selezionare soltanto una versione di RuleSet con un determinato nome di RuleSet.
 

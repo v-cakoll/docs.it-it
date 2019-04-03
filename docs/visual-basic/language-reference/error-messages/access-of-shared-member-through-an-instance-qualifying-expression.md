@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703549"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843565"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Accesso di membro condiviso tramite un'istanza; l'espressione di qualificazione non verrà valutata
 Una variabile di istanza di una classe o struttura viene usata per accedere a un `Shared` variabile, proprietà, routine o evento definito in quella classe o struttura. Questo avviso può verificarsi anche se una variabile di istanza viene utilizzata per accedere a un membro condiviso in modo implicito di una classe o struttura, ad esempio una costante o enumerazione, o una classe annidata o una struttura.  
@@ -56,5 +56,6 @@ End Module
 >  Prestare particolare attenzione agli effetti dell'ambito quando due elementi di programmazione hanno lo stesso nome. Nell'esempio precedente, se si dichiara un'istanza usando `Dim testClass as testClass = Nothing`, il compilatore considera una chiamata a `testClass.sayHello()` non appena si verifica un accesso al metodo tramite il nome della classe e alcun messaggio di avviso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Scope in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

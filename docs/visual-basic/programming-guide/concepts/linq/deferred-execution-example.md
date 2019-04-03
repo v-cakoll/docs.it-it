@@ -2,12 +2,12 @@
 title: Esempio di esecuzione posticipata (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e9247c89d46cc7705ef4297868739ba85d993eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838929"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Esempio di esecuzione posticipata (Visual Basic)
 In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  
@@ -60,4 +60,5 @@ Main: str GHI
  L'intera matrice di stringhe non viene convertita in lettere maiuscole prima dell'elaborazione nel ciclo `foreach` di `Main` di ogni elemento della raccolta restituita.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esercitazione: Esecuzione posticipata (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

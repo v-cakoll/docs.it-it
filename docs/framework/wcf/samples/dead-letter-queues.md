@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721295"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837858"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -342,7 +342,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>
     ```
 
-     Verificare che l'endpoint sia associato al binding impostando l'attributo `bindingConfiguration`.
+     Verificare che l'endpoint sia associato all'associazione impostando l'attributo `bindingConfiguration`.
 
 2.  Assicurarsi di modificare la configurazione in DeadLetterService, sul server e sul client prima che di eseguire l'esempio.
 
@@ -361,4 +361,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>Vedere anche

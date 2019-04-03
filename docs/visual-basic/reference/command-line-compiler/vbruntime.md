@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 31323f3d5b3eed01c56476353d621cfa8fe03a12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719117"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843864"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Indica che il compilatore deve compilare senza un riferimento alla libreria di runtime di Visual Basic oppure con un riferimento a una libreria di runtime specifica.  
@@ -95,6 +95,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Core di Visual Basic: nuova modalità di compilazione in Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

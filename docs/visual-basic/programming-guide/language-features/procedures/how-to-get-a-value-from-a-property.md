@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964773"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842915"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Procedura: Ottenere un valore da una proprietà (Visual Basic)
 Per recuperare un valore della proprietà di includere il nome della proprietà in un'espressione.  
@@ -39,6 +39,7 @@ Per recuperare un valore della proprietà di includere il nome della proprietà 
  Il valore della proprietà fa parte dell'espressione come una variabile o costante viene archiviato nella variabile o proprietà sul lato sinistro dell'istruzione di assegnazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)

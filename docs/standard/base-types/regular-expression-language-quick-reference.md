@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836305"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410524"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
-<a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
+ Un'espressione regolare è un modello per il quale il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
- In ogni sezione di questa guida di riferimento rapido viene elencata una categoria specifica di caratteri, operatori e costrutti che è possibile usare per definire le espressioni regolari:  
-  
- [Escape di caratteri](#character_escapes)  
- [Classi di caratteri](#character_classes)  
- [Punti di ancoraggio](#anchors)  
- [Costrutti di raggruppamento](#grouping_constructs)  
- [Quantificatori](#quantifiers)  
- [Costrutti di backreference](#backreference_constructs)  
- [Costrutti di alternanza](#alternation_constructs)  
- [Sostituzioni](#substitutions)  
- [Opzioni di espressioni regolari](#options)  
- [Costrutti vari](#miscellaneous_constructs)  
+ In ogni sezione di questa guida di riferimento rapido viene elencata una categoria specifica di caratteri, operatori e costrutti che è possibile usare per definire espressioni regolari.  
   
  Queste informazioni sono disponibili in due formati scaricabili e stampabili come riferimento:  
   
  [Download in formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Download in formato PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Caratteri di escape  
  Il carattere barra rovesciata (\\) in un'espressione regolare indica che il carattere successivo è un carattere speciale (come illustrato nella tabella seguente) oppure deve essere interpretato letteralmente. Per altre informazioni, vedere [Caratteri di escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>Classi di caratteri  
  Una classe di caratteri trova la corrispondenza con uno qualsiasi di un set di caratteri. Le classi di caratteri includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Costrutti di raggruppamento  
  I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e in genere acquisiscono sottostringhe di una stringa di input. I costrutti di raggruppamento includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantificatori  
  Un quantificatore specifica il numero di istanze dell'elemento precedente, che può essere un carattere, un gruppo o una classe di caratteri, che devono essere presenti nella stringa di input affinché venga trovata una corrispondenza. I quantificatori includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Quantifiers](quantifiers-in-regular-expressions.md).  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Costrutti di backreference  
  Un backreference consente a una sottoespressione di cui è stata trovata la corrispondenza in precedenza di essere identificata successivamente nella stessa espressione regolare. Nella tabella seguente sono elencati i costrutti di backreference supportati dalle espressioni regolari in .NET. Per altre informazioni, vedere [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Costrutti di alternanza  
  I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or. Questi costrutti includono gli elementi del linguaggio elencati nella tabella seguente. Per altre informazioni, vedere [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>Sostituzioni  
  Le sostituzioni sono elementi del linguaggio di espressioni regolari supportati nei modelli di sostituzione. Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md). I metacaratteri elencati nella tabella seguente sono asserzioni atomiche di larghezza zero.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opzioni di espressioni regolari  
  È possibile specificare opzioni che controllano il modo in cui il motore delle espressioni regolari interpreta un criterio di espressione regolare. Molte di queste opzioni possono essere specificate inline (nel criterio di espressione regolare) o come uno o più costanti <xref:System.Text.RegularExpressions.RegexOptions> . Questa guida di riferimento rapida elenca solo le opzioni inline. Per altre informazioni sulle opzioni inline e <xref:System.Text.RegularExpressions.RegexOptions> , vedere l'articolo [Regular Expression Options](regular-expression-options.md).  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836305"
   
  [Torna all'inizio](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Costrutti vari  
  I costrutti vari consentono di modificare un criterio di espressione regolare o forniscono informazioni su di esso. Nella tabella seguente sono elencati i costrutti vari supportati da .NET. Per altre informazioni, vedere [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
   

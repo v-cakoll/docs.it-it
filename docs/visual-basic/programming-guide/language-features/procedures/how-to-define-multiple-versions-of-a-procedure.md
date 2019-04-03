@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980776"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841173"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: Definire più versioni di una routine (Visual Basic)
 È possibile definire una procedura in più versioni da *overload* utilizzando lo stesso nome ma un elenco di parametri diversi per ogni versione. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome.  
@@ -43,6 +43,7 @@ ms.locfileid: "56980776"
  Assicurarsi che ognuna delle versioni di overload con lo stesso nome di procedura ma un elenco di parametri diverso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)

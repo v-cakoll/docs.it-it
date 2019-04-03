@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689523"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842902"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Differenze tra proprietà e variabili in Visual Basic
 Le variabili e le proprietà rappresentano valori che è possibile accedere. Tuttavia, esistono differenze di archiviazione e implementazione.  
@@ -45,6 +45,7 @@ Le variabili e le proprietà rappresentano valori che è possibile accedere. Tut
  <sup>1</sup> a differenza di una variabile, il valore di una proprietà potrebbe non corrispondere direttamente a un singolo elemento di spazio di archiviazione. Lo spazio di archiviazione è possibile suddividere in parti per comodità o della sicurezza o il valore potrebbe essere archiviato in formato crittografato. In questi casi il `Get` routine assemblare le parti o decrittografare il valore archiviato e `Set` routine crittografare il nuovo valore o suddividerlo in risorsa di archiviazione che lo costituiscono. Valore della proprietà potrebbe essere temporaneo, come l'ora del giorno, nel qual caso il `Get` procedure sarebbe calcolarla in tempo reale ogni volta che si accede alla proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)

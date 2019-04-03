@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664603"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843838"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Specifica che Visual Basic deve eseguire il marshalling di stringhe in base alle regole di .NET Framework in base al nome esterno della routine esterna viene dichiarato.  
@@ -34,6 +34,7 @@ Specifica che Visual Basic deve eseguire il marshalling di stringhe in base alle
  Questa parola chiave non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)

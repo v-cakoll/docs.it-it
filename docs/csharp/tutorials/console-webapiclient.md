@@ -3,12 +3,12 @@ title: Creare un client REST usando .NET Core
 description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846168"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412305"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -213,9 +213,9 @@ Compilare l'applicazione ed eseguirla. Verranno stampati i nomi dei repository c
 
 ## <a name="controlling-serialization"></a>Controllo della serializzazione
 
-Prima di aggiungere altre funzionalità, è necessario indirizzare il tipo `repo` e renderlo conforme ad altre convenzioni C# standard. A questo scopo, è necessario annotare il tipo `repo` con *attributi* che controllano il funzionamento del serializzatore JSON. In questo caso, si useranno questi attributi per definire un mapping tra i nomi di chiavi JSON e i nomi di membri e classi C#. In particolare, verranno usati i due attributi `DataContract` e `DataMember`. Per convenzione, tutte le classi di attributo terminano con il suffisso `Attribute`. Questo suffisso, tuttavia, non deve essere necessariamente usato quando si applica un attributo.
+Prima di aggiungere altre funzionalità, è necessario indirizzare il tipo `repo` e renderlo conforme ad altre convenzioni C# standard. A questo scopo, è necessario annotare il tipo `repo` con *attributi* che controllano il funzionamento del serializzatore JSON. In questo caso, si useranno questi attributi per definire un mapping tra i nomi di chiavi JSON e i nomi di membri e classi C#. In particolare, verranno usati i due attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute>. Per convenzione, tutte le classi di attributo terminano con il suffisso `Attribute`. Questo suffisso, tuttavia, non deve essere necessariamente usato quando si applica un attributo.
 
-Gli attributi `DataContract` e `DataMember` si trovano in un'altra libreria che sarà necessario aggiungere al file di progetto C# come dipendenza. Aggiungere la riga seguente alla sezione `<ItemGroup>` del file di progetto:
+Gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> si trovano in un'altra libreria che sarà necessario aggiungere al file di progetto C# come dipendenza. Aggiungere la riga seguente alla sezione `<ItemGroup>` del file di progetto:
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ Gli attributi `DataContract` e `DataMember` si trovano in un'altra libreria che 
 
 Dopo aver salvato il file, eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)) per recuperare il pacchetto.
 
-Aprire quindi il file `repo.cs`. È possibile modificare il nome in modo da usare la convenzione Pascal e specificare il nome completo `Repository`. Si vuole ora eseguire il mapping dei nodi 'repo' di JSON a questo tipo e sarà quindi necessario aggiungere l'attributo `DataContract` alla dichiarazione di classe. Si imposterà la proprietà `Name` dell'attributo sul nome dei nodi JSON mappati a questo tipo:
+Aprire quindi il file `repo.cs`. È possibile modificare il nome in modo da usare la convenzione Pascal e specificare il nome completo `Repository`. Si vuole ora eseguire il mapping dei nodi 'repo' di JSON a questo tipo e sarà quindi necessario aggiungere l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> alla dichiarazione di classe. Si imposterà la proprietà `Name` dell'attributo sul nome dei nodi JSON mappati a questo tipo:
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ Questo formato non segue nessuno dei formati .NET <xref:System.DateTime> standar
 private string JsonDate { get; set; }
 ```
 
-L'attributo `DataMember` informa il serializzatore che questo elemento deve essere elaborato, anche se non è un membro pubblico. Sarà quindi necessario scrivere una proprietà pubblica di sola lettura che converta la stringa in un oggetto <xref:System.DateTime> valido e restituisca il valore <xref:System.DateTime> specificato:
+L'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> informa il serializzatore che questo elemento deve essere elaborato, anche se non è un membro pubblico. Sarà quindi necessario scrivere una proprietà pubblica di sola lettura che converta la stringa in un oggetto <xref:System.DateTime> valido e restituisca il valore <xref:System.DateTime> specificato:
 
 ```csharp
 [IgnoreDataMember]

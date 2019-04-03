@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411005"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839392"
 ---
 # <a name="shadowing-in-visual-basic"></a>Shadowing in Visual Basic
 Quando due elementi di programmazione condividono lo stesso nome, è possibile nascondere uno di essi, oppure *shadow*, un altro. In questo caso, l'elemento nascosto non è disponibile per riferimento; al contrario, quando il codice usi il nome dell'elemento, il compilatore Visual Basic si risolve nell'elemento di shadowing.  
@@ -138,6 +138,7 @@ End Class
  Nell'esempio precedente, la variabile `basObj` viene dichiarata come classe di base. Assegnazione di un `dervCls` oggetto ad esso costituisce una conversione verso un ed è pertanto valido. Tuttavia, la classe di base non può accedere alla versione di shadowing della variabile `z` nella classe derivata, pertanto, il compilatore risolve `basObj.z` il valore di classe di base originale.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

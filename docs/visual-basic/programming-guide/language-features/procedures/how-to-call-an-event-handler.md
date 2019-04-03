@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837767"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Procedura: Chiamare un gestore eventi in Visual Basic
 Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato un limite di credito o fare clic su, che viene riconosciuto da alcuni componenti del programma e per cui è possibile scrivere codice per rispondere. Un' *gestore dell'evento* è riportato il codice scritto in risposta a un evento.  
@@ -53,6 +53,7 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
      È possibile annullare l'associazione di un gestore eventi da un evento tramite l'esecuzione di [istruzione RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)

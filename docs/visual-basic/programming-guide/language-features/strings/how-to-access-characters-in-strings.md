@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967555"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834491"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Procedura: Accesso caratteri delle stringhe in Visual Basic
 In questo esempio viene illustrato come utilizzare il <xref:System.String.Chars%2A> proprietà a cui accedere il carattere in corrispondenza della posizione specificata in una stringa.  
@@ -28,6 +28,7 @@ In questo esempio viene illustrato come utilizzare il <xref:System.String.Chars%
  Il <xref:System.String.Chars%2A> proprietà genera un' <xref:System.IndexOutOfRangeException> eccezione se il `index` parametro è maggiore o uguale alla lunghezza della stringa, o se è minore di zero  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.String.Chars%2A>
 - [Procedura: Convertire una stringa in una matrice di caratteri](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
 - [Conversione tra stringhe e altri tipi di dati in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)

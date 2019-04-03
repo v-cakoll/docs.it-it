@@ -2,12 +2,12 @@
 title: Formattatore e selettore dell'operazione
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661256"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836233"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
 Questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quanto si aspetta da WCF. Per impostazione predefinita, i formattatori WCF prevede che i parametri del metodo siano inclusi nel `soap:body` elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
@@ -65,7 +65,7 @@ Questo esempio viene illustrato come utilizzare i punti di estendibilità di Win
 ### <a name="installing-operation-formatters"></a>Installazione di formattatori dell'operazione  
  I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento sostitutivo, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore del tipo WCF da predefinito e sostituirlo o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  
   
- Questi comportamenti dei formattatori dell'operazione possono essere impostati a livello di codice prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> o specificando un comportamento dell'operazione da eseguire dopo quello predefinito. Tuttavia, non può essere configurato facilmente da un comportamento dell'endpoint (e pertanto mediante la configurazione) perché il modello di comportamento non consente la sostituzione di un comportamento con un altro o la modifica della struttura di descrizione.  
+ Questi comportamenti dei formattatori dell'operazione possono essere impostati a livello di codice prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> o specificando un comportamento dell'operazione da eseguire dopo quello predefinito. Tuttavia, non può essere configurato facilmente da un comportamento dell'endpoint (e pertanto mediante la configurazione) perché il modello di comportamento non consente la sostituzione di un comportamento con un altro o la modifica dell'albero di descrizione.  
   
  Nel client:  
   
@@ -178,4 +178,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vedere anche

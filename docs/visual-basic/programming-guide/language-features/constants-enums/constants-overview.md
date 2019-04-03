@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737689"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841296"
 ---
 # <a name="constants-overview-visual-basic"></a>Cenni preliminari sulle costanti (Visual Basic)
 Una costante è un nome significativo che prende il posto di un numero o una stringa che non cambia. Costanti di archiviano i valori, come suggerisce il nome, rimangono invariati durante l'esecuzione di un'applicazione. È notevolmente possibile migliorare la leggibilità del codice e semplificare la manutenzione mediante l'utilizzo delle costanti. Usarli nel codice che contiene valori utilizzati più volte o che dipende da alcuni numeri che sono difficili da ricordare o non hanno alcun significato ovvia.  
@@ -45,5 +45,6 @@ Una costante è un nome significativo che prende il posto di un numero o una str
 |[Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Viene descritto il `Option Strict` istruzione e sul relativo uso.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulle enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Procedura: Inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

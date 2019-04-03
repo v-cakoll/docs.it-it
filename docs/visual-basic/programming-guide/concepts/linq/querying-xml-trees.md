@@ -2,12 +2,12 @@
 title: Esecuzione di query su strutture ad albero XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: bb0024a6cfb93be5f1f78f33ad29c22f3400de48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3855a562ce5ec43b28fba21b2ab4db0583a2d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671382"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839626"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Esecuzione di query su strutture ad albero XML (Visual Basic)
 Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -16,7 +16,7 @@ Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~
   
  Dopo aver creato un'istanza di un albero XML, la scrittura di query è il modo più efficace per estrarre dati dall'albero. Inoltre, le query combinate con la costruzione funzionale consentono di generare un nuovo documento XML con una forma diversa rispetto all'originale.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -27,5 +27,6 @@ Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~
 |[Trasformazioni funzionali pure di XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Viene presentata una breve esercitazione sulla scrittura di query nello stile della programmazione funzionale.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

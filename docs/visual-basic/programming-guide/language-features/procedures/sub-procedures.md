@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977578"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843110"
 ---
 # <a name="sub-procedures-visual-basic"></a>Routine Sub (Visual Basic)
 Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra il `Sub` e `End Sub` istruzioni. Il `Sub` routine esegue un'attività e quindi restituisce il controllo al codice chiamante, ma non viene restituito un valore al codice chiamante.  
@@ -73,6 +73,7 @@ Oggetto `Sub` routine è una serie di istruzioni di Visual Basic racchiuse tra i
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Routine Function](./function-procedures.md)
 - [Routine Property](./property-procedures.md)

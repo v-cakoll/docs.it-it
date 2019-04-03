@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842512"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Procedura: Nascondere una variabile ereditata (Visual Basic)
 Una classe derivata eredita tutte le definizioni della relativa classe base. Se si desidera definire una variabile utilizzando lo stesso nome di un elemento della classe di base, è possibile nascondere, oppure *shadow*, tale elemento di classe di base quando si definisce la variabile nella classe derivata. In questo caso, il codice nella classe derivata accede la variabile a meno che non venga esplicitamente ignorato il meccanismo di shadowing.  
@@ -56,6 +56,7 @@ Una classe derivata eredita tutte le definizioni della relativa classe base. Se 
  Shadowing presenta più di una versione di una variabile con lo stesso nome. Quando un'istruzione di codice fa riferimento al nome della variabile, la versione a cui il compilatore risolve il riferimento dipende da fattori quali la posizione dell'istruzione di codice e la presenza di una stringa di qualificazione. Ciò può aumentare il rischio di fare riferimento a una versione imprevista di una variabile nascosta. È possibile ridurre tale rischio in modo completo tutti i riferimenti a una variabile nascosta.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

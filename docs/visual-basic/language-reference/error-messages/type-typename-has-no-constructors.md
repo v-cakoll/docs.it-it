@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837982"
 ---
 # <a name="type-typename-has-no-constructors"></a>Tipo '\<nomeTipo >' non ha costruttori
 Un tipo non supporta una chiamata a `Sub New()`. Causa possibile: compilatore o un file binario danneggiato.  
@@ -30,5 +30,6 @@ Un tipo non supporta una chiamata a `Sub New()`. Causa possibile: compilatore o 
 4.  Se l'errore persiste, raccogliere informazioni sulla situazione contingente e informare il Servizio Supporto Tecnico Clienti Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

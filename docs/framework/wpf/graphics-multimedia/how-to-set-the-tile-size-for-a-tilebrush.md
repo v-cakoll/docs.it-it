@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839696"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedura: Impostare la dimensione degli elementi affiancati di un TileBrush
 
@@ -20,19 +20,19 @@ Il <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà specifica la dim
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa un' <xref:System.Windows.Media.ImageBrush>, un tipo di <xref:System.Windows.Media.TileBrush>per disegnare un rettangolo con tessere. L'esempio imposta ogni tessera su un valore pari a 50% x 50% dell'area di output (rettangolo). Di conseguenza, il rettangolo viene disegnato con quattro proiezioni dell'immagine.
+L'esempio seguente usa un' <xref:System.Windows.Media.ImageBrush>, un tipo di <xref:System.Windows.Media.TileBrush>per disegnare un rettangolo con tessere. L'esempio imposta ogni tessera portandolo al 50% x 50% dell'area di output (rettangolo). Di conseguenza, il rettangolo viene disegnato con quattro proiezioni dell'immagine.
 
-L'immagine seguente illustra l'output generato dall'esempio.
+Nella figura seguente mostra l'output di esempio generato:
 
-![Esempio di affiancamento con un tratto con immagine](./media/0.png "0")
+![Un rettangolo con quattro gratta dimostrazione affiancamento con un pennello immagine.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 L'esempio successivo crea un <xref:System.Windows.Media.ImageBrush>, imposta relativo <xref:System.Windows.Media.TileBrush.Viewport%2A> a `0,0,25,25` e la relativa <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> a <xref:System.Windows.Media.BrushMappingMode.Absolute>e lo usa per disegnare un altro rettangolo. Di conseguenza, il pennello genera tessere con una larghezza pari a 25 pixel e un'altezza pari a 25 pixel.
 
-L'immagine seguente illustra l'output generato dall'esempio.
+Nella figura seguente mostra l'output di esempio generato:
 
-![TileBrush affiancato con un viewport di 0,0,0.25,0.25](./media/25x25viewport.png "25x25viewport")
+![Un rettangolo con cerchiato-gratta dimostrazione di un oggetto TileBrush affiancato con un Viewport.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

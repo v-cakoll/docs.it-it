@@ -1,15 +1,15 @@
 ---
-title: 'Trasporto: Interoperabilità WSE 3.0 TCP'
+title: 'Trasporto: interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653008"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842356"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: Interoperabilità WSE 3.0 TCP
+# <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: interoperabilità WSE 3.0 TCP
 L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una sessione duplex TCP come trasporto personalizzato Windows Communication Foundation (WCF). Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti. La procedura seguente illustra come compilare questo trasporto personalizzato WCF:  
   
 1.  A partire da un socket TCP, creare client e implementazioni server di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> che utilizzano framing DIME per delineare i limiti del messaggio.  
@@ -92,7 +92,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
  Quando un nuovo socket viene accettato, viene inizializzato un canale server con esso. Tutti gli input e output sono già implementati nella classe di base, pertanto questo canale è responsabile dell'inizializzazione del socket.  
   
 ## <a name="adding-a-binding-element"></a>Aggiunta di un elemento di associazione.  
- Ora che le factory e i canali sono compilati, devono essere esposti al runtime di ServiceModel tramite un'associazione. Un'associazione è una raccolta di elementi di associazione che rappresentano lo stack di comunicazione associato a un indirizzo del servizio. Ogni elemento dello stack  è rappresentato da un elemento di associazione.  
+ Ora che le factory e i canali sono compilati, devono essere esposti al runtime di ServiceModel tramite un'associazione. Un'associazione è una raccolta di elementi di associazione che rappresentano lo stack di comunicazione associato a un indirizzo del servizio. Ogni elemento dello stack è rappresentato da un elemento di associazione.  
   
  Nell'esempio, l'elemento di associazione è `WseTcpTransportBindingElement`, che deriva dalla classe <xref:System.ServiceModel.Channels.TransportBindingElement>. Esso supporta la classe <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ed esegue l'override dei metodi seguenti per compilare le factory associate all'associazione.  
   
@@ -112,7 +112,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  `}`  
   
- Contiene inoltre membri per clonare `BindingElement` e restituire lo schema (wse.tcp).  
+ Contiene inoltre membri per duplicare `BindingElement` e restituire lo schema (wse.tcp).  
   
 ## <a name="the-wse-tcp-test-console"></a>Console per eseguire il test di TCP WSE  
  Codice per testare l'utilizzo di questo esempio di trasporto è disponibile in TestCode.cs. Nelle istruzioni seguenti viene illustrato come configurare l'esempio `TcpSyncStockService` WSE.  
@@ -195,4 +195,3 @@ Symbols:
   
     8.  Il client di prova del trasporto TCP viene inizializzato in una nuova console. Il client richiede quotazioni al servizio e quindi visualizza i risultati nella finestra della console.  
   
-## <a name="see-also"></a>Vedere anche

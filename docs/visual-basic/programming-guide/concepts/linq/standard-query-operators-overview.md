@@ -2,12 +2,12 @@
 title: Cenni preliminari sugli operatori di Query standard (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526496"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841472"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Cenni preliminari sugli operatori di Query standard (Visual Basic)
 Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>. Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.  
@@ -101,6 +101,7 @@ MsgBox(output.ToString())
  [Operazioni di aggregazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)

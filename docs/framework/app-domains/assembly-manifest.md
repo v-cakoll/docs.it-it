@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529762"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58676069"
 ---
 # <a name="assembly-manifest"></a>Manifesto dell'assembly
 Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.  
   
  Nella figura che segue vengono illustrati i diversi modi in cui è possibile memorizzare il manifesto.  
   
- ![Assembly a file singolo](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-Tipi di assembly  
+ ![Diagramma che illustra il manifesto in una configurazione di assembly a file singolo e a più file.](./media/assembly-manifest/assembly-types-diagram.gif)  
   
  Nel caso di un assembly con un solo file associato, il manifesto viene incorporato nel file PE per formare un assembly a file singolo. È possibile creare un assembly su più file con un manifesto autonomo o con il manifesto incorporato in uno dei file PE dell'assembly.  
   

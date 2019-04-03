@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724070"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675952"
 ---
 # <a name="assembly-versioning"></a>Controllo delle versioni degli assembly
 Il controllo delle versioni degli assembly che utilizzano Common Language Runtime viene svolto interamente a livello dell'assembly. La specifica versione di un assembly e le versioni degli assembly dipendenti sono memorizzate nel manifesto dell'assembly. I criteri di versione predefiniti del runtime prevedono che l'applicazione venga eseguita solo con le versioni con cui è stata compilata e testata. Per modificare il comportamento predefinito, è possibile esprimere esplicitamente criteri di versione diversi nei file di configurazione (il file di configurazione dell'applicazione, il file dei criteri dell'autore e il file di configurazione dell'amministratore del computer).  
@@ -33,10 +33,9 @@ Il controllo delle versioni degli assembly che utilizzano Common Language Runtim
   
 4.  Controlla la Global Assembly Cache e le basi di codice specificate nei file di configurazione, quindi controlla la directory dell'applicazione e le sottodirectory che usano le regole di esecuzione del probe descritte in [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Nella figura che segue vengono illustrati tali passaggi.  
+ Questi passaggi sono illustrati nella figura seguente:  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Risoluzione della richiesta di associazione di un assembly  
+ ![Diagramma che illustra i passaggi della risoluzione della richiesta di associazione di un assembly.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  Per altre informazioni sulla configurazione di applicazioni, vedere [Configurazione di app](../../../docs/framework/configure-apps/index.md). Per altre informazioni sui criteri di associazione, vedere [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   

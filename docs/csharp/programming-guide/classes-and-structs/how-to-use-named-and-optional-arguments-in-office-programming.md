@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966801"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412201"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office (Guida per programmatori C#)
 Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], migliorano la praticità, la flessibilità e la leggibilità nella programmazione C#. Queste funzionalità, poi, semplificano notevolmente l'accesso alle interfacce COM, quali le API di automazione di Microsoft Office.  
@@ -79,8 +79,7 @@ Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[cs
   
 1.  Usare il metodo `ConvertToTable` per racchiudere il testo in una tabella. Il metodo ha 16 parametri facoltativi. IntelliSense racchiude tra parentesi quadre i parametri facoltativi, come mostrato nell'immagine seguente.  
   
-     ![Elenco dei parametri del metodo ConvertToTable.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Parametri di ConvertToTable  
+     ![Elenco dei parametri del metodo ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      Gli argomenti denominati e facoltativi consentono di specificare valori esclusivamente per i parametri che si vogliono modificare. Aggiungere il codice seguente alla fine del metodo `DisplayInWord` per creare una tabella semplice. L'argomento indica che le virgole nella stringa di testo in `range` separano le celle della tabella.  
   

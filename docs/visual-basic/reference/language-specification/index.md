@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 3810dd4d956c5cd8ef74cfd4da695f660e539820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744687"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842616"
 ---
 # <a name="visual-basic-language-specification"></a>Specifica del linguaggio Visual Basic
 La specifica del linguaggio Visual Basic è l'origine autorevole per le risposte a tutte le domande sulla grammatica di Visual Basic e la sintassi. Contiene informazioni dettagliate sul linguaggio, inclusi molti punti non trattati nella documentazione di riferimento di Visual Basic.  
@@ -23,6 +23,7 @@ Questo sito contiene la [specifica VB 11](../../../../_vblang/spec/introduction.
 Le segnalazioni dei problemi relativi alla specifica devono essere create nell'archivio [dotnet/vblang](https://github.com/dotnet/vblang/issues). Oppure, se si è interessati a correggere eventuali errori riscontrati, è possibile inviare una [richiesta pull](https://github.com/dotnet/vblang/pulls) allo stesso repository.
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]

@@ -1,15 +1,15 @@
 ---
-title: 'File XML di esempio: Configurazione di test (LINQ to XML)'
+title: 'File XML di esempio: configurazione di test (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: a0046b11ea9717ee1b105d8cfbe8953948d3c857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658689"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840913"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>File XML di esempio: Configurazione di test (LINQ to XML)
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>File XML di esempio: configurazione di test (LINQ to XML)
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Si tratta di un file di configurazione di test.  
   
 ## <a name="testconfigxml"></a>TestConfig.xml  
@@ -57,4 +57,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

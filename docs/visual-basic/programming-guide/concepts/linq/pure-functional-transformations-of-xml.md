@@ -2,17 +2,17 @@
 title: Trasformazioni funzionali pure di XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584740"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843422"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Trasformazioni funzionali pure di XML (Visual Basic)
 Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funzionali per XML. Vengono illustrati i principali concetti e costrutti di linguaggio che è necessario comprendere per usare le trasformazioni funzionali e vengono presentati alcuni esempi di utilizzo delle trasformazioni funzionali per la modifica di documenti XML. Anche se nell'esercitazione sono riportati esempi di codice LINQ to XML, tutti i concetti sottostanti sono validi anche per altre tecnologie LINQ.  
   
- Il [esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) offre una serie di esempi, ognuno basato su quello precedente. In questi esempio è illustrato l'approccio delle trasformazioni funzionali pure per l'elaborazione XML.  
+ [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) offre una serie di esempi, ognuno basato su quello precedente. In questi esempio è illustrato l'approccio delle trasformazioni funzionali pure per l'elaborazione XML.  
   
  Questa esercitazione presuppone una conoscenza pratica di Visual Basic. La semantica dettagliata dei costrutti del linguaggio non viene fornita, ma sono resi disponibili dei collegamenti alla documentazione appropriata.  
   
@@ -27,4 +27,5 @@ Contenuto della sezione viene fornita un'esercitazione sulle trasformazioni funz
 |[Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|In questa esercitazione viene illustrata una trasformazione funzionale.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query su alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

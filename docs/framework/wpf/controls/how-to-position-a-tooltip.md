@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364533"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840497"
 ---
 # <a name="how-to-position-a-tooltip"></a>Procedura: Posizionare un oggetto ToolTip
 In questo esempio viene illustrato come specificare la posizione della descrizione comando sullo schermo.  
@@ -34,16 +34,19 @@ In questo esempio viene illustrato come specificare la posizione della descrizio
  Se si definisce il contenuto di una descrizione comando con un <xref:System.Windows.Controls.ToolTip> dell'oggetto, è possibile usare le proprietà delle classi, tuttavia, il <xref:System.Windows.Controls.ToolTipService> proprietà hanno la precedenza. Usare la <xref:System.Windows.Controls.ToolTipService> delle proprietà per le descrizioni comandi che non sono definite come <xref:System.Windows.Controls.ToolTip> oggetti.  
   
  Le illustrazioni seguenti mostrano come posizionare un oggetto tooltip utilizzando queste proprietà. Anche se, il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] negli esempi di queste illustrazioni mostrano come impostare le proprietà definite dal <xref:System.Windows.Controls.ToolTip> classe, le proprietà corrispondenti del <xref:System.Windows.Controls.ToolTipService> classe seguono le stesse regole di layout. Per altre informazioni sui valori possibili per la proprietà di posizionamento, vedere [comportamento del posizionamento di Popup](popup-placement-behavior.md).  
+ 
+ L'immagine seguente mostra il posizionamento di tooltip mediante la proprietà di posizionamento:  
   
- ![Posizionamento di ToolTip](./media/tooltipplacement.png "ToolTipPlacement")  
-Posizionamento di ToolTip mediante la proprietà di posizionamento  
+ ![Diagramma che mostra di posizionamento di ToolTip mediante la proprietà di posizionamento.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ L'immagine seguente mostra il posizionamento di tooltip mediante le proprietà di posizionamento e PlacementRectangle:   
+
+ ![Diagramma che mostra di posizionamento di ToolTip mediante una proprietà PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ L'immagine seguente mostra il posizionamento di tooltip mediante le proprietà di posizionamento e PlacementRectangle Offset:   
   
- ![Posizionamento di ToolTip mediante un rettangolo di selezione host](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-Posizionamento di ToolTip mediante le proprietà di posizionamento e PlacementRectangle  
-  
- ![Diagramma di posizionamento di ToolTip](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-Posizionamento di ToolTip mediante le proprietà di posizionamento e PlacementRectangle Offset  
-  
+ ![Diagramma che mostra di posizionamento di ToolTip mediante la proprietà di Offset.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Windows.Controls.ToolTip> delle proprietà per specificare la posizione della descrizione comando il cui contenuto è un <xref:System.Windows.Controls.ToolTip> oggetto.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

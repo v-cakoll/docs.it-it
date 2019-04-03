@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967178"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837741"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lunga durate che richiedono uno scorrimento orizzontale nell'Editor del codice. Anche se ciò non influiscono sulla modalità di esecuzione del codice, rende difficile per te o per altri utenti a leggere il codice visualizzato sul monitor. In questi casi, è necessario considerare suddividendo la singola istruzione lunga in più righe.  
@@ -59,5 +59,6 @@ Quando si scrive codice, è possibile creare in alcuni casi le istruzioni di lun
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -4,12 +4,12 @@ description: Informazioni su come eseguire un'applicazione console .NET Framewor
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126084"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633842"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Esecuzione di applicazioni console in contenitori Windows
 
@@ -55,7 +55,9 @@ Per il supporto dei contenitori Windows è necessario avere Docker per Windows v
 ## <a name="building-the-application"></a>Compilazione dell'applicazione
 In genere le applicazioni console vengono distribuite attraverso un programma di installazione, FTP o una distribuzione di condivisione file. Quando si esegue la distribuzione in un contenitore, le risorse devono essere compilate e inserite temporaneamente in un percorso che può essere usato quando viene creata l'immagine Docker.
 
-In *build.ps1* lo script usa [MSBuild](/visualstudio/msbuild/msbuild) per compilare l'applicazione per completare l'attività di creazione delle risorse. Vi sono alcuni parametri che vengono passati a MSBuild per finalizzare le risorse necessarie. Il nome del file di progetto o della soluzione da compilare, il percorso dell'output e, infine, la configurazione (Release o Debug).
+Questa è l'applicazione di esempio: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+In *build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> lo script usa [MSBuild](/visualstudio/msbuild/msbuild) per compilare l'applicazione per completare l'attività di creazione delle risorse. Vi sono alcuni parametri che vengono passati a MSBuild per finalizzare le risorse necessarie. Il nome del file di progetto o della soluzione da compilare, il percorso dell'output e, infine, la configurazione (Release o Debug).
 
 Nella chiamata a `Invoke-MSBuild` `OutputPath` è impostato su **publish** e `Configuration` è impostato su **Release**. 
 

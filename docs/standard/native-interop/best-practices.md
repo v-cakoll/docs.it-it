@@ -4,12 +4,12 @@ description: Informazioni sulle procedure consigliate per interfacciarsi con i c
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411451"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412058"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
 
@@ -160,7 +160,7 @@ Non dimenticare che `GCHandle` deve essere liberato in modo esplicito per evitar
 
 ## <a name="common-windows-data-types"></a>Tipi di dati Windows comuni
 
-Ecco un elenco dei tipi di dati comunemente usati nelle API Win32 e dei tipi C# da usare per chiamate nel codice Win32.
+L'elenco seguente contiene i tipi di dati comunemente usati nelle API Windows e i tipi C# da usare per chiamate nel codice Windows.
 
 I tipi seguenti hanno le stesse dimensioni in Windows a 32 e 64 bit, nonostante i nomi.
 

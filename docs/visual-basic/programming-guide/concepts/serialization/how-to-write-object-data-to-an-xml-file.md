@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere dati oggetto in un File XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715829"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843734"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procedura: Scrivere dati oggetto in un File XML (Visual Basic)
 Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -55,6 +55,7 @@ End Module
  Questo esempio crea un nuovo file, se il file non esiste. Se un'applicazione deve creare un file, deve avere accesso `Create` alla cartella. Se il file esiste già, per l'applicazione è sufficiente l'accesso `Write`, un privilegio di livello inferiore. Se possibile, è più sicuro creare il file durante la distribuzione e concedere l'accesso `Read` a un unico file, anziché l'accesso `Create` a una cartella.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IO.StreamWriter>
 - [Procedura: Leggere dati oggetto in un File XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serializzazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

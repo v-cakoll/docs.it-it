@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840276"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Assegnazione di variabili oggetto (Visual Basic)
 Utilizzare una normale istruzione di assegnazione per assegnare un oggetto a una variabile oggetto. È possibile assegnare un'espressione di oggetto o il [Nothing](../../../../visual-basic/language-reference/nothing.md) (parola chiave), come illustrato nell'esempio seguente viene illustrato.  
@@ -76,6 +76,7 @@ addStandardText(Me)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

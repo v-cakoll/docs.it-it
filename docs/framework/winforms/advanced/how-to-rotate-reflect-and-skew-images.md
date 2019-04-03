@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ruotare, riflettere e inclinare immagini'
+title: 'Procedura: Ruotare, capovolgere e inclinare immagini'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839912"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Procedura: Ruotare, riflettere e inclinare immagini
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Procedura: Ruotare, capovolgere e inclinare immagini
 È possibile ruotare, riflettere e inclinare un'immagine specificando i punti di destinazione per gli angoli superiore sinistro, superiore destro e inferiore sinistro dell'immagine originale. I tre punti di destinazione determinano una trasformazione affine che esegue il mapping dell'immagine rettangolare originale in un parallelogramma.  
   
 ## <a name="example"></a>Esempio  
@@ -30,15 +30,15 @@ ms.locfileid: "57711499"
   
  Nella figura seguente mostra l'immagine originale e l'immagine associata nel parallelogramma. L'immagine originale è stato asimmetriche, riflessa, ruotata e convertito. L'asse x lungo il bordo superiore dell'immagine originale viene eseguito il mapping alla riga che viene eseguito tramite (200, 20) e (110, 100). L'asse y lungo il bordo sinistro dell'immagine originale viene eseguito il mapping alla riga che viene eseguito tramite (200, 20) e (250, 30).  
   
- ![Strisce](./media/stripes1.gif "Stripes1")  
+ ![L'immagine originale e l'immagine associata nel parallelogramma.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- Nella figura seguente mostra una trasformazione simile applicata a un'immagine fotografica.  
+ La figura seguente mostra una trasformazione simile applicata a un'immagine fotografica:  
   
- ![Trasformate scalatore](./media/transformedclimber.png "TransformedClimber")  
+ ![L'immagine di un scalatore e l'immagine associata al parallelogramma.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- Nella figura seguente mostra una trasformazione simile applicata a un metafile.  
+ La figura seguente mostra una trasformazione simile applicata a un metafile:  
   
- ![Trasformate Metafile](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Illustrazione di forme, testo e che il mapping nel parallelogramma.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  L'esempio seguente produce le immagini mostrate nella prima figura.  
   

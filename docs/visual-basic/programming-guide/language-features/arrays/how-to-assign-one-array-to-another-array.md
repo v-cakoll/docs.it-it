@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572721"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835284"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: Assegnare una matrice a un'altra matrice (Visual Basic)
 Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di assegnazione, come altri tipi di oggetto. Una variabile di matrice contiene un puntatore ai dati che costituiscono gli elementi della matrice e le informazioni di classificazione e la lunghezza e un'assegnazione di copia solo questo puntatore.  
@@ -43,6 +43,7 @@ Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di ass
  Il compilatore segnala un errore se le regole precedenti vengono violate, ad esempio se i tipi di dati non sono compatibili o le classificazioni non sono uguali. È possibile aggiungere al codice per assicurarsi che le matrici sono compatibili prima di tentare un'assegnazione di gestione degli errori. È anche possibile usare la [operatore TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) parola chiave se si desidera evitare di generare un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)

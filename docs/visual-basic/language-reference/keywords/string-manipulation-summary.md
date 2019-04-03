@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: 120a0a8d55107e8bd1fb4318da190be0a3647aac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543971"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841134"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Riepilogo della modifica delle stringhe (Visual Basic)
 Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  
@@ -33,5 +33,6 @@ Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime son
 |Restituisce un numero specificato di sottostringhe.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

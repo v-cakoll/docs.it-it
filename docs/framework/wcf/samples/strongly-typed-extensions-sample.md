@@ -2,15 +2,15 @@
 title: Esempio di estensioni fortemente tipizzate
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: c5b135fb46d13ff5599e75cbd1489c0f6affbd78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d5e1598d6bac7a5dbd6bca87f27af2f56982ba2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691398"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843604"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Esempio di estensioni fortemente tipizzate
-Nell'esempio seguente viene utilizzata la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> a scopo esemplificativo. Tuttavia, i modelli illustrati in questo esempio possono essere utilizzati con tutte le classi di diffusione che supportano dati di estensione.  
+Nell'esempio seguente viene utilizzata la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> a scopo esemplificativo. Tuttavia, i modelli illustrati in questo esempio possono essere usati con tutte le classi di diffusione che supportano dati di estensione.  
   
  Il modello a oggetti di diffusione (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem> e classi correlate) supporta l'accesso non fortemente tipizzato ai dati dell'estensione utilizzando le proprietà <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. Questo esempio illustra come fornire l'accesso fortemente tipizzato ai dati di estensione implementando classi derivate personalizzate di <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> che rendono disponibili alcune estensioni specifiche dell'applicazione come proprietà fortemente tipizzate.  
   
@@ -144,7 +144,7 @@ public void ReadXml(System.Xml.XmlReader reader)
 }  
 ```  
   
- In `WriteXml`, il metodo `InReplyToElement` scrive per primi i valori delle proprietà `Ref`, `HRef`, `Source` `MediaType` come attributi XML (`WriteXml` non è responsabile per la scrittura dell'elemento esterno effettivo, come quello effettuato dal chiamante di `WriteXml`). Scrive inoltre il contenuto di <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> nel writer, come illustrato nel codice seguente.  
+ In `WriteXml`, il metodo `InReplyToElement` scrive per primi i valori delle proprietà `Ref`, `HRef`, `Source``MediaType` come attributi XML (`WriteXml` non è responsabile per la scrittura dell'elemento esterno effettivo, come quello effettuato dal chiamante di `WriteXml`). Scrive inoltre il contenuto di <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> nel writer, come illustrato nel codice seguente.  
   
 ```  
 public void WriteXml(System.Xml.XmlWriter writer)  
@@ -287,4 +287,3 @@ public class ThreadedItem : SyndicationItem
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
   
-## <a name="see-also"></a>Vedere anche

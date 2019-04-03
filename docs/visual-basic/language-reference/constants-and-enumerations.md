@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573309"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839589"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Costanti ed enumerazioni (Visual Basic)
 Visual Basic fornisce un numero di costanti ed enumerazioni per gli sviluppatori predefinite. Archiviano i valori che rimangono costanti durante l'esecuzione di un'applicazione. Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi.  
@@ -78,6 +78,7 @@ Visual Basic fornisce un numero di costanti ed enumerazioni per gli sviluppatori
 |<xref:Microsoft.VisualBasic.VbStrConv>|Indica il tipo di conversione da eseguire quando si chiama la funzione <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)
 - [Cenni preliminari sulle costanti](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

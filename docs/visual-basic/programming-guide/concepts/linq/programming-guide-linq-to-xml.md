@@ -2,12 +2,12 @@
 title: Guida per programmatori (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 04e98c6aaa038bea03dd118521311adf40e3e2be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837707"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Guida per programmatori (LINQ to XML) (Visual Basic)
 Contenuto della sezione vengono fornite informazioni di carattere concettuale e procedurale sulla programmazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -35,5 +35,6 @@ Contenuto della sezione vengono fornite informazioni di carattere concettuale e 
 |[Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Sono contenuti i documenti XML di esempio usati nei numerosi esempi di questa documentazione.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
 - [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

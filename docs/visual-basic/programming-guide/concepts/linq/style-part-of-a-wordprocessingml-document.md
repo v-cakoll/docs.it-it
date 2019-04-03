@@ -2,12 +2,12 @@
 title: Parte di stile di visualizzazione di un WordprocessingML Document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 55ad04ba516482613d1abd86ce5feee007c0b98d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838066"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
 In questo argomento è illustrato un esempio della parte di stile del documento WordprocessingML di Office Open XML.  
@@ -141,4 +141,5 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841537"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Nome \<NomeSpazioDeiNomi > nello spazio dei nomi radice \<fullnamespacename > non è conforme a CLS
 Un assembly è contrassegnato come `<CLSCompliant(True)>`, ma un elemento del nome dello spazio dei nomi radice inizia con un carattere di sottolineatura (`_`).  
@@ -34,10 +34,10 @@ Un assembly è contrassegnato come `<CLSCompliant(True)>`, ma un elemento del no
 -   Se è necessario che il nome dello spazio dei nomi deve rimanere invariato, quindi rimuovere il <xref:System.CLSCompliantAttribute> dall'assembly o contrassegnarlo come `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Convenzioni di denominazione di Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-
