@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825378"
 ---
 # <a name="decision-structures-visual-basic"></a>Strutture decisionali (Visual Basic)
 Visual Basic consente di testare condizioni ed eseguire operazioni diverse a seconda del risultato di un test. È possibile testare una condizione sia true o false, per diversi valori di un'espressione o di diverse eccezioni generate quando si esegue una serie di istruzioni.  
@@ -47,6 +47,7 @@ Eseguire azioni diverse quando una condizione è true e false
 >  Per molte strutture di controllo, quando si fa clic su una parola chiave, sono evidenziate tutte le parole chiave nella struttura. Ad esempio, quando fa clic su `If` in un `If...Then...Else` costruzione, tutte le istanze di `If`, `Then`, `ElseIf`, `Else`, e `End If` nella costruzione di strutture vengono evidenziati. Per spostare alla parola chiave evidenziata successiva o precedente, premere CTRL + MAIUSC + freccia giù o CTRL + MAIUSC + freccia su.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Altre strutture di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

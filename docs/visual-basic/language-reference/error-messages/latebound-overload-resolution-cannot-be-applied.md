@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272636"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814055"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Impossibile applicare la risoluzione dell'overload con associazione tardiva a '\<nomeroutine >' perché l'istanza di accesso è un tipo interfaccia
 Il compilatore sta provando a risolvere un riferimento a una proprietà in overload o una routine, ma il riferimento ha esito negativo perché è un argomento di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore a risolvere il riferimento come associazione tardiva.  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  Ognuna delle righe di codice precedente esegue esplicitamente il cast di `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Overload della routine](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Risoluzione dell'overload](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)

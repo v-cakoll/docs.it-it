@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979535"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815596"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerazioni sull'overload di routine (Visual Basic)
 Quando si esegue l'overload di una procedura, è necessario utilizzare un diverso *firma* per ogni versione di overload. Ciò significa in genere che ogni versione è necessario specificare un elenco di parametri diverso. Per altre informazioni, vedere "Firma diversa" nella [overload della routine](./procedure-overloading.md).  
@@ -122,6 +122,7 @@ Quando si esegue l'overload di una procedura, è necessario utilizzare un divers
 -   Il compilatore non è possibile segnalare un errore se il codice chiamante passa un tipo di dati che non supporta la routine.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)

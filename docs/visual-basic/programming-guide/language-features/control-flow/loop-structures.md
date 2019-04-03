@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654367"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833311"
 ---
 # <a name="loop-structures-visual-basic"></a>Strutture di ciclo (Visual Basic)
 Strutture di ciclo di Visual Basic consentono di eseguire ripetutamente una o più righe di codice. È possibile ripetere le istruzioni in una struttura di ciclo fino a quando non è una condizione `True`, fino a quando una condizione è `False`, un numero di volte oppure una volta per ogni elemento specificato in una raccolta.  
@@ -37,6 +37,7 @@ Strutture di ciclo di Visual Basic consentono di eseguire ripetutamente una o pi
  Il `For Each`... `Next` costruzione esegue una serie di istruzioni una sola volta per ogni elemento in una raccolta. Si specifica la variabile di controllo, ma non è necessario determinare i valori iniziale e finale per tale. Per altre informazioni, vedere [For Each... Istruzione Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Altre strutture di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

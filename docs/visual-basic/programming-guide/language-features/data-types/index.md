@@ -2,12 +2,18 @@
 title: Tipi di dati in Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'data types [Visual Basic], declaring'
-  - typing
-  - 'data types [Visual Basic]'
-  - 'Visual Basic code, data types'
-  - 'data types [Visual Basic], improving speed with'
+- data types [Visual Basic], declaring
+- typing
+- data types [Visual Basic]
+- Visual Basic code, data types
+- data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
+ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829200"
 ---
 # <a name="data-types-in-visual-basic"></a>Tipi di dati in Visual Basic
 Il *tipo di dati* di un elemento di programmazione indica la tipologia di dati che può contenere e la modalità di archiviazione di tali dati. I tipi di dati si applicano a tutti i valori che possono essere archiviati nella memoria del computer o partecipano alla valutazione di un'espressione. Ogni variabile, valore letterale, costante, enumerazione, proprietà, parametro di routine, argomento di routine e valore restituito di routine ha un tipo di dati.  
@@ -29,6 +35,7 @@ Il *tipo di dati* di un elemento di programmazione indica la tipologia di dati c
  Per un elenco dei tipi di dati di Visual Basic, vedere [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Caratteri tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

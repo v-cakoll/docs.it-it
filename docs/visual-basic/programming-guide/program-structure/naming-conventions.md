@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672136"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837078"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenzioni di denominazione di Visual Basic
 Quando si assegna un elemento in un'applicazione Visual Basic, il primo carattere del nome deve essere un carattere alfabetico o un carattere di sottolineatura. Si noti tuttavia che i nomi che iniziano con un carattere di sottolineatura non sono conformi con la [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Quando si assegna un elemento in un'applicazione Visual Basic, il primo caratter
 -   Evitare di usare nomi in un ambito interno che sono gli stessi nomi in un ambito esterno. Gli errori possono verificarsi se si accede alla variabile non corretta. Se si verifica un conflitto tra la parola chiave lo stesso nome e una variabile, è necessario identificare la parola chiave anteponendovi la libreria dei tipi appropriati. Ad esempio, se si dispone di una variabile denominata `Date`, è possibile usare la funzione intrinseca `Date` funzione solo chiamando <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Parole chiave come nomi di elementi nel codice](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase e MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

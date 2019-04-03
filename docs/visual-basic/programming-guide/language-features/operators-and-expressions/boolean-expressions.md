@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965540"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825534"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Espressioni booleane (Visual Basic)
 Oggetto *espressione booleana* è un'espressione che restituisce un valore delle [tipo di dati Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean` le espressioni possono assumere forme diverse. È la più semplice il confronto diretto del valore di una `Boolean` variabile in un `Boolean` letterale, come illustrato nell'esempio seguente.  
@@ -67,6 +67,7 @@ Oggetto *espressione booleana* è un'espressione che restituisce un valore delle
  È possibile utilizzare parentesi per controllare l'ordine di valutazione di espressioni booleane. Prima di tutto valutazione di espressioni racchiuse tra parentesi. Per più livelli di annidamento, viene concessa la precedenza sulle espressioni maggiormente annidata. All'interno delle parentesi, la valutazione procede secondo le regole di precedenza degli operatori. Per altre informazioni, vedere [precedenza degli operatori in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatori logici e bit per bit in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Confronto di valori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Istruzioni](../../../../visual-basic/programming-guide/language-features/statements.md)

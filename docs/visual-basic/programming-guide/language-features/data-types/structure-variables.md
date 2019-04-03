@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640602"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816330"
 ---
 # <a name="structure-variables-visual-basic"></a>Variabili di struttura (Visual Basic)
 Dopo aver creato una struttura, è possibile dichiarare le variabili a livello di routine e a livello di modulo di quel tipo. Ad esempio, è possibile creare una struttura di registrare le informazioni sul sistema. Nell'esempio che segue viene illustrato quanto descritto.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Se un elemento di struttura è un tipo riferimento, ad esempio un `String`, `Object`, o matrice, il puntatore ai dati viene copiato. Nell'esempio precedente, se `systemInfo` fosse stata inclusa una variabile oggetto, quindi l'esempio precedente sarebbe stato copiato il puntatore dal `mySystem` a `yourSystem`, e una modifica ai dati dell'oggetto tramite una sola struttura sarebbe attivo quando si accede tramite la struttura.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tipi di dati elementari](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Tipi di dati compositi](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

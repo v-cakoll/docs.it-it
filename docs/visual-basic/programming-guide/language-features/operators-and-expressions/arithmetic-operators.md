@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981270"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820776"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
 Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che coinvolgono il calcolo dei valori numerici rappresentati da valori letterali, variabili, altre espressioni, (funzione) e le chiamate di proprietà e costanti. Anche classificati con operatori aritmetici sono elencati gli operatori di spostamento di bit, che operano a livello dei singoli bit di operandi- and -shift degli schemi di bit verso sinistra o destra.  
@@ -95,6 +95,7 @@ Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritme
  Se si imposta `Option Strict Off`, tuttavia, Visual Basic consente le conversioni di narrowing implicite si verifica anche se possono comportare la perdita imprevista di dati o di precisione. Per questo motivo, è consigliabile usare `Option Strict On` durante la scrittura di codice di produzione. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatori aritmetici](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operatori di spostamento bit](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

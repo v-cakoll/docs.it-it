@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: a498ec6f79c68ca924525fe837f356f097b01fd1
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746030"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833317"
 ---
 # <a name="-keyfile"></a>-keyfile
 Specifica un file contenente una chiave o una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -52,6 +52,7 @@ vbc -keyfile:myfile.sn input.vb
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Assembly in .NET](../../../standard/assembly/index.md)
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-riferimenti (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

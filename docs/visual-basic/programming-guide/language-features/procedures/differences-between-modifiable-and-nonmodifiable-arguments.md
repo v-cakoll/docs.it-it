@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498683"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826665"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Differenze tra argomenti modificabili e non modificabili (Visual Basic)
 Quando si chiama una routine, in genere passare uno o più argomenti. Ciascun argomento corrisponde a un elemento di programmazione sottostante. Gli elementi sottostanti sia gli argomenti stessi possono essere modificabili o meno.  
@@ -38,6 +38,7 @@ Quando si chiama una routine, in genere passare uno o più argomenti. Ciascun ar
  La routine chiamata potrebbe modificare la copia locale di un argomento non è modificabile, ma tale modifica non ha effetto sull'elemento sottostante nel codice chiamante.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)

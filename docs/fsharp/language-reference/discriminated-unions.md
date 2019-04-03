@@ -2,12 +2,12 @@
 title: Unioni discriminate
 description: Informazioni su come usare F# unioni discriminate.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821426"
 ---
 # <a name="discriminated-unions"></a>Unioni discriminate
 
@@ -156,7 +156,7 @@ Le unioni discriminate possono essere ricorsive, vale a dire che l'unione stessa
 
 Nel codice precedente, `resultSumTree` ha valore 10. La figura seguente mostra la struttura ad albero `myTree`.
 
-![Struttura ad albero di myTree](../media/TreeStructureDiagram.png)
+![Diagramma che mostra la struttura ad albero di mytree.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Le unioni discriminate funzionano bene se i nodi dell'albero sono eterogenei. Nel codice seguente, il tipo `Expression` rappresenta l'albero sintattico astratto di un'espressione in un semplice linguaggio di programmazione che supporta l'addizione e moltiplicazione di numeri e variabili. Alcuni case di unione non sono ricorsivi e rappresentano numeri (`Number`) o variabili (`Variable`). Altri case sono ricorsivi e rappresentano operazioni (`Add` e `Multiply`), in cui anche gli operandi sono espressioni. Il `Evaluate` funzione viene utilizzata un'espressione di corrispondenza per elaborare in modo ricorsivo l'albero della sintassi.
 

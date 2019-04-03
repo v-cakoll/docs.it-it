@@ -2,12 +2,12 @@
 title: Informazioni sul chiamante (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826054"
 ---
 # <a name="caller-information-visual-basic"></a>Informazioni sul chiamante (Visual Basic)
 Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante. Queste informazioni sono utili per la tracciatura, il debug e la creazione di strumenti diagnostici.  
@@ -75,6 +75,7 @@ End Sub
 |Nessun membro contenitore (ad esempio a livello di assembly o attributi applicati a tipi)|Valore predefinito del parametro facoltativo.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Attributi (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [Attributi comuni (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [Parametri facoltativi](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965787"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827575"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Espressioni incorporate in XML (Visual Basic)
 Le espressioni incorporate consentono di creare valori letterali XML che contengono espressioni valutate in fase di esecuzione. Sintassi dell'espressione incorporata `<%=` `expression` `%>`, che è la stessa sintassi utilizzata [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -81,6 +81,7 @@ Le espressioni incorporate consentono di creare valori letterali XML che conteng
 >  Quando si dichiara un prefisso dello spazio dei nomi XML usando la `xmlns` namespace (attributo), il valore dell'attributo deve essere una stringa costante. A questo proposito, utilizzando il `xmlns` attributo è simile all'utilizzo di `Imports` dichiarare uno spazio dei nomi XML dell'istruzione. È possibile usare un'espressione incorporata per specificare il valore dello spazio dei nomi XML.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Valore letterale di documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

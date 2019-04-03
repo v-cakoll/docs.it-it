@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 2f6f0362fcec170e677d153ad9f936a5c2e55ad7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828641"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Procedura: Etichetta istruzioni (Visual Basic)
 Blocchi di istruzioni sono costituiti da righe di codice delimitati da punti. Righe di codice preceduto da una stringa o numero intero di identificazione si dice che trovano *etichettato*. Le etichette di istruzione vengono utilizzate per contrassegnare una riga di codice per facilitarne l'identificazione per l'uso con le istruzioni, ad esempio `On Error Goto`.  
@@ -35,6 +35,7 @@ Blocchi di istruzioni sono costituiti da righe di codice delimitati da punti. Ri
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

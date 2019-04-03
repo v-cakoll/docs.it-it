@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824663"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo di dati Double (Visual Basic)
 Contiene segno IEEE a 64 bit (8 byte) e con precisione doppia numeri a virgola mobile che intervallo compreso tra - 1, 79769313486231570E + 308 a - fino a 4.94065645841246544-324 per i valori negativi e tra fino a 4.94065645841246544-324 e 1.79769313486231570 e + 308 per valori positivi. Numeri a precisione doppia contengono un'approssimazione di un numero reale.  
@@ -56,6 +56,7 @@ Contiene segno IEEE a 64 bit (8 byte) e con precisione doppia numeri a virgola m
 -   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
 - [Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 6a7c55433001af5c5695044f41f866c1df8c3651
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b85239f80b4bfa87d1dbb1e3207e63d0cef7eeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977864"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827211"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Procedura: Chiamare una routine di proprietà (Visual Basic)
 Si chiama una routine di proprietà per archiviare un valore nella proprietà o recuperarne il valore. Si accede a una proprietà allo stesso modo accedere a una variabile.  
@@ -53,6 +53,7 @@ Si chiama una routine di proprietà per archiviare un valore nella proprietà o 
  Il valore generato sul lato destro dell'istruzione di assegnazione viene archiviato nella proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)

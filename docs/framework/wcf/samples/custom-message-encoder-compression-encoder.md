@@ -1,15 +1,15 @@
 ---
-title: 'Codificatore di messaggi personalizzato: Codificatore di compressione'
+title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583624"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825292"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzato: Codificatore di compressione
+# <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
   
 > [!IMPORTANT]
@@ -355,4 +355,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
-## <a name="see-also"></a>Vedere anche

@@ -2,12 +2,12 @@
 title: 'Procedura: Aggiungere metodi personalizzati per le query LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829174"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Procedura: Aggiungere metodi personalizzati per le query LINQ (Visual Basic)
 È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -198,5 +198,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

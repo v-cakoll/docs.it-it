@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: b867380661e3545db9ac64cb67ad4e3a5a1a6b1e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0268693f29fc3c4e485679cd77d7069ea595b2eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830019"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>«\<name1 >' è ambiguo ed è importato dagli spazi dei nomi o tipi\<nome2 >»
 È stato specificato un nome che è ambiguo ed è quindi in conflitto con un altro nome. Il compilatore Visual Basic non dispone di regole di risoluzione dei conflitti. è necessario evitare ambiguità tra nomi manualmente.  
@@ -26,6 +26,7 @@ ms.locfileid: "55254743"
 2.  Specificare un nome completo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Variazione delle componenti cromatiche'
+title: 'Procedura: Variare le componenti cromatiche'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826392"
 ---
-# <a name="how-to-shear-colors"></a>Procedura: Variazione delle componenti cromatiche
+# <a name="how-to-shear-colors"></a>Procedura: Variare le componenti cromatiche
 Inclinazione aumenta o diminuisce di un componente di colore in modo proporzionale a un altro componente di colore. Si consideri ad esempio la trasformazione in cui il componente rossa viene incrementato della metà di quella del valore del componente blu. In una trasformazione di questo tipo, il colore (0,2, 0.5, 1) diventerebbe (0,7, 0.5, 1). Il nuovo componente rossa è la 0.2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente si costruisce un <xref:System.Drawing.Image> oggetto Colorbars4 nel file. Il codice applica quindi la trasformazione di inclinazione descritta nel paragrafo precedente per ogni pixel nell'immagine.  
   
- Nella figura seguente mostra l'immagine originale a sinistra e l'immagine tagliata a destra.  
+ Nella figura seguente mostra l'immagine originale a sinistra e l'immagine tagliata a destra: 
   
- ![Cromatiche](./media/colortrans6.png "colortrans6")  
+ ![Due dei quadrati con strisce colorato side-by-side che illustra l'immagine originale e l'immagine tagliata.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  La tabella seguente elenca i vettori di colore per le quattro barre prima e dopo la trasformazione di inclinazione.  
   

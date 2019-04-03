@@ -8,12 +8,12 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542197"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823363"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Procedura: Fare riferimento all'istanza corrente di un oggetto (Visual Basic)
 Il *istanza corrente* di un oggetto è l'istanza in cui è attualmente in esecuzione il codice.  
@@ -32,6 +32,7 @@ Il *istanza corrente* di un oggetto è l'istanza in cui è attualmente in esecuz
      Sebbene `Me` si comporta come un oggetto variabile, non è possibile dichiararla o qualsiasi elemento assegnare ad esso. `Me` fa sempre riferimento all'istanza corrente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Assegnazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

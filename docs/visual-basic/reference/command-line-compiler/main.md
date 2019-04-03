@@ -1,19 +1,19 @@
 ---
-title: -principale
+title: -main
 ms.date: 03/13/2018
 helpviewer_keywords:
 - main compiler option [Visual Basic]
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: e1e636da1d277f80f58268b24b69802006eb8315
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814042"
 ---
-# <a name="-main"></a>-principale
+# <a name="-main"></a>-main
 Specifica la classe o il modulo che contiene la procedura `Sub Main`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -53,6 +53,7 @@ vbc t2.vb t3.vb -main:Test2
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -2,17 +2,17 @@
 title: Analisi XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
-ms.openlocfilehash: 4f6cb9ad943214f04ecd997656f198ab4b095524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec9df29c239d2780b4fc13bb101a22c54eb43da5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548846"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832756"
 ---
 # <a name="parsing-xml-visual-basic"></a>Analisi XML (Visual Basic)
 Negli argomenti di questa sezione viene descritto come analizzare documenti XML.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -24,4 +24,5 @@ Negli argomenti di questa sezione viene descritto come analizzare documenti XML.
 |[Procedura: Stream frammenti XML da un XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Viene illustrato come eseguire il flusso di frammenti XML usando un oggetto <xref:System.Xml.XmlReader>.<br /><br /> Quando è necessario elaborare file XML grandi in modo arbitrario, potrebbe risultare impossibile caricare in memoria l'intero albero XML. In tali casi, è possibile eseguire il flusso di frammenti XML.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

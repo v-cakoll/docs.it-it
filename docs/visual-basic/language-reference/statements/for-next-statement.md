@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370306"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826327"
 ---
 # <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
 Ripete un gruppo di istruzioni un numero di volte specificato.  
@@ -130,10 +130,10 @@ Next [ counter ]
   
 |È `datatype` presente?|È `counter` già definito?|Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intera `For...Next` ciclo)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|No|Sì|No, perché `counter` è già definito. Se l'ambito di `counter` non sono locali rispetto alla procedura, viene generato un avviso in fase di compilazione.|  
+|No|Yes|No, perché `counter` è già definito. Se l'ambito di `counter` non sono locali rispetto alla procedura, viene generato un avviso in fase di compilazione.|  
 |No|No|Sì. Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni. Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Sì|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale rispetto alla procedura, si verifica un errore in fase di compilazione.|  
-|Sì|No|Sì.|  
+|Yes|Yes|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale rispetto alla procedura, si verifica un errore in fase di compilazione.|  
+|Yes|No|Sì.|  
   
  Tipo di dati di `counter` determina il tipo dell'iterazione, che deve essere uno dei tipi seguenti:  
   
@@ -173,6 +173,7 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Collections.Generic.List%601>
 - [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Istruzione While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

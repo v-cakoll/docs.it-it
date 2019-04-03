@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 9794c13e7bcb924bc52493dc3aad8a94eb231518
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582377"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824858"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ in Visual Basic
 Questa sezione contiene panoramiche, esempi e informazioni di base utili per comprendere e usare Visual Basic e [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -46,6 +46,7 @@ Questa sezione contiene panoramiche, esempi e informazioni di base utili per com
  Viene fornito un esempio di come restituire i risultati di una query LINQ come tipo specifico anziché come tipo anonimo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [Panoramica di LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)

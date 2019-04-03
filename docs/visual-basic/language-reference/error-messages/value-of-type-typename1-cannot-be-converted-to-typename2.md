@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261243"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829024"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'
 Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'. Mancata corrispondenza del tipo potrebbe essere dovuto a combinare un riferimento al file con un riferimento progetto all'assembly '\<assemblyname >'. Provare a sostituire il riferimento file a '\<percorsofile >' nel progetto '\<projectname1 >' con un riferimento al progetto '\<projectname2 >'.  
@@ -60,6 +60,6 @@ Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'.
 -   Modificare il riferimento file a un riferimento al progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)
-

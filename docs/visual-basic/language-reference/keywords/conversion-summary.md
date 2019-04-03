@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a2394af7fc01f00a60900ed705fd1189959a50e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94fa8c5f648211252b59d3f530f6b651566a7136
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703173"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836688"
 ---
 # <a name="conversion-summary-visual-basic"></a>Riepilogo della conversione (Visual Basic)
 Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  
@@ -32,5 +32,6 @@ Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime son
 |Converte l'ora per il numero di serie.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)
 - [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965905"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818605"
 ---
 # <a name="value-comparisons-visual-basic"></a>Confronto di valori (Visual Basic)
 Gli operatori di confronto sono utilizzabile per creare espressioni che confrontano i valori delle variabili numeriche. Queste espressioni restituiscono un `Boolean` valore basato sul fatto che il confronto è true o false. Esempi di un'espressione di questo tipo sono i seguenti.  
@@ -45,6 +45,7 @@ Gli operatori di confronto sono utilizzabile per creare espressioni che confront
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Espressioni booleane](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Operatori ed espressioni](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Operatori di confronto in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

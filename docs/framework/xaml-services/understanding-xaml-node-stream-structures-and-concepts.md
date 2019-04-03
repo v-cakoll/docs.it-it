@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824429"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 
@@ -70,7 +70,7 @@ while (xxr.Read()) {
 }
 ```
 
-Questo esempio di base di un ciclo di nodi XAML del percorso di caricamento connette in modo trasparente il reader XAML e il writer XAML, in modo analogo a quanto avviene usando <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Ma questa struttura di base viene quindi espansa per essere applicata allo scenario di lettura o scrittura. Ecco alcuni degli scenari possibili: 
+Questo esempio di base di un ciclo di nodi XAML del percorso di caricamento connette in modo trasparente il reader XAML e il writer XAML, in modo analogo a quanto avviene usando <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Ma questa struttura di base viene quindi espansa per essere applicata allo scenario di lettura o scrittura. Ecco alcuni degli scenari possibili:
 
 - Attivare <xref:System.Xaml.XamlXmlReader.NodeType%2A>. Eseguire azioni diverse a seconda del tipo di nodo letto.
 
@@ -218,7 +218,7 @@ L'elenco seguente illustra tutti i casi in cui si prevede che un reader XAML int
 
 - **Contenuto sconosciuto:** Il nome di questo nodo membro è `_UnknownContent`. Nello specifico, si tratta di un oggetto <xref:System.Xaml.XamlDirective>e viene definito nello spazio dei nomi XAML del linguaggio XAML. Questa direttiva viene usata come elemento sentinel per i casi in cui un elemento oggetto XAML include contenuto nel codice XAML di origine, ma non è possibile determinare alcuna proprietà del contenuto nel contesto dello schema XAML attualmente disponibile. È possibile rilevare questo caso in un flusso di nodi XAML controllando la presenza di membri denominati `_UnknownContent`. Se non viene eseguita alcuna altra azione nel flusso di nodi XAML del percorso di caricamento, l'oggetto <xref:System.Xaml.XamlObjectWriter> predefinito genera un'eccezione nel caso di un tentativo di chiamare `WriteEndObject` quando viene rilevato il membro `_UnknownContent` in qualsiasi oggetto. L'oggetto <xref:System.Xaml.XamlXmlWriter> predefinito non genera un'eccezione e tratta il membro come implicito. È possibile ottenere un'entità statica per `_UnknownContent` da <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Proprietà di raccolta per una raccolta:** anche se il tipo CLR di supporto sottostante di una classe di raccolta in uso per XAML dispone in genere di una proprietà denominata dedicata che contiene gli elementi della raccolta, tale proprietà non è nota a un sistema di tipi XAML prima della risoluzione del tipo di supporto. Il flusso di nodi XAML introduce invece un segnaposto `Items` come membro del tipo XAML della raccolta. Nell'implementazione dei servizi XAML di .NET Framework il nome di questo membro/direttiva nel flusso di nodi è `_Items`. È possibile ottenere una costante per questa direttiva da <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Proprietà della raccolta di una raccolta:** Anche se il tipo CLR sottostante di una classe di raccolta che viene usato in genere per XAML dispone di una proprietà denominata dedicata che contiene gli elementi della raccolta, tale proprietà non è nota a un sistema di tipi XAML prima della risoluzione del tipo di supporto. Il flusso di nodi XAML introduce invece un segnaposto `Items` come membro del tipo XAML della raccolta. Nell'implementazione dei servizi XAML di .NET Framework il nome di questo membro/direttiva nel flusso di nodi è `_Items`. È possibile ottenere una costante per questa direttiva da <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     Si noti che un flusso di nodi XAML può contenere una proprietà Items con elementi che non rivelarsi analizzabile basato sulla risoluzione del tipo sottostante e contesto dello schema XAML. Ad esempio,
 

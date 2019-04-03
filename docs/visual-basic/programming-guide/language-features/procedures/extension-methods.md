@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822076"
 ---
 # <a name="extension-methods-visual-basic"></a>Metodi di estensione (Visual Basic)
 I metodi di estensione consentono agli sviluppatori di aggiungere funzionalità personalizzate ai tipi di dati che sono già definiti senza creare un nuovo tipo derivato. I metodi di estensione consentono di scrivere un metodo che può essere chiamato come se fosse un metodo di istanza del tipo esistente.  
@@ -175,6 +175,7 @@ End Module
  Se la precedenza non risolve l'ambiguità, è possibile usare il nome completo per specificare il metodo che si sta chiamando. Se il `Print` metodo nell'esempio precedente viene definito in un modulo denominato `StringExtensions`, specificare il nome completo viene `StringExtensions.Print(example)` invece di `example.Print()`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

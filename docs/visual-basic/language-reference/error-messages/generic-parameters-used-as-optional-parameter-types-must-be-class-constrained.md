@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507161"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813899"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>I parametri generici utilizzati come tipi di parametri facoltativi devono essere vincolati a livello di classe
 Una routine è dichiarata con un parametro facoltativo che usa un parametro di tipo che non sia vincolato a un tipo riferimento.  
@@ -28,6 +28,7 @@ Una routine è dichiarata con un parametro facoltativo che usa un parametro di t
 -   Vincolare il parametro di tipo per accettare solo un tipo riferimento oppure non usarlo per il parametro facoltativo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)
 - [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)

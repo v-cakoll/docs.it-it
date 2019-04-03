@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821504"
 ---
 # <a name="directcast-operator-visual-basic"></a>Operatore DirectCast (Visual Basic)
 Introduce un'operazione di conversione di tipo basata di ereditarietà o implementazione.  
@@ -42,6 +42,7 @@ Introduce un'operazione di conversione di tipo basata di ereditarietà o impleme
  Nell'esempio precedente, digitare il runtime del `q` è `Double`. `CType` ha esito positivo perché `Double` può essere convertito in `Integer`. Tuttavia, il primo `DirectCast` non riesce in fase di esecuzione perché il runtime di tipo di `Double` non ha alcuna relazione di ereditarietà con `Integer`, anche se esiste una conversione. La seconda `DirectCast` ha esito positivo perché esegue la conversione dal tipo <xref:System.Windows.Forms.Form> al tipo <xref:System.Windows.Forms.Control>, da cui <xref:System.Windows.Forms.Form> eredita.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

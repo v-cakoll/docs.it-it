@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: 8159613036942d6c79f50b59a9b24ede02b6e4d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d9c1c1a50f0e3530c842a6058e288b8d2be15f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483588"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832541"
 ---
 # <a name="include-visual-basic"></a>\<include> (Visual Basic)
 Fa riferimento a un altro file che descrive i tipi e membri nel codice sorgente.  
@@ -60,4 +60,5 @@ Fa riferimento a un altro file che descrive i tipi e membri nel codice sorgente.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/index.md)

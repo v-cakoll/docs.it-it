@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 448ca9d52d820029464b75a616dc032a7cc41f59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4fc8ce96caea436b63fe346139e27ec8dd048f10
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979644"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814107"
 ---
 # <a name="-operator-visual-basic"></a>Operatore + (Visual Basic)
 Somma due numeri o restituisce il valore positivo di un'espressione numerica. È anche utilizzabile per concatenare due espressioni di stringa.  
@@ -109,6 +109,7 @@ expression1 + expression2
  Per evitare ambiguità, è consigliabile usare la `&` operatore anziché `+` per la concatenazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatore &](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [Operatori di concatenazione](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [Operatori aritmetici](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

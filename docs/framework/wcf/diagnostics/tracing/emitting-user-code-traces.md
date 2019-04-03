@@ -2,12 +2,12 @@
 title: Creazione di tracce di codice utente
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492664"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831779"
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
 Oltre ad abilitare la traccia nella configurazione per raccogliere dati di strumentazione generati da Windows Communication Foundation (WCF), è possibile creare tracce a livello di programmazione nel codice utente. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  
@@ -126,15 +126,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Visualizzatore di tracce: Creazione utente&#45;tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Elenco delle attività in base all'ora di creazione (riquadro sinistro) e alle relative attività annidate (riquadro superiore destro)  
   
- Se il codice del servizio genera un'eccezione che determina a sua volta la generazione di un'eccezione nel client (ad esempio, quando il client non ha ottenuto la risposta alla richiesta), entrambi i messaggi di errore o di avviso del client e del servizio vengono restituiti nella stessa attività per correlazione diretta. Nel diagramma seguente, il servizio genera un'eccezione indicante "il servizio rifiuta di elaborare la richiesta nel codice utente". Anche il client genera un'eccezione indicante "il server non è riuscito a elaborare la richiesta a causa di un errore interno".  
+ Se il codice del servizio genera un'eccezione che determina a sua volta la generazione di un'eccezione nel client (ad esempio, quando il client non ha ottenuto la risposta alla richiesta), entrambi i messaggi di errore o di avviso del client e del servizio vengono restituiti nella stessa attività per correlazione diretta. Nell'immagine seguente, il servizio genera un'eccezione indicante "il servizio rifiuta di elaborare la richiesta nel codice utente". Anche il client genera un'eccezione indicante "il server non è riuscito a elaborare la richiesta a causa di un errore interno".
+ 
+ Le immagini seguenti viene illustrato che gli errori tra gli endpoint per una determinata richiesta vengono visualizzati nella stessa attività se è stata propagata l'id attività:       
   
- ![Tramite Visualizzatore di tracce per creare l'utente&#45;tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-Se l'ID attività è stato propagato, gli errori verificatisi su endpoint diversi per una determinata richiesta vengono visualizzati nella stessa attività.  
+ ![Screenshot che mostra gli errori tra gli endpoint per una determinata richiesta.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Facendo doppio clic sull'attività Multiply nel riquadro sinistro è possibile visualizzare il grafico seguente, con le tracce relative all'attività Multiply per ogni processo coinvolto. Si può notare un avviso verificatosi inizialmente nel servizio (eccezione generata), seguito da avvisi ed errori nel client in quanto la richiesta non è stata elaborata. Si può pertanto presupporre la relazione di errore causale tra gli endpoint e derivare la causa radice dell'errore.  
+ Facendo doppio clic sull'attività Multiply nel riquadro sinistro è possibile visualizzare il grafico seguente, con le tracce relative all'attività Multiply per ogni processo coinvolto. Si può notare un avviso verificatosi inizialmente nel servizio (eccezione generata), seguito da avvisi ed errori nel client in quanto la richiesta non è stata elaborata. Si può pertanto presupporre la relazione di errore causale tra gli endpoint e derivare la causa radice dell'errore. 
+
+ L'immagine seguente mostra una visualizzazione grafico della correlazione tra errori:    
   
- ![Tramite Visualizzatore di tracce per creare l'utente&#45;tracce di codice](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Visualizzazione grafica della correlazione tra errori  
+ ![Screenshot che mostra la visualizzazione del grafico della correlazione degli errori.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Per ottenere le tracce precedenti è stato impostato `ActivityTracing` per le origini di traccia dell'utente e `propagateActivity=true` per l'origine di traccia `System.ServiceModel`. Non è stato impostato `ActivityTracing` per l'origine di traccia `System.ServiceModel` per attivare la propagazione di attività codice utente-codice utente. (Quando la traccia attività ServiceModel è attivata, l'ID attività definito nel client non viene propagato fino al codice utente del servizio; I trasferimenti, tuttavia, mettere in correlazione le attività di codice utente di client e servizio per le attività WCF intermedi.)  
   
