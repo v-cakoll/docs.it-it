@@ -2,18 +2,18 @@
 title: 'Procedura: Popolare un albero XML dal File System (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559788"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820835"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="99cdd-102">Procedura: Popolare un albero XML dal File System (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99cdd-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
-<span data-ttu-id="99cdd-103">Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico.</span><span class="sxs-lookup"><span data-stu-id="99cdd-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="99cdd-104">È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla.</span><span class="sxs-lookup"><span data-stu-id="99cdd-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="99cdd-105">In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti.</span><span class="sxs-lookup"><span data-stu-id="99cdd-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="99cdd-106">L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.</span><span class="sxs-lookup"><span data-stu-id="99cdd-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a><span data-ttu-id="af7f7-102">Procedura: Popolare un albero XML dal File System (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af7f7-102">How to: Populate an XML Tree from the File System (Visual Basic)</span></span>
+<span data-ttu-id="af7f7-103">Un'applicazione utile e comune degli alberi XML è data dall'utilizzo come archivio dati nome/valore gerarchico.</span><span class="sxs-lookup"><span data-stu-id="af7f7-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="af7f7-104">È possibile popolare un albero XML con dati gerarchici e quindi eseguirvi query, trasformarla e, se necessario, serializzarla.</span><span class="sxs-lookup"><span data-stu-id="af7f7-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="af7f7-105">In questo scenario di utilizzo molte delle caratteristiche semantiche specifiche di XML, quali gli spazi dei nomi e il comportamento degli spazi vuoti, non sono rilevanti.</span><span class="sxs-lookup"><span data-stu-id="af7f7-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="af7f7-106">L'albero XML viene invece usato come piccolo database gerarchico in memoria per singolo utente.</span><span class="sxs-lookup"><span data-stu-id="af7f7-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99cdd-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="99cdd-107">Example</span></span>  
- <span data-ttu-id="99cdd-108">Nell'esempio seguente un albero XML viene popolato dal file system locale tramite la ricorsione.</span><span class="sxs-lookup"><span data-stu-id="99cdd-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="99cdd-109">Viene quindi eseguita una query sull'albero per calcolare le dimensioni totali di tutti i file dell'albero.</span><span class="sxs-lookup"><span data-stu-id="99cdd-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="af7f7-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="af7f7-107">Example</span></span>  
+ <span data-ttu-id="af7f7-108">Nell'esempio seguente un albero XML viene popolato dal file system locale tramite la ricorsione.</span><span class="sxs-lookup"><span data-stu-id="af7f7-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="af7f7-109">Viene quindi eseguita una query sull'albero per calcolare le dimensioni totali di tutti i file dell'albero.</span><span class="sxs-lookup"><span data-stu-id="af7f7-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```vb  
 Module Module1  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="99cdd-110">In questo esempio viene prodotto un output simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="99cdd-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="af7f7-110">In questo esempio viene prodotto un output simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="af7f7-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -114,5 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="99cdd-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99cdd-111">See also</span></span>
-- [<span data-ttu-id="99cdd-112">Query tecniche avanzate (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99cdd-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="af7f7-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af7f7-111">See also</span></span>
+
+- [<span data-ttu-id="af7f7-112">Query tecniche avanzate (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af7f7-112">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
