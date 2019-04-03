@@ -5,32 +5,33 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 9d782539ca492946de4ebe7f8afcba25b72c9317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829980"
 ---
-# <a name="logicalbitwise-operators-visual-basic"></a><span data-ttu-id="7f2de-102">Operatori logici e bit per bit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f2de-102">Logical/Bitwise Operators (Visual Basic)</span></span>
-<span data-ttu-id="7f2de-103">Di seguito sono gli operatori logici e bit per bit definiti in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7f2de-103">The following are the logical/bitwise operators defined in Visual Basic.</span></span>  
+# <a name="logicalbitwise-operators-visual-basic"></a><span data-ttu-id="02f9a-102">Operatori logici e bit per bit (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="02f9a-102">Logical/Bitwise Operators (Visual Basic)</span></span>
+<span data-ttu-id="02f9a-103">Di seguito sono gli operatori logici e bit per bit definiti in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="02f9a-103">The following are the logical/bitwise operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="7f2de-104">Operatore And</span><span class="sxs-lookup"><span data-stu-id="7f2de-104">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [<span data-ttu-id="02f9a-104">Operatore And</span><span class="sxs-lookup"><span data-stu-id="02f9a-104">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
   
- [<span data-ttu-id="7f2de-105">Operatore Not</span><span class="sxs-lookup"><span data-stu-id="7f2de-105">Not Operator</span></span>](../../../visual-basic/language-reference/operators/not-operator.md)  
+ [<span data-ttu-id="02f9a-105">Operatore Not</span><span class="sxs-lookup"><span data-stu-id="02f9a-105">Not Operator</span></span>](../../../visual-basic/language-reference/operators/not-operator.md)  
   
- [<span data-ttu-id="7f2de-106">Operatore Or</span><span class="sxs-lookup"><span data-stu-id="7f2de-106">Or Operator</span></span>](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [<span data-ttu-id="02f9a-106">Operatore Or</span><span class="sxs-lookup"><span data-stu-id="02f9a-106">Or Operator</span></span>](../../../visual-basic/language-reference/operators/or-operator.md)  
   
- [<span data-ttu-id="7f2de-107">Operatore Xor</span><span class="sxs-lookup"><span data-stu-id="7f2de-107">Xor Operator</span></span>](../../../visual-basic/language-reference/operators/xor-operator.md)  
+ [<span data-ttu-id="02f9a-107">Operatore Xor</span><span class="sxs-lookup"><span data-stu-id="02f9a-107">Xor Operator</span></span>](../../../visual-basic/language-reference/operators/xor-operator.md)  
   
- [<span data-ttu-id="7f2de-108">Operatore AndAlso</span><span class="sxs-lookup"><span data-stu-id="7f2de-108">AndAlso Operator</span></span>](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [<span data-ttu-id="02f9a-108">Operatore AndAlso</span><span class="sxs-lookup"><span data-stu-id="02f9a-108">AndAlso Operator</span></span>](../../../visual-basic/language-reference/operators/andalso-operator.md)  
   
- [<span data-ttu-id="7f2de-109">Operatore OrElse</span><span class="sxs-lookup"><span data-stu-id="7f2de-109">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [<span data-ttu-id="02f9a-109">Operatore OrElse</span><span class="sxs-lookup"><span data-stu-id="02f9a-109">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)  
   
- [<span data-ttu-id="7f2de-110">Operatore IsFalse</span><span class="sxs-lookup"><span data-stu-id="7f2de-110">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [<span data-ttu-id="02f9a-110">Operatore IsFalse</span><span class="sxs-lookup"><span data-stu-id="02f9a-110">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
   
- [<span data-ttu-id="7f2de-111">Operatore IsTrue</span><span class="sxs-lookup"><span data-stu-id="7f2de-111">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [<span data-ttu-id="02f9a-111">Operatore IsTrue</span><span class="sxs-lookup"><span data-stu-id="02f9a-111">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7f2de-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f2de-112">See also</span></span>
-- [<span data-ttu-id="7f2de-113">Precedenza tra gli operatori in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7f2de-113">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="7f2de-114">Operatori logici e bit per bit in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7f2de-114">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="02f9a-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="02f9a-112">See also</span></span>
+
+- [<span data-ttu-id="02f9a-113">Precedenza tra gli operatori in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02f9a-113">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="02f9a-114">Operatori logici e bit per bit in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="02f9a-114">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
