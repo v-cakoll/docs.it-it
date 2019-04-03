@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 > [!NOTE]
->  Le opzioni della riga di comando di Tlbimp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Pertanto, **/n** equivale a **/nologo** e **/ou:***outfile.dll* equivale a **/out:** *outfile.dll*.  
+>  Le opzioni della riga di comando di Tlbimp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Pertanto, **/n** equivale a **/nologo** e **/ou:** *outfile.dll* equivale a **/out:** *outfile.dll*.  
   
 ## <a name="remarks"></a>Osservazioni  
  Tlbimp.exe converte un'intera libreria dei tipi in blocco. Non è possibile utilizzare lo strumento per generare informazioni sui tipi per un subset dei tipi definiti in una singola libreria dei tipi.  
