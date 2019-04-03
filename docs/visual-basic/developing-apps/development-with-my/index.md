@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720223"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830318"
 ---
 # <a name="development-with-my-visual-basic"></a>Sviluppo con My (Visual Basic)
 Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni che migliorano la produttività e aumentano la facilità d'uso, garantendo al tempo stesso maggiore potenza. Una di queste funzionalità, denominata `My`, consente di accedere a informazioni e istanze di oggetti predefinite correlate all'applicazione e al relativo ambiente di run-time. Queste informazioni sono organizzate in un formato riconoscibile tramite IntelliSense e delineato in modo logico in base all'uso.  
@@ -23,7 +23,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
   
  Questa tabella mostra gli oggetti `My` di primo livello e le relazioni tra tali oggetti.  
   
- ![Modello a oggetti per My](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![Il diagramma mostra il modello a oggetti per My.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Esecuzione di attività mediante My.Application, My.Computer e My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
@@ -42,6 +42,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

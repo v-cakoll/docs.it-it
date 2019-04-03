@@ -2,12 +2,12 @@
 title: Tipi conosciuti
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 0f9d24f469feb3e2cc5c58cd73f671ac4837f725
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d43cdd9fff58a7918aa98616bb4195183cf3be48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717142"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828370"
 ---
 # <a name="known-types"></a>Tipi conosciuti
 Questo esempio illustra come specificare informazioni sui tipi derivati in un contratto dati. I contratti dati consentono di passare dati strutturati a e da i servizi. Nella programmazione orientata a oggetti, un tipo che eredita da un altro tipo può essere utilizzato al posto del tipo originale. Nella programmazione orientata al servizio, vengono comunicati schemi piuttosto che tipi e, pertanto, la relazione tra tipi non viene mantenuta. L'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> consente alle informazioni sui tipi derivati di essere incluse nel contratto dati. Se questo meccanismo non viene utilizzato, un tipo derivato non può essere inviato o ricevuto se è atteso un tipo base.  
@@ -171,4 +171,3 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## <a name="see-also"></a>Vedere anche

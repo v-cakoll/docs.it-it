@@ -1,19 +1,19 @@
 ---
-title: "Procedura dettagliata: Creazione di un'applicazione basata su Windows accessibile"
+title: "Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823467"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata su Windows accessibile
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  
   
  Questa procedura dettagliata illustra i cinque requisiti di accessibilità per il logo Certified for Windows. In base a questi requisiti, un'applicazione accessibile deve:  
@@ -55,9 +55,9 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
   
 -   Assicurarsi che tutti i controlli etichetta che descrivono un controllo TextBox precedano immediatamente il controllo TextBox nell'ordine di tabulazione.  
   
--   Aggiungere un tasto di scelta, usando il carattere "&", alla proprietà <xref:System.Windows.Forms.Control.Text%2A> di ogni controllo accessibile all'utente.  
+-   Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà di qualsiasi controllo potrebbe essere necessario l'utente a cui passare.  
   
--   Aggiungere un tasto di scelta, usando il carattere "&", alla proprietà <xref:System.Windows.Forms.Control.Text%2A> dell'etichetta che precede un controllo accessibile all'utente. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.  
+-   Aggiungere una chiave di accesso, usando il carattere "&", al <xref:System.Windows.Forms.Control.Text%2A> proprietà dell'etichetta che precede un controllo che l'utente desidera spostarsi. Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> delle etichette su `true`, in modo che lo stato attivo venga impostato sul controllo successivo nell'ordine di tabulazione quando l'utente preme il tasto di scelta.  
   
 -   Aggiungere tasti di scelta a tutte le voci di menu.  
   
@@ -65,7 +65,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
   
 -   Aggiungere i controlli al form e impostare le proprietà come descritto di seguito. Vedere l'immagine alla fine della tabella per un modello di come disporre i controlli nel form.  
   
-    |Oggetto|Proprietà|Valore|  
+    |Object|Proprietà|Value|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Order form|  
     ||AccessibleName|Order form|  
@@ -74,8 +74,8 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     |PictureBox|Nome|logo|  
     ||AccessibleDescription|A slice of pizza|  
     ||AccessibleName|Company logo|  
-    ||Immagine|Un'icona o una bitmap|  
-    |Etichetta|Nome|companyLabel|  
+    ||Image|Un'icona o una bitmap|  
+    |Label|Nome|companyLabel|  
     ||Testo|Good Pizza|  
     ||TabIndex|1|  
     ||AccessibleDescription|Company name|  
@@ -83,7 +83,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     ||Backcolor|Blu|  
     ||Forecolor|Giallo|  
     ||Dimensione carattere|18|  
-    |Etichetta|Nome|customerLabel|  
+    |Label|Nome|customerLabel|  
     ||Testo|&Name|  
     ||TabIndex|2|  
     ||AccessibleDescription|Customer name label|  
@@ -110,7 +110,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     ||TabIndex|1|  
     ||AccessibleDescription|Large pizza|  
     ||AccessibleName|Large pizza|  
-    |Etichetta|Nome|toppingsLabel|  
+    |Label|Nome|toppingsLabel|  
     ||Testo|&Toppings ($0.75 each)|  
     ||TabIndex|5|  
     ||AccessibleDescription|Toppings label|  
@@ -121,12 +121,12 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     ||AccessibleDescription|Available toppings|  
     ||AccessibleName|Available toppings|  
     ||Elementi|Pepperoni, Sausage, Mushrooms|  
-    |Pulsante|Nome|order|  
+    |Button|Nome|order|  
     ||Testo|&Ordina|  
     ||TabIndex|7|  
     ||AccessibleDescription|Total the order|  
     ||AccessibleName|Total order|  
-    |Pulsante|Nome|cancel|  
+    |Button|Nome|cancel|  
     ||Testo|An&nulla|  
     ||TabIndex|8|  
     ||AccessibleDescription|Cancel the order|  
@@ -135,10 +135,12 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     |MenuItem|Nome|fileCommands|  
     ||Testo|&File|  
     |MenuItem|Nome|exitApp|  
-    ||Testo|&Esci|  
-  
-     ![Pizza Order Form](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-Il form sarà simile al seguente:  
+    ||Testo|&Esci|
+    
+      Il modulo avrà un aspetto simile al seguente:
+    
+      ![Il modulo d'ordine pizza con una selezione nella casella di testo, dimensioni e condimenti nome.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Supporto della modalità contrasto elevato  
  La modalità contrasto elevato è un'impostazione di sistema di Windows che migliora la leggibilità usando colori a contrasto e dimensioni del carattere che agevolano gli utenti con problemi di vista. Il <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> proprietà viene fornita per determinare se è impostata la modalità contrasto elevato.  

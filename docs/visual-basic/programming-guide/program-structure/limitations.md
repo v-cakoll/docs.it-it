@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596358"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824910"
 ---
 # <a name="visual-basic-limitations"></a>Limitazioni di Visual Basic
 Le versioni precedenti di Visual Basic applicati limiti nel codice, ad esempio la lunghezza dei nomi di variabili, il numero di variabili nei moduli e le dimensioni del modulo è consentita. In Visual Basic .NET, queste restrizioni sono stati ridotti, fornendo una maggiore libertà nella scrittura e il codice.  
@@ -24,7 +24,7 @@ Le versioni precedenti di Visual Basic applicati limiti nel codice, ad esempio l
   
 -   **Lunghezza del nome.** È presente un numero massimo di caratteri per il nome di ogni elemento di programmazione dichiarato. Questo limite si applica a un'intera stringa di qualificazione se il nome dell'elemento è qualificato. Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
--   **Lunghezza riga.** È presente un massimo di 65535 caratteri in una riga fisica del codice sorgente. La riga del codice sorgente logico può essere più lunga se si usano caratteri di continuazione di riga. Vedere [Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+-   **Lunghezza riga.** È presente un massimo di 65535 caratteri in una riga fisica del codice sorgente. La riga del codice sorgente logico può essere più lunga se si usano caratteri di continuazione di riga. Vedere [How to: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
 -   **Dimensioni della matrice.** È presente un numero massimo delle dimensioni che è possibile dichiarare una matrice. Questo limita il numero degli indici è possibile usare per specificare un elemento della matrice. Visualizzare [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
@@ -33,5 +33,6 @@ Le versioni precedenti di Visual Basic applicati limiti nel codice, ad esempio l
 -   **Lunghezza della stringa di ambiente.** È presente un massimo di 32768 caratteri per qualsiasi stringa di ambiente usato come argomento della riga di comando. Si tratta di una limitazione in tutte le piattaforme.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Convenzioni di denominazione di Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

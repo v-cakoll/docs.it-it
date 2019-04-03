@@ -9,31 +9,32 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703309"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834231"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Cenni preliminari sul controllo BindingNavigator (Windows Form)
 È possibile usare il controllo <xref:System.Windows.Forms.BindingNavigator> per fornire agli utenti un metodo standard per la ricerca e la modifica dei dati in un Windows Form. <xref:System.Windows.Forms.BindingNavigator> viene spesso usato con il componente <xref:System.Windows.Forms.BindingSource> per consentire agli utenti di spostarsi tra i vari record di dati in un form e apportare modifiche ai record.  
   
 ## <a name="how-the-bindingnavigator-works"></a>Funzionamento di BindingNavigator  
- Il controllo <xref:System.Windows.Forms.BindingNavigator> è composto da un <xref:System.Windows.Forms.ToolStrip> con una serie di oggetti <xref:System.Windows.Forms.ToolStripItem> per la maggior parte delle azioni correlate ai dati: aggiunta, eliminazione ed esplorazione. Per impostazione predefinita, il controllo <xref:System.Windows.Forms.BindingNavigator> contiene questi pulsanti standard. Nell'immagine riportata di seguito è illustrato il controllo <xref:System.Windows.Forms.BindingNavigator> in un form.  
+
+ Il controllo <xref:System.Windows.Forms.BindingNavigator> è composto da un <xref:System.Windows.Forms.ToolStrip> con una serie di oggetti <xref:System.Windows.Forms.ToolStripItem> per la maggior parte delle azioni correlate ai dati: aggiunta, eliminazione ed esplorazione. Per impostazione predefinita, il controllo <xref:System.Windows.Forms.BindingNavigator> contiene questi pulsanti standard. La schermata seguente mostra il <xref:System.Windows.Forms.BindingNavigator> controllo in un form:
   
- ![Controllo BindingNavigator](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![Screenshot che mostra il controllo BindingNavigator.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  La tabella seguente elenca i vari controlli con le relative funzioni.  
   
-|Controllo|Funzione|  
+|Control|Funzione|  
 |-------------|--------------|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Inserisce una nuova riga nell'origine dati sottostante.|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Elimina la riga corrente dall'origine dati sottostante.|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|Passa al primo elemento nell'origine dati sottostante.|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>|Passa all'ultimo elemento nell'origine dati sottostante.|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|Passa all'elemento successivo nell'origine dati sottostante.|  
-|Pulsante <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|Passa all'elemento precedente nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Pulsante|Inserisce una nuova riga nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Pulsante|Elimina la riga corrente dall'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Pulsante|Passa al primo elemento nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Pulsante|Passa all'ultimo elemento nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Pulsante|Passa all'elemento successivo nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Pulsante|Passa all'elemento precedente nell'origine dati sottostante.|  
 |Casella di testo <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Restituisce la posizione corrente nell'origine dati sottostante.|  
 |Casella di testo <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Restituisce il numero totale di elementi nell'origine dati sottostante.|  
   

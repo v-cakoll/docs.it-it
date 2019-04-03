@@ -11,12 +11,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 9aa3219cb613082545c0a417ed6972bb51c8815f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4de6ed4436f6a1769d178508210ed20e0162f647
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822882"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Procedura: Filtrare i risultati della Query utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query.  
@@ -78,6 +78,7 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
      [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Query](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

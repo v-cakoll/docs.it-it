@@ -2,12 +2,12 @@
 title: Ambito degli spazi dei nomi predefinito in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527016"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836714"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Ambito degli spazi dei nomi predefinito in Visual Basic
 Gli spazi dei nomi rappresentati nell'albero XML non sono inclusi nell'ambito delle query. Se il codice XML è incluso in uno spazio dei nomi predefinito, è comunque necessario dichiarare una variabile <xref:System.Xml.Linq.XNamespace> e combinarla con il nome locale per creare un nome completo da usare nella query.  
@@ -100,4 +100,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634167"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836935"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensioni di matrice in Visual Basic
 Oggetto *dimensione* è una direzione in cui è possibile modificare la specifica di elementi della matrice. Matrice contenente le vendite totali per ogni giorno del mese ha una dimensione (il giorno del mese). Matrice contenente le vendite totali per reparto per ciascun giorno del mese ha due dimensioni (il numero di reparto e il giorno del mese). Il numero di dimensioni è una matrice viene chiamato relativa *rank*.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  È possibile creare una matrice senza utilizzare il `Dim` istruzione o il `New` clausola. Ad esempio, è possibile chiamare il <xref:System.Array.CreateInstance%2A> metodo o un altro componente può passare al codice una matrice creata in questo modo. Ad esempio una matrice può avere un limite inferiore diverso da 0. È sempre possibile verificare il limite inferiore di una dimensione utilizzando la <xref:System.Array.GetLowerBound%2A> metodo o il `LBound` (funzione).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

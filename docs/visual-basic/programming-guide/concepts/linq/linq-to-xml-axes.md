@@ -2,19 +2,19 @@
 title: Assi LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-ms.openlocfilehash: 2b785dd43feece816675d36064b2b4218ab94cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a04c15357b5630de06dc0743523e5a98c91745e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684892"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831995"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>Assi LINQ to XML (Visual Basic)
 Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML, è possibile eseguire query su di essa per cercare elementi e attributi e recuperarne i valori.  
   
- Prima di scrivere eventuali query, è necessario conoscere gli assi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Esistono due tipi di metodi dell'asse: In primo luogo, sono disponibili i metodi che vengono chiamati su un unico <xref:System.Xml.Linq.XElement> oggetto <xref:System.Xml.Linq.XDocument> oggetto, o <xref:System.Xml.Linq.XNode> oggetto. Questi metodi operano su un unico oggetto e restituiscono una raccolta di oggetti <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> o <xref:System.Xml.Linq.XNode>. Il secondo tipo include i metodi di estensione che operano su raccolte e restituiscono raccolte. I metodi di estensione enumerano la raccolta di origine, chiamano il metodo dell'asse appropriato su ogni elemento della raccolta e concatenano i risultati.  
+ Prima di scrivere eventuali query, è necessario conoscere gli assi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Sono disponibili due tipi di metodi per l'asse. Il primo tipo include i metodi che vengono chiamati su un unico oggetto <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> o <xref:System.Xml.Linq.XNode>. Questi metodi operano su un unico oggetto e restituiscono una raccolta di oggetti <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> o <xref:System.Xml.Linq.XNode>. Il secondo tipo include i metodi di estensione che operano su raccolte e restituiscono raccolte. I metodi di estensione enumerano la raccolta di origine, chiamano il metodo dell'asse appropriato su ogni elemento della raccolta e concatenano i risultati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -31,4 +31,5 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
 |[Assi integrati nel linguaggio in Visual Basic (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Vengono riepilogati gli assi integrati di Visual Basic.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Guida per programmatori (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

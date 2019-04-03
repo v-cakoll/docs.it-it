@@ -2,12 +2,12 @@
 title: 'Procedura: Trasformare la forma di un albero XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: c3fb1cd0995597be6c5108832750b6695d196b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 067bf56b8dff994080ba78147d992b97a56867cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833661"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Procedura: Trasformare la forma di un albero XML (Visual Basic)
 Per *forma* di un documento XML si intendono i relativi nomi di elemento, nomi di attributi, nonché le caratteristiche della relativa gerarchia.  
@@ -23,7 +23,7 @@ Per *forma* di un documento XML si intendono i relativi nomi di elemento, nomi d
   
  Il documento XML di origine di questo esempio include un elemento `Customers` sotto l'elemento `Root` che contiene tutti i clienti. Include inoltre un elemento `Orders` sotto l'elemento `Root` che contiene tutti gli ordini. In questo esempio viene creata un nuovo albero XML in cui gli ordini relativi a ciascun cliente sono contenuti in un elemento `Orders` all'interno dell'elemento `Customer`. Il documento originale include inoltre nell'elemento `CustomerID` un elemento `Order` che verrà rimosso dal documento modificato.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -94,7 +94,7 @@ Console.WriteLine(newCustOrd)
   
  Il codice chiama `ConvertAddress` che restituisce un elenco di oggetti <xref:System.Xml.Linq.XElement>. L'argomento del metodo è una query che determina l'elemento complesso `Address` in cui il valore dell'attributo `Type` è `"Shipping"`.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Ordine di acquisto tipico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: tipico ordine di acquisto (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -143,4 +143,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

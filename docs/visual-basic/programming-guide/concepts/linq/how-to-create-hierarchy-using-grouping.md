@@ -2,12 +2,12 @@
 title: 'Procedura: Creare una gerarchia tramite raggruppamento (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822895"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Procedura: Creare una gerarchia tramite raggruppamento (Visual Basic)
 In questo esempio viene illustrato come raggruppare dati e quindi generare codice XML basato sul raggruppamento.  
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come raggruppare dati e quindi generare codic
 ## <a name="example"></a>Esempio  
  In questo esempio vengono prima raggruppati i dati in base a una categoria, quindi viene generato un nuovo file XML in cui la gerarchia XML riflette il raggruppamento.  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -80,4 +80,5 @@ Console.WriteLine(newData)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query tecniche avanzate (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

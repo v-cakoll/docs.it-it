@@ -2,41 +2,47 @@
 title: Riepilogo dei tipi di dati (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Boolean data type [Visual Basic], supported types in Visual Basic'
-  - 'storage [Visual Basic], order of storage'
-  - 'data types [Visual Basic], Visual Basic'
-  - 'Single data type [Visual Basic], supported types in Visual Basic'
-  - 'notation [Visual Basic], scientific'
-  - 'memory requirements, data types'
-  - 'user-defined data types [Visual Basic], Visual Basic'
-  - 'Date data type [Visual Basic], Visual Basic'
-  - 'Visual Basic, data types'
-  - 'storage [Visual Basic], allocation'
-  - 'Integer data type [Visual Basic], Visual Basic data types'
-  - 'storage [Visual Basic], space'
-  - 'Variant data types [Visual Basic], supported types in Visual Basic'
-  - 'Char data type [Visual Basic], Visual Basic data types'
-  - 'intrinsic data types [Visual Basic]'
-  - 'memory consumption [Visual Basic], data types'
-  - single-precision numbers
-  - 'data types [Visual Basic], order of storage'
-  - 'Long data type [Visual Basic], supported types in Visual Basic'
-  - 'String data type [Visual Basic], Visual Basic data types'
-  - 'storage order, data types'
-  - 'StructLayoutAttribute class, Visual Basic data type storage'
-  - scientific notation
-  - 'Double data type [Visual Basic], Visual Basic data types'
-  - 'Byte data type [Visual Basic], Visual Basic data types'
-  - 'Object data type [Visual Basic], supported types in Visual Basic'
-  - 'data types [Visual Basic], storage allocation'
-  - double-precision numbers
-  - 'data types [Visual Basic], summary'
-  - 'dates [Visual Basic], data types'
-  - 'strings [Visual Basic], data types'
-  - memory consumption
-  - 'storage order, controlling in Visual Basic'
-  - 'data types [Visual Basic], memory requirements'
+- Boolean data type [Visual Basic], supported types in Visual Basic
+- storage [Visual Basic], order of storage
+- data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], supported types in Visual Basic
+- notation [Visual Basic], scientific
+- memory requirements, data types
+- user-defined data types [Visual Basic], Visual Basic
+- Date data type [Visual Basic], Visual Basic
+- Visual Basic, data types
+- storage [Visual Basic], allocation
+- Integer data type [Visual Basic], Visual Basic data types
+- storage [Visual Basic], space
+- Variant data types [Visual Basic], supported types in Visual Basic
+- Char data type [Visual Basic], Visual Basic data types
+- intrinsic data types [Visual Basic]
+- memory consumption [Visual Basic], data types
+- single-precision numbers
+- data types [Visual Basic], order of storage
+- Long data type [Visual Basic], supported types in Visual Basic
+- String data type [Visual Basic], Visual Basic data types
+- storage order, data types
+- StructLayoutAttribute class, Visual Basic data type storage
+- scientific notation
+- Double data type [Visual Basic], Visual Basic data types
+- Byte data type [Visual Basic], Visual Basic data types
+- Object data type [Visual Basic], supported types in Visual Basic
+- data types [Visual Basic], storage allocation
+- double-precision numbers
+- data types [Visual Basic], summary
+- dates [Visual Basic], data types
+- strings [Visual Basic], data types
+- memory consumption
+- storage order, controlling in Visual Basic
+- data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
+ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821972"
 ---
 # <a name="data-type-summary-visual-basic"></a>Riepilogo dei tipi di dati (Visual Basic)
 Nella tabella seguente illustra i tipi di dati di Visual Basic, i tipi common language runtime supporto, l'allocazione della memoria nominali e relativi intervalli di valori.  
@@ -86,6 +92,7 @@ Nella tabella seguente illustra i tipi di dati di Visual Basic, i tipi common la
  Un `Object` che fa riferimento a tutti i dati elementari o compositi di tipo Usa 4 byte oltre ai dati contenuti nel tipo di dati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

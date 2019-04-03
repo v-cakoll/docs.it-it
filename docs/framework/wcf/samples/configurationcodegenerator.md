@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: eb547c89dc5d4af9330a6881d64f433de9bdad94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669081"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821933"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator è un strumento che consente di esporre le implementazioni del canale personalizzate nel sistema di configurazione. In questo modo gli utenti del canale personalizzato possono configurare il canale utilizzando un file con estensione config nello stesso modo in cui configurerebbero un'associazione fornita dal sistema, ad esempio `NetTcpBinding`, o un'associazione personalizzata utilizzando `TcpTransportBindingElement`.  
@@ -50,4 +50,3 @@ ConfigurationCodeGenerator è un strumento che consente di esporre le implementa
   
      Il file SampleConfig.xml contiene il codice di configurazione che è necessario aggiungere al file di configurazione che registra i gestori definiti nel passaggio 1 o 2 precedente.  
   
-## <a name="see-also"></a>Vedere anche

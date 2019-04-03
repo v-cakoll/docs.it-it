@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824624"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Nome \<membername > non è conforme a CLS
 Un assembly è contrassegnato come `<CLSCompliant(True)>` , ma espone un membro con un nome che inizia con un carattere di sottolineatura (`_`).  
@@ -34,6 +34,6 @@ Un assembly è contrassegnato come `<CLSCompliant(True)>` , ma espone un membro 
 -   Se è necessario che il nome del membro rimangono invariati, rimuovere il <xref:System.CLSCompliantAttribute> dalla relativa definizione o contrassegnarlo come `<CLSCompliant(False)>`. È comunque possibile contrassegnare l'assembly come `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Convenzioni di denominazione di Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

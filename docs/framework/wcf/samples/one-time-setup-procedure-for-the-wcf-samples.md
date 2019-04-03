@@ -2,12 +2,12 @@
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333456"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825170"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospitata in Internet Information Services (IIS) ed eseguire da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale IIS denominato **ServiceModelSamples**.
@@ -85,5 +85,3 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
     >  Assicurarsi di avviare il servizio MSMQ prima di eseguire gli esempi per i quali è necessario Accodamento messaggi.
 
 15. Alcuni esempi richiedono l'utilizzo di certificati. Visualizzare [istruzioni di installazione certificato Server (IIS) di Internet Information Services](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
-
-## <a name="see-also"></a>Vedere anche

@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire una query su un ArrayList con LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 5e1a7e84c8f8789edb3f0c867986d5a5e27674c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669029"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837156"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procedura: Eseguire una query su un ArrayList con LINQ (Visual Basic)
 Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Ad esempio, se si dispone di un <xref:System.Collections.ArrayList> del `Student` oggetti, il [dalla clausola](../../../../visual-basic/language-reference/queries/from-clause.md) dovrebbe essere simile al seguente:  
@@ -77,4 +77,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

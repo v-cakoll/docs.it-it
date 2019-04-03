@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965465"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824307"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Procedura: Inserire un valore in una proprietà (Visual Basic)
 Archiviare un valore in una proprietà inserendo il nome della proprietà sul lato sinistro di un'istruzione di assegnazione.  
@@ -35,6 +35,7 @@ Archiviare un valore in una proprietà inserendo il nome della proprietà sul la
 4.  Il valore generato sul lato destro dell'istruzione di assegnazione viene archiviato nella proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)

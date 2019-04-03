@@ -2,12 +2,12 @@
 title: Token di supporto
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 899c6ecabafb1bd0487b989c6da8963dd07945cf
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: aa2981d7b9c34061c3ffaed770d1521f5922d9d6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304154"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824708"
 ---
 # <a name="supporting-tokens"></a>Token di supporto
 L'esempio dei token di supporto illustra come aggiungere token aggiuntivi a un messaggio che utilizza WS-Security. L'esempio aggiunge un token di sicurezza binario X.509 e un token di sicurezza nome utente. Il token viene passato in un'intestazione di un messaggio WS-Security dal client al servizio e parte del messaggio viene firmata con la chiave privata associata al token di sicurezza X.509 per provare il possesso del certificato X.509 al destinatario. Ciò è utile nel caso in cui vi sia un requisito di più richieste per autenticare o autorizzare il mittente associate a un messaggio. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.
@@ -282,8 +282,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Visualizzazione delle informazioni sul chiamante
- Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. 
-  `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali richieste vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.
+ Per visualizzare le informazioni sul chiamante è possibile utilizzare `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` come mostra il codice seguente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene attestazioni di autorizzazione associate al chiamante corrente. Tali richieste vengono fornite automaticamente da Windows Communication Foundation (WCF) per ogni token ricevuto nel messaggio.
 
 ```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
@@ -466,5 +465,3 @@ iisreset
   
 > [!NOTE]
 >  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi WCF che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
-
-## <a name="see-also"></a>Vedere anche

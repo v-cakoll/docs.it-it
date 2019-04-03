@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622845"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832177"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Procedura: Accedere a una variabile nascosta da una classe derivata (Visual Basic)
 Quando il codice in una classe derivata accede a una variabile, il compilatore risolve in genere il riferimento alla versione accessibile più vicino, vale a dire, la versione accessibile i minor numero di passaggi di derivazione con le versioni precedenti dalla classe. Se la variabile viene definita nella classe derivata, il codice accede in genere tale definizione.  
@@ -50,6 +50,7 @@ Quando il codice in una classe derivata accede a una variabile, il compilatore r
  Per ridurre il rischio di fare riferimento a una versione imprevista di una variabile nascosta, è possibile qualificare completamente tutti i riferimenti a una variabile nascosta. Shadowing presenta più di una versione di una variabile con lo stesso nome. Quando un'istruzione di codice fa riferimento al nome della variabile, la versione a cui il compilatore risolve il riferimento dipende da fattori quali la posizione dell'istruzione di codice e la presenza di una stringa di qualificazione. Ciò può aumentare il rischio di fare riferimento alla versione errata della variabile.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

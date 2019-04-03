@@ -2,12 +2,12 @@
 title: LINQ e le directory dei File (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: bd6889c087f9347c2c056ed10356ae2a55565a4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566866"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825118"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ e le directory dei File (Visual Basic)
 Molte operazioni del file system sono essenzialmente query e quindi particolarmente adatte all'approccio LINQ.  
@@ -41,4 +41,5 @@ Molte operazioni del file system sono essenzialmente query e quindi particolarme
  La creazione di un'origine dati che rappresenta accuratamente il contenuto del file system e gestisce correttamente le eccezioni comporta un certo livello di complessità. Negli esempi riportati in questa sezione viene creata una raccolta di snapshot di oggetti <xref:System.IO.FileInfo>, che rappresenta tutti i file in una cartella radice specificata e in tutte le relative sottocartelle. Lo stato effettivo di ogni <xref:System.IO.FileInfo> può cambiare nel tempo tra l'inizio e la fine dell'esecuzione di una query. Ad esempio, è possibile creare un elenco di oggetti <xref:System.IO.FileInfo> da usare come origine dati. Se si tenta di accedere alla proprietà `Length` in una query, l'oggetto <xref:System.IO.FileInfo> tenterà di accedere al file system per aggiornare il valore di `Length`. Se il file non esiste più, nella query si otterrà un'eccezione <xref:System.IO.FileNotFoundException>, anche se non si sta eseguendo una query direttamente nel file system. Alcune query in questa sezione usano un metodo separato che impiega queste particolari eccezioni in determinati casi. Un'altra opzione consiste nel mantenere l'origine dati aggiornata in modo dinamico tramite <xref:System.IO.FileSystemWatcher>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

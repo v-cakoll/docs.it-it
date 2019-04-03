@@ -2,14 +2,14 @@
 title: 'File XML di esempio: Configurazione di test in uno spazio dei nomi3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609655"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821327"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>File XML di esempio: Configurazione di test in un Namespace
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>File XML di esempio: configurazione di test in uno spazio dei nomi
 Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Si tratta di un file di configurazione di test. L'XML si trova in uno spazio dei nomi.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -57,4 +57,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

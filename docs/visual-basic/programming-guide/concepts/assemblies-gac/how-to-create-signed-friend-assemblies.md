@@ -2,12 +2,12 @@
 title: 'Procedura: Creare assembly Friend firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359016"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836740"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -85,6 +85,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
  Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `Friend`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Assembly Friend](../../../../standard/assembly/friend-assemblies.md)

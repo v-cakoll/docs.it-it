@@ -2,12 +2,12 @@
 title: Provider di token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: dd27566886db62a6f06502749212ed4109c17a28
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 39a898286447168c68e2b91b03ba816b4b7aa8fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304986"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834478"
 ---
 # <a name="token-provider"></a>Provider di token
 Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:
@@ -293,4 +293,3 @@ static void DisplayIdentityInformation()
   
 1.  Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
-## <a name="see-also"></a>Vedere anche

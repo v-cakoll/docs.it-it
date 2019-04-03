@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718273"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820737"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Valutazione della funzione disabilitata a causa del timeout di una valutazione di funzione precedente
 Valutazione della funzione disabilitata a causa del timeout di una valutazione della funzione precedente. Per riabilitare la valutazione della funzione, ripetere l'operazione o riavviare il debug.  
@@ -32,5 +32,6 @@ Valutazione della funzione disabilitata a causa del timeout di una valutazione d
 2.  Passaggio del debugger, oppure interrompere e riavviare il debug.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Spostarsi nel codice con il Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger)

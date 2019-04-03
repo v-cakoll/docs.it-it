@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596007"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833997"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversioni implicite ed esplicite (Visual Basic)
 Un' *conversione implicita* non richiede alcuna sintassi speciale nel codice sorgente. Nell'esempio seguente, Visual Basic converte in modo implicito il valore del `k` su un valore a virgola mobile a precisione singola prima di assegnarlo a `q`.  
@@ -125,11 +125,12 @@ End If
 > [!CAUTION]
 >  Specifica di `CType` per convertire un tipo di classe in un altro non riesce in fase di esecuzione se il tipo di origine non deriva dal tipo di destinazione. Questo errore genera un <xref:System.InvalidCastException> eccezione.  
   
- Tuttavia, se uno dei tipi è una struttura o una classe è stato definito e se sono stati definiti `CType` su tale classe o struttura, una conversione può avere esito positivo se soddisfa i requisiti del `CType`. Vedere [Procedura: Definire un operatore di conversione](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Tuttavia, se uno dei tipi è una struttura o una classe è stato definito e se sono stati definiti `CType` su tale classe o struttura, una conversione può avere esito positivo se soddisfa i requisiti del `CType`. Vedere [How to: Definire un operatore di conversione](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
  L'esecuzione di una conversione esplicita è noto anche come *cast* un'espressione a una classe di tipo o un oggetto dati specificato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [Procedura: Convertire un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

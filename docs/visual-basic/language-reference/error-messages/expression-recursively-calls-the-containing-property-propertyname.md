@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259761"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836844"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Espressione in modo ricorsivo chiama la proprietà che contiene '\<NomeProprietà >'
 Un'istruzione all'interno di `Set` routine di una definizione di proprietà archivia un valore nel nome della proprietà.  
@@ -64,6 +64,7 @@ End Class
 -   Riscrivere la definizione di proprietà per utilizzare l'approccio consigliato, come illustrato nell'esempio precedente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine Property](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Istruzione Set](../../../visual-basic/language-reference/statements/set-statement.md)

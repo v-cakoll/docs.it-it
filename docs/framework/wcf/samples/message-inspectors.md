@@ -2,12 +2,12 @@
 title: Controlli messaggi
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 99886ef112a74bb86346208c5c24b09349ba4027
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552853"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830149"
 ---
 # <a name="message-inspectors"></a>Controlli messaggi
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Qualsiasi controllo messaggi del servizio (dispatcher) deve implementare i due metodi <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector><xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> viene richiamato dal dispatcher quando un messaggio è stato ricevuto, elaborato dallo stack di canali e assegnato a un servizio, ma prima che venga deserializzato e inviato a un'operazione. Se il messaggio in arrivo è crittografato, il messaggio arriva al controllo messaggi già decrittografato. Il metodo ottiene il messaggio `request` passato come un parametro di riferimento, il che significa che il messaggio potrà essere controllato, modificato o sostituito in base alla necessità. Il valore restituito può essere qualsiasi oggetto e può essere utilizzato come oggetto dello stato di correlazione che viene passato a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando il servizio restituisce una risposta al messaggio corrente. In questo esempio, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega l'esame (la convalida) del messaggio al metodo privato e locale `ValidateMessageBody` e non restituisce oggetti dello stato di correlazione. Questo metodo assicura che non passino messaggi non validi nel servizio.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> viene richiamato dal dispatcher quando un messaggio è stato ricevuto, elaborato dallo stack di canali e assegnato a un servizio, ma prima che venga deserializzato e inviato a un'operazione. Se il messaggio in arrivo è crittografato, il messaggio arriva al controllo messaggi già decrittografato. Il metodo ottiene il messaggio `request` passato come un parametro per riferimento, il che significa che il messaggio potrà essere controllato, modificato o sostituito in base alla necessità. Il valore restituito può essere qualsiasi oggetto e può essere utilizzato come oggetto dello stato di correlazione che viene passato a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando il servizio restituisce una risposta al messaggio corrente. In questo esempio, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega l'esame (la convalida) del messaggio al metodo privato e locale `ValidateMessageBody` e non restituisce oggetti dello stato di correlazione. Questo metodo assicura che non passino messaggi non validi nel servizio.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> viene richiamato ogni volta che una risposta è pronta per essere restituita a un client o, nel caso di messaggi unidirezionali, quando il messaggio in arrivo è stato elaborato. Questo consente alle estensioni di essere chiamate simmetricamente, indipendentemente da MEP. Come con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, il messaggio viene passato come un parametro di riferimento e può essere controllato, modificato o sostituito. La convalida del messaggio eseguita in questo esempio è delegata nuovamente al metodo `ValidMessageBody`, ma la gestione degli errori di convalida è leggermente diversa in questo caso.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> viene richiamato ogni volta che una risposta è pronta per essere restituita a un client o, nel caso di messaggi unidirezionali, quando il messaggio in arrivo è stato elaborato. Questo consente alle estensioni di essere chiamate simmetricamente, indipendentemente da MEP. Come con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, il messaggio viene passato come un parametro per riferimento e può essere controllato, modificato o sostituito. La convalida del messaggio eseguita in questo esempio è delegata nuovamente al metodo `ValidMessageBody`, ma la gestione degli errori di convalida è leggermente diversa in questo caso.  
   
  Se si verifica un errore di convalida nel servizio, il metodo `ValidateMessageBody` genera eccezioni derivate da <xref:System.ServiceModel.FaultException>. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, queste eccezioni possono essere inserite nell'infrastruttura del modello di servizi, dove vengono automaticamente trasformate in errori SOAP e inoltrate al client. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, le eccezioni <xref:System.ServiceModel.FaultException> non possono essere inserite nell'infrastruttura, perché la trasformazione di eccezioni d'errore generate dal servizio avviene prima che il controllo messaggi venga chiamato. Pertanto l'implementazione seguente rileva l'eccezione `ReplyValidationFault` nota e sostituisce il messaggio di risposta con un messaggio di errore esplicito. Questo metodo assicura che non vengano restituiti messaggi non validi dall'implementazione del servizio.  
   
@@ -256,7 +256,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
->  Questo particolare comportamento non funge anche da attributo e pertanto non può essere aggiunto in modo dichiarativo a un tipo di contratto di un tipo di servizio. Si tratta di una decisione presa a livello di programmazione perché la raccolta di schemi non può essere caricata in una dichiarazione di attributo e fare riferimento a un ulteriore percorso di configurazione (per esempio alle impostazioni dell'applicazione) in questo attributo significa creare un elemento di configurazione non coerente con il resto della configurazione del modello del servizio. Pertanto, questo comportamento può essere aggiunto soltanto in modo imperativo tramite codice o tramite una configurazione del modello del servizio.  
+>  Questo particolare comportamento non funge anche da attributo e pertanto non può essere aggiunto in modo dichiarativo a un tipo di contratto di un tipo di servizio. Si tratta di una decisione presa a livello di programmazione perché la raccolta di schemi non può essere caricata in una dichiarazione di attributo e fare riferimento a un ulteriore percorso di configurazione (per esempio alle impostazioni dell'applicazione) in questo attributo significa creare un elemento di configurazione non coerente con il resto della configurazione del modello del servizio. Pertanto, questo comportamento può essere aggiunto soltanto in modo imperativo tramite codice o tramite un'estensione di configurazione del modello del servizio.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Aggiunta del controllo messaggi tramite configurazione  
  Per configurare un comportamento personalizzato in un endpoint nel file di configurazione dell'applicazione, il modello di servizio richiede agli implementatori di creare una configurazione *l'elemento di estensione* rappresentato da una classe derivata da <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Questa estensione deve essere quindi aggiunta alla sezione di configurazione del modello del servizio per le estensioni come illustrato per le seguenti estensioni in questo argomento.  
@@ -413,4 +413,3 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   
-## <a name="see-also"></a>Vedere anche

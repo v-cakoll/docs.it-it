@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974913"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837496"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedura: Modificare il valore di un argomento di routine (Visual Basic)
 Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno dei parametri definiti nella procedura. In alcuni casi, il codice della routine può modificare il valore sottostante a un argomento nel codice chiamante. In altri casi, la routine può modificare solo la copia locale di un argomento.  
@@ -78,6 +78,7 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
  È sempre un potenziale rischio per consentire a una stored procedure per modificare il valore sottostante a un argomento nel codice chiamante. Assicurarsi che si prevede che questo valore per essere modificato e prepararsi a verificare la validità prima di poterla usare.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)

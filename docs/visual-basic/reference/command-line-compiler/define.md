@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: c21223cc353b7a4614511aa97340c6bc5d61e70e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200656"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834309"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definisce le costanti del compilatore condizionali.  
@@ -32,7 +32,7 @@ Definisce le costanti del compilatore condizionali.
 |Termine|Definizione|  
 |---|---|  
 |`symbol`|Obbligatorio. Il simbolo da definire.|  
-|`value`|Facoltativa. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiuso tra sequenze di barre rovesciate/virgolette (\\") anziché le virgolette. Se non è specificato un valore, è considerato True.|  
+|`value`|Facoltativo. Il valore da assegnare a `symbol`. Se `value` è una stringa, deve essere racchiuso tra sequenze di barre rovesciate/virgolette (\\") anziché le virgolette. Se non è specificato un valore, è considerato True.|  
   
 ## <a name="remarks"></a>Note  
  Il `-define` opzione ha un effetto simile all'uso di un `#Const` direttiva per il preprocessore nel file di origine, ad eccezione che le costanti definite con `-define` sono pubblici e si applicano a tutti i file nel progetto.  
@@ -53,6 +53,7 @@ Definisce le costanti del compilatore condizionali.
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Direttive #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Direttiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)

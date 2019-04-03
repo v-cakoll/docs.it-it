@@ -36,20 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831434"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipi generici in Visual Basic (Visual Basic)
 Un *tipo generico* è un singolo elemento di programmazione che si adatta per eseguire la stessa funzionalità per diversi tipi di dati. Quando si definisce una classe o una routine generica, non è necessario definire una versione distinta per ogni tipo di dati per il quale si vuole eseguire tale funzionalità.  
   
  Un'analogia è un cacciavite con diverse punte rimovibili. Si esamina la vite che è necessario ruotare e si seleziona la punta corretta per tale vite (a taglio, a croce, a stella). Dopo avere inserito la punta corretta nel manico del cacciavite, si esegue in tutti i casi la stessa funzione, ovvero ruotare la vite.  
   
- ![Diagramma di un cacciavite impostato come strumento generico](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-Cacciavite come strumento generico  
+ ![Diagramma di un cacciavite con diverse intestazioni.](./media/generic-types/generic-screwdriver-set.gif)  
   
  Quando si definisce un tipo generico, questo viene parametrizzato con uno o più tipi di dati. Questo consente di usare il codice per adattare i tipi di dati ai propri requisiti. Il codice può dichiarare più elementi di programmazione dall'elemento generico, ciascuno dei quali agisce su un diverso set di tipi di dati. Tuttavia, tutti gli elementi dichiarati eseguono la stessa logica, indipendentemente dai tipi di dati in uso.  
   

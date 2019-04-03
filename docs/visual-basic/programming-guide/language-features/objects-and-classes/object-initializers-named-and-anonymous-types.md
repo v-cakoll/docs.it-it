@@ -1,5 +1,5 @@
 ---
-title: 'Inizializzatori di oggetto: Tipi denominati e anonimi (Visual Basic)'
+title: 'Inizializzatori di oggetti: Tipi denominati e anonimi (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ObjectInitializer
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: d4f82cab8bcdeb3e0553649f8a569ae24bafc707
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974354"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821368"
 ---
-# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inizializzatori di oggetto: Tipi denominati e anonimi (Visual Basic)
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inizializzatori di oggetti: Tipi denominati e anonimi (Visual Basic)
 Gli inizializzatori di oggetto consentono di specificare le proprietà per un oggetto complesso usando un'unica espressione. Possono essere utilizzati per creare istanze di tipi denominati e tipi anonimi.  
   
 ## <a name="declarations"></a>Dichiarazioni  
@@ -128,6 +128,7 @@ Gli inizializzatori di oggetto consentono di specificare le proprietà per un og
      Per altre informazioni sulle opzioni per la definizione delle proprietà in tipi anonimi, vedere [come: In grado di dedurre i nomi delle proprietà e i tipi nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

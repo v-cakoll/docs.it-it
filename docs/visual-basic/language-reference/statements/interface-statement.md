@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970532"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823532"
 ---
 # <a name="interface-statement-visual-basic"></a>Istruzione Interface (Visual Basic)
 Dichiara il nome di un'interfaccia e introduce le definizioni dei membri che comprende l'interfaccia.  
@@ -113,6 +113,7 @@ End Interface
  Si noti che il `Property` e `Function` istruzioni non introducono che terminano con i blocchi `End Property` e `End Function` all'interno dell'interfaccia. L'interfaccia definisce solo le firme dei relativi membri. La versione completa `Property` e `Function` blocchi vengono visualizzati in una classe che implementa `thisInterface`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
 - [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824347"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Istruzione For Each...Next (Visual Basic)
 Ripete un gruppo di istruzioni per ogni elemento in una raccolta.  
@@ -173,6 +173,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Raccolte](../../../standard/collections/index.md)
 - [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

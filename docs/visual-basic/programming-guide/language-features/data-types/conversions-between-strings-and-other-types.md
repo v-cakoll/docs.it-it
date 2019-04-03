@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821661"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversioni fra stringhe e altri tipi (Visual Basic)
 È possibile convertire un valore numerico, `Boolean`, o valore di data/ora un `String`. È anche possibile convertire in direzione inversa, ovvero da un valore stringa, numerici `Boolean`, o `Date` , purché il contenuto della stringa può essere interpretato come un valore valido del tipo di dati di destinazione. In caso contrario, si verifica un errore di run-time.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Quando Visual Basic converte una stringa in un valore numerico, Usa la **opzioni internazionali** le impostazioni specificate nella finestra di Windows **Pannello di controllo** interpretare le migliaia separator, separatore decimale, e simbolo di valuta. Ciò significa che una conversione potrebbe avere esito positivo con un'impostazione ma non in un'altra. Ad esempio, `"$14.20"` sono accettabili nelle impostazioni locali inglese (Stati Uniti) ma non in tutte le impostazioni locali francesi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Conversioni di tipi in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

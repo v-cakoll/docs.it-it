@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821377"
 ---
 # <a name="date-data-type-visual-basic"></a>Tipo di dati Date (Visual Basic)
 Contiene valori a 64 bit (8 byte) conformi alle specifiche IEEE che rappresentano le date comprese tra l'1 gennaio dell'anno 0001 e il 31 dicembre dell'anno 9999 e le ore comprese tra le 00.00.00 (mezzanotte) e le 23.59.59.9999999. Ogni incremento rappresenta 100 nanosecondi di tempo trascorso dall'inizio del 1° gennaio dell'anno 1 del calendario gregoriano. Il valore massimo rappresenta 100 nanosecondi prima dell'inizio del 1° gennaio dell'anno 10000.  
@@ -35,7 +35,7 @@ Contiene valori a 64 bit (8 byte) conformi alle specifiche IEEE che rappresentan
 ## <a name="format-requirements"></a>Requisiti di formato  
  È necessario racchiudere un valore letterale `Date` tra simboli di cancelletto (`# #`). Il valore della data deve essere specificato nel formato M/g/aaaa, ad esempio `#5/31/1993#`, oppure aaaa-MM-gg, ad esempio `#1993-5-31#`. Quando si specifica prima l'anno, è possibile usare le barre.  Questo requisito è indipendente dalle impostazioni locali usate e dalle impostazioni relative al formato di data e ora del computer.  
   
- Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date` `#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. Si supponga però di distribuire l'applicazione in molti paesi. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.  
+ Il motivo di questa limitazione è che il significato del codice non deve mai cambiare a seconda delle impostazioni locali con cui l'applicazione viene eseguita. Si supponga di impostare come hardcoded il valore letterale `Date``#3/4/1998#` per rappresentare la data del 4 marzo 1998. Se nelle impostazioni locali è definito il formato mm/gg/aaaa, la compilazione di 3/4/1998 viene eseguita nel modo desiderato. Si supponga però di distribuire l'applicazione in molti paesi. Se nelle impostazioni locali è definito il formato gg/mm/aaaa, il valore letterale hardcoded verrà compilato come 3 aprile 1998. Se invece è definito il formato aaaa/mm/gg, il valore letterale non sarà valido (1998 aprile 0003) e verrà generato un errore del compilatore.  
   
 ## <a name="workarounds"></a>Soluzioni  
  Per convertire un valore letterale `Date` nel formato delle impostazioni locali in uso o in un formato personalizzato, fornire il valore letterale alla funzione <xref:Microsoft.VisualBasic.Strings.Format%2A>, specificando un formato di data predefinito o definito dall'utente. Nell'esempio che segue viene illustrato quanto descritto.  
@@ -75,6 +75,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [Tipi di dati](../../../visual-basic/language-reference/data-types/index.md)
 - [Stringhe di formato di data e ora standard](../../../standard/base-types/standard-date-and-time-format-strings.md)

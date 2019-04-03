@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377285"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824988"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> ha due proprietà di contenuto: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> e <xref:System.Windows.Controls.Decorator.Child%2A>. Il <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> proprietà definisce il <xref:System.Windows.UIElement> da usare come punto elenco. Il <xref:System.Windows.Controls.Decorator.Child%2A> proprietà definisce un <xref:System.Windows.UIElement> visivamente in linea con l'elenco puntato.  
   
  La figura seguente illustra esempi di controlli che utilizzano un <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
   
- ![3 BulletDecorator: CheckBox, RadioButton, TextBox](./media/bulletdecorator.png "BulletDecorator")  
+ ![Esempio di una casella di controllo, un pulsante di opzione e un elemento decorator del punto elenco nella casella di testo.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

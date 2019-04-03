@@ -2,9 +2,15 @@
 title: Stringhe in Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, strings'
-  - 'strings [Visual Basic], Visual Basic'
+- Visual Basic code, strings
+- strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
+ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821075"
 ---
 # <a name="strings-in-visual-basic"></a>Stringhe in Visual Basic
 Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe in Visual Basic.  
@@ -29,4 +35,5 @@ Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe 
  Illustra come crittografare e decrittografare le stringhe usando la versione del provider del servizio di crittografia dell'algoritmo Triple Data Encryption Standard.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzionalità del linguaggio Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)

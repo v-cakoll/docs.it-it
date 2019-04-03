@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822336"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene usata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini usati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sulle parti di una query, vedere [operazioni di Query (Visual Basic) base](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -117,6 +117,7 @@ Next
 3.  Il tipo della variabile di iterazione nel `For Each` ciclo è di tipo anonimo creato nel passaggio 2. Poiché il tipo ha un nome utilizzabile, il tipo della variabile di iterazione del ciclo deve essere determinato in modo implicito.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Inferenza del tipo di variabile locale](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

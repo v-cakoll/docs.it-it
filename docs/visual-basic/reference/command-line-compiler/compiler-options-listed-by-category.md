@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827367"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opzioni del compilatore Visual Basic elencate per categoria
 Il compilatore della riga di comando di Visual Basic viene fornito come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio. Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando di Visual Basic ordinati in base alla categoria funzionale.  
@@ -127,5 +127,6 @@ Il compilatore della riga di comando di Visual Basic viene fornito come alternat
 |`-checksumalgorithm:<alg>`|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Opzioni del compilatore Visual Basic in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

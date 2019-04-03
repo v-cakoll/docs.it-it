@@ -2,12 +2,12 @@
 title: Ottimizzazione dell'applicazione Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: bd03e0874cedd360f5b31984b4b49b3d5b647c7f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 88b26aea0740bb4a5c5e9d87790746a708bf45a1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677045"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838016"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>Ottimizzazione dell'applicazione Async (Visual Basic)
 È possibile rendere più precise e flessibili le applicazioni asincrone usando le proprietà e i metodi resi disponibili dal tipo <xref:System.Threading.Tasks.Task>. Gli argomenti di questa sezione mostrano esempi che usano <xref:System.Threading.CancellationToken> e metodi `Task` importanti, ad esempio <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -37,9 +37,10 @@ ms.locfileid: "57677045"
   
  I progetti creano un'interfaccia utente che contiene un pulsante che consente di avviare il processo e un pulsante che consente di annullarlo, come illustrato nell'immagine seguente. I pulsanti sono denominati `startButton` e `cancelButton`.  
   
- ![Finestra WPF con pulsante Annulla](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "finestra di dialogo con un pulsante di avvio e arresto")  
+ ![Finestra WPF con pulsante Annulla](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Finestra di dialogo con un pulsante di avvio e arresto")  
   
  È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

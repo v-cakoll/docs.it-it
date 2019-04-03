@@ -2,12 +2,12 @@
 title: 'Procedura: Modificare alberi delle espressioni (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c53983c6dfc601a7e8e32ad020f5f7feb66cfe04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603530"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834335"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Procedura: Modificare alberi delle espressioni (Visual Basic)
 In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non possono essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia dell'albero esistente e solo in seguito apportare le modifiche necessarie. È possibile usare la classe <xref:System.Linq.Expressions.ExpressionVisitor> per attraversare un albero delle espressioni esistente e copiare ogni nodo visitato.  
@@ -71,5 +71,6 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
 6.  Compilare l'applicazione ed eseguirla.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Eseguire alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

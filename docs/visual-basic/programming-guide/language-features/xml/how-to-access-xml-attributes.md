@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: d68596dd4f84cfcea37567bd4a43fe499848e5e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce22781584ad31766058f59a7ebf3081cb5e11cf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969981"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836909"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Procedura: Attributi XML di accesso (Visual Basic)
 In questo esempio mostra come usare una proprietà axis dell'attributo per accedere agli attributi XML in un elemento XML in base al nome. In particolare, viene utilizzata la `type` proprietà dell'asse per accedere all'attributo denominato dell'attributo `type` nel `phone` oggetto.  
@@ -21,6 +21,7 @@ In questo esempio mostra come usare una proprietà axis dell'attributo per acced
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Proprietà axis dell'attributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Accesso a XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

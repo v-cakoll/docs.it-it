@@ -2,47 +2,48 @@
 title: Elementi interni dell'host del servizio flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: c3293fe7f835ed0d5b3b62404a1f3f2e20b73fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0596e15e27460a08f859ec3398afbeae752c86fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826028"
 ---
 # <a name="workflow-service-host-internals"></a>Elementi interni dell'host del servizio flusso di lavoro
 <xref:System.ServiceModel.WorkflowServiceHost> fornisce un host per i servizi del flusso di lavoro. Consente di ascoltare i messaggi in arrivo e di indirizzarli all'istanza del servizio di flusso di lavoro appropriata, nonché di controllare lo scaricamento e il salvataggio permanente di flussi di lavoro inattivi e così via. In questo argomento viene descritta l'elaborazione dei messaggi in arrivo da parte di WorkflowServiceHost.  
   
 ## <a name="workflowservicehost-overview"></a>Panoramica di WorkflowServiceHost  
- La classe <xref:System.ServiceModel.WorkflowServiceHost> è utilizzata per ospitare i servizi del flusso di lavoro. Consente di ascoltare i messaggi in arrivo e di indirizzarli all'istanza del servizio appropriata, creando nuove istanze o caricando quelle esistenti da un archivio permanente in base alle necessità.  Nel diagramma seguente viene illustrato dettagliatamente il funzionamento di <xref:System.ServiceModel.WorkflowServiceHost>.  
+
+La classe <xref:System.ServiceModel.WorkflowServiceHost> è utilizzata per ospitare i servizi del flusso di lavoro. Consente di ascoltare i messaggi in arrivo e di indirizzarli all'istanza del servizio appropriata, creando nuove istanze o caricando quelle esistenti da un archivio permanente in base alle necessità. Nel diagramma seguente viene illustrato dettagliatamente <xref:System.ServiceModel.WorkflowServiceHost> funziona: 
   
- ![Panoramica di WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/media/wfshhighlevel.gif "WFSHHighLevel")  
+ ![Diagramma che mostra una panoramica dell'Host del servizio del flusso di lavoro.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
  In questo diagramma viene mostrato che l'oggetto <xref:System.ServiceModel.WorkflowServiceHost> consente di caricare le definizioni del servizio di flusso di lavoro dai file con estensione xamlx e le informazioni di configurazione da un file di configurazione. Permette inoltre di caricare la configurazione di rilevamento dal profilo di rilevamento. L'oggetto <xref:System.ServiceModel.WorkflowServiceHost> espone un endpoint di controllo del flusso di lavoro che consente di inviare operazioni di controllo alle istanze del flusso di lavoro.  Per altre informazioni, vedere [esempio di Endpoint di controllo del flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md).  
   
  Tramite l'oggetto <xref:System.ServiceModel.WorkflowServiceHost> vengono anche esposti endpoint applicazione che consentono di ascoltare i messaggi in arrivo dell'applicazione. Una volta arrivato, un messaggio viene inviato all'istanza del servizio di flusso di lavoro appropriata, se attualmente caricata. Se necessario, viene creata una nuova istanza del flusso di lavoro. Oppure, se un'istanza esistente è stata salvata in modo permanente, viene caricata dall'archivio salvataggi permanenti.  
   
 ## <a name="workflowservicehost-details"></a>Dettagli relativi a WorkflowServiceHost  
- Il diagramma seguente mostra come <xref:System.ServiceModel.WorkflowServiceHost> gestisce i messaggi più dettagliatamente.  
+ Il diagramma seguente mostra come <xref:System.ServiceModel.WorkflowServiceHost> gestisce i messaggi in modo più dettagliato:  
   
- ![Flusso messaggi Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
+ ![Diagramma che mostra il flusso di messaggi dell'Host del servizio del flusso di lavoro.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
   
  In questo diagramma vengono mostrati tre endpoint diversi, ovvero un endpoint applicazione, un endpoint di controllo del flusso di lavoro e un endpoint in cui viene ospitato il flusso di lavoro. I messaggi associati per un'istanza specifica del flusso di lavoro vengono ricevuti dall'endpoint applicazione. Le operazioni di controllo vengono ascoltate dall'endpoint di controllo del flusso di lavoro. I messaggi che causano il caricamento e l'esecuzione di flussi di lavoro non del servizio da parte di <xref:System.ServiceModel.WorkflowServiceHost> vengono ascoltati dall'endpoint in cui è ospitato il flusso di lavoro. Come mostrato nel diagramma, tutti i messaggi vengono elaborati tramite il runtime WCF.  La limitazione delle istanze del servizio del flusso di lavoro viene applicata tramite la proprietà <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Questa proprietà limiterà il numero di istanze simultanee del servizio del flusso di lavoro. Quando questo limite viene superato, qualsiasi richiesta aggiuntiva di nuove istanze del servizio del flusso di lavoro o qualsiasi richiesta di attivazione di istanze persistenti del flusso di lavoro sarà messa in coda. Le richieste in coda vengono elaborate nell'ordine FIFO indipendentemente dal fatto che siano richieste per nuove istanze o per istanze persistenti in esecuzione. Vengono caricate informazioni sui criteri host tramite cui vengono determinati il trattamento delle eccezioni non gestite, nonché lo scaricamento e il salvataggio permanente dei servizi di flusso di lavoro inattivi. Per altre informazioni su questi argomenti vedere [come: Configura flusso di lavoro non gestita di comportamento delle eccezioni con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) e [come: Configurare il comportamento inattivo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Le istanze del flusso di lavoro vengono salvate in modo permanente in base ai criteri host e, se necessario, vengono ricaricate. Per altre informazioni, vedere di persistenza del flusso di lavoro: [Procedura: Configurare la persistenza con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [creazione di un servizio del flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), e [persistenza del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
- Nell'immagine seguente viene mostrata la denominazione di WorkflowServiceHost.Open.  
+ Nella figura seguente illustra il flusso quando viene chiamata a WorkflowServiceHost. Open:  
   
- ![Quando viene chiamato a WorkflowServiceHost. Open](../../../../docs/framework/wcf/feature-details/media/wfhostopen.gif "WFHostOpen")  
+ ![Diagramma che mostra il flusso quando viene chiamata a WorkflowServiceHost. Open.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
   
  Il flusso di lavoro viene caricato da XAML e viene creato l'albero delle attività. <xref:System.ServiceModel.WorkflowServiceHost> consente di analizzare l'albero delle attività e di creare la descrizione del servizio. La configurazione viene applicata all'host. Infine, i messaggi in arrivo iniziano a essere ascoltati dall'host.  
   
- Nell'immagine seguente vengono mostrate le operazioni effettuate da <xref:System.ServiceModel.WorkflowServiceHost> quando viene ricevuto un messaggio associato per un'attività Receive la cui proprietà CanCreateInstance è impostata su `true`.  
+ La figura seguente illustra ciò che il <xref:System.ServiceModel.WorkflowServiceHost> quando viene ricevuto un messaggio associato per un'attività Receive la cui proprietà CanCreateInstance è impostata `true`:  
   
- ![Host del servizio del flusso di lavoro riceve un messaggio](../../../../docs/framework/wcf/feature-details/media/wfhreceivemessagecci.gif "WFHReceiveMessageCCI")  
+ ![Decision tree utilizzata dall'Host di flussi di lavoro quando viene ricevuto un messaggio e proprietà CanCreateInstance è true.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
   
  Un volta arrivato, il messaggio viene elaborato dallo stack di canali WCF. Vengono controllate le limitazioni ed eseguite le query di correlazione. Se associato per un'istanza esistente, il messaggio viene recapitato. Se è necessario creare una nuova istanza, viene controllata la proprietà CanCreateInstance dell'attività Receive. Se viene impostata su true, viene creata una nuova istanza e il messaggio viene recapitato.  
   
  Nell'immagine seguente vengono mostrate le operazioni effettuate da <xref:System.ServiceModel.WorkflowServiceHost> quando viene ricevuto un messaggio associato per un'attività Receive la cui proprietà CanCreateInstance è impostata su false.  
   
- ![WorkflowServiceHost riceve un messaggio](../../../../docs/framework/wcf/feature-details/media/wfshreceivemessage.gif "WFSHReceiveMessage")  
+ ![Decision tree utilizzata dall'Host di flussi di lavoro quando viene ricevuto un messaggio e la proprietà CanCreateInstance è false.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
   
  Un volta arrivato, il messaggio viene elaborato dallo stack di canali WCF. Vengono controllate le limitazioni ed eseguite le query di correlazione. Il messaggio viene associato per un'istanza esistente (poiché la proprietà CanCreateInstance è false), pertanto l'istanza viene caricata dall'archivio salvataggi permanenti, il segnalibro viene ripreso e il flusso di lavoro viene eseguito.  
   

@@ -2,12 +2,12 @@
 title: Unidirezionale
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 7e21a1cd16c025aae0f38b6a516b3c487f7b908f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529025"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826691"
 ---
 # <a name="one-way"></a>Unidirezionale
 Questo esempio illustra un contatto di servizio con operazioni di servizio unidirezionali. Il client non aspetta il completamento delle operazioni del servizio per terminare le operazioni, come accade invece con le operazioni di servizio bidirezionali. Questo esempio è basato sul [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e Usa il `wsHttpBinding` associazione. Il servizio, in questo esempio, è un'applicazione console indipendente che consente di osservare il servizio che riceve ed elabora messaggi in coda. Il client è anche un'applicazione console.  
@@ -106,4 +106,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## <a name="see-also"></a>Vedere anche

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976044"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824923"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durata in Visual Basic
 Il *durata* di un elemento dichiarato è il periodo di tempo durante cui si è disponibile per l'uso. Le variabili sono gli unici elementi che hanno una durata. A tale scopo, il compilatore considera i parametri di routine e funzione restituisce come case speciale delle variabili. La durata di una variabile rappresenta il periodo di tempo durante i quali può contenere un valore. Tale valore può cambiare nel corso del tempo, ma mantiene sempre un valore.  
@@ -72,6 +72,7 @@ Il *durata* di un elemento dichiarato è il periodo di tempo durante cui si è d
  Nell'esempio precedente, è possibile ottenere la stessa durata dichiarando `applesSold` a livello di modulo. Se è stato modificato l'ambito di una variabile in questo modo, tuttavia, la procedura non è più avrebbe accesso esclusivo a esso. Poiché è stato possibile accedere ad altre procedure `applesSold` e modificarne il valore, il totale parziale potrebbe non essere affidabile e il codice potrebbe risultare più difficile da gestire.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

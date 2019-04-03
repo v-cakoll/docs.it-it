@@ -2,12 +2,12 @@
 title: 'Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609929"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833438"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedura: Scrivere query in XML negli spazi dei nomi (Visual Basic)
 Per scrivere una query su XML inclusa in uno spazio dei nomi, è necessario usare oggetti <xref:System.Xml.Linq.XName> con lo spazio dei nomi corretto.  
@@ -54,7 +54,7 @@ End Module
 ## <a name="example"></a>Esempio  
  In Visual Basic, tuttavia, la scrittura di query in un albero XML che usa uno spazio dei nomi con un prefisso, è piuttosto diversa dall'esecuzione di query in un albero XML con uno spazio dei nomi predefinito. Lo spazio dei nomi con un prefisso viene in genere importato usando l'istruzione `Imports`. Il prefisso viene quindi usato nei nomi di elementi e attributi quando si crea l'albero XML. Il prefisso viene inoltre usato durante l'esecuzione di query su un albero XML tramite proprietà XML.  
   
- Nell'esempio seguente viene creata una struttura ad albero XML inclusa in uno spazio dei nomi con un prefisso. Viene quindi recuperata una raccolta di elementi.  
+ Nell'esempio seguente viene creato un albero XML incluso in uno spazio dei nomi con un prefisso. Viene quindi recuperata una raccolta di elementi.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -89,4 +89,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

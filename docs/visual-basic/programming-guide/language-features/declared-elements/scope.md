@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823545"
 ---
 # <a name="scope-in-visual-basic"></a>Ambito in Visual Basic
 Il *ambito* di un elemento dichiarato è il set di tutto il codice che può fare riferimento ad esso senza il nome completo o renderlo disponibile tramite un [istruzione Imports (tipo e .NET Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento ambito può essere uno dei livelli seguenti:  
@@ -135,6 +135,7 @@ Public strMsg As String
  In generale, quando si dichiara una variabile o costante, è buona norma apportare più brevi possibile l'ambito (ambito del blocco è il più ristretto). Ciò consente di risparmiare memoria e riduce al minimo le probabilità di codice erroneamente che fa riferimento alla variabile non corretta. Analogamente, è necessario dichiarare una variabile [statici](../../../../visual-basic/language-reference/modifiers/static.md) solo quando è necessario mantenere il valore tra le chiamate di procedura.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Procedura: Controllare l'ambito di una variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

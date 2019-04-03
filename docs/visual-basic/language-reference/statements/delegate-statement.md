@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965800"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821315"
 ---
 # <a name="delegate-statement"></a>Istruzione Delegate
 Usata per dichiarare un delegato. Un delegato è un tipo di riferimento che fa riferimento a un `Shared` metodo di un tipo o a un metodo di istanza di un oggetto. Qualsiasi routine con parametri e tipi restituiti corrispondenti può utilizzabile per creare un'istanza di questa classe delegata. La procedura può quindi essere successivamente richiamata tramite l'istanza del delegato.  
@@ -65,6 +65,7 @@ Usata per dichiarare un delegato. Un delegato è un tipo di riferimento che fa r
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Delegati](../../../visual-basic/programming-guide/language-features/delegates/index.md)

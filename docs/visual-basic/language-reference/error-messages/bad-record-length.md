@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: 37d9da67656ec4821903d8ba67a27ef10f1a437d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3df7819da0afddd7f238f282d496136d89cb052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833477"
 ---
 # <a name="bad-record-length"></a>Lunghezza del record non valida
 Di seguito sono riportate le cause possibili dell'errore:  
@@ -29,6 +29,7 @@ Di seguito sono riportate le cause possibili dell'errore:
 3.  Se la variabile in un `FilePut` o `FilePutObject` è o include un `Variant` assicurarsi che la stringa di lunghezza variabile è almeno 4 byte più la lunghezza del record specificata nel breve il `Len` clausola del `FileOpen` istruzione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>

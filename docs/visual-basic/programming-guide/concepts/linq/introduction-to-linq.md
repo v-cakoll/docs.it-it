@@ -2,12 +2,12 @@
 title: Introduzione a LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: dd457ec59659743bc7cd153fb6b9cef8d99a4a0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410186"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822323"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Introduzione a LINQ (Visual Basic)
 LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Framework versione 3.5 che colma il divario tra il mondo degli oggetti e il mondo dei dati.  
@@ -34,4 +34,5 @@ LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Fram
 -   Raccolte, file e stringhe .NET e così via: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [LINQ (Language-Integrated Query) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

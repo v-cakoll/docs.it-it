@@ -2,12 +2,12 @@
 title: Concetti chiave di Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574326"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825664"
 ---
 # <a name="entity-data-model-key-concepts"></a>Concetti chiave di Entity Data Model
 Entity Data Model (EDM) usano tre concetti chiave per descrivere la struttura dei dati: *tipo di entità*, *tipo di associazione*, e *proprietà*. Si tratta dei concetti più importanti nella descrizione della struttura di dati in qualsiasi implementazione di EDM.  
@@ -32,7 +32,7 @@ Entity Data Model (EDM) usano tre concetti chiave per descrivere la struttura de
 ## <a name="representations-of-a-conceptual-model"></a>Rappresentazioni di un modello concettuale  
  Oggetto *del modello concettuale* è una rappresentazione specifica della struttura di alcuni dati come entità e relazioni. È possibile rappresentare un modello concettuale tramite un diagramma. Nel diagramma seguente viene rappresentato un modello concettuale con tre tipi di entità (`Book`, `Publisher` e `Author`) e due associazioni (`PublishedBy` e `WrittenBy`):  
   
- ![Modello con le proprietà di navigazione](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Diagramma che mostra un modello concettuale con tre tipi di entità.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  Questa rappresentazione, tuttavia, presenta alcuni difetti quando è necessario illustrare alcuni dettagli relativi al modello. Le informazioni sul tipo di proprietà e sul set di entità, ad esempio, non sono illustrate nel diagramma. La ricchezza di un modello concettuale può essere illustrata più chiaramente con un linguaggio DSL. Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio basato su XML denominato *linguaggio conceptual schema definition language* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali. Di seguito è riportata la definizione CSDL del modello concettuale nel diagramma precedente:  
   

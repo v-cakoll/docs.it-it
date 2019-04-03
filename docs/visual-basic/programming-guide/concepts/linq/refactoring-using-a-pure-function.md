@@ -2,12 +2,12 @@
 title: Refactoring con una funzione pura (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 3adaede7bce206d6018f1eb624d9ce04f53c04b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833630"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring con una funzione pura (Visual Basic)
 Nell'esempio seguente effettua il refactoring nell'esempio precedente, [Refactoring tramite un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), per usare una funzione pure. In questo esempio, il codice per individuare il testo di un paragrafo viene spostato nel metodo statico pure `ParagraphText`.  
@@ -173,6 +173,7 @@ StyleName:Code >Hello World<
 -   [Proiezione di XML in una forma diversa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refactoring con un metodo di estensione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [Refactoring in funzioni Pure (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

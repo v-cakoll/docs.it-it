@@ -2,12 +2,12 @@
 title: 'Procedura: Trovare un elemento con un elemento figlio specifico (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: c9239ed5ff417b66cebeb3015014f1498278b602
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659082"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827055"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Procedura: Trovare un elemento con un elemento figlio specifico (Visual Basic)
 In questo argomento viene illustrato come trovare un determinato elemento che include un elemento figlio con un valore specifico.  
@@ -15,7 +15,7 @@ In questo argomento viene illustrato come trovare un determinato elemento che in
 ## <a name="example"></a>Esempio  
  Nell'esempio viene ricercato l'elemento `Test` contenente un elemento figlio `CommandLine` con valore "Examp2.EXE".  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Test (LINQ to XML) Configuration](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [uso di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Nell'esempio viene utilizzato il seguente documento XML:  [File XML di esempio: Configurazione di test in un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: configurazione di test in uno spazio dei nomi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -67,6 +67,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679422"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833672"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Routine Main in Visual Basic
 Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main`. Questa procedura viene usata come punto di partenza e controllo generale per l'applicazione. Le chiamate di .NET Framework di `Main` procedure quando è stata caricata l'applicazione ed è pronto per passare il controllo ad esso. A meno che non si sta creando un'applicazione Windows Forms, è necessario scrivere il `Main` procedure per le applicazioni eseguite nel proprio.  
@@ -109,6 +109,7 @@ Tutte le applicazioni Visual Basic devono contenere una routine denominata `Main
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

@@ -2,8 +2,14 @@
 title: Oggetti (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'objects [Visual Basic]'
+- objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
+ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821649"
 ---
 # <a name="objects-visual-basic"></a>Oggetti (Visual Basic)
 Questo argomento contiene collegamenti ad altri argomenti che illustrano gli oggetti runtime di Visual Basic e contengono tabelle di procedure, proprietà ed eventi dei relativi membri.  
@@ -40,5 +46,6 @@ Questo argomento contiene collegamenti ad altri argomenti che illustrano gli ogg
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Fornisce i metodi e le proprietà per l'analisi dei file di testo strutturati.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

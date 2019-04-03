@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: 5996bbf6a6b2659a325d347c4706dc91848b8ac0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e48576b0f09d58f0ce08cc4a7966b31c2880f570
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553932"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828893"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Operatori di scorrimento bit (Visual Basic)
 Di seguito è elencati gli operatori shift bit definiti in Visual Basic.  
@@ -21,4 +21,5 @@ Di seguito è elencati gli operatori shift bit definiti in Visual Basic.
  [Operatore >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

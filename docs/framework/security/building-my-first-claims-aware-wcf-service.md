@@ -3,12 +3,12 @@ title: Creazione del primo servizio WCF che può riconoscere attestazioni
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825768"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Creazione del primo servizio WCF che può riconoscere attestazioni
 ## <a name="applies-to"></a>Si applica a  
@@ -20,7 +20,7 @@ ms.locfileid: "54599205"
 ## <a name="overview"></a>Panoramica  
  In questo argomento viene illustrato lo scenario di compilazione di servizi WCF in grado di riconoscere attestazioni mediante WIF. Uno scenario di servizio Web in grado di riconoscere attestazioni è in genere caratterizzato da tre partecipanti: il servizio Web stesso, l'utente finale e il servizio token di sicurezza. come illustrato nella figura seguente:  
   
- ![Servizio WCF in grado di riconoscere attestazioni di base WIF](../../../docs/framework/security/media/wifbasicclaimsawarewcfservice.gif "WIFBasicClaimsAwareWCFService")  
+ ![Diagramma che mostra i componenti WIF le attestazioni compatibile con servizio WCF di base.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1.  Tramite il client del servizio WCF (talvolta definito agente) viene utilizzato WIF per inviare le credenziali al servizio token di sicurezza e alla riuscita dell'autenticazione, tramite l'agente viene emesso un token dal servizio token di sicurezza.  
   
