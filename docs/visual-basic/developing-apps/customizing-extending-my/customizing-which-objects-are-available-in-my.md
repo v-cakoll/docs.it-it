@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843539"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890371"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizzazione degli oggetti disponibili in My (Visual Basic)
+
 In questo argomento viene descritto come è possibile controllare quali `My` gli oggetti vengono abilitati mediante l'impostazione del progetto `_MYTYPE` costante di compilazione condizionale. Mantiene la Visual Studio integrata sviluppo ambiente (IDE) di `_MYTYPE` costante di compilazione condizionale per un progetto sincronizzata con il tipo di progetto.  
   
-## <a name="predefined-mytype-values"></a>Valori predefiniti di MyType  
- È necessario usare il `/define` opzione del compilatore per impostare il `_MYTYPE` costante di compilazione condizionale. Quando si specifica un valore personalizzato per il `_MYTYPE` costante, è necessario racchiudere il valore della stringa nella barra rovesciata/virgolette (\\") le sequenze. Ad esempio, è possibile usare:  
+## <a name="predefined-mytype-values"></a>Predefined \_MYTYPE valori  
+
+È necessario usare il `/define` opzione del compilatore per impostare il `_MYTYPE` costante di compilazione condizionale. Quando si specifica un valore personalizzato per il `_MYTYPE` costante, è necessario racchiudere il valore della stringa nella barra rovesciata/virgolette (\\") le sequenze. Ad esempio, è possibile usare:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ In questo argomento viene descritto come è possibile controllare quali `My` gli
   
  La tabella seguente mostra cosa la `_MYTYPE` viene impostata la costante di compilazione condizionale per diversi tipi di progetto.  
   
-|Tipo di progetto|Valore di MyType|  
+|Tipo di progetto|\_Valore MYTYPE|  
 |------------------|--------------------|  
 |Libreria di classi|"Windows"|  
 |Applicazione console|"Console"|  
@@ -37,12 +39,13 @@ In questo argomento viene descritto come è possibile controllare quali `My` gli
 |Empty|"Vuoto"|  
   
 > [!NOTE]
->  Tutti i confronti di stringhe di compilazione condizionale sono tra maiuscole e minuscole, indipendentemente dal modo in cui il `Option Compare` istruzione è impostata.  
+> Tutti i confronti di stringhe di compilazione condizionale sono tra maiuscole e minuscole, indipendentemente dal modo in cui il `Option Compare` istruzione è impostata.  
   
-## <a name="dependent-my-compilation-constants"></a>Costanti di compilazione My dipendenti  
- Il `_MYTYPE` costante di compilazione condizionale, determina a sua volta, i valori degli altri `_MY` costanti di compilazione:  
+## <a name="dependent-my-compilation-constants"></a>Dipendenti \_MY costanti di compilazione  
+
+Il `_MYTYPE` costante di compilazione condizionale, determina a sua volta, i valori degli altri `_MY` costanti di compilazione:  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |"Console"|"Console"|"Windows"|Undefined|"Windows"|true|  
 |"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
@@ -56,7 +59,7 @@ In questo argomento viene descritto come è possibile controllare quali `My` gli
  Per impostazione predefinita, le costanti di compilazione condizionale non definite risolte in `FALSE`. Quando si compila il progetto per eseguire l'override del comportamento predefinito, è possibile specificare i valori per le costanti non definite.  
   
 > [!NOTE]
->  Quando `_MYTYPE` è impostata su "Custom", il progetto contiene il `My` dello spazio dei nomi, ma non contiene alcun oggetto. Tuttavia, impostando `_MYTYPE` per "Vuoto" impedisce al compilatore di aggiungere il `My` dello spazio dei nomi e i relativi oggetti.  
+> Quando `_MYTYPE` è impostata su "Custom", il progetto contiene il `My` dello spazio dei nomi, ma non contiene alcun oggetto. Tuttavia, impostando `_MYTYPE` per "Vuoto" impedisce al compilatore di aggiungere il `My` dello spazio dei nomi e i relativi oggetti.  
   
  La tabella seguente descrive gli effetti dei valori predefiniti del `_MY` costanti di compilazione.  
   

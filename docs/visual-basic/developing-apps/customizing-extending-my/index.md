@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820945"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890397"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizzazione di progetti ed estensione di oggetti My in Visual Basic
 È possibile personalizzare modelli di progetto per fornire ulteriori `My` oggetti. Questo rende facile per gli altri sviluppatori trovare e utilizzare gli oggetti.  
@@ -27,7 +27,7 @@ ms.locfileid: "58820945"
  Viene descritto come specificare le proprie estensioni al modello dell'applicazione eseguendo l'override di membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe.  
   
  [Personalizzazione degli oggetti disponibili in My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Viene descritto come controllare quali `My` gli oggetti vengono attivati impostando la costante di compilazione condizionale del progetto MyType.  
+ Viene descritto come controllare quali `My` gli oggetti vengono abilitati mediante l'impostazione del progetto \_costante di compilazione condizionale MYTYPE.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Sviluppo con My](../../../visual-basic/developing-apps/development-with-my/index.md)  

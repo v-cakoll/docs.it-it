@@ -2,20 +2,22 @@
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 3ff65e995f6a0d405eac3c1fc4a23917b117fdc0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e6215465acbf9bb94298d282d15f8735a0e20c8c
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409172"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890254"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
 
 Un'associazione protetta e interoperabile che deriva da [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e supporta la sicurezza federata.
 
-\<system.ServiceModel>\
-\<bindings>\
-\<ws2007FederationHttpBinding>
+```xml
+<system.ServiceModel>
+  <bindings>
+    <ws2007FederationHttpBinding>
+```
 
 ## <a name="syntax"></a>Sintassi
 
@@ -93,7 +95,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
 
 ## <a name="remarks"></a>Note
 
