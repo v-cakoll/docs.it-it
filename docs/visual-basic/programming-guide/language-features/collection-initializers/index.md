@@ -2,12 +2,17 @@
 title: Inizializzatori di raccolta (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.CollectionInitializer
+- vb.CollectionInitializer
 helpviewer_keywords:
-  - 'collection initializers [Visual Basic]'
+- collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
+ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675460"
 ---
-
 # <a name="collection-initializers-visual-basic"></a><span data-ttu-id="55daa-102">Inizializzatori di raccolta (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55daa-102">Collection Initializers (Visual Basic)</span></span>
 
 <span data-ttu-id="55daa-103">Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori.</span><span class="sxs-lookup"><span data-stu-id="55daa-103">*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values.</span></span> <span data-ttu-id="55daa-104">Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.</span><span class="sxs-lookup"><span data-stu-id="55daa-104">Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.</span></span>

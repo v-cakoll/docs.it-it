@@ -2,9 +2,15 @@
 title: Miglioramento delle applicazioni Windows Form
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Forms, enhancing'
-  - 'Windows Forms, adding features'
+- Windows Forms, enhancing
+- Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
+ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713553"
 ---
 # <a name="enhancing-windows-forms-applications"></a><span data-ttu-id="28d12-102">Miglioramento delle applicazioni Windows Form</span><span class="sxs-lookup"><span data-stu-id="28d12-102">Enhancing Windows Forms Applications</span></span>
 <span data-ttu-id="28d12-103">In Windows Form sono disponibili molte funzionalità che possono essere usate per migliorare le proprie applicazioni basate su Windows in modo da soddisfare le specifiche esigenze degli utenti.</span><span class="sxs-lookup"><span data-stu-id="28d12-103">Windows Forms contains many features that you can use to enhance your Windows-based applications to meet the specific needs of your users.</span></span> <span data-ttu-id="28d12-104">Gli argomenti riportati di seguito illustrano queste funzionalità e le relative modalità di uso.</span><span class="sxs-lookup"><span data-stu-id="28d12-104">The following topics describe these features and how to use them.</span></span>  

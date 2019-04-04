@@ -4,6 +4,12 @@ description: Protezione di microservizi e applicazioni Web .NET - Informazioni s
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
+ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464814"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a><span data-ttu-id="6089f-103">Proteggere i microservizi e le applicazioni Web .NET</span><span class="sxs-lookup"><span data-stu-id="6089f-103">Make secure .NET Microservices and Web Applications</span></span>
 

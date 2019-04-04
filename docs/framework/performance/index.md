@@ -2,11 +2,17 @@
 title: Prestazioni di .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance [.NET Framework]'
-  - 'reliability [.NET Framework]'
+- performance [.NET Framework]
+- reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361278"
 ---
 # <a name="net-framework-performance"></a><span data-ttu-id="6dc50-102">Prestazioni di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6dc50-102">.NET Framework Performance</span></span>
 <span data-ttu-id="6dc50-103">Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app.</span><span class="sxs-lookup"><span data-stu-id="6dc50-103">If you want to create apps with great performance, you should design and plan for performance just as you would design any other feature of your app.</span></span> <span data-ttu-id="6dc50-104">Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta.</span><span class="sxs-lookup"><span data-stu-id="6dc50-104">You can use the tools provided by Microsoft to measure your app's performance, and, if needed, make improvements to memory use, code throughput, and responsiveness.</span></span> <span data-ttu-id="6dc50-105">Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.</span><span class="sxs-lookup"><span data-stu-id="6dc50-105">This topic lists the performance analysis tools that Microsoft provides, and provides links to other topics that cover performance for specific areas of app development.</span></span>  

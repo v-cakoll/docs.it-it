@@ -2,13 +2,18 @@
 title: Matrici in Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675965"
 ---
-
 # <a name="arrays-in-visual-basic"></a><span data-ttu-id="b7989-102">Matrici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b7989-102">Arrays in Visual Basic</span></span>
 
 <span data-ttu-id="b7989-103">Una matrice è un set di valori, che sono suddivisi *elementi*, che sono correlate logicamente tra loro.</span><span class="sxs-lookup"><span data-stu-id="b7989-103">An array is a set of values, which are termed *elements*, that are logically related to each other.</span></span> <span data-ttu-id="b7989-104">Ad esempio, può essere costituito da una matrice del numero di studenti iscritti a ciascun anno scolastico di una scuola elementare; ogni elemento della matrice è il numero di studenti in un singolo livello.</span><span class="sxs-lookup"><span data-stu-id="b7989-104">For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade.</span></span> <span data-ttu-id="b7989-105">Analogamente, può essere costituito da una matrice di voti di uno studente per una classe. ogni elemento della matrice è un singolo livello.</span><span class="sxs-lookup"><span data-stu-id="b7989-105">Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.</span></span>

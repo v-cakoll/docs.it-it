@@ -1,6 +1,12 @@
 ---
-title: 'Serializzazione (C#)'
+title: Serializzazione (C#)
 ms.date: 04/26/2018
+ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411577"
 ---
 # <a name="serialization-c"></a><span data-ttu-id="a047d-102">Serializzazione (C#)</span><span class="sxs-lookup"><span data-stu-id="a047d-102">Serialization (C#)</span></span>
 

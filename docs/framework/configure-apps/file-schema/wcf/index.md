@@ -2,6 +2,12 @@
 title: Schema di configurazione di WCF
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463332"
 ---
 # <a name="wcf-configuration-schema"></a><span data-ttu-id="ee694-102">Schema di configurazione di WCF</span><span class="sxs-lookup"><span data-stu-id="ee694-102">WCF Configuration Schema</span></span>
 <span data-ttu-id="ee694-103">Gli elementi di configurazione Windows Communication Foundation (WCF) consentono di configurare le applicazioni di servizio e client WCF.</span><span class="sxs-lookup"><span data-stu-id="ee694-103">Windows Communication Foundation (WCF) configuration elements enable you to configure WCF service and client applications.</span></span> <span data-ttu-id="ee694-104">È possibile usare lo [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) per creare e modificare i file di configurazione di client e servizi.</span><span class="sxs-lookup"><span data-stu-id="ee694-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="ee694-105">Poiché i file di configurazione sono in formato XML, per modificarli manualmente usando un editor di testo è necessario avere familiarità con il linguaggio XML.</span><span class="sxs-lookup"><span data-stu-id="ee694-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="ee694-106">In caso contrario, è possibile che si verifichino problemi. È ad esempio possibile che un tag di elemento XML o un attributo venga digitato in modo errato.</span><span class="sxs-lookup"><span data-stu-id="ee694-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="ee694-107">Per i tag di elemento XML e gli attributi viene applicata la distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="ee694-107">This is because XML element tags and attributes are case-sensitive.</span></span>  

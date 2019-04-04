@@ -1,11 +1,17 @@
 ---
-title: 'Generics - Guida per programmatori C#'
+title: Generics - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, generics'
-  - 'generics [C#]'
+- C# language, generics
+- generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
+ms.openlocfilehash: 186c5bc91204770e636eed5c008db23b798b6880
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202158"
 ---
 # <a name="generics-c-programming-guide"></a><span data-ttu-id="df3e5-102">Generics (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="df3e5-102">Generics (C# Programming Guide)</span></span>
 <span data-ttu-id="df3e5-103">I generics sono stati aggiunti alla versione 2.0 del linguaggio C# e di Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="df3e5-103">Generics were added to version 2.0 of the C# language and the common language runtime (CLR).</span></span> <span data-ttu-id="df3e5-104">I generics introducono in .NET Framework il concetto dei parametri di tipo, che consentono di progettare classi e metodi che rinviano la specifica di uno o più tipi finché non si dichiara la classe o il metodo e si crea un'istanza dal codice client.</span><span class="sxs-lookup"><span data-stu-id="df3e5-104">Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.</span></span> <span data-ttu-id="df3e5-105">Ad esempio, usando un parametro di tipo generico T è possibile scrivere un'unica classe che altro codice client può usare senza rischiare cast di runtime o operazioni di boxing, come illustrato di seguito:</span><span class="sxs-lookup"><span data-stu-id="df3e5-105">For example, by using a generic type parameter T you can write a single class that other client code can use without incurring the cost or risk of runtime casts or boxing operations, as shown here:</span></span>  

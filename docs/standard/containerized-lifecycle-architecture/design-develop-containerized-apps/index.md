@@ -4,8 +4,13 @@ description: È possibile ottenere il carico di lavoro di elaborazione/progettaz
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 2ecec1412ea1c3b6ff32e6250c7cb97c531a84fd
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665004"
 ---
-
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a><span data-ttu-id="1412d-103">Progettazione e sviluppo di app in contenitori con Docker e Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="1412d-103">Designing and developing containerized apps using Docker and Microsoft Azure</span></span>
 
 <span data-ttu-id="1412d-104">*Visione artificiale: Progettare e sviluppare soluzioni scalabili basate su Docker presente.*</span><span class="sxs-lookup"><span data-stu-id="1412d-104">*Vision: Design and develop scalable solutions with Docker in mind.*</span></span>

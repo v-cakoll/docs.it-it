@@ -1,11 +1,17 @@
 ---
-title: 'Spazi dei nomi - Guida per programmatori C#'
+title: Spazi dei nomi - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-  - 'C# language, namespaces'
-  - 'namespaces [C#]'
+- C# language, namespaces
+- namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
+ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971273"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="3c770-102">Spazi dei nomi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="3c770-102">Namespaces (C# Programming Guide)</span></span>
 

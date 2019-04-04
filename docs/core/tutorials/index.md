@@ -1,10 +1,16 @@
 ---
 title: Esercitazioni di .NET Core
-description: 'Seguire le esercitazioni per l''apprendimento di .NET Core per compilare applicazioni e librerie su Mac, Linux e Windows.'
+description: Seguire le esercitazioni per l'apprendimento di .NET Core per compilare applicazioni e librerie su Mac, Linux e Windows.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788297"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="e2ef7-103">Imparare a usare e gli strumenti di .NET Core e .NET Core SDK esplorando queste esercitazioni</span><span class="sxs-lookup"><span data-stu-id="e2ef7-103">Learn .NET Core and the .NET Core SDK tools by exploring these Tutorials</span></span>
 

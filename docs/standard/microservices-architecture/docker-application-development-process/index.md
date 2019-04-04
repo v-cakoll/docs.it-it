@@ -1,9 +1,15 @@
 ---
 title: Processo di sviluppo per le applicazioni basate su Docker
-description: 'Ottenere una panoramica generale delle opzioni per lo sviluppo di applicazioni basate su Docker. Uso a scelta di Visual Studio per Windows, Visual Studio per Mac o Visual Studio Code per il supporto multipiattaforma (Windows, Mac e Linux).'
+description: Ottenere una panoramica generale delle opzioni per lo sviluppo di applicazioni basate su Docker. Uso a scelta di Visual Studio per Windows, Visual Studio per Mac o Visual Studio Code per il supporto multipiattaforma (Windows, Mac e Linux).
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
+ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465035"
 ---
 # <a name="development-process-for-docker-based-applications"></a><span data-ttu-id="07fc8-104">Processo di sviluppo per le applicazioni basate su Docker</span><span class="sxs-lookup"><span data-stu-id="07fc8-104">Development Process for Docker-Based Applications</span></span>
 

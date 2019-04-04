@@ -1,9 +1,14 @@
 ---
-title: 'Articoli sulla procedura (Guida a C#)'
+title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202340"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="c0e76-103">Procedura (C#)</span><span class="sxs-lookup"><span data-stu-id="c0e76-103">How to (C#)</span></span>
 
 <span data-ttu-id="c0e76-104">Nella sezione della Guida a C# dedicata alla procedura è possibile trovare rapidamente le risposte alle domande più frequenti.</span><span class="sxs-lookup"><span data-stu-id="c0e76-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="c0e76-105">In alcuni casi gli articoli possono essere elencati in più sezioni.</span><span class="sxs-lookup"><span data-stu-id="c0e76-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="c0e76-106">Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi.</span><span class="sxs-lookup"><span data-stu-id="c0e76-106">We wanted to make them easy to find for multiple search paths.</span></span> 

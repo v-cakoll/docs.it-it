@@ -1,11 +1,16 @@
 ---
 title: Esempi ed esercitazioni per .NET
-description: 'Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core e il linguaggio C#, utili per l''apprendimento di .NET.'
+description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core e il linguaggio C#, utili per l'apprendimento di .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558949"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="db7bb-103">Esempi ed esercitazioni per .NET</span><span class="sxs-lookup"><span data-stu-id="db7bb-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="db7bb-104">La documentazione di .NET contiene una serie di esempi ed esercitazioni che illustrano il funzionamento di .NET.</span><span class="sxs-lookup"><span data-stu-id="db7bb-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="db7bb-105">Questo argomento descrive come trovare, visualizzare e scaricare esercitazioni ed esempi per .NET Core, ASP.NET Core e C#.</span><span class="sxs-lookup"><span data-stu-id="db7bb-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="db7bb-106">È possibile trovare risorse per apprendere il linguaggio di programmazione F# nel [sito di F# Foundation](https://fsharp.org/learn.html).</span><span class="sxs-lookup"><span data-stu-id="db7bb-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="db7bb-107">Se si è interessati a esplorare C# usando un editor del codice online, iniziare con [questa esercitazione interattiva](https://www.microsoft.com/net/learn/in-browser-tutorial/1) e continuare con l'[esercitazione interattiva per C#](../csharp/tutorials/intro-to-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="db7bb-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="db7bb-108">Per istruzioni su come visualizzare e scaricare il codice di esempio, vedere la sezione [Visualizzazione e download degli esempi](#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="db7bb-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>

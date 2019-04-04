@@ -2,10 +2,16 @@
 title: Windows Form
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723114"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="efbda-102">Windows Form</span><span class="sxs-lookup"><span data-stu-id="efbda-102">Windows Forms</span></span>
 <span data-ttu-id="efbda-103">I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione.</span><span class="sxs-lookup"><span data-stu-id="efbda-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="efbda-104">Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati.</span><span class="sxs-lookup"><span data-stu-id="efbda-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="efbda-105">A tale scopo, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritto con il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="efbda-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="efbda-106">Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.</span><span class="sxs-lookup"><span data-stu-id="efbda-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  
