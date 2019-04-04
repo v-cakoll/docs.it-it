@@ -2,6 +2,12 @@
 title: Programmazione asincrona con Async e Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125525"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programmazione asincrona con Async e Await (Visual Basic)
 È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona. Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.  

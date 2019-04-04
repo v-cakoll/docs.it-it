@@ -1,11 +1,16 @@
 ---
 title: Esempi ed esercitazioni per .NET
-description: 'Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core e il linguaggio C#, utili per l''apprendimento di .NET.'
+description: Informazioni su esempi ed esercitazioni per .NET Core, ASP.NET Core e il linguaggio C#, utili per l'apprendimento di .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558949"
 ---
-
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
 
 La documentazione di .NET contiene una serie di esempi ed esercitazioni che illustrano il funzionamento di .NET. Questo argomento descrive come trovare, visualizzare e scaricare esercitazioni ed esempi per .NET Core, ASP.NET Core e C#. È possibile trovare risorse per apprendere il linguaggio di programmazione F# nel [sito di F# Foundation](https://fsharp.org/learn.html). Se si è interessati a esplorare C# usando un editor del codice online, iniziare con [questa esercitazione interattiva](https://www.microsoft.com/net/learn/in-browser-tutorial/1) e continuare con l'[esercitazione interattiva per C#](../csharp/tutorials/intro-to-csharp/index.md). Per istruzioni su come visualizzare e scaricare il codice di esempio, vedere la sezione [Visualizzazione e download degli esempi](#viewing-and-downloading-samples).

@@ -1,12 +1,18 @@
 ---
-title: 'Eccezioni e gestione delle eccezioni - Guida per programmatori C#'
+title: Eccezioni e gestione delle eccezioni - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'exception handling [C#]'
-  - 'exceptions [C#]'
-  - 'C# language, exceptions'
+- exception handling [C#]
+- exceptions [C#]
+- C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
+ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200559"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per gestire qualsiasi situazione imprevista o eccezionale che può verificarsi durante l'esecuzione di un programma. Per la gestione delle eccezioni vengono usate le parole chiave `try`, `catch` e `finally` per provare a eseguire azioni che potrebbero non riuscire, per gestire gli errori quando si decide che è ragionevole farlo e per pulire le risorse in un secondo momento. Le eccezioni possono essere generate da CLR (Common Language Runtime), da .NET Framework o qualsiasi libreria di terze parti o dal codice dell'applicazione. Per creare le eccezioni viene usata la parola chiave `throw`.  

@@ -1,8 +1,14 @@
 ---
-title: 'Guida a F#'
-description: 'Questa guida viene fornita una panoramica della diversi materiali di formazione per F#, un linguaggio di programmazione funzionale che viene eseguita in .NET.'
+title: Guida a F#
+description: Questa guida viene fornita una panoramica della diversi materiali di formazione per F#, un linguaggio di programmazione funzionale che viene eseguita in .NET.
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977006"
 ---
 # <a name="f-guide"></a>Guida a F#
 

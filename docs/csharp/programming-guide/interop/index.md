@@ -1,13 +1,19 @@
 ---
-title: 'Interoperabilità - Guida per programmatori C#'
+title: Interoperabilità - Guida per programmatori C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - COM interop
-  - interoperability
-  - 'platform invoke, accessing APIs with C#'
-  - 'C# language, interoperability'
+- COM interop
+- interoperability
+- platform invoke, accessing APIs with C#
+- C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
+ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411343"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilità (Guida per programmatori C#)
 L'interoperabilità consente di preservare e sfruttare appieno gli investimenti effettuati in codice non gestito. Il codice eseguito sotto il controllo del Common Language Runtime (CLR) è detto *codice gestito*, mentre quello eseguito all'esterno è detto *codice non gestito*. Esempi di codice non gestito sono i componenti COM, COM+, C++, i componenti ActiveX e le API Microsoft Windows.  

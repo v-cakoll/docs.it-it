@@ -1,9 +1,14 @@
 ---
-title: 'Articoli sulla procedura (Guida a C#)'
+title: Articoli sulla procedura (Guida a C#)
 description: Raccolta di suggerimenti rapidi e brevi esempi di codice evidenziati
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202340"
 ---
-
 # <a name="how-to-c"></a>Procedura (C#)
 
 Nella sezione della Guida a C# dedicata alla procedura è possibile trovare rapidamente le risposte alle domande più frequenti. In alcuni casi gli articoli possono essere elencati in più sezioni. Volevamo semplificarne la ricerca rendendoli disponibili in più percorsi. 

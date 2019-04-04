@@ -4,8 +4,13 @@ description: Contiene informazioni sull'API non gestita .NET Framework per WMI e
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377456"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Strumentazione gestione Windows (WMI) e contatori delle prestazioni (riferimenti alle API non gestite)
 
 L'API non gestita .NET Framework per WMI e i contatori delle prestazioni è costituita da un set di funzioni che eseguono il wrapping delle chiamate all'[API di Strumentazione gestione Windows nativa](/windows/desktop/WmiSdk/com-api-for-wmi). Consente lo sviluppo di strumenti e librerie che gestiscono e monitorano i computer remoti.

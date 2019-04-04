@@ -1,17 +1,17 @@
 ---
-title: Flusso di lavoro di sviluppo a ciclo interno per le app Docker
+title: Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 description: Descrive il flusso di lavoro "ciclo interno" per lo sviluppo di applicazioni Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676668"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920909"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo a ciclo interno per le app Docker
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo del ciclo interno per le app Docker
 
 Prima di attivare il flusso di lavoro ciclo esterno che si estende l'intera DevOps del ciclo, tutto ha inizio in ogni computer dello sviluppatore, scrittura di codice dell'app stessa, usando i propri linguaggi Preferiti o piattaforme e testarla in locale (figura 4-21). Ma in ogni caso, sarà necessario un punto importante in comune, indipendentemente da quale linguaggio, framework o piattaforme scelto. In questo flusso di lavoro specifico, vengono sempre lo sviluppo, test sui contenitori di Docker, ma in locale.
 
@@ -105,7 +105,7 @@ Nella figura 4-24, è possibile visualizzare come un comando docker-compose file
 
 **Figura 4-24**. File docker aggiunti usando il **file Docker aggiungere al comando dell'area di lavoro**
 
-Quando si aggiunge un DockerFile, è specificare quale immagine Docker di base che verranno utilizzati (come l'uso di `FROM microsoft/aspnetcore`). In genere si creerà un'immagine personalizzata all'inizio di un'immagine di base che si ottiene da qualsiasi repository ufficiale nel [registro Docker Hub](https://hub.docker.com/) (ad esempio un [immagine per .NET Core](https://hub.docker.com/r/microsoft/dotnet/) o quello [per Node. js](https://hub.docker.com/_/node/)).
+Quando si aggiunge un DockerFile, è specificare quale immagine Docker di base che verranno utilizzati (come l'uso di `FROM mcr.microsoft.com/dotnet/core/aspnet`). In genere si creerà un'immagine personalizzata all'inizio di un'immagine di base che si ottiene da qualsiasi repository ufficiale nel [registro Docker Hub](https://hub.docker.com/) (ad esempio un [immagine per .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) o quello [per Node. js](https://hub.docker.com/_/node/)).
 
 ***Usare un'immagine Docker ufficiale esistente***
 
@@ -115,7 +115,7 @@ Di seguito è riportato un esempio di DockerFile per un contenitore di .NET Core
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-In questo caso, l'immagine si basa sulla versione 2.1 dell'immagine ASP.NET Core Docker ufficiale (multi-arch per Linux e Windows), in base alla riga `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Per altre informazioni su questo argomento, vedere la [ASP.NET Core Docker Image](https://hub.docker.com/r/microsoft/aspnetcore/) pagina e il [.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/) pagina).
+In questo caso, l'immagine si basa sulla versione 2.1 dell'immagine ASP.NET Core Docker ufficiale (multi-arch per Linux e Windows), in base alla riga `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Per altre informazioni su questo argomento, vedere la [ASP.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) pagina e il [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) pagina).
 
 Nel DockerFile, è possibile indicare anche Docker per l'ascolto della porta TCP che verrà usato in fase di esecuzione (ad esempio la porta 80).
 
@@ -143,9 +143,9 @@ Nel Dockerfile è possibile specificare altre impostazioni di configurazione in 
 
 **Usare i repository di immagini multi-arch**
 
-Il nome di un'immagine singola in un repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine di Windows. Questa funzionalità consente a fornitori come Microsoft (creatori di immagini di base) creare un unico repository per più piattaforme (vale a dire, Linux e Windows). Ad esempio, il [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) repository disponibili nel Registro di sistema dell'Hub Docker fornisce il supporto per Linux e Windows Nano Server usando lo stesso nome di immagine.
+Il nome di un'immagine singola in un repository può contenere varianti di piattaforme, ad esempio un'immagine Linux e un'immagine di Windows. Questa funzionalità consente a fornitori come Microsoft (creatori di immagini di base) creare un unico repository per più piattaforme (vale a dire, Linux e Windows). Ad esempio, il [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) repository disponibili nel Registro di sistema dell'Hub Docker fornisce il supporto per Linux e Windows Nano Server usando lo stesso nome di immagine.
 
-Eseguire il pull il [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) pull di immagini da un host Windows la variante di Windows, mentre il pull lo stesso nome di immagine da un host Linux estrae la variante Linux.
+Eseguire il pull il [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) pull di immagini da un host Windows la variante di Windows, mentre il pull lo stesso nome di immagine da un host Linux estrae la variante Linux.
 
 ***Creare l'immagine di base da zero***
 
@@ -216,7 +216,7 @@ Il servizio redis Usa il [immagine redis pubblica più recente](https://hub.dock
 
 Se l'app ha solo un singolo contenitore, è sufficiente eseguirla distribuendola all'host Docker (macchina virtuale o server fisico). Tuttavia, se l'app è costituita da più servizi, devi *comporlo*anche. Esaminiamo le diverse opzioni.
 
-***Opzione a: Eseguire un singolo contenitore o un servizio***
+***Opzione A: Eseguire un singolo contenitore o un servizio***
 
 È possibile eseguire l'immagine Docker usando il comando docker run, come illustrato di seguito:
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Per questa distribuzione specifica, si saranno reindirizzando le richieste inviate alla porta 80 alla porta interna 5000. A questo punto l'applicazione è in ascolto sulla porta esterna 80 a livello di host.
 
-***Opzione b: Creare ed eseguire un'applicazione di più contenitori***
+***Opzione B: Creare ed eseguire un'applicazione di più contenitori***
 
 Nella maggior parte degli scenari aziendali, un'applicazione Docker sarà essere composte da più servizi. In questi casi, è possibile eseguire il `docker-compose up` comando (figura 4-27), che userà il file docker-Compose. yml che è stato creato in precedenza. Questo comando consente di distribuire un'applicazione composta con tutti i contenitori correlati.
 

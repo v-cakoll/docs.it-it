@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738630"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921325"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: Creare certificati temporanei da usare durante lo sviluppo
 
@@ -78,7 +78,7 @@ Dopo avere impostato i certificati temporanei, è possibile usarli per sviluppar
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>Per specificare un certificato come tipo di credenziali client
 
-- Nel file di configurazione di un servizio usare l'XML seguente per impostare la modalità di sicurezza su messaggio e il tipo di credenziali client su certificato.
+1. Nel file di configurazione di un servizio usare l'XML seguente per impostare la modalità di sicurezza su messaggio e il tipo di credenziali client su certificato.
 
     ```xml
     <bindings>
@@ -92,19 +92,19 @@ Dopo avere impostato i certificati temporanei, è possibile usarli per sviluppar
     </bindings>
     ```
 
-Nel file di configurazione per un client, usare il seguente codice XML per specificare che il certificato è stato trovato nell'archivio dell'utente e che può essere trovato cercando il campo SubjectName per il valore "CohoWinery."
+2. Nel file di configurazione per un client, usare il seguente codice XML per specificare che il certificato è stato trovato nell'archivio dell'utente e che può essere trovato cercando il campo SubjectName per il valore "CohoWinery."
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
 Per altre informazioni sull'uso di certificati in WCF, vedere [Working with Certificates](working-with-certificates.md).
 
@@ -114,6 +114,6 @@ Assicurarsi di eliminare qualsiasi certificato temporaneo dell'autorità di radi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di certificati](working-with-certificates.md)
-- [Procedura: Visualizzare i certificati con lo Snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Utilizzo dei certificati](working-with-certificates.md)
+- [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protezione di servizi e client](securing-services-and-clients.md)
