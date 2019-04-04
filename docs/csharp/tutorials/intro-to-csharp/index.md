@@ -1,8 +1,14 @@
 ---
-title: 'Introduzione a C# - Esercitazioni interattive'
-description: 'Imparare a usare C# nel browser e introduzione all''ambiente di sviluppo'
+title: Introduzione a C# - Esercitazioni interattive
+description: Imparare a usare C# nel browser e introduzione all'ambiente di sviluppo
 ms.date: 01/30/2018
 ms.custom: mvc
+ms.openlocfilehash: 784461a707f0c40fd559b5652358bc8ec2ba9279
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920516"
 ---
 # <a name="introduction-to-c"></a>Introduzione a C\#
 
@@ -12,35 +18,29 @@ Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti d
 
 Tutte le esercitazioni introduttive successive alla lezione relativa a Hello World sono disponibili tramite l'esperienza del browser online o [nell'ambiente di sviluppo locale](local-environment.md). Alla fine di ogni esercitazione, è possibile scegliere se continuare con la successiva lezione online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con l'esercitazione successiva nel computer.
 
-## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
+## [<a name="hello-world"></a>Hello world](hello-world.yml)
 
 Nell'esercitazione [Hello World](hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Numeri in C#](numbers-in-csharp.yml)
+## [<a name="numbers-in-c"></a>Numeri in C#](numbers-in-csharp.yml)
 
 Nell'esercitazione [Numeri in C#](numbers-in-csharp.yml) viene descritto il modo in cui i computer archiviano numeri per eseguire calcoli con tipi numerici diversi. Verranno illustrati i concetti di base degli arrotondamenti e le procedure per eseguire calcoli matematici con C#. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](numbers-in-csharp-local.md).
 
 Questa esercitazione presuppone che sia stata già completata la lezione [Hello World](hello-world.yml).
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Rami e cicli](branches-and-loops.yml)
+## [<a name="branches-and-loops"></a>Rami e cicli](branches-and-loops.yml)
 
 L'esercitazione [Rami e cicli](branches-and-loops.yml) presenta i concetti di base della selezione di percorsi diversi di esecuzione del codice in base ai valori archiviati in variabili. Si apprenderanno i concetti fondamentali del flusso di controllo, ovvero i meccanismi in base ai quali i programmi prendono decisioni e scelgono azioni diverse. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](branches-and-loops-local.md).
 
 Questa esercitazione presuppone che siano state già completate le lezioni [Hello World](hello-world.yml) e [Numeri in C#](numbers-in-csharp.yml).
 
-## <a name="string-interpolationinterpolated-stringsyml"></a>[Interpolazione di stringhe](interpolated-strings.yml)
-
-L'esercitazione [Interpolazione di stringhe](interpolated-strings.yml) mostra come inserire valori in una stringa. Si apprenderà come creare una stringa interpolata con espressioni C# incorporate e come controllare la formattazione della stringa di output. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](interpolated-strings-local.md).
-
-Questa esercitazione presuppone che siano state già completate le lezioni [Hello World](hello-world.yml), [Numeri in C#](numbers-in-csharp.yml) e [Rami e cicli](branches-and-loops.yml).
-
-## <a name="list-collectionlist-collectionyml"></a>[Raccolte di elenchi](list-collection.yml)
+## [<a name="list-collection"></a>Raccolte di elenchi](list-collection.yml)
 
 La lezione [Raccolte di elenchi](list-collection.yml) offre una panoramica delle raccolte di tipo List che consentono di archiviare sequenze di dati. Si apprenderà come aggiungere e rimuovere elementi, eseguire la ricerca di elementi e ordinare gli elenchi. Verranno esaminati diversi tipi di elenchi. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](arrays-and-collections.md).
 
 Questa esercitazione presuppone che siano state già completate le lezioni elencate sopra.
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introduzione alle classi](introduction-to-classes.md)
+## [<a name="introduction-to-classes"></a>Introduzione alle classi](introduction-to-classes.md)
 
 Questa esercitazione finale è disponibile solo per l'esecuzione nel computer, usando l'ambiente di sviluppo locale e .NET Core.
 Verrà illustrato come creare un'applicazione console e verranno presentate le funzionalità orientate a oggetti di base che fanno parte del linguaggio C#.

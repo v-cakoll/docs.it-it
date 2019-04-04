@@ -4,8 +4,13 @@ description: Questo articolo illustra come viene specificata la versione di .NET
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
+ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921286"
 ---
-
 # <a name="overview-of-how-net-core-is-versioned"></a>Panoramica di come viene specificata la versione di .NET Core
 
 .NET Core indica il runtime di .NET Core e .NET Core SDK, contenente gli strumenti necessari per lo sviluppo di applicazioni. .NET Core SDK è progettato per funzionare con qualsiasi versione precedente del runtime di .NET Core. Questo articolo illustra il runtime e la strategia delle versioni del SDK. La spiegazione dei numeri di versione di .NET Standard è disponibile nell'articolo di presentazione di [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -87,7 +92,7 @@ Dopo l'uscita di una versione, i rami generalmente interrompono la produzione di
 
 .NET Standard è un assembly di riferimento .NET. Esistono più implementazioni specifiche per ogni piattaforma. L'assembly di riferimento contiene la definizione delle API .NET che fanno parte di una determinata versione di .NET Standard. Ogni implementazione adempie al contratto .NET Standard nella piattaforma specifica. Per altre informazioni vedere l'articolo su [.NET Standard](../../standard/net-standard.md) nella Guida di .NET.
 
-L'assembly di riferimento .NET Standard usa uno schema di controllo delle versioni `MAJOR.MINOR`. Il livello `PATCH` non è utile per .NET Standard, perché espone solo una specifica di API (nessuna implementazione) e, per definizione, qualsiasi modifica apportata all'API rappresenterebbe una modifica al set di funzionalità e di conseguenza una nuova versione di `MINOR`.
+L'assembly di riferimento .NET Standard usa uno schema di controllo delle versioni `MAJOR.MINOR`. `PATCH` : non è un livello utile per .NET Standard, perché espone solo una specifica di API (nessuna implementazione) e, per definizione, qualsiasi modifica apportata all'API rappresenterebbe una modifica al set di funzionalità e di conseguenza una nuova versione di `MINOR`.
 
 Le implementazioni in ogni piattaforma possono essere aggiornate, in genere nel quadro del rilascio della piattaforma e pertanto in modo non evidente per i programmatori che usano .NET Standard su tale piattaforma.
 
@@ -102,7 +107,7 @@ Ogni versione di .NET Core implementa una versione di .NET Standard. L'implement
 ## <a name="see-also"></a>Vedere anche
 
 - [Framework di destinazione](../../standard/frameworks.md)
-- [Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
-- [.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://www.microsoft.com/net/core/support)
-- [Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)
-- [Immagini Docker per .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Creazione di pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)
+- [Scheda informativa sul ciclo di supporto per .NET Core](https://www.microsoft.com/net/core/support)
+- [Associazione della versione di .NET Core 2+](https://github.com/dotnet/designs/issues/3)
+- [Immagini Docker per .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

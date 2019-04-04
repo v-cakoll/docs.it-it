@@ -4,12 +4,12 @@ description: .NET core è un'implementazione modulare ad alte prestazioni di .NE
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030282"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920623"
 ---
 # <a name="net-core-guide"></a>Guida a .NET Core
 
@@ -21,7 +21,7 @@ Per imparare a creare una semplice applicazione .NET Core, vedere le [Esercitazi
 
 ## <a name="download-net-core-22"></a>Scaricare .NET Core 2.2
 
-Scaricare [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) per provare .NET Core nel computer Windows, macOS o Linux. Visitare [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) se si preferisce usare i contenitori Docker.
+Scaricare [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) per provare .NET Core nel computer Windows, macOS o Linux. Visitare [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) se si preferisce usare i contenitori Docker.
 
 Tutte le versioni di .NET Core sono disponibili nella pagina [Download di .NET Core](https://www.microsoft.com/net/download/archives) se si sta cercando un'altra versione di .NET Core.
 
