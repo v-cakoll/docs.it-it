@@ -3,12 +3,12 @@ title: Guida ai contenuti su ML.NET
 description: Informazioni su come creare soluzioni di intelligenza artificiale personalizzate e integrarle nelle applicazioni .NET usando ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826269"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920766"
 ---
 # <a name="mlnet-content-guide"></a>Guida ai contenuti su ML.NET
 
@@ -27,25 +27,25 @@ Per informazioni di base, vedere [Concetti fondamentali sul training dei modelli
 
 ## <a name="tutorials"></a>Esercitazioni
 
-L'esercitazione [Analizzare il sentiment usando un modello di classificazione binaria](tutorials/sentiment-analysis.md) illustra come compilare un'app che determina se il sentiment è positivo o negativo.
+L'esercitazione [Analizzare il sentiment usando un modello di classificazione binaria](./tutorials/sentiment-analysis.md) illustra come compilare un'app che determina se il sentiment è positivo o negativo.
 
-[Classificare i problemi di GitHub usando un modello di classificazione multiclasse](tutorials/github-issue-classification.md) illustra come creare un'app che determina l'etichetta Area per un problema di GitHub.
+[Classificare i problemi di GitHub usando un modello di classificazione multiclasse](./tutorials/github-issue-classification.md) illustra come creare un'app che determina l'etichetta Area per un problema di GitHub.
 
-L'esercitazione [Prevedere i prezzi usando un modello di regressione](tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.
+L'esercitazione [Prevedere i prezzi usando un modello di regressione](./tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.
 
-L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris. 
+L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](./tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris. 
 
 ## <a name="how-to-guide"></a>Guida pratica
 
-La guida [Compilare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica](how-to-guides/matchup-app-infer-net.md) illustra come compilare una versione semplificata di un'app di corrispondenze così come sarebbe visualizzata in un gioco per Xbox.
+La guida [Compilare un'app elenco di corrispondenze di gioco con Infer.NET e la programmazione probabilistica](./how-to-guides/matchup-app-infer-net.md) illustra come compilare una versione semplificata di un'app di corrispondenze così come sarebbe visualizzata in un gioco per Xbox.
 
 ## <a name="resources"></a>Risorse
 
-L'articolo [Glossario di Machine Learning](resources/glossary.md) contiene le definizioni dei termini chiave.
+L'articolo [Glossario di Machine Learning](./resources/glossary.md) contiene le definizioni dei termini chiave.
 
-L'articolo [Attività di Machine Learning](resources/tasks.md) descrive attività come la classificazione e il rilevamento anomalie. 
+L'articolo [Attività di Machine Learning](./resources/tasks.md) descrive attività come la classificazione e il rilevamento anomalie. 
 
-L'articolo [Trasformazioni di dati](resources/transforms.md) descrive le funzionalità di preparazione dei dati in ML.NET.
+L'articolo [Trasformazioni di dati](./resources/transforms.md) descrive le funzionalità di preparazione dei dati in ML.NET.
 
 
 ## <a name="api-reference"></a>API (riferimento)
