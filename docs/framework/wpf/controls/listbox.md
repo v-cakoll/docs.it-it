@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362227"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055053"
 ---
-# <a name="listbox"></a><span data-ttu-id="72331-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="72331-102">ListBox</span></span>
-<span data-ttu-id="72331-103">Oggetto <xref:System.Windows.Controls.ListBox> controllo fornisce agli utenti un elenco di elementi selezionabili.</span><span class="sxs-lookup"><span data-stu-id="72331-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="adeab-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="adeab-102">ListBox</span></span>
+<span data-ttu-id="adeab-103">Oggetto <xref:System.Windows.Controls.ListBox> controllo fornisce agli utenti un elenco di elementi selezionabili.</span><span class="sxs-lookup"><span data-stu-id="adeab-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="72331-104">La figura seguente illustra una tipica <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="72331-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="adeab-104">La figura seguente illustra una tipica <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="adeab-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="72331-105">![Schermata ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="72331-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="72331-106">Casella di riepilogo tipico</span><span class="sxs-lookup"><span data-stu-id="72331-106">Typical ListBox</span></span>  
+ <span data-ttu-id="adeab-105">![Schermata ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="adeab-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="adeab-106">Casella di riepilogo tipico</span><span class="sxs-lookup"><span data-stu-id="adeab-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="72331-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="72331-107">In This Section</span></span>  
- [<span data-ttu-id="72331-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="72331-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="adeab-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="adeab-107">In This Section</span></span>  
+ [<span data-ttu-id="adeab-108">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="adeab-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="72331-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="72331-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="adeab-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="adeab-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="72331-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="72331-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="adeab-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="adeab-110">Related Sections</span></span>
