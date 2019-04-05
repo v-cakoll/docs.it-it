@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 246c5f489f4cc0076303de8383506898fe053ae5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1135cf211c3a858f495cd1424d3a28f3a6c37f7e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843149"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054962"
 ---
 # <a name="duplex"></a>Duplex
 Nell'esempio duplex viene illustrato come definire e implementare un contratto duplex. Una comunicazione duplex ha luogo quando un client stabilisce una sessione con un servizio e fornisce a quest'ultimo un canale usabile per inviare messaggi al client. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). Un contratto duplex è definito come una coppia di interfacce: un'interfaccia principale dal client al servizio e un'interfaccia di callback dal servizio al client. In questo esempio, l'interfaccia `ICalculatorDuplex` consente al client di eseguire operazioni matematiche, calcolando il risultato in una sessione. Il servizio restituisce i risultati sull'interfaccia `ICalculatorDuplexCallback`. Poiché occorre definire un contesto per correlare il set di messaggi scambiati fra il client e il servizio, i contratti duplex richiedono una sessione.  
@@ -61,14 +61,14 @@ public class CalculatorService : ICalculatorDuplex
   
     public void Clear()  
     {  
-        Callback.Equation(equation + " = " + result.ToString());  
+        Callback.Equation($"{equation} = {result}");  
         equation = result.ToString();  
     }  
   
     public void AddTo(double n)  
     {  
         result += n;  
-        equation += " + " + n.ToString();  
+        equation += $" + {n}";  
         Callback.Result(result);  
     }  
     

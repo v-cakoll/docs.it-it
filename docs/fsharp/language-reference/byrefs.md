@@ -2,12 +2,12 @@
 title: Zkratka
 description: Informazioni su byref e tipi byref simili in F#, che vengono utilizzati per la programmazione di basso livello.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976551"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055365"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Per scrivere il puntatore del mouse utilizzando un `outref<'T>` oppure `byref<'T>`, è inoltre necessario che il valore ottenere un puntatore a `mutable`.
@@ -84,7 +85,7 @@ Se si sta scrivendo solo il puntatore anziché leggerlo, è consigliabile usare 
 Esaminare il codice seguente:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Semanticamente, ciò significa che i seguenti:
@@ -111,17 +112,17 @@ C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La
 
 |Costrutto di linguaggio c#|F#deduce|
 |------------|---------|
-|`ref` Valore restituito|`outref<'T>`|
-|`ref readonly` Valore restituito|`inref<'T>`|
-|`in ref` Parametro|`inref<'T>`|
-|`out ref` Parametro|`outref<'T>`|
+|`ref` valore restituito|`outref<'T>`|
+|`ref readonly` valore restituito|`inref<'T>`|
+|`in ref` parametro|`inref<'T>`|
+|`out ref` parametro|`outref<'T>`|
 
 La tabella seguente illustra ciò che F# genera:
 
 |F#costrutto|Costrutto generato|
 |------------|-----------------|
 |`inref<'T>` argomento|`[In]` attributo nell'argomento|
-|`inref<'T>` restituire|`modreq` attributo sul valore|
+|`inref<'T>` return|`modreq` attributo sul valore|
 |`inref<'T>` in uno slot astratto o implementazione|`modreq` argomento o return|
 |`outref<'T>` argomento|`[Out]` attributo nell'argomento|
 

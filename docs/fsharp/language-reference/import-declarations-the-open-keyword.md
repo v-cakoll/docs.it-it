@@ -1,13 +1,13 @@
 ---
 title: 'Dichiarazioni di importazione: Parola chiave open'
 description: Informazioni su F# Importa le dichiarazioni e come vengono specificati un modulo o i cui elementi è possibile fare riferimento senza usare un nome completo dello spazio dei nomi.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610320"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055001"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Dichiarazioni di importazione: Il `open` (parola chiave)
 
@@ -68,6 +68,6 @@ Alcuni moduli, record o i tipi di unione possono specificare il `RequireQualifie
 
 ## <a name="see-also"></a>Vedere anche
 
-- [C# riferimenti al linguaggio](index.md)
+- [Riferimenti per il linguaggio F#](index.md)
 - [Spazi dei nomi](namespaces.md)
 - [Moduli](modules.md)

@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358187"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055248"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Prima applicazione desktop WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Compilare una prima applicazione desktop WPF
 
 Questo articolo illustra come sviluppare una semplice applicazione Windows Presentation Foundation (WPF) che include gli elementi che sono comuni alla maggior parte delle applicazioni WPF: Extensible Application Markup Language (XAML) markup, code-behind, definizioni delle applicazioni, controlli, layout, associazione dati e stili.
 
@@ -215,7 +215,7 @@ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.
 
     La figura seguente mostra l'applicazione con il <xref:System.Windows.Navigation.NavigationWindow> pulsanti:
 
-    ![Schermata dell'esempio ExpenseIt](./media/gettingstartedfigure1.png)
+    ![Screenshot di esempio ExpenseIt](./media/gettingstartedfigure1.png)
 
 2. Chiudere l'applicazione per tornare a Visual Studio.
 
@@ -285,7 +285,7 @@ Ogni controllo viene inserito in una riga della <xref:System.Windows.Controls.Gr
 
 La figura seguente mostra i controlli che appena creato:
 
-![Schermata dell'esempio ExpenseIt](./media/gettingstartedfigure2.png)
+![Screenshot di esempio ExpenseIt](./media/gettingstartedfigure2.png)
 
 ## <a name="add-an-image-and-a-title"></a>Aggiungere un'immagine e un titolo
 
@@ -321,7 +321,7 @@ In questa sezione, si verrà aggiornata la home page dell'interfaccia utente con
 
 La figura seguente mostra i risultati di ciò che appena aggiunto:
 
-![Schermata dell'esempio ExpenseIt](./media/gettingstartedfigure3.png)
+![Screenshot di esempio ExpenseIt](./media/gettingstartedfigure3.png)
 
 ## <a name="add-code-to-handle-events"></a>Aggiungere il codice per gestire gli eventi
 
@@ -361,7 +361,7 @@ La figura seguente mostra i risultati di ciò che appena aggiunto:
 
 La figura seguente mostra gli elementi dell'interfaccia utente aggiunti alla *ExpenseReportPage. XAML*.
 
-![Schermata dell'esempio ExpenseIt](./media/gettingstartedfigure4.png)
+![Screenshot di esempio ExpenseIt](./media/gettingstartedfigure4.png)
 
 ## <a name="style-controls"></a>Controlli in stile
 
@@ -475,7 +475,7 @@ In questa sezione, si aggiornerà l'interfaccia utente per ogni elemento negli e
 
 Nella figura seguente mostra le due pagine del `ExpenseIt` applicazione controlli, layout, stili, associazione dati e modelli di dati applicati:
 
-![Schermate dell'esempio ExpenseIt](./media/gettingstartedfigure5.png)
+![Screenshot di esempio ExpenseIt](./media/gettingstartedfigure5.png)
 
 > [!NOTE]
 > Questo esempio illustra una funzionalità specifica di WPF e non segue tutte le procedure consigliate per aspetti quali sicurezza, localizzazione e accessibilità. Per una descrizione completa di WPF e le procedure guidate di sviluppo dell'applicazione .NET Framework, vedere gli argomenti seguenti:
@@ -493,8 +493,8 @@ Nella figura seguente mostra le due pagine del `ExpenseIt` applicazione controll
 In questa procedura dettagliata si è appreso diverse tecniche per la creazione di un'interfaccia utente mediante Windows Presentation Foundation (WPF). È stata acquisita una conoscenza di base dei blocchi predefiniti di un'applicazione .NET Framework con associazione a dati. Per altre informazioni sull'architettura WPF e i modelli di programmazione, vedere gli argomenti seguenti:
 
 - [Architettura WPF](../advanced/wpf-architecture.md)
-- [Panoramica di XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Cenni preliminari sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
+- [Cenni preliminari su XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Panoramica sulle proprietà di dipendenza](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Per altre informazioni sulla creazione di applicazioni, vedere gli argomenti seguenti:

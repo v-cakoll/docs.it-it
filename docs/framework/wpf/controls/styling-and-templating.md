@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055326"
 ---
 # <a name="styling-and-templating"></a>Applicazione di stili e modelli
-Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono un insieme di funzionalità (stili, modelli, trigger e storyboard) che gli sviluppatori e i progettisti usano per creare effetti visivamente accattivanti e per conferire al prodotto un aspetto coerente. Gli sviluppatori e i progettisti possono personalizzare ampiamente l'aspetto a livello di applicazione, ma l'uso di un modello di stili e modelli definito è fondamentale per consentire la manutenzione e la condivisione dell'aspetto all'interno di un'applicazione e tra più applicazioni. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre questo modello.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stili e modelli fanno riferimento a un gruppo di funzionalità (stili, modelli, trigger e storyboard) che consente agli sviluppatori e progettisti per creare effetti visivamente accattivanti e creare un aspetto coerente per il prodotto. Gli sviluppatori e i progettisti possono personalizzare ampiamente l'aspetto a livello di applicazione, ma l'uso di un modello di stili e modelli definito è fondamentale per consentire la manutenzione e la condivisione dell'aspetto all'interno di un'applicazione e tra più applicazioni. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre questo modello.  
   
  Un'altra caratteristica del modello di stili di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è la separazione tra presentazione e logica. In pratica, mentre gli sviluppatori lavorano sulla logica di programmazione usando C# o Visual Basic, i progettisti possono lavorare sull'aspetto di un'applicazione usando solo il linguaggio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -45,7 +45,7 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Screenshot di esempio di applicazione di uno stile](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Screenshot di esempio Styling](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  È possibile modificare l'aspetto predefinito impostando le proprietà, ad esempio <xref:System.Windows.Controls.Control.FontSize%2A> e <xref:System.Windows.Controls.Control.FontFamily%2A>, su ogni <xref:System.Windows.Controls.TextBlock> elemento direttamente. Tuttavia, se si desidera che il <xref:System.Windows.Controls.TextBlock> elementi condividere alcune proprietà, è possibile creare un <xref:System.Windows.Style> nel `Resources` sezione del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file, come illustrato di seguito:  
   
@@ -57,7 +57,7 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
  A questo punto il <xref:System.Windows.Controls.TextBlock> gli elementi vengono visualizzati come indicato di seguito:  
   
- ![Screenshot di esempio di applicazione di uno stile](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Screenshot di esempio Styling](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Estensione degli stili  
  Probabilmente si desidera che i due <xref:System.Windows.Controls.TextBlock> elementi condividono alcuni valori delle proprietà, ad esempio il <xref:System.Windows.Controls.Control.FontFamily%2A> e il centrato <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, ma opportuno anche il testo "My Pictures" hanno alcune proprietà aggiuntive. Creare a tal fine un nuovo stile basato sul primo stile, come illustrato di seguito:  
@@ -165,7 +165,7 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
   
  Nella figura seguente il mouse punta sul terzo elemento:  
   
- ![Screenshot di esempio di applicazione di uno stile](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Screenshot di esempio Styling](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger e MultiDataTrigger  
  Oltre a <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger>, esistono altri tipi di trigger. <xref:System.Windows.MultiTrigger> Consente di impostare i valori delle proprietà in base a più condizioni. Si utilizza <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando la proprietà della condizione è associato a dati.  
@@ -199,4 +199,4 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
 ## <a name="see-also"></a>Vedere anche
 - [URI di tipo pack in WPF](../app-development/pack-uris-in-wpf.md)
 - [Procedura: Trovare elementi generati da un oggetto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
-- [Procedura: trovare elementi generati da un oggetto DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)
+- [Trovare elementi generati da un oggetto DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

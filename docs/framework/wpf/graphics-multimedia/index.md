@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87ae55c454a72797569de4cd944984ba18c3b2ca
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379562"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055066"
 ---
 # <a name="graphics-and-multimedia"></a>Grafica e funzionalità multimediali
 <a name="introduction"></a>
@@ -53,7 +53,7 @@ ms.locfileid: "57379562"
  WPF include il supporto per gli elementi grafici 2D di qualità elevata. La funzionalità include pennelli, geometrie, immagini, forme e trasformazioni. Per altre informazioni, vedere [Grafica](graphics.md). Il rendering degli elementi grafici è basato sul <xref:System.Windows.Media.Visual> classe. La struttura degli oggetti visivi sullo schermo è descritta dalla struttura ad albero visuale. Per altre informazioni, vedere [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>Forme 2D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di forme [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] di uso comune basate su vettori, ad esempio i rettangoli e le ellissi mostrati nella figura seguente.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di uso comune disegnate da vettori [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] forme, quali rettangoli ed ellissi, come illustrato di seguito.  
   
  ![Ellissi e rettangoli](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -101,7 +101,7 @@ End Class
  Per altre informazioni, vedere [Cenni preliminari sulle classi Geometry](geometry-overview.md). Per un esempio introduttivo, vedere [Esempio di geometrie](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Effetti 2D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di classi [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] che è possibile usare per creare una vasta gamma di effetti. La funzionalità di rendering [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre la possibilità di disegnare elementi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] che hanno gradienti, bitmap, disegni e video e di modificarli mediante rotazione, ridimensionamento e inclinazione. La figura seguente fornisce un esempio dei molti effetti che è possibile ottenere usando i pennelli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce una libreria di [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] le classi che è possibile usare per creare una varietà di effetti. La funzionalità di rendering [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] offre la possibilità di disegnare elementi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] che hanno gradienti, bitmap, disegni e video e di modificarli mediante rotazione, ridimensionamento e inclinazione. La figura seguente fornisce un esempio dei molti effetti che è possibile ottenere usando i pennelli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Illustrazione di pennelli diversi](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -109,9 +109,9 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Rendering 3D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un set di funzionalità di rendering [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] che si integrano con il supporto della grafica [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] per la creazione di layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e visualizzazione dei dati più interessanti. A un'estremità dello spettro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di eseguire il rendering di immagini [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] su superfici di forme [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], come illustrato di seguito.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un set di [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] funzionalità di rendering che si integrano con [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] supporto nella grafica [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in ordine per poter creare layout più interessanti, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]e visualizzazione dei dati. A un'estremità dello spettro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di eseguire il rendering di immagini [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] su superfici di forme [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], come illustrato di seguito.  
   
- ![Screenshot dell'esempio Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Screenshot di esempio Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  Per altre informazioni, vedere [Panoramica della grafica tridimensionale](3-d-graphics-overview.md). Per un esempio introduttivo, vedere [Esempio di solidi 3D](https://go.microsoft.com/fwlink/?LinkID=159964).  
   
@@ -130,7 +130,7 @@ End Class
 ### <a name="images"></a>Immagini  
  Le immagini, tra cui le icone, gli sfondi e le parti di animazioni, sono un componente fondamentale della maggior parte delle applicazioni. Poiché spesso è necessario usare le immagini, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consente di usarle in vari modi. La figura seguente mostra uno dei vari modi.  
   
- ![Screenshot di esempio di applicazione di uno stile](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Screenshot di esempio Styling](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
  Per altre informazioni, vedere [Panoramica della creazione dell'immagine](imaging-overview.md).  
   
@@ -149,10 +149,10 @@ End Class
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
-- [Animazione e temporizzazione procedure](animation-and-timing-how-to-topics.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Procedure relative all'animazione e al sistema di temporizzazione](animation-and-timing-how-to-topics.md)
+- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
 - [Panoramica delle funzionalità multimediali](multimedia-overview.md)

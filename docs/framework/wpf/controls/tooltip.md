@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367570"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054988"
 ---
 # <a name="tooltip"></a>Descrizione comando
 Una descrizione comando è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio su un <xref:System.Windows.Controls.Button>.  
@@ -26,7 +26,7 @@ Una descrizione comando è una piccola finestra popup che viene visualizzato qua
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo ToolTip](tooltip-overview.md)  
-  [Procedure relative alle proprietà](tooltip-how-to-topics.md)  
+  [Procedure relative](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ Una descrizione comando è una piccola finestra popup che viene visualizzato qua
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Panoramica sul controllo Popup](popup-overview.md)  
-  [Procedure relative alle proprietà](popup-how-to-topics.md)
+ [Cenni preliminari sul controllo Popup](popup-overview.md)  
+  [Procedure relative](popup-how-to-topics.md)

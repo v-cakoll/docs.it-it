@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: cdf2f9aebaac09ed3e03148fdf1bc899f1e1fc45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721996"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055209"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57721996"
   
  Se <xref:System.Windows.Forms.DataGrid> è associato a dati con più tabelle correlate e se è abilitata l'esplorazione della griglia, la griglia visualizzerà degli espansori in ogni riga. Con un espansore, l'utente può spostarsi da una tabella padre a una tabella figlio. Facendo clic su un nodo, viene visualizzata la tabella figlio e, facendo clic su un pulsante Indietro, viene visualizzata la tabella padre originale. In questo modo, nella griglia vengono visualizzate le relazioni gerarchiche tra le tabelle.  
   
- La schermata seguente mostra un DataGrid associato a dati con più tabelle.  
+ Lo screenshot seguente mostra che un DataGrid associato a dati con più tabelle.  
   
  ![DataGrid associato a dati con più tabelle](./media/vbcontrol1.gif "vbControl1")  
 DataGrid associato a dati con più tabelle  
@@ -58,13 +58,13 @@ DataGrid associato a dati con più tabelle
   
  Le origini dati valide per <xref:System.Windows.Forms.DataGrid> includono:  
   
--   Classe <xref:System.Data.DataTable>  
+-   <xref:System.Data.DataTable> classe  
   
--   Classe <xref:System.Data.DataView>  
+-   <xref:System.Data.DataView> classe  
   
--   Classe <xref:System.Data.DataSet>  
+-   <xref:System.Data.DataSet> classe  
   
--   Classe <xref:System.Data.DataViewManager>  
+-   <xref:System.Data.DataViewManager> classe  
   
  Se l'origine è un set di dati, il set di dati potrebbe essere un oggetto nel form o un oggetto passato al form da un servizio Web XML. È possibile eseguire il binding sia a set di dati tipizzati che non tipizzati.  
   
@@ -104,7 +104,7 @@ DataGrid associato a dati con più tabelle
  ![Oggetti inclusi nel controllo DataGrid](./media/vbcolumns1.gif "vbColumns1")  
 La figura seguente mostra gli oggetti inclusi nel controllo DataGrid.  
   
- Gli stili tabella e gli stili colonna vengono sincronizzati con gli oggetti <xref:System.Data.DataTable> e gli oggetti <xref:System.Data.DataColumn> impostandone le proprietà `MappingName` sulle proprietà <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> appropriate. Quando un oggetto <xref:System.Windows.Forms.DataGridTableStyle> senza stili colonna viene aggiunto a un controllo <xref:System.Windows.Forms.DataGrid> associato a un'origine dati valida e la proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> dello stile tabella viene impostata su una proprietà <xref:System.Data.DataTable.TableName%2A> valida, viene creata una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> per tale stile tabella. Per ogni <xref:System.Data.DataColumn> trovato nella raccolta <xref:System.Data.DataTable.Columns%2A> di <xref:System.Data.DataTable>, un corrispondente <xref:System.Windows.Forms.DataGridColumnStyle> viene aggiunto a <xref:System.Windows.Forms.GridColumnStylesCollection>. È possibile accedere all'oggetto <xref:System.Windows.Forms.GridColumnStylesCollection> attraverso la proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> di <xref:System.Windows.Forms.DataGridTableStyle>. Le colonne possono essere aggiunte o eliminate dalla griglia applicando il metodo <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> o <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> a <xref:System.Windows.Forms.GridColumnStylesCollection>. Per altre informazioni, vedere [Procedura: Aggiungere tabelle e colonne per i Windows Form di controllo DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [come: Eliminare o nascondere colonne nel Windows Form controllo DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Gli stili tabella e gli stili colonna vengono sincronizzati con gli oggetti <xref:System.Data.DataTable> e gli oggetti <xref:System.Data.DataColumn> impostandone le proprietà `MappingName` sulle proprietà <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> appropriate. Quando un oggetto <xref:System.Windows.Forms.DataGridTableStyle> senza stili colonna viene aggiunto a un controllo <xref:System.Windows.Forms.DataGrid> associato a un'origine dati valida e la proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> dello stile tabella viene impostata su una proprietà <xref:System.Data.DataTable.TableName%2A> valida, viene creata una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> per tale stile tabella. Per ogni <xref:System.Data.DataColumn> trovato nella raccolta <xref:System.Data.DataTable.Columns%2A> di <xref:System.Data.DataTable>, un corrispondente <xref:System.Windows.Forms.DataGridColumnStyle> viene aggiunto a <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> è possibile accedere mediante il <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà del <xref:System.Windows.Forms.DataGridTableStyle>. Le colonne possono essere aggiunte o eliminate dalla griglia applicando il metodo <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> o <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> a <xref:System.Windows.Forms.GridColumnStylesCollection>. Per altre informazioni, vedere [Procedura: Aggiungere tabelle e colonne per i Windows Form di controllo DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [come: Eliminare o nascondere colonne nel Windows Form controllo DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Una raccolta di tipi di colonna estende la classe <xref:System.Windows.Forms.DataGridColumnStyle> con funzionalità avanzate di modifica e formattazione. Tutti i tipi di colonna ereditano dalla classe base <xref:System.Windows.Forms.DataGridColumnStyle>. La classe creata dipende dalla proprietà <xref:System.Data.DataColumn.DataType%2A> dell'oggetto <xref:System.Data.DataColumn> su cui si basa <xref:System.Web.UI.WebControls.DataGridColumn>. Ad esempio, un oggetto <xref:System.Data.DataColumn> con la proprietà <xref:System.Data.DataColumn.DataType%2A> impostata su <xref:System.Boolean> verrà associato a <xref:System.Windows.Forms.DataGridBoolColumn>. La tabella seguente descrive ciascuno di questi tipi di colonna.  
   
@@ -141,7 +141,7 @@ La figura seguente mostra gli oggetti inclusi nel controllo DataGrid.
   
 ## <a name="see-also"></a>Vedere anche
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Procedura: Formattare il controllo DataGrid di Windows Form](how-to-format-the-windows-forms-datagrid-control.md)
+- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid di Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Procedura: Eliminare o nascondere colonne nel controllo DataGrid di Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Procedura: Formattare il controllo DataGrid di Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)
