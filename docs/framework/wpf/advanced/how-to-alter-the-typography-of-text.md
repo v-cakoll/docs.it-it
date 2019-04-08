@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setting Typography attributes [WPF]
 - Typography attribute [WPF], setting
 ms.assetid: 19a3b49b-60a2-4c11-a786-e26b4c965588
-ms.openlocfilehash: eeed93f62802a942915511db060c0e6c029579e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c027424632f8671ba8d7cae1c899ef3a53edc26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078863"
 ---
 # <a name="how-to-alter-the-typography-of-text"></a>Procedura: Modificare la tipografia del testo
 Nell'esempio seguente viene illustrato come impostare il <xref:System.Windows.Documents.TextElement.Typography%2A> dell'attributo, usando <xref:System.Windows.Documents.Paragraph> come elemento di esempio.  
@@ -36,4 +36,5 @@ Nell'esempio seguente viene illustrato come impostare il <xref:System.Windows.Do
  [!code-vb[TextElementSnippets#_TextElement_Typog](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)

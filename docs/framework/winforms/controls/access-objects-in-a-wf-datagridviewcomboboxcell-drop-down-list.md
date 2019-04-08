@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form'
+title: 'Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080787"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell Windows Form
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Procedura: Accedere agli oggetti in un elenco a discesa DataGridViewComboBoxCell di Windows Forms
 Ad esempio la <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridViewComboBoxColumn> e <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipi consentono di aggiungere oggetti arbitrari agli elenchi a discesa. Con questa funzionalità, è possibile rappresentare gli stati complessi in un elenco a discesa senza la necessità di archiviare oggetti corrispondenti in una raccolta separata.  
   
  A differenza di <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.Windows.Forms.DataGridView> tipi non è un <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> proprietà per il recupero dell'oggetto attualmente selezionato. In alternativa, è necessario impostare il <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> proprietà sul nome di una proprietà nell'oggetto business. Quando l'utente effettua una selezione, la proprietà indicata dell'oggetto business imposta la cella <xref:System.Windows.Forms.DataGridViewCell.Value%2A> proprietà.  
@@ -69,6 +69,7 @@ Ad esempio la <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.
 -   Riferimenti agli assembly System e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>
@@ -80,4 +81,4 @@ Ad esempio la <xref:System.Windows.Forms.ComboBox> (controllo), il <xref:System.
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [Visualizzazione di dati nel controllo DataGridView di Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Visualizzazione di dati nel controllo DataGridView Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)

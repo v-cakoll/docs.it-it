@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Utilizzare la classe FontSizeConverter'
+title: 'Procedura: Usare la classe FontSizeConverter'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FontSizeConverter objects [WPF]
 - typography [WPF], FontSizeConverter objects
 ms.assetid: 3b0592bd-7223-4860-a108-a5d72f3a9178
-ms.openlocfilehash: 21050ae69ad834b56c70f40d85138714af334dab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f33a297ae07d5509d2b4d9a98636086ac433a57f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088184"
 ---
-# <a name="how-to-use-the-fontsizeconverter-class"></a>Procedura: Utilizzare la classe FontSizeConverter
+# <a name="how-to-use-the-fontsizeconverter-class"></a>Procedura: Usare la classe FontSizeConverter
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come creare un'istanza di <xref:System.Windows.FontSizeConverter> e usarlo per modificare una dimensione del carattere.  
   
@@ -25,4 +25,5 @@ ms.locfileid: "57364099"
  [!code-csharp[FontSizeConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FontSizeConverter>

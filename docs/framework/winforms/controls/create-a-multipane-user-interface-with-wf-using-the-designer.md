@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Creare un'interfaccia utente a più riquadri con Windows Form usando la finestra di progettazione"
+title: "Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms usando la finestra di progettazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082932"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procedura: Creare un'interfaccia utente a più riquadri con Windows Form usando la finestra di progettazione
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms usando la finestra di progettazione
 Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simile a quello usato in Microsoft Outlook, con un **cartella** elenco, un **messaggi** riquadro e un **anteprima** riquadro. Questa disposizione avviene principalmente tramite l'ancoraggio dei controlli con il modulo.  
   
  Quando si effettua l'ancoraggio di un controllo, determinare il bordo del contenitore padre a cui è bloccato su un controllo. Di conseguenza, se si imposta la <xref:System.Windows.Forms.SplitContainer.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Right>, il bordo destro del controllo sarà ancorato al bordo destro del controllo padre. Inoltre, il bordo ancorato il controllo viene ridimensionato in modo corrisponde a quello del controllo contenitore. Per altre informazioni sul modo in cui <xref:System.Windows.Forms.SplitContainer.Dock%2A> funzionamento di proprietà, vedere [come: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md).  
@@ -47,5 +47,6 @@ Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simil
      A questo punto nello sviluppo di applicazioni, aver creato un'interfaccia utente sofisticata. Procedere con la programmazione dell'applicazione stessa, il passaggio successivo tramite la connessione è probabilmente il <xref:System.Windows.Forms.TreeView> controllo e <xref:System.Windows.Forms.ListView> controlli a un tipo di origine dati. Per altre informazioni sulla connessione di controlli ai dati, vedere [Data Binding e Windows Form](../data-binding-and-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controllo SplitContainer](splitcontainer-control-windows-forms.md)

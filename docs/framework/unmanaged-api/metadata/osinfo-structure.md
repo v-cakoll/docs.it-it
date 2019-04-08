@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abab67f28a5fabfc6c348af6b8b502b46510d460
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096199"
 ---
 # <a name="osinfo-structure"></a>Struttura OSINFO
 Contiene i dettagli sul sistema operativo per un assembly o un modulo.  
@@ -38,7 +38,7 @@ typedef struct {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`dwOSPlatformId`|Uno dei valori identificatore definiti dalla funzione della piattaforma Microsoft Windows `GetVersionEx`. Sono supportati i valori seguenti:<br /><br /> -VER_PLATFORM_WIN32s, o a 0x0000, specificare Microsoft Windows 3.1.<br />-VER_PLATFORM_WIN32_WINDOWS, o 0x0001, per specificare Windows 95, Windows 98 o discendenti da essi i sistemi operativi.<br />-VER_PLATFORM_WIN32_NT, o 0x0010, per specificare i sistemi operativi o Windows NT che derivano da essa.|  
 |`dwOSMajorVersion`|La versione principale del sistema operativo o un valore NULL per indicare tutte le versioni.|  
@@ -57,5 +57,6 @@ typedef struct {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

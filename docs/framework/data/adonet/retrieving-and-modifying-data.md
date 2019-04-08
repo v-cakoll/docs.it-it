@@ -2,12 +2,12 @@
 title: Recupero e modifica di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097622"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e recuperare i dati utilizzando un **DataReader** o una **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET, l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
@@ -40,10 +40,10 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
   
- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recupero di informazioni dello schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  Viene descritto come ottenere da un'origine dati database o cataloghi disponibili, tabelle e visualizzazioni in un database, vincoli esistenti per tabelle e altre informazioni relative allo schema.  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Viene descritto il modello a livello di factory del provider e viene illustrato come usare le classi base nello spazio dei nomi `System.Data.Common`.  
   
  [Traccia dati in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
@@ -55,10 +55,11 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Programmazione asincrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Viene descritto il supporto di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] per la programmazione asincrona.  
   
- [Supporto per flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
+ [Supporto del flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Viene illustrato come scrivere applicazioni che trasmettere dati da SQL Server senza che siano completamente caricata in memoria.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare un'associazione nel codice"
+title: 'Procedura: Creare un binding nel codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089263"
 ---
-# <a name="how-to-create-a-binding-in-code"></a>Procedura: Creare un'associazione nel codice
+# <a name="how-to-create-a-binding-in-code"></a>Procedura: Creare un binding nel codice
 Questo esempio illustra come creare e impostare un <xref:System.Windows.Data.Binding> nel codice.  
   
 ## <a name="example"></a>Esempio  
@@ -39,5 +39,6 @@ Questo esempio illustra come creare e impostare un <xref:System.Windows.Data.Bin
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

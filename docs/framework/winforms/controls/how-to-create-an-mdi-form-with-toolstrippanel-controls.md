@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un Form MDI con controlli ToolStripPanel'
+title: 'Procedura: Creare un modulo con interfaccia a documenti multipli con controlli ToolStripPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 9b3297acabbb05c25ae195acbb6fb9274ad02651
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096966"
 ---
-# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Procedura: Creare un Form MDI con controlli ToolStripPanel
+# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Procedura: Creare un modulo con interfaccia a documenti multipli con controlli ToolStripPanel
 È possibile creare un form con interfaccia a documenti multipli (MDI) e con controlli <xref:System.Windows.Forms.ToolStrip> disposti su tutti e quattro i lati.  
   
 ## <a name="example"></a>Esempio  
@@ -40,6 +40,7 @@ ms.locfileid: "57725389"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
 - <xref:System.Windows.Forms.ToolStripPanel.Join%2A>

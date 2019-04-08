@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Store e riutilizzare query'
+title: 'Procedura: Archiviare e riutilizzare query'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084194"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Procedura: Store e riutilizzare query
+# <a name="how-to-store-and-reuse-queries"></a>Procedura: Archiviare e riutilizzare query
 Quando si usa un'applicazione che esegue molte volte query strutturalmente simili, è spesso possibile migliorare le prestazioni compilando la query una volta ed eseguendola più volte con parametri diversi. Un'applicazione potrebbe ad esempio essere usata per recuperare tutti i clienti di una determinata città, specificata in fase di runtime dall'utente in un modulo. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta l'utilizzo delle *query compilate* per questo scopo.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ Quando si usa un'applicazione che esegue molte volte query strutturalmente simil
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.Linq.CompiledQuery>
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Esecuzione di query sul database](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

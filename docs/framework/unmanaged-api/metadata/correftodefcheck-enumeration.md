@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093891"
 ---
 # <a name="correftodefcheck-enumeration"></a>Enumerazione CorRefToDefCheck
 Specifica i flag per controllare quali elementi a cui viene fatto riferimento vengono convertiti nelle relative definizioni per ottimizzare il codice.  
@@ -40,7 +40,7 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`MDRefToDefDefault`|Specifica che i riferimenti di tipo e membro devono essere convertiti alle definizioni. Questo è il valore predefinito (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
 |`MDRefToDefAll`|Specifica che tutti gli elementi di cui viene fatto riferimento devono essere convertiti alle definizioni.|  
@@ -56,4 +56,5 @@ typedef enum CorRefToDefCheck {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

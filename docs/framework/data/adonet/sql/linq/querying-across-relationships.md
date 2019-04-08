@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083153"
 ---
 # <a name="querying-across-relationships"></a>Esecuzione di query tra relazioni
 I riferimenti ad altri oggetti o raccolte di altri oggetti nelle definizioni della classe corrispondono direttamente alle relazioni di chiavi esterne nel database. È possibile usare queste relazioni quando si esegue una query usando la notazione del punto per accedere alle proprietà della relazione e spostarsi tra gli oggetti. Queste operazioni di accesso vengono convertite in join più complessi o sottoquery correlate nell'equivalente SQL.  
@@ -53,4 +53,5 @@ WHERE  (t0.City = @p0)
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+
+- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

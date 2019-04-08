@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Convertire i dati associati'
+title: 'Procedura: Convertire dati associati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093800"
 ---
-# <a name="how-to-convert-bound-data"></a>Procedura: Convertire i dati associati
+# <a name="how-to-convert-bound-data"></a>Procedura: Convertire dati associati
 In questo esempio viene illustrato come applicare la conversione in dati utilizzati nelle associazioni.  
   
  Per convertire i dati durante l'associazione, è necessario creare una classe che implementa il <xref:System.Windows.Data.IValueConverter> interfaccia, che include le <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> metodi.  
@@ -38,6 +38,7 @@ In questo esempio viene illustrato come applicare la conversione in dati utilizz
  Le risorse di stile a cui fa riferimento l'esempio precedente sono definite in una sezione di risorse non illustrata in questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Implementare la convalida dell'associazione](how-to-implement-binding-validation.md)
+
+- [Implementare la convalida del binding](how-to-implement-binding-validation.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

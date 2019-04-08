@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078942"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Autorizzazioni pericolose e amministrazione dei criteri
 Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazioni possono potenzialmente consentire l'elusione del sistema di sicurezza. Queste autorizzazioni pericolose devono essere fornite solo a codice attendibile e solo se necessario. Non esiste in genere alcuna difesa contro malware se viene concesso questo tipo di autorizzazioni.  
@@ -39,4 +39,5 @@ Diverse operazioni protette per le quali .NET Framework fornisce le autorizzazio
 |<xref:System.MemberAccessException>|Può usare i membri privati per aggirare i meccanismi di accessibilità.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)
