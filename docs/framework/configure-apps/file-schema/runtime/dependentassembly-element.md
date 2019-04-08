@@ -11,53 +11,53 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083660"
 ---
-# <a name="dependentassembly-element"></a><span data-ttu-id="e6e16-102">\<dependentAssembly > elemento</span><span class="sxs-lookup"><span data-stu-id="e6e16-102">\<dependentAssembly> Element</span></span>
-<span data-ttu-id="e6e16-103">Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.</span><span class="sxs-lookup"><span data-stu-id="e6e16-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="e6e16-104">Usare uno `dependentAssembly` (elemento) per ogni assembly.</span><span class="sxs-lookup"><span data-stu-id="e6e16-104">Use one `dependentAssembly` element for each assembly.</span></span>  
+# <a name="dependentassembly-element"></a><span data-ttu-id="ed8b7-102">\<dependentAssembly > elemento</span><span class="sxs-lookup"><span data-stu-id="ed8b7-102">\<dependentAssembly> Element</span></span>
+<span data-ttu-id="ed8b7-103">Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="ed8b7-104">Usare uno `dependentAssembly` (elemento) per ogni assembly.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-104">Use one `dependentAssembly` element for each assembly.</span></span>  
   
- <span data-ttu-id="e6e16-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e6e16-105">\<configuration></span></span>  
-<span data-ttu-id="e6e16-106">\<runtime></span><span class="sxs-lookup"><span data-stu-id="e6e16-106">\<runtime></span></span>  
-<span data-ttu-id="e6e16-107">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="e6e16-107">\<assemblyBinding></span></span>  
-<span data-ttu-id="e6e16-108">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="e6e16-108">\<dependentAssembly></span></span>  
+ <span data-ttu-id="ed8b7-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ed8b7-105">\<configuration></span></span>  
+<span data-ttu-id="ed8b7-106">\<runtime></span><span class="sxs-lookup"><span data-stu-id="ed8b7-106">\<runtime></span></span>  
+<span data-ttu-id="ed8b7-107">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="ed8b7-107">\<assemblyBinding></span></span>  
+<span data-ttu-id="ed8b7-108">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="ed8b7-108">\<dependentAssembly></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6e16-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e6e16-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed8b7-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ed8b7-109">Syntax</span></span>  
   
 ```xml  
 <dependentAssembly>   
 </dependentAssembly>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e6e16-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="e6e16-110">Attributes and Elements</span></span>  
- <span data-ttu-id="e6e16-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="e6e16-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ed8b7-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ed8b7-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ed8b7-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e6e16-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="e6e16-112">Attributes</span></span>  
- <span data-ttu-id="e6e16-113">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="e6e16-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ed8b7-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="ed8b7-112">Attributes</span></span>  
+ <span data-ttu-id="ed8b7-113">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="e6e16-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="e6e16-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ed8b7-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ed8b7-114">Child Elements</span></span>  
   
-|<span data-ttu-id="e6e16-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="e6e16-115">Element</span></span>|<span data-ttu-id="e6e16-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e6e16-116">Description</span></span>|  
+|<span data-ttu-id="ed8b7-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="ed8b7-115">Element</span></span>|<span data-ttu-id="ed8b7-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ed8b7-116">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyIdentity`|<span data-ttu-id="e6e16-117">Contiene le informazioni di identificazione dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="e6e16-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="e6e16-118">Questo elemento deve essere incluso in ogni `dependentAssembly` elemento.</span><span class="sxs-lookup"><span data-stu-id="e6e16-118">This element must be included in each `dependentAssembly` element.</span></span>|  
-|`codeBase`|<span data-ttu-id="e6e16-119">Specifica in cui il runtime può trovare un assembly condiviso se non è installato nel computer.</span><span class="sxs-lookup"><span data-stu-id="e6e16-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
-|`bindingRedirect`|<span data-ttu-id="e6e16-120">Reindirizza una versione dell'assembly in un'altra.</span><span class="sxs-lookup"><span data-stu-id="e6e16-120">Redirects one assembly version to another.</span></span>|  
-|`publisherPolicy`|<span data-ttu-id="e6e16-121">Specifica se il runtime applica i criteri dell'editore per questo assembly.</span><span class="sxs-lookup"><span data-stu-id="e6e16-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
+|`assemblyIdentity`|<span data-ttu-id="ed8b7-117">Contiene le informazioni di identificazione dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="ed8b7-118">Questo elemento deve essere incluso in ogni `dependentAssembly` elemento.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-118">This element must be included in each `dependentAssembly` element.</span></span>|  
+|`codeBase`|<span data-ttu-id="ed8b7-119">Specifica in cui il runtime può trovare un assembly condiviso se non è installato nel computer.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
+|`bindingRedirect`|<span data-ttu-id="ed8b7-120">Reindirizza una versione dell'assembly in un'altra.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-120">Redirects one assembly version to another.</span></span>|  
+|`publisherPolicy`|<span data-ttu-id="ed8b7-121">Specifica se il runtime applica i criteri dell'editore per questo assembly.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="e6e16-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="e6e16-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ed8b7-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ed8b7-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="e6e16-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="e6e16-123">Element</span></span>|<span data-ttu-id="e6e16-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e6e16-124">Description</span></span>|  
+|<span data-ttu-id="ed8b7-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="ed8b7-123">Element</span></span>|<span data-ttu-id="ed8b7-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ed8b7-124">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="e6e16-125">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="e6e16-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="e6e16-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e6e16-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="e6e16-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="e6e16-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="ed8b7-125">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="ed8b7-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ed8b7-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="e6e16-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="e6e16-128">Example</span></span>  
- <span data-ttu-id="e6e16-129">Nell'esempio seguente viene illustrato come incapsulare le informazioni per i due assembly.</span><span class="sxs-lookup"><span data-stu-id="e6e16-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed8b7-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="ed8b7-128">Example</span></span>  
+ <span data-ttu-id="ed8b7-129">Nell'esempio seguente viene illustrato come incapsulare le informazioni per i due assembly.</span><span class="sxs-lookup"><span data-stu-id="ed8b7-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,8 @@ ms.locfileid: "55273949"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e6e16-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e6e16-130">See also</span></span>
-- [<span data-ttu-id="e6e16-131">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="e6e16-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="e6e16-132">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="e6e16-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="e6e16-133">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="e6e16-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="ed8b7-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ed8b7-130">See also</span></span>
+
+- [<span data-ttu-id="ed8b7-131">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="ed8b7-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="ed8b7-132">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="ed8b7-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="ed8b7-133">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="ed8b7-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
