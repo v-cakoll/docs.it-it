@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073884"
 ---
 # <a name="focus-overview"></a>Cenni preliminari sullo stato attivo
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lo stato attivo è basato su due concetti principali, lo stato attivo della tastiera e lo stato attivo logico.  Lo stato attivo della tastiera fa riferimento all'elemento che riceve l'input della tastiera, mentre lo stato attivo logico fa riferimento all'elemento di un ambito che ha ricevuto lo stato attivo.  In questa panoramica verranno illustrati in dettaglio questi concetti.  Comprendere le differenze esistenti tra questi concetti è fondamentale per la creazione di applicazioni complesse costituite da più aree in cui è possibile ottenere lo stato attivo.  
@@ -21,9 +21,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Le principali classi che fanno parte di gestione dello stato attivo sono le <xref:System.Windows.Input.Keyboard> (classe), il <xref:System.Windows.Input.FocusManager> classe e l'elemento di base, classi, ad esempio <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement>.  Per altre informazioni sugli elementi di base, vedere [Cenni preliminari sugli elementi di base](base-elements-overview.md).  
   
  Il <xref:System.Windows.Input.Keyboard> classe riguarda principalmente lo stato attivo della tastiera e <xref:System.Windows.Input.FocusManager> riguarda principalmente con lo stato attivo logico, ma questo non è una differenza assoluta.  Un elemento con lo stato attivo della tastiera presenta anche lo stato attivo logico, mentre un elemento che ha ottenuto lo stato attivo logico non ha necessariamente lo stato attivo della tastiera.  Questo è evidente quando si usa il <xref:System.Windows.Input.Keyboard> classe per impostare l'elemento con lo stato attivo della tastiera, per tale imposta inoltre lo stato attivo logico sull'elemento.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Stato attivo della tastiera  
  Lo stato attivo della tastiera fa riferimento all'elemento che riceve l'input dalla tastiera.  Su un desktop può esserci un solo elemento con lo stato attivo della tastiera.  Nelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], l'elemento con lo stato attivo della tastiera avrà <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> impostato su `true`.  La proprietà statica <xref:System.Windows.Input.Keyboard.FocusedElement%2A> sul <xref:System.Windows.Input.Keyboard> classe ottiene l'elemento che attualmente ha lo stato attivo della tastiera.  
@@ -118,6 +116,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Gli eventi correlati allo stato attivo logico sono <xref:System.Windows.UIElement.GotFocus> e <xref:System.Windows.UIElement.LostFocus>.  Questi eventi sono definiti nel <xref:System.Windows.Input.FocusManager> come eventi associati, ma il <xref:System.Windows.Input.FocusManager> non espone wrapper di eventi CLR.  <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> espongono questi eventi in modo più appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

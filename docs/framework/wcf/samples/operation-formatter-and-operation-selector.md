@@ -2,12 +2,12 @@
 title: Formattatore e selettore dell'operazione
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3843feacca0da6118ecc9d0f54a2cb088865caaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100405"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
 Questo esempio viene illustrato come utilizzare i punti di estendibilità di Windows Communication Foundation (WCF) per consentire i dati del messaggio in un formato diverso da quanto si aspetta da WCF. Per impostazione predefinita, i formattatori WCF prevede che i parametri del metodo siano inclusi nel `soap:body` elemento. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
@@ -16,11 +16,11 @@ Questo esempio viene illustrato come utilizzare i punti di estendibilità di Win
   
  Per questo scopo, nell'esempio vengono forniti gli elementi seguenti:  
   
--   `QueryStringFormatter`, che implementa <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> per il client e server, rispettivamente, ed elabora i dati nella stringa di query.  
+-   `QueryStringFormatter`, che implementa <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> per il client e server, rispettivamente ed elabora i dati nella stringa di query.  
   
--   `UriOperationSelector`, che implementa <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> nel server per eseguire l'operazione di distribuzione in base al nome dell'operazione nella richiesta GET.  
+-   `UriOperationSelector`, che implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> sul server per eseguire l'operazione di distribuzione basato sul nome operazione della richiesta GET.  
   
--   Comportamento dell'endpoint `EnableHttpGetRequestsBehavior` (e configurazione corrispondente), che aggiunge il selettore dell'operazione necessario al runtime.  
+-   `EnableHttpGetRequestsBehavior` comportamento dell'endpoint (e configurazione corrispondente), che aggiunge il selettore dell'operazione necessario al runtime.  
   
 -   Viene illustrato come inserire un nuovo formattatore dell'operazione nel runtime.  
   
@@ -38,7 +38,7 @@ Questo esempio viene illustrato come utilizzare i punti di estendibilità di Win
   
 -   Nell'esempio viene utilizzata la classe <xref:System.ComponentModel.TypeConverter> per convertire i dati dei parametri nel messaggio di richiesta da e verso le stringhe. Se non è disponibile una classe <xref:System.ComponentModel.TypeConverter> per un tipo specifico, il formattatore di esempio genera un'eccezione.  
   
--   Nel metodo `IClientMessageFormatter.SerializeRequest` sul client, il formattatore crea un URI con l'indirizzo A appropriato e aggiunge il nome dell'operazione come suffisso. Tale nome viene utilizzato per distribuire l'operazione appropriata sul server. Il formattatore prende quindi la matrice di oggetti parametro e serializza i dati dei parametri nella stringa di query dell'URI utilizzando i nomi di parametro e i valori convertiti dalla classe <xref:System.ComponentModel.TypeConverter>. Le proprietà <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> vengono quindi impostate su questo URI. È possibile accedere all'oggetto <xref:System.ServiceModel.Channels.MessageProperties> attraverso la proprietà <xref:System.ServiceModel.Channels.Message.Properties%2A>.  
+-   Nel metodo `IClientMessageFormatter.SerializeRequest` sul client, il formattatore crea un URI con l'indirizzo A appropriato e aggiunge il nome dell'operazione come suffisso. Tale nome viene utilizzato per distribuire l'operazione appropriata sul server. Il formattatore prende quindi la matrice di oggetti parametro e serializza i dati dei parametri nella stringa di query dell'URI utilizzando i nomi di parametro e i valori convertiti dalla classe <xref:System.ComponentModel.TypeConverter>. Le proprietà <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> e <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> vengono quindi impostate su questo URI. <xref:System.ServiceModel.Channels.MessageProperties> è possibile accedere mediante il <xref:System.ServiceModel.Channels.Message.Properties%2A> proprietà.  
   
 -   Nel metodo `IDispatchMessageFormatter.DeserializeRequest` sul server, il formattatore recupera l'URI `Via` nelle proprietà del messaggio di richiesta in ingresso. Analizza le coppie nome-valore nella stringa di query dell'URI nei nomi e valori di parametro e utilizza i nomi e valori di parametro per popolare la matrice di parametri passata nel metodo. Si noti che l'operazione di distribuzione è già stata eseguita, pertanto il suffisso del nome dell'operazione viene ignorato in questo metodo.  
   
@@ -177,4 +177,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

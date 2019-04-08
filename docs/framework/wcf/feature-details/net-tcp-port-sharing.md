@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: e191dc62368fc9c16bd58efd30dd1a3769d2bb88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073691"
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata su TCP (net.tcp://) per la comunicazione ad alte prestazioni. WCF introduce inoltre un nuovo componente di sistema, il servizio condivisione porte NET che consente la condivisione tra più processi utente delle porte Net. TCP.  
@@ -49,7 +49,8 @@ Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata 
  Sebbene il Servizio di condivisione porte Net.TCP preveda un livello di elaborazione tra le applicazioni e la rete, le applicazioni che usano la condivisione delle porte dovrebbero comunque essere protette come se fossero direttamente in ascolto sulla rete. In particolare, le applicazioni che usano la condivisione delle porte dovrebbero valutare i privilegi del processo con cui vengono eseguite. Considerare l'ipotesi di eseguire l'applicazione usando l'account predefinito Servizio di rete, che viene eseguito con il set minimo di privilegi del processo necessari per la comunicazione di rete.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Configurazione del servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Procedura: Configurare un servizio WCF per la condivisione delle porte di utilizzo](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [Procedura: Abilitare il servizio di condivisione delle porte Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Procedura: Configurare un servizio WCF per l'uso della condivisione delle porte](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [Procedura: Abilitare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

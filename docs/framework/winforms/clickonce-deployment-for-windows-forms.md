@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072844"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Distribuzione ClickOnce per Windows Form
 Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], usata per semplificare la distribuzione delle applicazioni Windows Form ai computer client.  
@@ -23,7 +23,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Scelta di una strategia di aggiornamento ClickOnce](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
  Illustra alcune opzioni disponibili per l'aggiornamento delle applicazioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Sicurezza di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)  
+ [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications)  
  Illustra le implicazioni di sicurezza relative alla distribuzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
  [Risoluzione dei problemi relativi alle distribuzioni ClickOnce](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
@@ -32,7 +32,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Impostazioni dell'applicazione e ClickOnce](/visualstudio/deployment/clickonce-and-application-settings)  
  Descrive come la distribuzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] interagisce con le impostazioni dell'applicazione, memorizzando le impostazioni dell'applicazione e le impostazioni dell'utente per il recupero futuro.  
   
- [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)  
+ [Cenni preliminari sulla distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview)  
  Descrive una funzione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] che consente l'esecuzione delle applicazioni trusted con un livello superiore di autorizzazioni sui computer client.  
   
  [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
@@ -41,7 +41,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Illustra l'uso della riga di comando e degli strumenti SDK per distribuire un'applicazione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] senza usare Visual Studio.  
   
- [Procedura: Aggiungere un autore attendibile a un computer client per applicazioni ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Procedura: Aggiungere un autore attendibile a un Computer Client per applicazioni ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Illustra la configurazione singola dei computer client necessaria per la distribuzione di applicazioni trusted.  
   
  [Procedura: Specificare un percorso alternativo per gli aggiornamenti della distribuzione](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
@@ -53,7 +53,7 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  [Procedura: Recuperare informazioni sulle stringhe di query in un'applicazione ClickOnce online](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
  Illustra il recupero dei parametri per l'URL usato per eseguire un'applicazione [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Panoramica della cache di ClickOnce](/visualstudio/deployment/clickonce-cache-overview)  
+ [Cenni preliminari sulla cache di ClickOnce](/visualstudio/deployment/clickonce-cache-overview)  
  Descrive la cache usata per memorizzare le applicazioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] nel computer locale.  
   
  [Accesso a dati locali e remoti in applicazioni ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
@@ -63,9 +63,10 @@ Gli argomenti riportati di seguito descrivono la tecnologia [!INCLUDE[ndptecclic
  Illustra come contrassegnare un file per renderlo disponibile nella directory di dati [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulle impostazioni delle applicazioni](./advanced/application-settings-overview.md)
 - [Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Compilazione di applicazioni ClickOnce dalla riga di comando](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [Debug di applicazioni ClickOnce in cui si usa System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
+- [Debug di applicazioni ClickOnce in cui si utilizza System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [Distribuzione di componenti COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
 - [Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

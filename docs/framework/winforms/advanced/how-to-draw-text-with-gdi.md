@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare testo con GDI'
+title: 'Procedura: Disegnare testo con GDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073325"
 ---
-# <a name="how-to-draw-text-with-gdi"></a>Procedura: Creare testo con GDI
+# <a name="how-to-draw-text-with-gdi"></a>Procedura: Disegnare testo con GDI
 Con il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo nella <xref:System.Windows.Forms.TextRenderer> (classe), è possibile accedere [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funzionalità per il disegno di testo in un form o controllo. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] il rendering del testo offre in genere prestazioni migliori e misurazione del testo più accurata [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 > [!NOTE]
@@ -34,11 +34,12 @@ Con il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo nella <xref:S
  Per altre informazioni su come ottenere un <xref:System.Drawing.Graphics>, vedere [come: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md). Per altre informazioni sulla creazione di un <xref:System.Drawing.Font>, vedere [come: Creare le famiglie di caratteri e caratteri](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Esempio di codice precedente è progettato per l'uso con Windows Form e richiede la <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ Esempio di codice precedente è progettato per l'uso con Windows Form e richiede la <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>
 - <xref:System.Drawing.Color>
-- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
+- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)

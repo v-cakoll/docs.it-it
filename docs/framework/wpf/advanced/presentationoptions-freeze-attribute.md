@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074662"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>Attributo PresentationOptions:Freeze
 Imposta il <xref:System.Windows.Freezable.IsFrozen%2A> torni allo stato `true` nel contenitore <xref:System.Windows.Freezable> elemento. Il comportamento predefinito per un <xref:System.Windows.Freezable> senza il `PresentationOptions:Freeze` attributo specificato è quello <xref:System.Windows.Freezable.IsFrozen%2A> viene `false` al tempo di caricamento e dipendente in generale <xref:System.Windows.Freezable> comportamento in fase di esecuzione.  
@@ -42,6 +42,7 @@ Imposta il <xref:System.Windows.Freezable.IsFrozen%2A> torni allo stato `true` n
  Qualsiasi valore per il `Freeze` attributo diverso da `true` (non maiuscole / minuscole) genera un errore in fase di caricamento. (Specificare il `Freeze` dell'attributo come `false` non è un errore, ma che è già l'impostazione predefinita, pertanto l'impostazione `false` non esegue alcuna operazione).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Freezable>
 - [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)
 - [Attributo mc:Ignorable](mc-ignorable-attribute.md)

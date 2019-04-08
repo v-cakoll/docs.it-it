@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076022"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
 Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF) e un client protetto usando la modalità sicurezza messaggio. Il client e il servizio sono autenticati mediante certificati.  
@@ -27,12 +27,12 @@ Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF)
 |Modalità di sicurezza|Messaggio|  
 |Interoperabilità|Sì, con WS-Security e client e servizi compatibili con X.509 Certificate Token Profile.|  
 |Autenticazione|Autenticazione reciproca del server e del client.|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
+|Integrità|Yes|  
+|Riservatezza|Yes|  
 |Trasporto|HTTP|  
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
@@ -159,6 +159,7 @@ Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+
+- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
 - [Procedura: Creare e installare certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppo](https://go.microsoft.com/fwlink/?LinkId=244264)

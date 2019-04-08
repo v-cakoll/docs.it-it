@@ -7,23 +7,23 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072506"
 ---
 # <a name="path-animation-how-to-topics"></a>Procedure relative all'animazione percorso
 Negli argomenti di questa sezione illustrano come aggiungere un'animazione a un oggetto lungo un tracciato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Animare un oggetto lungo un tracciato (animazione Double)](how-to-animate-an-object-along-a-path-double-animation.md)  
- [Animare un oggetto lungo un tracciato (animazione Point)](how-to-animate-an-object-along-a-path-point-animation.md)  
- [Animare un oggetto lungo un tracciato (animazione Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Animare un oggetto lungo un percorso (animazione Matrix con accumulazione offset)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Double)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Point)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Aggiungere un'animazione a un oggetto lungo un percorso (animazione Matrix con accumulazione offset)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
  [Ruotare un oggetto usando un percorso geometrico (animazione Matrix)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Ruotare un oggetto usando un percorso geometrico](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Ruotare un oggetto usando un tracciato geometrico](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -31,6 +31,7 @@ Negli argomenti di questa sezione illustrano come aggiungere un'animazione a un 
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Grafica e funzionalità multimediali](index.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)

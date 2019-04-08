@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Eseguire l'associazione a un servizio Web"
+title: 'Procedura: Eseguire il binding a un servizio Web'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098579"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Procedura: Eseguire l'associazione a un servizio Web
+# <a name="how-to-bind-to-a-web-service"></a>Procedura: Eseguire il binding a un servizio Web
 In questo esempio viene illustrato come eseguire l'associazione agli oggetti restituiti dalle chiamate al metodo del servizio Web.  
   
 ## <a name="example"></a>Esempio  
@@ -46,6 +46,7 @@ In questo esempio viene illustrato come eseguire l'associazione agli oggetti res
  Per informazioni sulla struttura dei **getContentResponse**, vedere [documentazione del servizio contenuto](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Panoramica delle origini di associazione](binding-sources-overview.md)
-- [Rendere i dati disponibili per l'associazione in XAML](how-to-make-data-available-for-binding-in-xaml.md)
+- [Cenni preliminari sulle origini del binding](binding-sources-overview.md)
+- [Rendere i dati disponibili per il binding in XAML](how-to-make-data-available-for-binding-in-xaml.md)

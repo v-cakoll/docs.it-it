@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire il rendering di un elemento dello stile di visualizzazione'
+title: 'Procedura: Eseguire il rendering di un elemento dello stile visivo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099833"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Procedura: Eseguire il rendering di un elemento dello stile di visualizzazione
+# <a name="how-to-render-a-visual-style-element"></a>Procedura: Eseguire il rendering di un elemento dello stile visivo
 Il <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> dello spazio dei nomi espone <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementi (UI) supportati dagli stili dell'interfaccia utente gli oggetti che rappresentano l'utente di Windows. In questo argomento illustra come usare il <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> classe per eseguire il rendering le <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> che rappresenta il **Disconnetti** e **Spegni** pulsanti del menu Start.  
   
 ### <a name="to-render-a-visual-style-element"></a>Per eseguire il rendering di un elemento dello stile di visualizzazione  
@@ -44,4 +44,5 @@ Il <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> dello s
 -   Fa riferimento per la <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, e <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> gli spazi dei nomi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Rendering dei controlli con stili visivi](rendering-controls-with-visual-styles.md)

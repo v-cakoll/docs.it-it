@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072662"
 ---
 # <a name="codechunkinfo-structure"></a>Struttura CodeChunkInfo
 
@@ -38,7 +38,7 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`startAddr`|Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo iniziale del blocco.|  
 |`length`|Le dimensioni, in byte, del blocco.|  
@@ -56,6 +56,7 @@ typedef struct _CodeChunkInfo {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

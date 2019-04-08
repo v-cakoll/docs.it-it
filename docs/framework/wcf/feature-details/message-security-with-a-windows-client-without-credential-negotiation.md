@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075166"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sicurezza dei messaggi con un client Windows senza negoziazione delle credenziali
 Lo scenario seguente viene illustrato un client Windows Communication Foundation (WCF) e un servizio protetti dal protocollo Kerberos.  
@@ -28,12 +28,12 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 |Interoperabilità|Sì, WS-Security con client compatibili con il profilo del token Kerberos|  
 |Autenticazione (server)|Autenticazione reciproca del server e del client|  
 |Autenticazione (client)|Autenticazione reciproca del server e del client|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
+|Integrità|Yes|  
+|Riservatezza|Yes|  
 |Trasporto|HTTP|  
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
@@ -147,6 +147,7 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

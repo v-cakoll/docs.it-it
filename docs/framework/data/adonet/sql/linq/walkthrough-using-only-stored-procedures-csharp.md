@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: Utilizzo solo di Stored procedure (C#)'
+title: 'Procedura dettagliata: Usare solo stored procedure (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098169"
 ---
-# <a name="walkthrough-using-only-stored-procedures-c"></a>Procedura dettagliata: Utilizzo solo di Stored procedure (C#)
+# <a name="walkthrough-using-only-stored-procedures-c"></a>Procedura dettagliata: Usare solo stored procedure (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati eseguendo solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
   
 > [!NOTE]
@@ -188,5 +188,6 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
  Questo progetto può essere migliorato apportandovi alcune modifiche. Ad esempio, è possibile elencare le stored procedure disponibili in una casella di riepilogo, in modo che l'utente possa selezionare quella da eseguire. È inoltre possibile trasmettere l'output dei rapporti a un file di testo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

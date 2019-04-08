@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074235"
 ---
 # <a name="accessibility-best-practices"></a>Procedure consigliate per l'accesso facilitato
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57676135"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Abilitare l'accesso a livello di codice a tutti gli elementi dell'interfaccia utente e al testo  
- Gli elementi di[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] devono consentire l'accesso a livello di codice. Se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] è un controllo standard di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], il supporto per l'accesso a livello di codice è incluso nel controllo. Se il controllo è personalizzato, cioè un controllo che è stato sottoclassato da un controllo comune o da un controllo sottoclassato da Control, è necessario verificare l'implementazione di <xref:System.Windows.Automation.Peers.AutomationPeer> per le aree che possono richiedere modifiche.  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] gli elementi devono abilitare l'accesso a livello di codice. Se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] è un controllo standard di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , il supporto per l'accesso a livello di codice è incluso nel controllo. Se il controllo è personalizzato, cioè un controllo che è stato sottoclassato da un controllo comune o da un controllo sottoclassato da Control, è necessario verificare l'implementazione di <xref:System.Windows.Automation.Peers.AutomationPeer> per le aree che possono richiedere modifiche.  
   
  Seguendo questa procedura consigliata, i fornitori di [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] potranno identificare e modificare gli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]del prodotto.  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676135"
  Le chiamate indipendenti dal dispositivo garantiscono l'uguaglianza delle funzionalità di tastiera e mouse, fornendo a [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] le informazioni necessarie sull' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Automation.Peers>
 - [Controllo personalizzato NumericUpDown con esempio di supporto per automazione interfaccia utente e del tema](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [Linee guida per la progettazione dell'interfaccia utente della tastiera](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

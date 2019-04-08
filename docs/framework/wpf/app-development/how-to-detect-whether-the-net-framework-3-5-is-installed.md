@@ -7,12 +7,12 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 2f3e3077f78aed90f4e213d61267131019664fdb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074638"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Procedura: Verificare se .NET Framework 3.5 è installato
 Prima che gli amministratori possono distribuire le applicazioni Windows Presentation Foundation (WPF) in un sistema che ha come destinazione il [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], è prima di tutto necessario verificare che il [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime è presente. In questo argomento viene fornito uno script in HTML/JavaScript che gli amministratori possono utilizzare per determinare se il [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] è presente in un sistema.  
@@ -129,4 +129,5 @@ Prima che gli amministratori possono distribuire le applicazioni Windows Present
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Verificare se .NET Framework 3.0 è installato](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

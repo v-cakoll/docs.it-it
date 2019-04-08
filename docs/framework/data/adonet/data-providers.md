@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074027"
 ---
 # <a name="net-framework-data-providers"></a>Provider di dati .NET Framework
-Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] consente di effettuare una connessione a un database, eseguire comandi e recuperare risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. I provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] presentano una struttura semplice e creano un livello minimo tra l'origine dati e il codice, migliorando quindi le prestazioni senza compromettere le funzionalità.  
+Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] consente di effettuare una connessione a un database, eseguire comandi e recuperare risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provider di dati sono leggeri, la creazione di un livello minimo tra l'origine dati e codice, migliorando le prestazioni senza compromettere le funzionalità.  
   
  La tabella seguente elenca i provider di dati inclusi in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-|Provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Descrizione|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati|Descrizione|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server|Consente l'accesso ai dati per Microsoft SQL Server. Usa lo spazio dei nomi <xref:System.Data.SqlClient> .|  
-|Provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB|Per origini dati esposte tramite OLE DB. Usa lo spazio dei nomi <xref:System.Data.OleDb> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Provider di dati per ODBC|Per origini dati esposte tramite ODBC. Usa lo spazio dei nomi <xref:System.Data.Odbc> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per OLE DB|Per origini dati esposte tramite OLE DB. Usa lo spazio dei nomi <xref:System.Data.OleDb> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per ODBC|Per origini dati esposte tramite ODBC. Usa lo spazio dei nomi <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per Oracle|Per origini dei dati Oracle. Il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle può essere usato con software client Oracle 8.1.7 e versioni successive e usa lo spazio dei nomi <xref:System.Data.OracleClient> .|  
 |Provider EntityClient|Fornisce accesso ai dati per le applicazioni Entity Data Model (EDM). Usa lo spazio dei nomi <xref:System.Data.EntityClient> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server Compact 4.0.|Fornisce l'accesso ai dati per Microsoft SQL Server Compact 4.0. Usa lo spazio dei nomi [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
@@ -29,7 +29,7 @@ Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.m
 ## <a name="core-objects-of-net-framework-data-providers"></a>Oggetti principali dei provider di dati .NET Framework  
  La tabella seguente delinea i quattro oggetti principali che costituiscono un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
-|Oggetto|Descrizione|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |`Connection`|Consente di stabilire una connessione a un'origine dati specifica. La classe di base per tutti gli oggetti `Connection` è <xref:System.Data.Common.DbConnection> .|  
 |`Command`|Consente di eseguire un comando su un'origine dati. Espone `Parameters` e può essere eseguito nell'ambito di `Transaction` da `Connection`. La classe di base per tutti gli oggetti `Command` è <xref:System.Data.Common.DbCommand> .|  
@@ -38,13 +38,13 @@ Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.m
   
  Oltre alle classi principali elencate nella tabella precedente, un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] contiene anche le classi elencate nella tabella seguente.  
   
-|Oggetto|Descrizione|  
+|Object|Descrizione|  
 |------------|-----------------|  
 |`Transaction`|Consente di inserire i comandi in transazioni nell'origine dati. La classe di base per tutti gli oggetti `Transaction` è <xref:System.Data.Common.DbTransaction> . In ADO.NET è anche disponibile il supporto per le transazioni che usano le classi nello spazio dei nomi <xref:System.Transactions> .|  
-|`CommandBuilder`|Oggetto helper che genera automaticamente le proprietà dei comandi di un oggetto `DataAdapter` o deriva le informazioni sui parametri da una stored procedure e popola la raccolta `Parameters` di un oggetto `Command`. La classe di base per tutti gli oggetti `CommandBuilder` è <xref:System.Data.Common.DbCommandBuilder> .|  
+|`CommandBuilder`|Oggetto helper che genera automaticamente le proprietà dei comandi di un oggetto `DataAdapter` o deriva le informazioni sui parametri da una stored procedure e popola la raccolta `Parameters` di un oggetto `Command` . La classe di base per tutti gli oggetti `CommandBuilder` è <xref:System.Data.Common.DbCommandBuilder> .|  
 |`ConnectionStringBuilder`|Oggetto helper che offre un metodo semplice per creare e gestire il contenuto delle stringhe di connessione usate dagli oggetti `Connection` . La classe di base per tutti gli oggetti `ConnectionStringBuilder` è <xref:System.Data.Common.DbConnectionStringBuilder> .|  
 |`Parameter`|Definisce i parametri di input, output e dei valori restituiti per i comandi e le stored procedure. La classe di base per tutti gli oggetti `Parameter` è <xref:System.Data.Common.DbParameter> .|  
-|`Exception`|Viene restituito quando si verifica un errore nell'origine dati. Per un errore verificatosi nel client, i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] generano un'eccezione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La classe di base per tutti gli oggetti `Exception` è <xref:System.Data.Common.DbException> .|  
+|`Exception`|Viene restituito quando si verifica un errore nell'origine dati. Per un errore verificatosi nel client, i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] generano un'eccezione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La classe di base per tutti gli oggetti `Exception` è <xref:System.Data.Common.DbException> .|  
 |`Error`|Espone le informazioni di un avviso o di un errore restituito da un'origine dati.|  
 |`ClientPermission`|Viene fornito per gli attributi di sicurezza dall'accesso di codice del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La classe di base per tutti gli oggetti `ClientPermission` è <xref:System.Data.Common.DBDataPermission> .|  
   
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  Non è possibile usare il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB con il provider OLE DB per ODBC (MSDASQL). Per accedere a un'origine dati ODBC mediante [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], usare il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per ODBC.  
   
- Le classi del provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB sono contenute nello spazio dei nomi <xref:System.Data.OleDb> . Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.OleDb` nelle applicazioni.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per le classi OLE DB si trovano nel <xref:System.Data.OleDb> dello spazio dei nomi. Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.OleDb` nelle applicazioni.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC per Oracle|  
 |Driver per Microsoft Access (*.mdb)|  
   
- Le classi del provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB sono contenute nello spazio dei nomi <xref:System.Data.Odbc> .  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per le classi ODBC si trovano nel <xref:System.Data.Odbc> dello spazio dei nomi.  
   
  Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.Odbc` nelle applicazioni.  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  Per usare il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle per la connessione a un'origine dati Oracle, è necessario installare il software client Oracle (versione 8.1.7 o successiva).  
   
- Le classi del provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle sono contenute nello spazio dei nomi <xref:System.Data.OracleClient> , all'interno dell'assembly `System.Data.OracleClient.dll` . Quando si compila un'applicazione in cui viene usato il provider di dati, è necessario fare riferimento sia a `System.Data.dll` che a `System.Data.OracleClient.dll` .  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per le classi di Oracle si trovano nel <xref:System.Data.OracleClient> dello spazio dei nomi sono contenute nel `System.Data.OracleClient.dll` assembly. Quando si compila un'applicazione in cui viene usato il provider di dati, è necessario fare riferimento sia a `System.Data.dll` che a `System.Data.OracleClient.dll` .  
   
  Nell'esempio di codice seguente viene illustrato come includere lo spazio dei nomi `System.Data.OracleClient` nelle applicazioni.  
   
@@ -150,7 +150,7 @@ using System.Data.OracleClient;
 |Provider|Note|  
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server|Consigliato per le applicazioni di livello intermedio che utilizzano Microsoft SQL Server.<br /><br /> Consigliato per applicazioni a un solo livello che utilizzano Microsoft Database Engine (MSDE) o SQL Server.<br /><br /> Consigliato rispetto all'uso del provider OLE DB per SQL Server (SQLOLEDB) con il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per OLE DB.|  
-|Provider di dati[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per OLE DB|Per SQL Server, il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server è consigliabile invece di questo provider.<br /><br /> Consigliato per applicazioni a un solo livello che usano database di Microsoft Access. L'uso di un database di Microsoft Access per applicazioni di livello intermedio non è consigliato.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per OLE DB|Per SQL Server, il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server è consigliabile invece di questo provider.<br /><br /> Consigliato per applicazioni a un solo livello che usano database di Microsoft Access. L'uso di un database di Microsoft Access per applicazioni di livello intermedio non è consigliato.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per ODBC|Consigliato per applicazioni a un solo livello o a livello intermedio che usano origini dati ODBC.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider di dati per Oracle|Consigliato per applicazioni a un solo livello o a livello intermedio che usano origini dati Oracle.|  
   
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  Il provider EntityClient è usato per l'accesso ai dati basati su Entity Data Model (EDM). A differenza degli altri provider di dati .NET Framework, non interagisce direttamente con un'origine dati, ma usa Entity SQL per comunicare con il provider di dati sottostante. Per altre informazioni, vedere [EntityClient Provider per Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Architettura di diffusione
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075912"
 ---
 # <a name="architecture-of-syndication"></a>Architettura di diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione indipendente dal formato, che consente di scrivere in rete contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -78,6 +78,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
 -   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione di diffusione WCF fornisce due modalità di utilizzo di attributi ed estensioni personalizzati: derivazione di una nuova classe e l'accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+
+- [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
-- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

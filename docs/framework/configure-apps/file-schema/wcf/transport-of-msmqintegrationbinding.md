@@ -2,12 +2,12 @@
 title: <transport> di <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: f404782ed54d27d5dcfdfba126f6992d9badf060
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073453"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<Transport > di \<msmqIntegrationBinding >
 Definisce le impostazioni di sicurezza per il trasporto di integrazione di Accodamento messaggi.  
@@ -55,6 +55,7 @@ msmqIntegrationBinding
  Questo elemento incapsula le impostazioni di sicurezza per il trasporto di integrazione del servizio di accodamento di messaggi. Le impostazioni sono le stesse per l'integrazione di accodamento messaggi e trasporti in coda. Consente di impostare la modalità di autenticazione, l'algoritmo di crittografia, l'algoritmo hash protetto e il livello di protezione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>

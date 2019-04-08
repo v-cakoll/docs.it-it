@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: 7041a5497355a806894b0a0e0363fffde134aadb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099417"
 ---
 # <a name="progressbar-styles-and-templates"></a>Stili e modelli di ProgressBar
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ProgressBar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -51,6 +51,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)

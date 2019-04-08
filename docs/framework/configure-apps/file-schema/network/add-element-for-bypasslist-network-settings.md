@@ -1,5 +1,5 @@
 ---
-title: Elemento <add> per bypasslist (Impostazioni di rete)
+title: <add> Elemento per bypasslist (impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098286"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<aggiungere > (elemento) per bypasslist (impostazioni di rete)
 Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.  
@@ -41,7 +41,7 @@ Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.
   
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
-|**address**|Un'espressione regolare che descrive un indirizzo IP o nome DNS.|  
+|**indirizzo**|Un'espressione regolare che descrive un indirizzo IP o nome DNS.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -81,5 +81,6 @@ Aggiunge un indirizzo IP o nome DNS per l'elenco proxy da ignorare.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

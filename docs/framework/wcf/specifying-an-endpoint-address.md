@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097531"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Si verificano tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -56,9 +56,7 @@ Si verificano tutte le comunicazioni con un servizio Windows Communication Found
   
 ## <a name="endpoint-address-in-metadata"></a>Indirizzo endpoint nei metadati  
  Un indirizzo endpoint viene rappresentato in WSDL (Web Services Description Language) come elemento `EndpointReference` (EPR) WS-Addressing all'interno dell'elemento `wsdl:port` dell'endpoint corrispondente. L'EPR contiene l'indirizzo dell'endpoint e qualsiasi proprietà dell'indirizzo. Si noti che l'EPR in `wsdl:port` sostituisce `soap:Address`, come illustrato nell'esempio seguente.  
-  
-  
-  
+
 ## <a name="defining-endpoint-addresses-in-code"></a>Definizione degli indirizzi endpoint nel codice  
  È possibile creare un indirizzo endpoint nel codice con la classe <xref:System.ServiceModel.EndpointAddress>. L'URI specificato per l'indirizzo endpoint può essere un percorso completo o un percorso relativo all'indirizzo di base del servizio. Nel codice seguente viene illustrato come creare un'istanza della classe <xref:System.ServiceModel.EndpointAddress> e aggiungerla all'istanza di <xref:System.ServiceModel.ServiceHost> che ospita il servizio.  
   
@@ -83,7 +81,8 @@ Si verificano tutte le comunicazioni con un servizio Windows Communication Found
  Se vengono forniti endpoint in modo esplicito, è comunque possibile aggiungere gli endpoint predefiniti chiamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> su <xref:System.ServiceModel.ServiceHost> prima di chiamare <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Per altre informazioni su endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) (Configurazione semplificata) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) (Configurazione semplificata per servizi WCF).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Cenni preliminari sulla creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Hosting](../../../docs/framework/wcf/feature-details/hosting.md)

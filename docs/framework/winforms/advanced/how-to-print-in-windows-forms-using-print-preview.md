@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Stampa in Windows Form tramite l'anteprima di stampa"
+title: "Procedura: Stampare in Windows Form tramite l'anteprima di stampa"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 11f5583cc181904b17c378ac7ead4f35c539aeed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48391465bf199f8a212a575c64227958385eeae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073611"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procedura: Stampa in Windows Form tramite l'anteprima di stampa
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procedura: Stampare in Windows Form tramite l'anteprima di stampa
 Nella programmazione di Windows Form è comune offrire servizi di anteprima di stampa oltre che di stampa. Per aggiungere facilmente i servizi di anteprima di stampa all'applicazione, usare un controllo <xref:System.Windows.Forms.PrintPreviewDialog> in combinazione con la logica di gestione degli eventi <xref:System.Drawing.Printing.PrintDocument.PrintPage> per la stampa di un file.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Per visualizzare in anteprima un documento di testo con un controllo PrintPreviewDialog  
@@ -65,6 +65,7 @@ Nella programmazione di Windows Form è comune offrire servizi di anteprima di s
 -   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Stampare un File di testo con più pagine in Windows Form](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)
-- [Stampa più sicura in Windows Forms](../more-secure-printing-in-windows-forms.md)
+
+- [Procedura: Stampare un file di testo con più pagine in Windows Form](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Supporto per la stampa in Windows Form](windows-forms-print-support.md)
+- [Stampa più protetta in Windows Form](../more-secure-printing-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: "Procedura: Recuperare metadati attraverso un'associazione non MEX"
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074157"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: Recuperare metadati attraverso un'associazione non MEX
 In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio si basa sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
@@ -124,4 +124,5 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
 5.  A questo punto, si ha una raccolta di endpoint del servizio. Per altre informazioni sull'importazione di metadati, vedere [come: Importare metadati negli endpoint servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

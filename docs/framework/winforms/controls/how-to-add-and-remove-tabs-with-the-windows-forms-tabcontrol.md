@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form'
+title: 'Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101601"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms
 Per impostazione predefinita, un <xref:System.Windows.Forms.TabControl> controllo contiene due <xref:System.Windows.Forms.TabPage> controlli. È possibile accedere a queste schede tramite il <xref:System.Windows.Forms.TabControl.TabPages%2A> proprietà.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Per aggiungere una scheda a livello di codice  
@@ -75,7 +75,8 @@ Per impostazione predefinita, un <xref:System.Windows.Forms.TabControl> controll
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: Aggiungere un controllo a una scheda](how-to-add-a-control-to-a-tab-page.md)
 - [Procedura: Disabilitare le schede](how-to-disable-tab-pages.md)
-- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Procedura: Modificare l'aspetto di TabControl di Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

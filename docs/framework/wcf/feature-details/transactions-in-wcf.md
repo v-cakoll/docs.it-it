@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 51dffe626aa873e4dc737d21946b61ea00eb5202
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074118"
 ---
 # <a name="transactions-in-wcf"></a>Transazioni in WCF
 La funzionalità delle transazioni di Windows Communication Foundation (WCF) consente a numerosi componenti di partecipare contemporaneamente a un'operazione sui dati. Negli argomenti di questa sezione viene illustrata in dettaglio la funzionalità.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica delle transazioni di Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [Panoramica sulle transazioni di Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  Panoramica della funzionalità delle transazioni fornite da WCF.  
   
  [Modelli di transazione](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
@@ -34,4 +34,5 @@ La funzionalità delle transazioni di Windows Communication Foundation (WCF) con
  [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica delle sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

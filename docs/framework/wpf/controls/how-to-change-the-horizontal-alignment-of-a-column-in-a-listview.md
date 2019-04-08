@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-ms.openlocfilehash: 616eae9d72517124b6757260e68e8745d12632ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102661"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Procedura: Modificare l'allineamento orizzontale di una colonna in ListView
 Per impostazione predefinita, il contenuto di ogni colonna in un <xref:System.Windows.Controls.ListViewItem> è allineato a sinistra. È possibile modificare l'allineamento di ogni colonna, fornendo una <xref:System.Windows.DataTemplate> e impostando il <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà dell'elemento all'interno di <xref:System.Windows.DataTemplate>. Questo argomento viene illustrato come un <xref:System.Windows.Controls.ListView> Allinea il contenuto per impostazione predefinita e come modificare l'allineamento di una colonna in un <xref:System.Windows.Controls.ListView>.  
@@ -28,7 +28,8 @@ Per impostazione predefinita, il contenuto di ogni colonna in un <xref:System.Wi
 [!code-xaml[ListViewHowTos#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sul data binding](../data/data-binding-overview.md)
-- [Panoramica sui modelli di dati](../data/data-templating-overview.md)
-- [Eseguire l'associazione ai dati XML usando un oggetto XMLDataProvider e le query XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)
+- [Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Panoramica sul controllo ListView](listview-overview.md)

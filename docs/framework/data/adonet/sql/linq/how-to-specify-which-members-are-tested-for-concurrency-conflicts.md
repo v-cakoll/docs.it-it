@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Specificare che i membri vengono verificati i conflitti di concorrenza'
+title: 'Procedura: Specificare per quali membri viene eseguito il test dei conflitti di concorrenza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: 1007cbc0961d01574fd60ec50eb63406ec7adef9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a690e95cadad4ed089fe1bb3ba6fea541a57411f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076302"
 ---
-# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procedura: Specificare che i membri vengono verificati i conflitti di concorrenza
+# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procedura: Specificare per quali membri viene eseguito il test dei conflitti di concorrenza
 Applicare una delle tre enumerazioni al [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> proprietà su un <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per specificare quali membri devono essere incluse nell'aggiornamento controlla per il rilevamento dei conflitti di concorrenza ottimistica.  
   
  La proprietà <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>, di cui è stato eseguito il mapping in fase di progettazione, viene usata insieme alle funzionalità di concorrenza in fase di esecuzione in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
@@ -47,5 +47,6 @@ Applicare una delle tre enumerazioni al [!INCLUDE[vbtecdlinq](../../../../../../
  [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

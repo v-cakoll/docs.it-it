@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare stili di righe alterne per il controllo di DataGridView Windows Form usando la finestra di progettazione'
+title: 'Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Forms usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ledger-like formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 860028fc0c2ea7fd0e985ad97f6e38b32c45e6f8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072936"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare stili di righe alterne per il controllo di DataGridView Windows Form usando la finestra di progettazione
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Forms usando la finestra di progettazione
 Dati tabulari spesso sono presentati in un formato simile a di contabilità in cui le righe alterne hanno colori di sfondo diversi. Questo formato permette agli utenti di individuare più facilmente le celle di ogni riga, soprattutto nelle tabelle estese in larghezza con molte colonne.  
   
  Con il controllo <xref:System.Windows.Forms.DataGridView>, è possibile specificare informazioni di stile complete per le righe alterne. È possibile utilizzare le caratteristiche di stile, come colore di primo piano e del tipo di carattere, oltre al colore di sfondo, per differenziare le righe alterne. Per altre informazioni, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md).  
@@ -39,9 +39,10 @@ Dati tabulari spesso sono presentati in un formato simile a di contabilità in c
     >  Le celle vengono visualizzate utilizzando gli stili ereditati da più proprietà. Per altre informazioni sull'ereditarietà degli stili, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Stili delle celle nel controllo DataGridView di Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formattazione e stile di base nel controllo DataGridView di Windows Form](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Uso della finestra di progettazione con il controllo DataGridView di Windows Form](using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+- [Stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formattazione e stile di base nel controllo DataGridView Windows Form](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Utilizzo della finestra di progettazione con il controllo DataGridView di Windows Form](using-the-designer-with-the-windows-forms-datagridview-control.md)
+- [Procedura: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)

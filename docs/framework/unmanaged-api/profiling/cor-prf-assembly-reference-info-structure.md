@@ -6,12 +6,12 @@ dev_langs:
 ms.assetid: c8c1d916-8d1a-4f82-8128-9fd3732383fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380dbe43c09e0be48410431b87d796f502a7012b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99fa1cc05ee583cf1bd59235fcd9821d1c92d21f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101432"
 ---
 # <a name="corprfassemblyreferenceinfo-structure"></a>Struttura COR_PRF_ASSEMBLY_REFERENCE_INFO
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -34,7 +34,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`pbPublicKeyOrToken`|Un puntatore alla chiave pubblica o token dell'assembly.|  
 |`cbPublicKeyOrToken`|Il numero di byte nella chiave pubblica o token.|  
@@ -59,6 +59,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
 - [Metodo GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
 - [Metodo AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)

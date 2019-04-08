@@ -2,12 +2,12 @@
 title: Tipi di dati di base
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072883"
 ---
 # <a name="basic-data-types"></a>Tipi di dati di base
 Poiché le query LINQ to SQL vengono convertite in Transact-SQL prima di essere eseguite in Microsoft SQL Server, in LINQ to SQL è supportata buona parte delle funzionalità predefinite di SQL Server  per i tipi di dati di base.  
@@ -23,5 +23,6 @@ Poiché le query LINQ to SQL vengono convertite in Transact-SQL prima di essere 
 -   È l'operatore: Il `IS` operatore ha supporta la conversione quando viene utilizzato il mapping di ereditarietà. È possibile usarlo invece di testare direttamente la colonna del discriminatore per determinare se un oggetto è di un tipo di entità specifico e viene convertito in un controllo nella colonna del discriminatore. Per altre informazioni su Visual Basic e C# è operators, vedere [operatore Is](~/docs/visual-basic/language-reference/operators/is-operator.md) e [viene](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

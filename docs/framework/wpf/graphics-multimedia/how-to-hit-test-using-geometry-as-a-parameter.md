@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire un hit test utilizzando la geometria come parametro'
+title: 'Procedura: Eseguire un hit test usando la geometria come parametro'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100964"
 ---
-# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Procedura: Eseguire un hit test utilizzando la geometria come parametro
+# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Procedura: Eseguire un hit test usando la geometria come parametro
 Questo esempio viene illustrato come eseguire un hit test su un oggetto visivo usando un <xref:System.Windows.Media.Geometry> come relativo parametro di test.  
   
 ## <a name="example"></a>Esempio  
@@ -38,5 +38,6 @@ Questo esempio viene illustrato come eseguire un hit test su un oggetto visivo u
 >  Il <xref:System.Windows.Media.HitTestResult> callback non deve essere chiamato una volta il dettaglio dell'intersezione <xref:System.Windows.Media.IntersectionDetail.Empty>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)
-- [Eseguire un hit test della geometria in un oggetto Visual](how-to-hit-test-geometry-in-a-visual.md)
+- [Eseguire un hit test della geometria in un oggetto visivo](how-to-hit-test-geometry-in-a-visual.md)

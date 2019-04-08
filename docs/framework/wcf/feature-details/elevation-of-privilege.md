@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099989"
 ---
 # <a name="elevation-of-privilege"></a>Elevazione dei privilegi
 *L'elevazione dei privilegi* risultante dalla concessione dell'autorizzazione un utente malintenzionato autorizzazioni maggiori rispetto a tali concessa inizialmente. L'autore di un attacco con, ad esempio, un set di privilegi di autorizzazioni "di sola lettura" eleva il set per includere "lettura e scrittura".  
@@ -18,7 +18,7 @@ ms.locfileid: "54658048"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Un servizio token di sicurezza affidabile deve firmare le attestazioni del token SAML  
  Un token SAML (Security Assertions Markup Language) è un token XML generico che è il tipo predefinito per i token emessi. Un token SAML può essere costruito da un servizio token di sicurezza (STS, Security Token Service) ritenuto affidabile dal servizio Web finale in uno scambio tipico. Nelle istruzioni, i token SAML contengono attestazioni. L'autore di un attacco può copiare le attestazioni da un token valido, creare un nuovo token SAML e firmarlo con un emittente diverso. Lo scopo è quello di determinare se il server sta convalidando gli emittenti e, in caso negativo, utilizzare la debolezza per costruire token SAML che consentano privilegi oltre quelli previsti da un servizio token di sicurezza.  
   
- La classe <xref:System.IdentityModel.Tokens.SamlAssertion> verifica la firma digitale contenuta in un token SAML e l'oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predefinito richiede che i token SAML siano firmati da un certificato X.509 che sia valido quando l'oggetti <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> è impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. La sola modalità `ChainTrust` non è sufficiente per stabilire se l'emittente del token SAML è affidabile. I servizi che richiedono un modello di affidabilità più granulare possono utilizzare i criteri di autorizzazione e di imposizione per controllare l'emittente dei set di attestazioni prodotti dall'autenticazione del token emesso oppure utilizzare le impostazioni di convalida X.509 in <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> per limitare il set di certificati di firma consentiti. Per altre informazioni, vedere [gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) e [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ La classe <xref:System.IdentityModel.Tokens.SamlAssertion> verifica la firma digitale contenuta in un token SAML e l'oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predefinito richiede che i token SAML siano firmati da un certificato X.509 che sia valido quando l'oggetti <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> è impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` modalità da solo è sufficiente per stabilire se l'emittente del token SAML è affidabile. I servizi che richiedono un modello di affidabilità più granulare possono utilizzare i criteri di autorizzazione e di imposizione per controllare l'emittente dei set di attestazioni prodotti dall'autenticazione del token emesso oppure utilizzare le impostazioni di convalida X.509 in <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> per limitare il set di certificati di firma consentiti. Per altre informazioni, vedere [gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) e [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Cambio di identità senza un contesto di sicurezza  
  Quando segue si applica solo a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -83,9 +83,10 @@ ms.locfileid: "54658048"
  Per limitare questo problema, fare riferimento al certificato X.509 in un altro modo, ad esempio utilizzando <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

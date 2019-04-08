@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073598"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: Impostare le immagini in fase di esecuzione (Windows Form)
 È possibile impostare a livello di codice l'immagine visualizzata da un controllo Windows Form <xref:System.Windows.Forms.PictureBox> controllo.  
@@ -98,9 +98,10 @@ ms.locfileid: "57711225"
      Questo codice verrà cancellata l'immagine, anche se un oggetto grafico è stato caricato nel controllo in fase di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Panoramica sul controllo PictureBox](picturebox-control-overview-windows-forms.md)
-- [Procedura: Caricare un'immagine utilizzando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Panoramica del controllo PictureBox](picturebox-control-overview-windows-forms.md)
+- [Procedura: Caricare un'immagine usando la finestra di progettazione](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Controllo PictureBox](picturebox-control-windows-forms.md)

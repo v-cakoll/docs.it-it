@@ -2,12 +2,12 @@
 title: Costruzione di tipi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073780"
 ---
 # <a name="constructing-types-entity-sql"></a>Costruzione di tipi (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce tre tipi di costruttori: costruttori di riga, costruttori di tipi denominati e costruttori di raccolte.  
@@ -41,7 +41,7 @@ ms.locfileid: "54718585"
  Per altre informazioni, vedere [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>Costruttori di tipi denominati (inizializzatori NamedType)  
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] i costruttori di tipi (inizializzatori) possono creare istanze di tipi di entità e di tipi complessi denominati. L'espressione seguente consente ad esempio di creare un'istanza di un tipo `Person`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Consente i costruttori di tipi (inizializzatori) possono creare istanze di tipi complessi denominati e tipi di entità. L'espressione seguente consente ad esempio di creare un'istanza di un tipo `Person`.  
   
  `Person("abc", 12)`  
   
@@ -64,6 +64,7 @@ ms.locfileid: "54718585"
  Per altre informazioni, vedere [costruttore di tipo denominato](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Sistema di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

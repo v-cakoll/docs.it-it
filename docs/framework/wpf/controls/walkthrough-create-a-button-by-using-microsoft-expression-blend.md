@@ -1,19 +1,19 @@
 ---
-title: 'Procedura dettagliata: Creare un pulsante tramite Microsoft Expression Blend'
+title: 'Procedura dettagliata: Creare un pulsante usando Microsoft Expression Blend'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100119"
 ---
-# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procedura dettagliata: Creare un pulsante tramite Microsoft Expression Blend
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Procedura dettagliata: Creare un pulsante usando Microsoft Expression Blend
 Questa procedura dettagliata viene illustrato il processo di creazione di un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pulsante personalizzato usando Microsoft Expression Blend.  
   
 > [!IMPORTANT]
@@ -248,8 +248,9 @@ Questa procedura dettagliata viene illustrato il processo di creazione di un [!I
 -   Varie: creare sfumature, aggiungere BitmapEffects, usare le trasformazioni e impostare le proprietà di base di oggetti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creare un pulsante usando XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Cenni preliminari sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

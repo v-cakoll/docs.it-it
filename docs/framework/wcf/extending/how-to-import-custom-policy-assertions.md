@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Importa asserzioni di criteri personalizzate'
+title: 'Procedura: Importare asserzioni di criteri personalizzate'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073624"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Procedura: Importa asserzioni di criteri personalizzate
+# <a name="how-to-import-custom-policy-assertions"></a>Procedura: Importare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio.  Le applicazioni client possono utilizzare asserzioni di criteri nei metadati del servizio per configurare l'associazione del client o per personalizzare il contratto di servizio per un endpoint del servizio.  
   
  Le asserzioni di criteri personalizzate vengono importate implementando l'interfaccia <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> e passando quell'oggetto al sistema di metadati o registrando il tipo di implementazione nel file di configurazione dell'applicazione.  Le implementazioni dell'interfaccia <xref:System.ServiceModel.Description.IPolicyImportExtension> devono fornire un costruttore predefinito.  
@@ -64,6 +64,7 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
 1.  Aggiungere l'unità di importazione alla proprietà <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> (ad esempio, se si sta utilizzando <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) prima di importare i metadati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

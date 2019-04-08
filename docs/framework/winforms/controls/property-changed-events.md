@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property changes (using code)
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-ms.openlocfilehash: 0ff5b3874d9de169f4a9f1040d601173af352c06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105769"
 ---
 # <a name="property-changed-events"></a>Eventi per proprietà modificate
 Se si desidera che il controllo per inviare notifiche quando una proprietà denominata *PropertyName* modifiche, definire un evento denominato *PropertyName* `Changed` e un metodo denominato `On` *PropertyName* `Changed` che genera l'evento. La convenzione di denominazione in Windows Form consiste nell'aggiungere la parola *Changed* al nome della proprietà. Il tipo di delegato di evento associato per gli eventi di modifica della proprietà è <xref:System.EventHandler>, e il tipo di dati di evento è <xref:System.EventArgs>. La classe di base <xref:System.Windows.Forms.Control> definisce molti eventi di modifica delle proprietà, ad esempio <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>e così via. Per informazioni generali sugli eventi, vedere [eventi](../../../standard/events/index.md) e [eventi nei controlli di Windows Form](events-in-windows-forms-controls.md).  
@@ -26,6 +26,7 @@ Se si desidera che il controllo per inviare notifiche quando una proprietà deno
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi](../../../standard/events/index.md)
-- [Eventi dei controlli di Windows Form](events-in-windows-forms-controls.md)
+- [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)

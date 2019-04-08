@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form'
+title: 'Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104650"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms
 Il processo di aggiunta di un elemento a un form Windows <xref:System.Windows.Forms.ListView> controllo consiste principalmente nella definizione dell'elemento e assegnazione di proprietà. È possibile aggiungere o rimuovere elementi elenco in qualsiasi momento.  
   
 ### <a name="to-add-items-programmatically"></a>Per aggiungere elementi a livello di codice  
@@ -34,6 +34,7 @@ Il processo di aggiunta di un elemento a un form Windows <xref:System.Windows.Fo
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ListView>
 - [Controllo ListView](listview-control-windows-forms.md)
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)

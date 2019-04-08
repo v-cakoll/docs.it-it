@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione'
+title: 'Procedura: Associare i controlli di Windows Forms al componente BindingSource usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: e12498bc71957d49893e49e54095b6bb184ac2c3
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074657"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procedura: Associare controlli Windows Form al componente BindingSource usando la finestra di progettazione
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Procedura: Associare i controlli di Windows Forms al componente BindingSource usando la finestra di progettazione
 Dopo aver aggiunto i controlli al form e determinare l'interfaccia utente per l'applicazione, è possibile associare i controlli a un'origine dati, in modo che, in fase di esecuzione, gli utenti possono modificare e salvare i dati correlati all'applicazione.  
   
  Associazione di un controllo o una serie di controlli in Windows Form viene effettuata più facilmente usando le <xref:System.Windows.Forms.BindingSource> controllo che funge da ponte tra i controlli nel form e l'origine dati.  
@@ -60,7 +60,8 @@ Dopo aver aggiunto i controlli al form e determinare l'interfaccia utente per l'
      Il **DataSource** verrà chiuso editor e il set di dati di tipo UI <xref:System.Windows.Forms.BindingSource> e adattatore di tabella specifico di connessione dati verranno aggiunti al form.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Aggiungi nuova origine dati](/visualstudio/data-tools/add-new-data-sources)
+- [Aggiungere nuove origini dati](/visualstudio/data-tools/add-new-data-sources)
 - [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
