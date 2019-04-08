@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761367"
+---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Scorrimento per elementi in un elenco semplice con elementi la cui altezza in pixel è diversa
 
 |   |   |

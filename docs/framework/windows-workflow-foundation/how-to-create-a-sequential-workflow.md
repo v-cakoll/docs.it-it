@@ -64,7 +64,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 ## <a name="to-add-the-workflow-activities"></a>Per aggiungere le attività del flusso di lavoro  
   
-1.  Trascinare un' **assegnare** attività dalle **primitive** sezione del **della casella degli strumenti** e rilasciarla sul **sequenza** attività. Tipo `Target` nella **al** finestra e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
+1.  Trascinare un' **assegnare** attività dalle **primitive** sezione del **della casella degli strumenti** e rilasciarla sul **sequenza** attività. Tipo `Target` nella **al** finestra e l'espressione seguente nella **immettere un'espressione C#** o **immettere un'espressione VB** casella.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     > [!NOTE]
     >  Quando si rilascia il **assegnare** attività, nota come la finestra di progettazione del flusso di lavoro aggiunge automaticamente un **sequenza** attività per contenere sia il **Prompt** appena aggiunto e attività **Assegnare** attività.  
   
-7.  Tipo `Turns` nella **al** casella e `Turns + 1` nel **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
+7.  Tipo `Turns` nella **al** casella e `Turns + 1` nel **immettere un'espressione C#** o **immettere un'espressione VB** casella.  
   
 8.  Trascinare un **se** attività dal **flusso di controllo** sezione del **della casella degli strumenti** e rilasciarla nel **sequenza** attività in modo che segua il aggiunti di recente **assegnare** attività.  
   

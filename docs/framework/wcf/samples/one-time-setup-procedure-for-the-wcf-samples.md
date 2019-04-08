@@ -42,7 +42,7 @@ La maggior parte degli esempi Windows Communication Foundation (WCF) sono ospita
   
 6.  Cercare la directory predefinita seguente: \<InstallDrive>:**\WF_WCF_Samples**. Se gli esempi sono stati installati in precedenza, questa è la directory predefinita.  
   
-7.  Se gli esempi non sono installati, installarli dal percorso di download di esempi per [Visual c#](https://go.microsoft.com/fwlink/?LinkId=190939) oppure [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7.  Se gli esempi non sono installati, installarli dal percorso di download di esempi per [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) oppure [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
 8.  Dopo aver installato gli esempi, vedere: \<Unitàinstallazione >:**\WF_WCF_Samples\WCF\Setup\\**  
   

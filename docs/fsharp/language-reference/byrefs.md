@@ -110,7 +110,7 @@ Lo scopo di `outref<'T>` consiste nell'indicare che il puntatore deve essere let
 
 C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra come F# interpreta cosa C# genera:
 
-|Costrutto di linguaggio c#|F#deduce|
+|Costrutto di linguaggio C#|F#deduce|
 |------------|---------|
 |`ref` valore restituito|`outref<'T>`|
 |`ref readonly` valore restituito|`inref<'T>`|

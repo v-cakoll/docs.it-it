@@ -106,7 +106,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Recupero dell'applicazione corrente  
- Poiché la funzionalità dei <xref:System.Windows.Application> classe sono condivise tra un'applicazione, può esistere una sola istanza del <xref:System.Windows.Application> classe per ogni <xref:System.AppDomain>. Per applicare questo comportamento, il <xref:System.Windows.Application> classe è implementata come classe singleton (vedere [Implementing Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567)), che consente di creare una singola istanza di se stesso e fornisce accesso a esso con condiviso il `static` <xref:System.Windows.Application.Current%2A> proprietà.  
+ Poiché la funzionalità dei <xref:System.Windows.Application> classe sono condivise tra un'applicazione, può esistere una sola istanza del <xref:System.Windows.Application> classe per ogni <xref:System.AppDomain>. Per applicare questo comportamento, il <xref:System.Windows.Application> classe è implementata come classe singleton (vedere [Implementing Singleton in C#](https://go.microsoft.com/fwlink/?LinkId=100567)), che consente di creare una singola istanza di se stesso e fornisce accesso a esso con condiviso il `static` <xref:System.Windows.Application.Current%2A> proprietà.  
   
  Il codice seguente viene illustrato come acquisire un riferimento per la <xref:System.Windows.Application> oggetto corrente <xref:System.AppDomain>.  
   

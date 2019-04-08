@@ -44,7 +44,7 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
 |`typeNameValue`|Obbligatorio. Nome di un tipo risolvibile in nomi XAML predefinito corrente; o specificato mappati prefisso se `prefix` fornito.|  
   
 ## <a name="remarks"></a>Note  
- Il `x:Type` estensione di markup è una funzione simile al `typeof()` operatore in c# o `GetType` operatore in Microsoft Visual Basic.  
+ Il `x:Type` estensione di markup è una funzione simile al `typeof()` operatore in C# o `GetType` operatore in Microsoft Visual Basic.  
   
  Il `x:Type` estensione di markup fornisca un comportamento di conversione da stringa per le proprietà che accettano il tipo <xref:System.Type>. L'input è un tipo XAML. La relazione tra il tipo XAML di input e output di CLR <xref:System.Type> è che l'output <xref:System.Type> è la <xref:System.Xaml.XamlType.UnderlyingType%2A> dell'input <xref:System.Xaml.XamlType>, dopo aver cercato le necessarie <xref:System.Xaml.XamlType> basata sul contesto dello schema XAML e la <xref:System.Windows.Markup.IXamlTypeResolver>service fornisce il contesto.  
   

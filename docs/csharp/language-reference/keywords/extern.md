@@ -29,7 +29,7 @@ La parola chiave `extern` può definire anche un alias di assembly esterno, rend
 
 È errato usare i modificatori [abstract](abstract.md) e `extern` contemporaneamente per modificare lo stesso membro. L'utilizzo del modificatore `extern` indica che il metodo viene implementato all'esterno del codice C#, mentre l'utilizzo del modificatore `abstract` indica che l'implementazione del metodo non viene fornita nella classe.
 
-La parola chiave extern ha un utilizzo più limitato in c# rispetto a C++. Per confrontare la parola chiave C# con la parola chiave C++, vedere Utilizzo di extern per specificare il collegamento in Riferimenti al linguaggio C++.
+La parola chiave extern ha un utilizzo più limitato in C# rispetto a C++. Per confrontare la parola chiave C# con la parola chiave C++, vedere Utilizzo di extern per specificare il collegamento in Riferimenti al linguaggio C++.
 
 ## <a name="example-1"></a>Esempio 1
 

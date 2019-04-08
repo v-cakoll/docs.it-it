@@ -10,7 +10,7 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56092007"
 ---
 # <a name="samples"></a>Esempi
-In questo argomento vengono forniti collegamenti alle soluzioni Visual Basic e c# contenenti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esempi di codice.  
+In questo argomento vengono forniti collegamenti alle soluzioni Visual Basic e C# contenenti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esempi di codice.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  Versione di Visual Basic della soluzione SampleQueries  
@@ -25,7 +25,7 @@ In questo argomento vengono forniti collegamenti alle soluzioni Visual Basic e c
   
 -   Partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti.  
   
--   Studiare il white paper che illustra in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e c#. Per altre informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Studiare il white paper che illustra in dettaglio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e C#. Per altre informazioni, vedere [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Vedere anche
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)

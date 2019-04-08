@@ -31,7 +31,7 @@ Per interpretare un valore null che viene ottenuto da un metodo .NET, usare crit
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-I valori null per F# tipi possono essere generati anche in altri modi, ad esempio quando Usa `Array.zeroCreate`, che chiama `Unchecked.defaultof`. È necessario prestare attenzione con tale codice per mantenere i valori null incapsulati. In una libreria destinata solo a F#, non è necessario verificare la presenza di valori null in tutte le funzioni. Se si scrive una libreria per essere interoperabile con altri linguaggi .NET, si potrebbe essere necessario aggiungere controlli null i parametri di input e generano un `ArgumentNullException`, esattamente come avviene nel codice c# o Visual Basic.
+I valori null per F# tipi possono essere generati anche in altri modi, ad esempio quando Usa `Array.zeroCreate`, che chiama `Unchecked.defaultof`. È necessario prestare attenzione con tale codice per mantenere i valori null incapsulati. In una libreria destinata solo a F#, non è necessario verificare la presenza di valori null in tutte le funzioni. Se si scrive una libreria per essere interoperabile con altri linguaggi .NET, si potrebbe essere necessario aggiungere controlli null i parametri di input e generano un `ArgumentNullException`, esattamente come avviene nel codice C# o Visual Basic.
 
 È possibile usare il codice seguente per verificare se un valore arbitrario è null.
 

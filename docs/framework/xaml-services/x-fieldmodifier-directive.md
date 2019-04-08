@@ -36,7 +36,7 @@ ms.locfileid: "58042447"
   
  Il valore per il `x:FieldModifier` attributo varia in base al linguaggio di programmazione e framework specifici può variare il suo scopo. La stringa da usare dipende dal modo in cui ogni linguaggio implementa relativi <xref:System.CodeDom.Compiler.CodeDomProvider> e i convertitori di tipi restituiti per definire gli stessi significati per <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> e <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, e se tale lingua è distinzione maiuscole / minuscole.  
   
--   Per c#, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `public`.  
+-   Per C#, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `public`.  
   
 -   Per Microsoft Visual Basic .NET, la stringa da passare per designare <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> è `Public`.  
   

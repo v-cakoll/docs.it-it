@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Note
 
-Riferimento al codice utilizzando il percorso completo dello spazio dei nomi o modulo ogni volta possibile creare codice difficile da leggere, scrivere e mantenere. In alternativa, è possibile usare il `open` parola chiave per utilizzati spesso moduli e spazi dei nomi in modo che quando si fa riferimento a un membro di tale modulo o dello spazio dei nomi, è possibile usare la versione abbreviata del nome anziché il nome completo. Questa parola chiave è simile al `using` parola chiave nel linguaggio c# `using namespace` in Visual C++ e `Imports` in Visual Basic.
+Riferimento al codice utilizzando il percorso completo dello spazio dei nomi o modulo ogni volta possibile creare codice difficile da leggere, scrivere e mantenere. In alternativa, è possibile usare il `open` parola chiave per utilizzati spesso moduli e spazi dei nomi in modo che quando si fa riferimento a un membro di tale modulo o dello spazio dei nomi, è possibile usare la versione abbreviata del nome anziché il nome completo. Questa parola chiave è simile al `using` parola chiave nel linguaggio C# `using namespace` in Visual C++ e `Imports` in Visual Basic.
 
 Il modulo o dello spazio dei nomi fornito deve essere nello stesso progetto o in un progetto di riferimento o un assembly. In caso contrario, è possibile aggiungere un riferimento al progetto o usare il `-reference` comandi`-`opzione della riga (o la relativa abbreviazione `-r`). Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 

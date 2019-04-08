@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760391"
+---
 ## <a name="installation-instructions"></a>Istruzioni di installazione 
 
 Esistono due modi diversi per trovare **.NET Compiler Platform SDK** nel **programma di installazione di Visual Studio**:

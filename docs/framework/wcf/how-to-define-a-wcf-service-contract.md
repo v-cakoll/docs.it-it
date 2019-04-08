@@ -38,7 +38,7 @@ In questa esercitazione si imparerà a:
 
    1. Scegliere **Nuovo** > **Progetto** dal menu **File**.
 
-   2. Nel **nuovo progetto** finestra di dialogo sul lato sinistro, espandere **Visual c#** oppure **Visual Basic**e quindi selezionare il **WCF** categoria. Visual Studio visualizza un elenco di modelli di progetto nella sezione centrale della finestra. Selezionare **WCF Service Library**.
+   2. Nel **nuovo progetto** finestra di dialogo sul lato sinistro, espandere **Visual C#** oppure **Visual Basic**e quindi selezionare il **WCF** categoria. Visual Studio visualizza un elenco di modelli di progetto nella sezione centrale della finestra. Selezionare **WCF Service Library**.
 
       > [!NOTE]
       > Se non viene visualizzato il **WCF** categoria di modelli di progetto, potrebbe essere necessario installare il **Windows Communication Foundation** componente di Visual Studio. Nel **nuovo progetto** finestra di dialogo, seleziona la **aperto Visual Studio Installer** collegamento sul lato sinistro. Selezionare il **singoli componenti** scheda e quindi cercare e selezionare **Windows Communication Foundation** sotto il **le attività di sviluppo** categoria. Scegli **Modify** per iniziare a installare il componente.

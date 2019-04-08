@@ -19,7 +19,7 @@ Host senza server usano spesso un esistente basato su contenitori o un livello P
 
 ![Architettura di funzioni di Azure](./media/azure-functions-architecture.png)
 
-Il nucleo di processi Web fornisce un contesto di esecuzione per la funzione. Il Runtime di linguaggio esegue gli script, esegue le librerie e ospita il framework per la lingua di destinazione. Ad esempio, Node. js viene usato per eseguire funzioni JavaScript e .NET Framework viene usato per eseguire le funzioni c#. Si apprenderà ulteriori informazioni sulle opzioni di linguaggio e piattaforma più avanti in questo capitolo.
+Il nucleo di processi Web fornisce un contesto di esecuzione per la funzione. Il Runtime di linguaggio esegue gli script, esegue le librerie e ospita il framework per la lingua di destinazione. Ad esempio, Node. js viene usato per eseguire funzioni JavaScript e .NET Framework viene usato per eseguire le funzioni C#. Si apprenderà ulteriori informazioni sulle opzioni di linguaggio e piattaforma più avanti in questo capitolo.
 
 Alcuni progetti possono trarre vantaggio da un "secondo" per approccio senza server. Le applicazioni che si basano su microservizi possono implementare tutti i microservizi tramite la tecnologia senza server. La maggior parte delle App sono ibrido, seguendo una progettazione a più livelli e l'uso senza server per i componenti che hanno un significato perché i componenti sono modulare e scalabile in modo indipendente. Per consentire questi scenari ha senso, questa sezione illustra alcuni esempi comuni di architettura che usano senza server.
 

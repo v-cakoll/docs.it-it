@@ -242,7 +242,7 @@ Un'app autonoma gratuita di Microsoft che consente di rappresentare facilmente d
 
 ### <a name="related-guides"></a>Guide correlate
 
-- [Introduzione all'archiviazione Blob di Azure nel linguaggio c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Introduzione all'archiviazione Blob di Azure nel linguaggio C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Trasferire dati con l'utilità della riga di comando di AzCopy in Windows](/azure/storage/common/storage-use-azcopy)
 - [Trasferire dati con l'utilità della riga di comando di AzCopy in Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)

@@ -18,7 +18,7 @@ Nell'esempio viene illustrato come eseguire le seguenti operazioni:
   
 -   Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> rispettivamente su un comportamento del contratto personalizzato e un comportamento dell'operazione personalizzato per scrivere le annotazioni importate come commenti in CodeDOM per il contratto e l'operazione importati.  
   
--   Usare la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per scaricare il WSDL, una <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per importare il WSDL mediante l'utilità di importazione WSDL personalizzata e il <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> per generare codice client di Windows Communication Foundation (WCF) con le annotazioni WSDL quali / / / e ' ' commenti in c# e Visual Base.  
+-   Usare la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> per scaricare il WSDL, una <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> per importare il WSDL mediante l'utilità di importazione WSDL personalizzata e il <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> per generare codice client di Windows Communication Foundation (WCF) con le annotazioni WSDL quali / / / e ' ' commenti in C# e Visual Base.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  

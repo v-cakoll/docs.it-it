@@ -134,7 +134,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controlla se le sequenze di tasti vuote nelle chiavi composte vengono ignorate dalla convalida dello schema XSD. Per altre informazioni, vedere [Mitigazione: Convalida di XML Schema](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Invece di aggiungere un `AppContextSwitchOverrides` elemento da un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di codice chiamando il `static` (in c#) o `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (metodo).  
+>  Invece di aggiungere un `AppContextSwitchOverrides` elemento da un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di codice chiamando il `static` (in C#) o `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (metodo).  
   
  Gli sviluppatori di librerie è anche possono definire opzioni personalizzate per consentire ai chiamanti di rifiutare esplicitamente la funzionalità modificate introdotte nelle versioni più recenti delle librerie. Per altre informazioni, vedere la classe <xref:System.AppContext>.  
   

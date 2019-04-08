@@ -96,7 +96,7 @@ F# inoltre offre supporto completo per l'ottimizzazione chiamata Tail, che è po
 
 Record e i tipi di unione sono due tipi di dati fondamentali usati nel codice F# e sono in genere il modo migliore per rappresentare i dati in un programma F#.  Anche se ciò li rende simile alle classi in altri linguaggi, una delle loro differenze principali è la semantica di uguaglianza strutturale.  Ciò significa che sono confrontabili "in modo nativo" e verificarne l'uguaglianza è semplice: controllare solo se uno è uguale a altro.
 
-[I record](language-reference/records.md) sono un'aggregazione di valori denominati, con i membri facoltativi (ad esempio metodi).  Se si ha familiarità con c# o Java, si dovrebbe risultare simile a oggetti poco o Pojo - solo con l'uguaglianza strutturale e meno conferimento.
+[I record](language-reference/records.md) sono un'aggregazione di valori denominati, con i membri facoltativi (ad esempio metodi).  Se si ha familiarità con C# o Java, si dovrebbe risultare simile a oggetti poco o Pojo - solo con l'uguaglianza strutturale e meno conferimento.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
@@ -187,7 +187,7 @@ I record sono un "gradino sopra" da tuple, visto denominato etichette e il suppo
 
 Unioni discriminate sono molti gli usi, ma il vantaggio principale consiste nel poter utilizzarli in combinazione con criteri di ricerca per conto di tutte le possibili "forme" che può avere un tipo di dati.  
 
-Le classi sono ideali per un numero enorme di motivi, ad esempio quando è necessario rappresentare le informazioni e anche associare tali informazioni per la funzionalità.  Come regola generale, quando si dispone di funzionalità che concettualmente è collegata ad alcuni dati, uso di classi e i principi della programmazione orientata a oggetti rappresenta un enorme vantaggio.  Le classi sono anche il tipo di dati preferito quando si interagisce con c# e Visual Basic, poiché questi linguaggi usano classi per quasi tutte le funzioni.
+Le classi sono ideali per un numero enorme di motivi, ad esempio quando è necessario rappresentare le informazioni e anche associare tali informazioni per la funzionalità.  Come regola generale, quando si dispone di funzionalità che concettualmente è collegata ad alcuni dati, uso di classi e i principi della programmazione orientata a oggetti rappresenta un enorme vantaggio.  Le classi sono anche il tipo di dati preferito quando si interagisce con C# e Visual Basic, poiché questi linguaggi usano classi per quasi tutte le funzioni.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

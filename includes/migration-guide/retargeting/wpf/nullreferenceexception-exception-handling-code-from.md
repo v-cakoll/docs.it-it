@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bae7d11f29609acddaf9f6391983176ccaa9ebcb
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760317"
+---
 ### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>NullReferenceException nel codice di gestione delle eccezioni da ImageSourceConverter.ConvertFrom
 
 |   |   |

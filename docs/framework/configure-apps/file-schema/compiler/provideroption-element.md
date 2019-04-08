@@ -58,14 +58,14 @@ Specifica gli attributi di versione del compilatore per un provider del linguagg
 ## <a name="remarks"></a>Note  
  In .NET Framework versione 3.5, i provider di codice Code Document Object Model (CodeDOM) possono supportare opzioni specifiche del provider usando la `<providerOption>` elemento.  
   
- .NET Framework 3.5 include gli assembly di .NET Framework 2.0 aggiornati e fornisce nuovi assembly della versione 3.5 che contengono nuovi tipi. I provider di codice Microsoft c# e Visual Basic sono contenuti negli assembly di .NET Framework 2.0, ma sono stati aggiornati per supportare i compilatori di versione 3.5. Per impostazione predefinita, i provider di codice aggiornato generano codice per i compilatori di versione 2.0. È possibile usare il `<providerOption>` elemento per modificare la versione del compilatore di destinazione a 3.5. A questo scopo, specificare "CompilerVersion" per il `name` attributo e "v3.5" per il `value` attributo. È necessario anteporre il numero di versione con lettere minuscole "v".  
+ .NET Framework 3.5 include gli assembly di .NET Framework 2.0 aggiornati e fornisce nuovi assembly della versione 3.5 che contengono nuovi tipi. I provider di codice Microsoft C# e Visual Basic sono contenuti negli assembly di .NET Framework 2.0, ma sono stati aggiornati per supportare i compilatori di versione 3.5. Per impostazione predefinita, i provider di codice aggiornato generano codice per i compilatori di versione 2.0. È possibile usare il `<providerOption>` elemento per modificare la versione del compilatore di destinazione a 3.5. A questo scopo, specificare "CompilerVersion" per il `name` attributo e "v3.5" per il `value` attributo. È necessario anteporre il numero di versione con lettere minuscole "v".  
   
  È possibile rendere la specifica della versione globale mediante l'aggiunta di `<providerOption>` elemento per il file Machine. config di .NET Framework 2.0 o un file Web. config radice. Se si aggiorna la versione del compilatore predefinito 3.5 nel file Machine. config, è possibile modificarlo al 2.0 su una base all'applicazione tramite il `<providerOption>` elemento nel file di configurazione dell'applicazione.  
   
  I responsabili dell'implementazione del provider di codice codeDOM può elaborare le opzioni personalizzate, fornendo un costruttore che accetta un `providerOptions` parametru typu <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come specificare la versione 3.5 del provider di codice c# da usare.  
+ Nell'esempio seguente viene illustrato come specificare la versione 3.5 del provider di codice C# da usare.  
   
 ```xml  
 <configuration>  

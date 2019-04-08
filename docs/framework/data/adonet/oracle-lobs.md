@@ -23,7 +23,7 @@ Il Provider di dati .NET Framework per Oracle include la <xref:System.Data.Oracl
  Un' **OracleLob** differisce da un <xref:System.Data.OracleClient.OracleBFile> in quanto i dati vengono archiviati nel server anziché in un file fisico nel sistema operativo. Può anche essere un oggetto di lettura / scrittura, a differenza di un' **OracleBFile**, che è sempre di sola lettura.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Creazione, recupero e scrittura di un LOB  
- L'esempio c# seguente illustra come creare LOB in una tabella Oracle e quindi recuperare e scriverli sotto forma di **OracleLob** oggetti. Nell'esempio viene illustrato come utilizzare il <xref:System.Data.OracleClient.OracleDataReader> oggetto e il **OracleLob** **lettura** e **scrivere** metodi. L'esempio Usa Oracle **BLOB**, **CLOB**, e **NCLOB** i tipi di dati.  
+ L'esempio C# seguente illustra come creare LOB in una tabella Oracle e quindi recuperare e scriverli sotto forma di **OracleLob** oggetti. Nell'esempio viene illustrato come utilizzare il <xref:System.Data.OracleClient.OracleDataReader> oggetto e il **OracleLob** **lettura** e **scrivere** metodi. L'esempio Usa Oracle **BLOB**, **CLOB**, e **NCLOB** i tipi di dati.  
   
 ```csharp  
 using System;  

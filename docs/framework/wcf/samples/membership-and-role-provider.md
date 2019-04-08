@@ -118,7 +118,7 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Per compilare l'edizione c# o Visual Basic .NET della soluzione, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1.  Per compilare l'edizione C# o Visual Basic .NET della soluzione, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 2.  Assicurarsi di aver configurato il [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   

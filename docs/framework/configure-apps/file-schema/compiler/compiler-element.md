@@ -45,7 +45,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |---------------|-----------------|
 |`compilerOptions`|Attributo facoltativo.<br /><br /> Specifica ulteriori argomenti specifici del compilatore per la compilazione. I valori per il `compilerOptions` attributo vengono elencati in genere in un argomento relativo alle opzioni del compilatore per consentire al compilatore.|
 |`extension`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di estensioni di file usato dai file di origine per il provider del linguaggio. Ad esempio, "cs".|
-|`language`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di nomi di linguaggio supportati dal provider del linguaggio. Ad esempio "c#; cs; csharp".|
+|`language`|Attributo obbligatorio.<br /><br /> Fornisce un elenco delimitato da punto e virgola di nomi di linguaggio supportati dal provider del linguaggio. Ad esempio "C#; cs; csharp".|
 |`type`|Attributo obbligatorio.<br /><br /> Specifica il nome del tipo di provider del linguaggio, inclusi il nome dell'assembly contenente l'implementazione del provider. Il nome del tipo deve soddisfare i requisiti definiti nella [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Attributo facoltativo.<br /><br /> Specifica il livello di avviso del compilatore predefinito; Determina il livello in corrispondenza del quale il provider del linguaggio avvisi di compilazione vengono considerati come errori.|
 
