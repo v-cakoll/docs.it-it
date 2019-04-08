@@ -1,17 +1,17 @@
 ---
-title: Metodo ICorDebugVirtualUnwinder::Next
+title: 'Metodo icordebugvirtualunwinder:: Next'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c05fcc9a40c3d47949b547164dc56f6a2246838
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076887"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>Metodo ICorDebugVirtualUnwinder::Next
+# <a name="icordebugvirtualunwindernext-method"></a>Metodo icordebugvirtualunwinder:: Next
 Avanza fino al contesto del chiamante.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -24,7 +24,7 @@ HRESULT Next();
  Nessuno.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` se la rimozione è stata eseguita correttamente o `CORDBG_S_AT_END_OF_STACK` se la rimozione non riesce perché non vi sono più frame.  
+ `S_OK` Se la rimozione è stata eseguita correttamente o `CORDBG_S_AT_END_OF_STACK` se la rimozione non può essere completata perché non sono più frame.  
   
  Se viene restituito un HRESULT, le API ICorDebug restituiranno `CORDBG_E_DATA_TARGET_ERROR`.  
   
@@ -44,5 +44,6 @@ HRESULT Next();
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

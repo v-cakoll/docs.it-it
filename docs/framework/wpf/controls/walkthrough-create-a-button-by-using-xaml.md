@@ -1,17 +1,17 @@
 ---
-title: 'Procedura dettagliata: Creare un pulsante tramite XAML'
+title: 'Procedura dettagliata: Creare un pulsante usando XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076562"
 ---
-# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante tramite XAML
+# <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante usando XAML
 L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare un pulsante animato per l'uso in un'applicazione Windows Presentation Foundation (WPF). Questa procedura dettagliata Usa stili e un modello per creare una risorsa pulsante personalizzato che consente il riutilizzo del codice e la separazione della logica di pulsante dalla dichiarazione del pulsante. Questa procedura dettagliata viene scritta interamente in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
@@ -432,8 +432,9 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 -   Personalizzare il comportamento dei pulsanti in risposta alle azioni dell'utente (ad esempio <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) che è includere gli effetti di animazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creare un pulsante usando Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Cenni preliminari sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

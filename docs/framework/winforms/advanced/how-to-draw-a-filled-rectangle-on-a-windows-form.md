@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disegna un rettangolo pieno in un Windows Form'
+title: 'Procedura: Disegnare un rettangolo pieno in un Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: 53fab93f47c16257b5ab2e336b43c6133a31d509
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072027"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Procedura: Disegna un rettangolo pieno in un Windows Form
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Procedura: Disegnare un rettangolo pieno in un Windows Form
 In questo esempio disegna un rettangolo pieno in un form.  
   
 ## <a name="example"></a>Esempio  
@@ -34,9 +34,10 @@ In questo esempio disegna un rettangolo pieno in un form.
  È sempre necessario chiamare <xref:System.IDisposable.Dispose%2A> tutti gli oggetti che utilizzano le risorse di sistema, ad esempio <xref:System.Drawing.Brush> e <xref:System.Drawing.Graphics> oggetti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
 - [Pennelli e forme con riempimento in GDI+](brushes-and-filled-shapes-in-gdi.md)

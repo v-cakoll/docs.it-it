@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078226"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Penne, linee e rettangoli in GDI+
 Per disegnare linee con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è necessario creare un <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto. Il <xref:System.Drawing.Graphics> oggetto fornisce i metodi che eseguono effettivamente il disegno, e il <xref:System.Drawing.Pen> oggetto archivia gli attributi, ad esempio colore, larghezza e stile.  
@@ -68,6 +68,7 @@ Per disegnare linee con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdip
  Oggetto <xref:System.Drawing.Rectangle> oggetto dispone di metodi e proprietà per la modifica e la raccolta di informazioni relative al rettangolo. Ad esempio, il <xref:System.Drawing.Rectangle.Inflate%2A> e <xref:System.Drawing.Rectangle.Offset%2A> metodi modificano le dimensioni e posizione del rettangolo. Il <xref:System.Drawing.Rectangle.IntersectsWith%2A> metodo indica se il rettangolo interseca un altro rettangolo specificato e il <xref:System.Drawing.Rectangle.Contains%2A> metodo indica se un determinato punto è all'interno del rettangolo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
