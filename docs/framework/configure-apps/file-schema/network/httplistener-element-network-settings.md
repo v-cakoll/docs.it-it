@@ -1,13 +1,13 @@
 ---
-title: Elemento <httpListener> (Impostazioni di rete)
+title: <httpListener> (Impostazioni di rete)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: ff5e4ad2788ab3df621beb52b1703647df068a7f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099743"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > (impostazioni di rete)
 Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> classe.  
@@ -43,7 +43,7 @@ Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> 
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
+|[impostazioni](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Note  
  Il **unescapeRequestUrl** attributo indica se <xref:System.Net.HttpListener> Usa l'URI senza codice di escape non elaborato anziché l'URI convertito in cui vengono convertiti i valori codificati in percentuale e vengono eseguiti altri passaggi di normalizzazione.  
@@ -138,6 +138,7 @@ Consente di personalizzare i parametri usati dal <xref:System.Net.HttpListener> 
 |Può essere vuoto||  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>

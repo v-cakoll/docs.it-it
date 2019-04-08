@@ -8,18 +8,16 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082178"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Hit testing a livello visivo
 In questo argomento vengono forniti dei cenni preliminari sulle funzionalità di hit testing fornite dal livello visivo. Supporto per l'hit testing consente di determinare se un valore di geometria o un punto compreso in contenuto di cui viene eseguito il rendering di un <xref:System.Windows.Media.Visual>, consentendo di implementare un comportamento dell'interfaccia utente, ad esempio un rettangolo di selezione per selezionare più oggetti.  
-  
- 
-  
+
 <a name="hit_testing_scenarios"></a>   
 ## <a name="hit-testing-scenarios"></a>Scenari di hit Testing  
  Il <xref:System.Windows.UIElement> classe fornisce il <xref:System.Windows.UIElement.InputHitTest%2A> metodo, che consente di eseguire un hit test su un elemento usando un valore di coordinate specificato. In molti casi, il <xref:System.Windows.UIElement.InputHitTest%2A> metodo fornisce le funzionalità richieste per implementare l'hit testing di elementi. Esistono tuttavia diversi scenari nei quali potrebbe essere necessario implementare l'hit testing a livello visivo.  
@@ -139,6 +137,7 @@ Eliminazione di una struttura ad albero visuale
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - <xref:System.Windows.Media.HitTestResult>
 - <xref:System.Windows.Media.HitTestResultCallback>
@@ -146,5 +145,5 @@ Eliminazione di una struttura ad albero visuale
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [Eseguire un hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [Eseguire un hit Test con interoperatività Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Eseguire un hit test della geometria in un oggetto Visual](how-to-hit-test-geometry-in-a-visual.md)
-- [Eseguire un hit test utilizzando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)
+- [Eseguire un hit test della geometria in un oggetto visivo](how-to-hit-test-geometry-in-a-visual.md)
+- [Eseguire un hit test usando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)

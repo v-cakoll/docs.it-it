@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ridimensionare i controlli Windows Form'
+title: 'Procedura: Ridimensionare i controlli in Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 486564f8092733ad253aac4ad9ee60ff0f83dce7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 598d3a6ea7f7cf6dc19cae5f55f49243d5d3ba31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091746"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: Ridimensionare i controlli Windows Form
+# <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: Ridimensionare i controlli in Windows Forms
 È possibile ridimensionare i singoli controlli ed è possibile ridimensionare più controlli di tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  
   
 ### <a name="to-resize-a-control"></a>Ridimensionare un controllo  
@@ -33,7 +33,8 @@ ms.locfileid: "57719767"
 2.  Nel **formato** menu, scegliere **Rendi uguali**, selezionare una delle quattro opzioni. I primi tre comandi modificano le dimensioni dei controlli in modo che corrisponda il primo controllo selezionato.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](index.md)
+
+- [Controlli per Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Elemento <add> per <listeners> per <trace>
+title: <add> Elemento per <listeners> per <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: 31ab58d6817c6c5064182ab5ef8b9595e92bef7d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089582"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<aggiungere > (elemento) per \<listeners > per \<traccia >
 Aggiunge un listener per il **listener** raccolta.  
@@ -39,7 +39,7 @@ Aggiunge un listener per il **listener** raccolta.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener. È necessario usare una stringa che soddisfi i requisiti specificati nelle [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**tipo**|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener. È necessario usare una stringa che soddisfi i requisiti specificati nelle [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
 |**name**|Attributo facoltativo.<br /><br /> Specifica il nome del listener.|  
   
@@ -102,6 +102,7 @@ Aggiunge un listener per il **listener** raccolta.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.EventLogTraceListener>

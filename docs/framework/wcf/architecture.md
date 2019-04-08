@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099703"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architettura di Windows Communication Foundation
 Il grafico seguente illustra i livelli principali dell'architettura Windows Communication Foundation (WCF).  
@@ -46,5 +46,6 @@ Il grafico seguente illustra i livelli principali dell'architettura Windows Comm
  I servizi possono essere anche *ospitato*, oppure eseguire in un file eseguibile gestito da un agente esterno, ad esempio IIS o Windows Activation Service (WAS). ERA consente alle applicazioni WCF per essere attivata automaticamente quando viene distribuita in un computer che esegue. I servizi possono inoltre essere eseguiti manualmente come file eseguibili (file con estensione exe). Un servizio può essere eseguito automaticamente come servizio Windows. I componenti COM+ possono anche essere ospitati come servizi WCF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Concetti fondamentali di Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

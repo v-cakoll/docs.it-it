@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Convalidare i file di Mapping esterni e DBML'
+title: 'Procedura: Convalidare file di mapping esterni e DBML'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078733"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedura: Convalidare i file di Mapping esterni e DBML
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedura: Convalidare file di mapping esterni e DBML
 I file di mapping esterno e i file con estensione dbml modificati devono essere convalidati in base alle rispettive definizioni dello schema. In questo argomento offre agli utenti di Visual Studio con i passaggi per implementare il processo di convalida.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ I file di mapping esterno e i file con estensione dbml modificati devono essere 
 7.  Nel **nome del File** casella, creare un nome di file con estensione XSD.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

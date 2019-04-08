@@ -1,13 +1,13 @@
 ---
-title: < (minore di) (Entity SQL)
+title: < (Minore di) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0373dc2d066252d76cd3d4408790404ca70ab701
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105170"
 ---
 # <a name="-less-than-entity-sql"></a>\< (minore di) (Entity SQL)
 Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore di quella a destra.  
@@ -23,7 +23,7 @@ expression < expression
  Qualsiasi espressione valida. Entrambe le espressioni devono contenere tipi di dati convertibili in modo implicito.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- `true` se l'espressione a sinistra ha un valore minore di quella a destra; in caso contrario, `false`.  
+ `true` Se l'espressione a sinistra ha un valore, minore l'espressione a destra; in caso contrario, `false`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore di confronto < per confrontare due espressioni e determinare se l'espressione a sinistra ha un valore minore di quella a destra. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
@@ -35,4 +35,5 @@ expression < expression
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

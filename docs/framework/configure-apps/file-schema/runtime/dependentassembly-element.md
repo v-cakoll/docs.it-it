@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083660"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > elemento
 Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Usare uno `dependentAssembly` (elemento) per ogni assembly.  
@@ -81,6 +81,7 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

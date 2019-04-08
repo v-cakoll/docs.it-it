@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102349"
 ---
 # <a name="graphics"></a>Grafica
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre supporto integrato per funzionalità multimediali, grafica vettoriale, animazione e composizione del contenuto, rendendo più semplice per gli sviluppatori di compilare interfacce utente e contenuto interessanti.  
@@ -20,15 +20,16 @@ ms.locfileid: "57361161"
 ## <a name="in-this-section"></a>In questa sezione  
  [Effetti bitmap](bitmap-effects.md)  
  [Pennelli](brushes.md)  
- [Disegni](drawings.md)  
+ [Oggetti Drawing](drawings.md)  
  [Geometrie](geometries.md)  
  [Immagini](images.md)  
  [Forme](shapes.md)  
  [Trasformazioni](transformations.md)  
  [Impostazioni del Registro di sistema per il rendering della grafica](graphics-rendering-registry-settings.md)  
- [Procedure relative alle proprietà](graphics-how-to-topics.md)  
+ [Procedure relative](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -36,6 +37,6 @@ ms.locfileid: "57361161"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafica e funzionalità multimediali](index.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

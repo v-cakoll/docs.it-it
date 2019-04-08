@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Usare un Moniker servizio con contratti per lo scambio di metadati'
+title: 'Procedura: Usare un moniker del servizio con i contratti di scambio di metadati'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: e7c05bb43b7811d4716a225142dd880886586783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d6c6516294d7df7f8c89a3aaddcf2ac3ba0e2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082698"
 ---
-# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Procedura: Usare un Moniker servizio con contratti per lo scambio di metadati
+# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Procedura: Usare un moniker del servizio con i contratti di scambio di metadati
 Dopo aver sviluppato alcuni nuovi servizi WCF, si potrebbe decidere che si desidera essere in grado di chiamare questi servizi da uno script o un'applicazione Visual Basic 6.0. Un metodo, è possibile generare un assembly client WCF, registrare l'assembly con COM, installare l'assembly nella Global Assembly Cache e quindi fare riferimento ai tipi COM dal codice Visual Basic. Quando si distribuisce l'applicazione, è necessario distribuire anche l'assembly Client WCF. L'utente dovrà quindi registrare l'assembly client WCF con COM e posizionarlo nella cache di assembly globale. Interoperabilità COM di WCF consente inoltre di apportare le stesse chiamate al servizio senza basarsi su un assembly client WCF. Il moniker WCF consente di chiamare qualsiasi servizio WCF da qualsiasi linguaggio compatibile con COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) e così via) specificando un URI che il moniker del servizio viene usato per estrarre tipo dell'endpoint exchange (Mex) dei metadati informazioni sul servizio. Questo argomento descrive come chiamare l'esempio di Guida introduttiva WCF utilizzando un moniker WCF che specifica un endpoint Mex.  
   
 > [!NOTE]
@@ -40,5 +40,6 @@ Dopo aver sviluppato alcuni nuovi servizi WCF, si potrebbe decidere che si desid
     >  Se il formato del moniker non è valido o se il servizio non è disponibile, la chiamata a `GetObject` restituirà un errore di sintassi non valida.  Se si riceve questo errore, verificare che il moniker che si sta usando sia valido e che il servizio sia disponibile.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Usare il Moniker del servizio Windows Communication Foundation senza registrazione](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [Procedura: Usare un Moniker servizio con contratti WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+
+- [Procedura: Usare il moniker del servizio di Windows Communication Foundation senza registrazione](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Procedura: Usare un moniker del servizio con i contratti WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

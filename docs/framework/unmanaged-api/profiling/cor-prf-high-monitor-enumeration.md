@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24fde3901f4a866fb14461533a24f0ce265847ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572fcee528098a4f2929e07dfae63efc56e93dfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081645"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>Enumerazione COR_PRF_HIGH_MONITOR
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -33,7 +33,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|Nessun flag impostato.|  
 |`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|I controlli di [ICorProfilerCallback6::GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) callback per l'aggiunta di riferimenti ad assembly durante il Walker di chiusura riferimenti ad assembly CLR.|  
@@ -60,6 +60,7 @@ Inizia con la [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)], il valo
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
 - [Enumerazione COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)
 - [Interfaccia ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)

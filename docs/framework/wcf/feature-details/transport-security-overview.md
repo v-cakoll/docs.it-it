@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105274"
 ---
 # <a name="transport-security-overview"></a>Panoramica sulla sicurezza del trasporto
 Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) dipendono l'associazione e il trasporto utilizzato. Ad esempio, quando si utilizza la classe <xref:System.ServiceModel.WSHttpBinding>, il trasporto è HTTP e il meccanismo principale per la sicurezza del trasporto è SSL (Secure Sockets Layer) su HTTP, comunemente noto come HTTP. Questo argomento descrive i meccanismi di sicurezza di trasporto principali utilizzati nelle associazioni fornite dal sistema di WCF.  
@@ -46,7 +46,7 @@ Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) 
   
  Nelle sezioni seguenti vengono illustrati altri tipi di credenziali client.  
   
-#### <a name="basic"></a>Di base  
+#### <a name="basic"></a>Basic  
  Questo tipo corrisponde al metodo di autenticazione di base di IIS. Quando si utilizza questa modalità, il server IIS deve essere configurato con gli account utente di Windows e le autorizzazioni del file system NTFS appropriate. Per altre informazioni sulle [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [abilitazione dell'autenticazione di base e configurazione del nome dell'area di autenticazione](https://go.microsoft.com/fwlink/?LinkId=88592). Per altre informazioni sulle [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: Configurare l'autenticazione di base](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Certificato  
@@ -121,4 +121,5 @@ Meccanismi di sicurezza del trasporto in Windows Communication Foundation (WCF) 
  Per una descrizione completa del trasporto della protezione con Accodamento messaggi (precedentemente chiamato MSMQ), vedere [protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Cancellare le associazioni'
+title: 'Procedura: Cancellare binding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101419"
 ---
-# <a name="how-to-clear-bindings"></a>Procedura: Cancellare le associazioni
+# <a name="how-to-clear-bindings"></a>Procedura: Cancellare binding
 Questo esempio illustra come cancellare le associazioni da un oggetto.  
   
 ## <a name="example"></a>Esempio  
@@ -30,6 +30,7 @@ Questo esempio illustra come cancellare le associazioni da un oggetto.
  Per cancellare le associazioni da tutte le possibili proprietà in un oggetto, usare <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Data.BindingOperations>
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

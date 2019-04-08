@@ -9,21 +9,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079675"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Risoluzione dei problemi relativi ad applicazioni ibride
 <a name="introduction"></a> Questo argomento illustra alcuni problemi comuni che possono verificarsi durante la creazione di applicazioni che usano tecnologie sia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], sia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Sovrapposizione di controlli  
- I controlli potrebbero sovrapporsi in maniera imprevista. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usa un HWND separato per ogni controllo. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa un HWND per tutto il contenuto in una pagina. Questa differenza di implementazione provoca comportamenti di sovrapposizione imprevisti.  
+ I controlli potrebbero sovrapporsi in maniera imprevista. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Usa un HWND separato per ogni controllo. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa un HWND per tutto il contenuto in una pagina. Questa differenza di implementazione provoca comportamenti di sovrapposizione imprevisti.  
   
  Un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ospitato in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene sempre visualizzato sopra il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -88,7 +86,7 @@ ms.locfileid: "57370098"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Abilitazione degli stili di visualizzazione  
- Gli stili di visualizzazione [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] di un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] potrebbero non essere abilitati. Il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> viene chiamato nel modello per un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dell'applicazione. Sebbene questo metodo non venga chiamato per impostazione predefinita, se si usa [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] per creare un progetto si otterranno gli stili di visualizzazione [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] per i controlli, se è disponibile la versione 6.0 di Comctl32.dll. È necessario chiamare il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metodo prima della creazione di handle nel thread. Per altre informazioni, vedere [Procedura: Abilitare gli stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] gli stili di visualizzazione in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo potrebbe non essere abilitato. Il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> viene chiamato nel modello per un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dell'applicazione. Sebbene questo metodo non venga chiamato per impostazione predefinita, se si usa [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] per creare un progetto si otterranno gli stili di visualizzazione [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] per i controlli, se è disponibile la versione 6.0 di Comctl32.dll. È necessario chiamare il <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metodo prima della creazione di handle nel thread. Per altre informazioni, vedere [Procedura: Abilitare gli stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Controlli con licenza  
@@ -115,11 +113,12 @@ ms.locfileid: "57370098"
  I controlli WPF ospitati in un' <xref:System.Windows.Forms.Integration.ElementHost> attualmente non supportano il <xref:System.Windows.Forms.Control.ImeMode%2A> proprietà. Passa a <xref:System.Windows.Forms.Control.ImeMode%2A> verranno ignorate dai controlli ospitati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilità in WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Architettura di input per l'interoperabilità tra Windows Form e WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Procedura: Abilitare gli stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [Considerazioni sul layout per l'elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md)
 - [Errori in fase di progettazione in Progettazione Windows Form](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
