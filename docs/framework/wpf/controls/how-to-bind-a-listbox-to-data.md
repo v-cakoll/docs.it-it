@@ -6,23 +6,24 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106438"
 ---
-# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="ede69-102">Procedura: Associare un controllo ListBox ai dati</span><span class="sxs-lookup"><span data-stu-id="ede69-102">How to: Bind a ListBox to Data</span></span>
-<span data-ttu-id="ede69-103">Uno sviluppatore di applicazioni può creare <xref:System.Windows.Controls.ListBox> controlli senza specificare il contenuto della ognuno <xref:System.Windows.Controls.ListBoxItem> separatamente.</span><span class="sxs-lookup"><span data-stu-id="ede69-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="ede69-104">È possibile utilizzare l'associazione dati per associare i dati per i singoli elementi.</span><span class="sxs-lookup"><span data-stu-id="ede69-104">You can use data binding to bind data to the individual items.</span></span>  
+# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="e310a-102">Procedura: Associare un controllo ListBox ai dati</span><span class="sxs-lookup"><span data-stu-id="e310a-102">How to: Bind a ListBox to Data</span></span>
+<span data-ttu-id="e310a-103">Uno sviluppatore di applicazioni può creare <xref:System.Windows.Controls.ListBox> controlli senza specificare il contenuto della ognuno <xref:System.Windows.Controls.ListBoxItem> separatamente.</span><span class="sxs-lookup"><span data-stu-id="e310a-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="e310a-104">È possibile utilizzare l'associazione dati per associare i dati per i singoli elementi.</span><span class="sxs-lookup"><span data-stu-id="e310a-104">You can use data binding to bind data to the individual items.</span></span>  
   
- <span data-ttu-id="ede69-105">Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Controls.ListBox> che consente di popolare il <xref:System.Windows.Controls.ListBoxItem> elementi in base al data binding a un'origine dati denominata *colori*.</span><span class="sxs-lookup"><span data-stu-id="ede69-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="ede69-106">In questo caso non è necessario usare <xref:System.Windows.Controls.ListBoxItem> tag per specificare il contenuto di ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="ede69-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
+ <span data-ttu-id="e310a-105">Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Controls.ListBox> che consente di popolare il <xref:System.Windows.Controls.ListBoxItem> elementi in base al data binding a un'origine dati denominata *colori*.</span><span class="sxs-lookup"><span data-stu-id="e310a-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="e310a-106">In questo caso non è necessario usare <xref:System.Windows.Controls.ListBoxItem> tag per specificare il contenuto di ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="e310a-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ede69-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="ede69-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e310a-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="e310a-107">Example</span></span>  
  [!code-xaml[ListBoxEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
 [!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="ede69-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ede69-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e310a-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e310a-108">See also</span></span>
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
-- [<span data-ttu-id="ede69-109">Controlli</span><span class="sxs-lookup"><span data-stu-id="ede69-109">Controls</span></span>](../advanced/optimizing-performance-controls.md)
+- [<span data-ttu-id="e310a-109">Controlli</span><span class="sxs-lookup"><span data-stu-id="e310a-109">Controls</span></span>](../advanced/optimizing-performance-controls.md)

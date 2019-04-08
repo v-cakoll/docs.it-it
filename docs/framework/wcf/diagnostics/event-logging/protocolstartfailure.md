@@ -2,23 +2,24 @@
 title: ProtocolStartFailure
 ms.date: 03/30/2017
 ms.assetid: b722d1d5-bfef-4dc9-bfa3-85178b6d2ae3
-ms.openlocfilehash: a69a7f8dd191ed48dfe7b9eb1b8ec89021561507
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e7aa1305d6998577ec92896ace357b8eceae18a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073049"
 ---
-# <a name="protocolstartfailure"></a><span data-ttu-id="7b4b5-102">ProtocolStartFailure</span><span class="sxs-lookup"><span data-stu-id="7b4b5-102">ProtocolStartFailure</span></span>
-<span data-ttu-id="7b4b5-103">Id: 143</span><span class="sxs-lookup"><span data-stu-id="7b4b5-103">Id: 143</span></span>  
+# <a name="protocolstartfailure"></a><span data-ttu-id="f326c-102">ProtocolStartFailure</span><span class="sxs-lookup"><span data-stu-id="f326c-102">ProtocolStartFailure</span></span>
+<span data-ttu-id="f326c-103">Id: 143</span><span class="sxs-lookup"><span data-stu-id="f326c-103">Id: 143</span></span>  
   
- <span data-ttu-id="7b4b5-104">Gravità: Error</span><span class="sxs-lookup"><span data-stu-id="7b4b5-104">Severity: Error</span></span>  
+ <span data-ttu-id="f326c-104">Gravità: Error</span><span class="sxs-lookup"><span data-stu-id="f326c-104">Severity: Error</span></span>  
   
- <span data-ttu-id="7b4b5-105">Categoria: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="7b4b5-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="f326c-105">Categoria: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="f326c-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7b4b5-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7b4b5-106">Description</span></span>  
- <span data-ttu-id="7b4b5-107">Questo evento indica che è stato impossibile avviare il servizio del protocollo WS-Atomic Transaction.</span><span class="sxs-lookup"><span data-stu-id="7b4b5-107">This event indicates that the WS-Atomic Transaction protocol service failed to start.</span></span> <span data-ttu-id="7b4b5-108">La funzionalità WS-Atomic Transaction viene pertanto disattivata.</span><span class="sxs-lookup"><span data-stu-id="7b4b5-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="7b4b5-109">Vengono indicati l'ID e il nome del protocollo, l'eccezione, il nome e l'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="7b4b5-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span> <span data-ttu-id="7b4b5-110">.</span><span class="sxs-lookup"><span data-stu-id="7b4b5-110">.</span></span>  
+## <a name="description"></a><span data-ttu-id="f326c-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f326c-106">Description</span></span>  
+ <span data-ttu-id="f326c-107">Questo evento indica che è stato impossibile avviare il servizio del protocollo WS-Atomic Transaction.</span><span class="sxs-lookup"><span data-stu-id="f326c-107">This event indicates that the WS-Atomic Transaction protocol service failed to start.</span></span> <span data-ttu-id="f326c-108">La funzionalità WS-Atomic Transaction viene pertanto disattivata.</span><span class="sxs-lookup"><span data-stu-id="f326c-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="f326c-109">Vengono indicati l'ID e il nome del protocollo, l'eccezione, il nome e l'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="f326c-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span> <span data-ttu-id="f326c-110">.</span><span class="sxs-lookup"><span data-stu-id="f326c-110">.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b4b5-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7b4b5-111">See also</span></span>
-- [<span data-ttu-id="7b4b5-112">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="7b4b5-112">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="7b4b5-113">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="7b4b5-113">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="f326c-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f326c-111">See also</span></span>
+
+- [<span data-ttu-id="f326c-112">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="f326c-112">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="f326c-113">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="f326c-113">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4188d1ef83f685bf39bdf951939e0ec6493b323d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 33eadccf691b14289a46ff460f3cef8ae636b129
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074846"
 ---
-# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="be996-102">Metodo IMetaDataEmit::DefinePermissionSet</span><span class="sxs-lookup"><span data-stu-id="be996-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
-<span data-ttu-id="be996-103">Crea una definizione per un set di autorizzazioni con la firma dei metadati specificati e ottiene un token per tale definizione del set di autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="be996-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
+# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="4f7e6-102">Metodo IMetaDataEmit::DefinePermissionSet</span><span class="sxs-lookup"><span data-stu-id="4f7e6-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
+<span data-ttu-id="4f7e6-103">Crea una definizione per un set di autorizzazioni con la firma dei metadati specificati e ottiene un token per tale definizione del set di autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be996-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="be996-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f7e6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4f7e6-104">Syntax</span></span>  
   
 ```  
 HRESULT DefinePermissionSet (  
@@ -39,31 +39,32 @@ HRESULT DefinePermissionSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be996-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="be996-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4f7e6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4f7e6-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="be996-106">[in] Oggetto da essere decorata.</span><span class="sxs-lookup"><span data-stu-id="be996-106">[in] The object to be decorated.</span></span>  
+ <span data-ttu-id="4f7e6-106">[in] Oggetto da essere decorata.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-106">[in] The object to be decorated.</span></span>  
   
  `dwAction`  
- <span data-ttu-id="be996-107">[in] Oggetto [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) valore che specifica il tipo di sicurezza dichiarativa da usare.</span><span class="sxs-lookup"><span data-stu-id="be996-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
+ <span data-ttu-id="4f7e6-107">[in] Oggetto [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) valore che specifica il tipo di sicurezza dichiarativa da usare.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
   
  `pvPermission`  
- <span data-ttu-id="be996-108">[in] L'autorizzazione di BLOB.</span><span class="sxs-lookup"><span data-stu-id="be996-108">[in] The permission BLOB.</span></span>  
+ <span data-ttu-id="4f7e6-108">[in] L'autorizzazione di BLOB.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-108">[in] The permission BLOB.</span></span>  
   
  `cbPermission`  
- <span data-ttu-id="be996-109">[in] Le dimensioni, in byte, di `pvPermission`.</span><span class="sxs-lookup"><span data-stu-id="be996-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
+ <span data-ttu-id="4f7e6-109">[in] Le dimensioni, in byte, di `pvPermission`.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
   
  `ppm`  
- <span data-ttu-id="be996-110">[out] Il token di autorizzazione restituito.</span><span class="sxs-lookup"><span data-stu-id="be996-110">[out] The returned permission token.</span></span>  
+ <span data-ttu-id="4f7e6-110">[out] Il token di autorizzazione restituito.</span><span class="sxs-lookup"><span data-stu-id="4f7e6-110">[out] The returned permission token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be996-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="be996-111">Requirements</span></span>  
- <span data-ttu-id="be996-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be996-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f7e6-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4f7e6-111">Requirements</span></span>  
+ <span data-ttu-id="4f7e6-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f7e6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be996-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="be996-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4f7e6-113">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="4f7e6-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="be996-114">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="be996-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4f7e6-114">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4f7e6-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="be996-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be996-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="4f7e6-115">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="4f7e6-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="be996-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="be996-116">See also</span></span>
-- [<span data-ttu-id="be996-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="be996-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="be996-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="be996-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f7e6-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4f7e6-116">See also</span></span>
+
+- [<span data-ttu-id="4f7e6-117">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="4f7e6-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4f7e6-118">Interfaccia IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="4f7e6-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

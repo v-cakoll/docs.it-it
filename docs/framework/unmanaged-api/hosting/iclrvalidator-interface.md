@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f34a9aac31fe50974a6f88416d0a00cd72aca8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075847"
 ---
-# <a name="iclrvalidator-interface"></a><span data-ttu-id="4b9eb-102">Interfaccia ICLRValidator</span><span class="sxs-lookup"><span data-stu-id="4b9eb-102">ICLRValidator Interface</span></span>
-<span data-ttu-id="4b9eb-103">Fornisce metodi per la convalida le immagini (PE) eseguibili portabili e segnalazione di errori di convalida.</span><span class="sxs-lookup"><span data-stu-id="4b9eb-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
+# <a name="iclrvalidator-interface"></a><span data-ttu-id="94dbc-102">Interfaccia ICLRValidator</span><span class="sxs-lookup"><span data-stu-id="94dbc-102">ICLRValidator Interface</span></span>
+<span data-ttu-id="94dbc-103">Fornisce metodi per la convalida le immagini (PE) eseguibili portabili e segnalazione di errori di convalida.</span><span class="sxs-lookup"><span data-stu-id="94dbc-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4b9eb-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="4b9eb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="94dbc-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="94dbc-104">Methods</span></span>  
   
-|<span data-ttu-id="4b9eb-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="4b9eb-105">Method</span></span>|<span data-ttu-id="4b9eb-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4b9eb-106">Description</span></span>|  
+|<span data-ttu-id="94dbc-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="94dbc-105">Method</span></span>|<span data-ttu-id="94dbc-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="94dbc-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4b9eb-107">Metodo FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="4b9eb-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="4b9eb-108">Ottiene un messaggio dettagliato sull'errore di convalida specificato.</span><span class="sxs-lookup"><span data-stu-id="4b9eb-108">Gets a detailed message about the specified validation error.</span></span>|  
-|[<span data-ttu-id="4b9eb-109">Metodo Validate</span><span class="sxs-lookup"><span data-stu-id="4b9eb-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="4b9eb-110">Convalida il file eseguibile portabile o Microsoft intermediate language (MSIL) nel file specificato.</span><span class="sxs-lookup"><span data-stu-id="4b9eb-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
+|[<span data-ttu-id="94dbc-107">Metodo FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="94dbc-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="94dbc-108">Ottiene un messaggio dettagliato sull'errore di convalida specificato.</span><span class="sxs-lookup"><span data-stu-id="94dbc-108">Gets a detailed message about the specified validation error.</span></span>|  
+|[<span data-ttu-id="94dbc-109">Metodo Validate</span><span class="sxs-lookup"><span data-stu-id="94dbc-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="94dbc-110">Convalida il file eseguibile portabile o Microsoft intermediate language (MSIL) nel file specificato.</span><span class="sxs-lookup"><span data-stu-id="94dbc-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4b9eb-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4b9eb-111">Requirements</span></span>  
- <span data-ttu-id="4b9eb-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b9eb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94dbc-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="94dbc-111">Requirements</span></span>  
+ <span data-ttu-id="94dbc-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94dbc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4b9eb-113">**Intestazione:** IValidator. idl, IValidator. H</span><span class="sxs-lookup"><span data-stu-id="4b9eb-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="94dbc-113">**Intestazione:** IValidator. idl, IValidator. H</span><span class="sxs-lookup"><span data-stu-id="94dbc-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="4b9eb-114">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4b9eb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="94dbc-114">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="94dbc-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4b9eb-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b9eb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="94dbc-115">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="94dbc-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4b9eb-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4b9eb-116">See also</span></span>
-- [<span data-ttu-id="4b9eb-117">Interfaccia ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="4b9eb-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="4b9eb-118">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="4b9eb-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="4b9eb-119">Coclasse CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="4b9eb-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+## <a name="see-also"></a><span data-ttu-id="94dbc-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="94dbc-116">See also</span></span>
+
+- [<span data-ttu-id="94dbc-117">Interfaccia ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="94dbc-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="94dbc-118">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="94dbc-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="94dbc-119">Coclasse CLRRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="94dbc-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

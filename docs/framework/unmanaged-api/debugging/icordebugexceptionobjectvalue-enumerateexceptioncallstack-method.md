@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e168c1a520ca0159ab273dcf9b56b41b4f32b4e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: db0e794953578fccd08428b730b3d7951e13bee3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074079"
 ---
-# <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a><span data-ttu-id="c89a0-102">Metodo ICorDebugExceptionObjectValue::EnumerateExceptionCallStack</span><span class="sxs-lookup"><span data-stu-id="c89a0-102">ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Method</span></span>
-<span data-ttu-id="c89a0-103">Ottiene un enumeratore per lo stack di chiamate incorporato in un oggetto eccezione.</span><span class="sxs-lookup"><span data-stu-id="c89a0-103">Gets an enumerator to the call stack embedded in an exception object.</span></span>  
+# <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a><span data-ttu-id="ff472-102">Metodo ICorDebugExceptionObjectValue::EnumerateExceptionCallStack</span><span class="sxs-lookup"><span data-stu-id="ff472-102">ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Method</span></span>
+<span data-ttu-id="ff472-103">Ottiene un enumeratore per lo stack di chiamate incorporato in un oggetto eccezione.</span><span class="sxs-lookup"><span data-stu-id="ff472-103">Gets an enumerator to the call stack embedded in an exception object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c89a0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c89a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff472-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff472-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateExceptionCallStack(  
@@ -35,24 +35,25 @@ HRESULT EnumerateExceptionCallStack(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c89a0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c89a0-105">Parameters</span></span>  
- <span data-ttu-id="c89a0-106">ppCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="c89a0-106">ppCallStackEnum</span></span>  
- <span data-ttu-id="c89a0-107">[out] Un puntatore all'indirizzo di un [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) oggetto di interfaccia che è un enumeratore di traccia dello stack per un oggetto eccezione gestita.</span><span class="sxs-lookup"><span data-stu-id="c89a0-107">[out] A pointer to the address of an [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) interface object that is a stack trace enumerator for a managed exception object.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ff472-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ff472-105">Parameters</span></span>  
+ <span data-ttu-id="ff472-106">ppCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="ff472-106">ppCallStackEnum</span></span>  
+ <span data-ttu-id="ff472-107">[out] Un puntatore all'indirizzo di un [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) oggetto di interfaccia che è un enumeratore di traccia dello stack per un oggetto eccezione gestita.</span><span class="sxs-lookup"><span data-stu-id="ff472-107">[out] A pointer to the address of an [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) interface object that is a stack trace enumerator for a managed exception object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c89a0-108">Note</span><span class="sxs-lookup"><span data-stu-id="c89a0-108">Remarks</span></span>  
- <span data-ttu-id="c89a0-109">Se non è disponibile alcuna informazione di stack di chiamate, il metodo restituisce `S_OK`, e [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) è un enumeratore valido con una lunghezza pari a 0.</span><span class="sxs-lookup"><span data-stu-id="c89a0-109">If no call stack information is available, the method returns `S_OK`, and [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) is a valid enumerator with a length of 0.</span></span> <span data-ttu-id="c89a0-110">Se il metodo non riesce a recuperare le informazioni di traccia dello stack, il valore restituito è `E_FAIL` e non viene restituito alcun enumeratore.</span><span class="sxs-lookup"><span data-stu-id="c89a0-110">If the method is unable to retrieve stack trace information, the return value is `E_FAIL` and no enumerator is returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff472-108">Note</span><span class="sxs-lookup"><span data-stu-id="ff472-108">Remarks</span></span>  
+ <span data-ttu-id="ff472-109">Se non è disponibile alcuna informazione di stack di chiamate, il metodo restituisce `S_OK`, e [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) è un enumeratore valido con una lunghezza pari a 0.</span><span class="sxs-lookup"><span data-stu-id="ff472-109">If no call stack information is available, the method returns `S_OK`, and [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) is a valid enumerator with a length of 0.</span></span> <span data-ttu-id="ff472-110">Se il metodo non riesce a recuperare le informazioni di traccia dello stack, il valore restituito è `E_FAIL` e non viene restituito alcun enumeratore.</span><span class="sxs-lookup"><span data-stu-id="ff472-110">If the method is unable to retrieve stack trace information, the return value is `E_FAIL` and no enumerator is returned.</span></span>  
   
- <span data-ttu-id="c89a0-111">Il [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) oggetto è responsabile per la decodifica i dati di traccia dello stack di `_stackTrace` campo dell'oggetto eccezione.</span><span class="sxs-lookup"><span data-stu-id="c89a0-111">The [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) object is responsible for decoding the stack trace data from the `_stackTrace` field of the exception object.</span></span>  
+ <span data-ttu-id="ff472-111">Il [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) oggetto è responsabile per la decodifica i dati di traccia dello stack di `_stackTrace` campo dell'oggetto eccezione.</span><span class="sxs-lookup"><span data-stu-id="ff472-111">The [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) object is responsible for decoding the stack trace data from the `_stackTrace` field of the exception object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c89a0-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c89a0-112">Requirements</span></span>  
- <span data-ttu-id="c89a0-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c89a0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff472-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ff472-112">Requirements</span></span>  
+ <span data-ttu-id="ff472-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff472-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c89a0-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c89a0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ff472-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ff472-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c89a0-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c89a0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ff472-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff472-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c89a0-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c89a0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="ff472-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ff472-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c89a0-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c89a0-117">See also</span></span>
-- [<span data-ttu-id="c89a0-118">Interfaccia ICorDebugExceptionObjectValue</span><span class="sxs-lookup"><span data-stu-id="c89a0-118">ICorDebugExceptionObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [<span data-ttu-id="c89a0-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="c89a0-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ff472-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff472-117">See also</span></span>
+
+- [<span data-ttu-id="ff472-118">Interfaccia ICorDebugExceptionObjectValue</span><span class="sxs-lookup"><span data-stu-id="ff472-118">ICorDebugExceptionObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
+- [<span data-ttu-id="ff472-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="ff472-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
