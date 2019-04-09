@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form'
+title: 'Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158548"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a><span data-ttu-id="83d71-102">Procedura: Creare i gestori eventi in fase di esecuzione per Windows Form</span><span class="sxs-lookup"><span data-stu-id="83d71-102">How to: Create Event Handlers at Run Time for Windows Forms</span></span>
-<span data-ttu-id="83d71-103">Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile creare un gestore eventi in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="83d71-103">In addition to creating events using the Windows Forms Designer, you can also create an event handler at run time.</span></span> <span data-ttu-id="83d71-104">Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.</span><span class="sxs-lookup"><span data-stu-id="83d71-104">This action allows you to connect event handlers based on conditions in code at run time as opposed to having them connected when the program initially starts.</span></span>  
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a><span data-ttu-id="ace0e-102">Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ace0e-102">How to: Create Event Handlers at Run Time for Windows Forms</span></span>
+<span data-ttu-id="ace0e-103">Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile creare un gestore eventi in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ace0e-103">In addition to creating events using the Windows Forms Designer, you can also create an event handler at run time.</span></span> <span data-ttu-id="ace0e-104">Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.</span><span class="sxs-lookup"><span data-stu-id="ace0e-104">This action allows you to connect event handlers based on conditions in code at run time as opposed to having them connected when the program initially starts.</span></span>  
   
-### <a name="to-create-an-event-handler-at-run-time"></a><span data-ttu-id="83d71-105">Per creare un gestore eventi in fase di esecuzione</span><span class="sxs-lookup"><span data-stu-id="83d71-105">To create an event handler at run time</span></span>  
+### <a name="to-create-an-event-handler-at-run-time"></a><span data-ttu-id="ace0e-105">Per creare un gestore eventi in fase di esecuzione</span><span class="sxs-lookup"><span data-stu-id="ace0e-105">To create an event handler at run time</span></span>  
   
-1.  <span data-ttu-id="83d71-106">Aprire il form nell'editor di codice in cui si desidera aggiungere un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="83d71-106">Open the form in the Code Editor that you want to add an event handler to.</span></span>  
+1.  <span data-ttu-id="ace0e-106">Aprire il form nell'editor di codice in cui si desidera aggiungere un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="ace0e-106">Open the form in the Code Editor that you want to add an event handler to.</span></span>  
   
-2.  <span data-ttu-id="83d71-107">Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.</span><span class="sxs-lookup"><span data-stu-id="83d71-107">Add a method to your form with the method signature for the event that you want to handle.</span></span>  
+2.  <span data-ttu-id="ace0e-107">Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.</span><span class="sxs-lookup"><span data-stu-id="ace0e-107">Add a method to your form with the method signature for the event that you want to handle.</span></span>  
   
-     <span data-ttu-id="83d71-108">Ad esempio, se si sta gestendo il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> (controllo), creare un metodo simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="83d71-108">For example, if you were handling the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control, you would create a method such as the following:</span></span>  
+     <span data-ttu-id="ace0e-108">Ad esempio, se si sta gestendo il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> (controllo), creare un metodo simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="ace0e-108">For example, if you were handling the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control, you would create a method such as the following:</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)  
@@ -52,11 +52,11 @@ ms.locfileid: "57705255"
        }  
     ```  
   
-3.  <span data-ttu-id="83d71-109">Aggiungere un codice al gestore dell'evento appropriato per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="83d71-109">Add code to the event handler as appropriate to your application.</span></span>  
+3.  <span data-ttu-id="ace0e-109">Aggiungere un codice al gestore dell'evento appropriato per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ace0e-109">Add code to the event handler as appropriate to your application.</span></span>  
   
-4.  <span data-ttu-id="83d71-110">Stabilire per quale modulo o controllo si desidera creare un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="83d71-110">Determine which form or control you want to create an event handler for.</span></span>  
+4.  <span data-ttu-id="ace0e-110">Stabilire per quale modulo o controllo si desidera creare un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="ace0e-110">Determine which form or control you want to create an event handler for.</span></span>  
   
-5.  <span data-ttu-id="83d71-111">In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento.</span><span class="sxs-lookup"><span data-stu-id="83d71-111">In a method within your form's class, add code that specifies the event handler to handle the event.</span></span> <span data-ttu-id="83d71-112">Ad esempio, il codice seguente specifica il gestore eventi `button1_Click` gestisce il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> controllo:</span><span class="sxs-lookup"><span data-stu-id="83d71-112">For example, the following code specifies the event handler `button1_Click` handles the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control:</span></span>  
+5.  <span data-ttu-id="ace0e-111">In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento.</span><span class="sxs-lookup"><span data-stu-id="ace0e-111">In a method within your form's class, add code that specifies the event handler to handle the event.</span></span> <span data-ttu-id="ace0e-112">Ad esempio, il codice seguente specifica il gestore eventi `button1_Click` gestisce il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> controllo:</span><span class="sxs-lookup"><span data-stu-id="ace0e-112">For example, the following code specifies the event handler `button1_Click` handles the <xref:System.Windows.Forms.Control.Click> event of a <xref:System.Windows.Forms.Button> control:</span></span>  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  
@@ -70,9 +70,10 @@ ms.locfileid: "57705255"
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     <span data-ttu-id="83d71-113">Il <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> metodo illustrato nel codice Visual Basic precedente stabilisce un evento Click del pulsante.</span><span class="sxs-lookup"><span data-stu-id="83d71-113">The <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> method demonstrated in the Visual Basic code above establishes a click event handler for the button.</span></span>  
+     <span data-ttu-id="ace0e-113">Il <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> metodo illustrato nel codice Visual Basic precedente stabilisce un evento Click del pulsante.</span><span class="sxs-lookup"><span data-stu-id="ace0e-113">The <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> method demonstrated in the Visual Basic code above establishes a click event handler for the button.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83d71-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="83d71-114">See also</span></span>
-- [<span data-ttu-id="83d71-115">Creazione di gestori eventi in Windows Form</span><span class="sxs-lookup"><span data-stu-id="83d71-115">Creating Event Handlers in Windows Forms</span></span>](creating-event-handlers-in-windows-forms.md)
-- [<span data-ttu-id="83d71-116">Informazioni generali sui gestori eventi</span><span class="sxs-lookup"><span data-stu-id="83d71-116">Event Handlers Overview</span></span>](event-handlers-overview-windows-forms.md)
-- [<span data-ttu-id="83d71-117">Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="83d71-117">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+## <a name="see-also"></a><span data-ttu-id="ace0e-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ace0e-114">See also</span></span>
+
+- [<span data-ttu-id="ace0e-115">Creazione di gestori eventi in Windows Form</span><span class="sxs-lookup"><span data-stu-id="ace0e-115">Creating Event Handlers in Windows Forms</span></span>](creating-event-handlers-in-windows-forms.md)
+- [<span data-ttu-id="ace0e-116">Panoramica sui gestori eventi</span><span class="sxs-lookup"><span data-stu-id="ace0e-116">Event Handlers Overview</span></span>](event-handlers-overview-windows-forms.md)
+- [<span data-ttu-id="ace0e-117">Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ace0e-117">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

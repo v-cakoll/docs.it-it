@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156375"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="9d502-102">Metodo ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="9d502-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="9d502-103">`GetRwDataRVA` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="9d502-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="9d502-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="9d502-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="7e3dd-102">Metodo ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="7e3dd-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+`GetRwDataRVA` <span data-ttu-id="7e3dd-103">è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="7e3dd-103">is obsolete.</span></span> <span data-ttu-id="7e3dd-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="7e3dd-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d502-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d502-105">See also</span></span>
-- [<span data-ttu-id="9d502-106">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="9d502-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7e3dd-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7e3dd-105">See also</span></span>
+
+- [<span data-ttu-id="7e3dd-106">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="7e3dd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

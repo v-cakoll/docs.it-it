@@ -7,26 +7,27 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158964"
 ---
-# <a name="toolstripprogressbar-control"></a><span data-ttu-id="08a2b-102">Controllo ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="08a2b-102">ToolStripProgressBar Control</span></span>
-<span data-ttu-id="08a2b-103">Il <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> il rendering e il raggruppamento di funzionalità con la tipica funzionalità di rilevamento di processo.</span><span class="sxs-lookup"><span data-stu-id="08a2b-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines <xref:System.Windows.Forms.ToolStrip> rendering and rafting features with its typical process-tracking functionality.</span></span>  
+# <a name="toolstripprogressbar-control"></a><span data-ttu-id="9960b-102">Controllo ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="9960b-102">ToolStripProgressBar Control</span></span>
+<span data-ttu-id="9960b-103">Il <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> il rendering e il raggruppamento di funzionalità con la tipica funzionalità di rilevamento di processo.</span><span class="sxs-lookup"><span data-stu-id="9960b-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines <xref:System.Windows.Forms.ToolStrip> rendering and rafting features with its typical process-tracking functionality.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="08a2b-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="08a2b-104">In This Section</span></span>  
- [<span data-ttu-id="08a2b-105">Cenni preliminari sul controllo ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="08a2b-105">ToolStripProgressBar Control Overview</span></span>](toolstripprogressbar-control-overview.md)  
- <span data-ttu-id="08a2b-106">Fornisce argomenti che descrivono lo scopo e i concetti principali del controllo <xref:System.Windows.Forms.ToolStripProgressBar> Windows Form.</span><span class="sxs-lookup"><span data-stu-id="08a2b-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9960b-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="9960b-104">In This Section</span></span>  
+ [<span data-ttu-id="9960b-105">Cenni preliminari sul controllo ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="9960b-105">ToolStripProgressBar Control Overview</span></span>](toolstripprogressbar-control-overview.md)  
+ <span data-ttu-id="9960b-106">Fornisce argomenti che descrivono lo scopo e i concetti principali del controllo <xref:System.Windows.Forms.ToolStripProgressBar> Windows Form.</span><span class="sxs-lookup"><span data-stu-id="9960b-106">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="08a2b-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="08a2b-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9960b-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="9960b-107">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- <span data-ttu-id="08a2b-108">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="08a2b-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
+ <span data-ttu-id="9960b-108">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="9960b-108">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripProgressBar>  
- <span data-ttu-id="08a2b-109">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="08a2b-109">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
+ <span data-ttu-id="9960b-109">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="9960b-109">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripProgressBar> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08a2b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08a2b-110">See also</span></span>
-- [<span data-ttu-id="08a2b-111">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="08a2b-111">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9960b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9960b-110">See also</span></span>
+
+- [<span data-ttu-id="9960b-111">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="9960b-111">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
