@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124722"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtuale nel controllo DataGridView di Windows Form
 Con la modalità virtuale, è possibile gestire l'interazione tra il <xref:System.Windows.Forms.DataGridView> controllo e una cache di dati personalizzati. Per implementare la modalità virtuale, impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire uno o più eventi descritti in questo argomento. In genere, è necessario gestire almeno le `CellValueNeeded` evento, che consente il controllo per cercare i valori nella cache dei dati.  
@@ -63,9 +63,10 @@ Con la modalità virtuale, è possibile gestire l'interazione tra il <xref:Syste
  Se si implementa la modalità virtuale per poter funzionare in modo efficiente con grandi quantità di dati, è inoltre opportuno verificare che si sta lavorando in modo efficiente il <xref:System.Windows.Forms.DataGridView> stesso controllo. Per altre informazioni sull'utilizzo efficiente di stili della cella, il ridimensionamento automatico, le selezioni e condivisione delle righe, vedere [procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form](implementing-virtual-mode-wf-datagridview-control.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Procedure consigliate per ridimensionare il controllo DataGridView Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
 - [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
