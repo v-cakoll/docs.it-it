@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 12588e6aa108813b2d857f6818bd27a275d12597
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100574"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementazione del pattern di controllo Grid di automazione interfaccia utente
 > [!NOTE]
@@ -64,9 +64,10 @@ Esempio di controllo griglia con coordinate vuote
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se uno della riga o colonna richiesta coordinate è minore di zero.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo GridItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

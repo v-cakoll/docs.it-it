@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Connettere più eventi a un unico gestore eventi in Windows Form'
+title: 'Procedura: Connettere più eventi a un unico gestore eventi in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d55ccc21efb92ba1e51f4ae88be5025f2f80905b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117962"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Form
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Forms
 Nella progettazione delle applicazioni, si potrebbe essere necessario utilizzare un unico gestore eventi per più eventi o avere più eventi di eseguire la stessa procedura. Ad esempio, è spesso un notevole risparmio di tempo per avere un comando di menu generano lo stesso evento come un pulsante sul form se espongono la stessa funzionalità. Questo scopo, è possibile utilizzare la visualizzazione di eventi della finestra proprietà in C# o tramite il `Handles` parola chiave e il **nome della classe** e **nome metodo** caselle di riepilogo a discesa nell'Editor di codice Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Per connettere più eventi a un unico gestore eventi in Visual Basic  
@@ -61,5 +61,6 @@ Nella progettazione delle applicazioni, si potrebbe essere necessario utilizzare
      Verrà aggiunto codice al form per associare l'evento al gestore dell'evento esistente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074274"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Procedura: Ridimensionare le righe con un GridSplitter
 Questo esempio viene illustrato come usare un oggetto orizzontale <xref:System.Windows.Controls.GridSplitter> per ridistribuire lo spazio tra le due righe in una <xref:System.Windows.Controls.Grid> senza modificare le dimensioni del <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Esempio  
- **Come creare un oggetto GridSplitter si sovrapponga al bordo di una riga**  
+ **Come creare un oggetto GridSplitter che si sovrappone il bordo di una riga**  
   
  Per specificare una <xref:System.Windows.Controls.GridSplitter> che ridimensiona righe adiacenti in un <xref:System.Windows.Controls.Grid>, impostare il <xref:System.Windows.Controls.Grid.Row%2A> proprietà associata a una delle righe che si intende ridimensionare. Se il <xref:System.Windows.Controls.Grid> ha più di una colonna, impostare il <xref:System.Windows.Controls.Grid.ColumnSpan%2A> proprietà associata per specificare il numero di colonne. Impostare quindi le <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> al <xref:System.Windows.VerticalAlignment.Top> o <xref:System.Windows.VerticalAlignment.Bottom> (l'allineamento impostato dipende dalle due righe si intende ridimensionare). Infine, impostare il <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà <xref:System.Windows.HorizontalAlignment.Stretch>.  
   
@@ -37,5 +37,6 @@ Questo esempio viene illustrato come usare un oggetto orizzontale <xref:System.W
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Procedure relative alle proprietà](gridsplitter-how-to-topics.md)
+- [Procedure relative](gridsplitter-how-to-topics.md)

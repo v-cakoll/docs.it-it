@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form'
+title: 'Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110716"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms
 Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo riceve lo stato attivo, l'inserimento dell'impostazione predefinita all'interno della casella di testo è a sinistra del testo esistente. L'utente può spostare il punto di inserimento con il mouse o tastiera. Se la casella di testo perde e riacquisisce quindi lo stato attivo, il punto di inserimento sarà ovunque l'utente ultima posizione assegnata.  
   
  In alcuni casi, questo comportamento può essere aggiunto all'utente. Applicazione di elaborazione di una parola, l'utente potrebbe prevedere caratteri di nuova visualizzazione dopo il testo esistente. In un'applicazione di immissione dati, l'utente potrebbe prevedere nuovi caratteri da sostituire qualsiasi voce esistente. Il <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> e <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> proprietà consentono di modificare il comportamento di un determinato scopo.  
@@ -62,11 +62,12 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
 -   Impostare il <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà `0`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.TextBox>
-- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
-- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Procedura: Creare una casella di testo di sola lettura](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Procedura: Inserire virgolette in una stringa](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Procedura: Selezionare il testo nel controllo TextBox Windows Form](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Procedura: Visualizzare più righe nel controllo TextBox Windows Form](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Procedura: Selezionare testo nel controllo TextBox di Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controllo TextBox](textbox-control-windows-forms.md)

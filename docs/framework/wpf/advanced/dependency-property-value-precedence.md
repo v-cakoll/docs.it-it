@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117760"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 <a name="introduction"></a> Questo argomento illustra il modo in cui i meccanismi del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] possono influire sul valore di una proprietà di dipendenza e descrive la precedenza in base alla quale gli aspetti del sistema di proprietà si applicano al valore effettivo di una proprietà.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento presuppone la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer delle proprietà di dipendenza esistenti nelle classi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md). Per seguire gli esempi illustrati in questo argomento, è anche necessario conoscere [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e saper scrivere applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -58,9 +57,9 @@ ms.locfileid: "57367937"
   
 7.  **Trigger dei modelli.** Qualsiasi trigger da un modello all'interno di uno stile oppure un modello applicato direttamente.  
   
-8.  **Setter di stili.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
+8.  **Setter di stile.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
   
-9. **Stile (tema) predefinito.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
+9. **Stile (tema) predefiniti.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
   
     1.  Trigger attivi nello stile del tema.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "57367937"
   
 10. **Ereditarietà.** Alcune proprietà di dipendenza ereditano i propri valori dall'elemento padre agli elementi figlio, in modo che non sia necessario impostarli in modo specifico per ogni elemento in tutta l'applicazione. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).  
   
-11. **Valore predefinito dai metadati delle proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
+11. **Valore predefinito dai metadati di proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -127,6 +126,7 @@ ms.locfileid: "57367937"
  Il <xref:System.Windows.DependencyObject.ClearValue%2A> metodo fornisce un modo efficace cancellare eventuali valori applicati localmente da una proprietà di dipendenza che è impostato su un elemento. Tuttavia, la chiamata <xref:System.Windows.DependencyObject.ClearValue%2A> non garantisce che il valore predefinito come stabilito nei metadati durante la registrazione della proprietà è il nuovo valore. Tutti gli altri partecipanti nella precedenza dei valori sono ancora attivi. Solo il valore impostato localmente è stato rimosso dalla sequenza di precedenza. Ad esempio, se si chiama <xref:System.Windows.DependencyObject.ClearValue%2A> su una proprietà in cui tale proprietà viene impostata anche da uno stile del tema, quindi il valore del tema viene applicato come nuovo valore anziché l'impostazione predefinita basata sui metadati. Se vuoi sfruttare tutti i partecipanti dei valori di proprietà insito nel processo e impostare il valore per l'impostazione predefinita i metadati registrati, è possibile ottenere che il valore predefinito definitivamente eseguendo una query di metadati della proprietà di dipendenza, quindi è possibile usare il valore predefinito da localmente impostare la proprietà con una chiamata a <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)

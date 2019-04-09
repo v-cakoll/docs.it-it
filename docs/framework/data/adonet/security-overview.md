@@ -2,12 +2,12 @@
 title: Sicurezza Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089861"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 La protezione di un'applicazione è un processo costante. Lo sviluppatore non sarà mai in grado di garantire l'assoluta sicurezza di un'applicazione da tutti gli attacchi, in quanto non è possibile prevedere i tipi di attacchi che consentiranno di elaborare le nuove tecnologie. Al contrario, proprio perché nessuno ha ancora individuato (o pubblicato) i punti deboli nella sicurezza di un sistema, questo non implica che non ne esista nessuno. Durante la fase di progettazione del progetto è necessario pianificare la sicurezza nonché le procedure previste di manutenzione per l'intera durata dell'applicazione.  
@@ -24,7 +24,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
  La classificazione dei rischi è un approccio iterativo alla valutazione delle vulnerabilità presenti nell'applicazione, il cui obiettivo è individuare quelle che sono più pericolose in quanto espongono i dati più sensibili. Una volta identificate le vulnerabilità, è necessario classificarle in ordine di gravità e creare un set di contromisure, in ordine di priorità, per contrastare le minacce.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -62,12 +62,12 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
  Per minimizzare il quantità di danni che possono verificarsi se un attacco riesce, scegliere un contesto di sicurezza per il codice che conceda l'accesso solo alle risorse necessarie per completare il lavoro.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
-|[Sicurezza dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
+|[Sicurezza dell'accesso al codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
+|[Sicurezza per l'accesso al codice](../../../../docs/framework/misc/code-access-security.md)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
   
 ## <a name="database-security"></a>Sicurezza dei database  
  Il principio dei privilegi minimi si applica anche all'origine dati. Le linee guida generali per la sicurezza dei database includono:  
@@ -84,7 +84,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 -   Abilitare le funzionalità di controllo della sicurezza e registrazione per il database in uso, in modo da ricevere avvisi in caso di violazioni della sicurezza.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -94,7 +94,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 ## <a name="security-policy-and-administration"></a>Amministrazione e criteri di sicurezza  
  Se i criteri di sicurezza dall'accesso di codice vengono amministrati in modo non corretto, possono verificarsi problemi di sicurezza. Una volta distribuita l'applicazione, è necessario usare tecniche per il monitoraggio della sicurezza e valutare i rischi quando emergono nuove minacce.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -102,6 +102,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |[Procedure consigliate per criteri di sicurezza](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sicurezza in .NET](../../../standard/security/index.md)
 - [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)

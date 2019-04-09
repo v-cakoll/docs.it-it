@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097577"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notifica delle modifiche nell'associazione dati dei Windows Form
 Uno dei principali concetti di data binding in Windows Form consiste *notifica delle modifiche*. Per assicurarsi che l'origine dati e i controlli associati dispongano sempre dei dati più recenti, è necessario aggiungere la notifica delle modifiche per il data binding. In particolare, per assicurarsi che i controlli associati vengono notificati le modifiche apportate all'origine dati e l'origine dati viene informato delle modifiche apportate alle proprietà di un controllo associata.  
@@ -33,9 +33,10 @@ Uno dei principali concetti di data binding in Windows Form consiste *notifica d
  Infine, dal lato del controllo è necessario esporre un *PropertyName*evento Changed per ogni proprietà progettate per essere associato a dati. Le modifiche alla proprietà del controllo vengono propagate all'origine dati associata. Per altre informazioni, vedere [Procedura: Applicare il modello PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Data binding di Windows Form](windows-forms-data-binding.md)
 - [Origini dati supportate da Windows Form](data-sources-supported-by-windows-forms.md)
-- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
+- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
