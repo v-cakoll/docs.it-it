@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117910"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Procedura: Eseguire query in un Batch (WCF Data Services)
 Tramite il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client, è possibile eseguire più di una query sul servizio dati in un unico batch. Per altre informazioni, vedere [operazioni di invio in batch](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
@@ -26,4 +26,5 @@ Tramite il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria 
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
