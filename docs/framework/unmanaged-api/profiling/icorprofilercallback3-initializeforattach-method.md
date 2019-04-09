@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8590a40ca74296bab618d6c0ba95f1683cf33cd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84d07fe975bab1b0af81299893b52142630b5bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079747"
 ---
-# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="d2ba2-102">Metodo ICorProfilerCallback3::InitializeForAttach</span><span class="sxs-lookup"><span data-stu-id="d2ba2-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
-<span data-ttu-id="d2ba2-103">Chiamato da Common Language Runtime (CLR) per dare al profiler la possibilità di inizializzare il proprio stato dopo un'operazione di connessione.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
+# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="f9878-102">Metodo ICorProfilerCallback3::InitializeForAttach</span><span class="sxs-lookup"><span data-stu-id="f9878-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
+<span data-ttu-id="f9878-103">Chiamato da Common Language Runtime (CLR) per dare al profiler la possibilità di inizializzare il proprio stato dopo un'operazione di connessione.</span><span class="sxs-lookup"><span data-stu-id="f9878-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2ba2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d2ba2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9878-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f9878-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeForAttach(  
@@ -36,30 +36,31 @@ HRESULT InitializeForAttach(
             [in] UINT cbClientData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2ba2-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d2ba2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9878-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f9878-105">Parameters</span></span>  
  `pCorProfilerInfoUnk`  
- <span data-ttu-id="d2ba2-106">[in] Puntatore all'interfaccia `ICorProfilerInfo*`.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
+ <span data-ttu-id="f9878-106">[in] Puntatore all'interfaccia `ICorProfilerInfo*`.</span><span class="sxs-lookup"><span data-stu-id="f9878-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
   
  `pvClientData`  
- <span data-ttu-id="d2ba2-107">[in] Passato un puntatore ai dati per il [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodo nella relativa `pvClientData` parametro.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="d2ba2-108">Se questo parametro è null, `cbClientData` sarà 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="d2ba2-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="d2ba2-109">CLR libera questa memoria quando ottiene un risultato da `InitializeForAttach`.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
+ <span data-ttu-id="f9878-107">[in] Passato un puntatore ai dati per il [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodo nella relativa `pvClientData` parametro.</span><span class="sxs-lookup"><span data-stu-id="f9878-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="f9878-108">Se questo parametro è null, `cbClientData` sarà 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="f9878-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="f9878-109">CLR libera questa memoria quando ottiene un risultato da `InitializeForAttach`.</span><span class="sxs-lookup"><span data-stu-id="f9878-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
   
  `cbClientData`  
- <span data-ttu-id="d2ba2-110">[in] Dimensioni in byte dei dati a cui `pvClientData` punta.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
+ <span data-ttu-id="f9878-110">[in] Dimensioni in byte dei dati a cui `pvClientData` punta.</span><span class="sxs-lookup"><span data-stu-id="f9878-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2ba2-111">Note</span><span class="sxs-lookup"><span data-stu-id="d2ba2-111">Remarks</span></span>  
- <span data-ttu-id="d2ba2-112">CLR chiama `InitializeForAttach` per dare al profiler la possibilità di richiedere callback.</span><span class="sxs-lookup"><span data-stu-id="d2ba2-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f9878-111">Note</span><span class="sxs-lookup"><span data-stu-id="f9878-111">Remarks</span></span>  
+ <span data-ttu-id="f9878-112">CLR chiama `InitializeForAttach` per dare al profiler la possibilità di richiedere callback.</span><span class="sxs-lookup"><span data-stu-id="f9878-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2ba2-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d2ba2-113">Requirements</span></span>  
- <span data-ttu-id="d2ba2-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2ba2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f9878-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f9878-113">Requirements</span></span>  
+ <span data-ttu-id="f9878-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9878-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2ba2-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d2ba2-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f9878-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f9878-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d2ba2-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2ba2-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f9878-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9878-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2ba2-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2ba2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="f9878-117">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f9878-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d2ba2-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2ba2-118">See also</span></span>
-- [<span data-ttu-id="d2ba2-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="d2ba2-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="d2ba2-120">Interfaccia ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="d2ba2-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="d2ba2-121">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="d2ba2-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="d2ba2-122">Profilatura</span><span class="sxs-lookup"><span data-stu-id="d2ba2-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="f9878-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f9878-118">See also</span></span>
+
+- [<span data-ttu-id="f9878-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="f9878-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="f9878-120">Interfaccia ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="f9878-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="f9878-121">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="f9878-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="f9878-122">Profilatura</span><span class="sxs-lookup"><span data-stu-id="f9878-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
