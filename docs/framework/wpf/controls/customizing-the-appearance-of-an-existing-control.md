@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098962"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate
 <a name="introduction"></a> Oggetto <xref:System.Windows.Controls.ControlTemplate> specifica la struttura visiva e il comportamento di un controllo. È possibile personalizzare l'aspetto di un controllo assegnando una nuova <xref:System.Windows.Controls.ControlTemplate>. Quando si crea un <xref:System.Windows.Controls.ControlTemplate>, si sostituisce l'aspetto di un controllo esistente senza modificarne la funzionalità. Ad esempio, è possibile rendere i pulsanti nell'applicazione forma rotonda invece della forma quadrata predefinita, ma il pulsante genererà comunque il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
@@ -31,8 +31,7 @@ Pulsante che usa un modello del controllo personalizzato
   
  ![Pulsante con un bordo rosso. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Pulsante che usa un modello del controllo personalizzato e su cui è posizionato il puntatore del mouse  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento si basa sul presupposto che si sappiano creare e usare i controlli e gli stili come descritto in [Controlli](index.md). I concetti illustrati in questo argomento si applicano agli elementi che ereditano dal <xref:System.Windows.Controls.Control> (classe), tranne per il <xref:System.Windows.Controls.UserControl>. Non è possibile applicare una <xref:System.Windows.Controls.ControlTemplate> a un <xref:System.Windows.Controls.UserControl>.  
@@ -257,9 +256,10 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Esempio completo  
- L'esempio seguente illustra l'intero <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> che è descritti in questo argomento.  
+ L'esempio seguente illustra l'intero <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> che è descritti in questo argomento.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazione di stili e modelli](styling-and-templating.md)

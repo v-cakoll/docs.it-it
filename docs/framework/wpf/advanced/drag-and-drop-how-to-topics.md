@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100171"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Procedure relative al trascinamento della selezione
 Gli esempi seguenti illustrano come eseguire attività comuni usando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.  
@@ -19,10 +19,11 @@ Gli esempi seguenti illustrano come eseguire attività comuni usando il [!INCLUD
 ## <a name="in-this-section"></a>In questa sezione  
  [Aprire un file rilasciato in un controllo RichTextBox](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
  [Creare un oggetto dati](how-to-create-a-data-object.md)  
- [Determinare se un formato di dati è presente in un oggetto dati](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [Elencare i formati di dati in un oggetto dati](how-to-list-the-data-formats-in-a-data-object.md)  
+ [Determinare se un formato dati è presente in un oggetto dati](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [Elencare i formati dati in un oggetto dati](how-to-list-the-data-formats-in-a-data-object.md)  
  [Recuperare dati in un formato dati particolare](how-to-retrieve-data-in-a-particular-data-format.md)  
- [Archiviare più formati di dati in un oggetto dati](how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [Archiviare più formati dati in un oggetto dati](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sul trascinamento della selezione](drag-and-drop-overview.md)

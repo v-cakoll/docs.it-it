@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b29faaaceb3006ffa114beb78ba245817c58ee8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101230"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Metodo ISymUnmanagedMethod::GetParameters
 Ottiene i parametri per questo metodo. I parametri vengono restituiti nell'ordine in cui vengono definiti all'interno di firma del metodo.  
@@ -54,4 +54,5 @@ HRESULT GetParameters(
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

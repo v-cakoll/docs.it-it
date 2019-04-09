@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097551"
 ---
 # <a name="data-templating-overview"></a>Cenni preliminari sui modelli di dati
 Il modello di applicazione di modelli di dati WPF offre una notevole flessibilità per definire la presentazione dei dati. I controlli WPF dispongono di funzionalità incorporate per supportare la personalizzazione della presentazione dei dati. In questo argomento viene innanzitutto illustrato come definire un <xref:System.Windows.DataTemplate> e successivamente presenta altre funzionalità di creazione di modelli dati, ad esempio la selezione di modelli basato su logica personalizzata e il supporto per la visualizzazione di dati gerarchici.  
@@ -194,6 +194,7 @@ Questa operazione chiude la spiegazione di questo esempio. Per l'esempio complet
  ![Screenshot di esempio HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Data binding](../advanced/optimizing-performance-data-binding.md)
 - [Trovare elementi generati da un oggetto DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077173"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Confronto di DataRows (LINQ to DataSet)
-In [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono definiti diversi operatori sui set per confrontare gli elementi di origine e verificarne l'uguaglianza. Gli operatori sui set disponibili in [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sono i seguenti:  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definisce diversi operatori sui set per confrontare gli elementi di origine per verificare se sono uguali. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] fornisce gli operatori sui set seguenti:  
   
 -   <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -39,6 +39,7 @@ In [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono defini
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.DataRowComparer>
-- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Caricamento di dati in un dataset](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076029"
 ---
 # <a name="regions-in-gdi"></a>Regioni in GDI+
 Un'area è una parte dell'area di visualizzazione di un dispositivo di output. Aree possono essere complesso (una combinazione di Polygon e curve chiuse) o semplice (un rettangolo singolo). La figura seguente mostra due aree: uno creato da un rettangolo, e l'altro creato da un percorso.  
@@ -40,6 +40,7 @@ Un'area è una parte dell'area di visualizzazione di un dispositivo di output. A
  [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [Linee, curve e forme](lines-curves-and-shapes.md)
-- [Uso delle regioni](using-regions.md)
+- [Utilizzo delle regioni](using-regions.md)

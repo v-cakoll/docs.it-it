@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099768"
 ---
 # <a name="queues-overview"></a>Panoramica delle code
 Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti dell'accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
@@ -74,6 +74,7 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
  Quando un messaggio raggiunge la coda di destinazione, è possibile che il servizio non riesca ripetutamente a elaborare il messaggio. Ad esempio, un'applicazione legge un messaggio dalla coda in una transazione e dopo aver aggiornato un database può scoprire che è stato disconnesso temporaneamente. In questo caso, viene eseguito il rollback della transazione, viene creata una transazione e il messaggio viene letto nuovamente dalla coda. Un secondo tentativo può riuscire o meno. In alcuni casi, a seconda della causa dell'errore, il recapito del messaggio all'applicazione può non riuscire ripetutamente. In questo caso, il messaggio viene considerato "non elaborabile" e viene spostato in una coda non elaborabile che può essere letta da un'applicazione che gestisce i messaggi non elaborabili.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Code di messaggi non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

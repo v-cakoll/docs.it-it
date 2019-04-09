@@ -2,12 +2,12 @@
 title: Numeri a virgola mobile
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102518"
 ---
 # <a name="floating-point-numbers"></a>Numeri a virgola mobile
 In questo argomento vengono descritti alcuni dei problemi rilevati di frequente dagli sviluppatori con l'uso di numeri a virgola mobile in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Questi problemi sono causati dal modo che i computer archiviano numeri a virgola mobile e non sono specifici di un determinato provider, ad esempio <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  
@@ -19,5 +19,6 @@ In questo argomento vengono descritti alcuni dei problemi rilevati di frequente 
  Per risolvere i problemi con il confronto di uguaglianza, è consigliabile scrivere il codice dell'applicazione in modo che le variazioni delle cifre meno significative vengano ignorate. Ad esempio, anziché eseguire un confronto per verificare l'uguaglianza tra due numeri, sottrarre un numero dall'altro. Se la differenza rientra in un margine accettabile di arrotondamento, l'applicazione può considerare i numeri come se fossero identici.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Causa della possibile perdita di precisione dei numeri a virgola mobile](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
-- [Panoramica di ADO.NET](ado-net-overview.md)
+- [Cenni preliminari su ADO.NET](ado-net-overview.md)

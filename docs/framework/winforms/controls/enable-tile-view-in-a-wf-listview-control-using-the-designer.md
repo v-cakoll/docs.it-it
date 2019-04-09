@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Abilitare la visualizzazione affiancata in un controllo di ListView Windows Form usando la finestra di progettazione'
+title: 'Procedura: Abilitare la visualizzazione affiancata in un controllo ListView di Windows Forms usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720095"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102479"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Abilitare la visualizzazione affiancata in un controllo di ListView Windows Form usando la finestra di progettazione
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Abilitare la visualizzazione affiancata in un controllo ListView di Windows Forms usando la finestra di progettazione
 La funzionalità di visualizzazione affiancata del <xref:System.Windows.Forms.ListView> controllo consente di fornire un equilibrio visivo tra informazioni grafiche e testuali. Le informazioni testuali visualizzate per un elemento nella visualizzazione affiancata corrisponde alle informazioni della colonna definite per la visualizzazione dettagli. Funzioni di visualizzazione affiancata in combinazione con il raggruppamento oppure dall'inserimento contrassegnare le funzionalità di <xref:System.Windows.Forms.ListView> controllo.  
   
  La visualizzazione affiancata Usa un' 32x32 icona e alcune righe di testo, come illustrato nell'immagine seguente.  
@@ -36,5 +36,6 @@ La funzionalità di visualizzazione affiancata del <xref:System.Windows.Forms.Li
 2.  Nel **delle proprietà** finestra, seleziona la <xref:System.Windows.Forms.ListView.View%2A> proprietà e scegliere **riquadro**.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)

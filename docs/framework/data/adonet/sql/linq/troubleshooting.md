@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105482"
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -15,7 +15,7 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
  Altri problemi verranno risolti nelle [Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Operatori di query standard non supportati  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta tutti i metodi degli operatori di query standard, ad esempio <xref:System.Linq.Enumerable.ElementAt%2A>. Di conseguenza, durante la compilazione dei progetti possono comunque verificarsi errori di runtime. Per altre informazioni, vedere [conversione dell'operatore Query Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta tutti i metodi degli operatori query standard (ad esempio, <xref:System.Linq.Enumerable.ElementAt%2A>). Di conseguenza, durante la compilazione dei progetti possono comunque verificarsi errori di runtime. Per altre informazioni, vedere [conversione dell'operatore Query Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problemi di memoria  
  Se una query implica una raccolta in memoria e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, potrebbe essere eseguita la query in memoria, in base all'ordine in cui vengono specificate le due raccolte. Se la query deve essere eseguita in memoria, sarà necessario recuperare i dati dalla tabella di database.  
@@ -26,10 +26,10 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
  Per specificare un nome file di input, aggiungere il nome nella riga di comando come file di input. Non è possibile includere il nome file nella stringa di connessione mediante l'opzione **/conn** . Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Progetti di librerie di classi  
- La [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una stringa di connessione nel file `app.config` del progetto. Nei progetti di librerie di classi il file `app.config` non viene usato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione fornita nei file della fase di progettazione. La modifica del valore in `app.config` non comporta la modifica del database al quale si connette l'applicazione.  
+ La [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una stringa di connessione nel file `app.config` del progetto. Nei progetti di librerie di classi il file `app.config` non viene usato. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usa la stringa di connessione fornita nei file della fase di progettazione. La modifica del valore in `app.config` non comporta la modifica del database al quale si connette l'applicazione.  
   
 ## <a name="cascade-delete"></a>Eliminazione a catena  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario effettuare una delle operazioni seguenti:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o riconosce operazioni di eliminazione a catena. Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario effettuare una delle operazioni seguenti:  
   
 -   Impostare la regola `ON DELETE CASCADE` nel vincolo di chiave esterna del database.  
   
@@ -70,5 +70,6 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
  Il metodo `OnCreated()` generato viene chiamato ogni volta che viene chiamato il costruttore dell'oggetto, incluso lo scenario in cui [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chiama il costruttore per creare una copia dei valori originali. Tenere conto di questo comportamento se si implementa il metodo `OnCreated()` nella classe parziale personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
 - [Domande frequenti](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

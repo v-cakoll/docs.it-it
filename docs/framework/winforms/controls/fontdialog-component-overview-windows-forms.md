@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098559"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Cenni preliminari sul componente FontDialog (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.FontDialog> componente è una finestra di dialogo preconfigurata, ovvero il Windows standard **Font** finestra di dialogo utilizzata per esporre i tipi di carattere attualmente installati nel sistema. Usarlo all'interno dell'applicazione basata su Windows come una soluzione semplice per la selezione del tipo di carattere anziché configurare una propria finestra di dialogo.  
@@ -24,5 +24,6 @@ I moduli di Windows <xref:System.Windows.Forms.FontDialog> componente è una fin
  Il componente ha numerose proprietà che consentono di configurare l'aspetto del controllo. Le proprietà impostare le selezioni di finestra di dialogo sono <xref:System.Windows.Forms.FontDialog.Font%2A> e <xref:System.Windows.Forms.FontDialog.Color%2A>. Il <xref:System.Windows.Forms.FontDialog.Font%2A> proprietà imposta il tipo di carattere, stile, dimensione, script ed effetti; ad esempio, `Arial, 10pt, style=Italic, Strikeout`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.FontDialog>
 - [Componente FontDialog](fontdialog-component-windows-forms.md)

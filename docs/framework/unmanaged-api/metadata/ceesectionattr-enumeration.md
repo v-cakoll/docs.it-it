@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c317524cefd7ed654e76bdd7051cdcd7653062db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101790"
 ---
 # <a name="ceesectionattr-enumeration"></a>Enumerazione CeeSectionAttr
 Fornisce i valori che specificano gli attributi di una sezione per l'utilizzo da parte di [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaccia.  
@@ -41,7 +41,7 @@ typedef enum  {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`sdNone`|Sezione non dispone di attributi.|  
 |`sdReadOnly`|Sezione contiene i dati inizializzati che possono essere solo letto, non aggiornati.|  
@@ -58,4 +58,5 @@ typedef enum  {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

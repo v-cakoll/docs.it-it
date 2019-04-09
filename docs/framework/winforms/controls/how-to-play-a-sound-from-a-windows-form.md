@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078681"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Procedura: Riprodurre un suono da un Windows Form
 In questo esempio viene riprodotto un suono in un percorso specificato in fase di esecuzione.  
@@ -65,6 +65,6 @@ private void playSimpleSound()
  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input.  
   
 ## <a name="see-also"></a>Vedere anche
-- <xref:System.Media.SoundPlayer>
-- [Procedura: Caricare un suono in modo asincrono in un Windows Form](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [Procedura: Caricare in modo asincrono un suono in un Windows Form](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

@@ -2,12 +2,12 @@
 title: Creazione di ruoli applicazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100373"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Creazione di ruoli applicazione in SQL Server
 I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione anziché a un ruolo o a un utente del database. Gli utenti possono connettersi al database, attivare il ruolo applicazione e assumere le autorizzazioni concesse all'applicazione. Le autorizzazioni concesse al ruolo applicazione sono effettive per la durata della connessione.  
@@ -52,13 +52,14 @@ I ruoli applicazione consentono di assegnare autorizzazioni a un'applicazione an
 -   Firmare le stored procedure con certificati, concedendo solo l'autorizzazione per eseguirle. Per altre informazioni, vedere [firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Ruoli applicazione](/sql/relational-databases/security/authentication-access/application-roles)|Viene descritto come creare e usare i ruoli applicazione in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

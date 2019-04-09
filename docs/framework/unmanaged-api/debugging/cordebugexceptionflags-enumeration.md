@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2bf681ed05728a015456e0e4c37157a55f755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078707"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>Enumerazione CorDebugExceptionFlags
 Offre informazioni aggiuntive su un'eccezione.  
@@ -37,7 +37,7 @@ typedef enum CorDebugExceptionFlags {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_NONE`|Nessuna eccezione.|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|L'eccezione è intercettabile.<br /><br /> È possibile che la temporizzazione dell'eccezione non consenta al debugger di intercettarla. Ad esempio, in assenza di codice gestito sotto il callback corrente o se l'evento di eccezione è stato generato da un allegato JIT, non è possibile intercettare l'eccezione.|  
@@ -55,4 +55,5 @@ typedef enum CorDebugExceptionFlags {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

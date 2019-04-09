@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077472"
 ---
 # <a name="dependency-property-security"></a>Sicurezza delle proprietà di dipendenza
 Le proprietà di dipendenza in genere devono essere considerate come proprietà pubbliche. A causa della natura stessa del sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], è impossibile avere delle garanzie di sicurezza sul valore di una proprietà di dipendenza.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Accesso e sicurezza delle proprietà wrapper e di dipendenza  
  In genere, le proprietà di dipendenza vengono implementate insieme alle proprietà [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] "wrapper" che consentono di ottenere o impostare la proprietà da un'istanza in modo più semplice. Ma i wrapper sono metodi pratici semplicemente che implementano sottostante <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> chiamate statiche utilizzate durante l'interazione con le proprietà di dipendenza. Considerando la situazione da un altro punto di vista, le proprietà sono esposte come proprietà [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] che risultano supportate da una proprietà di dipendenza piuttosto che da un campo privato. I meccanismi di sicurezza applicati ai wrapper non sono paralleli al comportamento del sistema di proprietà e all'accesso della proprietà di dipendenza sottostante. L'inserimento di una richiesta di sicurezza sul wrapper eviterà solo l'utilizzo del metodo pratico ma non impedirà le chiamate a <xref:System.Windows.DependencyObject.GetValue%2A> o <xref:System.Windows.DependencyObject.SetValue%2A>. Analogamente, inserendo un livello di accesso protetto o privato sui wrapper non viene garantita alcuna sicurezza effettiva.  
@@ -40,4 +39,5 @@ Le proprietà di dipendenza in genere devono essere considerate come proprietà 
  Applicazione di una richiesta a un <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> e aspetta l'errore di convalida in caso di errore richiesta per impedire l'impostazione di una proprietà non è un meccanismo di sicurezza adeguato. Invalidamento del valore impostato applicato tramite <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> potrebbe essere evitato da chiamanti malintenzionati, se questi operano all'interno del dominio applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)

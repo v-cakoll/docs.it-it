@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103441"
 ---
 # <a name="double-buffered-graphics"></a>Grafica a doppio buffer
 Lo sfarfallio è un problema comune della programmazione della grafica. Le operazioni di grafica che richiedono più operazioni complesse di disegno possono causare lo sfarfallio o altri gravi problemi delle immagini sottoposte a rendering. Per risolvere questi problemi, .NET Framework fornisce l'accesso al doppio buffer.  
@@ -33,10 +33,11 @@ Lo sfarfallio è un problema comune della programmazione della grafica. Le opera
  Per altre informazioni sull'uso di <xref:System.Drawing.BufferedGraphics> classe, vedere [Rendering manuale di grafica memorizzata nel buffer](how-to-manually-render-buffered-graphics.md). Per altre informazioni sul rendering della grafica, vedere [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Procedura: Eseguire il rendering manuale di grafica memorizzata nel buffer](how-to-manually-render-buffered-graphics.md)
-- [Procedura: Ridurre lo sfarfallio nella grafica con il doppio Buffering per form e controlli](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Procedura: Gestire manualmente le immagini memorizzate nel buffer](how-to-manually-manage-buffered-graphics.md)
+- [Procedura: Eseguire il rendering manuale della grafica memorizzata nel buffer](how-to-manually-render-buffered-graphics.md)
+- [Procedura: Ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Procedura: Gestire manualmente la grafica memorizzata nel buffer](how-to-manually-manage-buffered-graphics.md)
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)

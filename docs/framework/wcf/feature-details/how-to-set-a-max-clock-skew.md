@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Set un'inclinazione di Clock massima"
+title: 'Procedura: Impostare lo sfasamento di orario massimo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076628"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>Procedura: Set un'inclinazione di Clock massima
+# <a name="how-to-set-a-max-clock-skew"></a>Procedura: Impostare lo sfasamento di orario massimo
 È possibile un malfunzionamento delle funzioni dipendenti dall'orario quando le impostazioni dell'orologio in due computer sono differenti. Per limitare questo problema, è possibile impostare la proprietà `MaxClockSkew` su un <xref:System.TimeSpan>. Questa proprietà è disponibile in due classi:  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
@@ -85,6 +85,7 @@ ms.locfileid: "54646877"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>

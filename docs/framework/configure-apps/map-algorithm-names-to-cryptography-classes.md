@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 6bf6e79923f0b3119c516ed97e0e86971368a34c
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098741"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapping di nomi di algoritmi a classi di crittografia
 Sono disponibili quattro modi, uno sviluppatore può creare un oggetto di crittografia usando il [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
@@ -68,5 +68,6 @@ Sono disponibili quattro modi, uno sviluppatore può creare un oggetto di critto
  Per un elenco di nomi predefiniti e le classi di cui eseguono il mapping, vedere <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+
+- [servizi crittografici](../../../docs/standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

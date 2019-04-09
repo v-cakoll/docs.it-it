@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb6b303fa7569712c854e8dc4e7513d8608e2519
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104962"
 ---
 # <a name="corregflags-enumeration"></a>Enumerazione CorRegFlags
 Fornisce i valori di flag usati per la registrazione quando si installa un modulo o un'immagine composita.  
@@ -39,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`regNoCopy`|Specifica che i file non devono essere copiati nella destinazione.|  
 |`regConfig`|Specifica che il modulo o un insieme è una configurazione.|  
@@ -55,4 +55,5 @@ typedef enum
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

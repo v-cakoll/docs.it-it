@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a6c715183d3ae04130b729a9680335d65959836a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104065"
 ---
 # <a name="isframeworkassembly-function"></a>Funzione IsFrameworkAssembly
 Ottiene un valore che indica se l'assembly specificato è gestito.  
@@ -61,4 +61,5 @@ HRESULT IsFrameworkAssembly (
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

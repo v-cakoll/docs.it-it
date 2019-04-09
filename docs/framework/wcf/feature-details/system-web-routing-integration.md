@@ -2,12 +2,12 @@
 title: Integrazione di System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 0ace776b8be64f42c05918bc234d39cd96bf8782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097512"
 ---
 # <a name="systemwebrouting-integration"></a>Integrazione di System.Web.Routing
 Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Service (IIS) si inserisce un file con estensione svc nella directory virtuale. Questo file con estensione svc specifica la factory di host del servizio da utilizzare e la classe che implementa il servizio. Quando si effettuano richieste al servizio è specificare il file con estensione svc nell'URI, ad esempio: `http://contoso.com/EmployeeServce.svc`. Per i programmatori che scrivono servizi REST, questo tipo di URI non è ottimale. Gli URI per i servizi REST indicano una risorsa specifica e in genere non presentano estensioni. Il <xref:System.Web.Routing> caratteristica di integrazione consente di ospitare un servizio WCF REST che risponde a URI sprovvisti di estensione. Per altre informazioni, vedere routing [Routing ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
@@ -70,5 +70,6 @@ Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET Routing](https://go.microsoft.com/fwlink/?LinkId=184660)
+
+- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Routing di ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)

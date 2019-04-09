@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 3d188038526570761c2e50dc607fd4aac165fda5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076745"
 ---
 # <a name="xname-directive"></a>Direttiva x:Name
 Identifica in modo univoco gli elementi definiti XAML un namescope XAML. Ambiti dei nomi XAML e i relativi modelli di univocità è applicabile agli oggetti istanziati, quando Framework forniscono le API o implementare comportamenti che accedono a creato XAML dall'oggetto grafico in fase di esecuzione.  
@@ -67,6 +67,7 @@ Identifica in modo univoco gli elementi definiti XAML un namescope XAML. Ambiti 
  `x:Name` per Silverlight è documentato separatamente. Per altre informazioni, vedere [XAML Namespace (x) Funzionalità del linguaggio (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
 - [Strutture ad albero in WPF](../wpf/advanced/trees-in-wpf.md)
