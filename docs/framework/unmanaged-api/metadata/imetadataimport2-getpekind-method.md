@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3d0ee533ec0ece308f87c170846ef102bd3a3b9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113486"
 ---
 # <a name="imetadataimport2getpekind-method"></a>Metodo IMetaDataImport2::GetPEKind
 Ottiene un valore che identifica la natura del codice nel file eseguibile portabile (PE) di file, in genere un file DLL o EXE, definito nell'ambito dei metadati corrente.  
@@ -46,7 +46,7 @@ HRESULT GetPEKind (
 ## <a name="remarks"></a>Note  
  Il valore a cui fanno riferimento le `pdwMachine` parametro può essere uno dei valori seguenti.  
   
-|Valore|Architettura del computer|  
+|Value|Architettura del computer|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
@@ -62,6 +62,7 @@ HRESULT GetPEKind (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Enumerazione CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

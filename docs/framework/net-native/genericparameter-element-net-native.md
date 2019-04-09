@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111657"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > elemento (.NET Native)
 Applica i criteri al tipo di parametro di un tipo o di un metodo generico.  
@@ -51,13 +51,13 @@ Applica i criteri al tipo di parametro di un tipo o di un metodo generico.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Attributo obbligatorio. Il nome del parametro di tipo generico. Ad esempio, per il delegato generico <xref:System.Func%603>, un valore "TResult" per *generic_parameter_name* consente di applicare i criteri di runtime al valore restituito del delegato.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -68,8 +68,8 @@ Applica i criteri al tipo di parametro di un tipo o di un metodo generico.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection di runtime a un determinato tipo, ad esempio una classe o una struttura.|  
+|[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection di runtime a un determinato tipo, ad esempio una classe o una struttura.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<GenericParameter>` è figlio dell'elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) o [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ed è usato per applicare i criteri a un determinato parametro di tipo generico, specificato mediante il nome nella firma del tipo o del metodo generico.  
@@ -87,8 +87,9 @@ Applica i criteri al tipo di parametro di un tipo o di un metodo generico.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Metodo > elemento](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

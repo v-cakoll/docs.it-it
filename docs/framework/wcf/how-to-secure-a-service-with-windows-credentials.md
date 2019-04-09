@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Proteggere un servizio con le credenziali di Windows'
+title: 'Procedura: Proteggere un servizio con credenziali di Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111332"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: Proteggere un servizio con le credenziali di Windows
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: Proteggere un servizio con credenziali di Windows
 Questo argomento illustra come abilitare la sicurezza del trasporto in un servizio Windows Communication Foundation (WCF) che risiede in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per altre informazioni su questo scenario, vedere [protezione del trasporto con autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
   
  In questo argomento si presuppone la presenza di un'interfaccia e di un'implementazione del contratto esistente già definite, alle quali vengono aggiunti elementi. È inoltre possibile modificare un servizio e un client esistenti.  
@@ -50,7 +50,7 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 1.  Inserire il codice di questa procedura dopo il codice della procedura precedente.  
   
-2.  Creare una variabile <xref:System.Type> denominata `contractType` e assegnarle il tipo dell'interfaccia (`ICalculator`). Quando si usa Visual Basic, usare il `GetType` operatore; quando si usa C#, usare il `typeof` (parola chiave).  
+2.  Creare una variabile <xref:System.Type> denominata `contractType` e assegnarle il tipo dell'interfaccia (`ICalculator`). Quando si usa Visual Basic, usare il `GetType` operatore; quando si usa c#, usare il `typeof` (parola chiave).  
   
 3.  Creare una seconda variabile <xref:System.Type> denominata `serviceType` e assegnarle il tipo del contratto implementato (`Calculator`).  
   
@@ -148,8 +148,9 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
-- [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)

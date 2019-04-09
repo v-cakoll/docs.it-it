@@ -2,12 +2,12 @@
 title: SqlClient per funzioni Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: dc111d3f8321170a02c70f168bf8ae5c2a3521e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117780"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>SqlClient per funzioni Entity Framework
 Il provider di dati .NET Framework per SQL Server (SqlClient) per Entity Framework fornisce un set di funzioni per l'esecuzione di calcoli matematici e di aggregazione nonché funzioni per eseguire operazioni `System.DateTime` e `string`. Tali funzioni si trovano nello spazio dei nomi `SQLServer`.  
@@ -30,5 +30,6 @@ Il provider di dati .NET Framework per SQL Server (SqlClient) per Entity Framewo
  [Funzioni di sistema](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Cenni preliminari su Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 837ed1cd41869031e8c0b549ffcd26e3285570cd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111735"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Componenti aggiuntivi di Firefox per supportare la distribuzione di applicazioni .NET
 Abilitare Windows Presentation Foundation (WPF) plug-in per Firefox e .NET Framework Assistant per Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], separato [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e le applicazioni ClickOnce per lavorare con il browser Mozilla Firefox.  
@@ -34,6 +34,7 @@ Abilitare Windows Presentation Foundation (WPF) plug-in per Firefox e .NET Frame
  .NET Framework Assistant per Firefox è incluso con il [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Per informazioni sulla rimozione di .NET Framework Assistant per Firefox, vedere [come rimuovere .NET Framework Assistant per Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md)
 - [Panoramica delle applicazioni browser XAML di WPF](wpf-xaml-browser-applications-overview.md)
 - [Verificare se il plug-in delle applicazioni WPF per Firefox è installato](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

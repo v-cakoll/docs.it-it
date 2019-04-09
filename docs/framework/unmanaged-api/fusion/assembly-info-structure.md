@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110877"
 ---
 # <a name="assemblyinfo-structure"></a>Struttura ASSEMBLY_INFO
 Contiene informazioni relative a un assembly registrato nella global assembly cache.  
@@ -40,7 +40,7 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Le dimensioni, in byte, della struttura. Questo campo è riservato per un'estendibilità futura.|  
 |`dwAssemblyFlags`|Flag che indicano i dettagli di installazione sull'assembly. Sono supportati i valori seguenti:<br /><br /> -Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato. Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` a questo valore.<br />-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente. La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` a questo valore.|  
@@ -56,5 +56,6 @@ typedef struct _ASSEMBLY_INFO {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

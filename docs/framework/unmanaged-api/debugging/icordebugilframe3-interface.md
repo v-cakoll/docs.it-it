@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c87578c3a5e2bec9bbd754929308645f7862ee5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b46c74ec0bfc1fc44bcaca07439c472b0fd8393f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113763"
 ---
 # <a name="icordebugilframe3-interface"></a>Interfaccia ICorDebugILFrame3
 Fornisce un metodo che incapsula il valore restituito di una funzione. `ICorDebugILFrame3` è un'estensione logica delle interfacce ICorDebugILFrame e ICorDebugILFrame2.  
@@ -43,5 +43,6 @@ Fornisce un metodo che incapsula il valore restituito di una funzione. `ICorDebu
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

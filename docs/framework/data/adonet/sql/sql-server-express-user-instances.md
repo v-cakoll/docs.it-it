@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111150"
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Il protocollo di rete per le istanze utente deve essere Named Pipes locale. Un'istanza utente non può essere avviata su un'istanza remota di SQL Server e gli account di accesso di SQL Server non sono supportati.  
   
 ## <a name="connecting-to-a-user-instance"></a>Connessione a un'istanza utente  
- Il `User Instance` e `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> parole chiave accettano un <xref:System.Data.SqlClient.SqlConnection> per connettersi a un'istanza utente. Le istanze utente sono supportate anche dalle proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename`.  
+ Il `User Instance` e `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> parole chiave accettano un <xref:System.Data.SqlClient.SqlConnection> per connettersi a un'istanza utente. Le istanze utente sono supportate anche per il <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename` proprietà.  
   
  Si noti quanto segue sull'esempio di stringa di connessione illustrato di seguito:  
   
@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
   
 -   `User Instance` è impostata su `true`, che richiama un'istanza utente. Il valore predefinito è `false`.  
   
--   La parola chiave per la stringa di connessione `AttachDbFileName` viene usata per collegare il file di database primario (con estensione mdf) che deve includere il nome del percorso completo. `AttachDbFileName` corrisponde anche alle chiavi "extended properties" e "initial file name" all'interno della stringa di connessione <xref:System.Data.SqlClient.SqlConnection>.  
+-   La parola chiave per la stringa di connessione `AttachDbFileName` viene usata per collegare il file di database primario (con estensione mdf) che deve includere il nome del percorso completo. `AttachDbFileName` corrisponde anche alle chiavi "initial file name" all'interno e "extended properties" un <xref:System.Data.SqlClient.SqlConnection> stringa di connessione.  
   
 -   La stringa di sostituzione `|DataDirectory|` racchiusa tra barre verticali fa riferimento alla directory di dati dell'applicazione che apre la connessione e fornisce un percorso relativo che indica la posizione dei file di database e di log, con estensione mdf e ldf. Se si desidera individuare altrove questi file, è necessario fornire il percorso completo.  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  È anche possibile usare le proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> per compilare una stringa di connessione in fase di esecuzione.  
+>  È anche possibile usare la <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> e <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> proprietà per compilare una stringa di connessione in fase di esecuzione.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Tramite il &#124;DataDirectory&#124; stringa di sostituzione  
- `AttachDbFileName` è stata estesa in ADO.NET 2.0 con l'introduzione della stringa di sostituzione `|DataDirectory|` (racchiusa tra barre verticali). `DataDirectory` viene usata insieme a `AttachDbFileName` per indicare un percorso relativo di un file di dati, consentendo agli sviluppatori di creare stringhe di connessione basate su un percorso relativo dell'origine dati senza che sia necessario specificare un percorso completo.  
+ `AttachDbFileName` è stata estesa in ADO.NET 2.0 con l'introduzione del `|DataDirectory|` (racchiusa tra barre verticali) stringa di sostituzione. `DataDirectory` viene usato in combinazione con `AttachDbFileName` per indicare un percorso relativo a un file di dati, consentendo agli sviluppatori di creare stringhe di connessione che si basano su un percorso relativo all'origine dati anziché essere necessario per specificare il percorso completo.  
   
  La posizione fisica alla quale `DataDirectory` punta dipende dal tipo di applicazione. In questo esempio il file Northwind.mdf da collegare è situato nella cartella \app_data dell'applicazione.  
   
@@ -151,6 +151,7 @@ private static void OpenSqlConnection()
 -   Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Stringhe di connessione](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Connessione a un'origine dati](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

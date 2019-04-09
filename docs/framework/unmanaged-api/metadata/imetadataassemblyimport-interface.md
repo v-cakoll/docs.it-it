@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f213bcb9f87c34d23b53c2016bd841aae7c7194
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 373ff0470e2403f91534df0c0ffe4039dbb0f832
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112632"
 ---
 # <a name="imetadataassemblyimport-interface"></a>Interfaccia IMetaDataAssemblyImport
 Fornisce metodi per accedere ed esaminare il contenuto di un manifesto dell'assembly.  
@@ -55,5 +55,6 @@ Fornisce metodi per accedere ed esaminare il contenuto di un manifesto dell'asse
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

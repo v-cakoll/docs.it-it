@@ -2,19 +2,19 @@
 title: Requisiti di sistema per il provider di dati.NET Framework per Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111047"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisiti di sistema per il provider di dati.NET Framework per Oracle
 Per usare il provider di dati .NET Framework per Oracle, è necessario disporre di Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Si consiglia l'uso di MDAC 2.8 SP1.  
   
  È inoltre necessario installare il client Oracle 8i Release 3 (8.1.7) o versione successiva.  
   
- Non è possibile eseguire l'accesso ai database UTF16 mediante i software client Oracle precedenti alla versione Oracle 9i in quanto UTF16 è una nuova funzione di Oracle 9i. Per usare questa funzione, è necessario aggiornare il software client alla versione Oracle 9i o versione successiva.  
+ Non è possibile eseguire l'accesso ai database UTF16 mediante i software client Oracle precedenti alla versione Oracle 9i in quanto UTF16 è una nuova funzionalità di Oracle 9i. Per usare questa funzionalità, è necessario aggiornare il software client alla versione Oracle 9i o versione successiva.  
   
 ## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a>Utilizzo del provider di dati per dati Oracle e Unicode  
  Di seguito è riportato un elenco di problemi relativi a Unicode da tenere presente quando si usano il provider di dati .NET Framework per Oracle e le librerie del client Oracle. Per altre informazioni, vedere la documentazione di Oracle.  
@@ -38,5 +38,6 @@ Unicode=True
  Per motivi di usabilità, la <xref:System.Data.OracleClient.OracleLob> oggetto eredita dalla classe Stream di .NET Framework e fornisce **ReadByte** e **WriteByte** metodi. Implementa inoltre metodi, ad esempio **CopyTo** e **Erase**, che usare sulle sezioni di Oracle **LOB** oggetti. Al contrario, il software client Oracle fornisce una serie di API per l'uso con **LOB**s (**CLOB** e **NCLOB**). Tuttavia, queste API funzionano solo con i caratteri completi. A causa di questa differenza, il Provider di dati per Oracle implementa il supporto per **Read** e **ReadByte** per lavorare con dati UTF-16 in una modalità byte per byte. Tuttavia, gli altri metodi del **OracleLob** oggetto consentono solo operazioni con caratteri completi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Oracle e ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

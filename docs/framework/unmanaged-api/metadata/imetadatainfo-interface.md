@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bdaefdd1d7d53cdd3d2d908063fcd68ea83d81f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c691c403155d6e10db70c05894fe6a0fd381f036
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112502"
 ---
 # <a name="imetadatainfo-interface"></a>Interfaccia IMetaDataInfo
 Fornisce un metodo che ottiene informazioni sul mapping dei metadati da un file su disco in memoria.  
@@ -42,5 +42,6 @@ Fornisce un metodo che ottiene informazioni sul mapping dei metadati da un file 
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [Enumerazione CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

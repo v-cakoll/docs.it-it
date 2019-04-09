@@ -2,12 +2,12 @@
 title: Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: 8addcf564bda969d404694171a2af3dd277ff22b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115648"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli XML Schema (XSD) e vincoli di dataset
 Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli sugli elementi e sugli attributi in esso definiti. Durante il mapping di un XML Schema allo schema relazionale in una <xref:System.Data.DataSet>, vengono eseguito il mapping di vincoli di XML Schema ai vincoli relazionali appropriati nelle tabelle e colonne all'interno di **set di dati**.  
@@ -27,21 +27,22 @@ Lo schema XSD (XML Schema Definition Language) consente di specificare vincoli s
  Il processo di mapping consente di convertire tali vincoli dello schema in vincoli appropriati per le tabelle create all'interno di **set di dati**.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Mapping tra vincoli XML Schema (XSD) univoci e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapping tra vincoli XML Schema (XSD) univoci e vincoli di dataset](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Vengono descritti gli elementi di XML Schema utilizzati per creare vincoli univoci in una **set di dati**.  
   
- [Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Vengono descritti gli elementi di XML Schema utilizzati per creare vincoli key (vincoli univoci in cui non sono consentiti valori null) in un **set di dati**.  
   
- [Mapping tra vincoli keyref XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Vengono descritti gli elementi di XML Schema usati per creare keyref vincoli (chiave esterna) in un **set di dati**.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivazione della struttura relazionale di dataset da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Viene descritta la struttura relazionale, o schema, di un **set di dati** che viene creato da uno schema XSD.  
   
- [Generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Generazione di relazioni tra dataset da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  Vengono descritti gli elementi di XML Schema usati per creare relazioni tra le colonne della tabella in un **set di dati**.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Introduzione all'integrazione CLR in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110703"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Introduzione all'integrazione CLR in SQL Server
 Common Language Runtime (CLR) rappresenta l'elemento essenziale di Microsoft .NET Framework e fornisce l'ambiente di esecuzione per tutto il codice .NET Framework. Il codice eseguito all'interno di CLR viene definito codice gestito. CLR fornisce diverse funzioni e vari servizi richiesti per l'esecuzione del programma, che includono la compilazione JIT (Just-In-Time), l'allocazione e la gestione della memoria, l'applicazione dell'indipendenza dai tipi, la gestione delle eccezioni e dei thread e la sicurezza.  
@@ -20,10 +20,10 @@ Common Language Runtime (CLR) rappresenta l'elemento essenziale di Microsoft .NE
   
  **Documentazione online di SQL Server**  
   
--   [Panoramica di integrazione di Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115242)  
+-   [Panoramica dell'integrazione con CLR (Common Language Runtime)](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Abilitazione dell'integrazione con CLR  
- In Microsoft SQL Server la funzione di integrazione CLR (Common Language Runtime) è disattivata per impostazione predefinita e deve essere abilitata in modo da usare oggetti implementati mediante l'integrazione CLR. Per abilitare l'integrazione CLR mediante Transact-SQL, usare l'opzione `clr enabled` della stored procedure `sp_configure`, come illustrato di seguito:  
+ In Microsoft SQL Server la funzionalità di integrazione CLR (Common Language Runtime) è disattivata per impostazione predefinita e deve essere abilitata in modo da usare oggetti implementati mediante l'integrazione CLR. Per abilitare l'integrazione CLR mediante Transact-SQL, usare l'opzione `clr enabled` della stored procedure `sp_configure`, come illustrato di seguito:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -38,14 +38,14 @@ GO
   
  **Documentazione online di SQL Server**  
   
--   [Abilitazione dell'integrazione CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
+-   [Abilitazione dell'integrazione con CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Distribuzione di un assembly CLR  
  Dopo che i metodi CLR sono stati testati e verificati nel server di prova, possono essere distribuiti nei server di produzione usando uno script di distribuzione. Lo script di distribuzione può essere generato manualmente o tramite SQL Server Management Studio. Per informazioni più dettagliate, vedere la versione della documentazione online di SQL Server corrispondente alla versione di SQL Server in uso.  
   
  **Documentazione online di SQL Server**  
   
-1.  [Distribuzione di oggetti di Database CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1.  [Distribuzione di oggetti di database CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Sicurezza dell'integrazione con CLR  
  Il modello di sicurezza dell'integrazione di Microsoft SQL Server con CLR (Common Language Runtime) di Microsoft .NET Framework consente di gestire e di proteggere l'accesso tra diversi tipi di oggetti CLR e non CLR in esecuzione in SQL Server. Questi oggetti possono essere chiamati da un'istruzione Transact-SQL o da un altro oggetto CLR in esecuzione sul server.  
@@ -54,7 +54,7 @@ GO
   
  **Documentazione online di SQL Server**  
   
--   [Sicurezza dell'integrazione CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
+-   [Sicurezza dell'integrazione con CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>Debug di un assembly CLR  
  Microsoft SQL Server fornisce il supporto per il debug di oggetti Transact-SQL e CLR (Common Language Runtime) nel database. Il debug può essere eseguito in entrambi i linguaggi, ovvero gli utenti possono passare agevolmente da oggetti Transact-SQL a oggetti CLR e viceversa.  
@@ -63,8 +63,9 @@ GO
   
  **Documentazione online di SQL Server**  
   
--   [Debug di oggetti di Database CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+-   [Debug di oggetti di database CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Sicurezza dell'accesso di codice e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+
+- [Sicurezza dell'accesso al codice e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
