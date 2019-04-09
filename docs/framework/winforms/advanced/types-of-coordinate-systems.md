@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089302"
 ---
 # <a name="types-of-coordinate-systems"></a>Tipi di sistemi di coordinate
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Usa tre spazi di coordinate: world, pagina e dispositivo. Coordinate internazionali sono le coordinate usate per modellare un mondo grafico specifico e le coordinate passate ai metodi in .NET Framework. Le coordinate di pagina può fare riferimento al sistema di coordinate utilizzato da una superficie di disegno, ad esempio un form o controllo. Le coordinate di periferica vengono usate dal dispositivo fisico da disegnare, ad esempio una schermata o un foglio di carta. Quando si effettua la chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, i punti che si passano al <xref:System.Drawing.Graphics.DrawLine%2A> metodo, ovvero`(0, 0)` e `(160, 80)`, ovvero sono nello spazio delle coordinate world. Prima di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile tracciare le linee sullo schermo, le coordinate passano attraverso una sequenza di trasformazioni. Una trasformazione, ossia la trasformazione globale, converte le coordinate complessive in coordinate di pagina e un'altra trasformazione, ossia la trasformazione della pagina, converte le coordinate di pagina in coordinate del dispositivo.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715855"
 |Dispositivo|(192, 48) a (384, 144)|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sistemi di coordinate e trasformazioni](coordinate-systems-and-transformations.md)
 - [Rappresentazione tramite matrici delle trasformazioni](matrix-representation-of-transformations.md)

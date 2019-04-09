@@ -2,8 +2,14 @@
 title: Contatori delle prestazioni di WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance counters [WCF]'
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087859"
 ---
 # <a name="wcf-performance-counters"></a>Contatori delle prestazioni di WCF
 Windows Communication Foundation (WCF) include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione.  
@@ -133,4 +139,5 @@ ServiceName@ServiceBaseAddress
  Per altre informazioni sull'accesso ai contatori a livello di codice, vedere [architettura di programmazione dei contatori delle prestazioni](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

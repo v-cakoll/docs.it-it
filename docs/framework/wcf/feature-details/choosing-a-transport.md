@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107848"
 ---
 # <a name="choosing-a-transport"></a>Scelta di un trasporto
 In questo argomento vengono descritti i criteri per la scelta tra i tre trasporti principali inclusi in Windows Communication Foundation (WCF): HTTP, TCP e named pipe. WCF include anche un Microsoft message queuing (noto anche come MSMQ) del trasporto, ma in questo documento non illustra il servizio Accodamento messaggi.  
@@ -62,6 +62,7 @@ In questo argomento vengono descritti i criteri per la scelta tra i tre trasport
 |Strumenti|Gli strumenti rappresentano la possibilità che un protocollo supporti applicazioni di terze parti per lo sviluppo, la diagnosi, l'hosting e altre attività. Lo sviluppo di strumenti e software da utilizzare con il protocollo HTTP comporta un investimento notevole.|HTTP|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSDualHttpBinding>

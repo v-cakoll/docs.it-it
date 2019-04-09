@@ -2,12 +2,12 @@
 title: Client di test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106769"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
 Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare tale input al servizio e Visualizza la risposta restituita dal servizio. Fornisce un servizio facile test combinazione con Host servizio WCF.  
@@ -166,4 +166,5 @@ Il Client di prova di Windows Communication Foundation (WCF) (WcfTestClient.exe)
 -   Fare doppio clic il **Host servizio WCF** icona nell'area di notifica e quindi fare clic su **Exit.** Questo chiude sia Host automatico servizio WCF che Client di prova WCF e si arresta il processo di debug di Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+
+- [Host servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

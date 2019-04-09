@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Copiare i pixel per ridurre lo sfarfallio in Windows Form'
+title: 'Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094034"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: Copiare i pixel per ridurre lo sfarfallio in Windows Form
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedura: Copiare i pixel per ridurre lo sfarfallio nei Windows Form
 Quando si anima una semplice immagine, gli utenti possono a volte si verificano lo sfarfallio o altri effetti visivi indesiderati. Uno per limitare questo problema consiste nell'usare un processo di "bitblt" sull'oggetto grafico. BitBlt è il "blocchi di bit trasferimento" di dati relativi al colore da un'origine a un rettangolo di pixel a un rettangolo di destinazione del pixel.  
   
  Con Windows Forms, bitblt avviene utilizzando il <xref:System.Drawing.Graphics.CopyFromScreen%2A> metodo di <xref:System.Drawing.Graphics> classe. I parametri del metodo, si specifica l'origine e destinazione (come punti), le dimensioni dell'area di copia e l'oggetto graphics utilizzato per disegnare la nuova forma.  
@@ -63,8 +63,9 @@ private void Form1_Paint(System.Object sender,
  Il codice precedente viene eseguito in del modulo <xref:System.Windows.Forms.Control.Paint> gestore dell'evento in modo da rendere persistenti gli elementi grafici quando il form viene ridisegnato. Di conseguenza, non chiamare metodi correlati a grafici <xref:System.Windows.Forms.Form.Load> gestore eventi, in quanto il contenuto creato non verrà ridisegnato se il form viene ridimensionato o nascosto da un altro form.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)

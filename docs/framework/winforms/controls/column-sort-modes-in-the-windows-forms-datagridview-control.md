@@ -5,17 +5,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106666"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form
 <xref:System.Windows.Forms.DataGridView> le colonne sono disponibili tre modalità di ordinamento. La modalità di ordinamento per ogni colonna viene specificata tramite il <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> proprietà della colonna, che può essere impostata su uno dei seguenti <xref:System.Windows.Forms.DataGridViewColumnSortMode> valori di enumerazione.  
   
-|Valore di `DataGridViewColumnSortMode`|Descrizione|  
+|`DataGridViewColumnSortMode` predefinito|Descrizione|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Valore predefinito per le colonne di caselle di testo. A meno che le intestazioni di colonna vengono utilizzate per la selezione, facendo clic sull'intestazione di colonna automaticamente Ordina il <xref:System.Windows.Forms.DataGridView> da questa colonna e viene visualizzata un'icona che indica l'ordinamento.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Valore predefinito per le colonne non di testo, finestra. È possibile ordinare questa colonna a livello di codice; Tuttavia, non destinato per l'ordinamento, pertanto nessuno spazio viene riservato per l'icona di ordinamento.|  
@@ -59,12 +59,13 @@ ms.locfileid: "57717856"
 >  Il <xref:System.Windows.Forms.DataGridView.SortCompare> non vengono generati eventi quando il <xref:System.Windows.Forms.DataGridView.DataSource%2A> è impostata o quando il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> valore della proprietà è `true`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Ordinamento di dati nel controllo DataGridView di Windows Form](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare la modalità di ordinamento delle colonne nel controllo DataGridView Windows Form](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Procedura: Personalizzare l'ordinamento nel controllo DataGridView Windows Form](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Ordinamento dei dati nel controllo DataGridView di Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare le modalità di ordinamento delle colonne nel controllo DataGridView di Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Procedura: Personalizzare l'ordinamento nel controllo DataGridView di Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

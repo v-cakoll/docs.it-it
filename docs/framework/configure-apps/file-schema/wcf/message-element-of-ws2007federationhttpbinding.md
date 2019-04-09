@@ -1,13 +1,13 @@
 ---
-title: <message> elemento di <ws2007FederationHttpBinding>
+title: <message> di <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 29d9c318b6cff586095ed9668fdac79d7813e856
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f05bd90bd2e4c7e1fd606518d9e5cb8d4e5ad974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092994"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<messaggio > dell'elemento \<ws2007FederationHttpBinding >
 Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -86,14 +86,14 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`algorithmSuite`|Parametro facoltativo. Imposta la crittografia del messaggio, la firma e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Nella tabella che segue sono elencati i valori possibili. Il valore predefinito è Basic256.|  
+|`algorithmSuite`|Facoltativo. Imposta la crittografia del messaggio, la firma e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Nella tabella che segue sono elencati i valori possibili. Il valore predefinito è Basic256.|  
 |`issuedKeyType`|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> L'impostazione predefinita è SymmetricKey. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|URI che specifica il tipo di token da emettere. Il valore predefinito è `null`.|  
 |`negotiateServiceCredential`|Valore che specifica se la credenziale del servizio deve essere scambiata come parte della negoziazione o se è disponibile fuori banda. L'impostazione predefinita è `true`, a indicare che la credenziale del servizio viene negoziata.|  
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -128,6 +128,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

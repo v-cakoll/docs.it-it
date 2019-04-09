@@ -1,5 +1,5 @@
 ---
-title: Elemento <listeners> per <source>
+title: <listeners> (elemento) per <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089653"
 ---
 # <a name="listeners-element-for-source"></a>\<i listener > (elemento) per \<origine >
 Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSource.Listeners%2A> insieme per un <xref:System.Diagnostics.TraceSource>. I listener indirizzano l'output di traccia a una destinazione appropriata, ad esempio un log, una finestra o un file di testo.  
@@ -88,6 +88,7 @@ Aggiunge o rimuove nei listener di traccia le <xref:System.Diagnostics.TraceSour
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.TraceListener>
 - [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Listener di traccia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

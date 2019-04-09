@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092656"
 ---
 # <a name="setpekind-method"></a>Metodo SetPEKind
 Determina il tipo di eseguibile portabile, specifiche del computer o indipendente dal computer.  
@@ -57,7 +57,8 @@ HRESULT SetPEKind(
  Richiede alink.h.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodo GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)

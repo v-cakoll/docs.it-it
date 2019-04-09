@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffca8e076fe6fe966a9a07ed915a7e76ea06f37c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090355"
 ---
 # <a name="corheapinfo-structure"></a>Struttura COR_HEAPINFO
 Fornisce informazioni generali sull'heap di Garbage Collection, specificando anche se è enumerabile.  
@@ -40,7 +40,7 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`areGCStructuresValid`|`true` Se le strutture di garbage collection sono valide e possono essere enumerati heap; in caso contrario, `false`.|  
 |`pointerSize`|Le dimensioni, in byte, dei puntatori sull'architettura di destinazione.|  
@@ -63,5 +63,6 @@ typedef struct _COR_HEAPINFO {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

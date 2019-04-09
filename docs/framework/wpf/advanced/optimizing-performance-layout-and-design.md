@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107068"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Ottimizzazione delle prestazioni: Layout e progettazione
 La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti. La costruzione di oggetti, soprattutto in fase di runtime, può influire sulle caratteristiche di prestazioni dell'applicazione.  
@@ -57,7 +57,7 @@ La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../inc
 ### <a name="build-your-tree-top-down"></a>Compilare la struttura ad albero dall'alto in basso  
  Quando si aggiunge o si rimuove un nodo dall'albero logico, le convalide di proprietà vengono annullate sull'elemento padre e su tutti gli elementi figlio del nodo. Di conseguenza, è sempre consigliabile seguire un pattern di costruzione dall'alto in basso per evitare il costo di annullamenti di convalide non necessari su nodi già convalidati. La tabella seguente illustra la differenza in velocità di esecuzione tra la creazione di una struttura ad albero dall'alto in basso rispetto a basso in alto, in cui la struttura ad albero presenta 150 livelli di profondità con un unico <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.DockPanel> a ogni livello.  
   
-|**Azione**|**Compilazione della struttura ad albero (in ms)**|**Rendering: include la compilazione della struttura ad albero (in ms)**|  
+|**Operazione**|**Struttura ad albero di compilazione (in ms)**|**Eseguire il rendering: include albero compilazione (in ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |Dal basso in alto|366|454|  
 |Dall'alto in basso|11|96|  
@@ -70,13 +70,14 @@ La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../inc
  Per altre informazioni sull'albero logico, vedere [Strutture ad albero in WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](optimizing-performance-application-resources.md)
-- [per](optimizing-performance-text.md)
+- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
+- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
+- [Testo](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)
 - [Layout](layout.md)

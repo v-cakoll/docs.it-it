@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Codificare un oggetto Visual in un file di immagine'
+title: 'Procedura: Codificare un oggetto visivo in un file di immagine'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096784"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>Procedura: Codificare un oggetto Visual in un file di immagine
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>Procedura: Codificare un oggetto visivo in un file di immagine
 In questo esempio illustra come codificare un <xref:System.Windows.Media.Visual> oggetto in un file di immagine usando una <xref:System.Windows.Media.Imaging.RenderTargetBitmap> e un <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Esempio  
@@ -28,7 +28,8 @@ In questo esempio illustra come codificare un <xref:System.Windows.Media.Visual>
  Oggetto <xref:System.Windows.Media.Imaging.PngBitmapEncoder> è stato usato in questo esempio ma dei derivato <xref:System.Windows.Media.Imaging.BitmapEncoder> oggetti avrebbe potuto avere utilizzati per creare il file di immagine.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.DrawingContext>
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)
-- [Uso degli oggetti DrawingVisual](using-drawingvisual-objects.md)
+- [Utilizzo degli oggetti DrawingVisual](using-drawingvisual-objects.md)
