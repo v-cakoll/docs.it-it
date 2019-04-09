@@ -2,12 +2,12 @@
 title: Funzionalità SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107523"
 ---
 # <a name="sql-server-features-and-adonet"></a>Funzionalità SQL Server e ADO.NET
 Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.  
@@ -16,7 +16,7 @@ Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Ser
   
  **Documentazione online di SQL Server**  
   
-1.  [Sviluppo (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1.  [Sviluppo (Motore di database)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Enumerazione di istanze di SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
@@ -43,10 +43,11 @@ Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Ser
  [Supporto SqlClient per disponibilità elevata, ripristino di emergenza](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Viene descritto il supporto di SqlClient per i gruppi di disponibilità (AlwaysOn) con disponibilità elevata e ripristino di emergenza.  
   
- [Supporto SqlClient per Local DB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [Supporto SqlClient per LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Viene descritto il supporto di SqlClient per database LocalDB.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Recupero e modifica di dati in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)

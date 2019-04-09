@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107328"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier spline in GDI+
 Una spline di Bézier è una curva specificata da quattro punti: due punti finali (p1 e p2) e due punti di controllo (c1 e c2). La curva di p1 in cui inizia e termina in corrispondenza di p2. La curva non passa attraverso i punti di controllo, ma i punti di controllo usate come magneti, eseguire il pull della curva in determinate le direzioni e che influenzano il modo che curvatura. La figura seguente mostra una curva di Bézier insieme ai relativi punti finali e i punti di controllo.  
@@ -38,6 +38,7 @@ Una spline di Bézier è una curva specificata da quattro punti: due punti final
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Linee, curve e forme](lines-curves-and-shapes.md)

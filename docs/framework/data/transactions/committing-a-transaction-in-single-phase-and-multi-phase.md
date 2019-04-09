@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089556"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Commit di una transazione in monofase e multifase
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse (in seguito indicato con la sigla GR), le cui azioni vengono coordinate dalla gestione transazioni (in seguito indicato con la sigla GT). Il [integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) argomento viene illustrato come è possano integrare una risorsa (o più risorse) in una transazione. Questo argomento descrive invece come coordinare il commit di una transazione fra le risorse integrate.  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per altre informazioni in merito, vedere [ottimizzazione mediante Commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ottimizzazione mediante commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

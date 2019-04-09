@@ -8,12 +8,12 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: 4317d22a786caa6a191002ff411fe54436f3dbcc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089186"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Procedura: Trovare elementi generati da un oggetto DataTemplate
 Questo esempio illustra come trovare gli elementi che vengono generati da un <xref:System.Windows.DataTemplate>.  
@@ -38,9 +38,10 @@ Questo esempio illustra come trovare gli elementi che vengono generati da un <xr
  [!code-vb[FindGeneratedItems#FVC](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Trovare elementi generati da un oggetto ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
 - [Ambiti dei nomi XAML WPF](../advanced/wpf-xaml-namescopes.md)
 - [Strutture ad albero in WPF](../advanced/trees-in-wpf.md)

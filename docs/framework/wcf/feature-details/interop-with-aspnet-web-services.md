@@ -2,12 +2,12 @@
 title: Interoperabilità con i servizi Web ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 3d4416a67d467f60fa381abc648c3a7ea0b9ada1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108576"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilità con i servizi Web ASP.NET
 Interoperabilità tra [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servizi Web e servizi Web Windows Communication Foundation (WCF) possono essere ottenuti assicurando che i servizi implementati usando entrambe le tecnologie siano conformi a WS-I Basic Profile 1.1 specifica. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Servizi Web che è conforme a WS-I Basic Profile 1.1 sono interoperativi con i client WCF usando l'associazione fornita dal sistema WCF, <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -56,4 +56,5 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Configurare un servizio WCF per interagire con i client del servizio Web ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+
+- [Procedura: Configurare un servizio WCF per interagire con client di servizi Web ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

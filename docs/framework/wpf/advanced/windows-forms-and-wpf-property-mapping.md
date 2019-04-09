@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088821"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapping di proprietà di Windows Form e WPF
 Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologie hanno due proprietà simili ma diversi modelli. *Mapping di proprietà* supporta l'interazione tra le due architetture e offre le funzionalità seguenti:  
@@ -135,6 +135,7 @@ Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|Il <xref:System.Windows.Forms.Integration.ElementHost> controllano i set di <xref:System.Windows.UIElement.Visibility%2A> proprietà sull'elemento di hosting usando le regole seguenti:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true` esegue il mapping a <xref:System.Windows.Visibility.Visible>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false` esegue il mapping a <xref:System.Windows.Visibility.Hidden>.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)

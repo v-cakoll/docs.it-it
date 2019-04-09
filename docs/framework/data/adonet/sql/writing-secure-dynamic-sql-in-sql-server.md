@@ -2,22 +2,22 @@
 title: Scrittura dinamica sicura in SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107354"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Scrittura dinamica sicura in SQL Server
-Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini permanentemente i dati.  
+Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini definitivamente i dati.  
   
  Per la prevenzione degli attacchi di questo tipo è necessario esaminare tutte le procedure che creano istruzioni SQL, poiché in SQL Server vengono eseguite tutte le query sintatticamente valide ricevute. Anche i dati con parametri possono essere modificati da un utente malintenzionato abile e determinato. Se si usano istruzioni SQL dinamiche, aggiungere parametri ai comandi e non includere mai i valori dei parametri direttamente nella stringa di query.  
   
 ## <a name="anatomy-of-a-sql-injection-attack"></a>Anatomia di un attacco SQL injection  
  Il processo di injection termina prematuramente una stringa di testo e aggiunge un nuovo comando. Poiché prima che venga eseguito è possibile che al comando inserito vengano aggiunte ulteriori stringhe, l'utente malintenzionato termina la stringa inserita con un contrassegno di commento "--". In fase di esecuzione il testo che segue il contrassegno di commento viene ignorato. È possibile inserire più comandi usando il punto e virgola (;) come delimitatore.  
   
- Se il codice SQL inserito tramite injection è corretto dal punto di vista sintattico, le manomissioni non possono essere rilevate a livello di codice. È pertanto necessario convalidare tutto l'input utente ed esaminare attentamente il codice per l'esecuzione dei comandi SQL generati nel server in uso. Non eseguire mai la concatenazione di input utente non convalidato. La concatenazione delle stringhe costituisce il punto di ingresso principale per un attacco script injection.  
+ Se il codice SQL inserito tramite injection è corretto dal punto di vista sintattico, le manomissioni non possono essere rilevate a livello di codice. È pertanto necessario convalidare tutto l'input utente e esaminare attentamente il codice per l'esecuzione dei comandi SQL generati nel server in uso. Non eseguire mai la concatenazione di input utente non convalidato. La concatenazione delle stringhe costituisce il punto di ingresso principale per un attacco script injection.  
   
  Di seguito sono riportate alcune linee guida utili.  
   
@@ -60,13 +60,14 @@ Per SQL injection si intende il processo mediante il quale un utente malintenzio
  Il concatenamento della proprietà tra database non funziona nei casi in cui vengono eseguite istruzioni SQL create in modo dinamico. Per aggirare questo problema, in SQL Server è possibile creare una stored procedure che accede ai dati di un altro database e firmare la procedura con un certificato disponibile in entrambi i database. In questo modo si fornisce agli utenti l'accesso alle risorse del database usate dalla procedura senza concedere loro l'accesso o le autorizzazioni per il database.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Stored procedure](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Attacco SQL Injection](/sql/relational-databases/security/sql-injection) nella documentazione online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

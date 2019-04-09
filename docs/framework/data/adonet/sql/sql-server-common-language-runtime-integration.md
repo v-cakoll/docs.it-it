@@ -2,12 +2,12 @@
 title: Integrazione di Common Language Runtime di SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 6f8e16ecec1f99a0d7df6224f542eb03506528e3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d87f2b89583747b80ef103f419bd9bd2e3b1e0da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089835"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrazione di Common Language Runtime di SQL Server
 In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET Framework per Microsoft Windows. Questo significa che è possibile scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente, aggregati definiti dall'utente e funzioni con valori di tabella di flusso usando qualsiasi linguaggio di .NET Framework, inclusi Microsoft Visual Basic .NET e Microsoft Visual C#. Lo spazio dei nomi <xref:Microsoft.SqlServer.Server> contiene un set di nuove API (Application Programming Interface) che consente l'interazione del codice gestito con l'ambiente Microsoft SQL Server.  
@@ -18,7 +18,7 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
   
  **Documentazione online di SQL Server**  
   
-1.  [Concetti di programmazione integrazione di Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1.  [Nozioni di base sulla programmazione con l'integrazione CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione all'integrazione CLR in SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
@@ -43,5 +43,6 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
  Vengono descritte le estensioni specifiche in-process di SQL Server per ADO.NET e la connessione di contesto. Vengono forniti collegamenti ad argomenti aggiuntivi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
