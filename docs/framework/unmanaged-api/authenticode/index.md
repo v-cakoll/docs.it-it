@@ -4,6 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216353"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (riferimenti alle API non gestite)
 Supporta il modulo di creazione e verifica delle licenze Authenticode XrML.  
@@ -37,4 +43,5 @@ Supporta il modulo di creazione e verifica delle licenze Authenticode XrML.
  Definisce le informazioni su chi ha apposto il timestamp Authenticode.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti alle API non gestite](../../../../docs/framework/unmanaged-api/index.md)

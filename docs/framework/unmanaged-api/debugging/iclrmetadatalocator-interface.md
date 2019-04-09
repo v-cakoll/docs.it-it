@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5dd77783c03d6a61d0b5831e44db97a731d8074
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123773"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Interfaccia ICLRMetadataLocator
 Usato dal livello di servizi di accesso ai dati per individuare i metadati degli assembly in un processo di destinazione.  
@@ -30,7 +30,7 @@ Usato dal livello di servizi di accesso ai dati per individuare i metadati degli
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo getMetaData](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera i metadati di un'immagine dal processo di destinazione.|  
+|[Metodo GetMetaData](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera i metadati di un'immagine dal processo di destinazione.|  
   
 ## <a name="remarks"></a>Note  
  Il client API, ovvero il debugger, deve implementare questa interfaccia in modo appropriato per il processo di destinazione specifico. Ad esempio, l'implementazione per un processo reale sarebbe diversa da quella di un dump di memoria.  
@@ -45,4 +45,5 @@ Usato dal livello di servizi di accesso ai dati per individuare i metadati degli
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
