@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: aac0e4c71ae2752d4f56ae5eadb5f0a8d381d5fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b68595285eb5ec06be86c771733f7bb9036c9f21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154973"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Procedura: Eseguire query sul servizio dati (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di eseguire query su un servizio dati da un'applicazione client basata su .NET Framework usando le classi del servizio dati client generate. È possibile eseguire query usando uno dei metodi seguenti:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di eseguire query in un servizio dati da un'applicazione client basata su .NET Framework con le classi del servizio dati client generate. È possibile eseguire query usando uno dei metodi seguenti:  
   
 -   Mediante l'esecuzione di una query LINQ sull'oggetto <xref:System.Data.Services.Client.DataServiceQuery%601> denominato ottenuto dall'oggetto <xref:System.Data.Services.Client.DataServiceContext> generato dallo strumento `Add Data Service Reference`  
   
@@ -48,4 +48,5 @@ ms.locfileid: "54623287"
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Aggiungere le opzioni di Query a una Query del servizio dati](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+
+- [Procedura: Aggiungere opzioni di query a una query del servizio dati](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

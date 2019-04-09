@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf0fdb1e46bfbd17505e255d539547a00eb4764c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e6eb2a30dd6722309fd80c1611ad9200ab14ae5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151996"
 ---
 # <a name="cornativelinkflags-enumeration"></a>Enumerazione CorNativeLinkFlags
 Fornisce valori di flag usati dal linker durante il collegamento del codice nativo.  
@@ -40,7 +40,7 @@ typedef enum
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`nlfNone`|Non indica nessun flag.|  
 |`nlfLastError`|Indica un `setLastError` (parola chiave).|  
@@ -57,4 +57,5 @@ typedef enum
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

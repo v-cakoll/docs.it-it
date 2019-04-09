@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e7c10486bfa002172ab3e9683c83c8007abde6a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cf624695136a9397937f05b28dec18493c8e12d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153660"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>Metodo IMetaDataImport::EnumFieldsWithName
 Enumera i token FieldDef del tipo specificato con il nome specificato.  
@@ -79,5 +79,6 @@ HRESULT EnumFieldsWithName (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

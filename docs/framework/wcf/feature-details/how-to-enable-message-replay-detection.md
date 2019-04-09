@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Abilitare il rilevamento riproduzione messaggio'
+title: 'Procedura: Abilitare il rilevamento riproduzione messaggi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156026"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Procedura: Abilitare il rilevamento riproduzione messaggio
+# <a name="how-to-enable-message-replay-detection"></a>Procedura: Abilitare il rilevamento riproduzione messaggi
 Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flusso di messaggi tra due interessati e lo riproduce nei confronti di uno o più degli interessati. Se l'attacco non viene contrastato, i computer colpiti elaboreranno il flusso come se i messaggi fossero legittimi, determinando una serie di conseguenze negative, ad esempio ordini ridondanti di un elemento.  
   
  Per altre informazioni sul rilevamento riproduzione dei messaggi, vedere [rilevamento riproduzione dei messaggi](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -90,7 +90,7 @@ Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flus
   
 -   <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> con la proprietà <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> impostata su `false`.  
+-   <xref:System.ServiceModel.WSHttpBinding> con il <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> impostata su `false`.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
@@ -103,8 +103,9 @@ Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flus
 -   <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Conversazioni e sessioni sicure](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
+- [Conversazioni e sessioni protette](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
 - [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

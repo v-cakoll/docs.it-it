@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153712"
 ---
-# <a name="getmethodorigin-function"></a>GetMethodOrigin (funzione)
+# <a name="getmethodorigin-function"></a>Funzione GetMethodOrigin
 Determina la classe in cui viene dichiarato un metodo.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -57,7 +57,7 @@ HRESULT GetMethodOrigin (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il metodo specificato non è stato trovato. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
@@ -79,4 +79,5 @@ Il `pstrClassName` parametro non deve puntare a un valore valido `BSTR` prima di
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

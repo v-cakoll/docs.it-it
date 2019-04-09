@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 7c536c9420e94e9b8f8bc2656df284d95a9744c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158665"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Strumento per la configurazione del modello di servizio di COM+ (ComSvcConfig.exe)
 Lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) consente di configurare le interfacce COM+ che si desidera siano esposte come servizi Web.  
@@ -86,7 +86,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
 ```  
   
 ### <a name="description"></a>Descrizione  
- L’esempio di seguito riportato elenca le interfacce COM+ attualmente esposte, insieme all'indirizzo corrispondente e ai dettagli di associazione, per l'applicazione OnlineStore COM+ sul computer locale.  
+ L’esempio di seguito riportato elenca le interfacce ospitate COM+ attualmente esposte, insieme all'indirizzo corrispondente e ai dettagli di associazione, per l'applicazione OnlineStore COM+ sul computer locale.  
   
 ### <a name="code"></a>Codice  
   
@@ -95,4 +95,5 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Usare lo strumento di configurazione modello di servizio COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [Procedura: Usare lo strumento di configurazione del modello di servizi di COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

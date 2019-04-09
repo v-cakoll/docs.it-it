@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154414"
 ---
 # <a name="controls"></a>Controlli
 <a name="introduction"></a>
@@ -95,16 +95,16 @@ ms.locfileid: "57363150"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
 
-  
  Per altre informazioni su queste classi di base, vedere [modello di contenuto WPF](wpf-content-model.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Controlli per categoria](controls-by-category.md)
 - [Libreria di controlli](control-library.md)
-- [Panoramica sui modelli di dati](../data/data-templating-overview.md)
+- [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)
 - [Panoramica sul data binding](../data/data-binding-overview.md)
 - [Input](../advanced/input-wpf.md)
 - [Attivare un comando](../advanced/how-to-enable-a-command.md)
-- [Procedure dettagliate: Creare un pulsante animato personalizzato](walkthroughs-create-a-custom-animated-button.md)
+- [Procedure dettagliate: Creare un pulsante personalizzato a cui è stata aggiunta un'animazione](walkthroughs-create-a-custom-animated-button.md)
 - [Personalizzazione dei controlli](control-customization.md)

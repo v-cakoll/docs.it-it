@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione'
+title: 'Procedura: Disabilitare ToolStripMenuItems usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], disabling in designer
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: a185fe4421b5b5d7846c7d8cacbfc1cae5f805eb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 38a366003a856adaf0840d0d8911263bc40dfe23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151411"
 ---
-# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Procedura: Disabilitare i ToolStripMenuItems con la finestra di progettazione
+# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Procedura: Disabilitare ToolStripMenuItems usando la finestra di progettazione
 È possibile limitare o estendere i comandi di che un utente può eseguire l'abilitazione e disabilitazione di voci di menu in risposta alle attività dell'utente. Voci di menu sono abilitate per impostazione predefinita quando vengono creati, ma ciò può essere modificato tramite la <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> proprietà. È possibile modificare questa proprietà in fase di progettazione nel **proprietà** finestra o a livello di codice mediante l'impostazione nel codice. Per altre informazioni, vedere [Procedura: Disabilitare i ToolStripMenuItems](how-to-disable-toolstripmenuitems.md).  
   
 > [!NOTE]
@@ -28,7 +28,8 @@ ms.locfileid: "57704432"
     >  La voce di menu di primo livello o prima in un menu di disabilitazione disabilita tutte le voci di menu contenute all'interno del menu. La disabilitazione di una voce di menu che contiene voci di sottomenu disabilita in modo analogo, le voci di sottomenu. Se tutti i comandi in un determinato menu non sono disponibili all'utente, viene considerata buona norma di programmazione per nascondere e disabilitare l'intero menu, come questa operazione presenta un'interfaccia utente pulita. Si deve nascondere e disabilitare il menu di scelta, come nascondere da solo non impedisce l'accesso a un comando di menu tramite un tasto di scelta rapida. Impostare il <xref:System.Windows.Forms.ToolStripItem.Visible%2A> proprietà di una voce di menu di primo livello a `false` per nascondere l'intero menu.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [Procedura: Nascondere ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
-- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)

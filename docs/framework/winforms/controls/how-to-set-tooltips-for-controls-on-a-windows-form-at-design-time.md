@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione'
+title: 'Procedura: Impostare le descrizioni comando per i controlli in un Windows Form in fase di progettazione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157605"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedura: Impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedura: Impostare le descrizioni comando per i controlli in un Windows Form in fase di progettazione
 È possibile impostare un <xref:System.Windows.Forms.ToolTip> stringa nel codice o nella finestra di progettazione Windows Form. Per altre informazioni sul <xref:System.Windows.Forms.ToolTip> componente, vedere [Cenni preliminari sul componente ToolTip](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ ms.locfileid: "57710719"
 2.  Nel **delle proprietà** finestra, eliminare il testo nel **descrizione comando su ToolTip1**.  
 
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul componente ToolTip](tooltip-component-overview-windows-forms.md)
-- [Procedura: Modifica del ritardo del componente di descrizione comando di Windows Form](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+
+- [Panoramica del componente ToolTip](tooltip-component-overview-windows-forms.md)
+- [Procedura: Modificare il ritardo del componente ToolTip di Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [Componente ToolTip](tooltip-component-windows-forms.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: b2ac6c4f2e3334a9b4c5ff4d2a6e31b6b9bf3673
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153231"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Procedura: Riprodurre un suono del sistema da un Windows Form
 Nell'esempio di codice seguente viene riprodotto il suono del sistema `Exclamation` in fase di esecuzione. Per altre informazioni sui suoni del sistema, vedere <xref:System.Media.SystemSounds>.  
@@ -44,7 +44,8 @@ public void playExclamation()
 -   Un riferimento allo spazio dei nomi <xref:System.Media?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [Procedura: Riprodurre un segnale acustico da un Windows Form](how-to-play-a-beep-from-a-windows-form.md)
+- [Procedura: Emettere un segnale acustico da un Windows Form](how-to-play-a-beep-from-a-windows-form.md)
 - [Procedura: Riprodurre un suono da un Windows Form](how-to-play-a-sound-from-a-windows-form.md)

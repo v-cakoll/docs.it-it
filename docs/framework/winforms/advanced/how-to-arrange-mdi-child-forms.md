@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disporre i form figlio MDI'
+title: 'Procedura: Disporre form figlio MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160108"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>Procedura: Disporre i form figlio MDI
+# <a name="how-to-arrange-mdi-child-forms"></a>Procedura: Disporre form figlio MDI
 Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovrapponi e Disponi che controllano il layout dei form figlio MDI aperti. È possibile usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> con uno dei valori di enumerazione <xref:System.Windows.Forms.MdiLayout> per ridisporre i form figlio in un form padre MDI.  
   
  I valori di enumerazione <xref:System.Windows.Forms.MdiLayout> visualizzano i form figlio sovrapposti, affiancati orizzontalmente o verticalmente o sotto forma di icone disposte nella parte inferiore del form MDI. Questi valori hanno lo stesso effetto dei comandi di Windows **Sovrapponi finestre**, **Mostra le finestre affiancate**, **Mostra le finestre in pila**, e **mostrare il desktop** , rispettivamente.  
@@ -48,6 +48,7 @@ Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovr
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)

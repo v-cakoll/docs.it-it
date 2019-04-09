@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare un nome utente personalizzato e il Validator della Password'
+title: 'Procedura: Usare un validator di nome utente e password personalizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160251"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: Usare un nome utente personalizzato e il Validator della Password
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: Usare un validator di nome utente e password personalizzato
 Per impostazione predefinita, quando viene utilizzato un nome utente e una password per l'autenticazione, Windows Communication Foundation (WCF) viene utilizzato Windows per convalidare il nome utente e password. Tuttavia, WCF consente agli utente personalizzata nome e una password schemi di autenticazione, noto anche come *validator*. Per incorporare un validator personalizzato di nome utente e password, creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configurarla.  
   
  Per un'applicazione di esempio, vedere [Validator nome utente e Password](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -118,6 +118,7 @@ Per impostazione predefinita, quando viene utilizzato un nome utente e una passw
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [Procedura: Usare il Provider di appartenenze ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Procedura: Usare provider di appartenenza ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

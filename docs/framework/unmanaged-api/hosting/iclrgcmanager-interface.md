@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27899994a048c7000746a2e92516776fd23f8e2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9519f7c2df5cf078bac6be038275527d7741edb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152165"
 ---
 # <a name="iclrgcmanager-interface"></a>Interfaccia ICLRGCManager
 Fornisce metodi che consentono a un host interagire con il sistema di common language runtime garbage collection.  
@@ -50,7 +50,8 @@ Fornisce metodi che consentono a un host interagire con il sistema di common lan
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfacce di hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

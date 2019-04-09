@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159250"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 Se una query richiede un parametro il cui valore è una stringa XML, gli sviluppatori possono fornire tale valore con un'istanza di **SqlXml** tipo di dati. Non è realmente semplicissima Le colonne XML in SQL Server accettano i valori dei parametri in esattamente come altri tipi di dati.  
@@ -160,6 +160,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dati XML in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

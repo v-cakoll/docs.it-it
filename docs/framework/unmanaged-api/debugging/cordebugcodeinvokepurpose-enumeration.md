@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155571"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>Enumerazione CorDebugCodeInvokePurpose
 Descrive il motivo per cui una funzione esportata chiama il codice gestito.  
@@ -36,7 +36,7 @@ typedef enum CorDebugCodeInvokePurpose
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`CODE_INVOKE_PURPOSE_NONE`|Nessuno o sconosciuto.|  
 |`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|Il codice gestito esegue qualsiasi punto di ingresso gestito, ad esempio p-invoke inverso. Eventuali altri scopi più dettagliati non sono noti al runtime.|  
@@ -59,5 +59,6 @@ typedef enum CorDebugCodeInvokePurpose
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159523"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provider di reflection (WCF Data Services)
-Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di esporre dati non definiti rigidamente in un modello basato su entità. Il provider di reflection espone i dati nelle classi che restituiscono i tipi che implementano l'interfaccia <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la reflection per dedurre un modello di dati per queste classi e può convertire le query basate sull'indirizzo eseguite sulle risorse in query basate su LINQ (Language-Integrated Query) eseguite sui tipi <xref:System.Linq.IQueryable%601> esposti.  
+Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di esporre dati non definiti rigidamente in un modello basato su entità. Il provider di reflection espone i dati nelle classi che restituiscono i tipi che implementano l'interfaccia <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Usa la reflection per dedurre un modello di dati per queste classi e può convertire le query basate sull'indirizzo per le risorse in language-integrated query (LINQ)-basati su query su esposti <xref:System.Linq.IQueryable%601> tipi.  
   
 > [!NOTE]
 >  È possibile usare il metodo <xref:System.Linq.Queryable.AsQueryable%2A> per restituire un'interfaccia <xref:System.Linq.IQueryable%601> da una classe che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. In questo modo è possibile usare la maggior parte dei tipi di raccolte generiche come origine dati per il servizio dati.  
@@ -73,7 +73,7 @@ Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework,
   
  Per fare in modo che gli aggiornamenti vengano propagati all'origine dati tramite il provider di reflection, l'interfaccia <xref:System.Data.Services.IUpdatable> richiede l'implementazione dei membri seguenti:  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Data.Services.IUpdatable.AddReferenceToCollection%2A>|Fornisce la funzionalità che consente di aggiungere un oggetto a una raccolta di oggetti correlati accessibili da una proprietà di navigazione.|  
 |<xref:System.Data.Services.IUpdatable.ClearChanges%2A>|Fornisce la funzionalità che consente di annullare le modifiche in sospeso apportate ai dati.|  
@@ -95,4 +95,5 @@ Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework,
  Entity Framework è supportato a livello nativo per impostazione predefinita e rappresenta pertanto il provider di dati consigliato per l'uso di dati relazionali con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per usare classi LINQ to SQL con un servizio dati, è tuttavia possibile usare il provider di reflection. Il <xref:System.Data.Linq.Table%601> restituiti dai metodi a set di risultati di <xref:System.Data.Linq.DataContext> generate da LINQ per implementare SQL Object Relational Designer (O/R Designer) di <xref:System.Linq.IQueryable%601> interfaccia. In questo modo il provider di reflection è in grado di accedere a questi metodi e di restituire i dati di entità da SQL Server tramite le classi LINQ to SQL generate. Poiché LINQ to SQL non implementa l'interfaccia <xref:System.Data.Services.IUpdatable>, sarà tuttavia necessario aggiungere una classe parziale che estenda la classe parziale <xref:System.Data.Linq.DataContext> esistente per aggiungere l'implementazione di <xref:System.Data.Services.IUpdatable>. Per altre informazioni, vedere [Procedura: Creare un servizio dati usando un LINQ all'origine dati SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

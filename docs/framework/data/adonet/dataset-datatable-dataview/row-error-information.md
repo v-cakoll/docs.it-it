@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152724"
 ---
 # <a name="row-error-information"></a>Informazioni sugli errori di riga
 Per evitare di dover rispondere agli errori delle righe mentre si modificano i valori di una <xref:System.Data.DataTable>, è possibile aggiungere alla riga le informazioni sugli errori per un uso successivo. A questo scopo, l'oggetto <xref:System.Data.DataRow> fornisce una proprietà <xref:System.Data.DataRow.RowError%2A> su ciascuna riga. Aggiunta di dati per il **RowError** proprietà di un **DataRow** imposta la <xref:System.Data.DataRow.HasErrors%2A> proprietà del **DataRow** a **true**. Se il **DataRow** fa parte di un **DataTable**, e **DataRow. HasErrors** è **true**, il **DataTable. HasErrors** risulta anche la proprietà **true**. Si applica anche al **set di dati** a cui il **DataTable** appartiene. Durante il test per gli errori, è possibile controllare la **HasErrors** proprietà per determinare se le informazioni sull'errore è stato aggiunto a tutte le righe. Se **HasErrors** viene **true**, è possibile usare il <xref:System.Data.DataTable.GetErrors%2A> metodo del **DataTable** per restituire ed esaminare solo le righe con errori, come illustrato nell'esempio seguente.  
@@ -78,6 +78,7 @@ protected static void OnRowChanged(
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>

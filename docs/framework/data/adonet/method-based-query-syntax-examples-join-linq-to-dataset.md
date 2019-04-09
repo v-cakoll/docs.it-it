@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di Query basate sul metodo: Join (LINQ to DataSet)'
+title: 'Esempi di sintassi delle query basate su metodo: Join (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: bfa163e11415a0e389f9d1ce0b0b847097328223
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 84bd5f48c993dc5b15104b70081f739a1bec2e5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152477"
 ---
-# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Esempi di sintassi di Query basate sul metodo: Join (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Esempi di sintassi delle query basate su metodo: Join (LINQ to DataSet)
 La creazione di un join è un'operazione importante in query destinate a origini dati che non presentano relazioni esplorabili tra loro, ad esempio le tabelle di database relazionali. Per join di due origini dati si intende l'associazione degli oggetti di un'origine dati con oggetti che condividono un attributo comune nell'altra origine dati. Per altre informazioni, vedere [panoramica degli operatori Query Standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oppure [panoramica degli operatori di Query Standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  Negli esempi di questo argomento viene illustrato l'uso del metodo <xref:System.Linq.Enumerable.Join%2A> per eseguire una query su <xref:System.Data.DataSet> usando la sintassi delle query basate su metodo.  
@@ -43,9 +43,10 @@ La creazione di un join è un'operazione importante in query destinate a origini
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+
+- [Caricamento di dati in un dataset](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Panoramica degli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Panoramica degli operatori query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cenni preliminari sugli operatori di query standard (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Esempi di join](https://go.microsoft.com/fwlink/?LinkId=187357)
 - [Esempi di set di dati](https://go.microsoft.com/fwlink/?LinkId=187358)

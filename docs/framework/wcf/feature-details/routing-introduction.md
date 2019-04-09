@@ -2,12 +2,12 @@
 title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158678"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -209,7 +209,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
 -   Restituire il nuovo messaggio di richiesta.  
   
- **Elaborazione delle risposte**  
+ **Elaborazione della risposta**  
   
 -   Ottenere il **MessageVersion** del messaggio di richiesta originale.  
   
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Per usare la rappresentazione di credenziali di Windows con il servizio di routing è necessario configurare sia le credenziali sia il servizio. L'oggetto delle credenziali client (<xref:System.ServiceModel.Security.WindowsClientCredential>, accessibile da <xref:System.ServiceModel.ChannelFactory>) definisce una proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> che deve essere impostata per consentire la rappresentazione. Infine, nel servizio è necessario configurare il comportamento di <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> per impostare `ImpersonateCallerForAllOperations` su `true`. Il servizio di routing usa questo flag per decidere se creare i client per inoltrare i messaggi con la rappresentazione abilitata.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Filtri per messaggi](message-filters.md)
+
+- [Filtri messaggi](message-filters.md)
 - [Contratti di routing](routing-contracts.md)
 - [Scelta di un filtro](choosing-a-filter.md)

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151203"
 ---
 # <a name="schema-restrictions"></a>Restrizione dello schema
 Il secondo parametro facoltativo del **GetSchema** è il metodo le restrizioni che vengono usate per limitare la quantità di informazioni sullo schema restituite e viene passata al **GetSchema** metodo come una matrice di stringhe . La posizione nella matrice determina i valori che è possibile passare ed equivale al numero della restrizione.  
   
  Nella tabella seguente, ad esempio, vengono descritte le restrizioni supportate dalla raccolta di schemi "Tables" usando il provider di dati .NET Framework per SQL Server: Restrizioni aggiuntive per le raccolte di schemi di SQL Server vengono indicate alla fine di questo argomento.  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -135,19 +135,19 @@ class Program
   
 ### <a name="users"></a>Utenti  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |User_Name|@Name|name|1|  
   
 ### <a name="databases"></a>Database  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|nome|@Name|nome|1|  
+|Nome|@Name|Nome|1|  
   
 ### <a name="tables"></a>Tabelle  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -156,7 +156,7 @@ class Program
   
 ### <a name="columns"></a>Colonne  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -165,7 +165,7 @@ class Program
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -174,7 +174,7 @@ class Program
   
 ### <a name="views"></a>Visualizzazioni  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -182,7 +182,7 @@ class Program
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|VIEW_CATALOG|1|  
 |Owner|@Owner|VIEW_SCHEMA|2|  
@@ -191,25 +191,25 @@ class Program
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|nome|@Name|SPECIFIC_NAME|3|  
+|Nome|@Name|SPECIFIC_NAME|3|  
 |Parametro|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Procedure  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|nome|@Name|SPECIFIC_NAME|3|  
+|Nome|@Name|SPECIFIC_NAME|3|  
 |Tipo|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|db_name()|1|  
 |Owner|@Owner|user_name()|2|  
@@ -219,7 +219,7 @@ class Program
   
 ### <a name="indexes"></a>Indexes  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|db_name()|1|  
 |Owner|@Owner|user_name()|2|  
@@ -227,26 +227,26 @@ class Program
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |assembly_name|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tabella|@Table|TABLE_NAME|3|  
-|nome|@Name|CONSTRAINT_NAME|4|  
+|Nome|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>Restrizioni per gli schemi di SQL Server 2008  
  Nelle tabelle seguenti sono incluse le restrizioni per le raccolte di schemi di SQL Server 2008. Queste restrizioni sono valide a partire dalla versione 3.5 SP1 di .NET Framework e da SQL Server 2008. Le restrizioni non sono supportate nelle versioni precedenti di .NET Framework e di SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -254,7 +254,7 @@ class Program
   
 ### <a name="allcolumns"></a>AllColumns  
   
-|Nome della restrizione|Nome del parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
+|Nome della restrizione|Nome parametro|Impostazione predefinita della restrizione|Numero della restrizione|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
@@ -262,4 +262,5 @@ class Program
 |Colonna|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

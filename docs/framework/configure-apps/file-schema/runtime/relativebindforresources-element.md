@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157379"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > elemento
 Ottimizza le ricerche degli assembly satellite.  
@@ -72,6 +72,7 @@ Ottimizza le ricerche degli assembly satellite.
 -   Non viene generato l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione del pacchetto e distribuzione delle risorse](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

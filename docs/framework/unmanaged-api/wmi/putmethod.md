@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152503"
 ---
 # <a name="putmethod-function"></a>PutMethod (funzione)
 Crea un metodo.
@@ -60,13 +60,12 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in]  Un puntatore a una copia del [classe di sistema Parameters](/windows/desktop/WmiSdk/--parameters) che contiene il `out` parametri del metodo. Questo parametro viene ignorato se impostato su `null`.
- 
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Il `[in, out]` parametro del metodo specificato in entrambe le *pInSignature* e *pOutSignature* gli oggetti hanno qualificatori diversi.
@@ -102,4 +101,5 @@ Per un esempio, vedere la [IWbemClassObject::PutMethod](/windows/desktop/api/wbe
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

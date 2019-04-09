@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: 3e49683226f8c88a1d6bff678cc978c95a0d6864
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1cbb8d54a544b70b4a484c06c6bb2e9ca25029da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156325"
 ---
 # <a name="toolbar-styles-and-templates"></a>Stili e modelli di ToolBar
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.ToolBar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -50,6 +50,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155012"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>Procedura: Enumerare i tipi di carattere installati
 Il <xref:System.Drawing.Text.InstalledFontCollection> classe eredita dal <xref:System.Drawing.Text.FontCollection> classe base astratta. È possibile usare un <xref:System.Drawing.Text.InstalledFontCollection> oggetto da enumerare i tipi di carattere installati nel computer. Il <xref:System.Drawing.Text.FontCollection.Families%2A> proprietà di un <xref:System.Drawing.Text.InstalledFontCollection> oggetto è una matrice di <xref:System.Drawing.FontFamily> oggetti.  
@@ -32,4 +32,5 @@ Il <xref:System.Drawing.Text.InstalledFontCollection> classe eredita dal <xref:S
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>. Inoltre, è necessario importare il <xref:System.Drawing.Text> dello spazio dei nomi.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
+
+- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)

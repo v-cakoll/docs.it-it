@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159744"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -285,13 +285,12 @@ Nella tabella seguente viene fornito un riepilogo delle opzioni per ogni livello
 |Sicurezza|Simmetrico, asimmetrico, livello di trasporto|No|
 |Cambio di forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
 |Aggiornamenti del trasporto|Flusso SSL, flusso di Windows, resolver Peer|No|
-|Codifica|Testo, binario, MTOM, personalizzata|Sì|
-|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Sì|
+|Codifica|Testo, binario, MTOM, personalizzata|Yes|
+|Trasporto|TCP, named pipe, HTTP, HTTPS, versioni di MSMQ, personalizzato|Yes|
 
 È inoltre possibile definire elementi di associazione personalizzati e inserirli tra i livelli appena elencati.
 
 Per una discussione su come usare un'associazione personalizzata per modificare un'associazione fornita dal sistema, vedere [come: Personalizzare un'associazione fornita dal sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
-
 
 ## <a name="see-also"></a>Vedere anche
 

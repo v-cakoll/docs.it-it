@@ -2,12 +2,12 @@
 title: Mapping del tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152490"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapping del tipo SQL-CLR
 In LINQ to SQL viene eseguito il mapping del modello di dati di un database relazionale a un modello a oggetti espresso nel linguaggio di programmazione desiderato. Quando viene eseguita l'applicazione, LINQ to SQL converte in SQL le query LINQ (Language Integrated Query) nel modello a oggetti e le invia al database per l'esecuzione. Quando il database restituisce i risultati, questi vengono nuovamente convertiti da LINQ to SQL in oggetti che è possibile usare nel linguaggio di programmazione desiderato.  
@@ -18,17 +18,17 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
 -   [Mapping dei tipi predefiniti](#DefaultTypeMapping)  
   
--   [Matrice del comportamento in fase di esecuzione di Mapping dei tipi](#BehaviorMatrix)  
+-   [Matrice del comportamento in fase di esecuzione del mapping dei tipi](#BehaviorMatrix)  
   
--   [Differenze di comportamento tra CLR e l'esecuzione di SQL](#BehaviorDiffs)  
+-   [Differenze di comportamento tra l'esecuzione CLR e l'esecuzione SQL](#BehaviorDiffs)  
   
--   [Mapping dei tipi enum](#EnumMapping)  
+-   [Mapping dei tipi Enum](#EnumMapping)  
   
 -   [Mapping dei tipi numerici](#NumericMapping)  
   
--   [Testo e Mapping XML](#TextMapping)  
+-   [Mapping dei tipi di testo e XML](#TextMapping)  
   
--   [Data e ora di Mapping](#DateMapping)  
+-   [Mapping dei tipi data e ora](#DateMapping)  
   
 -   [Mapping dei tipi binari](#BinaryMapping)  
   
@@ -104,7 +104,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  La tabella seguente illustra i mapping dei tipi predefiniti usati dal metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> per determinare il tipo delle colonne SQL create per il mapping ai tipi CLR definiti nel modello a oggetti o nel file di mapping esterno.  
   
-|Tipo CLR|Tipo di SQL Server predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo di Server SQL predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,7 +142,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  La tabella seguente illustra i mapping dei tipi predefiniti usati dal metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> per determinare il tipo delle colonne SQL create per il mapping ai tipi CLR definiti nel modello a oggetti o nel file di mapping esterno.  
   
-|Tipo CLR|Tipo di SQL Server predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo di Server SQL predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
@@ -185,7 +185,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  La tabella seguente illustra i mapping dei tipi predefiniti usati dal metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> per determinare il tipo delle colonne SQL create per il mapping ai tipi CLR definiti nel modello a oggetti o nel file di mapping esterno.  
   
-|Tipo CLR|Tipo di SQL Server predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo di Server SQL predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
 ### <a name="systemdatetime"></a>System.Datetime  
  L'intervallo e la precisione del tipo <xref:System.DateTime?displayProperty=nameWithType> CLR sono maggiori dell'intervallo e della precisione del tipo `DATETIME` di SQL Server, che rappresenta il mapping dei tipi predefiniti per il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Per evitare eccezioni relative a date non incluse nell'intervallo di `DATETIME`, usare `DATETIME2`, disponibile a partire da Microsoft SQL Server 2008. `DATETIME2` può corrispondere all'intervallo e precisione di CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- Le date di SQL Server non includono alcun concetto di <xref:System.TimeZone>, una funzionalità ampiamente supportata in CLR. I valori di <xref:System.TimeZone> vengono salvati così come sono nel database senza conversione <xref:System.TimeZone>, indipendentemente dalle informazioni <xref:System.DateTimeKind> originali. Quando i valori di <xref:System.DateTime> vengono recuperati dal database, il relativo valore viene caricato così com'è in un oggetto <xref:System.DateTime> con un valore <xref:System.DateTimeKind> corrispondente a <xref:System.DateTimeKind.Unspecified>. Per altre informazioni su supportata <xref:System.DateTime?displayProperty=nameWithType> metodi, vedere [metodi System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ Le date di SQL Server non includono alcun concetto di <xref:System.TimeZone>, una funzionalità ampiamente supportata in CLR. <xref:System.TimeZone> i valori vengono salvati così come sono nel database senza <xref:System.TimeZone> conversione, indipendentemente dall'originale <xref:System.DateTimeKind> informazioni. Quando i valori di <xref:System.DateTime> vengono recuperati dal database, il relativo valore viene caricato così com'è in un oggetto <xref:System.DateTime> con un valore <xref:System.DateTimeKind> corrispondente a <xref:System.DateTimeKind.Unspecified>. Per altre informazioni su supportata <xref:System.DateTime?displayProperty=nameWithType> metodi, vedere [metodi System. DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 e .NET Framework 3.5 SP1 consentono di eseguire il mapping del tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR al tipo `TIME` di SQL Server. Vi è tuttavia una notevole differenza tra l'intervallo supportato dal tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR e quello supportato dal tipo `TIME` di SQL Server. Se si esegue il mapping di valori minori di 0 o maggiori delle ore 23.59.59.9999999 al tipo `TIME` di SQL Server, verranno restituite eccezioni di overflow. Per altre informazioni, vedere [metodi System. TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -221,7 +221,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  La tabella seguente illustra i mapping dei tipi predefiniti usati dal metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> per determinare il tipo delle colonne SQL create per il mapping ai tipi CLR definiti nel modello a oggetti o nel file di mapping esterno.  
   
-|Tipo CLR|Tipo di SQL Server predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo di Server SQL predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
   
  La tabella seguente illustra i mapping dei tipi predefiniti usati dal metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> per determinare il tipo delle colonne SQL create per il mapping ai tipi CLR definiti nel modello a oggetti o nel file di mapping esterno.  
   
-|Tipo CLR|Tipo di SQL Server predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo di Server SQL predefinito usato da <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
@@ -257,7 +257,8 @@ In LINQ to SQL viene eseguito il mapping del modello di dati di un database rela
  LINQ to SQL non supporta altri mapping per tali tipi vari.  Per altre informazioni, vedere la [tipo di Mapping di matrice fase di esecuzione comportamento](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
 - [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

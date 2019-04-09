@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un Form MDI con unione di Menu e controlli ToolStrip'
+title: 'Procedura: Creare un modulo con interfaccia a documenti multipli con unione di menu e controlli ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 2942d0e92a0f58bef5533d69b27a646d284fef62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a67298614b1985152c42577de14d2c5d295f672f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157527"
 ---
-# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura: Creare un Form MDI con unione di Menu e controlli ToolStrip
+# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura: Creare un modulo con interfaccia a documenti multipli con unione di menu e controlli ToolStrip
 Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supporta le applicazioni MDI (Multiple Document Interface, interfaccia a documenti multipli), mentre il controllo <xref:System.Windows.Forms.MenuStrip> supporta l'unione di menu. I form MDI possono inoltre usare i controlli <xref:System.Windows.Forms.ToolStrip>.  
   
  È disponibile supporto completo per questa funzionalità in Visual Studio.  
@@ -38,4 +38,5 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)

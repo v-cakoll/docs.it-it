@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158431"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (funzione)
 Determina se la classe o l'istanza corrente deriva da una classe padre specificata.
@@ -71,4 +71,5 @@ Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Inh
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

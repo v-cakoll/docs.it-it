@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4a9bda348ce4c0dfd1e41d4154cad88d4966a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05ff93f9dc7e875c9f84dd6d8d1f4be9b4f12653
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153972"
 ---
 # <a name="startupflags-enumeration"></a>Enumerazione STARTUP_FLAGS
 Contiene valori che indicano il comportamento di avvio di common language runtime (CLR). Per impostazione predefinita, la garbage collection è non simultanea e solo la libreria di classi di base viene caricata nell'area indipendenti dal dominio.  
@@ -55,7 +55,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Specifica che deve essere utilizzata garbage collection simultanea. Se il chiamante richiede garbage collection simultanea e il server su un computer a processore singolo, la build di workstation e non simultanea garbage collection vengono eseguite in alternativa. **Nota:**  Garbage collection simultanea non è supportata nelle applicazioni che eseguono il WOW64 x86 dell'emulatore su sistemi a 64 bit che implementino l'architettura Intel Itanium (in precedenza denominato IA-64). Per altre informazioni sull'utilizzo di WOW64 nei sistemi Windows a 64 bit, vedere [delle applicazioni in esecuzione a 32 bit](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Specifica che l'ottimizzazione del caricatore deve verificarsi.|  
@@ -84,4 +84,5 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

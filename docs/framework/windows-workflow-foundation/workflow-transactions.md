@@ -2,16 +2,16 @@
 title: Transazioni del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
-ms.openlocfilehash: cb2a72bb24640d214170c52b8b3bf0a328d3f775
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 17e4b712f5b6955ab777168d60d8a28e8b0ebd63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153296"
 ---
 # <a name="workflow-transactions"></a>Transazioni del flusso di lavoro
 
-In [!INCLUDE[wf1](../../../includes/wf1-md.md)] è disponibile il supporto per partecipare alle transazioni <xref:System.Transactions> tramite l'attività <xref:System.Activities.Statements.TransactionScope> per definire l'ambito di un'unità transazionale di lavoro. Mentre l'oggetto <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> deve essere completato in modo esplicito, l'attività <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> effettua le chiamate in modo implicito sulla transazione in seguito al corretto completamento. Qualsiasi attività contenuta nell'elemento <xref:System.Activities.Statements.TransactionScope.Body%2A> dell'attività <xref:System.Activities.Statements.TransactionScope> partecipa alla transazione. WF può propagare transazioni in un flusso di lavoro tramite l'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Analogamente all'attività <xref:System.Activities.Statements.TransactionScope>, qualsiasi attività contenuta nella proprietà <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> partecipa alla transazione. WF assicura che nelle attività che dipendono dall'oggetto <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> possano essere usati entrambi gli oggetti <xref:System.Activities.Statements.TransactionScope> e <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Se le attività fornite dal sistema non soddisfano tutti i requisiti, possono essere compilate attività personalizzate tramite l'oggetto <xref:System.Activities.RuntimeTransactionHandle> per abilitare scenari di controllo di transazioni e flussi avanzati.  
+[!INCLUDE[wf1](../../../includes/wf1-md.md)] fornisce il supporto per la partecipazione <xref:System.Transactions> transazioni usando il <xref:System.Activities.Statements.TransactionScope> attività per definire l'ambito di un'unità transazionale di lavoro. Mentre l'oggetto <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> deve essere completato in modo esplicito, l'attività <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> effettua le chiamate in modo implicito sulla transazione in seguito al corretto completamento. Qualsiasi attività contenuta nell'elemento <xref:System.Activities.Statements.TransactionScope.Body%2A> dell'attività <xref:System.Activities.Statements.TransactionScope> partecipa alla transazione. WF può propagare transazioni in un flusso di lavoro tramite l'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Analogamente all'attività <xref:System.Activities.Statements.TransactionScope>, qualsiasi attività contenuta nella proprietà <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> partecipa alla transazione. WF assicura che nelle attività che dipendono dall'oggetto <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> possano essere usati entrambi gli oggetti <xref:System.Activities.Statements.TransactionScope> e <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Se le attività fornite dal sistema non soddisfano tutti i requisiti, possono essere compilate attività personalizzate tramite l'oggetto <xref:System.Activities.RuntimeTransactionHandle> per abilitare scenari di controllo di transazioni e flussi avanzati.  
   
 Nell'esempio seguente viene creato un flusso di lavoro costituito da un <xref:System.Activities.Statements.Sequence> attività che contiene attività figlio inclusa un' <xref:System.Activities.Statements.TransactionScope> attività. Le attività <xref:System.Activities.Statements.TransactionScope.Body%2A> di <xref:System.Activities.Statements.TransactionScope> vengono eseguite nella transazione inizializzata dall'attività <xref:System.Activities.Statements.TransactionScope>.  
   
@@ -50,6 +50,7 @@ static Activity ScenarioOne()
 Per altre informazioni, vedere l'argomento sull'uso <xref:System.ServiceModel.Activities.TransactedReceiveScope>, vedere [transazioni che passano da e verso i servizi del flusso di lavoro](../wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Activities.Statements.TransactionScope>
 - <xref:System.Transactions.TransactionScope>
 - <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>

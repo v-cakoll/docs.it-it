@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158444"
 ---
 # <a name="user-drawn-controls"></a>Controlli creati dall'utente
 .NET Framework offre la possibilità di sviluppare con facilità i propri controlli. È possibile creare un controllo utente, ovvero un set di controlli standard intercorrelate da codice, oppure è possibile progettare un controllo personalizzato da zero backup. È anche possibile utilizzare l'ereditarietà per creare un controllo che eredita da un controllo esistente e aggiungere estenderne le funzionalità intrinseche. Qualunque approccio si utilizza, .NET Framework fornisce la funzionalità per tracciare un'interfaccia grafica personalizzata per qualsiasi controllo creato.  
@@ -76,6 +76,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  Usare il <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> proprietà per implementare un controllo non rettangolari.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>

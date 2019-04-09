@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158782"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration (funzione)
+# <a name="beginenumeration-function"></a>Funzione BeginEnumeration
 Avvia un'enumerazione dei metodi disponibili per l'oggetto.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -49,7 +49,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in] Zero (0) per tutti i metodi, o un flag che specifica l'ambito dell'enumerazione. I flag seguenti sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione per i metodi definiti nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione delle proprietà ereditate dalle classi di base. |
@@ -77,4 +77,5 @@ Questa chiamata al metodo è supportata solo se l'oggetto corrente è una defini
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

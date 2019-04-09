@@ -2,12 +2,12 @@
 title: BasicBinding con sicurezza del trasporto
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 5f3e2305a4ae8da13a5241bef9c438a060234132
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6a1c54f7a4985e5d1e7b65226aeca4f808619542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153192"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding con sicurezza del trasporto
 Questo esempio dimostra l'uso della sicurezza del trasporto SSL con l'associazione di base. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -88,4 +88,3 @@ Press <ENTER> to terminate client.
 4.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

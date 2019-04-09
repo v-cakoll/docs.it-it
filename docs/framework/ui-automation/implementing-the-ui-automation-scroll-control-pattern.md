@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 8efbe02098041b2037da94925e56244a28895e0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154531"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementazione del pattern di controllo Scroll di automazione interfaccia utente
 > [!NOTE]
@@ -36,7 +36,7 @@ Esempio di controllo scorrevole che non usa barre di scorrimento
   
 -   Quando lo scorrimento è misurato in percentuali, tutti i valori o gli importi relativi alla scala di scorrimento devono essere normalizzati in base a un intervallo compreso tra 0 e 100.  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> sono indipendenti da <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> sono indipendenti tra il <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
 -   Se <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> deve essere impostata su 100% e <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> deve essere impostata su <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. In modo analogo, se <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` , <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> deve essere impostata su 100% e <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> deve essere impostata su <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. In questo modo un client di automazione interfaccia utente è in grado di usare questi valori di proprietà all'interno del metodo <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> evitando una [race condition](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) se viene attivata una direzione di scorrimento non pertinente per il client.  
   
@@ -65,14 +65,15 @@ Esempio di controllo scorrevole che non usa barre di scorrimento
   
 |Tipo di eccezione|Condizione|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> genera questa eccezione se un controllo supporta valori di <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> esclusivamente per lo scorrimento orizzontale o verticale, ma viene passato un valore di <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> .|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> genera questa eccezione quando viene passato un valore che non può essere convertito in valore double.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> genera questa eccezione se un controllo supporta <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> valori esclusivamente per lo scorrimento orizzontale o verticale, ma un <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> viene passato il valore.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> genera questa eccezione quando viene passato un valore che non può essere convertito in un valore double.|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> genera questa eccezione quando viene passato un valore maggiore di 100 o minore di 0 (eccetto -1, che equivale a <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> e <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> generano entrambi questa eccezione quando viene effettuato un tentativo di scorrimento in una direzione non supportata.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156078"
 ---
 # <a name="security-transparent-code-level-2"></a>Codice SecurityTransparent, livello 2
 <a name="top"></a>
@@ -44,13 +44,13 @@ ms.locfileid: "54567022"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Esempi di utilizzo e i comportamenti](#examples)  
+-   [Esempi di utilizzo e comportamenti](#examples)  
   
 -   [Criteri di override](#override)  
   
 -   [Regole di ereditarietà](#inheritance)  
   
--   [Le regole e informazioni aggiuntive](#additional)  
+-   [Informazioni e regole aggiuntive](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Esempi di utilizzo e comportamenti  
@@ -192,5 +192,6 @@ ms.locfileid: "54567022"
  La proprietà <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> è `false`e per impostazione predefinita, quindi deve essere impostata su `true` per ignorare la verifica. Questa operazione deve essere eseguita solo per ottimizzare le prestazioni. È necessario assicurarsi che il codice transparent dell'assembly sia verificabile con il `transparent` opzione il [strumento PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Codice SecurityTransparent, livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)
+- [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md)

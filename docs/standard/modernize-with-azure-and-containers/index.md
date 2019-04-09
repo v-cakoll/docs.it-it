@@ -4,12 +4,12 @@ description: Scopri come lift and -shift e modernizzare le applicazioni esistent
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156390"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizzare le applicazioni .NET esistenti con cloud di Azure e i contenitori di Windows (2nd edition)
 
@@ -91,9 +91,9 @@ Il terzo livello di maturità rappresenta l'obiettivo finale nel cloud, ma è fa
 
 La tabella 1-1 descrive i vantaggi principali di ogni approccio alla migrazione o alla modernizzazione e i motivi per scegliere tale approccio.
 
-| **Pronto per l'infrastruttura cloud** <br /> *Lift-and-shift* | **Ottimizzato per il cloud** <br /> *Modernize* | **Cloud-Native** <br /> *Modernizza la ridefinizione dell'architettura e riscrivere* |
+| **Pronto per l'infrastruttura cloud** <br /> *Lift- and -shift* | **Ottimizzato per il cloud** <br /> *Modernizza* | **Native del cloud** <br /> *Modernizza la ridefinizione dell'architettura e riscrivere* |
 |---|---|---|
-| **Destinazione di elaborazione dell'applicazione** |
+| **Destinazione di calcolo dell'applicazione** |
 | Applicazioni distribuite in macchine virtuali in Azure | Monolitico o le app a più livelli distribuite in servizio App di Azure, istanza di contenitore di Azure (ACI), le macchine virtuali con i contenitori, Azure Service Fabric o servizio contenitore di AZURE (Azure Kubernetes Service) | Microservizi in contenitori in Azure Kubernetes Service (AKS), Service Fabric e/o microservizi senza server basati sulle funzioni di Azure. |
 | **Destinazione dei dati** |
 | SQL o qualsiasi database relazionale in una macchina virtuale | Istanza gestita del Database SQL Azure o un altro database gestito nel cloud. | Database multate-livello di dettaglio per ogni microservizio, basati su Database SQL di Azure, Azure Cosmos DB o un altro database gestito nel cloud |
@@ -129,7 +129,7 @@ La figura 1-3 illustra le tecnologie interne che è possibile usare per ogni liv
 
 ![Tecnologie interne per ogni livello di maturità della modernizzazione](./media/image1-3.png)
 
-> **Figura 1-3.** Tecnologie interne per ogni livello di maturità della modernizzazione
+> **Figura 1 a 3.** Tecnologie interne per ogni livello di maturità della modernizzazione
 
 ## <a name="lift-and-shift-scenario"></a>Scenario lift- and -shift
 
@@ -145,16 +145,15 @@ Per gli scenari di modernizzazione, potrebbe essere un'applicazione ottimizzato 
 
 ![Esempio di scenario con possibilità di scelta, con database in asset IaaS, DevOps e contenitori](./media/image1-5.png)
 
-> **Figura 1-5.** Esempio di scenario con possibilità di scelta, con database in asset IaaS, DevOps e contenitori
+> **Figura 1 a 5.** Esempio di scenario con possibilità di scelta, con database in asset IaaS, DevOps e contenitori
 
 Successivamente, come lo scenario ideale per molte applicazioni .NET Framework esistente eseguire la migrazione, è possibile eseguire la migrazione a un'applicazione ottimizzato per il Cloud, per ottenere vantaggi significativi da poco lavoro. Questo approccio anche la strada Native del Cloud come una possibile evoluzione futura. La figura 1-6 mostra un esempio.
 
 ![Scenario ottimizzato per il Cloud delle app di esempio con i contenitori Windows e i servizi gestiti](./media/image1-6.png)
 
-> **Figura 1-6.** Scenario ottimizzato per il Cloud delle app di esempio con i contenitori Windows e i servizi gestiti
+> **Figura 1 a 6.** Scenario ottimizzato per il Cloud delle app di esempio con i contenitori Windows e i servizi gestiti
 
 Procedendo ulteriormente, è possibile estendere l'applicazione ottimizzato per il Cloud esistente aggiungendo alcuni microservizi per scenari specifici. In questo modo si passerebbe parzialmente al livello del modello e Native del Cloud, che esula dall'ambito della presente Guida principale.
-
 
 ## <a name="what-this-guide-does-not-cover"></a>Argomenti non trattati dalla guida
 
@@ -162,7 +161,7 @@ Questa guida descrive un sottoinsieme specifico di scenari di esempio, come illu
 
 ![Native del cloud non è illustrata in questa Guida](./media/image1-7.png)
 
-> **Figura 1-7.** Native del cloud non è illustrata in questa Guida
+> **Nella figura 1-7.** Native del cloud non è illustrata in questa Guida
 
 L'obiettivo di questa guida è specifico. Viene illustrato il percorso da che seguire per ottenere una modalità lift- and -shift le applicazioni .NET esistenti, senza riarchitettare e senza modifiche al codice. In definitiva, illustra come rendere l'applicazione ottimizzato per il Cloud.
 
@@ -202,4 +201,4 @@ Le app di esempio hanno una seconda versione, con codice modernizzato, e sono pi
 Questa guida è stata scritta per aiutare a comprendere le opzioni per migliorare e modernizzare le applicazioni web .NET esistenti. La guida e le applicazioni di esempio correlate sono in continua evoluzione. I tuoi commenti sono molto apprezzati! È possibile inviare eventuali commenti su come rendere la guida ancora più utile all'indirizzo: [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[avanti](lift-and-shift-existing-apps-azure-iaas.md)
+>[Successivo](lift-and-shift-existing-apps-azure-iaas.md)

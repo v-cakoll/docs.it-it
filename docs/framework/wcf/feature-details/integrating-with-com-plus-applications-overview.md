@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153244"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM+
 Windows Communication Foundation (WCF) offre un ambiente completo per la creazione di applicazioni distribuite. Se si usa già la logica di applicazione basata su componenti ospitata in COM+, è possibile usare WCF per estendere la logica esistente anziché riscriverla. Uno degli scenari più comuni si verifica quando si desidera esporre la regola business COM+ o Enterprise Services esistente tramite servizi Web.  
@@ -62,9 +62,9 @@ Windows Communication Foundation (WCF) offre un ambiente completo per la creazio
 -   Interfacce da componenti Enterprise Services che non sono stati aggiunti alla Global Assembly Cache.  
   
 ### <a name="limited-object-reference-support"></a>Supporto limitato dei riferimenti a oggetti  
- Poiché diversi componenti COM+ distribuiti usano oggetti in base ai parametri di riferimento, per restituire, ad esempio, un oggetto recordset ADO, l'integrazione COM+ include un supporto limitato per i parametri di riferimento a oggetti. Il supporto è limitato a oggetti che implementano l'interfaccia COM `IPersistStream`. Il supporto include oggetti recordset ADO e può essere implementato per oggetti COM specifici dell'applicazione.  
+ Poiché diversi componenti COM+ distribuiti usano oggetti in base ai parametri per riferimento, per restituire, ad esempio, un oggetto recordset ADO, l'integrazione COM+ include un supporto limitato per i parametri per riferimento a oggetti. Il supporto è limitato a oggetti che implementano l'interfaccia COM `IPersistStream`. Il supporto include oggetti recordset ADO e può essere implementato per oggetti COM specifici dell'applicazione.  
   
- Per abilitare questo supporto, lo strumento ComSvcConfig.exe fornisce il **allowreferences** che disabilita il parametro di firma di metodo normale e controlla che lo strumento venga eseguito per verificare che i parametri per riferimento oggetto non sono in uso . I tipi di oggetto passati come parametri devono anche essere denominati e identificati all'interno dell'elemento di configurazione <`persistableTypes`> figlio dell'elemento <`comContract`>.  
+ Per abilitare questo supporto, lo strumento ComSvcConfig.exe fornisce il **allowreferences** che disabilita il parametro di firma di metodo normale e controlla che lo strumento venga eseguito per verificare che i parametri per riferimento oggetto non sono in uso . Inoltre, i tipi di oggetto passati come parametri devono vengano denominati e identificati all'interno di <`persistableTypes`> elemento di configurazione che è un figlio del <`comContract`> elemento.  
   
  Quando questa funzionalità viene usata, il servizio di integrazione COM+ usa l'interfaccia `IPersistStream` per serializzare o deserializzare l'istanza dell'oggetto. Se l'istanza dell'oggetto non supporta `IPersistStream`, viene generata un'eccezione.  
   
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) offre un ambiente completo per la creazio
  Le funzionalità di riciclo dei processi COM+ non possono essere usate su applicazioni integrate. Se l'applicazione è configurata per l'uso del riciclo dei processi e i componenti sono in esecuzione in un processo ospitato su COM+, non sarà possibile avviare il servizio. Questo requisito non include i servizi che usano la modalità di host Web in corso, poiché non vengono applicate le impostazioni di riciclo dei processi.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dell'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [Panoramica sull'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

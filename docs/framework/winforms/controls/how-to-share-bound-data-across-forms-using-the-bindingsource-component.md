@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Condividere dati associati tra form tramite il componente BindingSource'
+title: 'Procedura: Condividere i dati associati tra moduli usando il componente BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: b01c07208d796044e015b9c64e6414519862d4fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154870"
 ---
-# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Procedura: Condividere dati associati tra form tramite il componente BindingSource
+# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Procedura: Condividere i dati associati tra moduli usando il componente BindingSource
 È possibile condividere facilmente i dati tra i form con il componente <xref:System.Windows.Forms.BindingSource>. Ad esempio, è possibile visualizzare un form di sola lettura che riepiloga i dati dell'origine dati e un altro form modificabile che contiene informazioni dettagliate sull'elemento attualmente selezionato nell'origine dati. L'esempio illustra questo scenario.  
   
 ## <a name="example"></a>Esempio  
@@ -37,6 +37,7 @@ ms.locfileid: "57709029"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Componente BindingSource](bindingsource-component.md)
-- [Data binding in Windows Form](../windows-forms-data-binding.md)
-- [Procedura: Gestire errori ed eccezioni che si verificano con il Data Binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Data binding di Windows Form](../windows-forms-data-binding.md)
+- [Procedura: Gestire errori ed eccezioni relativi al data binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

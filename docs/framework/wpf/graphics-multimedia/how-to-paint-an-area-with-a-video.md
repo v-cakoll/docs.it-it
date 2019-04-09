@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151177"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Procedura: Disegnare un'area con un video
 In questo esempio viene illustrato come disegnare un'area con supporto di memorizzazione. Un modo per disegnare un'area con supporto consiste nell'utilizzare un <xref:System.Windows.Controls.MediaElement> insieme a un <xref:System.Windows.Media.VisualBrush>. Usare la <xref:System.Windows.Controls.MediaElement> per caricare e riprodurre i contenuti multimediali e quindi utilizzarla per impostare il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà del <xref:System.Windows.Media.VisualBrush>. È quindi possibile usare il <xref:System.Windows.Media.VisualBrush> per disegnare un'area con elementi multimediali caricati.  
@@ -38,7 +38,8 @@ In questo esempio viene illustrato come disegnare un'area con supporto di memori
  Per informazioni su come aggiungere un file di contenuto, ad esempio un file multimediale, per l'applicazione, vedere [WPF Application Resource, contenuto e i file di dati](../app-development/wpf-application-resource-content-and-data-files.md). Quando si aggiunge un file multimediale, è necessario aggiungerlo come un file di contenuto, non come un file di risorse.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.VisualBrush>
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
-- [Panoramica sugli oggetti TileBrush](tilebrush-overview.md)
+- [Cenni preliminari sugli oggetti TileBrush](tilebrush-overview.md)
 - [Panoramica delle funzionalità multimediali](multimedia-overview.md)

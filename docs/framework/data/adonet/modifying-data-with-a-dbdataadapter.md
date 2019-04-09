@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158873"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modifica di dati con un oggetto DbDataAdapter
 Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un oggetto <xref:System.Data.Common.DbProviderFactory> fornisce un oggetto <xref:System.Data.Common.DbDataAdapter> fortemente tipizzato al provider sottostante specificato durante la creazione della factory. È quindi possibile usare un oggetto <xref:System.Data.Common.DbCommandBuilder> per creare i comandi che consentono di inserire, aggiornare ed eliminare dati da un <xref:System.Data.DataSet> a un'origine dati.  
@@ -37,13 +37,14 @@ Il metodo <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> di un
 |`OleDb`|Usa marcatori dei parametri di posizione indicati da un punto interrogativo (`?`).|  
 |`Odbc`|Usa marcatori dei parametri di posizione indicati da un punto interrogativo (`?`).|  
   
- Il modello di factory non è utile per la creazione di oggetti `DbCommand` e `DbDataAdapter` con parametri. Sarà necessario eseguire il branching del codice per creare parametri personalizzati in base al provider di dati.  
+ Il modello di factory non è utile per la creazione di oggetti `DbCommand` e `DbDataAdapter` con parametri. Sarà necessario creare rami del codice per creare parametri personalizzati in base al provider di dati.  
   
 > [!IMPORTANT]
 >  Per motivi di sicurezza, è consigliabile evitare di usare parametri specifici del provider unitamente alla concatenazione di stringhe per costruire istruzioni SQL dirette. Se anziché i parametri si usa la concatenazione di stringhe, l'applicazione rimane vulnerabile ad attacchi SQL injection.  
   
 ## <a name="see-also"></a>Vedere anche
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Recupero di una classe DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+
+- [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Recupero di un oggetto DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

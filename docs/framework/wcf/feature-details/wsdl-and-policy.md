@@ -2,12 +2,12 @@
 title: WSDL e criteri
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151905"
 ---
 # <a name="wsdl-and-policy"></a>WSDL e criteri
 Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy e WS-PolicyAttachment dettagli di implementazione, nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da WCF.  
@@ -73,6 +73,7 @@ Questo argomento descrive Windows Communication Foundation (WCF) WSDL 1.1, WS-Po
 |mssp:RequireClientCertificate|Annidata|Questo elemento facoltativo specifica un requisito secondo cui deve essere fornito un certificato client come parte del protocollo TLSNEGO. Se questa asserzione è presente, deve essere fornito un certificato client. Se questa asserzione non è presente, non deve essere fornito un certificato client. Questa asserzione non deve essere usata al di fuori di mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
 - [Procedura: Esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
 - [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157469"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedura: Usare TraceSource e filtri con listener di traccia
-Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di traccia avanzato. Il sistema di base è invariato: i messaggi di traccia vengono inviati tramite commutatori ai listener, che inviano i dati a un supporto di output associato. Una delle differenze principali per la versione 2.0 è che le tracce possono essere avviate tramite istanze della classe <xref:System.Diagnostics.TraceSource>. La classe <xref:System.Diagnostics.TraceSource> è progettata per operare come un sistema di traccia avanzato e può essere usata al posto dei metodi statici delle versioni precedenti delle classi di traccia <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. Le classi note <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> esistono ancora, ma la procedura consigliata prevede l'uso della classe <xref:System.Diagnostics.TraceSource> per la traccia.  
+Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di traccia avanzato. Il sistema di base è invariato: i messaggi di traccia vengono inviati tramite commutatori ai listener, che inviano i dati a un supporto di output associato. Una delle differenze principali per la versione 2.0 è che le tracce possono essere avviate tramite istanze della classe <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> è progettata per operare come un sistema di traccia avanzato e può essere usato al posto dei metodi statici delle versioni precedenti <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> delle classi di traccia. Le classi note <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> esistono ancora, ma la procedura consigliata prevede l'uso della classe <xref:System.Diagnostics.TraceSource> per la traccia.  
   
  Questo argomento descrive l'uso di <xref:System.Diagnostics.TraceSource> associata a un file di configurazione dell'applicazione.  È possibile, ma non consigliabile, gestire la traccia con <xref:System.Diagnostics.TraceSource> senza usare un file di configurazione. Per informazioni sulla traccia senza un file di configurazione, vedere [come: Creare e inizializzare origini di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
@@ -164,6 +164,7 @@ Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di tr
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>

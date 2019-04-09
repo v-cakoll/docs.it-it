@@ -1,13 +1,13 @@
 ---
-title: elemento <serviceAuthorization>
+title: <serviceAuthorization> elemento
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157345"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > elemento
 Specifica impostazioni che autorizzano accesso alle operazioni del servizio  
@@ -96,6 +96,7 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
  Per un esempio dettagliato dell'uso di questo elemento di configurazione, vedere [autorizzare l'accesso alle operazioni del servizio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) e [criteri di autorizzazione](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

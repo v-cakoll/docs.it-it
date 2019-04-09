@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 292ab8684f20c7ec5dcb87784c0ffff7416e8880
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152984"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>Metodo IMetaDataImport::GetSigFromToken
 Ottiene la firma binaria dei metadati associata al token specificato.  
@@ -57,5 +57,6 @@ HRESULT GetSigFromToken (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

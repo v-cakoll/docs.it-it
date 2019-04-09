@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8de8816f08fa98055bb397d77d060721a0fb30d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f94f365aa8c9221c64e9611deab3597e06ed862
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157898"
 ---
 # <a name="ihosttaskmanagerendthreadaffinity-method"></a>Metodo IHostTaskManager::EndThreadAffinity
 Notifica all'host che il codice gestito è uscendo dalla fase in cui l'attività corrente non deve essere spostato a un altro thread del sistema operativo, seguendo una precedente chiamata a [BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md).  
@@ -58,6 +58,7 @@ HRESULT EndThreadAffinity ();
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Threading>
 - [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form"
+title: "Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157625"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms
 È possibile usare i moduli di Windows <xref:System.Windows.Forms.ErrorProvider> componente e visualizzare gli errori di colonna all'interno di un set di dati o un'altra origine dati. Per un <xref:System.Windows.Forms.ErrorProvider> componente per visualizzare gli errori dei dati in un form, non deve essere associato direttamente a un controllo. Dopo che è associato a un'origine dati, è possibile visualizzare un'icona di errore accanto a qualsiasi controllo associato alla stessa origine dati.  
   
 > [!NOTE]
@@ -63,5 +63,6 @@ ms.locfileid: "57705389"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
-- [Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+
+- [Panoramica del componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
+- [Procedura: Visualizzare le icone di errore per la convalida dei moduli con il componente ErrorProvider di Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

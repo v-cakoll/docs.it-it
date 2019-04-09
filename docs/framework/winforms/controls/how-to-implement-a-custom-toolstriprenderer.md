@@ -8,12 +8,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: c6150b23cf8390a31c6b77ae3c56cfb898eded4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151918"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procedura: Implementare un oggetto ToolStripRenderer personalizzato
 È possibile personalizzare l'aspetto di un controllo <xref:System.Windows.Forms.ToolStrip> implementando una classe che deriva da <xref:System.Windows.Forms.ToolStripRenderer>. In questo modo è possibile creare un aspetto differente da quello fornito dalle classi <xref:System.Windows.Forms.ToolStripProfessionalRenderer> e <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
@@ -23,11 +23,11 @@ ms.locfileid: "57723010"
   
  La classe `GridStripRenderer` consente di definire tre componenti relativi all'aspetto del controllo `GridStrip`:  
   
--   Bordo di `GridStrip`  
+-   `GridStrip` border  
   
--   Bordo di <xref:System.Windows.Forms.ToolStripButton>  
+-   <xref:System.Windows.Forms.ToolStripButton> border  
   
--   immagine di <xref:System.Windows.Forms.ToolStripButton>  
+-   <xref:System.Windows.Forms.ToolStripButton> immagine  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -40,6 +40,7 @@ ms.locfileid: "57723010"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripRenderer>

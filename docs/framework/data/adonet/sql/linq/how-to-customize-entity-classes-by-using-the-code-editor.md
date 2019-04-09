@@ -1,22 +1,22 @@
 ---
-title: "Procedura: Personalizzare le classi di entità usando l'Editor di codice"
+title: "Procedura: Personalizzare classi di entità mediante l'editor del codice"
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: bef835765120052be388abecde7c3c932c0766e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155168"
 ---
-# <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procedura: Personalizzare le classi di entità usando l'Editor di codice
+# <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procedura: Personalizzare classi di entità mediante l'editor del codice
 Gli sviluppatori che usano Visual Studio è possono usare il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per creare o personalizzare le classi di entità.  
   
  È anche possibile usare l'editor di Visual Studio code per scrivere il proprio codice di mapping o per personalizzare il codice che è già stato generato. Per altre informazioni, vedere [Mapping basato sugli attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
  Negli argomenti di questa sezione viene descritto come personalizzare il modello a oggetti.  
   
- [Procedura: Specificare i nomi di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [Procedura: Specificare nomi di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
  [Procedura: Rappresentare tabelle come classi](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
@@ -28,16 +28,16 @@ Gli sviluppatori che usano Visual Studio è possono usare il [!INCLUDE[vs_ordesi
  [Procedura: Rappresentare le chiavi primarie](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
   
- [Procedura: Eseguire il mapping di relazioni tra Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [Procedura: Eseguire il mapping delle relazioni di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  Vengono forniti esempi relativi all'utilizzo dell'attributo <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
- [Procedura: Rappresentare colonne come generate dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [Procedura: Rappresentare colonne come generate dal database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
- [Procedura: Rappresentare colonne come Timestamp o colonne di versione](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [Procedura: Rappresentare colonne come timestamp o colonne di versione](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
- [Procedura: Specificare i tipi di dati Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [Procedura: Specificare i tipi di dati del database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>.  
   
  [Procedura: Rappresentare colonne calcolate](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
@@ -46,7 +46,7 @@ Gli sviluppatori che usano Visual Studio è possono usare il [!INCLUDE[vs_ordesi
  [Procedura: Specificare campi di archiviazione privati](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
- [Procedura: Rappresentare colonne come supporto per valori Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [Procedura: Rappresentare colonne per l'accettazione di valori Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
  [Procedura: Eseguire il mapping di gerarchie di ereditarietà](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
@@ -56,4 +56,5 @@ Gli sviluppatori che usano Visual Studio è possono usare il [!INCLUDE[vs_ordesi
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

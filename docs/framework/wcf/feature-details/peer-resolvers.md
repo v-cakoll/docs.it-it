@@ -2,12 +2,12 @@
 title: Resolver del peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151619"
 ---
 # <a name="peer-resolvers"></a>Resolver del peer
 Per connettersi a una mesh, un nodo peer necessita dell'indirizzo IP di altri nodi. Gli indirizzi IP si ottengono contattando un servizio resolver, che accetta l'ID della rete e restituisce un elenco di indirizzi corrispondenti ai nodi registrati con quel particolare ID di rete. Il resolver mantiene un elenco di indirizzi registrati, creato facendo in modo che ogni nodo nella mesh venga registrato con il servizio.  
@@ -35,9 +35,10 @@ Per connettersi a una mesh, un nodo peer necessita dell'indirizzo IP di altri no
  Per una dimostrazione di come implementare un resolver personalizzato, vedere [Resolver Peer personalizzato del canale Peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Custompeerresolverservice: Registrazioni client](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [In CustomPeerResolverService: registrazioni client](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [Sicurezza del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Protezione del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

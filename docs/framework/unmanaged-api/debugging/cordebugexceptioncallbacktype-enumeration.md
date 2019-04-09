@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155558"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Enumerazione CorDebugExceptionCallbackType
 Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.  
@@ -39,7 +39,7 @@ typedef enum CorDebugExceptionCallbackType {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|È stata generata un'eccezione.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Il processo di chiusura eccezione immesso il codice utente.|  
@@ -56,4 +56,5 @@ typedef enum CorDebugExceptionCallbackType {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157326"
 ---
 # <a name="cordebugehclause-structure"></a>Struttura CorDebugEHClause
 [Supportato in .NET Framework 4.5.2 e versioni successive]  
@@ -42,9 +42,9 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|`Flags`|Campo di bit che descrive le informazioni sull'eccezione nella clausola di gestione delle eccezioni. Per altre informazioni, vedere la sezione Note.|  
+|`Flags`|Campo di bit che descrive le informazioni sull'eccezione nella clausola di gestione delle eccezioni. Per altre informazioni, vedere la sezione Osservazioni.|  
 |`TryOffset`|Offset, in byte, del blocco `try` dall'inizio del corpo del metodo.|  
 |`TryLength`|Lunghezza in byte del blocco `try`.|  
 |`HandlerOffset`|Il percorso del gestore per questo blocco `try`.|  
@@ -59,7 +59,7 @@ typedef struct _CorDebugEHClause {
   
  Il campo `flags` può contenere i flag seguenti. Si noti che non sono definiti in CorDebug.idl o CorDebug.h.  
   
-|Flag|Valore|Descrizione|  
+|Flag|Value|Descrizione|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Clausola dell'eccezione tipizzata.|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Clausola del gestore e del filtro eccezioni.|  
@@ -76,5 +76,6 @@ typedef struct _CorDebugEHClause {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodo GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

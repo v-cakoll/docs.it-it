@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disegnare testo sottoposto a wrapping in un rettangolo'
+title: 'Procedura: Disegnare testo disposto su più righe in un rettangolo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152789"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedura: Disegnare testo sottoposto a wrapping in un rettangolo
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedura: Disegnare testo disposto su più righe in un rettangolo
 È possibile disegnare testo sottoposto a wrapping in un rettangolo utilizzando il <xref:System.Drawing.Graphics.DrawString%2A> metodo di overload di <xref:System.Drawing.Graphics> classe che accetta un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parametro. Si utilizzerà inoltre un <xref:System.Drawing.Brush> e un <xref:System.Drawing.Font>.  
   
  È anche possibile disegnare testo sottoposto a wrapping in un rettangolo utilizzando il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo di overload di <xref:System.Windows.Forms.TextRenderer> che accetta un <xref:System.Drawing.Rectangle> e un <xref:System.Windows.Forms.TextFormatFlags> parametro. Si utilizzerà inoltre un <xref:System.Drawing.Color> e un <xref:System.Drawing.Font>.  
@@ -45,7 +45,8 @@ ms.locfileid: "58654529"
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)
-- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
-- [Procedura: Costruire i tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)
+
+- [Procedura: Disegnare testo con GDI](how-to-draw-text-with-gdi.md)
+- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
+- [Procedura: Creare tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)
 - [Procedura: Disegnare testo in una posizione specificata](how-to-draw-text-at-a-specified-location.md)
