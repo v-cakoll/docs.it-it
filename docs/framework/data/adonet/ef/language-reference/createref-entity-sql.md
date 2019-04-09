@@ -2,12 +2,12 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: bdf1c34f8a050764e8f8766da25076a7c1c361ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7003805429df36fec82e5d57811ed38af6323379
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095607"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Consente di creare riferimenti a un'entità in un oggetto EntitySet.  
@@ -26,7 +26,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  Espressione con tipizzazione di riga che corrisponde alle proprietà chiave del tipo di entità.  
   
 ## <a name="remarks"></a>Note  
- Dal punto di vista strutturale,`row_typed_expression` deve essere equivalente al tipo di chiave per l'entità. Questo significa che deve avere lo stesso numero di tipi e di campi nello stesso ordine delle chiavi di entità.  
+ `row_typed_expression` deve essere strutturalmente equivalente al tipo di chiave per l'entità. Questo significa che deve avere lo stesso numero di tipi e di campi nello stesso ordine delle chiavi di entità.  
   
  Nell'esempio seguente Orders e BadOrders sono entrambi oggetti EntitySet di tipo Order e si presuppone che Id sia la proprietà di chiave singola di Order. Nell'esempio viene illustrato in che modo è possibile creare un riferimento a un'entità in BadOrders. Si noti che il riferimento può essere inesatto,  ovvero potrebbe non identificare effettivamente un'entità specifica. In casi di questo tipo un'operazione `DEREF` su tale riferimento restituisce un valore Null.  
   
@@ -45,6 +45,7 @@ from LOB.Orders as o
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
 - [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)

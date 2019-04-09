@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091330"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 È possibile utilizzare Traccia eventi per Windows (ETW) per registrare eventi CLR (Common Language Runtime). Tramite i seguenti strumenti si possono creare e visualizzare tracce:  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Il parametro `-p` identifica il GUID del provider.  
   
-    -   `0x1CCBD` specifica le categorie degli eventi che saranno generati.  
+    -   `0x1CCBD` Specifica le categorie di eventi che verranno generati.  
   
-    -   `0x5` imposta il livello di registrazione, in questo caso Verbose (5).  
+    -   `0x5` Imposta il livello di registrazione (in questo caso verbose (5)).  
   
     -   Il parametro `-ets` indica a Logman di inviare comandi alle sessioni di traccia degli eventi.  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Questo comando fa in modo che XPerf esegua il dump degli eventi come un file (CSV) con valori delimitati da virgole visualizzabile. Poiché eventi diversi dispongono di campi diversi, questo file con estensione CSV contiene più di una riga di intestazione prima dei dati. Il primo campo di ogni riga è il tipo di evento che indica quale intestazione deve essere utilizzata per determinare gli altri campi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

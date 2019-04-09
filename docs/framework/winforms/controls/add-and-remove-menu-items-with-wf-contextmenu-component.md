@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere voci di Menu con il componente ContextMenu di Windows Form'
+title: 'Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094463"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedura: Aggiungere e rimuovere voci di Menu con il componente ContextMenu di Windows Form
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms
 Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Form.  
   
  I moduli di Windows <xref:System.Windows.Forms.ContextMenu> componente fornisce un menu dei comandi usati frequentemente rilevanti per l'oggetto selezionato. È possibile aggiungere elementi al menu di scelta rapida aggiungendo <xref:System.Windows.Forms.MenuItem> gli oggetti per il <xref:System.Windows.Forms.Menu.MenuItems%2A> raccolta.  
@@ -75,6 +75,7 @@ Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Wi
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [Componente ContextMenu](contextmenu-component-windows-forms.md)
-- [Panoramica sul componente ContextMenu](contextmenu-component-overview-windows-forms.md)
+- [Panoramica del componente ContextMenu](contextmenu-component-overview-windows-forms.md)

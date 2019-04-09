@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e228cfbdade420c4d5248ffd417c6131083ee74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110417"
 ---
 # <a name="corgcstattypes-enumeration"></a>Enumerazione COR_GC_STAT_TYPES
 Specifica le statistiche devono essere registrati per una garbage collection.  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_GC_COUNTS`|Registra il numero di operazioni di garbage collection eseguite per ogni generazione.|  
 |`COR_GC_MEMORYUSAGE`|I record memoria utilizzo e la garbage collection statistiche sulle dimensioni.|  
@@ -53,5 +53,6 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efb2c3e8033b8bd8fa736a29b2ab9b3bedebeaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109642"
 ---
 # <a name="cortypelayout-structure"></a>Struttura COR_TYPE_LAYOUT
 Fornisce informazioni sul layout di un oggetto in memoria.  
@@ -40,7 +40,7 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`parentID`|L'identificatore del tipo padre per questo tipo. Questo sarà l'id di tipo NULL (token1 = 0, token2 = 0) se l'id del tipo corrisponde a <xref:System.Object?displayProperty=nameWithType>.|  
 |`objectSize`|Le dimensioni di base di un oggetto di questo tipo. Questa è la dimensione totale per gli oggetti con dimensione non variabile.|  
@@ -61,5 +61,6 @@ typedef struct COR_TYPE_LAYOUT {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

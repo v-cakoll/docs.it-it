@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rispondere alle selezioni dei pulsanti di Windows Form'
+title: 'Procedura: Rispondere alla selezione dei pulsanti Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110071"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: Rispondere alle selezioni dei pulsanti di Windows Form
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Procedura: Rispondere alla selezione dei pulsanti Windows Forms
 L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> controllo consiste nell'eseguire codice quando si fa clic sul pulsante.  
   
  Facendo clic su un <xref:System.Windows.Forms.Button> controllo genera inoltre un numero di altri eventi, ad esempio il <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, e <xref:System.Windows.Forms.Control.MouseUp> eventi. Se si prevede di collegare i gestori eventi per questi eventi correlati, assicurarsi che le relative azioni non sono in conflitto. Ad esempio, se facendo clic sul pulsante Cancella le informazioni che l'utente ha digitato in una casella di testo, quando si posiziona il puntatore del mouse su pulsante non visualizzerà una descrizione comando con le informazioni ora inesistente.  
@@ -56,6 +56,7 @@ L'utilizzo di base di un form Windows <xref:System.Windows.Forms.Button> control
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul controllo Button](button-control-overview-windows-forms.md)
-- [Modalità di selezione di un controllo Button di Windows Form](ways-to-select-a-windows-forms-button-control.md)
+
+- [Panoramica del controllo Button](button-control-overview-windows-forms.md)
+- [Modalità di selezione di un controllo Button Windows Form](ways-to-select-a-windows-forms-button-control.md)
 - [Controllo Button](button-control-windows-forms.md)

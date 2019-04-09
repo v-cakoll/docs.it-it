@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form'
+title: 'Procedura: Impostare opzioni con i controlli CheckBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 926e89272e9ebedb0668b26b96b1614e85e637ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095919"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Procedura: Impostare opzioni con i controlli CheckBox di Windows Forms
 Un controllo Windows Form <xref:System.Windows.Forms.CheckBox> controllo tra le opzioni Sì/No o viene usato per assegnare gli utenti True/False. Quando viene selezionata, il controllo Visualizza un segno di spunta.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>Per impostare le opzioni con i controlli CheckBox  
@@ -66,7 +66,8 @@ Un controllo Windows Form <xref:System.Windows.Forms.CheckBox> controllo tra le 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.CheckBox>
-- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procedura: Rispondere a un Windows Form controlli CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Rispondere alla selezione dei controlli CheckBox di Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [Controllo CheckBox](checkbox-control-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 511ed20e63778b70355d1deb12e4256b4d2e9101
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c0bcf91d358d233b5b1d2e300d63112303e87a09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095403"
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Procedura: Allineare ed estendere un controllo in un controllo TableLayoutPanel
 È possibile allineare ed estendere i controlli in una <xref:System.Windows.Forms.TableLayoutPanel> con il <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> proprietà.  
@@ -40,4 +40,5 @@ ms.locfileid: "57702919"
 8.  Impostare il valore della <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Anchor%2A> proprietà <xref:System.Windows.Forms.AnchorStyles.None>. Il <xref:System.Windows.Forms.Button> controllo si sposta al centro della cella.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

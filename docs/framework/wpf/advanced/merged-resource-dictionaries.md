@@ -5,15 +5,15 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097239"
 ---
 # <a name="merged-resource-dictionaries"></a>Dizionari risorse uniti
-Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] supportano una funzionalità di dizionari risorse uniti. Questa funzionalità consente di definire la parte delle risorse di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] al di fuori dell'applicazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilata. Le risorse possono quindi essere condivise nelle applicazioni, oltre che isolate più facilmente per la localizzazione.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le risorse supportano una funzionalità di dizionari risorse uniti. Questa funzionalità consente di definire la parte delle risorse di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] al di fuori dell'applicazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilata. Le risorse possono quindi essere condivise nelle applicazioni, oltre che isolate più facilmente per la localizzazione.  
   
 ## <a name="introducing-a-merged-resource-dictionary"></a>Introduzione di un dizionario risorse unito  
  Nel markup si usa la sintassi seguente per introdurre un dizionario risorse unito in una pagina:  
@@ -52,7 +52,8 @@ Le risorse di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winc
  Se le risorse che è necessario localizzare vengono isolate nei dizionari uniti nei dizionari primari e conservate come [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] libero, questi file possono essere localizzati separatamente. Questa tecnica è un'alternativa leggera alla localizzazione degli assembly di risorse satellite. Per informazioni dettagliate, vedere [Panoramica della globalizzazione e localizzazione WPF](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.ResourceDictionary>
 - [Risorse XAML](xaml-resources.md)
 - [Risorse e codice](resources-and-code.md)
-- [File di dati e di risorse dell'applicazione WPF](../app-development/wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF.](../app-development/wpf-application-resource-content-and-data-files.md)

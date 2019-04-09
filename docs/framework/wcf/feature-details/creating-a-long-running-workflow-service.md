@@ -2,12 +2,12 @@
 title: Creazione di un servizio flusso di lavoro a esecuzione prolungata
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109655"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Creazione di un servizio flusso di lavoro a esecuzione prolungata
 In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata. L'esecuzione di tali servizi può durare molto tempo. A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive. In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria. Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.  In questo scenario viene implementato un sistema di ordini molto semplificato.  Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta, consente la restituzione di un ID ordine al client. A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.  Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine. Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine. L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata. In questo argomento presuppone che l'utente sappia creare soluzioni e progetti di Visual Studio 2012.
@@ -19,7 +19,7 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
 
 2.  Visual Studio 2012
 
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  Si ha familiarità con WCF e Visual Studio 2012 e in grado di creare progetti e soluzioni.
 
@@ -199,4 +199,5 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
     ```
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)

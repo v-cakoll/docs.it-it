@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4a90e8cd50ef1b3324aed35ae5cc34225bb2f7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6ebf9ad72f7a1b0dd7ac54afa104089182f122ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109889"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>Metodo IHostSecurityManager::ImpersonateLoggedOnUser
 Le richieste che codice eseguito con le credenziali dell'identità dell'utente corrente.  
@@ -65,6 +65,7 @@ HRESULT ImpersonateLoggedOnUser (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
 - [Interfaccia IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
 - [Metodo RevertToSelf](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)

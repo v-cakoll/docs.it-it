@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097174"
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
 Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di codice gestito affidabile. Un'area a esecuzione vincolata è un'area in cui Common Language Runtime (CLR) non può generare eccezioni fuori banda che impedirebbero l'esecuzione completa del codice nell'area. All'interno di tale area il codice non può eseguire codice che comporterebbe la generazione di eccezioni fuori banda. Il metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve precedere immediatamente un blocco `try` e contrassegna i blocchi `catch`, `finally` e `fault` come aree a esecuzione vincolata. Dopo che è stato contrassegnato come area a esecuzione vincolata, il codice può chiamare solo altro codice con contratto di affidabilità efficace e può allocare o effettuare chiamate virtuali a metodi non preparati o non affidabili solo se è in grado di gestire eventuali errori. Per il codice in esecuzione in un'area a esecuzione vincolata, CLR ritarda le interruzioni di thread.  
@@ -70,14 +70,14 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. In condizioni eccezionali, CLR non garantisce la coerenza dello stato. In altre parole, la condizione potrebbe danneggiare il processo.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, In condizioni eccezionali, CLR non offre alcuna garanzia relativamente all'uniformità dello stato; vale a dire, la condizione potrebbe danneggiare il processo.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
   
 ## <a name="reliability-trycatchfinally"></a>Blocco Try/catch/finally di affidabilità  
  Il blocco `try/catch/finally` di affidabilità è un meccanismo di gestione delle eccezioni con lo stesso livello di garanzie di prevedibilità della versione non gestita. Il blocco `catch/finally` costituisce l'area a esecuzione vincolata. I metodi nel blocco richiedono la preparazione anticipata e non devono poter essere interrotti.  
   
- In .NET Framework versione 2.0, il codice informa il runtime che un blocco try è affidabile chiamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediatamente prima di un blocco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>è un membro di <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una classe di supporto del compilatore. Chiamare <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direttamente durante la sua disponibilità nei compilatori.  
+ In .NET Framework versione 2.0, il codice informa il runtime che un blocco try è affidabile chiamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediatamente prima di un blocco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> è un membro di <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una classe di supporto del compilatore. Chiamare <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direttamente durante la sua disponibilità nei compilatori.  
   
 ## <a name="noninterruptible-regions"></a>Aree non interrompibili  
  Un'area non interrompibile raggruppa un set di istruzioni all'interno di un'area a esecuzione vincolata.  
@@ -106,7 +106,7 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 -   Controlli di sicurezza. Non eseguire le richieste, limitarsi a collegarle.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per oggetti COM e proxy  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per gli oggetti COM e proxy  
   
 -   Ottenere o impostare campi in un proxy trasparente.  
   
@@ -115,4 +115,5 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
 -   Puntatori a funzione e delegati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)

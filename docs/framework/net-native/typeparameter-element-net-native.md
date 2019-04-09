@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110214"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > elemento (.NET Native)
 Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo.  
@@ -51,13 +51,13 @@ Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*parameter_name*|Il nome del parametro di tipo <xref:System.Type>. Ad esempio, per la firma del metodo `Type.GetInterfaceMap(Type interfaceType)`, il valore dell'attributo `Name` è "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -68,7 +68,7 @@ Applica i criteri al tipo rappresentato da un argomento tipo passato a un metodo
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<TypeParameter>` è simile all'elemento [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), ma può essere applicato solo a parametri di tipo <xref:System.Type>. Applica i criteri a qualsiasi tipo rappresentato al runtime dall'argomento Type specificato dall'attributo `Name`.  
@@ -95,7 +95,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
  le direttive di reflection rendono disponibili i metadati per il tipo `StockQuote` per il serializzatore JSON di NewtonSoft al runtime.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+
+- [\<Metodo > elemento](../../../docs/framework/net-native/method-element-net-native.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

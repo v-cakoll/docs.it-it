@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a325c3e1aa9c08e00dc2cc38e3f7833fa9f99897
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 74517e034af6a1e4dfb8e4b28c2fec55a3d8de8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092838"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Metodo ICorProfilerInfo2::EnumModuleFrozenObjects
 Ottiene un enumeratore che consente di scorrere gli oggetti bloccati nel modulo specificato. Questo metodo è obsoleto.  
@@ -52,5 +52,6 @@ HRESULT EnumModuleFrozenObjects(
  **Versioni di .NET framework:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interfaccia ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

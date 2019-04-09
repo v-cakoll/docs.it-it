@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Personalizzare un'associazione fornita dal sistema"
+title: "Procedura: Personalizzare un'associazione basata sul sistema"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095152"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Procedura: Personalizzare un'associazione fornita dal sistema
+# <a name="how-to-customize-a-system-provided-binding"></a>Procedura: Personalizzare un'associazione basata sul sistema
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che consentono di configurare alcune delle proprietà degli elementi di associazione sottostante, ma non tutte le proprietà. In questo argomento viene illustrato come impostare proprietà sugli elementi di associazione per creare un'associazione personalizzata.  
   
  Per altre informazioni su come creare e configurare gli elementi di associazione senza utilizzare le associazioni fornite dal sistema direttamente, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -51,6 +51,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>

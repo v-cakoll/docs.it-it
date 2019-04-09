@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34349466594381441c11f947d682b018f95461e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110365"
 ---
 # <a name="fusioninstallreference-structure"></a>Struttura FUSION_INSTALL_REFERENCE
 Rappresenta un riferimento da un'applicazione a un assembly che l'applicazione è installata nella global assembly cache.  
@@ -40,7 +40,7 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`cbSize`|Le dimensioni della struttura in byte.|  
 |`dwFlags`|Riservato per un'estendibilità futura. Questo valore deve essere 0 (zero).|  
@@ -56,5 +56,6 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: b7f92c0341a63df6bb5553d656469b374755aae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096355"
 ---
 # <a name="datarows-and-datarowviews"></a>Oggetti DataRow e DataRowView
 In un <xref:System.Data.DataView> viene esposto una raccolta enumerabile di oggetti <xref:System.Data.DataRowView>. Il **DataRowView** oggetti espongono i valori come matrici di oggetti che vengono indicizzate per nome o il riferimento ordinale della colonna nella tabella sottostante. È possibile accedere la <xref:System.Data.DataRow> esposto dal **DataRowView** utilizzando la <xref:System.Data.DataRowView.Row%2A> proprietà del **DataRowView**.  
@@ -60,6 +60,7 @@ public static void WriteView(DataView thisDataView)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>

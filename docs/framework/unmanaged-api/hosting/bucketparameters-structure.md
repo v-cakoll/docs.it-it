@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110456"
 ---
 # <a name="bucketparameters-structure"></a>Struttura BucketParameters
 Archivia il nome del tipo di un evento e i parametri per l'eccezione corrente viene associato all'evento.  
@@ -38,7 +38,7 @@ typedef struct _BucketParameters {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`fInited`|`true`, se il resto di questa struttura è valido. in caso contrario, `false`.|  
 |`pszEventTypeName`|Nome del tipo di evento.|  
@@ -52,4 +52,5 @@ typedef struct _BucketParameters {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

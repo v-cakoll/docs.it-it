@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079136"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>Creazione e inizializzazione di un'opzione di traccia  
- Per usare le opzioni di traccia, è necessario prima di tutto crearle e inserirle nel codice. Sono presenti due classi predefinite da cui è possibile creare oggetti opzione: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Si usa l'oggetto <xref:System.Diagnostics.BooleanSwitch> solo se è necessario stabilire se i messaggi di traccia vengono visualizzati; l'oggetto <xref:System.Diagnostics.TraceSwitch> viene invece usato se è necessario distinguere tra i livelli di traccia. Se si usa un oggetto <xref:System.Diagnostics.TraceSwitch> è possibile definire messaggi di debug personalizzati e associarli a diversi livelli di traccia. È possibile usare entrambi i tipi di opzioni sia per la traccia sia per il debug. Per impostazione predefinita, un oggetto <xref:System.Diagnostics.BooleanSwitch> è disabilitato e un oggetto <xref:System.Diagnostics.TraceSwitch> è impostato sul livello <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. È possibile creare e inserire opzioni di traccia in un punto qualsiasi del codice in cui possano essere usate.  
+ Per usare le opzioni di traccia, è necessario prima di tutto crearle e inserirle nel codice. Sono presenti due classi predefinite da cui è possibile creare oggetti opzione: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Si utilizza l'oggetto <xref:System.Diagnostics.BooleanSwitch> solo se è necessario stabilire se i messaggi di traccia vengono visualizzati; l'oggetto <xref:System.Diagnostics.TraceSwitch> viene invece utilizzato se è necessario distinguere tra i livelli di traccia. Se si utilizza un oggetto <xref:System.Diagnostics.TraceSwitch> è possibile definire messaggi di debug personalizzati e associarli a diversi livelli di traccia. È possibile usare entrambi i tipi di opzioni sia per la traccia sia per il debug. Per impostazione predefinita, un oggetto <xref:System.Diagnostics.BooleanSwitch> è disabilitato e un oggetto <xref:System.Diagnostics.TraceSwitch> è impostato sul livello <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. È possibile creare e inserire opzioni di traccia in un punto qualsiasi del codice in cui possano essere usate.  
   
- Nonostante sia possibile impostare i livelli di traccia e altre opzioni di configurazione all'interno del codice, è consigliabile usare il file di configurazione per gestire lo stato delle opzioni. Questo perché la gestione della configurazione delle opzioni nel sistema di configurazione consente una maggiore flessibilità: è infatti possibile attivare e disattivare diverse opzioni e modificare i livelli senza ricompilare l'applicazione.  
+ Nonostante sia possibile impostare i livelli di traccia e altre opzioni di configurazione all'interno del codice, è consigliabile utilizzare il file di configurazione per gestire lo stato delle opzioni. Questo perché la gestione della configurazione delle opzioni nel sistema di configurazione consente una maggiore flessibilità: è infatti possibile attivare e disattivare diverse opzioni e modificare i livelli senza ricompilare l'applicazione.  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Per creare e inizializzare un'opzione di traccia  
   
@@ -126,6 +126,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
