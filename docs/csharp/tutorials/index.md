@@ -2,12 +2,12 @@
 title: Esercitazioni su C#
 description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214442"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
@@ -61,5 +61,3 @@ Le esercitazioni seguenti consentono di creare programmi C# usando [.NET Core](.
 * [Uso di LINQ](working-with-linq.md): questa esercitazione illustra molte delle funzionalità di LINQ e gli elementi del linguaggio che supportano questa tecnologia.
 * [Uso degli attributi](attributes.md): illustra come creare e usare gli attributi in C#.
 * L'esercitazione [Interpolazione di stringhe](exploration/interpolated-strings.yml) mostra come inserire valori in una stringa. Verrà illustrato come creare una stringa interpolata con espressioni C# incorporate e come controllare l'aspetto del testo dei risultati dell'espressione nella stringa di risultato. Questa esercitazione è disponibile anche per l'[esecuzione in locale nel computer](exploration/interpolated-strings-local.md).
-
-
