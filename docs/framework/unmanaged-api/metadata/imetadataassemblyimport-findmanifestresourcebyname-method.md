@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d736a93e7ba6451f1d4755a86749565b9ea071b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf61da362251577acadb83915404eba7508b3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141570"
 ---
-# <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a><span data-ttu-id="415f9-102">Metodo IMetaDataAssemblyImport::FindManifestResourceByName</span><span class="sxs-lookup"><span data-stu-id="415f9-102">IMetaDataAssemblyImport::FindManifestResourceByName Method</span></span>
-<span data-ttu-id="415f9-103">Ottiene un puntatore alla risorsa di manifesto con il nome specificato.</span><span class="sxs-lookup"><span data-stu-id="415f9-103">Gets a pointer to the manifest resource with the specified name.</span></span>  
+# <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a><span data-ttu-id="023cf-102">Metodo IMetaDataAssemblyImport::FindManifestResourceByName</span><span class="sxs-lookup"><span data-stu-id="023cf-102">IMetaDataAssemblyImport::FindManifestResourceByName Method</span></span>
+<span data-ttu-id="023cf-103">Ottiene un puntatore alla risorsa di manifesto con il nome specificato.</span><span class="sxs-lookup"><span data-stu-id="023cf-103">Gets a pointer to the manifest resource with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="415f9-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="415f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="023cf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="023cf-104">Syntax</span></span>  
   
 ```  
 HRESULT FindManifestResourceByName (  
@@ -36,25 +36,26 @@ HRESULT FindManifestResourceByName (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="415f9-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="415f9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="023cf-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="023cf-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="415f9-106">[in] Il nome della risorsa.</span><span class="sxs-lookup"><span data-stu-id="415f9-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="023cf-106">[in] Il nome della risorsa.</span><span class="sxs-lookup"><span data-stu-id="023cf-106">[in] The name of the resource.</span></span>  
   
  `ptkManifestResource`  
- <span data-ttu-id="415f9-107">[out] La matrice utilizzata per archiviare il `mdManifestResource` i token di metadati, ognuno dei quali rappresenta una risorsa di manifesto.</span><span class="sxs-lookup"><span data-stu-id="415f9-107">[out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.</span></span>  
+ <span data-ttu-id="023cf-107">[out] La matrice utilizzata per archiviare il `mdManifestResource` i token di metadati, ognuno dei quali rappresenta una risorsa di manifesto.</span><span class="sxs-lookup"><span data-stu-id="023cf-107">[out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="415f9-108">Note</span><span class="sxs-lookup"><span data-stu-id="415f9-108">Remarks</span></span>  
- <span data-ttu-id="415f9-109">Il `FindManifestResourceByName` metodo Usa le regole standard utilizzate da common language runtime per la risoluzione dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="415f9-109">The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="023cf-108">Note</span><span class="sxs-lookup"><span data-stu-id="023cf-108">Remarks</span></span>  
+ <span data-ttu-id="023cf-109">Il `FindManifestResourceByName` metodo Usa le regole standard utilizzate da common language runtime per la risoluzione dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="023cf-109">The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="415f9-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="415f9-110">Requirements</span></span>  
- <span data-ttu-id="415f9-111">**Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="415f9-111">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="023cf-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="023cf-110">Requirements</span></span>  
+ <span data-ttu-id="023cf-111">**Piattaforma:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="023cf-111">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="415f9-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="415f9-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="023cf-112">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="023cf-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="415f9-113">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="415f9-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="023cf-113">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="023cf-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="415f9-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="415f9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="023cf-114">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="023cf-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="415f9-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="415f9-115">See also</span></span>
-- [<span data-ttu-id="415f9-116">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="415f9-116">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="415f9-117">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="415f9-117">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="023cf-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="023cf-115">See also</span></span>
+
+- [<span data-ttu-id="023cf-116">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="023cf-116">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="023cf-117">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="023cf-117">How the Runtime Locates Assemblies</span></span>](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
