@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Disegnare una polilinea utilizzando l'elemento poligono"
+title: "Procedura: Disegnare una polilinea usando l'elemento poligono"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114846"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procedura: Disegnare una polilinea utilizzando l'elemento poligono
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Procedura: Disegnare una polilinea usando l'elemento poligono
 Questo esempio illustra come disegnare una polilinea, ovvero una serie di linee collegate, usando il <xref:System.Windows.Shapes.Polyline> elemento.  
   
  Per disegnare una polilinea, creare un <xref:System.Windows.Shapes.Polyline> elemento e utilizzo relativi <xref:System.Windows.Shapes.Polyline.Points%2A> proprietà per specificare i vertici della forma. Infine, usare il <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> definite dalle proprietà che descrivono la polilinea perché non è visibile una riga senza un tratto.  
@@ -35,6 +35,7 @@ Questo esempio illustra come disegnare una polilinea, ovvero una serie di linee 
  In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>

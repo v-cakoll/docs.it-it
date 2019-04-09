@@ -2,17 +2,17 @@
 title: Specifica di un algoritmo di crittografia personalizzato
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113711"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Specifica di un algoritmo di crittografia personalizzato
 WCF consente di specificare un algoritmo di crittografia personalizzato da usare per crittografare i dati o calcolare le firme digitali. A tale scopo, attenersi alla procedura seguente:  
   
-1.  Derivare una classe da <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
+1.  Derivare una classe da <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Registrare l'algoritmo.  
   
@@ -126,7 +126,8 @@ WSHttpBinding binding = new WSHttpBinding();
  Per un esempio di codice completo, vedere la [agilità di crittografia nella sicurezza WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) esempio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)

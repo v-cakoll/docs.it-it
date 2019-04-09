@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Visualizzare il contenuto dell'oggetto ListView tramite un oggetto GridView"
+title: "Procedura: Visualizzare il contenuto dell'oggetto ListView usando un oggetto GridView"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], displaying contents with GridView
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
-ms.openlocfilehash: 1066869c80bf5bd87d656bcb4994c188ee0e8efc
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 9b467c95d541c326a41d1ed4bd9eb5c87e25bd5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112788"
 ---
-# <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Procedura: Visualizzare il contenuto dell'oggetto ListView tramite un oggetto GridView
+# <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Procedura: Visualizzare il contenuto dell'oggetto ListView usando un oggetto GridView
 In questo esempio viene illustrato come definire un <xref:System.Windows.Controls.GridView> modalità di visualizzazione per un <xref:System.Windows.Controls.ListView> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -25,8 +25,9 @@ In questo esempio viene illustrato come definire un <xref:System.Windows.Control
  ![Screenshot che mostra un ListView con output GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Cenni preliminari su GridView](gridview-overview.md)
-- [Procedure relative alle proprietà](listview-how-to-topics.md)
+- [Procedure relative](listview-how-to-topics.md)

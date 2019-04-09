@@ -2,12 +2,12 @@
 title: Operatori di sequenza
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113685"
 ---
 # <a name="sequence-operators"></a>Operatori di sequenza
 In generale [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta gli operatori di sequenza con una o più delle seguenti qualità:  
@@ -43,7 +43,8 @@ In generale [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Differenze rispetto a .NET  
- Tutti gli operatori di sequenza supportati funzionano correttamente in Common Language Runtime (CLR), ad eccezione di `Average`. `Average` restituisce un valore dello stesso tipo di cui viene calcolata la media, mentre nell'operatore `Average` CLR viene sempre restituito <xref:System.Double> o <xref:System.Decimal>. Se viene eseguito il cast esplicito dell'argomento di origine su double o decimal o se viene eseguito il cast del selettore su double o decimal, questa conversione verrà applicata anche al codice risultante SQL e il risultato sarà corretto.  
+ Tutti gli operatori di sequenza supportati funzionano correttamente in Common Language Runtime (CLR), ad eccezione di `Average`. `Average` Restituisce un valore dello stesso tipo come tipo di cui viene calcolata la media, mentre in CLR `Average` sempre restituito un <xref:System.Double> o un <xref:System.Decimal>. Se viene eseguito il cast esplicito dell'argomento di origine su double o decimal o se viene eseguito il cast del selettore su double o decimal, questa conversione verrà applicata anche al codice risultante SQL e il risultato sarà corretto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

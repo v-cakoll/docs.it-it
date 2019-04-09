@@ -2,18 +2,18 @@
 title: WCF e nomi IDN (Internationalized Domain Name)
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112606"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomi IDN (Internationalized Domain Name)
 È stato aggiunto il supporto per i servizi WCF con gli IDN (Internationalized Domain Name). Un IDN è un nome di dominio che contiene caratteri non ASCII. Questo supporto include sia la possibilità di ospitare un servizio WCF con un nome IDN sia un client WCF per comunicare con un servizio Web con un nome IDN.  
   
 ## <a name="systemuri-and-idn"></a>System.Uri e IDN  
- All'oggetto <xref:System.Uri> sono associate due proprietà: <xref:System.Uri.Host%2A> e <xref:System.Uri.DnsSafeHost%2A>. Queste proprietà contengono valori Unicode o Punycode in base alle impostazioni di configurazione IDN.  
+ <xref:System.Uri> ha due proprietà <xref:System.Uri.Host%2A> e <xref:System.Uri.DnsSafeHost%2A>. Queste proprietà contengono valori Unicode o Punycode in base alle impostazioni di configurazione IDN.  
   
  IDN viene abilitato nel file di configurazione di un'applicazione usando il seguente codice XML  
   
@@ -42,4 +42,5 @@ ms.locfileid: "54571587"
 >  Quando si aggiungono caratteri Unicode ad applicationHost.exe.config, salvare il file usando la codifica UTF-8.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Uri?displayProperty=nameWithType>

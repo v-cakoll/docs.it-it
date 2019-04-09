@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0247f356bfc9f354edc420ea5460da02b17ab116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112814"
 ---
 # <a name="assemblybindinfo-structure"></a>Struttura AssemblyBindInfo
 Informazioni dettagliate sugli assembly di riferimento.  
@@ -39,7 +39,7 @@ typedef struct _AssemblyBindInfo {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`dwAppDomainId`|Un identificatore univoco per il `IStream` restituito da una chiamata a [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), da cui deve essere caricato l'assembly di riferimento.|  
 |`lpReferencedIdentity`|Un identificatore univoco per l'assembly di riferimento.|  
@@ -59,6 +59,7 @@ typedef struct _AssemblyBindInfo {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [Interfaccia ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

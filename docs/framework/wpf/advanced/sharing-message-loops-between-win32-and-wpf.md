@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115076"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Condivisione dei cicli di messaggi tra Win32 e WPF
 In questo argomento descrive come implementare un ciclo di messaggi per essere interoperabile con i [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], tramite l'utilizzo esistente del messaggio l'esposizione di ciclo in <xref:System.Windows.Threading.Dispatcher> o tramite la creazione di un ciclo di messaggi separate nel [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] lato del codice di interoperabilità.  
@@ -62,6 +62,7 @@ In questo argomento descrive come implementare un ciclo di messaggi per essere i
  Inviato un messaggio che va per il sink della tastiera potrebbe non essere per l'oggetto HWND se hook per il messaggio è stato aggiunto usando il <xref:System.Windows.Interop.HwndSource.AddHook%2A> (metodo). Il messaggio potrebbe essere stato gestito a livello del message pump direttamente e non inviato al `DispatchMessage` (funzione).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)

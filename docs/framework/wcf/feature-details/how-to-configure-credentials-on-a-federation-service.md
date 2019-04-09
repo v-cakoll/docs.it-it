@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112567"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Procedura: Configurare le credenziali in un servizio federativo
 In Windows Communication Foundation (WCF), la creazione di un servizio federato includono le procedure principali seguenti:  
@@ -72,11 +72,12 @@ In Windows Communication Foundation (WCF), la creazione di un servizio federato 
  Ad esempio, impostando la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> su <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>, verrebbe autenticato un token emesso il cui certificato di firma si trova nell'archivio certificati `TrustedPeople`. In tal caso, impostare la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> su <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> o su <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. È possibile selezionare altre modalità, tra cui <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Quando si seleziona `Custom`, è necessario assegnare un'istanza della classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> alla proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Con il validator personalizzato è possibile convalidare i certificati mediante qualsiasi criterio. Per altre informazioni, vedere [Procedura: Creare un servizio che usa un Validator del certificato personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Federazione e attendibilità](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
 - [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procedura: Disabilitare sessioni protette in WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Procedura: Creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Modalità di autenticazione di SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
