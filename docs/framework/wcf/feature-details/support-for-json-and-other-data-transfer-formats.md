@@ -2,12 +2,12 @@
 title: Supporto per JSON e altri formati di trasferimento dati
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
-ms.openlocfilehash: 65db474ebfe2b9a07c0f940d0033011c7b44ed45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128479"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Supporto per JSON e altri formati di trasferimento dati
 JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che consente scambi rapidi di piccole quantità di dati tra browser client e servizi Web compatibili con AJAX (Asynchronous JavaScript and XML).  
@@ -23,5 +23,6 @@ JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che 
  Descrive la corrispondenza tra le codifiche di JavaScript Object Notation (JSON) e l'infoset XML, che viene utilizzata internamente da Windows Communication Foundation (WCF) per rappresentare documenti e dati con codifica JSON.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 - <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>

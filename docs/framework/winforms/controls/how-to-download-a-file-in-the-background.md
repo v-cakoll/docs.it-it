@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scaricare un File in Background'
+title: 'Procedura: Scaricare un file in background'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128778"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>Procedura: Scaricare un File in Background
+# <a name="how-to-download-a-file-in-the-background"></a>Procedura: Scaricare un file in background
 Il download di file è un'attività comune. Spesso è utile eseguire questa operazione potenzialmente dispendiosa in termini di tempo in un thread separato. Usare il componente <xref:System.ComponentModel.BackgroundWorker> per eseguire questa attività con una quantità di codice molto ridotta.   
   
 ## <a name="example"></a>Esempio  
@@ -37,7 +37,7 @@ Il download di file è un'attività comune. Spesso è utile eseguire questa oper
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
- **Attesa della fine di un metodo BackgroundWorker**  
+ **Attesa della fine di un BackgroundWorker**  
   
  Il gestore eventi `downloadButton_Click` illustra come attendere il completamento di un'attività asincrona da parte di un componente <xref:System.ComponentModel.BackgroundWorker>.  
   
@@ -66,6 +66,7 @@ Il download di file è un'attività comune. Spesso è utile eseguire questa oper
  Verificare sempre la presenza della proprietà <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> nel gestore eventi <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> prima di tentare di accedere alla proprietà <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> o ad eventuali altri oggetti che possano essere influenzati dal gestore eventi <xref:System.ComponentModel.BackgroundWorker.DoWork>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Procedura: Eseguire un'operazione in background](how-to-run-an-operation-in-the-background.md)
 - [Procedura: Implementare un modulo che usa un'operazione in background](how-to-implement-a-form-that-uses-a-background-operation.md)

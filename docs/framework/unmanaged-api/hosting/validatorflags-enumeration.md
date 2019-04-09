@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127413"
 ---
 # <a name="validatorflags-enumeration"></a>Enumerazione ValidatorFlags
 Contiene valori che indicano il tipo di convalida che deve essere eseguita in una chiamata per il [ICLRValidator](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) (metodo).  
@@ -40,7 +40,7 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|Specifica che solo il Microsoft intermediate language (MSIL) nel file eseguibile deve essere convalidato.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Specifica che solo il formato del file eseguibile deve essere convalidato.|  
@@ -58,5 +58,6 @@ enum ValidatorFlags {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
