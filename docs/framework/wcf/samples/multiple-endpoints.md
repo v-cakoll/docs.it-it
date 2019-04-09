@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 4a9793b6598712265d47af1d31f2455436dfd855
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 438c321e44f04060a733b90ccdbf02caba9406c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112710"
 ---
-# <a name="multiple-endpoints"></a><span data-ttu-id="e7b6b-102">Più endpoint</span><span class="sxs-lookup"><span data-stu-id="e7b6b-102">Multiple Endpoints</span></span>
-<span data-ttu-id="e7b6b-103">L'esempio Più endpoint mostra come configurare più endpoint in un servizio e come comunicare con ogni endpoint a partire da un client.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="e7b6b-104">In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="e7b6b-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="e7b6b-105">La configurazione del servizio è stata modificata per definire due endpoint che supportano il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="e7b6b-106">La configurazione client e il codice sono stati modificati per comunicare con entrambi gli endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
+# <a name="multiple-endpoints"></a><span data-ttu-id="9eac2-102">Più endpoint</span><span class="sxs-lookup"><span data-stu-id="9eac2-102">Multiple Endpoints</span></span>
+<span data-ttu-id="9eac2-103">L'esempio Più endpoint mostra come configurare più endpoint in un servizio e come comunicare con ogni endpoint a partire da un client.</span><span class="sxs-lookup"><span data-stu-id="9eac2-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="9eac2-104">In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="9eac2-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="9eac2-105">La configurazione del servizio è stata modificata per definire due endpoint che supportano il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione.</span><span class="sxs-lookup"><span data-stu-id="9eac2-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="9eac2-106">La configurazione client e il codice sono stati modificati per comunicare con entrambi gli endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="9eac2-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e7b6b-107">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="9eac2-107">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="9eac2-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="e7b6b-108">Il file Web.config del servizio è stato modificato per definire due endpoint che supportano entrambi il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="e7b6b-109">Il primo endpoint viene definito all'indirizzo di base utilizzando un'associazione `basicHttpBinding` che non ha sicurezza attivata.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="e7b6b-110">Il secondo endpoint viene definito in {baseaddress}/secure utilizzando un'associazione `wsHttpBinding`, protetta per impostazione predefinita, utilizzando WS-Security con autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
+ <span data-ttu-id="9eac2-108">Il file Web.config del servizio è stato modificato per definire due endpoint che supportano entrambi il contratto `ICalculator`, ma ognuno con un indirizzo diverso e una diversa associazione.</span><span class="sxs-lookup"><span data-stu-id="9eac2-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="9eac2-109">Il primo endpoint viene definito all'indirizzo di base utilizzando un'associazione `basicHttpBinding` che non ha sicurezza attivata.</span><span class="sxs-lookup"><span data-stu-id="9eac2-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="9eac2-110">Il secondo endpoint viene definito in {baseaddress}/secure utilizzando un'associazione `wsHttpBinding`, protetta per impostazione predefinita, utilizzando WS-Security con autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="9eac2-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
   
 ```xml  
 <service   
@@ -37,7 +37,7 @@ ms.locfileid: "58817696"
 </service>  
 ```  
   
- <span data-ttu-id="e7b6b-111">Entrambi gli endpoint vengono configurati sul client.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="e7b6b-112">A questi endpoint vengono assegnati dei nomi così che il chiamante può passare il nome dell'endpoint desiderato nel costruttore del client.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
+ <span data-ttu-id="9eac2-111">Entrambi gli endpoint vengono configurati sul client.</span><span class="sxs-lookup"><span data-stu-id="9eac2-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="9eac2-112">A questi endpoint vengono assegnati dei nomi così che il chiamante può passare il nome dell'endpoint desiderato nel costruttore del client.</span><span class="sxs-lookup"><span data-stu-id="9eac2-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
   
 ```xml  
 <client>  
@@ -56,7 +56,7 @@ ms.locfileid: "58817696"
 </client>  
 ```  
   
- <span data-ttu-id="e7b6b-113">Il client utilizza entrambi gli endpoint come mostra il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-113">The client uses both endpoints as shown in the following code.</span></span>  
+ <span data-ttu-id="9eac2-113">Il client utilizza entrambi gli endpoint come mostra il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="9eac2-113">The client uses both endpoints as shown in the following code.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -85,7 +85,7 @@ static void Main()
 }  
 ```  
   
- <span data-ttu-id="e7b6b-114">Quando si esegue il client, vengono visualizzate interazioni con entrambi gli endpoint.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
+ <span data-ttu-id="9eac2-114">Quando si esegue il client, vengono visualizzate interazioni con entrambi gli endpoint.</span><span class="sxs-lookup"><span data-stu-id="9eac2-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
   
 ```  
 Communicate with basic endpoint.  
@@ -102,20 +102,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e7b6b-115">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="e7b6b-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9eac2-115">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="9eac2-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e7b6b-116">Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7b6b-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="9eac2-116">Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9eac2-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="e7b6b-117">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7b6b-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="9eac2-117">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9eac2-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="e7b6b-118">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7b6b-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="9eac2-118">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9eac2-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e7b6b-119">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e7b6b-120">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="9eac2-119">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="9eac2-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9eac2-120">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="9eac2-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e7b6b-121">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e7b6b-122">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="e7b6b-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="9eac2-121">Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="9eac2-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9eac2-122">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="9eac2-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
-  
