@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e887fb5f4f9667bed7eef4a84899f82cada0fcd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3a99ed42f500b83b5109631b21a88029995b43d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123878"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>Metodo IMetaDataImport::IsValidToken
 Ottiene un valore che indica se il token specificato contiene un riferimento valido a un oggetto codice.  
@@ -52,5 +52,6 @@ BOOL IsValidToken (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

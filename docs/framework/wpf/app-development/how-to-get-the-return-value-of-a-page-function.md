@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return values of page functions [WPF]
 - getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
-ms.openlocfilehash: fd54a5059d028f9fc6624d1e2d03b209140b481c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 054ffe16690425e118fcac481b2a5ff63f9450f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125068"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a>Procedura: Ottenere il valore restituito di una funzione di pagina
 Questo esempio illustra come ottenere il risultato restituito da una funzione di pagina.  
@@ -29,4 +29,5 @@ Questo esempio illustra come ottenere il risultato restituito da una funzione di
  [!code-vb[HOWTOPageFunctionSnippets#GetPageFunctionResultCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#getpagefunctionresultcodebehind)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Navigation.PageFunction%601>

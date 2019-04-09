@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124527"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: Creare form figlio MDI
 Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), come il centro di interazione dell'utente sono elencati i moduli.  
@@ -107,8 +107,9 @@ Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a do
     >  Quando un form figlio MDI con un componente <xref:System.Windows.Forms.MainMenu>, associato in genere a una struttura di voci di menu, viene aperto all'interno di un form padre MDI dotato di un componente <xref:System.Windows.Forms.MainMenu>, solitamente con struttura di voci di menu, le voci di menu vengono unite automaticamente se è stata impostata la proprietà <xref:System.Windows.Forms.MenuItem.MergeType%2A> ed eventualmente la proprietà <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>. Impostare la proprietà <xref:System.Windows.Forms.MenuItem.MergeType%2A> sia per i componenti <xref:System.Windows.Forms.MainMenu> che per tutte le voci di menu del form figlio su <xref:System.Windows.Forms.MenuMerge.MergeItems>. Impostare anche la proprietà <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> in modo che le voci di entrambi i menu appaiano nell'ordine desiderato. Tenere presente inoltre che quando si chiude un form padre MDI, ciascun form figlio MDI genera un evento <xref:System.Windows.Forms.Form.Closing> prima che venga generato l'evento <xref:System.Windows.Forms.Form.Closing> per il padre MDI. L'annullamento di un evento <xref:System.Windows.Forms.Form.Closing> di un figlio MDI non impedisce la generazione dell'evento <xref:System.Windows.Forms.Form.Closing> del padre MDI, ma l'argomento <xref:System.ComponentModel.CancelEventArgs> per l'evento <xref:System.Windows.Forms.Form.Closing> del padre MDI verrà ora impostato su `true`. È possibile imporre la chiusura del form padre MDI e di tutti i form figlio MDI impostando l'argomento <xref:System.ComponentModel.CancelEventArgs> su `false`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Determinare il figlio MDI attivo](how-to-determine-the-active-mdi-child.md)
 - [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disporre form figlio MDI](how-to-arrange-mdi-child-forms.md)

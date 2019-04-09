@@ -2,12 +2,12 @@
 title: Recupero di informazioni dello schema del database
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 8a076ca792ee1b4b2194b778c51fefbd0bb19bd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133705"
 ---
 # <a name="retrieving-database-schema-information"></a>Recupero di informazioni dello schema del database
 Il recupero di informazioni sullo schema da un database viene eseguito tramite il processo di individuazione dello schema. Individuazione dello schema consente alle applicazioni di richiedere che i provider gestiti trovano e restituiscono informazioni sullo schema di database, noto anche come *metadati*, di un determinato database. Nella raccolta di schemi vengono esposti vari elementi dello schema del database, quali tabelle, colonne e stored procedure. Ogni raccolta di schemi contiene una varietà di informazioni sullo schema specifiche del provider usato.  
@@ -72,5 +72,6 @@ Il recupero di informazioni sullo schema da un database viene eseguito tramite i
  Descrive la **GetSchemaTable** metodo il <xref:System.Data.SqlClient.SqlDataReader> classe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bc1e788f6a55fa6441592141d3a2236a7a0e2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f14d3dcaad1cc8cac11599b1647d61df3a793301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124449"
 ---
 # <a name="modulebindinfo-structure"></a>Struttura ModuleBindInfo
 Fornisce informazioni dettagliate sul modulo cui viene fatto riferimento e l'assembly che lo contiene.  
@@ -38,7 +38,7 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`dwAppDomainId`|Un identificatore univoco per il `IStream` restituito da una chiamata ai [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) metodo da cui è possibile caricare il modulo di cui viene fatto riferimento.|  
 |`lpAssemblyIdentity`|Identificatore univoco per l'assembly che contiene il modulo di cui viene fatto riferimento.|  
@@ -57,6 +57,7 @@ typedef struct _ModuleBindInfo {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [Struttura AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
 - [Interfaccia ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

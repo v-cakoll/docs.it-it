@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119301"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
 I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la dimensione massima di 8 kilobyte (KB) per le righe. In SQL Server viene fornito un identificatore `max` per i tipi di dati `varchar`, `nvarchar` e `varbinary` per consentire l'archiviazione di valori di dimensioni pari a 2^32 byte. Nelle colonne di tabelle e nelle variabili Transact-SQL possono essere specificati tipi di dati `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. In ADO.NET i tipi di dati `max` possono essere recuperati da un `DataReader` e possono inoltre essere specificati come parametri di input e di output senza richiedere una gestione speciale. Per tipi di dati `varchar` di grandi dimensioni, è possibile recuperare e aggiornare i dati in modo incrementale.  
@@ -21,7 +21,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
   
  **Documentazione online di SQL Server**  
   
-1.  [Utilizzo di tipi di dati di valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [Utilizzo di tipi di dati per valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrizioni per i tipi di valori di grandi dimensioni  
  Le seguenti restrizioni si applicano ai tipi di dati `max` e non ai tipi di dati di dimensioni minori:  
@@ -33,7 +33,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
 -   Le colonne `varchar` di grandi dimensioni non possono essere usate come colonne chiave di partizionamento.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Uso di tipi di valori di grandi dimensioni in Transact-SQL  
- La funzione `OPENROWSET` di Transact-SQL è un metodo unico per eseguire la connessione e l'accesso ai dati remoti. Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. È possibile fare riferimento a `OPENROWSET` nella clausola FROM di una query come se fosse un nome di tabella. È inoltre possibile farvi riferimento come tabella di destinazione di un'istruzione INSERT, UPDATE o DELETE, soggetta alle funzionalità del provider OLE DB.  
+ La funzione `OPENROWSET` di Transact-SQL è un metodo unico per eseguire la connessione e l'accesso ai dati remoti. Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. `OPENROWSET` è possibile fare riferimento nella clausola FROM di una query come se fosse un nome di tabella. È inoltre possibile farvi riferimento come tabella di destinazione di un'istruzione INSERT, UPDATE o DELETE, soggetta alle funzionalità del provider OLE DB.  
   
  La funzione `OPENROWSET` include il provider di set di righe `BULK`, che consente di leggere i dati direttamente da un file senza caricare i dati in una tabella di destinazione. Questo consente l'uso di `OPENROWSET` in una semplice istruzione INSERT SELECT.  
   
@@ -65,12 +65,12 @@ FROM OPENROWSET
   
  Il metodo WRITE specifica che una sezione del valore della *column_name* verrà modificato. L'espressione è il valore che verrà copiato il *column_name*, il `@Offset` è il punto di inizio in corrispondenza del quale verrà scritta l'espressione e il `@Length` argomento è la lunghezza della sezione nella colonna.  
   
-|Se|Then|  
+|Se|Quindi|  
 |--------|----------|  
 |L'espressione è impostata su NULL.|`@Length` viene ignorato e il valore in *column_name* viene troncato in corrispondenza `@Offset`.|  
-|Il valore di `@Offset` è NULL.|L'operazione di aggiornamento aggiunge l'espressione alla fine dell'oggetto esistente *column_name* valore e `@Length` viene ignorato.|  
-|Il valore di `@Offset` è maggiore della lunghezza del valore di column_name.|SQL Server restituisce un errore.|  
-|Il valore di `@Length` è NULL.|L'operazione di aggiornamento rimuove tutti i dati a partire da `@Offset` alla fine del valore di `column_name`.|  
+|`@Offset` è NULL|L'operazione di aggiornamento aggiunge l'espressione alla fine dell'oggetto esistente *column_name* valore e `@Length` viene ignorato.|  
+|`@Offset` è maggiore della lunghezza del valore di column_name|SQL Server restituisce un errore.|  
+|`@Length` è NULL|L'operazione di aggiornamento rimuove tutti i dati a partire da `@Offset` alla fine del valore di `column_name`.|  
   
 > [!NOTE]
 >  Il valore di `@Offset` o di `@Length` non può essere un numero negativo.  
@@ -227,7 +227,7 @@ while (reader.Read())
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
-## <a name="using-large-value-type-parameters"></a>Uso dei parametri di tipo di valore di grandi dimensioni  
+## <a name="using-large-value-type-parameters"></a>Utilizzo dei parametri di tipi di valore di grandi dimensioni  
  I tipi di valore di grandi dimensioni possono essere usati negli oggetti <xref:System.Data.SqlClient.SqlParameter> nello stesso modo in cui si usano tipi di valore di dimensioni minori in oggetti <xref:System.Data.SqlClient.SqlParameter>. È possibile recuperare tipi di valori di grandi dimensioni come <xref:System.Data.SqlClient.SqlParameter> i valori, come illustrato nell'esempio seguente. Il codice presuppone l'esistenza della seguente stored procedure GetDocumentSummary nel database di esempio AdventureWorks. La stored procedure accetta un parametro di input denominato @DocumentID e restituisce il contenuto della colonna DocumentSummary nel @DocumentSummary parametro di output.  
   
 ```  
@@ -250,6 +250,7 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Operazioni sui dati SQL Server in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)

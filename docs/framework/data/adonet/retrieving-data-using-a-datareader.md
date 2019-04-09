@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128687"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperare i dati tramite un oggetto DataReader
 Per recuperare dati usando un **DataReader**, creare un'istanza del **comando** dell'oggetto e quindi creare un **DataReader** chiamando **Command. ExecuteReader**  per recuperare righe da un'origine dati. Il **DataReader** fornisce un flusso non memorizzato nel buffer di dati che consente una logica procedurale di elaborare sequenzialmente risultati da un'origine dati. Il **DataReader** è un'ottima scelta quando si recuperano grandi quantità di dati perché i dati non viene memorizzato nella cache in memoria.
@@ -258,7 +258,8 @@ adapter.Fill(ds);
 >  Per evitare un' **OverflowException**, si consiglia di gestire le conversioni dal tipo NUMBER Oracle in un tipo .NET Framework valido prima di archiviare i valori in un <xref:System.Data.DataRow>. È possibile usare la <xref:System.Data.Common.DataAdapter.FillError> evento per determinare se un' **OverflowException** si è verificato. Per altre informazioni sul <xref:System.Data.Common.DataAdapter.FillError> eventi, vedere [la gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [Recupero di informazioni dello schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

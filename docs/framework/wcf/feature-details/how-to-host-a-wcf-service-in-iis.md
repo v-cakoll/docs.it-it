@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Ospitare un servizio WCF in IIS'
+title: 'Procedura: Hosting di un servizio WCF in WAS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124553"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Ospitare un servizio WCF in IIS
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
 Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per altre informazioni su IIS vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF che viene eseguito nell'ambiente IIS sfrutta appieno le funzionalità IIS, quali il riciclo dei processi, interruzione dell'inattività, il monitoraggio dello stato di processo e attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
   
  Per altre informazioni su come WCF e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interagiscono, vedere [i servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Per altre informazioni sulla configurazione della protezione, vedere [sicurezza](../../../../docs/framework/wcf/feature-details/security.md).  
@@ -66,7 +66,7 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
      In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni sull'endpoint, associazioni e comportamenti vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Per assicurarsi che il servizio sia ospitato correttamente, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
+11. Per assicurarsi che il servizio è ospitato in modo corretto, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo del codice per il servizio calcolatrice ospitato da IIS.  
@@ -76,8 +76,9 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Hosting in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
+
+- [Host in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Servizi host](../../../../docs/framework/wcf/hosting-services.md)
 - [Servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)
