@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Allineare il testo creato'
+title: 'Procedura: Allineare il testo disegnato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,34 +8,35 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210451"
 ---
-# <a name="how-to-align-drawn-text"></a><span data-ttu-id="aa9e3-102">Procedura: Allineare il testo creato</span><span class="sxs-lookup"><span data-stu-id="aa9e3-102">How to: Align Drawn Text</span></span>
-<span data-ttu-id="aa9e3-103">Quando si esegue il disegno personalizzato, è spesso possibile centrare testo disegnato su un form o controllo.</span><span class="sxs-lookup"><span data-stu-id="aa9e3-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="aa9e3-104">Per facilitare l'allineamento del testo disegnato con la <xref:System.Drawing.Graphics.DrawString%2A> o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodi creando l'oggetto di formattazione corretta e impostare i flag di formato appropriato.</span><span class="sxs-lookup"><span data-stu-id="aa9e3-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  
+# <a name="how-to-align-drawn-text"></a><span data-ttu-id="fd51e-102">Procedura: Allineare il testo disegnato</span><span class="sxs-lookup"><span data-stu-id="fd51e-102">How to: Align Drawn Text</span></span>
+<span data-ttu-id="fd51e-103">Quando si esegue il disegno personalizzato, è spesso possibile centrare testo disegnato su un form o controllo.</span><span class="sxs-lookup"><span data-stu-id="fd51e-103">When you perform custom drawing, you may often want to center drawn text on a form or control.</span></span> <span data-ttu-id="fd51e-104">Per facilitare l'allineamento del testo disegnato con la <xref:System.Drawing.Graphics.DrawString%2A> o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodi creando l'oggetto di formattazione corretta e impostare i flag di formato appropriato.</span><span class="sxs-lookup"><span data-stu-id="fd51e-104">You can easily align text drawn with the <xref:System.Drawing.Graphics.DrawString%2A> or <xref:System.Windows.Forms.TextRenderer.DrawText%2A> methods by creating the correct formatting object and setting the appropriate format flags.</span></span>  
   
-### <a name="to-draw-centered-text-with-gdi-drawstring"></a><span data-ttu-id="aa9e3-105">Per disegnare il testo con GDI + (DrawString) centrato</span><span class="sxs-lookup"><span data-stu-id="aa9e3-105">To draw centered text with GDI+ (DrawString)</span></span>  
+### <a name="to-draw-centered-text-with-gdi-drawstring"></a><span data-ttu-id="fd51e-105">Per disegnare il testo con GDI + (DrawString) centrato</span><span class="sxs-lookup"><span data-stu-id="fd51e-105">To draw centered text with GDI+ (DrawString)</span></span>  
   
-1.  <span data-ttu-id="aa9e3-106">Usare un <xref:System.Drawing.StringFormat> con l'appropriato <xref:System.Drawing.Graphics.DrawString%2A> metodo per specificare il testo centrato.</span><span class="sxs-lookup"><span data-stu-id="aa9e3-106">Use a <xref:System.Drawing.StringFormat> with the appropriate <xref:System.Drawing.Graphics.DrawString%2A> method to specify centered text.</span></span>  
+1.  <span data-ttu-id="fd51e-106">Usare un <xref:System.Drawing.StringFormat> con l'appropriato <xref:System.Drawing.Graphics.DrawString%2A> metodo per specificare il testo centrato.</span><span class="sxs-lookup"><span data-stu-id="fd51e-106">Use a <xref:System.Drawing.StringFormat> with the appropriate <xref:System.Drawing.Graphics.DrawString%2A> method to specify centered text.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#10)]
      [!code-vb[System.Drawing.AlignDrawnText#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#10)]  
   
-### <a name="to-draw-centered-text-with-gdi-drawtext"></a><span data-ttu-id="aa9e3-107">Per disegnare il testo con GDI (DrawText) centrato</span><span class="sxs-lookup"><span data-stu-id="aa9e3-107">To draw centered text with GDI (DrawText)</span></span>  
+### <a name="to-draw-centered-text-with-gdi-drawtext"></a><span data-ttu-id="fd51e-107">Per disegnare il testo con GDI (DrawText) centrato</span><span class="sxs-lookup"><span data-stu-id="fd51e-107">To draw centered text with GDI (DrawText)</span></span>  
   
-1.  <span data-ttu-id="aa9e3-108">Usare la <xref:System.Windows.Forms.TextFormatFlags> enumerazione per il wrapping, nonché verticalmente e orizzontalmente ruotava testo con l'appropriato <xref:System.Windows.Forms.TextRenderer.DrawText%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="aa9e3-108">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration for wrapping as well as vertically and horizontally centering text with the appropriate <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
+1.  <span data-ttu-id="fd51e-108">Usare la <xref:System.Windows.Forms.TextFormatFlags> enumerazione per il wrapping, nonché verticalmente e orizzontalmente ruotava testo con l'appropriato <xref:System.Windows.Forms.TextRenderer.DrawText%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="fd51e-108">Use the <xref:System.Windows.Forms.TextFormatFlags> enumeration for wrapping as well as vertically and horizontally centering text with the appropriate <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method.</span></span>  
   
      [!code-csharp[System.Drawing.AlignDrawnText#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#20)]
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="aa9e3-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="aa9e3-109">Compiling the Code</span></span>  
- <span data-ttu-id="aa9e3-110">Gli esempi di codice precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="aa9e3-110">The preceding code examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fd51e-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="fd51e-109">Compiling the Code</span></span>  
+ <span data-ttu-id="fd51e-110">Gli esempi di codice precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="fd51e-110">The preceding code examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa9e3-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa9e3-111">See also</span></span>
-- [<span data-ttu-id="aa9e3-112">Procedura: Creare testo con GDI</span><span class="sxs-lookup"><span data-stu-id="aa9e3-112">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
-- [<span data-ttu-id="aa9e3-113">Uso di tipi di carattere e testo</span><span class="sxs-lookup"><span data-stu-id="aa9e3-113">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="aa9e3-114">Procedura: Costruire i tipi di carattere e famiglie di caratteri</span><span class="sxs-lookup"><span data-stu-id="aa9e3-114">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)
+## <a name="see-also"></a><span data-ttu-id="fd51e-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd51e-111">See also</span></span>
+
+- [<span data-ttu-id="fd51e-112">Procedura: Disegnare testo con GDI</span><span class="sxs-lookup"><span data-stu-id="fd51e-112">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="fd51e-113">Utilizzo di tipi di carattere e testo</span><span class="sxs-lookup"><span data-stu-id="fd51e-113">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="fd51e-114">Procedura: Creare tipi di carattere e famiglie di caratteri</span><span class="sxs-lookup"><span data-stu-id="fd51e-114">How to: Construct Font Families and Fonts</span></span>](how-to-construct-font-families-and-fonts.md)

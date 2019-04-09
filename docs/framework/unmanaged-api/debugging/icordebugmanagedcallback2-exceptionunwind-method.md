@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 802d4987b3be86b5a6302b78f75e4f0c02d49f3e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: faba9631e85ac84ff1517b64e9a3f5567ee7c9dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214794"
 ---
-# <a name="icordebugmanagedcallback2exceptionunwind-method"></a><span data-ttu-id="c5a71-102">Metodo ICorDebugManagedCallback2::ExceptionUnwind</span><span class="sxs-lookup"><span data-stu-id="c5a71-102">ICorDebugManagedCallback2::ExceptionUnwind Method</span></span>
-<span data-ttu-id="c5a71-103">Fornisce una notifica sullo stato durante il processo di rimozione di eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-103">Provides a status notification during the exception unwinding process.</span></span>  
+# <a name="icordebugmanagedcallback2exceptionunwind-method"></a><span data-ttu-id="cee16-102">Metodo ICorDebugManagedCallback2::ExceptionUnwind</span><span class="sxs-lookup"><span data-stu-id="cee16-102">ICorDebugManagedCallback2::ExceptionUnwind Method</span></span>
+<span data-ttu-id="cee16-103">Fornisce una notifica sullo stato durante il processo di rimozione di eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-103">Provides a status notification during the exception unwinding process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5a71-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c5a71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cee16-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cee16-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionUnwind (  
@@ -38,33 +38,34 @@ HRESULT ExceptionUnwind (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5a71-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c5a71-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cee16-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cee16-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="c5a71-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="cee16-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione contenente il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread on which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="c5a71-107">[in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
+ <span data-ttu-id="cee16-107">[in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the exception was thrown.</span></span>  
   
  `dwEventType`  
- <span data-ttu-id="c5a71-108">[in] Valore dell'enumerazione CorDebugExceptionUnwindCallbackType che specifica l'evento segnalato dal callback durante la fase di rimozione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-108">[in] A value of the CorDebugExceptionUnwindCallbackType enumeration that specifies the event that is being signaled by the callback during the unwind phase.</span></span>  
+ <span data-ttu-id="cee16-108">[in] Valore dell'enumerazione CorDebugExceptionUnwindCallbackType che specifica l'evento segnalato dal callback durante la fase di rimozione.</span><span class="sxs-lookup"><span data-stu-id="cee16-108">[in] A value of the CorDebugExceptionUnwindCallbackType enumeration that specifies the event that is being signaled by the callback during the unwind phase.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="c5a71-109">[in] Valore di [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumerazione che specifica informazioni aggiuntive sull'eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-109">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception.</span></span>  
+ <span data-ttu-id="cee16-109">[in] Valore di [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumerazione che specifica informazioni aggiuntive sull'eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-109">[in] A value of the [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeration that specifies additional information about the exception.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5a71-110">Note</span><span class="sxs-lookup"><span data-stu-id="c5a71-110">Remarks</span></span>  
- <span data-ttu-id="c5a71-111">`ExceptionUnwind` viene chiamato in vari momenti durante la fase di rimozione del processo di gestione delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="c5a71-111">`ExceptionUnwind` is called at various points during the unwind phase of the exception-handling process.</span></span> <span data-ttu-id="c5a71-112">`ExceptionUnwind` può essere chiamato più volte durante la rimozione di un'unica eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-112">`ExceptionUnwind` can be called more than once while unwinding a single exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cee16-110">Note</span><span class="sxs-lookup"><span data-stu-id="cee16-110">Remarks</span></span>  
+ `ExceptionUnwind` <span data-ttu-id="cee16-111">viene chiamato in vari momenti durante la fase di rimozione del processo di gestione delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="cee16-111">is called at various points during the unwind phase of the exception-handling process.</span></span> `ExceptionUnwind` <span data-ttu-id="cee16-112">può essere chiamato più volte durante la rimozione di un'unica eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-112">can be called more than once while unwinding a single exception.</span></span>  
   
- <span data-ttu-id="c5a71-113">Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, il puntatore all'istruzione saranno nel frame foglia del thread, in corrispondenza del punto di sequenza prima (ciò può essere più istruzioni) dell'istruzione che ha causato l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="c5a71-113">If `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, the instruction pointer will be in the leaf frame of the thread, at the sequence point before (this may be several instructions before) the instruction that led to the exception.</span></span>  
+ <span data-ttu-id="cee16-113">Se `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, il puntatore all'istruzione saranno nel frame foglia del thread, in corrispondenza del punto di sequenza prima (ciò può essere più istruzioni) dell'istruzione che ha causato l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="cee16-113">If `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, the instruction pointer will be in the leaf frame of the thread, at the sequence point before (this may be several instructions before) the instruction that led to the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5a71-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c5a71-114">Requirements</span></span>  
- <span data-ttu-id="c5a71-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5a71-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cee16-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cee16-114">Requirements</span></span>  
+ <span data-ttu-id="cee16-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cee16-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5a71-116">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5a71-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cee16-116">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cee16-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c5a71-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5a71-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cee16-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cee16-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c5a71-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5a71-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="cee16-118">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="cee16-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c5a71-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5a71-119">See also</span></span>
-- [<span data-ttu-id="c5a71-120">Interfaccia ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="c5a71-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="c5a71-121">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="c5a71-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cee16-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cee16-119">See also</span></span>
+
+- [<span data-ttu-id="cee16-120">Interfaccia ICorDebugManagedCallback2</span><span class="sxs-lookup"><span data-stu-id="cee16-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="cee16-121">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="cee16-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

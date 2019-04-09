@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b7a7641398d2d083a3ea1b7f44186c3be02213c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a0372afe6718e5b8cf4d5ed99b3198a8163ae7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214773"
 ---
-# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="544a2-102">Enumerazione ECLRAssemblyIdentityFlags</span><span class="sxs-lookup"><span data-stu-id="544a2-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
-<span data-ttu-id="544a2-103">Indica il tipo di identità di un assembly.</span><span class="sxs-lookup"><span data-stu-id="544a2-103">Indicates the type of an assembly's identity.</span></span>  
+# <a name="eclrassemblyidentityflags-enumeration"></a><span data-ttu-id="d5016-102">Enumerazione ECLRAssemblyIdentityFlags</span><span class="sxs-lookup"><span data-stu-id="d5016-102">ECLRAssemblyIdentityFlags Enumeration</span></span>
+<span data-ttu-id="d5016-103">Indica il tipo di identità di un assembly.</span><span class="sxs-lookup"><span data-stu-id="d5016-103">Indicates the type of an assembly's identity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="544a2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="544a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5016-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d5016-104">Syntax</span></span>  
   
 ```  
 typedef enum _CLRAssemblyIdentityFlags {  
@@ -34,18 +34,19 @@ typedef enum _CLRAssemblyIdentityFlags {
 } ECLRAssemblyIdentityFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="544a2-105">Membri</span><span class="sxs-lookup"><span data-stu-id="544a2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d5016-105">Membri</span><span class="sxs-lookup"><span data-stu-id="d5016-105">Members</span></span>  
   
-|<span data-ttu-id="544a2-106">Membro</span><span class="sxs-lookup"><span data-stu-id="544a2-106">Member</span></span>|<span data-ttu-id="544a2-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="544a2-107">Description</span></span>|  
+|<span data-ttu-id="d5016-106">Member</span><span class="sxs-lookup"><span data-stu-id="d5016-106">Member</span></span>|<span data-ttu-id="d5016-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d5016-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="544a2-108">L'identità è in forma canonica.</span><span class="sxs-lookup"><span data-stu-id="544a2-108">The identity is canonicalized.</span></span>|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|<span data-ttu-id="d5016-108">L'identità è in forma canonica.</span><span class="sxs-lookup"><span data-stu-id="d5016-108">The identity is canonicalized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="544a2-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="544a2-109">Requirements</span></span>  
- <span data-ttu-id="544a2-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="544a2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5016-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d5016-109">Requirements</span></span>  
+ <span data-ttu-id="d5016-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5016-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="544a2-111">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="544a2-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d5016-111">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d5016-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="544a2-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="544a2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="d5016-112">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d5016-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="544a2-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="544a2-113">See also</span></span>
-- [<span data-ttu-id="544a2-114">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="544a2-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="d5016-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5016-113">See also</span></span>
+
+- [<span data-ttu-id="d5016-114">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="d5016-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

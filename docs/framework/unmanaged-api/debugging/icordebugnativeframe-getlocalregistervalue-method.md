@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e6512871bf9a5cb0219a470267d1be4ecd403b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f53c8290271391e52176f8364b592ce6b46faf71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195943"
 ---
-# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="019f7-102">Metodo ICorDebugNativeFrame::GetLocalRegisterValue</span><span class="sxs-lookup"><span data-stu-id="019f7-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
-<span data-ttu-id="019f7-103">Ottiene il valore di un argomento o una variabile locale viene archiviato nel registro specificato per il frame nativo.</span><span class="sxs-lookup"><span data-stu-id="019f7-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="dbc18-102">Metodo ICorDebugNativeFrame::GetLocalRegisterValue</span><span class="sxs-lookup"><span data-stu-id="dbc18-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
+<span data-ttu-id="dbc18-103">Ottiene il valore di un argomento o una variabile locale viene archiviato nel registro specificato per il frame nativo.</span><span class="sxs-lookup"><span data-stu-id="dbc18-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="019f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="019f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbc18-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dbc18-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalRegisterValue (  
@@ -38,30 +38,29 @@ HRESULT GetLocalRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="019f7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="019f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbc18-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="dbc18-105">Parameters</span></span>  
  `reg`  
- <span data-ttu-id="019f7-106">[in] Valore dell'enumerazione che specifica il registro contenente il valore "CorDebugRegister".</span><span class="sxs-lookup"><span data-stu-id="019f7-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
+ <span data-ttu-id="dbc18-106">[in] Valore dell'enumerazione che specifica il registro contenente il valore "CorDebugRegister".</span><span class="sxs-lookup"><span data-stu-id="dbc18-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="019f7-107">[in] Intero che specifica le dimensioni della firma binaria dei metadati che fa riferimento il `pvSigBlob` parametro.</span><span class="sxs-lookup"><span data-stu-id="019f7-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="dbc18-107">[in] Intero che specifica le dimensioni della firma binaria dei metadati che fa riferimento il `pvSigBlob` parametro.</span><span class="sxs-lookup"><span data-stu-id="dbc18-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="019f7-108">[in] Oggetto `PCCOR_SIGNATURE` valore che punta alla firma binaria dei metadati del tipo del valore.</span><span class="sxs-lookup"><span data-stu-id="019f7-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="dbc18-108">[in] Oggetto `PCCOR_SIGNATURE` valore che punta alla firma binaria dei metadati del tipo del valore.</span><span class="sxs-lookup"><span data-stu-id="dbc18-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="019f7-109">[out] Un puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nel registro specificato.</span><span class="sxs-lookup"><span data-stu-id="019f7-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
+ <span data-ttu-id="dbc18-109">[out] Un puntatore all'indirizzo di un oggetto "ICorDebugValue" che rappresenta il valore recuperato archiviato nel registro specificato.</span><span class="sxs-lookup"><span data-stu-id="dbc18-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="019f7-110">Note</span><span class="sxs-lookup"><span data-stu-id="019f7-110">Remarks</span></span>  
- <span data-ttu-id="019f7-111">Il `GetLocalRegisterValue` metodo può essere utilizzato in un frame nativo o un just-in-time (JIT)-frame compilato.</span><span class="sxs-lookup"><span data-stu-id="019f7-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbc18-110">Note</span><span class="sxs-lookup"><span data-stu-id="dbc18-110">Remarks</span></span>  
+ <span data-ttu-id="dbc18-111">Il `GetLocalRegisterValue` metodo può essere utilizzato in un frame nativo o un just-in-time (JIT)-frame compilato.</span><span class="sxs-lookup"><span data-stu-id="dbc18-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="019f7-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="019f7-112">Requirements</span></span>  
- <span data-ttu-id="019f7-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="019f7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbc18-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dbc18-112">Requirements</span></span>  
+ <span data-ttu-id="dbc18-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbc18-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="019f7-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="019f7-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dbc18-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dbc18-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="019f7-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="019f7-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dbc18-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbc18-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="019f7-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="019f7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="dbc18-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="dbc18-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="019f7-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="019f7-117">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="dbc18-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dbc18-117">See also</span></span>

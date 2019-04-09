@@ -19,31 +19,32 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192205"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="5aaf9-102">Procedura: Disegnare una forma con contorno</span><span class="sxs-lookup"><span data-stu-id="5aaf9-102">How to: Draw an Outlined Shape</span></span>
-<span data-ttu-id="5aaf9-103">In questo esempio disegna ellissi e rettangoli in un form.</span><span class="sxs-lookup"><span data-stu-id="5aaf9-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
+# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="42a01-102">Procedura: Disegnare una forma con contorno</span><span class="sxs-lookup"><span data-stu-id="42a01-102">How to: Draw an Outlined Shape</span></span>
+<span data-ttu-id="42a01-103">In questo esempio disegna ellissi e rettangoli in un form.</span><span class="sxs-lookup"><span data-stu-id="42a01-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5aaf9-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="5aaf9-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="42a01-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="42a01-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
  [!code-csharp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
  [!code-vb[System.Drawing.ConceptualHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5aaf9-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="5aaf9-105">Compiling the Code</span></span>  
- <span data-ttu-id="5aaf9-106">È possibile chiamare questo metodo nel <xref:System.Windows.Forms.Form.Load> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="5aaf9-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="5aaf9-107">Il contenuto creato non verrà ridisegnato se il form viene ridimensionato o nascosto da un altro form.</span><span class="sxs-lookup"><span data-stu-id="5aaf9-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="5aaf9-108">Per rendere il contenuto viene ridisegnata automaticamente, è necessario eseguire l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="5aaf9-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="42a01-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="42a01-105">Compiling the Code</span></span>  
+ <span data-ttu-id="42a01-106">È possibile chiamare questo metodo nel <xref:System.Windows.Forms.Form.Load> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="42a01-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="42a01-107">Il contenuto creato non verrà ridisegnato se il form viene ridimensionato o nascosto da un altro form.</span><span class="sxs-lookup"><span data-stu-id="42a01-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="42a01-108">Per rendere il contenuto viene ridisegnata automaticamente, è necessario eseguire l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="42a01-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="5aaf9-109">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="5aaf9-109">Robust Programming</span></span>  
- <span data-ttu-id="5aaf9-110">È sempre necessario chiamare <xref:System.IDisposable.Dispose%2A> tutti gli oggetti che utilizzano le risorse di sistema, ad esempio <xref:System.Drawing.Pen> e <xref:System.Drawing.Graphics> oggetti.</span><span class="sxs-lookup"><span data-stu-id="5aaf9-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="42a01-109">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="42a01-109">Robust Programming</span></span>  
+ <span data-ttu-id="42a01-110">È sempre necessario chiamare <xref:System.IDisposable.Dispose%2A> tutti gli oggetti che utilizzano le risorse di sistema, ad esempio <xref:System.Drawing.Pen> e <xref:System.Drawing.Graphics> oggetti.</span><span class="sxs-lookup"><span data-stu-id="42a01-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5aaf9-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5aaf9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42a01-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="42a01-111">See also</span></span>
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [<span data-ttu-id="5aaf9-112">Introduzione alla programmazione grafica</span><span class="sxs-lookup"><span data-stu-id="5aaf9-112">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="5aaf9-113">Uso di un oggetto Pen per creare linee e forme</span><span class="sxs-lookup"><span data-stu-id="5aaf9-113">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
-- [<span data-ttu-id="5aaf9-114">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="5aaf9-114">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="42a01-112">Guida introduttiva alla programmazione grafica</span><span class="sxs-lookup"><span data-stu-id="42a01-112">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="42a01-113">Utilizzo di un oggetto Pen per creare linee e forme</span><span class="sxs-lookup"><span data-stu-id="42a01-113">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="42a01-114">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="42a01-114">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)

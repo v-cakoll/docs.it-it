@@ -10,18 +10,18 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207825"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="10bac-102">\_Funzione AxlRSAKeyValueToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="10bac-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="4bd88-102">\_Funzione AxlRSAKeyValueToPublicKeyToken</span><span class="sxs-lookup"><span data-stu-id="4bd88-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
 
-<span data-ttu-id="10bac-103">Converte un elemento Modulus e un elemento Exponent in un token di chiave pubblica con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="10bac-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+<span data-ttu-id="4bd88-103">Converte un elemento Modulus e un elemento Exponent in un token di chiave pubblica con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="4bd88-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10bac-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="10bac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bd88-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4bd88-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
@@ -31,18 +31,19 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10bac-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="10bac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bd88-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4bd88-105">Parameters</span></span>  
  `pModulusBlob`  
- <span data-ttu-id="10bac-106">[in] Il blob dell'elemento Modulus con codifica base64 (dalla \<Modulus > elemento).</span><span class="sxs-lookup"><span data-stu-id="10bac-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="10bac-107">Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.</span><span class="sxs-lookup"><span data-stu-id="10bac-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="4bd88-106">[in] Il blob dell'elemento Modulus con codifica base64 (dalla \<Modulus > elemento).</span><span class="sxs-lookup"><span data-stu-id="4bd88-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="4bd88-107">Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.</span><span class="sxs-lookup"><span data-stu-id="4bd88-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pExponentBlob`  
- <span data-ttu-id="10bac-108">[in] Il blob di Exponent con codifica base64 (dalla \<Exponent > elemento).</span><span class="sxs-lookup"><span data-stu-id="10bac-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="10bac-109">Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.</span><span class="sxs-lookup"><span data-stu-id="10bac-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="4bd88-108">[in] Il blob di Exponent con codifica base64 (dalla \<Exponent > elemento).</span><span class="sxs-lookup"><span data-stu-id="4bd88-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="4bd88-109">Vedere le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) struttura.</span><span class="sxs-lookup"><span data-stu-id="4bd88-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyToken`  
- <span data-ttu-id="10bac-110">[out] Puntatore a WCHAR \* per ricevere il token di chiave pubblica con codifica esadecimale.</span><span class="sxs-lookup"><span data-stu-id="10bac-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="4bd88-110">[out] Puntatore a WCHAR \* per ricevere il token di chiave pubblica con codifica esadecimale.</span><span class="sxs-lookup"><span data-stu-id="4bd88-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10bac-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="10bac-111">Return Value</span></span>  
- <span data-ttu-id="10bac-112">`S_OK` se la funzione ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="10bac-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="10bac-113">In caso contrario, verrà restituito un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="10bac-113">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bd88-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4bd88-111">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="4bd88-112">Se la funzione ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="4bd88-112">if the function succeeds.</span></span> <span data-ttu-id="4bd88-113">In caso contrario, verrà restituito un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="4bd88-113">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10bac-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10bac-114">See also</span></span>
-- [<span data-ttu-id="10bac-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="10bac-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="4bd88-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4bd88-114">See also</span></span>
+
+- [<span data-ttu-id="4bd88-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="4bd88-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

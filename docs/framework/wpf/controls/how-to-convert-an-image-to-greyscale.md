@@ -9,23 +9,24 @@ helpviewer_keywords:
 - converting [WPF], images to grayscale
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
-ms.openlocfilehash: 3fcc758007bf0a7e3f6c9a3597d628fae506fda4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200285"
 ---
-# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="3a9a5-102">Procedura: Convertire un'immagine in scala di grigi</span><span class="sxs-lookup"><span data-stu-id="3a9a5-102">How to: Convert an Image to Greyscale</span></span>
-<span data-ttu-id="3a9a5-103">Questo esempio viene illustrato come convertire un'immagine in scala di grigi usando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="3a9a5-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
+# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="b4fb4-102">Procedura: Convertire un'immagine in scala di grigi</span><span class="sxs-lookup"><span data-stu-id="b4fb4-102">How to: Convert an Image to Greyscale</span></span>
+<span data-ttu-id="b4fb4-103">Questo esempio viene illustrato come convertire un'immagine in scala di grigi usando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="b4fb4-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3a9a5-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="3a9a5-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b4fb4-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="b4fb4-104">Example</span></span>  
  [!code-xaml[ImagingSnippetGallery_snip#FormatConvertedBitmapXamlExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/FormatConvertedBitmapExample.xaml#formatconvertedbitmapxamlexamplewholepage)]  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample.cs#formatconvertedbitmapcodeexamplewholepage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="3a9a5-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a9a5-105">See also</span></span>
-- [<span data-ttu-id="3a9a5-106">Usare l'elemento di immagine</span><span class="sxs-lookup"><span data-stu-id="3a9a5-106">Use the Image Element</span></span>](how-to-use-the-image-element.md)
-- [<span data-ttu-id="3a9a5-107">Ritagliare un'immagine</span><span class="sxs-lookup"><span data-stu-id="3a9a5-107">Crop an Image</span></span>](how-to-crop-an-image.md)
-- [<span data-ttu-id="3a9a5-108">Ruotare un'immagine</span><span class="sxs-lookup"><span data-stu-id="3a9a5-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)
+## <a name="see-also"></a><span data-ttu-id="b4fb4-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b4fb4-105">See also</span></span>
+
+- [<span data-ttu-id="b4fb4-106">Usare l'elemento Image</span><span class="sxs-lookup"><span data-stu-id="b4fb4-106">Use the Image Element</span></span>](how-to-use-the-image-element.md)
+- [<span data-ttu-id="b4fb4-107">Ritagliare un'immagine</span><span class="sxs-lookup"><span data-stu-id="b4fb4-107">Crop an Image</span></span>](how-to-crop-an-image.md)
+- [<span data-ttu-id="b4fb4-108">Ruotare un'immagine</span><span class="sxs-lookup"><span data-stu-id="b4fb4-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)
