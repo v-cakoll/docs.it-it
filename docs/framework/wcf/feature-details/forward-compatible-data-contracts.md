@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095893"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratti dati compatibili con versioni successive
 Una funzionalità di Windows Communication Foundation (WCF) è il sistema di contratto dati che i contratti può evolversi nel tempo in modi che non determina interruzioni. Ovvero, un client con una versione precedente di un contratto dati può comunicare con un servizio dotato di una versione più recente dello stesso contratto dati, oppure un client con una versione più recente di un contratto dati può comunicare con un client dotato di una versione precedente dello stesso contratto dati. Per altre informazioni, vedere [le procedure consigliate: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -42,7 +42,8 @@ Una funzionalità di Windows Communication Foundation (WCF) è il sistema di con
  La funzionalità delle sequenze di andata e ritorno può essere disattivata, impostando `ignoreExtensionDataObject` su `true` nel costruttore <xref:System.Runtime.Serialization.DataContractSerializer> o impostando la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> su `true` in <xref:System.ServiceModel.ServiceBehaviorAttribute>. Quando questa funzionalità è disattivata, il deserializzatore non popolerà la proprietà <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> e il serializzatore non creerà il contenuto della proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
-- [Controllo delle versioni dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Procedure consigliate: Versioni di DataContract](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Controllo delle versioni dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Procedure consigliate: Controllo delle versioni dei contratti dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

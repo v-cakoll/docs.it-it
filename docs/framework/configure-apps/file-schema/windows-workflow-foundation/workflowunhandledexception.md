@@ -3,12 +3,12 @@ title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: caf5be7aaff0df436be3a1d618a9f89bb32e6bb7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096251"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 Comportamento del servizio che consente di specificare l'azione da intraprendere quando si verifica un'eccezione non gestita all'interno di un servizio flusso di lavoro.  
@@ -38,7 +38,7 @@ Comportamento del servizio che consente di specificare l'azione da intraprendere
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|action|Stringa che specifica l'azione da intraprendere quando si verifica un'eccezione non gestita. L'attributo è di tipo <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>.|  
+|action|Stringa che specifica l'azione da intraprendere quando si verifica un'eccezione non gestita. Questo attributo è di tipo <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -50,5 +50,6 @@ Comportamento del servizio che consente di specificare l'azione da intraprendere
 |[\<comportamento > di \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>

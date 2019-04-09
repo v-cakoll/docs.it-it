@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ottenere l'offset di un oggetto Visual"
+title: "Procedura: Ottenere l'offset di un oggetto visivo"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093410"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Procedura: Ottenere l'offset di un oggetto Visual
+# <a name="how-to-get-the-offset-of-a-visual"></a>Procedura: Ottenere l'offset di un oggetto visivo
 Questi esempi illustrano come recuperare il valore di offset di un oggetto visivo che è relativo al relativo elemento padre, qualsiasi predecessore o discendente.  
   
 ## <a name="example"></a>Esempio  
@@ -66,6 +66,7 @@ TextBlock annidati all'interno di due StackPanel
  L'offset prende in considerazione il <xref:System.Windows.FrameworkElement.Margin%2A> i valori per tutti gli oggetti. In questo caso <xref:System.Windows.Vector.X%2A> è -4, e <xref:System.Windows.Vector.Y%2A> è -4. I valori di offset sono valori negativi, poiché l'oggetto padre viene spostato negativamente rispetto al relativo oggetto figlio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

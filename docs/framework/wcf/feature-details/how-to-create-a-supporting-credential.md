@@ -2,12 +2,12 @@
 title: 'Procedura: Creare una credenziale di supporto'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093709"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedura: Creare una credenziale di supporto
 È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. Questo argomento illustra come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
@@ -81,4 +81,5 @@ ms.locfileid: "54539805"
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

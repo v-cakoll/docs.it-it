@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091408"
 ---
 # <a name="dynamicresource-markup-extension"></a>Estensione del markup DynamicResource
 Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributo della proprietà rinviando il valore per indicare un riferimento a una risorsa definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di esecuzione.  
@@ -60,7 +60,7 @@ Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/t
   
  `DynamicResource` può essere utilizzata nella sintassi degli elementi oggetto. In questo caso, specificando il valore di <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> proprietà è obbligatoria.  
   
- L'oggetto `DynamicResource` può anche essere utilizzato per un utilizzo dettagliato degli attributi che consente di specificare la proprietà <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> come coppia proprietà=valore:  
+ `DynamicResource` è anche utilizzabile in un utilizzo dettagliato degli attributi che specifica il <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> proprietà come proprietà di = coppia valore:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -73,10 +73,11 @@ Fornisce un valore per qualsiasi [!INCLUDE[TLA2#tla_xaml](../../../../includes/t
  `DynamicResource` è un'estensione di markup. Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà. Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Risorse XAML](xaml-resources.md)
 - [Risorse e codice](resources-and-code.md)
 - [Direttiva x:Key](../../xaml-services/x-key-directive.md)
-- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Estensione di markup StaticResource](staticresource-markup-extension.md)
+- [Estensione del markup StaticResource](staticresource-markup-extension.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)
