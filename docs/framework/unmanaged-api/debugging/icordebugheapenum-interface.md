@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9f58a0bc51e8a22672df6ab9bd94009c00f9bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135850"
 ---
 # <a name="icordebugheapenum-interface"></a>Interfaccia ICorDebugHeapEnum
 Fornisce un enumeratore per gli oggetti nell'heap gestito. Questa interfaccia è una sottoclasse di interfaccia ICorDebugEnum.  
@@ -47,4 +47,5 @@ Fornisce un enumeratore per gli oggetti nell'heap gestito. Questa interfaccia è
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Limitazione della distribuzione di messaggi
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130221"
 ---
 # <a name="limiting-message-distribution"></a>Limitazione della distribuzione di messaggi
 In base alla progettazione, il canale peer è una rete di trasmissione. Il relativo modello di flooding di base prevede la distribuzione di ogni messaggio inviato da qualsiasi membro di una rete a tutti gli altri membri di quella stessa rete. Questa soluzione è ideale nelle situazioni in cui tutti i messaggi generati da un membro sono attinenti e utili a tutti gli altri membri, ad esempio in una chat. Tuttavia, molte applicazioni hanno occasionalmente la necessità di limitare la distribuzione dei messaggi. Ad esempio, se un nuovo membro si aggiunge a una rete e desidera recuperare l'ultimo messaggio inviato attraverso di essa, non è necessario che questa richiesta venga propagata a ogni membro della rete. È possibile limitare la richiesta ai router adiacenti oppure applicare un filtro ai messaggi generati in locale. I messaggi possono anche essere inviati a un singolo nodo della rete. In questo argomento viene illustrato come utilizzare il conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta per controllare il modo in cui i messaggi vengono inoltrati attraverso la rete. Vengono inoltre fornite linee guida generali per la scelta dell'approccio più appropriato.  
@@ -22,7 +22,7 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
 ## <a name="message-propagation-filter"></a>Filtro di propagazione dei messaggi  
  `MessagePropagationFilter` può essere utilizzato per il controllo personalizzato del flood di messaggi, in particolare quando il contenuto del messaggio o altri scenari specifici determinano una propagazione. Il filtro è responsabile delle decisioni sulla propagazione di ogni messaggio che passa attraverso il nodo. Questa situazione si verifica sia per i messaggi creati in altri punti della rete e ricevuti dal nodo sia per i messaggi creati dall'applicazione. Il filtro accede sia al messaggio che alla sua origine, pertanto le decisioni relative all'inoltro o all'eliminazione del messaggio possono basarsi sulle informazioni complete disponibili.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> è una classe astratta di base con una sola funzione, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Il primo argomento della chiamata al metodo passa una copia completa del messaggio. Qualsiasi modifica apportata al messaggio non influisce sul messaggio effettivo. L'ultimo argomento della chiamata al metodo identifica l'origine del messaggio (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Le implementazioni concrete di questo metodo devono restituire una costante dall'enumerazione <xref:System.ServiceModel.PeerMessagePropagation> che indica che il messaggio deve essere inoltrato all'applicazione locale (`Local`), a client remoti (`Remote`), a entrambi (`LocalAndRemote`) o a nessuna delle parti (`None`). È possibile applicare questo filtro accedendo all'oggetto `PeerNode` corrispondente e specificando un'istanza della classe del filtro di propagazione derivata nella proprietà `PeerNode.MessagePropagationFilter`. Assicurarsi che il filtro di propagazione sia collegato prima di aprire il canale peer.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> è una classe base astratta con una singola funzione, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Il primo argomento della chiamata al metodo passa una copia completa del messaggio. Qualsiasi modifica apportata al messaggio non influisce sul messaggio effettivo. L'ultimo argomento della chiamata al metodo identifica l'origine del messaggio (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Le implementazioni concrete di questo metodo devono restituire una costante dall'enumerazione <xref:System.ServiceModel.PeerMessagePropagation> che indica che il messaggio deve essere inoltrato all'applicazione locale (`Local`), a client remoti (`Remote`), a entrambi (`LocalAndRemote`) o a nessuna delle parti (`None`). È possibile applicare questo filtro accedendo all'oggetto `PeerNode` corrispondente e specificando un'istanza della classe del filtro di propagazione derivata nella proprietà `PeerNode.MessagePropagationFilter`. Assicurarsi che il filtro di propagazione sia collegato prima di aprire il canale peer.  
   
 -   Per frammenti di codice e informazioni correlate, vedere la [blog sul canale Peer](https://go.microsoft.com/fwlink/?LinkID=114532).  
   
@@ -44,7 +44,7 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
   
  Le risposte a queste domande possono essere utili per stabilire se utilizzare un conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta. Si considerino le seguenti linee guida generali:  
   
--   **Who**  
+-   **Chi**  
   
     -   *Singolo nodo*:  Filtro locale o connessione diretta.  
   
@@ -65,4 +65,5 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
     -   *Bassa*:  Qualsiasi, la connessione diretta probabilmente non necessaria.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], drawing circles
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-ms.openlocfilehash: 3a3d25643daaf48f7a0230e199dbba8710184a43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1393e158c1787dc7d4e44e5e1c90ed2e65666dc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146744"
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>Procedura: Disegnare un'ellisse o un cerchio
 Questo esempio illustra come disegnare cerchi e sui puntini di sospensione tramite il <xref:System.Windows.Shapes.Ellipse> elemento. Per disegnare un'ellisse, creare un <xref:System.Windows.Shapes.Ellipse> elemento e specificare il <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>. Usare la <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà per specificare il <xref:System.Windows.Media.Brush> utilizzato per disegnare la parte interna dell'ellisse. Usare la <xref:System.Windows.Shapes.Shape.Stroke%2A> proprietà per specificare il <xref:System.Windows.Media.Brush> utilizzato per disegnare il contorno dell'ellisse. Il <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> proprietà specifica lo spessore del contorno dell'ellisse.  
@@ -31,6 +31,7 @@ Questo esempio illustra come disegnare cerchi e sui puntini di sospensione trami
  In questo esempio fa parte di un esempio più esaustivo; per l'esempio completo, vedere [esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Shapes.Ellipse>
 - <xref:System.Windows.Shapes.Shape>
 - [Esempio di elementi forma](https://go.microsoft.com/fwlink/?LinkID=160037)

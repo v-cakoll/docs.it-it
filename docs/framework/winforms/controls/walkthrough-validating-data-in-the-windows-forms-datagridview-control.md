@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: La convalida dei dati nel controllo DataGridView Windows Form'
+title: 'Procedura dettagliata: Convalida dei dati nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127348"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: La convalida dei dati nel controllo DataGridView Windows Form
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Convalida dei dati nel controllo DataGridView di Windows Forms
 Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso necessario convalidare i dati immessi nel form. Il <xref:System.Windows.Forms.DataGridView> classe fornisce un modo pratico per eseguire la convalida prima i dati vengono eseguito il commit nell'archivio dati. È possibile convalidare i dati tramite la gestione di <xref:System.Windows.Forms.DataGridView.CellValidating> evento, che viene generato dal <xref:System.Windows.Forms.DataGridView> quando cambia la cella corrente.  
   
  In questa procedura dettagliata, si recupererà le righe di `Customers` tabella nel database di esempio Northwind e visualizzarli in un <xref:System.Windows.Forms.DataGridView> controllo. Quando un utente modifica una cella nel `CompanyName` colonna e cerca di lasciare la cella, il <xref:System.Windows.Forms.DataGridView.CellValidating> gestore eventi esaminerà la nuova stringa del nome della società per assicurarsi che sia non vuoto; se il nuovo valore è una stringa vuota, il <xref:System.Windows.Forms.DataGridView> impedirà il cursore dell'utente di lasciare la cella fino a quando non immette una stringa non vuota.  
@@ -89,9 +89,10 @@ Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso 
 -   Personalizzare l'aspetto delle celle. Per altre informazioni, vedere [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md) e [come: Impostare gli stili di colore e tipo di carattere nel controllo DataGridView Windows Form](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Immissione di dati nel controllo DataGridView di Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Convalidare i dati nel controllo DataGridView Windows Form](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView Windows Form](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Immissione di dati nel controllo DataGridView Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Convalidare i dati nel controllo DataGridView di Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Protezione delle informazioni di connessione](../../data/adonet/protecting-connection-information.md)

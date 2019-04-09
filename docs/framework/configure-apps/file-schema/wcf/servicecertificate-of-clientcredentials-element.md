@@ -2,12 +2,12 @@
 title: <serviceCertificate> di <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 7134e8b3d253575bf26f26490372aa94549c73b7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145340"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > di \<clientCredentials > elemento
 Specifica un certificato da usare per l'autenticazione di un servizio presso il client.  
@@ -51,6 +51,7 @@ Specifica un certificato da usare per l'autenticazione di un servizio presso il 
  Gli attributi del `serviceCertificate` sono identici agli attributi dell'elemento di [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -59,5 +60,5 @@ Specifica un certificato da usare per l'autenticazione di un servizio presso il 
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
-- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

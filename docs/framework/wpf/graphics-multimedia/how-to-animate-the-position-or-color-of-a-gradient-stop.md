@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare la posizione o il colore di un cursore sfumatura'
+title: "Procedura: Aggiungere un'animazione alla posizione o al colore di un cursore sfumatura"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 6d8c1bb5cd133b2ee9d50a7e851d2ca3b4fff023
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134810"
 ---
-# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Procedura: Animare la posizione o il colore di un cursore sfumatura
+# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Procedura: Aggiungere un'animazione alla posizione o al colore di un cursore sfumatura
 In questo esempio illustra come animare la <xref:System.Windows.Media.GradientStop.Color%2A> e <xref:System.Windows.Media.GradientStop.Offset%2A> di <xref:System.Windows.Media.GradientStop> oggetti.  
   
 ## <a name="example"></a>Esempio  
@@ -40,6 +40,7 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.GradientSt
  Per altri esempi, vedere la [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.GradientStop>
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sugli storyboard](storyboards-overview.md)

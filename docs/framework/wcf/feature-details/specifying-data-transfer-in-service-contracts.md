@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a9066054c82fdb2e25dace0b7611df4cbbf4ec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135200"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Specifica del trasferimento di dati nei contratti di servizio
 Windows Communication Foundation (WCF) può essere considerato come un'infrastruttura di messaggistica. Le operazioni di servizio possono ricevere, elaborare e inviare messaggi. I messaggi vengono descritti tramite contratti di operazione. Si consideri ad esempio il contratto seguente:  
@@ -141,7 +141,7 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>Descrizione dei messaggi vuoti  
- Per descrivere un messaggio di richiesta vuoto è possibile non specificare alcun parametro referenziato o di input. Ad esempio in C#:  
+ Per descrivere un messaggio di richiesta vuoto è possibile non specificare alcun parametro per riferimento o di input. Ad esempio in C#:  
   
  `[OperationContract]`  
   
@@ -153,7 +153,7 @@ public float GetAirfare(
   
  `Function GetCurrentTemperature() as Integer`  
   
- Per descrivere un messaggio di risposta vuoto è possibile usare un tipo restituito `void` e non specificare alcun parametro per riferimento o di output. Ad esempio in:  
+ Per descrivere un messaggio di risposta vuoto è possibile utilizzare un tipo restituito `void` e non specificare alcun parametro referenziato o di output. Ad esempio in:  
   
 ```csharp  
 [OperationContract]  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Specifica delle proprietà Use e Style  
  I due stili più comunemente utilizzati per descrivere i servizi tramite Web Services Description Language (WSDL) sono Document e Remote Procedure Call (RPC). Nello stile Document, l'intero corpo del messaggio viene descritto utilizzando un unico schema e WSDL descrive le varie parti del corpo del messaggio facendo riferimento agli elementi di tale schema. Nello stile RPC, invece, WSDL descrive le varie parti del corpo del messaggio facendo riferimento a vari tipi di schema. In alcuni casi occorre selezionare manualmente uno di questi stili. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.DataContractFormatAttribute> e impostare la proprietà `Style` (quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer>) oppure impostare la proprietà `Style` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> (quando si utilizza il motore <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato in genere più accettato ed è l'unico a essere supportato da <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP ed è consigliabile evitarne l'utilizzo nei servizi più recenti. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
+ Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato più comunemente accettato, ed è l'unica forma di <xref:System.Runtime.Serialization.DataContractSerializer> supporta. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP e non è consigliato per i nuovi servizi. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
   
  Nella maggior parte dei casi è consigliabile evitare di modificare le impostazioni predefinite delle proprietà `Style` e `Use`.  
   
@@ -560,7 +560,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>Serializzazione con condivisione di tipi, conservazione degli oggetti grafici e serializzatori personalizzati  
  La serializzazione eseguita dal componente <xref:System.Runtime.Serialization.DataContractSerializer> si basa su nomi di contratto di dati e non su nomi di tipo .NET. Ciò è in linea con i concetti di base dell'architettura orientata ai servizi e offre inoltre un elevato livello di flessibilità, in quanto i tipi .NET possono cambiare senza influire sul contratto di transito. In casi rari può risultare utile serializzare i nomi di tipo .NET effettivi. Questo approccio, analogamente alla tecnologia .NET Framework Remoting, comporta l'introduzione di un accoppiamento stretto fra client e server. Ciò non è una procedura consigliata, tranne in casi rari che in genere si verificano durante la migrazione da .NET Framework remoting a WCF. In questo caso è necessario utilizzare la classe <xref:System.Runtime.Serialization.NetDataContractSerializer> anziché la classe <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- In genere il componente <xref:System.Runtime.Serialization.DataContractSerializer> serializza i grafici degli oggetti come alberi degli oggetti. Ovvero, se esistono più riferimenti a uno stesso oggetto, quest'ultimo viene serializzato più volte. Si consideri ad esempio il caso di un'istanza della classe `PurchaseOrder` contenente i campi `billTo` e `shipTo` di tipo Address. Se entrambi i campi vengono impostati sulla stessa istanza di Address, dopo la serializzazione e la deserializzazione esistono due istanze identiche di Address. Ciò è dovuto al fatto che non esiste alcuna modalità standard interoperativa per rappresentare gli oggetti grafici in XML, salvo nel caso dello standard legacy con codifica SOAP disponibile nel motore <xref:System.Xml.Serialization.XmlSerializer>, come descritto nella sezione precedente relativa alle proprietà `Style` e `Use`. La serializzazione degli oggetti grafici come strutture comporta alcuni svantaggi. Ad esempio, risulta impossibile serializzare i grafici aventi riferimenti circolari. Talvolta occorre attivare la serializzazione degli oggetti grafici, anche se non è interoperativa. A tale scopo è possibile utilizzare il componente <xref:System.Runtime.Serialization.DataContractSerializer> costruito con il parametro `preserveObjectReferences` impostato su `true`.  
+ In genere il componente <xref:System.Runtime.Serialization.DataContractSerializer> serializza gli oggetti grafici come oggetti struttura. Ovvero, se esistono più riferimenti a uno stesso oggetto, quest'ultimo viene serializzato più volte. Si consideri ad esempio il caso di un'istanza della classe `PurchaseOrder` contenente i campi `billTo` e `shipTo` di tipo Address. Se entrambi i campi vengono impostati sulla stessa istanza di Address, dopo la serializzazione e la deserializzazione esistono due istanze identiche di Address. Ciò è dovuto al fatto che non esiste alcuna modalità standard interoperativa per rappresentare gli oggetti grafici in XML, salvo nel caso dello standard legacy con codifica SOAP disponibile nel motore <xref:System.Xml.Serialization.XmlSerializer>, come descritto nella sezione precedente relativa alle proprietà `Style` e `Use`. La serializzazione degli oggetti grafici come alberi comporta alcuni svantaggi. Ad esempio, risulta impossibile serializzare i grafici aventi riferimenti circolari. Talvolta occorre attivare la serializzazione degli oggetti grafici, anche se non è interoperativa. A tale scopo è possibile utilizzare il componente <xref:System.Runtime.Serialization.DataContractSerializer> costruito con il parametro `preserveObjectReferences` impostato su `true`.  
   
  Talvolta i serializzatori incorporati risultano insufficienti per lo scenario da gestire. Nella maggior parte dei casi è comunque possibile utilizzare l'astrazione <xref:System.Runtime.Serialization.XmlObjectSerializer> dalla quale derivano sia il serializzatore <xref:System.Runtime.Serialization.DataContractSerializer> sia il serializzatore <xref:System.Runtime.Serialization.NetDataContractSerializer>.  
   
@@ -575,6 +575,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  Per altre informazioni sui concetti relativi alla serializzazione avanzata, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Procedura: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Procedura: Creare un contratto di dati di base per una classe o struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+
+- [Utilizzo della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
+- [Procedura: Abilitare il flusso](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedura: Creare un contratto dati di base per una classe o una struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

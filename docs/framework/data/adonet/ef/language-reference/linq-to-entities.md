@@ -2,15 +2,15 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129688"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
-LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query a struttura ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
+LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
   
 1.  Costruire un'istanza di <xref:System.Data.Objects.ObjectQuery%601> da <xref:System.Data.Objects.ObjectContext>.  
   
@@ -33,9 +33,9 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
  Per altre informazioni, vedere [le query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md).  
   
 ## <a name="query-conversion"></a>Conversione della query  
- Per eseguire una query LINQ to Entities su Entity Framework, è necessario convertire la query LINQ in una rappresentazione a struttura ad albero dei comandi che possa essere eseguita su Entity Framework.  
+ Per eseguire una query LINQ to Entities su Entity Framework, è necessario convertire la query LINQ in una rappresentazione ad albero dei comandi che possa essere eseguita su Entity Framework.  
   
- Le query LINQ to Entities includono operatori di query standard LINQ, ad esempio <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A> e <xref:System.Linq.Queryable.GroupBy%2A>, ed espressioni (x > 10, Contact.LastName e così via). Gli operatori LINQ non sono definiti da una classe, ma sono piuttosto metodi in una classe. In LINQ le espressioni possono contenere tutto ciò che è consentito dai tipi all'interno dello spazio dei nomi <xref:System.Linq.Expressions> e, per estensione, tutto ciò che può essere rappresentato in una funzione lambda. Si tratta di un superset delle espressioni consentite da Entity Framework, per definizione limitate alle operazioni consentite sul database, e supportate da <xref:System.Data.Objects.ObjectQuery%601>.  
+ Query LINQ to Entities includono operatori di query standard LINQ (ad esempio <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A>, e <xref:System.Linq.Queryable.GroupBy%2A>) ed espressioni (x > 10, Contact. LastName e così via). Gli operatori LINQ non sono definiti da una classe, ma sono piuttosto metodi in una classe. In LINQ le espressioni possono contenere tutto ciò che è consentito dai tipi all'interno dello spazio dei nomi <xref:System.Linq.Expressions> e, per estensione, tutto ciò che può essere rappresentato in una funzione lambda. Si tratta di un superset delle espressioni consentite da Entity Framework, per definizione limitate alle operazioni consentite sul database, e supportate da <xref:System.Data.Objects.ObjectQuery%601>.  
   
  In Entity Framework sia gli operatori sia le espressioni sono rappresentati da una singola gerarchia dei tipi e vengono quindi inclusi in un albero dei comandi. L'albero dei comandi viene usato da Entity Framework per eseguire la query. Se la query LINQ non può essere espressa come albero dei comandi, viene generata un'eccezione durante la conversione della query. La conversione di query LINQ to Entities comporta due conversioni secondarie: la conversione degli operatori di query standard e la conversione delle espressioni.  
   
@@ -50,7 +50,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
  Per informazioni su come chiamare canonico, database e funzioni personalizzate dall'interno [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query, vedere [chiamata di funzioni in query LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Esecuzione di query  
- Al termine della creazione della query LINQ da parte dell'utente, la query viene convertita in una rappresentazione compatibile con Entity Framework, sotto forma di strutture ad albero dei comandi, e viene quindi eseguita sull'origine dati. In fase di esecuzione della query tutte le espressioni di query, o i componenti della query, vengono valutate nel client o nel server, incluse le espressioni usate nella materializzazione dei risultati o nelle proiezioni di entità. Per altre informazioni, vedere [esecuzione di Query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Per informazioni su come migliorare le prestazioni compilando una query una volta, quindi eseguendola molte volte con parametri diversi, vedere [query compilate (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+ Al termine della creazione della query LINQ da parte dell'utente, la query viene convertita in una rappresentazione compatibile con Entity Framework, sotto forma di alberi dei comandi, e viene quindi eseguita sull'origine dati. In fase di esecuzione della query tutte le espressioni di query, o i componenti della query, vengono valutate nel client o nel server, incluse le espressioni usate nella materializzazione dei risultati o nelle proiezioni di entità. Per altre informazioni, vedere [esecuzione di Query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Per informazioni su come migliorare le prestazioni compilando una query una volta, quindi eseguendola molte volte con parametri diversi, vedere [query compilate (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
 ## <a name="materialization"></a>Materializzazione  
  La materializzazione è il processo di restituzione dei risultati della query al client come tipi CLR. In LINQ to Entities i record di dati dei risultati della query non vengono mai restituiti, ma è sempre disponibile un tipo CLR di supporto definito dall'utente o da Entity Framework oppure generato dal compilatore (tipi anonimi). Tutta la materializzazione degli oggetti viene eseguita da Entity Framework. Qualsiasi errore correlato all'impossibilità di eseguire il mapping tra Entity Framework e CLR comporterà la generazione di eccezioni durante la materializzazione degli oggetti.  
@@ -78,7 +78,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
   
  [Esecuzione di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
- [Risultati query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
+ [Risultati delle query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
  [Operatori di query standard in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
@@ -89,6 +89,7 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
  [Problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Problemi noti e considerazioni in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
 - [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)

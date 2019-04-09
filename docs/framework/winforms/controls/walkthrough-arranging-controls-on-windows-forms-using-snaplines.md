@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento'
+title: 'Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139789"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Finestra di progettazione Windows Form offre molti strumenti di layout per eseguire questa operazione. Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.  
   
  Le guide di allineamento mostrano esattamente dove allineare i controlli con altri controlli. Illustrano inoltre le distanze consigliate per i margini tra i controlli, come specificato dalle linee guida dell'interfaccia utente di Windows. Per informazioni dettagliate, vedere [sviluppo e progettazione dell'interfaccia utente](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -240,8 +240,9 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
  Per informazioni sulla progettazione dell'interfaccia utente di Windows, vedere il libro *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and progettisti* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)

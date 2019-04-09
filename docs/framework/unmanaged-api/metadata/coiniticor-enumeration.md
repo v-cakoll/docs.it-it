@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224684bd76ec3318b2c7f8197263d66973ce27aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a22f65206a33ecece1ec8a117db4bc838e9a350
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136578"
 ---
 # <a name="coiniticor-enumeration"></a>Enumerazione COINITICOR
 Specifica le costanti usate da [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) quando inizializza common language runtime.  
@@ -37,7 +37,7 @@ typedef enum tagCOINITCOR
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COINITCOR`|Indica la modalità di inizializzazione predefinito.|  
   
@@ -51,4 +51,5 @@ typedef enum tagCOINITCOR
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

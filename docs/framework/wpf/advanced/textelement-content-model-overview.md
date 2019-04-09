@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125120"
 ---
 # <a name="textelement-content-model-overview"></a>Cenni preliminari sul modello di contenuto TextElement
 Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Documents.TextElement>. Il <xref:System.Windows.Documents.Paragraph> classe è un tipo di <xref:System.Windows.Documents.TextElement>. Un modello di contenuto descrive gli oggetti o gli elementi che possono essere contenuti in altri oggetti o elementi. Questa panoramica riepiloga il modello di contenuto usato per gli oggetti derivati da <xref:System.Windows.Documents.TextElement>. Per altre informazioni, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Diagramma del modello di contenuto  
  Il diagramma seguente riepiloga il modello di contenuto per le classi derivate da <xref:System.Windows.Documents.TextElement> , nonché come altri non - `TextElement` classi rientrare in questo modello.  
@@ -58,9 +57,9 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
 ## <a name="working-with-textelement-content-programmatically"></a>Uso del contenuto TextElement a livello di codice  
  Il contenuto di un <xref:System.Windows.Documents.TextElement> è costituito da raccolte e pertanto la modifica a livello di codice il contenuto di <xref:System.Windows.Documents.TextElement> oggetti avviene tramite queste raccolte. Esistono tre diverse raccolte usate da <xref:System.Windows.Documents.TextElement> -le classi derivate:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> definisce il contenuto figlio consentito degli elementi <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> e <xref:System.Windows.Controls.TextBlock>.  
+-   <xref:System.Windows.Documents.InlineCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, e <xref:System.Windows.Controls.TextBlock> elementi.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> definisce il contenuto figlio consentito degli elementi <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> e <xref:System.Windows.Documents.Figure>.  
+-   <xref:System.Windows.Documents.BlockCollection>: Rappresenta una raccolta di elementi <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> definisce il contenuto figlio consentito del <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, e <xref:System.Windows.Documents.Figure> elementi.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Elemento di contenuto dinamico che rappresenta un particolare elemento di contenuto in un oggetto ordinato o non ordinati <xref:System.Windows.Documents.List>.  
   
@@ -102,8 +101,9 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
  Visualizzare [modello di contenuto WPF](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Modificare un oggetto FlowDocument tramite la proprietà Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [Modificare elementi di contenuto dinamico tramite la proprietà Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
+- [Modificare elementi di contenuto di flusso tramite la proprietà Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Modificare un oggetto FlowDocument tramite la proprietà Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Modificare le colonne di una tabella tramite la proprietà Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [Modificare i gruppi di righe di una tabella tramite la proprietà RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

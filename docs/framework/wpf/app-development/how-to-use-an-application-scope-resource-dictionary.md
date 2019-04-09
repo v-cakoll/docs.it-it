@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Utilizzare un dizionario di risorse dell'ambito dell'applicazione"
+title: 'Procedura: Usare un dizionario risorse con ambito di applicazione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125379"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procedura: Utilizzare un dizionario di risorse dell'ambito dell'applicazione
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procedura: Usare un dizionario risorse con ambito di applicazione
 Questo esempio illustra come definire e usare un dizionario risorse personalizzato dell'ambito di un'applicazione.  
   
 ## <a name="example"></a>Esempio  
@@ -42,6 +42,7 @@ Questo esempio illustra come definire e usare un dizionario risorse personalizza
  Esistono due aspetti da considerare quando si usa <xref:System.Windows.Application.Resources%2A>. Per prima cosa, il dizionario *chiave* è un oggetto, pertanto è necessario usare esattamente la stessa istanza dell'oggetto sia quando si imposta e ottiene un valore della proprietà. (si noti che la chiave fa distinzione tra maiuscole e minuscole quando si usa una stringa). In secondo luogo, il dizionario *valore* è un oggetto, pertanto è necessario convertire il valore al tipo desiderato quando si recupera un valore della proprietà.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [Risorse XAML](../advanced/xaml-resources.md)

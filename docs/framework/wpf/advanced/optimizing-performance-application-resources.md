@@ -1,5 +1,5 @@
 ---
-title: 'Ottimizzazione delle prestazioni: Risorse delle applicazioni'
+title: "Ottimizzazione delle prestazioni: Risorse dell'applicazione"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139425"
 ---
-# <a name="optimizing-performance-application-resources"></a>Ottimizzazione delle prestazioni: Risorse delle applicazioni
+# <a name="optimizing-performance-application-resources"></a>Ottimizzazione delle prestazioni: Risorse dell'applicazione
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Consente di condividere le risorse dell'applicazione in modo che sia possibile supportare un aspetto coerente o il comportamento tra elementi di tipi simili. Questo argomento vengono elencati alcuni suggerimenti in questa area che consentono di migliorare le prestazioni delle applicazioni.  
   
  Per altre informazioni sulle risorse, vedere [Risorse XAML](xaml-resources.md).  
@@ -43,12 +43,13 @@ ms.locfileid: "57352399"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
-- [per](optimizing-performance-text.md)
+- [Layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
+- [Testo](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

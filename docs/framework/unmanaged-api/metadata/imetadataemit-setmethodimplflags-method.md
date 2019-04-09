@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98df83569681dab5a7aa15651181373ee5d559dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 28c0aa37bdcae2a09a4d53f920efd3ffe7117bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145171"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>Metodo IMetaDataEmit::SetMethodImplFlags
 Imposta o aggiorna la firma dei metadati dell'implementazione del metodo ereditato che fa riferimento il token specificato.  
@@ -53,5 +53,6 @@ HRESULT SetMethodImplFlags (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare immagini di anteprima'
+title: 'Procedura: Creare miniature'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144014"
 ---
-# <a name="how-to-create-thumbnail-images"></a>Procedura: Creare immagini di anteprima
+# <a name="how-to-create-thumbnail-images"></a>Procedura: Creare miniature
 Un'immagine di anteprima è una versione ridotta dell'immagine. È possibile creare un'immagine di anteprima chiamando il <xref:System.Drawing.Image.GetThumbnailImage%2A> metodo di un <xref:System.Drawing.Image> oggetto.  
   
 ## <a name="example"></a>Esempio  
@@ -32,7 +32,7 @@ Un'immagine di anteprima è una versione ridotta dell'immagine. È possibile cre
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Per eseguire l'esempio, seguire questa procedura:  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Per eseguire l'esempio, seguire questa procedura:  
   
 1.  Creare una nuova applicazione Windows Forms.  
   
@@ -51,5 +51,6 @@ Un'immagine di anteprima è una versione ridotta dell'immagine. È possibile cre
      Un'immagine di anteprima di 100 per 100 viene visualizzato nel form.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
 - [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -2,12 +2,12 @@
 title: Impostazioni consigliate per la traccia e la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132363"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Impostazioni consigliate per la traccia e la registrazione dei messaggi
 In questo argomento vengono illustrate le impostazioni consigliate di traccia e registrazione dei messaggi per diversi ambienti operativi.  
@@ -113,4 +113,5 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di Strumentazione gestione Windows per la diagnostica](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+
+- [Uso di Strumentazione gestione Windows (WMI) per la diagnostica](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

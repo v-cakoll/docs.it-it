@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142168"
 ---
 # <a name="cvstruct-structure"></a>Struttura CVStruct
 Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.  
@@ -39,7 +39,7 @@ typedef struct {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |Principale|Numero di build di versione principale.|  
 |Secondario|Numero di build di versione secondario.|  
@@ -56,4 +56,5 @@ typedef struct {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

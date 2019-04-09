@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a5a5bb26912c87cdf37ba0d8f0cee1cf1ffa97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142012"
 ---
 # <a name="corarraylayout-structure"></a>Struttura COR_ARRAY_LAYOUT
 Fornisce informazioni sul layout di un oggetto Array in memoria.  
@@ -43,7 +43,7 @@ typedef struct COR_ARRAY_LAYOUT {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`componentID`|L'identificatore del tipo di oggetti che contiene la matrice.|  
 |`componentType`|Un valore di enumerazione CorElementType che indica se il componente è un riferimento di garbage collection, una classe di valore o una primitiva.|  
@@ -69,5 +69,6 @@ typedef struct COR_ARRAY_LAYOUT {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

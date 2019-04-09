@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133549"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Procedura: Applicare un oggetto FocusVisualStyle a un controllo
 In questo esempio illustra come creare uno stile di visualizzazione dello stato attivo in risorse e applicare lo stile a un controllo, usando il <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> proprietà.  
@@ -27,6 +27,7 @@ In questo esempio illustra come creare uno stile di visualizzazione dello stato 
  Lo stato attivo gli stili di visualizzazione deve essere usate in modo coerente un tema o un'interfaccia utente, invece di usare una diversa per ogni elemento attivabile. Per informazioni dettagliate, vedere [applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
 - [Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

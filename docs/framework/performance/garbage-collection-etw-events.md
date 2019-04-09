@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149734"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventi ETW di Garbage Collection
 <a name="top"></a> Questi eventi raccolgono informazioni relative alla Garbage Collection ai fini della diagnostica e del debug, tra cui stabilire quante volte è stato eseguito il processo di Garbage Collection, la quantità di memoria liberata durante la procedura di Garbage Collection e così via.  
@@ -58,7 +58,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCStart_V1`|1|È stata avviata una procedura di Garbage Collection.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCEnd_V1`|2|È stata terminata una procedura di Garbage Collection.|  
   
@@ -108,7 +108,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|Mostra le statistiche heap alla fine di ogni Garbage Collection.|  
   
@@ -143,7 +143,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCCreateSegment_V1`|5|È stato creato un nuovo segmento di Garbage Collection. Inoltre, quando la traccia è attivata su un processo già in esecuzione, questo evento viene generato per ogni segmento esistente.|  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCFreeSegment_V1`|6|È stato rilasciato un segmento di Garbage Collection.|  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEBegin_V1`|7|Il ripristino dalla sospensione di Common Language Runtime è iniziato.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|Il ripristino dalla sospensione di Common Language Runtime è terminato.|  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEE_V1`|9|Inizio della sospensione del motore di esecuzione di operazioni di Garbage Collection.|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento:  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|Fine della sospensione del motore di esecuzione di operazioni di Garbage Collection.|  
   
@@ -271,7 +271,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCAllocationTick_V2`|10|Ogni volta vengono allocati circa 100 KB.|  
   
@@ -299,7 +299,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersBegin_V1`|14|Inizio dell'esecuzione dei finalizzatori.|  
   
@@ -317,7 +317,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersEnd_V1`|13|Fine dell'esecuzione dei finalizzatori.|  
   
@@ -341,7 +341,7 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCCreateConcurrentThread_V1`|11|È stato creato il thread di Garbage Collection in modalità simultanea|  
   
@@ -360,11 +360,12 @@ ms.locfileid: "54685217"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`GCTerminateConcurrentThread_V1`|12|È stato terminato il thread di Garbage Collection in modalità simultanea.|  
   
  Nessun dato dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

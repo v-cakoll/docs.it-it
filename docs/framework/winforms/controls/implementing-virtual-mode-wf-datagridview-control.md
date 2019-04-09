@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form'
+title: 'Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7bbf8a87f2f72a23199ce4d18cc50fbccd9b6af2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127049"
 ---
-# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Forms
 Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' <xref:System.Windows.Forms.DataGridView> (controllo), è possibile impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire in modo esplicito l'interazione del controllo con il relativo archivio dati. Ciò consente di ottimizzare le prestazioni del controllo in questa situazione.  
   
  Il <xref:System.Windows.Forms.DataGridView> controllo fornisce diversi eventi che è possibile gestire in modo da interagire con un archivio dati personalizzato. In questa procedura dettagliata è illustrato il processo di implementazione di questi gestori eventi. L'esempio di codice in questo argomento Usa un'origine dati molto semplice a scopo illustrativo. In un ambiente di produzione, è in genere caricherà solo le righe da visualizzare in una cache e gestire <xref:System.Windows.Forms.DataGridView> eventi per interagire con e aggiornare la cache. Per altre informazioni, vedere [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
@@ -126,6 +126,7 @@ Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' 
  Per altre informazioni sulla memorizzazione nella cache i valori da un database esterno, vedere [come: Implementare il modo virtuale con il caricamento dei dati Just-In-Time in di Windows Forms DataGridView Control](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
@@ -135,7 +136,7 @@ Quando si desidera visualizzare quantità molto elevate di dati tabulari in un' 
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Procedure consigliate per ridimensionare il controllo DataGridView di Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Procedure consigliate per ridimensionare il controllo DataGridView Windows Form](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Procedura: Implementare la modalità virtuale nel controllo DataGridView Windows Form](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Implementare la modalità virtuale nel controllo DataGridView di Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: 831905ca5a712bcb80d5bab1aef61a81d2ade1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2f2510cb334f4e22a7b0c6015a0a93b4dc11579
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142779"
 ---
 # <a name="concatenate-two-sequences"></a>Concatenare due sequenze
 Usare l'operatore <xref:System.Linq.Queryable.Concat%2A> per concatenare due sequenze.  
@@ -32,5 +32,6 @@ Usare l'operatore <xref:System.Linq.Queryable.Concat%2A> per concatenare due seq
  [!code-vb[DLinqQueryExamples#40](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#40)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Conversione dell'operatore query standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

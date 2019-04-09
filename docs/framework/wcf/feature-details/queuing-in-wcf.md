@@ -2,12 +2,12 @@
 title: Accodamento in WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128765"
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 In questa sezione descrive come usare la comunicazione in coda in Windows Communication Foundation (WCF).  
@@ -50,7 +50,7 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
   
 -   `ExactlyOnce`: Se impostato su `true` (impostazione predefinita), il canale in coda assicura che il messaggio, se recapitato, non vengano duplicato. Assicura inoltre che il messaggio non venga perso. Se il messaggio non può essere recapitato o se la durata del messaggio scade prima che il messaggio possa essere recapitato, il messaggio non riuscito, insieme al motivo dell'errore di recapito, viene registrato in una coda di messaggi non recapitabili. Se la proprietà è impostata su `false`, il canale in coda tenta di trasferire il messaggio. In questo caso, è possibile scegliere una coda di messaggi non recapitabili.  
   
--   `Durable:` se è impostata su `true` (impostazione predefinita), il canale in coda assicura che MSMQ archivi il messaggio sul disco in modo permanente. Così, se il servizio MSMQ viene interrotto e riavviato, il messaggio sul disco viene trasferito alla coda di destinazione o recapitato al servizio. Se la proprietà è impostata su `false`, i messaggi vengono memorizzati in un archivio volatile e persi al momento dell'interruzione e del riavvio del servizio MSMQ.  
+-   `Durable:` Se impostato su `true` (impostazione predefinita), il canale in coda assicura che MSMQ archivi il messaggio in modo permanente sul disco. Così, se il servizio MSMQ viene interrotto e riavviato, il messaggio sul disco viene trasferito alla coda di destinazione o recapitato al servizio. Se la proprietà è impostata su `false`, i messaggi vengono memorizzati in un archivio volatile e persi al momento dell'interruzione e del riavvio del servizio MSMQ.  
   
  Per il trasferimento affidabile `ExactlyOnce`, MSMQ richiede che la coda sia transazionale. Inoltre, MSMQ richiede una transazione da leggere da una coda transazionale. Se si usa `NetMsmqBinding` è quindi importante ricordare che è necessaria una transazione per inviare o ricevere messaggi quando la proprietà `ExactlyOnce` è impostata su `true`. Allo stesso modo, MSMQ richiede che la coda sia non transazionale per le situazioni che necessitano del massimo sforzo, come quando `ExactlyOnce` è `false` e per la messaggistica volatile. Quindi, quando si imposta `ExactlyOnce` su `false` o Durable su `false`, non è possibile inviare o ricevere messaggi usando una transazione.  
   
@@ -78,7 +78,7 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
   
  Oltre alla sicurezza del trasporto, il messaggio SOAP effettivo stesso può essere protetto usando la sicurezza dei messaggi. Per altre informazioni, vedere [protezione dei messaggi tramite sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
- Anche `MsmqTransportSecurity` espone due proprietà, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Si tratta di enumerazioni di algoritmi diversi da scegliere per la crittografia del trasferimento da coda a coda di messaggi e l'hash delle firme.  
+ `MsmqTransportSecurity` espone inoltre due proprietà, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Si tratta di enumerazioni di algoritmi diversi da scegliere per la crittografia del trasferimento da coda a coda di messaggi e l'hash delle firme.  
   
 #### <a name="other-properties"></a>Altre proprietà  
  Oltre alle proprietà precedenti, le altre proprietà specifiche di MSMQ esposte nell'associazione includono:  
@@ -105,9 +105,9 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
 ### <a name="sample-code"></a>Codice di esempio  
  Per istruzioni dettagliate su come scrivere servizi WCF che usano MSMQ, vedere gli argomenti seguenti:  
   
--   [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Per un esempio di codice completo in cui viene illustrato l'uso di MSMQ in WCF, vedere gli argomenti seguenti:  
   
@@ -126,5 +126,6 @@ In questa sezione descrive come usare la comunicazione in coda in Windows Commun
 -   [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
-- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+
+- [Mapping fra gli endpoint di servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Sito Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

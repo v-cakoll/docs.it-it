@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Eseguire l'associazione a un metodo"
+title: 'Procedura: Eseguire il binding a un metodo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], binding to methods using ObjectDataProvider
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123240"
 ---
-# <a name="how-to-bind-to-a-method"></a>Procedura: Eseguire l'associazione a un metodo
+# <a name="how-to-bind-to-a-method"></a>Procedura: Eseguire il binding a un metodo
 Nell'esempio seguente viene illustrato come associare a un metodo usando <xref:System.Windows.Data.ObjectDataProvider>.  
   
 ## <a name="example"></a>Esempio  
@@ -32,5 +32,6 @@ Nell'esempio seguente viene illustrato come associare a un metodo usando <xref:S
  Il `InvalidationCharacterRule` è un <xref:System.Windows.Controls.ValidationRule> che verifica la presenza di caratteri non validi. Il modello di errore predefinito, ovvero un bordo rosso intorno di <xref:System.Windows.Controls.TextBox>, viene visualizzato per notificare agli utenti quando il valore di input non è un valore double.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
-- [Eseguire l'associazione a un'enumerazione](how-to-bind-to-an-enumeration.md)
+
+- [Procedure relative](data-binding-how-to-topics.md)
+- [Eseguire il binding a un'enumerazione](how-to-bind-to-an-enumeration.md)

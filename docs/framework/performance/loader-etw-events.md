@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141531"
 ---
 # <a name="loader-etw-events"></a>Eventi ETW del caricatore
 <a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
@@ -43,9 +43,9 @@ ms.locfileid: "54579004"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (registrato per tutti i domini applicazioni)|156|Generato se un dominio applicazioni viene creato nel corso di un processo.|  
+|`AppDomainLoad_V1` (registrato per tutti i domini applicazione)|156|Generato se un dominio applicazioni viene creato nel corso di un processo.|  
 |`AppDomainUnLoad_V1`|157|Generato se un dominio applicazioni viene eliminato nel corso di un processo.|  
 |`AppDomainDCStart_V1`|157|Enumera i domini applicazioni durante un rundown di avvio.|  
 |`AppDomainDCEnd_V1`|158|Enumera i domini applicazioni durante un rundown di fine.|  
@@ -74,7 +74,7 @@ ms.locfileid: "54579004"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Generato quando viene caricato un assembly.|  
 |`AssemblyUnload_V1`|155|Generato quando viene scaricato un assembly.|  
@@ -107,7 +107,7 @@ ms.locfileid: "54579004"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Generato se un modulo viene caricato nel corso di un processo.|  
 |`ModuleUnload_V2`|153|Generato se un modulo viene scaricato nel corso di un processo.|  
@@ -154,7 +154,7 @@ ms.locfileid: "54579004"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Generato quando un modulo viene caricato per un dominio applicazioni.|  
 |`DomainModuleDCStart_V1`|151|Enumera i moduli caricati per un dominio applicazioni durante un rundown di avvio e viene registrato per tutti i domini applicazioni.|  
@@ -187,7 +187,7 @@ ms.locfileid: "54579004"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Questo evento è presente se un'immagine del generatore di immagini native (NGen) è stata ottimizzata con IBC e contiene informazioni sulle sezioni critiche dell'immagine NGen.|  
 |`ModuleRangeDCStart`|160|Evento `ModuleRange` generato all'avvio di un rundown.|  
@@ -213,4 +213,5 @@ ms.locfileid: "54579004"
  Gli eventi di intervallo form vengono generati in un qualsiasi livello ETW maggiore o uguale a 4 e vengono classificati come eventi informativi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

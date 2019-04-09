@@ -2,12 +2,12 @@
 title: Considerazioni sulla protezione per le sessioni protette
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: 85b0f95606e1ca3d52d8c79dbe0042c51ce3f36e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148707"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Considerazioni sulla protezione per le sessioni protette
 Si consiglia di considerare gli elementi seguenti che influiscono sulla sicurezza durante l'implementazione di sessioni protette. Per altre informazioni sulle considerazioni relative alla sicurezza, vedere [considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) e [procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -21,6 +21,7 @@ Si consiglia di considerare gli elementi seguenti che influiscono sulla sicurezz
  Ciò significa che se si desidera derivare un token personalizzato, è necessario eseguire il wrapping del relativo tipo di clausola in un elemento `SecurityTokenReference`. Benché sia disponibile un'opzione per disattivare la derivazione, per impostazione predefinita le chiavi vengono derivate. Se non è possibile eseguire il wrapping della chiave, la serializzazione del token della chiave derivata viene completata correttamente, ma il tentativo di deserializzazione genera un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+
+- [Procedura: Disabilitare sessioni protette in WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

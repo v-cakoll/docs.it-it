@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI"
+title: "Procedura: Configurare l'unione automatica dei menu per applicazioni con interfaccia a documenti multipli"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 17edde6e3968823abc915eb5faed6d2751ed9393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129356"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Procedura: Configurare l'unione automatica dei menu per applicazioni con interfaccia a documenti multipli
 La procedura seguente contiene i passaggi di base per la configurazione di unione automatica in un'applicazione di interfaccia a documenti multipli (MDI) con <xref:System.Windows.Forms.MenuStrip>.  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>Per impostare l'unione automatica dei menu  
@@ -32,6 +32,7 @@ La procedura seguente contiene i passaggi di base per la configurazione di union
 7.  Usare la <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> gli elementi proprietà dal menu del form figlio <xref:System.Windows.Forms.MenuStrip> per controllare la modalità di unione in form padre.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Debug di query di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133334"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 
@@ -23,10 +23,11 @@ Visual Studio supporta il debug di [!INCLUDE[linq_dataset](../../../../includes/
   
  Inoltre, modifica e continuazione non supporta la modifica il tipo o il valore di una variabile che viene usato in un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] istruzione. Anche in questo caso è possibile annullare le modifiche oppure interrompere e riavviare la sessione di debug.  
   
- In Visual C# in Visual Studio, è possibile usare modifica e continuazione su qualsiasi codice in un metodo che contiene un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.  
+ In Visual c# in Visual Studio, è possibile usare modifica e continuazione su qualsiasi codice in un metodo che contiene un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.  
   
  In Visual Basic in Visual Studio, è possibile usare modifica e continuazione su non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice, anche in metodi contenente una [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. È possibile aggiungere o rimuovere codice prima la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] anche se le modifiche influiscono sul numero di riga dell'istruzione il [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query. L'esecuzione del debug di Visual Basic non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice rimane invariato rispetto a prima [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è stata introdotta. È possibile modificare, aggiungere o rimuovere un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] esegue una query, tuttavia, a meno che non si arresta il debug per applicare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Debug di codice gestito](/visualstudio/debugger/debugging-managed-code)
+
+- [Debug del codice gestito](/visualstudio/debugger/debugging-managed-code)
 - [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

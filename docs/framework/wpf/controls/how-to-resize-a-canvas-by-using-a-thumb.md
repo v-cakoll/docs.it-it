@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ridimensionare un'area di disegno utilizzando un cursore"
+title: "Procedura: Ridimensionare un'area di disegno usando un cursore"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: 80b873e81acc243ff61257bc305c4f782b5bf867
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146354"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedura: Ridimensionare un'area di disegno utilizzando un cursore
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedura: Ridimensionare un'area di disegno usando un cursore
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Controls.Primitives.Thumb> controllo per ridimensionare un <xref:System.Windows.Controls.Canvas> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -47,6 +47,7 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Contr
  Per l'esempio completo, vedere [esempio di funzionalità di trascinamento Thumb](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Primitives.Thumb>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>

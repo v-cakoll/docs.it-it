@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BMP decoding [WPF]
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
-ms.openlocfilehash: 5aee77ab70c6a24846967b01bbb458ba4cdbe970
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121901"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>Procedura: Codificare e decodificare un'immagine BMP
 Gli esempi seguenti illustrano come decodificare e codificare un' [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] immagine usando le specifiche <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> e <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> oggetti.  
@@ -38,4 +38,5 @@ Gli esempi seguenti illustrano come decodificare e codificare un' [!INCLUDE[TLA#
  [!code-vb[BmpBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#4)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)

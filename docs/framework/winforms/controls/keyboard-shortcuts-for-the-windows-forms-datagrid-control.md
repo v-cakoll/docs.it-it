@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145977"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Tasti di scelta rapida per il controllo DataGrid Windows Form
 > [!NOTE]
@@ -51,5 +51,6 @@ ms.locfileid: "57711772"
 |Immettere un <xref:System.DBNull.Value?displayProperty=nameWithType> valore in una cella in modalità di modifica.|CTRL+0|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
+
+- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)

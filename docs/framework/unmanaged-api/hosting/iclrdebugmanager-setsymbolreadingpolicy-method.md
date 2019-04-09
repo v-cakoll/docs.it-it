@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d186c29c409bd6f85a764e3632e2e8e4998b168
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132821"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>Metodo ICLRDebugManager::SetSymbolReadingPolicy
 Imposta i criteri per la lettura dei file di programma (PDB) del database. Il criterio determina se le informazioni sui file e i numeri di riga viene inclusa negli stack di chiamate.  
@@ -58,4 +58,5 @@ HRESULT SetSymbolReadingPolicy (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

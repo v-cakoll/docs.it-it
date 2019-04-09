@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e36cb91c3ef741badb04b54e2b62158ecf6ced1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134498"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Enumerazione CorMethodSemanticsAttr
 Contiene valori che descrivono la relazione tra un metodo e una proprietà o evento associato.  
@@ -43,7 +43,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`msSetter`|Specifica che il metodo è un `set` della funzione di accesso per una proprietà.|  
 |`msGetter`|Specifica che il metodo è un `get` della funzione di accesso per una proprietà.|  
@@ -60,4 +60,5 @@ typedef enum CorMethodSemanticsAttr {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,12 +2,12 @@
 title: <connectionPoolSettings> di <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 4828357f392089be14ee04bc672acce0c0973300
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129974"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > di \<tcpTransport >
 Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.  
@@ -37,7 +37,7 @@ Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.
 |---------------|-----------------|  
 |`groupName`|Stringa che definisce il nome del pool di connessioni usato per canali in uscita. In modalità di invio nel flusso, le connessioni non sono condivise, pertanto il pool di connessioni è disabilitato. Il valore predefinito è una stringa "default". È possibile modificare questo valore per isolare le connessioni per un particolare client in gruppi separati.|  
 |`idleTimeout`|Elemento <xref:System.TimeSpan> positivo che specifica il periodo massimo di inattività della connessione prima che venga interrotta. L'impostazione predefinita è 00:02:00.|  
-|`leaseTimeout`|<xref:System.TimeSpan> specifica il periodo di tempo dopo il quale una connessione attiva viene chiusa. L'impostazione predefinita è 00:05:00.<br /><br /> Una connessione viene chiusa dopo che è stata restituita alla cache di connessione e non durante la trasmissione attiva. La cache della connessione usata dal trasporto TCP crea nuove connessioni in base a ogni endpoint, fino al limite della cache impostato da `maxOutboundConnectionsPerEndpoint.`.|  
+|`leaseTimeout`|<xref:System.TimeSpan> specifica il periodo di tempo dopo il quale una connessione attiva viene chiusa. L'impostazione predefinita è 00:05:00.<br /><br /> Una connessione viene chiusa dopo che è stata restituita alla cache di connessione e non durante la trasmissione attiva. La cache di connessione utilizzata dal trasporto TCP crea nuove connessioni in base alle esigenze per ogni endpoint, fino al limite della cache impostato da `maxOutboundConnectionsPerEndpoint.`|  
 |`maxOutboundConnectionsPerEndpoint`|Numero intero positivo che specifica il numero massimo di connessioni a un endpoint remoto iniziate dal servizio. Le connessioni in eccesso vengono messe in coda finché il numero di connessioni non risulta inferiore al limite consentito. `idleTimeout` limita il periodo di tempo entro il quale le connessioni rimangono in coda prima che venga generata un'eccezione. Il valore predefinito è 10.<br /><br /> Questo attributo limita il numero di connessioni attive simultanee dal client a un particolare endpoint del servizio. Se questo valore viene superato a causa di un numero maggiore di connessioni client attive, può risultare che il servizio non risponda al client. In questo caso, il valore deve essere regolato in modo da superare il numero massimo di connessioni client simultanee previste a un endpoint specifico.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -50,6 +50,7 @@ Specifica impostazioni aggiuntive del pool di connessioni per un trasporto TCP.
 |[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definisce un trasporto che fa in modo che un canale trasferisca messaggi usando named pipe.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

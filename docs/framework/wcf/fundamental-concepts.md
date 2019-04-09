@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122304"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 Questo documento fornisce una panoramica generale dell'architettura Windows Communication Foundation (WCF). Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione della versione più semplice di un servizio WCF e un client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per altre informazioni sulla programmazione di WCF, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -84,8 +84,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Componente che controlla vari aspetti in fase di esecuzione di un servizio, di un endpoint, di una particolare operazione o di un client. I comportamenti sono raggruppati in base allo scopo. I comportamenti comuni influiscono globalmente su tutti gli endpoint, i comportamenti del servizio influiscono solo sugli aspetti relativi al servizio, i comportamenti dell'endpoint influiscono solo sulle proprietà relative all'endpoint e i comportamenti a livello di operazione influiscono su particolari operazioni. Un comportamento del servizio, ad esempio, l'azione di limitazione che specifica come un servizio reagisce quando un eccesso di messaggi minaccia di sovraccaricarne le funzionalità di gestione. Un comportamento dell'endpoint, invece, controlla solo gli aspetti pertinenti agli endpoint, ad esempio come e dove trovare una credenziale di sicurezza.  
   
  associazioni fornite dal sistema  
- WCF include numerose associazioni fornite dal sistema. Si tratta di raccolte di elementi di associazione ottimizzati per scenari specifici. 
-  <xref:System.ServiceModel.WSHttpBinding> è progettata, ad esempio, per l'interoperabilità con servizi che implementano varie specifiche WS-*. Le associazioni predefinite consentono di risparmiare tempo presentando solo quelle opzioni che possono essere applicate correttamente allo scenario specifico. Se un'associazione predefinita non soddisfa i requisiti, è possibile crearne una personalizzata.  
+ WCF include numerose associazioni fornite dal sistema. Si tratta di raccolte di elementi di associazione ottimizzati per scenari specifici. <xref:System.ServiceModel.WSHttpBinding> è progettata, ad esempio, per l'interoperabilità con servizi che implementano varie specifiche WS-*. Le associazioni predefinite consentono di risparmiare tempo presentando solo quelle opzioni che possono essere applicate correttamente allo scenario specifico. Se un'associazione predefinita non soddisfa i requisiti, è possibile crearne una personalizzata.  
   
  configurazione e codifica  
  Il controllo di un'applicazione può essere eseguito tramite codifica, tramite configurazione o tramite una combinazione di entrambe. La configurazione presenta il vantaggio di consentire a qualcun altro oltre allo sviluppatore, ad esempio a un amministratore di rete, di impostare parametri del client e del servizio dopo che il codice è stato scritto e senza doverlo ricompilare. La configurazione non solo consente di impostare valori come gli indirizzi endpoint ma fornisce anche un maggior controllo consentendo di aggiungere endpoint, associazioni e comportamenti. La codifica consente allo sviluppatore di mantenere uno stretto controllo su tutti i componenti del servizio o del client ed eventuali impostazioni eseguite tramite la configurazione possono essere controllate e se necessario sottoposte a override dal codice.  
@@ -154,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Abbreviazione per il set in continua crescita di specifiche Web Service (WS), ad esempio WS-Security, WS-ReliableMessaging e così via, che sono implementate in WCF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

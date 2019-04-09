@@ -2,12 +2,12 @@
 title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137254"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -19,7 +19,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
  Dopo l'autenticazione degli utenti, l'ambito delle loro azioni dipende dalle autorizzazioni che gli sono state concesse. Attenersi sempre al principio dei privilegi minimi e concedere solo le autorizzazioni strettamente necessarie.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -42,7 +42,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 ## <a name="script-exploits"></a>Attacchi tramite script  
  Gli attacchi tramite script sono un altro tipo di intrusione in cui vengono inseriti caratteri dannosi in una pagina Web. I caratteri inseriti non vengono convalidati nel browser e verranno elaborati come parte della pagina.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -51,12 +51,12 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 ## <a name="probing-attacks"></a>Attacchi di tipo probe  
  Gli utenti non autorizzati usano spesso informazioni provenienti da un'eccezione, quale un nome di server, database o tabella, per eseguire un tentativo di attacco al sistema. Dal momento che le eccezioni possono presentare informazioni specifiche sull'applicazione o sull'origine dati, è possibile migliorarne la protezione esponendo al client solo le informazioni necessarie.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Nozioni fondamentali sulla gestione delle eccezioni](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Vengono descritte le forme di base di gestione delle eccezioni strutturata di tipo try/catch/finally|  
-|[Procedure consigliate per le eccezioni](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Vengono descritte le procedure consigliate per la gestione delle eccezioni.|  
+|[Suggerimenti per le eccezioni](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Vengono descritte le procedure consigliate per la gestione delle eccezioni.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Protezione delle origini dati di Microsoft Access ed Excel  
  Se i requisiti di sicurezza sono minimi o non esistenti, Microsoft Access e Microsoft Excel possono fungere da archivio dati per un'applicazione ADO.NET. Le funzionalità di sicurezza di queste applicazioni sono efficaci per la prevenzione, ma non devono essere considerate affidabili se non per scoraggiare le intrusioni di utenti non informati. I file di dati fisici per Access ed Excel si trovano nel file system e devono essere accessibili a tutti gli utenti. Questo li rende vulnerabili ad attacchi che possono comportare il furto o la perdita di dati, in quando i file possono essere facilmente copiati o modificati. Se è necessaria una soluzione di sicurezza più affidabile, usare SQL Server o un altro database basato su server in cui i file di dati non sono leggibili dal file system.  
@@ -65,9 +65,9 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Considerazioni sulla sicurezza e indicazioni per Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
-|[Informazioni sul ruolo del file di informazioni sul gruppo di lavoro nella sicurezza dall'accesso di](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
-|[Domande frequenti su Microsoft Access sicurezza per le versioni di Microsoft Access 2.0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
+|[Security Considerations and Guidance for Access 2007 (informazioni in lingua inglese)](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
+|[Understanding the Role of Workgroup Information Files in Access Security (informazioni in lingua inglese)](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
+|[Domande frequenti sulla sicurezza di Microsoft Access disponibili nell'area download](https://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
 ## <a name="enterprise-services"></a>Servizi aziendali  
  In COM+ è incluso un modello di sicurezza che si basa sugli account di Windows NT e sulla rappresentazione di processi e thread. Lo spazio dei nomi <xref:System.EnterpriseServices> fornisce dei wrapper che consentono alle applicazioni .NET di integrare codice non gestito con i servizi di sicurezza COM+ tramite la classe <xref:System.EnterpriseServices.ServicedComponent>.  
   
@@ -80,7 +80,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 ## <a name="interoperating-with-unmanaged-code"></a>Interoperabilità con codice non gestito  
  .NET Framework rende disponibile l'interazione con codice non gestito, inclusi componenti COM, servizi COM+, librerie dei tipi esterni e numerosi servizi del sistema operativo. L'uso di codice non gestito implica l'allontanamento del perimetro di sicurezza disponibile per il codice gestito. Sia il codice sia il codice da cui viene chiamato devono disporre dell'autorizzazione <xref:System.Security.Permissions.SecurityPermission> per codice non gestito con il flag <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> specificato. Il codice non gestito può introdurre vulnerabilità di sicurezza impreviste nell'applicazione. Pertanto, è necessario evitare di interoperare con codice non gestito a meno che non sia assolutamente necessario.  
   
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -88,6 +88,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |[Interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene componenti avanzati relativi, ad esempio, ad assembly di interoperabilità primari, threading e marshalling personalizzato.|
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Raccomandazioni per strategie di accesso ai dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))

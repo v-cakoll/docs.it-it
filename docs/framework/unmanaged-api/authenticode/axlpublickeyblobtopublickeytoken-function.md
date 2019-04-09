@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37957931f9d1e2f8da44f70e5b99d3544bf0ae4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b2535441da173ee13653c68f25039fd1431261a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147433"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>Funzione _AxlPublicKeyBlobToPublicKeyToken
 Calcola il token di chiave pubblica con nome sicuro da un formato CSP PUBLICKEYBLOB.  
@@ -37,7 +37,8 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [out] Puntatore a WCHAR * per ricevere l'hash di chiave pubblica con codifica esadecimale.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` se la funzione ha esito positivo; in caso contrario, `S_FALSE`.  
+ `S_OK` Se la funzione ha esito positivo; in caso contrario `S_FALSE`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

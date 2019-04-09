@@ -1,34 +1,32 @@
 ---
-title: Cenni preliminari sulle origini di associazione
+title: Cenni preliminari sulle origini del binding
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 857175c65c62d8abad07a93baf72aa3709e5cb6b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145925"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
-  
-  
-  
+
 <a name="binding_sources"></a>   
 ## <a name="binding-source-types"></a>Tipi di origine del binding  
- Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] supporta i tipi di origine del binding seguenti:  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Data binding supporta anche i tipi di origine di associazione seguenti:  
   
 |Origine del binding|Descrizione|  
 |--------------------|-----------------|  
-|Oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|È possibile stabilire l'associazione a proprietà pubbliche, proprietà secondarie e indicizzatori di qualsiasi oggetto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Il motore di binding usa la reflection [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per ottenere i valori delle proprietà. In alternativa, gli oggetti che implementano <xref:System.ComponentModel.ICustomTypeDescriptor> o è stato registrato <xref:System.ComponentModel.TypeDescriptionProvider> funzionano anche con il motore di binding.<br /><br /> Per altre informazioni su come implementare una classe che possa essere usata come origine del binding, vedere [Implementazione di una classe come origine del binding](#classes) più avanti in questo argomento.|  
+|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetti|È possibile stabilire l'associazione a proprietà pubbliche, proprietà secondarie e indicizzatori di qualsiasi oggetto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Il motore di binding usa la reflection [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] per ottenere i valori delle proprietà. In alternativa, gli oggetti che implementano <xref:System.ComponentModel.ICustomTypeDescriptor> o è stato registrato <xref:System.ComponentModel.TypeDescriptionProvider> funzionano anche con il motore di binding.<br /><br /> Per altre informazioni su come implementare una classe che possa essere usata come origine del binding, vedere [Implementazione di una classe come origine del binding](#classes) più avanti in questo argomento.|  
 |oggetti dinamici|È possibile associare le proprietà disponibili e gli indicizzatori di un oggetto che implementa il <xref:System.Dynamic.IDynamicMetaObjectProvider> interfaccia. Se è possibile accedere al membro nel codice, è possibile creare un'associazione a tale membro. Se ad esempio un oggetto dinamico consente di accedere a un membro nel codice tramite `someObjet.AProperty`, è possibile creare un'associazione al membro impostando il percorso di associazione su `AProperty`.|  
-|Oggetti [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|È possibile associare a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] oggetti, ad esempio <xref:System.Data.DataTable>. Il [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa il <xref:System.ComponentModel.IBindingList> interfaccia, che fornisce notifiche di modifica che attende il motore di binding.|  
-|Oggetti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|È possibile associare a ed eseguire `XPath` esegue una query su un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, o <xref:System.Xml.XmlElement>. Un modo pratico per accedere [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] i dati che rappresentano l'origine del binding nel markup consiste nell'usare un <xref:System.Windows.Data.XmlDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile associare a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o eseguire l'associazione ai risultati delle query eseguite su oggetti di questi tipi tramite LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresentano l'origine del binding nel markup consiste nell'utilizzare un <xref:System.Windows.Data.ObjectDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|Oggetti <xref:System.Windows.DependencyObject>.|È possibile associare alle proprietà di dipendenza di qualsiasi <xref:System.Windows.DependencyObject>. Per un esempio, vedere [Eseguire l'associazione delle proprietà di due controlli](how-to-bind-the-properties-of-two-controls.md).|  
+|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] oggetti|È possibile associare a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] oggetti, ad esempio <xref:System.Data.DataTable>. Il [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa il <xref:System.ComponentModel.IBindingList> interfaccia, che fornisce notifiche di modifica che attende il motore di binding.|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] oggetti|È possibile associare a ed eseguire `XPath` esegue una query su un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, o <xref:System.Xml.XmlElement>. Un modo pratico per accedere [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] i dati che rappresentano l'origine del binding nel markup consiste nell'usare un <xref:System.Windows.Data.XmlDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile associare a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o eseguire l'associazione ai risultati delle query eseguite su oggetti di questi tipi tramite LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresentano l'origine del binding nel markup consiste nell'utilizzare un <xref:System.Windows.Data.ObjectDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
+|<xref:System.Windows.DependencyObject> oggetti|È possibile associare alle proprietà di dipendenza di qualsiasi <xref:System.Windows.DependencyObject>. Per un esempio, vedere [Eseguire l'associazione delle proprietà di due controlli](how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementazione di una classe come origine del binding  
@@ -77,8 +75,8 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 |Tipo di proprietà<br /><br /> (tutti i modificatori di accesso)|Proprietà dell'oggetto dinamico|Proprietà dell'oggetto dinamico|Proprietà CLR|Proprietà CLR|Proprietà di dipendenza|Proprietà di dipendenza|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Livello di attendibilità**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|**Attendibilità totale**|**Attendibilità parziale**|  
-|Classe pubblica|Sì|Yes|Yes|Yes|Yes|Sì|  
-|Classe non pubblica|Sì|No|Sì|No|Yes|Sì|  
+|Classe pubblica|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Classe non pubblica|Yes|No|Sì|No|Yes|Yes|  
   
  Questa tabella descrive punti importanti relativi ai requisiti di autorizzazione per il data binding.  
   
@@ -95,10 +93,11 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
  Per altre informazioni sulla sicurezza con attendibilità parziale, vedere [Sicurezza con attendibilità parziale in WPF](../wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Specificare l'origine di associazione](how-to-specify-the-binding-source.md)
+- [Specificare l'origine di binding](how-to-specify-the-binding-source.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
-- [Panoramica dei data binding WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
+- [Procedure relative](data-binding-how-to-topics.md)
+- [Panoramica del data binding WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [Data binding](../advanced/optimizing-performance-data-binding.md)

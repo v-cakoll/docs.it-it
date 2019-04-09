@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Risolvere i conflitti mediante l'unione con valori di Database"
+title: "Procedura: Risolvere i conflitti mediante l'unione con valori di database"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: 2b6daa28c23c74eaea21f1f3d499a2e206252abd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130208"
 ---
-# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Procedura: Risolvere i conflitti mediante l'unione con valori di Database
+# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Procedura: Risolvere i conflitti mediante l'unione con valori di database
 Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.KeepChanges> per unire i valori del database con i valori del membro client corrente. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
 |------|-------------|---------------|----------------|  
 |Stato del database originale quando viene eseguita una query da User1 e User2.|Alfreds|Maria|Sales|  
 |User1 si prepara a inviare queste modifiche.|Alfred||Marketing|  
-|User2 ha già inviato queste modifiche.||Mary|Servizio|  
+|User2 ha già inviato queste modifiche.||Mary|Service|  
   
  User1 decide di risolvere questo conflitto unendo i valori del database con i valori del membro client corrente. Di conseguenza, i valori del database verranno sovrascritti solo quando il set di modifiche corrente avrà modificato anche quel valore.  
   
@@ -41,6 +41,7 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
  [!code-vb[System.Data.Linq.RefreshMode#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Risolvere i conflitti sovrascrivendo i valori del Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Procedura: Risolvere i conflitti mantenendo valori di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+
+- [Procedura: Risolvere conflitti sovrascrivendo i valori di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Procedura: Risolvere conflitti mantenendo i valori di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

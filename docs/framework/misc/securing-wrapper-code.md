@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c74a130c078077d9f692fbf6107e9d5aefc16b9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132782"
 ---
 # <a name="securing-wrapper-code"></a>Protezione del codice wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -71,7 +71,7 @@ ms.locfileid: "54505939"
   
  La sicurezza dichiarativa offre i controlli di sicurezza seguenti:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> specifica il percorso di chiamate nello stack di sicurezza dall'accesso al codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi luring verrà rilevato codice non autorizzato durante il recupero tramite quest'ultimo.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> Specifica il percorso stack di sicurezza accesso di codice. Tutti i chiamanti nello stack devono disporre dell'identità o dell'autorizzazione specificata per poter passare. **Richiesta** si verifica a ogni chiamata perché lo stack potrebbe contenere chiamanti diversi. Se si chiama un metodo più volte, questo controllo di sicurezza viene eseguito ogni volta. **Richiesta** è una valida protezione contro gli attacchi luring verrà rilevato codice non autorizzato durante il recupero tramite quest'ultimo.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) avviene in fase di compilazione just-in-time (JIT) e controlla solo il chiamante immediato. Questo controllo di sicurezza non verifica il chiamante del chiamante. Una volta passato questo controllo, non ne vengono eseguiti altri, indipendentemente dal numero di chiamate effettuate dal chiamante. Tuttavia, non esiste nemmeno alcuna protezione contro gli attacchi luring. Con **LinkDemand**, qualsiasi codice che supera il test e può fare riferimento al codice può provocare problemi di sicurezza, consentendo a codice dannoso di chiamare usando il codice autorizzato. Pertanto, non usare **LinkDemand** a meno che non possono evitare completamente tutti i possibili punti di debolezza.  
   
@@ -102,4 +102,5 @@ ms.locfileid: "54505939"
 -   Tipi e interfacce implementate. Questi devono usare le richieste di collegamento in modo coerente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

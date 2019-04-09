@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135863"
 ---
 # <a name="clr-etw-events"></a>Eventi ETW di CLR
 Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracing for Windows). A ogni evento sono associati una parola chiave e un livello, come descritto nell'argomento [Parole chiave e livelli ETW di CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). CLR dispone di due provider per gli eventi:  
@@ -62,6 +62,7 @@ Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracin
  Acquisisce informazioni che vengono usate con altri eventi per generare le analisi dello stack in seguito alla generazione di un evento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Migliorare il debug e ottimizzazione delle prestazioni con ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Blog sulle prestazioni di Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
 - [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md)

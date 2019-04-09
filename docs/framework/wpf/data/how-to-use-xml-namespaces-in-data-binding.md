@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Utilizzare gli spazi dei nomi XML nell'associazione dati"
+title: 'Procedura: Usare gli spazi dei nomi XML nel data binding'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML [WPF], namespaces
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 190bf22544bd17cb215870728333211795040294
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149994"
 ---
-# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Procedura: Utilizzare gli spazi dei nomi XML nell'associazione dati
+# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Procedura: Usare gli spazi dei nomi XML nel data binding
 ## <a name="example"></a>Esempio  
  Questo esempio spiega come gestire gli spazi dei nomi specificati nell'origine del binding [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
@@ -30,6 +30,7 @@ ms.locfileid: "57377332"
  In questo particolare esempio, il [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati provengono da un servizio web, ma la <xref:System.Windows.Data.XmlNamespaceMapping> elemento funziona anche con inline [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] o [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati in un file incorporato.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Eseguire l'associazione ai dati XML usando un oggetto XMLDataProvider e le query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+
+- [Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

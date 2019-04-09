@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147251"
 ---
 # <a name="icatalogservices-interface"></a>Interfaccia ICatalogServices
 Fornisce metodi per servizi di catalogazione.  
@@ -33,7 +33,8 @@ Fornisce metodi per servizi di catalogazione.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo Autodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Riservato esclusivamente per uso interno.|  
-|[Metodo NoAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Riservato esclusivamente per uso interno.|  
+|[Metodo NotAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Riservato esclusivamente per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

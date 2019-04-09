@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Utilizzare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView'
+title: 'Procedura: Usare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
-ms.openlocfilehash: 8c2d4adb2471c0f1891288573ce6b6460b20151d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145405"
 ---
-# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Procedura: Utilizzare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView
+# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Procedura: Usare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView
 In questo esempio viene illustrato come definire <xref:System.Windows.Style.Triggers%2A> per un <xref:System.Windows.Controls.ListViewItem> controllo in modo che quando un valore della proprietà di un <xref:System.Windows.Controls.ListViewItem> modifiche, il <xref:System.Windows.Style> del <xref:System.Windows.Controls.ListViewItem> modifiche in risposta.  
   
 ## <a name="example"></a>Esempio  
@@ -30,9 +30,10 @@ In questo esempio viene illustrato come definire <xref:System.Windows.Style.Trig
 [!code-xaml[ListViewChkBox#ListViewItemTriggersEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#listviewitemtriggersend)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Procedure relative alle proprietà](listview-how-to-topics.md)
+- [Procedure relative](listview-how-to-topics.md)
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Cenni preliminari su GridView](gridview-overview.md)

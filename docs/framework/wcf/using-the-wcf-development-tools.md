@@ -2,12 +2,12 @@
 title: Utilizzo degli strumenti di sviluppo WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144638"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizzo degli strumenti di sviluppo WCF
 In questa sezione vengono descritti gli strumenti di sviluppo di Visual Studio che possono facilitare lo sviluppo del servizio WCF.  
@@ -19,15 +19,15 @@ In questa sezione vengono descritti gli strumenti di sviluppo di Visual Studio c
   
  È possibile usare i modelli predefiniti di progetti ed elementi di Visual Studio in Visual Studio per compilare rapidamente i servizi WCF e le relative applicazioni.  
   
- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Host servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
  L'Host automatico servizio di WCF (WcfSvcHost.exe) consente di avviare il debugger di Visual Studio (F5) per ospitare e testare un servizio che è stato implementato automaticamente. È quindi possibile testare il servizio utilizzando il Client di prova WCF (wcfTestClient.exe) o il proprio client di individuare e correggere qualsiasi errore potenziale.  
   
- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [Client di test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
  Client di prova WCF (WcfTestClient.exe) è un strumento GUI che consente di immettere parametri di tipi arbitrari, inviare tale input al servizio e visualizzare che la risposta del servizio invia di nuovo. Fornisce un servizio facile test combinazione con Host automatico servizio di WCF.  
   
- [Generazione di classi di tipi dati da XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [Generazione di classi di tipo dati da XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  I dati XML archiviati negli Appunti possono essere incollati in una tabella codici. Le classi definite nei dati verranno convertite in tipi di codice.  
   
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Per altre informazioni sulle Netsh.exe, vedere [come usare lo strumento di Netsh.exe e opzioni della riga di comando](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Modelli di Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Client di test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

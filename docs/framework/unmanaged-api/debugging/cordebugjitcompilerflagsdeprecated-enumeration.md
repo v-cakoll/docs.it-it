@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ef262fcae117b27f06d4dba3b2087028b5cfa65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f15a4557be0dc633fb9ecda5916896e340f00da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136890"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>Enumerazione CorDebugJITCompilerFlagsDeprecated
 Questa enumerazione è obsoleta. Usare la `CORDEBUG_JIT_DEFAULT` membro della [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumerazione invece.  
@@ -36,9 +36,9 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|In alternativa, usare `CORDEBUG_JIT_DEFAULT`.|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|In alternativa, utilizzare `CORDEBUG_JIT_DEFAULT`.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,4 +50,5 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
  **Versioni di .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

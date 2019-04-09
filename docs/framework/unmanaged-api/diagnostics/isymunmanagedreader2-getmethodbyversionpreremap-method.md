@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ff8e2767f8bba618539ecd12c5034ae67d24d0a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135185"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Metodo ISymUnmanagedReader2::GetMethodByVersionPreRemap
 Ottiene un metodo del lettore di simboli, dato un token di metodo e un numero di versione di modifica e continuazione. I numeri di versione iniziano da 1 e vengano incrementati ogni volta che il metodo viene modificato in seguito a un'operazione di modifica e continuazione.  
@@ -53,4 +53,5 @@ HRESULT GetMethodByVersionPreRemap(
  **Intestazione:** CorSym.idl. CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Utilizzare chiavi di caratteri del sistema'
+title: 'Procedura: Usare le chiavi dei tipi di carattere del sistema'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-ms.openlocfilehash: 8d354bb598da6912bfa34f611cb55d4dcd7920a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148928"
 ---
-# <a name="how-to-use-system-fonts-keys"></a>Procedura: Utilizzare chiavi di caratteri del sistema
+# <a name="how-to-use-system-fonts-keys"></a>Procedura: Usare le chiavi dei tipi di carattere del sistema
 Le risorse di sistema espongono diverse metriche di sistema come risorse per consentire agli sviluppatori di creare oggetti visivi coerenti con le impostazioni di sistema. <xref:System.Windows.SystemFonts> è una classe che contiene i valori del tipo di carattere di sistema e le risorse del tipo di carattere di sistema associati ai valori, ad esempio, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> e <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.  
   
  Le metriche dei tipi di carattere del sistema possono essere usate come risorse statiche o dinamiche. Usare una risorsa dinamica per aggiornare automaticamente la metrica del tipo di carattere durante l'esecuzione dell'applicazione; in caso contrario, usare una risorsa statica.  
@@ -25,6 +25,7 @@ Le risorse di sistema espongono diverse metriche di sistema come risorse per con
  [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Disegnare un'area con un pennello di sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Utilizzare SystemParameters](how-to-use-systemparameters.md)
-- [Utilizzare la classe SystemFonts](how-to-use-systemfonts.md)
+- [Usare la classe SystemParameters](how-to-use-systemparameters.md)
+- [Usare la classe SystemFonts](how-to-use-systemfonts.md)

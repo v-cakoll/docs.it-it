@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126360"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57673678"
   
  In questa panoramica vengono presentati i pattern di controllo per [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . I pattern di controllo rappresentano un metodo di classificazione ed esposizione della funzionalità di un controllo indipendentemente dal tipo o dall'aspetto del controllo stesso.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] usa i pattern di controllo per rappresentare i comportamenti comuni dei controlli. Usare il pattern di controllo Invoke per i controlli che possono essere richiamati (ad esempio, i pulsanti) e il pattern di controllo Scroll per i controlli con barre di scorrimento (ad esempio le caselle di riepilogo, le visualizzazioni elenco o le caselle combinate). Poiché ogni pattern di controllo rappresenta una funzionalità distinta, possono essere combinati per descrivere il set completo di funzionalità supportate da un determinato controllo.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Usa i pattern per rappresentare i comportamenti comuni dei controlli di controllo. Usare il pattern di controllo Invoke per i controlli che possono essere richiamati (ad esempio, i pulsanti) e il pattern di controllo Scroll per i controlli con barre di scorrimento (ad esempio le caselle di riepilogo, le visualizzazioni elenco o le caselle combinate). Poiché ogni pattern di controllo rappresenta una funzionalità distinta, possono essere combinati per descrivere il set completo di funzionalità supportate da un determinato controllo.  
   
 > [!NOTE]
 >  I controlli aggregati, compilati con i controlli figlio che forniscono le funzionalità esposte dai controlli padre all' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , devono implementare tutti i pattern di controllo normalmente associati a ogni controllo figlio. Per contro questi stessi modelli di controllo non devono essere implementati dai controlli figlio.  
@@ -73,8 +73,9 @@ ms.locfileid: "57673678"
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Espone informazioni specifiche di Windows, un concetto fondamentale per il sistema operativo [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Esempi di controlli per Windows sono le finestre dell'applicazione di primo livello ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]e così via), finestre figlio [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] e le finestre di dialogo.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Mapping dei pattern di controllo per client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Mapping dei pattern di controllo per i client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Cenni preliminari su automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
 - [Proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
 - [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146874"
 ---
 # <a name="oidmap-element"></a>\<oidMap > elemento
 Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.  
@@ -74,8 +74,9 @@ Contiene mapping di identificatore (OID) ASN.1 oggetto alle classi.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [servizi crittografici](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Mapping di identificatori di oggetti ad algoritmi di crittografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

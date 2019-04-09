@@ -9,12 +9,12 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: cc511a79cf70bb8df8980c8703b1ad49d15516aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129116"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Cenni preliminari sul controllo RadioButton (Windows Form)
 Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano un insieme di due o più opzioni si escludono a vicenda all'utente. Anche se i pulsanti di opzione e caselle di controllo sembra funzionare allo stesso modo, è un'importante differenza: quando un utente seleziona un pulsante di opzione, non è possibile selezionare anche gli altri pulsanti di opzione nello stesso gruppo. Al contrario, è possibile selezionare un numero qualsiasi delle caselle di controllo. La definizione di un gruppo di pulsanti di opzione indica all'utente, "Di seguito è un set di opzioni da cui è possibile scegliere solo uno".  
@@ -25,11 +25,12 @@ Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano un ins
  Il <xref:System.Windows.Forms.RadioButton> controllo viene visualizzato come un pulsante di comando, viene visualizzato sia stato attivato se è selezionata, se il <xref:System.Windows.Forms.RadioButton.Appearance%2A> è impostata su <xref:System.Windows.Forms.Appearance.Button>. Pulsanti di opzione possono anche visualizzare immagini usando il <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A> proprietà. Per altre informazioni, vedere [Procedura: Impostare l'immagine visualizzata da controllo di un Windows Form](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.RadioButton>
-- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
-- [Panoramica sul controllo GroupBox](groupbox-control-overview-windows-forms.md)
-- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procedura: Creare le chiavi di accesso per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Procedura: Gruppo Windows Form controlli RadioButton funzionino come Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica del controllo GroupBox](groupbox-control-overview-windows-forms.md)
+- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Creare tasti di scelta per i controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Raggruppare i controlli RadioButton di Windows Forms in modo che funzionino come set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Controllo RadioButton](radiobutton-control-windows-forms.md)

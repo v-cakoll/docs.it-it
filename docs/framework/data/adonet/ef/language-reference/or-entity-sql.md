@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 4d0bed2fb000e96e9fd0ceac6ea90e19b8fa7514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141284"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 Combina due espressioni `Boolean` .  
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  Qualsiasi espressione valida che restituisce un valore `Boolean`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` se una delle condizioni è `true`; in caso contrario `false`.  
+ `true` Quando una delle condizioni è `true`; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  OR è un operatore logico [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usato per combinare due condizioni. Quando in un'istruzione si usa più di un operatore logico, gli operatori OR vengono valutati dopo gli operatori AND. È tuttavia possibile modificare l'ordine di valutazione tramite l'uso delle parentesi.  
@@ -50,4 +50,5 @@ boolean_expression || boolean_expression
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

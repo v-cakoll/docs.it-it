@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121979"
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
 In genere durante la compilazione di applicazioni Windows Communication Foundation (WCF), gli sviluppatori prestare particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non sono necessario occuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> consente di specificare gli attributi WrapperName e WrapperNamespace che determinano il nome dell'elemento wrapper nel corpo del messaggio SOAP. Per impostazione predefinita, il nome del tipo di contratto di messaggio viene utilizzato per il wrapper e lo spazio dei nomi in cui il contratto di messaggio viene definito. `http://tempuri.org/` viene utilizzato come spazio dei nomi predefinito.  
   
 > [!NOTE]
->  Gli attributi <xref:System.Runtime.Serialization.KnownTypeAttribute> vengono ignorati nei contratti di messaggio. Se è richiesto un <xref:System.Runtime.Serialization.KnownTypeAttribute>, inserirlo nell'operazione in cui è utilizzato il contratto di messaggio interessato.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> gli attributi vengono ignorati nei contratti di messaggio. Se è richiesto un <xref:System.Runtime.Serialization.KnownTypeAttribute>, inserirlo nell'operazione in cui è utilizzato il contratto di messaggio interessato.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Controllo di intestazione, nomi di parti del corpo e spazi dei nomi  
  Nella rappresentazione SOAP di un contratto di messaggio, ogni intestazione e parte del corpo esegue il mapping a un elemento XML che ha un nome e uno spazio dei nomi.  
@@ -336,7 +336,7 @@ public class BankingTransaction
   
 -   Tutte le intestazioni del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare il set completo di intestazioni per il messaggio.  
   
--   Tutte le parti del corpo del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare l'intero corpo del messaggio. Le parti del corpo sono ordinate in base alle normali regole di ordinamento (in base alla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> e quindi alfabeticamente), senza considerare affatto la loro posizione nella gerarchia di ereditarietà. È assolutamente sconsigliato utilizzare l'eredità del contratto di messaggio nel caso in cui le parti del corpo del messaggio si trovino a più livelli della struttura di eredità. Se una classe di base e una classe derivata definiscono un'intestazione o una parte del corpo con lo stesso nome, per archiviare il valore di quell'intestazione o di quella parte del corpo viene utilizzato il membro della classe più di base.  
+-   Tutte le parti del corpo del messaggio nella gerarchia di ereditarietà sono raccolte insieme per formare l'intero corpo del messaggio. Le parti del corpo sono ordinate in base alle normali regole di ordinamento (in base alla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> e quindi alfabeticamente), senza considerare affatto la loro posizione nella gerarchia di ereditarietà. È assolutamente sconsigliato usare l'ereditarietà del contratto di messaggio nel caso in cui le parti del corpo del messaggio si trovino a più livelli della struttura di ereditarietà. Se una classe di base e una classe derivata definiscono un'intestazione o una parte del corpo con lo stesso nome, per archiviare il valore di quell'intestazione o di quella parte del corpo viene utilizzato il membro della classe più di base.  
   
  Si considerino le classi nell'esempio di codice seguente.  
   
@@ -448,5 +448,6 @@ public class OperationDetails
  Se si desidera ricevere l’oggetto del messaggio come proprietà `Result` e i valori restituiti come proprietà in quell’oggetto, usare l’opzione di comando `/messageContract`. Questa operazione genera una firma che restituisce il messaggio di risposta come proprietà `Result` nell’oggetto <xref:System.EventArgs>. Pertanto, tutti i valori restituiti interni sono proprietà dell’oggetto del messaggio di risposta.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+
+- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md)

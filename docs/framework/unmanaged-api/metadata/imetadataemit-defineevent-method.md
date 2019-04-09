@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 48055103b49b4c61bb7561f2d4aa6c8daae07ae2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128908"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Metodo IMetaDataEmit::DefineEvent
 Crea una definizione per un evento con la firma dei metadati specificati e ottiene un token di definizione di tale evento.  
@@ -81,5 +81,6 @@ HRESULT DefineEvent (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

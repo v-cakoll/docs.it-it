@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129597"
 ---
 # <a name="timing-behaviors-overview"></a>Cenni preliminari sui comportamenti temporali
 In questo argomento descrive i comportamenti temporali di animazioni e altri <xref:System.Windows.Media.Animation.Timeline> oggetti.  
@@ -123,8 +123,9 @@ In questo argomento descrive i comportamenti temporali di animazioni e altri <xr
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Specifica la percentuale del <xref:System.Windows.Media.Animation.Timeline.Duration%2A> di una sequenza temporale trascorsa decelerando. Per un esempio, vedere [Procedura: Accelerare o decelerare un'animazione](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sull'animazione e sul sistema di temporizzazione](animation-and-timing-system-overview.md)
 - [Cenni preliminari sugli eventi di tempo](timing-events-overview.md)
-- [Procedure relative alle proprietà](animation-and-timing-how-to-topics.md)
-- [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Procedure relative](animation-and-timing-how-to-topics.md)
+- [Esempio di comportamento temporale di animazione](https://go.microsoft.com/fwlink/?LinkID=159970)

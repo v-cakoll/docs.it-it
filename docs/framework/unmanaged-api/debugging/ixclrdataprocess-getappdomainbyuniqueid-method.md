@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d4226bd73c7ae0c1faf510ed63b644116b064fb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 257fa2cf03a62ea888b76519aa5c9f9e84038045
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126503"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId Method
 
@@ -55,5 +55,6 @@ Il metodo specificato fa parte di `IXCLRDataProcess` interfaccia e corrisponde a
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Debug](index.md)
-- [IXCLRDataProcess Interface](ixclrdataprocess-interface.md)
+- [Interfaccia IXCLRDataProcess](ixclrdataprocess-interface.md)

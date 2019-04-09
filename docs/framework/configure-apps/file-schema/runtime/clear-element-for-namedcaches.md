@@ -1,16 +1,16 @@
 ---
-title: Elemento <clear> per <namedCaches>
+title: <clear> (elemento) per <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146861"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<Cancella > (elemento) per \<namedCaches >
 Cancella tutto `namedCache` voci il `namedCaches` raccolta per una cache in memoria.  
@@ -51,4 +51,5 @@ Cancella tutto `namedCache` voci il `namedCaches` raccolta per una cache in memo
  Il `clear` elemento cancellato tutto `namedCache` voci della raccolta di cache denominata per una cache in memoria. È possibile usare la `clear` elemento prima di usare il `add` elemento a cui aggiungere una nuova voce di cache denominata per essere certi che vi siano altre cache denominate nella raccolta.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [\<namedCaches > (impostazioni Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

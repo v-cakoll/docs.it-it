@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Verificare lo stato delle stampanti da postazione remota'
+title: 'Procedura: Sorvegliare da remoto lo stato delle stampanti'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143546"
 ---
-# <a name="how-to-remotely-survey-the-status-of-printers"></a>Procedura: Verificare lo stato delle stampanti da postazione remota
+# <a name="how-to-remotely-survey-the-status-of-printers"></a>Procedura: Sorvegliare da remoto lo stato delle stampanti
 In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere presenti più stampanti non funzionanti a causa di fogli bloccati o carta esaurita o un'altra situazione problematica. Il set completo di proprietà della stampante esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida verifica dello stato delle stampanti.  
   
 ## <a name="example"></a>Esempio  
@@ -74,6 +74,7 @@ In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere p
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere p
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [Operatore & (Riferimenti per C#)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documenti in WPF](documents-in-wpf.md)
-- [Panoramica della stampa](printing-overview.md)
+- [Cenni preliminari sulla stampa](printing-overview.md)

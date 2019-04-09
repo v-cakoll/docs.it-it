@@ -2,12 +2,12 @@
 title: Controllo delle versioni dei servizi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122408"
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. Questo argomento illustra come controllare la versione di Windows Communication Foundation (WCF).  
@@ -122,7 +122,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  Le organizzazioni possono avere librerie di contratti in cui un contratto viene pubblicato in un repository centrale e il servizio implementa i contratti da quel repository. In questo caso, quando si pubblica un contratto di servizio nel repository, non si ha alcun controllo su chi crea i servizi che l'implementano. Non è pertanto possibile modificare il contratto di servizio dopo che è stato pubblicato, rendendolo di fatto immutabile. WCF supporta l'ereditarietà del contratto, che può essere usato per creare un nuovo contratto che estende i contratti esistenti. Per utilizzare questa funzionalità, definire una nuova interfaccia del contratto di servizio che eredita dalla vecchia interfaccia del contratto di servizio, quindi aggiungere metodi alla nuova interfaccia. Modificare quindi il servizio che implementa il vecchio contratto per implementare quello nuovo e modificare la definizione dell'endpoint "versionOld" per utilizzare il nuovo contratto. Ai client "versionOld", l'endpoint continuerà a sembrare come se esponesse il contratto "versionOld"; ai client "versionNew", l'endpoint sembrerà esporre il contratto "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Controllo delle versioni di associazioni e indirizzi  
- Le modifiche all'indirizzo endpoint e all'associazione sono modifiche che possono determinare interruzioni a meno che i client non siano in grado di scoprire dinamicamente il nuovo indirizzo endpoint o la nuova associazione. Per implementare questa funzionalità è possibile utilizzare un Registro di sistema UDDI (Universal Discovery Description and Integration) e il modello di chiamata UDDI in cui un client tenta di comunicare con un endpoint e, in caso di errore, esegue una query nel registro di sistema UDDI noto, per cercare i metadati dell'endpoint corrente. Il client utilizza quindi l'indirizzo e l'associazione da questi metadati per comunicare con l'endpoint. Se la comunicazione riesce, il client memorizza nella cache le informazioni sull'indirizzo e sull'associazione per utilizzarle in seguito.  
+ Le modifiche all'indirizzo endpoint e all'associazione sono modifiche che possono determinare interruzioni a meno che i client non siano in grado di scoprire dinamicamente il nuovo indirizzo endpoint o la nuova associazione. Per implementare questa funzionalità è possibile usare un Registro di sistema UDDI (Universal Discovery Description and Integration) e il modello di chiamata UDDI in cui un client tenta di comunicare con un endpoint e, in caso di errore, esegue una query nel registro di sistema UDDI noto, per cercare i metadati dell'endpoint corrente. Il client utilizza quindi l'indirizzo e l'associazione da questi metadati per comunicare con l'endpoint. Se la comunicazione riesce, il client memorizza nella cache le informazioni sull'indirizzo e sull'associazione per utilizzarle in seguito.  
   
 ## <a name="routing-service-and-versioning"></a>Servizio di routing e controllo delle versioni  
  Se le modifiche apportate a un servizio sono in grado di determinare interruzioni e sono necessarie due o più versioni diverse di un servizio in esecuzione contemporanea, è possibile utilizzare il servizio di routing WCF per indirizzare messaggi all'istanza del servizio appropriata. Il servizio di routing WCF utilizza il routing basato sul contenuto, ovvero informazioni contenute nel messaggio, per determinare l'indirizzamento del messaggio stesso. Per altre informazioni, vedere il servizio di Routing WCF [servizio di Routing](../../../docs/framework/wcf/feature-details/routing-service.md). Per un esempio di come usare il servizio di Routing WCF per il controllo delle versioni di servizio vedere [How To: Controllo delle versioni del servizio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  Il contratto di servizio verrebbe aggiornato per includere le nuove operazioni che sono scritte come `PurchaseOrderV2`. La logica di business esistente scritta in termini di `IPurchaseOrderV1` continuerebbe a funzionare per `PurchaseOrderV2` e la nuova logica di business che richiede la proprietà `OrderDate` verrebbe scritta come `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -186,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Equivalenza dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Equivalenza dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

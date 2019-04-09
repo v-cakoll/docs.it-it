@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139815"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: Configurare una porta con un certificato SSL
 Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted con la <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto di classi, è anche necessario configurare una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -105,7 +105,7 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Per eliminare un certificato SSL da un numero di porta  
   
-1.  Usare lo strumento HttpCfg.exe o Netsh.exe per visualizzare le porte e le identificazioni personali di tutti i binding nel computer. Per stampare le informazioni su disco, usare il carattere di reindirizzamento ">", come mostrato nell'esempio seguente.  
+1.  Usare lo strumento HttpCfg.exe o Netsh.exe per visualizzare le porte e le identificazioni personali di tutti i binding nel computer. Per stampare le informazioni su disco, usare il carattere di reindirizzamento ">", come illustrato nell'esempio seguente.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
@@ -130,4 +130,5 @@ Quando si crea un servizio Windows Communication Foundation (WCF) self-hosted co
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+
+- [Protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

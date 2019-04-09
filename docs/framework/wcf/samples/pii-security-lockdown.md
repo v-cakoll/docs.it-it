@@ -2,12 +2,12 @@
 title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122057"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Per crittografare i valori nella sezione appSettings di Web.config per l'esempio  
   
-1.  Aprire un prompt dei comandi tramite Start->Esegui. Digitare `cmd` e fare clic su **OK**.  
+1.  Aprire un prompt dei comandi tramite Start -> Esegui... Digitare `cmd` e fare clic su **OK**.  
   
 2.  Spostarsi alla directory .NET Framework corrente eseguendo il comando seguente: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
@@ -122,7 +122,7 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 > [!IMPORTANT]
 >  Per eseguire questo esempio è necessario modificare manualmente Machine.config. È necessario fare attenzione nel modificare Machine.config, visto che valori o sintassi errati possono impedire l'esecuzione di tutte le applicazioni .NET Framework.  
   
- È anche possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
+ È inoltre possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   
 -   [Creazione di applicazioni ASP.NET protette: L'autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
@@ -143,4 +143,5 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
 1.  Modificare Machine.config per impostare l'attributo `enableLoggingKnownPii` su `false`.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)

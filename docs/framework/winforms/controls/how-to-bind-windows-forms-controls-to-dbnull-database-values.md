@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare i controlli Windows Form a valori di Database DBNull'
+title: 'Procedura: Associare i controlli di Windows Forms a valori di database DBNull'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 0c0768b922133fa0be1c8a56b4481048d1e200ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137761"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare i controlli Windows Form a valori di Database DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare i controlli di Windows Forms a valori di database DBNull
 Quando si associano controlli Windows Form a un'origine dati e questa restituisce un valore <xref:System.DBNull>, è possibile sostituire un valore appropriato senza gestire, formattare o analizzare eventi. La proprietà <xref:System.Windows.Forms.Binding.NullValue%2A> eseguirà la conversione del valore <xref:System.DBNull> in un oggetto specificato durante la formattazione o l'analisi dei valori dell'origine dati.  
   
 ## <a name="example"></a>Esempio  
@@ -35,6 +35,7 @@ Quando si associano controlli Windows Form a un'origine dati e questa restituisc
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Gestire errori ed eccezioni che si verificano con il Data Binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Gestire errori ed eccezioni relativi al data binding](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Procedura: Associare un controllo di Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

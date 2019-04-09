@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Usare EdmGen.exe per generare il modello e i file di Mapping'
+title: 'Procedura: Usare EdmGen.exe per generare i file di modello e di mapping'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 49890eb8bdb9f956cc36b3adde2f11db1e1e07bc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 72f4f84fc8651f3117eae637eb75300801e5000f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125331"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Procedura: Usare EdmGen.exe per generare il modello e i file di Mapping
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Procedura: Usare EdmGen.exe per generare i file di modello e di mapping
 In questo argomento viene illustrato come usare lo strumento Generatore EDM (EdmGen.exe) per generare i seguenti file in base al database School:  
   
 -   Modello concettuale (file con estensione csdl).  
@@ -54,8 +54,9 @@ In questo argomento viene illustrato come usare lo strumento Generatore EDM (Edm
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Modellazione e mapping](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
 - [Procedura: Configurare manualmente un progetto Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Procedura: Pre-generare viste per migliorare le prestazioni delle Query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [Strumenti di ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Procedura: Utilizzare EdmGen.exe per convalidare i file di modello e Mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Procedura: Usare EdmGen.exe per convalidare file di modello e di mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

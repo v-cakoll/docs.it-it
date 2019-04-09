@@ -2,12 +2,12 @@
 title: Eccezioni
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145990"
 ---
 # <a name="exceptions"></a>Eccezioni
 I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.TryCatch> per gestire le eccezioni generate durante l'esecuzione di un flusso di lavoro. Queste eccezioni possono essere gestite o generate una seconda volta usando l'attività <xref:System.Activities.Statements.Rethrow>. Le attività della sezione <xref:System.Activities.Statements.TryCatch.Finally%2A> vengono eseguite quando viene completata la sezione <xref:System.Activities.Statements.TryCatch.Try%2A> o <xref:System.Activities.Statements.TryCatch.Catches%2A>. I flussi di lavoro ospitato da un <xref:System.Activities.WorkflowApplication> istanza può anche usare il <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> gestore eventi per gestire le eccezioni non gestite da un <xref:System.Activities.Statements.TryCatch> attività.  
@@ -51,6 +51,7 @@ I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.
  La gestione delle eccezioni si verifica durante l'esecuzione di un'attività, mentre la compensazione si verifica dopo il corretto completamento di un'attività. La gestione delle eccezioni consente di eseguire una pulizia dopo che l'attività genera l'eccezione, mentre la compensazione permette di annullare il lavoro correttamente completato di un'attività portata a termine in precedenza. Per altre informazioni, vedere [compensazione](compensation.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

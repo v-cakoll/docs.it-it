@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137930"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Esercitazione: Iniziare con le applicazioni di Windows Communication Foundation
 La seguente serie di esercitazioni fornisce un'introduzione a Windows Communication Foundation (WCF) esperienza di programmazione. Eseguire queste esercitazioni nell'ordine fornirà informazioni introduttive sui passaggi necessari per creare le applicazioni WCF. Al termine, si otterrà un servizio WCF in esecuzione e un client WCF che chiama il servizio. 
@@ -72,5 +72,3 @@ Le due esercitazioni descrivono come creare, configurare e usare un'applicazione
 - [Esempio introduttivo](samples/getting-started-sample.md)
 - [Esempi di Windows Communication Foundation](samples/index.md)
 - [Servizio indipendente](samples/self-host.md)
-
-

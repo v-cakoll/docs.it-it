@@ -2,12 +2,12 @@
 title: Trasferimento dei messaggi di flusso
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136877"
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
 I trasporti di Windows Communication Foundation (WCF) supportano due modalità di trasferimento dei messaggi:  
@@ -47,4 +47,5 @@ I trasporti di Windows Communication Foundation (WCF) supportano due modalità d
  Il passaggio dalla modalità di trasferimento con memorizzazione nel buffer alla modalità di trasferimento con flusso comporta la modifica della forma del canale nativo dei trasporti TCP e pipe con nome. Per i trasferimenti con memorizzazione nel buffer, la forma del canale nativo è <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Per i trasferimenti con flusso, i canali nativi sono <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. La modifica della modalità di trasferimento di un'applicazione esistente che utilizza questi trasporti in modo diretto (ovvero non tramite un contratto di servizio) richiede la modifica della forma del canale previsto di channel factory e listener.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Procedura: Abilitare il flusso](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

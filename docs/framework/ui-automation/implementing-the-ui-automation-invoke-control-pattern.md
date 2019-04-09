@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 55e75e5835aa60a51b9186f31913347ad04dccdd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134784"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementazione del pattern di controllo Invoke di automazione interfaccia utente
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57674952"
   
 -   La chiamata di un controllo viene in genere eseguita facendo clic o doppio clic oppure premendo INVIO, una scelta rapida predefinita da tastiera o una combinazione alternativa di tasti.  
   
--   Viene generato un evento<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> su un controllo che è stato attivato in risposta a un controllo che esegue l'azione associata. Se possibile, l'evento deve essere generato dopo che il controllo ha completato l'azione ed è stato restituito senza alcun blocco. L'evento Invoked deve essere generato prima che la richiesta Invoke venga gestita negli scenari seguenti:  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> viene generato in un controllo che è stato attivato (in risposta a un controllo che esegue l'azione associata). Se possibile, l'evento deve essere generato dopo che il controllo ha completato l'azione ed è stato restituito senza alcun blocco. L'evento Invoked deve essere generato prima che la richiesta Invoke venga gestita negli scenari seguenti:  
   
     -   Non è possibile o conveniente attendere il completamento dell'azione.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57674952"
   
 -   Un elemento può scomparire dall'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] subito dopo essere stato richiamato. Di conseguenza, la richiesta di informazioni dall'elemento fornito dal callback di evento potrebbe avere esito negativo. La prelettura delle informazioni memorizzate nella cache rappresenta la soluzione alternativa consigliata.  
   
--   I controlli possono implementare più pattern di controllo. Ad esempio, il controllo Colore riempimento sulla barra degli strumenti dell' [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa sia il pattern di controllo <xref:System.Windows.Automation.InvokePattern> che il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.  
+-   I controlli possono implementare più pattern di controllo. Ad esempio, il controllo Colore riempimento sulla barra degli strumenti dell' [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa sia il pattern di controllo <xref:System.Windows.Automation.InvokePattern> che il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu di scelta e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Membri obbligatori per IInvokeProvider  
@@ -56,7 +56,7 @@ ms.locfileid: "57674952"
   
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|metodo|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente un valore senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|metodo|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> è una chiamata asincrona e deve restituire immediatamente senza bloccarsi.<br /><br /> Questo comportamento è particolarmente critico per i controlli che direttamente o indirettamente avviano una finestra di dialogo quando vengono chiamati. Qualsiasi client di automazione interfaccia utente che ha generato l'evento rimarrà bloccato fino a quando non viene chiusa la finestra di dialogo modale.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Eccezioni  
@@ -67,9 +67,10 @@ ms.locfileid: "57674952"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Il controllo non è abilitato.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Richiamare un controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Richiamare un controllo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

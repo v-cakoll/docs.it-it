@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139178"
 ---
 # <a name="net-native-and-compilation"></a>Compilazione e .NET Native
 Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono per lo più scritte in un determinato linguaggio di programmazione e compilate in linguaggio intermedio (IL). In fase di esecuzione, un compilatore JIT è responsabile della compilazione del linguaggio intermedio in codice nativo per il computer locale prima che un metodo venga eseguito per la prima volta. Al contrario, la catena di strumenti .NET Native converte il codice sorgente in codice nativo in fase di compilazione. Questo argomento confronta .NET Native con altre tecnologie di compilazione disponibili per le app .NET Framework e fornisce una panoramica pratica del modo in cui .NET Native produce codice nativo, utile a comprendere il motivo per cui le eccezioni che si verificano nel codice compilato con .NET Native non si verificano nel codice con compilazione JIT.  
@@ -101,6 +101,7 @@ Le applicazioni Windows 8.1 e Windows Desktop destinate a .NET Framework vengono
 -   Le immagini NGEN tendono a essere fragili. Ad esempio, in seguito all'applicazione di una patch o alla modifica di una dipendenza, in genere è necessario ripetere la generazione di immagini native per gli assembly che se ne servono. Ciò è particolarmente vero per gli assembly di sistema nella libreria di classi .NET Framework. Al contrario, .NET Native consente alle applicazioni di essere servite indipendentemente le une dalle altre.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metadati e componenti auto-descrittivi](../../../docs/standard/metadata-and-self-describing-components.md)
 - [Inside .NET Native (Video di Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

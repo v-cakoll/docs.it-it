@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 99f6e9e265071c2e7e3c79cf158ab5051eb78f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149097"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statistiche di provider per SQL Server
 A partire da .NET Framework versione 2.0, il provider di dati .NET Framework per SQL Server supporta le statistiche in fase di esecuzione. È necessario abilitare le statistiche impostando la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> su `True` dopo aver creato un oggetto di connessione valido. Dopo aver abilitato le statistiche, è possibile visualizzarle come "snapshot" recuperando un riferimento <xref:System.Collections.IDictionary> mediante il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection>. È possibile enumerare l'elenco come un set di voci di dizionario delle coppie nome/valore. Queste coppie nome/valore non seguono alcun ordine. È possibile chiamare il metodo <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> dell'oggetto <xref:System.Data.SqlClient.SqlConnection> per azzerare i contatori in qualsiasi momento. Se non è stata abilitata la raccolta delle statistiche, non viene generata alcuna eccezione. Inoltre, se il metodo <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> viene chiamato senza la proprietà <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, i valori recuperati sono i valori iniziali per ciascuna voce. Se vengono abilitate le statistiche, eseguire l'applicazione, quindi disabilitare le statistiche. I valori recuperati rifletteranno i valori raccolti fino al momento in cui le statistiche sono state disabilitate. Tutti i valori delle statistiche vengono raccolti in base alla connessione.  
@@ -339,5 +339,6 @@ namespace CS_Stats_Console_GetAll
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

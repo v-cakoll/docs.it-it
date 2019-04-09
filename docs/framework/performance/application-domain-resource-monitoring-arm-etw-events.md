@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133822"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventi ETW di monitoraggio delle risorse del dominio applicazione (ARM)
 <a name="top"></a> Questi eventi forniscono informazioni di diagnostica dettagliate sullo stato di un dominio applicazione. È possibile usare questi eventi o la funzionalità di monitoraggio delle risorse del dominio applicazione (ARM) per ottenere le stesse informazioni.  
@@ -42,7 +42,7 @@ ms.locfileid: "54689835"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ThreadCreated`|85|Un thread è stato creato per il dominio applicazione.|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54689835"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemAllocated`|83|Ogni 4 MB di memoria (approssimativamente) viene allocato nel dominio dell'applicazione.|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "54689835"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemSurvived`|84|Ogni operazione di Garbage Collection è stata terminata.|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "54689835"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ThreadAppDomainEnter`|87|Un thread immette un dominio applicazione.|  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54689835"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ThreadTerminated`|86|Termina un thread.|  
   
@@ -157,4 +157,5 @@ ms.locfileid: "54689835"
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

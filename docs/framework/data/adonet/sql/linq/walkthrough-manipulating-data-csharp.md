@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: La modifica dei dati (C#)'
+title: 'Procedura dettagliata: Modifica dei dati (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143286"
 ---
-# <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: La modifica dei dati (C#)
+# <a name="walkthrough-manipulating-data-c"></a>Procedura dettagliata: Modifica dei dati (C#)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -162,4 +162,5 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
 >  Dopo avere aggiunto il nuovo oggetto Customer mediante l'invio delle modifiche, non sarà possibile eseguire nuovamente questa soluzione così com'è. Per eseguire nuovamente la soluzione, modificare il nome del cliente e l'ID dell'oggetto Customer da aggiungere.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

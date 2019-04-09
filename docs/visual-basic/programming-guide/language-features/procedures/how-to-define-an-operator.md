@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126113"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Procedura: Definire un operatore (Visual Basic)
 Se è stato definito una classe o struttura, è possibile definire il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) quando uno o entrambi gli operandi sono del tipo di classe o struttura.  
@@ -35,15 +35,14 @@ Se è stato definito una classe o struttura, è possibile definire il comportame
  È possibile testare la struttura `height` con il codice seguente.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
-  
-  
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
 - [Procedura: Chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)
 - [Procedura: Usare una classe che definisce gli operatori](./how-to-use-a-class-that-defines-operators.md)
-- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Operatore Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)

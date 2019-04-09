@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130403"
 ---
 # <a name="expander-overview"></a>Cenni preliminari sul controllo Expander
 Un <xref:System.Windows.Controls.Expander> controllo fornisce un modo per fornire contenuto in un'area espandibile simile a una finestra che include un'intestazione.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>Creazione di un controllo Expander semplice  
  Nell'esempio seguente viene illustrato come creare una semplice <xref:System.Windows.Controls.Expander> controllo. Questo esempio viene creato un <xref:System.Windows.Controls.Expander> simile a quello riportato nella figura precedente.  
@@ -29,7 +28,7 @@ Un <xref:System.Windows.Controls.Expander> controllo fornisce un modo per fornir
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Impostazione della direzione dell'area del contenuto espandibile  
- È possibile impostare l'area di contenuto di un <xref:System.Windows.Controls.Expander> controllo per espandere in uno dei quattro direzioni (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) usando il <xref:System.Windows.Controls.ExpandDirection> proprietà. Quando l'area del contenuto è compresso, solo il <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e vengono visualizzati il relativo interruttore. Oggetto <xref:System.Windows.Controls.Button> controllo che visualizza una freccia direzionale viene usato come un interruttore per espandere o comprimere l'area del contenuto. Se viene espansa, il <xref:System.Windows.Controls.Expander> prova a visualizzare tutto il contenuto in un'area simile a finestra.  
+ È possibile impostare l'area di contenuto di un <xref:System.Windows.Controls.Expander> controllo per espandere in uno dei quattro direzioni (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) usando il <xref:System.Windows.Controls.ExpandDirection> proprietà. Quando l'area del contenuto è compresso, solo il <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e vengono visualizzati il relativo interruttore. Oggetto <xref:System.Windows.Controls.Button> controllo che visualizza una freccia direzionale viene usato come un interruttore per espandere o comprimere l'area del contenuto. Se viene espansa, il <xref:System.Windows.Controls.Expander> prova a visualizzare tutto il contenuto in un'area simile a finestra.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controllo delle dimensioni di un controllo Expander in un pannello  
@@ -60,6 +59,7 @@ Un <xref:System.Windows.Controls.Expander> controllo fornisce un modo per fornir
  È possibile allineare il contenuto impostando il <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> e <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> proprietà di <xref:System.Windows.Controls.Expander> controllo. Quando si impostano queste proprietà, l'allineamento viene applicato all'intestazione e al contenuto espanso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Procedure relative alle proprietà](expander-how-to-topics.md)
+- [Procedure relative](expander-how-to-topics.md)

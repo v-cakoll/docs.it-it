@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: e38e1601e2f4eeab2b53918924bc21e05163d948
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146016"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Procedura: Accumulare valori di animazione durante i cicli ripetuti
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> proprietà da accumulare valori di animazione durante i cicli ripetuti.  
@@ -33,8 +33,9 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Aggiungere un valore di output dell'animazione a un valore iniziale dell'animazione](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Ripetere un'animazione](how-to-repeat-an-animation.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)
-- [Procedure relative alle proprietà](animation-and-timing-how-to-topics.md)
+- [Procedure relative](animation-and-timing-how-to-topics.md)

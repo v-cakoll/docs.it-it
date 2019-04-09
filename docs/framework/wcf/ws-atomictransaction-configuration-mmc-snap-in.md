@@ -2,12 +2,12 @@
 title: Snap-in MMC di configurazione di WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138209"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
@@ -21,7 +21,7 @@ Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per confi
   
  Per usare l'interfaccia fornita dallo strumento è necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
- **%ProgramFiles%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
+ **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
  La registrazione può essere effettuata con il comando seguente:  
   
@@ -29,7 +29,7 @@ Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per confi
 regasm.exe /codebase WsatUI.dll  
 ```  
   
- È possibile utilizzare questo strumento per modificare le impostazioni di base WS-AtomicTransaction. Ad esempio, è possibile abilitare e disabilitare il supporto del protocollo WS-AtomicTransaction, configurare le porte HTTP per WS-AT, associare un certificato SSL alla porta HTTP, configurare certificati specificando nomi dell'oggetto del certificato, selezionare la modalità Analisi e impostare i timeout massimi e predefiniti.  
+ È possibile utilizzare questo strumento per modificare le impostazioni di base WS-AtomicTransaction. Ad esempio, è possibile abilitare e disabilitare il supporto del protocollo WS-AtomicTransaction, configurare le porte HTTP per WS-AT, associare un Certificato SSL alla porta HTTP, configurare certificati specificando nomi dell’oggetto del certificato, selezionare la modalità Analisi e impostare i timeout massimi e predefiniti.  
   
  Se è necessario configurare il supporto di WS-AtomicTransaction solo sul computer locale, è possibile utilizzare la versione da riga di comando di questo strumento. Per altre informazioni sullo strumento della riga di comando, vedere la [utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) argomento.  
   
@@ -87,6 +87,7 @@ regasm.exe /codebase WsatUI.dll
  Per altre informazioni sull'analisi e la registrazione, vedere [amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Configurazione del supporto di transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+
+- [Configurazione del supporto transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md)

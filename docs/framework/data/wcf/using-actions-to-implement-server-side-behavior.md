@@ -2,12 +2,12 @@
 title: Utilizzo di azioni per implementare il comportamento lato server
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144118"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 
@@ -81,6 +81,7 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  Nel frammento di codice precedente la classe `MoviesModel` è stata generata mediante la procedura per aggiungere il riferimento a un servizio WCF Data Services in Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Definizione di WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Sviluppo e distribuzione di WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)

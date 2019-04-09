@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Abilitare il servizio di condivisione delle porte Net. TCP'
+title: 'Procedura: Abilitare il servizio di condivisione delle porte Net.TCP'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 490c0d8c4c95eeb2b1cd9b43134720c9e44467ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130650"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedura: Abilitare il servizio di condivisione delle porte Net. TCP
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedura: Abilitare il servizio di condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) usano un servizio Windows denominato il servizio di condivisione porte Net. TCP per semplificare la condivisione delle porte TCP tra più processi. Questo servizio viene installato come parte di WCF, ma il servizio non è abilitato per impostazione predefinita come misura di sicurezza e pertanto è necessario abilitare manualmente prima del primo utilizzo. In questo argomento viene illustrato come configurare il servizio di condivisione delle porte Net TCP usando lo snap-in MMC (Microsoft Management Console).  
   
  Dopo aver abilitato il servizio di condivisione porte Net. TCP e avviarlo manualmente, vedere [come: Configurare un servizio WCF di utilizzare la condivisione delle porte](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) per informazioni su come configurare il servizio per usare questo servizio.  
@@ -34,5 +34,6 @@ Windows Communication Foundation (WCF) usano un servizio Windows denominato il s
 ## <a name="example"></a>Esempio  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Configurazione del servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

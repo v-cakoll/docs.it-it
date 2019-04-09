@@ -3,12 +3,12 @@ title: WIF e Web farm
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135356"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web farm
 Quando si usa Windows Identity Foundation (WIF) per proteggere le risorse di un'applicazione relying party (RP) distribuita in una Web farm, è necessario eseguire passaggi specifici per garantire che WIF possa elaborare i token da istanze dell'applicazione relying party in esecuzione in computer diversi nella farm. Tale elaborazione comprende la convalida delle firme dei token di sessione, la crittografia e la decrittografia dei token di sessione, la memorizzazione nella cache dei token di sessione e il rilevamento dei token di sicurezza riprodotti.  
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- Il codice seguente mostra l'implementazione del servizio di caching WCF. In questo esempio viene usata la cache dei token di sessione in memoria predefinita implementata da WIF. In alternativa, è possibile implementare una cache durevole supportata da un database. `ISessionSecurityTokenCacheService` definisce l'interfaccia illustrata in precedenza. In questo esempio, per motivi di brevità, non vengono mostrati tutti i metodi necessari per implementare l'interfaccia.  
+ Il codice seguente mostra l'implementazione del servizio di caching WCF. In questo esempio viene usata la cache dei token di sessione in memoria predefinita implementata da WIF. In alternativa, è possibile implementare una cache durevole supportata da un database. `ISessionSecurityTokenCacheService` definisce l'interfaccia illustrato in precedenza. In questo esempio, per motivi di brevità, non vengono mostrati tutti i metodi necessari per implementare l'interfaccia.  
   
 ```  
 using System;  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

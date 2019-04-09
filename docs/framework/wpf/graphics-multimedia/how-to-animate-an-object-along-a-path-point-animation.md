@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare un oggetto lungo un percorso (animazione Point)'
+title: "Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Point)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 13cf583277b4e105da01c5ab56111123cf03038c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129590"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Procedura: Animare un oggetto lungo un percorso (animazione Point)
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Point)
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> oggetto da animare un <xref:System.Windows.Point> lungo un tracciato curvo.  
   
 ## <a name="example"></a>Esempio  
@@ -31,6 +31,7 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media
  La versione del codice dell'esempio precedente utilizzato un <xref:System.Windows.Media.Animation.Storyboard> animare il <xref:System.Windows.Media.EllipseGeometry>, anche se è stata applicata l'animazione solo una. Oggetto <xref:System.Windows.Media.Animation.Storyboard> è spesso il modo più semplice per applicare più animazioni perché queste animazioni possono essere controllate dallo stesso <xref:System.Windows.Media.Animation.Storyboard>. Tuttavia, un modo più semplice per applicare una singola animazione a una proprietà quando si utilizza codice consiste nell'utilizzare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> (metodo). Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
+
+- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)

@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 2b750f41343a4a68e29af6055815efd1e6470252
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148135"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, vale a dire che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi non vi è alcuna chiamata a una procedura per eseguire la conversione, che migliora le prestazioni. Ogni funzione converte un'espressione per un tipo di dati specifico.  
@@ -121,7 +121,7 @@ CUShort(expression)
   
 |Nome funzione|Tipo di dati restituito|Intervallo per `expression` argomento|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Tipo di dati Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualunque `Char` o `String` o espressione numerica.|  
+|`CBool`|[Tipo di dati booleani](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Qualunque `Char` o `String` o espressione numerica.|  
 |`CByte`|[Tipo di dati Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) attraverso <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (senza segno); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di byte con il `CByte` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
 |`CChar`|[Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|Qualunque `Char` o `String` espressione; solo primo carattere di un `String` viene convertito; valore può essere 0 e 65535 (senza segno).|  
 |`CDate`|[Tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Qualsiasi rappresentazione valida di una data e ora.|  
@@ -129,7 +129,7 @@ CUShort(expression)
 |`CDec`|[Tipo di dati Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79.228.162.514.264.337.593.543.950.335 per i numeri da zero a scalabilità, ovvero numeri senza cifre decimali. Per i numeri con 28 posizioni decimali, l'intervallo è + /-7,9228162514264337593543950335. Il minor numero possibile di diverso da zero è 0,0000000000000000000000000001 (+ /-1E-28).|  
 |`CInt`|[Tipo di dati Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (da -2.147.483.648) attraverso <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2,147,483,647); vengono arrotondate parti frazionarie.<sup> 1</sup> <br/><br/>A partire da 15.8 Visual Basic, Visual Basic ottimizza le prestazioni della virgola mobile per la conversione di integer con il `CInt` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio. |  
 |`CLng`|[Tipo di dati Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (da -9.223.372.036.854.775.808) attraverso <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di integer a 64 bit con la `CLng` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
-|`CObj`|[Tipo di dati Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
+|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|Qualsiasi espressione valida.|  
 |`CSByte`|[Tipo di dati SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (da -128) attraverso <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di byte con segno con il `CSByte` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
 |`CShort`|[Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) attraverso <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); vengono arrotondate parti frazionarie.<sup> 1</sup><br/><br/>A partire da Visual Basic 15.8, Visual Basic consente di ottimizzare le prestazioni della virgola mobile per la conversione di integer a 16 bit con la `CShort` funzione; vedere la [osservazioni](#remarks) sezione per altre informazioni. Vedere le [CInt esempio](#cint-example) sezione per un esempio.|  
 |`CSng`|[Tipo di dati Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3,402823E+38 a - 1,401298E-45 per valori negativi. 1,401298E-45 a 3,402823E+38 per valori positivi.|  
@@ -142,7 +142,6 @@ CUShort(expression)
   
 ## <a name="remarks"></a>Note  
  Di norma, è consigliabile usare le funzioni di conversione di tipo Visual Basic anziché i metodi .NET Framework, ad esempio `ToString()`, ad esempio nel <xref:System.Convert> classe o in una classe o struttura di tipo individuale. Le funzioni di Visual Basic sono progettate per l'interazione ottimale con codice Visual Basic e rendono il codice sorgente più breve e facile da leggere. Inoltre, i metodi di conversione di .NET Framework non restituiscono sempre gli stessi risultati di funzioni di Visual Basic, ad esempio quando si convertono `Boolean` a `Integer`. Per altre informazioni, vedere [tipi di dati di risoluzione dei problemi](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-
 
 A partire da Visual Basic 15.8, le prestazioni della conversione a virgola mobile-virgola-a numero intero sono ottimizzata quando si passa il <xref:System.Single> oppure <xref:System.Double> valore restituito dai metodi seguenti per una delle funzioni di conversione di integer (`CByte`, `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 
@@ -172,7 +171,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Comportamento  
   
--   **Coercion.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
+-   **Coercizione.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
   
 -   **Conversioni non riuscite.** Se il `expression` passati alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.  
   

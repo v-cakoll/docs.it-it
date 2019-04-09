@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144027"
 ---
 # <a name="drawing-objects-overview"></a>Cenni preliminari sugli oggetti Drawing
 Questo argomento vengono presentate <xref:System.Windows.Media.Drawing> oggetti e viene spiegato come usarle per creare in modo efficace le forme, bitmap, testo e supporti. Usare <xref:System.Windows.Media.Drawing> gli oggetti quando si crea ClipArt, disegnare con un <xref:System.Windows.Media.DrawingBrush>, oppure usare <xref:System.Windows.Media.Visual> oggetti.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>Definizione di oggetto Drawing  
  Oggetto <xref:System.Windows.Media.Drawing> oggetto descrive il contenuto visibile, ad esempio una forma, bitmap, video o una riga di testo. Tipi diversi di disegni descrivono tipi diversi di contenuto. L'elenco seguente contiene i vari tipi di oggetti Drawing.  
@@ -234,12 +232,13 @@ Oggetto GeometryDrawing usato con un oggetto DrawingBrush
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sulle classi Geometry](geometry-overview.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md)
-- [Procedure relative alle proprietà](drawings-how-to-topics.md)
+- [Procedure relative](drawings-how-to-topics.md)

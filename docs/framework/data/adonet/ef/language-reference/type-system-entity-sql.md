@@ -2,17 +2,17 @@
 title: Sistema di tipi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: a2748407703b90c60d3082b0e6c0b6aa2d3fb365
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134563"
 ---
 # <a name="type-system-entity-sql"></a>Sistema di tipi (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta diversi tipi:  
   
--   Tipi primitivi (semplici), come `Int32` e `String.`.  
+-   Tipi primitivi (semplice), ad esempio `Int32` e `String.`  
   
 -   Tipi nominali definiti nello schema, ad esempio <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> e <xref:System.Data.Metadata.Edm.RelationshipType>.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "55904687"
 ## <a name="references"></a>Riferimenti  
  Un riferimento è un puntatore logico a un'entità specifica in un set di entità specifico.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta gli operatori seguenti per costruire o annullare i riferimenti, nonché eseguire la navigazione al loro interno:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta gli operatori seguenti per costruire o annullare, nonché navigazione nei riferimenti:  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
@@ -49,7 +49,8 @@ from (select ref(o) as r from LOB.Orders as o) as o2
  Se il valore di riferimento è null o la destinazione del riferimento non esiste, il risultato è null.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)
 - [Specifiche CSDL, SSDL e MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

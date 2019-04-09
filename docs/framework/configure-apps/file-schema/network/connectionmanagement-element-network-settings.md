@@ -1,5 +1,5 @@
 ---
-title: Elemento <connectionManagement> (Impostazioni di rete)
+title: <connectionManagement> (Impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125185"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > (impostazioni di rete)
 Specifica il numero massimo di connessioni a un host di rete.  
@@ -39,8 +39,8 @@ Specifica il numero massimo di connessioni a un host di rete.
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Cancella l'elenco di gestione connessione.|  
+|[aggiunta](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Aggiunge un indirizzo IP o nome DNS all'elenco di gestione delle connessioni.|  
+|[deselezionato](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Cancella l'elenco di gestione connessione.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Rimuove un indirizzo IP o nome DNS dall'elenco di gestione connessione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -70,6 +70,7 @@ Specifica il numero massimo di connessioni a un host di rete.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

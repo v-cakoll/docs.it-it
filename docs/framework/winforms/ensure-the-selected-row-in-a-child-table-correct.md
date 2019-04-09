@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
+title: 'Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149110"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Verificare che la riga selezionata in una tabella figlio rimanga nella posizione corretta
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
 Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre/figlio o master/dettagli Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli. Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo. Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.  
   
  A partire da .NET Framework versione 2.0, quando si visualizzano i dati in una visualizzazione padre/figlio può essere necessario effettuare alcuni passaggi aggiuntivi per assicurarsi che la riga attualmente selezionata nella tabella figlio non venga reimpostata sulla prima riga della tabella. A tale scopo, è necessario memorizzare nella cache la posizione della tabella figlio e reimpostarla dopo aver modificato la tabella padre. In genere, la tabella figlio viene reimpostata la prima volta che si modifica un campo in una riga della tabella padre.  
@@ -84,6 +84,7 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
  Per informazioni su come compilare questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [compilazione da riga di comando con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati](multiple-controls-bound-to-data-source-synchronized.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)
-- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
+- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)

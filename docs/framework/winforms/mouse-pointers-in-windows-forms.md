@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122785"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Puntatori del mouse in Windows Form
 Il puntatore del mouse *puntatore*, talvolta detta il cursore è una bitmap che specifica un punto di stato attivo nella schermata di input dell'utente con il mouse. Questo argomento viene fornita una panoramica del puntatore del mouse in Windows Forms e illustra alcuni dei modi per modificare e controllare il puntatore del mouse.  
@@ -31,6 +31,7 @@ Il puntatore del mouse *puntatore*, talvolta detta il cursore è una bitmap che 
  Il modo principale per modificare il puntatore del mouse consiste nell'impostare il <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oppure <xref:System.Windows.Forms.Control.DefaultCursor%2A> proprietà di un controllo a un nuovo <xref:System.Windows.Forms.Cursor>. Per esempi di modifica il puntatore del mouse, vedere l'esempio di codice il <xref:System.Windows.Forms.Cursor> classe. Inoltre, il <xref:System.Windows.Forms.Cursors> classe espone un set di <xref:System.Windows.Forms.Cursor> oggetti per molti tipi diversi di puntatori, ad esempio un puntatore che rappresenta una mano. Per visualizzare il puntatore di attesa, che è simile a una clessidra, ogni volta che si trova il puntatore del mouse sul controllo, usare il <xref:System.Windows.Forms.Control.UseWaitCursor%2A> proprietà del <xref:System.Windows.Forms.Control> classe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Cursor>
 - [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Funzionalità di trascinamento della selezione in Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Funzionalità di trascinamento della selezione in Windows Form](drag-and-drop-functionality-in-windows-forms.md)

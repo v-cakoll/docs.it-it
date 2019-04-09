@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261360"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132574"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 Configurazione di un servizio Windows Communication Foundation (WCF) con un file di configurazione ti offre la possibilità di fornire endpoint e i dati sul comportamento del servizio al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
@@ -96,7 +96,7 @@ Configurazione di un servizio Windows Communication Foundation (WCF) con un file
 ### <a name="the-bindings-element"></a>Il \<associazioni > elemento  
  L'elemento `bindings` contiene le specifiche per tutte le associazioni usabili da qualsiasi endpoint definito in qualsiasi servizio.  
   
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<le associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>Il \<associazione > elemento  
  L'elemento `binding` contenuto nell'elemento `bindings` può essere una delle associazioni fornite dal sistema (vedere [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) o un'associazione personalizzata (vedere [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). L'elemento `binding` ha un attributo `name` che mette in correlazione l'associazione e l'endpoint specificato nell'attributo `bindingConfiguration` dell'elemento `endpoint` . Se non è specificato alcun nome, l'associazione corrisponde all'impostazione predefinita del tipo di associazione.  
@@ -111,7 +111,7 @@ Per altre informazioni sulla configurazione dei servizi e client, vedere [serviz
  [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>Il \<comportamento > elemento  
- Ogni elemento `behavior` è identificato da un attributo `name` e specifica un comportamento fornito dal sistema, ad esempio <`throttling`>, o un comportamento personalizzato. Se non viene assegnato alcun nome, l'elemento relativo al comportamento corrisponde al comportamento del servizio o dell'endpoint predefinito.  
+ Ciascuna `behavior` elemento è identificato da un `name` dell'attributo e fornisce il comportamento fornito dal sistema, ad esempio <`throttling`>, o un comportamento personalizzato. Se non viene assegnato alcun nome, l'elemento relativo al comportamento corrisponde al comportamento del servizio o dell'endpoint predefinito.  
   
  [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
@@ -263,6 +263,7 @@ Per altre informazioni sulla configurazione dei servizi e client, vedere [serviz
  Se una raccolta di comportamenti figlio contiene un comportamento già presente nella raccolta di comportamenti padre, il comportamento figlio sostituisce quello del padre. Pertanto, se una raccolta di comportamenti padre fosse `<serviceMetadata httpGetEnabled="False" />` e una raccolta di comportamenti figlio fosse `<serviceMetadata httpGetEnabled="True" />`, il comportamento figlio sostituirebbe il comportamento padre nella raccolta di comportamenti e httpGetEnabled sarebbe "true".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)
 - [Configurazione dei servizi WCF](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

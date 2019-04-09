@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di Query basate sul metodo: Navigazione tra relazioni'
+title: 'Esempi di sintassi delle query basate su metodo: Spostamento tra relazioni'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: a65b71378b18397e138f88f9b23669e7818feea4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 87f8132fc8bc9d64fb02a78bc38d1261db032b5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138802"
 ---
-# <a name="method-based-query-syntax-examples-navigating-relationships"></a>Esempi di sintassi di Query basate sul metodo: Navigazione tra relazioni
+# <a name="method-based-query-syntax-examples-navigating-relationships"></a>Esempi di sintassi delle query basate su metodo: Spostamento tra relazioni
 Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono proprietà di collegamento usate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento sono inclusi alcuni esempi nella sintassi delle query basate su metodo in cui viene illustrato come spostarsi tra relazioni tramite proprietà di navigazione in query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
  Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
@@ -53,5 +53,6 @@ Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Le relazioni, le proprietà di navigazione e le chiavi esterne](/ef/ef6/fundamentals/relationships)
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

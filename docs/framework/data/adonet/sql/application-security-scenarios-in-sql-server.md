@@ -2,12 +2,12 @@
 title: Scenari di sicurezza delle applicazioni in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130160"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenari di sicurezza delle applicazioni in SQL Server
 Non esiste un singolo modo corretto per creare un'applicazione client SQL Server protetta. Ogni applicazione è univoca in termini di requisiti, ambiente di distribuzione e popolazione di utenti. Anche se un'applicazione può essere ragionevolmente protetta quando viene distribuita inizialmente, può diventare meno sicura nel corso del tempo. È impossibile prevedere con accuratezza quali minacce possano emergere nel futuro.  
@@ -18,7 +18,7 @@ Non esiste un singolo modo corretto per creare un'applicazione client SQL Server
  Gli sviluppatori devono conoscere le minacce per la sicurezza, gli strumenti disponibili per contrastarle e le misure per evitare problemi di sicurezza provocati internamente. La sicurezza può essere paragonata a una catena, in cui la rottura di uno degli anelli compromette l'efficacia dell'insieme. Nell'elenco seguente sono riportate alcune minacce comuni per la sicurezza che verranno descritte in maggior dettaglio negli argomenti di questa sezione.  
   
 ### <a name="sql-injection"></a>SQL injection  
- Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini permanentemente i dati. Per contrastare gli attacchi SQL Server injection, è possibile usare stored procedure e comandi con parametri, evitare le istruzioni SQL dinamiche e limitare le autorizzazioni per tutti gli utenti.  
+ Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini definitivamente i dati. Per contrastare gli attacchi SQL Server injection, è possibile usare stored procedure e comandi con parametri, evitare le istruzioni SQL dinamiche e limitare le autorizzazioni per tutti gli utenti.  
   
 ### <a name="elevation-of-privilege"></a>Elevazione dei privilegi  
  Gli attacchi tramite elevazione dei privilegi si verificano quando un utente è in grado di assumere i privilegi di un account attendibile, ad esempio un proprietario o un amministratore. Usare sempre account con privilegi minimi e assegnare solo le autorizzazioni necessarie. Evitare di usare account di amministratore o di proprietario per l'esecuzione di codice. In questo modo è possibile limitare l'entità dei danni che possono verificarsi in caso di successo di un attacco. Quando si eseguono attività che richiedono autorizzazioni aggiuntive, usare la rappresentazione o la firma di stored procedure solo per la durata dell'attività. È possibile firmare le stored procedure con certificati o usare la rappresentazione per assegnare autorizzazioni temporanee.  
@@ -57,6 +57,7 @@ Non esiste un singolo modo corretto per creare un'applicazione client SQL Server
  Viene descritto come consentire l'accesso tra database senza compromettere la sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

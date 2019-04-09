@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 2e818f3d5a7dfa85bf361d7de0cbd5bcb2dfe63b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137670"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materializzazione di oggetti (WCF Data Services)
 Quando si usa la **Aggiungi riferimento al servizio** finestra di dialogo per utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in un'applicazione client basata su .NET Framework, vengono generate classi di dati equivalenti per ogni tipo di entità nel modello di dati esposto dal feed. Per altre informazioni, vedere [generazione della libreria Client di servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). I dati di entità restituiti da una query vengono materializzati in un'istanza di una delle classi del servizio dati client generate. Per informazioni sulle opzioni di merge e la risoluzione di identità per gli oggetti rilevati, vedere [gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- Anziché usare le classi di dati generate dallo strumento, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire classi personalizzate del servizio dati client. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si usano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di dati con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> e assicurarsi che i nomi del tipo nei nomi dei tipi di client corrispondenza nel modello di dati del servizio dati.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire le proprie classi di servizio dati client, anziché utilizzare le classi di dati generati dallo strumento. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si usano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di dati con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> e assicurarsi che i nomi del tipo nei nomi dei tipi di client corrispondenza nel modello di dati del servizio dati.  
   
  Dopo aver ricevuto il messaggio di risposta query, la libreria materializza i dati restituiti dal [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in istanze di dati del client di classi del servizio sono di tipo della query. Di seguito viene descritto il processo generale di materializzazione di tali oggetti.  
   
@@ -40,12 +40,13 @@ Quando si usa la **Aggiungi riferimento al servizio** finestra di dialogo per ut
     -   Le proprietà di navigazione che restituiscono una raccolta di entità correlate vengono impostate su un'istanza di <xref:System.Collections.Generic.ICollection%601> nuova o esistente, dove `T` corrisponde al tipo dell'entità correlata. La raccolta è vuota se gli oggetti correlati non sono stati caricati in <xref:System.Data.Services.Client.DataServiceContext>. Per altre informazioni, vedere [caricamento di contenuto posticipato](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
         > [!NOTE]
-        >  Quando le classi di dati client generate supportano il data binding, le proprietà di navigazione restituiscono invece istanze della classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Per altre informazioni, vedere [associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
+        >  Quando le classi di dati client generate supportano l'associazione dati, le proprietà di navigazione restituiscono invece istanze della classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Per altre informazioni, vedere [associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
   
 4.  Viene generato l'evento <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>.  
   
 5.  La libreria client collega l'oggetto a <xref:System.Data.Services.Client.DataServiceContext>. Quando <xref:System.Data.Services.Client.MergeOption> è <xref:System.Data.Services.Client.MergeOption.NoTracking>, l'oggetto non viene collegato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Proiezioni di query](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

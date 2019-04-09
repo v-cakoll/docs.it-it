@@ -8,12 +8,12 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: 5a2b48c6f580def98a47913c4909d0c57aca0974
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142415"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Procedura: Aggiungere una filigrana a un oggetto TextBox
 Nell'esempio seguente viene illustrato come migliorare l'usabilità di un <xref:System.Windows.Controls.TextBox> visualizzando un'immagine di sfondo esplicativo all'interno del <xref:System.Windows.Controls.TextBox> fino a quando l'utente immette testo, a quel punto l'immagine viene rimossa. Inoltre, l'immagine di sfondo viene ripristinata nuovamente se l'utente rimuove l'input. Vedere la figura seguente.  
@@ -30,5 +30,6 @@ Nell'esempio seguente viene illustrato come migliorare l'usabilità di un <xref:
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)

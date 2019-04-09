@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 ms.date: 03/30/2017
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
-ms.openlocfilehash: b25debfd9b1e6de6b93fd4dfa8b96925718d9d87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9434f2f902a50a37fb3efee22fd3b18b33af9129
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138970"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 Il servizio del protocollo WS-AT ha ricevuto un messaggio Prepared o Replay da un partecipante volatile non riconosciuto. Al partecipante è stato restituito un errore che dichiara che il risultato della transazione è in dubbio.  
@@ -19,6 +19,7 @@ Il servizio del protocollo WS-AT ha ricevuto un messaggio Prepared o Replay da u
  Analizzare le cause potenziali di ritardo dei messaggi provenienti dal partecipante volatile.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

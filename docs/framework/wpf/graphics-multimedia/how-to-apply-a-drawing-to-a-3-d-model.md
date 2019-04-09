@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drawings [WPF], applying to 3-D models
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-ms.openlocfilehash: cfd133b04e0c04b4a502d2466e67685700e3f408
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a20b89a7359fc85d9790ac02dd2b173452df8c22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125034"
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Procedura: Applicare un disegno a un modello tridimensionale
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.DrawingBrush> come il <xref:System.Windows.Media.Media3D.Material> applicati a un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modello.  
@@ -27,7 +27,8 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media
  [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Risorse XAML](../advanced/xaml-resources.md)
 - [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)

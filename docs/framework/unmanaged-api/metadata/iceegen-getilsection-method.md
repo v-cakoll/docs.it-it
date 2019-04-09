@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e9d71edc580591b698ad039f8ee73e49c4e1d6a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139152"
 ---
 # <a name="iceegengetilsection-method"></a>Metodo ICeeGen::GetIlSection
 Ottiene la sezione di codice Microsoft intermediate language base fa riferimento l'handle specificato.  
@@ -51,4 +51,5 @@ HRESULT GetIlSection (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

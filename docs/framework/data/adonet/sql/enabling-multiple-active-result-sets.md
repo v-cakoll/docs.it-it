@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147550"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -87,7 +87,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Con MARS, un ambiente di esecuzione predefinito viene associato a una connessione. Ogni nuovo batch che viene eseguito in una determinata connessione riceve una copia dell'ambiente predefinito. Quando il codice viene eseguito in un determinato batch, tutte le modifiche apportate all'ambiente sono limitate al batch specifico. Al termine dell'esecuzione, le impostazioni di esecuzione vengono copiate nell'ambiente predefinito. Nel caso di un singolo batch in cui vengono generati diversi comandi da eseguire in ordine sequenziale nella stessa transazione, la semantica è identica a quella esposta dalle connessioni che implicano client e server con versioni precedenti.  
   
-### <a name="parallel-execution"></a>Esecuzione parallela  
+### <a name="parallel-execution"></a>Esecuzione in parallelo  
  Il servizio MARS non è progettato per eliminare tutte le esigenze relative a più connessioni in un'applicazione. Se per un'applicazione è necessaria l'esecuzione parallela effettiva di comandi su un server, è necessario usare più connessioni.  
   
  Ad esempio, si consideri il seguente scenario. Vengono creati due oggetti comando, uno per l'elaborazione di un set di risultati e un altro per l'aggiornamento dei dati. Entrambi gli oggetti condividono una connessione comune tramite MARS. In questo scenario il `Transaction`.`Commit` ha esito negativo dell'aggiornamento fino a quando non sono stati letti tutti i risultati sul primo oggetto comando, restituendo l'eccezione seguente:  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  L'applicazione può verificare il supporto di MARS mediante la lettura del valore `SqlConnection.ServerVersion`. Il valore massimo deve essere 9 per SQL Server 2005 e 10 per SQL Server 2008.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [MARS (Multiple Active Result Set)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

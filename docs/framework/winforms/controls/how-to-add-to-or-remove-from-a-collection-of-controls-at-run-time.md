@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere o rimuovere da una raccolta di controlli in fase di esecuzione'
+title: 'Procedura: Aggiungere o rimuovere controlli da una raccolta in fase di esecuzione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143143"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procedura: Aggiungere o rimuovere da una raccolta di controlli in fase di esecuzione
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procedura: Aggiungere o rimuovere controlli da una raccolta in fase di esecuzione
 Attività comuni nello sviluppo di applicazioni sono controlli per l'aggiunta e rimozione di controlli da un controllo contenitore sui form (ad esempio la <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> controllo o il form stesso). In fase di progettazione è possibile trascinare i controlli direttamente in un pannello o una casella di gruppo. In fase di esecuzione questi controlli mantengono una raccolta `Controls`, che tiene traccia di quali controlli vengono posizionati su essi.  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ Attività comuni nello sviluppo di applicazioni sono controlli per l'aggiunta e 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Panel>
 - [Controllo Panel](panel-control-windows-forms.md)

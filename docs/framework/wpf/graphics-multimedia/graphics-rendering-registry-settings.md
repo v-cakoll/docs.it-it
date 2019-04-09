@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135538"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Impostazioni del Registro di sistema per il rendering della grafica
 Questo argomento fornisce una panoramica delle impostazioni del Registro di sistema per il rendering della grafica di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che influiscono sulle applicazioni di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Quando usare le impostazioni del Registro di sistema per il rendering della grafica  
  Queste impostazioni del Registro di sistema vengono fornite per la risoluzione dei problemi, il debug e supporto per il prodotto. Poiché le modifiche al Registro di sistema influiscono su tutte le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], l'applicazione non deve mai modificare queste chiavi del Registro di sistema, automaticamente o durante l'installazione.  
@@ -30,11 +28,11 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Impostazioni Registro di sistema  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per controllare il rendering di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce quattro impostazioni del Registro di sistema per il controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering:  
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|**Opzione di disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
+|**Opzione per la disabilitazione dell'accelerazione hardware**|Specifica se l'accelerazione hardware deve essere abilitata.|  
 |**Valore massimo di multicampionamento**|Specifica il grado di multicampionamento del contenuto anti-aliasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
 |**Impostazione Data driver video necessaria**|Specifica se il sistema disabilita l'accelerazione hardware per i driver rilasciati prima di novembre 2004.|  
 |**Opzione per l'uso di unità di rasterizzazione dei riferimenti**|Specifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve usare l'unità di rasterizzazione dei riferimenti.|  
@@ -98,5 +96,6 @@ Questo argomento fornisce una panoramica delle impostazioni del Registro di sist
  L'**opzione per l'uso di unità di rasterizzazione dei riferimenti** accetta un valore DWORD. Il valore 0 indica che l'unità di rasterizzazione dei riferimenti non viene usata. Qualsiasi altro valore diverso da zero forza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a usare l'unità di rasterizzazione dei riferimenti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Livelli di rendering della grafica](../advanced/graphics-rendering-tiers.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)

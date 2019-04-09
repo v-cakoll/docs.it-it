@@ -1,15 +1,15 @@
 ---
-title: "Preparazione all'adozione di Windows Communication Foundation: Semplificazione dell'integrazione futura"
+title: "Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura"
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124800"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: Semplificazione dell'integrazione futura
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura
 Se si utilizzano oggi ASP.NET e si prevede l'utilizzo di WCF in futuro, questo argomento fornisce indicazioni per garantire che i nuovi servizi Web ASP.NET funzionerà anche con le applicazioni WCF.  
   
 ## <a name="general-recommendations"></a>Suggerimenti generali  
@@ -44,4 +44,5 @@ public interface IEcho
  Evitare di utilizzare le opzioni di autenticazione fornite in Internet Information Services (IIS), I client WCF non li supportano. Se un servizio deve essere protetto, utilizzare le opzioni fornite da WCF, perché queste opzioni sono infatti più affidabili e sono basate su protocolli standard.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Preparazione all'adozione di Windows Communication Foundation: Semplificazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Preparazione all'adozione di Windows Communication Foundation: facilitazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

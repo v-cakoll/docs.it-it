@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare un punto utilizzando fotogrammi chiave'
+title: "Procedura: Aggiungere un'animazione a un punto usando fotogrammi chiave"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 4eeb7aa271883e1c76d5cac77f49accbdff39aea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132587"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: Animare un punto utilizzando fotogrammi chiave
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un punto usando fotogrammi chiave
 Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe per animare un <xref:System.Windows.Point>.  
   
 ## <a name="example"></a>Esempio  
@@ -37,6 +37,7 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.Point
  Per coerenza con altri esempi di animazione, nelle versioni del codice di questo esempio usano un' <xref:System.Windows.Media.Animation.Storyboard> oggetto a cui applicare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Tuttavia, quando si applica una sola animazione al codice, è più semplice usare il <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metodo invece di usare un <xref:System.Windows.Media.Animation.Storyboard>. Per un esempio, vedere [Animare una proprietà senza utilizzare uno storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.EllipseGeometry>

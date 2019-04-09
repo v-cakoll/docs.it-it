@@ -11,12 +11,12 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144521"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Procedura: Ordinare e raggruppare dati tramite una visualizzazione in XAML
 Questo esempio illustra come creare una visualizzazione di una raccolta di dati in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Le viste consentono per le funzionalità di raggruppamento, ordinamento, filtro e la nozione di elemento corrente.  
@@ -39,7 +39,8 @@ Questo esempio illustra come creare una visualizzazione di una raccolta di dati 
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Ottenere la visualizzazione predefinita di una raccolta dati](how-to-get-the-default-view-of-a-data-collection.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

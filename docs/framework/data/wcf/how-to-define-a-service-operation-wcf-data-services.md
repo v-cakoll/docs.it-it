@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: fffc0efaea200a7b0aa26b0f273b3c0d99338bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138099"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Procedura: Definire un'operazione del servizio (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] espone i metodi definiti nel server come operazioni del servizio. Operazioni del servizio consentono a un servizio dati fornire l'accesso tramite un URI a un metodo definito nel server. Per definire un'operazione del servizio, si applicano le [`WebGet]` o `[WebInvoke]` al metodo. Per supportare gli operatori di query, l'operazione del servizio deve restituire un <xref:System.Linq.IQueryable%601> istanza. L'accesso ai dati sottostanti da parte delle operazioni del servizio può essere eseguito tramite la proprietà <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> su <xref:System.Data.Services.DataService%601>. Per altre informazioni, vedere [operazioni del servizio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -54,4 +54,5 @@ ms.locfileid: "54586553"
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Definizione di WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

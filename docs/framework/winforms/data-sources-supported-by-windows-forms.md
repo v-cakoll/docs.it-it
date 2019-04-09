@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124618"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stata utilizzata all'interno delle applicazioni per sfruttare i vantaggi dei dati archiviati nel database. Con data binding in Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti alcuni requisiti minimi.  
@@ -58,6 +58,7 @@ In genere, l'associazione dati è stata utilizzata all'interno delle applicazion
 -   <xref:System.Data.DataViewManager>. Oggetto <xref:System.Data.DataViewManager> è una visualizzazione personalizzata dell'intera <xref:System.Data.DataSet>, analogo a un <xref:System.Data.DataView>, ma con le relazioni inclusione. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> raccolta, è possibile impostare i filtri predefiniti e le opzioni di ordinamento per tutte le viste che il <xref:System.Data.DataViewManager> per una determinata tabella.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
-- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+
+- [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
+- [Data binding di Windows Form](windows-forms-data-binding.md)

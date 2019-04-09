@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)'
+title: 'Procedura: Creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125981"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox di Windows Forms
 Può risultare utile visualizzare i dati all'interno di un Windows Form in un formato facilmente riconoscibile dall'utente, ma memorizzare gli stessi dati in un formato che consenta una migliore gestione da parte del programma. Ad esempio un form di ordinazione per generi alimentari può visualizzare le voci di menu ordinate in base al nome in una casella di riepilogo, mentre la tabella dati per la registrazione dell'ordine può contenere i numeri univoci di identificazione corrispondenti a ogni piatto. Nelle tabelle seguenti viene mostrato un esempio di memorizzazione e visualizzazione dei dati contenuti in un form di ordinazione per generi alimentari.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -33,7 +33,7 @@ Può risultare utile visualizzare i dati all'interno di un Windows Form in un fo
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id|nome|  
+|Id|Nome|  
 |--------|----------|  
 |12|Patate|  
 |13|Pollo|  
@@ -71,8 +71,9 @@ Può risultare utile visualizzare i dati all'interno di un Windows Form in un fo
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Data binding e Windows Forms](../data-binding-and-windows-forms.md)
-- [Panoramica sul controllo ListBox](listbox-control-overview-windows-forms.md)
-- [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)
-- [Panoramica sul controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+
+- [Associazione dati e Windows Form](../data-binding-and-windows-forms.md)
+- [Panoramica del controllo ListBox](listbox-control-overview-windows-forms.md)
+- [Panoramica del controllo ComboBox](combobox-control-overview-windows-forms.md)
+- [Panoramica del controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148161"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Linee guida per la progettazione di controlli a cui è possibile applicare degli stili
 Questo documento offre un riepilogo di una serie di procedure consigliate per la progettazione di un controllo a cui siano facilmente applicabili stili e modelli. Questo è il risultato di molti tentativi ed errori durante l’elaborazione degli stili dei controlli dei temi per il set di controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incorporato. La corretta applicazione degli stili è una funzione che non dipende solo dalla corretta progettazione del modello a oggetti ma anche dallo stile stesso. I destinatari di questo documento sono gli autori dei controlli, non gli autori degli stili.  
@@ -42,11 +42,11 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
     -   Ridurre al minimo i contratti il più possibile.  
   
-    -   Eseguire la progettazione con la consapevolezza che in questa fase (ovvero quando si usa uno strumento di progettazione) è normale che il modello del controllo sia in uno stato incompleto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non offre un'infrastruttura di stato di composizione. La compilazione dei controlli deve essere eseguita con la prospettiva che tale stato possa essere valido.  
+    -   Eseguire la progettazione con la consapevolezza che in questa fase (ovvero quando si usa uno strumento di progettazione) è normale che il modello del controllo sia in uno stato incompleto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non offre un'infrastruttura di stato "composizione", in modo che controlli deve essere eseguita con la prospettiva che tale stato potrebbe essere valido.  
   
     -   Non generare eccezioni quando un aspetto qualsiasi di un contratto del modello non viene seguito. In tal senso i pannelli non devono generare eccezioni se contengono un numero troppo elevato o troppo esiguo di elementi figlio.  
   
--   **Scomporre le funzionalità secondarie in elementi helper del modello.** Ogni controllo deve essere incentrato sulla funzionalità di base e sulla reale proposta di valore e definito in base all'uso comune. A tal fine, usare elementi di composizione e helper all'interno del modello per abilitare comportamenti e visualizzazioni secondari, cioè quei comportamenti e quelle visualizzazioni che non contribuiscono alla funzionalità di base del controllo. Questi elementi sono suddivisi in tre categorie:  
+-   **Scomporre le funzionalità in elementi helper del modello.** Ogni controllo deve essere incentrato sulla funzionalità di base e sulla reale proposta di valore e definito in base all'uso comune. A tal fine, usare elementi di composizione e helper all'interno del modello per abilitare comportamenti e visualizzazioni secondari, cioè quei comportamenti e quelle visualizzazioni che non contribuiscono alla funzionalità di base del controllo. Questi elementi sono suddivisi in tre categorie:  
   
     -   Gli helper **autonomi** sono controlli o primitive pubblici e riutilizzabili che vengono usati "in modo anonimo" in un modello, vale a dire che l'elemento helper non è in grado di rilevare il controllo al quale è stato applicato lo stile e viceversa. Tecnicamente, qualsiasi elemento può essere di tipo anonimo, ma in questo contesto il termine descrive i tipi che incapsulano funzionalità specializzate per abilitare scenari di destinazione.  
   
@@ -79,7 +79,7 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
 -   **Usare la proprietà Name contrassegnare gli elementi all'interno di un modello**. Un controllo che deve individuare un elemento dello stile e accedervi a livello di codice, dovrà usare la proprietà `Name` e il paradigma `FindName`. Se l'elemento non viene trovato, il controllo non dovrà generare un'eccezione, ma disabilitare in modo normale e senza visualizzare messaggi la funzionalità in cui tale elemento era richiesto.  
   
--   **Usare le procedure consigliate per esprimere lo stato e il comportamento del controllo in uno stile.** Di seguito è riportato un elenco ordinato delle procedure consigliate per indicare le modifiche e il comportamento dello stato del controllo in uno stile. È consigliabile usare il primo elemento dell'elenco per abilitare lo scenario.  
+-   **Usare le procedure consigliate per esprimere lo stato del controllo e il comportamento in uno stile.** Di seguito è riportato un elenco ordinato delle procedure consigliate per indicare le modifiche e il comportamento dello stato del controllo in uno stile. È consigliabile usare il primo elemento dell'elenco per abilitare lo scenario.  
   
     1.  Associazione di proprietà. Esempio: associazione tra <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
@@ -101,7 +101,7 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
   
 -   **Essere coerenti con i modelli di applicazione di stili esistenti.** Spesso esistono diversi modi per risolvere un problema. Essere consapevoli e, se possibile, essere coerenti con i modelli di applicazione dello stile del controllo esistenti. Ciò è particolarmente importante per i controlli che derivano dallo stesso tipo di base (ad esempio, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>e così via).  
   
--   **Esporre le proprietà per abilitare scenari di personalizzazione comuni senza applicare nuovamente i modelli**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supporta parti personalizzabili o collegabili; pertanto, l'utente di un controllo avrà a disposizione soltanto due metodi per la personalizzazione: l'impostazione diretta delle proprietà o l'impostazione delle proprietà tramite gli stili. È consigliabile pertanto di limitare il numero di proprietà destinate a scenari di personalizzazione molto comuni, ad alta priorità, che richiederebbero altrimenti una nuova applicazione dei modelli. Di seguito sono riportate le procedure consigliate per stabilire il momento e il metodo adatti per abilitare gli scenari di personalizzazione:  
+-   **Esporre le proprietà per abilitare scenari di personalizzazione comuni senza applicare nuovamente i modelli**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supporta parti personalizzabili o collegabili, in modo che un utente di controllo viene lasciato con solo due metodi di personalizzazione: impostazione delle proprietà direttamente o impostazione delle proprietà utilizzando gli stili. È consigliabile pertanto di limitare il numero di proprietà destinate a scenari di personalizzazione molto comuni, ad alta priorità, che richiederebbero altrimenti una nuova applicazione dei modelli. Di seguito sono riportate le procedure consigliate per stabilire il momento e il metodo adatti per abilitare gli scenari di personalizzazione:  
   
     -   Le personalizzazioni molto comuni devono essere esposte come proprietà nel controllo e usate dal modello.  
   
@@ -119,5 +119,6 @@ Questo documento offre un riepilogo di una serie di procedure consigliate per la
 -   **Gli stili dei temi non devono necessariamente presentare una semantica dei "layout" coerente in tutti i temi**. L'uso dello stile predefinito, ad esempio, non deve garantire che un controllo abbia le stesse dimensioni in tutti i temi o che il contenuto abbia gli stessi margini o la stessa spaziatura interna in tutti i temi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazione di stili e modelli](styling-and-templating.md)
-- [Cenni preliminari sulla modifica di controlli](control-authoring-overview.md)
+- [Panoramica della creazione di controlli](control-authoring-overview.md)

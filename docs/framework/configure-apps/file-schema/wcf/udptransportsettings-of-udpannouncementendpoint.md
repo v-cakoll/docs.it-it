@@ -2,12 +2,12 @@
 title: <udpTransportSettings> di <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 1e7cdff1b26afcbea94424ecad5d8d0d9438b54d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 901b7e1429c3afc19e9b609026dc632730c35024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148330"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings > di \<udpAnnouncementEndpoint >
 Questo elemento di configurazione espone le impostazioni di trasporto UDP per [ \<udpAnnouncementEndpoint >](udpannouncementendpoint.md).  
@@ -52,7 +52,7 @@ Questo elemento di configurazione espone le impostazioni di trasporto UDP per [ 
 |maxReceivedMessageSize|Integer che specifica le dimensioni massime di un messaggio che può essere elaborato dall'associazione.<br /><br /> Il valore predefinito è 65507.|  
 |maxUnicastRetransmitCount|Integer che specifica il numero massimo di volte in cui il messaggio unicast deve essere ritrasmesso (oltre al primo invio).  Se il messaggio viene inviato a un indirizzo unicast e un messaggio di risposta viene ricevuto con un'intestazione RelatesTo corrispondente, la ritrasmissione può terminare prima che il messaggio venga ritrasmesso il numero di volte configurato.<br /><br /> Il valore predefinito è 1.|  
 |multicastInterfaceId|Stringa che identifica in modo univoco la scheda di rete da usare durante l'invio e la ricezione di traffico multicast in computer multihomed. In fase di runtime il trasporto utilizzerà questo valore di attributo per individuare l'indice dell'interfaccia usata per impostare le opzioni del socket `IP_MULTICAST_IF` e `IPV6_MULTICAST_IF`.  Lo stesso indice dell'interfaccia verrà usato per l'unione di un gruppo multicast, se applicabile.<br /><br /> Il valore predefinito è `null`.|  
-|socketReceiveBufferSize|Integer che specifica le dimensioni del buffer di ricezione nel socket WinSock sottostante.<br /><br /> Un utente di un canale di ricezione può usare questo attributo nell'associazione per controllare il comportamento del sistema alla ricezione dei dati.  Ad esempio, per un'applicazione che usa messaggi WCF in ingresso alla soglia massima, l'uso di un valore superiore per questo attributo consentirebbe ai messaggi di posizionarsi nel buffer WinSock in attesa che l'applicazione sia in grado di elaborarli.  L'utilizzo di un valore inferiore nella stessa situazione determinerebbe l'eliminazione dei messaggi. Questo attributo espone l'opzione del socket `SO_RCVBUF` WinSock sottostante. Questo valore di attributo deve essere almeno pari a `maxReceivedMessageSize`.   L'impostazione su un valore inferiore a `maxReceivedMessageSize` determinerà la generazione di un'eccezione in fase di esecuzione.<br /><br /> Il valore predefinito è 65536.|  
+|socketReceiveBufferSize|Integer che specifica le dimensioni del buffer di ricezione nel socket WinSock sottostante.<br /><br /> Un utente di un canale di ricezione può usare questo attributo nell'associazione per controllare il comportamento del sistema alla ricezione dei dati.  Ad esempio, per un'applicazione che usa messaggi WCF in ingresso alla soglia massima, l'uso di un valore superiore per questo attributo consentirebbe ai messaggi di posizionarsi nel buffer WinSock in attesa che l'applicazione sia in grado di elaborarli.  L'utilizzo di un valore inferiore nella stessa situazione determinerebbe il rilascio dei messaggi. Questo attributo espone l'opzione del socket `SO_RCVBUF` WinSock sottostante. Questo valore di attributo deve essere almeno pari a `maxReceivedMessageSize`.   L'impostazione su un valore inferiore a `maxReceivedMessageSize` determinerà la generazione di un'eccezione in fase di esecuzione.<br /><br /> Il valore predefinito è 65536.|  
 |timeToLive|Integer che specifica il numero di hop dei segmenti di rete che un pacchetto multicast può attraversare.  Questo attributo espone la funzionalità associata alle opzioni del socket `IP_MULTICAST_TTL` e `IP_TTL`.<br /><br /> Il valore predefinito è 1.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -65,4 +65,5 @@ Questo elemento di configurazione espone le impostazioni di trasporto UDP per [ 
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Endpoint standard che dispone di un contratto di annuncio e di un'associazione del trasporto UDP fissi.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

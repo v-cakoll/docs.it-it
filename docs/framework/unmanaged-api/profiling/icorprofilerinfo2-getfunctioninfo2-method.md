@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2b0273c0e757be9d6d69a02565f8509a196b803
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d7b6c19c87aceffd1e199975db6f16191bc3ddd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130273"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Metodo ICorProfilerInfo2::GetFunctionInfo2
 Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento di tipo, se presente, di una funzione.  
@@ -74,8 +74,8 @@ HRESULT GetFunctionInfo2(
 |Valore del parametro `frameInfo`|Risultato|  
 |----------------------------------------|------------|  
 |Valore `COR_PRF_FRAME_INFO` ottenuto da un callback di `FunctionEnter2`|L'elemento `ClassID`, restituito nella posizione a cui fa riferimento `pClassId`, e tutti gli argomenti di tipo, restituiti nella matrice `typeArgs`, saranno determinati in modo esatto.|  
-|Valore `COR_PRF_FRAME_INFO` ottenuto da un'origine diversa da un callback di `FunctionEnter2`|Non è possibile determinare in modo esatto l'elemento `ClassID` e gli argomenti di tipo. Ciò significa che `ClassID` potrebbe essere null e che alcuni argomenti di tipo potrebbero venire restituiti come <xref:System.Object>.|  
-|Zero|Non è possibile determinare in modo esatto l'elemento `ClassID` e gli argomenti di tipo. Ciò significa che `ClassID` potrebbe essere null e che alcuni argomenti di tipo potrebbero venire restituiti come <xref:System.Object>.|  
+|Valore `COR_PRF_FRAME_INFO` ottenuto da un'origine diversa da un callback di `FunctionEnter2`|Non è possibile determinare in modo esatto l'elemento `ClassID` e gli argomenti di tipo. Ciò significa che `ClassID` potrebbe essere null e che alcuni argomenti tipo potrebbero venire restituiti come <xref:System.Object>.|  
+|Zero|Non è possibile determinare in modo esatto l'elemento `ClassID` e gli argomenti di tipo. Ciò significa che `ClassID` potrebbe essere null e che alcuni argomenti tipo potrebbero venire restituiti come <xref:System.Object>.|  
   
  Dopo il completamento del metodo `GetFunctionInfo2`, è necessario verificare che il buffer `typeArgs` sia abbastanza grande per contenere tutti i valori `ClassID`. A tale scopo, confrontare il valore a cui punta `pcTypeArgs` con il valore del parametro `cTypeArgs`. Se `pcTypeArgs` punta a un valore maggiore di `cTypeArgs` diviso per la dimensione di un valore `ClassID`, allocare un buffer `pcTypeArgs` più grande, aggiornare `cTypeArgs` con la nuova dimensione e chiamare nuovamente `GetFunctionInfo2`.  
   
@@ -91,6 +91,7 @@ HRESULT GetFunctionInfo2(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interfaccia ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

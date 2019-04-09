@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150761"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventi ETW di traccia JIT
 <a name="top"></a> Questi eventi raccolgono informazioni relative all'esito positivo o negativo dell'incorporamento Just-In-Time (JIT) e delle chiamate tail JIT.  
@@ -35,7 +35,7 @@ ms.locfileid: "54536646"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|L'incorporamento JIT non è riuscito.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54536646"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|L'incorporamento del metodo è riuscito.|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "54536646"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|La chiamata tail al metodo non è riuscita.|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54536646"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La chiamata tail al metodo è riuscita.|  
   
@@ -150,4 +150,5 @@ ms.locfileid: "54536646"
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)

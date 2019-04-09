@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3109d5ba49b01f25c72aaa1c31c74984a683dd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144287"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumerazione EClrFailure
 Descrive il set di errori per il quale l'host può impostare le azioni dei criteri.  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa (ad esempio, un thread, un blocco di memoria o un blocco) in un'area critica del codice.|  
 |`FAIL_CriticalResource`|Si è verificato un errore durante il tentativo di allocare una risorsa (ad esempio, un thread, un blocco di memoria o un blocco) in un'area critica del codice.|  
@@ -65,6 +65,7 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
 - [Metodo SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
 - [Interfaccia IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

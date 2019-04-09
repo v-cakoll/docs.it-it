@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139139"
 ---
 # <a name="xarray-markup-extension"></a>Estensione del markup x:Array
 Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'estensione di markup. Corrisponde al `x:ArrayExtension` tipo XAML in [MS-XAML].  
@@ -70,5 +70,6 @@ Fornisce il supporto generale per le matrici di oggetti in XAML tramite un'esten
  Per i tipi personalizzati che vengono utilizzati come elementi della matrice, la classe deve anche supportare i requisiti per la creazione di un'istanza in XAML come elementi oggetto. Per altre informazioni, vedere [XAML e classi personalizzate per WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136461"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
@@ -134,7 +134,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controlla se le sequenze di tasti vuote nelle chiavi composte vengono ignorate dalla convalida dello schema XSD. Per altre informazioni, vedere [Mitigazione: Convalida di XML Schema](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Invece di aggiungere un `AppContextSwitchOverrides` elemento da un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di codice chiamando il `static` (in C#) o `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (metodo).  
+>  Invece di aggiungere un `AppContextSwitchOverrides` elemento da un file di configurazione dell'applicazione, è anche possibile impostare le opzioni a livello di codice chiamando il `static` (in c#) o `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> (metodo).  
   
  Gli sviluppatori di librerie è anche possono definire opzioni personalizzate per consentire ai chiamanti di rifiutare esplicitamente la funzionalità modificate introdotte nelle versioni più recenti delle librerie. Per altre informazioni, vedere la classe <xref:System.AppContext>.  
   
@@ -175,6 +175,7 @@ L'esempio seguente usa il `<add>` elemento a cui aggiungere le due impostazioni 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<runtime > elemento](runtime-element.md)
-- [Elemento \<configuration>](../configuration-element.md)
+- [\<configurazione > elemento](../configuration-element.md)

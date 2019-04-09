@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45929c3eef5e9127e89dd88346c6207f3f1bc65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e5479fad3f19c219a0ca1d5d01934ce92a7162e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127172"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>Enumerazione CorDebugDebugEventKind
 Indica il tipo di evento le cui informazioni sono decodificate dal [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) (metodo).  
@@ -37,7 +37,7 @@ typedef enum CorDebugDebugEventKind {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|Evento di caricamento del modulo.|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Evento di scaricamento del modulo.|  
@@ -62,4 +62,5 @@ typedef enum CorDebugDebugEventKind {
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

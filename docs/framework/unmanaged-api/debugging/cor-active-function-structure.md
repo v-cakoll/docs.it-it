@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121771"
 ---
 # <a name="coractivefunction-structure"></a>Struttura COR_ACTIVE_FUNCTION
 Contiene informazioni sulle funzioni attualmente attive nei frame di un thread. Questa struttura viene utilizzata per la [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) (metodo).  
@@ -40,7 +40,7 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`pAppDomain`|Puntatore al proprietario del dominio dell'applicazione dei `ilOffset` campo.|  
 |`pModule`|Puntatore al proprietario del modulo di `ilOffset` campo.|  
@@ -58,5 +58,6 @@ typedef struct  _COR_ACTIVE_FUNCTION {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

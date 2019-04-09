@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135807"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funzioni di hosting CLR deprecate
 Questa sezione descrive le funzioni statiche globali non gestite utilizzate versioni precedenti dell'API di hosting.  
@@ -159,4 +159,5 @@ Questa sezione descrive le funzioni statiche globali non gestite utilizzate vers
  Convalida delle immagini dei moduli gestiti e notifica al caricatore del sistema operativo dopo che sono stati caricati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni statiche globali di hosting di .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

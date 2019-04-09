@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b027d26292b5d810d91932bac4ec8dee4b77661d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120958"
 ---
-# <a name="clone-function"></a>Funzioni di clone
+# <a name="clone-function"></a>Funzione Clone
 Restituisce un nuovo oggetto che è un clone completo dell'oggetto corrente.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -74,4 +74,5 @@ Oggetto clonato è un oggetto COM che dispone di un conteggio dei riferimenti pa
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140855"
 ---
 # <a name="attached-events-overview"></a>Cenni preliminari sugli eventi associati
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definisce un componente del linguaggio e un tipo di evento noto come *evento associato*. Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definisce un componente del linguaggio e un tipo di evento chiamato un' *evento associato*. Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento si presuppone di aver letto [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md) e [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md).  
@@ -92,6 +90,7 @@ ms.locfileid: "57371671"
  Tuttavia, se si sta definendo un evento associato personalizzato basato sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modello di basare gli eventi associati nella <xref:System.Windows.RoutedEvent>, è possibile usare <xref:System.Windows.UIElement.RaiseEvent%2A> per generare un evento associato da qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>. Genera un evento indirizzato (associato o meno) richiede la dichiarazione di un particolare elemento nell'albero degli elementi come origine evento. tale origine è segnalata come il <xref:System.Windows.UIElement.RaiseEvent%2A> chiamante. È responsabilità del servizio determinare quale elemento viene riportato come origine nell'albero.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
 - [Descrizione dettagliata della sintassi XAML](xaml-syntax-in-detail.md)
 - [Classi XAML e personalizzate per WPF](xaml-and-custom-classes-for-wpf.md)

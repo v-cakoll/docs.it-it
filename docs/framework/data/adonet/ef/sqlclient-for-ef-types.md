@@ -2,12 +2,12 @@
 title: SqlClient per tipi Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147660"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient per tipi Entity Framework
 Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient) include l'elenco dei tipi primitivi del provider, facet per ogni tipo, mapping tra i tipi primitivi del modello concettuale e del modello di archiviazione e regole di promozione e conversione tra i tipi primitivi del modello concettuale e del modello di archiviazione.  
@@ -16,13 +16,13 @@ Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient)
   
 |Tipo di provider:<br /><br /> name|Tipo di provider:<br /><br /> attributi|`EDMSimpleType`<br /><br /> name|Facet|  
 |----------------------------|----------------------------------|------------------------------|------------|  
-|`bit`|n/d|`Edm.Boolean`|n/d|  
-|`tinyint`|n/d|`Edm.Byte`|n/d|  
-|`smallint`|n/d|`Edm.Int16`|n/d|  
-|`int`|n/d|`Edm.Int32`|n/d|  
-|`bigint`|n/d|`Edm.Int64`|n/d|  
-|`float`|n/d|`Edm.Double`|n/d|  
-|`real`|n/d|`Edm.Double`|n/d|  
+|`bit`|N/D|`Edm.Boolean`|N/D|  
+|`tinyint`|N/D|`Edm.Byte`|N/D|  
+|`smallint`|N/D|`Edm.Int16`|N/D|  
+|`int`|N/D|`Edm.Int32`|N/D|  
+|`bigint`|N/D|`Edm.Int64`|N/D|  
+|`float`|N/D|`Edm.Double`|N/D|  
+|`real`|N/D|`Edm.Double`|N/D|  
 |`decimal`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scalabilità:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
 |`numeric`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scalabilità:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
 |`smallmoney`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Il valore predefinito: 10<br /><br /> -Costante: True<br /><br /> Scalabilità:<br /><br /> -Il valore predefinito: 4<br /><br /> -Costante: True|  
@@ -51,4 +51,5 @@ Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient)
 |`xml`|Uguale simili: False<br /><br /> Confrontabile: False|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 1073741823<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> FixedLength:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Specifiche CSDL, SSDL e MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

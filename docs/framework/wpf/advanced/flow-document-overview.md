@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139607"
 ---
 # <a name="flow-document-overview"></a>Cenni preliminari sui documenti dinamici
 I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leggibilità. Anziché essere impostati su un layout predefinito, questi documenti consentono di adattare e ridisporre il contenuto in modo dinamico in base alle variabili in fase di esecuzione, ad esempio, le dimensioni della finestra, la risoluzione del dispositivo e le preferenze facoltative dell'utente. Questi documenti offrono anche funzionalità avanzate del documento, quali paginazione e colonne. Questo argomento offre una panoramica dei documenti dinamici e di come crearli.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Che cos'è un documento dinamico  
  I documenti dinamici sono progettati per "adattare il flusso del contenuto" in base alle dimensioni della finestra, alla risoluzione del dispositivo e ad altre variabili di ambiente. Inoltre, i documenti dinamici dispongono di numerose funzionalità incorporate tra cui ricerca, modalità di visualizzazione che ottimizzano la leggibilità e possibilità di modificare le dimensioni e l'aspetto dei tipi di carattere. I documenti dinamici sono particolarmente adatti quando la facilità di lettura è il principale requisito d'uso per il documento. I documenti statici, al contrario, sono progettati per avere una presentazione statica e risultano utili quando la fedeltà del contenuto di origine è fondamentale. Visualizzare [documenti in WPF](documents-in-wpf.md) per altre informazioni sui diversi tipi di documenti.  
@@ -98,7 +96,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  Ogni classe di queste due categorie è descritta brevemente di seguito.  
   
 ### <a name="block-derived-classes"></a>Classi derivate da Block  
- **Paragraph**  
+ **Paragrafo**  
   
  <xref:System.Windows.Documents.Paragraph> è in genere usato per raggruppare il contenuto in un paragrafo. L'uso più semplice e più comune di Paragraph è creare un paragrafo di testo.  
   
@@ -148,7 +146,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  <xref:System.Windows.Documents.Table> Consente di creare una tabella. <xref:System.Windows.Documents.Table> è simile al <xref:System.Windows.Controls.Grid> elemento ma offre maggiori funzionalità e, pertanto, comporta un sovraccarico di risorse superiore. In quanto <xref:System.Windows.Controls.Grid> è un <xref:System.Windows.UIElement>, non può essere usato nel contenuto dinamico a meno che non è inclusa in un <xref:System.Windows.Documents.BlockUIContainer> o <xref:System.Windows.Documents.InlineUIContainer>. Per ulteriori informazioni sul <xref:System.Windows.Documents.Table>, vedere [Cenni preliminari su tabella](table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Classi derivate da Inline  
- **Run**  
+ **Esegui**  
   
  <xref:System.Windows.Documents.Run> viene utilizzato per contenere testo non formattato. Ci si aspetterebbe <xref:System.Windows.Documents.Run> oggetti possano essere utilizzati ampiamente nel contenuto del flusso. Tuttavia, nel markup, <xref:System.Windows.Documents.Run> elementi non sono necessari per essere usato in modo esplicito. <xref:System.Windows.Documents.Run> è necessario usare quando si creano o modificano documenti dinamici mediante il codice. Ad esempio, nel markup seguente, il primo <xref:System.Windows.Documents.Paragraph> specifica il <xref:System.Windows.Documents.Run> non lo fa in modo esplicito mentre il secondo elemento. Entrambi i paragrafi generano output identici.  
   
@@ -156,7 +154,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  **Nota:**  A partire dal [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], il <xref:System.Windows.Documents.Run.Text%2A> proprietà del <xref:System.Windows.Documents.Run> oggetto è una proprietà di dipendenza. È possibile associare il <xref:System.Windows.Documents.Run.Text%2A> origine proprietà per una data, ad esempio un <xref:System.Windows.Controls.TextBlock>. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta completamente l'associazione unidirezionale. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta anche l'associazione bidirezionale, ad eccezione di <xref:System.Windows.Controls.RichTextBox>. Per un esempio, vedere <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **Span**  
+ **intervallo**  
   
  <xref:System.Windows.Documents.Span> Raggruppa altri elementi di contenuto inline. Nessun rendering inerente viene applicato al contenuto all'interno di un <xref:System.Windows.Documents.Span> elemento. Tuttavia, gli elementi che ereditano da <xref:System.Windows.Documents.Span> inclusi <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> e <xref:System.Windows.Documents.Underline> applicare la formattazione al testo.  
   
@@ -196,7 +194,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  <xref:System.Windows.Documents.Figure> e <xref:System.Windows.Documents.Floater> differiscono in diversi modi e vengono usati per scenari diversi.  
   
- **Figure:**  
+ **Figura:**  
   
 -   Può essere posizionata: È possibile impostare gli ancoraggi orizzontali e verticali per ancorarla in relazione la pagina, contenuto, colonna o del paragrafo. È anche possibile usare la <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> le proprietà per specificare offset arbitrari.  
   
@@ -349,11 +347,12 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  Visualizzare [funzionalità tipografiche di WPF](typography-in-wpf.md) per altre informazioni sulle proprietà tipografiche.  
   
 ## <a name="see-also"></a>Vedere anche
-- [per](optimizing-performance-text.md)
+
+- [Testo](optimizing-performance-text.md)
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
-- [Procedure relative alle proprietà](flow-content-elements-how-to-topics.md)
-- [Panoramica sul modello di contenuto TextElement](textelement-content-model-overview.md)
-- [Cenni preliminari sul controllo RichTextBox](../controls/richtextbox-overview.md)
+- [Procedure relative](flow-content-elements-how-to-topics.md)
+- [Cenni preliminari sul modello di contenuto TextElement](textelement-content-model-overview.md)
+- [Cenni generali sul controllo RichTextBox](../controls/richtextbox-overview.md)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Cenni preliminari sull'elemento Table](table-overview.md)
 - [Cenni preliminari sulle annotazioni](annotations-overview.md)

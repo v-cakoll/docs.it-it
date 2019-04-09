@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di Query basate sul metodo: Conversione'
+title: 'Esempi di sintassi delle query basate su metodo: Conversione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: e51e7b00b96a36cc05d2b436a4fbf265af0bff85
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: bf6c889fff2635cd50597e72151c46fbb4d9b97d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150618"
 ---
-# <a name="method-based-query-syntax-examples-conversion"></a>Esempi di sintassi di Query basate sul metodo: Conversione
+# <a name="method-based-query-syntax-examples-conversion"></a>Esempi di sintassi delle query basate su metodo: Conversione
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> e <xref:System.Linq.Enumerable.ToList%2A> metodi per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
@@ -45,4 +45,5 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
  [!code-vb[DP L2E Examples#ToList](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#tolist)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124787"
 ---
 # <a name="calendar"></a>Calendar
 Un calendario consente a un utente di selezionare una data mediante una rappresentazione visiva del calendario.  
@@ -49,8 +49,9 @@ Controlli del calendario
 |FINE|<xref:System.Windows.Controls.CalendarMode.Decade>|Modificare l'anno del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> all'ultimo anno del decennio. Il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
 |CTRL+FRECCIA SU|Qualsiasi|Passa al successivo più grande <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Se <xref:System.Windows.Controls.Calendar.DisplayMode%2A> già <xref:System.Windows.Controls.CalendarMode.Decade>, alcuna azione.|  
 |CTRL+freccia GIÙ|Qualsiasi|Passa alla successiva più piccoli <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Se <xref:System.Windows.Controls.Calendar.DisplayMode%2A> già <xref:System.Windows.Controls.CalendarMode.Month>, alcuna azione.|  
-|La barra spaziatrice o invio|<xref:System.Windows.Controls.CalendarMode.Year> o <xref:System.Windows.Controls.CalendarMode.Decade>|Commutatori <xref:System.Windows.Controls.Calendar.DisplayMode%2A> per il <xref:System.Windows.Controls.CalendarMode.Month> o <xref:System.Windows.Controls.CalendarMode.Year> rappresentato dall'elemento con lo stato attivo.|  
+|La barra spaziatrice o invio|<xref:System.Windows.Controls.CalendarMode.Year> oppure <xref:System.Windows.Controls.CalendarMode.Decade>|Commutatori <xref:System.Windows.Controls.Calendar.DisplayMode%2A> per il <xref:System.Windows.Controls.CalendarMode.Month> o <xref:System.Windows.Controls.CalendarMode.Year> rappresentato dall'elemento con lo stato attivo.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controlli](index.md)
 - [Applicazione di stili e modelli](styling-and-templating.md)

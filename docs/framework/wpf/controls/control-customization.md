@@ -7,22 +7,23 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 80873f7a08d241c80dd663ee09d2ea0180fb505d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135382"
 ---
 # <a name="control-customization"></a>Personalizzazione dei controlli
 In questa categoria sono le varie classi di base, interfacce e altri elementi e i concetti utilizzati nella creazione di un completamente funzionale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controllo.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sulla modifica di controlli](control-authoring-overview.md)  
+ [Panoramica della creazione di controlli](control-authoring-overview.md)  
  [Linee guida per la progettazione di controlli a cui è possibile applicare degli stili](guidelines-for-designing-stylable-controls.md)  
- [Strumenti decorativi](adorners.md)  
+ [Elementi grafici](adorners.md)  
  [Stili e modelli di Control](control-styles-and-templates.md)  
  [Automazione interfaccia utente di un controllo personalizzato WPF](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazione di stili e modelli](styling-and-templating.md)

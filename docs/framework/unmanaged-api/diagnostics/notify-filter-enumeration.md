@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142883"
 ---
 # <a name="notifyfilter-enumeration"></a>Enumerazione NOTIFY_FILTER
 Identifica i callback per le funzioni del debugger. Per altre informazioni, vedere la [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) (metodo).  
@@ -43,7 +43,7 @@ enum tagNOTIFY_FILTER
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica che il [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) metodo deve essere richiamato.|  
 |`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica che il [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) metodo deve essere richiamato.|  
@@ -57,4 +57,5 @@ enum tagNOTIFY_FILTER
  **Intestazione:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Vedere anche
-- [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+
+- [Enumerazioni dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

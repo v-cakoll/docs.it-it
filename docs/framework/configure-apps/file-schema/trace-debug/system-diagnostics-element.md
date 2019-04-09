@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 31768c1a66accab33a8867fac6e813c6ae93bda7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142712"
 ---
 # <a name="systemdiagnostics-element"></a>\<System. Diagnostics > elemento
 Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.  
@@ -73,6 +73,7 @@ Specifica i listener di traccia per raccogliere, archiviare e indirizzare i mess
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

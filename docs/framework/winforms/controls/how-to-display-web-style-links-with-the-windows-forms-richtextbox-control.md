@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare i collegamenti ipertestuali con il controllo RichTextBox di Windows Form'
+title: 'Procedura: Visualizzare collegamenti ipertestuali con il controllo RichTextBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148239"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Procedura: Visualizzare i collegamenti ipertestuali con il controllo RichTextBox di Windows Form
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Procedura: Visualizzare collegamenti ipertestuali con il controllo RichTextBox di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare i collegamenti Web colorati e sottolineato. È possibile scrivere codice che consente di aprire una finestra del browser con il sito Web specificato nel testo del collegamento quando viene selezionato il collegamento.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Il collegamento a una pagina Web con il controllo RichTextBox  
@@ -117,6 +117,7 @@ I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo può visua
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>

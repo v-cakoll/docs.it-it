@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132210"
 ---
 # <a name="wpf-brushes-overview"></a>Cenni preliminari sui pennelli di WPF
 Tutti gli elementi visibili sullo schermo è visibili perché sono stati disegnati con un pennello. Ad esempio, un pennello viene usato per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento introduce i concetti di disegno con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
@@ -161,13 +161,14 @@ Rettangolo disegnato usando VisualBrush
  Per altre informazioni sui motivi per cui <xref:System.Windows.Media.VisualBrush> gli oggetti non possono essere bloccati, vedere il <xref:System.Windows.Media.VisualBrush> pagina del tipo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md)
-- [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli)
+- [Esempio di pennelli](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Procedure relative alle proprietà](brushes-how-to-topics.md)
+- [Procedure relative](brushes-how-to-topics.md)
 - [Altri suggerimenti relativi alle prestazioni](../advanced/optimizing-performance-other-recommendations.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138645"
 ---
 # <a name="message-security-with-a-windows-client"></a>Protezione dei messaggi con un client Windows
 Questo scenario viene illustrato un client Windows Communication Foundation (WCF) e un server protetto dalla modalità di sicurezza messaggio. Il client e il servizio vengono autenticati utilizzando le credenziali di Windows.  
@@ -28,7 +28,7 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
 |Trasporto|NET.TCP|  
 |Binding|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
 -   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
@@ -117,5 +117,6 @@ Questo scenario viene illustrato un client Windows Communication Foundation (WCF
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+
+- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

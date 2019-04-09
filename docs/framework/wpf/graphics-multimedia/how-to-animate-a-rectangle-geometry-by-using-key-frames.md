@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare un rettangolo utilizzando fotogrammi chiave'
+title: "Procedura: Aggiungere un'animazione a un rettangolo usando fotogrammi chiave"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 30bd09ac61c855e0cda81261ca652f0574aa73e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 7a4ba4e682ad5880e7059b1a5babe3094bd1770a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139620"
 ---
-# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Procedura: Animare un rettangolo utilizzando fotogrammi chiave
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un rettangolo usando fotogrammi chiave
 In questo esempio illustra come animare la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> proprietà di un <xref:System.Windows.Media.RectangleGeometry> usando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
@@ -35,6 +35,7 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.RectangleG
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.RectangleGeometry>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>

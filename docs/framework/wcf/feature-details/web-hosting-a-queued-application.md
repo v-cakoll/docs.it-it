@@ -2,12 +2,12 @@
 title: Sito Web che ospita un'applicazione in coda
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126022"
 ---
 # <a name="web-hosting-a-queued-application"></a>Sito Web che ospita un'applicazione in coda
 Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che servizi di Windows Communication Foundation (WCF) host. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. In questo modo i servizi WCF da usare HTTP e protocolli non HTTP, ad esempio NET. MSMQ e MSMQ. FormatName, in un ambiente di hosting che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
@@ -19,7 +19,7 @@ Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la du
 ## <a name="queue-addressing-in-was"></a>Indirizzamento delle code in WAS  
  Le applicazioni WAS hanno indirizzi URL (Uniform Resource Identifier). Gli indirizzi delle applicazioni sono composti di due parti: un prefisso URI di base e un indirizzo relativo specifico dell'applicazione (percorso). Quando vengono congiunte, queste due parti forniscono l'indirizzo esterno di un'applicazione. Il prefisso URI di base viene creato dall'associazione di sito e viene usato per tutte le applicazioni presenti nel sito, ad esempio, "net.msmq://localhost", "msmq.formatname://localhost" o "TCP: //localhost". Gli indirizzi delle applicazioni vengono quindi creati aggiungendo frammenti del percorso specifico dell'applicazione (ad esempio "/ formare") e aggiungerli all'URI di base del prefisso per ottenere l'URI dell'applicazione completo, ad esempio, "MSMQ: //localhost/applicationone".  
   
- Il servizio di attivazione MSMQ usa l'URI dell'applicazione per individuare la coda di cui devono essere monitorati i messaggi. Quando il servizio di attivazione MSMQ viene avviato, enumera tutte le code pubbliche e private presenti nel computer da cui è prevista la ricezione e ne monitora i messaggi. Ogni 10 minuti, il servizio di attivazione MSMQ aggiorna l'elenco di code da monitorare. Quando viene trovato un messaggio in una coda, il servizio di attivazione associa il nome della coda all'URI dell' applicazione corrispondente più lungo per l'associazione net.msmq e attiva l'applicazione.  
+ Il servizio di attivazione MSMQ usa l'URI dell'applicazione per individuare la coda di cui devono essere monitorati i messaggi. Quando il servizio di attivazione MSMQ viene avviato, enumera tutte le code pubbliche e private presenti nel computer da cui è prevista la ricezione e ne monitora i messaggi. Ogni 10 minuti, il servizio di attivazione MSMQ aggiorna l'elenco di code da monitorare. Quando viene trovato un messaggio in una coda, il servizio di attivazione associa il nome della coda all'URI dell'applicazione corrispondente più lungo per l'associazione net.msmq e attiva l'applicazione.  
   
 > [!NOTE]
 >  L'applicazione attivata deve corrispondere (corrispondenza più lunga) al prefisso del nome della coda.  
@@ -42,5 +42,6 @@ Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la du
  Un'applicazione ospitata da WAS non può essere attivata in base a messaggi presenti in una coda di sistema, quale quella di messaggi non recapitabili a livello di sistema, o in code secondarie, quali quelle di messaggi non elaborabili. Si tratta di una limitazione di questa versione del prodotto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Mapping fra gli endpoint di servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132665"
 ---
 # <a name="trace-switches"></a>Opzioni di traccia
-Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch> , <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> . La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  
+Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia. Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch> , <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> . La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  
   
  Le opzioni di traccia possono essere utili per filtrare informazioni. Può essere ad esempio necessario visualizzare ogni messaggio di traccia in un modulo di accesso ai dati, ma solo i messaggi di errore nel resto dell'applicazione. In questo caso, si usa un'opzione di traccia per il modulo di accesso ai dati e un'opzione per il resto dell'applicazione. Usando il file CONFIG per configurare le opzioni sulle impostazioni appropriate, è possibile controllare il tipo di messaggi di traccia ricevuti. Per altre informazioni, vedere [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
@@ -84,6 +84,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Oltre a fornire **BooleanSwitch** e **TraceSwitch**, è possibile definire opzioni personalizzate ereditando dalla classe **Switch** ed eseguendo l'override dei metodi della classe base con i metodi personalizzati. Per altre informazioni sulla creazione di opzioni definite dallo sviluppatore, vedere la classe <xref:System.Diagnostics.Switch> negli argomenti di riferimento su .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], creating
 - Pen object
 ms.assetid: 7fbea8b7-7ac1-4413-9c17-733a850381e3
-ms.openlocfilehash: 3d88824845bf357dd9ee5f1ee8fd02f095aee605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 69fe6157c710ae63df9dbf391a5d355d1c3f9765
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148109"
 ---
 # <a name="how-to-create-a-pen"></a>Procedura: Creare un oggetto Pen
 Questo esempio viene creato un <xref:System.Drawing.Pen> oggetto.  
@@ -29,6 +29,7 @@ Questo esempio viene creato un <xref:System.Drawing.Pen> oggetto.
  Dopo aver terminato di utilizzare gli oggetti che utilizzano le risorse di sistema, ad esempio <xref:System.Drawing.Pen> oggetti, è necessario chiamare <xref:System.Drawing.Pen.Dispose%2A> su di essi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Pen>
-- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Penne, linee e rettangoli in GDI+](pens-lines-and-rectangles-in-gdi.md)

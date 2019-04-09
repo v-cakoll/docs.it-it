@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Creare elenchi Master-Details con il controllo di controllo DataGrid Windows Form usando la finestra di progettazione'
+title: 'Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Forms usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 0bf967ed364447782c8e8df4c86ac32371ac880f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125976"
 ---
-# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Creare elenchi Master-Details con il controllo di controllo DataGrid Windows Form usando la finestra di progettazione
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Forms usando la finestra di progettazione
 
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -53,7 +53,8 @@ ms.locfileid: "57705155"
     2.  Selezionare la relazione (ad esempio, "CustOrd") tra le tabelle master e i dettagli nell'elenco a discesa nel <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà. Per visualizzare la relazione, espandere il nodo, fare clic sul segno più (**+**) segno più accanto alla tabella master nell'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

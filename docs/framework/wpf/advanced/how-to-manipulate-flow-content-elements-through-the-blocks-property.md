@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare elementi di contenuto del flusso tramite la proprietà Blocks'
+title: 'Procedura: Modificare elementi di contenuto di flusso tramite la proprietà Blocks'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: a988f47b6b147b0db285af1928a4260c5deba542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150137"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procedura: Modificare elementi di contenuto del flusso tramite la proprietà Blocks
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procedura: Modificare elementi di contenuto di flusso tramite la proprietà Blocks
 Questi esempi illustrano alcune delle operazioni più comuni che possono essere eseguite su elementi di contenuto dinamico tramite il **blocchi** proprietà. Questa proprietà viene utilizzata per aggiungere e rimuovere elementi da <xref:System.Windows.Documents.BlockCollection>. Flusso di contenuto gli elementi che presentano una **blocchi** proprietà includono:  
   
 -   <xref:System.Windows.Documents.Figure>  
@@ -63,6 +63,7 @@ Questi esempi illustrano alcune delle operazioni più comuni che possono essere 
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

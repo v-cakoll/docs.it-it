@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Esecuzione di un'operazione in Background"
+title: "Procedura dettagliata: Esecuzione di un'operazione in background"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149084"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Procedura dettagliata: Esecuzione di un'operazione in Background
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Procedura dettagliata: Esecuzione di un'operazione in background
 Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare ritardi nella risposta dell'interfaccia utente, è possibile usare la classe <xref:System.ComponentModel.BackgroundWorker> per eseguire l'operazione in un altro thread.  
   
  Per un elenco completo del codice usato in questo esempio, vedere [come: Eseguire un'operazione in background](how-to-run-an-operation-in-the-background.md).  
@@ -32,9 +32,9 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
   
 1.  Aprire il modulo attivo in Progettazione Windows Form e trascinare due <xref:System.Windows.Forms.Button> dei controlli il **della casella degli strumenti** al form e quindi impostare il `Name` e <xref:System.Windows.Forms.Control.Text%2A> le proprietà dei pulsanti in base alla tabella riportata di seguito.  
   
-    |Button|nome|Testo|  
+    |Button|Nome|Testo|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
+    |`button1`|`startBtn`|**Inizia**|  
     |`button2`|`cancelBtn`|**Annulla**|  
   
 2.  Aprire il **casella degli strumenti**, fare clic sul **componenti** scheda e quindi trascinare il <xref:System.ComponentModel.BackgroundWorker> componente al form.  
@@ -101,8 +101,9 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
 -   Implementare una classe che supporta il modello asincrono per i componenti. Per altre informazioni, vedere [implementazione del modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Procedura: Implementare un modulo che usa un'operazione in background](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Procedura: Eseguire un'operazione in background](how-to-run-an-operation-in-the-background.md)
-- [BackgroundWorker (componente)](backgroundworker-component.md)
+- [Componente BackgroundWorker](backgroundworker-component.md)

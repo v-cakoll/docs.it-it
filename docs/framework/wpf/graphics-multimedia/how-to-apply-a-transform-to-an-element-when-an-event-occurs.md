@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: c14f746846943d3fa5150fbee405a62249dee9c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126438"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Procedura: Applicare una trasformazione a un elemento quando si verifica un evento
 In questo esempio viene illustrato come applicare un <xref:System.Windows.Media.ScaleTransform> quando si verifica un evento. Il concetto illustrato è identico a quello usato per applicare altri tipi di trasformazioni. Per altre informazioni sui tipi di trasformazioni disponibili, vedere la <xref:System.Windows.Media.Transform> classe oppure [Cenni preliminari sulle trasformazioni](transforms-overview.md).  
@@ -36,8 +36,9 @@ In questo esempio viene illustrato come applicare un <xref:System.Windows.Media.
  [!code-vb[ButtonTransform#1cb](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Procedure relative alle proprietà](transformations-how-to-topics.md)
+- [Procedure relative](transformations-how-to-topics.md)
 - [Cenni preliminari sugli eventi indirizzati](../advanced/routed-events-overview.md)
