@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186173"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>Enumerazione CorSymSearchPolicyAttributes
 Specifica i criteri da utilizzare quando si esegue una ricerca di un lettore di simboli. Queste costanti vengono utilizzate per la [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) metodi.  
@@ -43,7 +43,7 @@ typedef enum CorSymSearchPolicyAttributes
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`AllowRegistryAccess`|Esegue una query il Registro di sistema per i percorsi di ricerca simbolo.|  
 |`AllowSymbolServerAccess`|Accede a un server di simboli.|  
@@ -54,4 +54,5 @@ typedef enum CorSymSearchPolicyAttributes
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
-- [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+
+- [Enumerazioni dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

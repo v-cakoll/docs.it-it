@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174603"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: Dimostrazione dell'ereditarietà visiva
 L'ereditarietà visiva consente di visualizzare i controlli nel form di base e di aggiungere nuovi controlli. In questa procedura dettagliata verrà creato un form di base che verrà compilato in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo form che eredita dal form di base. Durante questa procedura dettagliata, si apprenderà come:  
@@ -146,7 +146,7 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 7.  Selezionare privato **Say Goodbye** pulsante e notare che non dispone di quadratini di ridimensionamento. Inoltre, nelle **proprietà** finestra, le proprietà di questo pulsante vengono visualizzate in grigio per indicare che non possono essere modificate.  
   
-8.  Se si usa Visual C#:  
+8.  Se si usa Visual c#:  
   
     1.  Nelle **Esplora soluzioni**, fare doppio clic su **Form1** nel **InheritanceTest** del progetto e quindi scegliere **Elimina**. Nella finestra di messaggio che viene visualizzato, fare clic su **OK** per confermare l'eliminazione.  
   
@@ -161,9 +161,10 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
 12. Premere F5 per eseguire l'applicazione e osservare il comportamento del form ereditato.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual C#) istruzione. Per altre informazioni, vedere [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md).  
+ L'ereditarietà per i controlli utente funziona in modo analogo. Aprire un nuovo progetto di libreria di classi e aggiungere un controllo utente. Inserire controlli costitutivi e compilare il progetto. Aprire un altro progetto di libreria di classi e aggiungere un riferimento alla libreria di classi compilata. Inoltre, provare ad aggiungere un controllo ereditato (tramite il **aggiungere nuovi elementi** finestra di dialogo) al progetto e l'uso il **Selezione ereditarietà**. Aggiungere un controllo utente e modificare il `Inherits` (`:` in Visual c#) istruzione. Per altre informazioni, vedere [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md)
 - [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)
 - [Windows Form](../index.md)

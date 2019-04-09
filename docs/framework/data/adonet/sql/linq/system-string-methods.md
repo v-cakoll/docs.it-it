@@ -2,15 +2,15 @@
 title: Metodi System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160498"
 ---
 # <a name="systemstring-methods"></a>Metodi System.String
-In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono supportati i metodi <xref:System.String> riportati di seguito.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta quanto segue <xref:System.String> metodi.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Metodi System.String non supportati in generale  
  Metodi <xref:System.String> non supportati in generale:  
@@ -56,4 +56,5 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non sono 
 -   Poiché molti metodi, ad esempio `Replace`, `ToLower`, `ToUpper` e l'indicizzatore del carattere, non dispongono di una conversione valida per le colonne `TEXT` o `NTEXT` e XML, se vengono convertiti normalmente si verifica un'eccezione `SqlExceptions`. Questo comportamento viene considerato accettabile per questi tipi. Tuttavia è necessario che tutte le operazioni stringa corrispondano alla semantica Common Language Runtime (CLR) per `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` e `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

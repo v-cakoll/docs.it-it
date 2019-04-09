@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188838"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Cenni preliminari sul controllo PrintPreviewDialog (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.PrintPreviewDialog> controllo è una finestra di dialogo preconfigurata che consente di visualizzare come un [PrintDocument](printdocument-component-windows-forms.md) verrà stampato. Usarlo all'interno dell'applicazione basata su Windows come una soluzione semplice invece di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  
@@ -52,7 +52,8 @@ Se l'opzione non è presente o se è impostata su qualsiasi altro valore, non vi
 Se si usa la <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventi per modificare le impostazioni della stampante, le prestazioni dei <xref:System.Windows.Forms.PrintPreviewDialog> controllo non migliorerà anche se è impostata un'opzione di configurazione di ottimizzazione.  
 
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [Panoramica sul controllo PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
+- [Panoramica del controllo PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
 - [Controllo PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
 - [Controlli e componenti della finestra di dialogo](dialog-box-controls-and-components-windows-forms.md)

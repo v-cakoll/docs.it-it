@@ -1,17 +1,17 @@
 ---
-title: 'Procedura dettagliata: Utilizzo solo di Stored procedure (Visual Basic)'
+title: 'Procedura dettagliata: Usare solo stored procedure (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188578"
 ---
-# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Utilizzo solo di Stored procedure (Visual Basic)
+# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
   
 > [!NOTE]
@@ -105,7 +105,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 1.  Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
   
-     `Class Form1` verrà visualizzato nell'editor di codice.  
+     `Class Form1` viene visualizzata nell'editor del codice.  
   
 2.  Digitare il codice riportato di seguito nel blocco di codice `Form1`.  
   
@@ -192,5 +192,6 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
  Questo progetto può essere migliorato apportandovi alcune modifiche. Ad esempio, è possibile elencare le stored procedure disponibili in una casella di riepilogo, in modo che l'utente possa selezionare quella da eseguire. È inoltre possibile trasmettere l'output dei rapporti a un file di testo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Stored procedure](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

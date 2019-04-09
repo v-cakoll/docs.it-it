@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174369"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Esercitazione: Creare un client Windows Communication Foundation
 
@@ -30,7 +30,6 @@ In questa esercitazione si imparerà a:
 > [!div class="checklist"]
 > - Creare e configurare un progetto app console per il client WCF.
 > - Aggiungere un riferimento al servizio per il servizio WCF per generare i file di classe e la configurazione proxy.
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Creare un client Windows Communication Foundation
 
@@ -67,7 +66,6 @@ In questa esercitazione si imparerà a:
    3. Selezionare **CalculatorService** per espanderlo e visualizzare i contratti di servizio implementati dal servizio. Lasciare l'impostazione predefinita **Namespace** e scegliere **OK**.
 
       Visual Studio aggiunge un nuovo elemento con il **servizi connessi** cartella nel **GettingStartedClient** progetto. 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>Strumento ServiceModel Metadata Utility tool
 
@@ -129,5 +127,3 @@ Passare all'esercitazione successiva per informazioni su come usare il client ge
 
 > [!div class="nextstepaction"]
 > [Esercitazione: Usare un client WCF](how-to-use-a-wcf-client.md)
-
-

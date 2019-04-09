@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 12b81d02e5db613c96d19a4aa3730b95e3477b7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166956"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integrazione di System.Transactions con SQL Server
 In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 2.0 è stato introdotto un framework per le transazioni, accessibile tramite lo spazio dei nomi <xref:System.Transactions> . Questo framework espone le transazioni in modo completamente integrato con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]e con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -229,5 +229,6 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

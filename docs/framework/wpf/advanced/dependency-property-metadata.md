@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170365"
 ---
 # <a name="dependency-property-metadata"></a>Metadati delle proprietà di dipendenza
 Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include un sistema di segnalazione dei metadati che va al di là di ciò che è possibile segnalare riguardo una proprietà tramite la reflection o le caratteristiche generali di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. I metadati di una proprietà di dipendenza possono anche essere assegnati in modo univoco dalla classe che definisce una proprietà di dipendenza, possono essere modificati quando la proprietà di dipendenza viene aggiunta a una classe diversa ed è possibile eseguirne specificatamente l'override tramite tutte le classi derivate che ereditano la proprietà di dipendenza dalla classe di base in fase di definizione.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento presuppone la conoscenza delle proprietà di dipendenza dal punto di vista di un consumer delle proprietà di dipendenza esistenti nelle classi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], nonché la lettura dell'argomento [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md). Per seguire gli esempi illustrati in questo argomento, è anche necessario conoscere [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e saper scrivere applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -92,6 +90,7 @@ Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
  È possibile chiamare <xref:System.Windows.DependencyProperty.AddOwner%2A> per una proprietà di dipendenza definita come proprietà associata dalla classe proprietario. In genere, questa operazione viene eseguita per esporre la proprietà precedentemente associata come proprietà di dipendenza non associata. È quindi necessario esporre il <xref:System.Windows.DependencyProperty.AddOwner%2A> restituire come valore un `public static readonly` campo da usare come identificatore della proprietà di dipendenza e verranno definite proprietà "wrapper" appropriate in modo che la proprietà viene visualizzata nella tabella dei membri e supporta una proprietà non associato utilizzo della classe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

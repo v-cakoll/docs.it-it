@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173676"
 ---
 # <a name="securing-exception-handling"></a>Protezione della gestione delle eccezioni
 In Visual C++ e Visual Basic, un'espressione di filtro ulteriormente verso l'alto e viene eseguito prima di qualsiasi **infine** istruzione. Il **intercettare** blocco associato a tale filtro viene eseguito dopo il **infine** istruzione. Per altre informazioni, vedere [eccezioni filtrate dall'utente](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In questa sezione esamina le implicazioni di sicurezza di quest'ordine. Si consideri l'esempio di pseudocodice seguente è illustrato l'ordine delle istruzioni di filtro e **infine** le istruzioni vengono eseguite.  
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

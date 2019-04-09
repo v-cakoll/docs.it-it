@@ -11,19 +11,19 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187447"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema di impostazioni del compilatore e del provider di linguaggi
 Le impostazioni del compilatore e del provider di linguaggi specificano gli elementi di configurazione del compilatore per i provider di linguaggi disponibili. Ogni elemento di configurazione del compilatore specifica il nome del tipo di provider di codice, i parametri del compilatore, i nomi dei linguaggi supportati e le estensioni di file supportate.  
   
  .NET Framework definisce le impostazioni del compilatore iniziali nel file di configurazione del computer (Machine.config). Gli sviluppatori e i fornitori di compilatori possono aggiungere impostazioni di configurazione per una nuova implementazione di <xref:System.CodeDom.Compiler.CodeDomProvider>. Usare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> per enumerare a livello di codice le impostazioni di configurazione dei provider di linguaggi e di configurazione del compilatore in un computer.  
   
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configurazione > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
   
@@ -57,7 +57,8 @@ Le impostazioni del compilatore e del provider di linguaggi specificano gli elem
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) (Elemento <compiler>)
+- [\<compilatore > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

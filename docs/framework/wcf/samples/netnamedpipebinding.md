@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 37926e48ef6dc12a6b96bbdb8b268993c82e4b48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e2773fc3b727295ac44c76fec1d0529d3f071152
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165516"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 In questo esempio viene descritta l'associazione `netNamedPipeBinding`, che fornisce la comunicazione tra i processi sullo stesso computer. Le named pipe non funzionano tra computer. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) servizio calcolatrice.  
@@ -93,4 +93,3 @@ Press <ENTER> to terminate client.
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
-  

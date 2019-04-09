@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: e66680d5260649862adea5a346f4e0ae3ce5fbc8
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183755"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementazione del pattern di controllo SelectionItem di automazione interfaccia utente
 > [!NOTE]
@@ -49,10 +49,11 @@ ms.locfileid: "57680037"
 |<xref:System.InvalidOperationException>|Quando vengono tentate le seguenti operazioni:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> viene chiamato in un contenitore a selezione singola dove <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` e un elemento è già selezionato.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> viene chiamato in un contenitore a selezione multipla dove <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` ed è selezionato solo un elemento.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> viene chiamato in un contenitore a selezione singola dove <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` e un altro elemento è già selezionato.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo Selection di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Esempio di Provider di frammenti](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

@@ -2,12 +2,12 @@
 title: Definizione dello schema di DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163072"
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
 Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli. Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
@@ -32,9 +32,10 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
  [Definizione di chiavi primarie](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Viene descritto come specificare la chiave primaria di una tabella da uno o più **DataColumn** oggetti.  
   
- [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Vincoli DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.  
   
 ## <a name="see-also"></a>Vedere anche
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

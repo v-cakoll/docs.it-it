@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172497"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Protezione del trasporto con l'autenticazione di base
 La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client. Il server richiede un certificato X.509 valido che possa essere usato per SSL (Secure Sockets Layer) e i client devono ritenere attendibile il certificato del server. Il servizio Web dispone già di un'implementazione SSL usabile. Per altre informazioni sull'abilitazione dell'autenticazione base in Internet Information Services (IIS), vedere [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -111,10 +111,11 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

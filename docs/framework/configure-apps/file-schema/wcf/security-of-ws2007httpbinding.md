@@ -2,12 +2,12 @@
 title: <security> di <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: 8d7df6f50c389e7b7a7766a18ee722159a6b1835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bac8b9c4af812e924296008fa81227d181b30c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170846"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<sicurezza > di \<ws2007HttpBinding >
 Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
@@ -48,11 +48,11 @@ Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Transport`|La sicurezza è fornita mediante HTTPS. Il servizio deve essere configurato con certificati Secure Sockets Layer (SSL). Il messaggio è interamente protetto usando HTTPS e il servizio viene autenticato dal client usando il certificato SSL del servizio. L'autenticazione client è controllata tramite il `ClientCredentials` attributo del [ \<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md) elemento.|  
-|`Message`|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP. Per impostazione predefinita, il corpo SOAP viene crittografato e firmato. Questa modalità offre varie funzionalità: è ad esempio possibile stabilire se le credenziali del servizio sono disponibili per i client fuori banda nonché specificare la suite di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà <xref:System.ServiceModel.Security.SecurityMessageProperty>. L'autenticazione client viene eseguita una volta per ogni sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
+|`Message`|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP. Per impostazione predefinita, il corpo SOAP viene crittografato e firmato. Questa modalità offre varie funzionalità: è ad esempio possibile stabilire se le credenziali del servizio sono disponibili per i client fuori banda nonché specificare il gruppo di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà <xref:System.ServiceModel.Security.SecurityMessageProperty>. L'autenticazione client viene eseguita una volta per ogni sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
 |`TransportWithMessageCredential`|In questa modalità, HTTPS fornisce l'integrità, la riservatezza e l'autenticazione server e client, mentre la sicurezza dei messaggi SOAP fornisce l'autenticazione client. Per impostazione predefinita, l'autenticazione client viene eseguita una volta per ogni sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -72,6 +72,7 @@ Rappresenta le impostazioni di sicurezza utilizzate con il [ \<ws2007HttpBinding
  Questo elemento è progettato per essere interoperabile con i servizi che implementano le specifiche WS-*. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>

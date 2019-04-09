@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178789"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati
 Se i componenti vengono definiti da un progetto nella soluzione attualmente aperta, verranno automaticamente visualizzati nei **casella degli strumenti**, senza alcun intervento da parte dell'utente. È anche possibile inserire manualmente il **casella degli strumenti** con i componenti personalizzati usando la [Scegli elementi della finestra della casella (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ma il **della casella degli strumenti** tengano conto elementi della soluzione di output con tutte le caratteristiche seguenti di compilazione:  
@@ -94,7 +94,8 @@ Se i componenti vengono definiti da un progetto nella soluzione attualmente aper
  Questa procedura dettagliata viene dimostrato che la **casella degli strumenti** prende in considerazione i componenti di un progetto, ma la **della casella degli strumenti** è anche dei controlli. Sperimentare con i controlli personalizzati aggiungendo e rimuovendo i progetti di controllo dalla soluzione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [Generale, Progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Procedura: Organizzare le schede della casella degli strumenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [Finestra di dialogo Scegli elementi della Casella degli strumenti (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [Scegli elementi della finestra di dialogo casella (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)

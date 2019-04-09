@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b72f2581b9670dbc110f2ab33cb861128bd78dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5186df61eb82b29fcfa9776408498b748068e122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173654"
 ---
 # <a name="icorpublishprocessenum-interface"></a>Interfaccia ICorPublishProcessEnum
 Una sottoclasse di [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) interfaccia che fornisce metodi che scorrono una raccolta di [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) oggetti.  
@@ -47,5 +47,6 @@ Una sottoclasse di [ICorPublishEnum](../../../../docs/framework/unmanaged-api/de
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Coclasse CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Chiamare funzioni definite dall'utente Inline"
+title: "Procedura: Chiamare funzioni inline definite dall'utente"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163709"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Procedura: Chiamare funzioni definite dall'utente Inline
+# <a name="how-to-call-user-defined-functions-inline"></a>Procedura: Chiamare funzioni inline definite dall'utente
 Anche se è possibile chiamare le funzioni inline definite dall'utente, le funzioni incluse in una query la cui esecuzione è rinviata non vengono eseguite finche non verrà eseguita la query. Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Quando si chiama la stessa funzione al di fuori di una query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea una semplice query dall'espressione della chiamata al metodo. Di seguito è riportata la sintassi SQL, in cui il parametro `@p0` è associato alla costante passata:  
@@ -21,7 +21,7 @@ Anche se è possibile chiamare le funzioni inline definite dall'utente, le funzi
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato quanto segue:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Crea gli elementi seguenti:  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
@@ -39,4 +39,5 @@ FROM [Customers] AS [t0]
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

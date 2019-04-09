@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f42b8d6eb1a35052b25fda6e7cc9c7d00836df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1118c879da4376bda0c73368a8b15df4f7a3d014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180466"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>Interfaccia ICorDebugMergedAssemblyRecord
 Fornisce informazioni su un assembly unito.  
@@ -40,5 +40,6 @@ Fornisce informazioni su un assembly unito.
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

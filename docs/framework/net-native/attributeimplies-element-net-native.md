@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165061"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > elemento (.NET Native)
 Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo contenitore.  
@@ -49,7 +49,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 ## <a name="all-attributes"></a>Tutti gli attributi  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -60,7 +60,7 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<AttributeImplies>` viene usato se il relativo tipo contenitore è un attributo (cioè, una classe derivata da <xref:System.Attribute?displayProperty=nameWithType>). Se l'attributo viene applicato a un particolare elemento di programma, il criterio definito dall'elemento `<AttributeImplies>` viene applicato a tale elemento di programma.  
@@ -68,7 +68,8 @@ Definisce i criteri per gli elementi di codice a cui viene applicato l'attributo
  Gli attributi di reflection, serializzazione e interoperabilità sono tutti facoltativi, ma è necessario usarne almeno uno.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

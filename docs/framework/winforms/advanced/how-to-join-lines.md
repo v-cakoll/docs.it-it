@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Linee di join'
+title: 'Procedura: Unire le linee'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: a43cfb8a51435aa0c5c3f7aae673d38d3f7792ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174915"
 ---
-# <a name="how-to-join-lines"></a>Procedura: Linee di join
+# <a name="how-to-join-lines"></a>Procedura: Unire le linee
 Un join di riga è l'area comune in cui è costituito da due righe di cui end soddisfare o si sovrappongono. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili tre stili di linea join: decorato, rilievo e arrotondato. Stile di linea join è una proprietà del <xref:System.Drawing.Pen> classe. Quando si specifica un stile della linea join per un <xref:System.Drawing.Pen> dell'oggetto, che verrà applicata a tutte le righe connessione in qualsiasi tipo di join <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto viene disegnato utilizzando la penna.  
   
  La figura seguente mostra i risultati dell'esempio di join di linee in rilievo.  
@@ -38,4 +38,5 @@ Un join di riga è l'area comune in cui è costituito da due righe di cui end so
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+
+- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)

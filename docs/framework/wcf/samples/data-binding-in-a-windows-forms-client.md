@@ -2,12 +2,12 @@
 title: Associazione dati in un client Windows Form
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: d41310108bfffedc38297f2c981e90007b59fb9a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e3f4134544076bc7e8d21da67172551f6f64c16c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167089"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Associazione dati in un client Windows Form
 In questo esempio viene illustrato come associare ai dati restituiti da un servizio Windows Communication Foundation (WCF) in un'applicazione Windows Form.  
@@ -37,4 +37,3 @@ In questo esempio viene illustrato come associare ai dati restituiti da un servi
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
-  

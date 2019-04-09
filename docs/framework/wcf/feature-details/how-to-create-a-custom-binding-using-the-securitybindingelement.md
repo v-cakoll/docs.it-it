@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175591"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedura: Creare un'associazione personalizzata usando SecurityBindingElement
 Windows Communication Foundation (WCF) include diverse associazioni fornite dal sistema che possono essere configurate ma non forniscono totale flessibilità durante la configurazione di tutte le opzioni di protezione supportati da WCF. In questo argomento viene illustrato come creare direttamente un'associazione personalizzata di singoli elementi di associazione e vengono evidenziate alcune impostazioni di sicurezza che è possibile specificare durante la creazione di tale associazione. Per altre informazioni sulla creazione di associazioni personalizzate, vedere [estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta la forma di <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, vale a dire la forma di canale predefinita utilizzata dal trasporto TCP quando l'oggetto <xref:System.ServiceModel.TransferMode> è impostato su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> non supporta il <xref:System.ServiceModel.Channels.IDuplexSessionChannel> shape, che è l'uso di forma del canale predefinito per il protocollo TCP del canale di trasporto quando <xref:System.ServiceModel.TransferMode> è impostata su <xref:System.ServiceModel.TransferMode.Buffered>. È necessario impostare <xref:System.ServiceModel.TransferMode> su <xref:System.ServiceModel.TransferMode.Streamed> per utilizzare <xref:System.ServiceModel.Channels.SecurityBindingElement> in questo scenario.  
   
 ## <a name="creating-a-custom-binding"></a>Creazione di un'associazione personalizzata  
  In WCF tutte le associazioni sono costituite da *elementi di associazione*. Ogni elemento di associazione deriva dalla classe <xref:System.ServiceModel.Channels.BindingElement>. Per le associazioni standard fornite dal sistema, vengono creati e configurati gli elementi di associazione, sebbene sia possibile personalizzare alcune delle impostazioni delle proprietà.  
@@ -107,6 +107,7 @@ Windows Communication Foundation (WCF) include diverse associazioni fornite dal 
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

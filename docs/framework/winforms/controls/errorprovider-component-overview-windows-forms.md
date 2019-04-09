@@ -8,12 +8,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 61a8d4baba35a7a8a8ae221b054029eb59107d0e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181181"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente ErrorProvider (Windows Form)
 I moduli di Windows [ErrorProvider](errorprovider-component-windows-forms.md) componente viene usato per convalidare l'input dell'utente in un form o controllo. Viene in genere usato in combinazione con la convalida dell'input utente in un form o visualizzare gli errori all'interno di un set di dati. Un provider di errore è un'alternativa migliore rispetto alla visualizzazione di un messaggio di errore in una finestra di messaggio perché una volta che viene chiusa una finestra di messaggio, il messaggio di errore non è più visibile. Il <xref:System.Windows.Forms.ErrorProvider> componente consente di visualizzare un'icona di errore (![icona ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) accanto al relativo controllo, ad esempio una casella di testo; quando l'utente posiziona il puntatore del mouse su di icona di errore, una descrizione comando verrà visualizzata la stringa di messaggio di errore.  
@@ -27,6 +27,7 @@ I moduli di Windows [ErrorProvider](errorprovider-component-windows-forms.md) co
 >  Il <xref:System.Windows.Forms.ErrorProvider> componente non fornisce supporto incorporato per i client di accessibilità. Per rendere accessibile l'applicazione quando si usa questo componente, è necessario fornire un meccanismo di commenti e suggerimenti aggiuntivi, accessibile.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Procedura: Visualizzare le icone di errore per la convalida dei moduli con il componente ErrorProvider di Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

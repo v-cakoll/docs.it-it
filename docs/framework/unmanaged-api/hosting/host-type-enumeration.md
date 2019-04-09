@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfb1cff3e95c5ff86d22913745b7d14982766b48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175227"
 ---
 # <a name="hosttype-enumeration"></a>Enumerazione HOST_TYPE
 Contiene valori che specificano il tipo di host che esegue un'applicazione.  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`HOST_TYPE_APPLAUNCH`|Avviare l'applicazione da AppLaunch.exe.<br /><br /> Utilizzare questo valore per le applicazioni parzialmente attendibili.|  
 |`HOST_TYPE_CORFLAG`|Avviare l'applicazione direttamente. Vale a dire, avviare l'applicazione da un proprio file .exe.<br /><br /> Utilizzare questo valore per le applicazioni completamente attendibili.|  
@@ -54,4 +54,5 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -2,12 +2,12 @@
 title: Sessione affidabile di associazione personalizzata su HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: eaf82e304dec2c8210cede64d4874670c8642156
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e29910be074f8196094186f7d81787ac5ee829b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172432"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessione affidabile di associazione personalizzata su HTTPS
 In questo esempio viene illustrato l'utilizzo della sicurezza del trasporto SSL con le sessioni affidabili. Le sessioni affidabili implementano il protocollo WS-RM (WS-Reliable Messaging). È possibile ottenere una sessione affidabile protetta componendo WS-Security su sessioni affidabili. Tuttavia, è anche possibile scegliere di utilizzare la sicurezza del trasporto HTTP con SSL.  
@@ -135,4 +135,3 @@ Press <ENTER> to terminate client.
 4.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

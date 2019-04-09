@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Implementazione del modo virtuale con caricamento dati Just-In-Time nel controllo DataGridView Windows Form'
+title: 'Procedura: Implementare la modalità virtuale con caricamento dati JIT nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: 33825f92-7a22-40ee-86d9-9a2ed1ead7b7
-ms.openlocfilehash: 0aeba7c39bb19de0300e166936e3f8b8f70f83b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6fdf2bd16297820026fa84bdaefe61cc495cea4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169884"
 ---
-# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Procedura: Implementazione del modo virtuale con caricamento dati Just-In-Time nel controllo DataGridView Windows Form
+# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Procedura: Implementare la modalità virtuale con caricamento dati JIT nel controllo DataGridView di Windows Forms
 Il seguente esempio di codice mostra come usare la modalità virtuale nel controllo <xref:System.Windows.Forms.DataGridView> con una cache dei dati che carica i dati da un server solo quando è necessario. In questo esempio viene descritto dettagliatamente [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="example"></a>Esempio  
@@ -39,9 +39,10 @@ Il seguente esempio di codice mostra come usare la modalità virtuale nel contro
  L'archiviazione delle informazioni riservate, ad esempio la password, nella stringa di connessione può avere implicazioni sulla sicurezza dell'applicazione. L'autenticazione di Windows, detta anche sicurezza integrata, consente di controllare l'accesso a un database in modo più sicuro. Per altre informazioni, vedere [Protezione delle informazioni di connessione](../../data/adonet/protecting-connection-information.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
 - [Implementazione del modo virtuale con caricamento dati JIT nel controllo DataGridView di Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Modo virtuale nel controllo DataGridView di Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md)

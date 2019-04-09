@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3009ee6a2ba22771a2132032744f76ca527c422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 49b3bb51f307093ea1cc8cc45064d5c405974822
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178022"
 ---
 # <a name="icordebugprocess2-interface"></a>Interfaccia ICorDebugProcess2
 Un'estensione logica dell'interfaccia ICorDebugProcess, che rappresenta un processo in esecuzione codice gestito.  
@@ -53,4 +53,5 @@ Un'estensione logica dell'interfaccia ICorDebugProcess, che rappresenta un proce
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

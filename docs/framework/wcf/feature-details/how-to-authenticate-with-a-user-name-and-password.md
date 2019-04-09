@@ -1,17 +1,17 @@
 ---
-title: "Procedura: Eseguire l'autenticazione con un nome utente e Password"
+title: 'Procedura: Autenticare con un nome utente e una password'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174135"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: Eseguire l'autenticazione con un nome utente e Password
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: Autenticare con un nome utente e una password
 
 In questo argomento viene illustrato come abilitare un servizio Windows Communication Foundation (WCF) autenticare un client con un nome utente di dominio di Windows e una password. Si presuppone che l'utente disponga di un servizio WCF self-hosted funzionante. Per un esempio di creazione di un base self-hosted WCF service, vedere [esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md). In questo argomento si presuppone che il servizio sia configurato tramite codice. Se si vuole vedere un esempio di configurazione di un servizio simile tramite un file di configurazione vedere [sicurezza messaggi tramite nome utente](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ In questo argomento viene illustrato come abilitare un servizio Windows Communic
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -91,6 +92,6 @@ In questo argomento viene illustrato come abilitare un servizio Windows Communic
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Sicurezza del trasporto con autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
-- [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [Protezione del trasporto con l'autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

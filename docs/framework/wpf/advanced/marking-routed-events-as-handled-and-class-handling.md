@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172107"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Impostazione degli eventi indirizzati come gestiti e gestione delle classi
 I gestori per un evento indirizzato possono contrassegnare l'evento come gestito all'interno dei dati dell'evento. La gestione dell'evento abbrevia efficacemente la route. La gestione delle classi è un concetto di programmazione supportato dagli eventi indirizzati. Un gestore classi ha l'opportunità di gestire un evento indirizzato specifico a livello di classe con un gestore richiamato prima di qualsiasi gestore istanze in qualsiasi istanza di classe.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Questo argomento elabora i concetti introdotti in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
@@ -99,6 +97,7 @@ I gestori per un evento indirizzato possono contrassegnare l'evento come gestito
  La seconda tecnica può essere usata solo per gli eventi di input, le cui versioni di tunneling e bubbling dell'evento indirizzato sono associate. Per questi eventi indirizzati, è invece possibile aggiungere gestori all'evento indirizzato di anteprima/tunneling equivalente. Poiché l'evento indirizzato percorre tramite tunneling la route a partire dalla radice, il codice di gestione delle classi del pulsante non lo intercetta, presumendo che il gestore di anteprima sia stato collegato a livello di un elemento predecessore nell'albero degli elementi dell'applicazione. Se si usa questo approccio, contrassegnare con cautela qualsiasi evento di anteprima come gestito. Per l'esempio fornito con <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> gestito nell'elemento radice, se è stata contrassegnata come dell'evento <xref:System.Windows.RoutedEventArgs.Handled%2A> nell'implementazione del gestore, verrà in realtà eliminato il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Questo non è un comportamento consigliato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.EventManager>
 - [Eventi di anteprima](preview-events.md)
 - [Creare un evento indirizzato personalizzato](how-to-create-a-custom-routed-event.md)

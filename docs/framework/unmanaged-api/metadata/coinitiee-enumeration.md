@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48f15cc08167baaadc61787b8b1f7167304f0cae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180018"
 ---
 # <a name="coinitiee-enumeration"></a>Enumerazione COINITIEE
 Specifica le costanti usate da [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) durante l'inizializzazione di common language runtime.  
@@ -38,7 +38,7 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|Modalità di inizializzazione predefinito. Inizializza il runtime e crea il valore predefinito <xref:System.AppDomain>.|  
 |`COINITEE_DLL`|Inizializza per l'esecuzione di una DLL gestita.|  
@@ -54,4 +54,5 @@ typedef enum tagCOINITEE {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

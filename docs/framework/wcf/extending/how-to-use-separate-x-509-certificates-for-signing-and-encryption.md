@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare certificati X.509 separati per la firma e crittografia'
+title: 'Procedura: Usare certificati X.509 separati per la firma e la crittografia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160940"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: Usare certificati X.509 separati per la firma e crittografia
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: Usare certificati X.509 separati per la firma e la crittografia
 Questo argomento illustra come configurare Windows Communication Foundation (WCF) per utilizzare certificati diversi per la firma dei messaggi e la crittografia nei client sia servizio.  
   
  Per abilitare certificati separati da utilizzare per la firma e crittografia, un client personalizzato o servizio credenziali (o entrambi) deve essere creati, poiché WCF non forniscono un'API per impostare più certificati client o del servizio. È inoltre necessario specificare un gestore del token di sicurezza per utilizzare le informazioni di più certificati e creare un provider di token di sicurezza appropriato per l'utilizzo della chiave specificata e la direzione del messaggio.  
@@ -90,9 +90,10 @@ Questo argomento illustra come configurare Windows Communication Foundation (WCF
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

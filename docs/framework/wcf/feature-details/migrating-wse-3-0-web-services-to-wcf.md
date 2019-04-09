@@ -2,12 +2,12 @@
 title: Migrazione dei servizi Web WSE 3.0 a WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180609"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrazione dei servizi Web WSE 3.0 a WCF
 I vantaggi della migrazione di servizi Web WSE 3.0 per Windows Communication Foundation (WCF) includono prestazioni migliori e il supporto di trasporti, scenari di sicurezza aggiuntive e WS-* specifiche. Un servizio Web che viene eseguita la migrazione da WSE 3.0 a WCF può subire fino a un miglioramento delle prestazioni di 200% e 400%. Per altre informazioni sui trasporti supportati da WCF, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Per un elenco degli scenari supportati da WCF, vedere [scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Per un elenco delle specifiche supportate da WCF, vedere [Web Services protocolli Interoperability Guide](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -123,6 +123,7 @@ I vantaggi della migrazione di servizi Web WSE 3.0 per Windows Communication Fou
  L'equivalente di un trasporto personalizzato di WSE 3.0 in WCF è un'estensione di canale. Per informazioni dettagliate sulla creazione di un'estensione di canale, vedere [estensione del livello del canale](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ciclo di vita della programmazione di base](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

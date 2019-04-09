@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Specificare i nomi di Database'
+title: 'Procedura: Specificare nomi di database'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a1198a294cd4921728919981bae213c0ee891da6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184522"
 ---
-# <a name="how-to-specify-database-names"></a>Procedura: Specificare i nomi di Database
+# <a name="how-to-specify-database-names"></a>Procedura: Specificare nomi di database
 Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su un attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> per specificare il nome di un database quando non viene fornito dalla connessione.  
   
  Per alcuni esempi di codice, vedere <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
@@ -23,5 +23,6 @@ Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su
 3.  Impostare il valore della proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> sul nome che si desidera specificare.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Procedura: Personalizzare classi di entità mediante l'editor del codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

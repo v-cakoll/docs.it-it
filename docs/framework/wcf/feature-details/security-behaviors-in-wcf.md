@@ -2,12 +2,12 @@
 title: Comportamenti di sicurezza in WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180063"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamenti di sicurezza in WCF
 In Windows Communication Foundation (WCF), i comportamenti determinano il comportamento in fase di esecuzione a livello di servizio o a livello di endpoint. (Per altre informazioni sui comportamenti in generale, vedere [che specifica il comportamento di Run-Time Service](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamenti di sicurezza* consentono di controllare le credenziali, l'autenticazione, autorizzazione e i registri di controllo. I comportamenti possono essere utilizzati tramite programmazione o mediante configurazione. In questo argomento viene descritto come configurare i comportamenti relativi alle funzioni di sicurezza elencati di seguito:  
@@ -56,7 +56,7 @@ In Windows Communication Foundation (WCF), i comportamenti determinano il compor
  Per altre informazioni sull'utilizzo dell'elemento, vedere [come: Specificare i valori di credenziale Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<certificato > di \<clientCertificate > elemento  
- Usare la [ \<certificato >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) elemento quando il servizio deve disporre del certificato del client in anticipo per comunicare in modo sicuro con il client. Questa esigenza si presenta quando si usa il modello di comunicazione duplex. Nel modello più comune di comunicazione richiesta-risposta, il client include il proprio certificato nella richiesta e il servizio utilizza tale certificato per proteggere la risposta che invia al client. Il modello di comunicazione duplex, invece, non prevede né richieste né risposte e pertanto il servizio non può ricavare il certificato del client dalla comunicazione. Di conseguenza, per proteggere i messaggi inviati al client, il servizio deve disporre in anticipo del certificato del client. Il certificato del client deve essere ottenuto fuori banda e deve essere specificato tramite questo elemento. Per altre informazioni sui servizi duplex, vedere [come: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Usare la [ \<certificato >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) elemento quando il servizio deve disporre del certificato del client in anticipo per comunicare in modo sicuro con il client. Questa esigenza si presenta quando si usa il modello di comunicazione duplex. Nel modello più comune di comunicazione richiesta-risposta, il client include il proprio certificato nella richiesta e il servizio usa tale certificato per proteggere la risposta che invia al client. Il modello di comunicazione duplex, invece, non prevede né richieste né risposte e pertanto il servizio non può ricavare il certificato del client dalla comunicazione. Di conseguenza, per proteggere i messaggi inviati al client, il servizio deve disporre in anticipo del certificato del client. Il certificato del client deve essere ottenuto fuori banda e deve essere specificato tramite questo elemento. Per altre informazioni sui servizi duplex, vedere [come: Creare un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<autenticazione > di \<clientCertificate > elemento  
  Il [ \<autenticazione >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) elemento consente di personalizzare la modalità di autenticazione client. A tale scopo, l'attributo `CertificateValidationMode` può essere impostato su `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` o `Custom`. Per impostazione predefinita, il livello è impostato su `ChainTrust`, che consente di specificare che ogni certificato appartenga a una gerarchia di certificati che termina con un *autorità radice* nella parte superiore della catena. Si tratta della modalità più protetta. Il livello può inoltre essere impostato su `PeerOrChainTrust`, a indicare che sia i certificati autocertificati (trust peer) sia i certificati appartenenti a una catena di trust sono ritenuti attendibili. Poiché i certificati autocertificati non devono essere acquistati da un'autorità attendibile, questo livello viene usato in fase di sviluppo e di debug dei client e dei servizi. Quando si distribuisce un client è invece opportuno usare il livello `ChainTrust`. Un altro livello disponibile è `Custom`. Quando si imposta il livello `Custom` è necessario impostare anche l'attributo `CustomCertificateValidatorType` sull'assembly e sul tipo usati per convalidare il certificato. Per creare un validator personalizzato è necessario ereditare una classe dalla classe astratta <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
@@ -218,5 +218,6 @@ In Windows Communication Foundation (WCF), i comportamenti determinano il compor
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

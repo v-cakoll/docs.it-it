@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171890"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperatività di WPF e Win32
 Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, se si ha una grande quantità di codice [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], può essere più efficace riutilizzare tale codice.  
-  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>Nozioni di base sull'interoperatività di WPF e Win32  
  Ci sono due tecniche di base per l'interoperatività tra codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
@@ -31,7 +29,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Progetti di interoperatività WPF  
- Le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono costituite da codice gestito, ma la maggior parte dei programmi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] esistenti è scritta in codice [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] non gestito.  Non è possibile chiamare [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da un programma non gestito vero e proprio. Usando tuttavia l'opzione `/clr` con il compilatore [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], è possibile creare un programma misto gestito e non gestito in cui si possono combinare facilmente chiamate ad [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] gestite e non gestite.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2scodice gestito, ma la maggior parte esistenti [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programmi sono scritti in non gestito [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enNon è possibile chiamare [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da un programma non gestito vero e proprio.nUsando tuttavia l'opzione `/clr` con il compilatore [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], è possibile creare un programma misto gestito e non gestito in cui si possono combinare facilmente chiamate ad [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] gestite e non gestite.  
   
  Una complicazione a livello di progetto è costituita dal fatto che non è possibile compilare file [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] in un progetto [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Per ovviare a tale problema, ci sono diverse tecniche di divisione dei progetti.  
   
@@ -64,7 +62,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
 2.  Implementare un'applicazione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] con [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Se si parte da un'applicazione [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] non gestita esistente, in genere è possibile consentire la chiamata al codice gestito modificando le impostazioni del progetto in modo da includere il flag del compilatore `/clr` (l'ambito completo degli elementi necessari per supportare la compilazione `/clr` non viene illustrato in questo argomento).  
   
-3.  Impostare il modello di threading su apartment a thread singolo (STA, Single Threaded Apartment). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa questo modello di threading.  
+3.  Impostare il modello di threading su apartment a thread singolo (STA, Single Threaded Apartment). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa questo modello di threading.  
   
 4.  Gestire la notifica WM_CREATE nella procedura di finestra.  
   
@@ -157,6 +155,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
  Le interfacce forniscono supporto solo per le operazioni eseguite nella transizione tra le aree [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. All'interno dell'area [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], il comportamento di tabulazione è completamente controllato dalla logica implementata da [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] per la tabulazione, se presente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>

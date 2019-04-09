@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166673"
 ---
 # <a name="dns"></a>\<dns>
 Specifica l'identità prevista del server. Questa identità è valida per la modalità di autenticazione tramite certificato X509 se il certificato del server contiene un DNS con lo stesso valore. Questa identità è inoltre valida per la modalità di autenticazione Windows se il nome SPN presenta lo stesso valore.  
@@ -30,7 +30,7 @@ Specifica l'identità prevista del server. Questa identità è valida per la mod
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|Valore|DNS del certificato. DNS è un protocollo conforme a standard di settore usato per individuare i computer di una rete basata su IP. Gli utenti in grado di memorizzare i nomi visualizzati, ad esempio [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) oppure [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), più facile che dover utilizzare indirizzi numerici, ad esempio 207.46.131.137.|  
+|predefinito|DNS del certificato. DNS è un protocollo conforme a standard di settore usato per individuare i computer di una rete basata su IP. Gli utenti in grado di memorizzare i nomi visualizzati, ad esempio [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) oppure [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), più facile che dover utilizzare indirizzi numerici, ad esempio 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -51,6 +51,7 @@ Specifica l'identità prevista del server. Questa identità è valida per la mod
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

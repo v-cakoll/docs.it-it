@@ -8,12 +8,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: 297e3bfec9bb24fb2c06e903a5f32410618812d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161005"
 ---
 # <a name="how-to-join-toolstrippanels"></a>Procedura: Unire controlli ToolStripPanel
 È possibile unire controlli <xref:System.Windows.Forms.ToolStrip> a un oggetto <xref:System.Windows.Forms.ToolStripPanel> in fase di esecuzione, che fornisce la flessibilità delle applicazioni di interfaccia a documenti multipli (MDI).  
@@ -32,6 +32,7 @@ ms.locfileid: "57703673"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Procedura: Usare ToolStripPanels per MDI](how-to-use-toolstrippanels-for-mdi.md)
+- [Procedura: Usare controlli ToolStripPanel per l'interfaccia a documenti multipli](how-to-use-toolstrippanels-for-mdi.md)

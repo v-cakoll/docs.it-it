@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176410"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Cenni preliminari sul controllo Splitter (Windows Form)
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703193"
  Quando l'utente fa riferimento il puntatore del mouse sul bordo di un controllo che può essere ridimensionato da un controllo barra di divisione non ancorato, il puntatore del mouse cambia il suo aspetto per indicare che è possibile ridimensionare il controllo. Con il controllo barra di divisione, l'utente può ridimensionare il controllo ancorato immediatamente precedente. Pertanto, per consentire all'utente di ridimensionare un controllo ancorato in fase di esecuzione, ancorare il controllo deve essere ridimensionato a un bordo di un contenitore e quindi ancorare un controllo splitter al lato del contenitore stesso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: Ancorare i controlli in Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

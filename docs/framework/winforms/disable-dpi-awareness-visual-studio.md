@@ -1,21 +1,24 @@
 ---
 title: Disabilitare la compatibilità con DPI in Visual Studio
-description: Descrive le limitazioni di progettazione form di Windows su schermi HDPI e su come eseguire Visual Studio come un processo non compatibili con DPI.
-ms.date: 03/19/2019
+description: Descrive le limitazioni di progettazione di Windows Form su schermi HDPI e come eseguire Visual Studio come un processo non compatibili con DPI.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181382"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Disabilitare la compatibilità con DPI in Visual Studio
 
 Visual Studio è un punti per pollice (DPI) compatibile con applicazioni, ovvero le scale visualizzato automaticamente. Se un'applicazione indica che non è compatibile con DPI, il sistema operativo Ridimensiona l'applicazione come un'immagine bitmap. Questo comportamento è l'acronimo di virtualizzazione DPI. L'applicazione continua a ritenere che venga eseguito al 100% di ridimensionamento o pari a 96 dpi.
+
+Questo articolo illustra le limitazioni di progettazione di Windows Form su schermi HDPI e come eseguire Visual Studio come un processo non compatibili con DPI.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Finestra di progettazione Windows Form su schermi HDPI
 
@@ -32,11 +35,15 @@ Legge il messaggio **ridimensionamento dello schermo principale è impostato su 
 > [!NOTE]
 > Questa barra informativa è stata introdotta in Visual Studio 2017 versione 15.8.
 
-Se si non funzionano nella finestra di progettazione e non essere necessario modificare il layout del form, è possibile ignorare la barra informativa e continuare a lavorare nell'editor del codice o in altri tipi di finestre di progettazione. (È anche possibile [disabilitare le notifiche](#disable-notifications) in modo che la barra informativa non vengono ancora visualizzati.) Solo le **finestra di progettazione Windows Form** è interessato. Se è necessario lavorare nel **finestra di progettazione Windows Form**, nella sezione successiva consente [risolvere il problema](#to-resolve-the-problem).
+Se si non funzionano nella finestra di progettazione e non essere necessario modificare il layout del form, è possibile ignorare la barra informativa e continuare a lavorare nell'editor del codice o in altri tipi di finestre di progettazione. (È anche possibile [disabilitare le notifiche](#disable-notifications) in modo che la barra informativa non vengono ancora visualizzati.) Solo le **finestra di progettazione Windows Form** è interessato. Se è necessario lavorare nel **finestra di progettazione Windows Form**, nella sezione successiva consente [risolvere il problema](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Per risolvere il problema
+## <a name="to-resolve-the-display-problem"></a>Per risolvere il problema di visualizzazione
 
-Sono disponibili tre opzioni per risolvere il problema di visualizzazione.
+Sono disponibili tre opzioni per risolvere il problema di visualizzazione:
+
+1. [Riavviare Visual Studio come un processo non compatibili con DPI](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Aggiungere una voce del Registro di sistema](#add-a-registry-entry)
+3. [Impostare la visualizzazione delle impostazione al 100% la scalabilità](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Riavviare Visual Studio come un processo non compatibili con DPI
 

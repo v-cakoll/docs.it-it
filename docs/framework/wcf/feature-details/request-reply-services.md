@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: a8d9ee30df5198335b15d2d7130d853f4dd73a18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177814"
 ---
 # <a name="request-reply-services"></a>Servizi request/reply
 Servizi request / reply sono il tipo predefinito di contratto dell'operazione in Windows Communication Foundation (WCF). I client effettuano chiamate alle operazioni del servizio e attendono una risposta dal servizio. È possibile effettuare chiamate a un'operazione del servizio in modo sincrono o asincrono. Nel primo caso, il client si blocca finché non riceve una risposta dal servizio o la chiamata scade, mentre nel secondo caso il client esegue una chiamata all'operazione del servizio, continua a funzionare e riceve la risposta dal servizio su un altro thread.  
@@ -31,5 +31,6 @@ public interface IRequestReplyCalculator
  Non è necessario impostare la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `false` perché questo è il comportamento predefinito.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Servizi unidirezionali](../../../../docs/framework/wcf/feature-details/one-way-services.md)
 - [Servizi duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

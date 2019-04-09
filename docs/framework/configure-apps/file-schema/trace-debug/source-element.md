@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186550"
 ---
 # <a name="source-element"></a>\<origine > elemento
 Specifica un'origine di traccia che avvia i messaggi di traccia.  
@@ -83,5 +83,6 @@ Specifica un'origine di traccia che avvia i messaggi di traccia.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Opzioni di traccia](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

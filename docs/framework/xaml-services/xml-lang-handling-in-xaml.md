@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 9ec844c37ee2ef7979c82b308cdf167a46a3c072
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163572"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Gestione di xml:lang in XAML
 L'attributo `xml:lang` è un attributo definito da [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]che dichiara le informazioni relative a lingua e cultura per un elemento in XML. Il significato dell'attributo rimane persistente in XAML. Tuttavia, sono valide alcune considerazioni aggiuntive.  
@@ -44,4 +44,5 @@ L'attributo `xml:lang` è un attributo definito da [!INCLUDE[TLA2#tla_xml](../..
  Per gli elementi che sono classi derivate di <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, è possibile usare l'equivalente proprietà di dipendenza <xref:System.Windows.FrameworkElement.Language%2A> anziché l'attributo `xml:lang` . Per impostazione predefinita, la proprietà <xref:System.Windows.FrameworkElement.Language%2A> usa "en-US" se non viene specificato un valore diverso tramite la proprietà o tramite l'elaborazione dell'attributo `xml:lang` .  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Globalizzazione per WPF](../wpf/advanced/globalization-for-wpf.md)

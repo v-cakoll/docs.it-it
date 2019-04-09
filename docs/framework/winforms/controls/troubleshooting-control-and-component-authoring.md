@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168064"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
 In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -108,9 +108,10 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
  Quando si usa <xref:System.Drawing.ToolboxBitmapAttribute> per associare un'icona con il componente personalizzato, la bitmap non viene visualizzata nella casella degli strumenti per i componenti generati automaticamente. Per visualizzare la bitmap, ricaricare il controllo usando la finestra di dialogo **Scegli elementi della casella degli strumenti**. Per altre informazioni, vedere [Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md)
 - [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [Modifica di componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Risoluzione dei problemi relativi allo sviluppo in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

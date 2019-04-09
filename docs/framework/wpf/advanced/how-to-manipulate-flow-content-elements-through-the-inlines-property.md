@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Modificare gli elementi di contenuto del flusso tramite la proprietà Inlines'
+title: 'Procedura: Modificare elementi di contenuto di flusso tramite la proprietà Inlines'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186069"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procedura: Modificare gli elementi di contenuto del flusso tramite la proprietà Inlines
+# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procedura: Modificare elementi di contenuto di flusso tramite la proprietà Inlines
 Questi esempi illustrano alcune delle operazioni più comuni che possono essere eseguite su elementi di contenuto dinamico inline (e i contenitori di tali elementi, ad esempio <xref:System.Windows.Controls.TextBlock>) tramite il **Inlines** proprietà. Questa proprietà viene utilizzata per aggiungere e rimuovere elementi da <xref:System.Windows.Documents.InlineCollection>. Flusso di contenuto gli elementi che presentano un' **Inlines** proprietà includono:  
   
 -   <xref:System.Windows.Documents.Bold>  
@@ -65,6 +65,7 @@ Questi esempi illustrano alcune delle operazioni più comuni che possono essere 
  [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

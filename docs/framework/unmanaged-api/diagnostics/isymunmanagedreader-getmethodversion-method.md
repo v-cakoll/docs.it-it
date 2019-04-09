@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5d4145e6c76cf95f2468a3f5ad59edcd310423e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160875"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Metodo ISymUnmanagedReader::GetMethodVersion
 Ottiene la versione del metodo. La versione del metodo inizia da 1 e viene incrementata ogni volta che il metodo viene ricompilato. La ricompilazione può verificarsi senza modifiche al metodo.  
@@ -49,4 +49,5 @@ HRESULT GetMethodVersion (
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

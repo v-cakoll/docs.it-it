@@ -2,12 +2,12 @@
 title: 'Procedura: Usare MetadataExchangeClient per recuperare i metadati'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168623"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Procedura: Usare MetadataExchangeClient per recuperare i metadati
 Utilizzare la classe <xref:System.ServiceModel.Description.MetadataExchangeClient> per scaricare metadati utilizzando il protocollo WS-MetadataExchange (MEX). I file dei metadati recuperati vengono restituiti come oggetti <xref:System.ServiceModel.Description.MetadataSet>. L'oggetto <xref:System.ServiceModel.Description.MetadataSet> restituito contiene una raccolta di oggetti <xref:System.ServiceModel.Description.MetadataSection>, ognuno dei quali contiene a sua volta un sottolinguaggio dei metadati specifici e un identificatore. I metadati restituiti possono essere scritti in file o, se contengono documenti WSDL (Web Services Description Language), possono essere importati utilizzando <xref:System.ServiceModel.Description.WsdlImporter>.  
@@ -36,6 +36,7 @@ Utilizzare la classe <xref:System.ServiceModel.Description.MetadataExchangeClien
  Per compilare questo esempio di codice, è necessario fare riferimento all'assembly System.ServiceModel.dll e importare lo spazio dei nomi <xref:System.ServiceModel.Description>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

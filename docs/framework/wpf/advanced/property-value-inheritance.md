@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186829"
 ---
 # <a name="property-value-inheritance"></a>Ereditarietà del valore della proprietà
 L'ereditarietà del valore della proprietà è una funzionalità del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'ereditarietà del valore della proprietà consente agli elementi figlio in un albero di elementi di ottenere il valore di una determinata proprietà dagli elementi padre, ereditando tale valore con le impostazioni specificate in un punto qualsiasi dell'elemento padre più vicino. Anche l'elemento padre potrebbe aver ottenuto il valore tramite l'ereditarietà del valore della proprietà, pertanto il sistema potrebbe procedere in modo ricorsivo fino alla radice della pagina. L'ereditarietà del valore della proprietà non è il comportamento predefinito del sistema di proprietà. È necessario stabilire una particolare impostazione dei metadati di una proprietà per fare in modo che quest'ultima attivi l'ereditarietà del valore per gli elementi figlio.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>L'ereditarietà del valore della proprietà è un'ereditarietà di contenimento  
  Il termine "ereditarietà" usato in questa sede non coincide perfettamente con il concetto di ereditarietà nel contesto dei tipi e in generale della programmazione orientata a oggetti, in cui le classi derivate ereditano le definizioni dei membri dalle rispettive classi di base. Questo significato di ereditarietà è valido anche in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: le proprietà definite nelle varie classi di base sono esposte come attributi per le classi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derivate, se usate come elementi ed esposte come membri per il codice. L'ereditarietà del valore della proprietà riguarda in particolare il modo in cui i valori delle proprietà possono ereditare da un elemento a un altro in base alle relazioni padre-figlio all'interno di un albero di elementi. L'albero di elementi è visibile più direttamente quando si annidano elementi all'interno di altri elementi in fase di definizione delle applicazioni nel markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Gli alberi di oggetti possono essere creati anche a livello di codice, aggiungendo oggetti a raccolte designate di altri oggetti. In questo caso la modalità di funzionamento dell'ereditarietà del valore della proprietà sarà la stessa nell'albero completato in fase di esecuzione.  
@@ -42,6 +40,7 @@ L'ereditarietà del valore della proprietà è una funzionalità del sistema di 
  L'ereditarietà delle proprietà funziona mediante il passaggio attraverso un albero di elementi. Quest'albero spesso è parallelo all'albero logico. Tuttavia, quando si include un oggetto di livello principale WPF nel markup che definisce un albero degli elementi, ad esempio un <xref:System.Windows.Media.Brush>, aver creato un albero logico discontinuo. Un vero albero logico non estende a livello concettuale i <xref:System.Windows.Media.Brush>, in quanto l'albero logico è un concetto a livello di framework WPF. È possibile verificarlo mostrate nei risultati quando si usano i metodi di <xref:System.Windows.LogicalTreeHelper>. Tuttavia, l'ereditarietà del valore della proprietà può colmare questa discontinuità nell'albero logico e comunque possibile passare i valori ereditati, purché la proprietà ereditabile è stata registrata come una proprietà associata e nessun limite di blocco dell'ereditarietà impostato intenzionalmente (ad esempio un <xref:System.Windows.Controls.Frame>) viene rilevato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metadati delle proprietà di dipendenza](dependency-property-metadata.md)
 - [Cenni preliminari sulle proprietà associate](attached-properties-overview.md)
 - [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md)

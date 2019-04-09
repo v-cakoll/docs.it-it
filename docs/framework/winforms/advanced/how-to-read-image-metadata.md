@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173615"
 ---
 # <a name="how-to-read-image-metadata"></a>Procedura: Leggere i metadati delle immagini
 Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Scatta una foto digitale, ad esempio, potrebbe contenere i metadati che possono leggere per determinare la marca e modello di fotocamera usata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti ed è anche possibile scrivere i nuovi metadati al file di immagine.  
@@ -40,7 +40,7 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
   
 |Valore numerico|Descrizione|  
 |-------------------|-----------------|  
-|1|Elemento `Byte`|  
+|1|A `Byte`|  
 |2|Matrice di `Byte` oggetti codificati in ASCII|  
 |3|Un intero a 16 bit|  
 |4|Un intero a 32 bit|  
@@ -121,8 +121,9 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
  [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Handle del modulo <xref:System.Windows.Forms.Control.Paint> evento e incollare questo codice nel gestore dell'evento paint. È necessario sostituire `FakePhoto.jpg` con un nome di immagine e un percorso valido per il sistema e l'importazione di `System.Drawing.Imaging` dello spazio dei nomi.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Handle del modulo <xref:System.Windows.Forms.Control.Paint> evento e incollare questo codice nel gestore dell'evento paint. È necessario sostituire `FakePhoto.jpg` con un nome di immagine e un percorso valido per il sistema e l'importazione di `System.Drawing.Imaging` dello spazio dei nomi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
 - [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

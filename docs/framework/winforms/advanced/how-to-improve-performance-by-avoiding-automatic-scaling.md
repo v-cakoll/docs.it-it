@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163592"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedura: Migliorare le prestazioni evitando il ridimensionamento automatico
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] durante il disegno, che ridurrebbe le prestazioni, può ridimensionare automaticamente un'immagine. In alternativa, è possibile controllare il ridimensionamento dell'immagine, passando le dimensioni del rettangolo di destinazione per il <xref:System.Drawing.Graphics.DrawImage%2A> (metodo).  
@@ -41,5 +41,6 @@ ms.locfileid: "58653795"
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire texture. jpg con un nome di immagine e il percorso che sono validi per il sistema.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
 - [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

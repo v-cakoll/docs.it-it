@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Aggiungere all'applicazione in più set di impostazioniC#"
+title: "Procedura: Aggiungere più set di impostazioni all'applicazione in C#"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 106e0ee0b8775f329f3ffd8babe458cac8492bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187382"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: Aggiungere più set di impostazioni dell'applicazione in C\#
 In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazione. Ad esempio, se si sviluppa un'applicazione posto di un determinato gruppo di impostazioni di cambiare frequentemente, è possibile raggrupparle tutto in un singolo file in modo che il file può essere sostituito a livello globale, lasciando inalterate le altre impostazioni. Visual Studio consente di aggiungere più set di impostazioni al progetto. Altri set di impostazioni sono accessibili tramite l'oggetto Properties. Settings.  
@@ -26,5 +26,6 @@ In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazio
 4.  Aggiungere e usare le impostazioni in questo file come si farebbe con qualsiasi altro file di impostazioni. È possibile accedere a questo gruppo di impostazioni tramite l'oggetto Properties. Settings.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+
+- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
 - [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)

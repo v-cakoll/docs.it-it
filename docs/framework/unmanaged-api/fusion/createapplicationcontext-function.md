@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6b5aa78efcc19f1fc50c8e9bfc5105f9afd7d50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170963"
 ---
 # <a name="createapplicationcontext-function"></a>Funzione CreateApplicationContext
 Questa funzione supporta l'infrastruttura .NET Framework e non deve essere usato direttamente dal codice.  
@@ -52,6 +52,7 @@ HRESULT CreateApplicationContext (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

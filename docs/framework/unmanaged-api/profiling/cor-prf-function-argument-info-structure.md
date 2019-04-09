@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163115"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>Struttura COR_PRF_FUNCTION_ARGUMENT_INFO
 Rappresenta gli argomenti di una funzione, in ordine da sinistra a destra.  
@@ -38,7 +38,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`numRanges`|Il numero di blocchi di argomenti. Vale a dire, questo valore è il numero di [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) le strutture nel `ranges` matrice.|  
 |`totalArgumentSize`|Le dimensioni totali di tutti gli argomenti. In altre parole, questo valore è la somma delle lunghezze degli argomenti.|  
@@ -61,4 +61,5 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175292"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenari del controllo DataGridView (Windows Form)
 Con la <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visualizzare dati tabulari forniti da un'ampia gamma di origini dati. Per le operazioni semplici, è possibile inserire manualmente un <xref:System.Windows.Forms.DataGridView> e modificare i dati direttamente tramite il controllo. In genere, tuttavia, si verrà archiviano i dati in un'origine dati esterna e associare il controllo tramite un <xref:System.Windows.Forms.BindingSource> componente.  
@@ -87,5 +87,6 @@ Con la <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visual
 -   È possibile implementare le classi di celle e colonne per ospitare i controlli diversi da quelli forniti da tipi di colonna predefiniti. Per altre informazioni, vedere [Procedura: Inserire controlli in Windows Form celle DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Panoramica sul controllo DataGridView](datagridview-control-overview-windows-forms.md)
+- [Panoramica del controllo DataGridView](datagridview-control-overview-windows-forms.md)

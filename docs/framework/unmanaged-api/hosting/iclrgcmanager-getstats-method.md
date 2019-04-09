@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187335"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Metodo ICLRGCManager::GetStats
 Ottiene un set di statistiche correnti sul sistema di garbage collection di common language runtime.  
@@ -73,7 +73,8 @@ pCLRGCManager->GetStats(&GCStats);
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Enumerazione COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172120"
 ---
 # <a name="wcf-data-services-resources"></a>Risorse di WCF Data Services
-Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] argomenti introduttivi sono reperibile nei percorsi seguenti. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
   
  [Panoramica](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Viene fornita una panoramica delle caratteristiche e delle funzionalità introdotte in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -47,7 +47,7 @@ Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssA
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Posizione centrale per la ricerca di informazioni e risorse per l'uso dei dati.  
   
- [Piattaforma dati di ricerca per categorie? Video Serie Wcf.net Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Video "Ricerca per categorie" sulle piattaforme dati: Video Serie Wcf.net Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Contiene un set di video nei quali viene illustrato come compilare e accedere ai servizi dati.  
   
  [Panoramica: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
@@ -60,4 +60,5 @@ Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssA
  Vengono descritte le basi del modello entità-relazione implementato da [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Scritto nel 1976, si tratta di uno dei documenti più citati in campo informatico.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

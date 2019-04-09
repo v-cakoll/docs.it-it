@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188266"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Procedura: Disegnare linee opache e semitrasparenti
 Quando si disegna una linea, è necessario passare un oggetto <xref:System.Drawing.Pen> al metodo <xref:System.Drawing.Graphics.DrawLine%2A> della classe <xref:System.Drawing.Graphics>. Uno dei parametri del costruttore <xref:System.Drawing.Pen.%23ctor%2A> è un oggetto <xref:System.Drawing.Color>. Per disegnare una linea opaca, impostare il componente alfa del colore su 255. Per disegnare una linea semitrasparente, impostare il componente alfa su un valore qualsiasi compreso tra 1 e 254.  
@@ -33,9 +33,10 @@ Quando si disegna una linea, è necessario passare un oggetto <xref:System.Drawi
  ![Figura che mostra l'output opache e semitrasparenti](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee e riempimenti con fusione alfa](alpha-blending-lines-and-fills.md)
-- [Procedura: Assegnare al controllo uno sfondo trasparente](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Procedura: Assegnare uno sfondo trasparente al controllo](../controls/how-to-give-your-control-a-transparent-background.md)
 - [Procedura: Disegnare con pennelli opachi e semitrasparenti](how-to-draw-with-opaque-and-semitransparent-brushes.md)

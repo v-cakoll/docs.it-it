@@ -2,12 +2,12 @@
 title: Eventi di rilevamento in Traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166530"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
 In questo esempio viene illustrato come abilitare la traccia in un servizio del flusso di lavoro Windows Workflow Foundation (WF) e creare gli eventi di rilevamento in Event Tracing for Windows (ETW). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -20,7 +20,7 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio del 
 |Componente|Descrizione|
 |---------------|-----------------|
 |Esecuzione del rilevamento|Fornisce l'infrastruttura per la creazione dei record di rilevamento.|
-|Partecipanti del rilevamento|Accede ai record di rilevamento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] viene fornito con un partecipante del rilevamento che scrive record di rilevamento come eventi ETW (Traccia eventi per Windows).|
+|Partecipanti del rilevamento|Accede ai record di rilevamento. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] viene fornito con un partecipante del rilevamento che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW).|
 |Profilo di rilevamento|Meccanismo di filtro che consente a un partecipante del rilevamento di sottoscrivere un subset dei record di rilevamento creati da un'istanza del flusso di lavoro.|
 
  Nella tabella seguente vengono indicati in dettaglio i record di rilevamento creati dall'esecuzione del flusso di lavoro.
@@ -150,4 +150,5 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio del 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Vedere anche
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Allineare un controllo ai bordi dei form'
+title: 'Procedura: Allineare un controllo ai bordi dei moduli'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 33a3b2e996bdab280eb7a4cd8ad7c59ccb1a1bd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185783"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Procedura: Allineare un controllo ai bordi dei form
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Procedura: Allineare un controllo ai bordi dei moduli
 È possibile allineare un controllo al bordo dei form impostando la proprietà <xref:System.Windows.Forms.Control.Dock%2A> che designa la posizione del controllo nel form. La proprietà <xref:System.Windows.Forms.Control.Dock%2A> può essere impostata su uno dei valori riportati di seguito:  
   
 |Impostazione|Effetto sul controllo|  
@@ -50,9 +50,10 @@ ms.locfileid: "57713891"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Procedura: Ancorare e agganciare controlli figlio in un controllo TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)

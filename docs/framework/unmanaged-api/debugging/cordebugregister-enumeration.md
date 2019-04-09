@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4175cf26b783ab7f19905941e94cfdb15ce69cff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168614"
 ---
 # <a name="cordebugregister-enumeration"></a>Enumerazione CorDebugRegister
 Specifica i registri associati a un'architettura di processore specifica.  
@@ -116,7 +116,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|Un registro dei puntatori alle istruzioni in qualsiasi processore.|  
 |`REGISTER_STACK_POINTER`|Un registro dei puntatori agli stack in qualsiasi processore.|  
@@ -210,4 +210,5 @@ typedef enum CorDebugRegister {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

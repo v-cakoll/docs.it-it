@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161512"
 ---
 # <a name="structured-navigation-overview"></a>Cenni preliminari sulla navigazione strutturata
 Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], una <xref:System.Windows.Controls.Frame>, o una <xref:System.Windows.Navigation.NavigationWindow> è composto da pagine che possono essere identificate da pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e la navigazione da collegamenti ipertestuali. La struttura della pagine e i modi in cui è possibile spostarsi tra di esse, definiti dai collegamenti ipertestuali, costituiscono una topologia di navigazione. Tale topologia è adatta a vari tipi di applicazioni, in particolare a quelli che consentono di spostarsi tra documenti. Per tali applicazioni, l'utente può spostarsi da una pagina all'altra senza che una pagina disponga di informazioni sull'altra.  
@@ -20,9 +20,7 @@ Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../in
  Tuttavia, altri tipi di applicazioni presentano pagine che necessitano di informazioni su quando avviene la navigazione tra di esse. Ad esempio, si consideri un'applicazione di risorse umane che include una pagina in cui vengono elencati tutti i dipendenti di un'azienda - la pagina "Elenco dipendenti". Questa pagina può inoltre consentire agli utenti di aggiungere un nuovo dipendente facendo clic su un collegamento ipertestuale. Quando si fa clic su tale collegamento, si passa alla pagina "Aggiungi dipendente" in cui vengono raccolti i dettagli sul nuovo dipendente e quindi si torna alla pagina "Elenco dipendenti" in cui viene creato il nuovo dipendente e aggiornato l'elenco. Questo stile di navigazione è simile alla chiamata di un metodo per l'esecuzione di una determinata elaborazione e la restituzione di un valore, denominata programmazione strutturata. Analogamente, questo stile di navigazione è denominato *navigazione strutturata*.  
   
  Il <xref:System.Windows.Controls.Page> classe non implementa il supporto per la navigazione strutturata. Al contrario, il <xref:System.Windows.Navigation.PageFunction%601> deriva dalla classe <xref:System.Windows.Controls.Page> e lo estende con i costrutti di base necessari per la navigazione strutturata. In questo argomento viene illustrato come definire la navigazione strutturata con <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Navigazione strutturata  
  Quando una pagina chiama un'altra pagina in una navigazione strutturata, sono richiesti alcuni o tutti i comportamenti seguenti:  
@@ -170,6 +168,7 @@ Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../in
  In altri casi, le applicazioni possono presentare topologie di navigazione complesse il cui corretto funzionamento dipende dalla navigazione strutturata. Per altre informazioni vedere [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
 - [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md)

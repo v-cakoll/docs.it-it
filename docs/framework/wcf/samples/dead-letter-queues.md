@@ -2,12 +2,12 @@
 title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177931"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -24,7 +24,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
  La coda di messaggi non recapitabili nell'associazione `NetMsmqBinding` è espressa nelle proprietà seguenti:
 
--   Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> proprietà per esprimere il tipo di coda dei messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
 
 -   `None`: Coda dei messaggi non recapitabili è richiesto dal client.
 
@@ -32,7 +32,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 -   `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
--   Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà per esprimere la coda specifica da usare come una coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  In questo esempio, il client invia un gruppo di messaggi al servizio dall'interno dell'ambito di una transazione e specifica un valore arbitrariamente basso per la "durata" di questi messaggi (circa 2 secondi). Il client specifica anche una coda di messaggi non recapitabili personalizzata da usare per accodare i messaggi che sono scaduti.
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

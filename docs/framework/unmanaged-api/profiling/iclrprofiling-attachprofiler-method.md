@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174174"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Metodo ICLRProfiling::AttachProfiler
 Connette il profiler specificato al processo specificato.  
@@ -91,6 +91,7 @@ HRESULT AttachProfiler(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Interfaccia ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

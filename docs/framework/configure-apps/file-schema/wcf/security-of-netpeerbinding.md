@@ -2,12 +2,12 @@
 title: <security> di <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170092"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 Definisce le impostazioni di sicurezza del [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), incluso il tipo di autenticazione utilizzato e la sicurezza per il trasporto dei messaggi.  
@@ -37,14 +37,14 @@ Definisce le impostazioni di sicurezza del [ \<netPeerTcpBinding >](../../../../
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|modalità|Parametro facoltativo. Specifica il tipo di sicurezza usata da peer configurati con questa associazione. Il valore predefinito è `Message`. L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
+|modalità|Facoltativo. Specifica il tipo di sicurezza usata da peer configurati con questa associazione. Il valore predefinito è `Message`. L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Messaggio|La sicurezza SOAP fornisce autenticazione, integrità e riservatezza.|  
-|None|La sicurezza è disabilitata.|  
+|nessuno|La sicurezza è disabilitata.|  
 |Trasporto|La sicurezza è fornita mediante HTTPS.|  
 |TransportWithMessageCredential|HTTPS fornisce autenticazione e riservatezza. I messaggi SOAP forniscono tipi di credenziale dettagliati.|  
   
@@ -64,6 +64,7 @@ Definisce le impostazioni di sicurezza del [ \<netPeerTcpBinding >](../../../../
  La sicurezza può essere specifica dei messaggi o del trasporto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>

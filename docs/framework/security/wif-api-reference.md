@@ -3,12 +3,12 @@ title: Riferimento per le API di WPF
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172211"
 ---
 # <a name="wif-api-reference"></a>Riferimento per le API di WPF
 Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll). Questo argomento fornisce collegamenti agli spazi dei nomi WIF e una breve spiegazione delle classi contenute in ogni spazio dei nomi.  
@@ -47,5 +47,6 @@ Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: 
  Contiene le classi che rappresentano contratti, canali, host servizio e altri elementi WCF usati in scenari attivi (WS-Trust). Questo spazio dei nomi contiene anche classi specifiche di Windows Communication Foundation (WCF) non usate da WIF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)
 - [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

@@ -2,12 +2,12 @@
 title: Estendibilità della diffusione
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170807"
 ---
 # <a name="syndication-extensibility"></a>Estendibilità della diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione di formato neutro che consente di scrivere in rete il contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -45,5 +45,6 @@ L'API di diffusione è progettata per fornire un modello di programmazione di fo
 -   Eseguire l'override di <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> nella classe MyExtensionFeed per creare l'istanza di un MyExtensionItem anziché del <xref:System.ServiceModel.Syndication.SyndicationItem> predefinito. In <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> è definita una serie di metodi in grado di creare oggetti <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory> e <xref:System.ServiceModel.Syndication.SyndicationPerson> (ad esempio, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> e <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Tutti possono essere sottoposti a override per creare una classe derivata personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Architettura della diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+
+- [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Architettura di diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

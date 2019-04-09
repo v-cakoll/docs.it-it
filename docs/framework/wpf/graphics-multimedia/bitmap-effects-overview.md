@@ -4,21 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166894"
 ---
 # <a name="bitmap-effects-overview"></a>Cenni preliminari sugli effetti bitmap
 Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare effetti visivi al rendering del contenuto Windows Presentation Foundation (WPF). Ad esempio, gli effetti bitmap consentono di applicare facilmente un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> effetto o un effetto sfocatura a un'immagine o un pulsante.  
   
 > [!IMPORTANT]
 >  Nel [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] o versioni successive, il <xref:System.Windows.Media.Effects.BitmapEffect> classe è obsoleta. Se si prova a usare il <xref:System.Windows.Media.Effects.BitmapEffect> (classe), si otterrà un'eccezione obsoleta. L'alternativa non obsoleta per le <xref:System.Windows.Media.Effects.BitmapEffect> classe è il <xref:System.Windows.Media.Effects.Effect> classe. Nella maggior parte dei casi, il <xref:System.Windows.Media.Effects.Effect> classe è notevolmente più veloce.  
-  
-  
-  
+
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>Effetti bitmap WPF  
  Effetti bitmap (<xref:System.Windows.Media.Effects.BitmapEffect> oggetto) sono i pixel semplici operazioni di elaborazione. Un effetto bitmap accetta un <xref:System.Windows.Media.Imaging.BitmapSource> come input e produce un nuovo oggetto <xref:System.Windows.Media.Imaging.BitmapSource> dopo aver applicato l'effetto, ad esempio un' sfocatura o un'ombreggiatura. Ogni effetto bitmap espone proprietà che possono controllare le proprietà di filtro, ad esempio <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> di <xref:System.Windows.Media.Effects.BlurBitmapEffect>.  
@@ -36,10 +34,10 @@ Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare eff
 -   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> Crea un bump mapping di un <xref:System.Windows.Media.Visual> per dare l'impressione di profondità e trama da una sorgente di luce artificiale.  
   
 > [!NOTE]
->  Gli effetti bitmap [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vengono sottoposti a rendering in modalità software e anche qualsiasi oggetto che applica un effetto verrà sottoposto a rendering in modalità software. Le prestazioni diminuiscono in modo più sensibile quando si usano effetti bitmap su elementi visivi di grandi dimensioni o quando si animano le proprietà di un effetto bitmap. Ciò non significa che gli effetti bitmap non debbano mai essere usati in questo modo, ma che è necessario prestare attenzione ed eseguire numerosi test affinché gli utenti acquisiscano l'esperienza necessaria.  
+>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] il rendering degli effetti bitmap vengono eseguiti in modalità software. e anche qualsiasi oggetto che applica un effetto verrà sottoposto a rendering in modalità software. Le prestazioni diminuiscono in modo più sensibile quando si usano effetti bitmap su elementi visivi di grandi dimensioni o quando si animano le proprietà di un effetto bitmap. Ciò non significa che gli effetti bitmap non debbano mai essere usati in questo modo, ma che è necessario prestare attenzione ed eseguire numerosi test affinché gli utenti acquisiscano l'esperienza necessaria.  
   
 > [!NOTE]
->  Gli effetti bitmap [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non supportano l'esecuzione in situazioni di attendibilità parziale. Per l'uso degli effetti bitmap, un'applicazione deve disporre di autorizzazioni di attendibilità completa.  
+>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Gli effetti bitmap non supportano l'esecuzione in attendibilità parziale. Per l'uso degli effetti bitmap, un'applicazione deve disporre di autorizzazioni di attendibilità completa.  
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>Come applicare un effetto  
@@ -58,9 +56,10 @@ Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare eff
   
 <a name="customeffects"></a>   
 ## <a name="creating-custom-effects"></a>Creazione di effetti personalizzati  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sono disponibili anche interfacce non gestite per creare effetti personalizzati da usare nelle applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non gestite. Per materiale di riferimento aggiuntivo per la creazione di effetti bitmap personalizzati, vedere la documentazione [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Effetto bitmap WPF non gestito).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce inoltre le interfacce non gestite per creare effetti personalizzati che possono essere utilizzati in gestite [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni. Per materiale di riferimento aggiuntivo per la creazione di effetti bitmap personalizzati, vedere la documentazione [Unmanaged WPF Bitmap Effect](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) (Effetto bitmap WPF non gestito).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Effects.BitmapEffectGroup>
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
@@ -68,4 +67,4 @@ Gli effetti bitmap consentono a progettisti e agli sviluppatori di applicare eff
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)
 - [Sicurezza](../security-wpf.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

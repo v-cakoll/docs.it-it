@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cca073cfccedacb037478903a603c375c876349c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 846ff76fb1073394cc27597c9a2015148581cc70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165100"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>Metodo ISymUnmanagedReader::GetVariables
 Restituisce una variabile non locale, padre e al nome.  
@@ -58,4 +58,5 @@ HRESULT GetVariables (
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

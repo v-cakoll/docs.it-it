@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168130"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere: [Configurazione della traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul Visualizzatore dei file di traccia, vedere: [Strumento Visualizzatore di tracce (SvcTraceViewer.exe) del servizio](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Debug degli errori di autenticazione di Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

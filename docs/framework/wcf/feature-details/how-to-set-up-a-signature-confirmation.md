@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare una conferma della firma'
+title: 'Procedura: Impostare una conferma della firma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 5163436f75e403ee7f682cdbe378922657116063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176163"
 ---
-# <a name="how-to-set-up-a-signature-confirmation"></a>Procedura: Configurare una conferma della firma
+# <a name="how-to-set-up-a-signature-confirmation"></a>Procedura: Impostare una conferma della firma
 *Conferma della firma* è un meccanismo iniziatore del messaggio garantire che una risposta ricevuta sia stata generata in risposta al messaggio originale del mittente. La conferma della firma è definita nella specifica WS-Security 1.1. Se un endpoint supporta WS-Security 1.0, non è possibile utilizzare la conferma della firma.  
   
  Nelle procedure seguenti viene illustrato come consentire la conferma della firma utilizzando un <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. È possibile utilizzare la stessa procedura con un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. La procedura è basata sui passaggi di base illustrati [come: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
@@ -67,6 +67,7 @@ ms.locfileid: "54513617"
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>

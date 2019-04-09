@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Controlli di gruppo con il controllo GroupBox di Windows Form'
+title: 'Procedura: Raggruppare i controlli con il controllo GroupBox di Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179628"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Procedura: Controlli di gruppo con il controllo GroupBox di Windows Form
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Procedura: Raggruppare i controlli con il controllo GroupBox di Windows Forms
 Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati per raggruppare altri controlli. Esistono tre motivi per i controlli di gruppo:  
   
 -   Per creare un raggruppamento visivo di elementi di form per un'interfaccia utente non crittografato.  
@@ -33,5 +33,6 @@ Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati p
 3.  Impostare il <xref:System.Windows.Forms.GroupBox.Text%2A> proprietà della casella di gruppo per un titolo appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.GroupBox>
 - [Controllo GroupBox](groupbox-control-windows-forms.md)

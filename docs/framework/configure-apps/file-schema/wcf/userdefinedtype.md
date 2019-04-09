@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a69571f5d34c2f844662f3d70ca67a2fb8ed0291
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182138"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contratto di servizio.  
@@ -59,7 +59,7 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
   
  Per aggirare questo problema, è possibile aggiungere tipi definiti dall'utente al file di configurazione in modo che possano essere inclusi come tipi noti nel contratto di servizio appropriato. A tale scopo, è necessario identificare in modo univoco i tipi definiti dall'utente e i contratti, ovvero le interfacce COM originali che li usano.  
   
- L'esempio seguente illustra come aggiungere alla sezione <`userDefinedTypes`> del file di configurazione due tipi specifici definiti dall'utente per questo scopo.  
+ Nell'esempio seguente viene illustrato come aggiungere due tipi definiti dall'utente specifici per la <`userDefinedTypes`> sezione del file di configurazione per questo scopo.  
   
 ```xml  
 <comContracts>
@@ -91,9 +91,10 @@ Rappresenta un tipo definito dall'utente (UDT) che deve essere incluso nel contr
  Quando il servizio viene inizializzato, il runtime di integrazione ricerca i tipi specificati e li aggiunge alla raccolta dei tipi noti per i contratti specificati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Integrazione con applicazioni COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Procedura: Configurare le impostazioni di servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Procedura: Configurare le impostazioni del servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

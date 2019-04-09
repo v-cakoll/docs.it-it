@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57caee7a0da019fc45bd35b7b81f8d066991081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178763"
 ---
 # <a name="icorprofilerinfo3-interface"></a>Interfaccia ICorProfilerInfo3
 Fornisce metodi che i Code Profiler possono usare per comunicare con Common Language Runtime (CLR) allo scopo di controllare il monitoraggio di eventi e richiedere informazioni. Il `ICorProfilerInfo3` interfaccia è un'estensione del [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfaccia. Fornisce nuovi metodi supportati in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] e versioni successive.  
@@ -60,5 +60,6 @@ Fornisce metodi che i Code Profiler possono usare per comunicare con Common Lang
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

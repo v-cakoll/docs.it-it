@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169741"
 ---
 # <a name="application-settings-for-custom-controls"></a>Impostazioni delle applicazioni per i controlli personalizzati
 È necessario completare alcune attività per consentire ai controlli personalizzati la possibilità di mantenere le impostazioni dell'applicazione quando i controlli sono ospitati nelle applicazioni di terze parti.  
@@ -46,6 +46,7 @@ ms.locfileid: "57714346"
  Tutte le istanze di un controllo che non si specifica un valore per <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> condivideranno le stesse impostazioni.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Application Settings Architecture](application-settings-architecture.md)
+- [Architettura Impostazioni applicazione](application-settings-architecture.md)

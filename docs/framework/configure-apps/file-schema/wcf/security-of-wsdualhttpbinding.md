@@ -2,12 +2,12 @@
 title: <security> di <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 8bc35b3bc8f0cbe1a51ceab63d876d5859d6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171509"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> of \<wsDualHttpBinding>
 Definisce le funzionalità di sicurezza del [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -39,9 +39,9 @@ Definisce le funzionalità di sicurezza del [ \<wsDualHttpBinding >](../../../..
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|None|La sicurezza è disabilitata.|  
+|nessuno|La sicurezza è disabilitata.|  
 |Messaggio|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -60,6 +60,7 @@ Definisce le funzionalità di sicurezza del [ \<wsDualHttpBinding >](../../../..
  Un'associazione duale espone l'indirizzo IP del client al servizio. Nel client è necessario implementare un meccanismo di sicurezza in grado di garantire che il client si connetta solo a servizi ritenuti attendibili.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

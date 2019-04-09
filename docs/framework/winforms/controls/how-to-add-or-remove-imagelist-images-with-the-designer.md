@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161525"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Procedura: Aggiungere o rimuovere immagini ImageList con la finestra di progettazione
 È possibile aggiungere immagini a un <xref:System.Windows.Forms.ImageList> componente diversi modi. È possibile aggiungere molto rapidamente immagini tramite lo smart tag associati con la <xref:System.Windows.Forms.ImageList>, o se si imposta su molte altre proprietà di <xref:System.Windows.Forms.ImageList>, può risultare più comodo aggiungere le immagini con la finestra Proprietà. È anche possibile aggiungere immagini tramite il codice. Per altre informazioni su come aggiungere immagini con il codice, vedere [come: Aggiungere o rimuovere immagini tramite il Windows Form componente ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). In genere si popola la <xref:System.Windows.Forms.ImageList> componente con le immagini prima è associato un controllo, ma non è obbligatorio.  
@@ -38,6 +38,7 @@ ms.locfileid: "57723747"
 4.  Nel **Editor Kolekce Images** fare clic su **Add** oppure **rimuovere** per aggiungere o rimuovere immagini dall'elenco.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Immagini, bitmap e metafile](../advanced/images-bitmaps-and-metafiles.md)
-- [Procedura dettagliata: Esecuzione di attività comuni usando gli Smart tag nei Windows Form controlli](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [Componente ImageList](imagelist-component-windows-forms.md)

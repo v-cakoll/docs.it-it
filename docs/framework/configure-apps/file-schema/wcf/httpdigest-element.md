@@ -2,12 +2,12 @@
 title: <httpDigest> Elemento
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165321"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > elemento
 Specifica una credenziale di tipo digest usata per autenticare il client presso un servizio.  
@@ -49,6 +49,7 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
  Questa funzionalità deve essere abilitata con Active Directory in Windows e Internet Information Services (IIS). Per altre informazioni, vedere [l'autenticazione del Digest in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -57,5 +58,5 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
 - <xref:System.ServiceModel.Security.HttpDigestClientCredential>
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
-- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

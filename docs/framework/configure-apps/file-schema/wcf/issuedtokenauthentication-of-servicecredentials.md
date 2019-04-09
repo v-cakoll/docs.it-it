@@ -2,12 +2,12 @@
 title: <issuedTokenAuthentication> di <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: c195791250831897b8bc9d09782d17609272e146
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178568"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication > di \<serviceCredentials >
 Specifica un token personalizzato emesso come credenziale del servizio.  
@@ -48,9 +48,9 @@ Specifica un token personalizzato emesso come credenziale del servizio.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`allowedAudienceUris`|Ottiene il set di URI di destinazione a cui il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché sia considerato valido dall'istanza di un oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>. Per altre informazioni sull'utilizzo di questo attributo, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
+|`allowedAudienceUris`|Ottiene il set di URI di destinazione a cui il token di sicurezza <xref:System.IdentityModel.Tokens.SamlSecurityToken> può essere destinato affinché sia considerato valido dall'istanza di un oggetto <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>. Per altre informazioni sull'uso di questo attributo, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>.|  
 |`allowUntrustedRsaIssuers`|Valore booleano che specifica se sono consentiti emittenti di certificati RSA non attendibili.<br /><br /> I certificati sono firmati dalle Autorità di certificazione (CA) per verificarne l'autenticità. Un emittente non attendibile è un'autorità di certificazione che non è specificata come attendibile per la firma di certificati.|  
-|`audienceUriMode`|Ottiene un valore che specifica se occorre convalidare la condizione <xref:System.IdentityModel.Tokens.SamlSecurityToken> del token di sicurezza <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>. Questo valore è di tipo <xref:System.IdentityModel.Selectors.AudienceUriMode>. Per altre informazioni sull'utilizzo di questo attributo, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
+|`audienceUriMode`|Ottiene un valore che specifica se occorre convalidare la condizione <xref:System.IdentityModel.Tokens.SamlSecurityToken> del token di sicurezza <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition>. Questo valore è di tipo <xref:System.IdentityModel.Selectors.AudienceUriMode>. Per altre informazioni sull'uso di questo attributo, vedere <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>.|  
 |`certificateValidationMode`|Imposta la modalità di convalida dei certificati. Uno dei valori validi di <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Se impostato su `Custom`, è necessario fornire anche un `customCertificateValidator`. Il valore predefinito è `ChainTrust`.|  
 |`customCertificateValidatorType`|Stringa facoltativa. Un tipo e un assembly usati per convalidare un tipo personalizzato. Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.|  
 |`revocationMode`|Imposta la modalità di revoca che specifica se viene eseguito un controllo di revoca e se viene eseguito in linea o non in linea. L'attributo è di tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.|  
@@ -90,6 +90,7 @@ Specifica un token personalizzato emesso come credenziale del servizio.
  Per altre informazioni sull'uso di questo elemento di configurazione, vedere [come: Configurare le credenziali in un servizio federativo](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>

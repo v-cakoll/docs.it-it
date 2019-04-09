@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c2927195b650f1098292f3d59cd887e084aea21
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6cfef7d929d40996716a02a4db51630827011a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183248"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>Metodo ICLRDomainManager::SetAppDomainManagerType
 Specifica il tipo, derivato dal <xref:System.AppDomainManager?displayProperty=nameWithType> (classe), l'applicazione del gestore del dominio che verrà usato per inizializzare il dominio applicazione predefinito.  
@@ -71,6 +71,7 @@ HRESULT SetAppDomainManagerType(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [Interfaccia ICLRDomainManager](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
 - [Enumerazione EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)

@@ -2,12 +2,12 @@
 title: Problemi di sicurezza per la registrazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170664"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -110,5 +110,6 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
  Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per altre informazioni, vedere [registrazione eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Problemi di sicurezza e suggerimenti utili per la traccia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

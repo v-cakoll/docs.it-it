@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Configura flusso di lavoro non gestita di comportamento delle eccezioni con WorkflowServiceHost'
+title: 'Procedura: Configurare il comportamento di eccezione non gestita del flusso di lavoro con WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 9a13bb9390e891295491722898bd780bc1cac587
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f7fe203a4198aa98e8aee1be3a12e4d72a066f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175409"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Procedura: Configura flusso di lavoro non gestita di comportamento delle eccezioni con WorkflowServiceHost
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Procedura: Configurare il comportamento di eccezione non gestita del flusso di lavoro con WorkflowServiceHost
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> è un comportamento che consente di specificare l'azione da eseguire se si verifica un'eccezione non gestita all'interno di un flusso di lavoro ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. In questo argomento viene illustrato come configurare il comportamento in un file di configurazione.  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>Per configurare WorkflowUnhandledExceptionBehavior  
@@ -52,5 +52,6 @@ ms.locfileid: "54636157"
      Per altre informazioni sulle <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, vedere [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estendibilità dell'host dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [Estensibilità host del servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)

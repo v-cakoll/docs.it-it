@@ -2,19 +2,19 @@
 title: Protezione delle informazioni di connessione
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184444"
 ---
 # <a name="protecting-connection-information"></a>Protezione delle informazioni di connessione
 La protezione dell'accesso all'origine dati è uno dei principali obiettivi da raggiungere quando si imposta la sicurezza di un'applicazione. Una stringa di connessione presenta una potenziale vulnerabilità se non è protetta. Se le informazioni di connessione vengono archiviate in testo normale o mantenute nella memoria, si rischia di compromettere l'intero sistema. Le stringhe di connessione incorporate nel codice sorgente possono essere letto utilizzando il [Ildasm.exe (Disassembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) visualizzare Microsoft intermediate language (MSIL) in un assembly compilato.  
   
  Le vulnerabilità di sicurezza che riguardano le stringhe di connessione possono presentarsi in base al tipo di autenticazione usato, alla modalità con cui le stringhe di connessione vengono mantenute nella memoria e su disco e alle tecniche usate per crearle in fase di esecuzione.  
   
-## <a name="use-windows-authentication"></a>Usa autenticazione di Windows  
+## <a name="use-windows-authentication"></a>Uso dell'autenticazione di Windows  
  Per limitare l'accesso all'origine dati, è necessario proteggere le informazioni di connessione quali, ad esempio, identificatore utente, password e nome dell'origine dati. Per evitare di esporre informazioni sull'utente, è consigliabile usare l'autenticazione di Windows (anche detta *la sicurezza integrata*) laddove possibile. L'autenticazione di Windows viene specificata in una stringa di connessione usando le parole chiave `Integrated Security` o `Trusted_Connection`, eliminando la necessità di usare un ID utente e una password. Tramite l'autenticazione di Windows, gli utenti vengono autenticati da Windows e l'accesso alle risorse di server e database viene determinato concedendo autorizzazioni a utenti e gruppi di Windows.  
   
  Nei casi in cui non sia possibile usare l'autenticazione di Windows, è necessario prestare una maggiore attenzione perché le credenziali utente sono esposte nella stringa di connessione. Nelle applicazioni ASP.NET è possibile configurare un account di Windows come identità fissa usata per le connessioni a database e ad altre risorse di rete. Rappresentazione viene abilitata nell'elemento identity nel **Web. config** file e specificare un nome utente e password.  
@@ -40,6 +40,7 @@ La protezione dell'accesso all'origine dati è uno dei principali obiettivi da r
  È anche possibile archiviare le stringhe di connessione in file di configurazione, eliminando la necessità di incorporarle nel codice dell'applicazione. I file di configurazione sono file XML standard per i quali in .NET Framework è stato definito un set comune di elementi. Le stringhe di connessione nei file di configurazione vengono in genere archiviate all'interno di  **\<connectionStrings >** elemento nel **app. config** per un'applicazione Windows, o il  **Web. config** file per un'applicazione ASP.NET. Per altre informazioni sui concetti fondamentali dell'archiviazione, il recupero e la crittografia di stringhe di connessione dai file di configurazione, vedere [stringhe di connessione e i file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Crittografia delle informazioni di configurazione tramite configurazione protetta](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Sicurezza in .NET](../../../standard/security/index.md)

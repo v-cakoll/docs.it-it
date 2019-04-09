@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f22c045be9af71644415ae3b6b5e64d3e399dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1cea8adcd12ecb3078e4469e6b018ed49064e0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175929"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>Enumerazione CorDebugUnmappedStop
 Specifica il tipo di codice non mappato che può attivare un arresto nell'esecuzione del codice da parte del gestore di istruzioni.  
@@ -42,7 +42,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`STOP_NONE`|Non arrestare in qualsiasi tipo di codice non mappato.|  
 |`STOP_PROLOG`|Interrompere il codice di prologo.|  
@@ -65,4 +65,5 @@ typedef enum CorDebugUnmappedStop {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fff5b25706353d999ab6875092e31f554438f28c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164918"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Metodo ICorProfilerCallback::RemotingClientReceivingReply
 Notifica al profiler che la parte del server di una chiamata remota è stata completata e il client sta ricevendo ora e sta per elaborare la risposta.  
@@ -60,4 +60,5 @@ HRESULT RemotingClientReceivingReply(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162672"
 ---
 # <a name="xaml-security-considerations"></a>Considerazioni sulla sicurezza in XAML
 In questo argomento descrive le procedure consigliate per la sicurezza in applicazioni quando si usa XAML e l'API di servizi XAML di .NET Framework.  
@@ -42,4 +42,5 @@ In questo argomento descrive le procedure consigliate per la sicurezza in applic
  XAML supporta un proprio sistema di tipi, che in molti modi è un peer a come CLR implementa il sistema di tipi CLR. Tuttavia, per alcuni aspetti di consapevolezza di tipo in cui si apportano le decisioni sull'attendibilità relative a un tipo basato su informazioni relative al tipo, è necessario fare riferimento le informazioni sui tipi in CLR i tipi di supporto. Infatti, alcune delle funzionalità di creazione di report specifiche del sistema di tipi XAML vengono lasciate aperte come metodi virtuali e di conseguenza, non sono completamente sotto il controllo delle implementazioni dei servizi XAML di .NET Framework originale. Questi punti di estendibilità esistono perché il sistema di tipi XAML è estensibile, in base l'estensibilità di XAML stesso e le strategie di mapping dei tipi alternative possibili e l'implementazione predefinita supportata da Common Language Runtime e il contesto dello schema XAML predefinito. Per altre informazioni, vedere le note specifiche su alcune delle proprietà del <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

@@ -2,12 +2,12 @@
 title: Responsabilità dello sviluppatore nell'override del comportamento predefinito
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4773d4d5cf8192dfa1f8bfad6b5846c03ab1d2c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555622"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184769"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilità dello sviluppatore nell'override del comportamento predefinito
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non applica i requisiti seguenti, tuttavia il comportamento sarà indefinito se non vengono soddisfatti questi requisiti.  
@@ -27,4 +27,5 @@ ms.locfileid: "54555622"
 -   Infine, il metodo di override dovrebbe eseguire l'operazione specificata. La semantica [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operazioni, ad esempio il caricamento eager, rinviato il caricamento, e <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) richiedono gli override per fornire la fornitura del servizio. Ad esempio, un override di caricamento che restituisce solo una raccolta vuota, senza controllare il contenuto nel database, causerà probabilmente la restituzione di dati incoerenti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare la sicurezza trasporto e le credenziali del messaggio'
+title: 'Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186812"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: Usare la sicurezza trasporto e le credenziali del messaggio
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio
 Protezione di un servizio con le credenziali di trasporto e messaggio utilizza il meglio delle modalità di sicurezza di trasporto e messaggio di Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [come: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Nel caso del protocollo HTTP, il meccanismo è Secure Sockets Layer (SSL) su HTTP (HTTPS). Nel caso del protocollo TCP, invece, il meccanismo è SSL su TCP oppure Windows.  
@@ -161,6 +161,7 @@ Protezione di un servizio con le credenziali di trasporto e messaggio utilizza i
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

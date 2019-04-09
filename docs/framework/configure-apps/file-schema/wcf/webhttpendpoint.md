@@ -2,12 +2,12 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 9b4dd3a61a9b5ad1b35cce4025a50ac4220fd77e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182455"
 ---
 # <a name="webhttpendpoint"></a>\<webHttpEndpoint>
 Questo elemento di configurazione definisce un endpoint standard con fisse [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automaticamente l'associazione che aggiunge il [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportamento. Usare questo endpoint per la scrittura di un servizio REST.  
@@ -52,5 +52,6 @@ Questo elemento di configurazione definisce un endpoint standard con fisse [ \<w
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description.WebHttpEndpoint>
 - <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

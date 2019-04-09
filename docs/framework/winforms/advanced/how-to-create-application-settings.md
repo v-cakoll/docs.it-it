@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare le impostazioni dell'applicazione"
+title: 'Procedura: Creare impostazioni applicazione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166400"
 ---
-# <a name="how-to-create-application-settings"></a>Procedura: Creare le impostazioni dell'applicazione
+# <a name="how-to-create-application-settings"></a>Procedura: Creare impostazioni applicazione
 Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  
   
  Nella routine seguente, viene creata manualmente una classe wrapper che deriva da <xref:System.Configuration.ApplicationSettingsBase>. A questa classe è possibile aggiungere una proprietà accessibile pubblicamente per ogni impostazione dell'applicazione da esporre.  
@@ -47,6 +47,7 @@ Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazio
  Il provider di impostazioni predefinito, <xref:System.Configuration.LocalFileSettingsProvider>, memorizza le informazioni nei file di configurazione come testo normale. Questo riduce la protezione dell'accesso ai file fornito dal sistema operativo per l'utente corrente. Per questo motivo, è necessario prestare attenzione alle informazioni archiviate nei file di configurazione. Ad esempio, un utilizzo comune per le impostazioni dell'applicazione consiste nell'archiviare le stringhe di connessione che puntano all'archivio dati dell'applicazione. Tuttavia, per motivi di sicurezza, queste stringhe non devono includere le password. Per altre informazioni sulle stringhe di connessione, vedere <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)

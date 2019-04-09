@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Controllare o modificare messaggi sul Client'
+title: 'Procedura: Ispezionare o modificare i messaggi sul client'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 4cb4560aa9edf9b9de30ab387f24f2f5300f1097
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc2a03806dbc9ff33c1b16da7a31d862001534aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167479"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedura: Controllare o modificare messaggi sul Client
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedura: Ispezionare o modificare i messaggi sul client
 È possibile ispezionare o modificare i messaggi in ingresso o in uscita tra un client WCF implementando un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e inserendola nel runtime del client. Per altre informazioni, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). La funzionalità equivalente nel servizio è <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Per un esempio di codice completo, vedere la [i controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md) esempio.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Per ispezionare o modificare i messaggi  
@@ -127,6 +127,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>
 - [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

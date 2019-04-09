@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Creazione di un Form MDI con unione di Menu e controlli ToolStrip'
+title: 'Procedura dettagliata: Creazione di un modulo con interfaccia a documenti multipli con unione di menu e controlli ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 49d9b10d8a87af1c3600756efe8dba3f81df90a6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9c4195cc6f26dd10f22bacb5bcba9ca2a078499c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160628"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: Creazione di un Form MDI con unione di Menu e controlli ToolStrip
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: Creazione di un modulo con interfaccia a documenti multipli con unione di menu e controlli ToolStrip
 Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supporta le applicazioni MDI (Multiple Document Interface, interfaccia a documenti multipli), mentre il controllo <xref:System.Windows.Forms.MenuStrip> supporta l'unione di menu. I form MDI possono inoltre usare i controlli <xref:System.Windows.Forms.ToolStrip>.  
   
  Questa procedura dettagliata illustra come usare <xref:System.Windows.Forms.ToolStripPanel> controlli con un form MDI. Il form supporta anche l'unione dei menu con menu figlio. Nella procedura dettagliata vengono illustrate le attività seguenti:  
@@ -205,10 +205,11 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
 -   Assegnare il <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale. Per altre informazioni, vedere [Procedura: Impostare il ToolStrip Renderer per un'applicazione](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Procedura: Creare form padre MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Procedura: Inserire un MenuStrip in un Menu a discesa MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Procedura: Inserire un elemento MenuStrip in un menu a discesa di interfaccia a documenti multipli](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)

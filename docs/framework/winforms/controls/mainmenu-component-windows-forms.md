@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 245193498478e24b2f0be102ecbbd6f5051167c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176631"
 ---
 # <a name="mainmenu-component-windows-forms"></a>Componente MainMenu (Windows Form)
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57713007"
  I moduli di Windows `MainMenu` componente consente di visualizzare un menu di scelta in fase di esecuzione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul componente MainMenu](mainmenu-component-overview-windows-forms.md)  
+ [Panoramica del componente MainMenu](mainmenu-component-overview-windows-forms.md)  
  Spiega che cos'è il componente le funzionalità principali e i relativi delle proprietà.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -26,5 +26,6 @@ ms.locfileid: "57713007"
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

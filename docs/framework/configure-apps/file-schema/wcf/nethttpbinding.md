@@ -2,12 +2,12 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: 5af68572b027ac9cd05fa9920280f978d99475aa
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 14c1b6940099fa2b34716ed785bd00756c3e435e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181233"
 ---
 # <a name="nethttpbinding"></a>\<netHttpBinding>
 Rappresenta un'associazione che un servizio Windows Communication Foundation (WCF) è possibile usare per configurare ed esporre endpoint che sono in grado di comunicare tramite HTTP. Nel caso di un contratto duplex, verrà usato Web Sockets. In caso contrario, verrà usato HTTP.  
@@ -92,7 +92,7 @@ Rappresenta un'associazione che un servizio Windows Communication Foundation (WC
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  NetHttpBinding usa HTTP come trasporto per l'invio di messaggi. Nel caso di un contratto duplex, verrà usato Web Sockets.  Se si usa un contratto richiesta-risposta, NetHttpBinding si comporta come BasicHttpBinding con un codificatore binario.  
@@ -174,6 +174,7 @@ Rappresenta un'associazione che un servizio Windows Communication Foundation (WC
  Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

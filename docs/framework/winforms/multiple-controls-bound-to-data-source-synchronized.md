@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati'
+title: 'Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170339"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati
 Quando si lavora con data binding in Windows Form, spesso più controlli associati alla stessa origine dati. In alcuni casi, è necessario eseguire passaggi aggiuntivi per garantire che le proprietà associate dei controlli restino sincronizzate tra loro e l'origine dati. Questi passaggi sono necessari in due situazioni:  
   
 -   Se l'origine dati non implementa <xref:System.ComponentModel.IBindingList>e quindi generare <xref:System.ComponentModel.IBindingList.ListChanged> eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -41,7 +41,8 @@ Quando si lavora con data binding in Windows Form, spesso più controlli associa
 -   Un form con il <xref:System.Windows.Forms.Form.Load> evento come gestito e una chiamata per il `InitializeControlsAndDataSource` metodo nell'esempio del form <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Condividere dati associati tra form tramite il componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+
+- [Procedura: Condividere i dati associati tra moduli usando il componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)
 - [Interfacce correlate al data binding](interfaces-related-to-data-binding.md)
-- [Data binding in Windows Form](windows-forms-data-binding.md)
+- [Data binding di Windows Form](windows-forms-data-binding.md)

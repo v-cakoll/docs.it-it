@@ -1,13 +1,13 @@
 ---
-title: <message> elemento di <netTcpBinding>
+title: <message> di <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161018"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<messaggio > dell'elemento \<netTcpBinding >
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -33,12 +33,12 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`algorithmSuite`|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Nella tabella che segue sono riportati i valori possibili. Il valore predefinito è `Basic256`.<br /><br /> Se l'associazione del servizio specifica un valore `algorithmSuite` diverso dal valore predefinito e il file di configurazione viene generato usando Svcutil.exe, il file non verrà generato correttamente ed sarà necessario modificare manualmente il file di configurazione per impostare questo attributo sul valore desiderato.|  
-|`clientCredentialType`|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza basata sul messaggio. Nella tabella che segue sono riportati i valori possibili. Il valore predefinito è `UserName`. L'attributo è di tipo <xref:System.ServiceModel.MessageCredentialType>.|  
+|`algorithmSuite`|Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Nella tabella seguente vengono illustrati i valori possibili. Il valore predefinito è `Basic256`.<br /><br /> Se l'associazione del servizio specifica un valore `algorithmSuite` diverso dal valore predefinito e il file di configurazione viene generato usando Svcutil.exe, il file non verrà generato correttamente ed sarà necessario modificare manualmente il file di configurazione per impostare questo attributo sul valore desiderato.|  
+|`clientCredentialType`|Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza basata sul messaggio. Nella tabella seguente vengono illustrati i valori possibili. Il valore predefinito è `UserName`. L'attributo è di tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ## <a name="algorithmsuite-attribute"></a>Attributo algorithmSuite  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Basic128|Usa crittografia Aes128, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
 |Basic192|Usa crittografia Aes192, Sha1 per il digest del messaggio e Rsa-oaep-mgf1p per l'incapsulamento della chiave.|  
@@ -59,10 +59,10 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|None|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
-|Windows|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
+|nessuno|None: consente al servizio di interagire con i client anonimi. Sul servizio, indica che il servizio non richiede alcuna credenziale client. Sul client, indica che il client non fornisce alcuna credenziale client.|  
+|WINDOWS|consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale di Windows.|  
 |UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. WCF non supporta l'invio di un digest delle password o la derivazione delle chiavi utilizzano password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. Di conseguenza, WCF richiede che il trasporto sia protetto quando si usano credenziali UserName. Questa modalità di credenziale produce un scambio interoperabile o una negoziazione non interoperabile basata sull'attributo `negotiateServiceCredential`.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato. Se viene usata la modalità di sicurezza del messaggio e l'attributo `negotiateServiceCredential` è impostato su `false`, sarà necessario eseguire il provisioning del client tramite il certificato del servizio.|  
 |IssuedToken|Specifica un token personalizzato, emesso da un servizio di token di sicurezza.|  
@@ -80,6 +80,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
  Il messaggio usa la sicurezza a livello di messaggio per garantire l'integrità e la riservatezza del messaggio SOAP e per svolgere l'autenticazione reciproca dei peer di comunicazione. Se questa modalità di sicurezza viene selezionata per un'associazione, nello stack di canali vengono configurati elementi di associazione di sicurezza dei messaggi e i messaggi SOAP vengono protetti in conformità agli standard WS-Security*.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

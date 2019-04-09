@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Specificare che le eccezioni di concorrenza quando vengono generate'
+title: 'Procedura: Specificare quando vengono generate eccezioni di concorrenza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: a6a9fa61685caffb7b2b5d1baf9640cb5ccfa31b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30dd83c68472ecd3244cfc87b6df97b948b9a84f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182988"
 ---
-# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Procedura: Specificare che le eccezioni di concorrenza quando vengono generate
+# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Procedura: Specificare quando vengono generate eccezioni di concorrenza
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un'eccezione <xref:System.Data.Linq.ChangeConflictException> viene generata quando gli oggetti non vengono aggiornati a causa di conflitti di concorrenza ottimistici. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
  Prima di inviare le modifiche al database, è possibile specificare quando dovranno essere generate le eccezioni di concorrenza:  
@@ -30,5 +30,6 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] un'eccezi
  [!code-vb[System.Data.Linq.ConflictModeEnumeration#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

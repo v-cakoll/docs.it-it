@@ -2,12 +2,12 @@
 title: Riferimenti per F# Interactive (fsi.exe)
 description: Informazioni su come F# Interactive (fsi.exe) viene usato per eseguire F# in modo interattivo alla console o per l'esecuzione di codice F# script.
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172263"
 ---
 # <a name="interactive-programming-with-f"></a>Programmazione interattiva con F\#
 
@@ -43,10 +43,8 @@ Se è aperto un progetto che fa riferimento ad alcune librerie, è possibile far
 
 È possibile controllare gli argomenti della riga di comando (opzioni) di F# Interactive modificando le impostazioni. Nel menu **Strumenti** selezionare **Opzioni**, quindi espandere **Strumenti F#**. Le due impostazioni che è possibile modificare sono le opzioni di F# Interactive e l'impostazione **F# Interactive a 64 bit**, che è rilevante solo se si esegue F# Interactive in un computer a 64 bit. Con questa impostazione si determina se si desidera eseguire la versione a 64 bit dedicata di fsi.exe o di fsianycpu.exe, in cui si usa l'architettura del computer per determinare se l'esecuzione avviene come processo a 32 bit o 64 bit.
 
-
 ## <a name="scripting-with-f"></a>Scripting con F\#
 Gli script hanno l'estensione di file **.fsx** o **.fsscript**. Anziché compilare il codice sorgente e quindi eseguire in un secondo momento l'assembly compilato, è possibile eseguire semplicemente **fsi.exe** e specificare il nome del file dello script del codice sorgente F#. F# Interactive legge il codice e lo esegue in tempo reale.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Differenze tra gli ambienti interattivi, di scripting e compilati
 Quando si compila il codice in F# Interactive, con un'esecuzione interattiva o con un'esecuzione di uno script, viene definito il simbolo **INTERACTIVE**. Quando si compila il codice nel compilatore, viene definito il simbolo **COMPILED**. In questo modo, se il codice deve essere diverso in modalità interattiva e compilata, è possibile usare le direttive del preprocessore per la compilazione condizionale allo scopo di determinare quale usare.

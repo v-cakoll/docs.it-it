@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166127"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedure consigliate per la protezione in WCF
 Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in considerazione quando si creano applicazioni protette tramite Windows Communication Foundation (WCF). Per altre informazioni sulla sicurezza, vedere [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Considerazioni sulla protezione per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) e [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -57,6 +57,7 @@ Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in 
  Quando si crea un'associazione personalizzata, è necessario impostare <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> su `true`. In caso contrario, se <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> viene impostato su `false` e il client utilizza un token basato su chiave asimmetrica quale un certificato X509, il messaggio non sarà firmato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Considerazioni sulla protezione per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

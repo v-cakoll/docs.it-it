@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: bbcdd544e79197c9cb35d13bd09cffde9962030d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167193"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fa parte di [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] della famiglia di tecnologie. e si basa sui servizi forniti dal modello provider [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. È pertanto possibile combinare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] codice esistenti [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] applicazioni ed eseguire la migrazione corrente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluzioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Nell'illustrazione seguente viene fornita una panoramica della relazione.  
@@ -55,8 +55,9 @@ ms.locfileid: "54553672"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` sostituisce quindi i parametri con parentesi graffe presenti nella stringa fornita con nomi di parametro generati, ad esempio `@p0`, `@p1` …, `@p(n)`.  
+>  I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` fornire quindi sostituisce i parametri di parentesi graffe presenti con nomi di parametro generati, ad esempio la stringa di query `@p0`, `@p1` ..., `@p(n)`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Procedura: Riutilizzare una connessione tra un comando ADO.NET e un DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Procedura: Riutilizzare una connessione tra un comando ADO.NET e un oggetto DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

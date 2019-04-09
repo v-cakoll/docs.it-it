@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179140"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > elemento
 Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibilità che vengono caricati con attendibilità <xref:System.AppDomain>.  
@@ -84,6 +84,7 @@ Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibi
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Procedura: Disabilitare la funzionalità di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

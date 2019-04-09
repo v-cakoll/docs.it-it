@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application'
+title: "Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182104"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedura: Rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Forms
 Nei sistemi operativi Windows, un utente può modificare le impostazioni del tipo di carattere a livello di sistema per rendere il tipo di carattere predefinito superiore o inferiore. Modifica di queste impostazioni del tipo di carattere è fondamentale per gli utenti che hanno problemi di vista e richiedono il tipo più grande contenere il testo sullo schermo. È possibile modificare l'applicazione Windows Forms per rispondere a queste modifiche, aumentando o riducendo le dimensioni del form e tutto il testo relativo a ogni volta che viene modificato lo schema del tipo di carattere. Se si desidera che il form per supportare le modifiche nelle dimensioni dei caratteri in modo dinamico, è possibile aggiungere codice al form.  
   
  In genere, il tipo di carattere predefinito utilizzato da Windows Form è il tipo di carattere restituito per il <xref:Microsoft.Win32> chiamata dello spazio dei nomi a `GetStockObject(DEFAULT_GUI_FONT)`. Il tipo di carattere restituito da questa chiamata cambia solo quando cambia la risoluzione dello schermo. Come illustrato nella procedura seguente, il codice necessario modificare il tipo di carattere predefinito <xref:System.Drawing.SystemFonts.IconTitleFont%2A> per rispondere alle modifiche nella dimensione del carattere.  
@@ -65,5 +65,6 @@ Nei sistemi operativi Windows, un utente può modificare le impostazioni del tip
  Il costruttore in questo esempio di codice contiene una chiamata a `InitializeComponent`, che viene definito quando si crea un nuovo progetto Windows Forms in Visual Studio. Rimuovere questa riga di codice se si compila l'applicazione dalla riga di comando.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Ridimensionamento automatico in Windows Form](automatic-scaling-in-windows-forms.md)

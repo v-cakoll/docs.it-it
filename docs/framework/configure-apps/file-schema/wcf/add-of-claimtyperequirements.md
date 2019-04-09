@@ -2,12 +2,12 @@
 title: <add> di <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 6a8c96fb2cb2050cac7b8853b84caecc883449d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168847"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<aggiungere > di \<claimTypeRequirements >
 Specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata. Ad esempio, i servizi definiscono requisiti per le credenziali in entrata affinché dispongano di un determinato set di tipi di attestazione.  
@@ -73,6 +73,7 @@ Specifica i tipi di attestazione obbligatori e facoltativi previsti in una crede
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>

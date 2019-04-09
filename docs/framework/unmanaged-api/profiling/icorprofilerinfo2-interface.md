@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623fecd210ac716824fdc5fede99ec40145e8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179010"
 ---
 # <a name="icorprofilerinfo2-interface"></a>Interfaccia ICorProfilerInfo2
 Fornisce metodi che code profiler possono usare per comunicare con il common language runtime (CLR) per controllare il monitoraggio degli eventi e informazioni sulla richiesta. Il `ICorProfilerInfo2` interfaccia è un'estensione del [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfaccia. Vale a dire, fornisce nuovi metodi supportati in .NET Framework versione 2.0 e versioni successive.  
@@ -41,7 +41,7 @@ Fornisce metodi che code profiler possono usare per comunicare con il common lan
 |[Metodo GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)|Ottiene gli ambiti del codice nativo associato al parametro `FunctionID` specificato.|  
 |[Metodo GetContextStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcontextstaticaddress-method.md)|Ottiene l'indirizzo del campo statico di contesto specificato che si trova nell'ambito del contesto specificato.|  
 |[Metodo GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)|Ottiene il `FunctionID` di una funzione usando il token di metadati specificato, contenente (classe), e `ClassID` valori di qualsiasi tipo di argomenti.|  
-|[Metodo GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)|Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento tipo, se presente, di una funzione.|  
+|[Metodo GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)|Ottiene la classe padre, il token di metadati e l'elemento `ClassID` di ciascun argomento di tipo, se presente, di una funzione.|  
 |[Metodo GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)|Ottiene le aree di memoria (i segmenti dell'heap) che costituiscono le generazioni dell'heap di garbage collection.|  
 |[Metodo GetNotifiedExceptionClauseInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)|Ottiene le informazioni di indirizzo e frame native per la clausola di eccezione (`catch`/`finally`/`filter`) che sta per essere eseguiti o che è stata appena eseguita.|  
 |[Metodo GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)|Ottiene il segmento dell'heap che contiene l'oggetto specificato.|  
@@ -69,5 +69,6 @@ Fornisce metodi che code profiler possono usare per comunicare con il common lan
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

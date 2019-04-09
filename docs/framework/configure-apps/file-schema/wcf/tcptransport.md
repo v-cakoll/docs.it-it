@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166166"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
@@ -80,6 +80,7 @@ Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei tr
  L'elemento `tcpTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto TCP. Il trasporto è ottimizzato per le comunicazioni da WCF a WCF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

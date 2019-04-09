@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 98eba600f64c8b656e3597b429cc69766f398f7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161486"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Procedura: Controllare uno Storyboard dopo l'avvio
 Questo esempio illustra come usare il codice al controllo un <xref:System.Windows.Media.Animation.Storyboard> dopo l'avvio. Per controllare uno storyboard in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usare <xref:System.Windows.Trigger> e <xref:System.Windows.TriggerAction> oggetti; per un esempio, vedere [usare i trigger di evento per controllare un Storyboard dopo il relativo avvio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
@@ -44,4 +44,5 @@ Questo esempio illustra come usare il codice al controllo un <xref:System.Window
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Usare i trigger di eventi per controllare uno storyboard in seguito al relativo avvio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

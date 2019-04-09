@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rendere le colonne di sola lettura nel controllo DataGridView Windows Form'
+title: 'Procedura: Impostare le colonne come di sola lettura nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: cad80a7b242622802b5897d9903c765a877e6fd4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171925"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procedura: Rendere le colonne di sola lettura nel controllo DataGridView Windows Form
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procedura: Impostare le colonne come di sola lettura nel controllo DataGridView di Windows Forms
 Non tutti i dati sono concepiti per la modifica. Nel controllo <xref:System.Windows.Forms.DataGridView>, il valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> di una colonna determina se gli utenti possono modificare le celle di tale colonna. Per informazioni su come rendere il controllo interamente di sola lettura, vedere [come: Impedire l'aggiunta di riga o eliminazione in di Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md).  
   
  Questa attività è supportata in Visual Studio.  Vedere anche [come: Rendere le colonne di sola lettura in Windows il controllo DataGridView form usando la finestra di progettazione](make-columns-read-only-in-the-datagrid-using-the-designer.md).  
@@ -35,8 +35,9 @@ Non tutti i dati sono concepiti per la modifica. Nel controllo <xref:System.Wind
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
 - [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Procedura: Impedire l'aggiunta di riga e l'eliminazione nel controllo DataGridView Windows Form](prevent-row-addition-and-deletion-datagridview.md)
+- [Procedura: Impedire l'aggiunta e l'eliminazione di righe nel controllo DataGridView di Windows Forms](prevent-row-addition-and-deletion-datagridview.md)

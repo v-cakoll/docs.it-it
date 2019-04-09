@@ -1,13 +1,13 @@
 ---
-title: elemento <endpoint>
+title: <endpoint> elemento
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163410"
 ---
 # <a name="endpoint-element"></a>\<endpoint > elemento
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
@@ -41,9 +41,9 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|address|Stringa che contiene l'indirizzo dell'endpoint. L'indirizzo può essere specificato come indirizzo assoluto o relativo. Se viene fornito un indirizzo relativo, l'host deve fornire un indirizzo di base appropriato per lo schema di trasporto usato nell'associazione. Se non viene configurato un indirizzo, si presuppone che l'indirizzo di base valga come indirizzo per quell'endpoint.<br /><br /> Il valore predefinito è una stringa vuota.|  
+|indirizzo|Stringa che contiene l'indirizzo dell'endpoint. L'indirizzo può essere specificato come indirizzo assoluto o relativo. Se viene fornito un indirizzo relativo, l'host deve fornire un indirizzo di base appropriato per lo schema di trasporto usato nell'associazione. Se non viene configurato un indirizzo, si presuppone che l'indirizzo di base valga come indirizzo per quell'endpoint.<br /><br /> Il valore predefinito è una stringa vuota.|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare nell'endpoint.|  
-|associazione|Attributo stringa obbligatorio che specifica il tipo di associazione da usare. Il tipo deve avere una sezione di configurazione registrata perché sia possibile farvi riferimento. Il tipo viene registrato dal nome di sezione, anziché dal nome del tipo di associazione.|  
+|binding|Attributo stringa obbligatorio che specifica il tipo di associazione da usare. Il tipo deve avere una sezione di configurazione registrata perché sia possibile farvi riferimento. Il tipo viene registrato dal nome di sezione, anziché dal nome del tipo di associazione.|  
 |bindingConfiguration|Stringa che specifica il nome dell'associazione da usare quando viene creata l'istanza dell'endpoint. Il nome dell'associazione deve essere nell'ambito del punto in cui l'endpoint viene definito. Il valore predefinito è una stringa vuota.<br /><br /> Questo attributo viene usato in combinazione con `binding` per fare riferimento a una configurazione di associazione specifica nel file di configurazione. Impostare questo attributo se si sta tentando di usare un'associazione personalizzata. In caso contrario, può venire generata un'eccezione.|  
 |bindingName|Stringa che specifica il nome completo e univoco dell'associazione per l'esportazione delle definizioni tramite WSDL. Il valore predefinito è una stringa vuota.|  
 |bindingNamespace|Stringa che specifica il nome completo e univoco dello spazio dei nomi dell'associazione per l'esportazione delle definizioni tramite WSDL. Il valore predefinito è una stringa vuota.|  
@@ -85,8 +85,9 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Endpoint: indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Procedura: Creare un endpoint di servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174616"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
 È possibile che i messaggi in coda non vengano recapitati. Tali messaggi con errori vengono registrati in una coda di messaggi non recapitabili. Il mancato recapito può essere dovuto a errori della rete, all'eliminazione di una coda, a una coda completa, a un errore di autenticazione o alla scadenza del tempo disponibile per il recapito.  
@@ -61,19 +61,16 @@ ms.locfileid: "54497092"
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  Il codice seguente è per un file di configurazione client.  
-  
-  
-  
+
  Il codice seguente si riferisce a un servizio che elabora messaggi da una coda di messaggi non recapitabili.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  Il codice seguente è per il file di configurazione del servizio della coda di messaggi non recapitabili.  
-  
-  
-  
+
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

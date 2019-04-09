@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164489"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Effetti della modifica dell'aspetto di un form di base
 Durante lo sviluppo di applicazioni, spesso potrebbe essere necessario modificare l'aspetto del form di base da cui ereditano altri form nel progetto (o in altri progetti).  
@@ -26,6 +26,7 @@ Durante lo sviluppo di applicazioni, spesso potrebbe essere necessario modificar
  Le modifiche apportate al form di base in fase di esecuzione non avranno alcun effetto sui form ereditati in cui è già stata creata un'istanza.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [base](~/docs/csharp/language-reference/keywords/base.md)
 - [Procedura: Ereditare Windows Form](how-to-inherit-windows-forms.md)
 - [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)

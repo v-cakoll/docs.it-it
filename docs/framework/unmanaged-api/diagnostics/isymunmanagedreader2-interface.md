@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a08695c4e5df6aaa63bedecf68b741302e5ddd8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 890053e1bf2e0648a41cca718e94edcf21c7e612
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165984"
 ---
 # <a name="isymunmanagedreader2-interface"></a>Interfaccia ISymUnmanagedReader2
 Rappresenta un lettore di simboli che fornisce accesso ai documenti, metodi e le variabili all'interno di un archivio simboli. Questa interfaccia estende la [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interfaccia.  
@@ -38,5 +38,6 @@ Rappresenta un lettore di simboli che fornisce accesso ai documenti, metodi e le
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
-- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+
+- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

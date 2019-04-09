@@ -2,12 +2,12 @@
 title: Provider WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162293"
 ---
 # <a name="wmi-provider"></a>Provider WMI
 Questo esempio viene illustrato come raccogliere dati dai servizi Windows Communication Foundation (WCF) in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in WCF. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per la [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e viene illustrato come raccogliere i dati dal `ICalculator` servizio in fase di esecuzione.  
@@ -34,9 +34,9 @@ Questo esempio viene illustrato come raccogliere dati dai servizi Windows Commun
 ## <a name="accessing-wmi-information"></a>Accesso alle informazioni WMI  
  L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API di WMI per gli script, le applicazioni Visual Basic, le applicazioni C++ e il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
   
- In questo esempio vengono usati due script Java: uno per enumerare i servizi in esecuzione nel computer con alcune delle relative proprietà e il secondo per visualizzare i dati WMI definiti dall'utente. Lo script apre una connessione al provider WMI, analizza i dati e visualizza i dati raccolti.  
+ In questo esempio vengono utilizzati due script Java: uno per enumerare i servizi in esecuzione nel computer con alcune delle relative proprietà e il secondo per visualizzare i dati WMI definiti dall'utente. Lo script apre una connessione al provider WMI, analizza i dati e visualizza i dati raccolti.  
   
- Avviare l'esempio per creare un'istanza di un servizio WCF in esecuzione. Mentre il servizio è in esecuzione, eseguire ogni script Java usando il comando seguente nel prompt dei comandi:  
+ Avviare l'esempio per creare un'istanza di un servizio WCF in esecuzione. Mentre il servizio è in esecuzione, eseguire ogni script Java utilizzando il comando seguente nel prompt dei comandi:  
   
 ```  
 cscript EnumerateServices.js  
@@ -125,14 +125,14 @@ cscript EnumerateCustomObjects.js
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pubblicare lo schema dei servizi in WMI eseguendo InstallUtil.exe (il percorso predefinito per InstallUtil.exe è "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") sul file service.dll nella directory di hosting. È necessario eseguire questo passaggio solo quando sono state apportate modifiche al file service.dll.
+3.  Pubblicare lo schema dei servizi in WMI eseguendo InstallUtil.exe (il percorso predefinito per InstallUtil.exe è "%WINDIR%\Microsoft.NET\Framework\v4.0.303197") sul file service.dll nella directory di hosting. È necessario eseguire questo passaggio solo quando sono state apportate modifiche al file service.dll.
   
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Se WCF è stato installato dopo l'installazione di ASP.NET, potrebbe essere necessario eseguire "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- r - x per autorizzare l'account ASPNET per pubblicare oggetti WMI.  
   
-5.  Visualizzare i dati dall'esempio riportato tramite WMI usando i comandi: `cscript EnumerateServices.js` o `cscript EnumerateCustomObjects.js`.  
+5.  Visualizzare i dati dall'esempio riportato tramite WMI utilizzando i comandi: `cscript EnumerateServices.js` o `cscript EnumerateCustomObjects.js`.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -144,4 +144,5 @@ cscript EnumerateCustomObjects.js
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>Vedere anche
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)

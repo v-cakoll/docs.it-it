@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175019"
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
 Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *overload degli operatori*.  
@@ -44,7 +44,7 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
  La sintassi per dichiarare una routine di operatore è come segue:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*  
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*   
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
   
  `Dim testStruct As`  *nomestruttura*  
   
- `Dim testNewStruct As`  *nomestruttura*`= testStruct`*simbolooperatore*  `10`  
+ `Dim testNewStruct As`  *nomestruttura*`= testStruct`*simbolooperatore*   `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e di chiamata  
  La struttura seguente archivia un valore intero con segno a 128 bit come le parti costituenti alto e basso. Definisce i `+` operaa a add due `veryLong` i valori e generare una risultante `veryLong` valore.  
@@ -78,16 +78,15 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
  Nell'esempio seguente viene illustrata una tipica chiamata per il `+` operatore definito in `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
-- [Routine Property](./property-procedures.md)
+- [Routine di proprietà](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
 - [Procedura: Chiamare una routine di operatore](./how-to-call-an-operator-procedure.md)

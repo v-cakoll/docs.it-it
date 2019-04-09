@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Compilare oggetti Table a livello di codice'
+title: 'Procedura: Creare una tabella a livello di codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 3848032bf527f64ce591eb2cda98028c835d79f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172627"
 ---
-# <a name="how-to-build-a-table-programmatically"></a>Procedura: Compilare oggetti Table a livello di codice
+# <a name="how-to-build-a-table-programmatically"></a>Procedura: Creare una tabella a livello di codice
 Gli esempi seguenti illustrano come creare a livello di codice un <xref:System.Windows.Documents.Table> e popolarlo con contenuto. Il contenuto della tabella è ripartito in cinque righe (rappresentato da <xref:System.Windows.Documents.TableRow> gli oggetti contenuti un <xref:System.Windows.Documents.Table.RowGroups%2A> oggetto) e sei colonne (rappresentato da <xref:System.Windows.Documents.TableColumn> oggetti). Le righe vengono usate per scopi di presentazione diversi, ad esempio una riga è destinata a contenere il titolo dell'intera tabella, una riga di intestazione a descrivere le colonne di dati nella tabella e una riga di piè di pagina a fornire informazioni di riepilogo.  Si noti che i concetti di righe di "titolo", "intestazione" e "piè di pagina" non sono inerenti alla tabella, ma fanno semplicemente riferimento a righe con caratteristiche diverse. Le celle della tabella contengono il contenuto effettivo, che può essere costituito da testo, immagini o qualsiasi altro [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] elemento.  
   
 ## <a name="example"></a>Esempio  
@@ -57,4 +57,5 @@ Gli esempi seguenti illustrano come creare a livello di codice un <xref:System.W
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'elemento Table](table-overview.md)

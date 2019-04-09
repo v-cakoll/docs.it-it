@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 0c9873638bca43e5e0d005d36053e7c75d48168b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161031"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo DataGrid
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "57679073"
 ## <a name="required-ui-automation-tree-structure"></a>Struttura ad albero di automazione interfaccia utente obbligatoria  
  Nella tabella seguente vengono illustrate la visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relativo ai controlli griglia dati e viene descritto il possibile contenuto di ogni visualizzazione. Per altre informazioni sull'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struttura ad albero - visualizzazione controlli|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struttura ad albero - visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataGrid<br /><br /> <ul><li>Header (0, 1 o 2)<br /><br /> <ul><li>HeaderItem (numero di colonne o righe)</li></ul></li><li>DataItem (0 o più, può essere strutturato in una gerarchia)</li></ul>|DataGrid<br /><br /> -DataItem (0 o più, può essere strutturato in una gerarchia)|  
   
@@ -54,10 +54,10 @@ ms.locfileid: "57679073"
   
 |Pattern di controllo|Supporto|Note|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Sì|Il controllo griglia dati stesso supporta sempre il pattern di controllo Grid perché gli elementi che contiene sono i metadati disposti in una griglia.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Il controllo griglia dati stesso supporta sempre il pattern di controllo Grid perché gli elementi che contiene sono i metadati disposti in una griglia.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|A seconda dei casi|La possibilità di scorrere la griglia dati dipende dal contenuto e dalla presenza o meno delle barre di scorrimento.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|A seconda dei casi|La possibilità di selezionare la griglia dati dipende dal contenuto.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Sì|Il controllo griglia dati ha sempre un'intestazione all'interno del relativo sottoalbero. Per tale motivo, il pattern di controllo Table deve essere supportato.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Yes|Il controllo griglia dati ha sempre un'intestazione all'interno del relativo sottoalbero. Per tale motivo, il pattern di controllo Table deve essere supportato.|  
   
  Gli elementi di dati nei contenitori di griglia dati supporteranno almeno:  
   
@@ -73,21 +73,21 @@ ms.locfileid: "57679073"
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
  La tabella seguente elenca gli eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] che devono essere supportati da tutti i controlli griglia dati. Per altre informazioni sugli eventi, vedere [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|A seconda dei casi|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|A seconda dei casi|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> evento di modifica della proprietà.|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento di modifica della proprietà.|A seconda dei casi|Se il controllo supporta il pattern Scroll, deve supportare questo evento.|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obbligatorio|nessuno|  
   
 <a name="List_View_Control_Example"></a>   
@@ -98,13 +98,14 @@ ms.locfileid: "57679073"
   
  La visualizzazione controlli e la visualizzazione contenuto dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] relative al controllo visualizzazione elenco sono visualizzate di seguito. I pattern di controllo per ogni elemento di automazione sono indicati tra parentesi.  
   
-|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione controlli|Albero di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Visualizzazione contenuto|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struttura ad albero - visualizzazione controlli|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Struttura ad albero - visualizzazione contenuto|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>DataGrid (Table, Grid, Selection)</li><li>Intestazione<br /><br /> <ul><li>HeaderItem "Nome" (Invoke)</li><li>HeaderItem "Ultima modifica" (Invoke)</li><li>HeaderItem "Dimensione" (Invoke)</li></ul></li><li>Gruppo "Contoso" (TableItem, GridItem, SelectionItem, tabella *, griglia\*)<br /><br /> <ul><li>DataItem "account receivable. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "account payable. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Gruppo "Contoso" (TableItem, GridItem, SelectionItem, tabella *, griglia\*)<br /><br /> <ul><li>DataItem "account receivable. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem "account payable. doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *L'esempio precedente mostra un DataGrid contenente più livelli di controlli. Il controllo Group ("Contoso") contiene due controlli DataItem ("Accounts Receivable.doc" e "Accounts Payable.doc"). Una copia DataGrid/GridItem è indipendente da una coppia in un altro livello. I controlli DataItem sotto Group possono essere esposti anche come tipo di controllo ListItem e quindi presentati più chiaramente come oggetti selezionabili, invece che come semplici elementi dati. Questo esempio non include i sottoelementi degli elementi di dati raggruppati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3d5d3808f51f921bd3e0c94942a1fb07a35d876
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 40e518e3cf5967d2b0a7eda8c7b58ec0f918e219
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187434"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>Metodo ICorProfilerInfo3::GetFunctionTailcall3Info
 Fornisce lo stack frame della funzione da segnalare al profiler tramite la [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) (funzione). Questo metodo può essere chiamato solo durante il callback `FunctionTailcall3WithInfo`.  
@@ -58,6 +58,7 @@ HRESULT GetFunctionTailcall3Info(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
 - [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)

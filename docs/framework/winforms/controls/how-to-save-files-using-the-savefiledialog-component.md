@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Salvare i file con il componente SaveFileDialog'
+title: 'Procedura: Salvare file con il componente SaveFileDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176800"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Procedura: Salvare i file con il componente SaveFileDialog
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Procedura: Salvare file con il componente SaveFileDialog
 Il <xref:System.Windows.Forms.SaveFileDialog> componente consente agli utenti di sfogliare il file system e selezionare i file da salvare. Nella finestra di dialogo vengono restituiti il percorso e il nome del file selezionato dall'utente. Tuttavia, è necessario scrivere il codice per salvare effettivamente i file sul disco.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Per salvare un file tramite il componente SaveFileDialog  
@@ -178,5 +178,6 @@ Il <xref:System.Windows.Forms.SaveFileDialog> componente consente agli utenti di
     >  Alcuni controlli, ad esempio il <xref:System.Windows.Forms.RichTextBox> controllare, hanno la possibilità di salvare i file. Per altre informazioni, vedere la sezione relativa al componente SaveFileDialog dell'articolo tecnico di MSDN Online Library [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Codice di base per le finestre di dialogo di Windows Form).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [Componente SaveFileDialog](savefiledialog-component-windows-forms.md)

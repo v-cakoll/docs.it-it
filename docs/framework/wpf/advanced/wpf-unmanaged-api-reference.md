@@ -1,15 +1,15 @@
 ---
-title: Riferimenti alle API non gestite di WPF
+title: Riferimenti alle API non gestite WPF
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: 9a33f8624f609a19e3c2f7f8958097a3e9b1114e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5a9a122f8df9786b457291b955c15bddb39696a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160641"
 ---
-# <a name="wpf-unmanaged-api-reference"></a>Riferimenti alle API non gestite di WPF
+# <a name="wpf-unmanaged-api-reference"></a>Riferimenti alle API non gestite WPF
 Librerie di Windows Presentation Foundation (WPF) espongono una serie di funzioni non gestite che sono destinati solo per uso interno. Essi non deve essere chiamati dal codice utente.  
   
 ## <a name="in-this-section"></a>In questa sezione  
@@ -23,4 +23,5 @@ Librerie di Windows Presentation Foundation (WPF) espongono una serie di funzion
  [Funzione SetFakeActiveWindow](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Avanzate](index.md)

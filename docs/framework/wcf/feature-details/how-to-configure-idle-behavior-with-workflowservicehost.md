@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164021"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Procedura: Configurare il comportamento inattivo con WorkflowServiceHost
-I flussi di lavoro diventano inattivi se incontrano un segnalibro che deve essere ripreso da uno stimolo esterno, ad esempio nel caso in cui l'istanza del flusso di lavoro sia in attesa di un messaggio da recapitare usando un'attività <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> è un comportamento che consente di specificare l'orario compreso tra il momento in cui un'istanza del servizio diventa inattiva e il momento in cui viene resa persistente o scaricata. Contiene due proprietà che consentono di impostare questi intervalli di tempo. La proprietà<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> specifica l'intervallo di tempo compreso tra il momento in cui un'istanza di servizio del flusso di lavoro diventa inattiva e il momento in cui l'istanza di servizio del flusso di lavoro viene resa persistente. La proprietà<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> specifica l'intervallo di tempo compreso tra il momento in cui un'istanza di servizio del flusso di lavoro diventa inattiva e il momento in cui l'istanza di servizio del flusso di lavoro viene scaricata, ovvero resa persistente nell'archivio di istanze e rimossa dalla memoria. In questo argomento viene illustrato come configurare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> in un file di configurazione.  
+I flussi di lavoro diventano inattivi se incontrano un segnalibro che deve essere ripreso da uno stimolo esterno, ad esempio nel caso in cui l'istanza del flusso di lavoro sia in attesa di un messaggio da recapitare usando un'attività <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> è un comportamento che consente di specificare il tempo tra il momento in cui un'istanza del servizio diviene inattiva e quando l'istanza viene resa persistente o scaricata. Contiene due proprietà che consentono di impostare questi intervalli di tempo. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Specifica l'intervallo di tempo tra quando un'istanza del servizio del flusso di lavoro diviene inattiva e quando l'istanza del servizio del flusso di lavoro è persistente. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Specifica l'intervallo di tempo tra l'istanza del servizio un flusso di lavoro quando diventa inattivo e quando l'istanza del servizio del flusso di lavoro viene scaricato, dove unload indica renda persistente l'istanza nell'archivio di istanze e rimossa dalla memoria. In questo argomento viene illustrato come configurare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> in un file di configurazione.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Per configurare WorkflowIdleBehavior  
   
-1.  Aggiungere un elemento <`workflowIdle`> all'elemento <`behavior`> nell'elemento <`serviceBehaviors`> come illustrato nell'esempio seguente.  
+1.  Aggiungere un <`workflowIdle`> elemento per il <`behavior`> elemento all'interno di <`serviceBehaviors`> elemento, come illustrato nell'esempio seguente.  
   
     ```xml  
     <behaviors>  
@@ -42,6 +42,7 @@ I flussi di lavoro diventano inattivi se incontrano un segnalibro che deve esser
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estendibilità dell'host dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [Estensibilità host del servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)

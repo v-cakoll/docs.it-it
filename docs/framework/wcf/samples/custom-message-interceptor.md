@@ -2,12 +2,12 @@
 title: Intercettore dei messaggi personalizzati
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181415"
 ---
 # <a name="custom-message-interceptor"></a>Intercettore dei messaggi personalizzati
 In questo esempio viene illustrato l'utilizzo del modello di estensibilità del canale. In particolare, viene illustrato come implementare un elemento di associazione personalizzato che crea channel factory e listener del canale per intercettare tutti i messaggi in ingresso e in uscita in un particolare punto nello stack di runtime. L'esempio include anche un client e un server che illustrano l'utilizzo di queste factory personalizzate.  
@@ -160,4 +160,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Eseguire prima Service.exe quindi Client.exe e controllare l'output di entrambe le finestre della console.  
-  

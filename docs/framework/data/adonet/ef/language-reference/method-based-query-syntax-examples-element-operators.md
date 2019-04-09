@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di Query basate sul metodo: Operatori di elemento'
+title: 'Esempi di sintassi delle query basate su metodo: Operatori di elemento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 89cbda4d049b30ee50accf94d5b7ec172bc25ae2
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3656ea6d2d9602c3790ab4113b5c2f153b4f7c73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188591"
 ---
-# <a name="method-based-query-syntax-examples-element-operators"></a>Esempi di sintassi di Query basate sul metodo: Operatori di elemento
+# <a name="method-based-query-syntax-examples-element-operators"></a>Esempi di sintassi delle query basate su metodo: Operatori di elemento
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.First%2A> metodo di query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  L'esempio in questo argomento Usa quanto segue `using` / `Imports` istruzioni:  
@@ -29,4 +29,5 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
  [!code-vb[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#firstcondition_mq)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

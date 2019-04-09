@@ -2,12 +2,12 @@
 title: Flussi di lavoro procedurali
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: fcf50296a8ce3e7e2e0631057467af8a8efd9215
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164749"
 ---
 # <a name="procedural-workflows"></a>Flussi di lavoro procedurali
 Nei flussi di lavoro procedurali vengono usati metodi di controllo del flusso simili a quelli dei linguaggi procedurali. Tra questi costrutti sono inclusi `While` e `If`. Questi flussi di lavoro possono essere creati liberamente usando altre attività di controllo del flusso quale <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence>.  
@@ -37,4 +37,5 @@ Nei flussi di lavoro procedurali vengono usati metodi di controllo del flusso si
 >  Se si usa [!INCLUDE[dublin](../../../includes/dublin-md.md)] per ospitare i flussi di lavoro in una Web farm, le istanze verranno spostate da AppFabric tra server di AppFabric differenti. È necessario quindi che le risorse possano essere condivise tra tutti i nodi.  Nessuna delle attività predefinite del flusso di lavoro di .NET 4 contiene operazioni di accesso alle risorse locali. Poiché AppFabric non offre alcun meccanismo per contrassegnare un flusso di lavoro come non spostabile, uno sviluppatore non deve creare attività personalizzate che non vengono eseguite correttamente quando un flusso di lavoro viene spostato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Flussi di lavoro del diagramma di flusso](flowchart-workflows.md)

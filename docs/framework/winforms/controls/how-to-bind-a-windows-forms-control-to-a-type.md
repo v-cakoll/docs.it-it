@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare un controllo di Windows Form a un tipo'
+title: 'Procedura: Associare un controllo di Windows Forms a un tipo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 8d6522f12944e2f1571fa6cbf0773991c54965c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f47090f5d0765833f7ac17a947691a4693d9923b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162490"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedura: Associare un controllo di Windows Form a un tipo
+# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedura: Associare un controllo di Windows Forms a un tipo
 Quando si compilano controlli che interagiscono con i dati, a volte è necessario associare un controllo a un tipo, invece che a un oggetto. Questa situazione si verifica soprattutto in fase di progettazione, quando i dati potrebbero non essere disponibili, ma i controlli associati a dati devono visualizzare informazioni provenienti dall'interfaccia pubblica di un tipo. Ad esempio, se si associa un controllo <xref:System.Windows.Forms.DataGridView> a un oggetto esposto da un servizio Web, potrebbe essere necessario che in fase di progettazione il controllo <xref:System.Windows.Forms.DataGridView> assegni alle colonne un'etichetta con i nomi dei membri di un tipo personalizzato.  
   
  È possibile associare facilmente un controllo a un tipo con il componente <xref:System.Windows.Forms.BindingSource>.  
@@ -35,6 +35,7 @@ Quando si compilano controlli che interagiscono con i dati, a volte è necessari
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

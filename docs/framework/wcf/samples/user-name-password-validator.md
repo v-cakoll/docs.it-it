@@ -2,12 +2,12 @@
 title: Validator del nome utente e password
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: df2340393544b0eaac8f2c6d4eae55846a604e40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162750"
 ---
 # <a name="user-name-password-validator"></a>Validator del nome utente e password
 In questo esempio viene illustrato come implementare un validator di UserNamePassword personalizzato. Questo processo è utile nei casi in cui nessuna delle modalità di convalida UserNamePassword incorporate è appropriata per i requisiti dell'applicazione; ad esempio, quando le coppie di nome utente/password sono archiviate in un archivio esterno, ad esempio un database. In questo esempio viene illustrato un servizio con un validator personalizzato che verifica due particolari coppie di nome utente/password. Il cliente utilizza tale coppia di nome utente/password per l'autenticazione nel servizio.
@@ -320,4 +320,3 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
 1.  Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio. In questo modo il certificato del server viene rimosso dall'archivio certificati.  
-  

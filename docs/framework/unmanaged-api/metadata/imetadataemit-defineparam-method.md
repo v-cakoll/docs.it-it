@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5384dd69578dbd912690b9490bd4bfa762ccd56d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 86711d107636505ab7aa23f0f72f70bd3e27635d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167772"
 ---
 # <a name="imetadataemitdefineparam-method"></a>Metodo IMetaDataEmit::DefineParam
 Crea una definizione di parametro con la firma specificata per il metodo fa riferimento il token specificato e ottiene un token per la definizione di parametro.  
@@ -80,5 +80,6 @@ HRESULT DefineParam (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

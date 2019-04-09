@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a4cd4d353c22921ed3dba1dc08fe2cee7e429f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173082"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>Struttura CorDebugExceptionObjectStackFrame
 Rappresenta le informazioni sullo stack frame da un oggetto di eccezione.  
@@ -39,7 +39,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`pModule`|Un puntatore all'oggetto ICorDebugModule per il frame corrente.|  
 |`ip`|Il valore del puntatore all'istruzione (EIP/RIP) per il frame corrente.|  
@@ -59,5 +59,6 @@ typedef struct CorDebugExceptionObjectStackFrame {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

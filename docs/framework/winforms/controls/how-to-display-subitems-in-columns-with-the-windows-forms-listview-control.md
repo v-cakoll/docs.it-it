@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Form'
+title: 'Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding ListSubItems
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
-ms.openlocfilehash: ecdb16087ff5788723b7d562cebd08551df87deb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: defa8aa736927c9076eb2410d6d914a8f7550d03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183717"
 ---
-# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Form
+# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.ListView> controllo può visualizzare testo aggiuntivi o secondari, per ogni elemento nella visualizzazione dettagli. La prima colonna consente di visualizzare il testo dell'elemento, ad esempio un numero di dipendenti. La seconda, terza le colonne successive visualizzano il primo, secondo e successivi elementi secondari associati.  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>Per aggiungere gli elementi secondari a un elemento di elenco  
@@ -30,8 +30,9 @@ I moduli di Windows <xref:System.Windows.Forms.ListView> controllo può visualiz
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)
-- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere colonne al controllo ListView Windows Form](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Procedura: Visualizzare le icone per il controllo ListView di Windows Form](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere colonne al controllo ListView di Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare icone per il controllo ListView di Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

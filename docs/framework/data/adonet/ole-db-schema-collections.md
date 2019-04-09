@@ -2,12 +2,12 @@
 title: Raccolte di schemi OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164684"
 ---
 # <a name="ole-db-schema-collections"></a>Raccolte di schemi OLE DB
 Contenuto della sezione viene descritto il supporto delle raccolte di schemi per i provider OLE DB per Microsoft SQL Server, Oracle e Microsoft Jet.  
@@ -31,12 +31,12 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|TABLE_TYPE|Stringa|  
+|TABLE_GUID|GUID|  
+|DESCRIZIONE|Stringa|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -45,50 +45,50 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|String|  
+|COLUMN_HASDEFAULT|Booleano|  
+|COLUMN_DEFAULT|Stringa|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booleano|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|String|  
-|CHARACTER_SET_SCHEMA|String|  
-|CHARACTER_SET_NAME|String|  
-|COLLATION_CATALOG|String|  
-|COLLATION_SCHEMA|String|  
-|COLLATION_NAME|String|  
-|DOMAIN_CATALOG|String|  
-|DOMAIN_SCHEMA|String|  
-|DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|CHARACTER_SET_CATALOG|Stringa|  
+|CHARACTER_SET_SCHEMA|Stringa|  
+|CHARACTER_SET_NAME|Stringa|  
+|COLLATION_CATALOG|Stringa|  
+|COLLATION_SCHEMA|Stringa|  
+|COLLATION_NAME|Stringa|  
+|DOMAIN_CATALOG|Stringa|  
+|DOMAIN_SCHEMA|Stringa|  
+|DOMAIN_NAME|Stringa|  
+|DESCRIZIONE|Stringa|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
 |COLUMN_TDSCOLLATION|Byte[]|  
-|IS_COMPUTED|Boolean|  
+|IS_COMPUTED|Booleano|  
   
 ### <a name="procedures"></a>Procedure  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|String|  
-|PROCEDURE_SCHEMA|String|  
-|PROCEDURE_NAME|String|  
+|PROCEDURE_CATALOG|Stringa|  
+|PROCEDURE_SCHEMA|Stringa|  
+|PROCEDURE_NAME|Stringa|  
 |PROCEDURE_TYPE|Int16|  
-|PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|PROCEDURE_DEFINITION|Stringa|  
+|DESCRIZIONE|Stringa|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -96,60 +96,60 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|String|  
-|PROCEDURE_SCHEMA|String|  
-|PROCEDURE_NAME|String|  
-|PARAMETER_NAME|String|  
+|PROCEDURE_CATALOG|Stringa|  
+|PROCEDURE_SCHEMA|Stringa|  
+|PROCEDURE_NAME|Stringa|  
+|PARAMETER_NAME|Stringa|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
-|PARAMETER_HASDEFAULT|Boolean|  
-|PARAMETER_DEFAULT|String|  
-|IS_NULLABLE|Boolean|  
+|PARAMETER_HASDEFAULT|Booleano|  
+|PARAMETER_DEFAULT|Stringa|  
+|IS_NULLABLE|Booleano|  
 |DATA_TYPE|Int32|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|String|  
-|TYPE_NAME|String|  
-|LOCAL_TYPE_NAME|String|  
+|DESCRIZIONE|Stringa|  
+|TYPE_NAME|Stringa|  
+|LOCAL_TYPE_NAME|Stringa|  
   
 ### <a name="catalog"></a>Catalog  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|CATALOG_NAME|String|  
-|DESCRIPTION|String|  
+|CATALOG_NAME|Stringa|  
+|DESCRIZIONE|Stringa|  
   
 ### <a name="indexes"></a>Indexes  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|INDEX_CATALOG|String|  
-|INDEX_SCHEMA|String|  
-|INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|INDEX_CATALOG|Stringa|  
+|INDEX_SCHEMA|Stringa|  
+|INDEX_NAME|Stringa|  
+|PRIMARY_KEY|Booleano|  
+|UNIQUE|Booleano|  
+|CLUSTERED|Booleano|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booleano|  
+|AUTO_UPDATE|Booleano|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|Decimale|  
 |PAGES|Int32|  
-|FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|FILTER_CONDITION|Stringa|  
+|INTEGRATED|Booleano|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Provider OLE DB per Microsoft Oracle  
  Oltre alle raccolte di schemi comuni, il driver OLE DB per Microsoft Oracle supporta le seguenti raccolte di schemi specifici:  
@@ -172,12 +172,12 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|TABLE_TYPE|Stringa|  
+|TABLE_GUID|GUID|  
+|DESCRIZIONE|Stringa|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -186,45 +186,45 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|String|  
+|COLUMN_HASDEFAULT|Booleano|  
+|COLUMN_DEFAULT|Stringa|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booleano|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|String|  
-|CHARACTER_SET_SCHEMA|String|  
-|CHARACTER_SET_NAME|String|  
-|COLLATION_CATALOG|String|  
-|COLLATION_SCHEMA|String|  
-|COLLATION_NAME|String|  
-|DOMAIN_CATALOG|String|  
-|DOMAIN_SCHEMA|String|  
-|DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|CHARACTER_SET_CATALOG|Stringa|  
+|CHARACTER_SET_SCHEMA|Stringa|  
+|CHARACTER_SET_NAME|Stringa|  
+|COLLATION_CATALOG|Stringa|  
+|COLLATION_SCHEMA|Stringa|  
+|COLLATION_NAME|Stringa|  
+|DOMAIN_CATALOG|Stringa|  
+|DOMAIN_SCHEMA|Stringa|  
+|DOMAIN_NAME|Stringa|  
+|DESCRIZIONE|Stringa|  
   
 ### <a name="procedures"></a>Procedure  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|String|  
-|PROCEDURE_SCHEMA|String|  
-|PROCEDURE_NAME|String|  
+|PROCEDURE_CATALOG|Stringa|  
+|PROCEDURE_SCHEMA|Stringa|  
+|PROCEDURE_NAME|Stringa|  
 |PROCEDURE_TYPE|Int16|  
-|PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|PROCEDURE_DEFINITION|Stringa|  
+|DESCRIZIONE|Stringa|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -232,35 +232,35 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|String|  
-|PROCEDURE_SCHEMA|String|  
-|PROCEDURE_NAME|String|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|PROCEDURE_CATALOG|Stringa|  
+|PROCEDURE_SCHEMA|Stringa|  
+|PROCEDURE_NAME|Stringa|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booleano|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|String|  
+|DESCRIZIONE|Stringa|  
 |OVERLOAD|Int16|  
   
 ### <a name="views"></a>Visualizzazioni  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|VIEW_DEFINITION|String|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
-|DESCRIPTION|String|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|VIEW_DEFINITION|Stringa|  
+|CHECK_OPTION|Booleano|  
+|IS_UPDATABLE|Booleano|  
+|DESCRIZIONE|Stringa|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -268,31 +268,31 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|INDEX_CATALOG|String|  
-|INDEX_SCHEMA|String|  
-|INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|INDEX_CATALOG|Stringa|  
+|INDEX_SCHEMA|Stringa|  
+|INDEX_NAME|Stringa|  
+|PRIMARY_KEY|Booleano|  
+|UNIQUE|Booleano|  
+|CLUSTERED|Booleano|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booleano|  
+|AUTO_UPDATE|Booleano|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|Decimale|  
 |PAGES|Int32|  
-|FILTER_CONDITION|String|  
-|INTEGRATED|Boolean|  
+|FILTER_CONDITION|Stringa|  
+|INTEGRATED|Booleano|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Provider OLE DB per Microsoft Jet  
  Oltre alle raccolte di schemi comuni, il driver OLE DB di Microsoft Jet supporta le raccolte di schemi specifici seguenti:  
@@ -311,12 +311,12 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|TABLE_TYPE|Stringa|  
+|TABLE_GUID|GUID|  
+|DESCRIZIONE|Stringa|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -325,45 +325,45 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
-|COLUMN_DEFAULT|String|  
+|COLUMN_HASDEFAULT|Booleano|  
+|COLUMN_DEFAULT|Stringa|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Booleano|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
 |DATETIME_PRECISION|Int64|  
-|CHARACTER_SET_CATALOG|String|  
-|CHARACTER_SET_SCHEMA|String|  
-|CHARACTER_SET_NAME|String|  
-|COLLATION_CATALOG|String|  
-|COLLATION_SCHEMA|String|  
-|COLLATION_NAME|String|  
-|DOMAIN_CATALOG|String|  
-|DOMAIN_SCHEMA|String|  
-|DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|CHARACTER_SET_CATALOG|Stringa|  
+|CHARACTER_SET_SCHEMA|Stringa|  
+|CHARACTER_SET_NAME|Stringa|  
+|COLLATION_CATALOG|Stringa|  
+|COLLATION_SCHEMA|Stringa|  
+|COLLATION_NAME|Stringa|  
+|DOMAIN_CATALOG|Stringa|  
+|DOMAIN_SCHEMA|Stringa|  
+|DOMAIN_NAME|Stringa|  
+|DESCRIZIONE|Stringa|  
   
 ### <a name="procedures"></a>Procedure  
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|PROCEDURE_CATALOG|String|  
-|PROCEDURE_SCHEMA|String|  
-|PROCEDURE_NAME|String|  
+|PROCEDURE_CATALOG|Stringa|  
+|PROCEDURE_SCHEMA|Stringa|  
+|PROCEDURE_NAME|Stringa|  
 |PROCEDURE_TYPE|Int16|  
-|PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|PROCEDURE_DEFINITION|Stringa|  
+|DESCRIZIONE|Stringa|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -371,13 +371,13 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|VIEW_DEFINITION|String|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
-|DESCRIPTION|String|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|VIEW_DEFINITION|Stringa|  
+|CHECK_OPTION|Booleano|  
+|IS_UPDATABLE|Booleano|  
+|DESCRIZIONE|Stringa|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -385,31 +385,32 @@ Contenuto della sezione viene descritto il supporto delle raccolte di schemi per
   
 |Nome colonna|Tipo di dati|  
 |----------------|--------------|  
-|TABLE_CATALOG|String|  
-|TABLE_SCHEMA|String|  
-|TABLE_NAME|String|  
-|INDEX_CATALOG|String|  
-|INDEX_SCHEMA|String|  
-|INDEX_NAME|String|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|TABLE_CATALOG|Stringa|  
+|TABLE_SCHEMA|Stringa|  
+|TABLE_NAME|Stringa|  
+|INDEX_CATALOG|Stringa|  
+|INDEX_SCHEMA|Stringa|  
+|INDEX_NAME|Stringa|  
+|PRIMARY_KEY|Booleano|  
+|UNIQUE|Booleano|  
+|CLUSTERED|Booleano|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Booleano|  
+|AUTO_UPDATE|Booleano|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_NAME|Stringa|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|Decimale|  
 |PAGES|Int32|  
-|FILTER_CONDITION|String|  
+|FILTER_CONDITION|Stringa|  
 |INTEGRATED|Booleano|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

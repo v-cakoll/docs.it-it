@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d778ca30aa29ba883552f97e061fb1dde8d73e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163000"
 ---
 # <a name="event-element-net-native"></a>\<Evento di > elemento (.NET Native)
 Applica i criteri di reflection di runtime a un evento.  
@@ -35,13 +35,13 @@ Applica i criteri di reflection di runtime a un evento.
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*method_name*|Il nome dell'evento. Il tipo dell'evento viene definito dall'elemento padre [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per l'evento. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -52,13 +52,14 @@ Applica i criteri di reflection di runtime a un evento.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  Se i criteri di un evento non sono definiti esplicitamente, l'evento eredita i criteri di runtime dell'elemento padre.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

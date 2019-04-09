@@ -10,12 +10,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184457"
 ---
 # <a name="cryptography-settings-schema"></a>Schema delle impostazioni di crittografia
 Lo schema delle impostazioni di crittografia contiene gli elementi che specificano come eseguire il mapping dei nomi descrittivi degli algoritmi alle classi che implementano gli algoritmi di crittografia.  
@@ -44,11 +44,12 @@ Lo schema delle impostazioni di crittografia contiene gli elementi che specifica
 |[**\<cryptoClass**>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Contiene una classe di crittografia per la quale è stato eseguito il mapping a un nome descrittivo nell'elemento **\<nameEntry>**.|  
 |[**\<cryptographySettings**>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)|Contiene le impostazioni di crittografia.|  
 |[**\<cryptoNameMapping**>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contiene i mapping di classi e nomi descrittivi.|  
-|[**Elemento \<mscorlib>** per le impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/mscorlib-element-for-cryptography-settings.md)|Contiene l'elemento **\<cryptographySettings>**.|  
+|[**\<mscorlib >** (elemento) per le impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/mscorlib-element-for-cryptography-settings.md)|Contiene l'elemento **\<cryptographySettings>**.|  
 |[**\<nameEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)|Esegue il mapping di un nome di classe a un nome di algoritmo descrittivo, in modo da poter associare più nomi descrittivi a una classe.|  
 |[**\<oidEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descrittivo.|  
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene i mapping di OID ASN.1 e classi.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [servizi crittografici](../../../../../docs/standard/security/cryptographic-services.md)

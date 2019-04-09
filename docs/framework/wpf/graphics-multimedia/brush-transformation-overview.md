@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169572"
 ---
 # <a name="brush-transformation-overview"></a>Cenni preliminari sulle proprietà di trasformazione Brush
 La classe Brush sono disponibili due proprietà di trasformazione: <xref:System.Windows.Media.Brush.Transform%2A> e <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Le proprietà consentono di ruotare, ridimensionare, inclinare e traslare il contenuto di un pennello. Questo argomento descrive le differenze tra le due proprietà e contiene gli esempi di uso.  
@@ -98,6 +98,7 @@ La classe Brush sono disponibili due proprietà di trasformazione: <xref:System.
  Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli). Per altre informazioni sui pennelli, vedere  [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>

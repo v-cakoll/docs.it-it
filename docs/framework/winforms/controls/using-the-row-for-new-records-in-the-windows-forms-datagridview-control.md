@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184821"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizzo della riga per i nuovi record del controllo DataGridView di Windows Form
 Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei dati nell'applicazione, spesso si desidera offrire agli utenti la possibilità di aggiungere nuove righe di dati nell'archivio dati. Il <xref:System.Windows.Forms.DataGridView> controllo supporta questa funzionalità, fornendo una riga per i nuovi record, che viene sempre visualizzata come ultima riga. È contrassegnato con un simbolo di asterisco (*) l'intestazione di riga. Le sezioni seguenti illustrano alcune delle attività che è necessario considerare quando si programma con la riga per i nuovi record abilitato.  
@@ -58,7 +58,8 @@ Quando si usa un <xref:System.Windows.Forms.DataGridView> per la modifica dei da
  Se si implementa la modalità virtuale, è necessario tenere traccia di quando è necessaria una riga per i nuovi record nel modello di dati e quando il rollback dell'aggiunta della riga. L'implementazione esatta di questa funzionalità dipende dall'implementazione del modello di dati e la relativa semantica di transazione, ad esempio, se il commit ambito è a livello di riga o cella. Per altre informazioni, vedere [modalità virtuale nel controllo DataGridView Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Immissione di dati nel controllo DataGridView di Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView Windows Form](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Immissione di dati nel controllo DataGridView Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Specificare i valori predefiniti per le nuove righe nel controllo DataGridView di Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

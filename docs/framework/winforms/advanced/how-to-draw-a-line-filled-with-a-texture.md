@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disegnare una linea con riempita a trama'
+title: 'Procedura: Disegnare una linea con riempimento a trama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 82fc553e2a2fc9d1e8161c0f0dfef9190668e48c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186907"
 ---
-# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Procedura: Disegnare una linea con riempita a trama
+# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Procedura: Disegnare una linea con riempimento a trama
 Invece di tracciare una linea con un colore a tinta unita, è possibile disegnare una linea con una trama. Per tracciare linee e curve con una trama, creare un <xref:System.Drawing.TextureBrush> dell'oggetto e passarlo <xref:System.Drawing.TextureBrush> dell'oggetto a un <xref:System.Drawing.Pen.%23ctor%2A> costruttore. La bitmap associata al pennello trama viene utilizzata per affiancare il piano (in modo invisibile) e quando la penna Disegna una linea o una curva, il tratto di penna permette di ottenere determinate pixel della trama affiancata.  
   
 ## <a name="example"></a>Esempio  
@@ -33,5 +33,6 @@ Invece di tracciare una linea con un colore a tinta unita, è possibile disegnar
  Creare un modulo di Windows e la gestione del modulo <xref:System.Windows.Forms.Control.Paint> evento. Incollare il codice precedente nel <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire `Texture.jpg` con un'immagine valida nel sistema.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+
+- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)

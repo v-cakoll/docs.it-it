@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: Eseguire query tra relazioni (C#)'
+title: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184886"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Eseguire query tra relazioni (C#)
+# <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Esecuzione di query tra relazioni (C#)
 Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -89,4 +89,5 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
  Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

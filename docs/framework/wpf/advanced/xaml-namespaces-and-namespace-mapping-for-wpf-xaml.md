@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176917"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF
 Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spazio dei nomi XAML nel tag radice di ogni file XAML WPF. L'argomento descrive anche come produrre mapping simili per l'uso di elementi definiti nel codice e/o all'interno di assembly separati.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>Definizione di spazio dei nomi XAML  
  Uno spazio dei nomi XAML è in realtà un'estensione del concetto di spazio dei nomi XML. Le tecniche di specifica di uno spazio dei nomi XAML si basano sulla sintassi dello spazio dei nomi XML, sulla convenzione dell'uso di URI come identificatori dello spazio dei nomi, sull'uso di prefissi per fare riferimento a più spazi dei nomi dalla stessa origine del markup e così via. Il concetto principale aggiunto alla definizione XAML rispetto allo spazio dei nomi XML consiste nel fatto che uno spazio dei nomi XAML implica un ambito di univocità per gli utilizzi del markup e influenza il modo in cui le entità del markup possono essere supportate da spazi dei nomi e da assembly di riferimento CLR specifici. Questa seconda considerazione è influenzata anche dal concetto di contesto dello schema XAML. Tuttavia, per quanto riguarda il funzionamento di WPF rispetto agli spazi dei nomi XAML, è possibile considerare gli spazi dei nomi XAML in termini di mapping diretto da parte del markup XAML di uno spazio dei nomi XAML predefinito, dello spazio dei nomi del linguaggio XAML e di qualsiasi altro spazio dei nomi XAML agli spazi dei nomi e agli assembly di riferimento CLR di supporto specifici.  
   
@@ -48,9 +47,9 @@ Questo argomento approfondisce la presenza e lo scopo dei due mapping dello spaz
   
  La sintassi accetta i token denominati e i valori riportati di seguito:  
   
- `clr-namespace:` lo spazio dei nomi CLR dichiarato nell'assembly che contiene i tipi pubblici da esporre come elementi.  
+ `clr-namespace:` Lo spazio dei nomi CLR dichiarato all'interno dell'assembly che contiene i tipi pubblici da esporre come elementi.  
   
- `assembly=` l'assembly che contiene l'intero spazio dei nomi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a cui si fa riferimento o parte di esso. Il valore è dato in genere dal nome dell'assembly, non dal percorso, e non include l'estensione (ad esempio, dll o exe). Il percorso dell'assembly deve essere stabilito come riferimento al progetto nel file di progetto che contiene il codice XAML di cui si sta tentando di eseguire il mapping. Per incorporare il controllo delle versioni e la firma con nome sicuro, il `assembly` valore può essere una stringa come definito da <xref:System.Reflection.AssemblyName>, anziché il nome di stringa semplice.  
+ `assembly=` L'assembly che contiene alcuni o tutti i riferimenti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dello spazio dei nomi. Il valore è dato in genere dal nome dell'assembly, non dal percorso, e non include l'estensione (ad esempio, dll o exe). Il percorso dell'assembly deve essere stabilito come riferimento al progetto nel file di progetto che contiene il codice XAML di cui si sta tentando di eseguire il mapping. Per incorporare il controllo delle versioni e la firma con nome sicuro, il `assembly` valore può essere una stringa come definito da <xref:System.Reflection.AssemblyName>, anziché il nome di stringa semplice.  
   
  Si noti che il carattere che separa il token `clr-namespace` dal valore è il segno di due punti (:), mentre il carattere che separa il token `assembly` dal valore è un segno di uguale (=). Il carattere da usare tra i due token è il segno di punto e virgola. Inoltre, non includere gli spazi vuoti in un punto qualsiasi nella dichiarazione.  
   
@@ -100,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Mapping ad assembly correnti  
- È possibile omettere `assembly` se `clr-namespace` a cui si fa riferimento è definito all'interno dello stesso assembly del codice dell'applicazione che fa riferimento alle classi personalizzate. In alternativa, una sintassi equivalente appropriata consiste nello specificare `assembly=` senza token di stringa dopo il segno di uguale.  
+ `assembly` può essere omessa se la `clr-namespace` cui viene fatto riferimento viene definito nello stesso assembly del codice dell'applicazione che fa riferimento alle classi personalizzate. In alternativa, una sintassi equivalente appropriata consiste nello specificare `assembly=` senza token di stringa dopo il segno di uguale.  
   
  Non è possibile usare le classi personalizzate come elemento radice di una pagina se definite nello stesso assembly. Non è necessario eseguire il mapping delle classi parziali, ma solo di quelle che non costituiscono la classe parziale di una pagina dell'applicazione, se si intende fare riferimento a esse come elementi in XAML.  
   
@@ -113,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Spazi dei nomi della finestra di progettazione e altri prefissi di modelli XAML  
  Se si lavora con ambienti di sviluppo e/o con strumenti di progettazione per XAML WPF, si può notare che all'interno del markup XAML esistono altri spazi dei nomi XAML definiti o altri prefissi.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa uno spazio dei nomi della finestra di progettazione in genere mappato al prefisso `d:`. I modelli di progetto più recenti per WPF possono eseguire preventivamente il mapping di questo spazio dei nomi XAML per supportare lo scambio di XAML tra [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e altri ambienti di progettazione. Questo spazio dei nomi XAML di progettazione è usato per trasmettere lo stato di progettazione durante la sequenza di andata e ritorno dell'interfaccia utente basata su XAML nella finestra di progettazione. Questo spazio dei nomi viene usato anche per funzionalità quali `d:IsDataSource`, che abilitano origini dati di runtime in una finestra di progettazione.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] Usa uno spazio dei nomi della finestra di progettazione che solitamente è associato al prefisso `d:`. I modelli di progetto più recenti per WPF possono eseguire preventivamente il mapping di questo spazio dei nomi XAML per supportare lo scambio di XAML tra [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e altri ambienti di progettazione. Questo spazio dei nomi XAML di progettazione è usato per trasmettere lo stato di progettazione durante la sequenza di andata e ritorno dell'interfaccia utente basata su XAML nella finestra di progettazione. Questo spazio dei nomi viene usato anche per funzionalità quali `d:IsDataSource`, che abilitano origini dati di runtime in una finestra di progettazione.  
   
- Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è finalizzato alla compatibilità dei markup e usa un modello di compatibilità dei markup non necessariamente specifico di XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per altre informazioni su concetti di compatibilità dei markup e sulla loro relazione con WPF, vedere [compatibilità dei Markup (mc:) Funzionalità del linguaggio](markup-compatibility-mc-language-features.md).  
+ Un altro prefisso che è possibile vedere mappato è `mc:`. `mc:` è per la compatibilità dei markup e Usa un modello di compatibilità dei markup non necessariamente specifiche XAML. In alcuni casi, è possibile usare le funzionalità di compatibilità dei markup per scambiare XAML tra framework o tra altri limiti di implementazione di supporto, per lavorare tra contesti di schemi XAML, per garantire la compatibilità per modalità limitate nelle finestre di progettazione e così via. Per altre informazioni su concetti di compatibilità dei markup e sulla loro relazione con WPF, vedere [compatibilità dei Markup (mc:) Funzionalità del linguaggio](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF e caricamento di assembly  
  Il contesto dello schema XAML per WPF si integra con il modello applicazione WPF, che a sua volta Usa il concetto definito da CLR di <xref:System.AppDomain>. La sequenza seguente descrive come contesto dello schema XAML interpreta la modalità di caricare gli assembly o trovare i tipi in fase di esecuzione o in fase di progettazione, in base all'utilizzo WPF di <xref:System.AppDomain> e ad altri fattori.  
@@ -137,5 +136,6 @@ End Namespace
  Il codice BAML (generato tramite PresentationBuildTask) usa tutti i passaggi, anche se non deve contenere nomi di assembly non qualificati.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Understanding XML Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)

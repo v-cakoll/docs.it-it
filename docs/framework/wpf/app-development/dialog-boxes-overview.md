@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177411"
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
 Le applicazioni autonome hanno in genere una finestra principale in cui vengono visualizzati i dati principali su cui opera l'applicazione ed espone la funzionalità di elaborazione dei dati tramite [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] meccanismi come le barre dei menu, barre degli strumenti e le barre di stato. In un'applicazione più complessa sono inoltre disponibili finestre aggiuntive per l'esecuzione delle operazioni riportate di seguito:  
@@ -33,9 +33,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
  Oggetto *modale* finestra di dialogo, d'altra parte, non impedire a un utente di attivare altre finestre mentre è aperto. Ad esempio, se un utente desidera cercare occorrenze di una determinata parola in un documento, dalla finestra principale verrà spesso aperta una finestra di dialogo in cui l'utente dovrà immettere la parola che desidera cercare. Poiché la ricerca di una parola non impedisce all'utente di modificare il documento, la finestra di dialogo non deve essere modale. Una finestra di dialogo non modale è senz'altro disponibile un **chiudere** per chiudere la finestra di dialogo ed eventualmente ulteriori pulsanti per eseguire funzioni specifiche, ad esempio un **Trova successivo** pulsante Trova l'occorrenza successiva di word che corrisponde ai criteri di ricerca di una parola.  
   
  Windows Presentation Foundation (WPF) consente di creare diversi tipi di finestre di dialogo, incluse le finestre di messaggio, finestre di dialogo comuni e finestre di dialogo personalizzate. Questo argomento vengono illustrate e il [esempio di finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984) disponibili alcuni esempi.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Finestre di messaggio  
  Oggetto *MessageBox* è una finestra di dialogo che può essere utilizzata per visualizzare le informazioni testuali e consentire agli utenti di prendere decisioni più intelligenti con i pulsanti. Di seguito è illustrata una finestra di messaggio in cui vengono visualizzate informazioni di testo, viene posta una domanda e sono disponibili tre pulsanti per fornire una risposta.  
@@ -47,7 +45,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Per visualizzare una finestra di messaggio, si chiama il `static` <xref:System.Windows.MessageBox.Show%2A> metodo, come illustrato nel codice seguente.  
+ Per visualizzare una finestra di messaggio, si chiama il `static`<xref:System.Windows.MessageBox.Show%2A> metodo, come illustrato nel codice seguente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -65,7 +63,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Finestre di dialogo comuni  
- In [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] è implementata una varietà di finestre di dialogo riutilizzabili comuni a tutte le applicazioni, incluse le finestre di dialogo per l'apertura, il salvataggio e la stampa di file. Poiché queste finestre di dialogo sono implementate dal sistema operativo, possono essere condivise da tutte le applicazioni eseguite nel sistema operativo, con notevoli vantaggi in termini della coerenza di utilizzo: se un utente utilizza con frequenza una finestra di dialogo basata sul sistema operativo in un'applicazione, non dovrà imparare a utilizzare la stessa finestra in altre applicazioni. Poiché queste finestre di dialogo sono disponibili per tutte le applicazioni e poiché consentono un'esperienza utente coerente, sono note come *finestre di dialogo comuni*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una serie di finestre di dialogo riutilizzabili comuni a tutte le applicazioni, incluse finestre di dialogo per l'apertura, salvataggio di file e la stampa. Poiché queste finestre di dialogo sono implementate dal sistema operativo, possono essere condivise da tutte le applicazioni eseguite nel sistema operativo, con notevoli vantaggi in termini della coerenza di utilizzo: se un utente utilizza con frequenza una finestra di dialogo basata sul sistema operativo in un'applicazione, non dovrà imparare a utilizzare la stessa finestra in altre applicazioni. Poiché queste finestre di dialogo sono disponibili per tutte le applicazioni e poiché consentono un'esperienza utente coerente, sono note come *finestre di dialogo comuni*.  
   
  Windows Presentation Foundation (WPF) incapsula il file aperto, salvare file e finestre di dialogo comuni di stampa e li espone come classi gestite per l'utilizzo in applicazioni autonome. Questo argomento fornisce alcuni cenni preliminari su ognuna.  
   
@@ -210,7 +208,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
  ![Una finestra di dialogo margini con un bordo rosso intorno al valore di margine sinistro non valido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] l'utente non rimane bloccato sul controllo non valido finché non vengono immessi dati validi. In questo modo, l'utente sarà libero di spostarsi tra i controlli della finestra di dialogo anche se i dati immessi non sono validi. Tuttavia, ciò significa che un utente può immettere dati non validi e premere il **OK** pulsante. Per questo motivo, il codice deve anche convalidare tutti i controlli in una finestra di dialogo quando il **OK** pulsante viene premuto gestendo il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non limita un utente per il controllo non è valido finché non vengono immessi dati validi. In questo modo, l'utente sarà libero di spostarsi tra i controlli della finestra di dialogo anche se i dati immessi non sono validi. Tuttavia, ciò significa che un utente può immettere dati non validi e premere il **OK** pulsante. Per questo motivo, il codice deve anche convalidare tutti i controlli in una finestra di dialogo quando il **OK** pulsante viene premuto gestendo il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -345,6 +343,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul controllo Popup](../controls/popup-overview.md)
+
+- [Cenni preliminari sul controllo Popup](../controls/popup-overview.md)
 - [Esempio di finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [Esempio di controllo personalizzato ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

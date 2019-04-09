@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182299"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  
@@ -23,7 +23,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
 -   La creazione di un oggetto è dispendiosa e si vuole posticiparla fino al completamento di altre operazioni dispendiose. Si supponga, ad esempio, che il programma carichi diverse istanze dell'oggetto all'avvio, ma che solo alcune siano necessarie immediatamente. È possibile migliorare le prestazioni di avvio del programma posticipando l'inizializzazione degli oggetti non necessari finché non vengono creati quelli necessari.  
   
- Benché sia possibile scrivere codice personalizzato per eseguire l'inizializzazione differita, è consigliabile usare <xref:System.Lazy%601>. <xref:System.Lazy%601> e i tipi correlati supportano anche la thread safety e forniscono criteri uniformi di propagazione delle eccezioni.  
+ Benché sia possibile scrivere codice personalizzato per eseguire l'inizializzazione differita, è consigliabile usare <xref:System.Lazy%601>. <xref:System.Lazy%601> e anche i tipi correlati supportano la thread safety e forniscono criteri di propagazione delle eccezioni coerente.  
   
  La tabella seguente elenca i tipi forniti da .NET Framework versione 4 per consentire l'inizializzazione differita in diversi scenari.  
   
@@ -75,7 +75,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
  Alcuni costruttori <xref:System.Lazy%601> includono un parametro <xref:System.Threading.LazyThreadSafetyMode> chiamato `mode`. Questi costruttori forniscono una modalità di thread safety aggiuntiva. La tabella seguente mostra in che modo i parametri del costruttore che specificano la thread safety influiscono sulla thread safety di un oggetto <xref:System.Lazy%601>. Ogni costruttore include al massimo uno di questi parametri.  
   
-|Thread safety dell'oggetto|Parametro `LazyThreadSafetyMode` `mode`|Parametro `isThreadSafe` booleano|Nessun parametro di thread safety|  
+|Thread safety dell'oggetto|`LazyThreadSafetyMode` `mode` parametro|Parametro `isThreadSafe` booleano|Nessun parametro di thread safety|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Completamente thread-safe. Un solo thread per volta tenta di inizializzare il valore.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sì.|  
 |Non thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Non applicabile.|  
@@ -126,7 +126,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> esegue il wrapping del proprio oggetto quasi allo stesso modo di <xref:System.Lazy%601>, con queste importanti differenze:  
+ <xref:System.Threading.ThreadLocal%601> esegue il wrapping relativo oggetto in modo analogo a come <xref:System.Lazy%601>, con queste importanti differenze:  
   
 -   Ogni thread inizializza la variabile di thread locale usando i propri dati privati, che non sono accessibili da altri thread.  
   
@@ -140,7 +140,7 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variabili di thread locali in Parallel.For e ForEach  
- Quando si usa il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> per eseguire l'iterazione delle origini dati in parallelo, è possibile usare gli overload che includono supporto integrato per dati locali del thread. In questi metodi la natura locale dei dati del thread viene ottenuta usando delegati locali per accedere ai dati, crearli e pulirli. Per altre informazioni, vedere [Procedura: Scrivere un ciclo Parallel. for con variabili locali del Thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [come: Scrivere un ciclo Parallel. foreach con variabili locali partizione](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Quando si usa il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> per eseguire l'iterazione delle origini dati in parallelo, è possibile usare gli overload che includono supporto integrato per dati locali del thread. In questi metodi la natura locale dei dati del thread viene ottenuta usando delegati locali per accedere ai dati, crearli e pulirli. Per altre informazioni, vedere [Procedura: Scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Procedura: Scrivere un ciclo Parallel.ForEach con variabili partition-local](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Uso dell'inizializzazione differita per scenari con sovraccarico ridotto  
  Negli scenari in cui è necessario inizializzare in modo differito un numero elevato di oggetti, si potrebbe stabilire che il wrapping di ogni oggetto in un oggetto <xref:System.Lazy%601> richiede una quantità eccessiva di memoria o di risorse di calcolo. In un altro caso, potrebbe essere necessario soddisfare requisiti rigorosi relativamente all'esposizione dell'inizializzazione differita. In questi casi, è possibile usare i metodi `static` (`Shared` in Visual Basic) della classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> per inizializzare in modo differito ogni oggetto senza eseguirne il wrapping in un'istanza di <xref:System.Lazy%601>.  
@@ -153,7 +153,8 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
  In questo esempio notare che la procedura di inizializzazione viene richiamata a ogni iterazione del ciclo. In scenari di multithreading, il primo thread che richiama la procedura di inizializzazione è quello i cui valori vengono visualizzati da tutti i thread. Anche i thread successivi richiamano la procedura di inizializzazione, ma i loro risultati non vengono usati. Se questo tipo di possibile race condition non è accettabile, usare l'overload di <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType>, che accetta un argomento booleano e un oggetto di sincronizzazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Nozioni di base sul threading gestito](../../../docs/standard/threading/managed-threading-basics.md)
-- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)
+- [Thread e threading](../../../docs/standard/threading/threads-and-threading.md)
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Procedura: Eseguire l'inizializzazione differita di oggetti](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Procedura: Eseguire l'inizializzazione lazy di oggetti](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

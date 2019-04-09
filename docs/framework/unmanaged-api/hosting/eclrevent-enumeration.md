@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d66e010340d186eed2222ae2ba8cfb24b8e8d7b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13d564be68d6b49a1616be97710312f33f828d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176345"
 ---
 # <a name="eclrevent-enumeration"></a>Enumerazione EClrEvent
 Descrive gli eventi di common language runtime (CLR) per il quale l'host può registrare i callback.  
@@ -39,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`Event_ClrDisabled`|Specifica un errore irreversibile di CLR.|  
 |`Event_DomainUnload`|Specifica lo scaricamento di un particolare <xref:System.AppDomain>.|  
@@ -63,6 +63,7 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

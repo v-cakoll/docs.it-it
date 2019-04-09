@@ -2,12 +2,12 @@
 title: Mapping dei tipi di dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 302ccd7b2a05dabc5f13e6f821404a8527951741
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178698"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapping dei tipi di dati in ADO.NET
 .NET Framework è basato su Common Type System, che definisce come vengono dichiarati, usati e gestiti i tipi nel runtime. È costituito sia da tipi di valore che da tipi di riferimento, che derivano tutti dal tipo di base <xref:System.Object>. Quando si usa un'origine dati, il tipo di dati viene dedotto dal provider di dati, se non è specificato in modo esplicito. Un oggetto <xref:System.Data.DataSet> è ad esempio indipendente da qualsiasi origine dati specifica. I dati in un oggetto `DataSet` vengono recuperati da un'origine dati e le modifiche vengono applicate nell'origine dati usando un oggetto `DataAdapter`. Questo significa che quando un `DataAdapter` compila un oggetto <xref:System.Data.DataTable> in un `DataSet` con valori provenienti da un'origine dati, i tipi di dati che si ottengono nelle colonne dell'oggetto `DataTable` sono tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] anziché tipi specifici del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] usato per la connessione all'origine dati.  
@@ -36,9 +36,10 @@ ms.locfileid: "55827916"
  Vengono descritti i problemi rilevati di frequente dagli sviluppatori con l'uso di numeri a virgola mobile.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+
+- [Mapping dei tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Configurazione dei parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Recupero di informazioni dello schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Common Type System](../../../../docs/standard/base-types/common-type-system.md)
 - [La conversione dei tipi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

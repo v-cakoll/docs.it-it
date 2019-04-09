@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c291c12de9cb95416e12e1a5fca273c542df36
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 778359a7d26b6e2f19984a1f7ff06a527f2449f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167746"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>Interfaccia ICorDebugValueBreakpoint
 Estende l'interfaccia ICorDebugBreakpoint per fornire l'accesso a valori specifici.  
@@ -47,4 +47,5 @@ Estende l'interfaccia ICorDebugBreakpoint per fornire l'accesso a valori specifi
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

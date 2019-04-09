@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 259b8e6df9b302ec50fe84a3b57d4597821bdcc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181532"
 ---
 # <a name="large-udts"></a>Tipi di grandi dimensioni definiti dall'utente
 I tipi definiti dall'utente (UDT) consentono agli sviluppatori di estendere il sistema di tipi scalari del server archiviando oggetti CLR (Common Language Runtime) in un database di SQL Server. I tipi UDT possono contenere più elementi e presentare comportamenti diversi dai tipi di dati alias tradizionali, costituiti da un singolo tipo di dati di sistema SQL Server.  
@@ -132,8 +132,9 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Recupero di informazioni sullo schema del database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+
+- [Configurazione dei parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Recupero di informazioni dello schema del database](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

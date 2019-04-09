@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare un comando a un controllo con supporto dei comandi'
+title: 'Procedura: Associare un comando a un controllo con supporto del comando'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165205"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procedura: Associare un comando a un controllo con supporto dei comandi
+# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procedura: Associare un comando a un controllo con supporto del comando
 Nell'esempio seguente viene illustrato come associare una classe <xref:System.Windows.Input.RoutedCommand> a una classe <xref:System.Windows.Controls.Control> che dispone del supporto incorporato per il comando.  Per un esempio completo in cui i comandi sono associati a più origini, vedere l'esempio [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Creare un esempio di oggetto RoutedCommand personalizzato).  
   
 ## <a name="example"></a>Esempio  
@@ -25,7 +25,7 @@ Nell'esempio seguente viene illustrato come associare una classe <xref:System.Wi
   
  Gli oggetti <xref:System.Windows.Input.RoutedCommand> statici che costituiscono queste classi non forniscono la logica per il comando.  La logica per il comando è associata al comando con un <xref:System.Windows.Input.CommandBinding>.  Alcuni controlli dispongono di CommandBinding incorporati per determinati comandi.  Questo meccanismo consente di mantenere invariata la semantica di un comando, mentre l'implementazione effettiva può cambiare.  Un oggetto <xref:System.Windows.Controls.TextBox>, ad esempio, gestisce il comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> in modo diverso rispetto a un controllo progettato per supportare immagini, ma l'idea alla base dell'operazione di incollamento rimane invariata.  La logica di comando non può essere fornita dal comando, bensì dal controllo o dall'applicazione.  
   
- Molti controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispongono del supporto incorporato per alcuni comandi della libreria di comandi.  <xref:System.Windows.Controls.TextBox>, ad esempio, supporta molti dei comandi di modifica dell'applicazione, ad esempio <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> e <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Lo sviluppatore dell'applicazione non deve eseguire operazioni particolari per garantire il funzionamento di questi comandi con tali controlli.  Se la destinazione del comando eseguito è <xref:System.Windows.Controls.TextBox>, il comando verrà gestito utilizzando il <xref:System.Windows.Input.CommandBinding> incorporato nel controllo.  
+ Molti controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispongono del supporto incorporato per alcuni comandi della libreria di comandi.  <xref:System.Windows.Controls.TextBox>, ad esempio, supporta molti dei comandi di modifica dell'applicazione, ad esempio <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, e <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Lo sviluppatore dell'applicazione non deve eseguire operazioni particolari per garantire il funzionamento di questi comandi con tali controlli.  Se la destinazione del comando eseguito è <xref:System.Windows.Controls.TextBox>, il comando verrà gestito utilizzando il <xref:System.Windows.Input.CommandBinding> incorporato nel controllo.  
   
  Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Windows.Controls.MenuItem> come origine del comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> in cui <xref:System.Windows.Controls.TextBox> è la destinazione del comando.  Tutta la logica che definisce il modo in cui <xref:System.Windows.Controls.TextBox> esegue Incolla è incorporata nel controllo <xref:System.Windows.Controls.TextBox>.  
   
@@ -37,5 +37,6 @@ Nell'esempio seguente viene illustrato come associare una classe <xref:System.Wi
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
+
+- [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md)
 - [Associare un comando a un controllo senza supporto del comando](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

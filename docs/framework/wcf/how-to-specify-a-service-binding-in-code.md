@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Specificare un'associazione al servizio nel codice"
+title: "Procedura: Specificare un'associazione al servizio in codice"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162358"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>Procedura: Specificare un'associazione al servizio nel codice
+# <a name="how-to-specify-a-service-binding-in-code"></a>Procedura: Specificare un'associazione al servizio in codice
 In questo esempio viene definito un contratto `ICalculator` per un servizio di calcolatrice. Il servizio viene implementato nella classe `CalculatorService` e il relativo endpoint viene quindi definito in codice, dove si specifica che il servizio deve utilizzare la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
  La procedura solitamente consigliata consiste nello specificare in modo dichiarativo l'associazione e le informazioni dell'indirizzo nella configurazione anziché in modo imperativo nel codice. In genere definire endpoint nel codice non è pratico in quanto le associazioni e gli indirizzi di un servizio distribuito sono solitamente diversi da quelli usati durante lo sviluppo del servizio. Più in generale, se le informazioni su associazione e indirizzo non vengono incluse nel codice, tali dati possono essere modificati senza dover compilare o distribuire nuovamente l'applicazione.  
@@ -49,5 +49,6 @@ In questo esempio viene definito un contratto `ICalculator` per un servizio di c
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Specifica di un indirizzo dell'endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Specifica di un indirizzo endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

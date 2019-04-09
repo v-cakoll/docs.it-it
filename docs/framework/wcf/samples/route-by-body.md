@@ -2,12 +2,12 @@
 title: Routing in base al corpo
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172315"
 ---
 # <a name="route-by-body"></a>Routing in base al corpo
 In questo esempio viene illustrato come implementare un servizio che accetta oggetti di messaggi con qualsiasi azione SOAP. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. Il servizio implementa una sola operazione `Calculate` che accetta un parametro di richiesta <xref:System.ServiceModel.Channels.Message> e restituisce una risposta <xref:System.ServiceModel.Channels.Message>.  
@@ -35,7 +35,7 @@ In questo esempio viene illustrato come implementare un servizio che accetta ogg
     }  
 ```  
   
- Se dispone di un contratto, un servizio richiede un comportamento di distribuzione `DispatchByBodyBehavior` personalizzato per consentire la distribuzione dei messaggi tra le operazioni. Questo comportamento di distribuzione Inizializza il `DispatchByBodyElementOperationSelector` selettore dell'operazione personalizzato con una tabella dei nomi delle operazioni con chiave basata sul QName dei rispettivi elementi wrapper. `DispatchByBodyElementOperationSelector` analizza il tag iniziale del primo elemento figlio del corpo e seleziona l'operazione utilizzando la tabella menzionata.  
+ Se dispone di un contratto, un servizio richiede un comportamento di distribuzione `DispatchByBodyBehavior` personalizzato per consentire la distribuzione dei messaggi tra le operazioni. Questo comportamento di distribuzione Inizializza il `DispatchByBodyElementOperationSelector` selettore dell'operazione personalizzato con una tabella dei nomi delle operazioni con chiave basata sul QName dei rispettivi elementi wrapper. `DispatchByBodyElementOperationSelector` Analizza il tag di inizio del primo elemento figlio del corpo e seleziona l'operazione utilizzando la tabella menzionata.  
   
  Il client usa un proxy generato automaticamente dal WSDL, esportato usando il servizio [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

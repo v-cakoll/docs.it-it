@@ -2,12 +2,12 @@
 title: Attivazione MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162828"
 ---
 # <a name="msmq-activation"></a>Attivazione MSMQ
 In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi. Questo esempio Usa la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio. Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Hosting di AppFabric e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Hosting e salvataggio permanente](https://go.microsoft.com/fwlink/?LinkId=193961)

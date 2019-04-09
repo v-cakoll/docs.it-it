@@ -1,13 +1,13 @@
 ---
-title: elemento <localClientSettings>
+title: <localClientSettings> elemento
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: e43a03258f4a76c1d19c7bdcff99fcb1d1db19ac
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163098"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > elemento
 Specifica le impostazioni di sicurezza di un client locale per questa associazione.  
@@ -69,6 +69,7 @@ Specifica le impostazioni di sicurezza di un client locale per questa associazio
  Le impostazioni sono locali nel senso che non sono derivate dai criteri di sicurezza del servizio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>

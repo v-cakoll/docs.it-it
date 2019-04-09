@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169247"
 ---
 # <a name="fonts-wpf"></a>Tipi di carattere (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include il supporto per una presentazione dettagliata dell'uso di testo [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere. Un pacchetto di esempio dei [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere viene incluso con il [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -20,9 +20,10 @@ ms.locfileid: "57360979"
  [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)  
  [Includere i tipi di carattere nel pacchetto delle applicazioni](packaging-fonts-with-applications.md)  
  [Esempio di pacchetto di tipi di carattere OpenType](sample-opentype-font-pack.md)  
- [Procedure relative alle proprietà](fonts-how-to-topics.md)  
+ [Procedure relative](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [Documenti in WPF](documents-in-wpf.md)

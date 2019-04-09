@@ -2,12 +2,12 @@
 title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178776"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scenari di sicurezza specifico. Ad esempio, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition può neimplementuje metodu i protocolli di autenticazione SSPI o Kerberos, e pertanto WCF non supporta l'esecuzione di un servizio con l'autenticazione di Windows che utilizzano tale piattaforma. Durante l'esecuzione di WCF in Windows XP Home Edition, sono supportati altri meccanismi di autenticazione, ad esempio nome utente/password e l'autenticazione integrata di HTTP/HTTPS.  
@@ -30,7 +30,7 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
   
  Il token SCT basato sullo stato può essere creato solo tramite un'associazione personalizzata. Per altre informazioni, vedere [Procedura: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) In codice, per attivare il token occorre creare un elemento di associazione di sicurezza (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizzando il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> e impostando il parametro `requireCancellation` su `false`. Il parametro fa riferimento alla memorizzazione nella cache del token SCT. L'impostazione del valore su `false` comporta l'attivazione della funzionalità del token SCT basato sullo stato.  
   
- In alternativa, per abilitare il token nella configurazione, è necessario creare un'associazione <`customBinding`>, quindi aggiungere un elemento <`security`> e infine impostare l'attributo `authenticationMode` su SecureConversation e l'attributo `requireSecurityContextCancellation` su `true`.  
+ In alternativa, nella configurazione, il token è abilitato per la creazione di un <`customBinding`>, quindi aggiungendo un <`security`> elemento e impostazione il `authenticationMode` attributo su SecureConversation e il `requireSecurityContextCancellation` dell'attributo `true`.  
   
 > [!NOTE]
 >  I requisiti precedenti sono specifici. Ad esempio, il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento di associazione che genera un'identità Windows senza tuttavia creare un token SCT. È pertanto possibile utilizzare questa identità con l'opzione `Required` di [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -75,7 +75,7 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Errore di sicurezza a livello di messaggio quando si utilizza la rappresentazione ASP.NET e la compatibilità con ASP.NET è obbligatoria  
  WCF non supporta la combinazione di impostazioni seguente perché possono impedire l'autenticazione di client che si verifichi:  
   
--   È stata attivata la rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. A questo scopo, nel file Web.config impostare l'attributo `impersonate` dell'elemento <`identity`> su `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La rappresentazione è abilitata. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modalità di compatibilità viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
@@ -109,9 +109,10 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
  Per risolvere il problema è necessario modificare l'associazione direttamente nel client dopo aver eseguito l'importazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

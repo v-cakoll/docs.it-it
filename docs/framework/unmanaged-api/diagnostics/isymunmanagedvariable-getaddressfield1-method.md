@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796a71ac941497801c749295fb2f6bb201547bd7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 67634024b04e82aa3a3c0b96dc260114c4c16371
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179699"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>Metodo ISymUnmanagedVariable::GetAddressField1
 Ottiene il primo campo dell'indirizzo di questa variabile. Il significato dipende dal tipo di indirizzo.  
@@ -45,6 +45,7 @@ HRESULT GetAddressField1(
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [Metodo GetAddressField2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
 - [Metodo GetAddressField3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)

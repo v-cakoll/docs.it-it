@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Set di formati di dati e stili di cella predefiniti per il controllo di DataGridView Windows Form usando la finestra di progettazione'
+title: 'Procedura: Impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Forms usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179894"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Set di formati di dati e stili di cella predefiniti per il controllo di DataGridView Windows Form usando la finestra di progettazione
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Forms usando la finestra di progettazione
 Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gli stili di cella predefiniti e formati di dati per l'intero controllo, per colonne specifiche, per le intestazioni di riga e colonna e per le righe per creare un effetto del libro mastro alterne della cella. Gli stili predefiniti impostati per l'intero controllo vengono sostituiti dagli stili predefiniti impostati per le colonne e righe alterne. Inoltre, gli stili impostati nel codice per le singole righe e celle sostituiranno gli stili predefiniti.  
   
  Per altre informazioni sugli stili di cella, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md). Per impostare gli stili per le righe alterne, vedere [come: Impostare stili di righe alterne per il Windows Form controllo DataGridView utilizzando la finestra di progettazione](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
@@ -60,13 +60,14 @@ Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gl
 4.  Se si desidera associare il <xref:System.Windows.Forms.DataGridView> controllo a un'origine dati che potrebbe contenere valori null, inserire il **valore Null** casella di testo. Questo valore viene visualizzato quando il valore della cella è uguale a un riferimento null (`Nothing` in Visual Basic) o <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Stili delle celle nel controllo DataGridView di Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare stili di righe alterne per il controllo di DataGridView Windows Form usando la finestra di progettazione](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+- [Stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Forms usando la finestra di progettazione](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Procedura: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)

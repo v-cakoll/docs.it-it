@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: 6c2c33c8c03751e87d71e65523b82d92b18f31c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168480"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>Cenni preliminari sul componente MainMenu (Windows Form)
 > [!IMPORTANT]
@@ -25,9 +25,10 @@ ms.locfileid: "57709871"
  Una voce di menu può essere designata come elemento predefinito impostando la <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> proprietà `true`. L'elemento predefinito viene visualizzato in grassetto quando si fa clic sul menu. La voce di menu <xref:System.Windows.Forms.MenuItem.Checked%2A> la proprietà `true` o `false`e indica se la voce di menu è selezionata. La voce di menu <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> proprietà consente di personalizzare l'aspetto dell'elemento selezionato: se <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> è impostata su `true`, un pulsante di opzione viene visualizzata accanto all'elemento; se <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> è impostato su `false`, viene visualizzato un segno di spunta accanto all'elemento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.MenuItem>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)

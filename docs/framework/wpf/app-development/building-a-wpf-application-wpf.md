@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184483"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
 Applicazioni Windows Presentation Foundation (WPF) possono essere compilate come [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] file eseguibili (.exe), librerie (DLL) o una combinazione di entrambi i tipi di assembly. Questo argomento illustra come compilare applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descrive i passaggi chiave del processo di compilazione.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Compilazione di un'applicazione WPF  
  Un'applicazione WPF può essere compilata nei modi seguenti:  
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Compilazione del markup - Passaggio 2  
- Non tutte le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono compilate durante il passaggio 1 della compilazione del markup. I file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che dispongono di riferimenti a tipi definiti in locale (riferimenti a tipi definiti nel codice in un'altra parte dello stesso progetto) sono esclusi dalla compilazione in questa fase, poiché tali tipi definiti in locale esistono solo nel codice sorgente e non sono ancora stati compilati. Per determinare questo aspetto, il parser utilizza un'euristica che implica la ricerca di elementi, ad esempio `x:Name`, nel file di markup. Se si individua un'istanza di questo tipo, la compilazione di tale file di markup viene posticipata fino a quando non vengono compilati i file di codice. Dopodiché, nel secondo passaggio di compilazione del markup, si elaborano questi file.  
+ Non tutte le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono compilate durante il passaggio 1 della compilazione del markup. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file in locale sono definiti i riferimenti ai tipi (riferimenti ai tipi definiti nel codice in un' posizione nello stesso progetto) sono esclusi dalla compilazione in questo momento. poiché tali tipi definiti in locale esistono solo nel codice sorgente e non sono ancora stati compilati. Per determinare questo aspetto, il parser utilizza un'euristica che implica la ricerca di elementi, ad esempio `x:Name`, nel file di markup. Se si individua un'istanza di questo tipo, la compilazione di tale file di markup viene posticipata fino a quando non vengono compilati i file di codice. Dopodiché, nel secondo passaggio di compilazione del markup, si elaborano questi file.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Classificazione dei file  
@@ -167,7 +166,8 @@ End Sub
 -   Non viene ricompilato nulla (se non è stato modificato nulla nel progetto).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md)
 - [Informazioni di riferimento su MSBuild WPF](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URI di tipo pack in WPF](pack-uris-in-wpf.md)
-- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF.](wpf-application-resource-content-and-data-files.md)

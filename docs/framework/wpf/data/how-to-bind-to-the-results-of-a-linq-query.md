@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Eseguire l'associazione ai risultati di una query LINQ"
+title: 'Procedura: Eseguire il binding ai risultati di una query LINQ'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 9be0f95824c97456b50996f9cd6f010442b523f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185900"
 ---
-# <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Procedura: Eseguire l'associazione ai risultati di una query LINQ
+# <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Procedura: Eseguire il binding ai risultati di una query LINQ
 In questo esempio viene illustrato come eseguire una query LINQ e quindi eseguire l'associazione ai risultati.  
   
 ## <a name="example"></a>Esempio  
@@ -26,11 +26,12 @@ In questo esempio viene illustrato come eseguire una query LINQ e quindi eseguir
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- La seconda casella di riepilogo esegue l'associazione alla raccolta perché relativi <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valore è impostato su `{Binding}`. Di conseguenza, viene visualizzato l'insieme restituito (in base il `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
+ La seconda casella di riepilogo esegue l'associazione alla raccolta perché relativi <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valore è impostato su `{Binding}`. Di conseguenza, viene visualizzato l'insieme restituito (in base il `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Rendere i dati disponibili per l'associazione in XAML](how-to-make-data-available-for-binding-in-xaml.md)
-- [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+
+- [Rendere i dati disponibili per il binding in XAML](how-to-make-data-available-for-binding-in-xaml.md)
+- [Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Novità di WPF versione 4.5](../getting-started/whats-new.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

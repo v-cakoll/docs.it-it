@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b00eda9ddad65d6618f097a6ca48b5c7c0eba334
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 147b33a3f49f9163daea776779ca26f62561a84e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170378"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>Metodo ISymUnmanagedReader::GetSymbolStoreFileName
 Fornisce il nome di file su disco dell'archivio simboli.  
@@ -54,4 +54,5 @@ HRESULT GetSymbolStoreFileName (
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

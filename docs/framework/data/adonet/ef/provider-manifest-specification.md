@@ -2,12 +2,12 @@
 title: Specifica del manifesto del provider
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169910"
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -23,7 +23,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
   
  Il manifesto del provider deve essere caricabile dagli strumenti in fase di progettazione senza che sia necessario aprire una connessione all'archivio dati.  
   
- Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] avviene sensibili, ma potrebbe non essere nell'archivio dati sottostante. Quando nel manifesto vengono definiti e usati gli artefatti di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
+ Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] avviene sensibili, ma potrebbe non essere nell'archivio dati sottostante. Quando nel manifesto vengono definiti e usati gli elementi di EDM, ad esempio identificatori e nomi dei tipi, è necessario che venga usata la distinzione tra maiuscole e minuscole di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Se nel manifesto del provider vengono visualizzati elementi dell'archivio dati per cui potrebbe essere rilevata la distinzione tra maiuscole e minuscole, è necessario mantenere tale distinzione nel manifesto del provider.  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] richiede un manifesto del provider per tutti i provider di dati. Se si prova a usare un provider che non dispone di un provider del manifesto con il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], si otterrà un errore.  
   
@@ -250,34 +250,35 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|String|Sì|n/d|Nome del tipo di dati specifico del provider|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Sì|n/d|Nome del tipo EDM|  
+|Nome|Stringa|Yes|N/D|Nome del tipo di dati specifico del provider|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Yes|N/D|Nome del tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Ogni oggetto Function definisce una sola funzione disponibile tramite il provider.  
   
 |Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|String|Sì|n/d|Nome/identificatore della funzione|  
-|ReturnType|String|No|Void|Il tipo restituito EDM della funzione|  
-|Aggregate|Boolean|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
-|BuiltIn|Boolean|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
-|StoreFunctionName|String|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
-|NiladicFunction|Boolean|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
-|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversion|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|Nome|Stringa|Yes|N/D|Nome/identificatore della funzione|  
+|ReturnType|Stringa|No|Void|Il tipo restituito EDM della funzione|  
+|Aggregate|Booleano|No|False|Restituisce True se si tratta di una funzione di aggregazione|  
+|BuiltIn|Booleano|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
+|StoreFunctionName|Stringa|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
+|NiladicFunction|Booleano|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
+|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversione|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
- **Nodo parametri**  
+ **Nodo Parameters**  
   
  Ogni funzione presenta una raccolta di uno o più nodi Parameter.  
   
 |Nome attributo|Tipo di dati|Obbligatorio|Valore predefinito|Descrizione|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Nome|String|Sì|n/d|Nome/identificatore del parametro.|  
-|Tipo|String|Sì|n/d|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direzione|Sì|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
+|Nome|Stringa|Yes|N/D|Nome/identificatore del parametro.|  
+|Tipo|Stringa|Yes|N/D|Tipo EDM del parametro.|  
+|Modalità|Parametro<br /><br /> Direzione|Yes|N/D|Direzione del parametro:<br /><br /> -   in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Scrittura di un provider di dati Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

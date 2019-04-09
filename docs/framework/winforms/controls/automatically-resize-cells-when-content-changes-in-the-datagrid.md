@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ridimensionare automaticamente le celle alla modifica del contenuto nel controllo DataGridView Windows Form'
+title: 'Procedura: Ridimensionare automaticamente le celle alla modifica del contenuto nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - cells [Windows Forms], resizing automatically
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
-ms.openlocfilehash: 15a3538dddfb1c36aa276bdf2fbe53cb8597992b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7acd7777ede726b9dfed2b821e4248a0ebf7797f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182494"
 ---
-# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Procedura: Ridimensionare automaticamente le celle alla modifica del contenuto nel controllo DataGridView Windows Form
+# <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Procedura: Ridimensionare automaticamente le celle alla modifica del contenuto nel controllo DataGridView di Windows Forms
 È possibile configurare il controllo <xref:System.Windows.Forms.DataGridView> per ridimensionarne automaticamente le righe, le colonne e le intestazioni quando il contenuto cambia, in modo che le dimensioni delle celle consentano sempre di visualizzare i valori senza troncarli.  
   
  Esistono molte opzioni per limitare il numero di celle usate per determinare le nuove dimensioni. Ad esempio, è possibile configurare il controllo per ridimensionare automaticamente la larghezza delle colonne solo in base ai valori nelle righe attualmente visualizzate. In questo modo è possibile lavorare sempre in modo efficiente, anche con un numero elevato di righe, sebbene in questo caso potrebbe essere necessario usare metodi di ridimensionamento come <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> per regolare le dimensioni quando si preferisce.  
@@ -39,6 +39,7 @@ ms.locfileid: "57710654"
 -   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType>
@@ -51,6 +52,6 @@ ms.locfileid: "57710654"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Ridimensionamento di colonne e righe nel controllo DataGridView Windows Form](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Opzioni di ridimensionamento nel controllo DataGridView di Windows Form](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Ridimensiona a livello di codice le celle per adattarsi al contenuto nel controllo DataGridView Windows Form](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [Ridimensionamento di colonne e righe nel controllo DataGridView di Windows Form](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Opzioni di ridimensionamento nel controllo DataGridView Windows Form](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Ridimensionare a livello di codice le celle in base al contenuto nel controllo DataGridView di Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)

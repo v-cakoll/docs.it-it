@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160764"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). Questo esempio supporta sia la [specifica Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e il [versione 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -74,4 +74,3 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

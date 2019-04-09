@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: fa8ddc3fb8f1f46349eeb1f7dd7af203a7459457
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d2b253a88260ef4e829f3f5022dc7cf76daa5cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181077"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Supporto per l'automazione dell'interfaccia utente del tipo di controllo ToolTip
 > [!NOTE]
@@ -39,7 +39,7 @@ ms.locfileid: "57680165"
 ## <a name="required-ui-automation-properties"></a>Proprietà di automazione interfaccia utente obbligatorie  
  La tabella seguente elenca le proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] il cui valore o la cui definizione è particolarmente rilevante per i controlli descrizione comando. Per altre informazioni sulle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vedere [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Value|Note|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Proprietà|Value|Note|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vedere le note.|Il valore di questa proprietà deve essere univoco in tutti i controlli in un'applicazione.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vedere le note.|Il rettangolo più esterno che contiene l'intero controllo.|  
@@ -67,7 +67,7 @@ ms.locfileid: "57680165"
   
  La tabella seguente elenca gli eventi dell' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] che devono essere supportati da tutti i controlli descrizione comando. Per altre informazioni sugli eventi, vedere [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|A seconda dei casi|nessuno|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|A seconda dei casi|nessuno|  
@@ -75,15 +75,16 @@ ms.locfileid: "57680165"
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|A seconda dei casi|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Obbligatorio|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obbligatorio|nessuno|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> .|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento di modifica della proprietà.|Obbligatorio|nessuno|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> evento di modifica della proprietà.|A seconda dei casi|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Automation.ControlType.ToolTip>
-- [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

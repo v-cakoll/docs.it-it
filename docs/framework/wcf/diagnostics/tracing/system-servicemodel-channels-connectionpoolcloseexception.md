@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.ConnectionPoolCloseException
 ms.date: 03/30/2017
 ms.assetid: 8358898e-129e-4fac-a6bf-bf3aa4293ae2
-ms.openlocfilehash: b2d49910ecbcd67beca83e2fbeabfbcafe6e1dd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3dd28276cd3a39497c0387f5b9d0adec23d07c37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182195"
 ---
 # <a name="systemservicemodelchannelsconnectionpoolcloseexception"></a>System.ServiceModel.Channels.ConnectionPoolCloseException
 Si è verificata un'eccezione durante la chiusura delle connessioni in questo pool di connessioni.  
@@ -16,6 +16,7 @@ Si è verificata un'eccezione durante la chiusura delle connessioni in questo po
  Questa traccia a livello di errore indica che si è verificato un errore durante la chiusura del pool di connessioni utilizzato dalla connessione di Windows Communication Foundation (WCF) della limitazione delle richieste di funzionalità. Una possibile ragione è un chiusura non riuscita di una o più connessioni in pool all'interno di CloseTimeout. Quando viene generata questa eccezione, tutte le connessioni rimanenti non chiuse all'interno di tale pool vengono interrotte; le connessioni non chiuse all'interno di altri pool vengono abbandonate.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare il tipo di credenziale Client'
+title: 'Procedura: Specificare il tipo di credenziali client'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185055"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Procedura: Specificare il tipo di credenziale Client
+# <a name="how-to-specify-the-client-credential-type"></a>Procedura: Specificare il tipo di credenziali client
 Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è possibile impostare il tipo di credenziali client. Questa proprietà specifica il tipo di credenziali che il client deve fornire al servizio per l'autenticazione. Per altre informazioni sull'impostazione della modalità di sicurezza (un passaggio necessario prima impostare il tipo di credenziale client), vedere [come: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Per impostare il tipo di credenziali client nel codice  
@@ -58,5 +58,6 @@ Dopo avere impostato una modalità di sicurezza (trasporto o messaggio), è poss
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
 - [Procedura: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

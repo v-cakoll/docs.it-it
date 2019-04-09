@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170391"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Enumerazione CorDebugMappingResult
 Fornisce informazioni su come è stato ottenuto il valore del puntatore dell'istruzione.  
@@ -41,7 +41,7 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|Il codice nativo è nel prologo, pertanto il valore dell'indirizzo IP è 0.|  
 |`MAPPING_EPILOG`|Il codice nativo è incluso un epilogo, pertanto il valore dell'indirizzo IP è l'indirizzo dell'ultima istruzione del metodo.|  
@@ -63,4 +63,5 @@ typedef enum CorDebugMappingResult {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

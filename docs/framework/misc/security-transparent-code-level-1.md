@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161070"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,7 +28,7 @@ ms.locfileid: "54590390"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Il modello di trasparenza di livello 1](#the_level_1_transparency_model)  
+-   [Modello di trasparenza di livello 1](#the_level_1_transparency_model)  
   
 -   [Attributi di trasparenza](#transparency_attributes)  
   
@@ -131,5 +131,6 @@ public class B
  Il codice precedente è trasparente a eccezione del metodo Critical che è contrassegnato in modo esplicito come `Critical`. La trasparenza rappresenta l'impostazione predefinita, anche con l'attributo <xref:System.Security.SecurityCriticalAttribute> a livello di assembly.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)
+- [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md)

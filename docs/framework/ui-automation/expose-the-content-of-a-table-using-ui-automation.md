@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: 772eb57b36ee26daac2bbac1c45d6b1c7df75e27
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a9867a07207f825f3f4a781f1c05607fc6b071b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174707"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Esporre il contenuto di una tabella utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -42,7 +42,8 @@ ms.locfileid: "57676629"
 [!code-vb[UIATableItemPattern_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Implementazione del pattern di controllo Table di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)
 - [Implementazione del pattern di controllo TableItem di automazione interfaccia utente](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)

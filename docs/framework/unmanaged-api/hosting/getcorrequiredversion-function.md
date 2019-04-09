@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b73d966e91480a13b03610dae452b04f9d6b9b4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5786444c36fcfc9547be1db0006757b0a9376c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175188"
 ---
 # <a name="getcorrequiredversion-function"></a>Funzione GetCORRequiredVersion
 Ottiene il numero di versione necessaria di common language runtime (CLR).  
@@ -58,4 +58,5 @@ HRESULT GetCORRequiredVersion (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

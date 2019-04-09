@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e190c045a70daa04e58604b25ac398fb5a1648d0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175318"
 ---
 # <a name="icordebugprocessenum-interface"></a>Interfaccia ICorDebugProcessEnum
 Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugProcess.  
@@ -47,4 +47,5 @@ Implementa i metodi ICorDebugEnum ed enumera le matrici ICorDebugProcess.
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

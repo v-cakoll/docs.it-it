@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168987"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
 Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interagisce con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout.  
@@ -40,7 +40,7 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
   
 -   In alcuni casi, i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non possono essere ridimensionati oppure possono essere ridimensionati solo in dimensioni specifiche. Ad esempio, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> controllo supporta una sola altezza, definita dalla dimensione del carattere del controllo. In un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout dinamico in cui gli elementi possano essere ridimensionati verticalmente, un ambiente host <xref:System.Windows.Forms.ComboBox> controllo non verrà ridimensionato come previsto.  
   
--   I controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non possono essere ruotati o inclinati. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento genera il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventi se si applica una trasformazione di inclinazione o una rotazione. Se non si gestisce il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> viene generato.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli non possono essere ruotati o asimmetrici. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento genera il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventi se si applica una trasformazione di inclinazione o una rotazione. Se non si gestisce il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> viene generato.  
   
 -   Nella maggior parte dei casi, i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non supportano il ridimensionamento proporzionale. Anche se le dimensioni complessive del controllo vengono ridimensionate, i controlli figlio e gli elementi componente del controllo potrebbero non venire ridimensionati come previsto. Questa limitazione dipende dal modo in cui ogni controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supporta il ridimensionamento. Inoltre, non è possibile ridimensionare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli fino a una dimensione pari a 0 pixel.  
   
@@ -99,9 +99,10 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
 -   Se il <xref:System.Windows.Forms.Control.Size%2A> dimensioni inferiori rispetto al vincolo specificato, viene restituita la <xref:System.Windows.Forms.Integration.WindowsFormsHost> accetta questo valore e restituisce il valore per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Procedura dettagliata: Disposizione di controlli Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [I controlli di disposizione Windows Form in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migrazione e interoperabilità](migration-and-interoperability.md)

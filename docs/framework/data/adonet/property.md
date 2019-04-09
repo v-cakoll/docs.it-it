@@ -2,12 +2,12 @@
 title: proprietà
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181649"
 ---
 # <a name="property"></a>proprietà
 *Le proprietà* sono i blocchi predefiniti fondamentali dei [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) e [tipi complessi](../../../../docs/framework/data/adonet/complex-type.md). Le proprietà definiscono la forma e le caratteristiche dei dati che saranno contenuti in un'istanza di un tipo di entità o in un'istanza di un tipo complesso. Le proprietà in un modello concettuale sono analoghe alle proprietà definite su una classe. Nello stesso modo in cui le proprietà su una classe definiscono la forma della classe e forniscono informazioni su oggetti, le proprietà in un modello concettuale definiscono la forma di un tipo di entità e forniscono informazioni su istanze del tipo di entità.  
@@ -42,5 +42,6 @@ ms.locfileid: "58409718"
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172055"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre due meccanismi paralleli per modificare l'aspetto visivo di un controllo che riceve lo stato attivo della tastiera. Il primo meccanismo consiste nell'usare setter di proprietà per proprietà, ad esempio <xref:System.Windows.UIElement.IsKeyboardFocused%2A> entro lo stile o il modello che viene applicato al controllo. Il secondo consiste nel fornire uno stile separato come valore del <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> proprietà; la "dello stile di visualizzazione dello stato attivo" Crea un struttura ad albero visuale separato per uno strumento decorativo che viene disegnato sopra il controllo, anziché modificare la struttura ad albero visuale del controllo o altra interfaccia utente elemento sostituendola. Questo argomento descrive gli scenari appropriati a ogni meccanismo.  
-   
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce due meccanismi paralleli per modificare l'aspetto visivo di un controllo che riceve lo stato attivo della tastiera. Il primo meccanismo consiste nell'usare setter di proprietà per proprietà, ad esempio <xref:System.Windows.UIElement.IsKeyboardFocused%2A> entro lo stile o il modello che viene applicato al controllo. Il secondo consiste nel fornire uno stile separato come valore del <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> proprietà; la "dello stile di visualizzazione dello stato attivo" Crea un struttura ad albero visuale separato per uno strumento decorativo che viene disegnato sopra il controllo, anziché modificare la struttura ad albero visuale del controllo o altra interfaccia utente elemento sostituendola. Questo argomento descrive gli scenari appropriati a ogni meccanismo.  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>Scopo dello stile di visualizzazione dello stato attivo  
  La funzionalità dello stile di visualizzazione dello stato attivo offre un "modello a oggetti" comune per introdurre un feedback utente visivo, basato sul passaggio tramite tastiera a un qualsiasi elemento dell'interfaccia utente. Questo è possibile senza bisogno di applicare un nuovo modello al controllo, né di conoscere la composizione specifica del modello.  
@@ -77,7 +76,8 @@ ms.locfileid: "57377045"
  Se si desidera che tutte le possibili cause di modifica dello stato attivo per produrre un comportamento visivo, è consigliabile basare un setter o trigger la <xref:System.Windows.UIElement.IsFocused%2A> proprietà di dipendenza, o in alternativa nel <xref:System.Windows.UIElement.GotFocus> o <xref:System.Windows.UIElement.LostFocus> eventi usati per un <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Applicazione di stili e modelli](../controls/styling-and-templating.md)
-- [Panoramica sullo stato attivo](focus-overview.md)
+- [Cenni preliminari sullo stato attivo](focus-overview.md)
 - [Cenni preliminari sull'input](input-overview.md)

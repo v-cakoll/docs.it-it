@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8723de93f5d7fa93b1f62764f3774c8719750bd4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e8c8725bf21aefa3abf5fc41366d8f983bd686b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175747"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>Metodo ICorDebugProcess3::SetEnableCustomNotification
 Abilita e disabilita le notifiche di debugger personalizzati del tipo specificato.  
@@ -56,6 +56,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

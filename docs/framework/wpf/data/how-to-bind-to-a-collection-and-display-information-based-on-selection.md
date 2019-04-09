@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione"
+title: 'Procedura: Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188747"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedura: Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedura: Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione
 In uno scenario master-dettagli semplice, è necessario con associazione a dati <xref:System.Windows.Controls.ItemsControl> , ad esempio un <xref:System.Windows.Controls.ListBox>. È basato sulla selezione dell'utente, visualizzare altre informazioni sull'elemento selezionato. In questo esempio viene illustrato come implementare questo scenario.  
   
 ## <a name="example"></a>Esempio  
@@ -46,8 +46,9 @@ In uno scenario master-dettagli semplice, è necessario con associazione a dati 
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Usare il modello Master-Details con dati gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Panoramica sui modelli di dati](data-templating-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Cenni preliminari sui modelli di dati](data-templating-overview.md)
+- [Procedure relative](data-binding-how-to-topics.md)

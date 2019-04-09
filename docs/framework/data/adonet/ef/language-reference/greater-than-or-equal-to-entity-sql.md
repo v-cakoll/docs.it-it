@@ -2,14 +2,14 @@
 title: '>= (Maggiore o uguale a) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 4b7b2aa7be0b978fb6b1317393fb3c6e9a87c621
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 1e2eef7c98aefd93c6ef388888661ac758fd8e30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166114"
 ---
-# <a name="-greater-than-or-equal-to-entity-sql"></a>>= (maggiore di o uguale a) (Entity SQL)
+# <a name="-greater-than-or-equal-to-entity-sql"></a>> = (maggiore o uguale a) (Entity SQL)
 Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -23,7 +23,7 @@ expression >= expression
  Qualsiasi espressione valida. Entrambe le espressioni devono contenere tipi di dati convertibili in modo implicito.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- `true` se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra; in caso contrario, `false`.  
+ `true` Se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra; in caso contrario, `false`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore di confronto >= per confrontare due espressioni e determinare se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
@@ -35,4 +35,5 @@ expression >= expression
  [!code-csharp[DP EntityServices Concepts 2#GREATER_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater_or_equals)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

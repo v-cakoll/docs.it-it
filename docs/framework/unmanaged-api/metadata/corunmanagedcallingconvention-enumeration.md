@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff308a81282a1cc14c35583daf9cbb057149e556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178451"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumerazione CorUnmanagedCallingConvention
 Specifica le convenzioni di chiamata per codice non gestito.  
@@ -46,7 +46,7 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|La convenzione di chiamata del linguaggio C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|La convenzione di chiamata standard.|  
@@ -68,4 +68,5 @@ typedef enum CorUnmanagedCallingConvention {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

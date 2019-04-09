@@ -2,12 +2,12 @@
 title: Paging (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: 1cc7b0ff931e0772cbdfc0f278b75153558efda6
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: dd6653c00c72697fa5e8ae896968ec2a9f09ae82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167141"
 ---
 # <a name="paging-entity-sql"></a>Paging (Entity SQL)
 Paging fisico può essere eseguito utilizzando il [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) e [limite](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) sottoclausole nel [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clausola. Per eseguire il paging fisico in modo deterministico, è consigliabile usare SKIP e LIMIT. Se si desidera solo limitare il numero di righe nel risultato in modo non deterministico, è necessario utilizzare [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP e SKIP/LIMIT si escludono a vicenda.  
@@ -25,6 +25,7 @@ Paging fisico può essere eseguito utilizzando il [SKIP](../../../../../../docs/
 -   [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Procedura: Spostarsi tra i risultati della Query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))

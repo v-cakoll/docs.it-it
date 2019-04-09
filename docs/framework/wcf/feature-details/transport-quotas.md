@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174629"
 ---
 # <a name="transport-quotas"></a>Quote dei trasporti
 Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una connessione sta utilizzando risorse eccessive. Una quota è un limite che impedisce l'utilizzo di risorse aggiuntive quando il valore della quota viene superato. Le quote dei trasporti impediscono attacchi di tipo Denial of Service (DoS) volutamente dannosi o non intenzionali.  
@@ -30,7 +30,7 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
   
  Ogni impostazione della quota è caratterizzata da un tipo, un valore minimo e un valore predefinito. Il valore massimo di una quota è limitato dal tipo. A causa di limitazioni dei computer, non è sempre possibile impostare una quota sul suo valore massimo.  
   
-|nome|Tipo|Valore<br /><br /> predefinito|Impostazione predefinita<br /><br /> predefinito|Descrizione|  
+|Nome|Tipo|Valore<br /><br /> predefinito|Impostazione predefinita<br /><br /> predefinito|Descrizione|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 tick|5 sec|Tempo massimo di attesa perché una connessione invii il preambolo durante la lettura iniziale. Questi dati vengono ricevuti prima che si verifichi l'autenticazione. Questa impostazione è generalmente molto più piccola del valore della quota `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|Tempo massimo di attesa per la chiusura di una connessione prima che il trasporto generi un'eccezione.|  
@@ -43,7 +43,7 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
 |`MaxOutboundConnectionsPerEndpoint`|Integer|1|10|Numero massimo di connessioni in uscita che possono essere associate a un particolare endpoint.<br /><br /> Questa impostazione viene applicata solo a connessioni in pool.|  
 |`MaxOutputDelay`|TimeSpan|0|200 ms|Tempo massimo di attesa dopo un'operazione di invio per il raggruppamento di messaggi aggiuntivi in un'unica operazione. I messaggi vengono inviati prima se il buffer del trasporto sottostante è pieno. L'invio di messaggi aggiuntivi non comporta la reimpostazione del periodo di ritardo.|  
 |`MaxPendingAccepts`|Integer|1|1|Numero massimo di canali che possono attendere nel listener prima di essere accettati.<br /><br /> Esiste un intervallo di tempo tra il completamento dell'accettazione e l'avvio di una nuova accettazione. L'aumento delle dimensioni di questa raccolta consente di evitare l'eliminazione di client che si connettono durante questo intervallo.|  
-|`MaxPendingConnections`|Integer|1|10|Numero massimo di connessioni che il listener può tenere in attesa di essere accettate dall'applicazione. Quando questo valore della quota viene superato, le nuove connessioni in ingresso vengono rilasciate anziché restare in attesa di essere accettate.<br /><br /> Le funzionalità di connessione, ad esempio la protezione dei messaggi, possono determinare l'apertura di più connessioni da parte di un client. Gli amministratori del servizio devono tener conto delle connessioni aggiuntive durante l'impostazione di questo valore della quota.|  
+|`MaxPendingConnections`|Integer|1|10|Numero massimo di connessioni che il listener può tenere in attesa di essere accettate dall'applicazione. Quando questo valore della quota viene superato, le nuove connessioni in ingresso vengono eliminate anziché restare in attesa di essere accettate.<br /><br /> Le funzionalità di connessione, ad esempio la protezione dei messaggi, possono determinare l'apertura di più connessioni da parte di un client. Gli amministratori del servizio devono tener conto delle connessioni aggiuntive durante l'impostazione di questo valore della quota.|  
 |`MaxReceivedMessageSize`|Long|1|64 KB|Dimensione massima, in byte, di un messaggio ricevuto, incluse le intestazioni, prima che il trasporto generi un'eccezione.|  
 |`OpenTimeout`|TimeSpan|0|1 min|Tempo massimo di attesa per stabilire una connessione prima che il trasporto generi un'eccezione.|  
 |`ReceiveTimeout`|TimeSpan|0|10 min|Tempo massimo di attesa per il completamento di un'operazione di lettura prima che il trasporto generi un'eccezione.|  
@@ -59,7 +59,7 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Controllo delle quote del trasporto dall'elemento di associazione.  
  L'impostazione delle quote del trasporto tramite l'elemento di associazione offre la massima flessibilità per il controllo del comportamento del trasporto. Come timeout predefiniti per le operazioni di chiusura, apertura, ricezione e invio vengono utilizzati i valori specificati dall'associazione al momento della generazione di un canale.  
   
-|nome|HTTP|TCP/IP|Named pipe|  
+|Nome|HTTP|TCP/IP|Named pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||x|x|  
 |`CloseTimeout`||||  
@@ -81,7 +81,7 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Controllo delle quote del trasporto dall'associazione.  
  L'impostazione delle quote del trasporto tramite l'associazione offre un set semplificato di quote tra cui scegliere e allo stesso tempo consente l'accesso ai valori delle quote più comuni.  
   
-|nome|HTTP|TCP/IP|Named pipe|  
+|Nome|HTTP|TCP/IP|Named pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|x|x|x|  
@@ -108,6 +108,7 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
  La configurazione dell'applicazione può impostare le stesse quote del trasporto utilizzate per accedere direttamente alle proprietà in un'associazione. Nei file di configurazione, il nome di una quota del trasporto inizia sempre con una lettera minuscola. La proprietà `CloseTimeout` in un'associazione corrisponde all'impostazione `closeTimeout` nella configurazione e la proprietà `MaxConnections` in un'associazione corrisponde all'impostazione `maxConnections` nella configurazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

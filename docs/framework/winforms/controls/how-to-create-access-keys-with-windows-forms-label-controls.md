@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form'
+title: 'Procedura: Creare tasti di scelta con i controlli Label di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171717"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procedura: Creare tasti di scelta con i controlli Label di Windows Forms
 Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizzati per definire le chiavi di accesso per altri controlli. Quando si definisce una chiave di accesso in un controllo etichetta, l'utente può premere il tasto ALT più il carattere che si è scelto di spostare lo stato attivo al controllo che lo segue nell'ordine di tabulazione. Poiché le etichette non possono ricevere lo stato attivo, lo stato attivo si sposta automaticamente al controllo successivo nell'ordine di tabulazione. Usare questa tecnica per assegnare le chiavi di accesso per le caselle di testo, caselle combinate, caselle di riepilogo e griglie di dati.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Per assegnare una chiave di accesso a un controllo con un'etichetta  
@@ -64,6 +64,7 @@ Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizza
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Panoramica sul controllo Label](label-control-overview-windows-forms.md)
+
+- [Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Panoramica del controllo Label](label-control-overview-windows-forms.md)
 - [Controllo Label](label-control-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167688"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
 Abilita o disabilita la suddivisione dei moduli virtuali.  
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parametri  
  `enableSplitting`  
- `true` per abilitare la suddivisione dei moduli virtuali; `false` per disabilitarla.  
+ `true` Per abilitare la suddivisione dei moduli virtuali; `false` per disabilitarlo.  
   
 ## <a name="remarks"></a>Note  
  Le cause di suddivisione dei moduli virtuali [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) per riconoscere i moduli che sono stati uniti durante la compilazione elaborano e li presentano come un gruppo di moduli separati invece un unico grande modulo. In questo modo viene modificato il comportamento di vari [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi descritti di seguito.  
@@ -113,5 +113,6 @@ HRESULT EnableVirtualModuleSplitting(
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

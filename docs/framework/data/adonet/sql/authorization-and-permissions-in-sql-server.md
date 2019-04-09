@@ -2,12 +2,12 @@
 title: Autorizzazioni in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185861"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorizzazioni in SQL Server
 Quando si creano oggetti di database, è necessario concedere in modo esplicito le autorizzazioni per renderli accessibili agli utenti. Ogni oggetto a protezione diretta dispone di autorizzazioni che possono essere concesse a un'entità di sicurezza usando istruzioni di autorizzazione.  
@@ -18,7 +18,7 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
  Attenersi sempre al principio dei privilegi minimi quando si concedono autorizzazioni agli utenti del database. Concedere le autorizzazioni minime necessarie per consentire a un utente o a un ruolo di eseguire una determinata attività.  
   
 > [!IMPORTANT]
->  Lo sviluppo e il test di un'applicazione per la quale è stato usato l'approccio basato su un account utente con privilegi minimi implica maggiori difficoltà durante il processo di sviluppo. È infatti più agevole creare oggetti e scrivere codice quando si è connessi come amministratore di sistema o proprietario del database rispetto a quando si usa un account con privilegi minimi. Tuttavia, lo sviluppo di applicazioni con un account dotato di privilegi maggiori può rendere meno evidente l'impatto di funzionalità ridotte quando utenti con privilegi minimi tentano di eseguire un'applicazione per il cui corretto funzionamento sono richieste autorizzazioni elevate. D'altro canto, concedere agli utenti autorizzazioni eccessive per consentire loro di disporre nuovamente delle funzionalità perse può esporre l'applicazione a potenziali attacchi. La progettazione, lo sviluppo e il test dell'applicazione per il cui accesso viene usato un account con privilegi minimi consentono invece di applicare un approccio disciplinato alla pianificazione della sicurezza, eliminando sorprese sgradite ed impedendo di cedere alla tentazione di concedere privilegi elevati per risolvere rapidamente il problema. Per il test è possibile usare un account di accesso SQL Server anche se per la distribuzione dell'applicazione si intende usare l'autenticazione di Windows.  
+>  Lo sviluppo e il test di un'applicazione per la quale è stato usato l'approccio basato su un account utente con privilegi minimi implica maggiori difficoltà durante il processo di sviluppo. È infatti più agevole creare oggetti e scrivere codice quando si è connessi come amministratore di sistema o proprietario del database rispetto a quando si usa un account con privilegi minimi. Tuttavia, lo sviluppo di applicazioni con un account dotato di privilegi maggiori può offuscare l'impatto di funzionalità ridotte quando utenti con privilegi minimi tentano di eseguire un'applicazione per il cui corretto funzionamento sono richieste autorizzazioni elevate. D'altro canto, concedere agli utenti autorizzazioni eccessive per consentire loro di disporre nuovamente delle funzionalità perse può esporre l'applicazione a potenziali attacchi. La progettazione, lo sviluppo e il test dell'applicazione per il cui accesso viene usato un account con privilegi minimi consentono invece di applicare un approccio disciplinato alla pianificazione della sicurezza, eliminando sorprese sgradite ed impedendo di cedere alla tentazione di concedere privilegi elevati per risolvere rapidamente il problema. Per il test è possibile usare un account di accesso SQL Server anche se per la distribuzione dell'applicazione si intende usare l'autenticazione di Windows.  
   
 ## <a name="role-based-permissions"></a>Autorizzazioni basate sui ruoli  
  La concessione delle autorizzazioni ai ruoli anziché agli utenti consente di semplificare l'amministrazione della sicurezza. I set di autorizzazioni assegnati ai ruoli vengono ereditati da tutti i membri del ruolo. È più semplice aggiungere o rimuovere utenti da un ruolo anziché ricreare set di autorizzazioni distinti per i singoli utenti. I ruoli possono essere annidati, tuttavia un numero eccessivo di livelli di annidamento può comportare problemi di prestazioni. Per semplificare l'assegnazione delle autorizzazioni, è inoltre possibile aggiungere utenti a ruoli predefiniti del database.  
@@ -52,13 +52,14 @@ Quando si creano oggetti di database, è necessario concedere in modo esplicito 
 >  Il concatenamento delle proprietà non si applica nel caso di istruzioni SQL dinamiche. Per chiamare una procedura che esegue un'istruzione SQL, è necessario che al chiamante siano concesse autorizzazioni sulle tabelle sottostanti, esponendo in tal l'applicazione ad attacchi SQL injection. In SQL Server vengono forniti nuovi meccanismi, ad esempio la rappresentazione e la firma di moduli con i certificati, per i quali non è richiesta la concessione di autorizzazioni sulle tabelle sottostanti e che possono essere usati anche con stored procedure CLR.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Autorizzazioni](/sql/relational-databases/security/permissions-database-engine)|Contiene argomenti che illustrano la gerarchia delle autorizzazioni, le viste del catalogo e le autorizzazioni dei ruoli predefiniti del server e del database.|
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

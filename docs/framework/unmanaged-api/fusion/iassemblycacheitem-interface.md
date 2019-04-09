@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188552"
 ---
 # <a name="iassemblycacheitem-interface"></a>Interfaccia IAssemblyCacheItem
 Rappresenta un singolo assembly in global assembly cache.  
@@ -42,6 +42,7 @@ Rappresenta un singolo assembly in global assembly cache.
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)
 - [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

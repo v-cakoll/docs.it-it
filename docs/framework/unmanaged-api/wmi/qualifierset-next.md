@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8b96957467b0acb100f7eea137b3294a60e208a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180908"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next (funzione)
 Recupera il qualificatore successivo in un'enumerazione avviata con una chiamata alla funzione [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
@@ -89,4 +89,5 @@ L'ordine dei qualificatori restituito durante l'enumerazione è definito.
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

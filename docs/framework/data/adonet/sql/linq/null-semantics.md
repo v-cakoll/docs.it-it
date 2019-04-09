@@ -2,12 +2,12 @@
 title: Semantica Null
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 272c19d7ee64381baa93cb2eda1cc035c42a025d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172757"
 ---
 # <a name="null-semantics"></a>Semantica Null
 Nella tabella seguente vengono forniti collegamenti alle varie parti della [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione in cui `null` (`Nothing` in Visual Basic) vengono descritti i problemi.  
@@ -20,4 +20,5 @@ Nella tabella seguente vengono forniti collegamenti alle varie parti della [!INC
 |[Calcolare la somma dei valori in una sequenza numerica](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|Viene descritto come la <xref:System.Linq.Enumerable.Sum%2A> operatore restituisce `null` (`Nothing` in Visual Basic) anziché 0 per una sequenza che contiene solo valori null o una sequenza vuota.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

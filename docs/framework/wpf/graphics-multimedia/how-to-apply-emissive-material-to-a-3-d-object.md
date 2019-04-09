@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Applicare EmissiveMaterial a un oggetto 3D'
+title: 'Procedura: Applicare materiale con componente emissiva a un oggetto tridimensionale'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - EmissiveMaterial [WPF], applying to 3-D objects
 - 3-D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
-ms.openlocfilehash: 7f4158d59334c2f80775541ea1b0f944e048b081
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b898148fa07950e3ad1eddcaf9206f7d6a837241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163124"
 ---
-# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procedura: Applicare EmissiveMaterial a un oggetto 3D
+# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procedura: Applicare materiale con componente emissiva a un oggetto tridimensionale
 Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Media.Media3D.EmissiveMaterial> aggiungere colori a un oggetto Material uguale al colore del pennello di EmissiveMaterial esistente. Il codice seguente illustra <xref:System.Windows.Media.Media3D.DiffuseMaterial> e <xref:System.Windows.Media.Media3D.EmissiveMaterial> applicato in combinazione per aggiungere blu all'aspetto dell'oggetto DiffuseMaterial.  
   
  [!code-xaml[3DGallery_snip#EmmisiveMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emmisivematerialanimationexampleinline1)]  
@@ -37,7 +37,8 @@ Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Medi
  [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
-- [Animare le proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Aggiungere un'animazione alle proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)
 - [Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)

@@ -2,12 +2,12 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 6dcbc7842e7e5012075309d2679df238ad33a3c2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: dc1af462222920c7b3c6b66c3822e7b2b326b244
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169823"
 ---
 # <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 Definisce un'associazione che è protetta, affidabile, ottimizzata per le comunicazioni tra processi nel computer. Per impostazione predefinita, genera uno stack di comunicazione in fase di esecuzione con WS-ReliableMessaging per affidabilità, sicurezza del trasporto per la sicurezza del trasferimento, named pipe per il recapito dei messaggi e codifica binaria dei messaggi.  
@@ -77,7 +77,7 @@ Definisce un'associazione che è protetta, affidabile, ottimizzata per le comuni
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  L'associazione `NetNamedPipeBinding` genera per impostazione predefinita uno stack di comunicazione di runtime che usa la sicurezza del trasporto, le named pipe per il recapito dei messaggi e una codifica dei messaggi binaria. Questa associazione rappresenta una scelta fornita dal sistema Windows Communication Foundation (WCF) appropriata per la comunicazione su computer. Supporta inoltre le transazioni.  
@@ -144,6 +144,7 @@ Definisce un'associazione che è protetta, affidabile, ottimizzata per le comuni
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
 - <xref:System.ServiceModel.NetNamedPipeBinding>
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 1db46d4eb4418682613624182cca133980206ea6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185913"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > elemento
 Reindirizza una versione dell'assembly in un'altra.  
@@ -85,6 +85,7 @@ newVersion="new assembly version"/>
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65910745aa6291f93fd42d8f99a0e84dc1e38fdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5fb3ab1d2dedb220fd4a486409512414233021
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176670"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>Enumerazione EClrUnhandledException
 Descrive le opzioni disponibili per la gestione delle eccezioni non gestite nel codice utente.  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|Specifica che si verifica il comportamento predefinito. Il processo viene eliminato.|  
 |`eHostDeterminedPolicy`|Specifica che common language runtime (CLR) ignora le eccezioni non gestite e consente all'host di determinare alcuna azione ulteriore.|  
@@ -55,6 +55,7 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazione EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [Enumerazione EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
 - [Interfaccia ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

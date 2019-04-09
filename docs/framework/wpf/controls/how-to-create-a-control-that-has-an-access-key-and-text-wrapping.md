@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un controllo che dispone di un tasto di scelta e di una disposizione di testo'
+title: 'Procedura: Creare un controllo con un tasto di scelta e la disposizione testo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174044"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Procedura: Creare un controllo che dispone di un tasto di scelta e di una disposizione di testo
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Procedura: Creare un controllo con un tasto di scelta e la disposizione testo
 Questo esempio illustra come creare un controllo dotato di un tasto di scelta e con un supporto di disposizione testo. Nell'esempio viene usato un <xref:System.Windows.Controls.Label> controllo per illustrare questi concetti.  
   
 ## <a name="example"></a>Esempio  
@@ -26,7 +26,7 @@ Questo esempio illustra come creare un controllo dotato di un tasto di scelta e 
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Aggiungere un tasto di scelta e una disposizione testo all'etichetta**  
+ **Aggiungere una chiave di accesso e la disposizione testo all'etichetta**  
   
  Se è necessario un <xref:System.Windows.Controls.Label> che dispone di una chiave di accesso (tasto di scelta), usare il <xref:System.Windows.Controls.AccessText> elemento che si trova all'interno di <xref:System.Windows.Controls.Label>.  
   
@@ -37,4 +37,5 @@ Questo esempio illustra come creare un controllo dotato di un tasto di scelta e 
  [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Impostare la proprietà di destinazione di un'etichetta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

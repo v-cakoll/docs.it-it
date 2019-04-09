@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare processi di stampa Standard di Windows Form'
+title: 'Procedura: Creare processi di stampa standard per Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170976"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procedura: Creare processi di stampa Standard di Windows Form
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procedura: Creare processi di stampa standard per Windows Form
 Del processo di stampa in Windows Form è la <xref:System.Drawing.Printing.PrintDocument> componente, in particolare, il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. Scrivendo codice per gestire il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento, è possibile specificare cosa stampare e come stamparlo.  
   
 ### <a name="to-create-a-print-job"></a>Per creare un processo di stampa  
@@ -77,5 +77,6 @@ Del processo di stampa in Windows Form è la <xref:System.Drawing.Printing.Print
      Per altre informazioni sulle specifiche di Windows Form i processi di stampa, incluse quelle sulla creazione di un processo di stampa a livello di codice, vedere <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)
+- [Supporto per la stampa in Windows Form](windows-forms-print-support.md)

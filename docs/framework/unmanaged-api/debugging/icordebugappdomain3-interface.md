@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ade4c88f4431dd6db636ea2581bdb936ac8d8e5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c141ca9a8e1c74015883f45cb2eaa9183bb3d89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177528"
 ---
 # <a name="icordebugappdomain3-interface"></a>Interfaccia ICorDebugAppDomain3
 Fornisce metodi per recuperare informazioni sulle rappresentazioni di gestito di [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipi attualmente caricati in un dominio dell'applicazione. Questa interfaccia è un'estensione delle interfacce ICorDebugAppDomain e ICorDebugAppDomain2.  
@@ -51,4 +51,5 @@ Fornisce metodi per recuperare informazioni sulle rappresentazioni di gestito di
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Memorizzazione nella cache di piani di query (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178178"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Memorizzazione nella cache di piani di query (Entity SQL)
 Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di query analizza il proprio piano di query per verificare se la query esatta è già stata compilata ed è disponibile. In caso affermativo, viene riutilizzato il piano memorizzato nella cache anziché compilarne un nuovo. Se non viene individuata una corrispondenza nella cache dei piani di query, la query viene compilata e memorizzata nella cache. Una query è identificata dal testo [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e dalla raccolta di parametri (nomi e tipi). In tutti i confronti di testo viene fatta distinzione tra maiuscole e minuscole.  
@@ -36,7 +36,7 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
   
 -   Il testo delle query deve essere un modello costante, preferibilmente una risorsa o una stringa costante.  
   
--   È necessario usare <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> in ogni situazione in cui deve essere passato un valore fornito dall'utente.  
+-   <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> deve essere usato ogni volta che deve essere passato un valore fornito dall'utente.  
   
  È necessario evitare i modelli di query seguenti, che usano inutilmente slot nella cache dei piani di query:  
   
@@ -49,4 +49,5 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
 -   Modifiche del testo nei commenti.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

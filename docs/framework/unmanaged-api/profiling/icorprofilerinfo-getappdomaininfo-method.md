@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fe1fa99cb7376aae6dffb2a0973955f417b0b8f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83468e13e1e028b031c31791910c4dd2d792f232
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168766"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Metodo ICorProfilerInfo::GetAppDomainInfo
 Accetta un ID del dominio dell'applicazione. Restituisce il nome di un domino applicazione e l'ID del processo che lo contiene.  
@@ -70,6 +70,7 @@ HRESULT GetAppDomainInfo(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)

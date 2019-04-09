@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Esportare metadati dagli endpoint di servizio'
+title: 'Procedura: Esportare metadati da endpoint del servizio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162789"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedura: Esportare metadati dagli endpoint di servizio
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedura: Esportare metadati da endpoint del servizio
 In questo argomento viene illustrato come esportare metadati da endpoint del servizio.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Per esportare metadati dagli endpoint del servizio  
@@ -56,6 +56,7 @@ In questo argomento viene illustrato come esportare metadati da endpoint del ser
  Durante la compilazione di Program.cs fare riferimento a System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

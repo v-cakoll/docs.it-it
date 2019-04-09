@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174109"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
 In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezza dall'accesso di codice (CAS, Code Access Security), entrambe implementate usando un'infrastruttura comune fornita da CLR (Common Language Runtime). In un contesto di codice non gestito la maggior parte delle applicazioni viene eseguita con le autorizzazioni dell'utente o entità di sicurezza. Di conseguenza, quando un utente con privilegi elevati esegue software dannoso o con errori possono verificarsi danni al sistemi del computer e ai dati privati.  
@@ -27,11 +27,11 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  Sono disponibili tre tipi di autorizzazioni di accesso al codice:  
   
--   `Code access permissions`, che derivano dalla classe <xref:System.Security.CodeAccessPermission>. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
+-   `Code access permissions` derivativo di <xref:System.Security.CodeAccessPermission> classe. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
   
--   `Identity permissions`, che rappresentano le caratteristiche identificative di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
+-   `Identity permissions` che rappresentano le caratteristiche identificano di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
   
--   `Role-based security permissions`, che variano a seconda che un'entità di sicurezza disponga di un'identità specificata o sia membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
+-   `Role-based security permissions` si basano sul fatto che un'entità ha un'identità specificata o è un membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
   
  Per determinare se il codice è autorizzato ad accedere a una risorsa o a eseguire un'operazione, il sistema di sicurezza del runtime attraversa lo stack di chiamate, confrontando le autorizzazioni concesse di ogni chiamante con l'autorizzazione richiesta. Se un qualsiasi chiamante nello stack di chiamate non dispone dell'autorizzazione richiesta, viene generata un'eccezione <xref:System.Security.SecurityException> e l'accesso viene rifiutato.  
   
@@ -190,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilità con codice non gestito  
- Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). I componenti COM, le interfacce ActiveX e le funzioni API Windows sono esempi di codice non gestito. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md).  
+ Il codice che non viene eseguito con CLR viene denominato codice non gestito. Non è pertanto possibile applicare al codice non gestito meccanismi di sicurezza quali la sicurezza dall'accesso di codice (CAS). Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Windows. Quando si esegue codice non gestito, è necessario applicare considerazioni specifiche relative alla sicurezza al fine di non compromettere la sicurezza dell'applicazione. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md).  
   
  In .NET Framework la compatibilità con versioni precedenti di componenti COM esistenti viene supportata fornendo l'accesso tramite l'interoperabilità COM. È possibile incorporare componenti COM in un'applicazione .NET Framework usando gli strumenti di interoperabilità COM per importare i tipi COM attinenti. Una volta importati, i tipi COM sono pronti per l'uso. L'interoperabilità COM consente anche ai client COM di accedere a codice gestito esportando i metadati dell'assembly in una libreria dei tipi e registrando il componente gestito come componente COM. Per altre informazioni, vedere [interoperabilità COM avanzata](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Security in Native and codice .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Sicurezza nel codice nativo e nel codice .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Sicurezza basata sui ruoli](../../../../docs/standard/security/role-based-security.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Generazione di codice in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174889"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generazione di codice in LINQ to SQL
 È possibile generare il codice per rappresentare un database usando la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o lo strumento della riga di comando SQLMetal. In entrambi i casi, si verifica la generazione di codice end-to-end in tre fasi:  
@@ -270,8 +270,9 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
-- [Procedura: Generare il modello a oggetti come File esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Procedura: Generare il modello a oggetti come file esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

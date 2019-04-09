@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169754"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Estensione del markup ComponentResourceKey
 Definisce e fa riferimento a chiavi per le risorse che vengono caricate da assembly esterni. In questo modo una ricerca delle risorse specificare un tipo di destinazione in un assembly, anziché un dizionario risorse esplicita in un assembly o in una classe.  
@@ -75,8 +75,9 @@ Definisce e fa riferimento a chiavi per le risorse che vengono caricate da assem
  `ComponentResourceKey` è un'estensione di markup. Le estensioni di markup in genere vengono implementate quando per i valori dell'attributo devono essere utilizzati caratteri escape in modo che non vengano considerati come valori letterali o nomi di gestori e il requisito è più globale del semplice utilizzo di convertitori dei tipi su alcuni tipi o proprietà. Tutte le estensioni di markup in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usano i caratteri { e } nella sintassi degli attributi, vale a dire la convenzione in base a cui il processore [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] riconosce che l'attributo deve essere elaborato da un'estensione di markup. Per altre informazioni, vedere [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md)
-- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
+- [Panoramica della creazione di controlli](../controls/control-authoring-overview.md)
+- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](markup-extensions-and-wpf-xaml.md)

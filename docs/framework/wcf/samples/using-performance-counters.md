@@ -2,12 +2,12 @@
 title: Utilizzo dei contatori delle prestazioni
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 755d93e8165b9747f799571836d6b54e54a5fc45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa4e309c7097359e538e92aa3ddf88794150f3c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186782"
 ---
 # <a name="using-performance-counters"></a>Utilizzo dei contatori delle prestazioni
 Questo esempio viene illustrato come accedere ai contatori delle prestazioni di Windows Communication Foundation (WCF) e come creare contatori delle prestazioni definiti dall'utente. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,4 +77,5 @@ Questo esempio viene illustrato come accedere ai contatori delle prestazioni di 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Vedere anche
-- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+
+- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)

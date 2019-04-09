@@ -2,12 +2,12 @@
 title: Più endpoint su un solo ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 6852c673ef21c2b2d511b02d4cc146b22c4c7506
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 80a5c18f1e19ef82f490aca705973e027ee0a634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163904"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Più endpoint su un solo ListenUri
 In questo esempio viene descritto un servizio che ospita più endpoint in un solo `ListenUri`. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -39,7 +39,7 @@ In questo esempio viene descritto un servizio che ospita più endpoint in un sol
   
  Tutti e tre gli endpoint sono ospitati sullo stesso `ListenUri` e utilizzano la stessa `binding`- endpoint sullo stesso `ListenUri` devono avere la stessa associazione, perché condividono un solo stack di canali che ascolta i messaggi su quell'indirizzo fisico del computer. L' `address` di ogni endpoint è un URN; sebbene in genere gli indirizzi rappresentano posizioni fisiche, infatti l'indirizzo può essere qualsiasi tipo di URI, perché l'indirizzo viene utilizzato per far corrispondere e filtrare scopi come è dimostrato in questo esempio.  
   
- Poiché tutti e tre gli endpoint condividono lo stesso `ListenUri`, quando arriva un messaggio non esiste, deve decidere a quale endpoint è destinato il messaggio di Windows Communication Foundation (WCF). Ogni endpoint ha un filtro messaggi composto di due parti: il filtro dell'indirizzo e il filtro del contratto. Il filtro dell'indirizzo adegua `To` del messaggio SOAP all'indirizzo dell'endpoint del servizio. Ad esempio, solo i messaggi con indirizzo `To "Urn:OtherEcho"` sono candidati per il terzo endpoint di questo servizio. Il filtro del contratto associa le azioni associate alle operazioni di un particolare contratto. Ad esempio, messaggi con l'azione `IEcho`. `Echo` fa corrispondere i filtri del contratto del secondo e del terzo endpoint di questo servizio, perché entrambi quegli endpoint ospitano il contratto `IEcho`.  
+ Poiché tutti e tre gli endpoint condividono lo stesso `ListenUri`, quando arriva un messaggio non esiste, deve decidere a quale endpoint è destinato il messaggio di Windows Communication Foundation (WCF). Ogni endpoint ha un filtro messaggi composto di due parti: il filtro dell'indirizzo e il filtro del contratto. Il filtro dell'indirizzo adegua `To` del messaggio SOAP all'indirizzo dell'endpoint del servizio. Ad esempio, solo i messaggi con indirizzo `To "Urn:OtherEcho"` sono candidati per il terzo endpoint di questo servizio. Il filtro del contratto associa le azioni associate alle operazioni di un particolare contratto. Ad esempio, messaggi con l'azione `IEcho`. `Echo` corrispondenze di filtri del contratto del secondo e terzo endpoint di questo servizio, perché entrambi quegli endpoint ospitano il `IEcho` contratto.  
   
  Così la combinazione di filtro dell'indirizzo e filtro del contratto rende possibile il routing di ogni messaggio che arriva al `ListenUri` di questo servizio all'endpoint corretto. Il terzo endpoint è differente dagli altri due perché accetta messaggi inviati a un indirizzo diverso dagli altri endpoint. I primo e secondo endpoint sono diversi uno dall'altro sulla base dei contratti (azione del messaggio in arrivo).  
   
@@ -78,4 +78,3 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
-  

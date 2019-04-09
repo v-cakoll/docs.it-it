@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162111"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Cenni preliminari sul controllo ToolStripProgressBar
 Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento verticale/orizzontale e le funzionalità di rendering di tutte le <xref:System.Windows.Forms.ToolStrip> controlli con la tipica funzionalità di rilevamento di processo. Oggetto <xref:System.Windows.Forms.ToolStripProgressBar> è generalmente ospitato da <xref:System.Windows.Forms.StatusStrip>e meno frequentemente in un <xref:System.Windows.Forms.ToolStrip>.  
@@ -22,7 +22,7 @@ Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento ve
   
 ### <a name="important-toolstripprogressbar-members"></a>Membri importanti ToolStripProgressBar  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Ottiene o imposta un valore che rappresenta il ritardo tra ogni <xref:System.Windows.Forms.ProgressBarStyle.Marquee> aggiornamento, della visualizzazione in millisecondi.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Ottiene o imposta il limite superiore dell'intervallo definito per questo <xref:System.Windows.Forms.ToolStripProgressBar>.|  
@@ -32,4 +32,5 @@ Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento ve
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|Fa avanzare la posizione corrente dell'indicatore di stato la quantità di <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> proprietà.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

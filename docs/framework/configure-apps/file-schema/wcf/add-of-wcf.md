@@ -1,13 +1,13 @@
 ---
-title: <add> di WCF
+title: <add> of WCF
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: 76197120096329d0eb42121f5740a87c4f42318b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e9ece03ec9376e6a428ac6a82a3f26020f64d744
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186615"
 ---
 # <a name="add-of-wcf"></a>\<aggiungere > di WCF
 Configurare un partecipante del rilevamento che ascolta i record di rilevamento generati direttamente durante la fase di esecuzione e li elabora in base alle impostazioni configurate. Tali impostazioni includono la scrittura in un output specifico, ad esempio file, console, ETW, l'elaborazione/aggregazione dei record o qualsiasi altra combinazione che potrebbe essere richiesta.  
@@ -49,7 +49,7 @@ Configurare un partecipante del rilevamento che ascolta i record di rilevamento 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Elenco di partecipanti del rilevamento.|  
+|[\<i partecipanti >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Elenco di partecipanti del rilevamento.|  
   
 ## <a name="remarks"></a>Note  
  I partecipanti del rilevamento vengono usati per ottenere i dati di rilevamento generati dal flusso di lavoro e archiviarli in supporti differenti. Analogamente, è anche possibile eseguire qualsiasi operazione di post-elaborazione sui record di rilevamento all'interno del partecipante del rilevamento.  
@@ -89,8 +89,9 @@ Configurare un partecipante del rilevamento che ascolta i record di rilevamento 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Partecipanti di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Partecipanti del rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

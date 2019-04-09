@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Animare un oggetto utilizzando fotogrammi chiave'
+title: "Procedura: Aggiungere un'animazione a un oggetto usando fotogrammi chiave"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177801"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedura: Animare un oggetto utilizzando fotogrammi chiave
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un oggetto usando fotogrammi chiave
 In questo esempio illustra come animare un oggetto, che in questo esempio è il <xref:System.Windows.Controls.Page.Background%2A> proprietà di un <xref:System.Windows.Controls.Page> controllo, usando fotogrammi chiave.  
   
 ## <a name="example"></a>Esempio  
@@ -34,6 +34,7 @@ In questo esempio illustra come animare un oggetto, che in questo esempio è il 
  Per l'esempio completo, vedere [Esempio di animazione con fotogrammi chiave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.Page.Background%2A>
 - <xref:System.Windows.Controls.Page>

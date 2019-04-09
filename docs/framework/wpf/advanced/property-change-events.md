@@ -13,15 +13,15 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166205"
 ---
 # <a name="property-change-events"></a>Eventi di modifica delle proprietà
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi generati in risposta a una modifica nel valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definisce diversi eventi che vengono generati in risposta a una modifica del valore di una proprietà. Spesso la proprietà è una proprietà di dipendenza. L'evento stesso è in alcuni casi un evento indirizzato, in altri casi un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] standard. La definizione dell'evento varia in base allo scenario, poiché alcune modifiche delle proprietà sono inviate in modo più appropriato tramite un albero di elementi, mentre altre in genere sono di interesse solo per l'oggetto in cui la proprietà è stata modificata.  
   
 ## <a name="identifying-a-property-change-event"></a>Identificazione di un evento di modifica delle proprietà  
  Non tutti gli eventi che segnalano una modifica delle proprietà sono identificati in modo esplicito come eventi di modifica delle proprietà, per mezzo di un pattern di firma o di nome. In genere, la descrizione dell'evento nella documentazione [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] indica se l'evento è direttamente collegato alla modifica del valore di una proprietà e fornisce riferimenti incrociati tra la proprietà e l'evento.  
@@ -62,5 +62,6 @@ ms.locfileid: "57351996"
  Per altre informazioni sui trigger di proprietà, vedere [Applicazione di stili e modelli](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)

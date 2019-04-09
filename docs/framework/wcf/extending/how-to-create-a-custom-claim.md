@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167427"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedura: Creare un'attestazione personalizzata
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) offre un set di tipi di attestazione incorporati e diritti con le funzioni di supporto per la creazione di <xref:System.IdentityModel.Claims.Claim> istanze con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziale client supportati da WCF per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  
@@ -75,9 +75,10 @@ L'infrastruttura del modello di identità in Windows Communication Foundation (W
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -1,5 +1,5 @@
 ---
-title: Elemento <listeners> per <trace>
+title: <listeners> (elemento) per <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: cc6ba06127703fbda5d9edf8211b4b206127cbda
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179114"
 ---
 # <a name="listeners-element-for-trace"></a>\<i listener > (elemento) per \<traccia >
 Specifica un listener che raccoglie, archivia e indirizza i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.  
@@ -85,5 +85,6 @@ Specifica un listener che raccoglie, archivia e indirizza i messaggi. I listener
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.TraceListener>
 - [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

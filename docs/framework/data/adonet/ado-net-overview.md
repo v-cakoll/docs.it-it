@@ -2,12 +2,12 @@
 title: Cenni preliminari su ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170064"
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
 ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e XML, sia per origini dati esposte tramite OLE DB e ODBC. Le applicazioni consumer che supportano la condivisione dei dati sono in grado di usare ADO.NET per connettersi a tali origini dati e recuperare, gestire e aggiornare i dati contenuti.  
@@ -23,7 +23,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  **Informativa sulla privacy**: Gli assembly System, System, DLL, System, System, SqlServerCe. dll e DataSetExtensions. dll non viene fatta distinzione tra un utente dati privati e pubblici.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Architettura di ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
+ [Architettura ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Viene fornita una descrizione generale dell'architettura e dei componenti di ADO.NET.  
   
  [Opzioni e linee guida per la tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
@@ -35,7 +35,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  [Provider di dati .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Vengono fornite informazioni generali sulle caratteristiche del provider di dati .NET Framework e dei provider di dati .NET Framework inclusi in ADO.NET.  
   
- [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Dataset ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Vengono fornite informazioni generali relative all'architettura e ai componenti del `DataSet`.  
   
  [Esecuzione side-by-side in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
@@ -49,7 +49,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  Vengono descritte le nuove funzionalità di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Vengono descritte le tecniche che consentono di scrivere codice protetto quando si usa ADO.NET.  
+ Vengono descritte le tecniche che consentono di scrivere codice sicuro quando si usa ADO.NET.  
   
  [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Vengono descritti i mapping tra i tipi di dati .NET Framework e i provider di dati .NET Framework.  
@@ -58,6 +58,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  Viene descritto come connettersi a un'origine dati, recuperare e modificare i dati, inclusi `DataReaders` e `DataAdapters`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

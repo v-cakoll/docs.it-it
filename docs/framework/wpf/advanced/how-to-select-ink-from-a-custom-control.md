@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-ms.openlocfilehash: 8517041fd9a1864abfb32851314a2926ddab5a3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173596"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Procedura: Selezionare l'input penna da un controllo personalizzato
 Aggiungendo un <xref:System.Windows.Ink.IncrementalLassoHitTester> del controllo personalizzato, è possibile abilitare il controllo in modo che un utente può selezionare l'input penna con lo strumento, analogamente al modo in cui il <xref:System.Windows.Controls.InkCanvas> seleziona input penna con un lazo.  
@@ -87,6 +87,7 @@ Aggiungendo un <xref:System.Windows.Ink.IncrementalLassoHitTester> del controllo
  [!code-vb[HowToSelectInk#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Ink.IncrementalLassoHitTester>
 - <xref:System.Windows.Ink.StrokeCollection>
 - <xref:System.Windows.Input.StylusPointCollection>

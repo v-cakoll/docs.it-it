@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168038"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementazione del pattern di controllo Window di automazione interfaccia utente
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.locfileid: "57677722"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Metodo|nessuno|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|nessuno|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|nessuno|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event|Non è garantito che sia <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|event|Non è garantito a essere <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Eccezioni  
@@ -64,8 +64,9 @@ ms.locfileid: "57677722"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Quando il parametro non è un numero valido.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Panoramica dell'albero di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

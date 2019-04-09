@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163137"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrazione dell'app di Windows Store a .NET Native
 .NET native fornisce la compilazione statica di App di Windows Store o nel computer dello sviluppatore. Ciò differisce dalla compilazione dinamica eseguita per applicazioni Windows Store dal compilatore just-in-time (JIT) o il [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sul dispositivo. Nonostante le differenze, .NET Native prova a mantenere la compatibilità con le [le app .NET per Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Nella maggior parte, ciò che funziona sulle app .NET per Windows Store funziona anche con .NET Native.  Tuttavia, in alcuni casi, è possibile riscontrare differenze di comportamento. Questo documento vengono illustrate le differenze tra le app .NET per Windows Store standard e .NET Native nelle aree seguenti:  
@@ -79,9 +79,9 @@ ms.locfileid: "56966788"
   
 -   I membri pubblici sulle strutture <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeMethodHandle> non sono supportati. Questi tipi sono supportati solo per LINQ, gli alberi delle espressioni e l'inizializzazione di matrice statica.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> includono membri nascosi in classi di base e perciò potrebbero essere sottoposti a override esplicito. Ciò vale anche per gli altri metodi [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> e <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> includono membri nascosi in classi di base e pertanto possono essere sottoposti a override esplicito. Ciò vale anche per gli altri metodi [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> non hanno esito negativo quando si prova a creare determinate combinazioni (ad esempio, una matrice di ByRef).  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> e <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> non abbiano esito negativo quando si prova a creare determinate combinazioni (ad esempio, una matrice di ByRef).  
   
 -   Non è possibile usare la reflection per richiamare i membri con parametri di puntatore.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "56966788"
   
 -   Quando il numero di argomenti è errato e il tipo di uno degli argomenti non è corretto, .NET Native genera un' <xref:System.ArgumentException> anziché un <xref:System.Reflection.TargetParameterCountException>.  
   
--   In genere la serializzazione binaria delle eccezioni non è supportata. Di conseguenza, è possibile aggiungere gli oggetti non serializzabili al dizionario <xref:System.Exception.Data%2A?displayProperty=nameWithType>.  
+-   In genere la serializzazione binaria delle eccezioni non è supportata. Di conseguenza, è possibile aggiungere gli oggetti non serializzabili al dizionario <xref:System.Exception.Data%2A?displayProperty=nameWithType> .  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>Scenari e API non supportati  
@@ -105,7 +105,7 @@ ms.locfileid: "56966788"
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>Differenze generali per lo sviluppo  
- **Tipi di valore**  
+ **Tipi valore**  
   
 -   Se si esegue l'override dei metodi <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> e <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> per un tipo di valore, non chiamare le implementazioni della classe di base. In .NET per applicazioni Windows Store, questi metodi si basano sulla reflection. In fase di compilazione .NET Native genera un'implementazione che non si basa sulla reflection di runtime. Ciò significa che se si non esegue l'override di questi due metodi, funzioneranno come previsto, perché .NET Native genera l'implementazione in fase di compilazione. Tuttavia, se si esegue l'override di questi metodi, ma si chiama l'implementazione della classe base verrà generata un'eccezione.  
   
@@ -115,9 +115,9 @@ ms.locfileid: "56966788"
   
  **Matrici**  
   
--   Non sono supportate le matrici con limite inferiore diverso da zero. Solitamente, queste matrici vengono create chiamando l'overload di <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType>.  
+-   Non sono supportate le matrici con limite inferiore diverso da zero. Solitamente, queste matrici vengono create chiamando l'overload di <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .  
   
--   Non è supportata la creazione dinamica di matrici multidimensionali. Tali matrici vengono in genere creata dalla chiamata di un overload del metodo <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> che include un parametro `lengths` oppure dalla chiamata del metodo <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType>.  
+-   Non è supportata la creazione dinamica di matrici multidimensionali. Tali matrici vengono in genere creata dalla chiamata di un overload del metodo <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> che include un parametro `lengths` oppure dalla chiamata del metodo <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .  
   
 -   Le matrici multidimensionali con quattro o più dimensioni non sono supportate; vale a dire il relativo valore della proprietà <xref:System.Array.Rank%2A?displayProperty=nameWithType> è 4 o superiore. Usare invece le [matrici irregolari](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (una matrice di matrici). Ad esempio, `array[x,y,z]` non è valido, mentre `array[x][y][z]` è valido.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "56966788"
   
 -   Il <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> metodo analizza correttamente stringhe che contengono date brevi in .NET Native. Tuttavia, non mantiene la compatibilità con le modifiche nell'analisi di data e ora descritte negli articoli della Microsoft Knowledge Base [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` è arrotondata correttamente in .NET Native. In alcune versioni di CLR, la stringa di risultato viene troncata anziché arrotondata.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correè arrotondata correttamente in .NET Native. In alcune versioni di CLR, la stringa di risultato viene troncata anziché arrotondata.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Differenze di HttpClient  
@@ -215,7 +215,7 @@ ms.locfileid: "56966788"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> è supportata, ma genera un'eccezione in alcuni scenari, ad esempio quando viene usata con [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) o varianti di ByRef.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> è supportato, ma genera un'eccezione in alcuni scenari, ad esempio quando viene usato con [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) o varianti di byref.  
   
  Le API deprecate per [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) supporto include:  
   
@@ -374,7 +374,7 @@ Altre funzionalità di interoperabilità non supportate includono:
 - <xref:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag?displayProperty=nameWithType>  
 - <xref:Microsoft.VisualBasic.CompilerServices.Utils?displayProperty=nameWithType>  
   
- **Contesto Reflection (spazio dei nomi System.Reflection.Context)**  
+ **Contesto di reflection (spazio dei nomi System.Reflection.Context)**  
   
  Il <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> classe non è supportata in .NET Native.  
   
@@ -574,15 +574,11 @@ Altre funzionalità di interoperabilità non supportate includono:
   
      Il tipo `InnerType` non è noto al serializzatore, perché i membri della classe base non vengono attraversati durante la serializzazione.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> non riescono a serializzare una classe o una struttura che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> . Ad esempio, i seguenti tipi non riesco a serializzare o deserializzare:  
-  
-  
-  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> non riescono a serializzare una classe o struttura che implementa il <xref:System.Collections.Generic.IEnumerable%601> interfaccia. Ad esempio, i seguenti tipi non riesco a serializzare o deserializzare:  
+
 -   <xref:System.Xml.Serialization.XmlSerializer> non riesce a serializzare il valore dell'oggetto seguente, perché non conoscere il tipo esatto dell'oggetto da serializzare:  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> non riesce a serializzare o deserializzare se il tipo di oggetto serializzato è <xref:System.Xml.XmlQualifiedName>.  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> non riesce a serializzare o deserializzare se il tipo dell'oggetto serializzato è <xref:System.Xml.XmlQualifiedName>.  
   
 -   Tutti i serializzatori (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>e <xref:System.Xml.Serialization.XmlSerializer>) non riescono a generare un codice di serializzazione per il tipo <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> o per un tipo che contiene <xref:System.Xml.Linq.XElement>, visualizzando invece gli errori in fase di compilazione.  
   
@@ -610,7 +606,7 @@ Altre funzionalità di interoperabilità non supportate includono:
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> non riesce a generare il codice per un tipo che ha metodi con uno qualsiasi dei seguenti attributi:  
+-   <xref:System.Xml.Serialization.XmlSerializer> non riesce a generare il codice per un tipo che dispone di metodi con uno qualsiasi dei seguenti attributi:  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -620,7 +616,7 @@ Altre funzionalità di interoperabilità non supportate includono:
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> non soddisfa l'interfaccia di serializzazione personalizzata di <xref:System.Xml.Serialization.IXmlSerializable> . Se si ha una classe che implementa questa interfaccia, <xref:System.Xml.Serialization.XmlSerializer> considera il tipo come un oggetto Plain Old CLR Object (POCO) di CLR e ne serializza solo le proprietà pubbliche.  
+-   <xref:System.Xml.Serialization.XmlSerializer> non soddisfa il <xref:System.Xml.Serialization.IXmlSerializable> interfaccia di serializzazione personalizzata. Se si ha una classe che implementa questa interfaccia, <xref:System.Xml.Serialization.XmlSerializer> considera il tipo come un oggetto Plain Old CLR Object (POCO) di CLR e ne serializza solo le proprietà pubbliche.  
   
 -   La serializzazione di un normale <xref:System.Exception> oggetto non funziona bene con <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
@@ -651,7 +647,8 @@ Altre funzionalità di interoperabilità non supportate includono:
  L'abilitazione di .NET Native in una libreria Unit Test per un progetto di App Windows Store non è supportato e fa sì che il progetto di compilazione non riesce.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Panoramica delle app .NET per Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Panoramica di .NET per applicazioni Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

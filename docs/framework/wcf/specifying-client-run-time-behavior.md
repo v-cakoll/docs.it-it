@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164372"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
 I client Windows Communication Foundation (WCF), come servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione per adattarlo all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per altre informazioni, vedere [che specifica il comportamento di Run-Time Service](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ I client Windows Communication Foundation (WCF), come servizi Windows Communicat
  È possibile usare il comportamento <xref:System.ServiceModel.Description.ClientViaBehavior> per specificare l'URI (Uniform Resource Identifier) per il quale deve essere creato il canale del trasporto. Usare questo comportamento quando la destinazione di rete immediata non è il processore desiderato del messaggio. Questo consente conversazioni multihop quando l'applicazione chiamante non conosce necessariamente la destinazione finale o quando l'intestazione `Via` della destinazione non è un indirizzo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Specifica del comportamento in fase di esecuzione del servizio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

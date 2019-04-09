@@ -2,12 +2,12 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: a5832d0117c6560d527706443d4966ce34bb3748
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fece74e76f879eff51f154eab8c8edea2c27119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180128"
 ---
 # <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
 Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione personalizzata.  
@@ -55,6 +55,7 @@ Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione per
  Per altre informazioni sulla protezione del trasporto, vedere [la sicurezza del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -65,4 +66,4 @@ Specifica le impostazioni di sicurezza del trasporto MSMQ di un'associazione per
 - [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Sicurezza del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Protezione del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)

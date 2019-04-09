@@ -2,12 +2,12 @@
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160667"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che utilizzano Service Trace Viewer per risolvere i problemi dell'applicazione.  
@@ -169,8 +169,7 @@ L'immagine seguente mostra l'attività client WCF elencate in base al momento de
  L'immagine seguente mostra una visualizzazione grafico delle attività del servizio WCF:   
 
  ![Screenshot del Visualizzatore di traccia che visualizza un elenco delle attività del servizio WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  Nella schermata seguente vengono illustrate le attività sia per il client che per il servizio e viene evidenziata l'attività Add di Elaborazione azione nei processi (arancione). Le frecce indicano i messaggi di richiesta e di risposta inviati e ricevuti dal client e dal servizio. Le tracce di Elaborazione azione sono separate nei processi nel grafico, ma sono riportate come parte della stessa attività nel riquadro in alto a destra. In questo riquadro è possibile vedere le tracce del client per i messaggi inviati, seguite dalle tracce del servizio per i messaggi ricevuti ed elaborati.  
   
  Le immagini seguenti viene illustrata una visualizzazione grafico di entrambe le attività del client e servizio WCF  
@@ -189,8 +188,7 @@ Correlazione dell'errore tra il servizio e il client
   
   L'immagine seguente mostra come selezionare un'attività rossa o gialla per individuare la radice di un problema.   
  ![Screenshot dell'attività rossa o gialla per individuare la radice di un problema.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  Nel riquadro in alto a destra, è possibile esaminare le tracce per l'attività selezionata nel riquadro di sinistra. È quindi possibile esaminare le tracce rosse o gialle in quel riquadro e vedere come sono correlate. Nel grafico precedente, le tracce di avviso sia per il client che per il servizio sono riportate nella stessa attività Elaborazione azione.  
   
  Se queste tracce non forniscono la causa radice dell'errore, è possibile usare il grafico facendo doppio clic sull'attività selezionata nel riquadro di sinistra (qui Elaborazione azione). Viene quindi visualizzato il grafico con attività correlate. È quindi possibile espandere le attività correlate (facendo il segno "+") per trovare la prima traccia emessa in rosso o giallo in un'attività correlata. Continuare a espandere le attività che si verificano subito prima della traccia rossa o gialla di interesse, seguendo i trasferimenti alle attività correlate o il flusso dei messaggi tra gli endpoint, fino a individuare la causa principale del problema.  
@@ -207,6 +205,7 @@ Espansione delle attività per individuare la causa principale di un problema
 Per avviare la risoluzione dei problemi, è anche possibile selezionare una traccia dei messaggi rossa o gialla e fare doppio clic per individuare la causa radice.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+
+- [Scenari di analisi end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)'
+title: 'Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188884"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms
 Gli elementi possono essere aggiunti a una casella combinata Windows Form, casella di riepilogo o casella di riepilogo in svariati modi, poiché questi controlli possono essere associati a una varietà di origini dati. Tuttavia, in questo argomento viene illustrato il metodo più semplice e non richiede supporta l'associazione dati. Gli elementi visualizzati in genere sono stringhe. Tuttavia, può essere usato qualsiasi oggetto. Il testo che viene visualizzato nel controllo è il valore restituito dell'oggetto `ToString` (metodo).  
   
 ### <a name="to-add-items"></a>Per aggiungere elementi  
@@ -137,9 +137,10 @@ Gli elementi possono essere aggiunti a una casella combinata Windows Form, casel
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Quando utilizzare un controllo ComboBox Windows Form anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)

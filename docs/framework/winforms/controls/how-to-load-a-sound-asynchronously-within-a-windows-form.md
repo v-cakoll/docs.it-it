@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Caricare un suono in modo asincrono in un Windows Form'
+title: 'Procedura: Caricare in modo asincrono un suono in un Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185757"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Procedura: Caricare un suono in modo asincrono in un Windows Form
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Procedura: Caricare in modo asincrono un suono in un Windows Form
 Nell'esempio di codice seguente viene caricato un suono in modo asincrono da un URL e quindi viene riprodotto in un nuovo thread.  
   
 ## <a name="example"></a>Esempio  
@@ -53,6 +53,7 @@ Nell'esempio di codice seguente viene caricato un suono in modo asincrono da un 
  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>

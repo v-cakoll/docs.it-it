@@ -2,12 +2,12 @@
 title: Attacchi di tipo replay
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186758"
 ---
 # <a name="replay-attacks"></a>Attacchi di tipo replay
 Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene respinto, i computer colpiti elaborano il flusso come se i messaggi fossero legittimi. Ciò determina una serie di conseguenze negative, ad esempio la creazione di ordini ridondanti di un articolo.  
@@ -30,16 +30,17 @@ Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato co
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Web Farm: Richiesta riproduzioni hacker in più nodi  
  Si consideri il caso di un client che utilizza un servizio implementato in una Web farm. In questo caso un utente malintenzionato può riprodurre una richiesta inviata a un determinato nodo della farm verso un'altro nodo della stessa farm. Inoltre, se un servizio viene riavviato, la cache di riproduzione viene svuotata. Ciò consente a un utente malintenzionato di riprodurre una richiesta. Nota: una cache di riproduzione contiene i valori di firma dei messaggi usati o già visualizzati e impedisce che tali firme vengano utilizzate più di una volta, respingendo in questo modo gli attacchi di tipo replay. Tuttavia, le funzionalità di una cache di riproduzione non vengono estese all'intera Web farm.  
   
- Le prevenzioni includono:  
+ Le mitigazioni includono:  
   
 -   Usare una modalità di sicurezza dei messaggi che preveda token del contesto di sicurezza con stato. La funzionalità di conversazione protetta può essere attiva o disattivata. Per altre informazioni, vedere [Procedura: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 -   Configurare il servizio in modo che utilizzi un meccanismo di sicurezza a livello di trasporto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162280"
 ---
 # <a name="xaml-2009-language-features"></a>Funzionalità del linguaggio XAML 2009
 XAML 2009 è il termine abbreviato per le nuove funzionalità del linguaggio XAML che estendono la specifica del linguaggio XAML esistente. XAML 2009 introduce varie nuove direttive e costrutti. Sono inclusi il [X:Arguments Directive](x-arguments-directive.md); il [direttiva X:FactoryMethod](x-factorymethod-directive.md); il [X:Reference Markup Extension](x-reference-markup-extension.md); il [direttiva X:TypeArguments ](x-typearguments-directive.md); e i tipi nativi per primitive di linguaggio comuni (ad esempio `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 è il termine abbreviato per le nuove funzionalità del linguaggio XAM
  Per gli attributi supportati dagli eventi, XAML 2006 presuppone che sia coinvolta la compilazione del markup e invia gli eventi alla compilazione del markup. XAML 2009 supporta un modulo di markup che assomiglia a un'estensione di markup, che rinvia il collegamento di eventi fino all'analisi e al caricamento in fase di esecuzione di XAML. Le applicazioni WPF e gli scenari XAML per l'interfaccia utente tuttavia in genere non usano questa funzionalità. WPF e la relativa implementazione XAML 2006 usano la combinazione del collegamento del gestore eventi per eventi indirizzati, definiti al livello <xref:System.Windows.UIElement> , e il passaggio del compilatore di markup per la maggior parte dell'elaborazione di attributi evento. Il compilatore di markup preelabora anche gli attributi dell'evento trovati in XAML in cui le operazioni di compilazione dichiarano di usare il compilatore di markup.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

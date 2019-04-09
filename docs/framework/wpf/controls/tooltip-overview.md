@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170105"
 ---
 # <a name="tooltip-overview"></a>Panoramica sul controllo ToolTip
 Una descrizione comando è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio su un <xref:System.Windows.Controls.Button>. L'argomento introduce la descrizione comando e illustra come creare e personalizzare il relativo contenuto.  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>Che cos'è una descrizione comando?  
  Quando si sposta il puntatore del mouse su un elemento per cui esiste una descrizione comando, viene visualizzata una finestra con contenuto relativo all'elemento (ad esempio, testo che descrive la funzione di un controllo) per un periodo di tempo specificato. Se si sposta il puntatore del mouse all'esterno del controllo, la finestra scompare perché il contenuto della descrizione comando non può ricevere lo stato attivo.  
@@ -76,8 +74,9 @@ Una descrizione comando è una piccola finestra popup che viene visualizzato qua
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Procedure relative alle proprietà](tooltip-how-to-topics.md)
+- [Procedure relative](tooltip-how-to-topics.md)

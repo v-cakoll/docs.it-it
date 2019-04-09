@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177378"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Procedura dettagliata: Modifica di un controllo composito con Visual C\#
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
@@ -30,7 +30,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 2.  Nell'elenco di progetti Visual c#, selezionare la **libreria di controlli Windows Form** modello di progetto, digitare `ctlClockLib` nel **Name** casella e quindi fare clic su **OK**.  
   
-     Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se ad esempio due assembly forniscono componenti denominati `ctlClock`, sarà possibile specificare il componente `ctlClock` usando`ctlClockLib.ctlClock.`  
+     Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se, ad esempio, due assembly forniscono componenti denominati `ctlClock`, è possibile specificare il `ctlClock` componente usando `ctlClockLib.ctlClock.`  
   
 3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.cs`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".  
   
@@ -54,8 +54,8 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Modificare in|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**per**|`(blank space)`|  
+    |**Nome**|`lblDisplay`|  
+    |**Testo**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -247,10 +247,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Impostazione|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
-    |**per**|**Allarme!**|  
+    |**Nome**|`lblAlarm`|  
+    |**Testo**|**Allarme!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`false`|  
+    |**Visibile**|`false`|  
   
 ### <a name="adding-the-alarm-functionality"></a>Aggiunta della funzionalità di allarme  
  Nelle procedure precedenti sono state aggiunte proprietà e un controllo in grado di abilitare la funzionalità di allarme nel controllo composito. In questa procedura verrà aggiunto un codice che consente di confrontare l'ora corrente con l'ora dell'allarme e, se le ore risultano identiche, attivare un allarme lampeggiante. Eseguendo l'override del metodo `timer1_Tick` di `ctlClock` e aggiungendovi ulteriore codice sarà possibile estendere le capacità di `ctlAlarmClock` e conservare allo stesso le funzionalità intrinseche di `ctlClock`.  
@@ -317,10 +317,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 2.  Aggiungere un pulsante al controllo. Impostare le proprietà del pulsante come illustrato di seguito.  
   
-    |Proprietà|Valore|  
+    |Proprietà|Value|  
     |--------------|-----------|  
-    |**Name**|`btnAlarmOff`|  
-    |**per**|**Disabilita allarme**|  
+    |**Nome**|`btnAlarmOff`|  
+    |**Testo**|**Disabilita allarme**|  
   
 3.  Nella finestra di progettazione fare doppio clic su **btnAlarmOff**.  
   
@@ -367,10 +367,10 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Control|Proprietà|Value|  
     |-------------|--------------|-----------|  
-    |`label1`|**per**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    |`label1`|**Testo**|`(blank space)`|  
+    ||**Nome**|`lblTest`|  
+    |`dateTimePicker1`|**Nome**|`dtpTest`|  
+    ||**Formato**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. Nella finestra di progettazione fare doppio clic su **dtpTest**.  
   
@@ -405,6 +405,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
      In questa procedura dettagliata sono stati trattati diversi concetti chiave. Si è appreso come creare un controllo composito combinando controlli e componenti in un contenitore controllo composito e come aggiungere proprietà al controllo e scrivere il codice per l'implementazione di funzionalità personalizzate. Nell'ultima sezione sono state illustrate l'estensione delle funzionalità di uno specifico controllo composito mediante ereditarietà e la modifica delle funzionalità dei metodi host mediante override.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)
-- [Procedura: Visualizzare un controllo nella finestra di dialogo elementi della casella degli strumenti scegliere](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Procedura dettagliata: Eredità da un controllo di Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Procedura: Visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedura dettagliata: Eredità da un controllo di Windows Form con Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

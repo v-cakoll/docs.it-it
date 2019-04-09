@@ -2,12 +2,12 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: ef3d92e07aaf4d4ba9d90e381017db104f2cc8fe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179153"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
 Specifica il supporto del flusso di transazione per l'associazione personalizzata.  
@@ -49,6 +49,7 @@ Specifica il supporto del flusso di transazione per l'associazione personalizzat
 >  Quando viene usato il protocollo `OleTransactions` per propagare transazioni da endpoint a endpoint, il timeout della transazione può essere perso se l'endpoint di destinazione tenta di eseguire nuovamente la propagazione usando un protocollo diverso da `OleTransactions`. Ciò può provocare un ritardo del timeout di tutti i nodi di livello inferiore dopo l'hop OleTransactions.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

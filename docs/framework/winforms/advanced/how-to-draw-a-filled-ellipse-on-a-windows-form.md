@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Disegna un'ellisse piena in un Windows Form"
+title: "Procedura: Disegnare un'ellisse piena in un Windows Form"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171008"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Procedura: Disegna un'ellisse piena in un Windows Form
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Procedura: Disegnare un'ellisse piena in un Windows Form
 In questo esempio disegna un'ellisse piena in un form.  
   
 ## <a name="example"></a>Esempio  
@@ -37,7 +37,8 @@ In questo esempio disegna un'ellisse piena in un form.
  È sempre necessario chiamare <xref:System.IDisposable.Dispose%2A> tutti gli oggetti che utilizzano le risorse di sistema, ad esempio <xref:System.Drawing.Brush> e <xref:System.Drawing.Graphics> oggetti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
-- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Linee e riempimenti con fusione alfa](alpha-blending-lines-and-fills.md)
-- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

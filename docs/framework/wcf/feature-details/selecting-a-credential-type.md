@@ -2,12 +2,12 @@
 title: Selezione di un tipo di credenziale
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167843"
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
 *Le credenziali* sono i dati di Windows Communication Foundation (WCF) viene utilizzato per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In WCF, le credenziali possono assumere molte forme, ad esempio token del nome utente e i certificati X.509. In questo argomento illustra come selezionare la credenziale appropriata per l'applicazione, come vengono usati in WCF e le credenziali.  
@@ -25,11 +25,11 @@ ms.locfileid: "54577113"
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|None|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Di base|Specifica l'autenticazione di base per il client. Per altre informazioni, vedere il documento RFC2617, ovvero[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (Autenticazione HTTP: autenticazione di base e del digest).|  
+|nessuno|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
+|Basic|Specifica l'autenticazione di base per il client. Per altre informazioni, vedere il documento RFC2617, ovvero[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (Autenticazione HTTP: autenticazione di base e del digest).|  
 |Digest|Specifica l'autenticazione digest per il client. Per altre informazioni, vedere il documento RFC2617, ovvero[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkID=88313) (Autenticazione HTTP: autenticazione di base e del digest).|  
 |Ntlm|Specifica l'autenticazione NT LAN Manager (NTLM). Viene usato quando non è possibile usare l'autenticazione Kerberos per qualche motivo. È anche possibile disabilitare l'uso come fallback impostando il <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> proprietà `false`, in modo che WCF rendere un tutti i tentativi possibili per generare un'eccezione se viene usato NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
-|Windows|Specifica l'autenticazione Windows. Per specificare solo il protocollo Kerberos in un dominio Windows, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false` (l'impostazione predefinita è `true`).|  
+|WINDOWS|Specifica l'autenticazione Windows. Per specificare solo il protocollo Kerberos in un dominio Windows, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false` (l'impostazione predefinita è `true`).|  
 |Certificato|Esegue l'autenticazione client mediante un certificato X.509.|  
 |Password|L'utente deve specificare un nome utente e una password. Convalidare la coppia di nome utente/password usando l'autenticazione di Windows o un'altra soluzione personalizzata.|  
   
@@ -38,8 +38,8 @@ ms.locfileid: "54577113"
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|None|Specifica che il client non deve presentare una credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Windows|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
+|nessuno|Specifica che il client non deve presentare una credenziale. Il client viene pertanto autenticato come anonimo.|  
+|WINDOWS|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
 |Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che WCF non consente le operazioni di crittografia con i nomi utente, ad esempio la generazione di una firma o la crittografia dei dati. WCF garantisce che il trasporto è protetto quando si usano credenziali nome utente.|  
 |Certificato|Consente al servizio di richiedere che il client venga autenticato tramite un certificato X.509.|  
 |Token emesso|Un tipo di token personalizzato, configurato in base a un criterio di sicurezza. Il tipo di token predefinito è Security Assertions Markup Language (SAML). Il token viene emesso da un servizio token di sicurezza. Per altre informazioni, vedere [federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
@@ -98,6 +98,7 @@ ms.locfileid: "54577113"
  Per altre informazioni sulle credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
@@ -110,7 +111,7 @@ ms.locfileid: "54577113"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
-- [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+- [Protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

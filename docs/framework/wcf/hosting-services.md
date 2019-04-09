@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 208841d880ffcbfb2bbeb9e235cc8cdf0fa2f041
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185536"
 ---
 # <a name="hosting-services"></a>Servizi host
 Per diventare attivo, un servizio deve essere ospitato all'interno di un ambiente di runtime che lo crea e ne controlla il contesto e la durata. Servizi Windows Communication Foundation (WCF) sono progettati per l'esecuzione in qualsiasi processo Windows che supporta codice gestito.  
@@ -62,10 +62,11 @@ Per diventare attivo, un servizio deve essere ospitato all'interno di un ambient
  È importante notare che l'esecuzione di un servizio o di una qualsiasi estensione da un host non attendibile compromette la sicurezza. Si noti inoltre che quando si apre un <xref:System.ServiceModel.ServiceHost> in caso di utilizzo della rappresentazione, un'applicazione deve controllare che l'utente non si sia disconnesso, ad esempio memorizzando nella cache l'elemento <xref:System.Security.Principal.WindowsIdentity> dell'utente.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Requisiti di sistema](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implementazione dei contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Procedura: Ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Procedura: Ospitare un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Procedura: Ospitare un servizio WCF in un servizio Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Procedura: Hosting di un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Procedura: hosting di un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Procedura: Hosting di un servizio WCF in un servizio Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

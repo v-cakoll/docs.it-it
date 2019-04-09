@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183638"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma è stato esteso per mantenere un registro sul server delle operazioni eseguite in una tabella di database e un totale per le operazioni della calcolatrice parziale con stato. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.  
@@ -264,4 +264,3 @@ Creating new service instance...
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
-  

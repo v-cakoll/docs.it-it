@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 6485bbd751d6467628f2191c3f5f0c6cc8a3db2f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: e9942ce3ccbec949160ee70dd103d3c1799bd44d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186303"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 Specifica le impostazioni di codifica e controllo di versione dei messaggi XML basati sul testo.  
@@ -66,6 +66,7 @@ Specifica le impostazioni di codifica e controllo di versione dei messaggi XML b
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

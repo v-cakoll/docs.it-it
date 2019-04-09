@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Testare il Proxy di individuazione'
+title: 'Procedura: Testare il proxy di individuazione'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176280"
 ---
-# <a name="how-to-test-the-discovery-proxy"></a>Procedura: Testare il Proxy di individuazione
+# <a name="how-to-test-the-discovery-proxy"></a>Procedura: Testare il proxy di individuazione
 Di seguito viene illustrato il quarto di quattro argomenti che indica come implementare un proxy di individuazione. Nell'argomento precedente, [come: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), è stata implementata un'applicazione client WCF che usa il proxy di individuazione per trovare un servizio e quindi chiama il servizio. In questo argomento viene descritto come verificare che il proxy di individuazione, il servizio e l'applicazione client funzionino come previsto.  
   
 ### <a name="run-the-discovery-proxy"></a>Eseguire il proxy di individuazione  
@@ -51,7 +51,8 @@ Di seguito viene illustrato il quarto di quattro argomenti che indica come imple
 3.  Chiudere il proxy di individuazione  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Procedura: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Procedura: Implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Procedura: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Procedura: Implementare un proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Procedura: Implementare un'applicazione client per usare il proxy di individuazione e cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

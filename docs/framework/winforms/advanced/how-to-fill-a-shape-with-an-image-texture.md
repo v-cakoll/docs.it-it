@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Riempire una forma con una trama basata su immagine'
+title: "Procedura: Riempire una forma con una trama basata su un'immagine"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177320"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedura: Riempire una forma con una trama basata su immagine
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedura: Riempire una forma con una trama basata su un'immagine
 È possibile riempire una forma chiusa con una trama utilizzando la <xref:System.Drawing.Image> classe e il <xref:System.Drawing.TextureBrush> classe.  
   
 ## <a name="example"></a>Esempio  
@@ -31,7 +31,8 @@ ms.locfileid: "57708444"
  [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+
+- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

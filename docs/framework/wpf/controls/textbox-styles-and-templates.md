@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 16f087051e438fa0dbe248c46b0ec555c07cc06c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177944"
 ---
 # <a name="textbox-styles-and-templates"></a>Stili e modelli di TextBox
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.TextBox> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -53,6 +53,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)

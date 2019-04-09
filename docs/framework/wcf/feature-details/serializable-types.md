@@ -2,12 +2,12 @@
 title: Tipi serializzabili
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160849"
 ---
 # <a name="serializable-types"></a>Tipi serializzabili
 Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSerializer> serializza tutti i tipi visibili pubblicamente. Vengono serializzati i campi e le proprietà di lettura/scrittura pubblici del tipo.  
@@ -27,7 +27,7 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
   
 -   I campi di sola lettura, le proprietà senza un metodo `get` o `set` e quelle con metodi `set` o `get` interni o privati non vengono serializzati. Tali proprietà vengono ignorate e non viene generata alcuna eccezione, salvo nel caso di raccolte con sola funzione di accesso get.  
   
--   Gli attributi <xref:System.Xml.Serialization.XmlSerializer> (ad esempio `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` e così via) vengono ignorati.  
+-   <xref:System.Xml.Serialization.XmlSerializer> attributi (ad esempio `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`e così via) vengono ignorati.  
   
 -   Se non si applica l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo specificato, il serializzatore ignora qualsiasi membro del tipo a cui viene applicato l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -39,8 +39,9 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
  I tipi non contrassegnati (tipi senza l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>) possono ereditare da tipi che dispongono di tale attributo, ma l'operazione opposta non è consentita, pertanto i tipi con l'attributo non possono ereditare da tipi non contrassegnati. Questa regola viene applicata principalmente per garantire la compatibilità con il codice scritto in versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

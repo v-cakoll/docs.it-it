@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)'
+title: 'Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Forms (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170027"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Forms (Visual Basic)
 In questo esempio viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un form Windows <xref:System.Windows.Forms.LinkLabel> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -50,5 +50,6 @@ End Sub
  La chiamata al <xref:System.Diagnostics.Process.Start%2A> metodo richiede attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [Controllo LinkLabel](linklabel-control-windows-forms.md)

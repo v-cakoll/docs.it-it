@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 928d3c528bef6d319f50464a0648e61de2603eb2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173134"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > elemento (.NET Native)
 Applica i criteri di reflection di runtime a un tipo generico costruito.  
@@ -39,7 +39,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |Attributo|Tipo di attributo|Descrizione|  
 |---------------|--------------------|-----------------|  
 |`Name`|Generale|Attributo obbligatorio. Specifica il nome del tipo.|  
-|`Arguments`|Generale|Attributo obbligatorio. Specifica gli argomenti di tipo generico. Se sono presenti più argomenti, saranno separati da virgole.|  
+|`Arguments`|Generale|Attributo obbligatorio. Specifica gli argomenti tipo generico. Se sono presenti più argomenti, saranno separati da virgole.|  
 |`Activate`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.|  
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
@@ -49,23 +49,23 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
-|`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling delle strutture al codice nativo.|  
+|`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling delle strutture al codice nativo.|  
   
 ## <a name="name-attribute"></a>Name (attributo)  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*type_name*|Nome del tipo. Se questo elemento `<TypeInstantiation>` è figlio di un elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), un elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o di un altro elemento `<TypeInstantiation>`, *type_name* può specificare il nome del tipo senza il relativo spazio dei nomi. In caso contrario, *type_name* deve includere il nome completo del tipo. Il nome del tipo non è decorato. Ad esempio, per un oggetto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, l'elemento `<TypeInstantiation>` può apparire come segue:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Attributo di argomenti  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*type_argument*|Specifica gli argomenti tipo generico. Se sono presenti più argomenti, saranno separati da virgole. Ogni argomento deve essere costituito dal nome completo del tipo.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il tipo generico costruito. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
@@ -74,12 +74,12 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Applica i criteri di reflection a un evento appartenente a questo tipo.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Applica i criteri di reflection a un campo appartenente a questo tipo.|  
+|[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|Applica i criteri di reflection a un campo appartenente a questo tipo.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Applica criteri a un tipo, se tale criterio è stato applicato al tipo rappresentato dall'oggetto contenente l'elemento `<TypeInstantiation>`.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection a un metodo appartenente a questo tipo.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applica criteri di reflection a un metodo generico costruito, appartenente a questo tipo.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Applica i criteri di reflection a una proprietà appartenente a questo tipo.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica criteri di reflection un tipo annidato.|  
+|[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection a un metodo appartenente a questo tipo.|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Applica criteri di reflection a un metodo generico costruito, appartenente a questo tipo.|  
+|[\<Proprietà >](../../../docs/framework/net-native/property-element-net-native.md)|Applica i criteri di reflection a una proprietà appartenente a questo tipo.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica criteri di reflection un tipo annidato.|  
 |`<TypeInstantiation>`|Applica i criteri di reflection a un tipo generico costruito annidato.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
@@ -88,9 +88,9 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime.|  
 |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applica i criteri di reflection a tutti i tipi in un determinato assembly.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Applica criteri di reflection a tutti i tipi in uno spazio dei nomi.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<Libreria >](../../../docs/framework/net-native/library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Applica criteri di reflection a tutti i tipi in uno spazio dei nomi.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
 |`<TypeInstantiation>`|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
@@ -117,6 +117,7 @@ Applica i criteri di reflection di runtime a un tipo generico costruito.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

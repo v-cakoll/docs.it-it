@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 424bc0f223dbdc6dbfc69a6623f86bcc2c71fa88
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180596"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
 Specifica le impostazioni di autenticazione di un certificato peer usato da un nodo peer.  
@@ -54,13 +54,14 @@ Specifica le impostazioni di autenticazione di un certificato peer usato da un n
  L'elemento `<authentication>` corrisponde alla classe <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Questo elemento specifica una convalida, che viene richiamata durante l'autenticazione tra peer adiacenti nella rete. Quando un nuovo peer tenta di stabilire una connessione con un peer adiacente, passa la propria credenziale al peer che risponde. Viene richiamata la convalida del risponditore per verificare la credenziale della parte remota. Ogni volta che viene stabilita una connessione peer nella rete, entrambi i peer vengono reciprocamente autenticati, indicando che vengono richiamati validator su entrambe le parti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Rete peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticazione dei messaggi del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticazione personalizzata del canale peer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Autenticazione personalizzata dei messaggi del canale](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protezione di applicazioni del canale peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

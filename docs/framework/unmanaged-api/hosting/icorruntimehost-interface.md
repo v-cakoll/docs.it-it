@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184782"
 ---
 # <a name="icorruntimehost-interface"></a>Interfaccia ICorRuntimeHost
 Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, common language runtime (CLR) per creare e configurare domini dell'applicazione, accedere al dominio predefinito di enumerare tutti i domini in esecuzione nel processo.  
@@ -62,6 +62,7 @@ Fornisce metodi che consentono all'host avviare e arrestare in modo esplicito, c
  **Versioni di .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.AppDomain>
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [Interfaccia ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

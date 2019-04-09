@@ -2,12 +2,12 @@
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 6fdfa696890459e92aabd4bdf24e0c3a1b0e17f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9de33512f4240dffdd9e549a49f3daf106418258
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179608"
 ---
 # <a name="unrecognizedpolicyassertion"></a>\<unrecognizedPolicyAssertion>
 Rappresenta un elemento di associazione che specifica l'asserzione di criteri. Questo elemento non ha attributo e è presente come un'opzione vuota.  
@@ -43,6 +43,7 @@ Rappresenta un elemento di associazione che specifica l'asserzione di criteri. Q
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)
 - [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)

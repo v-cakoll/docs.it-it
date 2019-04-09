@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186290"
 ---
 # <a name="specifying-an-assemblys-location"></a>Specifica della posizione di un assembly
 Esistono due modi per specificare la posizione dell'assembly:  
@@ -66,7 +66,8 @@ Esistono due modi per specificare la posizione dell'assembly:
  Il **privatePath** attributo contiene le directory in cui il runtime deve cercare gli assembly. Se l'applicazione si trova in c:\Programmi\Microsoft Programmi\Applicazione, il runtime cerca gli assembly che non si specificano una codebase in c:\Programmi\Microsoft Files\MyApp\Bin Files\MyApp\Bin2\Subbin c:\Programmi\Microsoft e Files\MyApp\Bin3 c:\Programmi\Microsoft. Directory specificate nella **privatePath** devono essere sottodirectory della directory base dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurazione delle App usando i file di configurazione](index.md)
+- [Configurazione delle app tramite file di configurazione](index.md)

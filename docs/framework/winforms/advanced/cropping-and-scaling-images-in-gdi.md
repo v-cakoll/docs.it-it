@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3cdb06e99770808461f9266fb5f07df9074149b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183729"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Ritaglio e ridimensionamento di immagini in GDI+
 È possibile usare il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di <xref:System.Drawing.Graphics> classe per creare e posizionare immagini vettoriali e raster. <xref:System.Drawing.Graphics.DrawImage%2A> è un metodo di overload, quindi esistono diversi modi, è possibile fornire argomenti.  
@@ -47,5 +47,6 @@ ms.locfileid: "57718792"
  ![Ritaglio e ridimensionamento](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)
 - [Utilizzo di immagini, bitmap, icone e metafile](working-with-images-bitmaps-icons-and-metafiles.md)

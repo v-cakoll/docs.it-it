@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174564"
 ---
 # <a name="how-to-fill-open-figures"></a>Procedura: Riempire figure aperte
 È possibile compilare un percorso passando un <xref:System.Drawing.Drawing2D.GraphicsPath> dell'oggetto per il <xref:System.Drawing.Graphics.FillPath%2A> (metodo). Il <xref:System.Drawing.Graphics.FillPath%2A> metodo inserisce il percorso secondo la modalità di riempimento (alternativo o dei vertici) attualmente impostato per il percorso. Se il percorso include figure aperte, il percorso viene inserito come se fossero chiuse. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] chiude una figura tracciando una linea retta tra il punto finale al punto di partenza.  
@@ -32,5 +32,6 @@ ms.locfileid: "58654081"
  L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Percorsi di oggetti Graphics in GDI+](graphics-paths-in-gdi.md)

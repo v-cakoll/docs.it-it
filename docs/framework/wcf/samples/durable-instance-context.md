@@ -2,12 +2,12 @@
 title: Contesto dell'istanza durevole
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160966"
 ---
 # <a name="durable-instance-context"></a>Contesto dell'istanza durevole
 In questo esempio viene illustrato come personalizzare il runtime di Windows Communication Foundation (WCF) per abilitare contesti dell'istanza durevoli. SQL Server 2005 viene utilizzato come archivio di backup (in questo caso SQL Server 2005 Express). Tuttavia, viene fornito anche un modo di accedere ai meccanismi di archiviazione personalizzati.  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

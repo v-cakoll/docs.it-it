@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181342"
 ---
 # <a name="guidelines-and-best-practices"></a>Linee guida e suggerimenti
 In questa sezione contiene argomenti che forniscono le linee guida per la creazione di applicazioni Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedure consigliate: Versioni di DataContract](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Procedure consigliate: Controllo delle versioni dei contratti dati](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Viene illustrato come e quando creare contratti dati che non determinano interruzioni quando vengono create versioni successive.  
   
  [Controllo delle versioni dei servizi](../../../docs/framework/wcf/service-versioning.md)  
@@ -45,6 +45,7 @@ In questa sezione contiene argomenti che forniscono le linee guida per la creazi
  [Programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Esempi di Windows Communication Foundation (WCF)](./samples/index.md)
 - [Panoramica dei concetti](../../../docs/framework/wcf/conceptual-overview.md)

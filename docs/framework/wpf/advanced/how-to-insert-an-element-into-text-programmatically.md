@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: c93a1c7542a4ddb33b3880de423c256adcc3f1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169585"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Procedura: Inserire un elemento in un testo a livello di codice
 Nell'esempio seguente viene illustrato come usare due <xref:System.Windows.Documents.TextPointer> gli oggetti per specificare un intervallo all'interno del testo per applicare un <xref:System.Windows.Documents.Span> elemento.  
@@ -30,4 +30,5 @@ Nell'esempio seguente viene illustrato come usare due <xref:System.Windows.Docum
  ![Elemento Span applicato a un intervallo di testo](./media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sui documenti dinamici](flow-document-overview.md)

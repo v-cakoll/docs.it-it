@@ -2,12 +2,12 @@
 title: Classe Operation
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165078"
 ---
 # <a name="operation-class"></a>Classe Operation
 Operazione  
@@ -94,7 +94,7 @@ class Operation
   
  Firma del metodo dell'operazione.  
   
-### <a name="name"></a>nome  
+### <a name="name"></a>Nome  
  Tipo di dati: stringa  
   
  Tipo di accesso: Sola lettura  
@@ -129,4 +129,5 @@ class Operation
 |Spazio dei nomi|Definito in root\ServiceModel|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description.OperationDescription>

@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Raggruppare gli elementi di un controllo ListView che implementa una GridView'
+title: 'Procedura: Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], grouping items with GridViews
 - grouping items in ListViews implementing GridViews [WPF]
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
-ms.openlocfilehash: 3989f0fcdaf2e3d3003aca9feb27cbf02f949389
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177671"
 ---
-# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Procedura: Raggruppare gli elementi di un controllo ListView che implementa una GridView
+# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Procedura: Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView
 In questo esempio viene illustrato come visualizzare i gruppi di voci di <xref:System.Windows.Controls.GridView> modalità di visualizzazione di un <xref:System.Windows.Controls.ListView> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -27,8 +27,9 @@ In questo esempio viene illustrato come visualizzare i gruppi di voci di <xref:S
 [!code-xaml[GridViewWithGroups#ListViewEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewWithGroups/CS/Window1.xaml#listviewend)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Procedure relative alle proprietà](listview-how-to-topics.md)
+- [Procedure relative](listview-how-to-topics.md)
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Cenni preliminari su GridView](gridview-overview.md)

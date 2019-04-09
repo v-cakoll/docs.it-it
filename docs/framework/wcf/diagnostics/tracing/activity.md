@@ -2,12 +2,12 @@
 title: Attività
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170209"
 ---
 # <a name="activity"></a>Attività
 Questo argomento descrive le tracce di attività nel modello di traccia di Windows Communication Foundation (WCF). Le attività sono unità di elaborazione che consentono all'utente di restringere l'ambito di un errore e quindi di individuarne le cause con maggiore facilità. Gli errori che si verificano nella stessa attività sono correlati in modo diretto. Si consideri ad esempio il caso di un'operazione che non riesce poiché la decrittografia di un messaggio ha avuto esito negativo. Le tracce relative alla non riuscita dell'operazione e della decrittografia del messaggio vengono visualizzate entrambe nella stessa attività, evidenziando in questo modo una correlazione diretta fra i due eventi di errore.  
@@ -38,14 +38,14 @@ Questo argomento descrive le tracce di attività nel modello di traccia di Windo
 ## <a name="defining-the-scope-of-an-activity"></a>Definizione dell'ambito di un'attività  
  Le attività vengono definite in fase di progettazione per indicare un'unità logica di esecuzione. Le tracce emesse con lo stesso identificatore di attività sono direttamente correlate, in quanto parte della stessa attività. Poiché le attività possono oltrepassare i limiti di endpoint (nel caso di una richiesta), per ogni attività vengono definiti due ambiti.  
   
--   Ambito `Global`, per applicazione. In questo ambito, l'attività è identificata dal proprio identificatore di attività globalmente univoco a 128 bit, il gAId. Il gAid è l'ID che viene propagato fra gli endpoint.  
+-   `Global` ambito, per ogni applicazione. In questo ambito, l'attività è identificata dal proprio identificatore di attività globalmente univoco a 128 bit, il gAId. Il gAid è l'ID che viene propagato fra gli endpoint.  
   
--   Ambito `Local`, per endpoint. In questo ambito, l'attività viene identificata in base al proprio gAId, al nome dell'origine di traccia che emette le tracce attività e all'ID del processo. Questa terna costituisce l'ID attività locale (lAId, local Activity Identifier). Il lAId è utilizzato per definire i limiti (locali) di un'attività.  
+-   `Local` ambito, per ogni endpoint. In questo ambito, l'attività viene identificata in base al proprio gAId, al nome dell'origine di traccia che emette le tracce attività e all'ID del processo. Questa terna costituisce l'ID attività locale (lAId, local Activity Identifier). Il lAId è utilizzato per definire i limiti (locali) di un'attività.  
   
 ## <a name="trace-schema"></a>Schema di traccia  
  Le tracce possono essere emesse utilizzando qualsiasi schema e tra piattaforme Microsoft diverse. "e2e" (per "End to End") è uno schema di uso comune. Questo schema include un gAId a 128 bit, il nome dell'origine di traccia e l'ID del processo. In codice gestito, <xref:System.Diagnostics.XmlWriterTraceListener> emette tracce nello schema E2E.  
   
- Gli sviluppatori possono impostare l'AID emesso con una traccia impostando la proprietà <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un GUID nell'archiviazione thread-local (TLS, Thread Local Storage). Nell'esempio che segue viene illustrato quanto descritto.  
+ Gli sviluppatori possono impostare l'AID emesso con una traccia impostando la proprietà <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un GUID nell'archiviazione locale di thread (TLS, Thread Local Storage). Nell'esempio che segue viene illustrato quanto descritto.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
@@ -85,7 +85,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="guidelines-for-using-activity-tracing"></a>Linee guida per l'utilizzo della traccia attività  
  Di seguito viene illustrato come utilizzare le tracce di ActivityTracing (Start, Stop, Suspend, Resume e Transfer).  
   
--   La traccia è un grafico ciclico diretto, non una struttura. È possibile restituire il controllo a un'attività che ha generato un'attività.  
+-   La traccia è un grafico ciclico diretto, non un albero. È possibile restituire il controllo a un'attività che ha generato un'attività.  
   
 -   Un'attività denota un limite di elaborazione che può essere significativo per l'amministratore del sistema o per le configurazioni supportate.  
   
@@ -98,8 +98,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   Le attività rappresentano attività, non necessariamente degli oggetti. Un'attività deve essere interpretata come "Ciò si stava verificando quando. . . (si è verificata l'emissione di una traccia significativa)".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenari di analisi end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

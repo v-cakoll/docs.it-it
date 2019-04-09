@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4789d5cad8bbb4f7dc6f5fcedc56be3bf74703b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186992"
 ---
 # <a name="iclrruntimeinfo-interface"></a>Interfaccia ICLRRuntimeInfo
 Fornisce metodi che restituiscono informazioni su un determinato common language runtime (CLR), inclusi lo stato di caricamento, directory e versione. Questa interfaccia fornisce inoltre funzionalità specifiche della fase di esecuzione senza l'inizializzazione di runtime. Include il relativo runtime [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metodo, la fase di esecuzione specifiche dei moduli [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metodo e le interfacce fornite dal runtime tramite il [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)metodo.  
@@ -53,5 +53,6 @@ Fornisce metodi che restituiscono informazioni su un determinato common language
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

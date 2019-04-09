@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162203"
 ---
 # <a name="transforms-overview"></a>Cenni preliminari sulle trasformazioni
 In questo argomento viene descritto come utilizzare il [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> alle classi di ruotare, ridimensionare, spostare (traslare) e inclinare <xref:System.Windows.FrameworkElement> oggetti.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Che cos'è un oggetto Transform?  
  Oggetto <xref:System.Windows.Media.Transform> definisce come eseguire il mapping o trasformare i punti da uno spazio di coordinate a un altro spazio delle coordinate. Questo mapping è descritto da una trasformazione <xref:System.Windows.Media.Matrix>, che è una raccolta di tre righe con tre colonne di <xref:System.Double> valori.  
@@ -150,7 +149,8 @@ Uso di LayoutTransform per ruotare il pulsante
  Poiché eredita dal <xref:System.Windows.Freezable> (classe), il <xref:System.Windows.Media.Transform> classe fornisce diverse funzionalità speciali: <xref:System.Windows.Media.Transform> gli oggetti possono essere dichiarati come [risorse](../advanced/xaml-resources.md)condiviso tra più oggetti, sola lettura per migliorare le prestazioni, clonati e resi thread-safe. Per altre informazioni sulle diverse funzionalità fornite da <xref:System.Windows.Freezable> oggetti, vedere la [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Procedure relative alle proprietà](transformations-how-to-topics.md)
-- [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [Procedure relative](transformations-how-to-topics.md)
+- [Esempio di trasformazioni 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

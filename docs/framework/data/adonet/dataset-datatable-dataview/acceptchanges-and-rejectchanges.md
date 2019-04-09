@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 84381a9a71ae85baad618684ebf783039456854f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172900"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges e RejectChanges
 Dopo aver verificato la correttezza delle modifiche apportate ai dati in un <xref:System.Data.DataTable>, è possibile accettare le modifiche utilizzando il <xref:System.Data.DataRow.AcceptChanges%2A> metodo per il <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, o <xref:System.Data.DataSet>, che imposterà il **corrente** riga per i valori di **originale** i valori e imposterà il **RowState** proprietà **Unchanged**. Accettare o rifiutare le modifiche apportate a qualsiasi Azzera **RowError** informazioni e imposta il **HasErrors** proprietà **false**. È inoltre possibile che l'accettazione o il rifiuto delle modifiche influisca sui dati di aggiornamento nell'origine dati. Per altre informazioni, vedere [l'aggiornamento di origini dati con DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
@@ -57,6 +57,7 @@ workTable.AcceptChanges();
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>

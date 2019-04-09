@@ -2,12 +2,12 @@
 title: Accesso ai servizi WCF con un'applicazione client Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167648"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Accesso ai servizi WCF con un'applicazione client Windows Store
 In Windows 8 è stato introdotto un nuovo tipo di applicazione denominato applicazioni Windows Store. Queste applicazioni sono progettate in base a un'interfaccia del touchscreen. .NET Framework 4.5 consente alle applicazioni Windows Store di chiamare i servizi WCF.  
@@ -130,7 +130,7 @@ I tipi di credenziale client seguenti sono supportati nelle applicazioni Windows
   
 5.  NTLM  
   
-6.  Windows  
+6.  WINDOWS  
   
 7.  Username (sicurezza del messaggio)  
   
@@ -175,9 +175,10 @@ void async SomeMethod()
  Si noti l'uso della parola chiave async nel metodo con cui si effettua la chiamata asincrona e la parola chiave await quando viene chiamato il metodo asincrono.  
   
 ## <a name="see-also"></a>Vedere anche
-- [WCF nel Blog delle App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [Sicurezza e i client di WCF Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Le app di Windows Store e chiamate tra computer](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [La chiamata a un servizio WCF distribuito in Azure da un'App Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+
+- [WCF nel blog delle app di Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Client e sicurezza di Windows Store WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [App e chiamate tra computer di Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Chiamata di un servizio WCF distribuito in Azure da un'app di Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Associazioni](../../../../docs/framework/wcf/bindings.md)

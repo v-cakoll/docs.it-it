@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183781"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Proprietà nei controlli Windows Form che supportano le linee guida per l'accesso facilitato
 Controlli della casella degli strumenti standard per i moduli di Windows supportano molte delle linee guida accessibilità, inclusi che espone lo stato attivo e l'esposizione degli elementi dello schermo.  
@@ -31,4 +31,5 @@ Controlli della casella degli strumenti standard per i moduli di Windows support
 |BackgroundImage|Omettere questa proprietà per rendere più leggibile il testo.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura dettagliata: Creazione di un'applicazione basata su Windows accessibile](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato](walkthrough-creating-an-accessible-windows-based-application.md)

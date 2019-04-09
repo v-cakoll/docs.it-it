@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Utilizzare gli oggetti SelectedValue, SelectedValuePath e SelectedItem'
+title: 'Procedura: Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: e3f4e5e6a51426581082ab24a1c3a962e38846bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169704"
 ---
-# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Procedura: Utilizzare gli oggetti SelectedValue, SelectedValuePath e SelectedItem
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Procedura: Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem
 Questo esempio illustra come usare il <xref:System.Windows.Controls.TreeView.SelectedValue%2A> e <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> delle proprietà per specificare un valore per il <xref:System.Windows.Controls.TreeView.SelectedItem%2A> di un <xref:System.Windows.Controls.TreeView>.  
   
 ## <a name="example"></a>Esempio  
@@ -38,7 +38,8 @@ Questo esempio illustra come usare il <xref:System.Windows.Controls.TreeView.Sel
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Panoramica sul controllo TreeView](treeview-overview.md)
-- [Procedure relative alle proprietà](treeview-how-to-topics.md)
+- [Cenni preliminari sul controllo TreeView](treeview-overview.md)
+- [Procedure relative](treeview-how-to-topics.md)

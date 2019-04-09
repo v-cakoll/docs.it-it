@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Selezionare le stampanti connesse al Computer dell'utente in Windows Form"
+title: "Procedura: Selezionare le stampanti connesse al computer dell'utente in Windows Form"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184028"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procedura: Selezionare le stampanti connesse al Computer dell'utente in Windows Form
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procedura: Selezionare le stampanti connesse al computer dell'utente in Windows Form
 Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita. È possibile consentire agli utenti di selezionare una stampante tra quelle attualmente installate usando il componente <xref:System.Windows.Forms.PrintDialog> . Tramite il componente <xref:System.Windows.Forms.PrintDialog> , l'oggetto <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> viene acquisito e usato per selezionare la stampante.  
   
  Nella procedura seguente viene selezionato un file di testo da stampare sulla stampante predefinita. Viene quindi creata un'istanza della classe <xref:System.Windows.Forms.PrintDialog> .  
@@ -107,4 +107,5 @@ Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)
+
+- [Supporto per la stampa in Windows Form](windows-forms-print-support.md)

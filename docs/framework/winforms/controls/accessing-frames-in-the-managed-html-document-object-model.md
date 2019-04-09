@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173498"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Accesso a frame nel Document Object Model HTML gestito
 Alcuni documenti HTML sono composti da fuori *frame*, o windows in grado di contenere i propri documenti HTML distinti. Con i frame è possibile creare facilmente pagine HTML in cui una o più parti della pagina sono statiche, ad esempio una barra di spostamento, mentre il contenuto degli altri frame cambia continuamente.  
@@ -39,5 +39,6 @@ Alcuni documenti HTML sono composti da fuori *frame*, o windows in grado di cont
  Questa regola si applica anche alle finestre aperte con i metodi <xref:System.Windows.Forms.HtmlWindow.Open%2A> e <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Se la finestra aperta è in un dominio diverso da quello della pagina ospitata nel controllo <xref:System.Windows.Forms.WebBrowser>, non sarà possibile spostare la finestra o esaminarne i contenuti. Queste restrizioni vengono applicate anche se si usa il controllo <xref:System.Windows.Forms.WebBrowser> per visualizzare un sito Web diverso dal sito Web usato per distribuire l'applicazione basata su Windows Form. Se si usa la tecnologia di distribuzione [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] per installare l'applicazione dal sito Web A e si usa <xref:System.Windows.Forms.WebBrowser> per visualizzare il sito Web B, non sarà possibile accedere ai dati del sito Web B.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [\<frame > elemento](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Utilizzare il Document Object Model HTML gestito](using-the-managed-html-document-object-model.md)

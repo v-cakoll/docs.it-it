@@ -5,26 +5,24 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162646"
 ---
 # <a name="textbox-overview"></a>Cenni preliminari sulla classe TextBox
 Il <xref:System.Windows.Controls.TextBox> classe consente di visualizzare o modificare testo non formattato. Un uso comune di un <xref:System.Windows.Controls.TextBox> consiste nel modificare testo non formattato in un form. Ad esempio, un modulo che richiede il nome dell'utente, numero di telefono e così via utilizzerebbe <xref:System.Windows.Controls.TextBox> controlli per input di testo. Questo argomento vengono presentate le <xref:System.Windows.Controls.TextBox> classe e vengono forniti esempi su come usarlo in entrambe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e C#.  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>Differenza tra un controllo TextBox e un controllo RichTextBox  
  Entrambe <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox> consentire agli utenti di input di testo, ma i due controlli vengono usati per scenari diversi. Oggetto <xref:System.Windows.Controls.TextBox> richiede meno risorse di sistema un <xref:System.Windows.Controls.RichTextBox> pertanto è ideale quando occorre modificare solo testo normale (ad esempio, l'utilizzo in un modulo). Oggetto <xref:System.Windows.Controls.RichTextBox> è una scelta migliore quando è necessario che l'utente deve modificare testo formattato, immagini, tabelle o su altri contenuta. Ad esempio, la modifica di un documento, un articolo o un blog che richiede formattazione, immagini, e così via è più opportuno utilizzare un <xref:System.Windows.Controls.RichTextBox>. La tabella seguente riepiloga le principali funzionalità del <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.TextBox>.  
   
 |Control|Controllo ortografico in tempo reale|Menu di scelta rapida|Formattazione di comandi, ad esempio <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument> contenuto, ad esempio immagini, paragrafi, tabelle e così via.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|Sì|Yes|No|No.|  
-|<xref:System.Windows.Controls.RichTextBox>|Sì|Sì|Sì (vedere [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md))|Sì (vedere [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md))|  
+|<xref:System.Windows.Controls.TextBox>|Yes|Yes|No|No.|  
+|<xref:System.Windows.Controls.RichTextBox>|Yes|Yes|Sì (vedere [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md))|Sì (vedere [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md))|  
   
 > [!NOTE]
 >  Sebbene <xref:System.Windows.Controls.TextBox> esegue i comandi non supportano modifica correlati alla formattazione, ad esempio <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B), molti comandi di base sono supportati entrambi i controlli, ad esempio <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Per altre informazioni, vedere <xref:System.Windows.Documents.EditingCommands>.  
@@ -68,5 +66,6 @@ Il <xref:System.Windows.Controls.TextBox> classe consente di visualizzare o modi
  In genere il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento deve essere usato per rilevare ogni volta che il testo in un <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox> viene modificato, anziché <xref:System.Windows.UIElement.KeyDown> come è prevedibile. Per un esempio, vedere [Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox](how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedure relative alle proprietà](textbox-how-to-topics.md)
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+
+- [Procedure relative](textbox-how-to-topics.md)
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: ec1c6549c4a386f529ca2191e1876975b2bf5dcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186849"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedura: Implementare un'operazione del servizio asincrona
 Nelle applicazioni Windows Communication Foundation (WCF), un'operazione del servizio può essere implementata in modo asincrono o in modo sincrono senza imporre al client come chiamarlo. Ad esempio, le operazioni del servizio asincrona possono essere chiamate in modo sincrono e operazioni del servizio sincrone possono essere chiamate in modo asincrono. Per un esempio che illustra come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [come: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per altre informazioni sulle operazioni sincrone e asincrone, vedere [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) e [sincrono e alle operazioni asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo di lati client e servizio, vedere [asincrono](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -46,5 +46,6 @@ Nelle applicazioni Windows Communication Foundation (WCF), un'operazione del ser
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Progettazione dei contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Operazioni sincrone e asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

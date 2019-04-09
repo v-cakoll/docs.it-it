@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169104"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)
-Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base con complessità minime. Verranno create una classe di entità per la modellazione della tabella Customers nel database Northwind di esempio, quindi una semplice query per elencare i clienti residenti nell'area londinese.  
+In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base con minime complessità. Verranno create una classe di entità per la modellazione della tabella Customers nel database Northwind di esempio, quindi una semplice query per elencare i clienti residenti nell'area londinese.  
   
  Questa procedura dettagliata è basata sul codice in fase di progettazione per illustrare i concetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente per creare il modello a oggetti si usa [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
   
@@ -91,7 +91,7 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
   
 -   Definire la proprietà `CustomerID` in modo che rappresenti una colonna di chiave primaria nel database.  
   
--   Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sarà quindi in grado di archiviare e recuperare direttamente i valori, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
+-   Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può quindi archiviare e recuperare i valori direttamente, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Per rappresentare caratteristiche di due colonne del database  
   
@@ -102,7 +102,7 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
 ## <a name="specifying-the-connection-to-the-northwind-database"></a>Definizione della connessione al database Northwind  
  In questo passaggio viene usato un oggetto <xref:System.Data.Linq.DataContext> per stabilire una connessione tra le strutture di dati basate sul codice e il database stesso. <xref:System.Data.Linq.DataContext> è il canale principale tramite il quale vengono recuperati oggetti dal database e vengono inviate modifiche.  
   
- Viene anche dichiarato un oggetto `Table(Of Customer)` che fungerà da tabella tipizzata logica per le query sulla tabella Customers nel database. Tali query verranno quindi create ed eseguite nei passaggi successivi.  
+ Viene inoltre dichiarato un oggetto `Table(Of Customer)` che fungerà da tabella tipizzata logica per le query sulla tabella Customers nel database. Tali query verranno quindi create ed eseguite nei passaggi successivi.  
   
 #### <a name="to-specify-the-database-connection"></a>Per specificare la connessione al database  
   
@@ -153,4 +153,5 @@ Questa procedura dettagliata descrive uno scenario [!INCLUDE[vbtecdlinq](../../.
  Se si desidera eseguire la procedura dettagliata relativa all'esecuzione di query tra relazioni, è indispensabile salvare la soluzione per la procedura dettagliata appena completata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

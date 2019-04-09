@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172809"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurazione di associazioni fornite dal sistema
 Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Le associazioni sono costituite da elementi che definiscono come i canali Windows Communication Foundation (WCF) sono sovrapposti per fornire la funzionalità di comunicazione richieste. Un'associazione contiene tre tipi di elementi:  
@@ -49,7 +49,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Associazione che è adatta per le comunicazioni fra computer tra un'applicazione WCF ed esistente Microsoft Message Queuing (noto anche come MSMQ) le applicazioni.|  
   
 ## <a name="binding-features"></a>Funzionalità di associazione  
- Nella tabella seguente sono riportate alcune delle funzionalità chiave di ogni associazione fornita dal sistema: Le associazioni sono riportate nella prima colonna, mentre le informazioni relative alle funzionalità sono descritte nella tabella. Nella tabella seguente viene fornita una chiave per le abbreviazioni delle associazioni utilizzate. Per selezionare un'associazione, stabilire qual è la colonna che soddisfa tutte le funzioni della riga necessarie.  
+ Nella tabella seguente sono riportate alcune delle funzionalità chiave di ogni associazione fornita dal sistema: Le associazioni sono riportate nella prima colonna, mentre le informazioni relative alle funzionalità sono descritte nella tabella. Nella tabella seguente viene fornita una chiave per le abbreviazioni delle associazioni utilizzate. Per selezionare un'associazione, stabilire qual è la colonna che soddisfa tutte le funzionalità della riga necessarie.  
   
 |Binding|Interoperabilità|Modalità di sicurezza (impostazione predefinita)|Sessione<br /><br /> (Predefinito)|Transazioni|Duplex|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
@@ -59,7 +59,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|None, (Message)|(Sessione affidabile)|(None), sì|Yes|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|None, (Message), misto|(None), sessione affidabile|(None), sì|No|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|None, (Message), misto|(None), sessione affidabile|(None), sì|No|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|None, (Transport), Message,<br /><br /> Mixed|Sessione affidabile, (Transport)|(None), sì|Yes|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|None, (Transport), Message,<br /><br /> Misto|Sessione affidabile, (Transport)|(None), sì|Yes|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), sì|Yes|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(Nessuno)|(None), sì|No|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), misto|(Nessuno)|(Nessuno)|Yes|  
@@ -78,6 +78,7 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
 |Flusso|Specifica se il flusso dei messaggi è supportato.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Cenni preliminari sulla creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Uso di associazioni per configurare servizi e client](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)

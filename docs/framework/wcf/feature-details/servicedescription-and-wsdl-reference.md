@@ -2,12 +2,12 @@
 title: ServiceDescription e riferimento a WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182884"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription e riferimento a WSDL
 Questo argomento viene descritto come Windows Communication Foundation (WCF) esegue il mapping di documenti Web Services Description Language (WSDL) da e verso <xref:System.ServiceModel.Description.ServiceDescription> istanze.  
@@ -50,7 +50,7 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
 |----------------|------------------|  
 |`Name`|Utilizzato nel nome predefinito di un endpoint, ovvero il nome dell'associazione seguito dal nome del contratto separati da un carattere di sottolineatura.|  
 |`Namespace`|`targetNamespace` per la definizione di `wsdl:binding`.<br /><br /> Se alla porta WSDL è associato un criterio, al momento dell'importazione viene eseguito il mapping dello spazio dei nomi di associazione importato a `targetNamespace` per la definizione di `wsdl:port`.|  
-|Elemento `BindingElementCollection` restituito dal metodo `CreateBindingElements`().|Varie estensioni specifiche del dominio alla definizione di `wsdl:binding`, in genere asserzioni di criteri.|  
+|`BindingElementCollection`, come restituito dal `CreateBindingElements`() (metodo)|Varie estensioni specifiche del dominio alla definizione di `wsdl:binding`, in genere asserzioni di criteri.|  
 |`MessageVersion`|`EnvelopeVersion` e `AddressingVersion` per l'endpoint.<br /><br /> Quando viene specificato `MessageVersion.None`, l'associazione WSDL non contiene un'associazione SOAP e la porta WSDL non include il contenuto WS-Addressing. Questa impostazione viene in genere usata per endpoint XML (POX) obsoleti.|  
   
 #### <a name="bindingelements"></a>BindingElements  
@@ -152,4 +152,5 @@ Questo argomento viene descritto come Windows Communication Foundation (WCF) ese
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Utilizzato per derivare il `wsdl:message` /@name valore per il messaggio di errore.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Description>

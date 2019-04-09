@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186095"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
 Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
@@ -111,4 +111,5 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
  Negli esempi precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di un pennello a sfumatura per il riempimento di forme](using-a-gradient-brush-to-fill-shapes.md)
+
+- [Utilizzo di un pennello a sfumatura per il riempimento di forme](using-a-gradient-brush-to-fill-shapes.md)

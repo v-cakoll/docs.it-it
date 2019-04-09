@@ -1,19 +1,19 @@
 ---
-title: 'Esempi di sintassi di espressione di query: Proiezione'
+title: 'Esempi di sintassi delle espressioni di query: Proiezione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 3e4b30c5d4d1cd5703ff6ec15a1c3fe32e41f42a
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178035"
 ---
-# <a name="query-expression-syntax-examples-projection"></a>Esempi di sintassi di espressione di query: Proiezione
-Gli esempi in questo argomento illustrano come usare il `Select` metodo e il `From … From …` parole chiave per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. `From … From …` è l'equivalente basato sulla query del metodo `SelectMany`. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
+# <a name="query-expression-syntax-examples-projection"></a>Esempi di sintassi delle espressioni di query: Proiezione
+Gli esempi in questo argomento illustrano come usare il `Select` metodo e il `From … From …` parole chiave per eseguire una query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. `From … From …` è equivalente alla query basata la `SelectMany` (metodo). Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
   
@@ -61,4 +61,5 @@ Gli esempi in questo argomento illustrano come usare il `Select` metodo e il `Fr
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

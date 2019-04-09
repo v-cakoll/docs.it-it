@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180726"
 ---
 # <a name="adonet-code-examples"></a>Esempi di codice ADO.NET
 Gli elenchi di codice inclusi in questo argomento illustrano come recuperare dati da un database usando le tecnologie ADO.NET seguenti:
@@ -344,7 +344,8 @@ End Class
 ```
 
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Creazione di applicazioni dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
 - [Esecuzione di query su Entity Data Model (attività di Entity Framework)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))

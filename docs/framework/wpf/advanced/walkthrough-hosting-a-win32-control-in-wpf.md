@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160693"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo Win32 in WPF
 Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale nel codice Win32, potrebbe essere più efficace riutilizzare almeno parte di tale codice nell'applicazione WPF anziché riscriverlo completamente. WPF fornisce un meccanismo semplice per l'hosting di una finestra Win32, in una pagina WPF.  
   
  Questo argomento illustra in dettaglio un'applicazione [che ospita un controllo Win32 ListBox in WPF Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), che contiene una casella di riepilogo Win32 controllo. Questa procedura generale può essere estesa all'hosting di qualsiasi finestra Win32.  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Requisiti  
  In questo argomento presuppone una conoscenza di base con la programmazione WPF sia all'API di Windows. Per un'introduzione alla programmazione WPF, vedere [introduttiva](../getting-started/index.md). Per un'introduzione alla programmazione dell'API di Windows, vedere uno qualsiasi dei numerosi manuali sull'argomento, in particolare *programmazione Windows* di Charles Petzold.  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
  Infine, impostare `handled` a `true` per indicare che il messaggio è stato gestito.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Interop.HwndHost>
 - [Interoperatività di WPF e Win32](wpf-and-win32-interoperation.md)
-- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 872164e2f48f1ef234b729b28aa9b1af1589c0fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180941"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub (funzione)
 Crea un sink di inoltro oggetti per consentire a un client di ricevere chiamate asincrone da Gestione Windows.
@@ -63,4 +63,5 @@ Se la funzione ha esito negativo, il valore restituito è un codice di errore di
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166179"
 ---
 # <a name="securing-method-access"></a>Protezione dell'accesso ai metodi
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -56,7 +56,7 @@ public class Class1
 }   
 ```  
   
-## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Esclusione di classi e membri dall'uso da parte di codice non attendibile  
+## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Esclusione di classi e membri dall'utilizzo da parte di codice non attendibile  
  Usare le dichiarazioni illustrate in questa sezione per impedire l'uso di specifiche classi e metodi, nonché proprietà ed eventi, da parte di codice parzialmente attendibile. Applicando tali dichiarazioni a una classe, è possibile applicare la protezione a tutti i relativi metodi, proprietà ed eventi. Si noti tuttavia che l'accesso al campo non è influenzato dalla protezione dichiarativa. Si noti inoltre che le richieste di collegamento aiutano a proteggere solo dai chiamanti immediati e potrebbero essere comunque soggette ad attacchi.  
   
 > [!NOTE]
@@ -241,4 +241,5 @@ class Implemented : ICanCastToMe
  Si noti che anche se un compilatore di linguaggio impedisce questi override con un errore di compilazione, è possibile eseguire l'override per il codice scritto con altri compilatori.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

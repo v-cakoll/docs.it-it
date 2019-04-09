@@ -1,5 +1,5 @@
 ---
-title: Strategia di sicurezza WPF - Progettazione di sicurezza
+title: Strategia di sicurezza WPF - Progettazione della sicurezza
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: bddb9bb2cf9a601ce7796d17483c1ab8fa6d7aa1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186159"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia di sicurezza WPF - Progettazione della sicurezza
 Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di codice sicuro. Un elemento chiave dell'iniziativa Trustworthy Computing è [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] è una procedura di progettazione usata insieme a processi di progettazione standard per semplificare la generazione di codice sicuro. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] prevede dieci fasi che combinano procedure consigliate con formalizzazione, misurabilità e struttura aggiuntiva, tra cui:  
@@ -75,7 +75,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Tecniche di test  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa svariate tecniche di test della sicurezza, tra cui:  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Usa svariate tecniche che includono test di protezione:  
   
 -   **Whitebox Testing**: I tester visualizzano il codice sorgente e quindi compilano test per gli exploit  
   
@@ -90,6 +90,7 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
  Per la [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compila una sandbox di sicurezza utilizzando il supporto di .NET Framework per contrassegnare e verificare il codice critico per la sicurezza che eleva i privilegi (vedere **metodologia critica per la sicurezza** in [WPF Strategia di sicurezza - sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). A causa degli elevati requisiti di qualità per il codice critico per la sicurezza, tale codice riceve un livello aggiuntivo di controllo della gestione del codice sorgente e della sicurezza. All'incirca dal 5% al 10% di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] è costituito da codice critico per la sicurezza, esaminato da un team di revisione dedicato. Il codice sorgente e il processo di archiviazione vengono gestiti verificando il codice critico per la sicurezza ed eseguendo il mapping di ogni entità critica (ovvero un metodo che contiene codice critico) al rispettivo stato di approvazione. Lo stato di approvazione include i nomi di uno o più revisori. Ogni compilazione giornaliera di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] confronta il codice critico con quello delle compilazioni precedenti per verificare la presenza di eventuali modifiche non approvate. Se un tecnico modifica codice critico senza l'approvazione del team di revisione, il codice viene identificato e corretto immediatamente. Questo processo permette l'applicazione e la gestione di un livello particolarmente elevato di controllo sul codice sandbox di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sicurezza](security-wpf.md)
 - [Sicurezza con attendibilità parziale in WPF](wpf-partial-trust-security.md)
 - [Strategia di sicurezza di WPF - Sicurezza della piattaforma](wpf-security-strategy-platform-security.md)

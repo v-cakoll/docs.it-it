@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160316"
 ---
 # <a name="strongnamesignaturesize-function"></a>Funzione StrongNameSignatureSize
 Restituisce le dimensioni della firma con nome sicuro. `StrongNameSignatureSize` è in genere utilizzata dai compilatori per determinare la quantità di spazio da riservare nel file durante la creazione di un assembly con firma ritardata.  
@@ -64,5 +64,6 @@ BOOLEAN StrongNameSignatureSize (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodo StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
 - [Interfaccia ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
