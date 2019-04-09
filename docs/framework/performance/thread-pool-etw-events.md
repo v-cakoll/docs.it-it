@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119132"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
 <a name="top"></a> Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
@@ -36,7 +36,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Viene creato un thread di lavoro.|  
 |`ThreadPoolWorkerThreadStop`|51|Viene arrestato un thread di lavoro.|  
@@ -63,7 +63,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Fa riferimento alla raccolta di informazioni per un esempio, ovvero una misurazione della velocità effettiva con un livello determinato di concorrenza in un istante di tempo.|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra una modifica nel controllo, quando l'algoritmo di inserimento thread (spostamento verso l’alto) determina che una modifica nel livello di concorrenza è attiva.|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Descrizione|  
+|event|ID evento|Descrizione|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Raccoglie i dati nel pool di thread.|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Viene creato un thread di I/O nel pool di thread.|  
   
@@ -161,7 +161,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Un thread di I/O diventa un candidato al ritiro.|  
   
@@ -182,7 +182,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Un thread di I/O viene ritirato a causa dell’I/O pervenuto entro un periodo di attesa dopo che il thread diventa un candidato al ritiro.|  
   
@@ -203,7 +203,7 @@ ms.locfileid: "54503313"
   
  La tabella seguente mostra le informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Viene creato un thread di I/O nel pool di thread.|  
   
@@ -216,4 +216,5 @@ ms.locfileid: "54503313"
 |ClrInstanceID|win:UInt16|ID univoco per l'istanza di CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
