@@ -2,12 +2,12 @@
 title: Operatori di query standard in query di LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118144"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operatori di query standard in query di LINQ to Entities
 In una query è necessario specificare le informazioni che si desidera recuperare dall'origine dati. Una query può inoltre specificare in che modo ordinare, raggruppare e formattare le informazioni prima che vengano restituite. LINQ fornisce un set di metodi di query standard che è possibile usare in una query. La maggior parte di questi metodi agisce sulle sequenze; In questo contesto, una sequenza è un oggetto il cui tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaccia o <xref:System.Linq.IQueryable%601> interfaccia. Le funzionalità di query degli operatori di query standard includono filtro, proiezione, aggregazione, ordinamento, raggruppamento, paging e altro ancora. Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave, in modo da poter essere chiamati usando la sintassi delle espressioni di query. Un'espressione di query rappresenta un modo diverso e più leggibile per esprimere una query rispetto alla sintassi equivalente basata su metodo. Le clausole di espressione di query vengono convertite in chiamate ai metodi di query in fase di compilazione. Per un elenco degli operatori query standard che hanno clausole di espressione di query equivalenti, vedere [panoramica degli operatori Query Standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
@@ -26,7 +26,7 @@ In una query è necessario specificare le informazioni che si desidera recuperar
   
  La maggior parte degli overload dei metodi di join è supportata, fatta eccezione per gli overload che usano un oggetto <xref:System.Collections.Generic.IEqualityComparer%601>, in quanto l'operatore di confronto non può essere convertito nell'origine dati.  
   
-## <a name="set-methods"></a>Metodi Set  
+## <a name="set-methods"></a>Imposta metodi  
  Le operazioni Set in LINQ sono operazioni di query i cui set di risultati sono basati sulla presenza o sull'assenza di elementi equivalenti nella stessa raccolta o in una raccolta distinta. I metodi Set sono `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` e `Union`.  
   
  La maggior parte degli overload dei metodi Set è supportata in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], sebbene vi siano alcune differenze nel comportamento rispetto a LINQ to Objects. Tuttavia, impostare i metodi che usano un <xref:System.Collections.Generic.IEqualityComparer%601> non sono supportate perché l'operatore di confronto non può essere convertito nell'origine dati.  
@@ -77,5 +77,6 @@ In una query è necessario specificare le informazioni che si desidera recuperar
  Un numero di metodi di paging non è supportato, a causa dell'impossibilità di eseguire il mapping di funzioni all'origine dati o la mancanza di ordinamento implicito dei set nell'origine dati. I metodi che restituiscono un valore predefinito sono limitati ai tipi primitivi del modello concettuale e ai tipi di riferimento con valori predefiniti null. I metodi di paging eseguiti in una sequenza vuota restituiscono null.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodi LINQ supportati e non supportati (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Cenni preliminari sugli operatori di query standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [Panoramica degli operatori query standard](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
