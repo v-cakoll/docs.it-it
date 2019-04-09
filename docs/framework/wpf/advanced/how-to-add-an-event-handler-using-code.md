@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere un gestore eventi mediante codice'
+title: 'Procedura: Aggiungere un gestore eventi usando il codice'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129363"
 ---
-# <a name="how-to-add-an-event-handler-using-code"></a>Procedura: Aggiungere un gestore eventi mediante codice
+# <a name="how-to-add-an-event-handler-using-code"></a>Procedura: Aggiungere un gestore eventi usando il codice
 In questo esempio viene illustrato come aggiungere un gestore eventi a un elemento tramite il codice.  
   
  Se si desidera aggiungere un gestore eventi per un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elemento e la pagina di markup che contiene l'elemento è già stato caricato, è necessario aggiungere il gestore usando il codice. In alternativa, se si sta compilando l'albero degli elementi per un'applicazione interamente tramite codice e non la dichiarazione di tutti gli elementi usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è possibile chiamare i metodi specifici per aggiungere i gestori eventi per la struttura dell'elemento costruito.  
@@ -38,5 +38,6 @@ In questo esempio viene illustrato come aggiungere un gestore eventi a un elemen
 >  Aggiunta di un gestore eventi in inizialmente analizzata [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina è molto più semplice. All'interno dell'elemento oggetto in cui si desidera aggiungere il gestore dell'evento, aggiungere un attributo che corrisponde al nome dell'evento che si desidera gestire. Quindi specificare il valore dell'attributo come nome del metodo del gestore eventi che è definito nel file code-behind del [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina. Per altre informazioni, vedere [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md) oppure [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
-- [Procedure relative alle proprietà](events-how-to-topics.md)
+- [Procedure relative](events-how-to-topics.md)
