@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 861f4c18f4c5151dc7215d300775928b88f018aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090628"
 ---
-# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="fa21f-102">Enumerazione COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="fa21f-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
-<span data-ttu-id="fa21f-103">Indica il tipo di clausola di eccezione in cui il codice è appena entrato o da cui è appena uscito.</span><span class="sxs-lookup"><span data-stu-id="fa21f-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
+# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="15f8e-102">Enumerazione COR_PRF_CLAUSE_TYPE</span><span class="sxs-lookup"><span data-stu-id="15f8e-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
+<span data-ttu-id="15f8e-103">Indica il tipo di clausola di eccezione in cui il codice è appena entrato o da cui è appena uscito.</span><span class="sxs-lookup"><span data-stu-id="15f8e-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa21f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fa21f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15f8e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="15f8e-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,24 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fa21f-105">Membri</span><span class="sxs-lookup"><span data-stu-id="fa21f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="15f8e-105">Membri</span><span class="sxs-lookup"><span data-stu-id="15f8e-105">Members</span></span>  
   
-|<span data-ttu-id="fa21f-106">Membro</span><span class="sxs-lookup"><span data-stu-id="fa21f-106">Member</span></span>|<span data-ttu-id="fa21f-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa21f-107">Description</span></span>|  
+|<span data-ttu-id="15f8e-106">Member</span><span class="sxs-lookup"><span data-stu-id="15f8e-106">Member</span></span>|<span data-ttu-id="15f8e-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="15f8e-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="fa21f-108">La clausola di eccezione non è valida.</span><span class="sxs-lookup"><span data-stu-id="fa21f-108">The exception clause is not valid.</span></span>|  
-|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="fa21f-109">La clausola di eccezione è un'espressione di filtro.</span><span class="sxs-lookup"><span data-stu-id="fa21f-109">The exception clause is a filter expression.</span></span>|  
-|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="fa21f-110">La clausola di eccezione è un `catch` istruzione.</span><span class="sxs-lookup"><span data-stu-id="fa21f-110">The exception clause is a `catch` statement.</span></span>|  
-|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="fa21f-111">La clausola di eccezione è un `finally` istruzione.</span><span class="sxs-lookup"><span data-stu-id="fa21f-111">The exception clause is a `finally` statement.</span></span>|  
+|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="15f8e-108">La clausola di eccezione non è valida.</span><span class="sxs-lookup"><span data-stu-id="15f8e-108">The exception clause is not valid.</span></span>|  
+|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="15f8e-109">La clausola di eccezione è un'espressione di filtro.</span><span class="sxs-lookup"><span data-stu-id="15f8e-109">The exception clause is a filter expression.</span></span>|  
+|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="15f8e-110">La clausola di eccezione è un `catch` istruzione.</span><span class="sxs-lookup"><span data-stu-id="15f8e-110">The exception clause is a `catch` statement.</span></span>|  
+|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="15f8e-111">La clausola di eccezione è un `finally` istruzione.</span><span class="sxs-lookup"><span data-stu-id="15f8e-111">The exception clause is a `finally` statement.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fa21f-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fa21f-112">Requirements</span></span>  
- <span data-ttu-id="fa21f-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa21f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15f8e-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="15f8e-112">Requirements</span></span>  
+ <span data-ttu-id="15f8e-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15f8e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa21f-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fa21f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="15f8e-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15f8e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fa21f-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa21f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15f8e-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15f8e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fa21f-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa21f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="15f8e-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="15f8e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fa21f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa21f-117">See also</span></span>
-- [<span data-ttu-id="fa21f-118">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="fa21f-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="15f8e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="15f8e-117">See also</span></span>
+
+- [<span data-ttu-id="15f8e-118">Enumerazioni di profilatura</span><span class="sxs-lookup"><span data-stu-id="15f8e-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

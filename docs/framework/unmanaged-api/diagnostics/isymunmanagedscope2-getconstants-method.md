@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c343810db3d714367f84f5394c0251b9ade0e18e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 08bc85c7a5b53c145375ca34f11ec499e5e7528f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096823"
 ---
-# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="476dc-102">Metodo ISymUnmanagedScope2::GetConstants</span><span class="sxs-lookup"><span data-stu-id="476dc-102">ISymUnmanagedScope2::GetConstants Method</span></span>
-<span data-ttu-id="476dc-103">Ottiene le costanti locali definite all'interno di questo ambito.</span><span class="sxs-lookup"><span data-stu-id="476dc-103">Gets the local constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstants-method"></a><span data-ttu-id="3b664-102">Metodo ISymUnmanagedScope2::GetConstants</span><span class="sxs-lookup"><span data-stu-id="3b664-102">ISymUnmanagedScope2::GetConstants Method</span></span>
+<span data-ttu-id="3b664-103">Ottiene le costanti locali definite all'interno di questo ambito.</span><span class="sxs-lookup"><span data-stu-id="3b664-103">Gets the local constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="476dc-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="476dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b664-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3b664-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConstants(  
@@ -38,21 +38,22 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="476dc-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="476dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b664-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3b664-105">Parameters</span></span>  
  `cConstants`  
- <span data-ttu-id="476dc-106">[in] La lunghezza del buffer che il `pcConstants` punta il parametro.</span><span class="sxs-lookup"><span data-stu-id="476dc-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
+ <span data-ttu-id="3b664-106">[in] La lunghezza del buffer che il `pcConstants` punta il parametro.</span><span class="sxs-lookup"><span data-stu-id="3b664-106">[in] The length of the buffer that the `pcConstants` parameter points to.</span></span>  
   
  `pcConstants`  
- <span data-ttu-id="476dc-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere le costanti.</span><span class="sxs-lookup"><span data-stu-id="476dc-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="3b664-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere le costanti.</span><span class="sxs-lookup"><span data-stu-id="3b664-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
  `constants`  
- <span data-ttu-id="476dc-108">[out] Buffer che archivia le costanti.</span><span class="sxs-lookup"><span data-stu-id="476dc-108">[out] The buffer that stores the constants.</span></span>  
+ <span data-ttu-id="3b664-108">[out] Buffer che archivia le costanti.</span><span class="sxs-lookup"><span data-stu-id="3b664-108">[out] The buffer that stores the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="476dc-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="476dc-109">Return Value</span></span>  
- <span data-ttu-id="476dc-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="476dc-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3b664-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3b664-109">Return Value</span></span>  
+ <span data-ttu-id="3b664-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="3b664-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="476dc-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="476dc-111">Requirements</span></span>  
- <span data-ttu-id="476dc-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="476dc-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b664-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3b664-111">Requirements</span></span>  
+ <span data-ttu-id="3b664-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3b664-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="476dc-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="476dc-113">See also</span></span>
-- [<span data-ttu-id="476dc-114">Interfaccia ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="476dc-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3b664-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3b664-113">See also</span></span>
+
+- [<span data-ttu-id="3b664-114">Interfaccia ISymUnmanagedScope2</span><span class="sxs-lookup"><span data-stu-id="3b664-114">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
