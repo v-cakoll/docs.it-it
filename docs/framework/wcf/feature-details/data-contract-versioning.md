@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118027"
 ---
 # <a name="data-contract-versioning"></a>Controllo delle versioni dei contratti dati
 Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati dai servizi. In questo argomento viene illustrato come controllare le versioni dei contratti dati. Vengono descritti i meccanismi di controllo delle versioni dei contratti dati. Per una panoramica completa e precise sul controllo delle versioni, vedere [le procedure consigliate: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -116,6 +116,7 @@ Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati
 Ovviamente, la modifica del contratto dati del contenuto di una raccolta, ad esempio il passaggio da un elenco di numeri interi a un elenco di stringhe, è sostanziale.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -125,7 +126,7 @@ Ovviamente, la modifica del contratto dati del contenuto di una raccolta, ad ese
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Callback di serializzazione a tolleranza di versione](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Procedure consigliate: Versioni di DataContract](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Equivalenza dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Procedure consigliate: Controllo delle versioni dei contratti dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Contratti dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

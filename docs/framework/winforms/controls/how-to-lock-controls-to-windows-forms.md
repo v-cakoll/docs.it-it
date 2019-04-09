@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Controlli di blocco a un Windows Form'
+title: 'Procedura: Bloccare i controlli di Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117923"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: Controlli di blocco a un Windows Form
+# <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: Bloccare i controlli di Windows Forms
 Quando si progetta l'interfaccia utente (UI) dell'applicazione Windows, è possibile bloccare i controlli di una volta posizionati in modo corretto, in modo che non vengano spostati o li ridimensiono quando si impostano altre proprietà non inavvertitamente.  
   
  Inoltre, è possibile bloccare e sbloccare tutti i controlli del form in una sola volta, ciò è utile per i moduli con molti controlli, oppure è possibile sbloccare singoli controlli. Dopo avere impostato tutti i controlli in cui si desidera utilizzarle sul form, bloccarli in unica posizione per evitare lo spostamento non corretti.  
@@ -47,7 +47,8 @@ Quando si progetta l'interfaccia utente (UI) dell'applicazione Windows, è possi
 1.  Nel **delle proprietà** finestra, fare clic sul **Locked** proprietà e selezionare `false`. (Fare doppio clic sul nome attiva o disattiva l'impostazione della proprietà.)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](index.md)
+
+- [Controlli per Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
