@@ -12,33 +12,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b13968e999fb737c954fc41ed2ec220e7894b73b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175721"
 ---
-# <a name="icordebugilcode-interface"></a><span data-ttu-id="df9a1-102">Interfaccia ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="df9a1-102">ICorDebugILCode Interface</span></span>
-<span data-ttu-id="df9a1-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="df9a1-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode-interface"></a><span data-ttu-id="08c00-102">Interfaccia ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="08c00-102">ICorDebugILCode Interface</span></span>
+<span data-ttu-id="08c00-103">[Supportato in .NET Framework 4.5.2 e versioni successive]</span><span class="sxs-lookup"><span data-stu-id="08c00-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="df9a1-104">Rappresenta un segmento di codice di linguaggio intermedio (IL).</span><span class="sxs-lookup"><span data-stu-id="df9a1-104">Represents a segment of intermediate language (IL) code.</span></span>  
+ <span data-ttu-id="08c00-104">Rappresenta un segmento di codice di linguaggio intermedio (IL).</span><span class="sxs-lookup"><span data-stu-id="08c00-104">Represents a segment of intermediate language (IL) code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="df9a1-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="df9a1-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="08c00-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="08c00-105">Methods</span></span>  
   
-|<span data-ttu-id="df9a1-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="df9a1-106">Method</span></span>|<span data-ttu-id="df9a1-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="df9a1-107">Description</span></span>|  
+|<span data-ttu-id="08c00-106">Metodo</span><span class="sxs-lookup"><span data-stu-id="08c00-106">Method</span></span>|<span data-ttu-id="08c00-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="08c00-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="df9a1-108">Metodo GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="df9a1-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="df9a1-109">Restituisce un puntatore a un elenco di clausole di gestione delle eccezioni (EH) definite per questo IL.</span><span class="sxs-lookup"><span data-stu-id="df9a1-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
+|[<span data-ttu-id="08c00-108">Metodo GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="08c00-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="08c00-109">Restituisce un puntatore a un elenco di clausole di gestione delle eccezioni (EH) definite per questo IL.</span><span class="sxs-lookup"><span data-stu-id="08c00-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="df9a1-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="df9a1-110">Requirements</span></span>  
- <span data-ttu-id="df9a1-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df9a1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08c00-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="08c00-110">Requirements</span></span>  
+ <span data-ttu-id="08c00-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08c00-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df9a1-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="df9a1-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="08c00-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="08c00-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="df9a1-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="df9a1-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="08c00-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08c00-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="df9a1-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df9a1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ **<span data-ttu-id="08c00-114">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="08c00-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="df9a1-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df9a1-115">See also</span></span>
-- [<span data-ttu-id="df9a1-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="df9a1-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="df9a1-117">Debug</span><span class="sxs-lookup"><span data-stu-id="df9a1-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="08c00-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08c00-115">See also</span></span>
+
+- [<span data-ttu-id="08c00-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="08c00-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="08c00-117">Debug</span><span class="sxs-lookup"><span data-stu-id="08c00-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

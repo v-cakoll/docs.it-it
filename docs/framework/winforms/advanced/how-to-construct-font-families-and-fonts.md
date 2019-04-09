@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Costruire i tipi di carattere e famiglie di caratteri'
+title: 'Procedura: Creare tipi di carattere e famiglie di caratteri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,47 +8,48 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181220"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="d84e0-102">Procedura: Costruire i tipi di carattere e famiglie di caratteri</span><span class="sxs-lookup"><span data-stu-id="d84e0-102">How to: Construct Font Families and Fonts</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="d84e0-103">Raggruppa i tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri.</span><span class="sxs-lookup"><span data-stu-id="d84e0-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="d84e0-104">Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:</span><span class="sxs-lookup"><span data-stu-id="d84e0-104">For example, the Arial font family contains the following fonts:</span></span>  
+# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="9eee1-102">Procedura: Creare tipi di carattere e famiglie di caratteri</span><span class="sxs-lookup"><span data-stu-id="9eee1-102">How to: Construct Font Families and Fonts</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="9eee1-103">Raggruppa i tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri.</span><span class="sxs-lookup"><span data-stu-id="9eee1-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="9eee1-104">Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:</span><span class="sxs-lookup"><span data-stu-id="9eee1-104">For example, the Arial font family contains the following fonts:</span></span>  
   
--   <span data-ttu-id="d84e0-105">Arial normale</span><span class="sxs-lookup"><span data-stu-id="d84e0-105">Arial Regular</span></span>  
+-   <span data-ttu-id="9eee1-105">Arial normale</span><span class="sxs-lookup"><span data-stu-id="9eee1-105">Arial Regular</span></span>  
   
--   <span data-ttu-id="d84e0-106">Arial in grassetto</span><span class="sxs-lookup"><span data-stu-id="d84e0-106">Arial Bold</span></span>  
+-   <span data-ttu-id="9eee1-106">Arial in grassetto</span><span class="sxs-lookup"><span data-stu-id="9eee1-106">Arial Bold</span></span>  
   
--   <span data-ttu-id="d84e0-107">Arial corsivo</span><span class="sxs-lookup"><span data-stu-id="d84e0-107">Arial Italic</span></span>  
+-   <span data-ttu-id="9eee1-107">Arial corsivo</span><span class="sxs-lookup"><span data-stu-id="9eee1-107">Arial Italic</span></span>  
   
--   <span data-ttu-id="d84e0-108">Arial grassetto corsivo</span><span class="sxs-lookup"><span data-stu-id="d84e0-108">Arial Bold Italic</span></span>  
+-   <span data-ttu-id="9eee1-108">Arial grassetto corsivo</span><span class="sxs-lookup"><span data-stu-id="9eee1-108">Arial Bold Italic</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="d84e0-109">vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo.</span><span class="sxs-lookup"><span data-stu-id="d84e0-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="d84e0-110">Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia.</span><span class="sxs-lookup"><span data-stu-id="d84e0-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="d84e0-111">Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:</span><span class="sxs-lookup"><span data-stu-id="d84e0-111">For example, Arial Narrow is a font family with the following members:</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="9eee1-109">vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo.</span><span class="sxs-lookup"><span data-stu-id="9eee1-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="9eee1-110">Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia.</span><span class="sxs-lookup"><span data-stu-id="9eee1-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="9eee1-111">Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:</span><span class="sxs-lookup"><span data-stu-id="9eee1-111">For example, Arial Narrow is a font family with the following members:</span></span>  
   
--   <span data-ttu-id="d84e0-112">Arial normale ridotta</span><span class="sxs-lookup"><span data-stu-id="d84e0-112">Arial Narrow Regular</span></span>  
+-   <span data-ttu-id="9eee1-112">Arial normale ridotta</span><span class="sxs-lookup"><span data-stu-id="9eee1-112">Arial Narrow Regular</span></span>  
   
--   <span data-ttu-id="d84e0-113">Arial "narrow" grassetto</span><span class="sxs-lookup"><span data-stu-id="d84e0-113">Arial Narrow Bold</span></span>  
+-   <span data-ttu-id="9eee1-113">Arial "narrow" grassetto</span><span class="sxs-lookup"><span data-stu-id="9eee1-113">Arial Narrow Bold</span></span>  
   
--   <span data-ttu-id="d84e0-114">Corsivo Narrow Arial</span><span class="sxs-lookup"><span data-stu-id="d84e0-114">Arial Narrow Italic</span></span>  
+-   <span data-ttu-id="9eee1-114">Corsivo Narrow Arial</span><span class="sxs-lookup"><span data-stu-id="9eee1-114">Arial Narrow Italic</span></span>  
   
--   <span data-ttu-id="d84e0-115">Arial Narrow grassetto corsivo</span><span class="sxs-lookup"><span data-stu-id="d84e0-115">Arial Narrow Bold Italic</span></span>  
+-   <span data-ttu-id="9eee1-115">Arial Narrow grassetto corsivo</span><span class="sxs-lookup"><span data-stu-id="9eee1-115">Arial Narrow Bold Italic</span></span>  
   
- <span data-ttu-id="d84e0-116">Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto.</span><span class="sxs-lookup"><span data-stu-id="d84e0-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="d84e0-117">Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.</span><span class="sxs-lookup"><span data-stu-id="d84e0-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
+ <span data-ttu-id="9eee1-116">Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto.</span><span class="sxs-lookup"><span data-stu-id="9eee1-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="9eee1-117">Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.</span><span class="sxs-lookup"><span data-stu-id="9eee1-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d84e0-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="d84e0-118">Example</span></span>  
- <span data-ttu-id="d84e0-119">Nell'esempio seguente crea uno stile regolare del tipo di carattere Arial con dimensioni pari a 16 pixel.</span><span class="sxs-lookup"><span data-stu-id="d84e0-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="d84e0-120">Nel codice seguente, il primo argomento passato per il <xref:System.Drawing.Font.%23ctor%2A> costruttore è la <xref:System.Drawing.FontFamily> oggetto.</span><span class="sxs-lookup"><span data-stu-id="d84e0-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="d84e0-121">Il secondo argomento specifica le dimensioni del font misurata nelle unità specificate dal quarto argomento.</span><span class="sxs-lookup"><span data-stu-id="d84e0-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="d84e0-122">Il terzo argomento identificato lo stile.</span><span class="sxs-lookup"><span data-stu-id="d84e0-122">The third argument identifies the style.</span></span>  
+## <a name="example"></a><span data-ttu-id="9eee1-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="9eee1-118">Example</span></span>  
+ <span data-ttu-id="9eee1-119">Nell'esempio seguente crea uno stile regolare del tipo di carattere Arial con dimensioni pari a 16 pixel.</span><span class="sxs-lookup"><span data-stu-id="9eee1-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="9eee1-120">Nel codice seguente, il primo argomento passato per il <xref:System.Drawing.Font.%23ctor%2A> costruttore è la <xref:System.Drawing.FontFamily> oggetto.</span><span class="sxs-lookup"><span data-stu-id="9eee1-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="9eee1-121">Il secondo argomento specifica le dimensioni del font misurata nelle unità specificate dal quarto argomento.</span><span class="sxs-lookup"><span data-stu-id="9eee1-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="9eee1-122">Il terzo argomento identificato lo stile.</span><span class="sxs-lookup"><span data-stu-id="9eee1-122">The third argument identifies the style.</span></span>  
   
- <span data-ttu-id="d84e0-123"><xref:System.Drawing.GraphicsUnit.Pixel> è un membro del <xref:System.Drawing.GraphicsUnit> enumerazione, e <xref:System.Drawing.FontStyle.Regular> è un membro del <xref:System.Drawing.FontStyle> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="d84e0-123"><xref:System.Drawing.GraphicsUnit.Pixel> is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
+ <xref:System.Drawing.GraphicsUnit.Pixel> <span data-ttu-id="9eee1-123">è un membro del <xref:System.Drawing.GraphicsUnit> enumerazione, e <xref:System.Drawing.FontStyle.Regular> è un membro del <xref:System.Drawing.FontStyle> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="9eee1-123">is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d84e0-124">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="d84e0-124">Compiling the Code</span></span>  
- <span data-ttu-id="d84e0-125">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="d84e0-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9eee1-124">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="9eee1-124">Compiling the Code</span></span>  
+ <span data-ttu-id="9eee1-125">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="9eee1-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d84e0-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d84e0-126">See also</span></span>
-- [<span data-ttu-id="d84e0-127">Uso di tipi di carattere e testo</span><span class="sxs-lookup"><span data-stu-id="d84e0-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="d84e0-128">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="d84e0-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9eee1-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9eee1-126">See also</span></span>
+
+- [<span data-ttu-id="9eee1-127">Utilizzo di tipi di carattere e testo</span><span class="sxs-lookup"><span data-stu-id="9eee1-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="9eee1-128">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="9eee1-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)

@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184860"
 ---
-# <a name="image"></a><span data-ttu-id="3c62c-102">Image</span><span class="sxs-lookup"><span data-stu-id="3c62c-102">Image</span></span>
-<span data-ttu-id="3c62c-103">Il <xref:System.Windows.Controls.Image> elemento utilizzato per visualizzare le immagini bitmap in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="3c62c-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="9eb5d-102">Image</span><span class="sxs-lookup"><span data-stu-id="9eb5d-102">Image</span></span>
+<span data-ttu-id="9eb5d-103">Il <xref:System.Windows.Controls.Image> elemento utilizzato per visualizzare le immagini bitmap in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="9eb5d-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3c62c-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="3c62c-104">In This Section</span></span>  
- [<span data-ttu-id="3c62c-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="3c62c-105">How-to Topics</span></span>](image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9eb5d-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="9eb5d-104">In This Section</span></span>  
+ [<span data-ttu-id="9eb5d-105">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="9eb5d-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3c62c-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="3c62c-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9eb5d-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="9eb5d-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="3c62c-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c62c-107">See also</span></span>
-- [<span data-ttu-id="3c62c-108">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="3c62c-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="3c62c-109">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="3c62c-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="9eb5d-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9eb5d-107">See also</span></span>
+
+- [<span data-ttu-id="9eb5d-108">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="9eb5d-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="9eb5d-109">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="9eb5d-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

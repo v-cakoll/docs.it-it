@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6330267c580901c62a74bf6d8ee8716c4fd3b1cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9d01f3d7485b19c076d9cd3e83aeccbcf5e728f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160706"
 ---
-# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="ca51d-102">Metodo ICorProfilerCallback::ClassUnloadFinished</span><span class="sxs-lookup"><span data-stu-id="ca51d-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
-<span data-ttu-id="ca51d-103">Notifica al profiler che ha terminato lo scaricamento di una classe.</span><span class="sxs-lookup"><span data-stu-id="ca51d-103">Notifies the profiler that a class has finished unloading.</span></span>  
+# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="fd750-102">Metodo ICorProfilerCallback::ClassUnloadFinished</span><span class="sxs-lookup"><span data-stu-id="fd750-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
+<span data-ttu-id="fd750-103">Notifica al profiler che ha terminato lo scaricamento di una classe.</span><span class="sxs-lookup"><span data-stu-id="fd750-103">Notifies the profiler that a class has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca51d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ca51d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd750-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fd750-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassUnloadFinished(  
@@ -35,25 +35,26 @@ HRESULT ClassUnloadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca51d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ca51d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd750-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fd750-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="ca51d-106">[in] Identifica la classe che è stata scaricata.</span><span class="sxs-lookup"><span data-stu-id="ca51d-106">[in] Identifies the class that was unloaded.</span></span>  
+ <span data-ttu-id="fd750-106">[in] Identifica la classe che è stata scaricata.</span><span class="sxs-lookup"><span data-stu-id="fd750-106">[in] Identifies the class that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="ca51d-107">[in] HRESULT che indica se la classe è stata scaricata correttamente.</span><span class="sxs-lookup"><span data-stu-id="ca51d-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
+ <span data-ttu-id="fd750-107">[in] HRESULT che indica se la classe è stata scaricata correttamente.</span><span class="sxs-lookup"><span data-stu-id="fd750-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca51d-108">Note</span><span class="sxs-lookup"><span data-stu-id="ca51d-108">Remarks</span></span>  
- <span data-ttu-id="ca51d-109">Alcune parti dello scaricamento della classe potrebbero continuare dopo il `ClassUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="ca51d-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="ca51d-110">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="ca51d-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="ca51d-111">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte dello scaricamento della classe ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="ca51d-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fd750-108">Note</span><span class="sxs-lookup"><span data-stu-id="fd750-108">Remarks</span></span>  
+ <span data-ttu-id="fd750-109">Alcune parti dello scaricamento della classe potrebbero continuare dopo il `ClassUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="fd750-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="fd750-110">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="fd750-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="fd750-111">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte dello scaricamento della classe ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="fd750-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca51d-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ca51d-112">Requirements</span></span>  
- <span data-ttu-id="ca51d-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca51d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd750-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fd750-112">Requirements</span></span>  
+ <span data-ttu-id="fd750-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd750-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca51d-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca51d-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="fd750-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fd750-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ca51d-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca51d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fd750-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd750-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ca51d-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca51d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="fd750-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fd750-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca51d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ca51d-117">See also</span></span>
-- [<span data-ttu-id="ca51d-118">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="ca51d-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ca51d-119">Metodo ClassUnloadStarted</span><span class="sxs-lookup"><span data-stu-id="ca51d-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="fd750-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fd750-117">See also</span></span>
+
+- [<span data-ttu-id="fd750-118">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="fd750-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="fd750-119">Metodo ClassUnloadStarted</span><span class="sxs-lookup"><span data-stu-id="fd750-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)

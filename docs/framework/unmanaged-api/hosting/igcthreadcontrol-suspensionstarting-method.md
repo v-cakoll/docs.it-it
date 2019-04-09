@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff0c95ea79978c0b58057ec06fea231f5632c941
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7613bc744ad4c2e172fc4f6dd7bf282fb3d9072c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179751"
 ---
-# <a name="igcthreadcontrolsuspensionstarting-method"></a><span data-ttu-id="379d1-102">Metodo IGCThreadControl::SuspensionStarting</span><span class="sxs-lookup"><span data-stu-id="379d1-102">IGCThreadControl::SuspensionStarting Method</span></span>
-<span data-ttu-id="379d1-103">Notifica all'host di runtime è l'avvio di una sospensione di thread per una garbage collection o un'altra sospensione.</span><span class="sxs-lookup"><span data-stu-id="379d1-103">Notifies the host that the runtime is beginning a thread suspension for a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionstarting-method"></a><span data-ttu-id="ad84b-102">Metodo IGCThreadControl::SuspensionStarting</span><span class="sxs-lookup"><span data-stu-id="ad84b-102">IGCThreadControl::SuspensionStarting Method</span></span>
+<span data-ttu-id="ad84b-103">Notifica all'host di runtime è l'avvio di una sospensione di thread per una garbage collection o un'altra sospensione.</span><span class="sxs-lookup"><span data-stu-id="ad84b-103">Notifies the host that the runtime is beginning a thread suspension for a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="379d1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="379d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad84b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ad84b-104">Syntax</span></span>  
   
 ```  
 HRESULT SuspensionStarting ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="379d1-105">Note</span><span class="sxs-lookup"><span data-stu-id="379d1-105">Remarks</span></span>  
- <span data-ttu-id="379d1-106">Non modificare la pianificazione di tutti i thread durante il `SuspensionStarting` callback.</span><span class="sxs-lookup"><span data-stu-id="379d1-106">Do not reschedule any threads during the `SuspensionStarting` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad84b-105">Note</span><span class="sxs-lookup"><span data-stu-id="ad84b-105">Remarks</span></span>  
+ <span data-ttu-id="ad84b-106">Non modificare la pianificazione di tutti i thread durante il `SuspensionStarting` callback.</span><span class="sxs-lookup"><span data-stu-id="ad84b-106">Do not reschedule any threads during the `SuspensionStarting` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="379d1-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="379d1-107">Requirements</span></span>  
- <span data-ttu-id="379d1-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="379d1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad84b-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ad84b-107">Requirements</span></span>  
+ <span data-ttu-id="ad84b-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad84b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="379d1-109">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="379d1-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ad84b-109">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ad84b-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="379d1-110">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="379d1-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ad84b-110">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ad84b-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="379d1-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="379d1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ad84b-111">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ad84b-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="379d1-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="379d1-112">See also</span></span>
-- [<span data-ttu-id="379d1-113">Interfaccia IGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="379d1-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ad84b-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad84b-112">See also</span></span>
+
+- [<span data-ttu-id="ad84b-113">Interfaccia IGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="ad84b-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

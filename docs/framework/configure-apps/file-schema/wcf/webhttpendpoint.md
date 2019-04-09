@@ -2,20 +2,20 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 9b4dd3a61a9b5ad1b35cce4025a50ac4220fd77e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182455"
 ---
-# <a name="webhttpendpoint"></a><span data-ttu-id="f0538-101">\<webHttpEndpoint></span><span class="sxs-lookup"><span data-stu-id="f0538-101">\<webHttpEndpoint></span></span>
-<span data-ttu-id="f0538-102">Questo elemento di configurazione definisce un endpoint standard con fisse [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automaticamente l'associazione che aggiunge il [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportamento.</span><span class="sxs-lookup"><span data-stu-id="f0538-102">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="f0538-103">Usare questo endpoint per la scrittura di un servizio REST.</span><span class="sxs-lookup"><span data-stu-id="f0538-103">Use this endpoint when writing a REST service.</span></span>  
+# <a name="webhttpendpoint"></a><span data-ttu-id="a6040-101">\<webHttpEndpoint></span><span class="sxs-lookup"><span data-stu-id="a6040-101">\<webHttpEndpoint></span></span>
+<span data-ttu-id="a6040-102">Questo elemento di configurazione definisce un endpoint standard con fisse [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automaticamente l'associazione che aggiunge il [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportamento.</span><span class="sxs-lookup"><span data-stu-id="a6040-102">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="a6040-103">Usare questo endpoint per la scrittura di un servizio REST.</span><span class="sxs-lookup"><span data-stu-id="a6040-103">Use this endpoint when writing a REST service.</span></span>  
   
-<span data-ttu-id="f0538-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f0538-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="f0538-105">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="f0538-105">\<standardEndpoints></span></span>  
+<span data-ttu-id="a6040-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="a6040-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a6040-105">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="a6040-105">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0538-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f0538-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6040-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a6040-106">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -30,27 +30,28 @@ ms.locfileid: "55256434"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f0538-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="f0538-107">Attributes and Elements</span></span>  
- <span data-ttu-id="f0538-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="f0538-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a6040-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="a6040-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="a6040-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="a6040-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f0538-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="f0538-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a6040-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="a6040-109">Attributes</span></span>  
   
-|<span data-ttu-id="f0538-110">Attributo</span><span class="sxs-lookup"><span data-stu-id="f0538-110">Attribute</span></span>|<span data-ttu-id="f0538-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f0538-111">Description</span></span>|  
+|<span data-ttu-id="a6040-110">Attributo</span><span class="sxs-lookup"><span data-stu-id="a6040-110">Attribute</span></span>|<span data-ttu-id="a6040-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a6040-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="f0538-112">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="f0538-112">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="f0538-113">Valore booleano che indica se la selezione automatica del formato è abilitata.</span><span class="sxs-lookup"><span data-stu-id="f0538-113">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="f0538-114">Quando la selezione automatica del formato è abilitata, l'infrastruttura analizza l'intestazione `Accept` del messaggio di richiesta e determina il formato appropriato per la risposta.</span><span class="sxs-lookup"><span data-stu-id="f0538-114">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="f0538-115">Se l'intestazione `Accept` non specifica un formato adatto per la risposta, l'infrastruttura usa il `Content-Type` del messaggio di richiesta o il formato della risposta predefinito dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="f0538-115">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
-|<span data-ttu-id="f0538-116">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="f0538-116">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="f0538-117">Attributo che specifica il formato predefinito per la risposta in uscita.</span><span class="sxs-lookup"><span data-stu-id="f0538-117">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="f0538-118">L'attributo è di tipo <xref:System.ServiceModel.Web.WebMessageFormat>.</span><span class="sxs-lookup"><span data-stu-id="f0538-118">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
-|<span data-ttu-id="f0538-119">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="f0538-119">helpEnabled</span></span>|<span data-ttu-id="f0538-120">Valore booleano che indica se la Guida HTTP è abilitata per l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="f0538-120">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
-|<span data-ttu-id="f0538-121">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="f0538-121">webEndpointType</span></span>|<span data-ttu-id="f0538-122">Stringa che specifica il tipo dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="f0538-122">A string that specifies the type of the endpoint.</span></span>|  
+|<span data-ttu-id="a6040-112">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="a6040-112">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="a6040-113">Valore booleano che indica se la selezione automatica del formato è abilitata.</span><span class="sxs-lookup"><span data-stu-id="a6040-113">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="a6040-114">Quando la selezione automatica del formato è abilitata, l'infrastruttura analizza l'intestazione `Accept` del messaggio di richiesta e determina il formato appropriato per la risposta.</span><span class="sxs-lookup"><span data-stu-id="a6040-114">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="a6040-115">Se l'intestazione `Accept` non specifica un formato adatto per la risposta, l'infrastruttura usa il `Content-Type` del messaggio di richiesta o il formato della risposta predefinito dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="a6040-115">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
+|<span data-ttu-id="a6040-116">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="a6040-116">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="a6040-117">Attributo che specifica il formato predefinito per la risposta in uscita.</span><span class="sxs-lookup"><span data-stu-id="a6040-117">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="a6040-118">L'attributo è di tipo <xref:System.ServiceModel.Web.WebMessageFormat>.</span><span class="sxs-lookup"><span data-stu-id="a6040-118">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
+|<span data-ttu-id="a6040-119">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="a6040-119">helpEnabled</span></span>|<span data-ttu-id="a6040-120">Valore booleano che indica se la Guida HTTP è abilitata per l'endpoint.</span><span class="sxs-lookup"><span data-stu-id="a6040-120">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
+|<span data-ttu-id="a6040-121">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="a6040-121">webEndpointType</span></span>|<span data-ttu-id="a6040-122">Stringa che specifica il tipo dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="a6040-122">A string that specifies the type of the endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f0538-123">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="f0538-123">Child Elements</span></span>  
- <span data-ttu-id="f0538-124">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="f0538-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a6040-123">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="a6040-123">Child Elements</span></span>  
+ <span data-ttu-id="a6040-124">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="a6040-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f0538-125">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="f0538-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a6040-125">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="a6040-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="f0538-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="f0538-126">Element</span></span>|<span data-ttu-id="f0538-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f0538-127">Description</span></span>|  
+|<span data-ttu-id="a6040-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="a6040-126">Element</span></span>|<span data-ttu-id="a6040-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a6040-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f0538-128">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="f0538-128">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="f0538-129">Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.</span><span class="sxs-lookup"><span data-stu-id="f0538-129">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="a6040-128">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="a6040-128">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="a6040-129">Raccolta di endpoint standard rappresentati da endpoint predefiniti con una o più delle relative proprietà (indirizzo, associazione, contratto) fisse.</span><span class="sxs-lookup"><span data-stu-id="a6040-129">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f0538-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f0538-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6040-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a6040-130">See also</span></span>
+
 - <xref:System.ServiceModel.Description.WebHttpEndpoint>
 - <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

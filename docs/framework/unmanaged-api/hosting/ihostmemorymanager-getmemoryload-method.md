@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c43fd1c63b14fc3254044247213bf09453da870e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175435"
 ---
-# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="49d0d-102">Metodo IHostMemoryManager::GetMemoryLoad</span><span class="sxs-lookup"><span data-stu-id="49d0d-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
-<span data-ttu-id="49d0d-103">Ottiene la quantità di memoria fisica che è attualmente in uso e pertanto non disponibile, come indicato dall'host.</span><span class="sxs-lookup"><span data-stu-id="49d0d-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
+# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="a4cda-102">Metodo IHostMemoryManager::GetMemoryLoad</span><span class="sxs-lookup"><span data-stu-id="a4cda-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
+<span data-ttu-id="a4cda-103">Ottiene la quantità di memoria fisica che è attualmente in uso e pertanto non disponibile, come indicato dall'host.</span><span class="sxs-lookup"><span data-stu-id="a4cda-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49d0d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="49d0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4cda-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a4cda-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemoryLoad (  
@@ -36,38 +36,39 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49d0d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="49d0d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4cda-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a4cda-105">Parameters</span></span>  
  `pMemoryLoad`  
- <span data-ttu-id="49d0d-106">[out] Puntatore alla percentuale approssimativa di memoria fisica totale che è attualmente in uso.</span><span class="sxs-lookup"><span data-stu-id="49d0d-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
+ <span data-ttu-id="a4cda-106">[out] Puntatore alla percentuale approssimativa di memoria fisica totale che è attualmente in uso.</span><span class="sxs-lookup"><span data-stu-id="a4cda-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
   
  `pAvailableBytes`  
- <span data-ttu-id="49d0d-107">[out] Puntatore al numero di byte disponibili per common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="49d0d-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="a4cda-107">[out] Puntatore al numero di byte disponibili per common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="a4cda-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="49d0d-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="49d0d-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a4cda-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a4cda-108">Return Value</span></span>  
   
-|<span data-ttu-id="49d0d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="49d0d-109">HRESULT</span></span>|<span data-ttu-id="49d0d-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="49d0d-110">Description</span></span>|  
+|<span data-ttu-id="a4cda-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a4cda-109">HRESULT</span></span>|<span data-ttu-id="a4cda-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a4cda-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="49d0d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="49d0d-111">S_OK</span></span>|<span data-ttu-id="49d0d-112">`GetMemoryLoad` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="49d0d-112">`GetMemoryLoad` returned successfully.</span></span>|  
-|<span data-ttu-id="49d0d-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="49d0d-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="49d0d-114">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="49d0d-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="49d0d-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="49d0d-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="49d0d-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="49d0d-116">The call timed out.</span></span>|  
-|<span data-ttu-id="49d0d-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="49d0d-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="49d0d-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="49d0d-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="49d0d-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="49d0d-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="49d0d-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="49d0d-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="49d0d-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="49d0d-121">E_FAIL</span></span>|<span data-ttu-id="49d0d-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="49d0d-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="49d0d-123">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="49d0d-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="49d0d-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="49d0d-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a4cda-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a4cda-111">S_OK</span></span>|`GetMemoryLoad` <span data-ttu-id="a4cda-112">stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="a4cda-112">returned successfully.</span></span>|  
+|<span data-ttu-id="a4cda-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a4cda-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a4cda-114">CLR non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="a4cda-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a4cda-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a4cda-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a4cda-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="a4cda-116">The call timed out.</span></span>|  
+|<span data-ttu-id="a4cda-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a4cda-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a4cda-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="a4cda-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a4cda-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a4cda-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a4cda-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="a4cda-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a4cda-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a4cda-121">E_FAIL</span></span>|<span data-ttu-id="a4cda-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="a4cda-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a4cda-123">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="a4cda-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a4cda-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a4cda-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="49d0d-125">Note</span><span class="sxs-lookup"><span data-stu-id="49d0d-125">Remarks</span></span>  
- <span data-ttu-id="49d0d-126">`GetMemoryLoad` esegue il wrapping di Win32 `GlobalMemoryStatus` (funzione).</span><span class="sxs-lookup"><span data-stu-id="49d0d-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="49d0d-127">Il valore di `pMemoryLoad` equivale al `dwMemoryLoad` campo le `MEMORYSTATUS` struttura restituita da `GlobalMemoryStatus`.</span><span class="sxs-lookup"><span data-stu-id="49d0d-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4cda-125">Note</span><span class="sxs-lookup"><span data-stu-id="a4cda-125">Remarks</span></span>  
+ `GetMemoryLoad` <span data-ttu-id="a4cda-126">esegue il wrapping di Win32 `GlobalMemoryStatus` (funzione).</span><span class="sxs-lookup"><span data-stu-id="a4cda-126">wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="a4cda-127">Il valore di `pMemoryLoad` equivale al `dwMemoryLoad` campo le `MEMORYSTATUS` struttura restituita da `GlobalMemoryStatus`.</span><span class="sxs-lookup"><span data-stu-id="a4cda-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
   
- <span data-ttu-id="49d0d-128">Il runtime usa il valore restituito come un'euristica per il garbage collector.</span><span class="sxs-lookup"><span data-stu-id="49d0d-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="49d0d-129">Ad esempio, se l'host segnala che la maggior parte della memoria è in uso, il garbage collector può scegliere di raccogliere dai più generazioni per aumentare la quantità di memoria che può potenzialmente diventano disponibile.</span><span class="sxs-lookup"><span data-stu-id="49d0d-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
+ <span data-ttu-id="a4cda-128">Il runtime usa il valore restituito come un'euristica per il garbage collector.</span><span class="sxs-lookup"><span data-stu-id="a4cda-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="a4cda-129">Ad esempio, se l'host segnala che la maggior parte della memoria è in uso, il garbage collector può scegliere di raccogliere dai più generazioni per aumentare la quantità di memoria che può potenzialmente diventano disponibile.</span><span class="sxs-lookup"><span data-stu-id="a4cda-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49d0d-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="49d0d-130">Requirements</span></span>  
- <span data-ttu-id="49d0d-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49d0d-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4cda-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a4cda-130">Requirements</span></span>  
+ <span data-ttu-id="a4cda-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4cda-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49d0d-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="49d0d-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a4cda-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a4cda-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="49d0d-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="49d0d-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4cda-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a4cda-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="49d0d-134">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49d0d-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a4cda-134">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a4cda-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="49d0d-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="49d0d-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4cda-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4cda-135">See also</span></span>
+
 - <xref:System.GC?displayProperty=nameWithType>
-- [<span data-ttu-id="49d0d-136">Interfaccia IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="49d0d-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="a4cda-136">Interfaccia IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="a4cda-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
