@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Procedura: creare un componente aggiuntivo che restituisce un'interfaccia utente"
+title: "Procedura: Creare un componente aggiuntivo che restituisca un'interfaccia utente"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115752"
 ---
-# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Procedura: Procedura: creare un componente aggiuntivo che restituisce un'interfaccia utente
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Procedura: Creare un componente aggiuntivo che restituisca un'interfaccia utente
 In questo esempio viene illustrato come creare un componente aggiuntivo che restituisce un Windows Presentation Foundation (WPF) in un host applicazione WPF autonoma.  
   
  Il componente aggiuntivo restituisce un'interfaccia utente che è un controllo utente WPF. Il contenuto del controllo utente è costituito da un unico pulsante che consente di visualizzare una finestra di messaggio. L'applicazione WPF autonoma ospita il componente aggiuntivo e visualizza il controllo utente (restituito dal componente aggiuntivo) come il contenuto della finestra principale dell'applicazione.  
@@ -31,8 +31,7 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che rest
   
 ## <a name="example"></a>Esempio  
  Per creare un componente aggiuntivo che restituisce una UI WPF richiede codice specifico per ogni segmento di pipeline, il componente aggiuntivo e l'applicazione host.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementazione del segmento di pipeline di contratto  
  Un metodo deve essere definito dal contratto per la restituzione di un'interfaccia utente e il relativo valore restituito deve essere di tipo <xref:System.AddIn.Contract.INativeHandleContract>. Detto è dimostrato dal `GetAddInUI` metodo del `IWPFAddInContract` dei contratti nel codice seguente.  
@@ -90,5 +89,6 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che rest
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+
+- [Componenti aggiuntivi ed estensibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md)

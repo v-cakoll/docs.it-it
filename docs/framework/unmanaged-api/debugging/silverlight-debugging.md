@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113698"
 ---
 # <a name="silverlight-debugging"></a>Debug Silverlight
 Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da Common Language Runtime (CLR) per supportare il debug delle applicazioni basate su Silverlight in esecuzione nel sistema operativo Windows o sulla piattaforma Macintosh.  
@@ -55,6 +55,7 @@ Gli argomenti in questa sezione descrivono l'ambiente e le interfacce forniti da
  Arresta il gestore trasporto per una connessione a un computer di destinazione remoto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Coclassi di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Funzioni statiche globali di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

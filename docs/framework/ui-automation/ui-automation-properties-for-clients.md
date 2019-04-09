@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116363"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Proprietà di automazione interfaccia utente per i client
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57677292"
   
  Anche i pattern di controllo hanno proprietà. Le proprietà dei pattern di controllo sono specifiche del modello. Ad esempio, <xref:System.Windows.Automation.ScrollPattern> dispone di proprietà che forniscono a un'applicazione client informazioni sulla possibilità di scorrere una finestra in senso verticale o orizzontale, sulle dimensioni correnti della visualizzazione e sulle posizioni di scorrimento. I pattern di controllo espongono tutte le proprietà tramite una struttura, ad esempio <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- Le proprietà di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono di sola lettura. Per impostare le proprietà di un controllo, è necessario usare i metodi del pattern di controllo appropriato. Ad esempio, usare il metodo <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> per modificare i valori di posizione di una finestra a scorrimento.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] le proprietà sono di sola lettura. Per impostare le proprietà di un controllo, è necessario usare i metodi del pattern di controllo appropriato. Ad esempio, usare il metodo <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> per modificare i valori di posizione di una finestra a scorrimento.  
   
  Per migliorare le prestazioni, è possibile memorizzare nella cache i valori di proprietà di controlli e pattern di controllo quando vengono recuperati oggetti <xref:System.Windows.Automation.AutomationElement> . Per altre informazioni, vedere [memorizzazione nella cache in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
@@ -104,6 +104,7 @@ ms.locfileid: "57677292"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Proprietà statica) Oggetto <xref:System.Windows.Automation.AutomationElement>radice.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+
+- [Memorizzazione nella cache dei client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Implementazione del provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [Sottoscrivere gli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
