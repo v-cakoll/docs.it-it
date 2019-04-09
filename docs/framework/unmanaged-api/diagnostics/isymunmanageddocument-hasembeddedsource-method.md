@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 620d303bcd33a4d04155850ec2c1b6293bf788d1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1d6c79be95ff80c8de9b07cb33be46a5f5db22b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094268"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="df937-102">Metodo ISymUnmanagedDocument::HasEmbeddedSource</span><span class="sxs-lookup"><span data-stu-id="df937-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
-<span data-ttu-id="df937-103">Restituisce `true` se il documento di origine è incorporata nei simboli di debug; in caso contrario, restituisce `false`.</span><span class="sxs-lookup"><span data-stu-id="df937-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="918ac-102">Metodo ISymUnmanagedDocument::HasEmbeddedSource</span><span class="sxs-lookup"><span data-stu-id="918ac-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+<span data-ttu-id="918ac-103">Restituisce `true` se il documento di origine è incorporata nei simboli di debug; in caso contrario, restituisce `false`.</span><span class="sxs-lookup"><span data-stu-id="918ac-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df937-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="df937-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="918ac-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="918ac-104">Syntax</span></span>  
   
 ```  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df937-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="df937-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="918ac-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="918ac-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="df937-106">[out] Un puntatore a una variabile che indica se il documento di origine è incorporata nei simboli di debug.</span><span class="sxs-lookup"><span data-stu-id="df937-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="918ac-106">[out] Un puntatore a una variabile che indica se il documento di origine è incorporata nei simboli di debug.</span><span class="sxs-lookup"><span data-stu-id="918ac-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df937-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="df937-107">Return Value</span></span>  
- <span data-ttu-id="df937-108">S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="df937-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="918ac-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="918ac-107">Return Value</span></span>  
+ <span data-ttu-id="918ac-108">S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="918ac-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df937-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df937-109">See also</span></span>
-- [<span data-ttu-id="df937-110">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="df937-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="918ac-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="918ac-109">See also</span></span>
+
+- [<span data-ttu-id="918ac-110">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="918ac-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
