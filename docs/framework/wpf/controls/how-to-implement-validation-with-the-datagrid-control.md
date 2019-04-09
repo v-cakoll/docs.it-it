@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086807"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedura: Implementare la convalida con il controllo DataGrid
 Il <xref:System.Windows.Controls.DataGrid> controllo consente di eseguire la convalida a livello di cella e di riga. Con la convalida a livello di cella, si convalidano le singole proprietà di un oggetto dati associato quando un utente aggiorna un valore. Con la convalida a livello di riga, si convalidano gli oggetti di tutti i dati quando un utente esegue il commit delle modifiche a una riga. È anche possibile fornire feedback visivo personalizzato per gli errori di convalida o usare il feedback visivo predefinito che il <xref:System.Windows.Controls.DataGrid> fornisce controllo.  
@@ -91,8 +91,9 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di eseguire la con
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Data binding](../data/data-binding-wpf.md)
-- [Implementare la convalida dell'associazione](../data/how-to-implement-binding-validation.md)
+- [Implementare la convalida del binding](../data/how-to-implement-binding-validation.md)
 - [Implementare la logica di convalida negli oggetti personalizzati](../data/how-to-implement-validation-logic-on-custom-objects.md)

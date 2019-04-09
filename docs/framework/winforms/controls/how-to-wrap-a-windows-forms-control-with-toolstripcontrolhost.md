@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire il wrapping di un controllo di Windows Form con ToolStripControlHost'
+title: 'Procedura: Eseguire il wrapping di un controllo di Windows Forms con ToolStripControlHost'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: f17a0a9f8a7403abd273b9faa7b1ef78f1aff016
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a87dab15c436302a8b87d535ee8128c1917d5011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080488"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Procedura: Eseguire il wrapping di un controllo di Windows Form con ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost> è progettato per abilitare l'hosting di controlli Windows Form arbitrari usando il costruttore <xref:System.Windows.Forms.ToolStripControlHost> o estendendo direttamente <xref:System.Windows.Forms.ToolStripControlHost>. È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente. È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Procedura: Eseguire il wrapping di un controllo di Windows Forms con ToolStripControlHost
+<xref:System.Windows.Forms.ToolStripControlHost> è progettato per consentire l'hosting di controlli Windows Form arbitrari usando il <xref:System.Windows.Forms.ToolStripControlHost> costruttore o estendendo <xref:System.Windows.Forms.ToolStripControlHost> stesso. È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente. È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Per ospitare un controllo in un oggetto ToolStripControlHost tramite derivazione  
   
@@ -66,7 +66,8 @@ ms.locfileid: "57704895"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripControlHost>
-- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
 - [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

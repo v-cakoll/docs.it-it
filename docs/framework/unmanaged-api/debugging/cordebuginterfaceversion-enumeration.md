@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101764"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Enumerazione CorDebugInterfaceVersion
 Specifica un'interfaccia, una versione di .NET Framework o una versione di .NET Framework in cui è stata introdotta un'interfaccia.  
@@ -135,7 +135,7 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="members"></a>Membri  
  La tabella seguente contiene collegamenti da ogni valore di enumerazione all'interfaccia corrispondente. Inoltre, la tabella indica la prima versione di .NET Framework in cui l'interfaccia è supportata.  
   
-|Membro|Specifica|Versione di .NET Framework|  
+|Member|Specifica|Versione di .NET Framework|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|La versione di .NET Framework non è valida.|-|  
 |`CorDebugVersion_1_0`|La versione di .NET Framework, inclusi tutti i relativi Service Pack, è 1.0.|1.0|  
@@ -247,4 +247,5 @@ typedef enum CorDebugInterfaceVersion {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

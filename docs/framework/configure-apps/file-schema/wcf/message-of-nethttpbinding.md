@@ -2,12 +2,12 @@
 title: <message> di <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 66e854ca9dd33b608b93dae08376caaf590bd97f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105456"
 ---
 # <a name="message-of-nethttpbinding"></a>\<messaggio > del \<netHttpBinding >
 Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -38,9 +38,9 @@ Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<basicH
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|UserName|-Richiede l'autenticazione del client al server con una credenziale UserName. La credenziale deve essere specificata tramite l'elemento <`clientCredentials`>.<br />-WCF non supporta l'invio di un digest delle password o la derivazione delle chiavi usando le password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. WCF impone quindi che il trasporto sia protetto quando si usano credenziali UserName. Per `basicHttpBinding`, questo richiede l'impostazione di un canale SSL.|  
+|UserName|-Richiede l'autenticazione del client al server con una credenziale UserName. La credenziale deve essere specificata tramite la <`clientCredentials`> elemento.<br />-WCF non supporta l'invio di un digest delle password o la derivazione delle chiavi usando le password e l'utilizzo di tali chiavi per la sicurezza dei messaggi. WCF impone quindi che il trasporto sia protetto quando si usano credenziali UserName. Per `basicHttpBinding`, questo richiede l'impostazione di un canale SSL.|  
 |Certificato|Richiede che l'autenticazione del client sul server avvenga mediante un certificato. La credenziale client in questo caso deve essere specificata tramite <`clientCredentials`> e <`clientCertificate`>. Inoltre, quando si usa la modalità di sicurezza del messaggio, è necessario eseguire il provisioning del client con il certificato del servizio. La credenziale del servizio in questo caso deve essere specificata mediante <xref:System.ServiceModel.Description.ClientCredentials> classe oppure `ClientCredentials` elemento di comportamento e specificando il certificato utilizzando il \<serviceCertificate > elemento di serviceCredentials.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
@@ -50,7 +50,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<basicH
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|<`security`> dell'elemento <`netHttpBinding`>|Definisce le funzionalità di sicurezza per l'elemento <`netHttpBinding`>.|  
+|<`security`> dell'elemento <`netHttpBinding`>|Definisce le funzionalità di sicurezza per la <`netHttpBinding`> elemento.|  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene dimostrato come implementare un'applicazione che usa basicHttpBinding e la sicurezza del messaggio. Nel seguente esempio di configurazione di un servizio, la definizione dell'endpoint specifica basicHttpBinding e fa riferimento a una configurazione di associazione denominata `Binding1`. Il certificato usato dal servizio per l'autenticazione con il client è impostato nella sezione `behaviors` del file di configurazione sotto l'elemento `serviceCredentials`. Anche la modalità di convalida applicata al certificato usato dal servizio per l'autenticazione con il client è impostata nella sezione `behaviors` del file di configurazione sotto l'elemento `clientCertificate`.  
@@ -120,6 +120,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio dei [ \<basicH
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)
 - [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

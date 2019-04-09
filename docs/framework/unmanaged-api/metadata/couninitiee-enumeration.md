@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 475ae98d2bf7ea5132c9ec4555070f8bb2999cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cf1bfa03fd14d6324af60781003a8072a267a7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102947"
 ---
 # <a name="couninitiee-enumeration"></a>Enumerazione COUNINITIEE
 Specifica le costanti usate da [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) durante l'inizializzazione di common language runtime.  
@@ -38,7 +38,7 @@ typedef enum tagCOUNINITEE
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COUNINITEE_DEFAULT`|Indica la modalità di annullamento dell'inizializzazione predefinita.|  
 |`COUNINITEE_DLL`|Indica la modalità di annullamento dell'inizializzazione per lo scaricamento di un assembly.|  
@@ -53,4 +53,5 @@ typedef enum tagCOUNINITEE
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

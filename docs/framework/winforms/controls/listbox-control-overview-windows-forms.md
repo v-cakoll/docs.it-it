@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104201"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ListBox (Windows Form)
 Un controllo Windows Form <xref:System.Windows.Forms.ListBox> controllo Visualizza un elenco da cui l'utente può selezionare uno o più elementi. Se il numero totale di elementi supera il numero che può essere visualizzato, una barra di scorrimento viene aggiunto automaticamente al <xref:System.Windows.Forms.ListBox> controllo. Quando la <xref:System.Windows.Forms.ListBox.MultiColumn%2A> è impostata su `true`, la casella di riepilogo Visualizza gli elementi in più colonne e viene visualizzata una barra di scorrimento orizzontale. Quando la <xref:System.Windows.Forms.ListBox.MultiColumn%2A> è impostata su `false`, la casella di riepilogo Visualizza gli elementi in una singola colonna e viene visualizzata una barra di scorrimento verticale. Quando <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> è impostata su `true`, indipendentemente dal numero di elementi viene visualizzata la barra di scorrimento. Il <xref:System.Windows.Forms.ListBox.SelectionMode%2A> proprietà determina il numero di elementi elenco può essere selezionato contemporaneamente.  
@@ -23,11 +23,12 @@ Un controllo Windows Form <xref:System.Windows.Forms.ListBox> controllo Visualiz
  Per aggiungere o eliminare elementi in un <xref:System.Windows.Forms.ListBox> controllo, utilizzare il <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> o <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> (metodo). In alternativa, è possibile aggiungere elementi all'elenco utilizzando il <xref:System.Windows.Forms.ListBox.Items%2A> proprietà in fase di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ListBox>
-- [Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](add-and-remove-items-from-a-wf-combobox.md)
-- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Procedura: Associare un Windows Form controllo ComboBox o ListBox ai dati](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)
-- [Panoramica sul controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procedura: Associare un controllo ComboBox o ListBox di Windows Forms ai dati](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Panoramica del controllo ComboBox](combobox-control-overview-windows-forms.md)
+- [Panoramica del controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)
-- [Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Procedura: Creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)

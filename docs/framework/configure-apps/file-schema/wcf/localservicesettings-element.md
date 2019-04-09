@@ -1,13 +1,13 @@
 ---
-title: elemento <localServiceSettings>
+title: <localServiceSettings> elemento
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102635"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > elemento
 Specifica le impostazioni di sicurezza di un servizio locale per questa associazione.  
@@ -76,17 +76,18 @@ Specifica le impostazioni di sicurezza di un servizio locale per questa associaz
   
  Gli attributi seguenti dell'elemento `localServiceSecuritySettings` consentono di attenuare un attacco di tipo Denial of Service (DoS):  
   
--   `maxCachedCookies`: controlla il numero massimo di token SecurityContextTokens temporali memorizzati dal server nella cache dopo la negoziazione SPNEGO o SSL.  
+-   `maxCachedCookies`: controlla il numero massimo di SecurityContextTokens temporali memorizzati dal server dopo la negoziazione SPNEGO o SSL.  
   
 -   `issuedCookieLifetime`: controlla la durata dei token SecurityContextTokens emessi dal server in seguito alla negoziazione SPNEGO o SSL. Il server memorizza nella cache il token SecurityContextTokens per questo periodo di tempo.  
   
--   `maxPendingSessions`: controlla il numero massimo di conversazioni protette stabilite nel server, per cui però non sono stati elaborati messaggi dell'applicazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per ogni client, senza mai usare i client.  
+-   `maxPendingSessions`: controlla il numero massimo di conversazioni protette stabilite nel server, ma per cui non è stati elaborati alcun messaggio dell'applicazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per ogni client, senza mai usare i client.  
   
--   `inactivityTimeout`: controlla il periodo di tempo massimo in cui il servizio mantiene attiva una conversazione protetta senza mai ricevere un messaggio di un'applicazione. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per ogni client, senza mai usare i client.  
+-   `inactivityTimeout`: controlla il tempo massimo che il servizio mantiene una conversazione protetta attiva senza mai ricevere un messaggio dell'applicazione su di esso. Questa quota impedisce ai client di stabilire conversazioni protette nel servizio, facendo così in modo che il servizio mantenga lo stato per ogni client, senza mai usare i client.  
   
  In una sessione di conversazione protetta, entrambi gli attributi `inactivityTimeout` e `receiveTimeout` nell'associazione influiscono sul timeout della sessione. Il valore inferiore tra i due determina quando si verificano i timeout.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>

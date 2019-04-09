@@ -10,12 +10,12 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078577"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Procedura: Riprodurre un suono incorporato in una risorsa da un Windows Form
 È possibile usare il <xref:System.Media.SoundPlayer> classe per riprodurre un suono da una risorsa incorporata.  
@@ -34,6 +34,7 @@ ms.locfileid: "57708184"
  Sostituzione di "\<AssemblyName>" con il nome dell'assembly in cui è incorporato il file audio. Non includere il suffisso ". dll".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Media.SoundPlayer>
 - [Procedura: Riprodurre un suono da un Windows Form](how-to-play-a-sound-from-a-windows-form.md)
 - [Procedura: Riprodurre un suono ripetutamente in un Windows Form](how-to-loop-a-sound-playing-on-a-windows-form.md)

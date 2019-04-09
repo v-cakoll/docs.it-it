@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106353"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Procedura: Esporre le proprietà dei controlli costitutivi
 I controlli che costituiscono un controllo composito sono detti *controlli costitutivi*. Questi controlli sono in genere dichiarati privati e pertanto non sono accessibile dallo sviluppatore. Se si desidera rendere disponibili le proprietà di questi controlli per futuri utenti, è necessario esporli all'utente. Viene esposta una proprietà di un controllo che costituiscono la creazione di una proprietà nel controllo utente e usando il `get` e `set` pubbliche della proprietà per rendere effettiva la modifica della proprietà privata del controllo che lo costituiscono.  
@@ -58,6 +58,7 @@ public Color ButtonColor
 3.  Nel `set` sezione della proprietà, scrivere codice che passa il valore della proprietà alla proprietà esposta del controllo che lo costituiscono.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.UserControl>
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

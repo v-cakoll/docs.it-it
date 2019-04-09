@@ -3,12 +3,12 @@ title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 99320b2b9c93df06ffd1e0d8dd3e3db656548b3f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d8e87799962638ac6514ebb31bbc9e209b39c98d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090927"
 ---
 # <a name="factorysettings"></a>\<factorySettings>
 Specifica le impostazioni della cache della channel factory.  
@@ -89,6 +89,7 @@ Specifica le impostazioni della cache della channel factory.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Duplicare una stampante'
+title: 'Procedura: Clonare una stampante'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104091"
 ---
-# <a name="how-to-clone-a-printer"></a>Procedura: Duplicare una stampante
+# <a name="how-to-clone-a-printer"></a>Procedura: Clonare una stampante
 La maggior parte delle aziende, a un certo punto acquisti più stampanti dello stesso modello. In genere, queste vengono installate con le impostazioni di configurazione praticamente identici. L'installazione di ogni stampante può richiedere molto tempo e tendente all'errore. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e il <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposte con Microsoft .NET Framework consente di installare immediatamente un numero qualsiasi di code di stampa aggiuntive che sono stati clonati da una coda di stampa esistente.  
   
 ## <a name="example"></a>Esempio  
@@ -56,10 +56,11 @@ La maggior parte delle aziende, a un certo punto acquisti più stampanti dello s
  [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Panoramica della stampa](printing-overview.md)
+- [Cenni preliminari sulla stampa](printing-overview.md)

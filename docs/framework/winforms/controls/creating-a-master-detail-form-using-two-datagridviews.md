@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078876"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedura dettagliata: Creazione di un Form Master-Details mediante due controlli DataGridView di Windows Form
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedura dettagliata: Creazione di un modulo Master-Details usando due controlli DataGridView di Windows Forms
 Uno degli scenari più comuni per l'uso di <xref:System.Windows.Forms.DataGridView> controllo è il *master/dettaglio* form, in cui viene visualizzata una relazione padre/figlio tra due tabelle di database. La selezione di righe nella tabella master fa sì che la tabella di dettagli da aggiornare con i dati figlio corrispondente.  
   
  Implementazione di un form master-Details è semplice se si utilizza l'interazione tra il <xref:System.Windows.Forms.DataGridView> controllo e il <xref:System.Windows.Forms.BindingSource> componente. In questa procedura dettagliata si compilerà il modulo utilizzando due <xref:System.Windows.Forms.DataGridView> e due controlli <xref:System.Windows.Forms.BindingSource> componenti. Nel modulo verrà visualizzate due tabelle correlate nel database di esempio Northwind di SQL Server: `Customers` e `Orders`. Al termine, si avrà un modulo che vengono visualizzati tutti i clienti del database nel master <xref:System.Windows.Forms.DataGridView> e tutti gli ordini per il cliente selezionato nei dettagli <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ Uno degli scenari più comuni per l'uso di <xref:System.Windows.Forms.DataGridVi
 -   Personalizzare l'aspetto delle celle. Per altre informazioni, vedere [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md) e [come: Impostare stili di cella predefiniti per i Windows Form controllo DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Visualizzazione di dati nel controllo DataGridView di Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Creare un Form Master-Details mediante due controlli DataGridView di Windows Form](create-a-master-detail-form-using-two-datagridviews.md)
+- [Visualizzazione di dati nel controllo DataGridView Windows Form](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Creare un modulo Master-Details usando due controlli DataGridView di Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
 - [Protezione delle informazioni di connessione](../../data/adonet/protecting-connection-information.md)

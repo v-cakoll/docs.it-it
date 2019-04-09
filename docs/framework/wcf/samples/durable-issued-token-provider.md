@@ -2,12 +2,12 @@
 title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 471e172589e578691d41690b0af7eff20e3234c9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103259"
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
@@ -253,4 +253,3 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
-  

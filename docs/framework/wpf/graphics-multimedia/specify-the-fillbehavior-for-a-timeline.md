@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Specificare il FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attività'
+title: 'Procedura: Specificare FillBehavior per un oggetto Timeline che ha raggiunto la fine del periodo di attività'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091122"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Procedura: Specificare il FillBehavior di un oggetto Timeline che ha raggiunto la fine del periodo di attività
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Procedura: Specificare FillBehavior per un oggetto Timeline che ha raggiunto la fine del periodo di attività
 In questo esempio viene illustrato come specificare il <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> per l'oggetto inattivo <xref:System.Windows.Media.Animation.Timeline> di una proprietà animata.  
   
 ## <a name="example"></a>Esempio  
@@ -27,6 +27,7 @@ In questo esempio viene illustrato come specificare il <xref:System.Windows.Medi
  Per l'esempio completo, vedere [raccolta di esempi di animazione](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
 - <xref:System.Windows.Media.Animation.Timeline>
@@ -34,4 +35,4 @@ In questo esempio viene illustrato come specificare il <xref:System.Windows.Medi
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Animazione e temporizzazione procedure](animation-and-timing-how-to-topics.md)
+- [Procedure relative all'animazione e al sistema di temporizzazione](animation-and-timing-how-to-topics.md)

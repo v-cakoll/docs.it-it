@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF], retrieving data
 - DataObject class [WPF], retrieving data
 ms.assetid: a625acf3-1144-44cd-add7-456aefc3859f
-ms.openlocfilehash: f759677d9aba51fc8a65f030be8ae19eea53c02e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b3ec1b8fa873fd449956912e9e77e98b0362cb0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080020"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>Procedura: Recuperare dati in un formato dati particolare
 Negli esempi seguenti mostrano come recuperare i dati da un oggetto dati in un formato specificato.  
@@ -38,5 +38,6 @@ Negli esempi seguenti mostrano come recuperare i dati da un oggetto dati in un f
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat_native)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.IDataObject>
 - [Cenni preliminari sul trascinamento della selezione](drag-and-drop-overview.md)

@@ -2,12 +2,12 @@
 title: Importazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090069"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importazione di metadati personalizzati per un'estensione WCF
 In Windows Communication Foundation (WCF), l'importazione dei metadati è il processo di generazione di una rappresentazione astratta di un servizio o sue parti componenti dai relativi metadati. Ad esempio, è possibile importare WCF <xref:System.ServiceModel.Description.ServiceEndpoint> istanze <xref:System.ServiceModel.Channels.Binding> istanze o <xref:System.ServiceModel.Description.ContractDescription> istanze da un file WSDL di documento per un servizio. Per importare i metadati del servizio in WCF, usare un'implementazione del <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> classe astratta. Tipi che derivano dal <xref:System.ServiceModel.Description.MetadataImporter> classi implementano il supporto per l'importazione formati dei metadati che sfruttano il WS-Policy Importa per la logica in WCF.  
@@ -49,6 +49,7 @@ In Windows Communication Foundation (WCF), l'importazione dei metadati è il pro
 >  È possibile che all'unità di importazione vengano passati metadati non validi o inappropriati. È pertanto necessario garantire che le unità di importazione personalizzate siano in grado di gestire qualsiasi formato XML.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Procedura: Importa asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procedura: Importare asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
 - [Procedura: Scrivere un'estensione per ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

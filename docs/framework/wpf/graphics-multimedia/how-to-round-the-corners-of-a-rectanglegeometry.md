@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089133"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Procedura: Arrotondare gli angoli di un oggetto RectangleGeometry
 Per arrotondare gli angoli di un <xref:System.Windows.Media.RectangleGeometry>, impostare il <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> e <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> proprietà su un valore maggiore di zero. Più valori, più rotondi sono angoli del rettangolo.  
@@ -26,6 +26,7 @@ Per arrotondare gli angoli di un <xref:System.Windows.Media.RectangleGeometry>, 
 Rettangoli con angoli arrotondati  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulle classi Geometry](geometry-overview.md)
 - [Creare una forma composta](how-to-create-a-composite-shape.md)
 - [Creare una forma usando un oggetto PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

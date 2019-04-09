@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Utilizzare il modello Master-Details con dati gerarchici'
+title: 'Procedura: Usare il modello Master-Details con dati gerarchici'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082659"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: Utilizzare il modello Master-Details con dati gerarchici
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Procedura: Usare il modello Master-Details con dati gerarchici
 In questo esempio viene illustrato come implementare lo scenario master-dettagli.  
   
 ## <a name="example"></a>Esempio  
@@ -34,8 +34,9 @@ In questo esempio viene illustrato come implementare lo scenario master-dettagli
  La tecnica è leggermente diversa quando si usa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dei dati. Per un esempio, vedere [usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Eseguire l'associazione a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [Eseguire il binding a una raccolta e visualizzare informazioni in base alla selezione](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Panoramica sui modelli di dati](data-templating-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Cenni preliminari sui modelli di dati](data-templating-overview.md)
+- [Procedure relative](data-binding-how-to-topics.md)

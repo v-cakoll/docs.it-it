@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104299"
 ---
 # <a name="using-nested-graphics-containers"></a>Utilizzo di contenitori di grafica annidati
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fornisce i contenitori che è possibile utilizzare per sostituire temporaneamente o per migliorare parte dello stato in un <xref:System.Drawing.Graphics> oggetto. Creare un contenitore, chiamare il <xref:System.Drawing.Graphics.BeginContainer%2A> metodo di un <xref:System.Drawing.Graphics> oggetto. È possibile chiamare <xref:System.Drawing.Graphics.BeginContainer%2A> ripetutamente per creare contenitori nidificati. Ogni chiamata a <xref:System.Drawing.Graphics.BeginContainer%2A> deve essere associato a una chiamata a <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -57,5 +57,6 @@ ms.locfileid: "58125863"
  ![Figura che mostra le stringhe ricavate dal contenitori nidificati.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Graphics>
 - [Gestione dello stato di un oggetto Graphics](managing-the-state-of-a-graphics-object.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090602"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedura: Associare dati al controllo MaskedTextBox
 È possibile associare dati a un <xref:System.Windows.Forms.MaskedTextBox> controllare esattamente come per qualsiasi altro controllo Windows Form. Tuttavia, se il formato dei dati nel database non corrisponde al formato previsto dalla definizione della maschera, è necessario riformattare i dati. La procedura seguente viene illustrato come eseguire questa operazione usando il <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventi del <xref:System.Windows.Forms.Binding> classe per visualizzare il numero di telefono separati e phone campi di estensione database in un solo campo modificabile.  
@@ -250,4 +250,5 @@ ms.locfileid: "57717466"
 -   Compilare l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Procedura dettagliata: Uso del controllo MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
