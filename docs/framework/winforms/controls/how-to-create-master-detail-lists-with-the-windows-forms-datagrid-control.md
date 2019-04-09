@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 8f247fb3e61abe46b3bb9c74a3b984310d2b99b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094983"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Form
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedura: Creare elenchi Master-Details con il controllo DataGrid di Windows Forms
 > [!NOTE]
 >  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -71,6 +71,7 @@ ms.locfileid: "57715464"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
