@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229427"
 ---
-# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="dead4-102">Enumerazione EHostApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="dead4-102">EHostApplicationPolicy Enumeration</span></span>
-<span data-ttu-id="dead4-103">Indica come modificare un' [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) oggetto interfaccia.</span><span class="sxs-lookup"><span data-stu-id="dead4-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="dead4-104">Questa enumerazione è stata deprecata.</span><span class="sxs-lookup"><span data-stu-id="dead4-104">This enumeration has been deprecated.</span></span>  
+# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="4e57c-102">Enumerazione EHostApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="4e57c-102">EHostApplicationPolicy Enumeration</span></span>
+<span data-ttu-id="4e57c-103">Indica come modificare un' [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) oggetto interfaccia.</span><span class="sxs-lookup"><span data-stu-id="4e57c-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="4e57c-104">Questa enumerazione è stata deprecata.</span><span class="sxs-lookup"><span data-stu-id="4e57c-104">This enumeration has been deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dead4-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dead4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e57c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4e57c-105">Syntax</span></span>  
   
 ```  
 typedef enum _HostApplicationPolicy {  
@@ -34,14 +34,15 @@ typedef enum _HostApplicationPolicy {
 } EHostApplicationPolicy;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dead4-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dead4-106">Requirements</span></span>  
- <span data-ttu-id="dead4-107">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dead4-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e57c-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4e57c-106">Requirements</span></span>  
+ <span data-ttu-id="4e57c-107">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4e57c-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dead4-108">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dead4-108">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4e57c-108">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4e57c-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="dead4-109">**Libreria:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dead4-109">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="4e57c-109">**Libreria:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4e57c-109">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dead4-110">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dead4-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="4e57c-110">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="4e57c-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="dead4-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dead4-111">See also</span></span>
-- [<span data-ttu-id="dead4-112">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="dead4-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="4e57c-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4e57c-111">See also</span></span>
+
+- [<span data-ttu-id="4e57c-112">Enumerazioni di hosting</span><span class="sxs-lookup"><span data-stu-id="4e57c-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

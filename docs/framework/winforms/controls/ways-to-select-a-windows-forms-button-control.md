@@ -4,31 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223290"
 ---
-# <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="bfede-102">Modalità di selezione di un controllo Button Windows Form</span><span class="sxs-lookup"><span data-stu-id="bfede-102">Ways to Select a Windows Forms Button Control</span></span>
-<span data-ttu-id="bfede-103">È possibile selezionare un pulsante Windows Form nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="bfede-103">A Windows Forms button can be selected in the following ways:</span></span>  
+# <a name="ways-to-select-a-windows-forms-button-control"></a><span data-ttu-id="cab37-102">Modalità di selezione di un controllo Button Windows Form</span><span class="sxs-lookup"><span data-stu-id="cab37-102">Ways to Select a Windows Forms Button Control</span></span>
+<span data-ttu-id="cab37-103">È possibile selezionare un pulsante Windows Form nei modi seguenti:</span><span class="sxs-lookup"><span data-stu-id="cab37-103">A Windows Forms button can be selected in the following ways:</span></span>  
   
--   <span data-ttu-id="bfede-104">Consente di fare clic sul pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="bfede-104">Use a mouse to click the button.</span></span>  
+-   <span data-ttu-id="cab37-104">Consente di fare clic sul pulsante del mouse.</span><span class="sxs-lookup"><span data-stu-id="cab37-104">Use a mouse to click the button.</span></span>  
   
--   <span data-ttu-id="bfede-105">Richiamo del pulsante <xref:System.Windows.Forms.Control.Click> evento nel codice.</span><span class="sxs-lookup"><span data-stu-id="bfede-105">Invoke the button's <xref:System.Windows.Forms.Control.Click> event in code.</span></span>  
+-   <span data-ttu-id="cab37-105">Richiamo del pulsante <xref:System.Windows.Forms.Control.Click> evento nel codice.</span><span class="sxs-lookup"><span data-stu-id="cab37-105">Invoke the button's <xref:System.Windows.Forms.Control.Click> event in code.</span></span>  
   
--   <span data-ttu-id="bfede-106">Spostare lo stato attivo al pulsante premendo il tasto TAB e quindi scegliere il pulsante premendo la barra spaziatrice o INVIO.</span><span class="sxs-lookup"><span data-stu-id="bfede-106">Move the focus to the button by pressing the TAB key, and then choose the button by pressing the SPACEBAR or ENTER.</span></span>  
+-   <span data-ttu-id="cab37-106">Spostare lo stato attivo al pulsante premendo il tasto TAB e quindi scegliere il pulsante premendo la barra spaziatrice o INVIO.</span><span class="sxs-lookup"><span data-stu-id="cab37-106">Move the focus to the button by pressing the TAB key, and then choose the button by pressing the SPACEBAR or ENTER.</span></span>  
   
--   <span data-ttu-id="bfede-107">Premere il tasto di scelta (ALT + lettera sottolineata) per il pulsante.</span><span class="sxs-lookup"><span data-stu-id="bfede-107">Press the access key (ALT + the underlined letter) for the button.</span></span> <span data-ttu-id="bfede-108">Per altre informazioni sulle chiavi di accesso, vedere [come: Creare le chiavi di accesso per i controlli di Windows Form](how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="bfede-108">For more information about access keys, see [How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md).</span></span>  
+-   <span data-ttu-id="cab37-107">Premere il tasto di scelta (ALT + lettera sottolineata) per il pulsante.</span><span class="sxs-lookup"><span data-stu-id="cab37-107">Press the access key (ALT + the underlined letter) for the button.</span></span> <span data-ttu-id="cab37-108">Per altre informazioni sulle chiavi di accesso, vedere [come: Creare le chiavi di accesso per i controlli di Windows Form](how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="cab37-108">For more information about access keys, see [How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md).</span></span>  
   
--   <span data-ttu-id="bfede-109">Se il pulsante è il pulsante "accept" del form, premendo INVIO sceglie il pulsante, anche se un altro controllo ha lo stato attivo, a meno che quest ' è un altro pulsante, una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.</span><span class="sxs-lookup"><span data-stu-id="bfede-109">If the button is the "accept" button of the form, pressing ENTER chooses the button, even if another control has the focus — except if that other control is another button, a multi-line text box, or a custom control that traps the enter key.</span></span>  
+-   <span data-ttu-id="cab37-109">Se il pulsante è il pulsante "accept" del form, premendo INVIO sceglie il pulsante, anche se un altro controllo ha lo stato attivo, a meno che quest ' è un altro pulsante, una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.</span><span class="sxs-lookup"><span data-stu-id="cab37-109">If the button is the "accept" button of the form, pressing ENTER chooses the button, even if another control has the focus — except if that other control is another button, a multi-line text box, or a custom control that traps the enter key.</span></span>  
   
--   <span data-ttu-id="bfede-110">Se il pulsante è il pulsante "Annulla" del form, il tasto ESC sceglie il pulsante, anche se un altro controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="bfede-110">If the button is the "cancel" button of the form, pressing ESC chooses the button, even if another control has the focus.</span></span>  
+-   <span data-ttu-id="cab37-110">Se il pulsante è il pulsante "Annulla" del form, il tasto ESC sceglie il pulsante, anche se un altro controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="cab37-110">If the button is the "cancel" button of the form, pressing ESC chooses the button, even if another control has the focus.</span></span>  
   
--   <span data-ttu-id="bfede-111">Chiamare il <xref:System.Windows.Forms.Button.PerformClick%2A> metodo per selezionare il pulsante a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="bfede-111">Call the <xref:System.Windows.Forms.Button.PerformClick%2A> method to select the button programmatically.</span></span>  
+-   <span data-ttu-id="cab37-111">Chiamare il <xref:System.Windows.Forms.Button.PerformClick%2A> metodo per selezionare il pulsante a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="cab37-111">Call the <xref:System.Windows.Forms.Button.PerformClick%2A> method to select the button programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfede-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bfede-112">See also</span></span>
-- [<span data-ttu-id="bfede-113">Panoramica sul controllo Button</span><span class="sxs-lookup"><span data-stu-id="bfede-113">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="bfede-114">Procedura: Rispondere alle selezioni dei pulsanti di Windows Form</span><span class="sxs-lookup"><span data-stu-id="bfede-114">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="bfede-115">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="bfede-115">Button Control</span></span>](button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cab37-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cab37-112">See also</span></span>
+
+- [<span data-ttu-id="cab37-113">Panoramica del controllo Button</span><span class="sxs-lookup"><span data-stu-id="cab37-113">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="cab37-114">Procedura: Rispondere alla selezione dei pulsanti Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cab37-114">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="cab37-115">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="cab37-115">Button Control</span></span>](button-control-windows-forms.md)

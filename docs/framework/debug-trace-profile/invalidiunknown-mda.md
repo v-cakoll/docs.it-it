@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fead50c42c0d686492459829f7629654c20a0f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223355"
 ---
-# <a name="invalidiunknown-mda"></a><span data-ttu-id="0cd39-102">MDA invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="0cd39-102">invalidIUnknown MDA</span></span>
-<span data-ttu-id="0cd39-103">L'assistente al debug gestito `invalidIUnknown` viene attivato quando un puntatore `IUnknown` non valido viene passato dal codice nativo al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="0cd39-103">The `invalidIUnknown` managed debugging assistant (MDA) is activated when an invalid `IUnknown` pointer is passed to managed code from native code.</span></span> <span data-ttu-id="0cd39-104">La ricerca dell'interfaccia `IUnknown` nel puntatore `IUnknown` non riesce.</span><span class="sxs-lookup"><span data-stu-id="0cd39-104">The `IUnknown` fails to return success when queried for the `IUnknown` interface.</span></span>  
+# <a name="invalidiunknown-mda"></a><span data-ttu-id="57898-102">MDA invalidIUnknown</span><span class="sxs-lookup"><span data-stu-id="57898-102">invalidIUnknown MDA</span></span>
+<span data-ttu-id="57898-103">L'assistente al debug gestito `invalidIUnknown` viene attivato quando un puntatore `IUnknown` non valido viene passato dal codice nativo al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="57898-103">The `invalidIUnknown` managed debugging assistant (MDA) is activated when an invalid `IUnknown` pointer is passed to managed code from native code.</span></span> <span data-ttu-id="57898-104">La ricerca dell'interfaccia `IUnknown` nel puntatore `IUnknown` non riesce.</span><span class="sxs-lookup"><span data-stu-id="57898-104">The `IUnknown` fails to return success when queried for the `IUnknown` interface.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0cd39-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="0cd39-105">Symptoms</span></span>  
- <span data-ttu-id="0cd39-106">Si verifica un errore imprevisto durante il marshalling degli argomenti di un puntatore a interfaccia COM.</span><span class="sxs-lookup"><span data-stu-id="0cd39-106">An unexpected error occurs when marshaling a COM interface pointer during argument marshaling.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="57898-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="57898-105">Symptoms</span></span>  
+ <span data-ttu-id="57898-106">Si verifica un errore imprevisto durante il marshalling degli argomenti di un puntatore a interfaccia COM.</span><span class="sxs-lookup"><span data-stu-id="57898-106">An unexpected error occurs when marshaling a COM interface pointer during argument marshaling.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0cd39-107">Causa</span><span class="sxs-lookup"><span data-stu-id="0cd39-107">Cause</span></span>  
- <span data-ttu-id="0cd39-108">Un'implementazione non valida di `QueryInterface` sull'interfaccia COM passata a CLR.</span><span class="sxs-lookup"><span data-stu-id="0cd39-108">An incorrect `QueryInterface` implementation on the COM interface passed to the CLR.</span></span>  
+## <a name="cause"></a><span data-ttu-id="57898-107">Causa</span><span class="sxs-lookup"><span data-stu-id="57898-107">Cause</span></span>  
+ <span data-ttu-id="57898-108">Un'implementazione non valida di `QueryInterface` sull'interfaccia COM passata a CLR.</span><span class="sxs-lookup"><span data-stu-id="57898-108">An incorrect `QueryInterface` implementation on the COM interface passed to the CLR.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0cd39-109">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="0cd39-109">Resolution</span></span>  
- <span data-ttu-id="0cd39-110">Correggere l'implementazione di `QueryInterface`.</span><span class="sxs-lookup"><span data-stu-id="0cd39-110">Correct the `QueryInterface` implementation.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="57898-109">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="57898-109">Resolution</span></span>  
+ <span data-ttu-id="57898-110">Correggere l'implementazione di `QueryInterface`.</span><span class="sxs-lookup"><span data-stu-id="57898-110">Correct the `QueryInterface` implementation.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0cd39-111">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="0cd39-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="0cd39-112">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="0cd39-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="57898-111">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="57898-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="57898-112">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="57898-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0cd39-113">Output</span><span class="sxs-lookup"><span data-stu-id="0cd39-113">Output</span></span>  
- <span data-ttu-id="0cd39-114">Descrizione dell'errore.</span><span class="sxs-lookup"><span data-stu-id="0cd39-114">The description of the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="57898-113">Output</span><span class="sxs-lookup"><span data-stu-id="57898-113">Output</span></span>  
+ <span data-ttu-id="57898-114">Descrizione dell'errore.</span><span class="sxs-lookup"><span data-stu-id="57898-114">The description of the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0cd39-115">Configurazione</span><span class="sxs-lookup"><span data-stu-id="0cd39-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="57898-115">Configurazione</span><span class="sxs-lookup"><span data-stu-id="57898-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,7 +45,8 @@ ms.locfileid: "54582669"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0cd39-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0cd39-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57898-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="57898-116">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="0cd39-117">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="0cd39-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="0cd39-118">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="0cd39-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="57898-117">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="57898-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="57898-118">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="57898-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

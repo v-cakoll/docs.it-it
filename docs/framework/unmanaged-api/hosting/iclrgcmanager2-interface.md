@@ -16,40 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9897526882a8ae53410a7744f78c558dfa6981e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89a7ef34418163d790fd055de681c1cdf989e57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226924"
 ---
-# <a name="iclrgcmanager2-interface"></a><span data-ttu-id="9f9fc-102">Interfaccia ICLRGCManager2</span><span class="sxs-lookup"><span data-stu-id="9f9fc-102">ICLRGCManager2 Interface</span></span>
-<span data-ttu-id="9f9fc-103">Fornisce metodi che consentono a un host interagire con il sistema di common language runtime garbage collection.</span><span class="sxs-lookup"><span data-stu-id="9f9fc-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  
+# <a name="iclrgcmanager2-interface"></a><span data-ttu-id="36c8f-102">Interfaccia ICLRGCManager2</span><span class="sxs-lookup"><span data-stu-id="36c8f-102">ICLRGCManager2 Interface</span></span>
+<span data-ttu-id="36c8f-103">Fornisce metodi che consentono a un host interagire con il sistema di common language runtime garbage collection.</span><span class="sxs-lookup"><span data-stu-id="36c8f-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9f9fc-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="9f9fc-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="36c8f-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="36c8f-104">Methods</span></span>  
   
-|<span data-ttu-id="9f9fc-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="9f9fc-105">Method</span></span>|<span data-ttu-id="9f9fc-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9f9fc-106">Description</span></span>|  
+|<span data-ttu-id="36c8f-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="36c8f-105">Method</span></span>|<span data-ttu-id="36c8f-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="36c8f-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9f9fc-107">Metodo SetGCStartupLimitsEx</span><span class="sxs-lookup"><span data-stu-id="9f9fc-107">SetGCStartupLimitsEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|<span data-ttu-id="9f9fc-108">Imposta le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0.</span><span class="sxs-lookup"><span data-stu-id="9f9fc-108">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span> <span data-ttu-id="9f9fc-109">Abilita generazione 0 e dimensioni del segmento superiori a `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="9f9fc-109">Enables generation 0 and segment sizes larger than `DWORD`.</span></span>|  
+|[<span data-ttu-id="36c8f-107">Metodo SetGCStartupLimitsEx</span><span class="sxs-lookup"><span data-stu-id="36c8f-107">SetGCStartupLimitsEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|<span data-ttu-id="36c8f-108">Imposta le dimensioni di un segmento di garbage collection e le dimensioni massime della generazione del sistema di garbage collection 0.</span><span class="sxs-lookup"><span data-stu-id="36c8f-108">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span> <span data-ttu-id="36c8f-109">Abilita generazione 0 e dimensioni del segmento superiori a `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="36c8f-109">Enables generation 0 and segment sizes larger than `DWORD`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9f9fc-110">Note</span><span class="sxs-lookup"><span data-stu-id="9f9fc-110">Remarks</span></span>  
- <span data-ttu-id="9f9fc-111">Questa interfaccia eredita dal [interfaccia ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).</span><span class="sxs-lookup"><span data-stu-id="9f9fc-111">This interface inherits from the [ICLRGCManager Interface](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="36c8f-110">Note</span><span class="sxs-lookup"><span data-stu-id="36c8f-110">Remarks</span></span>  
+ <span data-ttu-id="36c8f-111">Questa interfaccia eredita dal [interfaccia ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).</span><span class="sxs-lookup"><span data-stu-id="36c8f-111">This interface inherits from the [ICLRGCManager Interface](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).</span></span>  
   
- <span data-ttu-id="9f9fc-112">Common language runtime (CLR) implementa il meccanismo di garbage collection con managed <xref:System.GC> tipo.</span><span class="sxs-lookup"><span data-stu-id="9f9fc-112">The common language runtime (CLR) implements its garbage collection mechanism with the managed <xref:System.GC> type.</span></span> <span data-ttu-id="9f9fc-113">Per altre informazioni sul sistema di garbage collection, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="9f9fc-113">For more information about the garbage collection system, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
+ <span data-ttu-id="36c8f-112">Common language runtime (CLR) implementa il meccanismo di garbage collection con managed <xref:System.GC> tipo.</span><span class="sxs-lookup"><span data-stu-id="36c8f-112">The common language runtime (CLR) implements its garbage collection mechanism with the managed <xref:System.GC> type.</span></span> <span data-ttu-id="36c8f-113">Per altre informazioni sul sistema di garbage collection, vedere [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="36c8f-113">For more information about the garbage collection system, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f9fc-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9f9fc-114">Requirements</span></span>  
- <span data-ttu-id="9f9fc-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f9fc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36c8f-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="36c8f-114">Requirements</span></span>  
+ <span data-ttu-id="36c8f-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36c8f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f9fc-116">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9f9fc-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="36c8f-116">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="36c8f-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9f9fc-117">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9f9fc-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="36c8f-117">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="36c8f-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9f9fc-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f9fc-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="36c8f-118">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="36c8f-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9f9fc-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9f9fc-119">See also</span></span>
-- [<span data-ttu-id="9f9fc-120">Gestione automatica della memoria</span><span class="sxs-lookup"><span data-stu-id="9f9fc-120">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="9f9fc-121">Struttura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="9f9fc-121">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [<span data-ttu-id="9f9fc-122">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="9f9fc-122">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="9f9fc-123">Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5</span><span class="sxs-lookup"><span data-stu-id="9f9fc-123">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="9f9fc-124">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="9f9fc-124">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="9f9fc-125">Hosting</span><span class="sxs-lookup"><span data-stu-id="9f9fc-125">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="36c8f-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="36c8f-119">See also</span></span>
+
+- [<span data-ttu-id="36c8f-120">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="36c8f-120">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="36c8f-121">Struttura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="36c8f-121">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [<span data-ttu-id="36c8f-122">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="36c8f-122">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="36c8f-123">Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5</span><span class="sxs-lookup"><span data-stu-id="36c8f-123">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="36c8f-124">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="36c8f-124">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="36c8f-125">Hosting</span><span class="sxs-lookup"><span data-stu-id="36c8f-125">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

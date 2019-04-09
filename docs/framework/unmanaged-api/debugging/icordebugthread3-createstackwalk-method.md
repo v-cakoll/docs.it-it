@@ -17,48 +17,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fbd07638050b3861cd3cbfd45171ade5c19acb3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7969d8482970b13951938203262f6ce8f9bf574a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229303"
 ---
-# <a name="icordebugthread3createstackwalk-method"></a><span data-ttu-id="287f1-102">Metodo ICorDebugThread3::CreateStackWalk</span><span class="sxs-lookup"><span data-stu-id="287f1-102">ICorDebugThread3::CreateStackWalk Method</span></span>
-<span data-ttu-id="287f1-103">Crea un' [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto per il thread la cui stack si desidera rimuovere.</span><span class="sxs-lookup"><span data-stu-id="287f1-103">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
+# <a name="icordebugthread3createstackwalk-method"></a><span data-ttu-id="5f822-102">Metodo ICorDebugThread3::CreateStackWalk</span><span class="sxs-lookup"><span data-stu-id="5f822-102">ICorDebugThread3::CreateStackWalk Method</span></span>
+<span data-ttu-id="5f822-103">Crea un' [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto per il thread la cui stack si desidera rimuovere.</span><span class="sxs-lookup"><span data-stu-id="5f822-103">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="287f1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="287f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f822-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5f822-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="287f1-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="287f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f822-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5f822-105">Parameters</span></span>  
  `ppStackWalk`  
- <span data-ttu-id="287f1-106">[out] Puntatore all'indirizzo del [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto per il thread la cui stack si desidera rimuovere.</span><span class="sxs-lookup"><span data-stu-id="287f1-106">[out] A pointer to address of the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
+ <span data-ttu-id="5f822-106">[out] Puntatore all'indirizzo del [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) oggetto per il thread la cui stack si desidera rimuovere.</span><span class="sxs-lookup"><span data-stu-id="5f822-106">[out] A pointer to address of the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="287f1-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="287f1-107">Return Value</span></span>  
- <span data-ttu-id="287f1-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="287f1-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f822-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5f822-107">Return Value</span></span>  
+ <span data-ttu-id="5f822-108">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="5f822-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="287f1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="287f1-109">HRESULT</span></span>|<span data-ttu-id="287f1-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="287f1-110">Description</span></span>|  
+|<span data-ttu-id="5f822-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5f822-109">HRESULT</span></span>|<span data-ttu-id="5f822-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5f822-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="287f1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="287f1-111">S_OK</span></span>|<span data-ttu-id="287f1-112">Il `ICorDebugStackWalk` oggetto è stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="287f1-112">The `ICorDebugStackWalk` object was successfully created.</span></span>|  
-|<span data-ttu-id="287f1-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="287f1-113">E_FAIL</span></span>|<span data-ttu-id="287f1-114">Il `ICorDebugStackWalk` oggetto non è stato creato.</span><span class="sxs-lookup"><span data-stu-id="287f1-114">The `ICorDebugStackWalk` object was not created.</span></span>|  
+|<span data-ttu-id="5f822-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="5f822-111">S_OK</span></span>|<span data-ttu-id="5f822-112">Il `ICorDebugStackWalk` oggetto è stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="5f822-112">The `ICorDebugStackWalk` object was successfully created.</span></span>|  
+|<span data-ttu-id="5f822-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5f822-113">E_FAIL</span></span>|<span data-ttu-id="5f822-114">Il `ICorDebugStackWalk` oggetto non è stato creato.</span><span class="sxs-lookup"><span data-stu-id="5f822-114">The `ICorDebugStackWalk` object was not created.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="287f1-115">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="287f1-115">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="5f822-115">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="5f822-115">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="287f1-116">Note</span><span class="sxs-lookup"><span data-stu-id="287f1-116">Remarks</span></span>  
- <span data-ttu-id="287f1-117">Se il `CreateStackWalk` metodo ha esito positivo, l'oggetto restituito `ICorDebugStackWalk` contesto dell'oggetto viene impostato il contesto del thread corrente.</span><span class="sxs-lookup"><span data-stu-id="287f1-117">If the `CreateStackWalk` method succeeds, the returned `ICorDebugStackWalk` object's context is set to the thread's current context.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f822-116">Note</span><span class="sxs-lookup"><span data-stu-id="5f822-116">Remarks</span></span>  
+ <span data-ttu-id="5f822-117">Se il `CreateStackWalk` metodo ha esito positivo, l'oggetto restituito `ICorDebugStackWalk` contesto dell'oggetto viene impostato il contesto del thread corrente.</span><span class="sxs-lookup"><span data-stu-id="5f822-117">If the `CreateStackWalk` method succeeds, the returned `ICorDebugStackWalk` object's context is set to the thread's current context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="287f1-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="287f1-118">Requirements</span></span>  
- <span data-ttu-id="287f1-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="287f1-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f822-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5f822-118">Requirements</span></span>  
+ <span data-ttu-id="5f822-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f822-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="287f1-120">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="287f1-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5f822-120">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f822-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="287f1-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="287f1-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f822-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f822-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="287f1-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="287f1-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="5f822-122">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5f822-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="287f1-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="287f1-123">See also</span></span>
-- [<span data-ttu-id="287f1-124">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="287f1-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="287f1-125">Debug</span><span class="sxs-lookup"><span data-stu-id="287f1-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f822-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5f822-123">See also</span></span>
+
+- [<span data-ttu-id="5f822-124">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="5f822-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5f822-125">Debug</span><span class="sxs-lookup"><span data-stu-id="5f822-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -7,17 +7,18 @@ helpviewer_keywords:
 - PasswordBox control [WPF]
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
-ms.openlocfilehash: 1d83e00a7f636052cf871d7bd104b37c077e4950
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218407"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="c6a02-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="c6a02-102">PasswordBox</span></span>
-<span data-ttu-id="c6a02-103">Il <xref:System.Windows.Controls.PasswordBox> controllo viene usato per inserire informazioni sensibili o riservate.</span><span class="sxs-lookup"><span data-stu-id="c6a02-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="675d1-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="675d1-102">PasswordBox</span></span>
+<span data-ttu-id="675d1-103">Il <xref:System.Windows.Controls.PasswordBox> controllo viene usato per inserire informazioni sensibili o riservate.</span><span class="sxs-lookup"><span data-stu-id="675d1-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6a02-104">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6a02-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="675d1-104">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="675d1-104">See also</span></span>
+
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="c6a02-105">Libreria di controlli</span><span class="sxs-lookup"><span data-stu-id="c6a02-105">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="675d1-105">Libreria di controlli</span><span class="sxs-lookup"><span data-stu-id="675d1-105">Control Library</span></span>](control-library.md)
