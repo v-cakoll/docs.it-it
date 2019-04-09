@@ -2,12 +2,12 @@
 title: <transport> di <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116282"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<Transport > di \<webHttpBinding >
 Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint del servizio configurato per ricevere richieste HTTP.  
@@ -56,7 +56,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Basic`|Usa l'autenticazione di base.|  
@@ -67,7 +67,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Basic`|Usa l'autenticazione di base.|  
@@ -85,6 +85,7 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Rappresenta le funzionalità di protezione del [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
@@ -94,4 +95,4 @@ Definisce le impostazioni di sicurezza a livello di trasporto per un endpoint de
 - [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Uso di associazioni per configurare servizi e client](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Modello di programmazione HTTP Web di WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

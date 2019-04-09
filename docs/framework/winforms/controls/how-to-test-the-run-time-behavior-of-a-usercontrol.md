@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Testare il comportamento in fase di esecuzione di UserControl'
+title: 'Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116493"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: Testare il comportamento in fase di esecuzione di UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl
 Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario testarne il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione basata su Windows separato e posizionare il controllo in un modulo di test, ma questa procedura non è pratica. Un modo più veloce e più semplice consiste nell'usare la **UserControl Test Container** offerte da Visual Studio. Questo contenitore di test viene avviata direttamente dal progetto di libreria di controlli Windows.  
   
 > [!IMPORTANT]
@@ -67,8 +67,9 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
 6.  Usare la **selezionare controllo utente** <xref:System.Windows.Forms.ComboBox> per passare tra i due controlli utente dal **EsempioTestContainer** progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.UserControl>
-- [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md)
-- [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Procedura dettagliata: Modifica di un controllo composito con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Procedura: Creare controlli compositi](how-to-author-composite-controls.md)
+- [Procedura dettagliata: Creazione di un controllo composito con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Procedura dettagliata: Modifica di un controllo composito con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Progettazione controllo utente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

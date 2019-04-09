@@ -2,12 +2,12 @@
 title: <security> di <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: aadf2058c66cea4919d5dc9aa5aeab7850fcc395
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116863"
 ---
 # <a name="security-of-peertransport"></a>\<security> of \<peerTransport>
 Contiene le impostazioni di sicurezza associate a un canale peer, compreso il tipo di autenticazione usato e la sicurezza applicata al trasporto del messaggio.  
@@ -38,7 +38,7 @@ Contiene le impostazioni di sicurezza associate a un canale peer, compreso il ti
   
 ## <a name="mode-attribute"></a>Attributo mode  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`None`|La sicurezza è disabilitata.|  
 |`Transport`|La sicurezza è fornita mediante HTTPS.|  
@@ -58,10 +58,11 @@ Contiene le impostazioni di sicurezza associate a un canale peer, compreso il ti
 |[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Definisce un trasporto peer per un'associazione personalizzata.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Sicurezza del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Protezione del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)

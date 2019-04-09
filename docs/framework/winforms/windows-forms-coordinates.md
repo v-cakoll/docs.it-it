@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116136"
 ---
 # <a name="windows-forms-coordinates"></a>Coordinate di Windows Form
 Il sistema di coordinate di un modulo di Windows si basa su coordinate del dispositivo e l'unità di misura quando si disegnano in Windows Form base è l'unità di dispositivo (in genere, il pixel). I punti nella schermata sono descritti dalle coppie di coordinate x e y, con le coordinate x crescenti a destra e le coordinate y aumentano dall'alto verso il basso. Il percorso dell'entità origin, rispetto allo schermo, varia a seconda del fatto che siano specificate le coordinate dello schermo o client.  
@@ -29,5 +29,6 @@ Il sistema di coordinate di un modulo di Windows si basa su coordinate del dispo
  In alcuni casi, potrebbe essere necessario eseguire il mapping da coordinate dello schermo a coordinate del client. È possibile farlo facilmente usando le <xref:System.Windows.Forms.Control.PointToClient%2A> e <xref:System.Windows.Forms.Control.PointToScreen%2A> metodi disponibili nel <xref:System.Windows.Forms.Control> classe. Ad esempio, il <xref:System.Windows.Forms.Control.MousePosition%2A> proprietà di <xref:System.Windows.Forms.Control> viene segnalato nelle coordinate dello schermo, ma è possibile la conversione in coordinate client.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

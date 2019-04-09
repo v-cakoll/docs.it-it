@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116350"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Procedura: Copiare ToolStripMenuItems
 In fase di progettazione è possibile copiare interi menu di primo livello e le voci dei relativi sottomenu in un'altra posizione in <xref:System.Windows.Forms.MenuStrip>. È anche possibile copiare singole voci di menu tra i menu di primo livello o modificare la posizione delle voci di menu all'interno di un menu.  
@@ -43,6 +43,7 @@ In fase di progettazione è possibile copiare interi menu di primo livello e le 
      La voce di sottomenu copiata viene inserita prima della voce di sottomenu selezionata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)

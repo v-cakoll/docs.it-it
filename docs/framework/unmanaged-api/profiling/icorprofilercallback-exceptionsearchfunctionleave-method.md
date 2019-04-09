@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d20aa04b292fd29b60d68b844ef410258d90d31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdea3b0cc5b21cd881fe0ff3e0278444a22d083d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117196"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>Metodo ICorProfilerCallback::ExceptionSearchFunctionLeave
 Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha terminato la ricerca di una funzione.  
@@ -43,5 +43,6 @@ HRESULT ExceptionSearchFunctionLeave();
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Metodo ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
