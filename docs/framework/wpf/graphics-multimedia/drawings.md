@@ -13,23 +13,24 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206408"
 ---
 # <a name="drawings"></a>Oggetti Drawing
 <xref:System.Windows.Media.Drawing> gli oggetti vengono utilizzati per tracciare in modo efficiente forme, immagini o testo. In cui vengono utilizzati quando sul disegno con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)  
-  [Procedure relative alle proprietà](drawings-how-to-topics.md)  
+  [Procedure relative](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Drawing>
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafica e funzionalità multimediali](index.md)

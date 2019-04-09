@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare il controllo ContextMenuStrip margini del segno e immagine'
+title: "Procedura: Configurare margini del segno di spunta e dell'immagine di ContextMenuStrip"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 8527c8f2195c586ba7d9c61c5c2ea1fa26bf53f8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0e78ed960904baaead8e8d23b51c97cf2edfd4ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189644"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Procedura: Configurare il controllo ContextMenuStrip margini del segno e immagine
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Procedura: Configurare margini del segno di spunta e dell'immagine di ContextMenuStrip
 È possibile personalizzare un oggetto <xref:System.Windows.Forms.ContextMenuStrip> impostando le proprietà <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> e <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> in varie combinazioni.  
   
 ## <a name="example"></a>Esempio  
@@ -35,7 +35,8 @@ ms.locfileid: "57715218"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)
-- [Procedura: Abilitare i margini di verifica e dell'immagine nei controlli ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [Procedura: Abilitare i margini del segno di spunta e dell'immagine nei controlli ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

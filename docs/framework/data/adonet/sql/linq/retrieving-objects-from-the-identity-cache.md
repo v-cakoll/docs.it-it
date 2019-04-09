@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211231"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recupero di oggetti dalla cache di identità
 In questo argomento vengono descritti i tipi di query LINQ to SQL che restituiscono un oggetto dalla cache delle identità gestita dall'oggetto <xref:System.Data.Linq.DataContext>.  
@@ -30,7 +30,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
   
  In questi formati generali, `Function1`, `Function2` e `predicate` vengono definiti nel modo seguente.  
   
- `Function1` può essere uno degli elementi seguenti:  
+ `Function1` può essere uno dei seguenti:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` può essere uno degli elementi seguenti:  
+ `Function2` può essere uno dei seguenti:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` deve essere un'espressione in cui la proprietà della chiave primaria dell'oggetto è impostata su un valore costante. Se un oggetto dispone di una chiave primaria definita da più proprietà, ogni proprietà della chiave primaria deve essere impostata su un valore costante. Di seguito sono riportati esempi del formato che deve essere adottato da `predicate`:  
+ `predicate` deve essere un'espressione in cui proprietà di chiave primaria dell'oggetto è impostata su un valore costante. Se un oggetto dispone di una chiave primaria definita da più proprietà, ogni proprietà della chiave primaria deve essere impostata su un valore costante. Di seguito sono riportati esempi del formato che deve essere adottato da `predicate`:  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,7 +65,8 @@ In questo argomento vengono descritti i tipi di query LINQ to SQL che restituisc
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+
+- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Identità dell'oggetto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Identità dell'oggetto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

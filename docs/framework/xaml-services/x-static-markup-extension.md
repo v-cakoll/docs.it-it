@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207084"
 ---
 # <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
 Fa riferimento a qualsiasi entità di codice statico in base al valore definito in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modalità conforme. La proprietà statica a cui viene fatto riferimento è utilizzabile per fornire il valore di una proprietà in XAML.  
@@ -83,5 +83,6 @@ Nell'implementazione di servizi XAML di .NET Framework, la gestione di questa es
  Per altre informazioni su come usare i prefissi e spazi dei nomi XAML per WPF, vedere [spazi dei nomi XAML e Mapping di Namespace per XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estensione di markup x:Type](x-type-markup-extension.md)
+
+- [Estensione del markup x:Type](x-type-markup-extension.md)
 - [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

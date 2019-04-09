@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194981"
 ---
 # <a name="images"></a>Immagini
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce supporto incorporato per più formati di immagine, rendering delle immagini ad alta fedeltà ed estendibilità dei codec.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce supporto incorporato per più formati di immagine, il rendering delle immagini ad alta fedeltà ed estendibilità dei codec.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)  
- [Procedure relative alle proprietà](imaging-how-to-topics.md)  
+ [Procedure relative](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,6 @@ ms.locfileid: "57372815"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Vedere anche
-- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+
+- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafica e funzionalità multimediali](index.md)

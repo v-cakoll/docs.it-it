@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189158"
 ---
 # <a name="understanding-generated-client-code"></a>Informazioni sul codice client generato
 Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera il codice client e un file di configurazione dell'applicazione client da usare per la compilazione di applicazioni client. In questo argomento viene fornita una panoramica degli esempi di codice generati per gli scenari del contratto di servizio standard. Per altre informazioni sulla creazione di un'applicazione client usando il codice generato, vedere [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -31,7 +31,7 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
 -   Identificazione dell'interfaccia del contratto di servizio di assistenza.  
   
 ### <a name="finding-service-contract-interfaces"></a>Individuazione delle interfacce del contratto di servizio  
- Per individuare le interfacce che modellano i contratti di servizio, cercare le interfacce contrassegnate con l'attributo <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. Spesso questo attributo può essere difficile da individuare con una lettura rapida a causa della presenza di altri attributi e di proprietà esplicite impostate sull'attributo stesso. Ricordare che l'interfaccia del contratto di servizio e l'interfaccia del contratto client sono due tipi diversi. Nell'esempio di codice seguente viene illustrato il contratto di servizio originale.  
+ Per individuare le interfacce che modellano i contratti di servizio, cercare le interfacce contrassegnate con l'attributo <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> . Spesso questo attributo può essere difficile da individuare con una lettura rapida a causa della presenza di altri attributi e di proprietà esplicite impostate sull'attributo stesso. Ricordare che l'interfaccia del contratto di servizio e l'interfaccia del contratto client sono due tipi diversi. Nell'esempio di codice seguente viene illustrato il contratto di servizio originale.  
   
  [!code-csharp[C_GeneratedCodeFiles#22](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#22)]  
   
@@ -63,7 +63,7 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
  In questo caso il tipo di dati è il tipo di dettaglio generato da un'eccezione specifica sul client, una <xref:System.ServiceModel.FaultException%601> in cui il parametro di tipo del dettaglio è `microsoft.wcf.documentation.SampleFault`. Per altre informazioni sui tipi di dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Per altre informazioni sulla gestione delle eccezioni nei client, vedere [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Individuazione dei contratti di callback per i servizi duplex  
- Se si individua un contratto di servizio per il quale l'interfaccia del contratto specifica un valore per la proprietà <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, quel contratto specifica un contratto duplex. I contratti duplex richiedono che l'applicazione client crei una classe di callback che implementa il contratto di callback e passa un'istanza di quella classe all'oggetto <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> o <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> usato per comunicare con il servizio. Per altre informazioni sui client duplex, vedere [come: Accedere ai servizi con un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Se si individua un contratto di servizio per il quale l'interfaccia del contratto specifica un valore per la proprietà <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> , quel contratto specifica un contratto duplex. I contratti duplex richiedono che l'applicazione client crei una classe di callback che implementa il contratto di callback e passa un'istanza di quella classe all'oggetto <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> o <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> usato per comunicare con il servizio. Per altre informazioni sui client duplex, vedere [come: Accedere ai servizi con un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Nel contratto seguente viene specificato un contratto di callback di tipo `SampleDuplexHelloCallback`.  
   
@@ -76,9 +76,10 @@ Lo [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
  [!code-vb[C_GeneratedCodeFiles#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_generatedcodefiles/vb/duplexproxycode.vb#4)]  
   
 ### <a name="finding-service-contract-channel-interfaces"></a>Individuazione delle interfacce del canale del contratto di servizio  
- Quando si usa la classe <xref:System.ServiceModel.ChannelFactory> con un'interfaccia del contratto del servizio, per aprire, chiudere o interrompere in modo esplicito il canale è necessario eseguire il cast all'interfaccia <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>. Per semplificare l'uso, lo strumento Svcutil.exe genera inoltre un'interfaccia di supporto che implementa l'interfaccia del contratto del servizio e <xref:System.ServiceModel.IClientChannel> per consentire l'interazione con l'infrastruttura del canale client senza dovere eseguire il cast. Nel codice seguente viene illustrata la definizione di un canale client di supporto che implementa il contratto del servizio precedente.  
+ Quando si usa la classe <xref:System.ServiceModel.ChannelFactory> con un'interfaccia del contratto del servizio, per aprire, chiudere o interrompere in modo esplicito il canale è necessario eseguire il cast all'interfaccia <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> . Per semplificare l'uso, lo strumento Svcutil.exe genera inoltre un'interfaccia di supporto che implementa l'interfaccia del contratto del servizio e <xref:System.ServiceModel.IClientChannel> per consentire l'interazione con l'infrastruttura del canale client senza dovere eseguire il cast. Nel codice seguente viene illustrata la definizione di un canale client di supporto che implementa il contratto del servizio precedente.  
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica dei client WCF](../../../../docs/framework/wcf/wcf-client-overview.md)

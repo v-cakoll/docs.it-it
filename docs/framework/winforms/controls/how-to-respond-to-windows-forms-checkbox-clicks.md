@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rispondere a un Windows Form controlli CheckBox'
+title: 'Procedura: Rispondere alla selezione dei controlli CheckBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211985"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: Rispondere a un Windows Form controlli CheckBox
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Procedura: Rispondere alla selezione dei controlli CheckBox di Windows Forms
 Ogni volta che un utente fa clic su un controllo Windows Form <xref:System.Windows.Forms.CheckBox> (controllo), il <xref:System.Windows.Forms.Control.Click> evento si verifica. È possibile programmare l'applicazione per eseguire un'azione a seconda dello stato della casella di controllo.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Per rispondere alle selezioni la casella di controllo  
@@ -136,7 +136,8 @@ Ogni volta che un utente fa clic su un controllo Windows Form <xref:System.Windo
     >  Quando la <xref:System.Windows.Forms.CheckBox.ThreeState%2A> è impostata su `true`, il <xref:System.Windows.Forms.CheckBox.Checked%2A> restituisce proprietà `true` per entrambi <xref:System.Windows.Forms.CheckState.Checked> e <xref:System.Windows.Forms.CheckState.Indeterminate>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.CheckBox>
-- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procedura: Impostare le opzioni con i controlli CheckBox di Windows Form](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Impostare opzioni con i controlli CheckBox di Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [Controllo CheckBox](checkbox-control-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 038e259810111d2d648c72a9f43afabe11a07f29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206044"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Procedura: Richiamare una finestra di dialogo di stampa
 Per fornire la possibilità di stampa dall'applicazione, è possibile semplicemente creare e aprire un <xref:System.Windows.Controls.PrintDialog> oggetto.  
@@ -32,7 +32,8 @@ Per fornire la possibilità di stampa dall'applicazione, è possibile sempliceme
  In teoria, è possibile usare il <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> metodo senza mai aprire la finestra di dialogo. In tal senso, il controllo può essere utilizzato come un componente di stampa non visti. Ma per motivi di prestazioni sarebbe preferibile utilizzare il il <xref:System.Printing.PrintQueue.AddJob%2A> metodo o uno dei numerosi <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metodi del <xref:System.Windows.Xps.XpsDocumentWriter>. Per altre informazioni, vedere [a livello di codice stampa di file XPS](how-to-programmatically-print-xps-files.md) e.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.PrintDialog>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Panoramica della stampa](printing-overview.md)
+- [Cenni preliminari sulla stampa](printing-overview.md)
 - [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

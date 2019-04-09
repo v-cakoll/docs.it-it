@@ -6,12 +6,12 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195046"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Procedura: Disegnare un'area con un pennello di sistema
 Il <xref:System.Windows.SystemColors> classe fornisce accesso ai pennelli di sistema e i colori, ad esempio <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, e <xref:System.Windows.SystemColors.DesktopBrush%2A>. Un pennello di sistema è un <xref:System.Windows.Media.SolidColorBrush> che disegna un'area con il colore di sistema specificato. Un pennello di sistema produce sempre un riempimento a tinta unita e non può essere usato per creare una sfumatura.  
@@ -48,5 +48,6 @@ Il <xref:System.Windows.SystemColors> classe fornisce accesso ai pennelli di sis
  Per un esempio che illustra come usare un colore di sistema in una sfumatura, vedere [Usa colori di sistema in una sfumatura](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Usare i colori di sistema in una sfumatura](how-to-use-system-colors-in-a-gradient.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](painting-with-solid-colors-and-gradients-overview.md)

@@ -2,12 +2,12 @@
 title: Proprietà di esecuzione del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 96f5057986e256f485f60221d1c6ad3d2494be55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193902"
 ---
 # <a name="workflow-execution-properties"></a>Proprietà di esecuzione del flusso di lavoro
 Tramite l'archiviazione thread-local (TLS), CLR gestisce un contesto di esecuzione per ogni thread. Questo contesto di esecuzione determina le proprietà note dei thread quali l'identità del thread, la transazione di ambiente e il set di autorizzazioni corrente oltre alle proprietà del thread definite dall'utente come gli slot denominati.  
@@ -162,6 +162,7 @@ End default text.
  Le proprietà di esecuzione del flusso di lavoro possono essere usate dagli autori di attività personalizzate e consentono di gestire l'handle per attività quali <xref:System.ServiceModel.Activities.CorrelationScope> e <xref:System.Activities.Statements.TransactionScope>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>
 - <xref:System.Activities.RegistrationContext>

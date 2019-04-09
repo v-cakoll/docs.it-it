@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Usare il Moniker del servizio Windows Communication Foundation senza registrazione'
+title: 'Procedura: Usare il moniker del servizio di Windows Communication Foundation senza registrazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203977"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procedura: Usare il Moniker del servizio Windows Communication Foundation senza registrazione
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Procedura: Usare il moniker del servizio di Windows Communication Foundation senza registrazione
 Per connettersi e comunicare con un servizio Windows Communication Foundation (WCF), un'applicazione client WCF deve avere i dettagli dell'indirizzo del servizio, la configurazione dell'associazione e contratto di servizio.  
   
  Il moniker del servizio WCF ottiene in genere il contratto necessario tramite la precedente registrazione dei tipi di attributo obbligatorio, ma potrebbero esserci casi in cui questo non è fattibile. Invece che con la registrazione, il moniker può ottenere la definizione del contratto nella forma di un documento WSDL (Web Services Definition Language) tramite l'uso del parametro `wsdl` o dello scambio metadati, tramite il parametro `mexAddress`.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Se il formato del moniker non è valido o se il servizio non è disponibile, la chiamata a `GetObject` restituirà un errore di sintassi non valida. Se si riceve questo errore, verificare che il moniker che si sta usando sia valido e che il servizio sia disponibile.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Registrare e configurare un Moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Procedura: Registrare e configurare un moniker del servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

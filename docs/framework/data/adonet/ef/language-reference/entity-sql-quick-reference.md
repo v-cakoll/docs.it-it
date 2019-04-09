@@ -2,19 +2,19 @@
 title: Riferimento rapido a Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207071"
 ---
 # <a name="entity-sql-quick-reference"></a>Riferimento rapido a Entity SQL
 In questo argomento viene fornita una guida di riferimento rapido alle query [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Le query in questo argomento sono basate sul modello Sales di AdventureWorks.  
   
 ## <a name="literals"></a>Valori letterali  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Stringa  
  I valori letterali carattere di tipo String possono essere Unicode e non Unicode. Le stringhe Unicode vengono anteposta una n Ad esempio, `N'hello'`.  
   
  Di seguito è illustrato un esempio di valore letterale stringa Non-Unicode:  
@@ -27,7 +27,7 @@ In questo argomento viene fornita una guida di riferimento rapido alle query [!I
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |hello|  
   
@@ -44,7 +44,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
@@ -60,7 +60,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -252,7 +252,7 @@ using SqlServer; LOWER('AA');
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
 |aa|  
   
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Output:  
   
-|ID|Nome|  
+|Id|Nome|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE e SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce la clausola SELECT VALUE per consentire di ignorare la costruzione di riga implicita. In una clausola SELECT VALUE può essere specificato un solo elemento. Quando viene usata questa clausola, viene costruito alcun wrapper di riga intorno agli elementi nella clausola SELECT e una raccolta della forma desiderata può essere prodotta, ad esempio: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce la clausola SELECT VALUE per ignorare la costruzione di riga implicita. In una clausola SELECT VALUE può essere specificato un solo elemento. Quando viene usata questa clausola, viene costruito alcun wrapper di riga intorno agli elementi nella clausola SELECT e una raccolta della forma desiderata può essere prodotta, ad esempio: `SELECT VALUE a`.  
   
  Esempio:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELEZIONE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce inoltre il costruttore ROW per la costruzione di righe arbitrarie. SELECT accetta uno o più elementi nella proiezione e restituisce un record di dati con campi, ad esempio `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce inoltre il costruttore row per costruire righe arbitrarie. SELECT accetta uno o più elementi nella proiezione e restituisce un record di dati con campi, ad esempio `SELECT a, b, c`.  
   
  Esempio:  
   
@@ -358,10 +358,11 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Output:  
   
-|Valore|  
+|Value|  
 |-----------|  
-|true|  
+|TRUE|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

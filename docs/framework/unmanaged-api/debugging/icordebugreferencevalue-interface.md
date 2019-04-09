@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206460"
 ---
 # <a name="icordebugreferencevalue-interface"></a>Interfaccia ICorDebugReferenceValue
 Fornisce metodi che gestiscono un valore che è un riferimento a un oggetto. (Vale a dire, questa interfaccia fornisce metodi che gestiscono un puntatore.) Questa interfaccia implementerà "ICorDebugValue".  
@@ -54,6 +54,5 @@ Fornisce metodi che gestiscono un valore che è un riferimento a un oggetto. (Va
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
-
 
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

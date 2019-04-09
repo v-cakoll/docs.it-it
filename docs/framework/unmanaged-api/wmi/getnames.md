@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202651"
 ---
-# <a name="getnames-function"></a>GetNames (funzione)
+# <a name="getnames-function"></a>Funzione GetNames
 Recupera un subset o tutti i nomi delle proprietà di un oggetto. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -80,7 +80,6 @@ L'oggetto denominato restituito è controllato da una combinazione di flag e i p
 
 I valori di flag `lFlags` sono campi di bit
 
-
 I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di bit definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice.  È possibile combinare un flag di ogni gruppo con eventuali flag da qualsiasi altro gruppo. Tuttavia, i flag dallo stesso gruppo si escludono a vicenda. 
 
 | Flag di gruppo 1 |Value  |Descrizione  |
@@ -90,7 +89,7 @@ I flag che possono essere passati come le `lEnumFlags` argomenti sono i campi di
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Restituire solo le proprietà che non dispongono di un qualificatore del nome specificato per il `strQualifierName` parametro. Se questo flag viene utilizzato, è necessario specificare `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Restituire solo le proprietà che hanno un qualificatore del nome specificato per il `wszQualifierName` parametro e anche avere un valore identico a quello specificato dal `pQualifierVal` struttura. Se questo flag viene utilizzato, è necessario specificare sia un `wszQualifierName` e un `pQualifierValue`. |
 
-| Flag di gruppo 2 |Valore  |Descrizione  |
+| Flag di gruppo 2 |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Restituire solo i nomi di proprietà che definiscono le chiavi. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Restituito solo nomi di proprietà che sono riferimenti a oggetti. |
@@ -112,4 +111,5 @@ La funzione alloca sempre una nuova `SAFEARRAY` se viene restituito `WBEM_S_NO_E
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

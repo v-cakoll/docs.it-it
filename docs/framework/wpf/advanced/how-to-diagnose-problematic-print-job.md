@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Diagnosticare processi di stampa problematici'
+title: 'Procedura: Diagnosticare un processo di stampa problematico'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211042"
 ---
-# <a name="how-to-diagnose-problematic-print-job"></a>Procedura: Diagnosticare processi di stampa problematici
+# <a name="how-to-diagnose-problematic-print-job"></a>Procedura: Diagnosticare un processo di stampa problematico
 Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su processi di stampa lenti o che non vengono eseguiti affatto. Il set completo di proprietà di processo di stampa esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida diagnosi remota dei processi di stampa.  
   
 ## <a name="example"></a>Esempio  
@@ -82,10 +82,11 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& Operatore (C# riferimento)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [Operatore & (Riferimenti per C#)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Documenti in WPF](documents-in-wpf.md)
-- [Panoramica della stampa](printing-overview.md)
+- [Cenni preliminari sulla stampa](printing-overview.md)

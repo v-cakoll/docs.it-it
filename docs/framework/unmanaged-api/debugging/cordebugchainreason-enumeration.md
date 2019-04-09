@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 621ae6dae32e79a26d81441841b4c6a274d86f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac790ebbf25ee3095db293ba90612be37fff9b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190444"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Enumerazione CorDebugChainReason
 Indica i motivi che determinano l'avvio di una catena di chiamate.  
@@ -48,7 +48,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`CHAIN_NONE`|Non è stata avviata alcuna catena di chiamate.|  
 |`CHAIN_CLASS_INIT`|La catena è stata avviata da un costruttore.|  
@@ -77,4 +77,5 @@ typedef enum CorDebugChainReason {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

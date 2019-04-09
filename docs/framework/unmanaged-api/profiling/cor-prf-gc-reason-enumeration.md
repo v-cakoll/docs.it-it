@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13740920e8db5d44b71cd3c324742945c64b3e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196944"
 ---
 # <a name="corprfgcreason-enumeration"></a>Enumerazione COR_PRF_GC_REASON
 Indica il motivo per cui è in corso la Garbage Collection.  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_GC_INDUCED`|L'operazione di garbage collection è stata causata da un <xref:System.GC.Collect%2A> (metodo).|  
 |`COR_PRF_GC_OTHER`|Il motivo è specificato.|  
@@ -52,4 +52,5 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

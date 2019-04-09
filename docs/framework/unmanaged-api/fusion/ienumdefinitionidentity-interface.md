@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19ca92db6f57a004dca54f6e22db10603c9498a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214845"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>Interfaccia IEnumDefinitionIdentity
 Serve come enumeratore per una raccolta di `IDefinitionIdentity` oggetti.  
@@ -68,5 +68,6 @@ IEnumDefinitionIdentity : IUnknown {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [Interfaccia IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

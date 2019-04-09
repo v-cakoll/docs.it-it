@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190730"
 ---
 # <a name="custom-animations-overview"></a>Cenni preliminari sulle animazioni personalizzate
 Questo argomento descrive come e quando estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogrammi chiave e classi di animazione personalizzati o usando il callback per frame come alternativa al sistema.  
@@ -53,7 +53,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
   
 -   Crea un'interpolazione tra il valore del fotogramma chiave precedente e il proprio valore implementando il metodo InterpolateValueCore.  
   
- **Istruzioni per l'implementazione**  
+ **Per istruzioni sull'implementazione**  
   
  Eseguire la derivazione dalla classe astratta *\<Tipo>* KeyFrame e implementare il metodo InterpolateValueCore. Il metodo InterpolateValueCore restituisce il valore corrente del fotogramma chiave. Accetta due parametri: il valore del fotogramma chiave precedente e un valore di avanzamento compreso tra 0 e 1. Un avanzamento pari a 0 indica che il fotogramma chiave è appena stata avviata e un valore pari a 1 indica che il fotogramma chiave è appena stato completato e deve restituire il valore specificato dal relativo <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> proprietà.  
   
@@ -68,7 +68,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ### <a name="derive-from-typeanimationbase"></a>Derivazione dalla classe \<Tipo>AnimationBase  
  La derivazione da una classe *\<Tipo>* AnimationBase è il modo più semplice per creare un nuovo tipo di animazione. Usare questo approccio quando si desidera creare una nuova animazione per il tipo che dispone già di una classe *\<Tipo>* AnimationBase.  
   
- **Istruzioni per l'implementazione**  
+ **Per istruzioni sull'implementazione**  
   
  Eseguire la derivazione di una classe *\<Tipo>* Animation e implementare il metodo GetCurrentValueCore. Il metodo GetCurrentValueCore restituisce il valore corrente dell'animazione. Accetta tre parametri: un valore iniziale suggerito, un valore finale suggerito e un <xref:System.Windows.Media.Animation.AnimationClock>, utilizzabile per determinare lo stato di avanzamento dell'animazione.  
   
@@ -83,7 +83,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ### <a name="derive-from-animationtimeline"></a>Derivazione dalla classe AnimationTimeline  
  Derivare dal <xref:System.Windows.Media.Animation.AnimationTimeline> classe quando si desidera creare un'animazione per un tipo che non dispone già di un oggetto corrispondente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'animazione o si vuole creare un'animazione che non sia fortemente tipizzata.  
   
- **Istruzioni per l'implementazione**  
+ **Per istruzioni sull'implementazione**  
   
  Derivativo di <xref:System.Windows.Media.Animation.AnimationTimeline> classe ed eseguire l'override dei membri seguenti:  
   
@@ -111,7 +111,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
 ## <a name="use-per-frame-callback"></a>Usare il callback per frame  
  Usare questo approccio quando è necessario ignorare completamente il sistema di animazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Uno scenario di questo approccio è rappresentato dalle animazioni fisiche, dove a ciascun passaggio dell'animazione è necessario ricalcolare una nuova direzione o posizione degli oggetti animati in base all'ultima serie di interazioni dell'oggetto.  
   
- **Istruzioni per l'implementazione**  
+ **Per istruzioni sull'implementazione**  
   
  A differenza degli altri approcci descritti in questa panoramica, per usare un callback per frame non è necessario creare un'animazione personalizzata o una classe con fotogrammi chiave.  
   
@@ -124,6 +124,7 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
  Per altre informazioni, vedere il <xref:System.Windows.Media.CompositionTarget.Rendering> pagina.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
 - [Cenni preliminari sulle tecniche di animazione delle proprietà](property-animation-techniques-overview.md)

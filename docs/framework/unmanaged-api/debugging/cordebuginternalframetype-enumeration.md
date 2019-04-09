@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05184ceb3b32eb003951fff5cfdfbfb813992552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216054"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumerazione CorDebugInternalFrameType
 Identifica il tipo di stack frame. Questa enumerazione viene utilizzata per la [ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) (metodo).  
@@ -47,7 +47,7 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Valore null. Il `ICorDebugInternalFrame::GetFrameType` metodo non restituisce mai questo valore.|  
 |`STUBFRAME_M2U`|Un frame di uno stub a gestito.|  
@@ -71,4 +71,5 @@ typedef enum CorDebugInternalFrameType {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

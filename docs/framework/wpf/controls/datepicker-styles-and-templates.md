@@ -1,5 +1,5 @@
 ---
-title: DatePicker stili e modelli
+title: Stili e modelli di DatePicker
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ControlTemplate [WPF], DatePicker
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 685eb9478f1ff2da9047546648320a94305fff57
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206135"
 ---
-# <a name="datepicker-styles-and-templates"></a>DatePicker stili e modelli
+# <a name="datepicker-styles-and-templates"></a>Stili e modelli di DatePicker
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.DatePicker> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datepicker-parts"></a>Parti del controllo DatePicker  
@@ -77,6 +77,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)

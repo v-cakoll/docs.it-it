@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Controlli di gruppo con il controllo Panel di Windows Form usando la finestra di progettazione'
+title: 'Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214832"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procedura: Controlli di gruppo con il controllo Panel di Windows Form usando la finestra di progettazione
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione
 Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per raggruppare altri controlli. Esistono tre motivi per i controlli di gruppo. Uno è visual raggruppamento di elementi di form per un'interfaccia utente non crittografato. un vantaggio è a livello di codice di raggruppamento, dei pulsanti di opzione, ad esempio; l'ultimo è per spostare i controlli in un'unità in fase di progettazione.  
   
 > [!NOTE]
@@ -30,6 +30,7 @@ Windows Form <xref:System.Windows.Forms.Panel> controlli vengono utilizzati per 
 3.  (Facoltativo) Se si desidera aggiungere un bordo a un pannello, impostare il <xref:System.Windows.Forms.BorderStyle> proprietà. Sono disponibili tre opzioni: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, e <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controllo Panel](panel-control-windows-forms.md)
-- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
 - [Procedura: Impostare lo sfondo di un controllo Panel](how-to-set-the-background-of-a-windows-forms-panel.md)

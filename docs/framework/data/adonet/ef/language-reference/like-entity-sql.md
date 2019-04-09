@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197711"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina se un oggetto `String` di caratteri specifico corrisponde a un criterio specificato.  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Specifica la negazione del risultato di LIKE.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` se `string` corrisponde al criterio; in caso contrario, `false`.  
+ `true` Se il `string` corrisponde al modello; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le espressioni che usano l'operatore LIKE vengono valutate in gran parte esattamente come le espressioni che utilizzano l'uguaglianza come criterio di filtro. Tuttavia, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] espressioni che utilizzano l'operatore LIKE possono includere valori letterali e caratteri jolly.  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Se la destinazione è costituita da un provider specifico, è possibile usare estensioni specifiche del provider. Tali costrutti possono tuttavia essere trattati in modo diverso, ad esempio da altri provider. SqlServer supporta ad esempio i modelli [first-last] e [^first-last], dove il primo consente di trovare una corrispondenza esatta di un carattere compreso tra il primo e l'ultimo, mentre il secondo consente di trovare una corrispondenza esatta di un carattere non compreso tra il primo e l'ultimo.  
   
 ### <a name="escape"></a>Escape  
- Usando la clausola ESCAPE, è possibile cercare stringhe di caratteri che includono uno o più dei caratteri jolly speciali descritti nella tabella nella sezione precedente. Si presupponga, ad esempio, che diversi documenti includano il valore letterale "100%" nel titolo e che si desideri cercare tutti i documenti di questo tipo. Poiché il carattere di percentuale (%) è un carattere jolly, è necessario effettuare l'escape con la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] clausola di ESCAPE per eseguire correttamente la ricerca. Di seguito viene illustrato un esempio di questo filtro.  
+ Usando la clausola ESCAPE, è possibile cercare stringhe di caratteri che includono uno o più dei caratteri jolly speciali descritti nella tabella nella sezione precedente. Si presupponga, ad esempio, che diversi documenti includano il valore letterale "100%" nel titolo e che si desideri cercare tutti i documenti di questo tipo. Poiché la forma di percentuale (%)) carattere è un carattere jolly, è necessario effettuare l'escape con la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] clausola di ESCAPE per eseguire correttamente la ricerca. Di seguito viene illustrato un esempio di questo filtro.  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

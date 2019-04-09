@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Stampare un File di testo con più pagine in Windows Form'
+title: 'Procedura: Stampare un file di testo con più pagine in Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192180"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: Stampare un File di testo con più pagine in Windows Form
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedura: Stampare un file di testo con più pagine in Windows Form
 La stampa di testo è un'operazione molto comune nelle applicazioni per Windows. La classe <xref:System.Drawing.Graphics> fornisce metodi per visualizzare oggetti (grafica o testo) su una periferica, ad esempio un monitor o una stampante.  
   
 > [!NOTE]
@@ -61,6 +61,7 @@ La stampa di testo è un'operazione molto comune nelle applicazioni per Windows.
 -   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Supporto per la stampa in Windows Forms](windows-forms-print-support.md)
+- [Supporto per la stampa in Windows Form](windows-forms-print-support.md)

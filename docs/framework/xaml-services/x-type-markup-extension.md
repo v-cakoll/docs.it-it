@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211634"
 ---
 # <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il tipo sottostante per un tipo XAML specificato.  
@@ -44,7 +44,7 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
 |`typeNameValue`|Obbligatorio. Nome di un tipo risolvibile in nomi XAML predefinito corrente; o specificato mappati prefisso se `prefix` fornito.|  
   
 ## <a name="remarks"></a>Note  
- Il `x:Type` estensione di markup è una funzione simile al `typeof()` operatore in C# o `GetType` operatore in Microsoft Visual Basic.  
+ Il `x:Type` estensione di markup è una funzione simile al `typeof()` operatore in c# o `GetType` operatore in Microsoft Visual Basic.  
   
  Il `x:Type` estensione di markup fornisca un comportamento di conversione da stringa per le proprietà che accettano il tipo <xref:System.Type>. L'input è un tipo XAML. La relazione tra il tipo XAML di input e output di CLR <xref:System.Type> è che l'output <xref:System.Type> è la <xref:System.Xaml.XamlType.UnderlyingType%2A> dell'input <xref:System.Xaml.XamlType>, dopo aver cercato le necessarie <xref:System.Xaml.XamlType> basata sul contesto dello schema XAML e la <xref:System.Windows.Markup.IXamlTypeResolver>service fornisce il contesto.  
   
@@ -80,7 +80,8 @@ Fornisce Common Language Runtime <xref:System.Type> oggetto che rappresenta il t
  In WPF, è possibile usare le funzionalità di XAML 2009, ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Style>
 - [Applicazione di stili e modelli](../wpf/controls/styling-and-templating.md)
-- [Cenni preliminari su XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Panoramica di XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Estensioni di markup e XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

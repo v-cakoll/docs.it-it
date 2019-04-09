@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195163"
 ---
 # <a name="assemblymetadata-structure"></a>Struttura ASSEMBLYMETADATA
 Contiene informazioni sull'assembly di riferimento, inclusi la versione e del relativo livello di supporto per le impostazioni locali, processori e sistemi operativi.  
@@ -45,7 +45,7 @@ typedef struct {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`usMajorVersion`|Il numero di versione principale dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMajorVersion` vengono impostate, la versione principale non è specificata.|  
 |`usMinorVersion`|Il numero di versione secondaria dell'assembly di riferimento. Questo valore non può essere zero. Se tutti i bit di `usMinorVersion` vengono impostate, la versione secondaria non è specificata.|  
@@ -68,6 +68,7 @@ typedef struct {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [Struttura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

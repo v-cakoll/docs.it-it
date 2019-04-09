@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190631"
 ---
 # <a name="3-d-transformations-overview"></a>Cenni preliminari sulle trasformazioni tridimensionali
 Questo argomento descrive come applicare trasformazioni a modelli tridimensionali nel sistema grafico di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le trasformazioni consentono allo sviluppatore di riposizionare, ridimensionare e orientare nuovamente i modelli senza modificare i valori di base che li definiscono.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>Spazio delle coordinate tridimensionali  
  Nella grafica 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è incapsulato in un elemento <xref:System.Windows.Controls.Viewport3D>, che può appartenere alla struttura dell'elemento bidimensionale. Il sistema grafico considera Viewport3D come un oggetto visivo bidimensionale in modo analogo a molti altri in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D funziona come una finestra, ovvero un riquadro di visualizzazione, in una scena tridimensionale. Più precisamente, si tratta di una superficie sulla quale viene proiettata una scena tridimensionale.  Anche se è possibile usare l'oggetto Viewport3D con altri oggetti disegno bidimensionali nello stesso grafico della scena, non è possibile inserire oggetti bidimensionali e tridimensionali in un oggetto Viewport3D. Nella discussione seguente lo spazio delle coordinate descritto è contenuto nell'elemento Viewport3D.  
   
@@ -106,6 +104,7 @@ Esempio di rotazione
  Poiché anche le fotocamere sono modelli, è possibile trasformare anche le proprietà delle fotocamere.  Sebbene sia possibile modificare l'aspetto grafico della scena trasformando la posizione della fotocamera o le distanze del piano, trasformando di fatto l'intera proiezione della scena, si noti che molti effetti raggiungibili in questo modo non hanno molto senso visivo per il visualizzatore rispetto alle trasformazioni applicate al percorso o alla posizione dei modelli nella scena.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+
+- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [2-D Transforms Sample (Esempio di trasformazioni 2D)](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [Esempio di trasformazioni 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

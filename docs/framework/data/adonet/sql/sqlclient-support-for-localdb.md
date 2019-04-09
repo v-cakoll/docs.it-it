@@ -2,12 +2,12 @@
 title: Supporto SqlClient per LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204757"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Supporto SqlClient per LocalDB
 A partire da SQL Server nome in codice Denali, una versione leggera di SQL Server, chiamata LocalDB, sarà disponibile. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
@@ -29,7 +29,7 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` non è consentito quando ci si connette a un database di LocalDB.  
+ `User Instance=True` non è consentito quando ci si connette a un database LocalDB.  
   
  È possibile scaricare LocalDB da [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se si utilizzerà sqlcmd.exe per modificare i dati nell'istanza di LocalDB, sarà necessario sqlcmd da SQL Server 2012, è anche possibile ottenere dal Feature Pack di SQL Server 2012.  
   
@@ -59,5 +59,6 @@ A partire da SQL Server nome in codice Denali, una versione leggera di SQL Serve
 -   Usare la parola chiave della stringa di connessione `AttachDBFilename` per specificare il file con estensione MDF.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+
+- [Funzionalità SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-ms.openlocfilehash: 9ce4375d9e89e829349a2088daf4556fb05e9e94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211478"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associazioni di Windows Communication Foundation
 Le associazioni specificano come un endpoint del servizio Windows Communication Foundation (WCF) comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  
@@ -31,9 +31,10 @@ Le associazioni specificano come un endpoint del servizio Windows Communication 
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Endpoint: Gli indirizzi, associazioni e contratti](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Endpoint: indirizzi, associazioni e contratti](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Associazioni](../../../docs/framework/wcf/feature-details/bindings.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md)

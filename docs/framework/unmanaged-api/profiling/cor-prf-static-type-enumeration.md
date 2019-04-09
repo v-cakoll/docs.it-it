@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190496"
 ---
 # <a name="corprfstatictype-enumeration"></a>Enumerazione COR_PRF_STATIC_TYPE
 Indica se un campo è statico e, in tal caso, la qualità statica che si applica al campo. Questi valori possono essere combinati utilizzando l'operatore OR bit per indicare che il campo dispone di più, la qualità statica diverse.  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|Il campo non è statico.|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Il campo è statico dominio applicazione.|  
@@ -58,4 +58,5 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

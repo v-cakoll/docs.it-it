@@ -1,17 +1,17 @@
 ---
-title: Materiale sussidiario di sicurezza e procedure consigliate
+title: Indicazioni di sicurezza e procedure consigliate
 ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: 1a102de6780b59295b12bbaca50bca8ff170febe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210711"
 ---
-# <a name="security-guidance-and-best-practices"></a>Materiale sussidiario di sicurezza e procedure consigliate
+# <a name="security-guidance-and-best-practices"></a>Indicazioni di sicurezza e procedure consigliate
 Negli argomenti di questa sezione presentano materiale sussidiario e gli elementi da considerare durante la creazione di proteggere le applicazioni di Windows Communication Foundation (WCF). Per altre informazioni su Windows Server AppFabric e sicurezza, vedere [sicurezza del modello per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>In questa sezione  
@@ -25,5 +25,6 @@ Negli argomenti di questa sezione presentano materiale sussidiario e gli element
  Questo argomento contiene considerazioni sulle prestazioni e sulla sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

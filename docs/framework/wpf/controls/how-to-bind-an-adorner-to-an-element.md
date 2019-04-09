@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare uno strumento decorativo visuale a un elemento'
+title: 'Procedura: Associare uno strumento decorativo a un elemento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: 4943121aaf8ee6524be3fc9004eafee4fa92e527
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 54c9e6dfff2bbf7bfabde523b5d6ae5a623fe733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194721"
 ---
-# <a name="how-to-bind-an-adorner-to-an-element"></a>Procedura: Associare uno strumento decorativo visuale a un elemento
+# <a name="how-to-bind-an-adorner-to-an-element"></a>Procedura: Associare uno strumento decorativo a un elemento
 Questo esempio illustra come associare programmaticamente uno strumento decorativo a un oggetto specificato <xref:System.Windows.UIElement>.  
   
 ## <a name="example"></a>Esempio  
@@ -34,4 +34,5 @@ Questo esempio illustra come associare programmaticamente uno strumento decorati
 >  Non è attualmente possibile usare [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] per associare uno strumento decorativo a un altro elemento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sugli strumenti decorativi](adorners-overview.md)
+
+- [Cenni preliminari sugli strumenti decorativi visuali](adorners-overview.md)

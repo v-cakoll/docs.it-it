@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 886e2a81bab9fbf64668159b501a1d20180b9462
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6018b5b06a138b38b7b97df280a3e4c4ea0512d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208410"
 ---
 # <a name="functionenter-function"></a>Funzione FunctionEnter
 Notifica al profiler di controllo viene passato a una funzione.  
@@ -64,6 +64,7 @@ void __stdcall FunctionEnter (
  **Versioni di .NET framework:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzione FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [Funzione FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [Funzione FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)

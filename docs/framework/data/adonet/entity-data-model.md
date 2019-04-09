@@ -2,12 +2,12 @@
 title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197919"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato. EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
@@ -16,24 +16,24 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
   
  Un `conceptual model` è una rappresentazione specifica della struttura di dati come entità e relazioni e viene in genere definito in un linguaggio DSL che implementa i concetti del modello EDM. [Linguaggio di definizione schema concettuale (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) è riportato un esempio di questo tipo un linguaggio specifico di dominio. Entità e relazioni descritte in un modello concettuale possono essere considerate come astrazioni di oggetti e associazioni in un'applicazione. In questo modo gli sviluppatori hanno la possibilità di concentrarsi sul modello concettuale senza preoccuparsi dello schema di archiviazione e di scrivere il codice avendo come obiettivo l'efficienza e la manutenibilità. Nel frattempo i progettisti dello schema di archiviazione possono concentrarsi sull'efficienza di accesso ai dati, archiviazione e scalabilità.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Negli argomenti di questa sezione vengono descritti i concetti relativi a Entity Data Model. I linguaggi DSL che implementano EDM devono includere i concetti descritti di seguito. Si noti che il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa CSDL per definire i modelli concettuali. Per altre informazioni, vedere [CSDL Specification](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
  [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
  [Entity Data Model: Spazi dei nomi](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: Tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Entity Data Model: Ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [estremità dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
+ [entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
   
- [molteplicità di estremità dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [molteplicità di entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [set di associazioni](../../../../docs/framework/data/adonet/association-set.md)  
   
- [estremità del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [entità finale del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [tipo di associazione](../../../../docs/framework/data/adonet/association-type.md)  
   
@@ -62,6 +62,7 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
  [vincolo di integrità referenziale](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti di ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Panoramica di file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Panoramica sui file con estensione edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Specifica CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

@@ -8,27 +8,28 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195514"
 ---
 # <a name="typography"></a>Opzioni tipografiche
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include il supporto per una presentazione dettagliata del contenuto di testo. Il rendering del testo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene eseguito usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], che ne migliora la chiarezza e la leggibilità. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta inoltre [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere, che offrono funzionalità aggiuntive oltre a quelli definiti per il [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Funzionalità tipografiche di WPF](typography-in-wpf.md)  
- [Panoramica su ClearType](cleartype-overview.md)  
+ [Cenni preliminari su ClearType](cleartype-overview.md)  
  [Impostazioni del Registro di sistema ClearType](cleartype-registry-settings.md)  
  [Disegno di testo formattato](drawing-formatted-text.md)  
  [Formattazione del testo avanzata](advanced-text-formatting.md)  
  [Tipi di carattere](fonts-wpf.md)  
  [Glifi](glyphs.md)  
- [Procedure relative alle proprietà](typography-how-to-topics.md)  
+ [Procedure relative](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Documents.Typography>
 - [Documenti in WPF](documents-in-wpf.md)
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211394"
 ---
 # <a name="preview-events"></a>Eventi di anteprima
 Eventi di anteprima, noti anche come eventi di tunneling, sono eventi indirizzati in cui la direzione della route viene trasferito dalla radice dell'applicazione verso l'elemento che ha generato l'evento e viene indicato come origine di dati dell'evento. Non tutti gli scenari di evento supportano o richiedono eventi di anteprima. questo argomento descrive le situazioni in cui gli eventi di anteprima sono presenti, come le applicazioni o componenti devono essere gestiti, e i casi in cui la creazione di eventi di anteprima in componenti personalizzati o classi potrebbe essere appropriata.  
@@ -30,5 +30,6 @@ Eventi di anteprima, noti anche come eventi di tunneling, sono eventi indirizzat
  Ognuna di queste tecniche ha effetti collaterali o le limitazioni. L'effetto collaterale di gestione dell'evento di anteprima è che la gestione dell'evento a questo punto può disattivare i gestori che prevedono di gestire l'evento di bubbling e pertanto la limitazione è che in genere non è una buona idea per contrassegnare l'evento come gestito mentre è ancora attivata la Previ parte uova della route. La limitazione del `handledEventsToo` tecnica è che non è possibile specificare un `handledEventsToo` gestore in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] come un attributo, è necessario registrare il gestore dell'evento nel codice dopo aver ottenuto un riferimento all'oggetto per l'elemento in cui il gestore di è da collegare.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
+
+- [Impostazione degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

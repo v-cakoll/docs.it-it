@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195150"
 ---
 # <a name="configuring-http-and-https"></a>Configurazione di HTTP e HTTPS
 I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTTP/HTTPS vengono configurate tramite Internet Information Services (IIS) o tramite l'utilizzo di uno strumento da riga di comando. Quando un servizio WCF è ospitato in IIS è possibile configurare le impostazioni HTTP o HTTPS in IIS utilizzando lo strumento inetmgr.exe. Se un servizio WCF è indipendente, le impostazioni HTTP o HTTPS vengono configurate tramite uno strumento da riga di comando.  
@@ -18,7 +18,7 @@ I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTT
   
  Lo strumento utilizzato per configurare le impostazioni HTTP dipende dal sistema operativo in esecuzione nel computer.  
   
- Quando si esegue [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] installa automaticamente questo strumento. Quando si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento [strumenti di supporto di Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605).  
+ Quando si esegue [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Installa automaticamente questo strumento. Quando si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento [strumenti di supporto di Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605).  
   
  Quando si esegue [!INCLUDE[wv](../../../../includes/wv-md.md)] o Windows 7, aver configurato queste impostazioni con lo strumento Netsh.exe.  
   
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  IIS non supporta la condivisione delle porte su [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Se IIS è in esecuzione e un servizio WCF tenta di usare uno spazio dei nomi con la stessa porta, il servizio WCF non verrà avviato. IIS e WCF che sia per impostazione predefinita utilizza la porta 80. Modificare l'assegnazione della porta per uno dei servizi o utilizzare l'elenco di ascolto IP per assegnare il servizio WCF a una scheda di rete non utilizzata da IIS. IIS 6.0 e versioni successive sono stati riprogettati per utilizzare API server HTTP.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - [Procedura: Configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

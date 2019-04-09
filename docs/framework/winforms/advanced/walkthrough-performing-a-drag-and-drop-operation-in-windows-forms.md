@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form"
+title: "Procedura dettagliata: Esecuzione di un'operazione di trascinamento della selezione in Windows Form"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189027"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procedura dettagliata: Esecuzione di un'operazione di trascinamento e rilascio in Windows Form
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procedura dettagliata: Esecuzione di un'operazione di trascinamento della selezione in Windows Form
 Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni basate su Windows è necessario gestire una serie di eventi, in particolare il <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventi. Usando le informazioni disponibili negli argomenti di questi eventi, è possibile facilitare le operazioni di trascinamento della selezione.  
   
 ## <a name="dragging-data"></a>Trascinamento di dati  
@@ -107,6 +107,7 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
     >  Inoltre, è possibile utilizzare il <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> proprietà, in modo che, a seconda dei tasti premuti durante l'operazione di trascinamento e rilascio, si verifichino determinati effetti (ad esempio, è standard per copiare i dati trascinati quando viene premuto il tasto CTRL).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Aggiungere dati agli Appunti](how-to-add-data-to-the-clipboard.md)
-- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
-- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
+- [Procedura: Recuperare dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+- [Supporto delle operazioni di trascinamento della selezione e degli Appunti](drag-and-drop-operations-and-clipboard-support.md)

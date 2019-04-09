@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un oggetto Bitmap in fase di esecuzione'
+title: 'Procedura: Creare una bitmap in fase di esecuzione'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: edcf413bf6b3cb92e4570867afe8222c1f8b84f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213669"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a>Procedura: Creare un oggetto Bitmap in fase di esecuzione
+# <a name="how-to-create-a-bitmap-at-run-time"></a>Procedura: Creare una bitmap in fase di esecuzione
 Questo esempio viene creata e disegna un <xref:System.Drawing.Bitmap> dell'oggetto e lo visualizza in un form Windows esistenti <xref:System.Windows.Forms.PictureBox> controllo.  
   
 ## <a name="example"></a>Esempio  
@@ -28,5 +28,6 @@ Questo esempio viene creata e disegna un <xref:System.Drawing.Bitmap> dell'ogget
 -   Un modulo di Windows che importa l'assembly System, System. Drawing e System.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Bitmap>
 - [Immagini, bitmap e metafile](images-bitmaps-and-metafiles.md)

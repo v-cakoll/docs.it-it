@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207110"
 ---
 # <a name="how-to-examine-the-security-context"></a>Procedura: Esaminare il contesto di sicurezza
 Durante la programmazione di servizi Windows Communication Foundation (WCF), il contesto di sicurezza del servizio consente di determinare dettagli sulle credenziali client e sulle attestazioni utilizzate per eseguire l'autenticazione con il servizio. A tale fine, utilizzare le proprietà della classe <xref:System.ServiceModel.ServiceSecurityContext>.  
@@ -55,5 +55,6 @@ Durante la programmazione di servizi Windows Communication Foundation (WCF), il 
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
 - [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

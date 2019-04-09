@@ -2,12 +2,12 @@
 title: System.ServiceModel.Security.SecuritySessionCloseResponseSent
 ms.date: 03/30/2017
 ms.assetid: 501defc3-d110-46ea-86d7-3563c35830f0
-ms.openlocfilehash: e836e6ee6f6c0e9a18d5ef02f95d9c5b4a4b74b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4a9c150f45eeb674dce8b883f923acdfe45819d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195956"
 ---
 # <a name="systemservicemodelsecuritysecuritysessioncloseresponsesent"></a>System.ServiceModel.Security.SecuritySessionCloseResponseSent
 System.ServiceModel.Security.SecuritySessionCloseResponseSent  
@@ -16,6 +16,7 @@ System.ServiceModel.Security.SecuritySessionCloseResponseSent
  La sessione di sicurezza server ha inviato una risposta di chiusura al client.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

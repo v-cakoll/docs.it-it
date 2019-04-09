@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Specificare la direzione dell'associazione"
+title: 'Procedura: Specificare la direzione del binding'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - direction of binding [WPF]
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 265271cee16d203d7652281c5416b93759e66d4b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206434"
 ---
-# <a name="how-to-specify-the-direction-of-the-binding"></a>Procedura: Specificare la direzione dell'associazione
+# <a name="how-to-specify-the-direction-of-the-binding"></a>Procedura: Specificare la direzione del binding
 Questo esempio spiega come specificare se il binding aggiorna solo la proprietà della destinazione del binding (destinazione), dell'origine del binding (origine) o entrambe.  
   
 ## <a name="example"></a>Esempio  
@@ -40,6 +40,7 @@ Questo esempio spiega come specificare se il binding aggiorna solo la proprietà
  Per la <xref:System.Windows.Data.BindingMode.TwoWay> oppure <xref:System.Windows.Data.BindingMode.OneWayToSource> associazioni, è possibile controllare la tempistica degli aggiornamenti di origine, impostando il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Data.Binding>
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203938"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool di connessioni SQL Server (ADO.NET)
 Generalmente, la connessione a un server database comporta passaggi che richiedono molto tempo. È necessario, infatti, stabilire un canale fisico, ad esempio un socket oppure una named pipe. Deve verificarsi l'handshake iniziale con il server, deve essere analizzata l'informazione sulla stringa di connessione, la connessione deve essere autenticata dal server, sono necessarie verifiche per l'inserimento in un elenco nella transazione corrente e così via.  
@@ -19,7 +19,7 @@ Generalmente, la connessione a un server database comporta passaggi che richiedo
   
  Il pool di connessioni riduce il numero di volte in cui è necessario aprire nuove connessioni. Il *pool di connessioni* conserva la proprietà della connessione fisica. Gestisce le connessioni mantenendo attivo un set di connessioni attive per ogni configurazione di connessione. Quando un utente chiama `Open` su una connessione, il pool verifica la presenza di una connessione disponibile. Se è disponibile una connessione, il pool la restituisce al chiamante invece di aprirne una nuova. Quando l'applicazione chiama `Close`, il pool restituisce la connessione al set di connessioni attive invece di chiuderla realmente. Una volta restituita al pool, la connessione può essere usata nuovamente nella successiva chiamata `Open`.  
   
- È possibile raggruppare in pool solo le connessioni che presentano la stessa configurazione. In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] vengono mantenuti diversi pool contemporaneamente, uno per ogni configurazione. Le connessioni vengono divise in pool in base alla stringa di connessione e, quando si usa la sicurezza integrata, in base all'identità Windows. Le connessioni vengono inserite nei pool anche in base a dove sono inserite in una transazione. Quando si usa un <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, le istanze di <xref:System.Data.SqlClient.SqlCredential> influiscono sul pool di connessioni. Diverse istanze di <xref:System.Data.SqlClient.SqlCredential> useranno pool di connessioni diversi, anche se l'ID utente e la password sono uguali.  
+ È possibile raggruppare in pool solo le connessioni che presentano la stessa configurazione. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] vengono mantenuti diversi pool contemporaneamente, uno per ogni configurazione. Le connessioni vengono divise in pool in base alla stringa di connessione e, quando si usa la sicurezza integrata, in base all'identità Windows. Le connessioni vengono inserite nei pool anche in base a dove sono inserite in una transazione. Quando si usa un <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, le istanze di <xref:System.Data.SqlClient.SqlCredential> influiscono sul pool di connessioni. Diverse istanze di <xref:System.Data.SqlClient.SqlCredential> useranno pool di connessioni diversi, anche se l'ID utente e la password sono uguali.  
   
  Il pool di connessioni consente di migliorare notevolmente le prestazioni e di aumentare la scalabilità dell'applicazione. Per impostazione predefinita, in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] il pool di connessioni è attivato. A meno che non venga disabilitato in modo esplicito, il pool ottimizza le connessioni che vengono aperte e chiuse nell'applicazione. È possibile, inoltre, fornire più modificatori delle stringhe di connessione per controllare il comportamento del pool di connessioni. Per altre informazioni, vedere "Controllo del pool di connessioni con le parole chiave delle stringhe di connessione" in questo argomento.  
   
@@ -80,7 +80,7 @@ Per altre informazioni su eventi associati all'apertura e chiusura delle conness
  Se esiste una connessione a un server non più disponibile, la connessione può essere recuperata dal pool anche se nessuna connessione è stata rilevata come interrotta e pertanto non è stata contrassegnata come non valida. In caso contrario, l'overhead per la verifica della validità della connessione annullerebbe i vantaggi derivanti dal pool provocando un'ulteriore sequenza di andata e ritorno al server. In questo caso, al primo tentativo di uso della connessione verrà rilevato che la connessione è stata interrotta e verrà generata un'eccezione.  
   
 ## <a name="clearing-the-pool"></a>Cancellazione del pool  
- In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti due nuovi metodi per cancellare il pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` cancella i pool di connessioni per un determinato provider, mentre `ClearPool` cancella il pool di connessioni associato a una connessione specifica. Le connessioni in uso al momento della chiamata vengono contrassegnate in modo appropriato. Una volta chiuse, anziché essere restituite al pool, queste connessioni vengono eliminate.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti due nuovi metodi per cancellare il pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Cancella i pool di connessioni per un determinato provider, e `ClearPool` Cancella il pool di connessioni associato a una connessione specifica. Le connessioni in uso al momento della chiamata vengono contrassegnate in modo appropriato. Una volta chiuse, anziché essere restituite al pool, queste connessioni vengono eliminate.  
   
 ## <a name="transaction-support"></a>Supporto delle transazioni  
  Le connessioni vengono recuperate dal pool e assegnate in base al contesto della transazione. Se nella stringa di connessione non è specificato `Enlist=false`, il pool di connessioni assicura che la connessione venga inserita in un elenco del contesto <xref:System.Transactions.Transaction.Current%2A>. Quando una connessione viene chiusa e restituita al pool con una transazione `System.Transactions` in elenco, questa connessione viene conservata in modo tale che, quando si richiederà nuovamente il pool di connessioni con la stessa transazione `System.Transactions`, verrà restituita la stessa connessione, se è disponibile. Se viene eseguita una richiesta di questo tipo e non sono disponibili connessioni in pool, viene prelevata e inserita in elenco una connessione della parte non transazionale del pool. Se non sono disponibili connessioni in alcuna area del pool, viene creata e inserita in elenco una nuova connessione.  
@@ -130,6 +130,7 @@ using (SqlConnection connection = new SqlConnection(
  Si consiglia di trarre vantaggio dai meccanismi di sicurezza che è possibile usare al posto dei ruoli applicazione. Per altre informazioni, vedere [creazione di ruoli applicazione in SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Contatori delle prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)

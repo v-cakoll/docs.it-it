@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214936"
 ---
 # <a name="data-contract-equivalence"></a>Equivalenza dei contratti dati
 Perché un client possa inviare correttamente dati di un certo tipo a un servizio o perché un servizio possa inviare correttamente dati a un client, non è necessario che il tipo inviato sia presente nell'estremità ricevente. L'unico requisito è che i contratti dati di entrambi i tipi siano equivalenti. (In alcuni casi, equivalenza rigida non è necessaria, come descritto nella [versioni di DataContract](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,8 +61,9 @@ Perché un client possa inviare correttamente dati di un certo tipo a un servizi
  Quando vengono passati parametri e restituiti valori tra applicazioni, se il tipo previsto è un'interfaccia è come se fosse di tipo <xref:System.Object>. Poiché ogni tipo deriva in fondo da <xref:System.Object>, ogni contratto dati deriva in ultima istanza dal contratto dati relativo a <xref:System.Object>. Quando è prevista un'interfaccia è pertanto possibile passare qualsiasi tipo di contratto dati. Sono necessari passaggi aggiuntivi per funzionare correttamente con interfacce; per altre informazioni, vedere [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Nomi di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

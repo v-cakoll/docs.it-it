@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212349"
 ---
 # <a name="how-to-position-a-tooltip"></a>Procedura: Posizionare un oggetto ToolTip
 In questo esempio viene illustrato come specificare la posizione della descrizione comando sullo schermo.  
@@ -62,7 +62,8 @@ In questo esempio viene illustrato come specificare la posizione della descrizio
  [!code-vb[ToolTipService#NoToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Procedure relative alle proprietà](tooltip-how-to-topics.md)
+- [Procedure relative](tooltip-how-to-topics.md)
 - [Panoramica sul controllo ToolTip](tooltip-overview.md)

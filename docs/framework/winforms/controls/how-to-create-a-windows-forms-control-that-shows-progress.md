@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un controllo di Windows Form che mostra lo stato di avanzamento'
+title: 'Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 6910a7e2e68a3807e08a8b196dde003e1d5bc9af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202014"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: Creare un controllo di Windows Form che mostra lo stato di avanzamento
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento
 L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  
   
  Il controllo `FlashTrackBar` illustra i concetti seguenti:  
@@ -28,9 +28,9 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
 -   Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.  
   
--   Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.  
+-   Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo `OptimizedInvalidate` (metodo).  
   
--   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.  
+-   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` Definisce i `ShouldSerializeStartColor` e `ShouldSerializeEndColor` metodi per la serializzazione relativi `StartColor` e `EndColor` proprietà.  
   
  La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.  
   
@@ -93,5 +93,6 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Nozioni fondamentali sullo sviluppo di controlli Windows Form](windows-forms-control-development-basics.md)

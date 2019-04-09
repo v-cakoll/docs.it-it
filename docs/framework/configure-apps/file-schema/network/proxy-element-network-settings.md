@@ -1,5 +1,5 @@
 ---
-title: Elemento <proxy> (Impostazioni di rete)
+title: <proxy> (Impostazioni di rete)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204822"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy > (impostazioni di rete)
 Definisce un server proxy.  
@@ -91,5 +91,6 @@ Definisce un server proxy.
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

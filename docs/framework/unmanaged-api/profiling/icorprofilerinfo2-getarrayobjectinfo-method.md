@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe86fbe7ee51e5f53eeea74d7d5a56046de5e00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201273"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Metodo ICorProfilerInfo2::GetArrayObjectInfo
 Ottiene informazioni dettagliate su un oggetto matrice.  
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Matrice che contiene numeri interi, ognuno dei quali rappresenta minore associato di una dimensione della matrice.  
   
  `ppData`  
- [out] Un puntatore all'indirizzo del buffer non elaborato per la matrice, di cui viene disposta seguendo la convenzione di C++.  
+ [out] Un puntatore all'indirizzo del buffer non elaborato per la matrice, che è disposto in base al C++ convenzione.  
   
 ## <a name="remarks"></a>Note  
  Il `pDimensionSizes` e `pDimensionLowerBounds` sono matrici parallele, in modo che gli elementi che si trova in corrispondenza dell'indice stesso in ogni matrice sono illustrate le caratteristiche della stessa entità.  
@@ -67,5 +67,6 @@ HRESULT GetArrayObjectInfo(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interfaccia ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

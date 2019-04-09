@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203548"
 ---
 # <a name="contextmenu-overview"></a>Cenni preliminari sull'oggetto ContextMenu
 Il <xref:System.Windows.Controls.ContextMenu> classe rappresenta l'elemento che espone la funzionalità utilizzando un contesto specifico <xref:System.Windows.Controls.Menu>. In genere, un utente espone il <xref:System.Windows.Controls.ContextMenu> nella [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] facendo clic con il pulsante del mouse. Questo argomento vengono presentate le <xref:System.Windows.Controls.ContextMenu> elemento e vengono forniti esempi su come usarlo in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e codice.  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>Controllo ContextMenu  
  Oggetto <xref:System.Windows.Controls.ContextMenu> è collegato a un controllo specifico. Il <xref:System.Windows.Controls.ContextMenu> elemento consente di presentare agli utenti un elenco di elementi che specificano i comandi o le opzioni che sono associate a un particolare controllo, ad esempio, un <xref:System.Windows.Controls.Button>. Gli utenti possono fare clic con il pulsante destro del mouse sul controllo per visualizzare il menu. In genere, facendo clic su un <xref:System.Windows.Controls.MenuItem> apre un sottomenu o parte di un'applicazione eseguire un comando.  
@@ -63,6 +61,7 @@ Il <xref:System.Windows.Controls.ContextMenu> classe rappresenta l'elemento che 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>

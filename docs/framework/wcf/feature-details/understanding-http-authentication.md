@@ -2,12 +2,12 @@
 title: Informazioni sull'autenticazione HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206395"
 ---
 # <a name="understanding-http-authentication"></a>Informazioni sull'autenticazione HTTP
 L'autenticazione è il processo che consente di stabilire se un client è idoneo per accedere a una risorsa. Il protocollo HTTP supporta l'autenticazione come mezzo per negoziare l'accesso a una risorsa protetta.  
@@ -36,6 +36,7 @@ L'autenticazione è il processo che consente di stabilire se un client è idoneo
 -   Un server non deve presentare (nelle intestazioni WWW-Authenticate) schemi che non sono in grado di accettare o che non proteggono adeguatamente la risorsa in questione. I client hanno la possibilità di scegliere uno qualsiasi degli schemi di autenticazione presentati dal server. Alcuni client scelgono per impostazione predefinita uno schema di autenticazione debole o il primo schema di autenticazione nell'elenco del server.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Uso della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+
+- [Panoramica sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [Utilizzo della rappresentazione con la protezione del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

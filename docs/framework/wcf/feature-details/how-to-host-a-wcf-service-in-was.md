@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Ospitare un servizio WCF in WAS'
+title: 'Procedura: hosting di un servizio WCF in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195449"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: Ospitare un servizio WCF in WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: hosting di un servizio WCF in WAS
 Questo argomento illustra i passaggi di base necessari per creare un servizio di attivazione processo Windows (noto anche come WAS) servizio di Windows Communication Foundation (WCF) ospitato. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. WCF Usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da WCF, ad esempio TCP, named pipe e Accodamento messaggi.  
   
  Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per altre informazioni sull'installazione e configurazione di WAS, vedere [come: Installare e configurare componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
@@ -99,5 +99,6 @@ Questo argomento illustra i passaggi di base necessari per creare un servizio di
 6.  Compilare ed eseguire il client.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

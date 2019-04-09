@@ -1,17 +1,17 @@
 ---
-title: "Esempio: La gestione delle eccezioni durante l'associazione dati"
+title: 'Esempio: Gestione delle eccezioni durante il data binding'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199895"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Esempio: La gestione delle eccezioni durante l'associazione dati
+# <a name="example-handling-exceptions-when-binding-data"></a>Esempio: Gestione delle eccezioni durante il data binding
 > [!NOTE]
 >  In questo argomento si fa riferimento a .NET Native Developer Preview, ovvero la versione preliminare del software, che è possibile scaricare dal [sito Web di Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (è necessaria la registrazione).  
   
@@ -60,5 +60,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.  Ad esempio, è possibile applicare il <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attributo proprietà. In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Esempio: Risoluzione dei problemi di programmazione dinamica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

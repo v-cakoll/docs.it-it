@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209424"
 ---
 # <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Procedura: Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox
 In questo esempio mostra come posizionare un menu contestuale personalizzato per un <xref:System.Windows.Controls.RichTextBox>.  
@@ -35,5 +35,6 @@ In questo esempio mostra come posizionare un menu contestuale personalizzato per
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)

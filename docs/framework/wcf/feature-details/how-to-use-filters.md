@@ -2,23 +2,23 @@
 title: 'Procedura: Usare i filtri'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216197"
 ---
 # <a name="how-to-use-filters"></a>Procedura: Usare i filtri
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione di routing che usa più filtri. In questo esempio, i messaggi vengono indirizzati a due implementazioni di un servizio di calcolo, regularCalc e roundingCalc. Entrambe le implementazioni supportano le stesse operazioni; tuttavia uno dei servizi arrotonda tutti i calcoli all'integer più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se usare la versione del servizio che esegue l'arrotondamento. Se non viene espressa alcuna preferenza in merito al servizio da usare, il carico viene bilanciato tra i due servizi. Le operazioni esposte da entrambi servizi sono:  
   
--   Add  
+-   Aggiunta  
   
--   Subtract  
+-   Sottrai  
   
 -   Multiply  
   
--   Divide  
+-   Dividi  
   
  Poiché entrambi i servizi implementano le stesse operazioni, non è possibile usare il filtro Action, perché l'azione specificata nel messaggio non risulterebbe univoca. È invece necessario eseguire ulteriori attività per accertarsi che i messaggi vengano indirizzati agli endpoint appropriati.  
   
@@ -326,4 +326,5 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

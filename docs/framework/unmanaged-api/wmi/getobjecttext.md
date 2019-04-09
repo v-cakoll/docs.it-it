@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208319"
 ---
-# <a name="getobjecttext-function"></a>GetObjectText (funzione)
+# <a name="getobjecttext-function"></a>Funzione GetObjectText
 Restituisce un testo per il rendering dell'oggetto nella sintassi del formato MOF (Managed Object).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -85,4 +85,5 @@ Per ricostruire il testo dei parametri di un metodo viene usato l'algoritmo segu
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

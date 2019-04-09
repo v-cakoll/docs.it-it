@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Allineare il testo creato'
+title: 'Procedura: Allineare il testo disegnato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210451"
 ---
-# <a name="how-to-align-drawn-text"></a>Procedura: Allineare il testo creato
+# <a name="how-to-align-drawn-text"></a>Procedura: Allineare il testo disegnato
 Quando si esegue il disegno personalizzato, è spesso possibile centrare testo disegnato su un form o controllo. Per facilitare l'allineamento del testo disegnato con la <xref:System.Drawing.Graphics.DrawString%2A> o <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodi creando l'oggetto di formattazione corretta e impostare i flag di formato appropriato.  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>Per disegnare il testo con GDI + (DrawString) centrato  
@@ -33,9 +33,10 @@ Quando si esegue il disegno personalizzato, è spesso possibile centrare testo d
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Gli esempi di codice precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ Gli esempi di codice precedenti sono progettati per l'uso con Windows Form, e richiedono <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)
-- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
-- [Procedura: Costruire i tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)
+
+- [Procedura: Disegnare testo con GDI](how-to-draw-text-with-gdi.md)
+- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
+- [Procedura: Creare tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)

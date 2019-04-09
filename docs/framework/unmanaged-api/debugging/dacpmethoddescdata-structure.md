@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203197"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Struttura DacpMethodDescData
 
@@ -54,7 +54,7 @@ struct DacpMethodDescData
 
 ## <a name="members"></a>Membri
 
-| Membro                       | Descrizione                                                                                     |
+| Member                       | Descrizione                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Indica se il runtime dispone di codice nativo disponibile per la creazione dell'istanza specificata del metodo. |
 | `bIsDynamic`                 | Indica se il metodo viene generato in modo dinamico tramite la generazione di codice leggero.           |
@@ -73,7 +73,6 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | ReJIT informazioni per l'indirizzo native richiesto.                                             |
 | `cJittedRejitVersions`       | Numero di volte in cui che il metodo è stato rejitted tramite la strumentazione.                           |
 
-
 ## <a name="remarks"></a>Note
 
 Questa struttura si trova all'interno del runtime e non viene esposto tramite le intestazioni o i file di libreria. Per usarlo, definire la struttura come specificato in precedenza.
@@ -85,6 +84,7 @@ Questa struttura si trova all'interno del runtime e non viene esposto tramite le
 **Versioni di .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Tipi di dati comuni](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

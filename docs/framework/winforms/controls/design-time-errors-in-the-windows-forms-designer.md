@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213142"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errori in fase di progettazione in Progettazione Windows Form
 In questo argomento viene illustrato il significato e l'uso dell'elenco errori della fase di progettazione visualizzato in Microsoft Visual Studio quando il caricamento di Progettazione Windows Form non riesce. Se viene visualizzato questo elenco di errori non si deve interpretarlo come un bug della progettazione, ma come ausilio per la correzione degli errori nel codice.  
@@ -45,7 +45,7 @@ In questo argomento viene illustrato il significato e l'uso dell'elenco errori d
 ### <a name="forum-posts-about-this-error"></a>Post dei forum sull'errore  
  Nelle informazioni aggiuntive verrà incluso un collegamento ai post del forum MSDN relativi all'errore. La ricerca viene effettuata nei forum sulla base della stringa del messaggio di errore. È anche possibile provare a effettuare una ricerca nei seguenti forum:  
   
--   [Forum di Progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Forum di progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
 -   [Forum di Windows Form](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
@@ -53,6 +53,7 @@ In questo argomento viene illustrato il significato e l'uso dell'elenco errori d
  È possibile ignorare la condizione di errore e continuare a caricare la finestra di progettazione. La scelta di questa azione può produrre risultati imprevisti. Ad esempio, nell'area di progettazione potrebbero non venire visualizzati alcuni controlli.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Risoluzione dei problemi relativi allo sviluppo in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Risoluzione dei problemi relativi alla modifica di controlli e componenti](troubleshooting-control-and-component-authoring.md)
 - [Sviluppo di controlli Windows Form in fase di progettazione](developing-windows-forms-controls-at-design-time.md)

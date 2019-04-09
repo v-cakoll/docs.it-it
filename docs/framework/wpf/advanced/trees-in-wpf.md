@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197685"
 ---
 # <a name="trees-in-wpf"></a>Strutture ad albero in WPF
-In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usa anche molte metafore correlate alla struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi di helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, vengono illustrate tali strutture ad albero correlazione tra un concetto di albero di oggetti complessiva e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
-  
+In molte tecnologie gli elementi e i componenti sono organizzati in una struttura ad albero in cui gli sviluppatori modificano direttamente i nodi degli oggetti nell'albero per influire sul rendering o sul comportamento di un'applicazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Usa anche molte metafore di struttura ad albero per definire le relazioni tra gli elementi del programma. In genere gli sviluppatori WPF possono creare un'applicazione nel codice o definire parti dell'applicazione in XAML usando come riferimento concettuale la metafora della struttura ad albero di oggetti, ma chiameranno un'API specifica o useranno un markup specifico a tale scopo anziché un'API di modifica della struttura ad albero di oggetti generica simile a quella usata nel modello DOM XML. WPF espone due classi di helper che forniscono una visualizzazione albero metafora <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>. Nella documentazione di WPF vengono inoltre usati i termini struttura ad albero visuale e albero logico, in quanto tali strutture ad albero sono utili per la comprensione del comportamento di alcune funzionalità chiave di WPF. In questo argomento definisce ciò che rappresentano la struttura ad albero visuale e albero logico, vengono illustrate tali strutture ad albero correlazione tra un concetto di albero di oggetti complessiva e introduce <xref:System.Windows.LogicalTreeHelper> e <xref:System.Windows.Media.VisualTreeHelper>s.  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>Strutture ad albero in WPF  
  La struttura ad albero più completa in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è la struttura ad albero di oggetti. Se si definisce la pagina di un'applicazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e quindi si carica il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la struttura ad albero viene creata in base alle relazioni di annidamento degli elementi nel markup. Se si definisce un'applicazione o una parte dell'applicazione nel codice, la struttura ad albero viene creata in base a come si assegnano i valori per le proprietà che implementano il modello di contenuto per un determinato oggetto. In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] la struttura ad albero di oggetti completa viene concettualizzata e può essere segnalata alla relativa API pubblica in due modi diversi: come albero logico e come struttura ad albero visuale. Le distinzioni tra albero logico e struttura ad albero visuale non sono sempre necessariamente importanti, ma possono talvolta causare problemi con alcuni sottosistemi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e influire sulle scelte fatte nel markup o nel codice.  
@@ -87,6 +85,7 @@ In molte tecnologie gli elementi e i componenti sono organizzati in una struttur
  La ricerca delle risorse può però estendersi anche oltre l'albero logico diretto. Per il markup dell'applicazione, la ricerca delle risorse può proseguire verso l'altro nei dizionari risorse a livello di applicazione e quindi verso il supporto dei temi e i valori di sistema a cui viene fatto riferimento come chiavi o proprietà statiche. Se i riferimenti alle risorse sono dinamici, i temi stessi possono fare riferimento anche ai valori di sistema esterni all'albero logico del tema. Per altre informazioni sui dizionari risorse e sulla logica di ricerca, vedere [Risorse XAML](xaml-resources.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'input](input-overview.md)
 - [Cenni preliminari sul rendering della grafica WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

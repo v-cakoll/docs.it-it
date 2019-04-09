@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b9c76ca2c39fcba5a4d0519fc099d0a9d51ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2ea67c6e4d860d41cfe67aaab73babb51f3ce45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210659"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>Interfaccia ICorDebugGuidToTypeEnum
 Fornisce un enumeratore che definisce il mapping tra un set di GUID e i relativi tipi corrispondenti che sono rappresentati da istanze di ICorDebugType. Questa interfaccia eredita i metodi dall'interfaccia ICorDebugEnum.  
@@ -45,4 +45,5 @@ Fornisce un enumeratore che definisce il mapping tra un set di GUID e i relativi
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

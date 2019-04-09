@@ -2,15 +2,15 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215911"
 ---
 # <a name="dataviews"></a>DataView
-Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di data binding. Usando un **DataView**, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento ed è possibile filtrare i dati da riga di stato o sulla base di un'espressione di filtro.  
+Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di associazione dati. Usando un **DataView**, è possibile esporre i dati di una tabella applicando diversi tipi di ordinamento ed è possibile filtrare i dati da riga di stato o sulla base di un'espressione di filtro.  
   
  Oggetto **DataView** offre una visualizzazione dinamica dei dati nell'oggetto sottostante **DataTable**: il contenuto, ordinamento e l'appartenenza riflettono le modifiche appena si verificano. Questo comportamento è diverso dal **selezionare** metodo per il **DataTable**, che restituisce un <xref:System.Data.DataRow> matrice da una tabella basata su un particolare ordine di filtro e/o di ordinamento: questo contenuto riflette le modifiche apportate il sottostanti nella tabella, ma l'appartenenza e l'ordinamento restano statici. Le funzionalità dinamiche del **DataView** lo rendono ideale per applicazioni di data binding.  
   
@@ -47,17 +47,18 @@ Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazion
  [Applicazioni Web ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Vengono fornite informazioni generali e procedure passo passo dettagliate per la creazione di applicazioni, Web Form e servizi Web ASP.NET.  
   
- [Applicazioni di Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Applicazioni Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Vengono fornite informazioni dettagliate sull'utilizzo di Windows Form e di applicazioni console.  
   
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Descrive la **set di dati** oggetto e come è possibile usarlo per gestire i dati dell'applicazione.  
   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  Descrive la **DataTable** oggetto e come è possibile usarlo per gestire i dati dell'applicazione da solo o come parte di un **DataSet**.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  Vengono descritti l'architettura e i componenti di ADO.NET e come usare ADO.NET per l'accesso alle origini dati esistenti e per la gestione dei dati dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e351c61f7e8bfc254a6fc8ea12c8a94fc393e3fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b419962982fc80591ed565cceb28afb88a39495e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199141"
 ---
 # <a name="enumcustomattributes-method"></a>Metodo EnumCustomAttributes
 Recupera gli attributi personalizzati a livello di assembly.  
@@ -62,6 +62,7 @@ HRESULT EnumCustomAttributes(
  Richiede alink.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)

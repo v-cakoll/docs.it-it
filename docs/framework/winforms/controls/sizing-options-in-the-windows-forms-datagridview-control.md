@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197841"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opzioni di ridimensionamento nel controllo DataGridView Windows Form
 <xref:System.Windows.Forms.DataGridView> le intestazioni, colonne e righe è possono modificare le dimensioni in seguito a diverse occorrenze. La tabella seguente illustra queste occorrenze.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717908"
  Le enumerazioni utilizzate da metodi e proprietà di ridimensionamento hanno valori simili per il dimensionamento basato sul contenuto. Con questi valori, è possibile limitare le celle vengono utilizzate per calcolare le dimensioni preferite. Per tutte le enumerazioni di ridimensionamento, i valori con nomi che fanno riferimento alle celle visualizzate limitano il calcolo alle celle nelle righe visualizzate. Esclusione di righe è utile per evitare una riduzione delle prestazioni quando si lavora con grandi quantità di righe. È inoltre possibile limitare i calcoli sui valori di cella nelle celle di intestazione o di altro tipo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -154,6 +155,6 @@ ms.locfileid: "57717908"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Ridimensionamento di colonne e righe nel controllo DataGridView Windows Form](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Modalità di riempimento di colonna nel controllo DataGridView di Windows Form](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare le modalità dimensionamento del controllo DataGridView Windows Form](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Ridimensionamento di colonne e righe nel controllo DataGridView di Windows Form](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Modalità di riempimento di colonna nel controllo DataGridView Windows Form](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare le modalità di ridimensionamento del controllo DataGridView di Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

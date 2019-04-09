@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208670"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Procedura: Applicare trasformazioni al testo
 Le trasformazioni possono modificare la visualizzazione del testo nell'applicazione. Gli esempi seguenti usano diversi tipi di trasformazioni di rendering per modificare la visualizzazione di testo in un <xref:System.Windows.Controls.TextBlock> controllo.  
@@ -65,4 +65,5 @@ Le trasformazioni possono modificare la visualizzazione del testo nell'applicazi
 >  Il <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> offre un'ampia gamma di funzionalità per ottenere effetti di ombreggiatura. Per altre informazioni, vedere [creare testo con ombreggiatura](how-to-create-text-with-a-shadow.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicare animazioni al testo](how-to-apply-animations-to-text.md)

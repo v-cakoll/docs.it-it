@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209502"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio Windows Communication Foundation (WCF) funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  
@@ -57,8 +57,9 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
 -   [Esercitazione: Creare un client Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) fornisce un esempio di creazione di un client tramite configurazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Cenni preliminari sulla creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Procedura: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procedura: Specificare un'associazione al servizio nel codice](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [Procedura: Specificare un'associazione Client nella configurazione](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Procedura: Specificare un'associazione al Client nel codice](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Procedura: Specificare un'associazione al servizio in codice](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Procedura: Specificare un'associazione al client nella configurazione](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Procedura: Specificare un'associazione al client in codice](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209742"
 ---
 # <a name="typography-how-to-topics"></a>Procedure relative alla tipografia
 Negli argomenti di questa sezione viene descritto come utilizzare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Sopporto avanzato di presentazione del testo nelle applicazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Creare un effetto di testo](how-to-create-a-text-decoration.md)  
+ [Creare un effetto testo](how-to-create-a-text-decoration.md)  
  [Specificare se un collegamento ipertestuale è sottolineato](how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [Applicare trasformazioni al testo](how-to-apply-transforms-to-text.md)  
  [Applicare animazioni al testo](how-to-apply-animations-to-text.md)  
- [Creare un testo con un'ombreggiatura](how-to-create-text-with-a-shadow.md)  
+ [Creare testo con un'ombreggiatura](how-to-create-text-with-a-shadow.md)  
  [Creare testo con contorni](how-to-create-outlined-text.md)  
- [Disegnare un testo sullo sfondo di un controllo](how-to-draw-text-to-a-control-background.md)  
- [Disegnare testo in un oggetto Visual](how-to-draw-text-to-a-visual.md)  
+ [Disegnare testo sullo sfondo di un controllo](how-to-draw-text-to-a-control-background.md)  
+ [Disegnare testo in un oggetto visivo](how-to-draw-text-to-a-visual.md)  
  [Usare caratteri speciali in XAML](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Documents.Typography>
 - [Documenti in WPF](documents-in-wpf.md)
 - [Funzionalità dei tipi di carattere OpenType](opentype-font-features.md)

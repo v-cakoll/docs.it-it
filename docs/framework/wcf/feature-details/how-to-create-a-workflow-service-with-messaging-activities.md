@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica'
+title: 'Procedura: Creare un servizio di flusso di lavoro con attività di messaggistica'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192823"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedura: Creare un servizio di flusso di lavoro con attività di messaggistica
 In questo argomento viene illustrato come creare un semplice servizio flusso di lavoro utilizzando le attività di messaggistica. L'argomento è incentrato sui meccanismi di creazione di un servizio flusso di lavoro in cui il servizio è costituito esclusivamente da attività di messaggistica. In servizi reali i flussi di lavoro contengono molte altre attività. Il servizio implementa un'operazione denominata Echo che acquisisce una stringa e la restituisce al chiamante. Questo è il primo di una serie di due argomenti. Argomento successivo [How To: Accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) viene illustrato come creare un'applicazione flusso di lavoro che possa chiamare il servizio creato in questo argomento.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Per creare un progetto di servizio flusso di lavoro  
@@ -90,6 +90,7 @@ In questo argomento viene illustrato come creare un semplice servizio flusso di 
 4.  Continuare con la [come: Accedere a un servizio da un flusso di lavoro applicazione](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) argomento per creare un client flusso di lavoro che chiami questo servizio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204198"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Disegnare con oggetti Image, Drawing e Visual
 In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, e <xref:System.Windows.Media.VisualBrush> oggetti da disegnare un'area con un'immagine, una <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per comprendere questo argomento, è necessario conoscere i diversi tipi di pennelli forniti da [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e le relative funzionalità di base. Per un'introduzione, vedere [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md).  
@@ -135,15 +134,16 @@ Componenti di un oggetto TileBrush con più tessere
  Per altre informazioni sulle funzionalità di affiancamento <xref:System.Windows.Media.TileBrush> oggetti, vedere la [Cenni preliminari sugli oggetti TileBrush](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Panoramica sugli oggetti TileBrush](tilebrush-overview.md)
-- [Panoramica sui pennelli di WPF](wpf-brushes-overview.md)
+- [Cenni preliminari sugli oggetti TileBrush](tilebrush-overview.md)
+- [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md)
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)
-- [Panoramica sulle maschere di opacità](opacity-masks-overview.md)
+- [Cenni preliminari sulle maschere di opacità](opacity-masks-overview.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

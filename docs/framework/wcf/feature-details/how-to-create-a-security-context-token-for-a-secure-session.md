@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creare un contesto di sicurezza Token per una sessione protetta'
+title: 'Procedura: Creare un token di contesto di sicurezza per una sessione sicura'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189340"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedura: Creare un contesto di sicurezza Token per una sessione protetta
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Procedura: Creare un token di contesto di sicurezza per una sessione sicura
 Per evitare la perdita di una determinata sessione protetta quando il servizio viene riciclato, è possibile utilizzare in tale sessione un token di contesto di sicurezza (SCT, Security Context Token) con stato. Ad esempio, quando in una sessione protetta si utilizza un token SCT senza stato e si reimposta Internet Information Services (IIS), i dati di sessione associati al servizio vengono persi. Questi dati di sessione comprendono una cache del token SCT. Pertanto, quando un client invia al servizio un token SCT senza stato, viene restituito un errore, in quanto risulta impossibile recuperare la chiave associata al token SCT. Se tuttavia si utilizza un token SCT con stato, la relativa chiave associata è contenuta nel token SCT e quindi nel messaggio. Ne consegue che in questo caso il riciclo del servizio non influisce sulla sessione protetta. Per impostazione predefinita, Windows Communication Foundation (WCF) utilizza token SCT senza stato in una sessione protetta. In questo argomento viene descritto in modo dettagliato come utilizzare token SCT con stato in una sessione protetta.  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
 > [!NOTE]
 >  Quando la rappresentazione è obbligatoria in Windows XP, utilizzare una sessione protetta priva di token SCT con stato. Infatti, quando i token SCT con stato vengono utilizzati con la rappresentazione, il sistema genera un'eccezione <xref:System.InvalidOperationException>. Per altre informazioni, vedere [scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
-### <a name="to-use-stateful-scts-in-a-secure-session"></a>Per usare token SCT con stato in una sessione protetta  
+### <a name="to-use-stateful-scts-in-a-secure-session"></a>Per utilizzare token SCT con stato in una sessione protetta  
   
 -   Creare un'associazione personalizzata che prevede la protezione dei messaggi SOAP mediante una sessione protetta che utilizza un token SCT con stato.  
   
@@ -110,4 +110,5 @@ Per evitare la perdita di una determinata sessione protetta quando il servizio v
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

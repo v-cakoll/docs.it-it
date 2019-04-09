@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212297"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration (funzione)
+# <a name="beginenumeration-function"></a>Funzione BeginEnumeration
 Reimposta l'enumeratore all'inizio dell'enumerazione.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -68,14 +68,14 @@ I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento d
 
 **Gruppo 1**
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Include le proprietà che costituiscono solo la chiave. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Include le proprietà che sono solo i riferimenti agli oggetti. |
 
 **Gruppo 2**
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limitare l'enumerazione per solo le proprietà di sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Include le proprietà locali e propagate ma ne esclude le proprietà di sistema dall'enumerazione. |
@@ -92,11 +92,10 @@ Costante  |Value  |Descrizione  |
 
 Per le istanze:
 
-Costante  |Valore  |Descrizione  |
+Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitare l'enumerazione alle proprietà definite o modificato nella classe stessa. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitare l'enumerazione delle proprietà ereditate dalle classi di base. |
-
 
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

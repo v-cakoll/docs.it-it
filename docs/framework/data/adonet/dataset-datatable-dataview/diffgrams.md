@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197997"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram è un formato XML che consente di identificare le versioni correnti e originali degli elementi di dati. Il formato DiffGram viene usato dal tipo <xref:System.Data.DataSet> per caricare e conservare il contenuto e per serializzare tale contenuto in modo da consentirne il trasporto tramite una connessione di rete. Quando un <xref:System.Data.DataSet> viene scritto come DiffGram, tale DiffGram viene compilato con tutte le informazioni necessarie per ricreare accuratamente il contenuto, anche se non lo schema, del <xref:System.Data.DataSet>, inclusi sia i valori della colonna di **originale** e **corrente** versioni delle righe, le informazioni sull'errore di riga e l'ordine delle righe.  
@@ -87,7 +87,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
 |**parentId**|Identifica quale elemento dal **\<** ***DataInstance*** **>** blocco è l'elemento padre dell'elemento corrente. I valori con il **diffgr: parentId** annotazione sono nel formato *[NomeTabella] [IdentificatoreRiga]*. Ad esempio: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Identifica una riga nel **\<** ***DataInstance*** **>** bloccare come modificata. Il **hasChanges** annotazione può avere uno dei due valori seguenti:<br /><br /> **inserted**<br /> Identifica un **Added** riga.<br /><br /> **modified**<br /> Identifica un **Modified** riga che contiene un' **originale** versione di riga nel  **\<diffgr: prima >** blocco. Si noti che **Deleted** righe avranno un **originale** versione di riga nel  **\<diffgr: prima >** blocco, ma non è presente alcun elemento annotato nel **\<** ***DataInstance*** **>** blocco.|  
 |**hasErrors**|Identifica una riga nel **\<** ***DataInstance*** **>** blocco con un **RowError**. L'elemento di errore viene inserito nel  **\<diffgr: Errors >** blocco.|  
-|**Erroree**|Contiene il testo del **RowError** per un particolare elemento le  **\<diffgr: Errors >** blocco.|  
+|**Error**|Contiene il testo del **RowError** per un particolare elemento le  **\<diffgr: Errors >** blocco.|  
   
  Quando legge o scrive il proprio contenuto come DiffGram, il tipo <xref:System.Data.DataSet> include ulteriori annotazioni. La tabella seguente descrive tali annotazioni, che sono definiti nello spazio dei nomi **urn: schemas-microsoft-com: xml-msdata**.  
   
@@ -132,8 +132,9 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+
+- [Utilizzo di XML in un dataset](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Caricamento di un dataset da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Scrittura del contenuto di dataset come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

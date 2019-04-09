@@ -10,12 +10,12 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213441"
 ---
 # <a name="how-to-create-a-solid-brush"></a>Procedura: Creare un oggetto Solid Brush
 Questo esempio viene creato un <xref:System.Drawing.SolidBrush> oggetto che può essere usato da un <xref:System.Drawing.Graphics> oggetto per il riempimento di forme.  
@@ -29,8 +29,9 @@ Questo esempio viene creato un <xref:System.Drawing.SolidBrush> oggetto che può
  Dopo aver usarle, è necessario chiamare <xref:System.IDisposable.Dispose%2A> su oggetti che utilizzano le risorse di sistema, ad esempio gli oggetti pennello.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
-- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Pennelli e forme con riempimento in GDI+](brushes-and-filled-shapes-in-gdi.md)
-- [Uso di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)
+- [Utilizzo di un oggetto Brush per il riempimento di forme](using-a-brush-to-fill-shapes.md)

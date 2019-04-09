@@ -2,12 +2,12 @@
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: ba1484644c57651fc0feadcc61d71d03eec1899b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204406"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 Specifica l'identità di un servizio in base al relativo nome dell'entità servizio (SPN, Service Principal Name).  
@@ -45,6 +45,7 @@ Specifica l'identità di un servizio in base al relativo nome dell'entità servi
  Un client Windows Communication Foundation (WCF) sicuro che si connette a un endpoint con questa identità usa il nome SPN quando si esegue l'autenticazione SSPI con l'endpoint.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

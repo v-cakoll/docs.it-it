@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201598"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo RichTextBox (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo viene usato per visualizzare, immettere e modificare testo formattato. Il <xref:System.Windows.Forms.RichTextBox> offerte dal controllo di <xref:System.Windows.Forms.TextBox> del controllo, ma può anche visualizzare i tipi di carattere, colori e collegamenti, caricare testo e immagini incorporate da un file; e trovare caratteri specificati. Il <xref:System.Windows.Forms.RichTextBox> controllo viene in genere usato per fornire funzionalità simili alle applicazioni di elaborazione di testi, ad esempio Microsoft Word di visualizzazione e modifica di testo. Ad esempio la <xref:System.Windows.Forms.TextBox> (controllo), il <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare le barre di scorrimento; ma a differenza di <xref:System.Windows.Forms.TextBox> (controllo), l'impostazione predefinita per visualizzare le barre di scorrimento orizzontale e verticale in base alle esigenze, e ha impostazioni aggiuntive.  
@@ -25,6 +25,7 @@ I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo viene usat
  È possibile annullare e ripristinare la maggior parte delle operazioni di modifica in un <xref:System.Windows.Forms.RichTextBox> controllo chiamando la <xref:System.Windows.Forms.TextBoxBase.Undo%2A> e <xref:System.Windows.Forms.RichTextBox.Redo%2A> metodi. Il <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> metodo consente di determinare se l'ultima operazione annullata dall'utente può essere riapplicata al controllo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
-- [Cenni preliminari sul controllo TextBox](textbox-control-overview-windows-forms.md)
+- [Panoramica del controllo TextBox](textbox-control-overview-windows-forms.md)

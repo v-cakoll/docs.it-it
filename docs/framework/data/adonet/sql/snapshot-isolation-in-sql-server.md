@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215937"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Se si verificano molti conflitti, l'isolamento dello snapshot potrebbe non rivelarsi la scelta migliore. Gli hint devono essere usati solo se veramente necessari. L'applicazione non è stata progettata per essere basata sugli hint di blocco dell'operazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Guida di controllo delle versioni delle righe e il blocco della transazione](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

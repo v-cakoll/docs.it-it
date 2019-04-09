@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210672"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Specifica e gestione di errori in contratti e servizi
 Le applicazioni Windows Communication Foundation (WCF) gestire situazioni di errore eseguendo il mapping di oggetti eccezione gestiti a oggetti errore SOAP e oggetti errore SOAP a oggetti eccezione gestiti. Negli argomenti di questa sezione viene illustrato come progettare contratti per esporre condizioni di errore come errori SOAP personalizzati, come restituire tali errori come parte dell'implementazione del servizio e come tali errori vengono rilevati dai client.  
@@ -56,6 +56,7 @@ Le applicazioni Windows Communication Foundation (WCF) gestire situazioni di err
  Durante la deserializzazione di un contratto di errore, in WCF viene innanzitutto effettuato il tentativo di far corrispondere il nome del contratto di errore nel messaggio SOAP con il tipo di contratto di errore. Se non si trova una corrispondenza esatta, verrà effettuata una ricerca, in ordine alfabetico, di un tipo compatibile nell'elenco di contratti di errore disponibile. Se due contratti di errore sono tipi compatibili (ad esempio uno è una sottoclasse dell'altro), per deserializzare l'errore potrebbe essere utilizzato il tipo non corretto. Tale situazione si verifica solo se nel contratto di errore non vengono specificati un nome, uno spazio dei nomi e un'azione. Per evitare il verificarsi di tale errore, specificare sempre completamente i contratti di errore indicando il nome, lo spazio dei nomi e gli attributi dell'azione. Inoltre, se è stato definito un numero di contratti di errore correlati derivati da una classe base condivisa, assicurarsi di contrassegnare qualsiasi membro nuovo con `[DataMember(IsRequired=true)]`. Per ulteriori informazioni su questo attributo `IsRequired`, vedere <xref:System.Runtime.Serialization.DataMemberAttribute>. In questo modo si potrà evitare che la classe base sia di tipo compatibile e si consentirà la deserializzazione dell'errore nel tipo derivato corretto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

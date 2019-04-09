@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-ms.openlocfilehash: 08b7007911d15019c043a74e093ccc0fba072fd1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206473"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Procedura: Ottenere una copia scrivibile di un oggetto Freezable di sola lettura
 Questo esempio illustra come usare il <xref:System.Windows.Freezable.Clone%2A> metodo per creare una copia scrivibile di sola lettura <xref:System.Windows.Freezable>.  
@@ -29,7 +29,8 @@ Questo esempio illustra come usare il <xref:System.Windows.Freezable.Clone%2A> m
  Per altre informazioni sulle <xref:System.Windows.Freezable> oggetti, vedere la [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
 - [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)
-- [Procedure relative alle proprietà](base-elements-how-to-topics.md)
+- [Procedure relative](base-elements-how-to-topics.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di espressione di query: Raggruppamento'
+title: 'Esempi di sintassi delle espressioni di query: Raggruppamento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: 7992cd5a0f76f303018591b9dadd8173be3bd27f
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0a4aa57ba709852c30223598b9d1af146eaf6013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211998"
 ---
-# <a name="query-expression-syntax-examples-grouping"></a>Esempi di sintassi di espressione di query: Raggruppamento
+# <a name="query-expression-syntax-examples-grouping"></a>Esempi di sintassi delle espressioni di query: Raggruppamento
 Gli esempi in questo argomento illustrano come usare il `GroupBy` metodo di query di [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
@@ -39,4 +39,5 @@ Gli esempi in questo argomento illustrano come usare il `GroupBy` metodo di quer
  [!code-vb[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

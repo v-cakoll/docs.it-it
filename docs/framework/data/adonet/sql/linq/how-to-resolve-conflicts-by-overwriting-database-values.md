@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Risolvere i conflitti sovrascrivendo i valori del Database'
+title: 'Procedura: Risolvere conflitti sovrascrivendo i valori di database'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189118"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedura: Risolvere i conflitti sovrascrivendo i valori del Database
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedura: Risolvere conflitti sovrascrivendo i valori di database
 Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> per sovrascrivere i valori del database. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
 |------|-------------|---------------|----------------|  
 |Stato del database originale quando viene eseguita una query da User1 e User2.|Alfreds|Maria|Sales|  
 |User1 si prepara a inviare queste modifiche.|Alfred||Marketing|  
-|User2 ha già inviato queste modifiche.||Mary|Servizio|  
+|User2 ha già inviato queste modifiche.||Mary|Service|  
   
  User1 decide di risolvere questo conflitto sovrascrivendo i valori del database con i valori del membro client corrente.  
   
@@ -41,4 +41,5 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

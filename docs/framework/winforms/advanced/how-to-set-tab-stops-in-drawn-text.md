@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197490"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Procedura: Impostare tabulazioni nel testo disegnato
 È possibile impostare punti di tabulazione per il testo chiamando il <xref:System.Drawing.StringFormat.SetTabStops%2A> metodo di un <xref:System.Drawing.StringFormat> oggetto e quindi passandolo <xref:System.Drawing.StringFormat> dell'oggetto per il <xref:System.Drawing.Graphics.DrawString%2A> metodo del <xref:System.Drawing.Graphics> classe.  
@@ -38,5 +38,6 @@ ms.locfileid: "58832307"
 -   L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
-- [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)
+
+- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
+- [Procedura: Disegnare testo con GDI](how-to-draw-text-with-gdi.md)

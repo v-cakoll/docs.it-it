@@ -2,12 +2,12 @@
 title: Manipolazione di dati in un oggetto DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202573"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipolazione di dati in un oggetto DataTable
 Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Data.DataSet>, è possibile usarlo esattamente come una tabella in un database. È possibile aggiungere, visualizzare, modificare ed eliminare i dati della tabella, monitorare errori ed eventi ed eseguire query nei dati della tabella. Quando si modificano i dati in un **DataTable**, è anche possibile verificare se le modifiche sono accurate e stabilire se accettare o rifiutare le modifiche a livello di codice.  
@@ -22,7 +22,7 @@ Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Da
  [Metodo Load](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
  Viene descritto come utilizzare il **Load** metodo da riempire un **DataTable** con le righe.  
   
- [Modifiche a DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
+ [Modifiche agli oggetti DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Viene spiegato come modificare i dati di una riga, inclusa la sospensione delle modifiche a una riga fino a quando le modifiche proposte non saranno verificate e accettate.  
   
  [Stati e versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
@@ -34,10 +34,11 @@ Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Da
  [Informazioni sugli errori di riga](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  Viene spiegato come inserire informazioni sugli errori in ciascuna riga, per consentire la risoluzione dei problemi relativi ai dati all'interno di un'applicazione.  
   
- [Oggetti AcceptChange e RejectChange](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [AcceptChanges e RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  Viene spiegato come accettare o rifiutare le modifiche apportate a una riga.  
   
 ## <a name="see-also"></a>Vedere anche
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

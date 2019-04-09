@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210555"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Aggiunta di vincoli esistenti a un dataset
 Il **riempire** metodo per il **DataAdapter** riempie un <xref:System.Data.DataSet> solo con le colonne della tabella e le righe da un'origine dati; tuttavia i vincoli vengano in genere impostati dall'origine dati, il **riempire** metodo non aggiunge queste informazioni sullo schema per il **set di dati** per impostazione predefinita. Per popolare una **set di dati** con informazioni di vincolo di chiave primaria esistente da un'origine dati, è possibile chiamare il **FillSchema** metodo per il **DataAdapter**, o impostare il **MissingSchemaAction** proprietà delle **DataAdapter** al **AddWithKey** prima di chiamare **riempire**. In tal modo, la chiave primaria vincoli nel **set di dati** riflettano quelli nell'origine dati. Informazioni sul vincolo di chiave esterna non è inclusi e deve essere creati in modo esplicito, come illustrato nella [vincoli DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
@@ -61,6 +61,7 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Se il **FillSchema** metodo per il **OleDbDataAdapter** oggetto viene chiamato per un comando che restituisce più set di risultati, vengono restituite solo le informazioni dello schema dal primo set di risultati. Quando la restituzione di informazioni sullo schema per il risultato di più set mediante il **OleDbDataAdapter**, si consiglia di specificare una **MissingSchemaAction** dei **AddWithKey** e ottenere le informazioni sullo schema quando si chiama il **riempire** (metodo).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

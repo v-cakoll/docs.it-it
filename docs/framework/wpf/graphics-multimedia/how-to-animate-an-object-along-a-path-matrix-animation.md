@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Animare un oggetto lungo un percorso (animazione Matrix)'
+title: "Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Matrix)"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190925"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procedura: Animare un oggetto lungo un percorso (animazione Matrix)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Matrix)
 Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> classe per animare un oggetto lungo un tracciato definito da un <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Esempio  
@@ -35,6 +35,7 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.Matri
  Per l'esempio completo, vedere [esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028). Per altre informazioni sui tracciati geometrici, vedere la [panoramica delle classi Geometry](geometry-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)

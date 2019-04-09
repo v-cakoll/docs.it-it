@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare se un formato di dati è presente in un oggetto dati'
+title: 'Procedura: Determinare se un formato dati è presente in un oggetto dati'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drag-and-drop [WPF], data formats present
 - data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-ms.openlocfilehash: 57190b94988c8ee557e99836a8e8500bfb622f2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cec733490e2a9dc5d54b3b253ac38a5090ac885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207968"
 ---
-# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Procedura: Determinare se un formato di dati è presente in un oggetto dati
+# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Procedura: Determinare se un formato dati è presente in un oggetto dati
 Gli esempi seguenti illustrano come usare i vari <xref:System.Windows.DataObject.GetDataPresent%2A> overload del metodo di query se un particolare formato dati è presente in un oggetto dati.  
   
 ## <a name="example"></a>Esempio  
@@ -47,4 +47,5 @@ Gli esempi seguenti illustrano come usare i vari <xref:System.Windows.DataObject
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.IDataObject>

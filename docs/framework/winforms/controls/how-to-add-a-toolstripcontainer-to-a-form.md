@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere un oggetto ToolStripContainer a un Form'
+title: 'Procedura: Aggiungere un oggetto ToolStripContainer a un modulo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216210"
 ---
-# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procedura: Aggiungere un oggetto ToolStripContainer a un Form
+# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procedura: Aggiungere un oggetto ToolStripContainer a un modulo
 È possibile aggiungere un oggetto <xref:System.Windows.Forms.ToolStripContainer> a un Windows Form a livello di codice e quindi popolarlo con controlli.  
   
 ## <a name="example"></a>Esempio  
@@ -33,6 +33,7 @@ ms.locfileid: "57715321"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [Controllo ToolStripContainer](toolstripcontainer-control.md)
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)

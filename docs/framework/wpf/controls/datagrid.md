@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197152"
 ---
 # <a name="datagrid"></a>DataGrid
 Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e modificare i dati da molte origini diverse, ad esempio da un database SQL, query LINQ o qualsiasi altra origine dati associabili. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](../data/binding-sources-overview.md).  
@@ -49,17 +49,18 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e 
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Visualizzare i dati da un Database SQL Server in un controllo DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene descritto come configurare un nuovo progetto WPF, aggiungere un elemento Entity Framework, impostare l'origine e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid>.|  
-|[Procedura: Aggiungere i dettagli della riga a un controllo DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Viene descritto come creare i dettagli delle righe per un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procedura dettagliata: Visualizzare i dati di un database di SQL Server in un controllo DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Viene descritto come configurare un nuovo progetto WPF, aggiungere un elemento Entity Framework, impostare l'origine e visualizzare i dati in un <xref:System.Windows.Controls.DataGrid>.|  
+|[Procedura: Aggiungere dettagli di riga a un controllo DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Viene descritto come creare i dettagli delle righe per un <xref:System.Windows.Controls.DataGrid>.|  
 |[Procedura: Implementare la convalida con il controllo DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Viene descritto come convalidare i valori in <xref:System.Windows.Controls.DataGrid> celle e righe e i suggerimenti di convalida visualizzato.|  
 |[Comportamento predefinito di tastiera e mouse nel controllo DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Viene descritto come interagire con il <xref:System.Windows.Controls.DataGrid> controllo usando la tastiera e mouse.|  
 |[Procedura: Raggruppare, ordinare e filtrare dati nel controllo DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Viene descritto come visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> in modi diversi per il raggruppamento, ordinamento e filtro dei dati.|  
 |[Opzioni di ridimensionamento nel controllo DataGrid](sizing-options-in-the-datagrid-control.md)|Viene descritto come controllare il ridimensionamento automatico e assoluto nel <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.DataGrid>
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Panoramica sul data binding](../data/data-binding-overview.md)
-- [Panoramica sui modelli di dati](../data/data-templating-overview.md)
+- [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)
 - [Controlli](index.md)
 - [Modello di contenuto WPF](wpf-content-model.md)

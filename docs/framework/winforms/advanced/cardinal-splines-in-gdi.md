@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200415"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Spline di tipo Cardinal in GDI+
 Spline di tipo cardinal è una sequenza di curve singole raggruppate per formare una curva di dimensioni maggiori. La spline di tipo è specificato da una matrice di punti e un parametro di tensione. Spline di tipo cardinal passa per ogni punto della matrice; Esistono Nessun angoli acuti e apportare alcuna modifica improvviso la tensione della curva. Nella figura seguente mostra un set di punti e di una spline di tipo cardinal che passa attraverso ogni punto nel set.  
@@ -36,5 +36,6 @@ Spline di tipo cardinal è una sequenza di curve singole raggruppate per formare
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee, curve e forme](lines-curves-and-shapes.md)
 - [Costruzione e creazione di curve](constructing-and-drawing-curves.md)

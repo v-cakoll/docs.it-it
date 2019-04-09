@@ -1,19 +1,19 @@
 ---
-title: 'Endpoint: Gli indirizzi, associazioni e contratti'
+title: 'Endpoint: indirizzi, associazioni e contratti'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207526"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: Gli indirizzi, associazioni e contratti
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
 Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio WCF.  
   
  Ogni endpoint è costituito da quattro proprietà:  
@@ -78,15 +78,16 @@ Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) vi
  [Contratti](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Viene descritto in che modo i contratti definiscono i metodi di un servizio.  
   
- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Procedura: Creare un endpoint di servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Viene descritto come creare un endpoint del servizio nella configurazione.  
   
- [Procedura: Creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Procedura: Creare un endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Viene descritto come creare un endpoint del servizio nel codice.  
   
  [Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Viene descritto come rilevare errori in implementazioni del servizio e le configurazioni senza ospitare il servizio utilizzando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Configurazione dei servizi](../../../../docs/framework/wcf/configuring-services.md)
 - [Estensione delle associazioni](../../../../docs/framework/wcf/extending/extending-bindings.md)

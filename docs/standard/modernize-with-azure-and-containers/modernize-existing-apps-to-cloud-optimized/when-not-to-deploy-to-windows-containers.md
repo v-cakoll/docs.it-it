@@ -1,17 +1,17 @@
 ---
-title: Quando non eseguire la distribuzione ai contenitori Windows
+title: Casi in cui non eseguire la distribuzione in contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Quando non eseguire la distribuzione ai contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200740"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Quando non eseguire la distribuzione ai contenitori Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Casi in cui non eseguire la distribuzione in contenitori Windows
 
 Alcune tecnologie di Windows non sono supportati da contenitori di Windows. In questi casi, è comunque necessario eseguire la migrazione alle macchine virtuali standard, in genere con solo Windows e IIS.
 
@@ -34,7 +34,6 @@ Case non è supportate nei contenitori di Windows, a partire da maggio 2018:
 -   Interfaccia utente (app client con un'interfaccia utente visiva) non sono supportati gli scenari.
 
 -   I ruoli di Windows dell'infrastruttura (DNS, DHCP, controller di dominio, NTP, stampa, File server, di pagine IAM e così via) non sono supportati gli scenari.
-
 
 Per altri scenari non supportate e il desiderio della community, vedere il forum di UserVoice per i contenitori di Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 

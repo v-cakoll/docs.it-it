@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Utilizzare il controllo ortografico con un menu di scelta rapida'
+title: 'Procedura: Usare il controllo ortografico con un menu di scelta rapida'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192979"
 ---
-# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procedura: Utilizzare il controllo ortografico con un menu di scelta rapida
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procedura: Usare il controllo ortografico con un menu di scelta rapida
 Per impostazione predefinita, quando si abilita il controllo ortografico in un controllo di modifica, ad esempio <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, si ottengono le opzioni di controllo ortografico nel menu di scelta rapida. Ad esempio, quando gli utenti fare doppio clic su una parola errata, ricevono un set di suggerimenti ortografici o la possibilità **Ignora tutto**. Tuttavia, quando si esegue l'override di menu di scelta rapida predefinito con il proprio menu di scelta rapida personalizzato, questa funzionalità viene persa e devi scrivere codice per riabilitare la funzionalità di controllo ortografico nel menu di scelta rapida. Nell'esempio seguente viene illustrato come abilitare questa opzione su un <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Esempio  
@@ -39,7 +39,8 @@ Per impostazione predefinita, quando si abilita il controllo ortografico in un c
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)
 - [Attivare il controllo ortografico in un controllo di modifica del testo](how-to-enable-spell-checking-in-a-text-editing-control.md)
 - [Usare un menu di scelta rapida personalizzato con un oggetto TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)

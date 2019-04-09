@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [WPF], Viewbox
 - Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-ms.openlocfilehash: 96d6584debe3e0dc85121cbcde5e6b4d1ac8c75c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08358ea07e0c41e3b7cdf52251a3ed4296035e2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209879"
 ---
 # <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>Procedura: Applicare le proprietà Stretch al contenuto di un Viewbox
 ## <a name="example"></a>Esempio  
@@ -31,6 +31,7 @@ ms.locfileid: "57352478"
  [!code-vb[viewboxStretchLayoutSamp#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Viewbox>
 - <xref:System.Windows.Media.Stretch>
 - <xref:System.Windows.Controls.StretchDirection>

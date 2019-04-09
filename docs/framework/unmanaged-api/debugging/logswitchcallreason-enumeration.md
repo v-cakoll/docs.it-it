@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198491"
 ---
 # <a name="logswitchcallreason-enumeration"></a>Enumerazione LogSwitchCallReason
 Indica l'operazione che è stata eseguita su un'opzione di debug/traccia.  
@@ -38,7 +38,7 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|È stato creato un commutatore di analisi o debug.|  
 |`SWITCH_MODIFY`|È stata modificata un'opzione di debug/traccia.|  
@@ -54,4 +54,5 @@ typedef enum LogSwitchCallReason {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

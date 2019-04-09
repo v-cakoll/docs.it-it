@@ -2,12 +2,12 @@
 title: Opzioni e linee guida per la tecnologia ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212531"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opzioni e linee guida per la tecnologia ADO.NET
 ADO.NET Data Platform è una strategia multi-versione concepita per ridurre la quantità di codice e di interventi di manutenzione richiesti per gli sviluppatori consentendo loro di eseguire la programmazione per modelli di dati di entità concettuali. Questa piattaforma include ADO.NET Entity Framework e le tecnologie correlate.  
@@ -31,15 +31,16 @@ ADO.NET Data Platform è una strategia multi-versione concepita per ridurre la q
  EntityClient è un nuovo provider di dati .NET Framework usato per l'interazione con Entity Data Model. Come gli altri provider di dati .NET Framework, EntityClient espone oggetti <xref:System.Data.EntityClient.EntityConnection> e <xref:System.Data.EntityClient.EntityCommand> che restituiscono un oggetto <xref:System.Data.EntityClient.EntityDataReader>. EntityClient usa il linguaggio Entity SQL, fornendo mapping flessibile ai provider di dati specifici dell'archiviazione. Per altre informazioni, vedere [EntityClient Provider per Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Strumenti di Entity Data Model  
- Entity Framework fornisce finestre di progettazione, procedure guidate e strumenti da riga di comando per semplificare la compilazione di applicazioni EDM. Il controllo EntityDataSource supporta scenari di associazione dati basati su EDM. La superficie di programmazione del controllo EntityDataSource è simile agli altri controlli origine dati in Visual Studio. Per altre informazioni, vedere [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
+ Entity Framework fornisce finestre di progettazione, procedure guidate e strumenti da riga di comando per semplificare la compilazione di applicazioni EDM. Il controllo EntityDataSource supporta scenari di data binding basati su EDM. La superficie di programmazione del controllo EntityDataSource è simile agli altri controlli origine dati in Visual Studio. Per altre informazioni, vedere [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  LINQ to SQL è un'implementazione del mapping relazionale a oggetti che consente di modellare un database SQL Server tramite le classi di .NET Framework. LINQ to SQL consente di eseguire una query sul database tramite LINQ nonché di aggiornare, inserire ed eliminare dati da esso. LINQ to SQL supporta transazioni, visualizzazioni e stored procedure consentendo di integrare facilmente le regole relative alla convalida dei dati e alla logica di business nel modello dati. È possibile usare Progettazione relazionale oggetti per modellare le classi di entità e le associazioni basate sugli oggetti in un database. Per altre informazioni, vedere [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] distribuisce servizi dati nel Web o in una rete Intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di distribuire servizi dati sul Web o in una rete intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Novità in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

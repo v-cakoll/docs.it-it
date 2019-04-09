@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193096"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet (funzione)
 Recupera il qualificatore impostato per l'istanza di una classe o la definizione di una classe.
@@ -47,13 +47,13 @@ HRESULT GetQualifierSet (
 [in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.
 
 `ppQualSet`  
-[out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori dell'oggetto di classe. Il parametro `ppQualSet` non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore viene lasciato invariato. 
+[out] Riceve il puntatore a interfaccia che consente l'accesso per i qualificatori dell'oggetto di classe. `ppQualSet` Non può essere `null`. Se si verifica un errore, non viene restituito un nuovo oggetto e il puntatore viene lasciato invariato. 
 
 ## <a name="return-value"></a>Valore restituito
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Il metodo specificato non esiste. |
@@ -75,4 +75,5 @@ Il [puntatore IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqu
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

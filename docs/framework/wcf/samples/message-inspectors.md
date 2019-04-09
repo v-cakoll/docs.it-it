@@ -2,12 +2,12 @@
 title: Controlli messaggi
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199804"
 ---
 # <a name="message-inspectors"></a>Controlli messaggi
 In questo esempio viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Qualsiasi controllo messaggi del servizio (dispatcher) deve implementare i due metodi <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector><xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> e <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> viene richiamato dal dispatcher quando un messaggio è stato ricevuto, elaborato dallo stack di canali e assegnato a un servizio, ma prima che venga deserializzato e inviato a un'operazione. Se il messaggio in arrivo è crittografato, il messaggio arriva al controllo messaggi già decrittografato. Il metodo ottiene il messaggio `request` passato come un parametro per riferimento, il che significa che il messaggio potrà essere controllato, modificato o sostituito in base alla necessità. Il valore restituito può essere qualsiasi oggetto e può essere utilizzato come oggetto dello stato di correlazione che viene passato a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando il servizio restituisce una risposta al messaggio corrente. In questo esempio, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega l'esame (la convalida) del messaggio al metodo privato e locale `ValidateMessageBody` e non restituisce oggetti dello stato di correlazione. Questo metodo assicura che non passino messaggi non validi nel servizio.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> viene richiamato dal dispatcher quando un messaggio è stato ricevuto, elaborato dallo stack dei canali e assegnato a un servizio, ma prima che venga deserializzato e inviato a un'operazione. Se il messaggio in arrivo è crittografato, il messaggio arriva al controllo messaggi già decrittografato. Il metodo ottiene il messaggio `request` passato come un parametro per riferimento, il che significa che il messaggio potrà essere controllato, modificato o sostituito in base alla necessità. Il valore restituito può essere qualsiasi oggetto e può essere utilizzato come oggetto dello stato di correlazione che viene passato a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> quando il servizio restituisce una risposta al messaggio corrente. In questo esempio, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> delega l'esame (la convalida) del messaggio al metodo privato e locale `ValidateMessageBody` e non restituisce oggetti dello stato di correlazione. Questo metodo assicura che non passino messaggi non validi nel servizio.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> viene richiamato ogni volta che una risposta è pronta per essere restituita a un client o, nel caso di messaggi unidirezionali, quando il messaggio in arrivo è stato elaborato. Questo consente alle estensioni di essere chiamate simmetricamente, indipendentemente da MEP. Come con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, il messaggio viene passato come un parametro per riferimento e può essere controllato, modificato o sostituito. La convalida del messaggio eseguita in questo esempio è delegata nuovamente al metodo `ValidMessageBody`, ma la gestione degli errori di convalida è leggermente diversa in questo caso.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> viene richiamato ogni volta che una risposta è pronta per essere inviati a un client o nel caso di messaggi unidirezionali, quando è stato elaborato il messaggio in arrivo. Questo consente alle estensioni di essere chiamate simmetricamente, indipendentemente da MEP. Come con <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, il messaggio viene passato come un parametro per riferimento e può essere controllato, modificato o sostituito. La convalida del messaggio eseguita in questo esempio è delegata nuovamente al metodo `ValidMessageBody`, ma la gestione degli errori di convalida è leggermente diversa in questo caso.  
   
  Se si verifica un errore di convalida nel servizio, il metodo `ValidateMessageBody` genera eccezioni derivate da <xref:System.ServiceModel.FaultException>. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, queste eccezioni possono essere inserite nell'infrastruttura del modello di servizi, dove vengono automaticamente trasformate in errori SOAP e inoltrate al client. In <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, le eccezioni <xref:System.ServiceModel.FaultException> non possono essere inserite nell'infrastruttura, perché la trasformazione di eccezioni d'errore generate dal servizio avviene prima che il controllo messaggi venga chiamato. Pertanto l'implementazione seguente rileva l'eccezione `ReplyValidationFault` nota e sostituisce il messaggio di risposta con un messaggio di errore esplicito. Questo metodo assicura che non vengano restituiti messaggi non validi dall'implementazione del servizio.  
   
@@ -412,4 +412,3 @@ catch (Exception e)
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

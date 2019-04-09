@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11afa2900ef2db857942e95d0b184f99b1e9c947
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7dd4589da9b59d7e701ac641c8d45be3735d0b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199167"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>Metodo ICorThreadpool::CorCallOrQueueUserWorkItem
 Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.  
@@ -47,4 +47,5 @@ HRESULT CorCallOrQueueUserWorkItem (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorThreadpool](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

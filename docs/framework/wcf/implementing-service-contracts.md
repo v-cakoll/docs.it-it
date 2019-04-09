@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196320"
 ---
 # <a name="implementing-service-contracts"></a>Implementazione dei contratti di servizio
 Un servizio è una classe che espone le funzionalità disponibili per i client a uno o più endpoint. Per creare un servizio, scrivere una classe che implementa un contratto Windows Communication Foundation (WCF). Questa operazione può essere eseguita in due modi. È possibile definire il contratto separatamente come un'interfaccia e quindi creare una classe che implementi tale interfaccia. In alternativa, è possibile creare direttamente la classe e il contratto posizionando l'attributo <xref:System.ServiceModel.ServiceContractAttribute> sulla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> sui metodi disponibili per i client del servizio.  
@@ -58,7 +58,8 @@ class MathService
  Dopo avere implementato un contratto di servizio, è necessario creare uno o più endpoint per il servizio. Per altre informazioni, vedere [Cenni preliminari sulla creazione di Endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md). Per altre informazioni su come eseguire un servizio, vedere [servizi di Hosting](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Procedura: Creare un servizio con una classe del contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [Procedura: Creare un servizio con un'interfaccia del contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Procedura: Creare un servizio con una classe di contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Procedura: Creare un servizio con un'interfaccia di contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [Specifica del comportamento in fase di esecuzione del servizio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

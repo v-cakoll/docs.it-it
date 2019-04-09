@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60cbc6f6649db28d06321b59c26c45668628d9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212466"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>Enumerazione COR_GC_THREAD_STATS_TYPES
 Indica le statistiche per un thread di garbage collection.  
@@ -36,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Il thread di byte che sono state alzate di livello il più recente operazione di garbage collection.|  
   
@@ -48,4 +48,5 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

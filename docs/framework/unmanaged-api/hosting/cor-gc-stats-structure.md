@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208475"
 ---
 # <a name="corgcstats-structure"></a>Struttura COR_GC_STATS
 Fornisce statistiche sul meccanismo di garbage collection di common language runtime (CLR).  
@@ -46,7 +46,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`Flags`|Indica i valori dei campi devono essere calcolati e restituiti.|  
 |`ExplicitGCCount`|Indica il numero di operazioni di garbage collection che sono stati obbligati da una richiesta esterna.|  
@@ -87,6 +87,7 @@ pCLRGCManager->GetStats(&GCStats);
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)

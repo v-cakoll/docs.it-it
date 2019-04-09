@@ -2,12 +2,12 @@
 title: Novità in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191460"
 ---
 # <a name="whats-new-in-adonet"></a>Novità in ADO.NET
 Di seguito sono riportate le nuove funzionalità di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -41,7 +41,7 @@ Di seguito sono riportate le nuove funzionalità di [!INCLUDE[vstecado](../../..
   
 -   SqlClient supporta le connessioni ai database LocalDB. Per altre informazioni, vedere [supporto SqlClient per LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` è il nuovo valore da passare alla proprietà di connessione `Type System Version`. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` nuovo valore da passare al `Type System Version` proprietà di connessione. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 -   SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se una colonna è di tipo sparse (vedere [raccolte di schemi di SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) per altre informazioni). Per altre informazioni sulle colonne di tipo sparse, vedere [utilizzo di colonne di tipo Sparse](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
@@ -51,8 +51,9 @@ Di seguito sono riportate le nuove funzionalità di [!INCLUDE[vstecado](../../..
  In [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] sono state aggiunte le API che abilitano nuovi scenari quando si usa Entity Framework 5.0. Per altre informazioni sui miglioramenti e funzionalità che sono stati aggiunti a Entity Framework 5.0, vedere gli argomenti seguenti: [Quali sono le novità](https://go.microsoft.com/fwlink/?LinkID=251106) e [le versioni di Entity Framework e il controllo delle versioni](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Quali sono le novità in WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

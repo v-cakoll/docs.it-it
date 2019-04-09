@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 52ea2336bac1ec483cb86e24114090a1b3725038
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 06283a93c3b88d2febc1d64797139eee62661b42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201650"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Procedura: Rendere invisibile il controllo in fase di esecuzione
 Vi sono casi quando si potrebbe voler creare un controllo utente che non è visibile in fase di esecuzione. Ad esempio, potrebbe essere invisibile tranne quando l'allarme è stato suona un controllo che una sveglia. Questo avviene facilmente impostando il <xref:System.Windows.Forms.Control.Visible%2A> proprietà. Se il <xref:System.Windows.Forms.Control.Visible%2A> è di proprietà `true`, il controllo verrà visualizzato come di consueto. Se `false`, il controllo sarà nascosto. Anche se nel controllo del codice può comunque eseguire nonostante sia invisibile, non sarà in grado di interagire con il controllo tramite l'interfaccia utente. Se si desidera creare un controllo invisibile in grado di rispondere all'input (ad esempio, clic del mouse) dell'utente, è necessario creare un controllo trasparente. Per altre informazioni, vedere [assegnazione di uno sfondo trasparente al controllo](how-to-give-your-control-a-transparent-background.md).  
@@ -40,6 +40,7 @@ Vi sono casi quando si potrebbe voler creare un controllo utente che non è visi
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Control.Visible%2A>
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Procedura: Assegnare al controllo uno sfondo trasparente](how-to-give-your-control-a-transparent-background.md)
+- [Procedura: Assegnare uno sfondo trasparente al controllo](how-to-give-your-control-a-transparent-background.md)

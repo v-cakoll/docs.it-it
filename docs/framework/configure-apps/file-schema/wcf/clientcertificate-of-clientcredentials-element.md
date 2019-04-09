@@ -2,12 +2,12 @@
 title: <clientCertificate> di <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216457"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > di \<clientCredentials > elemento
 Definisce un certificato X.509 utilizzato dal client per autenticare un servizio.  
@@ -53,6 +53,7 @@ Definisce un certificato X.509 utilizzato dal client per autenticare un servizio
  Questo elemento di configurazione specifica il certificato usato per autenticare il client con questo elemento. Per altre informazioni, vedere [Procedura: Specificare i valori di credenziale Client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -60,7 +61,7 @@ Definisce un certificato X.509 utilizzato dal client per autenticare un servizio
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Procedura: Specificare i valori di credenziale Client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Procedura: Specificare valori di credenziali client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)
-- [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

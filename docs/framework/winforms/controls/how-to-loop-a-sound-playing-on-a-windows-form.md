@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188513"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedura: Riprodurre un suono ripetutamente in un Windows Form
 Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando viene eseguito il codice nel gestore dell'evento `stopPlayingButton_Click`, l'eventuale riproduzione corrente di un suono viene interrotta. Se non è in corso di riproduzione alcun suono, non accadrà nulla.  
@@ -54,6 +54,7 @@ Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando 
  Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto. È possibile ad esempio che il file Form1.vb non sia un file di origine di Visual Basic. Prima di usare i dati nell'applicazione verificare tutti gli input.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
 - [Procedura: Riprodurre un suono da un Windows Form](how-to-play-a-sound-from-a-windows-form.md)
-- [Panoramica della classe SoundPlayer](soundplayer-class-overview.md)
+- [Cenni preliminari sulla classe SoundPlayer](soundplayer-class-overview.md)

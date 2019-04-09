@@ -2,17 +2,16 @@
 title: Tipi F#
 description: Informazioni sui tipi utilizzabili in F# e in che modo F# sono denominati e descritti i tipi.
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193590"
 ---
 # <a name="f-types"></a>Tipi F#
 
 In questo argomento vengono descritti i tipi usati in F# e in che modo F# sono denominati e descritti i tipi.
-
 
 ## <a name="summary-of-f-types"></a>Riepilogo di F# tipi
 Alcuni tipi sono considerati *i tipi primitivi*, ad esempio il tipo booleano `bool` e tipi a virgola mobile e integrali di diverse dimensioni, che includono i tipi di caratteri e i byte. Questi tipi sono descritti [i tipi primitivi](primitive-types.md).
@@ -27,34 +26,30 @@ Inoltre, F# codice è possibile definire gli alias, sono denominati *abbreviazio
 
 F#Fornisce tipi di raccolta utile che sono progettati con la programmazione funzionale in considerazione. Utilizzo di questi tipi di raccolta consente di scrivere codice che è più funziona nello stile. Per altre informazioni, vedere [ F# tipi di raccolte](fsharp-collection-types.md).
 
-
 ## <a name="syntax-for-types"></a>Sintassi per i tipi
 In F# codice, spesso è necessario scrivere i nomi dei tipi. Ogni tipo ha una forma sintattica e si usano queste forme in annotazioni del tipo, le dichiarazioni di metodo astratto, le dichiarazioni delegate, firme e altri costrutti sintattiche. Ogni volta che si dichiara un nuovo costrutto di programma nell'interprete, l'interprete stampa il nome del costrutto e la sintassi per il relativo tipo. Questa sintassi può essere solo un identificatore per un tipo definito dall'utente o un identificatore incorporato, ad esempio le `int` o `string`, ma per i tipi più complessi, la sintassi è più complessa.
 
 La tabella seguente illustra gli aspetti della sintassi del tipo per F# tipi.
-
-
 
 |Tipo|Sintassi di tipo|Esempi|
 |----|-----------|--------|
 |tipo primitivo|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |tipo di aggregazione (classe, struttura, unione, record, enum e così via)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |abbreviazione di tipo|*nome di abbreviazione di tipo*|`bigint`|
-|nome completo del tipo|*Namespaces.type-name*<br /><br />oppure<br /><br />*Modules.type-name*<br /><br />oppure<br /><br />*Namespaces.Modules.type-name*|`System.IO.StreamWriter`|
+|nome completo del tipo|*namespaces.type-name*<br /><br />oppure<br /><br />*modules.type-name*<br /><br />oppure<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*nome del tipo*[] o<br /><br />*nome del tipo* matrice|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|matrice bidimensionale|*nome del tipo*[,]|`int[,]`<br /><br />`float[,]`|
-|Matrice tridimensionale|*nome del tipo*[,]|`float[,,]`|
-|tuple|*tipo nome1* &#42; *nome2 di tipo* ...|Ad esempio, `(1,'b',3)` ha tipo `int * char * int`|
-|tipo generico|*parametro di tipo* *generico-type-name*<br /><br />oppure<br /><br />*nome di tipo generico*&lt;*elenco di parametri di tipo*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|costruito (un tipo generico che ha un argomento di tipo specifico fornito)|*argomento di tipo* *generico-type-name*<br /><br />oppure<br /><br />*nome di tipo generico*&lt;*elenco di argomenti tipo*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|tipo di funzione che ha un parametro singolo|*parametro-tipo1*  - &gt; *tipo restituito*|Una funzione che accetta un `int` e restituisce un `string` ha tipo `int -> string`|
+|matrice bidimensionale|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|Matrice tridimensionale|*type-name*[,,]|`float[,,]`|
+|tuple|*type-name1* &#42; *type-name2* ...|Ad esempio, `(1,'b',3)` ha tipo `int * char * int`|
+|tipo generico|*type-parameter* *generic-type-name*<br /><br />oppure<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|costruito (un tipo generico che ha un argomento di tipo specifico fornito)|*type-argument* *generic-type-name*<br /><br />oppure<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|tipo di funzione che ha un parametro singolo|*parameter-type1* -&gt; *return-type*|Una funzione che accetta un `int` e restituisce un `string` ha tipo `int -> string`|
 |tipo di funzione che ha più parametri|*parametro-tipo1*  - &gt; *parametro type2*  - &gt; ... -&gt; *tipo restituito*|Una funzione che accetta un `int` e una `float` e restituisce un `string` ha tipo `int -> float -> string`|
-|funzione di ordine superiore come parametro|(*-tipo di funzione*)|`List.map` è di tipo `('a -> 'b) -> 'a list -> 'b list`|
+|funzione di ordine superiore come parametro|(*function-type*)|`List.map` è di tipo `('a -> 'b) -> 'a list -> 'b list`|
 |delegato|delegato di *-tipo di funzione*|`delegate of unit -> int`|
 |tipo flessibile|#*nome del tipo*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Argomenti correlati
-
 
 |Argomento|Descrizione|
 |-----|-----------|

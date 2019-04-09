@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6244f01a78f08da839b233c3313f2fd6bff44b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190353"
 ---
 # <a name="eclroperation-enumeration"></a>Enumerazione EClrOperation
 Descrive il set di operazioni per il quale un host è possibile applicare azioni dei criteri.  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|L'host può specificare le azioni dei criteri da eseguire quando un <xref:System.AppDomain> viene scaricato in modo non regolare (non applicabili).|  
 |`OPR_AppDomainUnload`|L'host può specificare le azioni dei criteri da eseguire quando un <xref:System.AppDomain> viene scaricato.|  
@@ -71,6 +71,7 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazione EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [Enumerazione EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
 - [Interfaccia ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

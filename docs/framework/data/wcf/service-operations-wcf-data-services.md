@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211972"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operazioni di servizio (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server. Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI. Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate. Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. URI dell'operazione del servizio seguente, ad esempio, (in base il [Guida introduttiva](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servizio dati) passa il valore `London` per il `city` parametro:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di definire operazioni del servizio in un servizio dati per esporre metodi nel server. Allo stesso modo di altre risorse del servizio dati, le operazioni del servizio vengono indirizzate mediante URI. Le operazioni del servizio consentono di esporre la logica di business in un servizio dati, ad esempio per implementare la logica di convalida, per applicare la sicurezza basata sui ruoli o per esporre funzionalità di query specializzate. Le operazioni del servizio sono metodi aggiunti alla classe del servizio dati che deriva da <xref:System.Data.Services.DataService%601>. Analogamente a tutte le altre risorse del servizio dati, è possibile fornire parametri al metodo dell'operazione del servizio. URI dell'operazione del servizio seguente, ad esempio, (in base il [Guida introduttiva](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) servizio dati) passa il valore `London` per il `city` parametro:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Il metodo deve essere annotato con l'attributo `[WebGet]` o `[WebInvoke]`.  
   
-    -   `[WebGet]` abilita il metodo da richiamare tramite una richiesta GET.  
+    -   `[WebGet]` Abilita il metodo da richiamare tramite una richiesta GET.  
   
-    -   `[WebInvoke(Method = "POST")]` abilita il metodo da richiamare tramite una richiesta POST. Altri metodi <xref:System.ServiceModel.Web.WebInvokeAttribute> non sono supportati.  
+    -   `[WebInvoke(Method = "POST")]` Abilita il metodo da richiamare tramite una richiesta POST. Altri metodi <xref:System.ServiceModel.Web.WebInvokeAttribute> non sono supportati.  
   
 -   Un'operazione del servizio può essere annotata con <xref:System.Data.Services.SingleResultAttribute> che specifica che il valore restituito dal metodo è una singola entità anziché una raccolta di entità. Questa distinzione determina la serializzazione della risposta e il modo in cui gli attraversamenti delle proprietà di navigazione aggiuntivi vengono rappresentati nell'URI. Nel caso di utilizzo della serializzazione AtomPub, ad esempio, un'istanza singola del tipo di risorsa viene rappresentata come elemento entry e un set di istanze come elemento feed.  
   
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

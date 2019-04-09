@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199219"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedura: Installare e configurare componenti di attivazione WCF
 In questo argomento vengono descritti i passaggi necessari per configurare il servizio Attivazione processo Windows (noto anche come WAS) in [!INCLUDE[wv](../../../../includes/wv-md.md)] per Windows Communication Foundation (WCF) di ospitare servizi che non comunicano su HTTP i protocolli di rete. Nelle sezioni seguenti vengono spiegati i passaggi relativi a tale configurazione:  
@@ -101,6 +101,7 @@ In questo argomento vengono descritti i passaggi necessari per configurare il se
     >  Questo comando è una singola riga di testo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Attivazione MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [Attivazione di NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

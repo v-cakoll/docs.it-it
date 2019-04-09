@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNeighborStateChangeFailed
 ms.date: 03/30/2017
 ms.assetid: 95153aa1-0e04-4857-83d9-9963f5e40b4e
-ms.openlocfilehash: e1d739f94b2ec8489e4236e6428df6ef7b909f1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c934b5ac819ebccce4fd3aa0d6528caad34b1f49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202690"
 ---
 # <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a>System.ServiceModel.Channels.PeerNeighborStateChangeFailed
 Lo stato di un router adiacente è stato danneggiato.  
@@ -16,6 +16,7 @@ Lo stato di un router adiacente è stato danneggiato.
  Questa traccia si verifica in occasione di un tentativo non riuscito di modifica dello stato di un router adiacente. Indica un errore interno imprevisto o la presenza di memoria danneggiata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

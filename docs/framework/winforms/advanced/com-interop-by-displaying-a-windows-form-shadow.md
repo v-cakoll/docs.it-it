@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206447"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procedura: Supportare l'interoperabilità COM visualizzando un Windows Form con il metodo ShowDialog
 È possibile risolvere i problemi di interoperabilità di Component Object Model (COM) visualizzando il Windows Form in un ciclo di messaggi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] creato usando il metodo <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
@@ -38,6 +38,7 @@ ms.locfileid: "57715438"
 -   Sostituire tutte le chiamate al metodo <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> con chiamate al metodo <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> nel componente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esposizione di componenti .NET Framework a COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Procedura: Supportare l'interoperabilità COM mediante la visualizzazione di ogni Windows Form nel relativo Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Procedura: Supportare l'interoperabilità COM visualizzando ogni Windows Form nel proprio thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
 - [Windows Form e applicazioni non gestite](windows-forms-and-unmanaged-applications.md)

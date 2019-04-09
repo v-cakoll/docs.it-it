@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Assegnare al controllo uno sfondo trasparente'
+title: 'Procedura: Assegnare uno sfondo trasparente al controllo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent backgrounds [Windows Forms], custom controls
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 5a54b76eb92c7d3f518b9bf13e154e6faf58de63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206096"
 ---
-# <a name="how-to-give-your-control-a-transparent-background"></a>Procedura: Assegnare al controllo uno sfondo trasparente
+# <a name="how-to-give-your-control-a-transparent-background"></a>Procedura: Assegnare uno sfondo trasparente al controllo
 Nelle versioni precedenti di .NET Framework, i controlli non supportavano gli sfondi trasparenti senza aver prima impostato il metodo <xref:System.Windows.Forms.Control.SetStyle%2A> nel costruttore del modulo. Nella versione corrente del framework è possibile impostare il colore di sfondo per la maggior parte dei controlli su <xref:System.Drawing.Color.Transparent%2A> nella finestra **Proprietà** in fase di progettazione o nel codice nel costruttore del modulo.  
   
 > [!NOTE]
@@ -24,10 +24,11 @@ Nelle versioni precedenti di .NET Framework, i controlli non supportavano gli sf
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>Per assegnare al controllo uno sfondo trasparente  
   
--   Nella finestra Proprietà scegliere la proprietà <xref:System.Windows.Forms.ButtonBase.BackColor%2A> e impostarla su <xref:System.Drawing.Color.Transparent%2A>.  
+-   Nella finestra Proprietà scegliere il <xref:System.Windows.Forms.ButtonBase.BackColor%2A> proprietà e impostarla su <xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Uso di classi grafiche gestite](../advanced/using-managed-graphics-classes.md)
+- [Utilizzo di classi grafiche gestite](../advanced/using-managed-graphics-classes.md)
 - [Procedura: Disegnare linee opache e semitrasparenti](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

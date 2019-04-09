@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202716"
 ---
 # <a name="couninitializecor-function"></a>Funzione CoUninitializeCor
 `CoUninitializeCor` è obsoleto.  
@@ -37,4 +37,5 @@ STDAPI_(void) CoUninitializeCor(void);
  Common language runtime non può essere scaricato da un processo. Per rimuovere completamente il runtime da un processo in esecuzione, è necessario arrestare il processo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni statiche globali dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

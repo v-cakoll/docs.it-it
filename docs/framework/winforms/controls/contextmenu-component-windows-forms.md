@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207955"
 ---
 # <a name="contextmenu-component-windows-forms"></a>Componente ContextMenu (Windows Form)
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "57724527"
  I moduli di Windows `ContextMenu` componente viene utilizzato per fornire agli utenti con un menu di scelta rapida facilmente accessibile di comandi usati di frequente associate all'oggetto selezionato. Gli elementi in un menu di scelta rapida sono spesso un sottoinsieme degli elementi del menu principali che vengono visualizzati in un' posizione nell'applicazione. Menu di scelta rapida sono in genere disponibili facendo clic con il mouse. In Windows Form sono associati ad altri controlli.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul componente ContextMenu](contextmenu-component-overview-windows-forms.md)  
+ [Panoramica del componente ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Introduce i concetti generali del `ContextMenu` componente, che consente agli utenti di creare i menu dei comandi usati frequentemente associati a un oggetto selezionato.  
   
- [Procedura: Aggiungere e rimuovere voci di Menu con il componente ContextMenu di Windows Form](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Procedura: Aggiungere e rimuovere voci di menu con il componente ContextMenu di Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Form.  
   
 ## <a name="reference"></a>Riferimenti  
@@ -39,5 +39,6 @@ ms.locfileid: "57724527"
  Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: Associazione di una visualizzazione struttura ad albero a dati di profondità non determinabile'
+title: 'Procedura: Associare una visualizzazione struttura ad albero a dati di profondità non determinabile'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214858"
 ---
-# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedura: Associazione di una visualizzazione struttura ad albero a dati di profondità non determinabile
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedura: Associare una visualizzazione struttura ad albero a dati di profondità non determinabile
 Quando si desidera associare a volte può essere un <xref:System.Windows.Controls.TreeView> a un'origine dati di profondità non è noto.  Ciò può verificarsi quando i dati ricorsivi, ad esempio un file system, in cui le cartelle possono contenere le cartelle, o struttura organizzativa dell'azienda, in cui i dipendenti hanno altri dipendenti come dipendenti diretti.  
   
  L'origine dati deve avere un modello gerarchico di oggetti. Ad esempio, un `Employee` classe potrebbe contenere una raccolta di oggetti dipendenti che sono i dipendenti diretti di un dipendente. Se i dati vengono rappresentati in modo che non è di tipo gerarchico, è necessario compilare una rappresentazione gerarchica dei dati.  
@@ -26,5 +26,6 @@ Quando si desidera associare a volte può essere un <xref:System.Windows.Control
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sul data binding](../data/data-binding-overview.md)
-- [Panoramica sui modelli di dati](../data/data-templating-overview.md)
+- [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)
