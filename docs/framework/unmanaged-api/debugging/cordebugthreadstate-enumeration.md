@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2296f6e386f35aed91a8aea4392a9cd00ec27ccb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efb7f5b8e63742471123a0e0a38cebe605f3696f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092448"
 ---
-# <a name="cordebugthreadstate-enumeration"></a><span data-ttu-id="a9408-102">Enumerazione CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="a9408-102">CorDebugThreadState Enumeration</span></span>
-<span data-ttu-id="a9408-103">Specifica lo stato di un thread per il debug.</span><span class="sxs-lookup"><span data-stu-id="a9408-103">Specifies the state of a thread for debugging.</span></span>  
+# <a name="cordebugthreadstate-enumeration"></a><span data-ttu-id="6cd47-102">Enumerazione CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="6cd47-102">CorDebugThreadState Enumeration</span></span>
+<span data-ttu-id="6cd47-103">Specifica lo stato di un thread per il debug.</span><span class="sxs-lookup"><span data-stu-id="6cd47-103">Specifies the state of a thread for debugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a9408-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a9408-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cd47-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6cd47-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugThreadState {  
@@ -35,26 +35,27 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a9408-105">Membri</span><span class="sxs-lookup"><span data-stu-id="a9408-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6cd47-105">Membri</span><span class="sxs-lookup"><span data-stu-id="6cd47-105">Members</span></span>  
   
-|<span data-ttu-id="a9408-106">Membro</span><span class="sxs-lookup"><span data-stu-id="a9408-106">Member</span></span>|<span data-ttu-id="a9408-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a9408-107">Description</span></span>|  
+|<span data-ttu-id="6cd47-106">Member</span><span class="sxs-lookup"><span data-stu-id="6cd47-106">Member</span></span>|<span data-ttu-id="6cd47-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6cd47-107">Description</span></span>|  
 |------------|-----------------|  
-|`THREAD_RUN`|<span data-ttu-id="a9408-108">Il thread esegue gratuitamente, a meno che non si verifica un evento di debug.</span><span class="sxs-lookup"><span data-stu-id="a9408-108">The thread runs freely, unless a debug event occurs.</span></span>|  
-|`THREAD_SUSPEND`|<span data-ttu-id="a9408-109">Non è possibile eseguire il thread.</span><span class="sxs-lookup"><span data-stu-id="a9408-109">The thread cannot run.</span></span>|  
+|`THREAD_RUN`|<span data-ttu-id="6cd47-108">Il thread esegue gratuitamente, a meno che non si verifica un evento di debug.</span><span class="sxs-lookup"><span data-stu-id="6cd47-108">The thread runs freely, unless a debug event occurs.</span></span>|  
+|`THREAD_SUSPEND`|<span data-ttu-id="6cd47-109">Non è possibile eseguire il thread.</span><span class="sxs-lookup"><span data-stu-id="6cd47-109">The thread cannot run.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a9408-110">Note</span><span class="sxs-lookup"><span data-stu-id="a9408-110">Remarks</span></span>  
- <span data-ttu-id="a9408-111">Il debugger usa il `CorDebugThreadState` enumerazione per controllare l'esecuzione di un thread.</span><span class="sxs-lookup"><span data-stu-id="a9408-111">The debugger uses the `CorDebugThreadState` enumeration to control a thread's execution.</span></span> <span data-ttu-id="a9408-112">Lo stato di un thread può essere impostato utilizzando il [SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) oppure [SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="a9408-112">The state of a thread can be set by using the [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) or [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6cd47-110">Note</span><span class="sxs-lookup"><span data-stu-id="6cd47-110">Remarks</span></span>  
+ <span data-ttu-id="6cd47-111">Il debugger usa il `CorDebugThreadState` enumerazione per controllare l'esecuzione di un thread.</span><span class="sxs-lookup"><span data-stu-id="6cd47-111">The debugger uses the `CorDebugThreadState` enumeration to control a thread's execution.</span></span> <span data-ttu-id="6cd47-112">Lo stato di un thread può essere impostato utilizzando il [SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) oppure [SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) (metodo).</span><span class="sxs-lookup"><span data-stu-id="6cd47-112">The state of a thread can be set by using the [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) or [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) method.</span></span>  
   
- <span data-ttu-id="a9408-113">Un callback fornito per il [API di hosting](../../../../docs/framework/unmanaged-api/hosting/index.md) consente la distribuzione dei messaggi, pertanto non è necessario uno stato interrotto.</span><span class="sxs-lookup"><span data-stu-id="a9408-113">A callback provided to the [hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md) enables message pumping, so an interrupted state is not needed.</span></span>  
+ <span data-ttu-id="6cd47-113">Un callback fornito per il [API di hosting](../../../../docs/framework/unmanaged-api/hosting/index.md) consente la distribuzione dei messaggi, pertanto non è necessario uno stato interrotto.</span><span class="sxs-lookup"><span data-stu-id="6cd47-113">A callback provided to the [hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md) enables message pumping, so an interrupted state is not needed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a9408-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a9408-114">Requirements</span></span>  
- <span data-ttu-id="a9408-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9408-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6cd47-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6cd47-114">Requirements</span></span>  
+ <span data-ttu-id="6cd47-115">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6cd47-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a9408-116">**Intestazione:** CorDebug.idl, CorDegug.h</span><span class="sxs-lookup"><span data-stu-id="a9408-116">**Header:** CorDebug.idl, CorDegug.h</span></span>  
+ <span data-ttu-id="6cd47-116">**Intestazione:** CorDebug.idl, CorDegug.h</span><span class="sxs-lookup"><span data-stu-id="6cd47-116">**Header:** CorDebug.idl, CorDegug.h</span></span>  
   
- <span data-ttu-id="a9408-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9408-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6cd47-117">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6cd47-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a9408-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9408-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6cd47-118">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="6cd47-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a9408-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9408-119">See also</span></span>
-- [<span data-ttu-id="a9408-120">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="a9408-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6cd47-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6cd47-119">See also</span></span>
+
+- [<span data-ttu-id="6cd47-120">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="6cd47-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
