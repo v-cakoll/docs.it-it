@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103285"
 ---
 # <a name="corprfcodeinfo-structure"></a>Struttura COR_PRF_CODE_INFO
 Rappresenta un blocco contiguo di codice nativo archiviato in memoria.  
@@ -37,7 +37,7 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`startAddress`|Indirizzo iniziale del blocco contiguo di codice.|  
 |`size`|Le dimensioni del blocco.|  
@@ -52,4 +52,5 @@ typedef struct _COR_PRF_CODE_INFO {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Modificare l'aspetto del controllo Windows Form LinkLabel"
+title: "Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105027"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procedura: Modificare l'aspetto del controllo Windows Form LinkLabel
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Forms
 È possibile modificare il testo visualizzato dal <xref:System.Windows.Forms.LinkLabel> controllo in base alle diverse esigenze. Ad esempio, è pratica comune per indicare all'utente che è possibile fare clic sul testo, impostare il testo da visualizzare in un colore specifico con un carattere di sottolineatura. L'utente seleziona il testo, cambia il colore in un colore diverso. Per controllare questo comportamento, è possibile impostare diverse cinque proprietà: il <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> proprietà.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Per modificare l'aspetto di un controllo LinkLabel  
@@ -122,10 +122,11 @@ ms.locfileid: "57717726"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [Panoramica sul controllo LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Panoramica del controllo LinkLabel](linklabel-control-overview-windows-forms.md)
+- [Procedura: Eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [Controllo LinkLabel](linklabel-control-windows-forms.md)
