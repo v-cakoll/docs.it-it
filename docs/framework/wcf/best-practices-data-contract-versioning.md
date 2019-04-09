@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119002"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per altre informazioni sui contratti dati, vedere gli argomenti in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -91,6 +91,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
  Alcune delle linee guida elencate possono essere ignorate senza conseguenze se si verificano alcune circostanze speciali. Accertarsi di aver compreso tutti gli aspetti della serializzazione, della deserializzazione e dei meccanismi dello schema coinvolti prima di allontanarsi dalle linee guida.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
@@ -100,8 +101,8 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Controllo delle versioni dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Nomi di contratto di dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Controllo delle versioni dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Contratti dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
