@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092058"
 ---
-# <a name="corparamattr-enumeration"></a><span data-ttu-id="110a3-102">Enumerazione CorParamAttr</span><span class="sxs-lookup"><span data-stu-id="110a3-102">CorParamAttr Enumeration</span></span>
-<span data-ttu-id="110a3-103">Contiene valori che descrivono i metadati di un parametro di metodo.</span><span class="sxs-lookup"><span data-stu-id="110a3-103">Contains values that describe the metadata of a method parameter.</span></span>  
+# <a name="corparamattr-enumeration"></a><span data-ttu-id="d3015-102">Enumerazione CorParamAttr</span><span class="sxs-lookup"><span data-stu-id="d3015-102">CorParamAttr Enumeration</span></span>
+<span data-ttu-id="d3015-103">Contiene valori che descrivono i metadati di un parametro di metodo.</span><span class="sxs-lookup"><span data-stu-id="d3015-103">Contains values that describe the metadata of a method parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="110a3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="110a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3015-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d3015-104">Syntax</span></span>  
   
 ```  
 typedef enum CorParamAttr {  
@@ -44,24 +44,25 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="110a3-105">Membri</span><span class="sxs-lookup"><span data-stu-id="110a3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d3015-105">Membri</span><span class="sxs-lookup"><span data-stu-id="d3015-105">Members</span></span>  
   
-|<span data-ttu-id="110a3-106">Membro</span><span class="sxs-lookup"><span data-stu-id="110a3-106">Member</span></span>|<span data-ttu-id="110a3-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="110a3-107">Description</span></span>|  
+|<span data-ttu-id="d3015-106">Member</span><span class="sxs-lookup"><span data-stu-id="d3015-106">Member</span></span>|<span data-ttu-id="d3015-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d3015-107">Description</span></span>|  
 |------------|-----------------|  
-|`pdIn`|<span data-ttu-id="110a3-108">Specifica che il parametro viene passato nella chiamata al metodo.</span><span class="sxs-lookup"><span data-stu-id="110a3-108">Specifies that the parameter is passed into the method call.</span></span>|  
-|`pdOut`|<span data-ttu-id="110a3-109">Specifica che il parametro viene passato dal metodo restituito.</span><span class="sxs-lookup"><span data-stu-id="110a3-109">Specifies that the parameter is passed from the method return.</span></span>|  
-|`pdOptional`|<span data-ttu-id="110a3-110">Specifica che il parametro è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="110a3-110">Specifies that the parameter is optional.</span></span>|  
-|`pdReservedMask`|<span data-ttu-id="110a3-111">Riservato per uso interno da common language runtime.</span><span class="sxs-lookup"><span data-stu-id="110a3-111">Reserved for internal use by the common language runtime.</span></span>|  
-|`pdHasDefault`|<span data-ttu-id="110a3-112">Specifica che il parametro ha un valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="110a3-112">Specifies that the parameter has a default value.</span></span>|  
-|`pdHasFieldMarshal`|<span data-ttu-id="110a3-113">Specifica che il parametro contiene le informazioni di marshalling.</span><span class="sxs-lookup"><span data-stu-id="110a3-113">Specifies that the parameter has marshaling information.</span></span>|  
-|`pdUnused`|<span data-ttu-id="110a3-114">Non usato.</span><span class="sxs-lookup"><span data-stu-id="110a3-114">Unused.</span></span>|  
+|`pdIn`|<span data-ttu-id="d3015-108">Specifica che il parametro viene passato nella chiamata al metodo.</span><span class="sxs-lookup"><span data-stu-id="d3015-108">Specifies that the parameter is passed into the method call.</span></span>|  
+|`pdOut`|<span data-ttu-id="d3015-109">Specifica che il parametro viene passato dal metodo restituito.</span><span class="sxs-lookup"><span data-stu-id="d3015-109">Specifies that the parameter is passed from the method return.</span></span>|  
+|`pdOptional`|<span data-ttu-id="d3015-110">Specifica che il parametro è facoltativo.</span><span class="sxs-lookup"><span data-stu-id="d3015-110">Specifies that the parameter is optional.</span></span>|  
+|`pdReservedMask`|<span data-ttu-id="d3015-111">Riservato per uso interno da common language runtime.</span><span class="sxs-lookup"><span data-stu-id="d3015-111">Reserved for internal use by the common language runtime.</span></span>|  
+|`pdHasDefault`|<span data-ttu-id="d3015-112">Specifica che il parametro ha un valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="d3015-112">Specifies that the parameter has a default value.</span></span>|  
+|`pdHasFieldMarshal`|<span data-ttu-id="d3015-113">Specifica che il parametro contiene le informazioni di marshalling.</span><span class="sxs-lookup"><span data-stu-id="d3015-113">Specifies that the parameter has marshaling information.</span></span>|  
+|`pdUnused`|<span data-ttu-id="d3015-114">Non usato.</span><span class="sxs-lookup"><span data-stu-id="d3015-114">Unused.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="110a3-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="110a3-115">Requirements</span></span>  
- <span data-ttu-id="110a3-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="110a3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3015-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d3015-115">Requirements</span></span>  
+ <span data-ttu-id="d3015-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3015-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="110a3-117">**Intestazione:** CorHdr. H</span><span class="sxs-lookup"><span data-stu-id="110a3-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d3015-117">**Intestazione:** CorHdr. H</span><span class="sxs-lookup"><span data-stu-id="d3015-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="110a3-118">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="110a3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="d3015-118">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d3015-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="110a3-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="110a3-119">See also</span></span>
-- [<span data-ttu-id="110a3-120">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="110a3-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="d3015-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d3015-119">See also</span></span>
+
+- [<span data-ttu-id="d3015-120">Enumerazioni dei metadati</span><span class="sxs-lookup"><span data-stu-id="d3015-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

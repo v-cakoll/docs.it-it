@@ -17,15 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 867635d8c25c7b862d70c00ad16119df7cecd776
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91a9bea6a89d7684d1f3524e4105da81f11e00a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085662"
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="46a29-102">Metodo ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="46a29-102">ICorDebugController::CanCommitChanges Method</span></span>
-<span data-ttu-id="46a29-103">`CanCommitChanges` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="46a29-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="46a29-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="46a29-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="de3a7-102">Metodo ICorDebugController::CanCommitChanges</span><span class="sxs-lookup"><span data-stu-id="de3a7-102">ICorDebugController::CanCommitChanges Method</span></span>
+`CanCommitChanges` <span data-ttu-id="de3a7-103">è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="de3a7-103">is obsolete.</span></span> <span data-ttu-id="de3a7-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="de3a7-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46a29-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="46a29-105">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="de3a7-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="de3a7-105">See also</span></span>
