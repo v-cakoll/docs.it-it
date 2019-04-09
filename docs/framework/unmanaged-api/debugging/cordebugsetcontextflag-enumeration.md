@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572087bd6f14c43b439910be32fca54af66a2e8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115687"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Enumerazione CorDebugSetContextFlag
 Indica se il contesto proviene dal frame attivo (o foglia) sullo stack o se è stato calcolato dalla rimozione da un altro frame.  
@@ -38,7 +38,7 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|Il contesto è il contesto del thread attivo.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|Il contesto è stato calcolato dalla rimozione da un altro frame.|  
@@ -56,5 +56,6 @@ typedef enum CorDebugSetContextFlag
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

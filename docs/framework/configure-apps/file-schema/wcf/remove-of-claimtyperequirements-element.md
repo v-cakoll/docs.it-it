@@ -2,12 +2,12 @@
 title: <remove> di <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 8058a90d61d8f94944d98a26c59bfbe225f611d5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9ab1162ff5d86b8a9d43dae79ebf9c9321119206
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119704"
 ---
 # <a name="remove-of-claimtyperequirements-element"></a>\<rimuovere > di \<claimTypeRequirements > elemento
 Specifica i tipi di attestazioni da rimuovere nella credenziale federativa.  
@@ -47,6 +47,7 @@ Specifica i tipi di attestazioni da rimuovere nella credenziale federativa.
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Specifica una raccolta di tipi di attestazione obbligatori. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> In un scenario federato, i servizi attestano i requisiti per le credenziali in ingresso. Ad esempio, le credenziali in ingresso devono disporre di un certo set di tipi di attestazioni. Ogni elemento di questa raccolta specifica i tipi di attestazione obbligatori e facoltativi previsti in una credenziale federata.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

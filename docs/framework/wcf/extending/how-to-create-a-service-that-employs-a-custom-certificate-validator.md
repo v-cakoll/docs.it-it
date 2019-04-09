@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un servizio che usa un Validator del certificato personalizzato'
+title: 'Procedura: Creare un servizio che usa un validator del certificato personalizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119626"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedura: Creare un servizio che usa un Validator del certificato personalizzato
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedura: Creare un servizio che usa un validator del certificato personalizzato
 In questo argomento viene illustrato come implementare un validator del certificato personalizzato e come configurare le credenziali del client o del servizio per sostituire la logica di convalida del certificato predefinita con il validator del certificato personalizzato.  
   
  Se il certificato X.509 viene usato per autenticare un client o servizio, Windows Communication Foundation (WCF) per impostazione predefinita utilizza l'archivio certificati Windows e l'API di Crypto per convalidare il certificato e per assicurarsi che sia attendibile. A volte la funzionalità di convalida del certificato predefinita non è sufficiente e deve essere modificata. WCF fornisce un modo semplice per modificare la logica di convalida consentendo agli utenti di aggiungere un validator del certificato personalizzato. Se si specifica un validator del certificato personalizzato, WCF non utilizza la logica di convalida del certificato incorporata, ma si basa sul validator personalizzato invece.  
@@ -130,4 +130,5 @@ In questo argomento viene illustrato come implementare un validator del certific
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

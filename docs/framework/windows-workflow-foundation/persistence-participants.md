@@ -2,12 +2,12 @@
 title: Partecipanti di persistenza
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115895"
 ---
 # <a name="persistence-participants"></a>Partecipanti di persistenza
 Un partecipante di persistenza può far parte di un'operazione di persistenza (Save o Load) attivata da un'applicazione host. Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito con due classi astratte **PersistenceParticipant** e **PersistenceIOParticipant**, che è possibile usare per creare un partecipante di persistenza. Un partecipante di persistenza deriva da una di queste classi, implementa i metodi di interesse, quindi aggiunge un'istanza della classe alla raccolta <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'applicazione host può cercare tali estensioni del flusso di lavoro quando rende persistente un'istanza del flusso di lavoro e richiamare metodi appropriati sui partecipanti di persistenza in momenti appropriati.  
@@ -61,4 +61,5 @@ Un partecipante di persistenza può far parte di un'operazione di persistenza (S
 -   [Procedura: Creare un partecipante di persistenza personalizzato](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Estendibilità dell'archivio](store-extensibility.md)
+
+- [Estensibilità dell'archivio](store-extensibility.md)

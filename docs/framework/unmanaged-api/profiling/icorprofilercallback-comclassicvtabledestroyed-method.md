@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fffe8059a3be42a05d564773766023c6bbe4d56d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116756"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>Metodo ICorProfilerCallback::COMClassicVTableDestroyed
 Notifica al profiler che è in corso l'eliminazione di un oggetto vtable di interoperabilità COM.  
@@ -64,5 +64,6 @@ HRESULT COMClassicVTableDestroyed(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Metodo COMClassicVTableCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

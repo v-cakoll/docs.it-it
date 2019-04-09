@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 05a94116d3b3cc662036b2ed15e255d4f8eda2c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3ac5fdeaebfd67d6ad4f68166fda588b9e58ca98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119522"
 ---
 # <a name="runtime-element"></a>\<runtime > elemento
 Fornisce informazioni usate da common language runtime per configurare le applicazioni.  
@@ -46,8 +46,8 @@ Fornisce informazioni usate da common language runtime per configurare le applic
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Specifica se la verifica del nome sicuro per gli assembly attendibili deve essere ignorata.|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che il runtime deve utilizzare il comportamento di ordinamento legacy quando si eseguono confronti di stringhe.|  
-|[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
+|[\<CompatSortNLSVersion >](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che il runtime deve utilizzare il comportamento di ordinamento legacy quando si eseguono confronti di stringhe.|  
+|[\<developmentMode >](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
 |[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se la memorizzazione nella cache di errori di associazione, ovvero il comportamento predefinito in .NET Framework versione 2.0, è disabilitato.|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Specifica se viene eseguito il commit dello stack di thread completo quando viene avviato un thread.|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.|  
@@ -90,5 +90,6 @@ Fornisce informazioni usate da common language runtime per configurare le applic
  Gli elementi di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione vengono letti automaticamente dal common language runtime all'avvio dell'applicazione. È anche possibile definire il file di configurazione per un dominio dell'applicazione non predefinito specificando il nome per il <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> proprietà; le relative impostazioni vengono lette automaticamente quando viene caricato il dominio dell'applicazione. Si dovrebbe raramente, se mai, ha l'esigenza di leggere direttamente le impostazioni nel [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione nel file di configurazione dell'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

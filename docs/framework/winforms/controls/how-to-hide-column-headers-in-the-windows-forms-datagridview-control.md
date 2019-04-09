@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Nascondere le intestazioni di colonna nel controllo DataGridView Windows Form'
+title: 'Procedura: Nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: b9b78020a567d05ea000be97bb116b4f8353d56c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115245"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: Nascondere le intestazioni di colonna nel controllo DataGridView Windows Form
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Procedura: Nascondere le intestazioni delle colonne nel controllo DataGridView di Windows Forms
 In alcuni casi si potrebbe essere necessario visualizzare un <xref:System.Windows.Forms.DataGridView> senza intestazioni di colonna. Nel <xref:System.Windows.Forms.DataGridView> (controllo), il <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valore della proprietà determina se le intestazioni di colonna vengono visualizzate.  
   
 ### <a name="to-hide-the-column-headers"></a>Per nascondere le intestazioni di colonna  
@@ -34,6 +34,7 @@ In alcuni casi si potrebbe essere necessario visualizzare un <xref:System.Window
 -   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
 - [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](basic-column-row-and-cell-features-wf-datagridview-control.md)

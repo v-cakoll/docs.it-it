@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115791"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procedura dettagliata: Creazione di un controllo ToolStrip professionale
 È possibile assegnare l'applicazione <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale scrivendo una classe personalizzata derivata dal <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -62,9 +62,9 @@ ms.locfileid: "57710745"
   
 2.  Nel **delle proprietà** impostare nella finestra Proprietà la <xref:System.Windows.Forms.ToolStrip> proprietà del controllo in base alla tabella riportata di seguito.  
   
-    |Proprietà|Valore|  
+    |Proprietà|Value|  
     |--------------|-----------|  
-    |nome|`stackStrip`|  
+    |Nome|`stackStrip`|  
     |CanOverflow|`false`|  
     |Dock|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Carattere|`Tahoma, 10pt, style=Bold`|  
@@ -77,9 +77,9 @@ ms.locfileid: "57710745"
   
 4.  Nel **delle proprietà** impostare nella finestra Proprietà la <xref:System.Windows.Forms.ToolStripButton> proprietà del controllo in base alla tabella riportata di seguito.  
   
-    |Proprietà|Valore|  
+    |Proprietà|Value|  
     |--------------|-----------|  
-    |nome|`mailStackButton`|  
+    |Nome|`mailStackButton`|  
     |CheckOnClick|true|  
     |Oggetto CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -88,7 +88,7 @@ ms.locfileid: "57710745"
     |ImageTransparentColor|`238, 238, 238`|  
     |Margini|`0, 0, 0, 0`|  
     |Spaziatura interna|`3, 3, 3, 3`|  
-    |Testo|**Posta elettronica**|  
+    |Testo|**Posta**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Ripetere il passaggio 7 per altri tre <xref:System.Windows.Forms.ToolStripButton> controlli.  
@@ -185,8 +185,9 @@ ms.locfileid: "57710745"
 -   Creare un form MDI (interfaccia) mediante l'ancoraggio <xref:System.Windows.Forms.ToolStrip> controlli. Per altre informazioni, vedere [Procedura: Creare un Form MDI con unione di Menu e controlli ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)
-- [Procedura: Specificare voci di Menu Standard in un Form](how-to-provide-standard-menu-items-to-a-form.md)
+- [Procedura: Specificare voci di menu standard per un modulo](how-to-provide-standard-menu-items-to-a-form.md)

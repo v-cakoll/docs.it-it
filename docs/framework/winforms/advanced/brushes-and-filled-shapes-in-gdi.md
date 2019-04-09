@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115310"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pennelli e forme con riempimento in GDI+
 Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una struttura e una parte interna. La struttura viene disegnata con una penna e la parte interna viene riempita con un pennello. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce diverse classi di pennelli per riempire le parti interne delle forme chiuse: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tutte queste classi di ereditare il <xref:System.Drawing.Brush> classe. La figura seguente mostra un rettangolo riempito con un pennello tinta unita e un'ellisse riempita con un pennello di tratteggio.  
@@ -77,10 +77,11 @@ Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una st
  ![Forma compilata](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Linee, curve e forme](lines-curves-and-shapes.md)
-- [Procedura: Disegna un rettangolo pieno in un Windows Form](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Procedura: Disegna un'ellisse piena in un Windows Form](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Procedura: Disegnare un rettangolo pieno in un Windows Form](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Procedura: Disegnare un'ellisse piena in un Windows Form](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

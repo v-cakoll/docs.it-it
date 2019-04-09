@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare una curva di Bezier cubica'
+title: 'Procedura: Creare una curva di Bézier cubica'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - curves [WPF], cubic Bezier
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-ms.openlocfilehash: da5472408caf8db92fd025730de48b820397f372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115570"
 ---
-# <a name="how-to-create-a-cubic-bezier-curve"></a>Procedura: Creare una curva di Bezier cubica
+# <a name="how-to-create-a-cubic-bezier-curve"></a>Procedura: Creare una curva di Bézier cubica
 In questo esempio viene illustrato come creare una curva di Bézier cubica. Per creare una curva di Bézier cubica continua, usare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.BezierSegment> classi.  Per visualizzare la geometria risulta, usare una <xref:System.Windows.Shapes.Path> elemento, o usarlo con un <xref:System.Windows.Media.GeometryDrawing> o un <xref:System.Windows.Media.DrawingContext>. Negli esempi seguenti, una curva di Bézier cubica viene disegnata da (10, 100) a (300, 100). La curva ha punti di controllo di (100, 0) e (200, 200).  
   
 ## <a name="example"></a>Esempio  
@@ -33,6 +33,7 @@ In questo esempio viene illustrato come creare una curva di Bézier cubica. Per 
  Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creare un arco ellittico](how-to-create-an-elliptical-arc.md)
 - [Creare un oggetto LineSegment in un oggetto PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)
 - [Creare una curva di Bézier cubica](how-to-create-a-cubic-bezier-curve.md)

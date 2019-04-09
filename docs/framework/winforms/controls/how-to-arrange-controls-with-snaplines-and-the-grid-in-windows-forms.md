@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disporre i controlli con guide di allineamento e la griglia in Windows Form'
+title: 'Procedura: Disporre i controlli con le guide di allineamento e la griglia in Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - GridSize
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 23a1c850133982c5f0136e4c21e6b73fcb94e887
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115740"
 ---
-# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedura: Disporre i controlli con guide di allineamento e la griglia in Windows Form
+# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Procedura: Disporre i controlli con le guide di allineamento e la griglia in Windows Forms
 Tramite le caratteristiche di layout di Visual Studio è possibile indicare precisamente in cui i controlli vengono posizionati in un form. I controlli aggiunti a un form o spostati in un form possono essere automaticamente allineati a righe e colonne della griglia di Windows Form della finestra di progettazione oppure è possibile allineare i controlli usando la funzionalità di guide di allineamento.  
   
 > [!NOTE]
@@ -36,10 +36,11 @@ Tramite le caratteristiche di layout di Visual Studio è possibile indicare prec
      Per altre informazioni, vedere [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). È ora possibile usare le guide di allineamento per allineare e disporre i controlli sul form.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Controlli Windows Form](index.md)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
+
+- [Generale, Progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Controlli per Windows Form](index.md)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
