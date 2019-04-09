@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07df1564cc769e466f9ac2cc274f98093ea8e9ca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e264f2361c739536d15fbf31d366db74e107bac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085103"
 ---
-# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="6048d-102">Metodo ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="6048d-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
-<span data-ttu-id="6048d-103">Restituisce una matrice di frame interni ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetti) nello stack.</span><span class="sxs-lookup"><span data-stu-id="6048d-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
+# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="9a846-102">Metodo ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="9a846-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
+<span data-ttu-id="9a846-103">Restituisce una matrice di frame interni ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetti) nello stack.</span><span class="sxs-lookup"><span data-stu-id="9a846-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6048d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6048d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a846-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9a846-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveInternalFrames  
@@ -39,45 +39,46 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6048d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6048d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9a846-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9a846-105">Parameters</span></span>  
  `cInternalFrames`  
- <span data-ttu-id="6048d-106">[in] Il numero di frame interni previsto in `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="6048d-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="9a846-106">[in] Il numero di frame interni previsto in `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="9a846-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
   
  `pcInternalFrames`  
- <span data-ttu-id="6048d-107">[out] Un puntatore a un `ULONG32` che contiene il numero di frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="6048d-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
+ <span data-ttu-id="9a846-107">[out] Un puntatore a un `ULONG32` che contiene il numero di frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="9a846-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
   
  `ppInternalFrames`  
- <span data-ttu-id="6048d-108">[in, out] Un puntatore all'indirizzo di una matrice di frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="6048d-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
+ <span data-ttu-id="9a846-108">[in, out] Un puntatore all'indirizzo di una matrice di frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="9a846-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6048d-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="6048d-109">Return Value</span></span>  
- <span data-ttu-id="6048d-110">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="6048d-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9a846-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="9a846-109">Return Value</span></span>  
+ <span data-ttu-id="9a846-110">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="9a846-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="6048d-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6048d-111">HRESULT</span></span>|<span data-ttu-id="6048d-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6048d-112">Description</span></span>|  
+|<span data-ttu-id="9a846-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9a846-111">HRESULT</span></span>|<span data-ttu-id="9a846-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9a846-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="6048d-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="6048d-113">S_OK</span></span>|<span data-ttu-id="6048d-114">Il [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetto è stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="6048d-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
-|<span data-ttu-id="6048d-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="6048d-115">E_INVALIDARG</span></span>|<span data-ttu-id="6048d-116">`cInternalFrames` non è uguale a zero e `ppInternalFrames` viene `null`, o `pcInternalFrames` è `null`.</span><span class="sxs-lookup"><span data-stu-id="6048d-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
-|<span data-ttu-id="6048d-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="6048d-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="6048d-118">`ppInternalFrames` è minore del numero di frame interni.</span><span class="sxs-lookup"><span data-stu-id="6048d-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
+|<span data-ttu-id="9a846-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="9a846-113">S_OK</span></span>|<span data-ttu-id="9a846-114">Il [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) oggetto è stato creato correttamente.</span><span class="sxs-lookup"><span data-stu-id="9a846-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
+|<span data-ttu-id="9a846-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="9a846-115">E_INVALIDARG</span></span>|`cInternalFrames` <span data-ttu-id="9a846-116">non è uguale a zero e `ppInternalFrames` viene `null`, o `pcInternalFrames` è `null`.</span><span class="sxs-lookup"><span data-stu-id="9a846-116">is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
+|<span data-ttu-id="9a846-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="9a846-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|`ppInternalFrames` <span data-ttu-id="9a846-118">è minore del numero di frame interni.</span><span class="sxs-lookup"><span data-stu-id="9a846-118">is smaller than the count of internal frames.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="6048d-119">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="6048d-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="9a846-119">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="9a846-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6048d-120">Note</span><span class="sxs-lookup"><span data-stu-id="6048d-120">Remarks</span></span>  
- <span data-ttu-id="6048d-121">Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei.</span><span class="sxs-lookup"><span data-stu-id="6048d-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9a846-120">Note</span><span class="sxs-lookup"><span data-stu-id="9a846-120">Remarks</span></span>  
+ <span data-ttu-id="9a846-121">Frame interni sono strutture di dati inserite nello stack dal runtime per archiviare dati temporanei.</span><span class="sxs-lookup"><span data-stu-id="9a846-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
   
- <span data-ttu-id="6048d-122">Quando si chiama innanzitutto `GetActiveInternalFrames`, è necessario impostare la `cInternalFrames` parametro su 0 (zero) e il `ppInternalFrames` parametro su null.</span><span class="sxs-lookup"><span data-stu-id="6048d-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="6048d-123">Quando `GetActiveInternalFrames` restituisce prima, `pcInternalFrames` contiene il numero dei frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="6048d-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
+ <span data-ttu-id="9a846-122">Quando si chiama innanzitutto `GetActiveInternalFrames`, è necessario impostare la `cInternalFrames` parametro su 0 (zero) e il `ppInternalFrames` parametro su null.</span><span class="sxs-lookup"><span data-stu-id="9a846-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="9a846-123">Quando `GetActiveInternalFrames` restituisce prima, `pcInternalFrames` contiene il numero dei frame interni dello stack.</span><span class="sxs-lookup"><span data-stu-id="9a846-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
   
- <span data-ttu-id="6048d-124">`GetActiveInternalFrames` deve quindi essere chiamato una seconda volta.</span><span class="sxs-lookup"><span data-stu-id="6048d-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="6048d-125">È necessario passare il numero appropriato (`pcInternalFrames`) nei `cInternalFrames` parametro, e specificare un puntatore a una matrice di dimensione appropriate in `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="6048d-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
+ `GetActiveInternalFrames` <span data-ttu-id="9a846-124">deve quindi essere chiamato una seconda volta.</span><span class="sxs-lookup"><span data-stu-id="9a846-124">should then be called a second time.</span></span> <span data-ttu-id="9a846-125">È necessario passare il numero appropriato (`pcInternalFrames`) nei `cInternalFrames` parametro, e specificare un puntatore a una matrice di dimensione appropriate in `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="9a846-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
   
- <span data-ttu-id="6048d-126">Usare la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo restituisca effettivo stack frame.</span><span class="sxs-lookup"><span data-stu-id="6048d-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
+ <span data-ttu-id="9a846-126">Usare la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) metodo restituisca effettivo stack frame.</span><span class="sxs-lookup"><span data-stu-id="9a846-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6048d-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6048d-127">Requirements</span></span>  
- <span data-ttu-id="6048d-128">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6048d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a846-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9a846-127">Requirements</span></span>  
+ <span data-ttu-id="9a846-128">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a846-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6048d-129">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6048d-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9a846-129">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a846-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6048d-130">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6048d-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9a846-130">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a846-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6048d-131">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6048d-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="9a846-131">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9a846-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6048d-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6048d-132">See also</span></span>
-- [<span data-ttu-id="6048d-133">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="6048d-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="6048d-134">Debug</span><span class="sxs-lookup"><span data-stu-id="6048d-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="9a846-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9a846-132">See also</span></span>
+
+- [<span data-ttu-id="9a846-133">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="9a846-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9a846-134">Debug</span><span class="sxs-lookup"><span data-stu-id="9a846-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
