@@ -2,12 +2,12 @@
 title: Connessione a un'origine dati in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083712"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connessione a un'origine dati in ADO.NET
 In ADO.NET si utilizza un **connessione** oggetto per la connessione a un'origine dati specifica, fornendo informazioni di autenticazione necessarie in una stringa di connessione. Il **connessione** oggetto da usare dipende dal tipo di origine dati.  
@@ -22,6 +22,7 @@ In ADO.NET si utilizza un **connessione** oggetto per la connessione a un'origin
  Viene descritto come utilizzare un **InfoMessage** recuperare messaggi informativi da un'origine dati dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)

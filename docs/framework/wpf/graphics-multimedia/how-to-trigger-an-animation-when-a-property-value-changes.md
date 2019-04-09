@@ -6,12 +6,12 @@ helpviewer_keywords:
 - triggering animation [WPF]
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-ms.openlocfilehash: 87f7525755556301fec3f00da612fc5262f1f533
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080709"
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>Procedura: Attivare un'animazione quando il valore di una proprietà viene modificato
 In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Trigger> per avviare un <xref:System.Windows.Media.Animation.Storyboard> quando viene modificato un valore della proprietà. È possibile usare una <xref:System.Windows.Trigger> all'interno di un <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, o <xref:System.Windows.DataTemplate>.  
@@ -24,6 +24,7 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Trigg
  Le animazioni applicate dalla proprietà <xref:System.Windows.Trigger> oggetti si comportano in modo più complesso rispetto <xref:System.Windows.EventTrigger> animazioni o animazioni all'uso di <xref:System.Windows.Media.Animation.Storyboard> metodi.  Sono "consegne" animazioni definite da altri <xref:System.Windows.Trigger> oggetti, ma possono essere combinate con <xref:System.Windows.EventTrigger> e animazioni avviate tramite metodi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Trigger>
 - [Cenni preliminari sulle tecniche di animazione delle proprietà](property-animation-techniques-overview.md)
 - [Cenni preliminari sugli storyboard](storyboards-overview.md)

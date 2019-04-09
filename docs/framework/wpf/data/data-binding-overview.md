@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081268"
 ---
 # <a name="data-binding-overview"></a>Panoramica sul data binding
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associazione di dati fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s, ad esempio <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> dispongono di funzionalità incorporate per abilitare lo stile flessibile dei singoli elementi di dati o raccolte di elementi di dati. In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055352"
  La funzionalità di data binding in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta molti vantaggi rispetto ai modelli tradizionali, tra cui un'ampia gamma di proprietà che supportano implicitamente il data binding, una rappresentazione dei dati mediante [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flessibile e una netta separazione tra logica di business e [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  In questo argomento illustra prima di tutto i concetti fondamentali [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] data binding e successivamente passa ad analizzare l'utilizzo del <xref:System.Windows.Data.Binding> classe e altre funzionalità di data binding.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Definizione di data binding  
  Il data binding è il processo tramite cui viene stabilita una connessione tra l'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dell'applicazione e la logica di business. Se le impostazioni del binding sono corrette e i dati forniscono le notifiche appropriate, quando il valore dei dati viene modificato, gli elementi a essi associati riflettono automaticamente le modifiche apportate. Il data binding prevede anche che, se una rappresentazione esterna dei dati in un elemento viene modificata, i dati sottostanti possono essere automaticamente aggiornati in modo da riflettere la modifica. Ad esempio, se l'utente modifica il valore in un <xref:System.Windows.Controls.TextBox> elemento, il valore di dati sottostante viene aggiornata automaticamente per riflettere tale modifica.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055352"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Visualizzazioni di raccolte  
  Una volta il <xref:System.Windows.Controls.ItemsControl> è associato a una raccolta di dati, è possibile ordinare, filtrare o raggruppare i dati. A tale scopo, si usano le visualizzazioni di raccolta, che sono classi che implementano il <xref:System.ComponentModel.ICollectionView> interfaccia.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Definizione di visualizzazione di raccolta  
  Una visualizzazione di raccolta rappresenta il livello superiore di una raccolta di origine di binding che consente di esplorare e visualizzare la raccolta di origine in base a query di ordinamento, filtro e raggruppamento, il tutto senza modificare la raccolta di origine sottostante. Una visualizzazione di raccolta mantiene inoltre un puntatore all'elemento corrente nella raccolta. Se la raccolta di origine implementa il <xref:System.Collections.Specialized.INotifyCollectionChanged> dell'interfaccia, le modifiche generate dalla <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> evento vengono propagate alle visualizzazioni.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055352"
  È possibile impostare la proprietà associata <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> su un oggetto correlato all'associazione per ricevere informazioni sullo stato di uno specifico binding.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Novità di WPF versione 4.5](../getting-started/whats-new.md)
 - [Eseguire il binding ai risultati di una query LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

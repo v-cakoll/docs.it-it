@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Generare il modello a oggetti come File esterno'
+title: 'Procedura: Generare il modello a oggetti come file esterno'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095582"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedura: Generare il modello a oggetti come File esterno
-In alternativa al mapping basato sugli attributi, è possibile generare il modello a oggetti come file XML esterno usando lo strumento da riga di comando SQLMetal. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Usando un file di mapping XML esterno, si evita confusione nel codice. È anche possibile modificare il comportamento modificando il file esterno senza ricompilare i file binari dell'applicazione. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedura: Generare il modello a oggetti come file esterno
+In alternativa al mapping basato sugli attributi, è possibile generare il modello a oggetti come file XML esterno usando lo strumento da riga di comando SQLMetal. Per altre informazioni, vedere [SqlMetal.exe (strumento per la generazione del codice)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Usando un file di mapping XML esterno, si evita confusione nel codice. È inoltre possibile modificare il comportamento modificando il file esterno senza ricompilare i file binari dell'applicazione. Per altre informazioni, vedere [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
 >  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] non supporta la generazione di un file di mapping esterno.  
@@ -49,6 +49,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Procedura: Generare il modello a oggetti in Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

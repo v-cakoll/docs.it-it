@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075938"
 ---
 # <a name="security-transparent-code"></a>Codice SecurityTransparent
 <a name="top"></a>
@@ -27,7 +27,7 @@ ms.locfileid: "54510117"
   
 -   [Scopo del modello di trasparenza](#purpose)  
   
--   [Specifica il livello di trasparenza](#level)  
+-   [Specifica del livello di trasparenza](#level)  
   
 -   [Imposizione della trasparenza](#enforcement)  
   
@@ -107,5 +107,6 @@ ms.locfileid: "54510117"
  Le regole di trasparenza non vengono applicate fino a quando la trasparenza non viene calcolata. In tale fase, viene generata un'eccezione <xref:System.InvalidOperationException> se una regola di trasparenza risulta violata. Il momento in cui viene calcolata la trasparenza dipende da vari fattori e non può essere previsto. Il calcolo avviene il più tardi possibile. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il calcolo della trasparenza a livello di assembly si verifica prima di quanto avvenga in .NET Framework 2.0. L'unica garanzia è che il calcolo della trasparenza si verifica nel momento in cui è necessario. È un meccanismo analogo al modo in cui il compilatore JIT (Just-In-Time) può modificare il punto in cui un metodo viene compilato e gli eventuali errori in tale metodo vengono rilevati. Il calcolo della trasparenza è invisibile se il codice non contiene errori di trasparenza.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Codice SecurityTransparent, livello 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

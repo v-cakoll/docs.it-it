@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Usare un Moniker servizio con contratti WSDL'
+title: 'Procedura: Usare un moniker del servizio con i contratti WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8729055c82e3ce1273e8a0cfae53a1f6d3c14e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081671"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: Usare un Moniker servizio con contratti WSDL
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: Usare un moniker del servizio con i contratti WSDL
 In alcune situazioni può essere necessario disporre di un client per l'interoperabilità COM completamente autonomo. Il servizio che si desidera chiamare può non esporre un endpoint MEX e la DLL del client WCF può non essere registrata per l'interoperabilità COM. In questi casi è possibile creare un file WSDL che descriva il servizio e lo passi nel moniker del servizio WCF. In questo argomento viene illustrato come chiamare l'esempio WCF della Guida introduttiva utilizzando un moniker WSDL WCF.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Utilizzo del moniker del servizio WSDL  
@@ -23,9 +23,7 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
 4.  Aggiungere un spazio dei nomi dell'associazione al servizio App.config:  
-  
-  
-  
+
 5.  Creare un file WSDL che deve essere letto dall'applicazione. Poiché gli spazi dei nomi sono stati aggiunti nei passaggi 3 e 4, è possibile usare Internet Explorer per eseguire una query per l'intera descrizione WSDL del servizio passando a `http://localhost/ServiceModelSamples/Service.svc?wsdl`. È quindi possibile salvare il file da Internet Explorer come serviceWSDL.xml. Se non si specificano gli spazi dei nomi nei passaggi 3 e 4, il documento WSDL restituito dalla query sull'URL precedente non sarà il WSDL completo. Il documento WSDL restituito includerà molte istruzioni di importazione che consentono di importare altri documenti WSDL. Sarà quindi necessario esaminare ogni istruzione di importazione e compilare il documento WSDL completo, combinando il WSDL restituito dal servizio con il WSDL importato.  
   
 6.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
@@ -57,5 +55,6 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
 7.  Eseguire l'applicazione Visual Basic. Verrà visualizzata una finestra di messaggio con i risultati della chiamata a Subtract(145, 76.54).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Panoramica dell'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [Panoramica sull'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

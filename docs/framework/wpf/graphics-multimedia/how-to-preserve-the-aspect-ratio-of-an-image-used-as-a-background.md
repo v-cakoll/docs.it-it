@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Conservare le proporzioni di un'immagine utilizzata come sfondo"
+title: "Procedura: Conservare le proporzioni di un'immagine usata come sfondo"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083245"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Procedura: Conservare le proporzioni di un'immagine utilizzata come sfondo
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Procedura: Conservare le proporzioni di un'immagine usata come sfondo
 Questo esempio illustra come usare il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà di un <xref:System.Windows.Media.ImageBrush> per conservare le proporzioni dell'immagine.  
   
  Per impostazione predefinita, quando si usa un <xref:System.Windows.Media.ImageBrush> per disegnare un'area, il contenuto si adatta per riempire completamente l'area di output. Quando l'area di output e l'immagine hanno proporzioni diverse, l'immagine risulta distorta dall'adattamento.  
@@ -40,5 +40,6 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.TileBrush.Stret
  Questo esempio di codice fa parte di un esempio più esaustivo fornito per il <xref:System.Windows.Media.ImageBrush> classe. Per l'esempio completo, vedere [esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.TileBrush>
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)

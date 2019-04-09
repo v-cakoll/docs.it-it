@@ -2,12 +2,12 @@
 title: Funzioni (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: 88029f22cc22594d26a05ad66051378a75a6e753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080605"
 ---
 # <a name="functions-entity-sql"></a>Funzioni (Entity SQL)
 Entity SQL supporta funzioni definite dall'utente, funzioni canoniche e funzioni specifiche del provider. Le funzioni definite dall'utente vengono specificate nel modello concettuale o inline nella query. Per altre informazioni, vedere [funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
@@ -19,9 +19,10 @@ Entity SQL supporta funzioni definite dall'utente, funzioni canoniche e funzioni
 ## <a name="in-this-section"></a>In questa sezione  
  [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)  
   
- [Risoluzione dell'overload della funzione](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)  
+ [Risoluzione dell'overload di funzioni](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)  
   
  [Funzioni di aggregazione](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

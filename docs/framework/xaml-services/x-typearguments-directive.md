@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085805"
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
@@ -82,7 +82,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  In WPF e quando la destinazione [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare le funzionalità di XAML 2009 con `x:TypeArguments` ma solo per XAML loose (XAML non è compilato dal markup). Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009. Se è necessario di una compilazione di markup di XAML, è necessario operare con le restrizioni indicate nella sezione "XAML 2006 e WPF XAML utilizzi generici".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Direttiva x:Class](x-class-directive.md)
-- [Estensione di markup x:Type](x-type-markup-extension.md)
+- [Estensione del markup x:Type](x-type-markup-extension.md)
 - [Tipi incorporati per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md)
 - [Generics in XAML](generics-in-xaml.md)

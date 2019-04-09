@@ -6,23 +6,23 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d0b8d812fd13be090f42bf4fb3ea84cedd1c07a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082568"
 ---
 # <a name="toolstripcontainer-control"></a>Controllo ToolStripContainer
-<xref:System.Windows.Forms.ToolStrip> controlla il raggruppamento verticale/orizzontale incorporato di funzionalità (condivisione di spazio orizzontale o verticale nell'area strumenti, se ancorata) usando <xref:System.Windows.Forms.ToolStripContainer>.  
+<xref:System.Windows.Forms.ToolStrip> i controlli di funzionalità incorporate raggruppamento verticale/orizzontale (condivisione di spazio orizzontale o verticale nell'area strumenti, se ancorata) usando il <xref:System.Windows.Forms.ToolStripContainer>.  
   
  Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità <xref:System.Windows.Forms.ToolStripContainer> nelle applicazioni.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo ToolStripContainer](toolstripcontainer-control-overview.md)  
+ [Cenni preliminari sul controllo ToolStripContainer](toolstripcontainer-control-overview.md)  
  Fornisce argomenti che descrivono lo scopo e i concetti principali del controllo <xref:System.Windows.Forms.ToolStripContainer> Windows Form.  
   
- [Procedura: Aggiungere un oggetto ToolStripContainer a un Form](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Procedura: Aggiungere un oggetto ToolStripContainer a un modulo](how-to-add-a-toolstripcontainer-to-a-form.md)  
  Illustra come aggiungere <xref:System.Windows.Forms.ToolStripContainer> a un'applicazione e l'aggiunta di un controllo a un pannello specifico di <xref:System.Windows.Forms.ToolStripContainer>.  
   
  [Procedura: Aggiungere un controllo a un controllo ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
@@ -42,4 +42,5 @@ ms.locfileid: "57716851"
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripPanel>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

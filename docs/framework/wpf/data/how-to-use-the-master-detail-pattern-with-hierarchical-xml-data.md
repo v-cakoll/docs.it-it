@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Utilizzare il modello Master-Details con dati XML gerarchici'
+title: 'Procedura: Usare il modello Master-Details con dati XML gerarchici'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-ms.openlocfilehash: 2b1ed34fe363f44a3a9eb80dc56d721868329717
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086260"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Procedura: Utilizzare il modello Master-Details con dati XML gerarchici
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Procedura: Usare il modello Master-Details con dati XML gerarchici
 In questo esempio viene illustrato come implementare lo scenario master-Details con [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dei dati.  
   
 ## <a name="example"></a>Esempio  
@@ -22,5 +22,6 @@ In questo esempio viene illustrato come implementare lo scenario master-Details 
 [!code-xaml[MasterDetailXml#HowTo2](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)
