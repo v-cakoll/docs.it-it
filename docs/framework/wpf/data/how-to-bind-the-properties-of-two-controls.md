@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Eseguire l'associazione delle proprietà di due controlli"
+title: 'Procedura: Eseguire il binding delle proprietà di due controlli'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], binding properties of two controls
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: f3355969d0f12f0f3ed9b49bdb7efa6913c5e4c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222065"
 ---
-# <a name="how-to-bind-the-properties-of-two-controls"></a>Procedura: Eseguire l'associazione delle proprietà di due controlli
+# <a name="how-to-bind-the-properties-of-two-controls"></a>Procedura: Eseguire il binding delle proprietà di due controlli
 Questo esempio viene illustrato come associare la proprietà di un controllo di un'istanza a quella di un altro usando il <xref:System.Windows.Data.Binding.ElementName%2A> proprietà.  
   
 ## <a name="example"></a>Esempio  
@@ -28,5 +28,6 @@ Questo esempio viene illustrato come associare la proprietà di un controllo di 
  **Nota** le proprietà di destinazione del binding (in questo esempio, il <xref:System.Windows.Controls.Panel.Background%2A> proprietà) deve essere una proprietà di dipendenza. Per altre informazioni, vedere la [panoramica del data binding](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Specificare l'origine di associazione](how-to-specify-the-binding-source.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+
+- [Specificare l'origine di binding](how-to-specify-the-binding-source.md)
+- [Procedure relative](data-binding-how-to-topics.md)

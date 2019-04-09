@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228588"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importazione dello schema per generare classi
 Per generare classi da schemi che possono essere utilizzati con Windows Communication Foundation (WCF), usare il <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. In questo argomento viene descritto il processo e le relative varianti.  
@@ -29,15 +29,15 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
   
 1. Creare un'istanza di <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Parametro facoltativo. Passare `CodeCompileUnit` nel costruttore. I tipi generati durante l'importazione dello schema vengono aggiunti a questa istanza di `CodeCompileUnit` anziché iniziare con un'istanza `CodeCompileUnit` vuota.  
+2. Facoltativo. Passare `CodeCompileUnit` nel costruttore. I tipi generati durante l'importazione dello schema vengono aggiunti a questa istanza di `CodeCompileUnit` anziché iniziare con un'istanza `CodeCompileUnit` vuota.  
   
-3. Parametro facoltativo. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>. Il metodo determina se lo schema specificato è un schema del contratto dati valido e può essere importato. Il metodo `CanImport` presenta gli stessi overload di `Import` (il passaggio successivo).  
+3. Facoltativo. Chiamare uno dei metodi <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . Il metodo determina se lo schema specificato è un schema del contratto dati valido e può essere importato. Il metodo `CanImport` presenta gli stessi overload di `Import` (il passaggio successivo).  
   
 4. Chiamare uno dei metodi `Import` di overload, ad esempio il metodo <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   
      L'overload più semplice accetta una classe `XmlSchemaSet` e importa tutti i tipi, incluso quelli anonimi, presenti in tale set di schemi. Gli altri overload consentono di specificare il tipo XSD o un elenco di tipi da importare (in una classe <xref:System.Xml.XmlQualifiedName> o una raccolta di oggetti `XmlQualifiedName`). In questo caso, vengono importati solo i tipi specificati. Un overload accetta una classe <xref:System.Xml.Schema.XmlSchemaElement> che importa un elemento specifico fuori dalla classe `XmlSchemaSet`, insieme al tipo associato (indipendentemente dal fatto che sia anonimo o meno). Questo overload restituisce una classe `XmlQualifiedName` che rappresenta il nome del contratto dati del tipo generato per questo elemento.  
   
-     Più chiamate al metodo `Import` determinano l'aggiunta di più elementi alla stessa classe `CodeCompileUnit`. Se esiste già un tipo in `CodeCompileUnit`, non ne viene generato un altro. È consigliabile chiamare più volte `Import` sullo stesso `XsdDataContractImporter` anziché usare più oggetti `XsdDataContractImporter`. Questa procedura è consigliata per evitare la generazione di tipi duplicati.  
+     Più chiamate al metodo `Import` determinano l'aggiunta di più elementi alla stessa classe `CodeCompileUnit`. Se esiste già un tipo in `CodeCompileUnit` , non ne viene generato un altro. È consigliabile chiamare più volte `Import` sullo stesso `XsdDataContractImporter` anziché usare più oggetti `XsdDataContractImporter`. Questa procedura è consigliata per evitare la generazione di tipi duplicati.  
   
     > [!NOTE]
     > Se si verifica un errore durante l'importazione, lo stato della classe `CodeCompileUnit` sarà imprevedibile. Se si usa una classe `CodeCompileUnit` da un'importazione non riuscita, è possibile esporre il sistema a vulnerabilità della protezione.  
@@ -52,7 +52,7 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
   
  In genere, i tipi pubblici vengono generati dallo schema, con campi privati e proprietà dei membri dati pubblici corrispondenti. Per generare invece tipi interni, impostare la proprietà <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> su `true`.  
   
- Nell'esempio seguente viene illustrato uno schema trasformato in una classe interna quando la proprietà <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> è impostata su `true.`  
+ L'esempio seguente mostra uno schema trasformato in un interno quando viene chiamato il <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> è impostata su `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -175,17 +175,18 @@ Per generare classi da schemi che possono essere utilizzati con Windows Communic
 #### <a name="import-options-advanced-options"></a>Opzioni di importazione: Opzioni avanzate  
  Di seguito sono elencate le opzioni importazione avanzate:  
   
--   Proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se la proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> non è impostata, il set completo di funzionalità [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene usato senza restrizioni.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> . Specifica la classe <xref:System.CodeDom.Compiler.CodeDomProvider> da usare per generare il codice per le classi generate. Il meccanismo di importazione tenta di evitare funzionalità non supportate da <xref:System.CodeDom.Compiler.CodeDomProvider>. Se la proprietà <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> non è impostata, il set completo di funzionalità [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] viene usato senza restrizioni.  
   
--   Proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. È possibile specificare un'implementazione <xref:System.Runtime.Serialization.IDataContractSurrogate> con questa proprietà. <xref:System.Runtime.Serialization.IDataContractSurrogate> personalizza il processo di importazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> . È possibile specificare un'implementazione <xref:System.Runtime.Serialization.IDataContractSurrogate> con questa proprietà. <xref:System.Runtime.Serialization.IDataContractSurrogate> personalizza il processo di importazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Per impostazione predefinita, non viene usato alcun surrogato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
-- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
-- [Surrogati di contratti di dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
-- [Importazione ed esportazione di schemi](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
-- [Esportazione di schemi da classi](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
-- [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Importazione ed esportazione degli schemi](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Esportazione di schemi dalle classi](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

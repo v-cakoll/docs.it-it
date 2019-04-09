@@ -1,18 +1,18 @@
 ---
-title: 'Esempi di sintassi di Query basate sul metodo: Ordering'
+title: 'Esempi di sintassi delle query basate su metodo: Ordering'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: 73ea7a11353c83995bee6457c1fed12cd9c936d2
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e213046955c2c4e720c56adb96da29078ea3c48d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226859"
 ---
-# <a name="method-based-query-syntax-examples-ordering"></a>Esempi di sintassi di Query basate sul metodo: Ordering
+# <a name="method-based-query-syntax-examples-ordering"></a>Esempi di sintassi delle query basate su metodo: Ordering
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.ThenBy%2A> metodo di query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  
   
  Gli esempi in questo argomento usano il comando seguente `using` / `Imports` istruzioni:  
@@ -37,4 +37,5 @@ Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumer
  [!code-vb[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescending_mq)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Query in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

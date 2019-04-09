@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218771"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Intercettazione dell'input dello stilo
 Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo per l'implementazione del controllo di basso livello tramite <xref:System.Windows.Input.Stylus> input e la creazione di input penna digitale <xref:System.Windows.Ink.Stroke> oggetti. Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare il comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.  
@@ -71,5 +71,6 @@ Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo
  Derivando <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classi e inserendoli in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> raccolte, è possibile migliorare notevolmente il comportamento dell'input penna digitale. È possibile utilizzare il <xref:System.Windows.Input.StylusPoint> dati man mano che viene generati, offrendo la possibilità di personalizzare il <xref:System.Windows.Input.Stylus> input. Perché si dispone di accesso di basso livello per il <xref:System.Windows.Input.StylusPoint> dati, è possibile implementare la raccolta dell'input penna e rendering con prestazioni ottimali per l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Gestione avanzata dell'input penna](advanced-ink-handling.md)
 - [L'accesso e modifica dell'Input penna](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

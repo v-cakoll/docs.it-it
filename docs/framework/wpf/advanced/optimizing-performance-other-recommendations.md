@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224286"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Ottimizzazione delle prestazioni: Altri suggerimenti
 <a name="introduction"></a> Questo argomento offre suggerimenti sulle prestazioni aggiuntivi rispetto a quelli descritti negli argomenti della sezione [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "57358938"
   
 -   [Evitare l'uso di ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Configurare il servizio Cache tipi di carattere per ridurre i tempi di avvio](#FontCache)  
+-   [Configurare il servizio Cache tipi di carattere per ridurre il tempo di avvio](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Pennelli opachi ed elementi opachi  
@@ -73,12 +73,13 @@ ms.locfileid: "57358938"
  Con il servizio Cache tipi di carattere di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], i dati relativi ai tipi di carattere vengono condivisi tra le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Il servizio viene avviato insieme alla prima applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] eseguita, a meno che non sia già in esecuzione. Se si usa [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], è possibile impostare il servizio "Windows Presentation Foundation (WPF) del tipo di carattere Cache 3.0.0.0" da "Manuale" (predefinito) su "Automatico (avvio ritardato)" per ridurre il tempo di avvio di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](optimizing-performance-application-resources.md)
-- [per](optimizing-performance-text.md)
+- [Layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
+- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
+- [Testo](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Suggerimenti sulle animazioni](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224377"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > elemento
 Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.  
@@ -73,6 +73,7 @@ Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel 
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

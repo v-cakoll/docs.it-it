@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219629"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Procedura: Gestire l'evento ContextMenuOpening
 Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere gestito in un'applicazione per modificare un esistente prima di menu di scelta rapida per visualizzare o eliminare il menu che verrà altrimenti visualizzato impostando il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà `true` nei dati dell'evento. La ragione più comune per l'impostazione <xref:System.Windows.RoutedEventArgs.Handled%2A> al `true` dei dati nell'evento consiste nella sostituzione menu interamente con un nuovo <xref:System.Windows.Controls.ContextMenu> dell'oggetto, che a volte richiede l'annullamento dell'operazione e l'avvio di un nuovo open. Se si scrivono i gestori per il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento, è necessario essere consapevoli dei problemi di temporizzazione tra un <xref:System.Windows.Controls.ContextMenu> controllo e il servizio che è responsabile dell'apertura e il posizionamento di menu di scelta rapida per i controlli in generale. In questo argomento vengono illustrate alcune delle tecniche di codice per scenari di apertura dei vari menu di scelta rapida e viene illustrato un caso in cui il problema di temporizzazione entra in gioco.  
@@ -56,7 +56,8 @@ Il <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento può essere 
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [Cenni preliminari sugli elementi di base](base-elements-overview.md)
-- [Panoramica sull'oggetto ContextMenu](../controls/contextmenu-overview.md)
+- [Cenni preliminari sull'oggetto ContextMenu](../controls/contextmenu-overview.md)

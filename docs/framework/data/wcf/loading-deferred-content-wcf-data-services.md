@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227171"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Caricamento di contenuto posticipato (WCF Data Services)
 Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la quantità di dati restituiti da una query. Se necessario, dal servizio dati è tuttavia possibile caricare in modo esplicito dati aggiuntivi, tra cui entità correlate, dati di risposta di paging e flussi di dati binari. In questo argomento viene descritto come caricare questo tipo di contenuto posticipato nell'applicazione.  
@@ -27,7 +27,7 @@ Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastori
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] il numero di set di entità che possono essere inclusi in una sola query è limitato a 12 tramite l'opzione query `$expand`.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è limitato a 12 il numero di set di entità che può essere incluso in una singola query usando il `$expand` opzione di query.  
   
 -   **Il caricamento esplicito**: È possibile chiamare il <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> metodo di <xref:System.Data.Services.Client.DataServiceContext> istanza da caricare in modo esplicito le entità correlate. Ogni chiamata del metodo <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> determina la creazione di una richiesta distinta al servizio dati. Nell'esempio seguente viene caricato in modo esplicito `Order_Details` per un'entità `Orders`.  
   
@@ -55,8 +55,9 @@ Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastori
  Per altre informazioni, vedere [Procedura: Caricare risultati di paging](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>Flussi di dati binari  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente di accedere a dati BLOB (Binary Large Object) come flusso di dati. Il flusso posticipa il caricamento dei dati binari fino al momento opportuno per consentire al client di elaborare i dati in maniera più efficiente. Per trarre vantaggio da questa funzionalità, il servizio dati deve implementare il provider <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Per altre informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Quando il flusso è abilitato, i tipi di entità vengono restituiti senza i dati binari correlati. In questo caso, è necessario usare il <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodo di <xref:System.Data.Services.Client.DataServiceContext> classe per accedere al flusso di dati per i dati binari dal servizio. In modo analogo, usare il metodo <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> per aggiungere o modificare i dati binari di un'entità come flusso. Per altre informazioni, vedere [funziona con dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di accedere ai dati di oggetto binario di grandi dimensioni (BLOB) come flusso di dati. Il flusso posticipa il caricamento dei dati binari fino al momento opportuno per consentire al client di elaborare i dati in maniera più efficiente. Per trarre vantaggio da questa funzionalità, il servizio dati deve implementare il provider <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Per altre informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Quando il flusso è abilitato, i tipi di entità vengono restituiti senza i dati binari correlati. In questo caso, è necessario usare il <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodo di <xref:System.Data.Services.Client.DataServiceContext> classe per accedere al flusso di dati per i dati binari dal servizio. In modo analogo, usare il metodo <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> per aggiungere o modificare i dati binari di un'entità come flusso. Per altre informazioni, vedere [funziona con dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Esecuzione di query sul servizio dati](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

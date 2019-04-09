@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219603"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando è presente un investimento sostanziale [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace estendere esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dell'applicazione con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno dell'applicazione Windows Form. Per altre informazioni sulla personalizzazione dei controlli WPF, vedere [personalizzazione dei controlli](../controls/control-customization.md).  
@@ -35,7 +35,6 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 
  L'immagine seguente mostra un controllo composito WPF: 
 
-  
  ![Screenshot che mostra un controllo WPF semplice.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Creazione del progetto  
@@ -43,7 +42,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
   
 1.  Avvio veloce [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]e aprire la **nuovo progetto** nella finestra di dialogo.  
   
-2.  In Visual C# e nella categoria Windows selezionare la **libreria di controlli utente WPF** modello.  
+2.  In Visual c# e nella categoria Windows selezionare la **libreria di controlli utente WPF** modello.  
   
 3.  Assegnare il nome `MyControls` al nuovo progetto.  
   
@@ -192,7 +191,7 @@ L'immagine seguente mostra un controllo composito WPF ospitato in un'applicazion
   
 1.  Avvio veloce [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]e aprire la **nuovo progetto** nella finestra di dialogo.  
   
-2.  In Visual C# e nella categoria Windows selezionare la **Windows Forms Application** modello.  
+2.  In Visual c# e nella categoria Windows selezionare la **Windows Forms Application** modello.  
   
 3.  Assegnare il nome `WFHost` al nuovo progetto.  
   
@@ -324,8 +323,9 @@ L'immagine seguente mostra un controllo composito WPF ospitato in un'applicazion
  Compilare ed eseguire l'applicazione. Fare clic sui vari pulsanti di opzione per vedere l'effetto sul controllo composito WPF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Procedura dettagliata: Hosting di controlli compositi 3D di WPF in Windows Form](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Procedura dettagliata: Hosting di un controllo composito Windows Form in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di un controllo composito WPF 3D in Windows Form](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

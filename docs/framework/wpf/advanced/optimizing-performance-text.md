@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225963"
 ---
 # <a name="optimizing-performance-text"></a>Ottimizzazione delle prestazioni: Testo
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include il supporto per la presentazione di contenuto di testo tramite l'uso di controlli avanzati della [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. In generale, è possibile suddividere il rendering del testo in tre livelli:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include il supporto per la presentazione del contenuto di testo tramite l'utilizzo e ricco di funzionalità [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] controlli. In generale, è possibile suddividere il rendering del testo in tre livelli:  
   
 1.  Usando il <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> diretto degli oggetti.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409406"
 3.  Usando i controlli di alto livello, ad esempio la <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> oggetti.  
   
  Questo argomento offre utili suggerimenti sulle prestazioni del rendering del testo.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Rendering del testo a livello di glifo  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce il supporto del testo avanzata, incluso il markup a livello di glifo con accesso diretto a <xref:System.Windows.Documents.Glyphs> per i clienti che vogliono intercettare e salvare in modo permanente il testo dopo la formattazione. Queste funzionalità forniscono il supporto fondamentale per i diversi requisiti di rendering del testo in ognuno degli scenari seguenti.  
@@ -38,7 +37,7 @@ ms.locfileid: "58409406"
   
 -   Scenari di stampa.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come linguaggio della stampante.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come un linguaggio della stampante.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -75,7 +74,7 @@ ms.locfileid: "58409406"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>Controlli FlowDocument, TextBlock e Label  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include più controlli per la creazione di testo sullo schermo. Ogni controllo è destinato a uno scenario diverso e dispone di un proprio elenco di funzionalità e limitazioni.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include più controlli per il disegno di testo sullo schermo. Ogni controllo è destinato a uno scenario diverso e dispone di un proprio elenco di funzionalità e limitazioni.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>Un elemento FlowDocument influisce sulle prestazioni più di un elemento TextBlock o Label  
  In generale, il <xref:System.Windows.Controls.TextBlock> elemento deve essere usato quando è richiesto, ad esempio una breve frase in un supporto limitato del testo un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> può essere utilizzato quando è necessario il supporto minimo del testo. Il <xref:System.Windows.Documents.FlowDocument> elemento è un contenitore per i documenti rinnovabile che supporta avanzato di presentazione del contenuto e di conseguenza, ha un impatto sulle prestazioni maggiore rispetto all'uso di <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.Label> controlli.  
@@ -98,7 +97,7 @@ ms.locfileid: "58409406"
   
  Nella tabella seguente mostra il costo della visualizzazione di 1000 <xref:System.Windows.Controls.TextBlock> gli oggetti con e senza l'esplicita <xref:System.Windows.Documents.Run>.  
   
-|**Tipo di TextBlock**|**Tempo di creazione (ms)**|**Tempo di rendering (ms)**|  
+|**Tipo di TextBlock**|**Ora di creazione (ms)**|**Eseguire il rendering di tempo (ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Proprietà di testo impostate con Run|146|540|  
 |Proprietà di testo impostate con TextBlock|43|453|  
@@ -108,7 +107,7 @@ ms.locfileid: "58409406"
   
  La soluzione di questo problema è semplice. Se il <xref:System.Windows.Controls.Label> non è impostata su un oggetto personalizzato <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> di valore, sostituire il <xref:System.Windows.Controls.Label> con un <xref:System.Windows.Controls.TextBlock> e associare i dati relativi <xref:System.Windows.Controls.TextBlock.Text%2A> proprietà nella stringa di origine.  
   
-|**Proprietà con data binding**|**Tempo di aggiornamento (ms)**|  
+|**Proprietà con associazione a dati**|**Ora aggiornamento (ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -143,14 +142,14 @@ ms.locfileid: "58409406"
   
  Nella tabella seguente viene illustrato l'impatto sulle prestazioni della visualizzazione di 1000 <xref:System.Windows.Documents.Hyperlink> elementi con e senza sottolineatura.  
   
-|**Collegamento ipertestuale**|**Tempo di creazione (ms)**|**Tempo di rendering (ms)**|  
+|**Hyperlink**|**Ora di creazione (ms)**|**Eseguire il rendering di tempo (ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Con sottolineatura|289|1130|  
 |Senza sottolineatura|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Funzionalità di formattazione del testo  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce servizi di formattazione RTF come le sillabazioni automatiche. Questi servizi possono influire sulle prestazioni dell'applicazione e devono essere usati solo se strettamente necessario.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce informazioni di formattazione servizi, come le sillabazioni automatiche. Questi servizi possono influire sulle prestazioni dell'applicazione e devono essere usati solo se strettamente necessario.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Evitare l'uso non necessario della sillabazione  
  La sillabazione automatica vengono trattini di interruzione per le righe di testo e consente di aggiungere posizioni di interruzione aggiuntive per le righe in <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument> oggetti. Per impostazione predefinita, la funzionalità di sillabazione automatica è disattivata in questi oggetti. È possibile attivare questa funzionalità impostando la proprietà IsHyphenationEnabled dell'oggetto su `true`. Con l'attivazione di questa funzionalità in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tuttavia, viene avviata anche l'interoperabilità [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], operazione che può influire sulle prestazioni dell'applicazione. È consigliabile quindi usare la sillabazione automatica solo se necessario.  
@@ -162,12 +161,13 @@ ms.locfileid: "58409406"
  La funzionalità di paragrafo ottimale del <xref:System.Windows.Documents.FlowDocument> oggetto disporre i paragrafi in modo che gli spazi vuoti vengano distribuiti nel modo più uniforme possibile. Per impostazione predefinita, la funzionalità di paragrafo ottimale è disattivata. È possibile abilitare questa funzionalità impostando l'oggetto <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> proprietà `true`. L'attivazione di questa funzionalità, tuttavia, influisce sulle prestazioni dell'applicazione. È consigliabile quindi usare la funzionalità di paragrafo ottimale solo se necessario.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
-- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [Layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
+- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

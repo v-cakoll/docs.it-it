@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Visualizzare un elenco del tipo di carattere con il componente FontDialog'
+title: 'Procedura: Visualizzare un elenco di tipi di carattere con il componente FontDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220188"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procedura: Visualizzare un elenco del tipo di carattere con il componente FontDialog
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procedura: Visualizzare un elenco di tipi di carattere con il componente FontDialog
 Il [FontDialog](fontdialog-component-windows-forms.md) componente consente agli utenti di selezionare un tipo di carattere, nonché modificarne la visualizzazione, ad esempio il peso e dimensioni.  
   
  Il tipo di carattere selezionato nella finestra di dialogo viene restituito nel <xref:System.Windows.Forms.FontDialog.Font%2A> proprietà. Pertanto, sfruttando i vantaggi del tipo di carattere selezionato dall'utente è semplice quanto la lettura di una proprietà.  
@@ -77,5 +77,6 @@ Il [FontDialog](fontdialog-component-windows-forms.md) componente consente agli 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.FontDialog>
 - [Componente FontDialog](fontdialog-component-windows-forms.md)

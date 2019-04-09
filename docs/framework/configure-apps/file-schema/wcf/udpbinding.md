@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229602"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBinding>.  
@@ -75,13 +75,13 @@ Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBi
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  UdpBinding consente ai servizi WCF di comunicare tramite trasporto UDP. Consente lo scambio di messaggi in cui un client invia un messaggio a un servizio e non prevede alcuna risposta di "fire and forget".  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra come configurare <xref:System.ServiceModel.UdpBinding> usando l'elemento <`udpBinding`>.  
+ Nell'esempio seguente viene illustrato come configurare il <xref:System.ServiceModel.UdpBinding> tramite la <`udpBinding`> elemento.  
   
 ```xml  
 <udpBinding>
@@ -104,6 +104,7 @@ Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBi
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: a3a53cb26ffb0e5934982c1c9f367115177b9b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216769"
 ---
 # <a name="reliable-services"></a>Servizi affidabili
 Code e sessioni affidabili sono le funzionalità di Windows Communication Foundation (WCF) che implementano la messaggistica affidabile. Questo argomento illustra le funzionalità di messaggistica affidabile di WCF.  
@@ -45,5 +45,6 @@ Code e sessioni affidabili sono le funzionalità di Windows Communication Founda
  La separazione, abbinata ai trasferimenti affidabili dei messaggi tra le code, consente alle applicazioni ad accoppiamento debole di comunicare in modo affidabile. A differenza delle sessioni affidabili, non è necessario che l'origine e la destinazione siano in esecuzione contemporaneamente. Questo consente implicitamente scenari in cui le code vengono di fatto utilizzate come un meccanismo di livellamento del carico nei casi in cui il tasso di produzione di messaggi dell'origine e il tasso di utilizzo di messaggi della destinazione non corrispondono. Per altre informazioni sulle code, vedere [code in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica delle sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
 - [Accodamento in WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

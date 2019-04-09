@@ -2,12 +2,12 @@
 title: <transport> di <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217796"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<Transport > di \<netTcpBinding >
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -46,24 +46,24 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|clientCredentialType|Parametro facoltativo. Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza del trasporto.<br /><br /> -Il valore predefinito è `Windows`.<br />-L'attributo è di tipo <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Parametro facoltativo. Definisce il livello di sicurezza del trasporto TCP. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto.<br /><br /> Il valore predefinito è `EncryptAndSign`.|  
+|clientCredentialType|Facoltativo. Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza del trasporto.<br /><br /> -Il valore predefinito è `Windows`.<br />-L'attributo è di tipo <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Facoltativo. Definisce il livello di sicurezza del trasporto TCP. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto.<br /><br /> Il valore predefinito è `EncryptAndSign`.|  
 |sslProtocols|Valore del flag di enumerazione SslProtocols che specifica gli elementi SslProtocol supportati. Il valore predefinito è Tls&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Questa enumerazione specifica il momento in cui deve essere applicato l'oggetto <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never – I criteri non vengono mai applicati e la protezione estesa è disabilitata.<br />2.  WhenSupported – I criteri vengono applicati solo se il client supporta la protezione estesa.<br />3.  Always - I criteri vengono sempre applicati. L'autenticazione dei client che non supportano la protezione estesa avrà esito negativo.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|None|Il client è anonimo. Richiede un certificato per il servizio.|  
-|Windows|Specifica l'autenticazione Windows del client mediante la negoziazione SP (negoziazione Kerberos).|  
+|nessuno|Il client è anonimo. Richiede un certificato per il servizio.|  
+|WINDOWS|Specifica l'autenticazione Windows del client mediante la negoziazione SP (negoziazione Kerberos).|  
 |Certificato|Il client viene autenticato mediante un certificato. Viene usata la negoziazione SSL ed è necessario un certificato per il servizio.|  
   
 ## <a name="protectionlevel-attribute"></a>Attributo protectionLevel  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|None|Nessuna protezione.|  
+|nessuno|Nessuna protezione.|  
 |Sign|I messaggi vengono firmati.|  
 |EncryptAndSign|-I messaggi vengono crittografati e firmati.|  
   
@@ -80,6 +80,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
  Usare la sicurezza del trasporto garantire l'integrità e la riservatezza del messaggio SOAP, nonché l'esecuzione dell'autenticazione reciproca. Se questa modalità di sicurezza viene selezionata per un'associazione, lo stack di canali viene configurato in modo da usare un trasporto protetto nonché proteggere i messaggi SOAP tramite una sicurezza di trasporto quale Windows (Negotiate) o SSL su TCP.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>

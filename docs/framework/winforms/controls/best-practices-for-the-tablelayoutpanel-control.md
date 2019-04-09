@@ -14,12 +14,12 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222328"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Suggerimenti per il controllo TableLayoutPanel
 Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce funzionalità di layout avanzate che è opportuno considerare con attenzione prima di utilizzare nei Windows Form.  
@@ -56,5 +56,6 @@ Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce funzionalità
  Il <xref:System.Windows.Forms.TableLayoutPanel> controllo non supporta l'ereditarietà visiva in Progettazione Windows Form. Oggetto <xref:System.Windows.Forms.TableLayoutPanel> controllo in una classe derivata viene visualizzato come "bloccato" in fase di progettazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

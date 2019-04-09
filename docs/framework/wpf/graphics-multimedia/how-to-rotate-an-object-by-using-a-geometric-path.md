@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ruotare un oggetto utilizzando un percorso geometrico'
+title: 'Procedura: Ruotare un oggetto usando un tracciato geometrico'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 2a027e11b910650044996c7ca7bdb822a1de513f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229212"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Procedura: Ruotare un oggetto utilizzando un percorso geometrico
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Procedura: Ruotare un oggetto usando un tracciato geometrico
 Questo esempio viene illustrato come ruotare un oggetto lungo un tracciato geometrico definito da un <xref:System.Windows.Media.PathGeometry> oggetto.  
   
 ## <a name="example"></a>Esempio  
@@ -35,6 +35,7 @@ Questo esempio viene illustrato come ruotare un oggetto lungo un tracciato geome
  Per l'esempio completo, vedere [esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)

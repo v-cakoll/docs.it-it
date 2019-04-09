@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Abilitare le operazioni di trascinamento e rilascio con il controllo RichTextBox di Windows Form'
+title: 'Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223961"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare le operazioni di trascinamento e rilascio con il controllo RichTextBox di Windows Form
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms
 Le operazioni di trascinamento della selezione del controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form vengono eseguite gestendo gli eventi <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> . Quindi, le operazioni di trascinamento della selezione risultano molto semplici con il controllo <xref:System.Windows.Forms.RichTextBox> .  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Per abilitare le operazioni di trascinamento in un controllo RichTextBox  
@@ -165,7 +165,8 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
      Quando si rilascia il pulsante del mouse, il testo selezionato viene rilasciato (ossia, viene generato l'evento <xref:System.Windows.Forms.RichTextBox.DragDrop> ) e viene inserito all'interno del controllo <xref:System.Windows.Forms.RichTextBox> .  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Procedura: Eseguire operazioni di trascinamento della selezione tra applicazioni](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controllo RichTextBox](richtextbox-control-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

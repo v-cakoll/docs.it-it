@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 ms.date: 03/30/2017
 ms.assetid: 74aeb3e7-f9eb-4491-9e78-5f8c9cbcb434
-ms.openlocfilehash: 35fd26a36cca19d66655069309beb63ee801cc7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bea784cfaf98d5024d5c8913243e4ff2cfa7184
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217653"
 ---
 # <a name="microsofttransactionstransactionbridgeenlistmentidentitycheckfailed"></a>Microsoft.Transactions.TransactionBridge.EnlistmentIdentityCheckFailed
 L'identità del mittente del messaggio in ingresso non corrisponde all'identità derivata dal riferimento all'endpoint dell'integrazione.  
@@ -19,6 +19,7 @@ L'identità del mittente del messaggio in ingresso non corrisponde all'identità
  Verificare che la protezione della transazione sia configurata correttamente per tutti i computer che partecipano alla transazione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

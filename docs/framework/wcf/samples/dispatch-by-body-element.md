@@ -2,12 +2,12 @@
 title: Distribuzione in base all'elemento corpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 44e70a5344d7ab0fc324c6bc5948f367227c869d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227730"
 ---
 # <a name="dispatch-by-body-element"></a>Distribuzione in base all'elemento corpo
 Questo esempio dimostra come implementare un algoritmo alternativo per l'assegnazione di messaggi in arrivo alle operazioni.  
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- Le implementazioni di <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> sono molto semplici da compilare in quanto vi è solo un metodo nell'interfaccia: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Il compito di questo metodo è ispezionare un messaggio in arrivo e restituire una stringa uguale al nome di un metodo nel contratto di servizio per l'endpoint corrente.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> le implementazioni sono molto semplici da compilare in quanto è presente solo un metodo sull'interfaccia: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Il compito di questo metodo è ispezionare un messaggio in arrivo e restituire una stringa uguale al nome di un metodo nel contratto di servizio per l'endpoint corrente.  
   
  In questo esempio, il selettore dell'operazione acquisisce un <xref:System.Xml.XmlDictionaryReader> per il corpo del messaggio in arrivo usando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Questo metodo posiziona già il reader sul primo figlio del corpo del messaggio in modo che sia sufficiente ottenere il nome dell'elemento corrente e l'URI dello spazio dei nomi e combinarli in un `XmlQualifiedName` che viene quindi usato per cercare l'operazione corrispondente nel dizionario usato dal selettore dell'operazione.  
   
@@ -178,4 +178,3 @@ public interface IDispatchedByBody
 >  Se questa directory non esiste, andare al [Windows Communication Foundation (WCF) e gli esempi di Windows Workflow Foundation (WF) per .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti i Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
-  

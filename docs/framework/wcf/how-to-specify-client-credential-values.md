@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Specificare i valori di credenziale Client'
+title: 'Procedura: Specificare valori di credenziali client'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225131"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Procedura: Specificare i valori di credenziale Client
+# <a name="how-to-specify-client-credential-values"></a>Procedura: Specificare valori di credenziali client
 Utilizza Windows Communication Foundation (WCF), il servizio può specificare come un client viene autenticato nel servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Per determinare il tipo di credenziale client  
@@ -92,6 +92,7 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -100,8 +101,8 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Selezione di un tipo di credenziale](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Uso di certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<messaggio >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)

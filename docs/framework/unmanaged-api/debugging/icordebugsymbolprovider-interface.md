@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b588ec9dffcc4e759b40c7c472f48ab325167943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc33018f68f9634a29e2f5c52123a0215b446de7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228965"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>Interfaccia ICorDebugSymbolProvider
 Fornisce metodi che possono essere usati per recuperare informazioni relative al simbolo di debug.  
@@ -45,5 +45,6 @@ Fornisce metodi che possono essere usati per recuperare informazioni relative al
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

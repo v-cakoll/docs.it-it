@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231565"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Unione delle voci di menu nel controllo MenuStrip Windows Form
 Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è possibile unire le voci di menu o i form figlio interi menu nei menu del form padre.  
@@ -54,8 +54,9 @@ Se si dispone di un'applicazione di interfaccia a documenti multipli (MDI), è p
  È possibile attivare il merge automatico attivando il <xref:System.Windows.Forms.MenuStrip> sull'origine MDI. Dopo l'attivazione, l'origine <xref:System.Windows.Forms.MenuStrip> viene unito nella destinazione MDI. Quando un nuovo form diventa attivo, l'unione è ripristinato sull'ultimo modulo e attivata al momento il nuovo form. È possibile controllare questo comportamento impostando il <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> proprietà in base alle esigenze in ogni <xref:System.Windows.Forms.ToolStripItem>e impostando le <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> su ogni proprietà <xref:System.Windows.Forms.MenuStrip>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [Controllo MenuStrip](menustrip-control-windows-forms.md)
-- [Procedura: Creare un elenco di finestre MDI con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Procedura: Impostare l'unione automatica dei Menu per applicazioni MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Procedura: Creare un elenco di finestre di interfaccia a documenti multipli con MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Procedura: Configurare l'unione automatica dei menu per applicazioni con interfaccia a documenti multipli](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

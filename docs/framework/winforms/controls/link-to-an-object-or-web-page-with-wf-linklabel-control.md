@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form'
+title: 'Procedura: Eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222731"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Procedura: Collegarsi a un oggetto o Web Page con il controllo LinkLabel di Windows Form
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Procedura: Eseguire il collegamento a un oggetto o a una pagina Web con il controllo LinkLabel di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.LinkLabel> controllo consente di creare collegamenti ipertestuali nel form. Quando si fa clic sul collegamento, è possibile modificare il colore per indicare che il collegamento è stato visitato. Per altre informazioni su come modificare il colore, vedere [come: Modificare l'aspetto del controllo Windows Form LinkLabel](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
 ## <a name="linking-to-another-form"></a>Collegamento a un altro formato  
@@ -179,7 +179,8 @@ I moduli di Windows <xref:System.Windows.Forms.LinkLabel> controllo consente di 
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [Panoramica sul controllo LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Procedura: Modificare l'aspetto del controllo Windows Form LinkLabel](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Panoramica del controllo LinkLabel](linklabel-control-overview-windows-forms.md)
+- [Procedura: Modificare l'aspetto del controllo LinkLabel di Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [Controllo LinkLabel](linklabel-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: <endpoint> di <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231201"
 ---
 # <a name="endpoint-of-client"></a>\<endpoint > di \<client >
 Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del canale usato dai client per connettersi agli endpoint del servizio nel server.  
@@ -37,10 +37,10 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|address|Attributo stringa obbligatorio.<br /><br /> Specifica l'indirizzo dell'endpoint. Il valore predefinito è una stringa vuota. L'indirizzo deve essere un URI assoluto.|  
+|indirizzo|Attributo stringa obbligatorio.<br /><br /> Specifica l'indirizzo dell'endpoint. Il valore predefinito è una stringa vuota. L'indirizzo deve essere un URI assoluto.|  
 |behaviorConfiguration|Stringa che contiene il nome del comportamento da usare per creare un'istanza dell'endpoint. Il nome del comportamento deve essere nell'ambito del punto in cui il servizio è definito. Il valore predefinito è una stringa vuota.|  
-|associazione|Attributo stringa obbligatorio.<br /><br /> Stringa che indica il tipo di associazione da usare. Il tipo deve avere una sezione di configurazione registrata perché sia possibile farvi riferimento. Il tipo viene registrato in base al nome di sezione invece che al nome del tipo di associazione.|  
-|bindingConfiguration|Parametro facoltativo. Stringa che contiene il nome della configurazione di associazione da usare quando viene creata un'istanza dell'endpoint. La configurazione di associazione deve essere nell'ambito del punto in cui l'endpoint viene definito. Il valore predefinito è una stringa vuota.<br /><br /> Questo attributo viene usato in combinazione con `binding` per fare riferimento a una configurazione di associazione specifica nel file di configurazione. Impostare questo attributo se si sta tentando di usare un'associazione personalizzata. In caso contrario, può venire generata un'eccezione.|  
+|binding|Attributo stringa obbligatorio.<br /><br /> Stringa che indica il tipo di associazione da usare. Il tipo deve avere una sezione di configurazione registrata perché sia possibile farvi riferimento. Il tipo viene registrato in base al nome di sezione invece che al nome del tipo di associazione.|  
+|bindingConfiguration|Facoltativo. Stringa che contiene il nome della configurazione di associazione da usare quando viene creata un'istanza dell'endpoint. La configurazione di associazione deve essere nell'ambito del punto in cui l'endpoint viene definito. Il valore predefinito è una stringa vuota.<br /><br /> Questo attributo viene usato in combinazione con `binding` per fare riferimento a una configurazione di associazione specifica nel file di configurazione. Impostare questo attributo se si sta tentando di usare un'associazione personalizzata. In caso contrario, può venire generata un'eccezione.|  
 |contratto|Attributo stringa obbligatorio.<br /><br /> Stringa che indica quale contratto viene esposto da questo endpoint. L'assembly deve implementare il tipo di contratto.|  
 |endpointConfiguration|Stringa che specifica il nome dell'endpoint standard impostato dall'attributo `kind` che fa riferimento alle informazioni di configurazione aggiuntive di questo endpoint standard. Lo stesso nome deve essere definito nella sezione `<standardEndpoints>`.|  
 |kind|Stringa che specifica il tipo di endpoint standard applicato. Il tipo deve essere registrato nella sezione `<extensions>` o in machine.config. Se non specificato, viene creato un endpoint del canale comune.|  
@@ -72,6 +72,7 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>

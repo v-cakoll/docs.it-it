@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223628"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: Creare oggetti Graphics per disegnare
 Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene usato per creare immagini grafiche.  
@@ -171,7 +171,8 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
     |Immagini|[Procedura: Eseguire il rendering delle immagini con GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
+
+- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Grafica e disegno in Windows Form](graphics-and-drawing-in-windows-forms.md)
 - [Linee, curve e forme](lines-curves-and-shapes.md)
 - [Procedura: Eseguire il rendering delle immagini con GDI+](how-to-render-images-with-gdi.md)

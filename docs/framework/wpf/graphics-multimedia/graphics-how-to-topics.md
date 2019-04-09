@@ -8,25 +8,26 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230655"
 ---
 # <a name="graphics-how-to-topics"></a>Procedure relative alle funzionalità grafiche
 Gli argomenti seguenti illustrano come usare le funzionalità grafiche del [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Animare un rettangolo](how-to-animate-a-rectangle.md)  
- [Animare la posizione di un oggetto usando PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Aggiungere un'animazione a un rettangolo](how-to-animate-a-rectangle.md)  
+ [Aggiungere un'animazione alla posizione di un oggetto usando PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Trasformare punti e vettori](how-to-transform-points-and-vectors.md)  
  [Estendere l'effetto cristallo a un'applicazione WPF](extend-glass-frame-into-a-wpf-application.md)  
- [Procedura: Migliorare le prestazioni di Rendering memorizzando nella cache un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)  
  [Procedura: Usare un elemento memorizzato nella cache come pennello](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

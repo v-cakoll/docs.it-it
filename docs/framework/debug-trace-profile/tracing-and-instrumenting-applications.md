@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219213"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
@@ -41,7 +41,7 @@ La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in co
   
  Le classi <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> sono identiche, ad eccezione del fatto che le routine e le funzioni della classe <xref:System.Diagnostics.Trace> vengono compilate per impostazione predefinita nelle build di rilascio, mentre quelle della classe <xref:System.Diagnostics.Debug> no.  
   
- Le classi <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> consentono di monitorare ed esaminare le prestazioni dell'applicazione durante lo sviluppo o dopo la distribuzione. È ad esempio possibile usare la classe <xref:System.Diagnostics.Trace> per tenere traccia di particolari tipi di azioni all'interno di un'applicazione distribuita man mano che si verificano (ad esempio la creazione di nuove connessioni a database) e monitorare quindi l'efficienza dell'applicazione.  
+ Le classi <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> consentono di monitorare ed esaminare le prestazioni dell'applicazione durante lo sviluppo o dopo la distribuzione. È ad esempio possibile utilizzare la classe <xref:System.Diagnostics.Trace> per tenere traccia di particolari tipi di azioni all'interno di un'applicazione distribuita man mano che si verificano (ad esempio la creazione di nuove connessioni a database) e monitorare quindi l'efficienza dell'applicazione.  
   
 ## <a name="code-tracing-and-debugging"></a>Traccia e debug del codice  
  Nella fase di sviluppo è possibile usare i metodi di output della classe <xref:System.Diagnostics.Debug> per visualizzare messaggi nella finestra di output dell'ambiente di sviluppo integrato (IDE) di Visual Studio. Ad esempio:  
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Metodo|Output|  
 |------------|------------|  
 |**Assert**|Il testo specificato oppure, se non è specificato, lo stack di chiamate. L'output viene scritto solo se la condizione specificata come argomento nell'istruzione **Assert** è **false**.|  
-|**Fail**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
+|**Test non superato**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
 |**Write**|Il testo specificato.|  
 |**WriteIf**|Il testo specificato, se la condizione specificata come argomento nell'istruzione **WriteIf** viene soddisfatta.|  
 |**WriteLine**|Il testo specificato e un ritorno a capo.|  
@@ -142,6 +142,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Se non si disabilitano la traccia e il debug prima di distribuire un'applicazione ASP.NET, l'applicazione può rivelare informazioni su se stessa che potrebbero venire sfruttate da un programma dannoso. Per altre informazioni, vedere [Procedura: Compilazione in modo condizionale con traccia e Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio), e [come: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Il debug può essere configurato anche tramite Internet Information Services (IIS).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contratti di codice](../../../docs/framework/debug-trace-profile/code-contracts.md)

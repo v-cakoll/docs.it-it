@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231123"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -149,8 +149,9 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
  La capacità di identificare il modo in cui gli elementi vengono misurati e disposti è il primo passaggio per la comprensione del layout. Per altre informazioni sui contatori <xref:System.Windows.Controls.Panel> elementi, vedere [pannelli Panoramica](../controls/panels-overview.md). Per meglio determinare le diverse proprietà di posizionamento che possono influire sul layout, vedere [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md). Per un esempio di una classe personalizzata <xref:System.Windows.Controls.Panel> elemento, vedere [esempio di pannello radiale personalizzato](https://go.microsoft.com/fwlink/?LinkID=159982). Quando si è pronti per riunire il tutto in un'applicazione leggera, vedere [procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [Cenni preliminari sugli elementi Panel](../controls/panels-overview.md)
 - [Panoramica su allineamento, margini e spaziatura interna](alignment-margins-and-padding-overview.md)
-- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Layout e progettazione](optimizing-performance-layout-and-design.md)

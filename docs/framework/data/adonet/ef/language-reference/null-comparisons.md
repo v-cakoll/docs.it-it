@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222666"
 ---
 # <a name="null-comparisons"></a>Confronti Null
 Un valore `null` nell'origine dati indica che il valore è sconosciuto. Nella query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è possibile verificare la presenza di valori Null in modo che alcuni calcoli o confronti vengano eseguiti solo sulle righe che includono dati validi, ovvero non NULL. Tuttavia, la semantica dei valori Null di CLR può differire da quella dell'origine dati. La maggior parte dei database usa una versione della logica con tre valori per la gestione dei confronti di valori Null. Vale a dire, un confronto con un valore null non restituiscono `true` oppure `false`, viene restituito `unknown`. Spesso, ma non sempre, si tratta di un'implementazione di valori Null ANSI.  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  Nelle [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], quando si passa una raccolta che supporta `IQueryable` a una funzione di aggregazione, le operazioni di aggregazione vengono eseguite a livello di database. Potrebbero essere presenti differenze nei risultati di una query che è stata eseguita in memoria e una query che è stata eseguita a livello di database. Con una query in memoria, se non sono presenti corrispondenze, la query restituisce zero. A livello di database, la stessa query restituisce `null`. Se un `null` valore viene passato a una funzione di aggregazione LINQ, verrà generata un'eccezione. Per accettare i possibili `null` valori, eseguire il cast ai tipi e le proprietà dei tipi che ricevono i risultati di query per i tipi nullable.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Espressioni in query di LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

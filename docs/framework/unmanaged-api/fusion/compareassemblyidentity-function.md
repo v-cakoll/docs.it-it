@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0088ed696b2018054dc34a0b363def97c5753fe0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231044"
 ---
 # <a name="compareassemblyidentity-function"></a>Funzione CompareAssemblyIdentity
 Confronta due identità di assembly per determinare se sono equivalenti.  
@@ -85,5 +85,6 @@ STDAPI CompareAssemblyIdentity (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Enumerazione AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

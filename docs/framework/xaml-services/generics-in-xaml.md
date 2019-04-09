@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221600"
 ---
 # <a name="generics-in-xaml"></a>Generics in XAML
 Servizi di .NET Framework XAML come implementato in XAML fornisce il supporto per l'utilizzo di tipi generici di CLR. Questo supporto include la specifica dei vincoli di generics come argomento di tipo e applicazione dei vincoli chiamando appropriato `Add` metodo per i casi di raccolte generiche. Questo argomento descrive gli aspetti dell'utilizzo e che fanno riferimento a tipi generici in XAML.  
@@ -43,6 +43,7 @@ Servizi di .NET Framework XAML come implementato in XAML fornisce il supporto pe
  Flussi di lavoro personalizzati in Windows Workflow Foundation per [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] non supportano l'utilizzo generico di XAML.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Direttiva x:TypeArguments](x-typearguments-directive.md)
 - [Direttiva x:Class](x-class-directive.md)
 - [Tipi incorporati per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md)

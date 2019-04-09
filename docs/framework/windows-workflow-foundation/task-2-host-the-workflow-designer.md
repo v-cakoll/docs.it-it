@@ -1,15 +1,15 @@
 ---
-title: 'Attività 2: Host di progettazione del flusso di lavoro'
+title: 'Attività 2: Ospitare Progettazione flussi di lavoro'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218706"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Attività 2: Host di progettazione del flusso di lavoro
+# <a name="task-2-host-the-workflow-designer"></a>Attività 2: Ospitare Progettazione flussi di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
   
  La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione, a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività, registra i metadati della finestra di progettazione per fornire supporto di progettazione per attività tutte predefinite e gli host il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nella [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
@@ -122,6 +122,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
 10. Vedere [attività 3: Creare la casella degli strumenti e riquadri PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md) per informazioni su come aggiungere **casella degli strumenti** e **PropertyGrid** supportano alla finestra di progettazione del flusso di lavoro ospitata nuovamente.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
+
+- [Riallocazione dell'utilità di progettazione del flusso di lavoro](rehosting-the-workflow-designer.md)
 - [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Attività 3: Creare la casella degli strumenti e PropertyGrid riquadri](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

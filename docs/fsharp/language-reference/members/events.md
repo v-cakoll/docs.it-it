@@ -2,12 +2,12 @@
 title: Eventi
 description: Informazioni su come F# eventi consentono di associare chiamate di funzione con le azioni utente, che sono importanti nella programmazione GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227002"
 ---
 # <a name="events"></a>Eventi
 
@@ -40,7 +40,7 @@ L'output è indicato di seguito.
 Event1 occurred! Object data: Hello World!
 ```
 
-Di seguito viene illustrata la funzionalità aggiuntiva fornita dal modulo `Event`. Nell'esempio di codice seguente viene illustrato l'utilizzo di base di `Event.create` per creare un evento e un metodo trigger, aggiungere due gestori eventi sotto forma di espressioni lambda e quindi attivare l'evento per eseguire entrambe le espressioni lambda.
+Di seguito viene illustrata la funzionalità aggiuntiva fornita dal modulo `Event`. Nell'esempio di codice seguente viene illustrato l'utilizzo di base di `Event.create` per creare un evento e un metodo trigger, aggiungere due gestori eventi sotto forma di espressioni lambda e quindi attivare l'evento per eseguire entrambe le espressioni.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3603.fs)]
 
@@ -97,7 +97,6 @@ type AppForm() as this =
     [<CLIEvent>]
     member this.PropertyChanged = propertyChanged.Publish
 
-
     // Define the add and remove methods to implement this interface.
     interface INotifyPropertyChanged with
         member this.add_PropertyChanged(handler) = propertyChanged.Publish.AddHandler(handler)
@@ -138,7 +137,6 @@ type AppForm private (dummy) as this =
         this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
         this.Property2 <- "text3")
 
-
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set
 
@@ -169,7 +167,6 @@ type AppForm private (dummy) as this =
             let inpc = this :> INotifyPropertyChanged
             inpc.PropertyChanged.Add(this.OnPropertyChanged)
 
-
 // Create a form, hook up the event handler, and start the application.
 let appForm = new AppForm()
 Application.Run(appForm)
@@ -178,8 +175,8 @@ Application.Run(appForm)
 ## <a name="see-also"></a>Vedere anche
 
 - [Membri](index.md)
-- [La gestione e generazione di eventi](../../../../docs/standard/events/index.md)
-- [Espressioni lambda: Parola chiave `fun`](../functions/lambda-expressions-the-fun-keyword.md)
+- [Gestione e generazione di eventi](../../../../docs/standard/events/index.md)
+- [Espressioni lambda: Il `fun` (parola chiave)](../functions/lambda-expressions-the-fun-keyword.md)
 - [Modulo Control. event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. event&#60;l&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control. event&#60;'Delegate' Args&#62; classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

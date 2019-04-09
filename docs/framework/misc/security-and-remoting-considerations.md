@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225287"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerazioni sulla sicurezza e sui servizi remoti
 I servizi remoti consentono di impostare chiamate trasparenti tra domini applicazione, processi o computer. Lo stack di sicurezza per l'accesso di codice, tuttavia, non può superare i limiti del processo o del computer (viene applicato tra domini applicazione dello stesso processo).  
@@ -38,4 +38,5 @@ I servizi remoti consentono di impostare chiamate trasparenti tra domini applica
  In genere, il dominio applicazione predefinito crea domini applicazione figlio con un oggetto controllo in ognuno di essi. L'oggetto controllo gestisce il nuovo dominio applicazione e occasionalmente accetta gli ordini dal dominio applicazione predefinito, ma non è in grado di contattare direttamente il dominio. A volte il dominio applicazione predefinito chiama il proxy per l'oggetto controllo. Tuttavia, in alcuni casi l'oggetto controllo deve richiamare il dominio applicazione predefinito. In questi casi, il dominio applicazione predefinito passa un oggetto callback di marshalling per riferimento al costruttore dell'oggetto controllo. È responsabilità dell'oggetto controllo proteggere il proxy. Se l'oggetto controllo posiziona il proxy in un campo statico pubblico di una classe pubblica o espone pubblicamente il proxy, può attivarsi un pericoloso meccanismo che consente a un codice di richiamare il dominio applicazione predefinito. Per questo motivo, gli oggetti controllo vengono sempre considerati implicitamente attendibili per mantenere privato il proxy.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)

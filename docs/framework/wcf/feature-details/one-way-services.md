@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231279"
 ---
 # <a name="one-way-services"></a>Servizi unidirezionali
 Il comportamento predefinito di un'operazione del servizio segue il modello request-reply, in base al quale il client resta in attesa del messaggio di risposta, anche se l'operazione del servizio è rappresentata nel codice come metodo `void`. Con un'operazione unidirezionale, viene invece trasmesso solo un messaggio. Il destinatario non invia un messaggio di risposta, né il mittente ne aspetta uno.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  È invece consigliabile esaminare i vari controlli sul servizio e sul client e quindi testare gli scenari dell'applicazione per determinare la configurazione migliore su ogni lato. Ad esempio, se l'utilizzo di sessioni blocca l'elaborazione di messaggi nel servizio, è possibile impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.InstanceContextMode.PerCall>, in modo che ogni messaggio possa essere elaborato da un'istanza diversa del servizio, e impostare la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> su <xref:System.ServiceModel.ConcurrencyMode.Multiple> per consentire a più di un thread alla volta di inviare messaggi. Un altro approccio consiste nell'aumentare le quote di lettura delle associazioni del servizio e del client.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Unidirezionale](../../../../docs/framework/wcf/samples/one-way.md)

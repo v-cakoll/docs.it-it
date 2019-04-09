@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45340a26b3351ca03b453fbcdb626de199bd6d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57d7c3256d7b52a4e55dbb5bc420b0438983d2f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219681"
 ---
 # <a name="cordebugsteprange-structure"></a>Struttura COR_DEBUG_STEP_RANGE
 Contene le informazioni sugli offset per un intervallo di codice.  
@@ -39,7 +39,7 @@ typedef struct {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`startOffset`|L'offset dell'inizio dell'intervallo.|  
 |`endOffset`|L'offset della fine dell'intervallo.|  
@@ -54,6 +54,7 @@ typedef struct {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Metodo StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,12 +2,12 @@
 title: Gestione delle autorizzazioni con stored procedure in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 92752df75390c4f672f4a0cc1dd48ec7c07f6265
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229992"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestione delle autorizzazioni con stored procedure in SQL Server
 Per creare più linee di difesa intorno al database, è possibile implementare tutto l'accesso ai dati tramite stored procedure o funzioni definite dall'utente. Revocare o negare tutte le autorizzazioni per gli oggetti sottostanti, ad esempio tabelle, e concedere autorizzazioni EXECUTE sulle stored procedure. In questo modo viene creato un perimetro di sicurezza efficace intorno ai dati e agli oggetti di database.  
@@ -50,13 +50,14 @@ Per creare più linee di difesa intorno al database, è possibile implementare t
 -   Evitare le istruzioni SQL dinamiche se non sono assolutamente necessarie. Usare la funzione Transact-SQL QUOTENAME() per delimitare un valore di stringa e usare caratteri di escape per tutte le occorrenze del delimitatore nella stringa di input.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Stored procedure](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Attacco SQL Injection](https://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

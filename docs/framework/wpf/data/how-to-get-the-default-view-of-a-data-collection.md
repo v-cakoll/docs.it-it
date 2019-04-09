@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222107"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procedura: Ottenere la visualizzazione predefinita di una raccolta dati
 Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, a seconda di ordinamento, filtro o criteri di raggruppamento. Ogni raccolta ha una visualizzazione condivisa predefinita, viene usata come origine del binding effettivo quando un'associazione specifica una raccolta come origine. In questo esempio viene illustrato come ottenere la visualizzazione predefinita di una raccolta.  
@@ -33,5 +33,6 @@ Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, 
  Per esempi delle funzionalità fornite da una visualizzazione di raccolta, vedere [ordinare i dati in una vista](how-to-sort-data-in-a-view.md), [filtrare i dati in una vista](how-to-filter-data-in-a-view.md), e [tra gli oggetti in una visualizzazione di raccolta dati](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+
+- [Ordinare e raggruppare dati tramite una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Procedure relative](data-binding-how-to-topics.md)

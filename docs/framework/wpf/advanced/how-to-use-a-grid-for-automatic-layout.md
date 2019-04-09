@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Utilizzare una griglia per il layout automatico'
+title: 'Procedura: Usare una griglia per il layout automatico'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227128"
 ---
-# <a name="how-to-use-a-grid-for-automatic-layout"></a>Procedura: Utilizzare una griglia per il layout automatico
+# <a name="how-to-use-a-grid-for-automatic-layout"></a>Procedura: Usare una griglia per il layout automatico
 Questo esempio descrive come usare una griglia nell'approccio basato sul layout automatico per la creazione di un'applicazione localizzabile.  
   
  Localizzazione di un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] può essere un processo molto tempo. Spesso sono necessari il ridimensionamento e il riposizionamento degli elementi, oltre alla traduzione del testo. In precedenza ogni lingua che un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] richiedeva delle modifiche è stato adattato. Ora con le funzionalità di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è possibile progettare elementi che riducono la necessità di modifiche. Viene chiamato l'approccio alla scrittura di applicazioni che possono risultare più semplice ridimensionare e riposizionare `auto layout`.  
@@ -30,5 +30,6 @@ Questo esempio descrive come usare una griglia nell'approccio basato sul layout 
 Grid  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'utilizzo del layout automatico](use-automatic-layout-overview.md)
-- [Utilizzare un layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)
+- [Usare il layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)

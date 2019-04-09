@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Specificare l'origine di associazione"
+title: "Procedura: Specificare l'origine di binding"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222302"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Procedura: Specificare l'origine di associazione
+# <a name="how-to-specify-the-binding-source"></a>Procedura: Specificare l'origine di binding
 Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i vari modi per specificare l'origine del binding.  
   
 ## <a name="example"></a>Esempio  
@@ -44,9 +44,10 @@ Nel data binding l'oggetto origine di binding fa riferimento all'oggetto da cui 
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Specificare una stringa che rappresenta l'elemento a cui si desidera eseguire il binding. Risulta utile se si desidera eseguire il binding alla proprietà di un altro elemento dell'applicazione, Ad esempio, se si desidera utilizzare un <xref:System.Windows.Controls.Slider> controllarne l'altezza di un altro controllo nell'applicazione, o se si desidera associare il <xref:System.Windows.Controls.ContentControl.Content%2A> del controllo per il <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> proprietà del <xref:System.Windows.Controls.ListBox> controllo. Per altre informazioni, vedere <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Ereditarietà del valore della proprietà](../advanced/property-value-inheritance.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Panoramica sulle dichiarazioni di associazione](binding-declarations-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Cenni preliminari sulle dichiarazioni di associazione](binding-declarations-overview.md)
+- [Procedure relative](data-binding-how-to-topics.md)

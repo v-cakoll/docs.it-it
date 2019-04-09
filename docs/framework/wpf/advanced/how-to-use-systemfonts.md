@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Utilizzare la classe SystemFonts'
+title: 'Procedura: Usare la classe SystemFonts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216782"
 ---
-# <a name="how-to-use-systemfonts"></a>Procedura: Utilizzare la classe SystemFonts
+# <a name="how-to-use-systemfonts"></a>Procedura: Usare la classe SystemFonts
 Questo esempio illustra come usare le risorse statiche del <xref:System.Windows.SystemFonts> classe per poter applicare uno stile a un pulsante o personalizzarlo.  
   
 ## <a name="example"></a>Esempio  
@@ -37,11 +37,12 @@ Questo esempio illustra come usare le risorse statiche del <xref:System.Windows.
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.SystemFonts>
 - [Disegnare un'area con un pennello di sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Utilizzare SystemParameters](how-to-use-systemparameters.md)
-- [Usare chiavi di caratteri del sistema](how-to-use-system-fonts-keys.md)
-- [Procedure relative alle proprietà](resources-how-to-topics.md)
+- [Usare la classe SystemParameters](how-to-use-systemparameters.md)
+- [Usare le chiavi dei tipi di carattere del sistema](how-to-use-system-fonts-keys.md)
+- [Procedure relative](resources-how-to-topics.md)
 - [Estensione del markup x:Static](../../xaml-services/x-static-markup-extension.md)
 - [Risorse XAML](xaml-resources.md)
 - [Estensione del markup DynamicResource](dynamicresource-markup-extension.md)

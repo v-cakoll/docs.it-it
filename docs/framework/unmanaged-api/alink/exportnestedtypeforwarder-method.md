@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed615ea641293f8ea3fdf962e3f84d602934df60
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 050ed0bbd4da38bede5a56ff95d0243f5f3cf1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220084"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>Metodo ExportNestedTypeForwarder
 Aggiunge un server d'inoltro di tipo per un tipo annidato alla tabella di tipo di assembly specificato.  
@@ -69,6 +69,7 @@ HRESULT ExportNestedTypeForwarder(
  Richiede alink.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)

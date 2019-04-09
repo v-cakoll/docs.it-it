@@ -2,12 +2,12 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: f454a8b70441473991acffae9db86a09b0658bfb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b24b048cb1beae3ab515d9e49353fb1e0123a47f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219174"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 Specifica un'associazione che fornisce il contesto di scambio dell'associazione <xref:System.ServiceModel.BasicHttpBinding> mediante l'abilitazione dei cookie HTTP come meccanismo di scambio.  
@@ -91,12 +91,13 @@ Specifica un'associazione che fornisce il contesto di scambio dell'associazione 
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di associazione fornisce un livello di protezione e un meccanismo di scambio come parte del contesto per `BasicHttpBinding`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.BasicHttpContextBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>

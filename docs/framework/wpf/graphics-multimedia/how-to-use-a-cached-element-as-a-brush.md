@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229368"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>Procedura: Usare un elemento memorizzato nella cache come pennello
 Usare il <xref:System.Windows.Media.BitmapCacheBrush> classe riutilizzare un elemento memorizzato nella cache in modo efficiente. Per memorizzare nella cache un elemento, creare una nuova istanza di <xref:System.Windows.Media.BitmapCache> classi e assegnarla alla proprietà dell'elemento <xref:System.Windows.UIElement.CacheMode%2A> proprietà.  
@@ -23,7 +23,8 @@ Usare il <xref:System.Windows.Media.BitmapCacheBrush> classe riutilizzare un ele
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Procedura: Migliorare le prestazioni di Rendering memorizzando nella cache un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento](how-to-improve-rendering-performance-by-caching-an-element.md)

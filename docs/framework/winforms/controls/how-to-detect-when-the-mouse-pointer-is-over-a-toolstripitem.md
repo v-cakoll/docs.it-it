@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Rilevare quando il puntatore del Mouse si trova sopra un ToolStripItem'
+title: 'Procedura: Rilevare quando il puntatore del mouse si trova sopra un ToolStripItem'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], detecting mouse movement
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ToolStripItem class [Windows Forms], detecting mouse movement
 - mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
-ms.openlocfilehash: 39173490c31711cca9f26f5f0cb2ab493546dda3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 09fd9f2f9b8cc44b6c04b829bf2854bea4aa8cf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220046"
 ---
-# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Procedura: Rilevare quando il puntatore del Mouse si trova sopra un ToolStripItem
+# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Procedura: Rilevare quando il puntatore del mouse si trova sopra un ToolStripItem
 Usare la procedura seguente per rilevare quando il puntatore del mouse è posizionato sopra un <xref:System.Windows.Forms.ToolStripItem>.  
   
 ### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a>Per rilevare quando il puntatore si trova sopra un ToolStripItem  
@@ -24,6 +24,7 @@ Usare la procedura seguente per rilevare quando il puntatore del mouse è posizi
      Ciò impedirà è la necessità di sincronizzare le <xref:System.Windows.Forms.ToolStripItem.MouseEnter> e <xref:System.Windows.Forms.ToolStripItem.MouseLeave> eventi.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripItem.Selected%2A>
-- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)

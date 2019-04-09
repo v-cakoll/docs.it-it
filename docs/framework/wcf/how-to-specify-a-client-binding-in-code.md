@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Specificare un'associazione al Client nel codice"
+title: "Procedura: Specificare un'associazione al client in codice"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218602"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: Specificare un'associazione al Client nel codice
+# <a name="how-to-specify-a-client-binding-in-code"></a>Procedura: Specificare un'associazione al client in codice
 Questo esempio illustra un client creato in modo da utilizzare un servizio di calcolatrice. Inoltre, l'associazione a tale client viene specificata in modo imperativo in codice. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Questa procedura presuppone che il servizio di calcolatrice sia in esecuzione. Per informazioni sulla creazione del servizio, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Viene inoltre utilizzata la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) offre per generare automaticamente i componenti client. Lo strumento genera il codice client di accesso al servizio.  
@@ -47,4 +47,5 @@ Questo esempio illustra un client creato in modo da utilizzare un servizio di ca
 5.  Compilare ed eseguire il client.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

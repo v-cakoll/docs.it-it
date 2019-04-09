@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218381"
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser di Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a una serie di restrizioni. Per applicare queste restrizioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su entrambe [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza WPF - sicurezza della piattaforma](wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o nel computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -130,23 +130,23 @@ ms.locfileid: "57371632"
   
 |Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Sì|No|  
-|Finestre di dialogo file|Apri|Sì|Sì|  
-|Finestre di dialogo file|Senza restrizioni|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Supporti|Audio, video e immagini sicuri|Sì|Sì|  
-|Stampa|Stampa predefinita|Sì|No|  
-|Stampa|Stampa sicura|Sì|Sì|  
-|Reflection|Emissione|Sì|No|  
-|Sicurezza|Esecuzione del codice gestito|Sì|Sì|  
-|Sicurezza|Asserzione autorizzazioni concesse|Sì|No|  
-|Interfaccia utente|Senza restrizioni|Sì|No|  
-|Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
-|Interfaccia utente|Appunti personali|Sì|Sì|  
-|Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  
+|DNS|Accesso ai server DNS|Yes|No|  
+|Variabili di ambiente|Lettura|Yes|No|  
+|Finestre di dialogo file|Apri|Yes|Yes|  
+|Finestre di dialogo file|Senza restrizioni|Yes|No|  
+|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Yes|No|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Yes|Yes|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
+|Supporti|Audio, video e immagini sicuri|Yes|Yes|  
+|Stampa|Stampa predefinita|Yes|No|  
+|Stampa|Stampa sicura|Yes|Yes|  
+|Reflection|Emissione|Yes|No|  
+|Sicurezza|Esecuzione del codice gestito|Yes|Yes|  
+|Sicurezza|Asserzione autorizzazioni concesse|Yes|No|  
+|Interfaccia utente|Senza restrizioni|Yes|No|  
+|Interfaccia utente|Finestre di primo livello sicure|Yes|Yes|  
+|Interfaccia utente|Appunti personali|Yes|Yes|  
+|Web browser|Navigazione sicura dei frame in HTML|Yes|Yes|  
   
 > [!NOTE]
 >  L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  
@@ -164,6 +164,7 @@ ms.locfileid: "57371632"
  In alternativa, è possibile usare il modello di distribuzione attendibile di ClickOnce per una distribuzione con attendibilità totale da qualsiasi area di sicurezza. Per altre informazioni, vedere [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) e [sicurezza](security-wpf.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Sicurezza](security-wpf.md)
 - [Strategia di sicurezza di WPF - Sicurezza della piattaforma](wpf-security-strategy-platform-security.md)
 - [Strategia di sicurezza WPF - Progettazione della sicurezza](wpf-security-strategy-security-engineering.md)

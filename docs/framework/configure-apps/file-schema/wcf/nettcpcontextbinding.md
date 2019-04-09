@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 35a7f322a38135ae2f728993f29b570c1fa94e8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228445"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Specifica un contesto per l'associazione <xref:System.ServiceModel.NetTcpBinding> che richiede che il livello di protezione sia Sign. Il meccanismo contextExchangeMechanism dell'associazione NetTcpContextBinding è SOAPHeader.  
@@ -96,9 +96,10 @@ Specifica un contesto per l'associazione <xref:System.ServiceModel.NetTcpBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>

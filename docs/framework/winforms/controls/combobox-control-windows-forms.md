@@ -10,25 +10,25 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227119"
 ---
 # <a name="combobox-control-windows-forms"></a>Controllo ComboBox (Windows Form)
 I moduli di Windows `ComboBox` controllo viene usato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il `ComboBox` controllo viene visualizzato in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che visualizza un elenco di elementi da cui l'utente può selezionare uno.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)  
+ [Panoramica del controllo ComboBox](combobox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Creare testo di dimensioni variabili in un controllo ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Viene illustrato il disegno personalizzato di testo in un `ComboBox` controllo.  
   
 ## <a name="reference"></a>Riferimenti  
- Classe <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ComboBox> classe  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
@@ -36,4 +36,5 @@ I moduli di Windows `ComboBox` controllo viene usato per visualizzare i dati in 
  Fornisce un elenco di operazioni che è possibile eseguire con le caselle di riepilogo, caselle combinate e caselle di riepilogo selezionate.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

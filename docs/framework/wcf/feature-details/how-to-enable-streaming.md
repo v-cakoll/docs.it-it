@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Abilitare lo Streaming'
+title: 'Procedura: Abilitare il flusso'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227314"
 ---
-# <a name="how-to-enable-streaming"></a>Procedura: Abilitare lo Streaming
+# <a name="how-to-enable-streaming"></a>Procedura: Abilitare il flusso
 Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
   
  Per attivare il flusso, definire correttamente `OperationContract` e attivare il flusso a livello di trasporto.  
@@ -30,13 +30,13 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     L'operazione `GetStream` riceve alcuni dati di input memorizzati nel buffer come `string`, che è memorizzata nel buffer, e restituisce `Stream`, trasferito con flusso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce uno `Stream` ed è un esempio di un'operazione i cui messaggi di input e output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
+     L'operazione `GetStream` riceve alcuni dati di input memorizzati nel buffer come `string`, che è memorizzata nel buffer, e restituisce `Stream`, trasferito con flusso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce `Stream` ed è riportato un esempio di un'operazione il cui input e i messaggi di output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
   
 2.  La trasmissione deve essere attivata nell'associazione. Impostare una proprietà `TransferMode`, che può prendere uno dei valori seguenti:  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`, che consente di attivare la comunicazione con flusso bidirezionale.  
+    2.  `Streamed`, che consente la comunicazione di streaming in entrambe le direzioni.  
   
     3.  `StreamedRequest`, che consente la trasmissione della sola richiesta.  
   
@@ -69,11 +69,12 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
   
 1.  Per eseguire un'elaborazione speciale su ogni blocco di flusso di dati quando viene inviato o ricevuto, derivare una classe del flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
   
-     `GetReversedStream` crea e restituisce una nuova istanza di `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
+     `GetReversedStream` Crea e restituisce una nuova istanza della `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+
+- [Dati di grandi dimensioni e flussi](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Flusso](../../../../docs/framework/wcf/samples/stream.md)

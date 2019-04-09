@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere controlli senza interfaccia utente a un Windows Form'
+title: "Procedura: Aggiungere i controlli senza un'interfaccia utente a Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223693"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedura: Aggiungere controlli senza interfaccia utente a un Windows Form
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedura: Aggiungere i controlli senza un'interfaccia utente a Windows Forms
 Un controllo non visivo (o componente) offre funzionalità all'applicazione. A differenza di altri controlli, componenti non forniscono un'interfaccia utente per l'utente e pertanto non sono necessario essere visualizzato nell'area di progettazione di Windows Form. Quando un componente viene aggiunto a un form, finestra di progettazione Windows Form consente di visualizzare una barra delle applicazioni ridimensionabile nella parte inferiore del form in cui vengono visualizzati tutti i componenti. Dopo aver aggiunto un controllo alla barra dei componenti, è possibile selezionare il componente e impostarne le proprietà come si farebbe con qualsiasi altro controllo nel form.  
   
 > [!NOTE]
@@ -80,9 +80,10 @@ Un controllo non visivo (o componente) offre funzionalità all'applicazione. A d
     >  Facendo riferimento a un controllo utente malintenzionato può esporre il computer locale a un rischio per la sicurezza attraverso la rete. Questa è solo un problema nel caso di un utente con un controllo personalizzato, seguito dall'utente erroneamente aggiungendolo al progetto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Controlli Windows Form](index.md)
-- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
-- [Procedura: Aggiungere i controlli ActiveX a Windows Form](how-to-add-activex-controls-to-windows-forms.md)
+
+- [Controlli per Windows Form](index.md)
+- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Aggiungere i controlli ActiveX a Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Procedura: Copiare i controlli tra Windows Form](how-to-copy-controls-between-windows-forms.md)
 - [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

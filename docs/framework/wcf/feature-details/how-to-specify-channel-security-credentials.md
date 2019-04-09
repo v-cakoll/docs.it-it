@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Specificare le credenziali di sicurezza del canale'
+title: 'Procedura: Specificare credenziali di sicurezza del canale'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222601"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Procedura: Specificare le credenziali di sicurezza del canale
+# <a name="how-to-specify-channel-security-credentials"></a>Procedura: Specificare credenziali di sicurezza del canale
 Il Moniker del servizio Windows Communication Foundation (WCF) consente alle applicazioni COM di chiamare i servizi WCF. La maggior parte dei servizi WCF richiedono al client specificare le credenziali per l'autenticazione e autorizzazione. Quando si chiama un servizio WCF da un client WCF, è possibile specificare queste credenziali nel codice gestito o in un file di configurazione dell'applicazione. Quando si chiama un servizio WCF da un'applicazione COM, è possibile usare il <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaccia per specificare le credenziali. In questo argomento vengono illustrate varie modalità di specifica delle credenziali mediante l'interfaccia <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch nella quale non viene visualizzata la funzionalità IntelliSense nell'ambiente Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> è un'interfaccia basata su IDispatch e non sarà possibile ottenere la funzionalità IntelliSense nell'ambiente di Visual Studio.  
   
  Questo articolo usa il servizio WCF definito nella [esempio di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
@@ -50,7 +50,7 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
   
 7.  Eseguire l'applicazione Visual Basic e verificare i risultati.  
   
-     Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4). Per impostare il certificato client è inoltre possibile usare <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> al posto di <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>:  
+     Nell'applicazione Visual Basic verrà visualizzata una finestra di messaggio con il risultato relativo alla chiamata di Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oppure <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> può anche essere usato al posto di <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> per impostare il certificato Client:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -65,13 +65,9 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
 ### <a name="to-specify-user-name-and-password"></a>Per specificare un nome utente e una password  
   
 1.  Modificare il file Service App.config per usare `wsHttpBinding`. Questa operazione è necessaria per la convalida del nome utente e della password.  
-  
-  
-  
+
 2.  Impostare `clientCredentialType` su UserName:  
-  
-  
-  
+
 3.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
     ```  
@@ -96,9 +92,7 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
 ### <a name="to-specify-windows-credentials"></a>Per specificare credenziali di Windows.  
   
 1.  Impostare `clientCredentialType` su Windows nel file App.config del servizio:  
-  
-  
-  
+
 2.  Aprire Visual Basic 6.0 e creare un nuovo file standard con estensione exe. Aggiungere un pulsante al form e fare doppio clic su di esso per aggiungere il codice seguente al gestore Click:  
   
     ```  
@@ -138,8 +132,9 @@ Il Moniker del servizio Windows Communication Foundation (WCF) consente alle app
      Per altre informazioni sui parametri relativi a questo metodo, vedere <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Federazione](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Procedura: Creare un Client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedura: Creare un client federato](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

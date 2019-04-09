@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223801"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Procedura: Implementare una proprietà di dipendenza
 Questo esempio illustra come eseguire una [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] proprietà con un <xref:System.Windows.DependencyProperty> campo, definendo una proprietà di dipendenza. Quando si definiscono proprietà personalizzate e si vuole che supportino molti aspetti della funzionalità [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], inclusi stili, data binding, ereditarietà, animazione e valori predefiniti, è necessario implementarle come proprietà di dipendenza.  
@@ -33,5 +33,6 @@ Questo esempio illustra come eseguire una [!INCLUDE[TLA#tla_clr](../../../../inc
  Per altre informazioni su come e perché implementare una proprietà di dipendenza, in contrapposizione al semplice supporto di una proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un campo privato, vedere [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
-- [Procedure relative alle proprietà](properties-how-to-topics.md)
+- [Procedure relative](properties-how-to-topics.md)

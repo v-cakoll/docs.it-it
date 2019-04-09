@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca7508c675ccc4c4ee0c07a2d7790bb5de7a668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 513fc93bdac71e2a3ba59ebb53fdde44f1659af5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220461"
 ---
 # <a name="cordebughandletype-enumeration"></a>Enumerazione CorDebugHandleType
 Indica il tipo di handle.  
@@ -37,7 +37,7 @@ typedef enum CorDebugHandleType {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`HANDLE_STRONG`|L'handle è forte, che impedisce un oggetto viene recuperato da garbage collection.|  
 |`HANDLE_WEAK_TRACK_RESURRECTION`|L'handle è debole, che non impedisce un oggetto viene recuperato da garbage collection.<br /><br /> L'handle viene invalidato quando l'oggetto viene raccolto.|  
@@ -52,4 +52,5 @@ typedef enum CorDebugHandleType {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

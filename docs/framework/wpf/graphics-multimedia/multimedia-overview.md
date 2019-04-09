@@ -5,18 +5,16 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ffdcb58cdd332f9c730e7ed367e0f8bcc56da459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222094"
 ---
 # <a name="multimedia-overview"></a>Panoramica delle funzionalità multimediali
 Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consentono di integrare audio e video nelle applicazioni per migliorare l'esperienza utente. Questo argomento introduce le funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
- 
-  
+
 <a name="mediaapi"></a>   
 ## <a name="media-api"></a>API multimediali  
  Il <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> classi vengono usate per presentare contenuto audio o video. Queste classi possono essere controllate in modo interattivo o da un orologio. È possibile usare queste classi sul controllo [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 per la riproduzione multimediale. La classe da usare dipende dallo scenario.  
@@ -101,7 +99,7 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 ### <a name="controlling-mediaplayer"></a>Controllo di un oggetto MediaPlayer  
  Poiché <xref:System.Windows.Media.MediaPlayer> è senza stato, sono disponibili solo due modi per controllare la riproduzione multimediale.  
   
-1.  Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
+1.  Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
   
 2.  <xref:System.Windows.Media.MediaClock>. Disponibile quando i supporti hanno un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -113,6 +111,7 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
  Vedere le [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md) per altre informazioni su <xref:System.Windows.Media.Drawing> oggetti.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Layout](../advanced/layout.md)
-- [Procedure relative alle proprietà](audio-and-video-how-to-topics.md)
+- [Procedure relative](audio-and-video-how-to-topics.md)

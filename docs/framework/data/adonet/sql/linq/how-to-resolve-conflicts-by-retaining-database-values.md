@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Risolvere i conflitti mantenendo valori di Database'
+title: 'Procedura: Risolvere conflitti mantenendo i valori di database'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: f647dad951acfbc309257212018db32e655169df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230109"
 ---
-# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procedura: Risolvere i conflitti mantenendo valori di Database
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Procedura: Risolvere conflitti mantenendo i valori di database
 Per risolvere le differenze tra i valori del database previsti ed effettivi prima del tentativo di inviare di nuovo le modifiche, è possibile usare <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> per conservare i valori trovati nel database. I valori correnti nel modello a oggetti vengono quindi sovrascritti. Per altre informazioni, vedere [la concorrenza ottimistica: Panoramica](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
 |------|-------------|---------------|----------------|  
 |Stato del database originale quando viene eseguita una query da User1 e User2.|Alfreds|Maria|Sales|  
 |User1 si prepara a inviare queste modifiche.|Alfred||Marketing|  
-|User2 ha già inviato queste modifiche.||Mary|Servizio|  
+|User2 ha già inviato queste modifiche.||Mary|Service|  
   
  User1 decide di risolvere questo conflitto sovrascrivendo i valori correnti nel modello a oggetti con i valori del database più recenti.  
   
@@ -33,7 +33,7 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
   
 ||Manager|Assistant|Department|  
 |------|-------------|---------------|----------------|  
-|Nuovo stato dopo la risoluzione dei conflitti.|Alfreds<br /><br /> (originale)|Mary<br /><br /> (da User2)|Servizio<br /><br /> (da User2)|  
+|Nuovo stato dopo la risoluzione dei conflitti.|Alfreds<br /><br /> (originale)|Mary<br /><br /> (da User2)|Service<br /><br /> (da User2)|  
   
  Nel codice di esempio seguente viene illustrato come sovrascrivere i valori correnti nel modello a oggetti con i valori del database. Non si verificano conflitti di ispezione o gestione personalizzata dei singoli membri.  
   
@@ -41,4 +41,5 @@ Per risolvere le differenze tra i valori del database previsti ed effettivi prim
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

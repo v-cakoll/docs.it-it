@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227691"
 ---
 # <a name="adorners-overview"></a>Cenni preliminari sugli strumenti decorativi visuali
 Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.FrameworkElement>, usato per fornire indicazioni visive a un utente. Tra l'altro, è possibile usare gli strumenti decorativi per aggiungere handle funzionali agli elementi o fornire informazioni sullo stato relative a un controllo.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Informazioni sugli strumenti decorativi  
  Un' <xref:System.Windows.Documents.Adorner> è una classe personalizzata <xref:System.Windows.FrameworkElement> associato a un <xref:System.Windows.UIElement>. Gli strumenti decorativi vengono sottoposti a rendering un <xref:System.Windows.Documents.AdornerLayer>, ovvero una superficie di rendering che si trova sempre nella parte superiore dell'elemento decorato o una raccolta di elementi decorati. Il rendering di uno strumento decorativo è indipendente dal rendering del <xref:System.Windows.UIElement> che lo strumento decorativo è associato. Uno strumento decorativo in genere è posizionato in relazione all'elemento a cui è associato, usando l'origine delle coordinate 2D standard che si trova in alto a sinistra dell'elemento decorato.  
@@ -102,8 +100,9 @@ Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.Framework
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sugli oggetti Drawing](../graphics-multimedia/drawing-objects-overview.md)
-- [Procedure relative alle proprietà](adorners-how-to-topics.md)
+- [Procedure relative](adorners-how-to-topics.md)

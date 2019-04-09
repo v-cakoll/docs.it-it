@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228637"
 ---
 # <a name="load-balancing"></a>Bilanciamento del carico
 Un modo per aumentare la capacità delle applicazioni di Windows Communication Foundation (WCF) è a scalabilità orizzontale distribuendole in una farm di server con bilanciamento del carico. Le applicazioni WCF possono essere con carico bilanciato usando standard il bilanciamento del carico tecniche, tra cui servizi di bilanciamento del carico software, ad esempio Windows Network Load Balancing, nonché di carico basato su hardware appositi dispositivi.  
@@ -92,4 +92,5 @@ Un modo per aumentare la capacità delle applicazioni di Windows Communication F
  Per migliorare le prestazioni in scenari con carico bilanciato, considerare l'utilizzo di <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> o <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedure consigliate per l'hosting in Internet Information Services (IIS)](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

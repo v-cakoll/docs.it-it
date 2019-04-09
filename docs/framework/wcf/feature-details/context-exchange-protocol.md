@@ -2,12 +2,12 @@
 title: Protocollo di scambio del contesto
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217003"
 ---
 # <a name="context-exchange-protocol"></a>Protocollo di scambio del contesto
 Questa sezione descrive il protocollo di scambio del contesto introdotto in Windows Communication Foundation (WCF) versione .NET Framework versione 3.5. Questo protocollo consente al canale client di accettare un contesto fornito da un servizio e di applicarlo a tutte le richieste successive a quel servizio inviate sulla stessa istanza del canale client. L'implementazione del protocollo di scambio di contesto possa usare uno dei due meccanismi seguenti per propagare il contesto tra il server e client: I cookie HTTP o un'intestazione SOAP.  
@@ -68,4 +68,5 @@ Questa sezione descrive il protocollo di scambio del contesto introdotto in Wind
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Guida all'interoperabilità dei protocolli di servizi Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+
+- [Guida di interoperabilità dei protocolli di servizi Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

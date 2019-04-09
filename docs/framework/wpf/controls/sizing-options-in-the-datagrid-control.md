@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219200"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opzioni di ridimensionamento nel controllo DataGrid
 Sono disponibili per controllare diverse opzioni come la <xref:System.Windows.Controls.DataGrid> ridimensionato in modo. Il <xref:System.Windows.Controls.DataGrid>le singole righe e colonne di <xref:System.Windows.Controls.DataGrid>, può essere impostato su ridimensionati automaticamente in base al contenuto o può essere impostato su valori specifici. Per impostazione predefinita, il <xref:System.Windows.Controls.DataGrid> aumentando e riducendo per adattarsi alla dimensione del relativo contenuto.  
@@ -56,7 +56,7 @@ Sono disponibili per controllare diverse opzioni come la <xref:System.Windows.Co
   
  Nella tabella seguente mostra i valori forniti dal <xref:System.Windows.Controls.DataGridLengthUnitType> struttura.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Il valore predefinito di dimensioni delle modalità di ridimensionamento automatico <xref:System.Windows.Controls.DataGrid> colonne in basano al contenuto delle celle e le intestazioni di colonna.|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|L'oggetto automatico basato sulle celle dimensioni delle modalità di ridimensionamento <xref:System.Windows.Controls.DataGrid> colonne in base al contenuto delle celle nella colonna, senza includere le intestazioni di colonna.|  
@@ -86,6 +86,7 @@ Sono disponibili per controllare diverse opzioni come la <xref:System.Windows.Co
  Gli utenti possono ridimensionare <xref:System.Windows.Controls.DataGrid> righe e colonne trascinando i separatori di intestazione di riga o colonna. Il <xref:System.Windows.Controls.DataGrid> supporta anche il ridimensionamento automatico di righe e colonne facendo doppio clic sul divisore di intestazione di riga o colonna. Per evitare che un utente di ridimensionare le colonne particolare, impostare il <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> proprietà `false` per le singole colonne. Per impedire agli utenti di ridimensionare tutte le colonne, impostare il <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> proprietà `false`. Per impedire agli utenti di ridimensionare tutte le righe, impostare il <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> proprietà `false`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

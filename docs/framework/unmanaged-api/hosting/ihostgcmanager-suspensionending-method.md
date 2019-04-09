@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1995321e8598d010188fee2437640b4489eaa294
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 527607d5c39e7f698ab44baf4af0e7600ae2f473
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222822"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Metodo IHostGCManager::SuspensionEnding
 Notifica all'host che common language runtime (CLR) viene ripresa l'esecuzione delle attività nei thread che erano stati sospesi per una garbage collection.  
@@ -66,6 +66,7 @@ HRESULT SuspensionEnding (
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

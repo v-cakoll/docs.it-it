@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223290"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Modalità di selezione di un controllo Button Windows Form
 È possibile selezionare un pulsante Windows Form nei modi seguenti:  
@@ -29,6 +29,7 @@ ms.locfileid: "57717258"
 -   Chiamare il <xref:System.Windows.Forms.Button.PerformClick%2A> metodo per selezionare il pulsante a livello di codice.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Panoramica sul controllo Button](button-control-overview-windows-forms.md)
-- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)
+
+- [Panoramica del controllo Button](button-control-overview-windows-forms.md)
+- [Procedura: Rispondere alla selezione dei pulsanti Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Controllo Button](button-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Flussi di lavoro macchina a stati
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222991"
 ---
 # <a name="state-machine-workflows"></a>Flussi di lavoro macchina a stati
 Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attività <xref:System.Activities.Statements.StateMachine> può essere usata insieme all'oggetto <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> e ad altre attività per compilare programmi del flusso di lavoro macchina a stati. In questo argomento viene fornita una panoramica sulla creazione dei flussi di lavoro macchina a stati.  
@@ -101,8 +101,9 @@ Una macchina a stati è un paradigma noto per lo sviluppo di programmi. L'attivi
  Uno stato che rappresenta il completamento della macchina a stati.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare un flusso di lavoro macchina a stati](how-to-create-a-state-machine-workflow.md)
-- [Activity Designer StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [Activity Designer State](/visualstudio/workflow-designer/state-activity-designer)
-- [Activity Designer FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Activity Designer Transition](/visualstudio/workflow-designer/transition-activity-designer)
+
+- [Procedura: Creare un flusso di lavoro della macchina a stati](how-to-create-a-state-machine-workflow.md)
+- [ActivityDesigner StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [ActivityDesigner State](/visualstudio/workflow-designer/state-activity-designer)
+- [ActivityDesigner FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [ActivityDesigner Transition](/visualstudio/workflow-designer/transition-activity-designer)

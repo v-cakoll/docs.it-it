@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire un hit test della geometria in un oggetto Visual'
+title: 'Procedura: Eseguire un hit test della geometria in un oggetto visivo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227340"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Procedura: Eseguire un hit test della geometria in un oggetto Visual
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Procedura: Eseguire un hit test della geometria in un oggetto visivo
 In questo esempio illustra come eseguire un hit test su un oggetto visivo costituito da uno o più <xref:System.Windows.Media.Geometry> oggetti.  
   
 ## <a name="example"></a>Esempio  
@@ -36,5 +36,6 @@ In questo esempio illustra come eseguire un hit test su un oggetto visivo costit
 >  Questo esempio non prende in considerazione eventuali trasformazioni o ritagli applicabili alla geometria. L'esempio, inoltre, non funziona con un controllo con stili, poiché a esso non saranno direttamente associati disegni.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)
-- [Eseguire un hit test utilizzando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [Eseguire un hit test usando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)

@@ -2,12 +2,12 @@
 title: 'Procedura: Accedere ai servizi WCF con un contratto unidirezionale e i contratti Request / Reply'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217029"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Procedura: Accedere ai servizi WCF con un contratto unidirezionale e i contratti Request / Reply
 Le procedure seguenti descrivono come per accedere a un servizio Windows Communication Foundation (WCF) che definisce un contratto unidirezionale e un contratto request / reply e che non usa il modello di comunicazione duplex.  
@@ -401,4 +401,5 @@ namespace Microsoft.ServiceModel.Samples
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Servizi unidirezionali](../../../../docs/framework/wcf/feature-details/one-way-services.md)

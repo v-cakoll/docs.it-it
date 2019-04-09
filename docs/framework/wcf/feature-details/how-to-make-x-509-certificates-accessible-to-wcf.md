@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219915"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: Rendere accessibili a WCF i certificati X.509
 Per rendere accessibile da Windows Communication Foundation (WCF) un certificato X.509, il codice dell'applicazione deve specificare il nome dell'archivio certificati e il percorso. In alcuni casi l'identità del processo deve avere accesso al file contenente la chiave privata associata al certificato X.509. Per ottenere la chiave privata associata con un certificato X.509 in un archivio certificati, WCF deve avere l'autorizzazione per eseguire questa operazione. Per impostazione predefinita solo il proprietario e l'account di sistema possono accedere alla chiave privata di un certificato.  
@@ -71,6 +71,7 @@ Per rendere accessibile da Windows Communication Foundation (WCF) un certificato
         ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
 - [Procedura: Recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
-- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

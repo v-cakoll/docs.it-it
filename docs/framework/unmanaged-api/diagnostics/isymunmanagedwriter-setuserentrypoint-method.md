@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bd3d411ad6fe7f65d1eeb25754794704752009e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224221"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>Metodo ISymUnmanagedWriter::SetUserEntryPoint
 Specifica il metodo definito dall'utente che è il punto di ingresso per questo modulo. Ad esempio, il punto di ingresso potrebbe essere il metodo dell'utente principale invece stub generato dal compilatore prima main.  
@@ -45,4 +45,5 @@ HRESULT SetUserEntryPoint(
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

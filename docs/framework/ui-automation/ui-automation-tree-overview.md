@@ -1,16 +1,16 @@
 ---
-title: Cenni preliminari sulla struttura ad albero di automazione dell'interfaccia utente
+title: Panoramica dell'albero di automazione dell'interfaccia utente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225950"
 ---
 # <a name="ui-automation-tree-overview"></a>Panoramica dell'albero di automazione dell'interfaccia utente
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57675576"
   
  I provider di automazione interfaccia utente supportano i filtri mediante la definizione di proprietà sugli elementi, incluse le proprietà <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> e <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] offre tre visualizzazioni predefinite, che sono definite dal tipo di filtro eseguito. L'ambito di qualsiasi visualizzazione è definito dall'applicazione. L'applicazione può inoltre applicare altri filtri sulle proprietà, ad esempio per includere solo i controlli abilitati in una visualizzazione controlli.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce tre visualizzazioni predefinite. che sono definite dal tipo di filtro eseguito. L'ambito di qualsiasi visualizzazione è definito dall'applicazione. L'applicazione può inoltre applicare altri filtri sulle proprietà, ad esempio per includere solo i controlli abilitati in una visualizzazione controlli.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Visualizzazione non elaborata  
@@ -55,5 +55,6 @@ ms.locfileid: "57675576"
  La visualizzazione contenuto si ottiene cercando elementi con la proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> impostata su `true` o usando <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> per esplorare l'albero.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Automation.AutomationElement>
-- [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Cenni preliminari su automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

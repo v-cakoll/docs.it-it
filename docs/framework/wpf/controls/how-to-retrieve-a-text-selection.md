@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-ms.openlocfilehash: fdd0e3974964e141c4b65e1c8851f3c371a4d501
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224585"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>Procedura: Recuperare un testo selezionato
 In questo esempio illustra un modo per usare la <xref:System.Windows.Controls.TextBox.SelectedText%2A> proprietà per recuperare il testo che l'utente ha selezionato in un <xref:System.Windows.Controls.TextBox> controllo.  
@@ -33,5 +33,6 @@ In questo esempio illustra un modo per usare la <xref:System.Windows.Controls.Te
  [!code-vb[TextBox_MiscCode#_SelectText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)

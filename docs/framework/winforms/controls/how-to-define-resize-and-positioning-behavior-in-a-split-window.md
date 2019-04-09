@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa'
+title: 'Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217068"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa
 I pannelli del <xref:System.Windows.Forms.SplitContainer> controllo si prestano bene a viene ridimensionata e modificati dagli utenti. Tuttavia, vi saranno si vogliano verrà a livello di programmazione della barra di divisione, in cui è posizionato e in che misura può essere spostato.  
   
  Il <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà e le altre proprietà di <xref:System.Windows.Forms.SplitContainer> controllo consentono di controllare con precisione il comportamento dell'interfaccia utente in base alle esigenze. Queste proprietà sono elencate nella tabella seguente.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se la barra di divisione è mobile tramite mouse o tastiera.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
-|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> proprietà|Determina se la barra di divisione è mobile tramite mouse o tastiera.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> proprietà|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
   
  Nell'esempio seguente viene modificato il <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà per creare un effetto "allineamento splitter"; quando l'utente trascina la barra di divisione, viene automaticamente incrementato in unità pari a 10 pixel anziché il valore predefinito 1.  
   
@@ -64,5 +64,6 @@ I pannelli del <xref:System.Windows.Forms.SplitContainer> controllo si prestano 
      Spostare leggermente la barra di divisione verso sinistra o destra non avranno alcun effetto visibile. Tuttavia, quando il puntatore del mouse esce 10 pixel in direzione orizzontale, la barra di divisione verrà bloccato per la nuova posizione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

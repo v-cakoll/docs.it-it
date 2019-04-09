@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lines [WPF], getting collection of
 - TextBox control [WPF], getting collection of lines
 ms.assetid: a12f529d-b926-47f6-92bf-cad5f17b532a
-ms.openlocfilehash: 1aa73e55a3fdfd658c6a337b598dff96244ace40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7b2f1c2e071388635fb50b1e3573fd7f44334dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224637"
 ---
 # <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Procedura: Ottenere una raccolta di righe da un controllo TextBox
 In questo esempio viene illustrato come ottenere una raccolta di righe di testo da un <xref:System.Windows.Controls.TextBox>.  
@@ -21,5 +21,6 @@ In questo esempio viene illustrato come ottenere una raccolta di righe di testo 
  [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)
-- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)

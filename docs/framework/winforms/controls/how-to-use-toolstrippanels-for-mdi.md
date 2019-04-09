@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare ToolStripPanels per MDI'
+title: "Procedura: Usare controlli ToolStripPanel per l'interfaccia a documenti multipli"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219876"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>Procedura: Usare ToolStripPanels per MDI
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>Procedura: Usare controlli ToolStripPanel per l'interfaccia a documenti multipli
 <xref:System.Windows.Forms.ToolStripPanel> fornisce flessibilità per le applicazioni con interfaccia a documenti multipli usando il metodo <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Esempio  
@@ -33,5 +33,6 @@ ms.locfileid: "57722061"
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ToolStripPanel>
 - [Procedura: Unire controlli ToolStripPanel](how-to-join-toolstrippanels.md)

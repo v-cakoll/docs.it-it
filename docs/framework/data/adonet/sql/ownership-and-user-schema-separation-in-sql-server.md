@@ -2,15 +2,15 @@
 title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221860"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
-Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né eliminare utenti da un database che contiene oggetti di cui sono proprietari.  
+Uno dei concetti principali in merito alla sicurezza di SQL Server è che i proprietari di oggetti dispongono di autorizzazioni irrevocabili per amministrarli. Non è possibile rimuovere privilegi dal proprietario di un oggetto, né rilasciare utenti da un database che contiene oggetti di cui sono proprietari.  
   
 ## <a name="user-schema-separation"></a>Distinzione tra utente e schema  
  La distinzione tra utente e schema offre una maggiore flessibilità nella gestione delle autorizzazioni per gli oggetti di database. Oggetto *schema* è un contenitore denominato per gli oggetti di database, che consente di raggruppare gli oggetti in spazi dei nomi separato. Ad esempio, il database di esempio AdventureWorks contiene gli schemi per Production, Sales e HumanResources.  
@@ -24,10 +24,10 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="schema-owners-and-permissions"></a>Proprietari e autorizzazioni per gli schemi  
  Gli schemi possono essere di proprietà di qualsiasi entità di database e una singola entità può essere proprietaria di più schemi. È possibile applicare regole di sicurezza a un schema, che vengono ereditate da tutti gli oggetti al suo interno. Le autorizzazioni di accesso configurate per uno schema vengono automaticamente applicate quando vengono aggiunti nuovi oggetti. Agli utenti è possibile assegnare uno schema predefinito e più utenti di database possono condividere lo stesso schema.  
   
- Per impostazione predefinita, gli oggetti creati dagli sviluppatori in uno schema appartengono all'entità di sicurezza proprietaria dello schema, non allo sviluppatore. La proprietà degli oggetti può essere trasferita con l'istruzione Transact-SQL ALTER AUTHORIZATION. Uno schema può anche contenere oggetti che appartengono a utenti diversi e con autorizzazioni più granulari di quelle assegnate allo schema, anche se questa soluzione non è consigliata perché aumenta la complessità della gestione delle autorizzazioni. Gli oggetti possono essere spostati tra schemi e la proprietà dello schema può essere trasferita tra entità. Gli utenti del database possono essere eliminati senza influire sugli schemi.  
+ Per impostazione predefinita, gli oggetti creati dagli sviluppatori in uno schema appartengono all'entità di sicurezza proprietaria dello schema, non allo sviluppatore. La proprietà degli oggetti può essere trasferita con l'istruzione Transact-SQL ALTER AUTHORIZATION. Uno schema può anche contenere oggetti che appartengono a utenti diversi e con autorizzazioni più granulari di quelle assegnate allo schema, anche se questa soluzione non è consigliata perché aumenta la complessità della gestione delle autorizzazioni. Gli oggetti possono essere spostati tra schemi e la proprietà dello schema può essere trasferita tra entità. Gli utenti del database possono essere rilasciati senza influire sugli schemi.  
   
 ### <a name="built-in-schemas"></a>Schemi predefiniti  
- In SQL Server sono disponibili dieci schemi predefiniti con gli stessi nomi degli utenti e dei ruoli incorporati del database. Vengono forniti principalmente per la compatibilità con le versioni precedenti. È possibile eliminare gli schemi con gli stessi nomi dei ruoli predefiniti del database, se non sono necessari. Non è possibile eliminare i seguenti schemi:  
+ In SQL Server sono disponibili dieci schemi predefiniti con gli stessi nomi degli utenti e dei ruoli incorporati del database. Vengono forniti principalmente per la compatibilità con le versioni precedenti. È possibile rilasciare gli schemi con gli stessi nomi dei ruoli predefiniti del database, se non sono necessari. Non è possibile eliminare i seguenti schemi:  
   
 -   `dbo`  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Se questi schemi vengono eliminati dal database modello, non saranno presenti nei nuovi database.  
   
 > [!NOTE]
->  Gli schemi `sys` e `INFORMATION_SCHEMA` sono riservati per gli oggetti di sistema. Non è possibile creare oggetti in questi schemi e non è possibile eliminarli.  
+>  Gli schemi `sys` e `INFORMATION_SCHEMA` sono riservati per gli oggetti di sistema. Non è possibile creare oggetti in questi schemi e non è possibile rilasciarli.  
   
 #### <a name="the-dbo-schema"></a>Schema dbo  
  Lo schema `dbo` è quello predefinito per i nuovi database creati. Lo schema `dbo` è di proprietà dell'account utente `dbo`. Per impostazione predefinita, gli utenti creati con l'istruzione Transact-SQL CREATE USER hanno `dbo` come schema predefinito.  
@@ -55,9 +55,10 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Separazione Schema-utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Distinzione tra utente e schema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

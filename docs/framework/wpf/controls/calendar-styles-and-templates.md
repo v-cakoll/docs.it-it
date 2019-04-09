@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227118"
 ---
 # <a name="calendar-styles-and-templates"></a>Stili e modelli di Calendar
 In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Controls.Calendar> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -83,7 +83,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 |Con stato attivo|FocusStates|Il pulsante ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il pulsante non è attivo.|  
 |Attivo|ActiveStates|Il pulsante è attivo.|  
-|inattivo|ActiveStates|Il pulsante è inattivo.|  
+|Inattivo|ActiveStates|Il pulsante è inattivo.|  
 |RegularDay|DayStates|Non rappresenta il pulsante <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Oggi|DayStates|Rappresenta il pulsante <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Il pulsante rappresenta un giorno che può essere selezionato.|  
@@ -111,7 +111,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
 |Con stato attivo|FocusStates|Il pulsante ha lo stato attivo.|  
 |Con stato non attivo|FocusStates|Il pulsante non è attivo.|  
 |Attivo|ActiveStates|Il pulsante è attivo.|  
-|inattivo|ActiveStates|Il pulsante è inattivo.|  
+|Inattivo|ActiveStates|Il pulsante è inattivo.|  
 |Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classi e le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
 |InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
 |InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
@@ -128,6 +128,7 @@ In questo argomento descrive gli stili e modelli per la <xref:System.Windows.Con
  Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Stili e modelli di Control](control-styles-and-templates.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f8c8b522aabfce3b83b6b624bd0ca9757448ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231214"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>Metodo ISymUnmanagedWriter::CloseMethod
 Chiude il metodo corrente. Dopo che un metodo è stato chiuso, altri simboli non possono essere definiti all'interno di esso.  
@@ -40,5 +40,6 @@ HRESULT CloseMethod();
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Metodo OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

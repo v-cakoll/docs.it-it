@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219811"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Callback e convalida delle proprietà di dipendenza
 Questo argomento descrive come creare proprietà di dipendenza usando le implementazioni personalizzate alternative per funzionalità correlate alle proprietà, ad esempio la determinazione della convalida, i callback richiamati ogni volta che il valore effettivo della proprietà viene modificato e l'override delle possibili influenze esterne sulla determinazione del valore. In questo argomento vengono anche presentati scenari in cui è possibile espandere i comportamenti predefiniti del sistema di proprietà usando queste tecniche.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Prerequisiti  
  Nell'argomento si presuppone la conoscenza degli scenari di base dell'implementazione di una proprietà di dipendenza e del modo in cui i metadati vengono applicati a una proprietà di dipendenza personalizzata. Per il contesto, vedere [Proprietà di dipendenza personalizzate](custom-dependency-properties.md) e [Metadati delle proprietà di dipendenza](dependency-property-metadata.md).  
@@ -81,6 +79,7 @@ Questo argomento descrive come creare proprietà di dipendenza usando le impleme
  Il sistema di proprietà considererà qualsiasi <xref:System.Windows.CoerceValueCallback> che restituisce il valore <xref:System.Windows.DependencyProperty.UnsetValue> come caso speciale. Ciò significa che la modifica della proprietà che ha comportato il <xref:System.Windows.CoerceValueCallback> chiamato deve essere rifiutato dal sistema di proprietà e che il sistema di proprietà deve invece segnalare qualsiasi valore precedente della proprietà. Questo meccanismo può essere utile per controllare che le modifiche a una proprietà avviate in modo asincrono siano ancora valide per lo stato dell'oggetto corrente e per eliminarle in caso non lo siano. Un altro possibile scenario è costituito dalla possibilità di eliminare in modo selettivo un valore a seconda di quale componente della determinazione dei valori di proprietà sia responsabile del valore segnalato. A tale scopo, è possibile usare la <xref:System.Windows.DependencyProperty> passato come input per il callback e l'identificatore della proprietà <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, quindi elaborare il <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md)
 - [Metadati delle proprietà di dipendenza](dependency-property-metadata.md)
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e7976740a79efda8e5ab569f2efb55444012c5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220370"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>Interfaccia IHostThreadPoolManager
 Fornisce metodi che consentono a common language runtime (CLR) per configurare il pool di thread e accodare elementi di lavoro al pool di thread.  
@@ -50,6 +50,7 @@ Fornisce metodi che consentono a common language runtime (CLR) per configurare i
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Threading>
 - <xref:System.Threading.ThreadPool>
 - [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

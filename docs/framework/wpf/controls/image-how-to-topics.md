@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227561"
 ---
 # <a name="image-how-to-topics"></a>Procedure relative alle immagini
 Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.Image> elemento.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Usare l'elemento di immagine](how-to-use-the-image-element.md)  
+ [Usare l'elemento Image](how-to-use-the-image-element.md)  
   [Convertire un'immagine in scala di grigi](how-to-convert-an-image-to-greyscale.md)  
   [Ritagliare un'immagine](how-to-crop-an-image.md)  
   [Ruotare un'immagine](how-to-rotate-an-image.md)  
@@ -31,5 +31,6 @@ Negli argomenti di questa sezione viene descritto come utilizzare il <xref:Syste
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sulla creazione dell'immagine](../graphics-multimedia/imaging-overview.md)
-- [Procedure relative alle proprietà](../graphics-multimedia/imaging-how-to-topics.md)
+- [Procedure relative](../graphics-multimedia/imaging-how-to-topics.md)

@@ -2,31 +2,31 @@
 title: Raccolte di schemi SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224564"
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
-Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta di schemi comuni, supporta la raccolta di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco di raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
+Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolte di schemi comuni, supporta raccolte di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco di raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
   
 ## <a name="databases"></a>Database  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|database_name|String|Nome del database.|  
+|database_name|Stringa|Nome del database.|  
 |dbid|Int16|Identificatore del database.|  
 |create_date|DateTime|Data di creazione del database.|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>Chiavi esterne  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|Stringa|Catalogo a cui appartiene il vincolo.|  
 |CONSTRAINT_SCHEMA|Stringa|Schema contenente il vincolo.|  
-|CONSTRAINT_NAME|Stringa|Il nome.|  
+|CONSTRAINT_NAME|Stringa|Nome.|  
 |TABLE_CATALOG|Stringa|Nome della tabella contenente il vincolo.|  
 |TABLE_SCHEMA|Stringa|Schema contenente la tabella.|  
 |TABLE_NAME|Stringa|Nome tabella|  
@@ -38,12 +38,12 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|String|Catalogo a cui appartiene l'indice.|  
-|constraint_schema|String|Schema contenente l'indice.|  
-|constraint_name|String|Nome dell'indice.|  
-|table_catalog|String|Nome della tabella a cui è associato l'indice.|  
-|table_schema|String|Schema contenente la tabella a cui è associato l'indice.|  
-|table_name|String|Nome della tabella.|  
+|constraint_catalog|Stringa|Catalogo a cui appartiene l'indice.|  
+|constraint_schema|Stringa|Schema contenente l'indice.|  
+|constraint_name|Stringa|Nome dell'indice.|  
+|table_catalog|Stringa|Nome della tabella a cui è associato l'indice.|  
+|table_schema|Stringa|Schema contenente la tabella a cui è associato l'indice.|  
+|table_name|Stringa|Nome della tabella.|  
 |index_name|Stringa|Nome dell'indice.|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
@@ -51,19 +51,19 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|type_desc|String|I valori del tipo di indice sono i seguenti:<br /><br /> -HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-   XML<br />-SPAZIALI|  
+|type_desc|Stringa|I valori del tipo di indice sono i seguenti:<br /><br /> -HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-   XML<br />-SPAZIALI|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|String|Catalogo a cui appartiene l'indice.|  
-|constraint_schema|String|Schema contenente l'indice.|  
-|constraint_name|String|Nome dell'indice.|  
-|table_catalog|String|Nome della tabella a cui è associato l'indice.|  
-|table_schema|String|Schema contenente la tabella a cui è associato l'indice.|  
-|table_name|String|Nome della tabella.|  
-|column_name|String|Nome della colonna a cui è associato l'indice.|  
+|constraint_catalog|Stringa|Catalogo a cui appartiene l'indice.|  
+|constraint_schema|Stringa|Schema contenente l'indice.|  
+|constraint_name|Stringa|Nome dell'indice.|  
+|table_catalog|Stringa|Nome della tabella a cui è associato l'indice.|  
+|table_schema|Stringa|Schema contenente la tabella a cui è associato l'indice.|  
+|table_name|Stringa|Nome della tabella.|  
+|column_name|Stringa|Nome della colonna a cui è associato l'indice.|  
 |ordinal_position|Int32|Posizione ordinale della colonna.|  
 |KeyType|Byte|Tipo di oggetto.|  
 |index_name|Stringa|Nome dell'indice.|  
@@ -126,7 +126,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |TABLE_CATALOG|Stringa|Catalogo della tabella.|  
 |TABLE_SCHEMA|Stringa|Schema contenente la tabella.|  
 |TABLE_NAME|Stringa|Nome della tabella.|  
-|COLUMN_NAME|String|Nome della colonna.|  
+|COLUMN_NAME|Stringa|Nome della colonna.|  
 |ORDINAL_POSITION|Int32|Numero di identificazione della colonna.|  
 |COLUMN_DEFAULT|Stringa|Il valore predefinito della colonna.|  
 |IS_NULLABLE|Stringa|Supporto di valori Null della colonna. Se la colonna supporta i valori NULL, restituisce YES. In caso contrario, restituisce NO.|  
@@ -147,9 +147,9 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|IS_FILESTREAM|String|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
-|IS_SPARSE|String|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
-|IS_COLUMN_SET|String|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
+|IS_FILESTREAM|Stringa|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
+|IS_SPARSE|Stringa|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
+|IS_COLUMN_SET|Stringa|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
  A partire da .NET Framework versione 3.5 SP1 e SQL Server 2008, è stata aggiunta la raccolta di schemi AllColumns per supportare colonne di tipo sparse. AllColumns non è supportato nelle versioni precedenti di .NET Framework e di SQL Server.  
@@ -161,7 +161,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |TABLE_CATALOG|Stringa|Catalogo della tabella.|  
 |TABLE_SCHEMA|Stringa|Schema contenente la tabella.|  
 |TABLE_NAME|Stringa|Nome della tabella.|  
-|COLUMN_NAME|String|Nome della colonna.|  
+|COLUMN_NAME|Stringa|Nome della colonna.|  
 |ORDINAL_POSITION|Int32|Numero di identificazione della colonna.|  
 |COLUMN_DEFAULT|Stringa|Il valore predefinito della colonna.|  
 |IS_NULLABLE|Stringa|Supporto di valori Null della colonna. Se la colonna supporta i valori NULL, restituisce YES. In caso contrario, restituisce NO.|  
@@ -176,9 +176,9 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |CHARACTER_SET_SCHEMA|Stringa|Restituisce sempre NULL.|  
 |CHARACTER_SET_NAME|Stringa|Se la colonna presenta un tipo di dati carattere o testo, viene restituito il nome univoco del set di caratteri. Per altri tipi di dati, viene restituito NULL.|  
 |COLLATION_CATALOG|Stringa|Se la colonna presenta un tipo di dati carattere o testo, viene restituito master, che indica il database in cui sono definite le regole di confronto. In caso contrario, il valore di questa colonna è NULL.|  
-|IS_FILESTREAM|String|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
-|IS_SPARSE|String|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
-|IS_COLUMN_SET|String|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
+|IS_FILESTREAM|Stringa|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
+|IS_SPARSE|Stringa|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
+|IS_COLUMN_SET|Stringa|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  A partire da .NET Framework versione 3.5 SP1 e SQL Server 2008, è stata aggiunta la raccolta di schemi ColumnSetColumns per supportare colonne di tipo sparse. ColumnSetColumns non è supportato nelle versioni precedenti di .NET Framework e di SQL Server. La raccolta di schemi ColumnSetColumns restituisce lo schema per tutte le colonne di un set di colonne. Nella tabella seguente vengono descritte queste colonne.  
@@ -188,7 +188,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |TABLE_CATALOG|Stringa|Catalogo della tabella.|  
 |TABLE_SCHEMA|Stringa|Schema contenente la tabella.|  
 |TABLE_NAME|Stringa|Nome della tabella.|  
-|COLUMN_NAME|String|Nome della colonna.|  
+|COLUMN_NAME|Stringa|Nome della colonna.|  
 |ORDINAL_POSITION|Int32|Numero di identificazione della colonna.|  
 |COLUMN_DEFAULT|Stringa|Il valore predefinito della colonna.|  
 |IS_NULLABLE|Stringa|Supporto di valori Null della colonna. Se la colonna supporta i valori NULL, restituisce YES. In caso contrario, restituisce NO.|  
@@ -203,9 +203,9 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |CHARACTER_SET_SCHEMA|Stringa|Restituisce sempre NULL.|  
 |CHARACTER_SET_NAME|Stringa|Se la colonna presenta un tipo di dati carattere o testo, viene restituito il nome univoco del set di caratteri. Per altri tipi di dati, viene restituito NULL.|  
 |COLLATION_CATALOG|Stringa|Se la colonna presenta un tipo di dati carattere o testo, viene restituito master, che indica il database in cui sono definite le regole di confronto. In caso contrario, il valore di questa colonna è NULL.|  
-|IS_FILESTREAM|String|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
-|IS_SPARSE|String|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
-|IS_COLUMN_SET|String|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
+|IS_FILESTREAM|Stringa|YES in caso di colonna con attributo FILESTREAM.<br /><br /> NO se la colonna non dispone dell'attributo FILESTREAM.|  
+|IS_SPARSE|Stringa|YES in caso di colonna di tipo sparse.<br /><br /> NO se la colonna non è di tipo sparse.|  
+|IS_COLUMN_SET|Stringa|YES in caso di colonna del set di colonne.<br /><br /> NO se la colonna non fa parte del set di colonne.|  
   
 ## <a name="users"></a>Utenti  
   
@@ -236,18 +236,18 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |TABLE_CATALOG|Stringa|Catalogo della tabella associata a questa visualizzazione.|  
 |TABLE_SCHEMA|Stringa|Il catalogo della tabella associata a questa visualizzazione.|  
 |TABLE_NAME|Stringa|Il nome della tabella associata alla visualizzazione. Tabella di base.|  
-|COLUMN_NAME|String|Nome della colonna.|  
+|COLUMN_NAME|Stringa|Nome della colonna.|  
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|assembly_name|String|Nome del file dell'assembly.|  
+|assembly_name|Stringa|Nome del file dell'assembly.|  
 |udt_name|Stringa|Il nome della classe per l'assembly.|  
-|version_major|Oggetto|Il numero di versione principale.|  
-|version_minor|Oggetto|Numero di versione secondario.|  
-|version_build|Oggetto|Numero di build.|  
-|version_revision|Oggetto|Numero di revisione.|  
+|version_major|Object|Il numero di versione principale.|  
+|version_minor|Object|Numero di versione secondario.|  
+|version_build|Object|Numero di build.|  
+|version_revision|Object|Numero di revisione.|  
 |culture_info|Object|Informazioni sulle impostazioni cultura associate all'UDT.|  
 |public_key|Object|La chiave pubblica usata dall'assembly.|  
 |is_fixed_length|Booleano|Specifica se la lunghezza del tipo è sempre uguale a max_length.|  
@@ -256,5 +256,6 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |Permission_set_desc|Stringa|Il nome descrittivo del set di autorizzazioni o del livello di sicurezza dell'assembly.|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+
+- [Recupero di informazioni dello schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

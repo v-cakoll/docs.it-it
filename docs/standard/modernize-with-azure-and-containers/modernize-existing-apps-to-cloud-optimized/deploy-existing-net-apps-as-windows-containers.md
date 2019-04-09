@@ -1,17 +1,17 @@
 ---
-title: Distribuire le app .NET esistenti come contenitori di Windows
+title: Distribuire app .NET esistenti come contenitori Windows
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Distribuire le app .NET esistenti come contenitori di Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216665"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire le app .NET esistenti come contenitori di Windows
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori Windows
 
 Le distribuzioni basate su contenitori Windows sono applicabili alle applicazioni ottimizzato per il Cloud e applicazioni Native del Cloud.
 
@@ -134,7 +134,6 @@ Esecuzione di un contenitore in Windows con o senza isolamento Hyper-V è una de
 -   **Infografica: Microsoft e i contenitori**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>L'ecosistema di contenitori in Azure
 

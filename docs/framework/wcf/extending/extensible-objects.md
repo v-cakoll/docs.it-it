@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220279"
 ---
 # <a name="extensible-objects"></a>Oggetti estensibili
 Questo modello viene usato per estendere le classi di runtime esistenti con nuove funzionalità oppure per aggiungere un nuovo stato a un oggetto. Le estensioni, allegate a uno degli oggetti estensibili, attivano i comportamenti in fasi molto diverse dell'elaborazione per accedere a stato e funzionalità condivisi allegati a un oggetto estensibile comune al quale possono accedere.  
@@ -19,7 +19,7 @@ Questo modello viene usato per estendere le classi di runtime esistenti con nuov
   
  L'interfaccia <xref:System.ServiceModel.IExtensibleObject%601> viene implementata dai tipi che consentono agli oggetti <xref:System.ServiceModel.IExtension%601> di personalizzare la funzionalità.  
   
- Gli oggetti estendibili consentono l'aggregazione dinamica di oggetti <xref:System.ServiceModel.IExtension%601>. Gli oggetti <xref:System.ServiceModel.IExtension%601> sono caratterizzati dall'interfaccia seguente:  
+ Gli oggetti estendibili consentono l'aggregazione dinamica di oggetti <xref:System.ServiceModel.IExtension%601>. <xref:System.ServiceModel.IExtension%601> gli oggetti sono caratterizzati dall'interfaccia seguente:  
   
 ```  
 public interface IExtension<T>  
@@ -30,7 +30,7 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- Tramite la restrizione dei tipi è possibile garantire che le estensioni possano essere definite solo per le classi <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> e <xref:System.ServiceModel.IExtension%601.Detach%2A> forniscono la notifica dell'aggregazione o disaggregazione.  
+ Tramite la restrizione dei tipi è possibile garantire che le estensioni possano essere definite solo per le classi <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> e <xref:System.ServiceModel.IExtension%601.Detach%2A> invierà una notifica dell'aggregazione o disaggregazione.  
   
  È consigliabile limitare le implementazioni quando possono essere aggiunte e rimosse da un proprietario. Ad esempio, è possibile impedire completamente la rimozione, impedire l'aggiunta o la rimozione delle estensioni quando il proprietario o l'estensione sono in un determinato stato, impedire l'aggiunta contemporaneamente a più proprietari o consentire solo una singola aggiunta seguita da una singola rimozione.  
   
@@ -46,16 +46,16 @@ where T : IExtensibleObject<T>
   
  Nel secondo scenario vengono usate le proprietà <xref:System.ServiceModel.IExtension%601.Attach%2A> e <xref:System.ServiceModel.IExtension%601.Detach%2A> per consentire a un oggetto di partecipare a un comportamento personalizzato, ad esempio la registrazione per gli eventi, il controllo delle transizioni di stato e così via.  
   
- L'interfaccia <xref:System.ServiceModel.IExtensionCollection%601> è una raccolta degli oggetti <xref:System.ServiceModel.IExtension%601> che consentono il recupero di <xref:System.ServiceModel.IExtension%601> in base al tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> restituisce l'ultimo oggetto aggiunto che è un oggetto <xref:System.ServiceModel.IExtension%601> di quel tipo.  
+ L'interfaccia <xref:System.ServiceModel.IExtensionCollection%601> è una raccolta degli oggetti <xref:System.ServiceModel.IExtension%601> che consentono il recupero di <xref:System.ServiceModel.IExtension%601> in base al tipo. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> Restituisce l'ultimo oggetto aggiunto che è un <xref:System.ServiceModel.IExtension%601> di quel tipo.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Oggetti estensibili in Windows Communication Foundation  
  Esistono quattro oggetti estensibili in Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.ServiceHostBase>: è la classe base per l'host del servizio.  Le estensioni di questa classe possono essere usate per estendere il comportamento di <xref:System.ServiceModel.ServiceHostBase> o per archiviare lo stato per ogni servizio.  
+-   <xref:System.ServiceModel.ServiceHostBase> : Questa è la classe base per l'host del servizio.  Le estensioni di questa classe possono essere usate per estendere il comportamento di <xref:System.ServiceModel.ServiceHostBase> o per archiviare lo stato per ogni servizio.  
   
--   <xref:System.ServiceModel.InstanceContext>: questa classe collega un'istanza del tipo del servizio con il runtime del servizio.  Contiene informazioni sull'istanza e un riferimento alla classe <xref:System.ServiceModel.InstanceContext> che contiene la classe <xref:System.ServiceModel.ServiceHostBase>. Le estensioni di questa classe possono essere usate per estendere il comportamento di <xref:System.ServiceModel.InstanceContext> o per archiviare lo stato per ogni servizio.  
+-   <xref:System.ServiceModel.InstanceContext> : Questa classe collega un'istanza del tipo del servizio con il runtime del servizio.  Contiene informazioni sull'istanza e un riferimento alla classe <xref:System.ServiceModel.InstanceContext> che contiene la classe <xref:System.ServiceModel.ServiceHostBase>. Le estensioni di questa classe possono essere usate per estendere il comportamento di <xref:System.ServiceModel.InstanceContext> o per archiviare lo stato per ogni servizio.  
   
--   <xref:System.ServiceModel.OperationContext>: questa classe rappresenta le informazioni dell'operazione che il runtime raccoglie per ogni operazione.  Tra queste informazioni sono incluse le intestazioni dei messaggi in arrivo, le proprietà dei messaggi in arrivo, l'identità di sicurezza dei messaggi in arrivo e altre informazioni.  Le estensioni di questa classe possono estendere il comportamento di <xref:System.ServiceModel.OperationContext> o archiviare lo stato per ogni operazione.  
+-   <xref:System.ServiceModel.OperationContext> : Questa classe rappresenta le informazioni sull'operazione che il runtime raccoglie per ogni operazione.  Tra queste informazioni sono incluse le intestazioni dei messaggi in arrivo, le proprietà dei messaggi in arrivo, l'identità di sicurezza dei messaggi in arrivo e altre informazioni.  Le estensioni di questa classe possono estendere il comportamento di <xref:System.ServiceModel.OperationContext> o archiviare lo stato per ogni operazione.  
   
 -   <xref:System.ServiceModel.IContextChannel> : Questa interfaccia consente l'ispezione di ogni stato per i canali e i proxy compilati dal runtime di WCF.  Le estensioni di questa classe possono estendere il comportamento di <xref:System.ServiceModel.IClientChannel> o usarlo per archiviare lo stato per ogni canale.  
   
@@ -66,6 +66,7 @@ where T : IExtensibleObject<T>
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.IExtensibleObject%601>
 - <xref:System.ServiceModel.IExtension%601>
 - <xref:System.ServiceModel.IExtensionCollection%601>
