@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105742"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Parole chiave e livelli ETW di CLR
 <a name="top"></a> Gli eventi Event Tracing for Windows (ETW) possono essere filtrati in base a categoria e livello. Le [Parole chiave ETW di CLR](#keywords) degli eventi permettono di filtrare gli eventi per categoria e vengono usate in diverse combinazioni per i provider di runtime e rundown. I [livelli evento](#levels) vengono identificati da flag.  
@@ -95,12 +95,12 @@ ms.locfileid: "54572357"
   
 |Parole chiave e flag|Eventi DCStart/DCEnd di domini applicazione, assembly e moduli|Eventi DCStart/DCEnd di metodi (inclusi gli eventi di metodi dinamici)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventi`DCStart` .|Nessuno.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventi`DCEnd` .|Nessuno.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Nessuno.|Eventi`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Nessuno.|Eventi`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Nessuno.|Eventi`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Nessuno.|Eventi`DCEnd` .|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` eventi.|Nessuno.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` eventi.|Nessuno.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Nessuno.|`DCStart` eventi.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Nessuno.|`DCEnd` eventi.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Nessuno.|`DCStart` eventi.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Nessuno.|`DCEnd` eventi.|  
   
  [Torna all'inizio](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572357"
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider ETW di CLR](../../../docs/framework/performance/clr-etw-providers.md)
 - [Eventi ETW di CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

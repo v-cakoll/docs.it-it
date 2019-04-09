@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082490"
 ---
 # <a name="path-markup-syntax"></a>Sintassi di markup del percorso
 I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](shapes-and-basic-drawing-in-wpf-overview.md) e il [panoramica delle classi Geometry](geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini-linguaggio è possibile usare per specificare percorso modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -47,17 +47,17 @@ I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](s
   
 |Utilizzo degli attributi XAML StreamGeometry|  
 |-----------------------------------------|  
-|`<` *oggetto* *proprietà* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.PathFigureCollection> è costituito da uno o più descrizioni di figure.  
   
 |Utilizzo degli attributi XAML PathFigureCollection|  
 |-----------------------------------------------|  
-|`<` *oggetto* *proprietà* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Termine|Descrizione|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza le <xref:System.Windows.Media.FillRule.EvenOdd> oppure <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il tracciato secondario userà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza le <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il tracciato secondario userà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
 |*figureDescription*|Figura costituita da un comando di spostamento, da alcuni comandi di disegno e da un comando di chiusura facoltativo.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Comando di spostamento che specifica il punto iniziale della figura. Vedere le [comando Sposta](#themovecommand) sezione.|  
 |*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere le [comandi Draw](#drawcommands) sezione.|  
@@ -99,7 +99,6 @@ Maiuscolo `L` indica che `endPoint` è un valore assoluto; una minuscola `l` ind
 ### <a name="horizontal-line-command"></a>Comando Horizontal Line  
  Crea una linea orizzontale tra il punto corrente e la coordinata x specificata. `H 90` è un esempio di comando di linea orizzontale valido.
 
-  
 |Sintassi|  
 |------------|  
 |`H`  *x*<br /><br /> -oppure-<br /><br /> `h`  *x*|  
@@ -113,7 +112,6 @@ Maiuscolo `H` indica che `x` è un valore assoluto; una minuscola `h` indica che
 ### <a name="vertical-line-command"></a>Comando Vertical Line  
  Crea una linea verticale tra il punto corrente e la coordinata y specificata. `v 90` è un esempio di comando di linea verticale valido.
 
-  
 |Sintassi|  
 |------------|  
 |`V`  *y*<br /><br /> -oppure-<br /><br /> `v`  *y*|  
@@ -225,10 +223,11 @@ Maiuscolo `V` indica che `y` è un valore assoluto; una minuscola `v` indica che
  È anche possibile usare una notazione scientifica. Ad esempio, `+1.e17` è un valore valido.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Cenni preliminari sulle classi Geometry](geometry-overview.md)
-- [Procedure relative alle proprietà](geometries-how-to-topics.md)
+- [Procedure relative](geometries-how-to-topics.md)

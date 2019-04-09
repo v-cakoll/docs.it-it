@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Specificare l'origine di una trasformazione utilizzando valori relativi"
+title: "Procedura: Specificare l'origine di una trasformazione usando valori relativi"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - origins of Transforms [WPF]
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082958"
 ---
-# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Procedura: Specificare l'origine di una trasformazione utilizzando valori relativi
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Procedura: Specificare l'origine di una trasformazione usando valori relativi
 Questo esempio illustra come usare i valori relativi per specificare l'origine di un <xref:System.Windows.UIElement.RenderTransform%2A> che viene applicato a un <xref:System.Windows.FrameworkElement>.  
   
  Quando si ruota, ridimensiona o inclina un <xref:System.Windows.FrameworkElement> utilizzando il <xref:System.Windows.UIElement.RenderTransform%2A> proprietà, l'impostazione predefinita viene applicata la trasformazione all'angolo superiore sinistro dell'elemento. Se si desidera ruotare, ridimensionare o inclinare dal centro dell'elemento, è possibile compensare impostando il centro della trasformazione sul centro dell'elemento. Tuttavia, questa soluzione prevede che si conoscano le dimensioni dell'elemento. Un modo più semplice applicare una trasformazione al centro di un elemento consiste nell'impostare relativo <xref:System.Windows.UIElement.RenderTransformOrigin%2A> proprietà su (0,5, 0,5), anziché impostare un valore centrale sulla trasformazione stessa.  
@@ -40,6 +40,7 @@ Rotazione di 45 gradi usando la proprietà RenderTransform con RenderTransformOr
  Per altre informazioni sulla trasformazione <xref:System.Windows.FrameworkElement> oggetti, vedere la [Cenni preliminari sulle trasformazioni](transforms-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Media.Transform>
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Procedure relative alle proprietà](transformations-how-to-topics.md)
+- [Procedure relative](transformations-how-to-topics.md)

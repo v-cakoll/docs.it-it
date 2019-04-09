@@ -2,12 +2,12 @@
 title: Diagnostica di applicazioni transazionali
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101712"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
 Questo argomento descrive come usare la gestione di Windows Communication Foundation (WCF) e la funzionalità di diagnostica per risolvere i problemi di un'applicazione transazionale.  
@@ -19,7 +19,7 @@ Questo argomento descrive come usare la gestione di Windows Communication Founda
   
 ### <a name="service-performance-counters"></a>Contatori delle prestazioni del servizio  
   
-|Contatore di prestazioni|Descrizione|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |Transazioni propagate|Numero di transazioni propagate alle operazioni in questo servizio. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato al servizio.|  
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo servizio ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato al servizio.|  
@@ -32,14 +32,14 @@ Questo argomento descrive come usare la gestione di Windows Communication Founda
   
 ### <a name="endpoint-performance-counters"></a>Contatori delle prestazioni dell'endpoint  
   
-|Contatore di prestazioni|Descrizione|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |Transazioni propagate|Numero di transazioni propagate alle operazioni in questo endpoint. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
   
 ### <a name="operation-performance-counters"></a>Contatori delle prestazioni per l'operazione  
   
-|Contatore di prestazioni|Descrizione|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |Transazioni propagate|Numero di transazioni propagate alle operazioni in questo endpoint. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
@@ -95,7 +95,7 @@ Questo argomento descrive come usare la gestione di Windows Communication Founda
   
      Analisi WS-AtomicTransaction può essere abilitata utilizzando la [utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tale traccia consente di comprendere lo stato delle transazioni e di conoscere i partecipanti all'interno di un sistema. Per attivare anche la traccia del modello di servizi interna, è possibile impostare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` su un valore valido dell'enumerazione <xref:System.Diagnostics.SourceLevels>. È possibile abilitare la registrazione nello stesso modo delle altre applicazioni WCF dei messaggi.  
   
--   Traccia `System.Transactions`  
+-   `System.Transactions` traccia  
   
      Quando si utilizza il protocollo OleTransactions, i messaggi di protocollo non possono essere tracciati. Il supporto di traccia fornito dall'infrastruttura <xref:System.Transactions>, che utilizza OleTransactions, consente agli utenti di visualizzare gli eventi che si sono verificati nelle transazioni. Per attivare la traccia per un'applicazione <xref:System.Transactions>, includere il codice seguente nel file di configurazione `App.config`.  
   
@@ -121,6 +121,7 @@ Questo argomento descrive come usare la gestione di Windows Communication Founda
      Consente anche la tracciatura WCF, come WCF Usa anche il <xref:System.Transactions> dell'infrastruttura.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Amministrazione e diagnostica](../../../../docs/framework/wcf/diagnostics/index.md)
 - [Configurazione delle funzionalità di traccia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085129"
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **set di dati** per fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento agli oggetti che sono presenti nell'origine dati.  
@@ -62,14 +62,14 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
   
  La tabella seguente mostra i valori predefiniti per gli oggetti in un oggetto tipizzato **set di dati** e le annotazioni disponibili.  
   
-|Oggetto/Metodo/Evento|Default|Annotazione|  
+|Oggetto/Metodo/Evento|Impostazione predefinita|Annotazione|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** metodi|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**Proprietà**|PropertyName|typedName|  
 |**Figlio** della funzione di accesso|GetChildTableNameRows|typedChildren|  
 |**Padre** della funzione di accesso|TableNameRow|typedParent|  
 |**Set di dati** eventi|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,8 +223,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Set di dati tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [Dataset tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

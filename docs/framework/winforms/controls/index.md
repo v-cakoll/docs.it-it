@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: da5f0b4418d61b973044a89d4902900247efb115
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2fb4ffd4d2f39f0b11f1db4d152c5922e1ac4d19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085701"
 ---
 # <a name="windows-forms-controls"></a>Controlli per Windows Form
 Durante la progettazione e la modifica dell'interfaccia utente delle Windows Forms Application, è necessario aggiungere, allineare e posizionare i controlli. I controlli sono gli oggetti contenuti all'interno di oggetti Form. Ogni tipo di controllo ha un proprio set di proprietà, metodi ed eventi che lo rendono appropriato per un particolare scopo. È possibile modificare i controlli nella finestra di progettazione e scrivere codice per aggiungere controlli in modo dinamico in fase di esecuzione.  
@@ -38,4 +38,3 @@ Durante la progettazione e la modifica dell'interfaccia utente delle Windows For
 ## <a name="related-sections"></a>Sezioni correlate  
  [Applicazioni client](../../develop-client-apps.md)  
  Fornisce una panoramica sullo sviluppo di applicazioni basate su Windows.  
-  

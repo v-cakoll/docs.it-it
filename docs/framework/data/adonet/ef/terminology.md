@@ -2,12 +2,12 @@
 title: Terminologia relativa a Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104169"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia relativa a Entity Framework
 In questo argomento definisce le condizioni includono spesso riferimenti a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentazione. Vengono forniti collegamenti agli argomenti rilevanti in cui sono disponibili altre informazioni.  
@@ -44,7 +44,7 @@ In questo argomento definisce le condizioni includono spesso riferimenti a [!INC
 |associazione indipendente|Associazione tra entità rappresentata e rilevata da un oggetto indipendente.|  
 |key|Attributo di un tipo di entità che specifica la proprietà o il set di proprietà usato per identificare istanze univoche del tipo di entità. Rappresentato nel livello oggetti dalla classe <xref:System.Data.EntityKey>.<br /><br /> Per altre informazioni, vedere [elemento Key (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) e [chiave di entità](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |caricamento differito|Quando gli oggetti sono restituiti da una query, gli oggetti correlati non vengono caricati contemporaneamente. Vengono invece caricati automaticamente quando viene eseguito l'accesso alla proprietà di navigazione.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintassi della query che definisce un set di operatori di query che consentono operazioni di attraversamento, filtro e proiezione di esprimere in modo diretto e dichiarativo in Visual C# e Visual Basic.<br /><br /> Per altre informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintassi della query che definisce un set di operatori di query che consentono operazioni di attraversamento, filtro e proiezione di esprimere in modo diretto e dichiarativo in Visual c# e Visual Basic.<br /><br /> Per altre informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapping|Specifica delle corrispondenze tra gli elementi di un modello concettuale e quelli di un modello di archiviazione.<br /><br /> Per altre informazioni, vedere [specifica di MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |file con estensione msl|File XML che contiene il mapping tra il modello concettuale e quello di archiviazione espresso nel linguaggio MSL.|  
 |Mapping Specification Language (MSL)|Linguaggio basato su XML usato per eseguire il mapping di elementi definiti in un modello concettuale a elementi in un modello di archiviazione.<br /><br /> Per altre informazioni, vedere [specifica di MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -76,7 +76,8 @@ In questo argomento definisce le condizioni includono spesso riferimenti a [!INC
 |tabella per tipo|Metodo di modellazione di una gerarchia dei tipi in un database, che usa più tabelle con relazioni uno-a-uno per modellare i diversi tipi.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
-- [Panoramica di Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [Cenni preliminari su Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Introduzione](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Risorse di Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

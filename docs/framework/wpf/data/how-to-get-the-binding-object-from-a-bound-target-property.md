@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Ottenere l'oggetto di associazione da una proprietà di destinazione associata"
+title: "Procedura: Ottenere l'oggetto di binding da una proprietà di destinazione associata"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083114"
 ---
-# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Procedura: Ottenere l'oggetto di associazione da una proprietà di destinazione associata
+# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Procedura: Ottenere l'oggetto di binding da una proprietà di destinazione associata
 Questo esempio illustra come ottenere l'oggetto di binding da una proprietà di destinazione associata a dati.  
   
 ## <a name="example"></a>Esempio  
@@ -31,5 +31,6 @@ Questo esempio illustra come ottenere l'oggetto di binding da una proprietà di 
 >  Se il binding è un <xref:System.Windows.Data.MultiBinding>, usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Se si tratta di un <xref:System.Windows.Data.PriorityBinding>, usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Se si è sicuri se la proprietà di destinazione sia associata utilizzando un <xref:System.Windows.Data.Binding>, una <xref:System.Windows.Data.MultiBinding>, o una <xref:System.Windows.Data.PriorityBinding>, è possibile usare <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Creare un'associazione nel codice](how-to-create-a-binding-in-code.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+
+- [Creare un binding nel codice](how-to-create-a-binding-in-code.md)
+- [Procedure relative](data-binding-how-to-topics.md)

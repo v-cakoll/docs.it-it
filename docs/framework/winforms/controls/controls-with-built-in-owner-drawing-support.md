@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087183"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Controlli con supporto incorporato per la creazione da parte del proprietario
 Il disegno da parte del proprietario in Windows Form, noto anche come disegno personalizzato, è una tecnica che consente di modificare l'aspetto visivo di alcuni controlli.  
@@ -172,9 +172,9 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView di Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Procedura: Personalizzare l'aspetto delle righe nel controllo DataGridView Windows Form](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Procedura: Personalizzare l'aspetto delle righe nel controllo DataGridView di Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>Controllo ToolStrip  
  <xref:System.Windows.Forms.ToolStrip> e i controlli derivati consentono di personalizzare qualsiasi dettaglio del proprio aspetto.  
@@ -185,9 +185,10 @@ Il disegno da parte del proprietario in Windows Form, noto anche come disegno pe
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Procedura: Creare e impostare un Renderer personalizzato per il controllo ToolStrip in Windows Form](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Procedura: Creare e impostare un renderer personalizzato per il controllo ToolStrip in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Procedura: Disegno personalizzato di un controllo ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
+-   [Procedura: Eseguire un disegno personalizzato di un controllo ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

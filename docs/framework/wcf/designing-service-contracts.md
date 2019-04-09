@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102739"
 ---
 # <a name="designing-service-contracts"></a>Progettazione dei contratti di servizio
 In questo argomento vengono descritti i contratti di servizio, la relativa modalità di definizione, le operazioni disponibili (e le implicazioni per gli scambi di messaggi sottostanti), i tipi di dati utilizzati e altri temi che consentono di progettare operazioni in linea con i requisiti del proprio scenario.  
@@ -28,7 +28,7 @@ In questo argomento vengono descritti i contratti di servizio, la relativa modal
   
 -   Modalità di indicazione dei tipi di dati che si desidera scambiare.  
   
--   Tipi di modello di scambio che è possibile utilizzare.  
+-   Tipi di modello di scambio che è possibile usare.  
   
 -   Possibilità di inserimento nel contratto di requisiti di sicurezza espliciti.  
   
@@ -76,7 +76,7 @@ In questo argomento vengono descritti i contratti di servizio, la relativa modal
  Anche se una tipica applicazione WCF utilizza il <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> attributi per la creazione di contratti dati per le operazioni, è possibile usare altri meccanismi di serializzazione. I meccanismi <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> e <xref:System.Xml.Serialization.IXmlSerializable> standard gestiscono tutti la serializzazione dei tipi di dati nei messaggi SOAP sottostanti che li trasportano da un'applicazione all'altra. È possibile utilizzare più strategie di serializzazione se i tipi di dati richiedono un supporto speciale. Per altre informazioni sulle opzioni per la serializzazione dei tipi di dati in applicazioni WCF, vedere [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Esecuzione del mapping di parametri e valori restituiti agli scambi di messaggi  
- Le operazioni del servizio sono supportate da uno scambio sottostante di messaggi SOAP che trasferiscono i dati dell'applicazione avanti e indietro, oltre ai dati necessari per l'applicazione per supportare alcune funzioni standard di sicurezza, transazione e correlate alla sessione. Perché questo è il caso, la firma dell'operazione del servizio determina un determinato sottostante *modello di scambio messaggi* (MEP) che può supportare il trasferimento dei dati e le funzionalità per un'operazione necessaria. È possibile specificare tre modelli nel modello di programmazione WCF: request/reply, unidirezionale e duplex.  
+ Le operazioni del servizio sono supportate da uno scambio sottostante di messaggi SOAP che trasferiscono i dati dell'applicazione avanti e indietro, oltre ai dati necessari per l'applicazione per supportare alcune funzionalità standard di sicurezza, transazione e correlate alla sessione. Perché questo è il caso, la firma dell'operazione del servizio determina un determinato sottostante *modello di scambio messaggi* (MEP) che può supportare il trasferimento dei dati e le funzionalità per un'operazione necessaria. È possibile specificare tre modelli nel modello di programmazione WCF: request/reply, unidirezionale e duplex.  
   
 ##### <a name="requestreply"></a>Request/Reply  
  Nel modello Request/Reply il mittente di una richiesta (un'applicazione client) riceve una risposta alla quale è correlata la richiesta. Si tratta del modello di scambio dei messaggi predefinito perché supporta un'operazione in cui uno o più parametri vengono passati all'operazione e un valore restituito viene passato di nuovo al chiamante. Nell'esempio di codice C# seguente viene illustrata un'operazione di base del servizio che accetta una stringa e restituisce una stringa.  
@@ -109,7 +109,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- L'esempio precedente può rallentare le prestazioni e la velocità di risposta del client se l'esecuzione dell'operazione richiede molto tempo, tuttavia le operazioni Request/Reply presentano vantaggi anche quando restituiscono `void`. Il vantaggio più ovvio consiste nel fatto che gli errori SOAP possono essere restituiti nel messaggio di risposta, a indicare che si è verificata una condizione di errore correlata al servizio, nella comunicazione o nell'elaborazione. Gli errori SOAP specificati in un contratto di servizio vengono passati all'applicazione client sotto forma di oggetto <xref:System.ServiceModel.FaultException%601>, dove il parametro di tipo è il tipo specificato nel contratto di servizio. In questo modo i client notificanti sulle condizioni di errore nei servizi WCF semplice. Per altre informazioni sulle eccezioni, gli errori SOAP e la gestione degli errori, vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Per un esempio di un servizio di tipo request/reply e un client, vedere [come: Creare un contratto Request / Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Per altre informazioni sui problemi con il modello request / reply, vedere [servizi Request / Reply](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
+ L'esempio precedente può rallentare le prestazioni e la velocità di risposta del client se l'esecuzione dell'operazione richiede molto tempo, tuttavia le operazioni Request/Reply presentano vantaggi anche quando restituiscono `void`. Il vantaggio più ovvio consiste nel fatto che gli errori SOAP possono essere restituiti nel messaggio di risposta, a indicare che si è verificata una condizione di errore correlata al servizio, nella comunicazione o nell'elaborazione. Gli errori SOAP specificati in un contratto di servizio vengono passati all'applicazione client sotto forma di oggetto <xref:System.ServiceModel.FaultException%601>, dove il parametro tipo è il tipo specificato nel contratto di servizio. In questo modo i client notificanti sulle condizioni di errore nei servizi WCF semplice. Per altre informazioni sulle eccezioni, gli errori SOAP e la gestione degli errori, vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). Per un esempio di un servizio di tipo request/reply e un client, vedere [come: Creare un contratto Request / Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Per altre informazioni sui problemi con il modello request / reply, vedere [servizi Request / Reply](../../../docs/framework/wcf/feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Unidirezionale  
  Se il client di un'applicazione di servizio WCF non deve attendere il completamento dell'operazione e non elabora errori SOAP, l'operazione può specificare un modello di messaggi unidirezionale. Un'operazione unidirezionale è uno in cui un client richiama un'operazione e continua l'elaborazione dopo che WCF scrive il messaggio in rete. In genere ciò significa che, a meno che le dimensioni dei dati inviati nel messaggio in uscita non siano eccessive, il client continua l'esecuzione quasi immediatamente (purché non si verifichi un errore durante l'invio dei dati). Questo tipo di modello di scambio dei messaggi supporta il comportamento simile a quello degli eventi da un client a un'applicazione di servizio.  
@@ -135,7 +135,7 @@ Sub Hello (ByVal greeting As String)
  Questo metodo è identico all'esempio Request/Reply precedente ma impostare la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `true` implica che sebbene il metodo sia identico, l'operazione del servizio non invia un messaggio di risposta e i client rispondono immediatamente dopo l'invio del messaggio in uscita al livello del canale. Per un esempio, vedere [Procedura: Creare un contratto unidirezionale](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md). Per altre informazioni relative al modello unidirezionale, vedere [unidirezionale servizi](../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Duplex  
- Un modello duplex è caratterizzato dalla possibilità del servizio e del client di inviarsi reciprocamente messaggi indipendentemente dal modello utilizzato, unidirezionale o Request/Reply. Questa forma di comunicazione bidirezionale è utile per i servizi con la necessità di comunicare direttamente con il client o per consentire un'esperienza asincrona a entrambe le estremità dello scambio di messaggi, compreso il comportamento simile a quello degli eventi.  
+ Un modello duplex è caratterizzato dalla possibilità del servizio e del client di inviarsi reciprocamente messaggi indipendentemente dal modello usato, unidirezionale o Request/Reply. Questa forma di comunicazione bidirezionale è utile per i servizi con la necessità di comunicare direttamente con il client o per consentire un'esperienza asincrona a entrambe le estremità dello scambio di messaggi, compreso il comportamento simile a quello degli eventi.  
   
  Il modello duplex è leggermente più complesso del modello Request/Reply o del modello unidirezionale a causa del meccanismo supplementare di comunicazione con il client.  
   
@@ -270,12 +270,13 @@ End Interface
  Se i nomi e gli spazi dei nomi non vengono impostati in modo esplicito, una delle conseguenze sarà che l'utilizzo dell'offuscamento IL sull'assembly determinerà la modifica dei nomi e degli spazi dei nomi del tipo di contratto e genererà WSDL modificato e scambi di rete che in genere hanno esito negativo. Se i nomi e gli spazi dei nomi del contratto non vengono impostati in modo esplicito, ma si intende utilizzare l'offuscamento, utilizzare gli attributi <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> per impedire la modifica dei nomi e degli spazi dei nomi del tipo di contratto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Creare un contratto Request / Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+
+- [Procedura: Creare un contratto Request/Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
 - [Procedura: Creare un contratto unidirezionale](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Procedura: Creare un contratto Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Definizione del trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Procedura: Creare un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Specifica del trasferimento di dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Uso di sessioni](../../../docs/framework/wcf/using-sessions.md)
 - [Operazioni sincrone e asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Reliable Services](../../../docs/framework/wcf/reliable-services.md)
+- [Servizi affidabili](../../../docs/framework/wcf/reliable-services.md)
 - [Servizi e transazioni](../../../docs/framework/wcf/services-and-transactions.md)

@@ -2,12 +2,12 @@
 title: Ruoli server e database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087976"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
 In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che consente di assegnare le autorizzazioni a un ruolo, ovvero un gruppo di utenti, anziché ai singoli utenti. Ai ruoli predefiniti del server e del database è assegnato un set predefinito di autorizzazioni.  
@@ -16,7 +16,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  I ruoli predefiniti del server hanno un set fisso di autorizzazioni e un ambito a livello di server. Sono destinati a essere usati per l'amministrazione di SQL Server e non è possibile modificare le autorizzazioni ad essi assegnate. È possibile assegnare account di accesso ai ruoli predefiniti del server senza avere un account utente in un database.  
   
 > [!IMPORTANT]
->  Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. I membri del ruolo `sysadmin` dispongono di privilegi amministrativi irrevocabili su tutti i database e le risorse del server.  
+>  Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. `sysadmin` i membri del ruolo dispongono di privilegi amministrativi irrevocabili su tutti i database del server e le risorse.  
   
  È necessario aggiungere in modo selettivo gli utenti ai ruoli predefiniti del server. Ad esempio, il ruolo `bulkadmin` consente agli utenti di inserire il contenuto di qualsiasi file locale in una tabella, il che potrebbe compromettere l'integrità dei dati. Per l'elenco completo dei ruoli predefiniti del server e le autorizzazioni, vedere la documentazione Online di SQL Server.  
   
@@ -62,6 +62,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
 |[Entità](/sql/relational-databases/security/authentication-access/principals-database-engine)|Contiene una descrizione delle entità e collegamenti ad argomenti in cui sono illustrati i ruoli del server e del database.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticazione in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

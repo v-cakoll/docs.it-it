@@ -2,12 +2,12 @@
 title: Sintassi delle stringhe di connessione
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084963"
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -43,7 +43,7 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` genera un'eccezione se usata con il provider `OleDb`.  
+>  `Integrated Security=true` genera un'eccezione se usato con il `OleDb` provider.  
   
 ## <a name="sqlclient-connection-strings"></a>Stringhe di connessione SqlClient  
 La sintassi per una stringa di connessione <xref:System.Data.SqlClient.SqlConnection> è documentata nella proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. È possibile usare la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> per ottenere o impostare una stringa di connessione per un database di SQL Server. Per eseguire la connessione a una versione precedente di SQL Server, è necessario usare il provider di dati .NET Framework per OleDb (<xref:System.Data.OleDb>). La maggior parte delle parole chiave delle stringhe di connessione sono inoltre mappate alle proprietà dell'oggetto <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -112,11 +112,11 @@ Data Source=MySqlServer\MSSQL1;"
 |Impostazione client Forza crittografia protocollo|Impostazione client Considera attendibile certificato server|Attributo/stringa di connessione Encrypt/Use Encryption for Data|Attributo/stringa di connessione Trust Server Certificate|Risultato|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/D|No (impostazione predefinita)|Ignorato|Nessuna crittografia.|  
-|No|N/D|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
-|No|N/D|Sì|Yes|Crittografia sempre applicata, ma potrebbe usare un certificato server autofirmato.|  
+|No|N/D|Yes|No (impostazione predefinita)|La crittografia viene applicata solo se è disponibile un certificato server verificabile; in caso contrario, il tentativo di connessione non riesce.|  
+|No|N/D|Yes|Yes|Crittografia sempre applicata, ma potrebbe usare un certificato server autofirmato.|  
 |Yes|No|Ignorato|Ignorato|La crittografia viene applicata solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione ha esito negativo.|  
-|Yes|Sì|No (impostazione predefinita)|Ignorato|Crittografia sempre applicata, ma potrebbe usare un certificato server autofirmato.|  
-|Yes|Yes|Sì|No (impostazione predefinita)|La crittografia viene applicata solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione ha esito negativo.|  
+|Yes|Yes|No (impostazione predefinita)|Ignorato|Crittografia sempre applicata, ma potrebbe usare un certificato server autofirmato.|  
+|Yes|Yes|Yes|No (impostazione predefinita)|La crittografia viene applicata solo se è presente un certificato server verificabile; in caso contrario, il tentativo di connessione ha esito negativo.|  
 |Yes|Yes|Yes|Yes|Crittografia sempre applicata, ma potrebbe usare un certificato server autofirmato.|  
   
  Per altre informazioni, vedere [Using Encryption Without Validation](/sql/relational-databases/native-client/features/using-encryption-without-validation).
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  È possibile fornire informazioni di connessione per un **OleDbConnection** in un file Universal Data Link (UDL); tuttavia è consigliabile evitare questa operazione. I file UDL non sono crittografati, pertanto espongono le informazioni nella stringa di connessione come testo non crittografato. Poiché per l'applicazione si tratta di una risorsa esterna basata su file, un file UDL non può essere protetto tramite .NET Framework. I file UDL non sono supportati per **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Uso di DataDirectory per la connessione a Access/Jet  
- `DataDirectory` non è riservata esclusivamente a `SqlClient`. Può essere usata anche con i provider di dati .NET <xref:System.Data.OleDb> e <xref:System.Data.Odbc>. Nell'esempio seguente la stringa <xref:System.Data.OleDb.OleDbConnection> indica la sintassi richiesta per connettersi al database Northwind.mdb situato nella cartella app_data dell'applicazione. In tale percorso è archiviato anche il database di sistema (System.mdw).  
+ `DataDirectory` non è esclusivo per `SqlClient`. Può essere usata anche con i provider di dati .NET <xref:System.Data.OleDb> e <xref:System.Data.Odbc>. Nell'esempio seguente la stringa <xref:System.Data.OleDb.OleDbConnection> indica la sintassi richiesta per connettersi al database Northwind.mdb situato nella cartella app_data dell'applicazione. In tale percorso è archiviato anche il database di sistema (System.mdw).  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  Per altre informazioni sulla sintassi delle stringhe di connessione ODBC, vedere <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

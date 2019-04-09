@@ -8,17 +8,16 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087989"
 ---
 # <a name="3-d-graphics-overview"></a>Cenni preliminari sulla grafica tridimensionale
-<a name="introduction"></a> La funzionalità [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consente agli sviluppatori di creare, trasformare e animare grafica 3D nel markup e nel codice procedurale. Gli sviluppatori possono combinare grafica [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] per creare controlli dettagliati, realizzare illustrazioni complesse di dati o migliorare l'esperienza utente dell'interfaccia di un'applicazione. Il supporto [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non è progettato come piattaforma per lo sviluppo di giochi con funzionalità complete. Questo argomento contiene cenni preliminari sulla funzionalità di [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] nel sistema grafico di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
- 
-  
+<a name="introduction"></a> La funzionalità [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consente agli sviluppatori di creare, trasformare e animare grafica 3D nel markup e nel codice procedurale. Gli sviluppatori possono combinare grafica [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] e [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] per creare controlli dettagliati, realizzare illustrazioni complesse di dati o migliorare l'esperienza utente dell'interfaccia di un'applicazione. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] supporto in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non è progettato per offrire una piattaforma di sviluppo di giochi complete. Questo argomento contiene cenni preliminari sulla funzionalità di [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] nel sistema grafico di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>Grafica tridimensionale in un contenitore bidimensionale  
  [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] il contenuto nel grafico [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è incapsulato in un elemento <xref:System.Windows.Controls.Viewport3D>, che può appartenere alla struttura dell'elemento bidimensionale. Il sistema grafico considera <xref:System.Windows.Controls.Viewport3D> come un elemento visivo bidimensionale, come molti altri in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Viewport3D> funziona come una finestra, ovvero un riquadro di visualizzazione, ovvero in una scena tridimensionale. Più precisamente, si tratta di una superficie sulla quale viene proiettata una scena [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].  
@@ -170,12 +169,13 @@ Proiezioni prospettiche e ortografiche
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Panoramica sulle trasformazioni tridimensionali](3-d-transformations-overview.md)
+- [Cenni preliminari sulle trasformazioni tridimensionali](3-d-transformations-overview.md)
 - [Ottimizzazione delle prestazioni tridimensionali di WPF](maximize-wpf-3d-performance.md)
-- [Procedure relative alle proprietà](3-d-graphics-how-to-topics.md)
+- [Procedure relative](3-d-graphics-how-to-topics.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 94a708ca33aa94c7a0143d195803d17d49be4bdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086247"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provider Entity Framework (WCF Data Services)
 Analogamente a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework è basato su Entity Data Model, un tipo di modello entità-relazione. Entity Framework traduce le operazioni eseguite sulla relativa implementazione di Entity Data Model, che viene chiamato il *del modello concettuale*, in operazioni equivalenti su un'origine dati. Ciò rende Entity Framework il provider ideale per i servizi dati basati su dati relazionali, consentendo inoltre l'uso di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da parte di qualsiasi database che disponga di un provider di dati con supporto per Entity Framework. Per un elenco delle origini dati che supportano attualmente Entity Framework, vedere [provider di terze parti per Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -21,6 +21,7 @@ Analogamente a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.
  Per altre informazioni su Entity Framework, vedere [Panoramica di Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Provider di reflection](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

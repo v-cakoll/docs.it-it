@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49784a0eba0458a7b9ddbcd58cbe1a187c3c779a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101202"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumerazione CorAttributeTargets
 Specifica gli elementi dell'applicazione ai quali è valido applicare un attributo.  
@@ -62,7 +62,7 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`catAssembly`|Attributo può essere applicato a un assembly.|  
 |`catModule`|Attributo può essere applicato a un modulo (con estensione dll o .exe) eseguibile portabile.|  
@@ -94,4 +94,5 @@ typedef enum CorAttributeTargets
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Enumerazioni dei metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1032227a539fb0f1a670a2c1a7a0f4f7df05a82b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54ccb52468a530280527252e0e0c43cc9edbb2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080956"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Metodo ICorDebugAssembly3::EnumerateContainedAssemblies
 Ottiene un enumeratore per gli assembly contenuti in questo assembly.  
@@ -27,7 +27,7 @@ HRESULT EnumerateContainedAssemblies(
  [out] Un puntatore all'indirizzo di un oggetto di interfaccia ICorDebugAssemblyEnum che corrisponde all'enumeratore.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` se questo oggetto `ICorDebugAssembly3` è un contenitore, altrimenti `S_FALSE` e l'enumerazione è vuota.  
+ `S_OK` Se l'oggetto `ICorDebugAssembly3` oggetto è un contenitore; in caso contrario, `S_FALSE`, e l'enumerazione è vuota.  
   
 ## <a name="remarks"></a>Note  
  I simboli sono necessari per enumerare gli assembly contenuti. Se non ce ne sono, il metodo restituisce `S_FALSE` e non viene fornito alcun enumeratore valido.  
@@ -45,5 +45,6 @@ HRESULT EnumerateContainedAssemblies(
  **Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

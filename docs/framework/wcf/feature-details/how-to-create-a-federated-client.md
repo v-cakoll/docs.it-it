@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un Client federato'
+title: 'Procedura: Creare un client federato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104325"
 ---
-# <a name="how-to-create-a-federated-client"></a>Procedura: Creare un Client federato
+# <a name="how-to-create-a-federated-client"></a>Procedura: Creare un client federato
 In Windows Communication Foundation (WCF), la creazione di un client per un *servizio federato* è costituito da tre passaggi principali:  
   
 1.  Configurare un [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o associazione personalizzata simile. Per altre informazioni sulla creazione di un'associazione appropriata, vedere [come: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). In alternativa, eseguire la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contro l'endpoint dei metadati del servizio federato per generare un file di configurazione per la comunicazione con il servizio federato e uno o più servizi token di sicurezza.  
@@ -161,10 +161,11 @@ In Windows Communication Foundation (WCF), la creazione di un client per un *ser
 >  L'idea client di certificati definiti con ambito per uno specifico URI si applica solo alle applicazioni che stanno effettuando chiamate in uscita a servizi che espongono endpoint a tali URI. Non è applicabile per i certificati usati per firmare i token emessi, ad esempio quelle configurate nel server nella raccolta restituita dal <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> del <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> classe. Per altre informazioni, vedere [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Procedura: Disabilitare sessioni protette in WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Procedura: Configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Procedura: Proteggere gli endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Procedura: Proteggere endpoint di metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

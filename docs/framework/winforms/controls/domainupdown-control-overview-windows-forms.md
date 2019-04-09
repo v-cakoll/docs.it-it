@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102856"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Cenni preliminari sul controllo DomainUpDown (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.DomainUpDown> controllo è essenzialmente una combinazione di una casella di testo e una coppia di pulsanti di spostamento verso l'alto o verso il basso in un elenco. Il controllo Visualizza e imposta una stringa di testo da un elenco di scelte. L'utente può selezionare la stringa, fare clic su pulsanti per spostarsi all'interno di un elenco su e giù, premendo i tasti di direzione su e giù o digitando una stringa che corrisponde a un elemento nell'elenco. Un possibile utilizzo di questo controllo è per la selezione di elementi da un elenco alfabetico dei nomi.  
@@ -28,5 +28,6 @@ I moduli di Windows <xref:System.Windows.Forms.DomainUpDown> controllo è essenz
  Questo controllo consente di visualizzare solo le stringhe di testo. Se si vuole un controllo che visualizza i valori numerici, usare il <xref:System.Windows.Forms.NumericUpDown> controllo. Per altre informazioni, vedere [Cenni preliminari sul controllo NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - [Controllo DomainUpDown](domainupdown-control-windows-forms.md)

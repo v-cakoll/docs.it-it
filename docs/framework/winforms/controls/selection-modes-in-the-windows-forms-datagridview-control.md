@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097278"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modalità di selezione nel controllo DataGridView Windows Form
 A volte si desidera che l'applicazione per eseguire azioni in base alle selezioni dell'utente all'interno di un <xref:System.Windows.Forms.DataGridView> controllo. A seconda delle azioni, è possibile limitare i tipi di selezione che sono possibili. Si supponga, ad esempio, che l'applicazione può stampare un report per il record attualmente selezionato. In questo caso, è possibile configurare il <xref:System.Windows.Forms.DataGridView> controllo in modo che selezionando un punto qualsiasi all'interno di una riga sempre selezionata l'intera riga, e possa essere scelte in modo che solo una riga alla volta.  
@@ -45,9 +45,10 @@ A volte si desidera che l'applicazione per eseguire azioni in base alle selezion
 >  Codice di esempio che illustra l'uso delle celle selezionate a livello di codice sono reperibili nel <xref:System.Windows.Forms.DataGridView> Cenni preliminari sulla classe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Uso della selezione e degli Appunti con il controllo DataGridView di Windows Form](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare la modalità di selezione del controllo DataGridView Windows Form](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Utilizzo della selezione e degli Appunti con il controllo DataGridView Windows Form](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Procedura: Impostare la modalità di selezione del controllo DataGridView di Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

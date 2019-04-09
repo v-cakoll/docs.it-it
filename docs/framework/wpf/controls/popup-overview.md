@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102778"
 ---
 # <a name="popup-overview"></a>Cenni preliminari sul controllo Popup
 Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visualizzare il contenuto in una finestra separata mobile rispetto alla finestra dell'applicazione corrente relativo a un determinato elemento o coordinata dello schermo. Questo argomento vengono presentate le <xref:System.Windows.Controls.Primitives.Popup> controllano e vengono fornite informazioni sul relativo utilizzo.  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>Definizione di un controllo Popup  
  Oggetto <xref:System.Windows.Controls.Primitives.Popup> controllo Visualizza il contenuto in una finestra separata in relazione a un elemento o un punto dello schermo. Quando la <xref:System.Windows.Controls.Primitives.Popup> è visibile, il <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> è impostata su `true`.  
@@ -89,6 +87,7 @@ Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visuali
  Il <xref:System.Windows.Controls.Primitives.Popup> controllo mantiene un riferimento al relativo <xref:System.Windows.Controls.Primitives.Popup.Child%2A> contenuto come un figlio logico. Quando viene creato la nuova finestra, il contenuto del <xref:System.Windows.Controls.Primitives.Popup> diventa un elemento figlio visivo della finestra e rimane figlio logico del <xref:System.Windows.Controls.Primitives.Popup>. Al contrario, <xref:System.Windows.Controls.Primitives.Popup> rimane il padre logico del relativo <xref:System.Windows.Controls.Primitives.Popup.Child%2A> contenuto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>
@@ -96,5 +95,5 @@ Il <xref:System.Windows.Controls.Primitives.Popup> controllo consente di visuali
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Procedure relative alle proprietà](popup-how-to-topics.md)
-- [Procedure relative alle proprietà](tooltip-how-to-topics.md)
+- [Procedure relative](popup-how-to-topics.md)
+- [Procedure relative](tooltip-how-to-topics.md)

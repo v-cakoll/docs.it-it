@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ListView controls [WPF], CheckBox controls
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
-ms.openlocfilehash: 31a500c3a592ff8d1dd839543171991e908c23c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b09d5ad11b0961febf524cec1e19cb1e59832e44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083107"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Procedura: Creare ListViewItems con un CheckBox
 Questo esempio viene illustrato come visualizzare una colonna <xref:System.Windows.Controls.CheckBox> controlli in un <xref:System.Windows.Controls.ListView> controllo che usa un <xref:System.Windows.Controls.GridView>.  
@@ -29,9 +29,10 @@ Questo esempio viene illustrato come visualizzare una colonna <xref:System.Windo
  [!code-xaml[ListViewChkBox#GridViewColumnCheckBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#gridviewcolumncheckbox)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Panoramica sul controllo ListView](listview-overview.md)
-- [Procedure relative alle proprietà](listview-how-to-topics.md)
+- [Procedure relative](listview-how-to-topics.md)
 - [Cenni preliminari su GridView](gridview-overview.md)

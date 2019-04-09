@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105852"
 ---
 # <a name="reflection-and-net-native"></a>Reflection e .NET Native
 In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso l'API di reflection. La reflection consente di controllare gli oggetti in un'applicazione, chiamare metodi su oggetti individuati tramite ispezione, generare nuovi tipi in fase di esecuzione e supporta molti altri scenari di codice dinamico. Supporta anche la serializzazione e la deserializzazione, che consente di mantenere e successivamente ripristinare i valori dei campi di un oggetto. Tutti questi scenari richiedono che il compilatore JIT just-in-time di .NET Framework generi codice nativo basato sui metadati disponibili.  
@@ -31,8 +31,9 @@ In .NET Framework, lo sviluppo gestito supporta la metaprogrammazione attraverso
   
 -   [Riferimento all'API Reflection](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Compilazione di app con .NET Native](../../../docs/framework/net-native/index.md)
-- [.NET Native e compilazione](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md)

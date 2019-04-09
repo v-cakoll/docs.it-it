@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086442"
 ---
 # <a name="windows-forms-control-development-basics"></a>Nozioni fondamentali sullo sviluppo di controlli Windows Form
 Un controllo Windows Form è una classe che deriva direttamente o indirettamente da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Nell'elenco seguente vengono descritti scenari comuni per lo sviluppo di controlli Windows Form:  
@@ -31,7 +31,8 @@ Un controllo Windows Form è una classe che deriva direttamente o indirettamente
  La classe base per controlli Windows Form, <xref:System.Windows.Forms.Control>, fornisce l'infrastruttura necessaria per la visualizzazione nelle applicazioni basate su Windows client-side. <xref:System.Windows.Forms.Control> fornisce un handle di finestra, gestisce il routing dei messaggi e fornisce gli eventi di mouse e tastiera, oltre a molti altri utenti dell'interfaccia eventi. Fornisce un layout avanzato e ha le proprietà specifiche per la visualizzazione, ad esempio <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e molti altri. Inoltre, offre sicurezza, supporto del threading e l'interoperabilità con i controlli ActiveX. Poiché gran parte dell'infrastruttura viene definita dalla classe di base, è relativamente semplice sviluppare i propri controlli Windows Form.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Procedura: Sviluppare un controllo di semplice Windows Form](how-to-develop-a-simple-windows-forms-control.md)
-- [Sviluppo di un controllo di Windows Form composto](developing-a-composite-windows-forms-control.md)
-- [Procedura: Creare un controllo di Windows Form che mostra lo stato di avanzamento](how-to-create-a-windows-forms-control-that-shows-progress.md)
+
+- [Procedura: Sviluppare un controllo di Windows Forms semplice](how-to-develop-a-simple-windows-forms-control.md)
+- [Sviluppo di un controllo Windows Form composto](developing-a-composite-windows-forms-control.md)
+- [Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)

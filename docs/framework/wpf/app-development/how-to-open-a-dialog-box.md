@@ -8,12 +8,12 @@ helpviewer_keywords:
 - opening dialog boxes [WPF]
 - dialog boxes [WPF], opening
 ms.assetid: 6b1557d2-da98-4ef4-9f68-4089f04ab9ea
-ms.openlocfilehash: 1182e22ad40b49ee13832c51986662373f36ee35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70ac31285dd22244b4bd6ad0d188d182eb6e6264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084987"
 ---
 # <a name="how-to-open-a-dialog-box"></a>Procedura: Aprire una finestra di dialogo
 In questo esempio viene illustrato come aprire una finestra di dialogo.  
@@ -28,4 +28,5 @@ In questo esempio viene illustrato come aprire una finestra di dialogo.
  La chiamata a <xref:System.Windows.Window.ShowDialog%2A> richiede l'autorizzazione per usare tutte le finestre e gli eventi input utente senza alcuna restrizione.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Restituire il risultato di una finestra di dialogo](how-to-return-a-dialog-box-result.md)
